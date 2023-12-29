@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="TCH Labs" />
+    <meta property="og:url" content="http://www.tchlabs.net/" />
+    <meta property="og:site_name" content="YouTube" />
+    <!--lol maybe this will trick whatsapp into previewing what i want-->
+    <meta property="og:description" content="H2/SJPO/SPhO/H3 Lessons">
+    <meta property="og:image" itemprop='image' content="./images/tan-chien-hao-2-smol.jpeg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_GB" />
+    <title>Physics Classes</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link href='../stylesheets/styles.css' rel='stylesheet'>
+    <script>
+        function loaded(){
+            const btn = document.querySelector("button.navbar-button");
+            const menu = document.querySelector(".navbar-default");
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden")
+            });
+        }
+    </script>
+</head>
+
+<body onload="loaded()">
+<link itemprop="thumbnailUrl" href="./images/tan-chien-hao-2.jpg">
+<span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
+        <link itemprop="url" href="./images/tan-chien-hao-2.jpg">
+    </span>
+<section class="relative w-full px-8 text-gray-700 bg-white body-font">
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+        <div class="container flex flex-wrap justify-between items-center mx-auto">
+            <a href="#_" class="flex items-center text-2xl font-extrabold text-black select-none py-5">tchlabs</a>
+            <button data-collapse-toggle="navbar-default" type="button" class="navbar-button inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="true">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+            <div class="navbar-default hidden w-full md:block md:w-auto" >
+                <!-- add something that floats left -->
+                
+                <ul class="flex flex-col mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li class="py-1">
+                        <a href="../coding/index.html"
+                           class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+                           x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                            <span class="block text-black">Coding</span>
+                            <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"></span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="../physics/index.html"
+                           class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+                           x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                            <span class="block text-black">Physics</span>
+                            <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"></span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#classes"
+                           class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+                           x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                            <span class="block">Classes</span>
+                            <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"></span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#about-me"
+                           class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+                           x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                            <span class="block">About Me</span>
+                            <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"></span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#portfolio"
+                           class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+                           x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                            <span class="block">Portfolio</span>
+                            <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"></span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#contact"
+                           class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+                           x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                            <span class="block">Contact</span>
+                            <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"></span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="#resources"
+                           class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+                           x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                            <span class="block">Resources</span>
+                            <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"></span>
+                        </a>
+                    </li>
+                    <li class="py-1">
+                        <a href="../index.html"
+                           class="relative font-medium leading-6 text-gray-600 transition duration-150 ease-out hover:text-gray-900"
+                           x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                            <span class="block">Main Page</span>
+                            <span class="absolute bottom-0 left-0 inline-block w-full h-0.5 -mb-1 overflow-hidden"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</section>
+
+<!-- Section 2 -->
+<section id='classes' class="w-full bg-white pt-7 pb-7 md:pt-20 md:pb-24">
+    <div
+            class="box-border flex flex-col items-center content-center px-8 mx-auto leading-6 text-black border-0 border-gray-300 border-solid md:flex-row max-w-7xl lg:px-16">
+
+        <!-- Image -->
+        <div
+                class="box-border order-first relative w-full max-w-md px-4 mt-5 mb-4 -ml-5 text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none lg:mb-0 md:w-1/2 xl:pl-10">
+            <img src="../images/tan-chien-hao-2.jpg" class="rounded-none p-2 pl-6 pr-5 xl:pl-16 xl:pr-20">
+        </div>
+
+        <!-- Content -->
+        <div class="box-border w-full text-black border-solid md:w-1/2 md:pl-10 md:order-none">
+            <h2
+                    class="text-gray-600 m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
+                Ongoing Physics Classes
+            </h2>
+            <p class="pt-4 pb-8 m-0 leading-7 text-gray-700 border-0 border-gray-300 sm:pr-12 xl:pr-32 lg:text-lg">
+                <a class='font-bold text-blue-600' href="#contact">Contact</a> me if you wish to join!
+            </p>
+            <ul class="p-0 m-0 leading-6 border-0 border-gray-300">
+                <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">
+                        <span
+                                class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full"><span
+                                class="text-sm font-bold">✓</span></span> SJPO Sec 1 Physics (Introduction) - Mon (7pm-9pm)
+
+                <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">
+                        <span
+                                class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full"><span
+                                class="text-sm font-bold">✓</span></span> SJPO Sec 3 Physics (Intermediate) - Sat (10.30am-12pm)
+
+                <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">
+                        <span
+                                class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-green-500 rounded-full"><span
+                                class="text-sm font-bold">✓</span></span> IPhO Training (Advanced) - Tue (8pm-10pm) & Thu (8pm-10pm)
+
+            </ul>
+        </div>
+        <!-- End  Content -->
+    </div>
+</section>
+
+<section id='about-me' class="w-full bg-white pt-10 pb-7 md:pt-20 md:pb-24">
+    <div
+            class="box-border flex flex-col items-center content-center px-8 mx-auto mt-2 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl lg:px-16">
+        <!-- Content -->
+        <div class="box-border w-full text-black border-solid md:w-1/2 md:pl-6 xl:pl-32">
+            <h2 class="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
+                About Me
+            </h2>
+            <p class="pt-4 pb-4 m-0 leading-7 text-gray-700 border-0 border-gray-300 sm:pr-10 lg:text-lg">
+                Chien Hao is a passionate learner and Physics educator. At the age of 13, he fell in love with Physics after watching
+famous lecturer Walter Lewin's series on Physics. He then went on to self-study Physics, achieving numerous accomplishments. He has dreams of being a Professor in Theoretical Physics.
+            </p>
+            <p class="pt-4 pb-4 m-0 leading-7 text-gray-700 border-0 border-gray-300 sm:pr-10 lg:text-lg">
+                He teaches Physics on his Youtube channels <a target="_blank" class='font-bold text-blue-600' href="https://www.youtube.com/playlist?list=PLJJWhYFYCpOK5n_iipomt_mA1a9PyB0sj">SJPO</a> and <a class='font-bold text-blue-600' target="_blank" href="https://www.youtube.com/@tch1001">H3 Physics</a>. He also gives <a href="https://youtu.be/J-_3VGPntUY">lectures</a> at the National Team Training.
+            </p>
+            <p class="pt-4 pb-4 m-0 leading-7 text-gray-700 border-0 border-gray-300 sm:pr-10 lg:text-lg">
+                Chien Hao believes that every student, under the proper guidance, can easily pick upseemingly advanced concepts and theories. He is confident that not only will he
+prepare his students to ace the Olympiad, but also instil a lifelong passion for Physics in them.
+            </p>
+        </div>
+        <!-- End  Content -->
+
+        <!-- Image -->
+        <div class="box-border w-full text-black border-solid md:w-1/2 md:pl-6 xl:pl-32">
+            <a target="_blank" href="https://twigslot.com/project/188">
+                <img src="../images/tesla-driver.jpeg" class="pl-6">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id='portfolio' class="w-full bg-white pt-10 pb-7 md:pt-20 md:pb-24">
+    <div
+            class="box-border flex flex-col items-center content-center px-8 mx-auto mt-2 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl lg:px-16">
+        <!-- Content -->
+        <!-- Image -->
+        <div
+                class="box-border relative w-full max-w-md px-4 mt-10 mb-4 text-center bg-no-repeat bg-contain border-solid md:mt-0 md:max-w-none lg:mb-0 md:w-1/2">
+            <img src="../images/inertia-tensor.jpeg" class="pl-4 sm:pr-10 xl:pl-10 lg:pr-32">
+        </div>
+        <div class="box-border w-full text-black border-solid md:w-1/2 md:pl-1 xl:pl-1">
+            <h2 class="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
+                Portfolio
+            </h2>
+            <p class="pt-4 pb-8 m-0 leading-7 text-gray-700 border-0 border-gray-300 sm:pr-10 lg:text-lg">
+                
+            </p>
+            <ul class="p-0 m-0 leading-6 border-0 border-gray-300">
+                <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">
+                        <span
+                                class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-blue-500 rounded-full"><span
+                                class="text-sm font-bold">✓</span></span> 
+                                <a href="https://ipho-unofficial.org/countries/SGP/individual" class="font-bold text-blue-600" target="_blank">
+                                International Physics Olympiad (IPhO) 2021 
+                                </a>
+                                Silver Medallist
+
+                <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">
+                        <span
+                                class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-blue-500 rounded-full"><span
+                                class="text-sm font-bold">✓</span></span> 
+                                <a class='font-bold text-blue-600' href="https://wwwdontmesswith6a.blogspot.com/2021/01/singapore-physics-olympiad-2020-results.html" target="_blank">
+                                Singapore Physics Olympiad (SPhO) 2020
+                                </a>
+                                 Gold Medallist and Top in Experiment
+
+                <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">
+                        <span
+                                class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-blue-500 rounded-full"><span
+                                class="text-sm font-bold">✓</span></span> 
+                                <a class='font-bold text-blue-600' href="https://drive.google.com/file/d/1WO6GKle81BTEuPT76DwdXmPXKAOdkbhZ/view?usp=sharing" target="_blank">
+                                A-Level 
+                                </a>
+                                H2 and H3 Physics Distinctions
+                <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">
+                        <span
+                                class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-blue-500 rounded-full"><span
+                                class="text-sm font-bold">✓</span></span> 
+                                <a class='font-bold text-blue-600' href="https://www.physics.nus.edu.sg/tan-chienhao/" target="_blank">
+                                Singapore Science and Engineering Fair (SSEF) 
+                                </a>
+                                Gold Medallist
+
+                <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">
+                        <span
+                                class="inline-flex items-center justify-center w-6 h-6 mr-2 text-white bg-blue-500 rounded-full"><span
+                                class="text-sm font-bold">✓</span></span> 
+                                International Conference of Young Scientists (ICYS) Silver Medallist for researching 
+                                <a class='font-bold text-blue-600' target="_blank" href="https://link.springer.com/chapter/10.1007/978-981-16-9869-9_5">
+                                Topological Condensed Matter Physics</a>
+
+            </ul>
+        </div>
+        <!-- End  Content -->
+
+
+    </div>
+</section>
+
+<section id='resources' class="w-full bg-white pt-10 pb-7 md:pt-20 md:pb-24">
+    <div
+            class="box-border flex flex-col items-center content-center px-8 mx-auto mt-2 leading-6 text-black border-0 border-gray-300 border-solid md:mt-20 xl:mt-0 md:flex-row max-w-7xl lg:px-16">
+        <!-- Content -->
+        <div class="box-border w-full text-black border-solid md:w-1/2 md:pl-6 xl:pl-32">
+            <h2 class="m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
+                Resources
+            </h2>
+            <p class="pt-4 pb-1 m-0 leading-7 text-gray-700 border-0 border-gray-300 sm:pr-10 lg:text-lg">
+                Happy Learning!
+            </p>
+            <!-- <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">Coding</li>
+            <a class='font-bold text-blue-600' href='http://www.tchlabs.net/resources/NOIRef.html'>Competitive
+                Programming Reference (for
+                NOI)</a><br>
+            <a class='font-bold text-blue-600'
+               href='https://www.youtube.com/playlist?list=PLJJWhYFYCpOIi2KM2DZsuNMPKbjLyulo6'>Python Tutorials</a> -->
+            <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">Notes</li>
+            <span class="text-gray-600">Might not be updated, give me a poke if I forget!</span><br>
+            <a class='font-bold text-blue-600' href='https://bit.ly/3DCDVPI' target="_blank">SPhO Ten Year Series</a><br>
+            <a class='font-bold text-blue-600' href='https://drive.google.com/drive/folders/1IlQiDa0ApNgJvU7jcURz2633W613zzwD?usp=drive_link' target="_blank">My SJPO (Sec 1) Class Notes</a><br>
+            <a class='font-bold text-blue-600' href='./SJPO.pdf' target="_blank">My SJPO (Sec 3) Class Notes</a><br>
+            <a class='font-bold text-blue-600' href='https://drive.google.com/drive/folders/1qu1SACoEciImdA_8EfOmZF1yUax7oLWJ?usp=drive_link' target="_blank">My IPhO Class Notes</a>
+            <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">Videos</li>
+            
+            
+            <a class='font-bold text-blue-600'
+               href='https://www.youtube.com/playlist?list=PLJJWhYFYCpOK5n_iipomt_mA1a9PyB0sj' target="_blank">SJPO Series</a><br>
+
+            <a class='font-bold text-blue-600'
+            href='https://www.youtube.com/@tch1001' target="_blank">H3 Physics Channel</a><br>
+            
+         <a class='font-bold text-blue-600'
+            href='https://www.youtube.com/playlist?list=PLJJWhYFYCpOIoFoTSkAo7a0foENvkIJGl' target="_blank">University Physics
+             Videos</a><br>
+         <a class='font-bold text-blue-600'
+            href='https://www.youtube.com/playlist?list=PLJJWhYFYCpOIhw2tn79DNM8wAC_AxFXbC' target="_blank">High School Physics
+             Videos</a><br>
+             <a class='font-bold text-blue-600'
+            href='https://www.youtube.com/playlist?list=PLJJWhYFYCpOLS2N4qY1ObFAFJJQoiwGDF' target="_blank">Quantum Field Theory
+             Problems</a><br>
+            <li class="box-border relative py-1 pl-0 text-left text-gray-600 border-solid">Math</li>
+            <a class='font-bold text-blue-600'
+               href='https://www.youtube.com/playlist?list=PLJJWhYFYCpOJz6p3p7TKFyGMwHkW7R32X' target="_blank">Math Videos</a><br>
+            <a class="font-bold text-blue-600" href="https://www.youtube.com/playlist?list=PLJJWhYFYCpOKrWSaGk7_IVfnQVD2f291A" target="_blank">H2 Vectors Series</a><br>
+            
+            <h2 id='contact'
+                class="pt-8 pb-4 m-0 text-xl font-semibold leading-tight border-0 border-gray-300 lg:text-3xl md:text-2xl">
+                Contact Me!
+            </h2>
+
+            <div class="text-gray-600">
+                <a class='font-bold text-blue-600' href="https://wa.me/6593221246">WeChat/WhatsApp</a>:
+                +65 93221246<br>
+                <a class='font-bold text-blue-600' href="mailto:tanchienhao@gmail.com">Email</a>:
+                tanchienhao@gmail.com<br>
+                <a class='font-bold text-blue-600' href="https://www.youtube.com/tanchienhao">Youtube</a>:
+                Tchsurvives<br>
+                <a class='font-bold text-blue-600' href="https://t.me/tch1001">Telegram</a>: @tch1001<br>
+                <a class='font-bold text-blue-600'
+                   href="https://www.linkedin.com/in/tan-chien-hao-49abb1185/">LinkedIn</a>: Tan Chien Hao<br>
+                <a class='font-bold text-blue-600' href="https://www.instagram.com/tch1001/">Instagram</a>: @tch1001
+                <br> <br>
+            </div>
+
+        </div>
+        <!-- End  Content -->
+
+        <!-- Image -->
+        <div
+                class="box-border relative w-full max-w-md px-4 mt-10 mb-4 text-center bg-no-repeat bg-contain border-solid md:mt-0 md:max-w-none lg:mb-0 md:w-1/2">
+            <img src="../images/tesla-coil.jpg" class="pl-4 sm:pr-10 xl:pl-10 lg:pr-32">
+        </div>
+    </div>
+</section>
+</body>
+
+</html>
