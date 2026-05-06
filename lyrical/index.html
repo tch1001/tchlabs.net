@@ -495,6 +495,54 @@
             background: #2a2a3a;
             transform: none;
         }
+        .recent .translation-badge {
+            font-size: 0.75rem;
+            color: #6effd1;
+            margin-left: 6px;
+        }
+
+        .translate-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #a4a4b8;
+            font-size: 0.95rem;
+            padding: 0 4px;
+        }
+        .translate-row input[type="checkbox"] {
+            accent-color: #6e8bff;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+        .translate-row label { cursor: pointer; }
+
+        .slide-text.bilingual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4vw;
+            font-size: clamp(1.2rem, 3.4vw, 2.8rem);
+            text-align: left;
+            width: 100%;
+        }
+        .slide-text.bilingual .lang-col span { display: block; }
+        .slide-text.bilingual .lang-col.original { text-align: right; }
+        .slide-text.bilingual .lang-col.translated {
+            text-align: left;
+            color: #c4c4d6;
+            font-weight: 500;
+        }
+        .slideshow.no-translation .slide-text.bilingual {
+            grid-template-columns: 1fr;
+            text-align: center;
+            font-size: clamp(1.8rem, 5.5vw, 4.5rem);
+        }
+        .slideshow.no-translation .slide-text.bilingual .lang-col.original {
+            text-align: center;
+        }
+        .slideshow.no-translation .slide-text.bilingual .lang-col.translated {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -523,6 +571,10 @@
                 Lines per slide
                 <input id="lines-per-slide" type="number" min="1" max="20" value="4">
             </label>
+            <div class="translate-row">
+                <input type="checkbox" id="translate-checkbox">
+                <label for="translate-checkbox">Translate to English (side-by-side)</label>
+            </div>
             <button type="submit" id="submit-btn">Generate Slideshow</button>
         </form>
 
@@ -556,6 +608,7 @@
             <button id="prev-btn">← Prev</button>
             <button id="autoplay-btn">▶ Auto</button>
             <button id="next-btn">Next →</button>
+            <button id="translate-btn" class="hidden">🌐 Hide Translation</button>
             <button id="exit-btn">Exit</button>
         </div>
     </div>
@@ -585,13 +638,21 @@
         if (!song) return;
 
         const btn = $('submit-btn');
+        const wantTranslate = $('translate-checkbox').checked;
         btn.disabled = true;
         btn.textContent = 'Searching…';
         setStatus('Looking up the song…');
 
         try {
             const result = await fetchLyrics(song, artist);
-            startSlideshow(result.title, result.artist, result.lyrics);
+            let translation = null;
+            if (wantTranslate) {
+                btn.textContent = 'Translating…';
+                setStatus('Translating to English…');
+                translation = await translateLyrics(result.lyrics);
+                cacheSet({ ...result, translation, queryTitle: song, queryArtist: artist });
+            }
+            startSlideshow(result.title, result.artist, result.lyrics, translation);
         } catch (err) {
             setStatus(err.message || 'Could not find lyrics. Try adding the artist, or paste them manually below.', true);
         } finally {
@@ -600,15 +661,26 @@
         }
     });
 
-    $('paste-go').addEventListener('click', () => {
+    $('paste-go').addEventListener('click', async () => {
         const title = $('paste-title').value.trim() || 'Untitled';
         const lyrics = $('paste-lyrics').value.trim();
         if (!lyrics) {
             setStatus('Paste some lyrics first.', true);
             return;
         }
-        cacheSet({ title, artist: '', lyrics });
-        startSlideshow(title, '', lyrics);
+        const wantTranslate = $('translate-checkbox').checked;
+        let translation = null;
+        if (wantTranslate) {
+            setStatus('Translating to English…');
+            try {
+                translation = await translateLyrics(lyrics);
+            } catch (err) {
+                setStatus(err.message || 'Translation failed.', true);
+                return;
+            }
+        }
+        cacheSet({ title, artist: '', lyrics, translation });
+        startSlideshow(title, '', lyrics, translation);
     });
 
     function setStatus(msg, isError = false) {
@@ -644,10 +716,12 @@
             if (entry.queryArtist || entry.queryTitle) {
                 keys.add(cacheKey(entry.queryArtist, entry.queryTitle || entry.title));
             }
+            const existing = c[cacheKey(entry.artist, entry.title)] || {};
             const stored = {
                 title: entry.title,
                 artist: entry.artist,
                 lyrics: entry.lyrics,
+                translation: entry.translation || existing.translation || null,
                 addedAt: Date.now(),
             };
             for (const k of keys) c[k] = stored;
@@ -708,8 +782,15 @@
                 artistSpan.textContent = ' — ' + entry.artist;
                 playBtn.appendChild(artistSpan);
             }
+            if (entry.translation) {
+                const badge = document.createElement('span');
+                badge.className = 'translation-badge';
+                badge.textContent = '🌐 EN';
+                badge.title = 'Translation cached';
+                playBtn.appendChild(badge);
+            }
             playBtn.addEventListener('click', () => {
-                startSlideshow(entry.title, entry.artist || '', entry.lyrics);
+                startSlideshow(entry.title, entry.artist || '', entry.lyrics, entry.translation || null);
             });
 
             const delBtn = document.createElement('button');
@@ -728,6 +809,60 @@
             li.appendChild(delBtn);
             list.appendChild(li);
         }
+    }
+
+    // ---- Translation (line-aligned, parallel, with host fallback) ----
+    const TRANSLATE_HOSTS = [
+        'https://translate.plausibility.cloud',
+        'https://lingva.lunar.icu',
+        'https://lingva.garudalinux.org',
+        'https://lingva.ml',
+    ];
+
+    async function translateOne(text) {
+        if (!text || !text.trim()) return '';
+        const encoded = encodeURIComponent(text);
+        for (const host of TRANSLATE_HOSTS) {
+            try {
+                const res = await fetch(`${host}/api/v1/auto/en/${encoded}`);
+                if (!res.ok) continue;
+                const data = await res.json();
+                if (data && typeof data.translation === 'string') {
+                    return data.translation;
+                }
+            } catch (_) { /* try next host */ }
+        }
+        return '';
+    }
+
+    async function translateLyrics(rawLyrics) {
+        const cleaned = cleanLyrics(rawLyrics);
+        const allLines = cleaned.split('\n').map(l => l.trim());
+        const out = new Array(allLines.length);
+        const concurrency = 6;
+        let idx = 0;
+        let anySuccess = false;
+        async function worker() {
+            while (idx < allLines.length) {
+                const i = idx++;
+                if (!allLines[i]) { out[i] = ''; continue; }
+                const t = await translateOne(allLines[i]);
+                if (t) anySuccess = true;
+                out[i] = t;
+            }
+        }
+        await Promise.all(Array.from({ length: concurrency }, worker));
+        if (!anySuccess) {
+            throw new Error('Translation service unreachable. Try again later.');
+        }
+        return out.join('\n');
+    }
+
+    function cleanLyrics(raw) {
+        return String(raw || '')
+            .replace(/\r\n/g, '\n')
+            .replace(/^Paroles de la chanson.*?\n/i, '')
+            .trim();
     }
 
     // ---- Lyrics lookup ----
@@ -789,18 +924,26 @@
         return Math.min(n, 20);
     }
 
-    function buildSlides(rawLyrics, linesPerSlide) {
-        // Normalise line endings, drop a leading "Paroles de…" header that lyrics.ovh sometimes returns.
-        const cleaned = rawLyrics
-            .replace(/\r\n/g, '\n')
-            .replace(/^Paroles de la chanson.*?\n/i, '')
-            .trim();
+    function buildSlides(rawLyrics, linesPerSlide, rawTranslation = null) {
+        const cleaned = cleanLyrics(rawLyrics);
+        const allLines = cleaned.split('\n').map(l => l.trim());
+        const allTrans = rawTranslation
+            ? rawTranslation.replace(/\r\n/g, '\n').split('\n').map(l => l.trim())
+            : null;
 
-        const lines = cleaned.split('\n').map(l => l.trim()).filter(Boolean);
+        const lines = [];
+        const trans = allTrans ? [] : null;
+        for (let i = 0; i < allLines.length; i++) {
+            if (!allLines[i]) continue;
+            lines.push(allLines[i]);
+            if (allTrans) trans.push(allTrans[i] || '');
+        }
 
         const slides = [];
         for (let i = 0; i < lines.length; i += linesPerSlide) {
-            slides.push(lines.slice(i, i + linesPerSlide));
+            const slide = { original: lines.slice(i, i + linesPerSlide) };
+            if (trans) slide.translated = trans.slice(i, i + linesPerSlide);
+            slides.push(slide);
         }
         return slides;
     }
@@ -810,25 +953,47 @@
     let current = 0;
     let autoplayId = null;
 
-    function startSlideshow(title, artist, rawLyrics) {
-        slides = buildSlides(rawLyrics, getLinesPerSlide());
+    function startSlideshow(title, artist, rawLyrics, translation = null) {
+        slides = buildSlides(rawLyrics, getLinesPerSlide(), translation);
         if (slides.length === 0) {
             setStatus('Lyrics looked empty after parsing. Try pasting them manually.', true);
             return;
         }
 
+        const hasTranslation = slides.some(s => s.translated);
         const container = $('slides-container');
         container.innerHTML = '';
-        slides.forEach((lines, i) => {
+        slides.forEach((slideData, i) => {
             const slide = document.createElement('div');
             slide.className = 'slide' + (i === 0 ? ' active' : '');
             const text = document.createElement('div');
-            text.className = 'slide-text';
-            for (const line of lines) {
-                const span = document.createElement('span');
-                span.textContent = line;
-                text.appendChild(span);
+            text.className = 'slide-text' + (slideData.translated ? ' bilingual' : '');
+
+            if (slideData.translated) {
+                const orig = document.createElement('div');
+                orig.className = 'lang-col original';
+                for (const line of slideData.original) {
+                    const span = document.createElement('span');
+                    span.textContent = line;
+                    orig.appendChild(span);
+                }
+                const tr = document.createElement('div');
+                tr.className = 'lang-col translated';
+                for (const line of slideData.translated) {
+                    const span = document.createElement('span');
+                    span.textContent = line;
+                    tr.appendChild(span);
+                }
+                text.appendChild(orig);
+                text.appendChild(tr);
+            } else {
+                for (const line of slideData.original) {
+                    const span = document.createElement('span');
+                    span.textContent = line;
+                    text.appendChild(span);
+                }
             }
+
             slide.appendChild(text);
             container.appendChild(slide);
         });
@@ -836,6 +1001,11 @@
         $('song-info').textContent = artist ? `${title} — ${artist}` : title;
         current = 0;
         updateProgress();
+
+        const translateBtn = $('translate-btn');
+        translateBtn.classList.toggle('hidden', !hasTranslation);
+        slideshow.classList.remove('no-translation');
+        translateBtn.textContent = '🌐 Hide Translation';
 
         setup.classList.add('hidden');
         slideshow.classList.remove('hidden');
@@ -888,6 +1058,11 @@
     $('prev-btn').addEventListener('click', (e) => { e.stopPropagation(); prev(); });
     $('autoplay-btn').addEventListener('click', (e) => { e.stopPropagation(); toggleAutoplay(); });
     $('exit-btn').addEventListener('click', (e) => { e.stopPropagation(); exitSlideshow(); });
+    $('translate-btn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        const hidden = slideshow.classList.toggle('no-translation');
+        $('translate-btn').textContent = hidden ? '🌐 Show Translation' : '🌐 Hide Translation';
+    });
 
     slideshow.addEventListener('click', () => next());
 
