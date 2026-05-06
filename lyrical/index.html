@@ -517,6 +517,33 @@
         }
         .translate-row label { cursor: pointer; }
 
+        .translate-quality {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding: 6px 4px 0;
+            color: #a4a4b8;
+            font-size: 0.88rem;
+        }
+        .translate-quality label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .translate-quality input[type="radio"] {
+            accent-color: #6e8bff;
+            cursor: pointer;
+            width: 14px;
+            height: 14px;
+        }
+        .translate-quality .hint {
+            color: #6a6a80;
+            font-size: 0.78rem;
+            margin-left: 22px;
+            line-height: 1.4;
+        }
+
         .slide-text.bilingual {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -575,6 +602,17 @@
                 <input type="checkbox" id="translate-checkbox">
                 <label for="translate-checkbox">Translate to English (side-by-side)</label>
             </div>
+            <div class="translate-quality hidden" id="translate-quality">
+                <label>
+                    <input type="radio" name="translate-mode" value="online" checked>
+                    Online (fast, ~Google Translate quality)
+                </label>
+                <label>
+                    <input type="radio" name="translate-mode" value="local">
+                    Local AI (better — Chinese / Japanese / Korean)
+                </label>
+                <span class="hint">First use downloads ~500&nbsp;MB (NLLB-200 model). Runs entirely in your browser; cached for next time.</span>
+            </div>
             <button type="submit" id="submit-btn">Generate Slideshow</button>
         </form>
 
@@ -626,6 +664,29 @@
         $('paste-section').classList.toggle('hidden');
     });
 
+    $('translate-checkbox').addEventListener('change', () => {
+        $('translate-quality').classList.toggle('hidden', !$('translate-checkbox').checked);
+    });
+
+    const TRANSLATE_MODE_KEY = 'lyrical:translate-mode:v1';
+    const savedMode = localStorage.getItem(TRANSLATE_MODE_KEY);
+    if (savedMode) {
+        const savedRadio = document.querySelector(`input[name="translate-mode"][value="${savedMode}"]`);
+        if (savedRadio) savedRadio.checked = true;
+    }
+    document.querySelectorAll('input[name="translate-mode"]').forEach(r => {
+        r.addEventListener('change', () => {
+            if (r.checked) {
+                try { localStorage.setItem(TRANSLATE_MODE_KEY, r.value); } catch (_) {}
+            }
+        });
+    });
+
+    function getTranslateMode() {
+        const r = document.querySelector('input[name="translate-mode"]:checked');
+        return r ? r.value : 'online';
+    }
+
     $('party-toggle').addEventListener('click', (e) => {
         e.stopPropagation();
         document.body.classList.toggle('party');
@@ -647,9 +708,12 @@
             const result = await fetchLyrics(song, artist);
             let translation = null;
             if (wantTranslate) {
-                btn.textContent = 'Translating…';
-                setStatus('Translating to English…');
-                translation = await translateLyrics(result.lyrics);
+                const mode = getTranslateMode();
+                btn.textContent = mode === 'local' ? 'Translating (local)…' : 'Translating…';
+                setStatus(mode === 'local' ? 'Preparing local translation…' : 'Translating to English…');
+                translation = mode === 'local'
+                    ? await translateLyricsLocal(result.lyrics)
+                    : await translateLyrics(result.lyrics);
                 cacheSet({ ...result, translation, queryTitle: song, queryArtist: artist });
             }
             startSlideshow(result.title, result.artist, result.lyrics, translation);
@@ -671,9 +735,12 @@
         const wantTranslate = $('translate-checkbox').checked;
         let translation = null;
         if (wantTranslate) {
-            setStatus('Translating to English…');
+            const mode = getTranslateMode();
+            setStatus(mode === 'local' ? 'Preparing local translation…' : 'Translating to English…');
             try {
-                translation = await translateLyrics(lyrics);
+                translation = mode === 'local'
+                    ? await translateLyricsLocal(lyrics)
+                    : await translateLyrics(lyrics);
             } catch (err) {
                 setStatus(err.message || 'Translation failed.', true);
                 return;
@@ -811,44 +878,94 @@
         }
     }
 
-    // ---- Translation (line-aligned, parallel, with host fallback) ----
+    // ---- Translation (batched for context, line-aligned, host fallback) ----
     const TRANSLATE_HOSTS = [
         'https://translate.plausibility.cloud',
         'https://lingva.lunar.icu',
         'https://lingva.garudalinux.org',
         'https://lingva.ml',
     ];
+    const BATCH_LINES = 4;
 
-    async function translateOne(text) {
-        if (!text || !text.trim()) return '';
+    function detectSourceLang(text) {
+        if (/[぀-ヿ]/.test(text)) return 'ja';      // Hiragana / Katakana
+        if (/[가-힯]/.test(text)) return 'ko';      // Hangul
+        if (/[㐀-鿿豈-﫿]/.test(text)) return 'zh'; // CJK Unified Ideographs
+        return 'auto';
+    }
+
+    async function translateRequest(text, sourceLang) {
+        if (!text || !text.trim()) return null;
         const encoded = encodeURIComponent(text);
         for (const host of TRANSLATE_HOSTS) {
             try {
-                const res = await fetch(`${host}/api/v1/auto/en/${encoded}`);
+                const res = await fetch(`${host}/api/v1/${sourceLang}/en/${encoded}`);
                 if (!res.ok) continue;
                 const data = await res.json();
-                if (data && typeof data.translation === 'string') {
+                if (data && typeof data.translation === 'string' && data.translation.trim()) {
                     return data.translation;
                 }
             } catch (_) { /* try next host */ }
         }
-        return '';
+        // MyMemory fallback (limited to ~500 chars per request).
+        try {
+            const sl = sourceLang === 'auto' ? 'Autodetect' : sourceLang;
+            const url = `https://api.mymemory.translated.net/get?q=${encoded}&langpair=${sl}|en`;
+            const res = await fetch(url);
+            if (res.ok) {
+                const data = await res.json();
+                const t = data && data.responseData && data.responseData.translatedText;
+                if (t && typeof t === 'string' && t.trim()) return t;
+            }
+        } catch (_) { /* swallow */ }
+        return null;
+    }
+
+    async function translateLines(lines, sourceLang) {
+        // Batch consecutive lines to give the translator surrounding context,
+        // then split the result back into per-line slots.
+        const joined = lines.join('\n');
+        const result = await translateRequest(joined, sourceLang);
+        if (result) {
+            const parts = result.split('\n').map(s => s.trim());
+            if (parts.length === lines.length) return parts;
+        }
+        // Mismatch or failure — fall back to per-line so alignment is preserved.
+        const out = [];
+        for (const line of lines) {
+            out.push((await translateRequest(line, sourceLang)) || '');
+        }
+        return out;
     }
 
     async function translateLyrics(rawLyrics) {
         const cleaned = cleanLyrics(rawLyrics);
         const allLines = cleaned.split('\n').map(l => l.trim());
-        const out = new Array(allLines.length);
-        const concurrency = 6;
-        let idx = 0;
+        const sourceLang = detectSourceLang(cleaned);
+
+        // Group consecutive non-blank lines into batches; blanks pass through.
+        const batches = [];
+        let cur = null;
+        for (let i = 0; i < allLines.length; i++) {
+            if (!allLines[i]) { if (cur) { batches.push(cur); cur = null; } continue; }
+            if (!cur) cur = { startIdx: i, lines: [] };
+            cur.lines.push(allLines[i]);
+            if (cur.lines.length >= BATCH_LINES) { batches.push(cur); cur = null; }
+        }
+        if (cur) batches.push(cur);
+
+        const out = new Array(allLines.length).fill('');
+        let bIdx = 0;
         let anySuccess = false;
+        const concurrency = 4;
         async function worker() {
-            while (idx < allLines.length) {
-                const i = idx++;
-                if (!allLines[i]) { out[i] = ''; continue; }
-                const t = await translateOne(allLines[i]);
-                if (t) anySuccess = true;
-                out[i] = t;
+            while (bIdx < batches.length) {
+                const batch = batches[bIdx++];
+                const parts = await translateLines(batch.lines, sourceLang);
+                for (let j = 0; j < batch.lines.length; j++) {
+                    if (parts[j]) anySuccess = true;
+                    out[batch.startIdx + j] = parts[j] || '';
+                }
             }
         }
         await Promise.all(Array.from({ length: concurrency }, worker));
@@ -865,10 +982,159 @@
             .trim();
     }
 
+    // ---- Local AI translation (lazy: lib + ~500 MB model only loaded on demand) ----
+    const NLLB_LANG = {
+        zh: 'zho_Hans',
+        ja: 'jpn_Jpan',
+        ko: 'kor_Hang',
+    };
+    let _localTranslatorPromise = null;
+
+    function loadLocalTranslator() {
+        if (_localTranslatorPromise) return _localTranslatorPromise;
+        _localTranslatorPromise = (async () => {
+            setStatus('Loading translation engine…');
+            const { pipeline, env } = await import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.0.2');
+            env.allowLocalModels = false;
+            return await pipeline('translation', 'Xenova/nllb-200-distilled-600M', {
+                dtype: 'q8',
+                progress_callback: (data) => {
+                    if (data.status === 'progress' && data.total) {
+                        const pct = Math.round((data.loaded / data.total) * 100);
+                        const file = (data.file || '').split('/').pop();
+                        setStatus(`Downloading translation model (${file}): ${pct}%`);
+                    }
+                },
+            });
+        })();
+        // Reset on failure so the user can retry.
+        _localTranslatorPromise.catch(() => { _localTranslatorPromise = null; });
+        return _localTranslatorPromise;
+    }
+
+    async function translateLyricsLocal(rawLyrics) {
+        const cleaned = cleanLyrics(rawLyrics);
+        const allLines = cleaned.split('\n').map(l => l.trim());
+        const sourceLang = detectSourceLang(cleaned);
+        const srcCode = NLLB_LANG[sourceLang];
+        if (!srcCode) {
+            setStatus('Local AI supports Chinese / Japanese / Korean — using online fallback.');
+            return translateLyrics(rawLyrics);
+        }
+
+        let translator;
+        try {
+            translator = await loadLocalTranslator();
+        } catch (err) {
+            console.error('Local translator load failed:', err);
+            setStatus('Local model failed to load — using online translation.');
+            return translateLyrics(rawLyrics);
+        }
+
+        const indices = [];
+        const lines = [];
+        for (let i = 0; i < allLines.length; i++) {
+            if (allLines[i]) { indices.push(i); lines.push(allLines[i]); }
+        }
+
+        const out = new Array(allLines.length).fill('');
+        const BATCH = 8;
+        for (let start = 0; start < lines.length; start += BATCH) {
+            const chunk = lines.slice(start, start + BATCH);
+            setStatus(`Translating locally… ${Math.min(start + chunk.length, lines.length)}/${lines.length}`);
+            try {
+                const result = await translator(chunk, {
+                    src_lang: srcCode,
+                    tgt_lang: 'eng_Latn',
+                });
+                const arr = Array.isArray(result) ? result : [result];
+                for (let j = 0; j < chunk.length; j++) {
+                    out[indices[start + j]] = (arr[j] && arr[j].translation_text) || '';
+                }
+            } catch (err) {
+                // Per-line fallback for this chunk so a single bad line doesn't kill the rest.
+                for (let j = 0; j < chunk.length; j++) {
+                    try {
+                        const r = await translator(chunk[j], { src_lang: srcCode, tgt_lang: 'eng_Latn' });
+                        const item = Array.isArray(r) ? r[0] : r;
+                        out[indices[start + j]] = (item && item.translation_text) || '';
+                    } catch (_) { /* leave blank */ }
+                }
+            }
+        }
+        return out.join('\n');
+    }
+
     // ---- Lyrics lookup ----
+    const CJK_RE = /[㐀-鿿豈-﫿가-힯぀-ヿ]/;
+
+    async function fetchFromLrclibGet(artist, title) {
+        try {
+            const url = `https://lrclib.net/api/get?artist_name=${encodeURIComponent(artist)}&track_name=${encodeURIComponent(title)}`;
+            const res = await fetch(url);
+            if (!res.ok) return null;
+            const data = await res.json();
+            if (data && data.plainLyrics && data.plainLyrics.trim()) {
+                return {
+                    title: data.trackName || title,
+                    artist: data.artistName || artist,
+                    lyrics: data.plainLyrics,
+                };
+            }
+        } catch (_) { /* swallow */ }
+        return null;
+    }
+
+    async function fetchFromLrclibSearch(query) {
+        if (!query || !query.trim()) return null;
+        try {
+            const url = `https://lrclib.net/api/search?q=${encodeURIComponent(query)}`;
+            const res = await fetch(url);
+            if (!res.ok) return null;
+            const arr = await res.json();
+            if (!Array.isArray(arr)) return null;
+            const hit = arr.find(x => x && x.plainLyrics && x.plainLyrics.trim());
+            if (hit) {
+                return {
+                    title: hit.trackName,
+                    artist: hit.artistName || '',
+                    lyrics: hit.plainLyrics,
+                };
+            }
+        } catch (_) { /* swallow */ }
+        return null;
+    }
+
+    async function fetchFromLyricsOvh(artist, title) {
+        try {
+            const url = `https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)}`;
+            const res = await fetch(url);
+            if (!res.ok) return null;
+            const data = await res.json();
+            if (data && data.lyrics && data.lyrics.trim()) {
+                return { title, artist, lyrics: data.lyrics };
+            }
+        } catch (_) { /* swallow */ }
+        return null;
+    }
+
     async function fetchLyrics(song, artistHint) {
         let artist = artistHint;
         let title = song;
+        const isCJK = CJK_RE.test(song + ' ' + (artistHint || ''));
+        const combinedQuery = artistHint ? `${song} ${artistHint}` : song;
+
+        const save = (result) => {
+            cacheSet({ ...result, queryTitle: song, queryArtist: artistHint });
+            return result;
+        };
+
+        // For CJK queries, LRCLib's search handles them well — try it before iTunes
+        // (which has an English-biased catalogue and tends to mis-resolve artist names).
+        if (isCJK) {
+            const r = await fetchFromLrclibSearch(combinedQuery);
+            if (r) return save(r);
+        }
 
         // If user didn't supply an artist, try iTunes Search to resolve one.
         if (!artist) {
@@ -885,21 +1151,16 @@
             } catch (_) { /* fall through */ }
         }
 
-        // If we have an artist, try lyrics.ovh.
+        // With an artist, try LRCLib (broad catalogue) then lyrics.ovh.
         if (artist) {
-            try {
-                const url = `https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)}`;
-                const res = await fetch(url);
-                if (res.ok) {
-                    const data = await res.json();
-                    if (data.lyrics && data.lyrics.trim()) {
-                        const result = { title, artist, lyrics: data.lyrics };
-                        cacheSet({ ...result, queryTitle: song, queryArtist: artistHint });
-                        return result;
-                    }
-                }
-            } catch (_) { /* network error — fall through to cache */ }
+            const r = (await fetchFromLrclibGet(artist, title))
+                   || (await fetchFromLyricsOvh(artist, title));
+            if (r) return save(r);
         }
+
+        // Last-resort generic search (helps when artist resolution fails).
+        const r = await fetchFromLrclibSearch(combinedQuery);
+        if (r) return save(r);
 
         // Fall back to cache: try the resolved artist+title, then user-typed values.
         const cached =
