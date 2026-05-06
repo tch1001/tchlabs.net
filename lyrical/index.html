@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Lyrical — TCH Labs">
+    <meta property="og:description" content="Type a song name. Get a lyrics slideshow.">
+    <meta property="og:url" content="http://www.tchlabs.net/lyrical/">
+    <meta property="og:type" content="website">
+    <title>Lyrical — TCH Labs</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #0b0b14;
+            color: #f4f4f7;
+            overflow: hidden;
+        }
+
+        a { color: #8ab4ff; }
+
+        #app {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ----- Setup screen ----- */
+        .setup {
+            width: 100%;
+            max-width: 560px;
+            padding: 40px 28px;
+            text-align: center;
+        }
+
+        .setup h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ff6ec7, #6e8bff, #6effd1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .setup p.tagline {
+            color: #a4a4b8;
+            margin-bottom: 32px;
+            font-size: 1rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            background: #15151f;
+            border: 1px solid #2a2a3a;
+            color: #f4f4f7;
+            padding: 14px 16px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 120ms ease;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+            border-color: #6e8bff;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        button {
+            background: linear-gradient(135deg, #6e8bff, #ff6ec7);
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 120ms ease, opacity 120ms ease;
+        }
+
+        button:hover { transform: translateY(-1px); }
+        button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+        button.secondary {
+            background: #15151f;
+            border: 1px solid #2a2a3a;
+            color: #d0d0dc;
+        }
+
+        .row {
+            display: flex;
+            gap: 12px;
+        }
+        .row > * { flex: 1; }
+
+        .lines-per-slide {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            color: #a4a4b8;
+            font-size: 0.95rem;
+            padding: 0 4px;
+        }
+        .lines-per-slide input {
+            width: 80px;
+            text-align: center;
+        }
+
+        .toggle {
+            display: inline-block;
+            margin-top: 18px;
+            color: #8ab4ff;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-decoration: underline;
+        }
+
+        .status {
+            margin-top: 18px;
+            min-height: 1.2em;
+            color: #a4a4b8;
+            font-size: 0.95rem;
+        }
+        .status.error { color: #ff8a8a; }
+
+        .hidden { display: none !important; }
+
+        .home-link {
+            position: absolute;
+            top: 18px;
+            left: 22px;
+            color: #8ab4ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        .home-link:hover { opacity: 1; }
+
+        /* ----- Slideshow ----- */
+        .slideshow {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8vh 8vw;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 600ms ease;
+            pointer-events: none;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide-text {
+            font-size: clamp(1.8rem, 5.5vw, 4.5rem);
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+            max-width: 1100px;
+        }
+
+        .slide-text span {
+            display: block;
+        }
+
+        .bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: linear-gradient(135deg, #1a0b2e, #0b0b14, #0e1a2e);
+            background-size: 300% 300%;
+            animation: drift 20s ease infinite;
+        }
+
+        @keyframes drift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .controls {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            background: rgba(15, 15, 25, 0.7);
+            backdrop-filter: blur(8px);
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid #2a2a3a;
+            font-size: 0.85rem;
+            color: #d0d0dc;
+            opacity: 0.85;
+        }
+
+        .controls button {
+            background: transparent;
+            color: #d0d0dc;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+        }
+
+        .controls button:hover { background: #2a2a3a; }
+
+        .progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6ec7, #6e8bff);
+            transition: width 200ms linear;
+        }
+
+        .song-info {
+            position: fixed;
+            top: 18px;
+            right: 22px;
+            font-size: 0.85rem;
+            color: #a4a4b8;
+            text-align: right;
+        }
+
+        kbd {
+            background: #2a2a3a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+
+    <!-- Setup screen -->
+    <div class="setup" id="setup">
+        <h1>Lyrical</h1>
+        <p class="tagline">Type a song name. Get a lyrics slideshow.</p>
+
+        <form id="song-form" autocomplete="off">
+            <input id="song-input" type="text" placeholder="Song name (e.g. Bohemian Rhapsody)" required>
+            <input id="artist-input" type="text" placeholder="Artist (optional, helps accuracy)">
+            <label class="lines-per-slide">
+                Lines per slide
+                <input id="lines-per-slide" type="number" min="1" max="20" value="4">
+            </label>
+            <button type="submit" id="submit-btn">Generate Slideshow</button>
+        </form>
+
+        <span class="toggle" id="paste-toggle">Or paste lyrics manually</span>
+
+        <div id="paste-section" class="hidden" style="margin-top: 14px;">
+            <input id="paste-title" type="text" placeholder="Title (shown in corner)">
+            <textarea id="paste-lyrics" placeholder="Paste lyrics here. Separate stanzas with a blank line."></textarea>
+            <button type="button" id="paste-go" style="margin-top: 10px;">Start Slideshow</button>
+        </div>
+
+        <div class="status" id="status"></div>
+
+        <p style="margin-top: 28px; font-size: 0.8rem; color: #6a6a80;">
+            Tip: <kbd>Space</kbd> / <kbd>→</kbd> next · <kbd>←</kbd> back · <kbd>Esc</kbd> exit
+        </p>
+    </div>
+
+    <!-- Slideshow screen -->
+    <div class="slideshow hidden" id="slideshow">
+        <div class="bg"></div>
+        <div class="progress" id="progress" style="width: 0%"></div>
+        <div class="song-info" id="song-info"></div>
+        <div id="slides-container"></div>
+        <div class="controls">
+            <button id="prev-btn">← Prev</button>
+            <button id="autoplay-btn">▶ Auto</button>
+            <button id="next-btn">Next →</button>
+            <button id="exit-btn">Exit</button>
+        </div>
+    </div>
+</div>
+
+<script>
+(() => {
+    const $ = (id) => document.getElementById(id);
+    const setup = $('setup');
+    const slideshow = $('slideshow');
+    const status = $('status');
+
+    // ---- Setup interactions ----
+    $('paste-toggle').addEventListener('click', () => {
+        $('paste-section').classList.toggle('hidden');
+    });
+
+    $('song-form').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const song = $('song-input').value.trim();
+        const artist = $('artist-input').value.trim();
+        if (!song) return;
+
+        const btn = $('submit-btn');
+        btn.disabled = true;
+        btn.textContent = 'Searching…';
+        setStatus('Looking up the song…');
+
+        try {
+            const result = await fetchLyrics(song, artist);
+            startSlideshow(result.title, result.artist, result.lyrics);
+        } catch (err) {
+            setStatus(err.message || 'Could not find lyrics. Try adding the artist, or paste them manually below.', true);
+        } finally {
+            btn.disabled = false;
+            btn.textContent = 'Generate Slideshow';
+        }
+    });
+
+    $('paste-go').addEventListener('click', () => {
+        const title = $('paste-title').value.trim() || 'Untitled';
+        const lyrics = $('paste-lyrics').value.trim();
+        if (!lyrics) {
+            setStatus('Paste some lyrics first.', true);
+            return;
+        }
+        startSlideshow(title, '', lyrics);
+    });
+
+    function setStatus(msg, isError = false) {
+        status.textContent = msg;
+        status.classList.toggle('error', isError);
+    }
+
+    // ---- Lyrics lookup ----
+    async function fetchLyrics(song, artistHint) {
+        let artist = artistHint;
+        let title = song;
+
+        // If user didn't supply an artist, try iTunes Search to resolve one.
+        if (!artist) {
+            try {
+                const q = encodeURIComponent(song);
+                const res = await fetch(`https://itunes.apple.com/search?term=${q}&entity=song&limit=1`);
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.results && data.results.length > 0) {
+                        artist = data.results[0].artistName;
+                        title = data.results[0].trackName;
+                    }
+                }
+            } catch (_) { /* fall through */ }
+        }
+
+        if (!artist) {
+            throw new Error('Could not auto-detect the artist. Please fill in the Artist field.');
+        }
+
+        // lyrics.ovh
+        const url = `https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)}`;
+        const res = await fetch(url);
+        if (!res.ok) {
+            throw new Error(`No lyrics found for "${title}" by ${artist}. Try a different spelling, or paste them manually.`);
+        }
+        const data = await res.json();
+        if (!data.lyrics || !data.lyrics.trim()) {
+            throw new Error(`No lyrics found for "${title}" by ${artist}. Try a different spelling, or paste them manually.`);
+        }
+        return { title, artist, lyrics: data.lyrics };
+    }
+
+    // ---- Slide building ----
+    function getLinesPerSlide() {
+        const n = parseInt($('lines-per-slide').value, 10);
+        if (!Number.isFinite(n) || n < 1) return 4;
+        return Math.min(n, 20);
+    }
+
+    function buildSlides(rawLyrics, linesPerSlide) {
+        // Normalise line endings, drop a leading "Paroles de…" header that lyrics.ovh sometimes returns.
+        const cleaned = rawLyrics
+            .replace(/\r\n/g, '\n')
+            .replace(/^Paroles de la chanson.*?\n/i, '')
+            .trim();
+
+        const lines = cleaned.split('\n').map(l => l.trim()).filter(Boolean);
+
+        const slides = [];
+        for (let i = 0; i < lines.length; i += linesPerSlide) {
+            slides.push(lines.slice(i, i + linesPerSlide));
+        }
+        return slides;
+    }
+
+    // ---- Slideshow state ----
+    let slides = [];
+    let current = 0;
+    let autoplayId = null;
+
+    function startSlideshow(title, artist, rawLyrics) {
+        slides = buildSlides(rawLyrics, getLinesPerSlide());
+        if (slides.length === 0) {
+            setStatus('Lyrics looked empty after parsing. Try pasting them manually.', true);
+            return;
+        }
+
+        const container = $('slides-container');
+        container.innerHTML = '';
+        slides.forEach((lines, i) => {
+            const slide = document.createElement('div');
+            slide.className = 'slide' + (i === 0 ? ' active' : '');
+            const text = document.createElement('div');
+            text.className = 'slide-text';
+            for (const line of lines) {
+                const span = document.createElement('span');
+                span.textContent = line;
+                text.appendChild(span);
+            }
+            slide.appendChild(text);
+            container.appendChild(slide);
+        });
+
+        $('song-info').textContent = artist ? `${title} — ${artist}` : title;
+        current = 0;
+        updateProgress();
+
+        setup.classList.add('hidden');
+        slideshow.classList.remove('hidden');
+    }
+
+    function showSlide(idx) {
+        if (idx < 0 || idx >= slides.length) return;
+        const all = document.querySelectorAll('.slide');
+        all[current].classList.remove('active');
+        current = idx;
+        all[current].classList.add('active');
+        updateProgress();
+    }
+
+    function updateProgress() {
+        const pct = slides.length <= 1 ? 100 : (current / (slides.length - 1)) * 100;
+        $('progress').style.width = pct + '%';
+    }
+
+    function next() { if (current < slides.length - 1) showSlide(current + 1); else stopAutoplay(); }
+    function prev() { showSlide(current - 1); }
+
+    function toggleAutoplay() {
+        const btn = $('autoplay-btn');
+        if (autoplayId) {
+            stopAutoplay();
+        } else {
+            autoplayId = setInterval(next, 3500);
+            btn.textContent = '⏸ Pause';
+        }
+    }
+
+    function stopAutoplay() {
+        if (autoplayId) {
+            clearInterval(autoplayId);
+            autoplayId = null;
+            $('autoplay-btn').textContent = '▶ Auto';
+        }
+    }
+
+    function exitSlideshow() {
+        stopAutoplay();
+        slideshow.classList.add('hidden');
+        setup.classList.remove('hidden');
+        setStatus('');
+    }
+
+    // ---- Slideshow controls ----
+    $('next-btn').addEventListener('click', (e) => { e.stopPropagation(); next(); });
+    $('prev-btn').addEventListener('click', (e) => { e.stopPropagation(); prev(); });
+    $('autoplay-btn').addEventListener('click', (e) => { e.stopPropagation(); toggleAutoplay(); });
+    $('exit-btn').addEventListener('click', (e) => { e.stopPropagation(); exitSlideshow(); });
+
+    slideshow.addEventListener('click', () => next());
+
+    document.addEventListener('keydown', (e) => {
+        if (slideshow.classList.contains('hidden')) return;
+        if (e.key === ' ' || e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+            e.preventDefault(); next();
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+            e.preventDefault(); prev();
+        } else if (e.key === 'Escape') {
+            exitSlideshow();
+        } else if (e.key.toLowerCase() === 'p') {
+            toggleAutoplay();
+        }
+    });
+})();
+</script>
+</body>
+</html>
