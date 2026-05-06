@@ -429,6 +429,72 @@
             font-size: 0.8rem;
             font-family: inherit;
         }
+
+        .recent {
+            margin-top: 28px;
+            text-align: left;
+        }
+        .recent h2 {
+            font-size: 0.8rem;
+            color: #a4a4b8;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding: 0 4px;
+        }
+        .recent ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            max-height: 240px;
+            overflow-y: auto;
+        }
+        .recent li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #15151f;
+            border: 1px solid #2a2a3a;
+            border-radius: 10px;
+            padding: 4px 4px 4px 0;
+            transition: border-color 120ms ease;
+        }
+        .recent li:hover { border-color: #6e8bff; }
+        .recent .play-btn {
+            flex: 1;
+            background: transparent;
+            color: #f4f4f7;
+            text-align: left;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 8px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .recent .play-btn:hover { transform: none; }
+        .recent .song-artist {
+            color: #a4a4b8;
+            font-weight: 400;
+            font-size: 0.85rem;
+        }
+        .recent .delete-btn {
+            background: transparent;
+            color: #6a6a80;
+            padding: 6px 10px;
+            font-size: 1.1rem;
+            line-height: 1;
+            border-radius: 6px;
+            font-weight: 400;
+        }
+        .recent .delete-btn:hover {
+            color: #ff8a8a;
+            background: #2a2a3a;
+            transform: none;
+        }
     </style>
 </head>
 <body>
@@ -469,6 +535,11 @@
         </div>
 
         <div class="status" id="status"></div>
+
+        <div class="recent hidden" id="recent-section">
+            <h2>Recent Songs</h2>
+            <ul id="recent-list"></ul>
+        </div>
 
         <p style="margin-top: 28px; font-size: 0.8rem; color: #6a6a80;">
             Tip: <kbd>Space</kbd> / <kbd>→</kbd> next · <kbd>←</kbd> back · <kbd>Esc</kbd> exit
@@ -573,9 +644,90 @@
             if (entry.queryArtist || entry.queryTitle) {
                 keys.add(cacheKey(entry.queryArtist, entry.queryTitle || entry.title));
             }
-            for (const k of keys) c[k] = { title: entry.title, artist: entry.artist, lyrics: entry.lyrics };
+            const stored = {
+                title: entry.title,
+                artist: entry.artist,
+                lyrics: entry.lyrics,
+                addedAt: Date.now(),
+            };
+            for (const k of keys) c[k] = stored;
             localStorage.setItem(CACHE_STORE, JSON.stringify(c));
         } catch (_) { /* quota / disabled */ }
+        renderRecent();
+    }
+
+    function listRecent() {
+        const c = loadCache();
+        const seen = new Map();
+        for (const v of Object.values(c)) {
+            if (!v || !v.title) continue;
+            const k = cacheKey(v.artist || '', v.title);
+            const existing = seen.get(k);
+            if (!existing || (v.addedAt || 0) > (existing.addedAt || 0)) {
+                seen.set(k, v);
+            }
+        }
+        return [...seen.values()].sort((a, b) => (b.addedAt || 0) - (a.addedAt || 0));
+    }
+
+    function deleteRecent(title, artist) {
+        try {
+            const c = loadCache();
+            const t = (title || '').trim().toLowerCase();
+            const a = (artist || '').trim().toLowerCase();
+            for (const k of Object.keys(c)) {
+                const v = c[k];
+                if (!v || (v.title || '').trim().toLowerCase() !== t) continue;
+                if ((v.artist || '').trim().toLowerCase() !== a) continue;
+                delete c[k];
+            }
+            localStorage.setItem(CACHE_STORE, JSON.stringify(c));
+        } catch (_) { /* disabled */ }
+    }
+
+    function renderRecent() {
+        const section = $('recent-section');
+        const list = $('recent-list');
+        const items = listRecent();
+        list.innerHTML = '';
+        if (items.length === 0) {
+            section.classList.add('hidden');
+            return;
+        }
+        section.classList.remove('hidden');
+        for (const entry of items) {
+            const li = document.createElement('li');
+
+            const playBtn = document.createElement('button');
+            playBtn.type = 'button';
+            playBtn.className = 'play-btn';
+            playBtn.textContent = entry.title;
+            if (entry.artist) {
+                const artistSpan = document.createElement('span');
+                artistSpan.className = 'song-artist';
+                artistSpan.textContent = ' — ' + entry.artist;
+                playBtn.appendChild(artistSpan);
+            }
+            playBtn.addEventListener('click', () => {
+                startSlideshow(entry.title, entry.artist || '', entry.lyrics);
+            });
+
+            const delBtn = document.createElement('button');
+            delBtn.type = 'button';
+            delBtn.className = 'delete-btn';
+            delBtn.textContent = '×';
+            delBtn.title = 'Remove from history';
+            delBtn.setAttribute('aria-label', `Remove ${entry.title} from history`);
+            delBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                deleteRecent(entry.title, entry.artist || '');
+                renderRecent();
+            });
+
+            li.appendChild(playBtn);
+            li.appendChild(delBtn);
+            list.appendChild(li);
+        }
     }
 
     // ---- Lyrics lookup ----
@@ -751,6 +903,8 @@
             toggleAutoplay();
         }
     });
+
+    renderRecent();
 })();
 </script>
 </body>
