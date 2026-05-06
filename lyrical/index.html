@@ -30,6 +30,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 8;
         }
 
         /* ----- Setup screen ----- */
@@ -145,16 +146,180 @@
 
         .hidden { display: none !important; }
 
-        .home-link {
-            position: absolute;
-            top: 18px;
-            left: 22px;
-            color: #8ab4ff;
-            text-decoration: none;
-            font-size: 0.9rem;
-            opacity: 0.7;
+        .party-toggle {
+            position: fixed;
+            top: 14px;
+            left: 16px;
+            z-index: 30;
+            background: rgba(15, 15, 25, 0.7);
+            border: 1px solid #2a2a3a;
+            color: #d0d0dc;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            backdrop-filter: blur(8px);
         }
-        .home-link:hover { opacity: 1; }
+        .party-toggle:hover { background: rgba(40, 40, 60, 0.8); }
+        body.party .party-toggle {
+            background: linear-gradient(135deg, #ff00ff, #00ffff);
+            color: #fff;
+            border-color: transparent;
+            box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+        }
+
+        /* ----- Party mode ----- */
+        .party-fx {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 5;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 300ms ease;
+        }
+        body.party .party-fx { opacity: 1; }
+
+        body.party .bg {
+            display: none;
+        }
+        body.party {
+            animation: party-bg 1.2s steps(1) infinite;
+        }
+        @keyframes party-bg {
+            0%   { background: #2a0040; }
+            14%  { background: #00284a; }
+            28%  { background: #003d1a; }
+            42%  { background: #4a3a00; }
+            56%  { background: #4a0020; }
+            70%  { background: #1a004a; }
+            84%  { background: #003a3a; }
+            100% { background: #2a0040; }
+        }
+
+        .disco-ball {
+            position: absolute;
+            top: -8vmin;
+            left: 50%;
+            width: 16vmin;
+            height: 16vmin;
+            margin-left: -8vmin;
+            border-radius: 50%;
+            background:
+                radial-gradient(circle at 35% 30%, #fff, #aaa 30%, #444 70%, #111),
+                conic-gradient(from 0deg, #fff, #888, #fff, #888, #fff, #888, #fff, #888);
+            background-blend-mode: overlay;
+            box-shadow: 0 0 40px rgba(255,255,255,0.6), inset -10px -10px 30px rgba(0,0,0,0.6);
+            animation: disco-spin 4s linear infinite;
+        }
+        .disco-ball::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background:
+                repeating-conic-gradient(#ffffff22 0deg 10deg, #00000044 10deg 20deg),
+                repeating-linear-gradient(0deg, #ffffff22 0 4px, #00000033 4px 8px);
+            mix-blend-mode: overlay;
+        }
+        @keyframes disco-spin {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }
+
+        .spotlight {
+            position: absolute;
+            top: -20vh;
+            width: 60vmax;
+            height: 140vh;
+            transform-origin: top center;
+            mix-blend-mode: screen;
+            filter: blur(2px);
+            opacity: 0.55;
+        }
+        .spotlight.s1 {
+            left: 10%;
+            background: linear-gradient(to bottom, rgba(255,0,200,0.55) 0%, rgba(255,0,200,0) 80%);
+            clip-path: polygon(48% 0, 52% 0, 90% 100%, 10% 100%);
+            animation: sweep1 4.5s ease-in-out infinite;
+        }
+        .spotlight.s2 {
+            right: 10%;
+            background: linear-gradient(to bottom, rgba(0,200,255,0.55) 0%, rgba(0,200,255,0) 80%);
+            clip-path: polygon(48% 0, 52% 0, 90% 100%, 10% 100%);
+            animation: sweep2 5.5s ease-in-out infinite;
+        }
+        .spotlight.s3 {
+            left: 40%;
+            background: linear-gradient(to bottom, rgba(255,255,0,0.5) 0%, rgba(255,255,0,0) 80%);
+            clip-path: polygon(48% 0, 52% 0, 90% 100%, 10% 100%);
+            animation: sweep3 3.8s ease-in-out infinite;
+        }
+        @keyframes sweep1 {
+            0%, 100% { transform: rotate(-35deg); }
+            50%      { transform: rotate(20deg); }
+        }
+        @keyframes sweep2 {
+            0%, 100% { transform: rotate(35deg); }
+            50%      { transform: rotate(-20deg); }
+        }
+        @keyframes sweep3 {
+            0%, 100% { transform: rotate(-15deg); }
+            50%      { transform: rotate(15deg); }
+        }
+
+        .laser {
+            position: absolute;
+            left: 50%;
+            top: 8vmin;
+            width: 2px;
+            height: 140vh;
+            transform-origin: top center;
+            mix-blend-mode: screen;
+            filter: drop-shadow(0 0 6px currentColor);
+        }
+        .laser::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: currentColor;
+            box-shadow: 0 0 8px currentColor, 0 0 16px currentColor;
+        }
+        .laser.l1 { color: #ff003c; animation: laser1 1.7s linear infinite; }
+        .laser.l2 { color: #00ff88; animation: laser2 2.1s linear infinite; }
+        .laser.l3 { color: #00d4ff; animation: laser3 1.3s linear infinite; }
+        .laser.l4 { color: #ff00ff; animation: laser4 1.9s linear infinite; }
+        @keyframes laser1 {
+            0%   { transform: rotate(-50deg); opacity: 1; }
+            50%  { transform: rotate(50deg); opacity: 1; }
+            51%  { opacity: 0; }
+            100% { transform: rotate(-50deg); opacity: 0; }
+        }
+        @keyframes laser2 {
+            0%   { transform: rotate(60deg); }
+            100% { transform: rotate(-60deg); }
+        }
+        @keyframes laser3 {
+            0%, 100% { transform: rotate(-70deg); }
+            50%      { transform: rotate(70deg); }
+        }
+        @keyframes laser4 {
+            0%   { transform: rotate(40deg); opacity: 0; }
+            10%  { opacity: 1; }
+            50%  { transform: rotate(-40deg); }
+            100% { transform: rotate(40deg); opacity: 0; }
+        }
+
+        body.party .slide-text {
+            animation: party-text 0.4s steps(1) infinite;
+        }
+        @keyframes party-text {
+            0%   { color: #ff3cff; text-shadow: 0 0 20px #ff3cff; }
+            25%  { color: #3cffff; text-shadow: 0 0 20px #3cffff; }
+            50%  { color: #ffe600; text-shadow: 0 0 20px #ffe600; }
+            75%  { color: #3cff6a; text-shadow: 0 0 20px #3cff6a; }
+            100% { color: #ff3c6a; text-shadow: 0 0 20px #ff3c6a; }
+        }
 
         /* ----- Slideshow ----- */
         .slideshow {
@@ -165,6 +330,7 @@
             justify-content: center;
             cursor: pointer;
             user-select: none;
+            z-index: 10;
         }
 
         .slide {
@@ -266,6 +432,17 @@
     </style>
 </head>
 <body>
+<button type="button" class="party-toggle" id="party-toggle">🪩 Toggle Party Mode</button>
+<div class="party-fx" id="party-fx" aria-hidden="true">
+    <div class="disco-ball"></div>
+    <div class="spotlight s1"></div>
+    <div class="spotlight s2"></div>
+    <div class="spotlight s3"></div>
+    <div class="laser l1"></div>
+    <div class="laser l2"></div>
+    <div class="laser l3"></div>
+    <div class="laser l4"></div>
+</div>
 <div id="app">
 
     <!-- Setup screen -->
@@ -325,6 +502,11 @@
         $('paste-section').classList.toggle('hidden');
     });
 
+    $('party-toggle').addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.body.classList.toggle('party');
+    });
+
     $('song-form').addEventListener('submit', async (e) => {
         e.preventDefault();
         const song = $('song-input').value.trim();
@@ -354,12 +536,46 @@
             setStatus('Paste some lyrics first.', true);
             return;
         }
+        cacheSet({ title, artist: '', lyrics });
         startSlideshow(title, '', lyrics);
     });
 
     function setStatus(msg, isError = false) {
         status.textContent = msg;
         status.classList.toggle('error', isError);
+    }
+
+    // ---- Lyrics cache (localStorage; survives offline) ----
+    const CACHE_STORE = 'lyrical:cache:v1';
+
+    function cacheKey(artist, title) {
+        return `${(artist || '').trim().toLowerCase()}::${(title || '').trim().toLowerCase()}`;
+    }
+
+    function loadCache() {
+        try { return JSON.parse(localStorage.getItem(CACHE_STORE)) || {}; }
+        catch (_) { return {}; }
+    }
+
+    function cacheGet(key) {
+        const c = loadCache();
+        return c[key] || null;
+    }
+
+    function cacheSet(entry) {
+        try {
+            const c = loadCache();
+            const keys = new Set([
+                cacheKey(entry.artist, entry.title),
+                cacheKey('', entry.title),
+            ]);
+            if (entry.queryTitle) keys.add(cacheKey('', entry.queryTitle));
+            if (entry.queryArtist || entry.queryTitle) {
+                keys.add(cacheKey(entry.queryArtist, entry.queryTitle || entry.title));
+            }
+            for (const k of keys) c[k] = { title: entry.title, artist: entry.artist, lyrics: entry.lyrics };
+            localStorage.setItem(CACHE_STORE, JSON.stringify(c));
+        } catch (_) { /* quota / disabled */ }
     }
 
     // ---- Lyrics lookup ----
@@ -382,21 +598,36 @@
             } catch (_) { /* fall through */ }
         }
 
+        // If we have an artist, try lyrics.ovh.
+        if (artist) {
+            try {
+                const url = `https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)}`;
+                const res = await fetch(url);
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data.lyrics && data.lyrics.trim()) {
+                        const result = { title, artist, lyrics: data.lyrics };
+                        cacheSet({ ...result, queryTitle: song, queryArtist: artistHint });
+                        return result;
+                    }
+                }
+            } catch (_) { /* network error — fall through to cache */ }
+        }
+
+        // Fall back to cache: try the resolved artist+title, then user-typed values.
+        const cached =
+            (artist && cacheGet(cacheKey(artist, title))) ||
+            cacheGet(cacheKey(artistHint, song)) ||
+            cacheGet(cacheKey('', song));
+        if (cached) {
+            setStatus('Offline — loaded from cache.');
+            return cached;
+        }
+
         if (!artist) {
             throw new Error('Could not auto-detect the artist. Please fill in the Artist field.');
         }
-
-        // lyrics.ovh
-        const url = `https://api.lyrics.ovh/v1/${encodeURIComponent(artist)}/${encodeURIComponent(title)}`;
-        const res = await fetch(url);
-        if (!res.ok) {
-            throw new Error(`No lyrics found for "${title}" by ${artist}. Try a different spelling, or paste them manually.`);
-        }
-        const data = await res.json();
-        if (!data.lyrics || !data.lyrics.trim()) {
-            throw new Error(`No lyrics found for "${title}" by ${artist}. Try a different spelling, or paste them manually.`);
-        }
-        return { title, artist, lyrics: data.lyrics };
+        throw new Error(`No lyrics found for "${title}" by ${artist}. Try a different spelling, or paste them manually.`);
     }
 
     // ---- Slide building ----
