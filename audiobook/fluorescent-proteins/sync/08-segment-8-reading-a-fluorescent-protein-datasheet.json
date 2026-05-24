@@ -1,0 +1,303 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Reading a fluorescent protein datasheet",
+ "duration": 397.58,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Reading a fluorescent protein datasheet"
+  },
+  {
+   "t": 3.67,
+   "text": "Okay."
+  },
+  {
+   "t": 4.49,
+   "text": "So you now have, in your head, a sense of the palette — green from jellyfish, red from coral, the whole spectrum filled in by engineering."
+  },
+  {
+   "t": 13.54,
+   "text": "The next question is genuinely practical: when a paper or a vendor offers you ten different green fluorescent proteins, how do you choose?"
+  },
+  {
+   "t": 22.46,
+   "text": "This segment is the practical rubric."
+  },
+  {
+   "t": 25.01,
+   "text": "There are six numbers that matter on a fluorescent protein datasheet, and I want you to memorize them, because every time you reach for an FP in your career you'll be running through this checklist, either explicitly or in the back of your head."
+  },
+  {
+   "t": 38.25,
+   "text": "Number one: brightness."
+  },
+  {
+   "t": 40.24,
+   "text": "Brightness is the product of two underlying things — the extinction coefficient, which tells you how strongly the protein absorbs the excitation light coming in, and the quantum yield, which tells you what fraction of the absorbed photons actually come back out as fluorescence instead of being dissipated as heat."
+  },
+  {
+   "t": 59.86,
+   "text": "Brightness is extinction times quantum yield."
+  },
+  {
+   "t": 63.0,
+   "text": "Why does it matter?"
+  },
+  {
+   "t": 64.08,
+   "text": "Because in many experiments — single-molecule tracking, deep-tissue imaging, endogenous expression at low levels — you are photon-starved."
+  },
+  {
+   "t": 73.56,
+   "text": "Every photon you can collect counts."
+  },
+  {
+   "t": 76.25,
+   "text": "A two-fold brighter protein can be the difference between an experiment that works and one that gives you noise."
+  },
+  {
+   "t": 82.84,
+   "text": "Number two: photostability."
+  },
+  {
+   "t": 85.08,
+   "text": "Every fluorescent molecule, each time it absorbs and emits a photon, has some small probability of undergoing an irreversible chemical reaction — typically involving reactive oxygen species — that destroys the chromophore permanently."
+  },
+  {
+   "t": 100.29,
+   "text": "We call that photobleaching."
+  },
+  {
+   "t": 102.0,
+   "text": "Photostability is how many cycles a given fluorescent protein can survive before it goes dark forever."
+  },
+  {
+   "t": 109.34,
+   "text": "Some proteins are exquisitely stable; others bleach in seconds under strong illumination."
+  },
+  {
+   "t": 116.51,
+   "text": "If you're imaging for two seconds, this doesn't matter much."
+  },
+  {
+   "t": 120.05,
+   "text": "If you're imaging a process that takes an hour, with a frame every five seconds, photostability becomes the dominant constraint on your experiment."
+  },
+  {
+   "t": 129.14,
+   "text": "The analogy here: think of every fluorescent molecule as a candle."
+  },
+  {
+   "t": 133.78,
+   "text": "Each time it emits a photon, it burns down a tiny bit."
+  },
+  {
+   "t": 137.22,
+   "text": "A high-photostability candle is a long, fat candle that will burn for hours."
+  },
+  {
+   "t": 142.41,
+   "text": "A low-photostability candle is a birthday candle that goes out in seconds."
+  },
+  {
+   "t": 147.01,
+   "text": "Match your candle to how long your experiment runs."
+  },
+  {
+   "t": 150.14,
+   "text": "Number three: maturation time."
+  },
+  {
+   "t": 152.64,
+   "text": "Remember the autocatalytic chromophore cooking from Segment 4?"
+  },
+  {
+   "t": 157.07,
+   "text": "That takes time."
+  },
+  {
+   "t": 158.22,
+   "text": "Different fluorescent proteins mature at very different rates."
+  },
+  {
+   "t": 162.28,
+   "text": "EGFP matures in tens of minutes."
+  },
+  {
+   "t": 164.97,
+   "text": "Some red proteins take many hours."
+  },
+  {
+   "t": 167.81,
+   "text": "The original DsRed took more than a day."
+  },
+  {
+   "t": 170.81,
+   "text": "If your experiment depends on seeing newly-synthesized protein quickly — for example, if you're using FP as a reporter of whether a gene just got turned on, and you need temporal precision — maturation time is critical."
+  },
+  {
+   "t": 184.29,
+   "text": "A slow-maturing protein gives you blurry temporal information, because the light you see now comes from molecules made hours ago."
+  },
+  {
+   "t": 192.71,
+   "text": "Number four: monomericity."
+  },
+  {
+   "t": 195.1,
+   "text": "We just talked about this."
+  },
+  {
+   "t": 196.53,
+   "text": "Check for the \"m\" prefix."
+  },
+  {
+   "t": 198.47,
+   "text": "If it's not monomeric, know what you're getting into."
+  },
+  {
+   "t": 201.39,
+   "text": "Number five: pH sensitivity."
+  },
+  {
+   "t": 204.19,
+   "text": "The chromophore's brightness often depends on its protonation state, and protonation depends on the local pH around the protein."
+  },
+  {
+   "t": 211.94,
+   "text": "Most Aequorea-derived proteins — GFP, YFP, CFP — get noticeably dim when the pH drops below about 6, which means they're quenched by acidic conditions."
+  },
+  {
+   "t": 224.35,
+   "text": "This matters because not all of the cell is at neutral pH."
+  },
+  {
+   "t": 228.26,
+   "text": "Lysosomes are very acidic — around pH 4 to 5."
+  },
+  {
+   "t": 232.57,
+   "text": "Endosomes are mildly acidic."
+  },
+  {
+   "t": 234.78,
+   "text": "Some secretory granules are acidic."
+  },
+  {
+   "t": 237.14,
+   "text": "If you tag a protein that ends up in an acidic compartment with a pH-sensitive variant, the protein may seem to vanish when in fact it's there, just quenched."
+  },
+  {
+   "t": 246.15,
+   "text": "Many red proteins, including mCherry, are remarkably pH-insensitive and are better choices for acidic compartments."
+  },
+  {
+   "t": 254.74,
+   "text": "Interestingly, this property has been weaponized into a feature."
+  },
+  {
+   "t": 259.05,
+   "text": "A YFP variant called pHluorin is so pH-sensitive that it's used as a sensor for vesicle fusion."
+  },
+  {
+   "t": 266.09,
+   "text": "The story: synaptic vesicles inside a neuron are acidic, so pHluorin is dark while it's sitting in a vesicle."
+  },
+  {
+   "t": 273.46,
+   "text": "When the vesicle fuses with the cell membrane and dumps its contents outside, the pHluorin suddenly faces the neutral extracellular fluid, and it lights up."
+  },
+  {
+   "t": 283.69,
+   "text": "Each flash signals one vesicle fusion event."
+  },
+  {
+   "t": 286.94,
+   "text": "The very property that's a bug for most applications becomes the entire point of pHluorin."
+  },
+  {
+   "t": 292.84,
+   "text": "Number six: folding efficiency at body temperature."
+  },
+  {
+   "t": 296.69,
+   "text": "Some proteins fold poorly at 37 degrees Celsius because their source organism lived in colder water."
+  },
+  {
+   "t": 304.03,
+   "text": "Wild-type GFP folded badly at 37; the F64L mutation in EGFP was specifically to fix that."
+  },
+  {
+   "t": 313.18,
+   "text": "Always check that your chosen variant actually folds in the temperature regime you'll be using."
+  },
+  {
+   "t": 317.98,
+   "text": "So that's the rubric."
+  },
+  {
+   "t": 319.3,
+   "text": "Brightness, photostability, maturation, monomericity, pH sensitivity, folding."
+  },
+  {
+   "t": 327.6,
+   "text": "Six numbers."
+  },
+  {
+   "t": 328.8,
+   "text": "Run any candidate FP through this checklist with the specific demands of your experiment in mind, and you'll make sensible choices."
+  },
+  {
+   "t": 337.18,
+   "text": "A piece of practical advice that isn't on any datasheet: always pilot in your own system before committing to a big experiment."
+  },
+  {
+   "t": 345.04,
+   "text": "Fluorescent proteins behave subtly differently in different cell types, in different fusion contexts, in different organelles."
+  },
+  {
+   "t": 353.19,
+   "text": "A protein that's beautifully bright in HEK cells in the cytoplasm may behave differently fused to a transmembrane domain in a neuron's axon."
+  },
+  {
+   "t": 362.81,
+   "text": "The datasheet is a starting point."
+  },
+  {
+   "t": 364.94,
+   "text": "The empirical test is the final word."
+  },
+  {
+   "t": 367.76,
+   "text": "And finally, one more meta-principle."
+  },
+  {
+   "t": 370.67,
+   "text": "There is no single best fluorescent protein."
+  },
+  {
+   "t": 373.37,
+   "text": "There is only the best fluorescent protein for this particular experiment."
+  },
+  {
+   "t": 377.9,
+   "text": "The brightest variant might bleach too fast."
+  },
+  {
+   "t": 380.88,
+   "text": "The most photostable might be too dim."
+  },
+  {
+   "t": 383.43,
+   "text": "The fastest-maturing might be a dimer."
+  },
+  {
+   "t": 386.03,
+   "text": "Engineering is always trading off — you optimize for one dimension at the cost of others."
+  },
+  {
+   "t": 392.08,
+   "text": "Knowing the rubric is what lets you make those tradeoffs deliberately, instead of by accident."
+  }
+ ]
+}

@@ -1,0 +1,179 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Variants of Cas9: smarter blades and smaller scissors",
+ "duration": 272.81,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Variants of Cas9: smarter blades and smaller scissors"
+  },
+  {
+   "t": 5.49,
+   "text": "Welcome back."
+  },
+  {
+   "t": 6.54,
+   "text": "The first hour built the foundation."
+  },
+  {
+   "t": 8.75,
+   "text": "The second hour is largely about engineering — what people have built on top of the basic platform."
+  },
+  {
+   "t": 14.43,
+   "text": "We're going to start with the menagerie of engineered and natural Cas9 variants, because the workhorse SpCas9 is often not the right tool for a given job."
+  },
+  {
+   "t": 24.51,
+   "text": "There are two big problems that have motivated most of the variant engineering: specificity and size."
+  },
+  {
+   "t": 31.05,
+   "text": "On specificity."
+  },
+  {
+   "t": 32.4,
+   "text": "Remember that Cas9 will sometimes cut at off-target sites that resemble the on-target by a few mismatches."
+  },
+  {
+   "t": 39.12,
+   "text": "For research applications, this is annoying but manageable — you can use multiple guides, you can sequence to check, you can pick targets carefully."
+  },
+  {
+   "t": 48.8,
+   "text": "For therapeutic applications, where you're editing a patient's cells, an off-target cut could in principle damage a tumor-suppressor gene or activate an oncogene."
+  },
+  {
+   "t": 58.56,
+   "text": "So reducing off-targets matters a lot."
+  },
+  {
+   "t": 60.98,
+   "text": "Several groups have engineered SpCas9 to be more discriminating."
+  },
+  {
+   "t": 66.09,
+   "text": "The general idea: weaken Cas9's grip on DNA just enough that perfect matches still get cut but imperfect matches don't have enough binding energy to commit."
+  },
+  {
+   "t": 76.12,
+   "text": "The first widely-used variant was eSpCas9 — enhanced specificity Cas9 — from Feng Zhang's group in 2016."
+  },
+  {
+   "t": 85.3,
+   "text": "They identified a few amino acids in Cas9 that contact the non-target DNA strand, and mutated them to weaken those contacts."
+  },
+  {
+   "t": 94.96,
+   "text": "The mutated protein still cuts perfect matches well, but doesn't tolerate the energy cost of imperfect R-loops."
+  },
+  {
+   "t": 102.42,
+   "text": "Within a few months, David Liu's lab at Harvard published SpCas9-HF1 — high-fidelity Cas9 — using a similar logic but targeting different contacts."
+  },
+  {
+   "t": 114.1,
+   "text": "Several more followed: HypaCas9, evoCas9, Sniper-Cas9."
+  },
+  {
+   "t": 119.74,
+   "text": "They differ in details but share the same design philosophy."
+  },
+  {
+   "t": 123.62,
+   "text": "On the PAM constraint."
+  },
+  {
+   "t": 125.29,
+   "text": "SpCas9 needs NGG."
+  },
+  {
+   "t": 128.45,
+   "text": "That's usually fine, but sometimes — if you want to cut at a very specific spot in a regulatory element, or correct a specific disease mutation — there just isn't an NGG where you need it."
+  },
+  {
+   "t": 140.36,
+   "text": "So people have engineered SpCas9 variants that accept different PAMs."
+  },
+  {
+   "t": 145.51,
+   "text": "xCas9 tolerates several different PAMs."
+  },
+  {
+   "t": 149.15,
+   "text": "SpCas9-NG tolerates any NG."
+  },
+  {
+   "t": 152.05,
+   "text": "SpRY, from David Liu's lab again, is nearly PAMless — it accepts almost anything."
+  },
+  {
+   "t": 158.3,
+   "text": "The tradeoff is usually some loss of efficiency and some increase in off-targets, but for applications where you need to cut at a precise spot, those variants are essential."
+  },
+  {
+   "t": 169.2,
+   "text": "On size."
+  },
+  {
+   "t": 170.34,
+   "text": "SpCas9 is 1,368 amino acids long."
+  },
+  {
+   "t": 176.11,
+   "text": "When you want to deliver CRISPR into a patient's body — and you want to package the whole thing into one of those tiny viral shipping containers I'll discuss in the delivery segment — SpCas9 is right at the upper limit of what fits."
+  },
+  {
+   "t": 189.81,
+   "text": "So people have looked for smaller versions of Cas9 in other bacteria."
+  },
+  {
+   "t": 194.21,
+   "text": "The most useful smaller cousin is SaCas9 from Staphylococcus aureus — about 1,050 amino acids, comfortably small enough to fit."
+  },
+  {
+   "t": 203.9,
+   "text": "SaCas9 has a longer, more restrictive PAM, but the size advantage makes it the workhorse for in-vivo delivery applications."
+  },
+  {
+   "t": 212.45,
+   "text": "There are even smaller versions, like CjCas9 from a campylobacter species, that are even more compact."
+  },
+  {
+   "t": 219.03,
+   "text": "There's also a related family of Cas proteins called Cas12."
+  },
+  {
+   "t": 223.3,
+   "text": "Cas12 does the same basic job as Cas9 — RNA-guided DNA cutting — but with some different properties."
+  },
+  {
+   "t": 231.14,
+   "text": "It only needs a single piece of guide RNA, not a duplex."
+  },
+  {
+   "t": 235.54,
+   "text": "It uses a different PAM, a T-rich one."
+  },
+  {
+   "t": 238.49,
+   "text": "And it cuts the DNA with a staggered rather than blunt break, leaving little sticky overhangs on each side, which can sometimes be useful for getting HDR to work better."
+  },
+  {
+   "t": 248.71,
+   "text": "Cas12 is the underdog cousin of Cas9, and it has its own niche applications."
+  },
+  {
+   "t": 254.56,
+   "text": "So the toolbox is not \"Cas9."
+  },
+  {
+   "t": 257.07,
+   "text": "\" The toolbox is \"a family of Cas9 and Cas12 proteins and engineered variants, each tuned for a particular job."
+  },
+  {
+   "t": 265.76,
+   "text": "\" A modern paper will tell you exactly which variant they used and why — and that choice is always deliberate."
+  }
+ ]
+}

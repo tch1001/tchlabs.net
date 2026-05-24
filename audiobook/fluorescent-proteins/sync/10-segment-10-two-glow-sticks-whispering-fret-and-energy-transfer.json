@@ -1,0 +1,291 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Two glow sticks whispering: FRET and energy transfer",
+ "duration": 406.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Two glow sticks whispering: FRET and energy transfer"
+  },
+  {
+   "t": 5.26,
+   "text": "Welcome back."
+  },
+  {
+   "t": 6.3,
+   "text": "So far we've used fluorescent proteins as markers — as molecular flashlights that tell us where things are."
+  },
+  {
+   "t": 13.51,
+   "text": "But the real power of fluorescent proteins is that they can be turned into sensors — molecules that report on chemical conditions, on protein interactions, on conformational changes."
+  },
+  {
+   "t": 24.93,
+   "text": "The principle that makes most of these sensors possible is called FRET, which stands for Förster resonance energy transfer."
+  },
+  {
+   "t": 31.82,
+   "text": "Let me walk you through it carefully, because it's the basis for an enormous fraction of all modern biosensors."
+  },
+  {
+   "t": 38.36,
+   "text": "Here's the analogy first."
+  },
+  {
+   "t": 40.17,
+   "text": "Imagine you have two glow sticks held very close to each other."
+  },
+  {
+   "t": 43.73,
+   "text": "One is blue, one is yellow."
+  },
+  {
+   "t": 46.11,
+   "text": "If you shake the blue one, it lights up — but instead of glowing blue, the energy passes silently across the tiny gap to the yellow one, and the yellow one glows."
+  },
+  {
+   "t": 57.5,
+   "text": "The blue one stays dark; the yellow one shines."
+  },
+  {
+   "t": 61.05,
+   "text": "Now pull them apart."
+  },
+  {
+   "t": 62.35,
+   "text": "They have to be incredibly close — within a few nanometers, which is roughly the width of a single protein."
+  },
+  {
+   "t": 69.25,
+   "text": "If you separate them even a little, the energy transfer fails, and now when you shake the blue one, it glows blue normally."
+  },
+  {
+   "t": 78.3,
+   "text": "The yellow one stays dark."
+  },
+  {
+   "t": 80.17,
+   "text": "That whispering between two glow sticks is FRET."
+  },
+  {
+   "t": 83.46,
+   "text": "The blue stick is called the donor."
+  },
+  {
+   "t": 85.5,
+   "text": "The yellow stick is called the acceptor."
+  },
+  {
+   "t": 87.83,
+   "text": "The donor is the one you excite with light."
+  },
+  {
+   "t": 90.75,
+   "text": "The acceptor is the one whose emission you detect."
+  },
+  {
+   "t": 93.81,
+   "text": "Whether the energy hops across depends almost entirely on how close they are."
+  },
+  {
+   "t": 98.59,
+   "text": "If the donor and acceptor are within about one to ten nanometers, energy transfer is efficient and you see the acceptor's color."
+  },
+  {
+   "t": 106.96,
+   "text": "If they're farther than that, no transfer happens and you see the donor's color."
+  },
+  {
+   "t": 111.76,
+   "text": "The crucial number is that the efficiency depends on distance to the sixth power."
+  },
+  {
+   "t": 116.44,
+   "text": "Double the distance, and the energy transfer drops by a factor of sixty-four."
+  },
+  {
+   "t": 121.41,
+   "text": "This is a brutally steep distance dependence."
+  },
+  {
+   "t": 124.7,
+   "text": "FRET is essentially zero by about fifteen nanometers and nearly complete at one nanometer."
+  },
+  {
+   "t": 130.84,
+   "text": "That steep distance dependence is what makes FRET so useful: it turns the readout into a molecular ruler operating at exactly the scale of single proteins and their interactions."
+  },
+  {
+   "t": 142.06,
+   "text": "So now think about what you can do with this."
+  },
+  {
+   "t": 144.18,
+   "text": "Suppose you fuse the donor — say, CFP, cyan — to one protein, and the acceptor — say, YFP, yellow — to a second protein."
+  },
+  {
+   "t": 155.0,
+   "text": "When the two proteins are far apart in the cell, you shine CFP-exciting light at them and you see cyan emission, because the donor is glowing alone."
+  },
+  {
+   "t": 164.21,
+   "text": "When the two proteins come together — because of a signaling event, say, or because they were just synthesized as binding partners — the donor and acceptor are suddenly close enough to whisper."
+  },
+  {
+   "t": 176.56,
+   "text": "You shine the same CFP-exciting light, but now you see yellow emission, because energy is hopping from CFP to YFP."
+  },
+  {
+   "t": 184.56,
+   "text": "The ratio of yellow to cyan in the emission tells you, in real time, in a living cell, whether your two proteins are interacting."
+  },
+  {
+   "t": 193.54,
+   "text": "That's intermolecular FRET, and it has been used to map countless protein-protein interactions."
+  },
+  {
+   "t": 199.6,
+   "text": "But here's the more elegant version: intramolecular FRET."
+  },
+  {
+   "t": 203.35,
+   "text": "You make a single chimeric protein — one continuous polypeptide chain — that contains both the donor and the acceptor, connected by some sensing element in the middle."
+  },
+  {
+   "t": 214.69,
+   "text": "The sensing element is some piece of protein that changes shape in response to a specific biochemical event."
+  },
+  {
+   "t": 221.75,
+   "text": "When the sensing element is in one shape, the donor and acceptor are far apart."
+  },
+  {
+   "t": 227.09,
+   "text": "When the event triggers a shape change, the donor and acceptor are brought close."
+  },
+  {
+   "t": 232.19,
+   "text": "You've turned the chimera into a biosensor for that specific event."
+  },
+  {
+   "t": 236.5,
+   "text": "The first famous example was Cameleon, designed by Roger Tsien's lab in 1997."
+  },
+  {
+   "t": 242.69,
+   "text": "The architecture is beautiful."
+  },
+  {
+   "t": 245.03,
+   "text": "The Cameleon protein is one chain that goes: CFP — then calmodulin (a calcium-binding protein) — then a peptide called M13 that calmodulin grabs onto when calcium is bound — then YFP."
+  },
+  {
+   "t": 258.99,
+   "text": "In the absence of calcium, calmodulin and M13 are floppy and don't engage."
+  },
+  {
+   "t": 265.25,
+   "text": "The chain is extended."
+  },
+  {
+   "t": 267.1,
+   "text": "CFP and YFP are far apart."
+  },
+  {
+   "t": 270.31,
+   "text": "FRET is low."
+  },
+  {
+   "t": 271.3,
+   "text": "You see cyan emission."
+  },
+  {
+   "t": 273.09,
+   "text": "When calcium rises in the cell, calcium binds to calmodulin, calmodulin wraps around M13, the chain folds up like a closing accordion, and CFP and YFP are pulled together."
+  },
+  {
+   "t": 286.26,
+   "text": "FRET jumps."
+  },
+  {
+   "t": 287.41,
+   "text": "You see yellow emission."
+  },
+  {
+   "t": 289.0,
+   "text": "The ratio of yellow to cyan is a real-time readout of intracellular calcium."
+  },
+  {
+   "t": 294.24,
+   "text": "A single protein, encoded by a single gene, that you can express in any cell and use to watch calcium levels rise and fall."
+  },
+  {
+   "t": 303.07,
+   "text": "The same architecture has been built into sensors for many other things."
+  },
+  {
+   "t": 307.57,
+   "text": "A sensor called Epac uses a cyclic-AMP-binding protein as the sensing element, sandwiched between CFP and YFP, and reports on cAMP levels in the cell."
+  },
+  {
+   "t": 318.91,
+   "text": "Other FRET sensors have been built for protein kinase activity, for small G-protein activation, for membrane voltage, for tension forces inside the cytoskeleton, for sugars, for amino acids."
+  },
+  {
+   "t": 331.77,
+   "text": "The general recipe is: take a protein whose shape changes when something interesting happens, sandwich it between a FRET pair, validate that the FRET signal tracks the event, and you have a genetically encoded sensor for that thing."
+  },
+  {
+   "t": 345.59,
+   "text": "FRET turned fluorescent proteins from passive markers into active measurement devices."
+  },
+  {
+   "t": 351.17,
+   "text": "Once you have that capability, the whole question of cell biology shifts."
+  },
+  {
+   "t": 355.54,
+   "text": "You no longer just ask \"where is this molecule?"
+  },
+  {
+   "t": 358.55,
+   "text": "\" You can ask \"what is this molecule doing?"
+  },
+  {
+   "t": 361.06,
+   "text": "What is the calcium level here?"
+  },
+  {
+   "t": 362.74,
+   "text": "What is the cAMP level there?"
+  },
+  {
+   "t": 364.75,
+   "text": "When does this kinase fire?"
+  },
+  {
+   "t": 366.47,
+   "text": "\" All in real time, in living cells, optically."
+  },
+  {
+   "t": 370.11,
+   "text": "A practical note: measuring FRET cleanly is tricky."
+  },
+  {
+   "t": 374.17,
+   "text": "You have to account for the donor's emission bleeding into the acceptor channel, for direct excitation of the acceptor by the donor's light, and for the spectral properties of your filters."
+  },
+  {
+   "t": 384.32,
+   "text": "Quantitative FRET microscopy is a real subspecialty."
+  },
+  {
+   "t": 388.97,
+   "text": "But the concept is straightforward: two glow sticks, held close enough to whisper, give you a distance reporter at the nanometer scale."
+  },
+  {
+   "t": 397.17,
+   "text": "We'll see in the next segment how this idea was taken to its highest engineering refinement in the calcium sensors that have transformed neuroscience."
+  }
+ ]
+}

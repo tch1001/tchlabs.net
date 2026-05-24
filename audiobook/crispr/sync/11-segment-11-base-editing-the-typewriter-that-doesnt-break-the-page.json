@@ -1,0 +1,271 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Base editing: the typewriter that doesn't break the page",
+ "duration": 372.79,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Base editing: the typewriter that doesn't break the page"
+  },
+  {
+   "t": 5.16,
+   "text": "Now we get to one of the most consequential extensions of CRISPR."
+  },
+  {
+   "t": 9.04,
+   "text": "To motivate it, let me restate the limitation that drove its invention."
+  },
+  {
+   "t": 14.61,
+   "text": "We want to make a precise single-letter change in the genome — say, correct a specific disease-causing mutation, change a C to a T at a particular spot."
+  },
+  {
+   "t": 24.75,
+   "text": "The standard CRISPR approach is: cut with Cas9, supply an HDR template with the corrected letter, hope HDR happens."
+  },
+  {
+   "t": 33.04,
+   "text": "But as we discussed, HDR is inefficient."
+  },
+  {
+   "t": 36.94,
+   "text": "Most of the time, you instead get NHEJ — messy indels that break the gene rather than correct it."
+  },
+  {
+   "t": 43.61,
+   "text": "For therapeutic correction of point mutations, this is a poor tool."
+  },
+  {
+   "t": 48.05,
+   "text": "You're trying to do delicate surgery with a sledgehammer."
+  },
+  {
+   "t": 51.64,
+   "text": "In 2016, David Liu's lab at Harvard published a fundamentally different approach."
+  },
+  {
+   "t": 57.75,
+   "text": "Their paper was titled \"Programmable editing of a target base in genomic DNA without double-stranded DNA cleavage."
+  },
+  {
+   "t": 65.56,
+   "text": "\" Read that title carefully."
+  },
+  {
+   "t": 67.38,
+   "text": "Editing of a target base."
+  },
+  {
+   "t": 69.26,
+   "text": "Without double-stranded DNA cleavage."
+  },
+  {
+   "t": 72.12,
+   "text": "This is a tool that does what you wanted Cas9 plus HDR to do — change one specific letter — but achieves it through totally different chemistry."
+  },
+  {
+   "t": 81.04,
+   "text": "Here's the analogy I want you to hold."
+  },
+  {
+   "t": 83.46,
+   "text": "Regular CRISPR is like editing a document by tearing out the paragraph with scissors and stapling in a new one."
+  },
+  {
+   "t": 90.44,
+   "text": "It works, but you've damaged the page."
+  },
+  {
+   "t": 92.78,
+   "text": "Base editing is more like a typewriter that changes one letter without breaking the page — a chemical eraser that converts one letter directly into another, in place, without ever cutting the document."
+  },
+  {
+   "t": 105.64,
+   "text": "No double-strand break."
+  },
+  {
+   "t": 107.1,
+   "text": "No NHEJ mess."
+  },
+  {
+   "t": 108.36,
+   "text": "No need for HDR."
+  },
+  {
+   "t": 110.21,
+   "text": "How is this possible?"
+  },
+  {
+   "t": 111.62,
+   "text": "Let me walk through the architecture."
+  },
+  {
+   "t": 113.69,
+   "text": "Step one."
+  },
+  {
+   "t": 114.62,
+   "text": "Take Cas9 and break it."
+  },
+  {
+   "t": 116.53,
+   "text": "Specifically, mutate it so that one of its two cutting blades — the RuvC blade — no longer cuts."
+  },
+  {
+   "t": 123.6,
+   "text": "The other blade, HNH, still cuts."
+  },
+  {
+   "t": 126.59,
+   "text": "So now you have a Cas9 that can only nick one strand of the DNA — make a single-strand cut, not a double-strand break."
+  },
+  {
+   "t": 134.14,
+   "text": "This crippled version is called a Cas9 nickase, or nCas9."
+  },
+  {
+   "t": 138.46,
+   "text": "Step two."
+  },
+  {
+   "t": 139.43,
+   "text": "Take a chemical enzyme — a deaminase — that can convert one DNA letter to a different one."
+  },
+  {
+   "t": 145.85,
+   "text": "The first base editor used an enzyme called APOBEC1, which converts the letter C into the letter U (which is essentially the same as T from the cell's perspective)."
+  },
+  {
+   "t": 156.3,
+   "text": "Crucially, APOBEC can only work on single-stranded DNA — it can't reach into the double helix."
+  },
+  {
+   "t": 163.4,
+   "text": "Step three."
+  },
+  {
+   "t": 164.49,
+   "text": "Fuse the deaminase enzyme to the front of the nickase Cas9, like a chemical attachment on the end of a guided missile."
+  },
+  {
+   "t": 172.55,
+   "text": "Step four."
+  },
+  {
+   "t": 173.56,
+   "text": "Load the guide RNA, send the whole assembly to the target site, and let it form the R-loop."
+  },
+  {
+   "t": 179.97,
+   "text": "Remember the R-loop?"
+  },
+  {
+   "t": 181.19,
+   "text": "The guide RNA pairs with one DNA strand, and the other DNA strand gets displaced as single-stranded for a stretch of a few letters."
+  },
+  {
+   "t": 190.28,
+   "text": "That single-stranded window is now exposed to the deaminase enzyme riding on the front of the Cas9."
+  },
+  {
+   "t": 197.03,
+   "text": "The deaminase, finding its substrate, converts any Cs within that window into Us."
+  },
+  {
+   "t": 203.57,
+   "text": "Meanwhile, the HNH blade nicks the opposite strand, signaling to the cell \"this strand is wrong, use the other one as the template."
+  },
+  {
+   "t": 213.38,
+   "text": "\" The cell faithfully copies the U-containing strand, putting in an A across from the U; after one round of repair, the U becomes a T."
+  },
+  {
+   "t": 222.22,
+   "text": "Net result: a C has been converted to a T at the targeted site, with no double-strand break and no indels."
+  },
+  {
+   "t": 229.76,
+   "text": "That tool is called the cytosine base editor, or CBE."
+  },
+  {
+   "t": 233.26,
+   "text": "It was transformative — C-to-T conversion alone covers a significant fraction of human disease-causing mutations."
+  },
+  {
+   "t": 241.11,
+   "text": "A year later, Liu's lab followed up with the adenine base editor, or ABE, which converts A to G."
+  },
+  {
+   "t": 248.29,
+   "text": "The catch was that no naturally-occurring enzyme existed that deaminates A to G in DNA."
+  },
+  {
+   "t": 254.94,
+   "text": "So they had to make one, through directed evolution in bacteria — they took an enzyme that deaminates A in tRNA, mutated it through many generations, and selected variants that could work on DNA."
+  },
+  {
+   "t": 267.82,
+   "text": "After several rounds, they had an enzyme that did the job."
+  },
+  {
+   "t": 271.47,
+   "text": "Fuse it to nickase Cas9, follow the same architecture as the CBE, and you get a programmable A-to-G converter."
+  },
+  {
+   "t": 279.44,
+   "text": "Together, the C-to-T and A-to-G editors — and their mirror-image partners on the opposite DNA strand, G-to-A and T-to-C — cover four out of the twelve possible single-letter changes."
+  },
+  {
+   "t": 291.62,
+   "text": "These four are called the transition mutations."
+  },
+  {
+   "t": 294.44,
+   "text": "By some estimates, they account for around sixty percent of pathogenic human point mutations."
+  },
+  {
+   "t": 300.75,
+   "text": "Not every mutation, but a lot of them."
+  },
+  {
+   "t": 303.64,
+   "text": "There are some practical wrinkles to know."
+  },
+  {
+   "t": 305.65,
+   "text": "The editing window is a window, not a single point — it covers a few letters."
+  },
+  {
+   "t": 311.13,
+   "text": "If there are multiple Cs within the window, you may get multiple simultaneous edits."
+  },
+  {
+   "t": 316.78,
+   "text": "These extra edits are called bystander edits, and they can be a problem if the bystander changes happen to alter something important."
+  },
+  {
+   "t": 324.79,
+   "text": "Engineered variants with narrower windows have been developed to mitigate this."
+  },
+  {
+   "t": 330.15,
+   "text": "The first version of the cytosine base editor also had some off-target activity on RNA — it would deaminate cellular messenger RNAs at some background rate — and improved versions have addressed that too."
+  },
+  {
+   "t": 341.4,
+   "text": "Version 1.0 had issues; version 2.0 and beyond have fixed most of them."
+  },
+  {
+   "t": 348.08,
+   "text": "The therapeutic implications were immediate."
+  },
+  {
+   "t": 350.65,
+   "text": "Many human point mutation diseases — sickle cell, beta-thalassemia, certain cardiovascular conditions, various metabolic disorders — are now in clinical development with base editors as the editing modality."
+  },
+  {
+   "t": 364.08,
+   "text": "We'll come back to one specific example, Verve Therapeutics' base editor for cardiovascular disease, when we talk about therapeutics."
+  }
+ ]
+}

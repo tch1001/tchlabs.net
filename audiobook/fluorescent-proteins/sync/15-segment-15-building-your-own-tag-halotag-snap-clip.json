@@ -1,0 +1,191 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Building your own tag: HaloTag, SNAP, CLIP",
+ "duration": 299.0,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Building your own tag: HaloTag, SNAP, CLIP"
+  },
+  {
+   "t": 4.86,
+   "text": "There's a beautiful hybrid approach I want to spend a segment on, because it's become enormously important in modern imaging."
+  },
+  {
+   "t": 12.12,
+   "text": "The idea is: instead of building the fluorescent molecule directly into your protein, build a small magnet, and then later add the fluorescent molecule of your choice."
+  },
+  {
+   "t": 22.62,
+   "text": "That's the analogy."
+  },
+  {
+   "t": 23.86,
+   "text": "The protein you express is a magnet — a small enzyme that doesn't glow at all."
+  },
+  {
+   "t": 29.2,
+   "text": "You genetically fuse the magnet to your protein of interest, just like you'd fuse a fluorescent protein."
+  },
+  {
+   "t": 35.1,
+   "text": "The magnet attaches itself to your protein wherever your protein goes."
+  },
+  {
+   "t": 39.9,
+   "text": "Then, separately, you add the matching glowing payload — a small fluorescent ligand that has a chemical handle the magnet grabs onto."
+  },
+  {
+   "t": 49.41,
+   "text": "The magnet snaps onto the payload covalently, and now your protein is fluorescently labeled, with the dye of your choice, at the moment of your choice."
+  },
+  {
+   "t": 58.5,
+   "text": "This family of tools is called self-labeling protein tags, and the two leading systems are HaloTag and SNAP-tag."
+  },
+  {
+   "t": 65.69,
+   "text": "HaloTag, developed by Promega, is an engineered version of a bacterial enzyme that normally cleaves chloride atoms off alkyl chloride substrates."
+  },
+  {
+   "t": 76.11,
+   "text": "In the engineered HaloTag, a single mutation in the active site removes the step that would normally release the substrate, so the enzyme gets stuck holding it forever."
+  },
+  {
+   "t": 86.39,
+   "text": "So if you provide HaloTag with a substrate molecule — a chloroalkane carrying whatever fluorescent dye you want — HaloTag will rapidly and covalently capture that dye and hold it permanently."
+  },
+  {
+   "t": 99.35,
+   "text": "You express your protein fused to HaloTag, you wash on a fluorescent HaloTag ligand, and within minutes, your protein is glowing."
+  },
+  {
+   "t": 108.36,
+   "text": "SNAP-tag, developed by Kai Johnsson's lab, works similarly but with different chemistry."
+  },
+  {
+   "t": 114.22,
+   "text": "It's an engineered version of a human DNA-repair enzyme that normally transfers a chemical group from damaged DNA to a cysteine in its own active site."
+  },
+  {
+   "t": 124.14,
+   "text": "The engineered SNAP-tag accepts ligands built on a different chemical platform, called benzylguanine."
+  },
+  {
+   "t": 130.76,
+   "text": "CLIP-tag is a SNAP variant that grabs a different chemical group, benzylcytosine, so you can use both SNAP and CLIP in the same cell with two completely orthogonal labels."
+  },
+  {
+   "t": 142.22,
+   "text": "So why use these instead of, or in addition to, fluorescent proteins?"
+  },
+  {
+   "t": 147.06,
+   "text": "Several reasons."
+  },
+  {
+   "t": 148.36,
+   "text": "First, brighter dyes."
+  },
+  {
+   "t": 150.03,
+   "text": "The payload you attach can be a synthetic dye — and as we just discussed, the best synthetic dyes are brighter and more photostable than any fluorescent protein."
+  },
+  {
+   "t": 160.49,
+   "text": "The combination HaloTag-plus-JF-dye is, for many demanding applications like single-molecule tracking and super-resolution, dramatically better than any pure fluorescent protein."
+  },
+  {
+   "t": 172.53,
+   "text": "Second, temporal control of labeling."
+  },
+  {
+   "t": 175.25,
+   "text": "You can choose when to add the dye."
+  },
+  {
+   "t": 177.01,
+   "text": "Express your fusion for as long as you want, wait until your cell reaches some interesting state, and only then add the label."
+  },
+  {
+   "t": 185.16,
+   "text": "You can do pulse-chase experiments: label one batch of molecules today with a green dye, label a different batch tomorrow with a red dye, and watch the two populations."
+  },
+  {
+   "t": 196.14,
+   "text": "Third, color flexibility."
+  },
+  {
+   "t": 198.21,
+   "text": "The same expressed protein can be labeled with any color you have a ligand for."
+  },
+  {
+   "t": 202.76,
+   "text": "Want green today?"
+  },
+  {
+   "t": 203.96,
+   "text": "Add green ligand."
+  },
+  {
+   "t": 205.25,
+   "text": "Want red next week?"
+  },
+  {
+   "t": 206.46,
+   "text": "Add red ligand."
+  },
+  {
+   "t": 207.84,
+   "text": "No re-engineering of the construct required."
+  },
+  {
+   "t": 210.74,
+   "text": "Fourth, no-wash imaging for some dye chemistries."
+  },
+  {
+   "t": 214.19,
+   "text": "Certain ligands are dark in solution and only become fluorescent when bound to the tag — so you can add them and image immediately, no washing required, with very low background."
+  },
+  {
+   "t": 225.6,
+   "text": "Fifth, the chemistry can deliver things other than fluorophores."
+  },
+  {
+   "t": 230.05,
+   "text": "You can attach biotin for affinity purification, photocrosslinkers for capturing interactions, drug molecules for chemical perturbations."
+  },
+  {
+   "t": 238.62,
+   "text": "The tag becomes a universal hook."
+  },
+  {
+   "t": 240.74,
+   "text": "The trade-offs: self-labeling tags require an added ligand, and the ligand has to get into the cell or tissue, which can be a constraint in vivo."
+  },
+  {
+   "t": 249.88,
+   "text": "They're a bit bigger than the smallest peptide-based labels but smaller than tandem-dimer fluorescent proteins."
+  },
+  {
+   "t": 256.47,
+   "text": "The way to think about HaloTag and SNAP-tag is not as competitors to fluorescent proteins but as complementary tools occupying different parts of the toolbox."
+  },
+  {
+   "t": 266.58,
+   "text": "For an experiment where you want pure genetic encoding with no added reagent — a fluorescent protein is right."
+  },
+  {
+   "t": 273.94,
+   "text": "For an experiment where you need maximum brightness, temporal control, or color flexibility — self-labeling tags shine."
+  },
+  {
+   "t": 281.83,
+   "text": "Many modern experiments use both: a fluorescent protein for one channel, a HaloTag plus synthetic dye for another."
+  },
+  {
+   "t": 290.4,
+   "text": "The flexible-but-needs-a-reagent approach and the all-in-one-genetic approach are both alive and well, and the best experiments draw on both."
+  }
+ ]
+}

@@ -1,0 +1,203 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Getting CRISPR into cells",
+ "duration": 314.53,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Getting CRISPR into cells"
+  },
+  {
+   "t": 3.62,
+   "text": "We've spent a lot of time on what the editor does."
+  },
+  {
+   "t": 6.2,
+   "text": "Now let's talk about how you get it into the cell, because for any therapeutic application this is at least as hard as the editing chemistry."
+  },
+  {
+   "t": 14.1,
+   "text": "A perfect editor that you can't deliver to the target tissue is not a therapy."
+  },
+  {
+   "t": 19.57,
+   "text": "There are three broad delivery strategies, and you should know all three because each one shows up in different applications."
+  },
+  {
+   "t": 27.06,
+   "text": "The first strategy is viral delivery."
+  },
+  {
+   "t": 29.98,
+   "text": "You take a virus, gut its harmful genes, and replace them with the CRISPR cargo — the gene for Cas9 plus the guide RNA."
+  },
+  {
+   "t": 38.41,
+   "text": "Then you let the modified virus infect the patient's cells the way it naturally would."
+  },
+  {
+   "t": 43.71,
+   "text": "The cells take up the viral cargo, express Cas9 and the guide, and editing happens."
+  },
+  {
+   "t": 49.96,
+   "text": "The workhorse virus for in-vivo delivery is something called adeno-associated virus, or AAV."
+  },
+  {
+   "t": 56.5,
+   "text": "The analogy I want you to hold is: AAV is like putting the CRISPR machinery inside a tiny shipping container that knows how to enter cells."
+  },
+  {
+   "t": 65.71,
+   "text": "It's a small, well-behaved virus that doesn't cause significant human disease, has a long safety record, and comes in different \"flavors\" called serotypes that prefer different tissues."
+  },
+  {
+   "t": 76.7,
+   "text": "AAV8 prefers the liver."
+  },
+  {
+   "t": 78.78,
+   "text": "AAV9 can cross into the brain."
+  },
+  {
+   "t": 81.45,
+   "text": "There are engineered serotypes that target the eye, the muscle, the heart."
+  },
+  {
+   "t": 85.85,
+   "text": "You pick your serotype based on where you want to edit."
+  },
+  {
+   "t": 88.41,
+   "text": "AAV has one big limitation: it's small."
+  },
+  {
+   "t": 91.76,
+   "text": "It can only carry about 4,700 letters of DNA cargo."
+  },
+  {
+   "t": 96.62,
+   "text": "SpCas9 alone is about 4,200 letters — so it just barely fits, with very little room for the guide RNA and the regulatory elements you need."
+  },
+  {
+   "t": 106.34,
+   "text": "This is one of the main reasons people went searching for smaller Cas9 cousins like SaCas9."
+  },
+  {
+   "t": 112.3,
+   "text": "SaCas9 fits comfortably in one AAV, leaving room for everything else."
+  },
+  {
+   "t": 117.99,
+   "text": "Another viral option is lentivirus, which is derived from HIV."
+  },
+  {
+   "t": 122.35,
+   "text": "It carries a larger payload and can integrate into the genome of dividing and non-dividing cells."
+  },
+  {
+   "t": 128.68,
+   "text": "It's used heavily for ex-vivo applications — when you take cells out of the patient, edit them in a dish, and put them back."
+  },
+  {
+   "t": 136.05,
+   "text": "CAR-T cell therapies for cancer use lentiviral delivery."
+  },
+  {
+   "t": 140.46,
+   "text": "The second delivery strategy is lipid nanoparticles, or LNPs."
+  },
+  {
+   "t": 145.28,
+   "text": "The analogy: wrapping the CRISPR ingredients in fat bubbles that fuse with cells."
+  },
+  {
+   "t": 150.81,
+   "text": "LNPs are tiny droplets of specific lipid mixtures — fatty molecules engineered to package a nucleic acid cargo inside, circulate safely through the bloodstream, and then dump their cargo into the cytoplasm of a target cell."
+  },
+  {
+   "t": 165.96,
+   "text": "You may already know LNPs, because they're the same delivery technology that proved itself at scale in the COVID mRNA vaccines."
+  },
+  {
+   "t": 174.1,
+   "text": "The mRNA vaccines used LNPs to deliver mRNA encoding the spike protein into your muscle cells."
+  },
+  {
+   "t": 182.18,
+   "text": "CRISPR uses LNPs to deliver mRNA encoding Cas9, plus a chemically-stabilized synthetic guide RNA, into target cells."
+  },
+  {
+   "t": 191.97,
+   "text": "The cell translates the mRNA into Cas9 protein for a day or two, editing happens, the mRNA degrades, the Cas9 protein gets cleared, and you're done."
+  },
+  {
+   "t": 202.24,
+   "text": "This transient kinetics is actually a major safety advantage — Cas9 isn't hanging around for weeks accumulating off-targets."
+  },
+  {
+   "t": 210.97,
+   "text": "LNPs naturally accumulate in the liver after intravenous infusion."
+  },
+  {
+   "t": 216.07,
+   "text": "So LNPs are the natural choice for liver-targeted editing."
+  },
+  {
+   "t": 220.06,
+   "text": "For other tissues, active targeting via surface ligands is an area of active research."
+  },
+  {
+   "t": 226.47,
+   "text": "The third strategy is direct protein delivery — deliver pre-formed Cas9 protein, with the guide RNA already loaded, as a finished functional unit."
+  },
+  {
+   "t": 236.22,
+   "text": "You purify Cas9, mix it with synthetic guide RNA in a tube, and then introduce the complex into cells using a brief high-voltage electric pulse — a technique called electroporation."
+  },
+  {
+   "t": 248.74,
+   "text": "The pulse transiently makes holes in the cell membrane, letting the Cas9 in."
+  },
+  {
+   "t": 254.14,
+   "text": "The advantage is that the protein is active immediately, edits, and then is degraded within a day or so."
+  },
+  {
+   "t": 261.3,
+   "text": "Very short Cas9 lifetime in the cell means very few off-targets accumulate over time."
+  },
+  {
+   "t": 267.79,
+   "text": "Electroporation is the standard approach for ex-vivo applications — when you have the cells in a dish and you can put them through the electric pulse."
+  },
+  {
+   "t": 276.28,
+   "text": "It's how Casgevy, the sickle cell cure we're about to discuss, is manufactured."
+  },
+  {
+   "t": 281.72,
+   "text": "The choice of delivery is intimately tied to the application."
+  },
+  {
+   "t": 285.92,
+   "text": "Ex-vivo, with cells in a dish, electroporation of Cas9 protein is hard to beat — efficient, safe, transient."
+  },
+  {
+   "t": 294.63,
+   "text": "In-vivo, for the liver, LNPs delivering Cas9 mRNA are increasingly the gold standard."
+  },
+  {
+   "t": 301.47,
+   "text": "In-vivo for tissues that don't divide much — eye, muscle, brain — AAV is still the workhorse, despite its size constraints."
+  },
+  {
+   "t": 310.11,
+   "text": "Delivery is not a footnote."
+  },
+  {
+   "t": 312.21,
+   "text": "Delivery is half the therapy."
+  }
+ ]
+}

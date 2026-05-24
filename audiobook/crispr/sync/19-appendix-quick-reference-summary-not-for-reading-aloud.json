@@ -1,0 +1,163 @@
+{
+ "n": 19,
+ "title": "APPENDIX — Quick-reference summary (not for reading aloud)",
+ "duration": 349.76,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX — Quick-reference summary (not for reading aloud)"
+  },
+  {
+   "t": 3.9,
+   "text": "Core idea: CRISPR is find-and-replace for the genome."
+  },
+  {
+   "t": 7.7,
+   "text": "A short guide RNA (the \"search query\") directs a protein called Cas9 (the \"programmable scissors with GPS\") to a matching site in the genome, where it cuts."
+  },
+  {
+   "t": 19.09,
+   "text": "The cell then repairs the cut, either sloppily (knocking the gene out) or precisely if you supply a template."
+  },
+  {
+   "t": 26.15,
+   "text": "Bacterial origin: CRISPR is a bacterial immune system — a vaccination card written in DNA."
+  },
+  {
+   "t": 33.1,
+   "text": "Bacteria store snippets of past viral attackers (spacers) in a genomic array and use them as guides to recognize and destroy returning viruses."
+  },
+  {
+   "t": 43.23,
+   "text": "Discovery timeline: Ishino (1987) noticed odd repeats in E. coli → Mojica (2000) named CRISPR → Mojica + Vergnaud (2005) showed spacers match viral DNA → Barrangou + Horvath (2007) proved it experimentally in a yogurt bacterium → Jinek/Chylinski/Charpentier/Doudna (2012) reprogrammed Cas9 as a universal tool → Zhang and Church (2013) showed mammalian editing → Charpentier and Doudna shared the Nobel (2020) → Casgevy approved (2023)."
+  },
+  {
+   "t": 79.24,
+   "text": "Three stages of the bacterial system: adaptation (acquire new spacers), expression (process spacers into mature crRNAs), interference (use crRNA-loaded Cas9 to cut matching foreign DNA)."
+  },
+  {
+   "t": 92.66,
+   "text": "Cas9 mechanism: scan the genome for the PAM (NGG — \"the password the protein checks before it cuts\"), then unzip the DNA and try to pair the guide; if the seed region matches, form the R-loop across all 20 letters; both nuclease blades close, producing a blunt double-strand break 3 letters from the PAM."
+  },
+  {
+   "t": 113.1,
+   "text": "Two repair pathways: NHEJ = \"slap it back together with typos\" — fast, sloppy, always available, good for knockouts."
+  },
+  {
+   "t": 122.92,
+   "text": "HDR = \"fix it carefully using a template\" — slow, precise, requires dividing cells."
+  },
+  {
+   "t": 130.46,
+   "text": "Engineered variants: High-fidelity Cas9 (eSpCas9, SpCas9-HF1, etc.): reduce off-targets."
+  },
+  {
+   "t": 140.28,
+   "text": "Relaxed-PAM (xCas9, SpRY): cut at sites without NGG."
+  },
+  {
+   "t": 144.94,
+   "text": "Smaller orthologs (SaCas9, CjCas9): fit into AAV."
+  },
+  {
+   "t": 150.8,
+   "text": "Cas12: cousin of Cas9, T-rich PAM, sticky-end cuts."
+  },
+  {
+   "t": 155.82,
+   "text": "Base editing (David Liu, 2016): \"a typewriter that changes one letter without breaking the page\" — Cas9 nickase fused to a deaminase enzyme converts C→T or A→G in place, no double-strand break."
+  },
+  {
+   "t": 170.61,
+   "text": "Covers ~60% of pathogenic point mutations."
+  },
+  {
+   "t": 174.64,
+   "text": "Prime editing (David Liu, 2019): \"find-and-replace where you can change a whole word, not just one letter\" — Cas9 nickase fused to reverse transcriptase plus an extended pegRNA writes any small edit directly into the genome."
+  },
+  {
+   "t": 189.95,
+   "text": "All 12 base swaps plus small insertions/deletions, no double-strand break."
+  },
+  {
+   "t": 195.99,
+   "text": "Delivery: AAV = \"tiny shipping container that knows how to enter cells\" — for in-vivo, tissue-tropic; size-limited."
+  },
+  {
+   "t": 204.61,
+   "text": "LNP = \"fat bubbles that fuse with cells\" — for in-vivo liver delivery of Cas9 mRNA; same tech as COVID vaccines."
+  },
+  {
+   "t": 214.41,
+   "text": "Electroporation of RNP = brief electric pulse for ex-vivo delivery; the manufacturing approach for Casgevy."
+  },
+  {
+   "t": 222.46,
+   "text": "Therapeutics: Casgevy — first approved CRISPR cure (Dec 2023)."
+  },
+  {
+   "t": 228.39,
+   "text": "Edits BCL11A enhancer in patient stem cells to reactivate fetal hemoglobin and compensate for the sickle mutation."
+  },
+  {
+   "t": 237.24,
+   "text": "NTLA-2001 (Intellia) — first in-vivo CRISPR therapy with clinical efficacy."
+  },
+  {
+   "t": 244.68,
+   "text": "LNP-Cas9 mRNA to liver to knock out transthyretin."
+  },
+  {
+   "t": 249.74,
+   "text": "Verve — first in-vivo base editor in humans, targeting PCSK9 for cardiovascular disease."
+  },
+  {
+   "t": 257.21,
+   "text": "Diagnostics (collateral cleavage): SHERLOCK (Cas13, RNA): COVID detection."
+  },
+  {
+   "t": 263.23,
+   "text": "DETECTR (Cas12, DNA): HPV and other infectious disease tests."
+  },
+  {
+   "t": 268.66,
+   "text": "Screens: pooled libraries of guides (GeCKO, Brunello) target every gene in the genome."
+  },
+  {
+   "t": 275.71,
+   "text": "Selection + sequencing reveals which gene knockouts matter for any selectable phenotype."
+  },
+  {
+   "t": 282.71,
+   "text": "Cancer Dependency Map catalogs essential genes across 1000+ cancer cell lines."
+  },
+  {
+   "t": 289.64,
+   "text": "Perturb-seq adds single-cell transcriptional readouts."
+  },
+  {
+   "t": 293.99,
+   "text": "dCas9 platforms (\"scissors with the blades removed, used as a programmable on/off switch\"): CRISPRi (dCas9-KRAB): programmable gene silencing."
+  },
+  {
+   "t": 304.84,
+   "text": "CRISPRa (dCas9-activator): programmable gene activation."
+  },
+  {
+   "t": 310.19,
+   "text": "Plus epigenome editing, live-cell locus imaging, and 3D genome engineering."
+  },
+  {
+   "t": 316.49,
+   "text": "Ethics: He Jiankui (2018): edited CCR5 in human embryos, twins born — \"the cautionary tale of what happens when someone uses the technology before the field is ready."
+  },
+  {
+   "t": 329.43,
+   "text": "\" Global moratorium on germline editing reaffirmed."
+  },
+  {
+   "t": 333.51,
+   "text": "One-sentence summary: RNA-guided DNA cleavage made what used to be impossible routine — from a bacterial defense against phage, to programmable scissors, to base and prime editors, to approved cures and rapid diagnostics, in a single decade."
+  }
+ ]
+}

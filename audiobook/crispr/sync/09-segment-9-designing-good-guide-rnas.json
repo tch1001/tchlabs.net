@@ -1,0 +1,163 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Designing good guide RNAs",
+ "duration": 241.45,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Designing good guide RNAs"
+  },
+  {
+   "t": 3.83,
+   "text": "We're nearly at the halfway point, so let me ground us in something practical: how do you actually design a guide RNA that works?"
+  },
+  {
+   "t": 11.21,
+   "text": "Because here's a fact that surprised the early CRISPR field and has since become well-established."
+  },
+  {
+   "t": 17.27,
+   "text": "Not all guide RNAs are equally good."
+  },
+  {
+   "t": 19.82,
+   "text": "Two guides targeting two different sites in the same gene — both with twenty-letter spacers, both with perfect PAMs, both delivered the same way — one will edit 80% of cells, the other will edit 5%."
+  },
+  {
+   "t": 34.26,
+   "text": "Why?"
+  },
+  {
+   "t": 34.96,
+   "text": "There are two largely independent questions to answer for any candidate guide."
+  },
+  {
+   "t": 39.58,
+   "text": "The first is efficiency: when Cas9 is loaded with this guide, will it actually cut the target effectively?"
+  },
+  {
+   "t": 46.55,
+   "text": "The second is specificity: will this guide also cause Cas9 to cut other sites in the genome that look similar to the target — the off-target problem?"
+  },
+  {
+   "t": 56.1,
+   "text": "You optimize both."
+  },
+  {
+   "t": 57.61,
+   "text": "Good design tools balance them."
+  },
+  {
+   "t": 59.51,
+   "text": "For efficiency, there are some surprisingly simple rules."
+  },
+  {
+   "t": 63.75,
+   "text": "Avoid runs of identical letters — four Ts in a row, for example, are bad because they accidentally act as a \"stop transcription\" signal for the machinery that produces the guide RNA."
+  },
+  {
+   "t": 76.16,
+   "text": "Keep the overall G-and-C content of the spacer moderate — not too high, not too low."
+  },
+  {
+   "t": 82.29,
+   "text": "Avoid spacers that fold back on themselves into stable hairpins, because then the guide can't properly base-pair with the DNA."
+  },
+  {
+   "t": 90.09,
+   "text": "Certain positions in the spacer prefer certain letters — the letter right next to the PAM, for example, prefers a G."
+  },
+  {
+   "t": 97.79,
+   "text": "Beyond these sequence rules, there's also a question of where the target sits in the genome."
+  },
+  {
+   "t": 103.35,
+   "text": "Cas9 has trouble cutting in regions of DNA that are tightly wrapped around histones — what we call dense or closed chromatin."
+  },
+  {
+   "t": 111.55,
+   "text": "Open, accessible chromatin works much better."
+  },
+  {
+   "t": 114.54,
+   "text": "So a good design tool will, if possible, factor in chromatin accessibility data when picking guides."
+  },
+  {
+   "t": 120.96,
+   "text": "For specificity, the rule of thumb is: the search query is fuzzy enough that sometimes it matches the wrong line of text."
+  },
+  {
+   "t": 129.15,
+   "text": "Cas9 will tolerate a few mismatches between the guide and the DNA, especially if those mismatches are at the far end of the spacer — the end away from the PAM."
+  },
+  {
+   "t": 139.03,
+   "text": "Mismatches in the seed region near the PAM are much more disruptive."
+  },
+  {
+   "t": 143.38,
+   "text": "So when you're looking for potential off-targets, you scan the genome for sites that resemble your intended target, weighting the mismatch penalty by where in the spacer the mismatch sits."
+  },
+  {
+   "t": 153.68,
+   "text": "There are now well-established scoring systems for this — the CFD score from John Doench's group at the Broad is the most widely used."
+  },
+  {
+   "t": 161.79,
+   "text": "The standard workflow in practice."
+  },
+  {
+   "t": 164.01,
+   "text": "You enter the name of your gene of interest into one of several free online tools — CRISPick, Benchling, CHOPCHOP, CRISPOR."
+  },
+  {
+   "t": 172.81,
+   "text": "The tool enumerates every possible spacer in your gene, scores each one for predicted efficiency, scans the genome for off-target risks, and presents you with a ranked list."
+  },
+  {
+   "t": 183.99,
+   "text": "You pick the top three or four."
+  },
+  {
+   "t": 185.71,
+   "text": "You order them as oligonucleotides."
+  },
+  {
+   "t": 188.38,
+   "text": "You clone them into your guide RNA vector."
+  },
+  {
+   "t": 191.3,
+   "text": "You deliver."
+  },
+  {
+   "t": 192.3,
+   "text": "You validate."
+  },
+  {
+   "t": 193.51,
+   "text": "If you're trying to knock out a gene, the practical convention is to target the second or third exon — early enough that a frameshift will kill most of the protein, but not so early that alternative splicing might rescue some functional isoform."
+  },
+  {
+   "t": 207.88,
+   "text": "You typically run three to five guides per gene for important experiments, because different guides at different positions give you redundancy."
+  },
+  {
+   "t": 217.22,
+   "text": "If all five guides give you the same phenotype, you can be confident the phenotype is really due to losing that gene, and not due to some weird off-target effect of one particular guide."
+  },
+  {
+   "t": 228.31,
+   "text": "This whole design process sounds tedious in description."
+  },
+  {
+   "t": 232.24,
+   "text": "In practice, designing a guide for a new target now takes about fifteen minutes total, including ordering the oligos."
+  },
+  {
+   "t": 239.97,
+   "text": "The tools have gotten that good."
+  }
+ ]
+}

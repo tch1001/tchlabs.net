@@ -1,0 +1,359 @@
+{
+ "n": 19,
+ "title": "APPENDIX — Quick-reference summary (not for reading aloud)",
+ "duration": 563.8,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX — Quick-reference summary (not for reading aloud)"
+  },
+  {
+   "t": 3.92,
+   "text": "Discovery and Nobel laureates"
+  },
+  {
+   "t": 6.26,
+   "text": "Osamu Shimomura: discovered and purified GFP from Aequorea victoria jellyfish (described 1962); also isolated aequorin (calcium-activated bioluminescent protein)."
+  },
+  {
+   "t": 19.6,
+   "text": "Collected ~850,000 jellyfish over decades."
+  },
+  {
+   "t": 24.73,
+   "text": "Douglas Prasher: cloned the GFP gene (1992) and distributed it to Chalfie and Tsien; not included in the Nobel."
+  },
+  {
+   "t": 34.1,
+   "text": "Martin Chalfie: demonstrated GFP expression in E. coli and C. elegans (1994), proving autonomous folding in any organism."
+  },
+  {
+   "t": 45.54,
+   "text": "Roger Tsien: engineered the color variants (EBFP, ECFP, EGFP, EYFP), the monomeric red mFruits, and the first FRET biosensors."
+  },
+  {
+   "t": 57.8,
+   "text": "2008 Nobel Prize in Chemistry: Shimomura, Chalfie, Tsien."
+  },
+  {
+   "t": 63.51,
+   "text": "Core structure"
+  },
+  {
+   "t": 64.61,
+   "text": "238-amino-acid protein; 11-stranded beta barrel (\"beta-can\"), ~4 nm tall, with internal alpha helix."
+  },
+  {
+   "t": 74.29,
+   "text": "Chromophore formed autocatalytically from residues Ser65-Tyr66-Gly67 via cyclization, dehydration, and O2-dependent oxidation."
+  },
+  {
+   "t": 87.56,
+   "text": "Barrel rigidifies the chromophore (preventing non-radiative decay), excludes water, shields from quenchers."
+  },
+  {
+   "t": 95.54,
+   "text": "Color engineering (Aequorea-derived)"
+  },
+  {
+   "t": 98.11,
+   "text": "EGFP: S65T + F64L; single 488 nm excitation peak; folds well at 37°C; ~35× brighter than wild-type."
+  },
+  {
+   "t": 112.74,
+   "text": "EBFP: Tyr66His; blue ~440 nm."
+  },
+  {
+   "t": 117.69,
+   "text": "ECFP: Tyr66Trp; cyan ~475 nm."
+  },
+  {
+   "t": 123.74,
+   "text": "EYFP: T203Y; yellow ~527 nm; pH/Cl-sensitive (improved in Citrine, Venus, mVenus)."
+  },
+  {
+   "t": 135.96,
+   "text": "mEGFP: A206K to break weak dimer interface."
+  },
+  {
+   "t": 140.6,
+   "text": "Red FPs from coral"
+  },
+  {
+   "t": 142.29,
+   "text": "DsRed (from Discosoma): emits ~583 nm; extra oxidation step extends chromophore; original was tetramer, slow-maturing, aggregation-prone."
+  },
+  {
+   "t": 154.35,
+   "text": "mRFP1: first true monomer (Tsien lab, 2002)."
+  },
+  {
+   "t": 159.31,
+   "text": "mFruits: mCherry (workhorse red, 587/610 nm), mOrange (562 nm), tdTomato (covalent tandem dimer, very bright), mScarlet (designed de novo, brightest monomeric red)."
+  },
+  {
+   "t": 176.06,
+   "text": "FP datasheet rubric"
+  },
+  {
+   "t": 178.16,
+   "text": "Brightness = extinction coefficient × quantum yield."
+  },
+  {
+   "t": 182.49,
+   "text": "Photostability — bleaching tolerance for time-lapse."
+  },
+  {
+   "t": 186.0,
+   "text": "Maturation time — how fast newly made protein lights up."
+  },
+  {
+   "t": 190.05,
+   "text": "Monomericity — look for the \"m\" prefix; non-monomeric tags lie."
+  },
+  {
+   "t": 195.09,
+   "text": "pH sensitivity — matters for acidic compartments (lysosomes, endosomes)."
+  },
+  {
+   "t": 200.84,
+   "text": "Folding efficiency at 37°C."
+  },
+  {
+   "t": 204.74,
+   "text": "Photoactivatable / switchable / convertible FPs"
+  },
+  {
+   "t": 209.85,
+   "text": "PA-GFP: dark → bright with 405 nm pulse."
+  },
+  {
+   "t": 214.53,
+   "text": "Dronpa: reversibly switchable on/off (blue/UV)."
+  },
+  {
+   "t": 219.35,
+   "text": "Dendra2, mEos: green → red photoconversion with 405 nm; the workhorses of PALM."
+  },
+  {
+   "t": 227.03,
+   "text": "FRET — Förster resonance energy transfer"
+  },
+  {
+   "t": 230.41,
+   "text": "Non-radiative dipole-dipole energy transfer between donor (high-energy emitter) and acceptor (overlapping absorber), 1–10 nm range."
+  },
+  {
+   "t": 240.53,
+   "text": "Efficiency ∝ 1/r⁶ — molecular ruler at single-protein scale."
+  },
+  {
+   "t": 246.71,
+   "text": "Common pair: CFP/YFP."
+  },
+  {
+   "t": 249.99,
+   "text": "Cameleon: CFP–calmodulin–M13–YFP; FRET rises with Ca²⁺ binding."
+  },
+  {
+   "t": 259.34,
+   "text": "Epac: cAMP biosensor with similar architecture."
+  },
+  {
+   "t": 263.14,
+   "text": "Calcium and voltage indicators"
+  },
+  {
+   "t": 265.91,
+   "text": "GCaMP: circularly permuted GFP between calmodulin and M13; single-color, ΔF/F > 10× per Ca²⁺ event."
+  },
+  {
+   "t": 277.88,
+   "text": "GCaMP1 → GCaMP6 → jGCaMP8 (faster, brighter; Janelia GENIE Project)."
+  },
+  {
+   "t": 285.48,
+   "text": "Enabled large-scale calcium imaging in awake-behaving animals."
+  },
+  {
+   "t": 290.01,
+   "text": "Voltage indicators: ASAP series (voltage-sensing domain + cpGFP), Archon (rhodopsin-based, fast and accurate)."
+  },
+  {
+   "t": 300.14,
+   "text": "Imaging modalities"
+  },
+  {
+   "t": 301.8,
+   "text": "Widefield epifluorescence: fast, sensitive, no optical sectioning."
+  },
+  {
+   "t": 307.51,
+   "text": "Confocal: pinhole rejects out-of-focus light; optical sectioning at cost of speed."
+  },
+  {
+   "t": 313.89,
+   "text": "Spinning-disk confocal: parallelized confocal; faster, gentler."
+  },
+  {
+   "t": 319.32,
+   "text": "Two-photon: near-IR pulsed laser; inherent sectioning at the focal point; deep tissue penetration (workhorse for in-vivo neuroscience)."
+  },
+  {
+   "t": 329.18,
+   "text": "Light-sheet: side illumination of single plane; gentle, fast 3D imaging of large samples."
+  },
+  {
+   "t": 336.77,
+   "text": "Super-resolution"
+  },
+  {
+   "t": 338.15,
+   "text": "Diffraction limit ~200 nm (Abbe)."
+  },
+  {
+   "t": 341.16,
+   "text": "Single-molecule localization: PSF center localizable to nm precision with enough photons."
+  },
+  {
+   "t": 348.4,
+   "text": "PALM (Betzig): photoactivatable FPs (mEos) for sparse switching."
+  },
+  {
+   "t": 353.93,
+   "text": "STORM (Zhuang): blinking small-molecule dyes (Cy5, Alexa647)."
+  },
+  {
+   "t": 360.38,
+   "text": "STED (Hell): doughnut depletion beam shrinks effective PSF. 2014 Nobel: Betzig, Hell, Moerner."
+  },
+  {
+   "t": 369.0,
+   "text": "Self-labeling tags"
+  },
+  {
+   "t": 370.65,
+   "text": "HaloTag: engineered dehalogenase; covalently traps chloroalkane-dye ligands."
+  },
+  {
+   "t": 377.16,
+   "text": "SNAP-tag: engineered alkyltransferase; traps benzylguanine-dye ligands."
+  },
+  {
+   "t": 383.81,
+   "text": "CLIP-tag: SNAP variant for benzylcytosine (orthogonal to SNAP)."
+  },
+  {
+   "t": 388.82,
+   "text": "Advantages: brightest dye chemistries (JF dyes), temporal labeling control, color flexibility, fluorogenic options."
+  },
+  {
+   "t": 397.79,
+   "text": "Synthetic dye families"
+  },
+  {
+   "t": 399.76,
+   "text": "Fluoresceins / rhodamines (classical xanthenes)."
+  },
+  {
+   "t": 404.17,
+   "text": "Cyanines (Cy3, Cy5, Cy7): tunable, single-molecule workhorses."
+  },
+  {
+   "t": 411.36,
+   "text": "Alexa Fluor: optimized series across spectrum (default for immunofluorescence)."
+  },
+  {
+   "t": 417.11,
+   "text": "Atto dyes: high QY, photostable."
+  },
+  {
+   "t": 420.61,
+   "text": "Janelia Fluor (JF) dyes: bright, photostable, cell-permeable; designed for HaloTag/SNAP-tag live-cell labeling."
+  },
+  {
+   "t": 431.09,
+   "text": "Labeling strategies"
+  },
+  {
+   "t": 432.65,
+   "text": "N- vs C-terminal fusion: try both, validate function."
+  },
+  {
+   "t": 437.72,
+   "text": "Linker design: flexible Gly-Ser repeats common."
+  },
+  {
+   "t": 442.02,
+   "text": "Organelle targeting: signal sequences for mitochondria (COX VIII), nucleus (NLS), ER (KDEL), peroxisomes (SKL), plasma membrane (palmitoylation/CAAX)."
+  },
+  {
+   "t": 455.47,
+   "text": "Knock-in tagging via CRISPR for endogenous expression — gold standard."
+  },
+  {
+   "t": 460.31,
+   "text": "Brainbow: stochastic combinatorial multi-color expression for tracing single cells in dense tissue."
+  },
+  {
+   "t": 467.47,
+   "text": "Optogenetics intersection"
+  },
+  {
+   "t": 469.59,
+   "text": "Channelrhodopsin-2 (ChR2): blue-light-gated cation channel from algae; drives neuronal firing."
+  },
+  {
+   "t": 477.31,
+   "text": "Halorhodopsin: yellow-light-driven chloride pump; silences neurons."
+  },
+  {
+   "t": 482.42,
+   "text": "All-optical electrophysiology: combine opsin actuator + FP indicator with spectrally separated wavelengths."
+  },
+  {
+   "t": 490.66,
+   "text": "2005: Deisseroth, Boyden, Nagel demonstrate ChR2 in mammalian neurons."
+  },
+  {
+   "t": 497.79,
+   "text": "Frontier"
+  },
+  {
+   "t": 498.87,
+   "text": "Near-IR FPs: iRFP family from bacterial phytochromes; biliverdin chromophore; deep tissue imaging."
+  },
+  {
+   "t": 507.17,
+   "text": "Oxygen-independent FPs: UnaG (eel, bilirubin-binding) for anaerobic imaging."
+  },
+  {
+   "t": 513.82,
+   "text": "MiniSOG: flavin-binding singlet-oxygen generator for EM contrast and chromophore-assisted protein inactivation."
+  },
+  {
+   "t": 522.64,
+   "text": "NanoLuc + furimazine: bright bioluminescence; no excitation needed; no photobleaching/phototoxicity; in-vivo whole-animal imaging."
+  },
+  {
+   "t": 533.77,
+   "text": "Single-molecule tracking: photon-budget-limited; pushes brightest dyes and most photostable FPs to their limits."
+  },
+  {
+   "t": 541.9,
+   "text": "Two organizing principles"
+  },
+  {
+   "t": 543.95,
+   "text": "Structure dictates function: the barrel rigidifies the chromophore, Tyr66 is the color knob, the environment fine-tunes, and engineering is mutation of these structural elements."
+  },
+  {
+   "t": 556.72,
+   "text": "There is no single best FP — only the best FP for this experiment."
+  },
+  {
+   "t": 561.99,
+   "text": "Run the rubric every time."
+  }
+ ]
+}

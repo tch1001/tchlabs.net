@@ -1,0 +1,199 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The mFruits and why monomeric matters",
+ "duration": 327.27,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The mFruits and why monomeric matters"
+  },
+  {
+   "t": 4.34,
+   "text": "So, picking up where we left off: by the early 2000s, mRFP1 existed — a monomeric red fluorescent protein, finally — but it was dim and didn't mature fully."
+  },
+  {
+   "t": 16.9,
+   "text": "The Tsien lab decided to fix that, and what they did between roughly 2004 and 2008 is one of the great campaigns of directed protein evolution in modern biology."
+  },
+  {
+   "t": 27.8,
+   "text": "The method is worth understanding."
+  },
+  {
+   "t": 29.96,
+   "text": "They took mRFP1 as a starting point, made tens of thousands of random mutant versions of it, and then screened them — basically by looking at petri plates and picking the brightest, best-behaved colonies."
+  },
+  {
+   "t": 43.01,
+   "text": "Round after round."
+  },
+  {
+   "t": 44.25,
+   "text": "Mutate, screen, pick the winners, mutate the winners again, screen again."
+  },
+  {
+   "t": 49.55,
+   "text": "Out of this came a family of monomeric fluorescent proteins spanning yellow, orange, red, and far-red."
+  },
+  {
+   "t": 57.24,
+   "text": "The lab named them after fruits."
+  },
+  {
+   "t": 59.41,
+   "text": "The mFruits."
+  },
+  {
+   "t": 60.69,
+   "text": "Let me walk through the key members, because you'll see these names constantly in modern papers."
+  },
+  {
+   "t": 66.4,
+   "text": "mCherry — the workhorse red."
+  },
+  {
+   "t": 68.61,
+   "text": "mCherry emerged from the mFruits screens as a good balance of brightness, monomericity, photostability, and reasonable maturation speed."
+  },
+  {
+   "t": 78.22,
+   "text": "It absorbs around 587 nanometers, emits around 610."
+  },
+  {
+   "t": 84.11,
+   "text": "It's not the brightest red protein available, but it's well-behaved when fused to other proteins, and it matures in a sensible amount of time."
+  },
+  {
+   "t": 92.39,
+   "text": "For more than a decade, mCherry has been the default red protein for routine fusion-protein work."
+  },
+  {
+   "t": 98.78,
+   "text": "Pair it with EGFP and you have a clean two-color system: green and red, well-separated, both monomeric."
+  },
+  {
+   "t": 106.4,
+   "text": "That combination — green and red, EGFP and mCherry — is probably the most common two-color setup in cell biology."
+  },
+  {
+   "t": 115.38,
+   "text": "mOrange — exactly what it sounds like, emitting around 562 nanometers."
+  },
+  {
+   "t": 120.97,
+   "text": "Useful when you want a color between green and red, often paired with cyan or blue for multi-color work."
+  },
+  {
+   "t": 127.5,
+   "text": "tdTomato — this one's a special case worth explaining."
+  },
+  {
+   "t": 131.07,
+   "text": "tdTomato is not a true monomer."
+  },
+  {
+   "t": 134.06,
+   "text": "The \"td\" stands for \"tandem dimer."
+  },
+  {
+   "t": 136.91,
+   "text": "\" The original Tomato protein was a dimer — two cans stuck together."
+  },
+  {
+   "t": 141.36,
+   "text": "Rather than try to monomerize it, which would have cost a lot of brightness, the engineers did something clever: they genetically fused two copies of the protein head-to-tail into a single long polypeptide."
+  },
+  {
+   "t": 153.66,
+   "text": "So the molecule you express comes off the ribosome as one continuous chain, but it folds up into what is functionally a covalently-linked dimer — two cans stuck together, but as one molecule."
+  },
+  {
+   "t": 166.1,
+   "text": "Why bother?"
+  },
+  {
+   "t": 167.14,
+   "text": "Because tdTomato is extremely bright — among the brightest fluorescent proteins available."
+  },
+  {
+   "t": 173.59,
+   "text": "And from the perspective of whatever protein you're fusing it to, it still behaves like a single tag."
+  },
+  {
+   "t": 179.57,
+   "text": "The tradeoff is size: tdTomato is twice as big as a normal FP, which can be a problem for some applications."
+  },
+  {
+   "t": 187.99,
+   "text": "But for things like labeling neurons where you want maximum signal in fine processes, tdTomato is hard to beat."
+  },
+  {
+   "t": 195.45,
+   "text": "mScarlet — a more recent entry, from 2017, from a Dutch group."
+  },
+  {
+   "t": 201.15,
+   "text": "mScarlet is a designed red fluorescent protein — its sequence was constructed with the help of structural principles rather than purely by random screening — and it is currently the brightest monomeric red fluorescent protein known."
+  },
+  {
+   "t": 214.35,
+   "text": "If you're starting a new project today and you want a red tag, mScarlet or one of its successors is often the right starting point."
+  },
+  {
+   "t": 221.62,
+   "text": "Now I want to step back and emphasize a principle, because it goes deeper than any individual protein."
+  },
+  {
+   "t": 228.47,
+   "text": "The reason monomericity matters so much comes back to the analogy I introduced earlier: a good tag is invisible to the biology."
+  },
+  {
+   "t": 237.49,
+   "text": "The tag is supposed to ride along passively."
+  },
+  {
+   "t": 240.25,
+   "text": "The moment the tag starts pulling your protein into artificial clusters — into dimers or tetramers — the tag has become an actor in the play instead of a stage light."
+  },
+  {
+   "t": 250.6,
+   "text": "It's affecting where your protein goes, how fast it diffuses, what it binds to."
+  },
+  {
+   "t": 256.07,
+   "text": "The biology you measure is now contaminated by the tag's own behavior."
+  },
+  {
+   "t": 260.94,
+   "text": "This is why, when you read a modern methods section and see \"mCherry\" or \"mScarlet\" or \"mEGFP\" with that lowercase \"m\" prefix, the m is telling you \"monomeric."
+  },
+  {
+   "t": 273.24,
+   "text": "\" It's a flag that says: this version of the protein has been explicitly engineered not to self-associate."
+  },
+  {
+   "t": 279.98,
+   "text": "Even EGFP, derived from wild-type GFP, has a tiny tendency to weakly dimerize at high concentrations, and there's a variant called mEGFP with a single mutation, A206K, that breaks that weak dimer interface."
+  },
+  {
+   "t": 296.3,
+   "text": "For careful work, especially when you're tagging a membrane protein where local concentrations get high, you want the m version."
+  },
+  {
+   "t": 304.32,
+   "text": "So when you choose a fluorescent tag for an experiment, the very first question after \"what color?"
+  },
+  {
+   "t": 310.48,
+   "text": "\" is \"is it monomeric?"
+  },
+  {
+   "t": 312.39,
+   "text": "\" If the answer is no, you may be measuring an artifact."
+  },
+  {
+   "t": 316.07,
+   "text": "That's the lesson of the entire mFruits campaign: thousands of mutations, years of work, all in service of making sure the tag tells the truth instead of contaminating it."
+  }
+ ]
+}

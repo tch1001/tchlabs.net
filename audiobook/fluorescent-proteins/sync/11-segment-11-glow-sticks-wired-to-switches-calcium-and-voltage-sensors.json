@@ -1,0 +1,279 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Glow sticks wired to switches: calcium and voltage sensors",
+ "duration": 461.38,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Glow sticks wired to switches: calcium and voltage sensors"
+  },
+  {
+   "t": 6.08,
+   "text": "Now we come to one of the most consequential applications of fluorescent protein engineering in the last two decades: genetically encoded indicators of neural activity."
+  },
+  {
+   "t": 16.4,
+   "text": "This is the technology that, more than any other, transformed neuroscience from a field of electrodes — measuring one cell at a time with a glass pipette — into a field where you can image, simultaneously, the activity of thousands of neurons across an animal's brain while it does a behavior."
+  },
+  {
+   "t": 34.01,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 35.33,
+   "text": "A regular fluorescent protein is a glow stick."
+  },
+  {
+   "t": 38.5,
+   "text": "A calcium sensor is a glow stick wired to a switch — flip the switch and the brightness changes."
+  },
+  {
+   "t": 45.01,
+   "text": "Calcium binds, the protein lights up."
+  },
+  {
+   "t": 47.55,
+   "text": "Calcium leaves, the protein goes dim."
+  },
+  {
+   "t": 50.3,
+   "text": "If you can express this glow-stick-with-a-switch inside a neuron, then every time the neuron fires, calcium rushes in, and you see a bright flash."
+  },
+  {
+   "t": 60.27,
+   "text": "You've turned the molecular flashlight into an action-potential reporter."
+  },
+  {
+   "t": 64.35,
+   "text": "Why calcium?"
+  },
+  {
+   "t": 65.45,
+   "text": "Because neurons fire by sending electrical spikes called action potentials."
+  },
+  {
+   "t": 70.7,
+   "text": "Each spike opens voltage-gated calcium channels in the neuron's membrane, and calcium ions flood briefly into the cell."
+  },
+  {
+   "t": 78.53,
+   "text": "So calcium concentration is, indirectly, a readout of when the neuron is firing."
+  },
+  {
+   "t": 84.15,
+   "text": "If you can image calcium, you can read out neural activity."
+  },
+  {
+   "t": 87.71,
+   "text": "The first widely used calcium sensors were FRET-based — like the Cameleon I described in the last segment."
+  },
+  {
+   "t": 93.84,
+   "text": "Useful, but the signals were modest, and a two-color FRET readout is hard to multiplex across many cells."
+  },
+  {
+   "t": 101.19,
+   "text": "The big leap came with a different design strategy that produces a single-color, single-wavelength indicator with a much bigger response."
+  },
+  {
+   "t": 109.12,
+   "text": "That sensor is called GCaMP, and its architecture is worth understanding because it's a masterpiece of protein engineering."
+  },
+  {
+   "t": 117.04,
+   "text": "GCaMP is a single polypeptide consisting of three parts joined together: calmodulin on one end, the M13 peptide on the other end, and — here's the trick — in the middle, a circularly permuted GFP."
+  },
+  {
+   "t": 132.4,
+   "text": "Circularly permuted is a bit of a jargon phrase, so let me unpack it."
+  },
+  {
+   "t": 137.41,
+   "text": "A normal GFP has its N-terminus and C-terminus — the two ends of the chain — at one end of the barrel, away from the chromophore."
+  },
+  {
+   "t": 146.12,
+   "text": "To make a circularly permuted version, you take the gene and rearrange it: you fuse the original ends together with a short linker, and you open up new ends at a different position in the protein sequence, specifically a position that puts the new ends right next to the chromophore."
+  },
+  {
+   "t": 161.96,
+   "text": "The protein still folds into the same beta barrel."
+  },
+  {
+   "t": 165.28,
+   "text": "The chromophore still forms in the middle."
+  },
+  {
+   "t": 168.2,
+   "text": "But now the two free ends — the N and C termini — stick out right near the chromophore, in a spot where they can directly affect its environment."
+  },
+  {
+   "t": 177.61,
+   "text": "Now you fuse calmodulin to one of those new ends, and the M13 peptide to the other end."
+  },
+  {
+   "t": 183.96,
+   "text": "So the assembled GCaMP has the circularly permuted GFP in the middle, with calmodulin and M13 dangling off the side, right next to the chromophore."
+  },
+  {
+   "t": 194.7,
+   "text": "When there's no calcium, calmodulin and M13 are floppy and don't engage."
+  },
+  {
+   "t": 200.31,
+   "text": "In this configuration, there's a little gap near the chromophore that lets water in, and the chromophore is mostly dark."
+  },
+  {
+   "t": 207.14,
+   "text": "When calcium rises, calcium binds calmodulin, calmodulin wraps around M13, and the resulting compact complex sits down right next to the chromophore."
+  },
+  {
+   "t": 217.81,
+   "text": "This closes off the gap, restructures the chromophore's environment, and turns the chromophore bright."
+  },
+  {
+   "t": 223.88,
+   "text": "The protein lights up."
+  },
+  {
+   "t": 225.21,
+   "text": "Modern GCaMP variants show fluorescence increases of more than ten-fold per calcium event."
+  },
+  {
+   "t": 231.94,
+   "text": "One color, one wavelength, a big bright flash on every spike."
+  },
+  {
+   "t": 236.86,
+   "text": "Easy to image, easy to multiplex across thousands of neurons."
+  },
+  {
+   "t": 241.43,
+   "text": "The evolution of GCaMP is a story in itself, and it shows how iterative engineering can compound into extraordinary improvements over years."
+  },
+  {
+   "t": 251.55,
+   "text": "The first version, GCaMP1, was published in 2001 by Junichi Nakai."
+  },
+  {
+   "t": 257.24,
+   "text": "It worked, but it was dim and slow."
+  },
+  {
+   "t": 259.44,
+   "text": "GCaMP2, GCaMP3, GCaMP5, GCaMP6 — each generation got brighter, faster, more sensitive."
+  },
+  {
+   "t": 269.95,
+   "text": "By the time GCaMP6 came out, around 2013, from a consortium called the GENIE Project at HHMI's Janelia Research Campus, the sensor was good enough to reliably detect single action potentials in mouse cortical neurons."
+  },
+  {
+   "t": 285.47,
+   "text": "Then came GCaMP7."
+  },
+  {
+   "t": 287.94,
+   "text": "Then in 2023, jGCaMP8 — the \"j\" is for Janelia — with response times fast enough to begin resolving individual spikes at nearly millisecond timescales."
+  },
+  {
+   "t": 300.27,
+   "text": "Each generation involved screening thousands or tens of thousands of mutant variants."
+  },
+  {
+   "t": 305.98,
+   "text": "The improvements came from mutations all over the protein — at the calmodulin interface, at the M13 interface, in the linker regions, in the GFP itself."
+  },
+  {
+   "t": 316.18,
+   "text": "The fundamental architecture stayed the same; what changed was the fine tuning of every contact point, so that the calcium-driven shape change translated more and more efficiently into a fluorescence change."
+  },
+  {
+   "t": 328.77,
+   "text": "The impact has been enormous."
+  },
+  {
+   "t": 330.69,
+   "text": "Modern neuroscience papers routinely image calcium signals from thousands of neurons simultaneously across multiple brain regions while a mouse navigates a virtual reality environment."
+  },
+  {
+   "t": 342.47,
+   "text": "That experiment was simply impossible twenty years ago."
+  },
+  {
+   "t": 346.35,
+   "text": "GCaMP made it routine."
+  },
+  {
+   "t": 348.74,
+   "text": "But calcium is, fundamentally, a proxy for spiking."
+  },
+  {
+   "t": 353.03,
+   "text": "It's slow — calcium signals last hundreds of milliseconds while action potentials last one or two milliseconds."
+  },
+  {
+   "t": 360.74,
+   "text": "The cleaner readout would be membrane voltage itself."
+  },
+  {
+   "t": 364.33,
+   "text": "But engineering a fluorescent protein indicator of voltage has turned out to be much harder."
+  },
+  {
+   "t": 369.73,
+   "text": "Why?"
+  },
+  {
+   "t": 370.42,
+   "text": "Because voltage-sensing requires the indicator to sit on the membrane and respond to changes in the electric field across it."
+  },
+  {
+   "t": 377.57,
+   "text": "The earliest designs took voltage-sensing protein domains from voltage-gated ion channels and fused them to GFP."
+  },
+  {
+   "t": 385.57,
+   "text": "Those indicators worked, but were slow and dim."
+  },
+  {
+   "t": 388.62,
+   "text": "A more successful family, the ASAP sensors, use a circularly permuted GFP fused to a voltage-sensing domain from a sea squirt protein."
+  },
+  {
+   "t": 399.09,
+   "text": "A different approach uses microbial rhodopsins — light-driven ion pumps from archaea, whose absorption changes when membrane voltage changes."
+  },
+  {
+   "t": 408.33,
+   "text": "Engineered versions like Archon can resolve individual action potentials in vivo."
+  },
+  {
+   "t": 413.87,
+   "text": "The catch is they need very intense excitation light and they're dim."
+  },
+  {
+   "t": 418.13,
+   "text": "The voltage indicator field is moving fast."
+  },
+  {
+   "t": 421.27,
+   "text": "Within a decade, voltage imaging may become as routine as calcium imaging is today."
+  },
+  {
+   "t": 427.53,
+   "text": "But for now, calcium imaging with GCaMP is the workhorse, and it has rewritten what neuroscience can do."
+  },
+  {
+   "t": 435.3,
+   "text": "The unifying point: the sensor revolution turned fluorescent proteins from passive tags into active readouts of biological activity."
+  },
+  {
+   "t": 444.74,
+   "text": "Combined with the right microscopy — which is exactly what we'll cover next — these tools have made it possible to watch the brain at work, in real time, with single-cell resolution, in behaving animals."
+  },
+  {
+   "t": 457.03,
+   "text": "That capability is one of the great achievements of modern biology."
+  }
+ ]
+}

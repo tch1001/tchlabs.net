@@ -1,0 +1,191 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — How we make virus from plasmids: AAV and lentivirus production",
+ "duration": 333.69,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — How we make virus from plasmids: AAV and lentivirus production"
+  },
+  {
+   "t": 6.34,
+   "text": "When bare plasmid delivery isn't efficient enough — which is most of the time, in patients — we usually turn to viral vectors."
+  },
+  {
+   "t": 14.34,
+   "text": "Viruses are, after all, exquisitely evolved machines for delivering genetic material into cells."
+  },
+  {
+   "t": 21.38,
+   "text": "So in gene therapy, we hijack viruses, gut their disease-causing parts, and use what's left as a delivery vehicle for our gene of interest."
+  },
+  {
+   "t": 30.14,
+   "text": "The two most important platforms today are AAV — adeno-associated virus — and lentivirus, which is a stripped-down HIV-derived vector."
+  },
+  {
+   "t": 39.42,
+   "text": "But here's the question you may not have asked: where do the viral particles come from?"
+  },
+  {
+   "t": 44.02,
+   "text": "You're treating a patient with billions of viral particles per dose."
+  },
+  {
+   "t": 48.5,
+   "text": "Somebody has to manufacture them."
+  },
+  {
+   "t": 50.35,
+   "text": "And the answer, beautifully, is that you make them from plasmids."
+  },
+  {
+   "t": 54.38,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 55.64,
+   "text": "You don't ship the virus."
+  },
+  {
+   "t": 57.23,
+   "text": "You ship the assembly kit."
+  },
+  {
+   "t": 58.89,
+   "text": "Specifically, you ship a small set of plasmids — typically two, three, or four — that, when delivered together into a producer cell line in a lab, instruct the producer cell to assemble brand-new viral particles."
+  },
+  {
+   "t": 73.19,
+   "text": "The producer cell becomes a tiny factory cranking out virus, which you then harvest, purify, and use as your therapeutic."
+  },
+  {
+   "t": 82.0,
+   "text": "Let me walk through how this works for AAV, because the trick is clever."
+  },
+  {
+   "t": 86.21,
+   "text": "A normal AAV particle, when it infects a cell, brings in three things: a short single-stranded DNA genome encoding two viral proteins (Rep and Cap), surrounded by capsid built from Cap."
+  },
+  {
+   "t": 99.66,
+   "text": "The genome is flanked by short hairpin sequences called ITRs — inverted terminal repeats — that mark the boundaries of what gets packaged."
+  },
+  {
+   "t": 108.83,
+   "text": "In the manufacturing scheme, those three components — Rep/Cap, your gene of interest, and adenoviral helper genes that AAV needs to replicate — get split across three or four different plasmids."
+  },
+  {
+   "t": 121.47,
+   "text": "Plasmid one carries your gene of interest flanked by the AAV ITRs."
+  },
+  {
+   "t": 126.62,
+   "text": "This is the plasmid that will get packaged inside the eventual viral particles."
+  },
+  {
+   "t": 132.04,
+   "text": "Plasmid two carries the Rep and Cap genes, which produce the proteins that make the capsid and replicate the genome."
+  },
+  {
+   "t": 139.75,
+   "text": "Plasmid three carries the adenoviral helper genes that provide functions AAV needs."
+  },
+  {
+   "t": 145.88,
+   "text": "When all three plasmids are co-transfected into a producer cell line — usually HEK293 cells, a workhorse human cell line — the cell makes Rep and Cap proteins, recognizes the ITRs flanking your gene of interest on plasmid one, replicates that ITR-flanked sequence into single-stranded copies, and packages those copies into new capsids."
+  },
+  {
+   "t": 170.28,
+   "text": "The cell becomes an AAV-producing factory."
+  },
+  {
+   "t": 173.68,
+   "text": "After a few days, you harvest huge numbers of AAV particles from the cell culture, each one carrying your gene of interest inside."
+  },
+  {
+   "t": 181.88,
+   "text": "The brilliance of this design is what's missing from any one plasmid."
+  },
+  {
+   "t": 186.36,
+   "text": "None of them, individually, can produce infectious virus on its own."
+  },
+  {
+   "t": 190.82,
+   "text": "You need all three components together."
+  },
+  {
+   "t": 193.19,
+   "text": "So if any one of them escaped into the wild, it couldn't propagate."
+  },
+  {
+   "t": 197.25,
+   "text": "The system is replication-incompetent by design — a major safety feature when you're making vectors for human therapy."
+  },
+  {
+   "t": 204.47,
+   "text": "The split also lets you swap parts independently."
+  },
+  {
+   "t": 207.45,
+   "text": "Want a different capsid that targets a different tissue?"
+  },
+  {
+   "t": 210.54,
+   "text": "Just swap plasmid two for one with a different Cap gene."
+  },
+  {
+   "t": 214.34,
+   "text": "Want a different therapeutic gene?"
+  },
+  {
+   "t": 216.24,
+   "text": "Swap plasmid one."
+  },
+  {
+   "t": 217.6,
+   "text": "The modularity makes the platform broadly programmable."
+  },
+  {
+   "t": 221.46,
+   "text": "Lentiviral vector production works on the same principle, with a different breakdown."
+  },
+  {
+   "t": 226.2,
+   "text": "Typically you have a transfer plasmid carrying your gene of interest flanked by HIV-derived sequences that include the packaging signal and the LTRs; a packaging plasmid carrying the viral gag, pol, and accessory genes; and an envelope plasmid carrying the envelope glycoprotein — usually not HIV's own envelope but a hybrid envelope like VSV-G, from vesicular stomatitis virus, which gives broader tropism and higher titers."
+  },
+  {
+   "t": 255.29,
+   "text": "Co-transfect all three into HEK293 cells, and the cells assemble lentiviral particles that carry your gene of interest, can infect target cells, and integrate the gene into the target's genome — but cannot replicate further, because the viral genes needed for replication aren't packaged in the particle."
+  },
+  {
+   "t": 274.93,
+   "text": "Again, the safety is built into what's distributed across what plasmids."
+  },
+  {
+   "t": 280.06,
+   "text": "This is the model for the CAR-T therapies that have revolutionized blood cancer treatment."
+  },
+  {
+   "t": 285.5,
+   "text": "Patient's T cells are removed, treated in the lab with a lentiviral vector carrying a chimeric antigen receptor gene, the virus delivers and integrates the gene, the modified T cells are expanded, and given back to the patient as cancer-fighting cells."
+  },
+  {
+   "t": 301.37,
+   "text": "The lentivirus that did the engineering was, somewhere upstream, three plasmids in a flask of HEK293 cells."
+  },
+  {
+   "t": 311.03,
+   "text": "The takeaway: viral vector production is fundamentally a plasmid process."
+  },
+  {
+   "t": 316.39,
+   "text": "The most advanced gene therapies on the market today, including FDA-approved treatments for spinal muscular atrophy and certain inherited blindnesses, are produced from plasmid kits."
+  },
+  {
+   "t": 328.08,
+   "text": "Without the plasmid technology we've built up over fifty years, none of this would exist."
+  }
+ ]
+}

@@ -1,0 +1,227 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Building colors by tweaking the chromophore",
+ "duration": 366.02,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Building colors by tweaking the chromophore"
+  },
+  {
+   "t": 3.7,
+   "text": "Now let me show you how you change the color, because once you have the barrel-and-chromophore picture, the color engineering is going to feel almost inevitable."
+  },
+  {
+   "t": 12.55,
+   "text": "Here's the principle."
+  },
+  {
+   "t": 13.85,
+   "text": "The color of light the chromophore absorbs and emits depends on two things."
+  },
+  {
+   "t": 19.01,
+   "text": "First, the chemical structure of the chromophore itself — its electronic skeleton, the conjugated double bonds."
+  },
+  {
+   "t": 26.65,
+   "text": "Second, the chemical environment surrounding the chromophore inside the barrel — the nearby amino acids whose electrostatic and steric properties nudge the chromophore's energy levels one way or another."
+  },
+  {
+   "t": 39.62,
+   "text": "Change either of those, and you change the color."
+  },
+  {
+   "t": 42.7,
+   "text": "The analogy I want you to hold is tinting."
+  },
+  {
+   "t": 45.51,
+   "text": "Imagine the chromophore is a light bulb, and the amino acids that touch it from the inside of the barrel are a set of colored filters and surface coatings pressed up against the bulb."
+  },
+  {
+   "t": 56.0,
+   "text": "Swap out a filter, and the color shifts."
+  },
+  {
+   "t": 58.67,
+   "text": "Coat the bulb with a different material, and the color shifts."
+  },
+  {
+   "t": 62.6,
+   "text": "The bulb itself can also be swapped — replace the tyrosine in the center with a histidine or a tryptophan, and you've changed the actual emitting material, which shifts the color even more."
+  },
+  {
+   "t": 73.65,
+   "text": "Let me walk you through the canonical color variants of the GFP family, because these are the proteins you'll actually encounter in modern papers."
+  },
+  {
+   "t": 81.95,
+   "text": "Start with wild-type GFP, straight from the jellyfish."
+  },
+  {
+   "t": 85.75,
+   "text": "As I mentioned, it had a few problems — two awkward absorption peaks instead of one clean one, modest brightness, slow folding at 37 degrees Celsius, which is mammalian body temperature."
+  },
+  {
+   "t": 98.14,
+   "text": "The jellyfish lives in cold water, so the protein evolved to fold at ocean temperatures, not warm-blooded ones."
+  },
+  {
+   "t": 105.72,
+   "text": "The first big improvement was a single point mutation discovered in 1995: S65T — swap the serine at position 65 for a threonine."
+  },
+  {
+   "t": 115.84,
+   "text": "This single change cleaned up the absorption spectrum to a single nice peak."
+  },
+  {
+   "t": 120.38,
+   "text": "Combined with another mutation — F64L, phenylalanine to leucine — which fixed the folding problem at body temperature, you got the variant called EGFP, \"enhanced green fluorescent protein."
+  },
+  {
+   "t": 133.78,
+   "text": "\" EGFP absorbs cleanly at 488 nanometers — which conveniently happened to be the standard wavelength of the argon laser already sitting on every confocal microscope in the world — and emits at 507 nanometers."
+  },
+  {
+   "t": 148.71,
+   "text": "It folds well at 37 degrees."
+  },
+  {
+   "t": 151.28,
+   "text": "It's about thirty-five times brighter than wild-type GFP."
+  },
+  {
+   "t": 155.56,
+   "text": "EGFP became, and remains, the default green fluorescent protein in most labs."
+  },
+  {
+   "t": 161.78,
+   "text": "When someone says \"GFP\" today, they almost always mean EGFP."
+  },
+  {
+   "t": 166.7,
+   "text": "Now the other colors."
+  },
+  {
+   "t": 168.14,
+   "text": "Stay with me, because there's a pattern, and the pattern is the structural lesson."
+  },
+  {
+   "t": 173.5,
+   "text": "EBFP — enhanced blue fluorescent protein."
+  },
+  {
+   "t": 177.1,
+   "text": "To shift the emission to blue, you swap out the tyrosine at the center for a histidine."
+  },
+  {
+   "t": 182.5,
+   "text": "The histidine has a smaller, differently-shaped ring than tyrosine, and it gives a different electronic structure to the chromophore, which shifts the emission from green to blue, around 440 nanometers."
+  },
+  {
+   "t": 195.43,
+   "text": "Early blue variants were dim and bleached fast, but later versions like EBFP2 are much better."
+  },
+  {
+   "t": 202.07,
+   "text": "ECFP — enhanced cyan fluorescent protein, emitting in the cyan, around 475 nanometers, between blue and green."
+  },
+  {
+   "t": 211.75,
+   "text": "The mutation here is also at position 66, but now to tryptophan."
+  },
+  {
+   "t": 217.26,
+   "text": "The bulky indole ring of tryptophan in the center of the barrel gives the cyan color."
+  },
+  {
+   "t": 223.36,
+   "text": "CFP turns out to be important because it pairs beautifully with YFP for a technique called FRET, which we'll cover in Segment 10."
+  },
+  {
+   "t": 231.57,
+   "text": "EYFP — enhanced yellow fluorescent protein."
+  },
+  {
+   "t": 235.24,
+   "text": "To shift in the other direction, toward yellow, you keep the original tyrosine in the middle but tweak the environment."
+  },
+  {
+   "t": 242.25,
+   "text": "Specifically, a mutation called T203Y places an aromatic ring right next to the chromophore."
+  },
+  {
+   "t": 250.24,
+   "text": "Two aromatic rings stacked next to each other lower the chromophore's excited-state energy, which red-shifts the emission into the yellow, around 527 nanometers."
+  },
+  {
+   "t": 261.99,
+   "text": "There are improved YFP variants — Citrine, Venus, mVenus — that fold faster and are less sensitive to small changes in pH and chloride."
+  },
+  {
+   "t": 272.33,
+   "text": "So look at the logic."
+  },
+  {
+   "t": 273.58,
+   "text": "To make significant color shifts, the most powerful lever is to change the amino acid at position 66, the central one — to histidine for blue, to tryptophan for cyan, leave it as tyrosine for green or yellow."
+  },
+  {
+   "t": 288.42,
+   "text": "Position 66 is, in a very literal sense, the color knob of the protein."
+  },
+  {
+   "t": 294.74,
+   "text": "The surrounding amino acids provide fine adjustments — tweaking brightness, folding speed, the exact wavelength."
+  },
+  {
+   "t": 302.32,
+   "text": "And here's the payoff."
+  },
+  {
+   "t": 303.77,
+   "text": "Once you have a palette of spectrally distinct variants — blue, cyan, green, yellow — you can label multiple proteins in the same cell with different colors."
+  },
+  {
+   "t": 314.33,
+   "text": "You can dye the mitochondria one color and the actin cytoskeleton another and the nucleus a third, and watch all three simultaneously in a single living cell."
+  },
+  {
+   "t": 324.73,
+   "text": "You can use two compatible colors to ask whether two proteins are interacting, via the FRET trick we'll cover later."
+  },
+  {
+   "t": 331.68,
+   "text": "Multi-color imaging is where most of the experimental power lives, and you can't do it without a palette."
+  },
+  {
+   "t": 337.97,
+   "text": "The whole point of Tsien's engineering campaign was to build that palette."
+  },
+  {
+   "t": 341.95,
+   "text": "But there was still a gap."
+  },
+  {
+   "t": 343.23,
+   "text": "None of these variants emitted in the red."
+  },
+  {
+   "t": 345.64,
+   "text": "The longest-wavelength Aequorea-derived variant, YFP, tops out around 530 nanometers — that's yellow, not red."
+  },
+  {
+   "t": 354.52,
+   "text": "For deeper tissue imaging, for cleaner separation from green, for more channels, the field needed red."
+  },
+  {
+   "t": 361.81,
+   "text": "And the red wasn't going to come from jellyfish."
+  },
+  {
+   "t": 364.42,
+   "text": "It was going to come from coral."
+  }
+ ]
+}

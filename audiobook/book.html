@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0f14">
+<title>Audiobook</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-chapters">
+<header class="topic-header">
+  <a class="back" href="index.html" aria-label="back">←</a>
+  <h1 id="bookTitle">…</h1>
+</header>
+<main id="chapters" class="chapter-list">
+  <p class="muted">Loading…</p>
+</main>
+<script>
+(async function () {
+  const params = new URLSearchParams(location.search);
+  const slug = params.get("slug");
+  const titleEl = document.getElementById("bookTitle");
+  const main = document.getElementById("chapters");
+  if (!slug) { main.innerHTML = '<p class="muted">No book selected.</p>'; return; }
+  try {
+    const res = await fetch(`${slug}/manifest.json`, { cache: "no-store" });
+    const m = await res.json();
+    titleEl.textContent = m.topic;
+    document.title = m.topic;
+    main.innerHTML = m.chapters.map(c => `
+      <a class="card chapter-card"
+         href="player.html?slug=${encodeURIComponent(slug)}&ch=${encodeURIComponent(c.slug)}">
+        <div class="chapter-num">${String(c.n).padStart(2, "0")}</div>
+        <div class="chapter-body">
+          <div class="chapter-title-row">${escape(c.title)}</div>
+          <div class="chapter-meta">${fmtTime(c.duration)}</div>
+        </div>
+        <div class="chevron">›</div>
+      </a>`).join("");
+  } catch (e) {
+    main.innerHTML = `<p class="muted">Could not load book: ${escape(e.message)}</p>`;
+  }
+  function escape(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+  function fmtTime(s){s=Math.max(0,Math.round(s));const m=Math.floor(s/60),ss=s%60;return `${m}:${String(ss).padStart(2,"0")}`;}
+})();
+</script>
+</body>
+</html>

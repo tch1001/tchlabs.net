@@ -1,0 +1,247 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Plasmids that make protein on demand: expression vectors",
+ "duration": 403.11,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Plasmids that make protein on demand: expression vectors"
+  },
+  {
+   "t": 5.39,
+   "text": "Here's a subtle thing that trips up most students when they first learn about cloning."
+  },
+  {
+   "t": 9.74,
+   "text": "Just because you've successfully inserted a gene into a plasmid, and the plasmid is happily replicating in your bacterium, does not mean the bacterium is making the protein the gene encodes."
+  },
+  {
+   "t": 21.84,
+   "text": "Having the DNA there is necessary but not sufficient."
+  },
+  {
+   "t": 26.06,
+   "text": "The cell still has to read the gene, transcribe it into mRNA, and translate that mRNA into protein."
+  },
+  {
+   "t": 33.26,
+   "text": "And for any of that to happen, the gene needs the right regulatory signals wrapped around it — signals the bacterium's transcription machinery recognizes as \"start reading here."
+  },
+  {
+   "t": 44.16,
+   "text": "\""
+  },
+  {
+   "t": 44.36,
+   "text": "The plasmids we discussed in Segment 6 — pUC, pBluescript — are great for holding a gene and shuttling it around."
+  },
+  {
+   "t": 52.56,
+   "text": "They're cloning vectors."
+  },
+  {
+   "t": 54.09,
+   "text": "But they don't necessarily make the bacterium read that gene."
+  },
+  {
+   "t": 57.8,
+   "text": "For that, we need a different category called expression vectors, plasmids specifically designed to drive vigorous, controllable production of protein from whatever gene you've inserted."
+  },
+  {
+   "t": 69.09,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 70.4,
+   "text": "A regular plasmid is like a USB stick storing a program file."
+  },
+  {
+   "t": 74.92,
+   "text": "The cell can carry it around fine, but the cell's CPU isn't running the program; the file is just sitting there."
+  },
+  {
+   "t": 81.69,
+   "text": "An expression vector is a plasmid with a built-in megaphone."
+  },
+  {
+   "t": 85.56,
+   "text": "The megaphone is called a promoter, and it's a short DNA sequence positioned right next to the gene that says, very loudly to the cell's transcription machinery, \"READ THIS GENE."
+  },
+  {
+   "t": 96.75,
+   "text": "READ IT NOW."
+  },
+  {
+   "t": 97.76,
+   "text": "KEEP READING IT."
+  },
+  {
+   "t": 98.84,
+   "text": "\" With a strong promoter sitting in front of your gene, the bacterium can't help but make tons of mRNA, which gets translated into tons of protein."
+  },
+  {
+   "t": 107.76,
+   "text": "Without a promoter, your gene is just sitting on the plasmid being ignored."
+  },
+  {
+   "t": 112.22,
+   "text": "Let me get a bit concrete about what makes a good promoter for an expression vector."
+  },
+  {
+   "t": 116.97,
+   "text": "You want three things, and they're somewhat in tension with each other."
+  },
+  {
+   "t": 120.97,
+   "text": "First, you want the promoter to be strong — meaning the bacterium's RNA polymerase binds it tightly and starts transcription frequently."
+  },
+  {
+   "t": 129.78,
+   "text": "Strong promoter equals lots of mRNA equals lots of protein."
+  },
+  {
+   "t": 134.96,
+   "text": "The classic strong bacterial promoters used in early expression vectors were natural E. coli sequences like the trp promoter and the lac promoter, but for really high expression we now use promoters lifted from bacteriophages, especially the T7 promoter from a phage called T7."
+  },
+  {
+   "t": 152.68,
+   "text": "Second, you want the promoter to be inducible — meaning you can turn it on and off."
+  },
+  {
+   "t": 157.89,
+   "text": "Why?"
+  },
+  {
+   "t": 158.56,
+   "text": "Because some proteins, when produced in huge amounts, are toxic to the bacterium."
+  },
+  {
+   "t": 164.43,
+   "text": "They poison the cell."
+  },
+  {
+   "t": 165.82,
+   "text": "If your promoter is on all the time, the cell either dies or stops growing, and you end up with nothing."
+  },
+  {
+   "t": 171.91,
+   "text": "The trick is to let the bacteria grow up first to a dense population without producing your protein, then flip the switch and force everyone to start making the protein at once."
+  },
+  {
+   "t": 181.62,
+   "text": "You get a final harvest where you've turned a huge cell mass into a wave of protein production, and you collect the result before the toxicity kills everyone."
+  },
+  {
+   "t": 191.47,
+   "text": "Third, you want the promoter to be tight when it's off — meaning essentially zero protein produced before you flip the switch."
+  },
+  {
+   "t": 198.94,
+   "text": "Leaky promoters that dribble protein when supposedly off cause the same toxicity problems."
+  },
+  {
+   "t": 205.22,
+   "text": "The cleverest engineering solution that satisfies all three is the pET system developed by William Studier in the 1980s, and it's worth walking through because it's elegantly designed."
+  },
+  {
+   "t": 216.26,
+   "text": "The gene you want to express sits behind a T7 phage promoter."
+  },
+  {
+   "t": 221.14,
+   "text": "But here's the catch: E. coli's own RNA polymerase doesn't recognize T7 promoters."
+  },
+  {
+   "t": 227.82,
+   "text": "T7 is a phage promoter, so it can only be read by T7 RNA polymerase."
+  },
+  {
+   "t": 233.66,
+   "text": "So if you just put a pET plasmid into regular E. coli, nothing happens — the bacterium can't read the T7 promoter, your gene stays silent."
+  },
+  {
+   "t": 243.62,
+   "text": "Then you put the same plasmid into a special E. coli strain called BL21(DE3), which has the T7 RNA polymerase gene integrated into its chromosome, under control of a switchable bacterial promoter that responds to a small molecule called IPTG."
+  },
+  {
+   "t": 261.43,
+   "text": "Now, before you add IPTG, the T7 polymerase isn't being made, so the T7 promoter on the plasmid is dark, and your gene is silent."
+  },
+  {
+   "t": 270.91,
+   "text": "You let the bacteria grow up to high density."
+  },
+  {
+   "t": 273.9,
+   "text": "Then you add IPTG."
+  },
+  {
+   "t": 275.46,
+   "text": "The bacterial chromosome starts making T7 RNA polymerase, the T7 polymerase rushes to the T7 promoter on the plasmid, and now your gene is being transcribed like crazy — T7 polymerase is unusually fast and processive, so it produces huge amounts of mRNA from the target gene."
+  },
+  {
+   "t": 295.67,
+   "text": "Translation follows, and within a few hours the bacteria are stuffed full of your protein, often making up as much as 30 to 50 percent of the cell's total protein content."
+  },
+  {
+   "t": 306.65,
+   "text": "That's the pET trick."
+  },
+  {
+   "t": 308.07,
+   "text": "Two switches: one for growth, one for production."
+  },
+  {
+   "t": 311.87,
+   "text": "Decoupled, controllable, induced on demand."
+  },
+  {
+   "t": 315.08,
+   "text": "It is, hands down, the most widely used bacterial protein expression system in the world, and it's been used to produce countless research proteins and quite a few therapeutic ones too."
+  },
+  {
+   "t": 326.32,
+   "text": "There's one more piece you need for the bacterium to actually translate your protein efficiently: the ribosome binding site, often called the RBS or Shine-Dalgarno sequence."
+  },
+  {
+   "t": 337.41,
+   "text": "This is a short DNA sequence positioned between the promoter and the actual start of the gene, that the bacterial ribosome recognizes as a docking site."
+  },
+  {
+   "t": 347.31,
+   "text": "Without it, the mRNA gets made but ribosomes don't load onto it efficiently, and translation falters."
+  },
+  {
+   "t": 355.02,
+   "text": "Expression vectors come with optimized RBSs built in, so usually you don't have to think about this — but it's worth knowing it exists."
+  },
+  {
+   "t": 363.13,
+   "text": "It's the equivalent, in a sense, of the call number on a library book: the bookshelf system (the cell) needs both the title (the gene) and the right shelf address (the RBS) to actually find and use it."
+  },
+  {
+   "t": 376.81,
+   "text": "So now your gene is on a plasmid, behind a strong inducible promoter, with a good RBS, in a bacterium primed to express it."
+  },
+  {
+   "t": 386.07,
+   "text": "You add IPTG."
+  },
+  {
+   "t": 387.82,
+   "text": "The bacterium makes huge amounts of your protein."
+  },
+  {
+   "t": 390.98,
+   "text": "Now the question is: how do you get it out?"
+  },
+  {
+   "t": 393.53,
+   "text": "How do you purify your specific protein from the soup of thousands of other bacterial proteins it's sitting in?"
+  },
+  {
+   "t": 400.21,
+   "text": "That's where tags come in, and that's the next segment."
+  }
+ ]
+}

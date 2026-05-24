@@ -1,0 +1,339 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — What the cell does with the break: the slapdash patch versus the careful repair",
+ "duration": 406.34,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — What the cell does with the break: the slapdash patch versus the careful repair"
+  },
+  {
+   "t": 6.28,
+   "text": "Cas9 has made a cut."
+  },
+  {
+   "t": 7.92,
+   "text": "Now what?"
+  },
+  {
+   "t": 8.78,
+   "text": "Now Cas9 is done, and the cell takes over."
+  },
+  {
+   "t": 12.19,
+   "text": "CRISPR didn't add anything new to the cell's repair machinery."
+  },
+  {
+   "t": 16.6,
+   "text": "CRISPR just creates a problem — a broken chromosome — and the cell's own repair machinery decides what to do about it."
+  },
+  {
+   "t": 24.15,
+   "text": "So understanding the two main repair pathways is essential, because they give you fundamentally different kinds of edits."
+  },
+  {
+   "t": 31.45,
+   "text": "The first pathway is called non-homologous end joining, or NHEJ."
+  },
+  {
+   "t": 36.51,
+   "text": "The name is a mouthful."
+  },
+  {
+   "t": 37.95,
+   "text": "The behavior is simple: the cell sees a broken piece of DNA and slaps it back together quickly, often making typos in the process."
+  },
+  {
+   "t": 46.81,
+   "text": "That's it."
+  },
+  {
+   "t": 47.62,
+   "text": "NHEJ is the cell's default, all-purpose double-strand break repair pathway."
+  },
+  {
+   "t": 53.14,
+   "text": "It's available at every stage of the cell cycle."
+  },
+  {
+   "t": 56.49,
+   "text": "The cell doesn't know that the break was caused by CRISPR — it just sees broken DNA, recognizes it as an emergency, and rushes a repair crew to the scene."
+  },
+  {
+   "t": 65.79,
+   "text": "The repair crew grabs the two broken ends, sometimes nibbles a few letters off, sometimes adds a few letters in, and then ligates the ends back together."
+  },
+  {
+   "t": 76.33,
+   "text": "The result is that the rejoined DNA frequently has small insertions or deletions — what we call indels — at the junction."
+  },
+  {
+   "t": 84.35,
+   "text": "Usually one to ten letters, sometimes more."
+  },
+  {
+   "t": 87.22,
+   "text": "Now here's the consequence."
+  },
+  {
+   "t": 88.9,
+   "text": "If the cut was in the middle of a gene — specifically, in the part of the gene that codes for protein — an indel that isn't a multiple of three letters will shift the reading frame."
+  },
+  {
+   "t": 99.09,
+   "text": "The ribosome reading the gene will now read the wrong groups of three, will hit a premature stop signal, and will produce a truncated, broken protein."
+  },
+  {
+   "t": 108.36,
+   "text": "The gene is knocked out."
+  },
+  {
+   "t": 110.03,
+   "text": "Disabled."
+  },
+  {
+   "t": 110.96,
+   "text": "Gone."
+  },
+  {
+   "t": 111.67,
+   "text": "This is the workhorse of CRISPR."
+  },
+  {
+   "t": 114.12,
+   "text": "The most common use, by far."
+  },
+  {
+   "t": 116.01,
+   "text": "You want to disable a gene."
+  },
+  {
+   "t": 117.59,
+   "text": "You design a guide targeting an early part of the gene."
+  },
+  {
+   "t": 121.16,
+   "text": "You deliver Cas9 plus guide."
+  },
+  {
+   "t": 123.59,
+   "text": "Cas9 cuts."
+  },
+  {
+   "t": 125.06,
+   "text": "NHEJ slaps it back together with a typo."
+  },
+  {
+   "t": 128.07,
+   "text": "About two-thirds of the time, the typo is a frameshift, and the gene is dead."
+  },
+  {
+   "t": 132.93,
+   "text": "You select the cells where it worked."
+  },
+  {
+   "t": 134.84,
+   "text": "You move on."
+  },
+  {
+   "t": 135.88,
+   "text": "That whole process, which used to take a year, now takes a week."
+  },
+  {
+   "t": 139.74,
+   "text": "But notice: you don't control what indel you get."
+  },
+  {
+   "t": 142.59,
+   "text": "You get a distribution — some one-letter insertions, some three-letter deletions, some seven-letter deletions."
+  },
+  {
+   "t": 149.35,
+   "text": "For a knockout, that's fine — you don't care which typo, as long as the gene is broken."
+  },
+  {
+   "t": 155.14,
+   "text": "But what if you wanted something more precise?"
+  },
+  {
+   "t": 157.43,
+   "text": "What if you wanted to change one specific letter in the gene from a T to a C?"
+  },
+  {
+   "t": 162.54,
+   "text": "NHEJ won't do that."
+  },
+  {
+   "t": 164.41,
+   "text": "NHEJ just makes a mess at the cut site."
+  },
+  {
+   "t": 167.47,
+   "text": "For that, you need the other repair pathway."
+  },
+  {
+   "t": 170.46,
+   "text": "The other pathway is called homology-directed repair, or HDR."
+  },
+  {
+   "t": 175.18,
+   "text": "And here's the analogy: the cell can fix the break properly if you hand it a template that shows what the fix should look like."
+  },
+  {
+   "t": 182.19,
+   "text": "HDR is the careful repair pathway."
+  },
+  {
+   "t": 185.39,
+   "text": "When a cell is dividing — specifically, after it's copied its DNA but before it's split into two daughter cells — it has two identical copies of every chromosome sitting next to each other."
+  },
+  {
+   "t": 198.28,
+   "text": "So if one copy breaks, the cell can use the unbroken copy as a reference, copy the missing information off of it, and do a perfect, accurate repair."
+  },
+  {
+   "t": 207.81,
+   "text": "The cellular machinery resects the broken ends, sticks them into the homologous template, and rebuilds the missing sequence with perfect fidelity."
+  },
+  {
+   "t": 216.9,
+   "text": "For genome editing, we hijack this pathway by providing our own template — a piece of DNA we hand to the cell, designed to look like the cut site but carrying the edit we want."
+  },
+  {
+   "t": 228.38,
+   "text": "The cell, given the choice between using the sister chromatid and using our donated template, sometimes uses our donor."
+  },
+  {
+   "t": 235.72,
+   "text": "And when it does, the edit gets copied into the chromosome, letter for letter."
+  },
+  {
+   "t": 240.74,
+   "text": "We can install whatever change we encoded in the template."
+  },
+  {
+   "t": 243.81,
+   "text": "HDR gives you precise, programmable edits."
+  },
+  {
+   "t": 247.36,
+   "text": "That sounds wonderful."
+  },
+  {
+   "t": 248.69,
+   "text": "The problem is that HDR is hard."
+  },
+  {
+   "t": 251.03,
+   "text": "It's much less efficient than NHEJ — often ten to a hundred times less efficient."
+  },
+  {
+   "t": 257.16,
+   "text": "And it only works in cells that are actively dividing, because it needs the conditions of a specific phase of the cell cycle."
+  },
+  {
+   "t": 264.89,
+   "text": "In post-mitotic cells — neurons, mature muscle, most of the cells in an adult body — HDR is essentially unavailable."
+  },
+  {
+   "t": 273.19,
+   "text": "NHEJ works everywhere; HDR is choosy."
+  },
+  {
+   "t": 277.47,
+   "text": "So here's the picture."
+  },
+  {
+   "t": 278.81,
+   "text": "NHEJ is fast, sloppy, universal, and good for knockouts."
+  },
+  {
+   "t": 284.3,
+   "text": "HDR is slow, accurate, restricted to dividing cells, and good for precise edits if you can get it to work."
+  },
+  {
+   "t": 291.75,
+   "text": "This split between the two pathways has shaped the entire trajectory of CRISPR technology."
+  },
+  {
+   "t": 297.64,
+   "text": "Two giant bodies of work have flowed from it."
+  },
+  {
+   "t": 300.71,
+   "text": "One body of work has tried to make HDR better — using small-molecule drugs to suppress NHEJ, timing CRISPR delivery to the right phase of the cell cycle, fusing Cas9 to factors that recruit the HDR machinery."
+  },
+  {
+   "t": 315.7,
+   "text": "The gains have been real but modest."
+  },
+  {
+   "t": 318.09,
+   "text": "HDR is still hard."
+  },
+  {
+   "t": 319.87,
+   "text": "The other body of work has gone around the problem entirely."
+  },
+  {
+   "t": 323.42,
+   "text": "Instead of cutting DNA and hoping for HDR, why not build a tool that makes the desired edit directly, without ever cutting both strands?"
+  },
+  {
+   "t": 332.84,
+   "text": "That's what base editing and prime editing are."
+  },
+  {
+   "t": 335.71,
+   "text": "Those tools, which we'll get to in segments 11 and 12, exist precisely because HDR is hard and indels are imprecise."
+  },
+  {
+   "t": 343.71,
+   "text": "They are designed responses to the limitations we just discussed."
+  },
+  {
+   "t": 347.86,
+   "text": "So when I introduce base editing later, remember: it exists because somebody got tired of HDR not working."
+  },
+  {
+   "t": 355.14,
+   "text": "One more cool thing about the indels themselves."
+  },
+  {
+   "t": 357.8,
+   "text": "People used to think they were essentially random — a Gaussian distribution of insertions and deletions of various sizes."
+  },
+  {
+   "t": 365.75,
+   "text": "It turns out they're much more structured than that."
+  },
+  {
+   "t": 368.26,
+   "text": "The actual indel you get at any given site depends in predictable ways on the local DNA sequence — particularly the four letters right next to the cut."
+  },
+  {
+   "t": 377.75,
+   "text": "Computer models can now predict, with reasonable accuracy, what mix of indels you'll get at any given Cas9 target site."
+  },
+  {
+   "t": 386.25,
+   "text": "This means that in some cases you can pick a guide RNA specifically because it'll give you the indel you want."
+  },
+  {
+   "t": 392.39,
+   "text": "Even the \"sloppy\" pathway turns out to have a learnable structure."
+  },
+  {
+   "t": 396.59,
+   "text": "Alright."
+  },
+  {
+   "t": 397.4,
+   "text": "We've built the core platform: discovery, mechanism, the cut, the repair."
+  },
+  {
+   "t": 402.72,
+   "text": "From here, we start expanding into the technology layer."
+  }
+ ]
+}

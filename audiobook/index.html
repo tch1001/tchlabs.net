@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0f14">
+<title>Audiobook</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-topics">
+<header class="topic-header">
+  <h1>Audiobook</h1>
+</header>
+<main id="topics" class="topic-list">
+  <p class="muted">Loading…</p>
+</main>
+<script>
+(async function () {
+  const main = document.getElementById("topics");
+  try {
+    const res = await fetch("index.json", { cache: "no-store" });
+    const topics = await res.json();
+    if (!topics.length) {
+      main.innerHTML = '<p class="muted">No topics yet.</p>';
+      return;
+    }
+    main.innerHTML = topics.map(t => `
+      <a class="card" href="book.html?slug=${encodeURIComponent(t.slug)}">
+        <div class="card-title">${escape(t.title)}</div>
+        <div class="card-meta">Tap to view chapters →</div>
+      </a>`).join("");
+  } catch (e) {
+    main.innerHTML = '<p class="muted">No topics yet.</p>';
+  }
+  function escape(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));}
+})();
+</script>
+</body>
+</html>

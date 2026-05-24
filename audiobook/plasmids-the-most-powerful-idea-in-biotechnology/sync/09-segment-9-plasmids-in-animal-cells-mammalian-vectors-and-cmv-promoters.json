@@ -1,0 +1,211 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Plasmids in animal cells: mammalian vectors and CMV promoters",
+ "duration": 361.79,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Plasmids in animal cells: mammalian vectors and CMV promoters"
+  },
+  {
+   "t": 6.22,
+   "text": "So far we've talked about plasmids living in bacteria."
+  },
+  {
+   "t": 9.59,
+   "text": "But what if you want to express a protein in a mammalian cell — a human cell, a mouse cell, a hamster cell?"
+  },
+  {
+   "t": 16.46,
+   "text": "Maybe because you're studying something that only works in a mammalian cellular context, like a membrane protein that needs human glycosylation."
+  },
+  {
+   "t": 25.05,
+   "text": "Maybe because the protein you're making, like a therapeutic antibody, has to fold and modify correctly to be useful as a drug, and bacteria can't do those modifications."
+  },
+  {
+   "t": 36.26,
+   "text": "Maybe because you're trying to do gene therapy, where the whole point is to deliver the plasmid into a patient's cells."
+  },
+  {
+   "t": 43.14,
+   "text": "For any of these, you need a different category of plasmid — a mammalian expression vector."
+  },
+  {
+   "t": 49.04,
+   "text": "The structural pattern is broadly the same as bacterial expression vectors: origin of replication, selectable marker, promoter, multiple cloning site, optional tag."
+  },
+  {
+   "t": 60.15,
+   "text": "But each of those elements has to be the mammalian version."
+  },
+  {
+   "t": 63.15,
+   "text": "Bacterial origins don't work in mammalian cells."
+  },
+  {
+   "t": 66.76,
+   "text": "Bacterial promoters aren't recognized by mammalian RNA polymerase."
+  },
+  {
+   "t": 71.86,
+   "text": "Bacterial selection markers don't make sense in mammalian cells."
+  },
+  {
+   "t": 76.49,
+   "text": "So we swap each part for a counterpart that works in the new host."
+  },
+  {
+   "t": 80.58,
+   "text": "Let me walk through the standard set of components."
+  },
+  {
+   "t": 83.28,
+   "text": "The promoter is usually one of a small handful of very strong mammalian-compatible promoters."
+  },
+  {
+   "t": 89.75,
+   "text": "The most famous is the CMV promoter, from human cytomegalovirus."
+  },
+  {
+   "t": 94.88,
+   "text": "It's strong, it works in most cell types, and it's been the workhorse of mammalian expression for thirty years."
+  },
+  {
+   "t": 101.22,
+   "text": "The analogy still holds: it's the megaphone that tells the mammalian cell's RNA polymerase II to read your gene loudly."
+  },
+  {
+   "t": 109.79,
+   "text": "Other commonly used promoters include the SV40 promoter from simian virus 40, the EF1-alpha promoter from a human elongation factor gene, and various tissue-specific promoters when you want expression only in particular cell types."
+  },
+  {
+   "t": 124.99,
+   "text": "The polyadenylation signal."
+  },
+  {
+   "t": 126.9,
+   "text": "Mammalian mRNAs need a poly-A tail to be stable and translated, and the cell adds that tail in response to a specific sequence positioned at the end of the gene."
+  },
+  {
+   "t": 137.57,
+   "text": "Mammalian expression vectors include a poly-A signal — often from SV40 or bovine growth hormone — downstream of the gene insertion site to ensure mRNAs are properly terminated and polyadenylated."
+  },
+  {
+   "t": 151.35,
+   "text": "The selectable marker for mammalian cells."
+  },
+  {
+   "t": 154.01,
+   "text": "Bacteria-grade antibiotic resistance genes don't work here, so we use different drugs."
+  },
+  {
+   "t": 160.3,
+   "text": "G418 (also called geneticin) is the mammalian equivalent of kanamycin and the resistance gene neomycin phosphotransferase is the marker."
+  },
+  {
+   "t": 170.59,
+   "text": "Puromycin resistance, hygromycin resistance, and zeocin resistance are other common options."
+  },
+  {
+   "t": 177.2,
+   "text": "The principle is identical to bacterial selection — only cells that took up and kept the plasmid survive the drug — just with mammalian-compatible drug-and-resistance pairs."
+  },
+  {
+   "t": 187.35,
+   "text": "Now, a typical mammalian expression vector also keeps a bacterial origin and a bacterial selectable marker on it as well."
+  },
+  {
+   "t": 195.85,
+   "text": "Why?"
+  },
+  {
+   "t": 196.56,
+   "text": "Because you don't construct the plasmid in mammalian cells — that would be a nightmare."
+  },
+  {
+   "t": 201.28,
+   "text": "You construct it in bacteria, where cloning is fast and cheap, and then transfer the finished plasmid into mammalian cells."
+  },
+  {
+   "t": 209.39,
+   "text": "So the plasmid has to be functional in both kingdoms: bacterial parts for construction and amplification, mammalian parts for actually expressing the gene."
+  },
+  {
+   "t": 219.06,
+   "text": "These are called shuttle vectors, because they shuttle between bacterial and mammalian systems."
+  },
+  {
+   "t": 224.31,
+   "text": "Getting the plasmid into a mammalian cell is harder than getting it into a bacterium."
+  },
+  {
+   "t": 229.79,
+   "text": "Bacteria can be persuaded with heat shock, electrical pulses, or chemical treatments and they'll take up DNA."
+  },
+  {
+   "t": 237.11,
+   "text": "Mammalian cells are more resistant."
+  },
+  {
+   "t": 239.76,
+   "text": "The methods we use — collectively called transfection — include things like packaging the DNA in lipid nanoparticles that fuse with the cell membrane (Lipofectamine and similar reagents), or zapping the cells with brief electrical pulses that punch transient holes in the membrane (electroporation), or precipitating the DNA with calcium phosphate to form clumps the cells engulf."
+  },
+  {
+   "t": 264.07,
+   "text": "The efficiency varies enormously."
+  },
+  {
+   "t": 266.64,
+   "text": "With a good transfection method on an easy cell line, you might get 50 percent of your cells to take up the plasmid."
+  },
+  {
+   "t": 273.21,
+   "text": "With a harder cell type, maybe 1 percent."
+  },
+  {
+   "t": 275.91,
+   "text": "With primary cells from a patient, maybe much less."
+  },
+  {
+   "t": 279.47,
+   "text": "This is one of the reasons why, when we want efficient delivery — especially for therapeutic applications in animals or humans — we often turn to viral vectors instead of bare plasmids, which we'll discuss in Segment 13."
+  },
+  {
+   "t": 292.62,
+   "text": "There's a related distinction worth flagging."
+  },
+  {
+   "t": 295.1,
+   "text": "When you transfect a plasmid into mammalian cells, you can get either transient expression — the plasmid sits in the cytoplasm or nucleus, the cell expresses the gene for a few days, and then the plasmid is gradually lost as the cell divides — or stable expression, where some of the plasmid integrates into the host chromosome and gets stably inherited by all daughter cells."
+  },
+  {
+   "t": 319.01,
+   "text": "For transient expression, you don't need selection; you just harvest at peak expression a couple of days after transfection."
+  },
+  {
+   "t": 326.51,
+   "text": "For stable expression, you add the selection drug and grow cells for weeks until you have a population in which every cell carries the integrated plasmid in its chromosome."
+  },
+  {
+   "t": 336.99,
+   "text": "That's mammalian plasmid expression."
+  },
+  {
+   "t": 339.4,
+   "text": "Same architecture as bacterial, just with mammalian parts substituted in at each layer."
+  },
+  {
+   "t": 345.61,
+   "text": "Same architecture, different ecosystem."
+  },
+  {
+   "t": 348.24,
+   "text": "And with that, we've covered the foundational use of plasmids as molecular tools for studying biology."
+  },
+  {
+   "t": 354.55,
+   "text": "Let's take a short break, and when we come back, we'll start looking at some of the more advanced and exotic things plasmids let us do."
+  }
+ ]
+}

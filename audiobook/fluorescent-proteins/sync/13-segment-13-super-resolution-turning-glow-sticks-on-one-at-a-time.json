@@ -1,0 +1,259 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Super-resolution: turning glow sticks on one at a time",
+ "duration": 410.75,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Super-resolution: turning glow sticks on one at a time"
+  },
+  {
+   "t": 4.92,
+   "text": "Now we get to one of the most consequential capabilities to come out of fluorescent protein engineering: super-resolution microscopy, the family of techniques that broke a physical limit that had stood for over a century."
+  },
+  {
+   "t": 17.56,
+   "text": "This earned the 2014 Nobel Prize in Chemistry, and fluorescent proteins played a central role."
+  },
+  {
+   "t": 24.64,
+   "text": "Let me set up the problem."
+  },
+  {
+   "t": 25.95,
+   "text": "Way back in the 1870s, a German physicist named Ernst Abbe worked out that you cannot resolve two points of light that are closer together than about half the wavelength of the light you're using."
+  },
+  {
+   "t": 37.41,
+   "text": "For visible light at 500 nanometers, that means the smallest features a microscope can distinguish are about 200 to 250 nanometers apart."
+  },
+  {
+   "t": 47.58,
+   "text": "If two objects are 100 nanometers apart, no matter how good your lenses are, they blur into a single spot."
+  },
+  {
+   "t": 55.34,
+   "text": "That's the diffraction limit."
+  },
+  {
+   "t": 56.96,
+   "text": "For over a century, the diffraction limit was treated as an unbreakable physical law."
+  },
+  {
+   "t": 62.76,
+   "text": "It's not a limitation of glass or money — it's a limit imposed by the wave nature of light itself."
+  },
+  {
+   "t": 69.29,
+   "text": "And it's an annoying limit, because lots of important biology lives below 200 nanometers."
+  },
+  {
+   "t": 75.46,
+   "text": "Single ribosomes are about 25 nanometers."
+  },
+  {
+   "t": 78.76,
+   "text": "Nuclear pore complexes are about 100 nanometers."
+  },
+  {
+   "t": 82.49,
+   "text": "Synaptic structures are tens of nanometers."
+  },
+  {
+   "t": 85.9,
+   "text": "All of those are dark, blurry blobs under a conventional fluorescence microscope."
+  },
+  {
+   "t": 91.51,
+   "text": "Then, in the 1990s and 2000s, a series of remarkably clever ideas showed that you could effectively get around the diffraction limit — not by violating the physics, but by being clever about time."
+  },
+  {
+   "t": 103.66,
+   "text": "Here's the key insight, and it's beautiful."
+  },
+  {
+   "t": 106.59,
+   "text": "A single fluorescent molecule, by itself, also produces a 200-nanometer blob in the microscope — the same diffraction-limited blur."
+  },
+  {
+   "t": 116.01,
+   "text": "But that blob is centered on the true position of the molecule."
+  },
+  {
+   "t": 120.49,
+   "text": "If you collect enough photons from that single molecule, you can fit the blob mathematically and find its center with much higher precision than the blob's width."
+  },
+  {
+   "t": 129.61,
+   "text": "With a few thousand photons from one molecule, you can locate it to within a few nanometers."
+  },
+  {
+   "t": 135.26,
+   "text": "The precision of locating a single point is much better than the resolution of distinguishing two separate points."
+  },
+  {
+   "t": 142.49,
+   "text": "So the trick becomes: can you arrange for there to be only one fluorescent molecule lit up at a time in any given diffraction-limited region?"
+  },
+  {
+   "t": 151.69,
+   "text": "Then you can localize each one precisely."
+  },
+  {
+   "t": 154.44,
+   "text": "The catch, of course, is that real cellular structures — a microtubule decorated with thousands of fluorescent proteins, say — have far too many molecules close together."
+  },
+  {
+   "t": 166.2,
+   "text": "They overlap."
+  },
+  {
+   "t": 167.32,
+   "text": "You can't separate them."
+  },
+  {
+   "t": 168.81,
+   "text": "The solution: cycle them."
+  },
+  {
+   "t": 170.84,
+   "text": "Use a switchable fluorescent protein."
+  },
+  {
+   "t": 173.3,
+   "text": "Most of the molecules sit in the dark state."
+  },
+  {
+   "t": 176.45,
+   "text": "A weak pulse of activating light flips a tiny random subset into the bright state."
+  },
+  {
+   "t": 182.12,
+   "text": "You image them — the few sparse molecules — fit each one to find its precise center, then those molecules bleach away."
+  },
+  {
+   "t": 191.36,
+   "text": "Another pulse flips a different small random subset on."
+  },
+  {
+   "t": 195.11,
+   "text": "Image, localize, bleach."
+  },
+  {
+   "t": 197.38,
+   "text": "Repeat many thousands of cycles."
+  },
+  {
+   "t": 199.96,
+   "text": "After enough rounds, you have an enormous list of precise localizations, and you can build a super-resolution image from the list — a pointillist painting made of tens of thousands of precisely-placed dots."
+  },
+  {
+   "t": 212.69,
+   "text": "The analogy I love is: imagine you're standing on a hill, trying to map a city at night."
+  },
+  {
+   "t": 218.51,
+   "text": "If all the streetlights are on at once, the city is a blur — too many lights too close together."
+  },
+  {
+   "t": 224.8,
+   "text": "But if you can turn on just one streetlight at a time and precisely note its location, then turn it off and turn on a different one, eventually you can build up a precise map of every streetlight in the city."
+  },
+  {
+   "t": 236.59,
+   "text": "That's what super-resolution does, except the streetlights are individual fluorescent molecules and the city is the inside of a cell."
+  },
+  {
+   "t": 245.31,
+   "text": "That principle is the foundation of two techniques developed in 2006."
+  },
+  {
+   "t": 251.03,
+   "text": "PALM — photoactivated localization microscopy, from Eric Betzig — uses photoactivatable or photoconvertible fluorescent proteins for the switching."
+  },
+  {
+   "t": 261.8,
+   "text": "The mEos family, which I mentioned in Segment 9, is the workhorse."
+  },
+  {
+   "t": 266.69,
+   "text": "You tag your protein with mEos, you express it in cells."
+  },
+  {
+   "t": 270.64,
+   "text": "You hit it with weak pulses of violet light that convert a small random subset from green to red."
+  },
+  {
+   "t": 276.5,
+   "text": "You image the red, localize each spot precisely, those molecules bleach."
+  },
+  {
+   "t": 282.14,
+   "text": "Repeat thousands of times."
+  },
+  {
+   "t": 284.08,
+   "text": "You assemble an image with about 20-nanometer resolution — ten times better than the diffraction limit."
+  },
+  {
+   "t": 290.14,
+   "text": "STORM — stochastic optical reconstruction microscopy, from Xiaowei Zhuang — uses the same principle but with small-molecule dyes instead of proteins."
+  },
+  {
+   "t": 300.54,
+   "text": "Certain dyes, particularly cyanine dyes like Cy5 or Alexa Fluor 647, can be made to blink between bright and dark states under specific buffer conditions."
+  },
+  {
+   "t": 312.12,
+   "text": "The blinking gives the same single-molecule sparsity, and the same localization-and-reconstruction trick applies."
+  },
+  {
+   "t": 319.2,
+   "text": "There's a third super-resolution technique, STED — stimulated emission depletion, from Stefan Hell — that works differently."
+  },
+  {
+   "t": 327.01,
+   "text": "STED uses a second laser shaped like a doughnut to actively shut off the fluorescence everywhere except the center hole of the doughnut."
+  },
+  {
+   "t": 335.53,
+   "text": "That effectively shrinks the excitation spot below the diffraction limit."
+  },
+  {
+   "t": 340.89,
+   "text": "It's a different physical trick but it gets you to similar resolutions, and it works with normal fluorescent proteins."
+  },
+  {
+   "t": 347.64,
+   "text": "Betzig, Hell, and W."
+  },
+  {
+   "t": 349.9,
+   "text": "E."
+  },
+  {
+   "t": 350.53,
+   "text": "Moerner shared the 2014 Nobel."
+  },
+  {
+   "t": 353.75,
+   "text": "The take-home for fluorescent proteins: super-resolution opened up an entirely new scale of biology, the molecular scale at ten to one hundred nanometers, where individual proteins and complexes live."
+  },
+  {
+   "t": 367.21,
+   "text": "Discoveries that came out of super-resolution include the discrete arrangement of receptors in synapses, the gorgeous actin-spectrin ring scaffold inside the axons of neurons, the detailed architecture of bacterial cell division machinery, and many more."
+  },
+  {
+   "t": 383.06,
+   "text": "And the photoactivatable and photoconvertible proteins are essential reagents for PALM — they're not optional accessories."
+  },
+  {
+   "t": 390.89,
+   "text": "The engineering of switchable fluorescent proteins and the optics of super-resolution came together to deliver an entirely new class of microscopy."
+  },
+  {
+   "t": 400.89,
+   "text": "It is genuinely magical that you can now see, in cells, structures that the founders of light microscopy considered fundamentally invisible."
+  }
+ ]
+}

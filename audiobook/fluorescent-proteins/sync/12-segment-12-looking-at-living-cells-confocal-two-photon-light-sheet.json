@@ -1,0 +1,259 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Looking at living cells: confocal, two-photon, light-sheet",
+ "duration": 412.45,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Looking at living cells: confocal, two-photon, light-sheet"
+  },
+  {
+   "t": 6.14,
+   "text": "So you have all these beautiful fluorescent proteins and sensors."
+  },
+  {
+   "t": 10.61,
+   "text": "Now we need to talk about how you actually image them, because the choice of microscope matters enormously."
+  },
+  {
+   "t": 16.39,
+   "text": "A bad microscope can wreck a good fluorescent-protein experiment."
+  },
+  {
+   "t": 20.68,
+   "text": "Let me walk you through the main options."
+  },
+  {
+   "t": 23.06,
+   "text": "Widefield epifluorescence microscopy."
+  },
+  {
+   "t": 26.11,
+   "text": "This is the basic fluorescence microscope."
+  },
+  {
+   "t": 28.91,
+   "text": "You illuminate the entire field of view from above through the objective lens, you collect the emitted fluorescence with a camera, and that's it."
+  },
+  {
+   "t": 37.91,
+   "text": "It's fast, simple, sensitive."
+  },
+  {
+   "t": 40.14,
+   "text": "The downside: you excite light everywhere in the depth of the sample, so light from above and below your focal plane all contributes as out-of-focus blur."
+  },
+  {
+   "t": 49.99,
+   "text": "For thin samples — cultured cells in a dish — widefield is often the right answer because it's gentle and fast."
+  },
+  {
+   "t": 57.96,
+   "text": "For thick samples — tissue slices, embryos — the blur becomes intolerable."
+  },
+  {
+   "t": 64.2,
+   "text": "Confocal microscopy."
+  },
+  {
+   "t": 65.97,
+   "text": "The analogy here is helpful: think of confocal as taking a clean optical slice through your sample, like a CT scanner but for visible light."
+  },
+  {
+   "t": 75.62,
+   "text": "Instead of imaging the whole depth, you image just one thin focal plane, sharply."
+  },
+  {
+   "t": 81.66,
+   "text": "How does it do that?"
+  },
+  {
+   "t": 82.88,
+   "text": "With a clever optical trick: a tiny pinhole sitting in the detection path that physically blocks out-of-focus light."
+  },
+  {
+   "t": 90.81,
+   "text": "You scan a focused laser spot across the sample, one point at a time, and at each point you collect only the light coming from exactly that focal point."
+  },
+  {
+   "t": 99.65,
+   "text": "Light from above or below the focal plane misses the pinhole and is discarded."
+  },
+  {
+   "t": 104.76,
+   "text": "The result is a sharp optical section through your sample at one depth."
+  },
+  {
+   "t": 109.38,
+   "text": "By moving the focus up or down and scanning again, you can build up a stack of slices and reconstruct a three-dimensional image — exactly like a CT scan, but with light instead of x-rays."
+  },
+  {
+   "t": 122.05,
+   "text": "Confocal is the workhorse of cellular imaging for both fixed and live samples."
+  },
+  {
+   "t": 127.58,
+   "text": "Trade-offs: it's slower than widefield because you have to scan point by point, and it dumps a lot of light into the sample, which is harsh on live cells and accelerates photobleaching."
+  },
+  {
+   "t": 138.11,
+   "text": "Spinning-disk confocal is a clever speed solution."
+  },
+  {
+   "t": 141.5,
+   "text": "Instead of one laser spot scanning serially, a spinning disk full of pinholes illuminates and detects many points simultaneously, producing a confocal image in real time, at video rates."
+  },
+  {
+   "t": 155.2,
+   "text": "Spinning-disk is faster and gentler than point-scanning confocal, and it's often the preferred choice for live-cell time-lapse imaging where you need optical sectioning at speed."
+  },
+  {
+   "t": 166.2,
+   "text": "Two-photon microscopy."
+  },
+  {
+   "t": 167.99,
+   "text": "Here the analogy is more elaborate, but it's worth it."
+  },
+  {
+   "t": 171.47,
+   "text": "Imagine that normally, to excite your fluorophore, you need one big photon — say, a green photon."
+  },
+  {
+   "t": 178.75,
+   "text": "In two-photon excitation, you instead use two smaller, lower-energy photons — say, two red photons — that have to arrive at the same molecule at almost the same instant, within a femtosecond of each other."
+  },
+  {
+   "t": 192.0,
+   "text": "Only then does the combined energy of the two-photon collision excite the fluorophore."
+  },
+  {
+   "t": 198.07,
+   "text": "Why is that useful?"
+  },
+  {
+   "t": 199.45,
+   "text": "Because the probability of two photons arriving at the same place at the same instant scales as the square of the local light intensity."
+  },
+  {
+   "t": 208.75,
+   "text": "So the excitation only happens at the very tightest spot of a focused laser beam, where the intensity is maximal."
+  },
+  {
+   "t": 216.8,
+   "text": "Even a tiny bit above or below the focal point, the intensity drops and the rate of two-photon collisions falls off a cliff."
+  },
+  {
+   "t": 225.16,
+   "text": "You get inherent optical sectioning — only the focal point gets excited — without any need for a pinhole."
+  },
+  {
+   "t": 231.57,
+   "text": "There are two big bonuses."
+  },
+  {
+   "t": 233.31,
+   "text": "First, because you're using longer-wavelength light, typically near-infrared around 900 to 1000 nanometers, it scatters less in tissue."
+  },
+  {
+   "t": 242.8,
+   "text": "You can image hundreds of micrometers deep into a brain."
+  },
+  {
+   "t": 246.65,
+   "text": "Second, because nothing outside the focal point gets excited, nothing outside the focal point bleaches."
+  },
+  {
+   "t": 253.5,
+   "text": "Your surrounding tissue stays fresh and unharmed even as you scan repeatedly through a particular plane."
+  },
+  {
+   "t": 260.76,
+   "text": "Two-photon microscopy has become the dominant method for imaging GCaMP in awake-behaving mice."
+  },
+  {
+   "t": 268.18,
+   "text": "The catch is cost: it requires a very expensive pulsed femtosecond laser, and the imaging is point-scanning, so it's slow."
+  },
+  {
+   "t": 276.42,
+   "text": "Light-sheet microscopy."
+  },
+  {
+   "t": 278.2,
+   "text": "A different approach to optical sectioning entirely, and the analogy is direct: shine a thin sheet of light sideways through the sample, illuminating only the layer you're currently imaging, like cutting the sample with a laser knife."
+  },
+  {
+   "t": 293.03,
+   "text": "The detection objective looks down at the illuminated plane from above."
+  },
+  {
+   "t": 297.89,
+   "text": "Nothing above or below that plane is illuminated, so nothing else bleaches or contributes to the image."
+  },
+  {
+   "t": 304.79,
+   "text": "The results are beautiful."
+  },
+  {
+   "t": 306.55,
+   "text": "Gorgeous optical sectioning, very low light dose to the sample as a whole, very fast imaging — you can capture full 3D volumes in seconds."
+  },
+  {
+   "t": 316.07,
+   "text": "Light-sheet has become the method of choice for imaging large, fragile specimens — developing embryos, organoids, transparent zebrafish larvae — over long periods without phototoxicity."
+  },
+  {
+   "t": 328.88,
+   "text": "The downside: the geometry requires specialized sample mounting, and the equipment is sophisticated."
+  },
+  {
+   "t": 335.79,
+   "text": "A few practical notes that tie back to fluorescent proteins."
+  },
+  {
+   "t": 340.18,
+   "text": "Different modalities place different demands on the FP."
+  },
+  {
+   "t": 343.67,
+   "text": "Two-photon imaging requires proteins that absorb well at the long wavelengths the laser uses — not all FPs are equally good two-photon absorbers."
+  },
+  {
+   "t": 353.94,
+   "text": "Long time-lapse confocal or two-photon stresses photostability above all."
+  },
+  {
+   "t": 360.17,
+   "text": "Light-sheet is gentle enough that almost any FP works."
+  },
+  {
+   "t": 364.73,
+   "text": "The general rule: match the microscope to the biological question first, then choose the FP that performs best under that microscope's specific demands."
+  },
+  {
+   "t": 374.12,
+   "text": "Don't pick an FP in the abstract and try to image it however you can."
+  },
+  {
+   "t": 378.0,
+   "text": "Plan the imaging pipeline as one integrated system from the start."
+  },
+  {
+   "t": 382.72,
+   "text": "And remember the trade-off that runs through all of this: brighter and longer imaging means more photons, more photons means more photobleaching and more phototoxicity."
+  },
+  {
+   "t": 393.43,
+   "text": "Every photon you collect is a small insult to the cell."
+  },
+  {
+   "t": 397.28,
+   "text": "The art of live-cell imaging is collecting just enough photons to answer your question without dosing the cell into damage."
+  },
+  {
+   "t": 405.3,
+   "text": "Understanding how the FP works, how it bleaches, and what the microscope is doing to it is what lets you walk that line."
+  }
+ ]
+}

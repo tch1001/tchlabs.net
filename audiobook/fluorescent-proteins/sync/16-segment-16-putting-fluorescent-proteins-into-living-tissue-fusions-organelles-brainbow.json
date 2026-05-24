@@ -1,0 +1,231 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Putting fluorescent proteins into living tissue: fusions, organelles, Brainbow",
+ "duration": 361.37,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Putting fluorescent proteins into living tissue: fusions, organelles, Brainbow"
+  },
+  {
+   "t": 7.4,
+   "text": "Let me spend a segment on the practical art of fluorescent labeling in actual experiments, because this is where a lot of work goes wrong even when the protein itself is great."
+  },
+  {
+   "t": 17.6,
+   "text": "The most basic strategy is the fusion protein — N-terminal or C-terminal."
+  },
+  {
+   "t": 22.86,
+   "text": "You take your gene of interest, genetically fuse the fluorescent protein gene to one end of it, with a short flexible linker peptide in between to let each part fold independently, and you express the fusion."
+  },
+  {
+   "t": 35.71,
+   "text": "The fluorescent tag goes everywhere your protein goes."
+  },
+  {
+   "t": 39.62,
+   "text": "Simple in principle."
+  },
+  {
+   "t": 40.99,
+   "text": "But there are decisions to make."
+  },
+  {
+   "t": 42.75,
+   "text": "Which end to tag."
+  },
+  {
+   "t": 43.88,
+   "text": "Many proteins tolerate tagging at one end but not the other."
+  },
+  {
+   "t": 48.17,
+   "text": "If your protein has a signal sequence at the N-terminus that targets it to the secretory pathway, then tagging the N-terminus disrupts that signal and the protein goes to the wrong place."
+  },
+  {
+   "t": 59.05,
+   "text": "If your protein has a critical C-terminal binding domain, then tagging the C-terminus may break that interaction."
+  },
+  {
+   "t": 66.38,
+   "text": "The rule is: try both ends, validate both."
+  },
+  {
+   "t": 69.92,
+   "text": "Confirm that the tagged version still does what the untagged version does, using whatever functional assay you have."
+  },
+  {
+   "t": 77.1,
+   "text": "Linker length."
+  },
+  {
+   "t": 78.15,
+   "text": "A short rigid linker holds the two domains close together."
+  },
+  {
+   "t": 82.24,
+   "text": "A long flexible linker — typically a stretch of glycine and serine repeats — gives them more independence."
+  },
+  {
+   "t": 89.33,
+   "text": "For most fusion work, a moderate flexible linker of around ten to twenty amino acids is a sensible default."
+  },
+  {
+   "t": 96.65,
+   "text": "Beyond simple fusions, there are some powerful strategies you should know."
+  },
+  {
+   "t": 101.09,
+   "text": "Organelle targeting with signal sequences."
+  },
+  {
+   "t": 104.05,
+   "text": "Cells have elaborate machinery for trafficking proteins to specific destinations — to the nucleus, the mitochondria, the endoplasmic reticulum, peroxisomes, the plasma membrane."
+  },
+  {
+   "t": 116.35,
+   "text": "Each destination has characteristic targeting sequences that you can attach to a fluorescent protein to send it there."
+  },
+  {
+   "t": 123.24,
+   "text": "Want to label all your mitochondria?"
+  },
+  {
+   "t": 125.65,
+   "text": "Fuse a short mitochondrial targeting sequence — like the first 23 amino acids of COX VIII — to the N-terminus of a fluorescent protein, and the cell delivers your glow stick straight to every mitochondrion."
+  },
+  {
+   "t": 139.69,
+   "text": "Want to mark your nucleus?"
+  },
+  {
+   "t": 141.31,
+   "text": "Append a nuclear localization signal."
+  },
+  {
+   "t": 143.6,
+   "text": "Want the ER?"
+  },
+  {
+   "t": 144.54,
+   "text": "Use an ER signal sequence and an ER-retention motif."
+  },
+  {
+   "t": 148.7,
+   "text": "These targeted reporters are how cell biologists visualize specific compartments without tagging any individual endogenous protein."
+  },
+  {
+   "t": 157.65,
+   "text": "Knock-in tagging."
+  },
+  {
+   "t": 158.91,
+   "text": "When you transfect a cell with a plasmid that drives expression of your fluorescent fusion from a strong viral promoter, you typically end up with ten to a hundred times more of your tagged protein than the cell normally has."
+  },
+  {
+   "t": 171.64,
+   "text": "That over-expression can perturb biology — high levels can saturate binding partners, trigger feedback, create aggregates."
+  },
+  {
+   "t": 179.78,
+   "text": "The cleaner approach, increasingly accessible thanks to CRISPR-Cas9 gene editing, is knock-in tagging: you use CRISPR to insert the fluorescent protein gene directly into the endogenous locus of your gene of interest, so the tagged protein is expressed under its natural promoter at its natural level."
+  },
+  {
+   "t": 198.78,
+   "text": "The signal is weaker — endogenous expression is usually modest — but the biology is undisturbed."
+  },
+  {
+   "t": 206.04,
+   "text": "Knock-in tagging is now the gold standard for serious fluorescence cell biology."
+  },
+  {
+   "t": 210.89,
+   "text": "Brainbow."
+  },
+  {
+   "t": 211.82,
+   "text": "This is one of the most beautiful experimental ideas in modern neuroscience, and the analogy is direct: give each neuron a randomly mixed cocktail of three or more fluorescent protein colors, in different ratios, so that every neuron ends up with a unique color — like every neuron in the brain getting its own custom shade of paint."
+  },
+  {
+   "t": 233.16,
+   "text": "Then you can trace individual neurons through a dense tangle of other neurons by following their unique color signature."
+  },
+  {
+   "t": 239.95,
+   "text": "The original Brainbow technique, developed by Jeff Lichtman, Joshua Sanes, and colleagues at Harvard, uses a clever genetic trick."
+  },
+  {
+   "t": 248.62,
+   "text": "The animal carries multiple copies of a construct that expresses a different fluorescent protein depending on which DNA recombination event happens, and recombination happens randomly in each cell."
+  },
+  {
+   "t": 260.79,
+   "text": "By the time the brain develops, each neuron has settled on some random combination of, say, red plus yellow plus blue at varying ratios, and the result is a different color in every neuron."
+  },
+  {
+   "t": 273.64,
+   "text": "You can then map circuits by tracing colored cells through the tissue."
+  },
+  {
+   "t": 277.51,
+   "text": "Brainbow has been extended to other systems and other model organisms — trace cell lineages in a developing embryo, trace immune cell populations, watch single cells in any dense tissue."
+  },
+  {
+   "t": 290.29,
+   "text": "A few pitfalls of fluorescent labeling worth flagging."
+  },
+  {
+   "t": 293.46,
+   "text": "Over-expression artifacts."
+  },
+  {
+   "t": 295.27,
+   "text": "As I mentioned, expressing the tagged protein at very high levels can mislocalize it, create aggregates, or perturb biology."
+  },
+  {
+   "t": 303.64,
+   "text": "Always confirm that the tagged version localizes the same as the endogenous, ideally by comparing to an antibody stain."
+  },
+  {
+   "t": 311.67,
+   "text": "Misfolding."
+  },
+  {
+   "t": 312.74,
+   "text": "Some tagged proteins fold badly and end up in inclusion bodies or get degraded."
+  },
+  {
+   "t": 318.42,
+   "text": "If your fluorescent signal is in weird bright spots, suspect misfolding before you suspect biology."
+  },
+  {
+   "t": 324.94,
+   "text": "Oligomerization artifacts."
+  },
+  {
+   "t": 327.06,
+   "text": "As we've discussed, non-monomeric tags drag your protein into artificial complexes."
+  },
+  {
+   "t": 332.91,
+   "text": "Use monomeric variants for any serious experiment."
+  },
+  {
+   "t": 336.47,
+   "text": "The art of fluorescence labeling is knowing what can go wrong and designing around it."
+  },
+  {
+   "t": 341.51,
+   "text": "A perfect fluorescent protein attached to a misfolded fusion expressed at toxic levels in the wrong cell tells you nothing."
+  },
+  {
+   "t": 349.98,
+   "text": "A modest fluorescent protein attached to a validated, properly localized fusion at endogenous levels can tell you everything."
+  },
+  {
+   "t": 358.63,
+   "text": "The strategy is half the experiment."
+  }
+ ]
+}

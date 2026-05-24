@@ -1,0 +1,199 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Going the other direction: optogenetics",
+ "duration": 334.4,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Going the other direction: optogenetics"
+  },
+  {
+   "t": 4.56,
+   "text": "I want to spend a segment on a closely related technology that came out of the same broader revolution."
+  },
+  {
+   "t": 10.91,
+   "text": "It's not strictly about fluorescent proteins, but it shares all the same ancestry — a marine organism, a light-sensitive protein, clever engineering — and it's increasingly used in combination with fluorescent imaging."
+  },
+  {
+   "t": 24.09,
+   "text": "It's called optogenetics, and the central idea is the inverse of fluorescent imaging."
+  },
+  {
+   "t": 29.4,
+   "text": "In a fluorescent protein, light goes in and light comes out, and we observe."
+  },
+  {
+   "t": 35.05,
+   "text": "In optogenetics, light goes in and the protein does something — opens an ion channel, drives a pump, triggers a signaling event — and we control."
+  },
+  {
+   "t": 45.23,
+   "text": "Fluorescent proteins let us watch."
+  },
+  {
+   "t": 47.77,
+   "text": "Optogenetic proteins let us drive."
+  },
+  {
+   "t": 50.66,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 51.92,
+   "text": "Imagine that channelrhodopsin is a window shade attached to an ion channel."
+  },
+  {
+   "t": 56.83,
+   "text": "Shine blue light on it, the shade rolls up, the channel opens, ions flow through."
+  },
+  {
+   "t": 62.56,
+   "text": "Shine no light, the shade stays down, the channel is closed."
+  },
+  {
+   "t": 66.72,
+   "text": "A neuron expressing channelrhodopsin can be made to fire on command, just by turning on a blue light."
+  },
+  {
+   "t": 72.78,
+   "text": "The story begins with a class of proteins called opsins, which are seven-transmembrane proteins that bind the small molecule retinal — the same molecule that allows your own eyes to detect light — and respond to light."
+  },
+  {
+   "t": 85.67,
+   "text": "Mammalian opsins, like rhodopsin in your retina, signal slowly through G-protein cascades."
+  },
+  {
+   "t": 92.29,
+   "text": "But there's a completely different family — microbial opsins — found in archaea, bacteria, and algae, that work much faster."
+  },
+  {
+   "t": 101.42,
+   "text": "They are themselves light-gated ion channels or light-driven ion pumps."
+  },
+  {
+   "t": 105.88,
+   "text": "Shine light on them, and ions move across the membrane on a millisecond timescale."
+  },
+  {
+   "t": 111.4,
+   "text": "The breakthrough that launched optogenetics came in 2005, when Karl Deisseroth, Ed Boyden, and Georg Nagel showed that you could express channelrhodopsin-2 — a light-gated cation channel from a green alga — in mammalian neurons."
+  },
+  {
+   "t": 125.97,
+   "text": "Shine blue light on a ChR2-expressing neuron, and sodium and other cations rush in, the cell depolarizes, an action potential fires."
+  },
+  {
+   "t": 137.32,
+   "text": "Suddenly, with no electrode, with no chemicals, just a blue LED, you can make specific neurons fire whenever you want."
+  },
+  {
+   "t": 145.89,
+   "text": "That capability is staggering, because for the first time you could causally probe neural circuits."
+  },
+  {
+   "t": 152.34,
+   "text": "Not just record what neurons are doing, but make specific neurons fire and ask what behavior follows."
+  },
+  {
+   "t": 158.78,
+   "text": "Cell types defined genetically by their promoters could be activated selectively."
+  },
+  {
+   "t": 163.95,
+   "text": "The technique exploded across neuroscience over the next decade and is now standard in essentially every behavioral neuroscience lab."
+  },
+  {
+   "t": 171.91,
+   "text": "A complementary protein, halorhodopsin, is a yellow-light-driven chloride pump that lets you silence neurons by hyperpolarizing them."
+  },
+  {
+   "t": 180.81,
+   "text": "Between channelrhodopsin and halorhodopsin you have complementary on/off switches for neural activity, controllable by different colors of light."
+  },
+  {
+   "t": 189.75,
+   "text": "The interaction with fluorescent imaging is where things get really exciting, and it's called all-optical electrophysiology."
+  },
+  {
+   "t": 196.81,
+   "text": "The idea: combine an optogenetic actuator — a channelrhodopsin — with a fluorescent indicator — a GCaMP or a voltage sensor — in the same neuron."
+  },
+  {
+   "t": 207.46,
+   "text": "Then you can both stimulate neural activity with one wavelength of light, and read out activity with another wavelength, all without any electrodes."
+  },
+  {
+   "t": 216.9,
+   "text": "You can drive a single neuron to fire and watch the calcium response in real time."
+  },
+  {
+   "t": 221.99,
+   "text": "You can stimulate one population of neurons and image the response in a downstream network."
+  },
+  {
+   "t": 227.89,
+   "text": "You can do classical electrophysiology, but on hundreds or thousands of cells at once, in any cell type you can target genetically."
+  },
+  {
+   "t": 236.25,
+   "text": "The big challenge in combining these tools is spectral crosstalk."
+  },
+  {
+   "t": 240.01,
+   "text": "You don't want your imaging light to accidentally activate your opsin, or vice versa."
+  },
+  {
+   "t": 245.01,
+   "text": "So a lot of engineering has gone into separating the excitation spectra cleanly."
+  },
+  {
+   "t": 250.81,
+   "text": "Pairings like a red-shifted opsin with a green calcium indicator, or a blue opsin with a red indicator, are now standard."
+  },
+  {
+   "t": 258.74,
+   "text": "Why does this matter beyond neuroscience?"
+  },
+  {
+   "t": 261.49,
+   "text": "Because the principle generalizes."
+  },
+  {
+   "t": 263.95,
+   "text": "There are now optogenetic tools to drive protein localization, to dimerize proteins on command, to trigger signaling pathways, to switch gene expression on and off — all with light."
+  },
+  {
+   "t": 276.14,
+   "text": "Combined with fluorescent imaging, you can perturb a system and watch it respond in real time, in living cells."
+  },
+  {
+   "t": 282.78,
+   "text": "That capability — to drive and to read biology with light — is one of the major themes of modern molecular cell biology, and it grew out of the same insight that drove fluorescent protein development: light is a remarkably clean, fast, spatially-targeted way to interact with biology, if you have the right molecular interfaces."
+  },
+  {
+   "t": 303.25,
+   "text": "The lesson for our purposes is that the fluorescent protein toolkit doesn't sit alone."
+  },
+  {
+   "t": 308.04,
+   "text": "It's part of a broader optical-control-of-biology toolkit, and the most powerful modern experiments use both halves."
+  },
+  {
+   "t": 315.14,
+   "text": "Fluorescent proteins to watch."
+  },
+  {
+   "t": 317.62,
+   "text": "Opsins to drive."
+  },
+  {
+   "t": 318.94,
+   "text": "Both deployed through the same microscope."
+  },
+  {
+   "t": 321.64,
+   "text": "The optogenetic revolution is a sibling of the fluorescent-protein revolution, born of similar curiosity about marine proteins, engineered by similar people, and deployed in the same kinds of labs."
+  }
+ ]
+}

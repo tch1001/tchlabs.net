@@ -1,0 +1,155 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — CRISPR as a discovery tool: genome-wide screens",
+ "duration": 225.34,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — CRISPR as a discovery tool: genome-wide screens"
+  },
+  {
+   "t": 5.03,
+   "text": "Now another major application."
+  },
+  {
+   "t": 7.31,
+   "text": "Beyond editing one gene at a time, CRISPR has transformed how we discover what genes do, by letting us perturb every gene in the genome in parallel and read out the consequences."
+  },
+  {
+   "t": 19.19,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 20.49,
+   "text": "A CRISPR screen is asking \"what happens if we break every gene, one at a time, across millions of cells?"
+  },
+  {
+   "t": 28.81,
+   "text": "\" — and then reading off which cells survive, or which cells changed in some interesting way, and using that to figure out which broken genes mattered."
+  },
+  {
+   "t": 37.58,
+   "text": "Let me make this concrete."
+  },
+  {
+   "t": 39.2,
+   "text": "Imagine you have a population of millions of cells in a dish, and into each cell you put a single guide RNA, chosen at random from a library of guides that covers every gene in the human genome."
+  },
+  {
+   "t": 51.33,
+   "text": "The library has, say, four guides per gene, totaling about eighty thousand guides covering twenty thousand genes."
+  },
+  {
+   "t": 58.27,
+   "text": "Each cell ends up with one guide."
+  },
+  {
+   "t": 60.35,
+   "text": "Each cell, therefore, has one gene knocked out."
+  },
+  {
+   "t": 62.9,
+   "text": "The whole dish becomes a chaotic mixture of millions of single-gene knockouts."
+  },
+  {
+   "t": 67.97,
+   "text": "Some cells have BRCA1 knocked out, some have TP53 knocked out, some have a random gene called RBP4 knocked out, and so on across the genome."
+  },
+  {
+   "t": 77.72,
+   "text": "Now you apply a selection."
+  },
+  {
+   "t": 79.41,
+   "text": "Maybe you treat the cells with a cancer drug, and let them grow for two weeks."
+  },
+  {
+   "t": 84.3,
+   "text": "Some cells survive; most die."
+  },
+  {
+   "t": 86.55,
+   "text": "Or you infect them with a virus and see which cells get killed."
+  },
+  {
+   "t": 90.26,
+   "text": "Or you sort them by flow cytometry for a particular marker."
+  },
+  {
+   "t": 93.97,
+   "text": "After selection, you sequence the guide RNAs in the surviving cells."
+  },
+  {
+   "t": 99.03,
+   "text": "Each guide RNA acts as a barcode that tells you which gene was knocked out in that cell."
+  },
+  {
+   "t": 104.9,
+   "text": "If a particular gene's knockout helped cells survive, you'll see those guides over-represented in the surviving population."
+  },
+  {
+   "t": 112.39,
+   "text": "If a particular gene's knockout was harmful, you'll see those guides drop out."
+  },
+  {
+   "t": 117.16,
+   "text": "You're reading the consequences of perturbing every gene, all at once, from one sequencing experiment."
+  },
+  {
+   "t": 124.22,
+   "text": "This is the CRISPR screen."
+  },
+  {
+   "t": 125.78,
+   "text": "It's the most powerful systematic genetics tool in mammalian biology, and it didn't exist in any practical form before CRISPR."
+  },
+  {
+   "t": 134.49,
+   "text": "The first genome-scale CRISPR knockout libraries were published in 2014."
+  },
+  {
+   "t": 139.69,
+   "text": "Tools like GeCKO and Brunello — two of the most widely-used libraries — have been used in thousands of studies."
+  },
+  {
+   "t": 147.14,
+   "text": "A major ongoing project at the Broad Institute called the Cancer Dependency Map has applied CRISPR screens to over a thousand cancer cell lines, identifying which genes each cancer is dependent on for survival."
+  },
+  {
+   "t": 160.61,
+   "text": "This is a public catalog."
+  },
+  {
+   "t": 162.09,
+   "text": "Every time someone in cancer drug discovery is looking for a new target, the Dependency Map is the first place they look."
+  },
+  {
+   "t": 169.11,
+   "text": "Beyond knockout screens, there are activation screens — using the on/off switch tools I'll discuss in the next segment — to find out what happens when each gene is turned up instead of down."
+  },
+  {
+   "t": 179.94,
+   "text": "And there's a powerful extension called Perturb-seq, where you combine CRISPR perturbations with single-cell RNA sequencing — so the readout isn't just survival, it's the entire transcriptional response of each cell to each perturbation."
+  },
+  {
+   "t": 194.25,
+   "text": "The most informative possible genetic screen."
+  },
+  {
+   "t": 197.06,
+   "text": "The conceptual point is this."
+  },
+  {
+   "t": 199.44,
+   "text": "Before CRISPR, doing systematic genome-scale genetics in mammalian cells was either impossible or required noisy, incomplete tools like RNA interference."
+  },
+  {
+   "t": 210.22,
+   "text": "Now you can do, in a few months, what would have taken decades by classical approaches."
+  },
+  {
+   "t": 215.54,
+   "text": "Functional genomics — actually knowing what every gene in the genome does — went from a long-term dream to a tractable, ongoing enterprise."
+  }
+ ]
+}

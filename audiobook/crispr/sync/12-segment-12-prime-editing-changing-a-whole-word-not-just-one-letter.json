@@ -1,0 +1,239 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Prime editing: changing a whole word, not just one letter",
+ "duration": 310.71,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Prime editing: changing a whole word, not just one letter"
+  },
+  {
+   "t": 5.39,
+   "text": "Liu's lab wasn't done."
+  },
+  {
+   "t": 7.01,
+   "text": "Base editors could do four out of twelve possible letter changes — the transitions."
+  },
+  {
+   "t": 12.64,
+   "text": "They couldn't do the remaining eight, called transversions (like C-to-A or A-to-T)."
+  },
+  {
+   "t": 18.29,
+   "text": "They couldn't insert new letters."
+  },
+  {
+   "t": 20.32,
+   "text": "They couldn't delete letters."
+  },
+  {
+   "t": 22.07,
+   "text": "There were whole classes of edits still out of reach."
+  },
+  {
+   "t": 25.07,
+   "text": "In 2019, the same group published prime editing, which is the most ambitious extension of the CRISPR platform to date."
+  },
+  {
+   "t": 33.16,
+   "text": "The lead author was Andrew Anzalone in Liu's lab."
+  },
+  {
+   "t": 36.55,
+   "text": "The paper described a tool that — in principle — can install any of the twelve possible single-letter swaps, plus small insertions and small deletions, all without a double-strand break, all programmable by RNA."
+  },
+  {
+   "t": 49.74,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 51.04,
+   "text": "Base editing is a typewriter that changes one letter."
+  },
+  {
+   "t": 54.42,
+   "text": "Prime editing is find-and-replace where you can change a whole word, not just one letter, without breaking the page."
+  },
+  {
+   "t": 61.85,
+   "text": "You highlight a stretch of text, you supply the new text, and the system swaps the new for the old, in place, no scissors required."
+  },
+  {
+   "t": 70.39,
+   "text": "The architecture is more elaborate than base editing, but the core idea is wonderful."
+  },
+  {
+   "t": 76.17,
+   "text": "Let me walk you through it."
+  },
+  {
+   "t": 77.61,
+   "text": "Take the Cas9 nickase again — but this time, mutated so that it nicks the opposite strand from the base editor nickase."
+  },
+  {
+   "t": 85.04,
+   "text": "Fuse to its C-terminus an enzyme called reverse transcriptase, which is borrowed from a virus."
+  },
+  {
+   "t": 91.51,
+   "text": "(Reverse transcriptase normally copies RNA into DNA — this is a famously dogma-breaking trick of retroviruses like HIV, and there's a whole separate lecture about that elsewhere in this course.)"
+  },
+  {
+   "t": 103.59,
+   "text": "So you have a Cas9 nickase fused to a reverse transcriptase."
+  },
+  {
+   "t": 107.75,
+   "text": "That's the protein."
+  },
+  {
+   "t": 108.99,
+   "text": "Now you also need a special guide RNA."
+  },
+  {
+   "t": 111.7,
+   "text": "Not a regular sgRNA — a prime editing guide RNA, or pegRNA."
+  },
+  {
+   "t": 117.35,
+   "text": "The pegRNA contains the normal guide sequence at one end, plus two extra elements at the other end."
+  },
+  {
+   "t": 124.12,
+   "text": "One extra element is a short bit of sequence that's complementary to the strand right at the nick site — call it the primer binding site."
+  },
+  {
+   "t": 132.94,
+   "text": "The other extra element is a template that encodes the edit you want to install."
+  },
+  {
+   "t": 137.35,
+   "text": "Here's how the cycle plays out."
+  },
+  {
+   "t": 139.05,
+   "text": "The prime editor finds its target, the way Cas9 always does — via PAM and guide pairing."
+  },
+  {
+   "t": 145.64,
+   "text": "The nickase blade cuts one strand."
+  },
+  {
+   "t": 147.91,
+   "text": "The cut leaves a free 3' end of DNA sticking out, single-stranded."
+  },
+  {
+   "t": 153.75,
+   "text": "The primer-binding part of the pegRNA grabs that free end, base-pairs with it."
+  },
+  {
+   "t": 159.12,
+   "text": "Now the reverse transcriptase, riding on the back of the Cas9, reads from the template part of the pegRNA and writes new DNA onto the end of the nicked strand."
+  },
+  {
+   "t": 169.1,
+   "text": "The newly-written DNA contains the edit you encoded."
+  },
+  {
+   "t": 172.62,
+   "text": "The cell now has two competing flaps of DNA at the cut site — the original unedited flap and the new edited flap."
+  },
+  {
+   "t": 180.5,
+   "text": "The cell's natural machinery resolves the situation."
+  },
+  {
+   "t": 184.14,
+   "text": "With some clever additional tricks (a second nick on the other strand to bias the choice, additional modifications to the pegRNA to make it more stable, suppression of a cellular pathway called mismatch repair that would otherwise undo the edit), the cell can be coaxed to keep the edited version."
+  },
+  {
+   "t": 201.41,
+   "text": "The result: the edit you encoded in the pegRNA gets written into the genome."
+  },
+  {
+   "t": 206.25,
+   "text": "What can you do with this?"
+  },
+  {
+   "t": 207.5,
+   "text": "Any single-letter swap — all twelve, including transversions."
+  },
+  {
+   "t": 212.16,
+   "text": "Small insertions of up to a few dozen letters."
+  },
+  {
+   "t": 215.71,
+   "text": "Small deletions."
+  },
+  {
+   "t": 217.09,
+   "text": "The platform is genuinely the most general programmable editor anybody has built."
+  },
+  {
+   "t": 222.36,
+   "text": "When the prime editing paper came out, the field reacted strongly."
+  },
+  {
+   "t": 226.31,
+   "text": "Some called it \"search-and-replace for the genome."
+  },
+  {
+   "t": 228.76,
+   "text": "\" That's the analogy that stuck, and it's apt."
+  },
+  {
+   "t": 231.47,
+   "text": "Some were more cautious — early prime editing efficiencies were lower than base editing, and pegRNAs are harder to design than sgRNAs."
+  },
+  {
+   "t": 241.21,
+   "text": "But the versatility was undeniable."
+  },
+  {
+   "t": 243.93,
+   "text": "Subsequent improvements have steadily increased efficiency."
+  },
+  {
+   "t": 247.84,
+   "text": "The first clinical prime editing trial in humans began in 2024, for a primary immunodeficiency disease called chronic granulomatous disease, run by Prime Medicine — the company David Liu co-founded around the technology."
+  },
+  {
+   "t": 263.26,
+   "text": "Early data are still coming in as I give this lecture."
+  },
+  {
+   "t": 267.06,
+   "text": "So step back and look at the full editing toolkit we now have."
+  },
+  {
+   "t": 271.2,
+   "text": "Standard Cas9 for knocking genes out via NHEJ."
+  },
+  {
+   "t": 276.0,
+   "text": "HDR plus Cas9 for precise edits in dividing cells, when you can afford the inefficiency."
+  },
+  {
+   "t": 282.61,
+   "text": "Base editors for four out of twelve letter swaps, with no double-strand break."
+  },
+  {
+   "t": 287.43,
+   "text": "Prime editors for any small edit — all twelve letter swaps, plus small insertions and deletions — also with no double-strand break."
+  },
+  {
+   "t": 296.07,
+   "text": "Each tool has its specialty."
+  },
+  {
+   "t": 297.91,
+   "text": "Modern editing strategy is largely about choosing the right tool for the desired edit."
+  },
+  {
+   "t": 303.55,
+   "text": "The toolkit is now rich enough that for almost any change you want to make, somewhere in the catalog there's a tool that can do it."
+  }
+ ]
+}

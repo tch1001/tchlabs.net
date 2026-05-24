@@ -1,0 +1,155 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Modern assembly: Gibson, Golden Gate, and the synthetic biology toolkit",
+ "duration": 301.54,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Modern assembly: Gibson, Golden Gate, and the synthetic biology toolkit"
+  },
+  {
+   "t": 6.6,
+   "text": "For the first forty years of recombinant DNA work, we built plasmids using restriction enzymes and ligase."
+  },
+  {
+   "t": 14.34,
+   "text": "Cut, paste, glue."
+  },
+  {
+   "t": 15.68,
+   "text": "That worked, but it was slow, and it had a fundamental limitation: you could only join pieces where you had compatible restriction sites, which severely constrained what designs you could build."
+  },
+  {
+   "t": 26.75,
+   "text": "Joining more than two or three pieces in one experiment was an ordeal."
+  },
+  {
+   "t": 31.18,
+   "text": "Two newer assembly methods, both invented in the late 2000s, have largely replaced classical restriction-enzyme cloning for serious construction work."
+  },
+  {
+   "t": 41.55,
+   "text": "They're worth knowing because they're how modern synthetic biology actually happens."
+  },
+  {
+   "t": 46.66,
+   "text": "Gibson assembly, invented around 2009 by Daniel Gibson and colleagues at the J."
+  },
+  {
+   "t": 52.95,
+   "text": "Craig Venter Institute, is essentially a one-pot reaction that figures out how to stitch pieces together using their overlapping ends — like fitting puzzle pieces by shape, not by glue."
+  },
+  {
+   "t": 64.36,
+   "text": "Here's the idea."
+  },
+  {
+   "t": 65.54,
+   "text": "You design each DNA piece to have, at each end, a short overlap — say, 20 to 40 base pairs — with the piece it's meant to join."
+  },
+  {
+   "t": 75.16,
+   "text": "You can engineer those overlaps by including them in the primers when you PCR up each piece."
+  },
+  {
+   "t": 80.97,
+   "text": "Then you mix all the pieces in a single tube with three enzymes: an exonuclease that chews back the ends to expose single-stranded overhangs, a DNA polymerase that fills in gaps, and a DNA ligase that seals nicks."
+  },
+  {
+   "t": 96.6,
+   "text": "You incubate at one temperature for an hour, and at the end, the enzymes have stitched the pieces together in the order dictated by which overlaps match."
+  },
+  {
+   "t": 105.62,
+   "text": "It is remarkably good."
+  },
+  {
+   "t": 107.03,
+   "text": "You can join half a dozen fragments in one reaction."
+  },
+  {
+   "t": 110.46,
+   "text": "The overlaps act like the shapes of puzzle pieces — only matching pieces can fit together, and the rest get rejected."
+  },
+  {
+   "t": 118.09,
+   "text": "The geometry of the assembly is encoded entirely in the sequences of the overlaps."
+  },
+  {
+   "t": 124.12,
+   "text": "You don't need to find compatible restriction sites at every junction; you just design the overlaps to be whatever you need."
+  },
+  {
+   "t": 131.54,
+   "text": "Golden Gate assembly, invented around 2008 by Carola Engler and colleagues, uses a clever class of restriction enzymes called Type IIS enzymes."
+  },
+  {
+   "t": 142.53,
+   "text": "The cleverness here: most restriction enzymes cut at their recognition sequence, leaving sticky ends defined by that sequence."
+  },
+  {
+   "t": 150.9,
+   "text": "Type IIS enzymes are different — they cut outside their recognition site, at a fixed distance from it."
+  },
+  {
+   "t": 157.24,
+   "text": "The enzyme grabs onto its recognition site, then reaches over and cuts a few bases away, leaving a short sticky end whose sequence is whatever happened to be at the cut location — not part of the recognition site."
+  },
+  {
+   "t": 170.79,
+   "text": "The analogy: Golden Gate uses scissors that cut OUTSIDE their recognition site — so you can choose what the sticky ends look like, which means you can program assembly order."
+  },
+  {
+   "t": 180.41,
+   "text": "Why is that useful?"
+  },
+  {
+   "t": 181.81,
+   "text": "Because you can put the same recognition site flanking every fragment, but design the cut-outside sticky ends to be unique for each junction."
+  },
+  {
+   "t": 190.82,
+   "text": "So you mix all your fragments and the destination plasmid together with the Type IIS enzyme and ligase, in one tube, and the enzyme cuts each fragment out of its source, leaving unique sticky ends that only match one specific neighbor."
+  },
+  {
+   "t": 206.15,
+   "text": "The pieces self-assemble in the correct order based on the designed compatibility of their overhangs."
+  },
+  {
+   "t": 212.14,
+   "text": "Even better, because the recognition site gets cut off each fragment during the reaction, the assembled product no longer contains the recognition site — so the enzyme can keep cutting any incorrectly assembled intermediates without harming the correct final product."
+  },
+  {
+   "t": 227.88,
+   "text": "The reaction drives itself toward the right answer."
+  },
+  {
+   "t": 231.44,
+   "text": "Golden Gate is the foundation of modern modular cloning systems like MoClo and the syn-bio toolkit that lets you assemble plasmids out of standardized parts as if they were Lego bricks."
+  },
+  {
+   "t": 243.29,
+   "text": "You build a library of standard parts — promoters, ribosome binding sites, coding sequences, terminators — each flanked with the right Type IIS recognition sites, and you can snap any combination together in a single afternoon reaction."
+  },
+  {
+   "t": 258.67,
+   "text": "These methods, together with the dramatic drop in the cost of synthesizing DNA from scratch — companies will now print you any DNA sequence you can specify, delivered in the mail, for cents per base pair — have transformed what's possible."
+  },
+  {
+   "t": 273.35,
+   "text": "A construct that would have taken six months to build in 1995 is a week's work in 2025."
+  },
+  {
+   "t": 279.6,
+   "text": "You design it on a screen, order the parts as synthetic DNA, assemble with Gibson or Golden Gate, and you have a functional plasmid."
+  },
+  {
+   "t": 287.79,
+   "text": "This is what makes large-scale synthetic biology projects, like building entire metabolic pathways or engineering bacteria to produce complex drugs, even thinkable."
+  },
+  {
+   "t": 298.97,
+   "text": "The tooling has caught up to the ambition."
+  }
+ ]
+}

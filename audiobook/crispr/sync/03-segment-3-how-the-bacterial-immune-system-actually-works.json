@@ -1,0 +1,243 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — How the bacterial immune system actually works",
+ "duration": 329.9,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — How the bacterial immune system actually works"
+  },
+  {
+   "t": 4.5,
+   "text": "Before we get to the technology, I want to spend a few minutes on the bacterial immune system in detail, because every weird thing about CRISPR-the-tool is a leftover from CRISPR-the-immune-system."
+  },
+  {
+   "t": 15.1,
+   "text": "Understanding the biology now will save you a lot of \"why does it work that way?"
+  },
+  {
+   "t": 20.32,
+   "text": "\" frustration later."
+  },
+  {
+   "t": 21.73,
+   "text": "The bacterial system has to do three things — the same three things any immune system has to do."
+  },
+  {
+   "t": 28.95,
+   "text": "It has to acquire memory."
+  },
+  {
+   "t": 30.65,
+   "text": "It has to express that memory in a usable form."
+  },
+  {
+   "t": 34.16,
+   "text": "And it has to use the memory to attack invaders."
+  },
+  {
+   "t": 37.42,
+   "text": "We give those three stages the names adaptation, expression, and interference."
+  },
+  {
+   "t": 43.26,
+   "text": "Memorize those three words; they're the spine of how a CRISPR-Cas system operates."
+  },
+  {
+   "t": 49.12,
+   "text": "Let me walk through them with an analogy."
+  },
+  {
+   "t": 51.66,
+   "text": "Imagine a small town that keeps getting raided by bandits."
+  },
+  {
+   "t": 55.25,
+   "text": "The town needs a security system."
+  },
+  {
+   "t": 57.56,
+   "text": "Stage one, adaptation: every time a bandit raid is foiled, the town guards grab the bandit's identification card, photocopy it, and add the photo to a big binder of known bandit faces, kept at the town hall."
+  },
+  {
+   "t": 71.53,
+   "text": "Stage two, expression: clerks at the town hall make small photo cards from the binder and hand them out to the security guards on patrol."
+  },
+  {
+   "t": 79.81,
+   "text": "Stage three, interference: the security guards walk around town with their photo cards, and when somebody walks in whose face matches a card, they tackle them."
+  },
+  {
+   "t": 89.97,
+   "text": "That's the bacterial immune system."
+  },
+  {
+   "t": 91.94,
+   "text": "Let me make it concrete."
+  },
+  {
+   "t": 93.36,
+   "text": "In stage one, adaptation, a phage injects its DNA into the bacterium."
+  },
+  {
+   "t": 98.78,
+   "text": "Bacterial proteins — a complex called Cas1-Cas2 — find a fragment of that foreign DNA, snip out a roughly 30-letter piece, and insert it as a new spacer at one end of the CRISPR array."
+  },
+  {
+   "t": 112.35,
+   "text": "The array grows by one entry."
+  },
+  {
+   "t": 114.97,
+   "text": "The bacterium now has a permanent memory of that phage encoded in its chromosome."
+  },
+  {
+   "t": 120.6,
+   "text": "Importantly, the system has to be careful not to grab a piece of its own DNA by mistake — if it did, it would later attack itself."
+  },
+  {
+   "t": 129.35,
+   "text": "It uses several clever tricks to avoid this."
+  },
+  {
+   "t": 132.39,
+   "text": "The most important one is something called a PAM — protospacer adjacent motif — and we'll come back to the PAM later in detail, because it turns out to be one of the most consequential features of how the whole system works."
+  },
+  {
+   "t": 144.75,
+   "text": "In stage two, expression, the CRISPR array gets transcribed by the cell's normal machinery into a long RNA message."
+  },
+  {
+   "t": 153.16,
+   "text": "That long RNA reads: REPEAT-spacer-REPEAT-spacer-REPEAT-spacer, all the way across the array."
+  },
+  {
+   "t": 160.28,
+   "text": "Then specialized enzymes chop the long RNA up at the repeats, producing many small mature crRNAs — \"CRISPR RNAs\" — each one containing a single spacer plus little bits of repeat sequence on either end."
+  },
+  {
+   "t": 173.97,
+   "text": "Each mature crRNA is one photo card."
+  },
+  {
+   "t": 177.09,
+   "text": "It's a portable, ready-to-use copy of one past invader's identifying mark."
+  },
+  {
+   "t": 182.14,
+   "text": "In stage three, interference, each crRNA gets loaded onto a Cas protein — and now we have what's called a ribonucleoprotein, which is just a fancy word for \"a protein with an RNA attached."
+  },
+  {
+   "t": 195.2,
+   "text": "\" This RNA-loaded protein is the security guard."
+  },
+  {
+   "t": 198.47,
+   "text": "It patrols the cell."
+  },
+  {
+   "t": 199.9,
+   "text": "When the same phage comes back and injects its DNA, the crRNA inside the guard base-pairs with the matching sequence in the phage DNA — and the Cas protein cuts the foreign DNA, destroying the infection."
+  },
+  {
+   "t": 213.4,
+   "text": "That's the system, end to end."
+  },
+  {
+   "t": 215.64,
+   "text": "Memory storage, memory expression, memory deployment."
+  },
+  {
+   "t": 219.74,
+   "text": "Now, here's the punchline that connects this back to the technology."
+  },
+  {
+   "t": 224.35,
+   "text": "The targeting specificity of the whole system is encoded in a short, easy-to-make piece of RNA."
+  },
+  {
+   "t": 231.07,
+   "text": "Not in the protein."
+  },
+  {
+   "t": 232.44,
+   "text": "The protein is the universal scissors."
+  },
+  {
+   "t": 235.31,
+   "text": "The RNA is the search query."
+  },
+  {
+   "t": 237.54,
+   "text": "If you swap out the RNA, the protein cuts a different sequence."
+  },
+  {
+   "t": 241.91,
+   "text": "The same Cas protein, with a thousand different RNAs, would cut a thousand different sequences."
+  },
+  {
+   "t": 248.01,
+   "text": "This is the magic."
+  },
+  {
+   "t": 249.26,
+   "text": "Think about how big a deal this is."
+  },
+  {
+   "t": 251.54,
+   "text": "Earlier genome editing tools — things called zinc finger nucleases and TALENs, which I'll mention again briefly later — also cut DNA at specific sites."
+  },
+  {
+   "t": 261.64,
+   "text": "But the targeting in those tools was encoded in the protein itself."
+  },
+  {
+   "t": 265.75,
+   "text": "To target a new sequence, you had to engineer a new custom protein, which took months and cost thousands of dollars."
+  },
+  {
+   "t": 273.08,
+   "text": "With CRISPR, all you have to engineer is a new RNA."
+  },
+  {
+   "t": 276.88,
+   "text": "RNA is trivial to make — you can order it from a website for under thirty dollars and have it in two days."
+  },
+  {
+   "t": 283.89,
+   "text": "That single difference — programmability via cheap RNA, not expensive protein — is the entire reason CRISPR ate the world."
+  },
+  {
+   "t": 292.88,
+   "text": "One last thing."
+  },
+  {
+   "t": 293.95,
+   "text": "There are many flavors of bacterial CRISPR systems — they vary in the number and identity of the Cas proteins involved."
+  },
+  {
+   "t": 301.29,
+   "text": "We sort them into types."
+  },
+  {
+   "t": 302.79,
+   "text": "For the next two hours, when I say \"CRISPR\" without further qualification, I mostly mean a particular type called Type II, whose effector — whose business-end protein — is called Cas9."
+  },
+  {
+   "t": 314.55,
+   "text": "Cas9 is the workhorse."
+  },
+  {
+   "t": 316.74,
+   "text": "Cas9 is the protein that turned out to be the easiest to repurpose as a tool."
+  },
+  {
+   "t": 322.24,
+   "text": "There are others — Cas12, Cas13, and so on — and we'll meet them when they matter."
+  },
+  {
+   "t": 327.79,
+   "text": "But Cas9 is the star."
+  }
+ ]
+}
