@@ -1,0 +1,231 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Whole-genome sequencing as the detective tool — chimeric reads, careful eyes",
+ "duration": 420.62,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Whole-genome sequencing as the detective tool — chimeric reads, careful eyes"
+  },
+  {
+   "t": 6.74,
+   "text": "So in January of 2017, Mila's case was referred to a researcher at Boston Children's Hospital named Timothy Yu."
+  },
+  {
+   "t": 14.86,
+   "text": "Yu's lab specialized — and still specializes — in using whole-genome sequencing to identify previously undiagnosable forms of childhood neurological disease."
+  },
+  {
+   "t": 26.1,
+   "text": "The decision was made to take Mila's DNA, sequence the entire thing, and go looking for whatever the panel had missed."
+  },
+  {
+   "t": 33.11,
+   "text": "Let me explain the difference between a panel and a whole-genome sequence."
+  },
+  {
+   "t": 37.38,
+   "text": "A gene panel, as we just discussed, reads about a hundred to a few hundred specific genes — the exons of those genes, mostly — at high accuracy, and reports any mutations it finds."
+  },
+  {
+   "t": 49.4,
+   "text": "The total amount of DNA examined is, in genomic terms, tiny — a few hundred thousand bases out of three billion in the human genome."
+  },
+  {
+   "t": 58.46,
+   "text": "Whole-genome sequencing reads everything."
+  },
+  {
+   "t": 61.66,
+   "text": "Every chromosome, every exon, every intron, every regulatory region, every stretch of repetitive sequence that no one knows the function of, every base."
+  },
+  {
+   "t": 73.84,
+   "text": "All three billion bases."
+  },
+  {
+   "t": 75.74,
+   "text": "It produces, in raw form, an enormous file — usually several hundred gigabytes for a single human genome — containing the entire DNA sequence of the patient, with every base typically read multiple times for accuracy."
+  },
+  {
+   "t": 90.41,
+   "text": "To use the analogy I promised in the opening — a panel is checking a list of usual suspects."
+  },
+  {
+   "t": 96.74,
+   "text": "Whole-genome sequencing is reading the whole book and looking for anything unusual."
+  },
+  {
+   "t": 102.31,
+   "text": "But here is the catch, and this is the part that makes whole-genome sequencing harder than it sounds."
+  },
+  {
+   "t": 108.22,
+   "text": "Reading the whole book gives you a lot of information."
+  },
+  {
+   "t": 110.99,
+   "text": "Three billion bases worth."
+  },
+  {
+   "t": 113.0,
+   "text": "The vast majority of which — for any given patient — are completely normal, identical to a reference human genome, irrelevant to the diagnosis."
+  },
+  {
+   "t": 122.9,
+   "text": "To find the actual disease-causing variant, you have to filter that ocean of normal sequence down to the small set of differences from the reference, and then further filter down to the differences that are likely to actually cause disease."
+  },
+  {
+   "t": 136.26,
+   "text": "The bioinformatic pipelines that do this filtering are sophisticated, but they are not perfect, and the kinds of mutations they catch most easily are simple point mutations and small insertions or deletions — single letters changed, a handful of letters added or removed."
+  },
+  {
+   "t": 153.18,
+   "text": "Those are easy to recognize because they look like clean differences from the reference genome."
+  },
+  {
+   "t": 158.3,
+   "text": "Bigger, weirder mutations — large rearrangements, big insertions of foreign sequence, complex structural variants — are much harder for the automated pipelines to call confidently."
+  },
+  {
+   "t": 170.12,
+   "text": "They tend to produce, in the raw sequencing data, what are called chimeric reads — individual sequencing reads in which the front half of the read matches one location in the genome and the back half of the read matches somewhere else entirely."
+  },
+  {
+   "t": 184.05,
+   "text": "Chimeric reads are often discarded by quality filters as artifacts, or flagged but ignored, because most chimeric reads really are artifacts of the sequencing process."
+  },
+  {
+   "t": 194.86,
+   "text": "But sometimes — sometimes — a chimeric read is the signature of a real, large, complex mutation that happens to span the boundary between two different DNA elements."
+  },
+  {
+   "t": 206.22,
+   "text": "And recognizing those takes careful human eyes looking at the raw data."
+  },
+  {
+   "t": 212.0,
+   "text": "This is what Yu's team did."
+  },
+  {
+   "t": 213.39,
+   "text": "When the automated pipeline came back with nothing definitive in MFSD8 on Mila's second copy, they did not give up."
+  },
+  {
+   "t": 221.29,
+   "text": "They went into the raw sequencing reads at the MFSD8 locus and they looked, by eye, at every read mapping there."
+  },
+  {
+   "t": 228.66,
+   "text": "And in February of 2017 — about a month after the referral — they found something unusual."
+  },
+  {
+   "t": 235.61,
+   "text": "In a region within intron 6 of MFSD8 — that is, in the non-coding stretch between exon 6 and exon 7, exactly the kind of region a standard panel would never have looked at — there was a cluster of chimeric reads."
+  },
+  {
+   "t": 250.16,
+   "text": "The front halves of these reads matched MFSD8 intron 6 normally."
+  },
+  {
+   "t": 255.4,
+   "text": "The back halves matched something completely different."
+  },
+  {
+   "t": 258.09,
+   "text": "And that something completely different had three very specific features."
+  },
+  {
+   "t": 262.59,
+   "text": "First, on one end, a long stretch of T's — a so-called poly-T tail."
+  },
+  {
+   "t": 267.87,
+   "text": "Second, on the other end, a series of repeating six-letter motifs that read AGAGGG, AGAGGG, AGAGGG, over and over."
+  },
+  {
+   "t": 276.29,
+   "text": "Third, surrounding the entire insertion, the genomic sequence of MFSD8 was duplicated — fourteen base pairs of the gene were present at both ends of the inserted material, a feature called a target site duplication."
+  },
+  {
+   "t": 290.39,
+   "text": "To someone trained in genome biology, those three features together are a diagnostic signature."
+  },
+  {
+   "t": 296.5,
+   "text": "They are the unmistakable fingerprint of a particular kind of mobile DNA element called an SVA — an SVA retrotransposon."
+  },
+  {
+   "t": 305.61,
+   "text": "Roughly two thousand bases long."
+  },
+  {
+   "t": 308.04,
+   "text": "A piece of jumping DNA that does not belong in the MFSD8 gene, that originally lived somewhere else in the genome, and that, at some point in Mila's recent ancestry, had copied itself out of its original location and pasted itself into MFSD8 intron 6 on what would become Mila's second copy."
+  },
+  {
+   "t": 327.59,
+   "text": "That was the missing mutation."
+  },
+  {
+   "t": 329.3,
+   "text": "That was the second hit."
+  },
+  {
+   "t": 330.67,
+   "text": "And the panel had never seen it — could never have seen it — because the SVA was sitting in an intron, deep inside non-coding DNA that the panel did not even attempt to read."
+  },
+  {
+   "t": 342.24,
+   "text": "In Segment 6 we are going to talk about what SVAs are, where they come from, and why they exist at all."
+  },
+  {
+   "t": 348.34,
+   "text": "But I want to pause here, at the end of Segment 5, on a methodological point."
+  },
+  {
+   "t": 353.04,
+   "text": "Because this is the moment in the story where it became clear that finding the diagnosis required not just better technology, but better attention."
+  },
+  {
+   "t": 362.07,
+   "text": "The automated pipeline could not, on its own, identify what had happened in Mila's gene."
+  },
+  {
+   "t": 368.64,
+   "text": "It took human researchers, looking at raw reads, recognizing a pattern, and trusting their suspicion enough to investigate."
+  },
+  {
+   "t": 376.56,
+   "text": "The chimeric reads were there in the data the whole time."
+  },
+  {
+   "t": 379.62,
+   "text": "They just needed someone who knew what they were looking at."
+  },
+  {
+   "t": 382.3,
+   "text": "And that, in a way, is the deeper lesson of the diagnostic phase of this paper."
+  },
+  {
+   "t": 388.25,
+   "text": "The molecular cause of Mila's disease was knowable."
+  },
+  {
+   "t": 391.94,
+   "text": "The data existed."
+  },
+  {
+   "t": 393.54,
+   "text": "The tools existed."
+  },
+  {
+   "t": 394.91,
+   "text": "What was required was someone willing to do whole-genome sequencing on a case the panel had already mostly answered, and someone willing to scrutinize the raw output for signs of something the pipeline did not flag."
+  },
+  {
+   "t": 406.97,
+   "text": "Without those choices, the diagnosis would have stopped at \"one MFSD8 mutation, second one unknown,\" and the rest of the story — the design of milasen, the FDA submission, the treatment of the patient — would never have happened."
+  }
+ ]
+}
