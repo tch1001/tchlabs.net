@@ -1,0 +1,279 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — Controlling cells with drugs",
+ "duration": 357.35,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — Controlling cells with drugs"
+  },
+  {
+   "t": 3.23,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 4.92,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 6.25,
+   "text": "For the next two hours we're going to talk about chemogenetics."
+  },
+  {
+   "t": 9.35,
+   "text": "And I want to begin, as I always do, with a problem — because chemogenetics, like every good tool in modern neuroscience, is the answer to a problem that wouldn't go away, and once you feel the shape of the problem you'll see why the tool looks the way it does."
+  },
+  {
+   "t": 24.39,
+   "text": "Here is the problem."
+  },
+  {
+   "t": 25.96,
+   "text": "You are a neuroscientist."
+  },
+  {
+   "t": 27.61,
+   "text": "You have a brain in front of you — a mouse brain, say — and you have a hypothesis."
+  },
+  {
+   "t": 33.11,
+   "text": "You think that a specific small population of neurons, maybe a few thousand cells in a deep nucleus, is responsible for some behavior."
+  },
+  {
+   "t": 42.1,
+   "text": "Hunger."
+  },
+  {
+   "t": 42.89,
+   "text": "Fear."
+  },
+  {
+   "t": 43.66,
+   "text": "The decision to run rather than freeze."
+  },
+  {
+   "t": 46.5,
+   "text": "You want to test it."
+  },
+  {
+   "t": 47.56,
+   "text": "The cleanest test in all of biology is the perturbation experiment: turn the neurons off and see if the behavior goes away; turn them on and see if the behavior appears."
+  },
+  {
+   "t": 58.23,
+   "text": "If you can manipulate the cells and the behavior tracks, you've got something."
+  },
+  {
+   "t": 62.64,
+   "text": "If you can't, you've got correlations and arguments."
+  },
+  {
+   "t": 65.69,
+   "text": "So the question becomes — how do you turn a few thousand neurons, deep in a live moving mouse, on and off, on demand, without touching anything else?"
+  },
+  {
+   "t": 75.74,
+   "text": "That is a surprisingly hard request to satisfy."
+  },
+  {
+   "t": 78.84,
+   "text": "You can't just inject a drug; drugs don't know which neurons you mean."
+  },
+  {
+   "t": 82.99,
+   "text": "You can't just put a wire in; wires excite everything nearby."
+  },
+  {
+   "t": 87.35,
+   "text": "You can't kill the cells, because then the experiment ends and you can't reverse it."
+  },
+  {
+   "t": 91.96,
+   "text": "You need a switch that is specific to the cells you care about, reversible, non-destructive, and triggerable from outside the animal."
+  },
+  {
+   "t": 99.62,
+   "text": "Nothing in pharmacology, as it stood thirty years ago, gave you all four properties at once."
+  },
+  {
+   "t": 105.65,
+   "text": "Let me sharpen the difficulty."
+  },
+  {
+   "t": 107.56,
+   "text": "Suppose you decide to use a drug."
+  },
+  {
+   "t": 109.62,
+   "text": "You pick a drug that activates, let's say, dopamine receptors."
+  },
+  {
+   "t": 113.89,
+   "text": "You inject it into the mouse."
+  },
+  {
+   "t": 115.88,
+   "text": "The drug goes everywhere."
+  },
+  {
+   "t": 117.8,
+   "text": "It activates dopamine receptors in the striatum, in the cortex, in the spinal cord, in the gut, in the heart."
+  },
+  {
+   "t": 124.47,
+   "text": "Every cell in the body that expresses that receptor sees the drug."
+  },
+  {
+   "t": 128.54,
+   "text": "You haven't manipulated your few thousand neurons of interest; you've manipulated a few hundred million cells across the entire body."
+  },
+  {
+   "t": 137.1,
+   "text": "The behavior changes, sure, but you have no idea which population of cells caused the change."
+  },
+  {
+   "t": 143.0,
+   "text": "The drug is a sledgehammer when you needed a scalpel."
+  },
+  {
+   "t": 146.0,
+   "text": "So the central design problem of chemogenetics is this: how do you build a pharmacological switch that is, by design, off-target free?"
+  },
+  {
+   "t": 154.4,
+   "text": "How do you give a mouse a drug and have that drug activate exactly the cells you specified and nothing else?"
+  },
+  {
+   "t": 161.45,
+   "text": "Every receptor that the drug might naturally hit is a contaminant."
+  },
+  {
+   "t": 165.75,
+   "text": "Every cell that expresses that receptor is a confound."
+  },
+  {
+   "t": 169.69,
+   "text": "To make a clean experiment, you need a receptor-drug pair that has no other reactions in the body — and that pair has to land, somehow, only in the cells you care about."
+  },
+  {
+   "t": 180.34,
+   "text": "Hold the shape of that problem in your head."
+  },
+  {
+   "t": 182.49,
+   "text": "We are going to need two engineering moves to solve it."
+  },
+  {
+   "t": 185.54,
+   "text": "One is biological — we need a receptor that does not naturally exist in any cell anywhere in the body of the animal, so that wherever it appears, you put it there."
+  },
+  {
+   "t": 196.06,
+   "text": "Two is chemical — we need a drug that doesn't naturally bind anything in the body, so the only thing that responds to the drug is the receptor we made."
+  },
+  {
+   "t": 204.85,
+   "text": "Two parallel acts of design."
+  },
+  {
+   "t": 206.7,
+   "text": "A custom receptor and a custom drug, built to fit each other, and engineered to ignore everything else."
+  },
+  {
+   "t": 213.88,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the basic DREADD concept and tell me why both ends, receptor and ligand, have to be engineered together; two, explain the difference between chemogenetics and optogenetics in plain English and tell me when you'd pick each one; three, look at any neuroscience paper that uses chemogenetics and tell me, at least roughly, what the experimenters are claiming and what controls they should have run — then we've succeeded."
+  },
+  {
+   "t": 243.43,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 245.72,
+   "text": "One more thing before we dive in."
+  },
+  {
+   "t": 247.66,
+   "text": "I want you to think of chemogenetics, throughout this whole lecture, in relation to its more famous sibling — optogenetics."
+  },
+  {
+   "t": 255.51,
+   "text": "Optogenetics is the technique that, in the 2000s, took neuroscience by storm — engineered light-gated ion channels that let you fire neurons with a pulse of laser light delivered through an optical fiber."
+  },
+  {
+   "t": 269.01,
+   "text": "You've probably heard of it."
+  },
+  {
+   "t": 270.35,
+   "text": "It's the technique that gets the cover stories."
+  },
+  {
+   "t": 273.08,
+   "text": "Chemogenetics is the slower, longer-lasting cousin."
+  },
+  {
+   "t": 276.98,
+   "text": "Optogenetics flips neurons on and off with millisecond precision, but to do it you have to stick a fiber-optic cable into the brain, and the effect only lasts as long as the light is on."
+  },
+  {
+   "t": 288.13,
+   "text": "Chemogenetics doesn't need a cable."
+  },
+  {
+   "t": 290.46,
+   "text": "You give the animal an injection."
+  },
+  {
+   "t": 292.35,
+   "text": "The neurons stay altered for an hour, two hours, sometimes longer."
+  },
+  {
+   "t": 296.8,
+   "text": "There's no light, no fiber, no millisecond timing."
+  },
+  {
+   "t": 300.68,
+   "text": "You can manipulate cells in a freely behaving animal during a long task — through a maze, through a social interaction, through an entire night of sleep — without dragging hardware around with the mouse."
+  },
+  {
+   "t": 312.7,
+   "text": "So think of it this way."
+  },
+  {
+   "t": 314.06,
+   "text": "Optogenetics is the precision strike — millisecond stimulation, surgical timing, but tethered to a fiber."
+  },
+  {
+   "t": 322.22,
+   "text": "Chemogenetics is the mood adjustment — hours of altered firing, no hardware, but blunter in time."
+  },
+  {
+   "t": 329.5,
+   "text": "Both are designer-receptor tricks."
+  },
+  {
+   "t": 331.86,
+   "text": "Both let you control specific cells."
+  },
+  {
+   "t": 334.52,
+   "text": "They are complementary, not competitive, and the very best modern papers use them together, which we'll get to in Segment 16."
+  },
+  {
+   "t": 342.68,
+   "text": "For now, hold the comparison: precision strike versus mood adjustment, fiber versus injection, milliseconds versus hours."
+  },
+  {
+   "t": 352.22,
+   "text": "That distinction is going to come back over and over."
+  },
+  {
+   "t": 355.27,
+   "text": "Alright."
+  },
+  {
+   "t": 356.05,
+   "text": "Let me show you the trick."
+  }
+ ]
+}

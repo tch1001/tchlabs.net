@@ -1,0 +1,259 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — NHEJ and HDR — what the cell does with the cut",
+ "duration": 423.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — NHEJ and HDR — what the cell does with the cut"
+  },
+  {
+   "t": 5.85,
+   "text": "Let me reset the frame."
+  },
+  {
+   "t": 7.35,
+   "text": "The TALEN itself is, in a strict sense, just a pair of scissors."
+  },
+  {
+   "t": 12.47,
+   "text": "All it does is cut."
+  },
+  {
+   "t": 13.75,
+   "text": "The TALEN doesn't insert new DNA."
+  },
+  {
+   "t": 16.45,
+   "text": "The TALEN doesn't change one base to another."
+  },
+  {
+   "t": 19.6,
+   "text": "The TALEN doesn't repair anything."
+  },
+  {
+   "t": 22.02,
+   "text": "The TALEN cuts, and walks away."
+  },
+  {
+   "t": 24.35,
+   "text": "Everything interesting that happens after the cut — the actual editing, the actual change to the genome — is done by the cell's own DNA repair machinery."
+  },
+  {
+   "t": 34.21,
+   "text": "The genome editing field is, fundamentally, the art of provoking the cell to repair a deliberate break in a way that produces the change we wanted."
+  },
+  {
+   "t": 44.01,
+   "text": "The TALEN is the provocation."
+  },
+  {
+   "t": 46.23,
+   "text": "The repair is the editing."
+  },
+  {
+   "t": 48.2,
+   "text": "So what does a cell do when its DNA gets cut?"
+  },
+  {
+   "t": 50.98,
+   "text": "Cells absolutely hate having double-strand breaks."
+  },
+  {
+   "t": 54.2,
+   "text": "A broken chromosome is an existential threat — it can be lost, it can fuse with the wrong partner, it can trigger cell death."
+  },
+  {
+   "t": 62.26,
+   "text": "Cells have evolved elaborate machinery to detect and repair double-strand breaks, and to repair them fast, before something terrible happens."
+  },
+  {
+   "t": 71.72,
+   "text": "There are two major pathways, and they produce different outcomes."
+  },
+  {
+   "t": 75.7,
+   "text": "The first and most common is called non-homologous end joining, or NHEJ."
+  },
+  {
+   "t": 81.19,
+   "text": "NHEJ is the cell's quick-and-dirty repair pathway."
+  },
+  {
+   "t": 85.2,
+   "text": "When a double-strand break appears, an enzyme complex grabs both broken ends and basically slaps them back together."
+  },
+  {
+   "t": 93.67,
+   "text": "The chemistry of the slap is sloppy — it often chews back a few bases from one or both ends before ligating, or it inserts a few random bases at the junction."
+  },
+  {
+   "t": 103.95,
+   "text": "The result is that the repaired DNA, after NHEJ, frequently has a small insertion or deletion at the cut site — what we call an indel, for insertion-deletion."
+  },
+  {
+   "t": 114.83,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 116.65,
+   "text": "NHEJ is like duct-taping the pages of a torn book back together — fast and functional, but if you compare the repaired text to the original, you'll see some words got mangled or duplicated at the seam."
+  },
+  {
+   "t": 129.39,
+   "text": "The cell doesn't care; the chromosome is intact, that's the main thing."
+  },
+  {
+   "t": 133.94,
+   "text": "But from the perspective of a researcher trying to disable a specific gene, NHEJ's sloppiness is a gift."
+  },
+  {
+   "t": 141.18,
+   "text": "If your TALEN cuts inside a gene, and NHEJ introduces a small indel at the cut site, the indel will usually shift the reading frame of the gene's mRNA, producing a frameshift mutation that destroys the protein the gene encodes."
+  },
+  {
+   "t": 157.66,
+   "text": "The gene is now knocked out — functionally disabled — and you can study what happens without that gene."
+  },
+  {
+   "t": 164.66,
+   "text": "This is the most common way TALENs are used: cut a gene, let NHEJ scar it, and observe the resulting knockout phenotype."
+  },
+  {
+   "t": 173.38,
+   "text": "It's the fastest, cheapest, most reliable kind of genome editing, because you just need the cut — you let the cell mess up the repair on its own, and that mess-up is exactly what you wanted."
+  },
+  {
+   "t": 184.34,
+   "text": "The second pathway is more sophisticated and far less common."
+  },
+  {
+   "t": 188.59,
+   "text": "It's called homology-directed repair, or HDR."
+  },
+  {
+   "t": 192.22,
+   "text": "In HDR, when a double-strand break occurs, the cell looks for a template — another piece of DNA with sequence similar to the broken region — and uses that template to copy across the break, restoring the original sequence by direct templated synthesis."
+  },
+  {
+   "t": 208.41,
+   "text": "The cell uses HDR mainly during the S and G2 phases of the cell cycle, when sister chromatids are available as natural templates."
+  },
+  {
+   "t": 218.55,
+   "text": "For genome editing, we exploit HDR by providing our own template."
+  },
+  {
+   "t": 223.14,
+   "text": "We deliver into the cell, alongside the TALENs, a piece of DNA — typically called the donor or homology template — that has, at each end, a stretch of sequence identical to the regions just left and right of the cut site, and in the middle, the change we want to make."
+  },
+  {
+   "t": 239.9,
+   "text": "Maybe the change is a single corrected base, fixing a disease mutation."
+  },
+  {
+   "t": 245.11,
+   "text": "Maybe it's a whole new gene we want to insert at this exact spot."
+  },
+  {
+   "t": 248.86,
+   "text": "When the TALENs cut, and the cell uses HDR to repair, sometimes — not always, but sometimes — the cell uses our donor as the template, and copies across the gap using our sequence."
+  },
+  {
+   "t": 261.34,
+   "text": "The result is that our designed change is now baked into the genome at exactly the spot we wanted it."
+  },
+  {
+   "t": 267.94,
+   "text": "The analogy here is NHEJ is duct-tape; HDR is a careful editor with a backup copy who rewrites the torn passage to match the backup."
+  },
+  {
+   "t": 278.48,
+   "text": "Slower, more error-prone in the sense that it sometimes fails altogether, but when it works, it gives you the exact change you specified."
+  },
+  {
+   "t": 286.81,
+   "text": "The big difference between NHEJ and HDR, in practice, is efficiency."
+  },
+  {
+   "t": 293.14,
+   "text": "NHEJ happens at most cuts, in most cells."
+  },
+  {
+   "t": 296.51,
+   "text": "Almost any cut, in any cell type, will be repaired by NHEJ pretty efficiently, often with an indel."
+  },
+  {
+   "t": 304.39,
+   "text": "HDR, by contrast, is rare."
+  },
+  {
+   "t": 307.4,
+   "text": "Even when you provide a good donor template, only a small fraction of cuts get repaired by HDR — typically a few percent at best, in many cell types, and even less in cells that aren't actively dividing (because HDR mostly works in dividing cells)."
+  },
+  {
+   "t": 323.21,
+   "text": "Most of the time, the cell ignores your donor and just NHEJ-repairs the break."
+  },
+  {
+   "t": 328.9,
+   "text": "So if your goal is to knock out a gene — produce a loss-of-function mutation — TALENs plus NHEJ is wonderfully efficient."
+  },
+  {
+   "t": 337.4,
+   "text": "If your goal is precise editing — change one base to another, or insert a new sequence at a defined spot — TALENs plus HDR with a donor template is possible but considerably harder."
+  },
+  {
+   "t": 349.55,
+   "text": "A great deal of effort in the genome editing field has gone into improving HDR efficiency — synchronizing cells in S phase, providing better donor designs, manipulating the choice of repair pathway — but it remains the harder problem."
+  },
+  {
+   "t": 364.11,
+   "text": "This NHEJ-vs-HDR distinction, by the way, isn't specific to TALENs."
+  },
+  {
+   "t": 370.08,
+   "text": "It applies to any double-strand break editing system, including CRISPR-Cas9."
+  },
+  {
+   "t": 375.78,
+   "text": "The cell's repair choice is what gets you the edit, and the cell's bias toward NHEJ makes knockouts easy and precise edits hard."
+  },
+  {
+   "t": 384.26,
+   "text": "TALENs and CRISPR share this constraint."
+  },
+  {
+   "t": 387.11,
+   "text": "So now you have a complete picture of how a TALEN works as an editing tool."
+  },
+  {
+   "t": 391.49,
+   "text": "The TALEN binds."
+  },
+  {
+   "t": 392.93,
+   "text": "The TALEN cuts."
+  },
+  {
+   "t": 394.38,
+   "text": "The cell repairs."
+  },
+  {
+   "t": 395.7,
+   "text": "If you let the cell repair by NHEJ, you get a knockout."
+  },
+  {
+   "t": 400.04,
+   "text": "If you provide a donor template and the cell does HDR, you get a precise edit."
+  },
+  {
+   "t": 405.28,
+   "text": "The TALEN is just the provocation; the cellular repair is the editing."
+  },
+  {
+   "t": 409.99,
+   "text": "Now let's talk about how you actually design a working TALEN pair in practice — what the software tools do for you, what spacer lengths actually work in real experiments, and the engineering rules that experimentalists have figured out from a decade of TALEN use."
+  }
+ ]
+}

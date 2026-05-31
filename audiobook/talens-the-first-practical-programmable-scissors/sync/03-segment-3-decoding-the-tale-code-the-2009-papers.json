@@ -1,0 +1,375 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Decoding the TALE code — the 2009 papers",
+ "duration": 513.88,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Decoding the TALE code — the 2009 papers"
+  },
+  {
+   "t": 5.03,
+   "text": "So the year is 2009."
+  },
+  {
+   "t": 7.33,
+   "text": "Two groups, working independently, sit down to figure out what the variable residues in TALE repeats actually do."
+  },
+  {
+   "t": 14.93,
+   "text": "The first group is led by Jens Boch, a German plant biologist based at Martin Luther University in Halle."
+  },
+  {
+   "t": 21.66,
+   "text": "The second group is led by Adam Bogdanove at Iowa State University, with the actual code-cracking work done by his postdoctoral fellow Matthew Moscou, a brilliant young scientist who would do most of the computational analysis."
+  },
+  {
+   "t": 35.2,
+   "text": "Both groups published their findings, separately, in the same issue of the journal Science in December 2009."
+  },
+  {
+   "t": 42.1,
+   "text": "Both reached essentially the same conclusion, by different routes."
+  },
+  {
+   "t": 46.11,
+   "text": "It is one of those beautiful moments in science where two teams converge on the same truth from different starting points, and the fact that they agree gives everyone confidence that the answer is real."
+  },
+  {
+   "t": 56.77,
+   "text": "Let me tell you what they found, because it is, genuinely, one of the most elegant results in molecular biology."
+  },
+  {
+   "t": 63.2,
+   "text": "Boch's group took the experimental approach."
+  },
+  {
+   "t": 65.99,
+   "text": "They took TALE proteins, mutated their repeat-variable di-residues — the RVDs — one by one, and tested which DNA sequences the mutated proteins now bound."
+  },
+  {
+   "t": 77.47,
+   "text": "By systematically varying the RVDs and observing which bases the protein recognized, they built up, repeat by repeat, RVD by RVD, a table."
+  },
+  {
+   "t": 88.45,
+   "text": "Moscou and Bogdanove took the computational approach."
+  },
+  {
+   "t": 92.19,
+   "text": "They had access to a database of natural TALE proteins from Xanthomonas, and they knew, for many of these proteins, the DNA target each one bound in its host plant."
+  },
+  {
+   "t": 103.78,
+   "text": "They wrote algorithms to look for correlations: did certain RVDs in the TALE protein correspond to certain bases in the target DNA?"
+  },
+  {
+   "t": 112.67,
+   "text": "They mined the data, looking for patterns."
+  },
+  {
+   "t": 115.44,
+   "text": "Both approaches converged on the same astonishingly simple answer."
+  },
+  {
+   "t": 119.89,
+   "text": "Here is what they found."
+  },
+  {
+   "t": 121.21,
+   "text": "Each repeat in a TALE protein contacts exactly one base of DNA."
+  },
+  {
+   "t": 126.19,
+   "text": "One repeat, one base."
+  },
+  {
+   "t": 128.24,
+   "text": "The repeats are arranged in a row along the protein, and they contact the bases of the DNA target in the same order — first repeat contacts first base, second repeat contacts second base, and so on."
+  },
+  {
+   "t": 141.0,
+   "text": "It's a one-to-one mapping, perfectly modular, no spillover between neighboring repeats."
+  },
+  {
+   "t": 146.74,
+   "text": "Unlike zinc fingers, where context mattered enormously, TALE repeats really do behave as independent units."
+  },
+  {
+   "t": 154.55,
+   "text": "One module, one letter."
+  },
+  {
+   "t": 156.38,
+   "text": "And the identity of the base that any given repeat recognizes is determined by just those two amino acids — the RVD — at positions 12 and 13 of the repeat."
+  },
+  {
+   "t": 168.11,
+   "text": "The rest of the 34 amino acids is structural scaffolding, the same in every repeat."
+  },
+  {
+   "t": 174.8,
+   "text": "The two RVD amino acids are the part that reaches into the DNA major groove and reads the base."
+  },
+  {
+   "t": 181.61,
+   "text": "Most beautifully of all, the code itself turned out to be just four primary entries, one for each of the four DNA bases."
+  },
+  {
+   "t": 189.84,
+   "text": "HD — histidine followed by aspartate — recognizes C, cytosine."
+  },
+  {
+   "t": 195.84,
+   "text": "NG — asparagine followed by glycine — recognizes T, thymine."
+  },
+  {
+   "t": 201.28,
+   "text": "NI — asparagine followed by isoleucine — recognizes A, adenine."
+  },
+  {
+   "t": 206.95,
+   "text": "NN — asparagine followed by asparagine — recognizes G, guanine."
+  },
+  {
+   "t": 212.1,
+   "text": "(With a little weakness — NN can also bind A, but more loosely."
+  },
+  {
+   "t": 216.89,
+   "text": "Variants like NH or NK can give cleaner G specificity, but NN was the original code letter.)"
+  },
+  {
+   "t": 224.1,
+   "text": "Four RVDs."
+  },
+  {
+   "t": 225.99,
+   "text": "Four DNA bases."
+  },
+  {
+   "t": 227.68,
+   "text": "One repeat per base."
+  },
+  {
+   "t": 229.29,
+   "text": "That's it."
+  },
+  {
+   "t": 230.04,
+   "text": "That's the whole code."
+  },
+  {
+   "t": 231.28,
+   "text": "Let me give you the analogy."
+  },
+  {
+   "t": 232.81,
+   "text": "The TALE protein is like a string of Lego bricks, where each brick is color-coded to recognize one of the four DNA letters."
+  },
+  {
+   "t": 240.78,
+   "text": "A red brick reads A, a blue brick reads C, a yellow brick reads G, a green brick reads T."
+  },
+  {
+   "t": 248.59,
+   "text": "You want to read the sequence ACGT?"
+  },
+  {
+   "t": 251.18,
+   "text": "Snap together a red, blue, yellow, green brick in that order."
+  },
+  {
+   "t": 256.04,
+   "text": "You want to read the sequence GATTACA?"
+  },
+  {
+   "t": 258.15,
+   "text": "Snap together yellow, red, green, green, red, blue, red."
+  },
+  {
+   "t": 262.9,
+   "text": "The order of your bricks matches the sequence you want to read."
+  },
+  {
+   "t": 266.31,
+   "text": "Or, if you prefer a different metaphor, think of the TALE as a four-letter alphabet decoder."
+  },
+  {
+   "t": 272.27,
+   "text": "You have an alphabet of A, T, G, C."
+  },
+  {
+   "t": 276.0,
+   "text": "You have a decoder with four kinds of unit, one for each letter."
+  },
+  {
+   "t": 280.61,
+   "text": "You build a custom decoder for any sentence in this alphabet by stringing together the right units in the right order."
+  },
+  {
+   "t": 287.42,
+   "text": "Twenty letters in your target sequence?"
+  },
+  {
+   "t": 289.87,
+   "text": "Twenty repeats in your TALE."
+  },
+  {
+   "t": 291.8,
+   "text": "Each repeat is a single character of the decoder."
+  },
+  {
+   "t": 294.76,
+   "text": "Snap them together, and you have a protein that reads exactly that sequence and no other."
+  },
+  {
+   "t": 300.56,
+   "text": "The genius of this is the modularity."
+  },
+  {
+   "t": 303.36,
+   "text": "There is no context-dependence to speak of."
+  },
+  {
+   "t": 306.29,
+   "text": "The HD repeat reads C whether its neighbors are reading A or G or anything else."
+  },
+  {
+   "t": 312.31,
+   "text": "The NI repeat reads A regardless of what comes before or after."
+  },
+  {
+   "t": 316.0,
+   "text": "This means that if you want to design a TALE that binds the sequence ACATAGGCTAGCT, you literally just write down: NI HD NI NG NI NN NN HD NG NI NN HD NG."
+  },
+  {
+   "t": 329.63,
+   "text": "One repeat per base, in order, and the protein will bind that sequence."
+  },
+  {
+   "t": 334.62,
+   "text": "This is the most important fact about TALEs."
+  },
+  {
+   "t": 337.27,
+   "text": "The recognition code is fully modular and predictable."
+  },
+  {
+   "t": 340.9,
+   "text": "No design expertise required."
+  },
+  {
+   "t": 343.08,
+   "text": "No trial and error."
+  },
+  {
+   "t": 344.52,
+   "text": "You read off the DNA sequence you want to target, and you write down the sequence of RVDs to put in your protein."
+  },
+  {
+   "t": 350.9,
+   "text": "Done."
+  },
+  {
+   "t": 351.61,
+   "text": "The design problem that took zinc-finger engineers months to solve, badly, became something you could do in five minutes with a piece of paper."
+  },
+  {
+   "t": 359.86,
+   "text": "There is one tiny exception to the otherwise complete modularity, and it's worth noting because you'll run into it."
+  },
+  {
+   "t": 367.4,
+   "text": "Almost all natural TALE proteins, and the engineered TALENs derived from them, require that the very first base of their target site be a T, a thymine."
+  },
+  {
+   "t": 377.58,
+   "text": "This is because of how the protein's N-terminal region — the part just before the array of repeats begins — sits on the DNA."
+  },
+  {
+   "t": 385.32,
+   "text": "There's a kind of \"zeroth\" half-repeat structure at the front that prefers to contact a T."
+  },
+  {
+   "t": 391.41,
+   "text": "So when you're designing a target site for a TALEN, you have one constraint: the first base on the recognized strand must be T."
+  },
+  {
+   "t": 399.29,
+   "text": "Beyond that, anything goes."
+  },
+  {
+   "t": 401.2,
+   "text": "This is a mild constraint."
+  },
+  {
+   "t": 402.97,
+   "text": "In a random three-billion-letter genome, a T appears at any given position about a quarter of the time, so on average a TALEN-compatible target site starts roughly every four bases."
+  },
+  {
+   "t": 414.58,
+   "text": "That means you can find TALE-compatible sites approximately every 35 base pairs in any genome, which is more than dense enough to hit essentially anything you'd want to target."
+  },
+  {
+   "t": 425.6,
+   "text": "By comparison, zinc finger nucleases — because of their context-sensitivity and the difficulty of designing them for arbitrary sequences — could practically only target about every 500 base pairs in a typical genome."
+  },
+  {
+   "t": 438.96,
+   "text": "The TALE recognition code expanded the targetable space by more than an order of magnitude."
+  },
+  {
+   "t": 444.67,
+   "text": "So that's the Boch and Moscou achievement, in late 2009."
+  },
+  {
+   "t": 449.11,
+   "text": "They handed the field a code, ready to use."
+  },
+  {
+   "t": 452.12,
+   "text": "Within months, labs were synthesizing their own designed TALE proteins to bind arbitrary sequences."
+  },
+  {
+   "t": 459.27,
+   "text": "The recognition problem — the central problem that had bogged down programmable genome editing for a decade and a half — was solved."
+  },
+  {
+   "t": 467.15,
+   "text": "But recognition isn't cutting."
+  },
+  {
+   "t": 469.12,
+   "text": "A TALE, by itself, doesn't snip DNA."
+  },
+  {
+   "t": 472.05,
+   "text": "It just sits on it."
+  },
+  {
+   "t": 473.12,
+   "text": "To make a real genome editing tool, you needed to attach a pair of scissors."
+  },
+  {
+   "t": 477.92,
+   "text": "The cutting tool was already lying around — zinc finger nuclease research had given us the FokI domain, and people knew how to fuse it onto sequence-specific binders."
+  },
+  {
+   "t": 488.52,
+   "text": "So once the TALE code was published, the next step was almost obvious."
+  },
+  {
+   "t": 492.96,
+   "text": "Take your designer TALE, fuse it to FokI, and you have a programmable nuclease that, this time, actually works."
+  },
+  {
+   "t": 499.9,
+   "text": "We'll get to that fusion in Segment 6."
+  },
+  {
+   "t": 502.56,
+   "text": "But first, let's spend a little more time understanding the TALE protein itself — its architecture, why the modular code works at the structural level, and how you actually engineer one for a new target."
+  }
+ ]
+}

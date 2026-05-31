@@ -1,0 +1,227 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The dimerization requirement and target site design",
+ "duration": 435.76,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The dimerization requirement and target site design"
+  },
+  {
+   "t": 4.67,
+   "text": "Let's dig into the dimerization architecture, because the engineering choices around it are genuinely clever and they explain a lot of how ZFNs got safer over time."
+  },
+  {
+   "t": 14.97,
+   "text": "The basic problem the field had to solve was this: if any two FokI domains can dimerize with each other to cut DNA, then in a cell that contains two different ZFNs — call them ZFN-left and ZFN-right — you can in principle get three different productive dimer combinations."
+  },
+  {
+   "t": 32.71,
+   "text": "You can get left-with-right, which is the cut you want."
+  },
+  {
+   "t": 35.21,
+   "text": "But you can also get left-with-left, if two copies of the left ZFN happen to bind at two adjacent left-half-sites somewhere else in the genome."
+  },
+  {
+   "t": 44.24,
+   "text": "And you can get right-with-right, similarly."
+  },
+  {
+   "t": 47.0,
+   "text": "Those off-target homodimer cuts are bad."
+  },
+  {
+   "t": 49.4,
+   "text": "They happen at unintended sites where the ZFN binding domain happens to have multiple matches in a row, and they cause unwanted double-strand breaks that can lead to chromosomal rearrangements, deletions, and other genome damage."
+  },
+  {
+   "t": 62.99,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 64.28,
+   "text": "Imagine your ZFN pair is a left hand and a right hand, and they're supposed to clap together to cut."
+  },
+  {
+   "t": 70.42,
+   "text": "But the original wild-type FokI is sloppy enough that two left hands can also clap together."
+  },
+  {
+   "t": 76.69,
+   "text": "Two right hands too."
+  },
+  {
+   "t": 77.92,
+   "text": "Anywhere you happen to have a row of left-binding sites, you can get left-on-left cuts."
+  },
+  {
+   "t": 82.76,
+   "text": "You wanted a precise edit; instead you got random damage at sites that loosely match either of your halves."
+  },
+  {
+   "t": 89.09,
+   "text": "The solution, worked out beautifully around 2007 by groups led by Toni Cathomen in Hannover and Andrew Wood at Sangamo, was to engineer the FokI cutting domain so that it could only dimerize with a different FokI variant — not with itself."
+  },
+  {
+   "t": 104.65,
+   "text": "They introduced charge-swap mutations into the dimer interface — for example, changing a negatively charged glutamate on one FokI variant to a positively charged lysine, and changing a positive residue on the partner FokI to a negative residue."
+  },
+  {
+   "t": 120.09,
+   "text": "Now the two variants attract each other but neither can dimerize with itself, because two like-charged variants would electrostatically repel."
+  },
+  {
+   "t": 128.51,
+   "text": "These engineered variants are called obligate heterodimer FokI."
+  },
+  {
+   "t": 132.8,
+   "text": "They come in matched pairs — versions like \"ELD\" and \"KKR\" being a common pairing — and modern ZFNs almost always use them."
+  },
+  {
+   "t": 142.12,
+   "text": "With obligate heterodimers, left-on-left and right-on-right cutting is essentially abolished."
+  },
+  {
+   "t": 148.21,
+   "text": "Only the productive left-with-right configuration produces a cut."
+  },
+  {
+   "t": 152.61,
+   "text": "The off-target damage from homodimer cutting dropped by orders of magnitude when this engineering was implemented, and the ZFNs that went into clinical trials after about 2008 essentially all use obligate heterodimer FokI variants."
+  },
+  {
+   "t": 166.76,
+   "text": "Now the other side of the target-site design problem."
+  },
+  {
+   "t": 169.64,
+   "text": "Where on the genome do you place your ZFN pair, given that you need a specific architecture?"
+  },
+  {
+   "t": 175.07,
+   "text": "Here are the constraints, in case you're ever designing one of these yourself, or just want to read a ZFN paper intelligently."
+  },
+  {
+   "t": 182.95,
+   "text": "You need a stretch of DNA, in your gene of interest, that has the following structure."
+  },
+  {
+   "t": 188.74,
+   "text": "Half-site one — nine to twelve bases that you can target with your left zinc finger array."
+  },
+  {
+   "t": 193.66,
+   "text": "A spacer — a short stretch, usually five to seven bases, of any sequence, that sits between the two binding sites."
+  },
+  {
+   "t": 202.89,
+   "text": "Half-site two — nine to twelve bases on the opposite strand, that you can target with your right zinc finger array."
+  },
+  {
+   "t": 209.78,
+   "text": "The two half-sites have to be on opposite strands so that the two ZFNs approach the DNA from opposite sides; that puts the two FokI domains on the same face of the DNA, where they can meet and dimerize."
+  },
+  {
+   "t": 222.9,
+   "text": "The constraints on the spacer are not nothing."
+  },
+  {
+   "t": 225.51,
+   "text": "The five-to-seven base length is determined by the geometry of the FokI dimer — too short and the two FokI domains can't fit; too long and they can't reach each other."
+  },
+  {
+   "t": 236.21,
+   "text": "The exact length tolerance was worked out empirically and varies a bit depending on the linker between the zinc finger array and the FokI domain."
+  },
+  {
+   "t": 244.6,
+   "text": "Some engineered ZFNs tolerate spacers from four to eight bases; others are pickier."
+  },
+  {
+   "t": 250.97,
+   "text": "Within those constraints, you need to find a site in your gene of interest where the left half-site sequence is one you can actually engineer fingers for."
+  },
+  {
+   "t": 259.14,
+   "text": "Remember the context-dependence problem from Segment 5 — not every nine-base sequence is equally easy to target."
+  },
+  {
+   "t": 266.78,
+   "text": "Some sequences fall in the \"comfortable\" zone of available finger combinations."
+  },
+  {
+   "t": 272.21,
+   "text": "Others require fingers that interact badly with each other and just don't yield working arrays."
+  },
+  {
+   "t": 278.19,
+   "text": "In the early ZFN era, this constraint was severe — researchers might want to edit a specific codon in a specific gene, only to find that no usable ZFN architecture could be designed to cut nearby."
+  },
+  {
+   "t": 290.71,
+   "text": "The site had to be flexible."
+  },
+  {
+   "t": 292.41,
+   "text": "Often you'd end up cutting a few bases away from your ideal target, then relying on the cell's repair machinery to introduce the edit at the right position through homology-directed repair using a donor DNA template, which we'll get to in Segment 12."
+  },
+  {
+   "t": 307.48,
+   "text": "The constraint pushed ZFN designers toward target genes where there were many candidate sites — long, well-studied genes where you could afford to pick the easiest sequence rather than the most important one."
+  },
+  {
+   "t": 319.43,
+   "text": "It's part of why early ZFN demonstrations focused on a handful of well-trodden targets — the CCR5 gene, the IL2RG gene, the AAVS1 safe-harbor site — where good cutting sites were known to exist."
+  },
+  {
+   "t": 333.06,
+   "text": "Now I want to point out one more piece of the design that's easy to miss but matters in practice."
+  },
+  {
+   "t": 338.72,
+   "text": "Each individual ZFN, before it's been paired with its partner, is just a protein floating in the cell."
+  },
+  {
+   "t": 345.66,
+   "text": "It's going to spend most of its time not at the target site, because the target site is one place out of three billion."
+  },
+  {
+   "t": 352.03,
+   "text": "The protein has to diffuse around the nucleus, sample many sequences, find the right one, and bind."
+  },
+  {
+   "t": 358.8,
+   "text": "This is exactly the same search problem that natural transcription factors have to solve, and ZFNs use exactly the same physics."
+  },
+  {
+   "t": 367.88,
+   "text": "They diffuse along the DNA, sliding and hopping, until they find a sequence that matches well."
+  },
+  {
+   "t": 374.35,
+   "text": "The whole search-and-bind process takes minutes to hours, depending on the concentration of the protein and how favorable the binding is."
+  },
+  {
+   "t": 382.41,
+   "text": "So when you express a ZFN pair in a cell — typically by transfecting in mRNA or plasmid encoding both proteins — the cell makes a lot of both ZFNs, they diffuse around, they search, they find their respective half-sites, and at the rare lucky moments when both ZFNs are bound at the same target site with the right geometry, the FokI domains dimerize and cut."
+  },
+  {
+   "t": 406.28,
+   "text": "The cell then notices the double-strand break and starts the repair process."
+  },
+  {
+   "t": 411.14,
+   "text": "Multiply this over many cells in a culture, and over the few hours during which the ZFN proteins are present, and you can get edit rates in the range of ten to fifty percent — sometimes higher, sometimes much lower, depending on the ZFN, the target site, and the cell type."
+  },
+  {
+   "t": 428.02,
+   "text": "Ten to fifty percent."
+  },
+  {
+   "t": 429.83,
+   "text": "Hold that number, because it'll be important when we compare ZFNs to TALENs and CRISPR later."
+  }
+ ]
+}

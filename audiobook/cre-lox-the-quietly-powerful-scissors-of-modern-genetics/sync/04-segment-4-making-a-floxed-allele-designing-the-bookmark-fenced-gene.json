@@ -1,0 +1,227 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Making a floxed allele — designing the bookmark-fenced gene",
+ "duration": 404.77,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Making a floxed allele — designing the bookmark-fenced gene"
+  },
+  {
+   "t": 5.11,
+   "text": "So to do any of this, you need a mouse — or more generally, an organism — whose genome has been edited so that a specific gene has loxP sites flanking it."
+  },
+  {
+   "t": 15.96,
+   "text": "This is what people mean when they say \"we generated a floxed Xyz allele."
+  },
+  {
+   "t": 21.02,
+   "text": "\" Designing and building that floxed allele is its own art form, and it's worth a few minutes because the design constraints tell you a lot about what's hard about this technology."
+  },
+  {
+   "t": 30.81,
+   "text": "The goal is precise."
+  },
+  {
+   "t": 32.4,
+   "text": "You want two loxP sites, in the same orientation, flanking the part of the gene you want to remove."
+  },
+  {
+   "t": 38.27,
+   "text": "The loxP sites have to be placed such that, before Cre acts, the gene is completely normal — same expression level, same RNA splicing, same protein product."
+  },
+  {
+   "t": 48.71,
+   "text": "The mouse with the unrecombined floxed allele should be indistinguishable from a wild-type mouse."
+  },
+  {
+   "t": 55.23,
+   "text": "Otherwise you've introduced a confound: maybe the effect you see after Cre is partly from the loxP sites disrupting expression even in the absence of recombination."
+  },
+  {
+   "t": 66.35,
+   "text": "Bad."
+  },
+  {
+   "t": 67.09,
+   "text": "You want the floxed allele to be a silent passenger until Cre activates it."
+  },
+  {
+   "t": 72.49,
+   "text": "So where do you put the loxP sites?"
+  },
+  {
+   "t": 74.55,
+   "text": "They're 34 base pairs each."
+  },
+  {
+   "t": 76.79,
+   "text": "If you stick them into a coding exon, you'll disrupt the protein."
+  },
+  {
+   "t": 80.67,
+   "text": "If you stick them into a critical regulatory element — a promoter, a splice site, a polyadenylation signal — you'll disrupt expression."
+  },
+  {
+   "t": 89.38,
+   "text": "The standard solution is: place them in introns, ideally in regions that are tolerant to insertion."
+  },
+  {
+   "t": 95.94,
+   "text": "The two loxP sites flank one or more critical exons — usually an early exon whose removal will shift the reading frame and destroy the protein, or an exon encoding a known functional domain like an enzyme active site."
+  },
+  {
+   "t": 110.83,
+   "text": "That way, when Cre is absent, the loxP sites sit harmlessly in introns, and the gene is spliced and translated normally."
+  },
+  {
+   "t": 120.21,
+   "text": "When Cre is present, the floxed exon is excised, splicing of the now-shorter pre-mRNA produces a transcript that either lacks the critical region or, more commonly, hits a premature stop codon and gets destroyed by nonsense-mediated decay."
+  },
+  {
+   "t": 137.21,
+   "text": "Net result: no functional protein."
+  },
+  {
+   "t": 139.93,
+   "text": "Now, how do you physically get the loxP sites into the gene?"
+  },
+  {
+   "t": 144.04,
+   "text": "Historically, before CRISPR existed, this was a long and laborious process called gene targeting by homologous recombination in embryonic stem cells."
+  },
+  {
+   "t": 154.32,
+   "text": "The recipe, briefly: you build a long plasmid — a targeting vector — that contains a copy of the gene you want to modify, but with loxP sites inserted at the desired locations, plus a selectable marker like a neomycin resistance gene also flanked by loxP or FRT sites so you can remove it later."
+  },
+  {
+   "t": 173.45,
+   "text": "You electroporate this targeting vector into mouse embryonic stem cells."
+  },
+  {
+   "t": 178.89,
+   "text": "In a tiny fraction of those cells — maybe one in a thousand — the cell's own homologous recombination machinery aligns the targeting vector with the chromosome and swaps in the modified sequence."
+  },
+  {
+   "t": 191.22,
+   "text": "You then use the neomycin selection to find cells that took up the construct, and PCR or Southern blot to identify the rare cells where it landed in the correct location."
+  },
+  {
+   "t": 201.59,
+   "text": "You then take those ES cells, inject them into a mouse blastocyst, implant the blastocyst into a pseudopregnant female, and birth chimeric mice — mice that are a mix of edited and unedited cells."
+  },
+  {
+   "t": 214.69,
+   "text": "With luck, the edited cells contribute to the germline, and breeding those chimeras produces offspring that carry the floxed allele in every cell of their body."
+  },
+  {
+   "t": 224.71,
+   "text": "The whole process used to take eighteen months and a postdoc's career."
+  },
+  {
+   "t": 228.72,
+   "text": "Not exaggerating."
+  },
+  {
+   "t": 230.1,
+   "text": "With CRISPR, since the mid-2010s, this has gotten much faster."
+  },
+  {
+   "t": 234.68,
+   "text": "You can now use CRISPR-Cas9 to make a precise cut in the gene of interest, and supply a repair template that contains the loxP-flanked design."
+  },
+  {
+   "t": 243.8,
+   "text": "The cell repairs the cut by using your template, incorporating the loxP sites in the process."
+  },
+  {
+   "t": 249.64,
+   "text": "You can often do this directly in mouse zygotes — fertilized eggs — and skip the ES cell step entirely."
+  },
+  {
+   "t": 256.69,
+   "text": "What used to take eighteen months can now sometimes be done in three."
+  },
+  {
+   "t": 260.59,
+   "text": "But the design principles — where to put the sites, what region to flank, how to avoid disrupting expression in the unrecombined state — have not changed."
+  },
+  {
+   "t": 270.29,
+   "text": "CRISPR just made the construction faster; the genetics is the same."
+  },
+  {
+   "t": 275.57,
+   "text": "A practical detail worth knowing."
+  },
+  {
+   "t": 277.81,
+   "text": "When researchers describe a floxed allele in a paper, they typically write it with a particular notation."
+  },
+  {
+   "t": 284.37,
+   "text": "The wild-type allele might be written Brca1+."
+  },
+  {
+   "t": 288.29,
+   "text": "The floxed allele is often written Brca1^fl or Brca1^flox."
+  },
+  {
+   "t": 295.04,
+   "text": "The allele after Cre has acted — the deletion allele — might be written Brca1^Δ or Brca1^null."
+  },
+  {
+   "t": 304.18,
+   "text": "A mouse that's homozygous for the floxed allele — meaning both copies of Brca1 are floxed — would be written Brca1^fl/fl."
+  },
+  {
+   "t": 314.66,
+   "text": "If you cross that mouse with a Cre-expressing line, you get Brca1^fl/fl ; Cre."
+  },
+  {
+   "t": 322.74,
+   "text": "That's the kind of nomenclature you'll see in any paper that uses these systems, and once you know it, you can read the experimental design at a glance."
+  },
+  {
+   "t": 331.57,
+   "text": "One more design consideration."
+  },
+  {
+   "t": 333.46,
+   "text": "Floxed alleles are commonly built so that they can be switched between states by different recombinases."
+  },
+  {
+   "t": 339.33,
+   "text": "For example, the selectable marker used during the targeting process — usually flanked by FRT sites, which are the recognition sites for the FLP recombinase that we'll discuss later — can be excised by crossing the floxed mouse with a FLP-expressing line before any experiments are done."
+  },
+  {
+   "t": 356.66,
+   "text": "This leaves a clean floxed allele with just the two loxP sites and no antibiotic resistance gene cluttering things up."
+  },
+  {
+   "t": 364.09,
+   "text": "Modern targeting designs often layer multiple recombinase systems in a single allele — loxP sites for Cre, FRT sites for FLP, sometimes rox sites for Dre — so that you can flip the allele between several different functional states by applying different recombinases at different times."
+  },
+  {
+   "t": 382.76,
+   "text": "We'll come back to this when we talk about FLP and Dre."
+  },
+  {
+   "t": 385.92,
+   "text": "But the point for now is that floxed alleles are usually designed not just for one experiment but as flexible molecular machines that can be reconfigured by different scissors."
+  },
+  {
+   "t": 396.13,
+   "text": "Right."
+  },
+  {
+   "t": 396.82,
+   "text": "Now we have a mouse with a floxed gene."
+  },
+  {
+   "t": 399.21,
+   "text": "The next question is: how do we get Cre into the cells where we want the deletion to happen?"
+  }
+ ]
+}

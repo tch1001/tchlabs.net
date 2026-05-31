@@ -1,0 +1,151 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Step-function opsins: switches with memory",
+ "duration": 287.85,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Step-function opsins: switches with memory"
+  },
+  {
+   "t": 4.1,
+   "text": "Welcome back."
+  },
+  {
+   "t": 5.15,
+   "text": "We left off with a toolkit of opsins that respond to light in real time — when the light is on, the channel is open; when the light is off, the channel is closed."
+  },
+  {
+   "t": 15.1,
+   "text": "For most experiments this is exactly what you want."
+  },
+  {
+   "t": 18.45,
+   "text": "Millisecond control, light pulses driving spikes one-for-one."
+  },
+  {
+   "t": 23.07,
+   "text": "But there are experiments where this kind of constant illumination is a problem."
+  },
+  {
+   "t": 27.54,
+   "text": "Imagine you want to keep a population of cells active for ten minutes while a mouse explores a maze."
+  },
+  {
+   "t": 33.34,
+   "text": "With ordinary ChR2, that means ten minutes of continuous or pulsed light, delivered through a fiber, into the brain."
+  },
+  {
+   "t": 41.46,
+   "text": "Ten minutes of light dumps a substantial amount of energy into the tissue — heating it slightly, photobleaching things, sometimes inducing weird artifacts."
+  },
+  {
+   "t": 52.05,
+   "text": "And ten minutes of fiber-tethered behavior is harder on the animal than a quick flash."
+  },
+  {
+   "t": 57.89,
+   "text": "Wouldn't it be nice if you could flick the switch on with one quick blue pulse and have it stay on for minutes without further light?"
+  },
+  {
+   "t": 64.59,
+   "text": "And then turn it off, when you want, with a quick yellow pulse?"
+  },
+  {
+   "t": 68.39,
+   "text": "That's exactly what step-function opsins, or SFOs, do."
+  },
+  {
+   "t": 72.45,
+   "text": "They are channelrhodopsin variants engineered by Deisseroth's group, with specific point mutations — at residues C128 and D156, in the original ChR2 numbering — that dramatically slow the closing of the channel."
+  },
+  {
+   "t": 88.2,
+   "text": "In wild-type ChR2, the channel closes in about ten milliseconds."
+  },
+  {
+   "t": 93.64,
+   "text": "In SFOs, the channel closes in seconds to minutes."
+  },
+  {
+   "t": 97.61,
+   "text": "So one brief pulse of blue light opens thousands of channels in the membrane, and they stay open, depolarizing the cell, until something closes them."
+  },
+  {
+   "t": 107.69,
+   "text": "The \"something\" is a second pulse of light, at a different color — usually yellow."
+  },
+  {
+   "t": 113.97,
+   "text": "The same chromophore mechanism that opens the channel with blue light has a second photochemical state, reached with yellow light, that snaps the channel back to closed."
+  },
+  {
+   "t": 123.96,
+   "text": "So you get the bistable behavior in the analogy I gave earlier: a switch with memory."
+  },
+  {
+   "t": 129.56,
+   "text": "Flick on with blue, stay on for minutes, flick off with yellow."
+  },
+  {
+   "t": 133.36,
+   "text": "No continuous illumination required."
+  },
+  {
+   "t": 136.01,
+   "text": "The most popular variant of this is called SSFO, the stable step-function opsin, which has the C128S/D156A double mutation and stays open for up to thirty minutes after a single pulse of blue light."
+  },
+  {
+   "t": 151.39,
+   "text": "SSFO has been used in many beautiful experiments where the experimental question requires sustained, gentle elevation of a population's activity over long behavioral epochs — for instance, sustained activation of prefrontal cortex during decision-making tasks, or sustained activation of dopamine neurons during reward learning."
+  },
+  {
+   "t": 172.09,
+   "text": "The biology being modeled is often itself slow — many neuromodulatory effects operate on timescales of minutes, not milliseconds — and a tool that matches that timescale is, in some experiments, much more naturalistic than a high-frequency train of pulses."
+  },
+  {
+   "t": 189.01,
+   "text": "There are similar bistable variants now in the inhibitory family — engineered halorhodopsins and ACRs that can be flipped to a long-lasting silencing state with one pulse, then released with another."
+  },
+  {
+   "t": 201.96,
+   "text": "The general principle is the same: by tuning the photocycle of the chromophore, you can build switches with timescales ranging from a millisecond to a half-hour, depending on what your biological question needs."
+  },
+  {
+   "t": 213.4,
+   "text": "There's a related concept worth mentioning here: chemogenetics, which I told you we'd come back to."
+  },
+  {
+   "t": 218.96,
+   "text": "Chemogenetics uses engineered receptors — most commonly DREADDs, \"designer receptors exclusively activated by designer drugs\" — that respond not to light but to an injected small molecule."
+  },
+  {
+   "t": 231.59,
+   "text": "The most common DREADD activates GPCR signaling for hours after a single intraperitoneal injection of a synthetic ligand called CNO or its derivatives."
+  },
+  {
+   "t": 242.09,
+   "text": "Chemogenetics gives you cell-type specificity, just like optogenetics, but the timescale is completely different."
+  },
+  {
+   "t": 249.72,
+   "text": "The analogy I want you to hold is: optogenetics is the millisecond-precision tool; chemogenetics is the hours-long mood adjustment."
+  },
+  {
+   "t": 258.99,
+   "text": "Optogenetics asks \"what happens when these cells fire right now?"
+  },
+  {
+   "t": 262.85,
+   "text": "\" Chemogenetics asks \"what happens when these cells are slightly more or less active for the next four hours?"
+  },
+  {
+   "t": 269.56,
+   "text": "\" They are complementary tools, often used in the same paper, and the right choice depends entirely on the timescale of your question."
+  },
+  {
+   "t": 276.89,
+   "text": "Step-function opsins sit in the middle — minutes-long activation, but still triggered by a defined light pulse, still with the temporal landmark of an exact onset."
+  }
+ ]
+}

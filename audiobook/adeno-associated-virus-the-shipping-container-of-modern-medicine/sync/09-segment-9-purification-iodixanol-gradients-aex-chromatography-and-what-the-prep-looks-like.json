@@ -1,0 +1,207 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Purification: iodixanol gradients, AEX chromatography, and what the prep looks like",
+ "duration": 460.62,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Purification: iodixanol gradients, AEX chromatography, and what the prep looks like"
+  },
+  {
+   "t": 7.17,
+   "text": "So you have your transfected cells, three days post-transfection, full of AAV particles."
+  },
+  {
+   "t": 13.44,
+   "text": "Now what?"
+  },
+  {
+   "t": 14.26,
+   "text": "You can't just inject crude cell lysate into a patient."
+  },
+  {
+   "t": 17.77,
+   "text": "You have to purify the virus — separate the actual AAV particles from everything else in the soup."
+  },
+  {
+   "t": 24.54,
+   "text": "Everything else includes: cellular debris, cellular DNA and proteins, residual plasmid DNA, free capsid proteins that didn't assemble, empty capsids that assembled but didn't package any DNA, partially packaged capsids, helper-plasmid-derived proteins, and so on."
+  },
+  {
+   "t": 43.84,
+   "text": "Purification is about isolating the full, intact, transgene-containing AAV particles from that complex mixture."
+  },
+  {
+   "t": 51.98,
+   "text": "There are two main approaches that the field uses, often in combination: density gradient ultracentrifugation and ion exchange chromatography."
+  },
+  {
+   "t": 60.8,
+   "text": "Let me describe each."
+  },
+  {
+   "t": 62.29,
+   "text": "Density gradient ultracentrifugation."
+  },
+  {
+   "t": 65.46,
+   "text": "The principle is that AAV particles have a characteristic density — they sink to a specific level when spun in a density gradient."
+  },
+  {
+   "t": 73.97,
+   "text": "A \"density gradient\" is a tube of liquid where the density increases from top to bottom — light at the top, heavy at the bottom."
+  },
+  {
+   "t": 82.17,
+   "text": "You load your crude virus prep on top, you spin the tube at very high speed (around 350,000 g) for several hours, and gravity drives every particle in the mixture to the position in the gradient that matches its own density."
+  },
+  {
+   "t": 96.85,
+   "text": "AAV particles, having a particular protein-to-DNA ratio, settle at a specific density and form a visible band in the gradient."
+  },
+  {
+   "t": 105.89,
+   "text": "You stick a needle in the side of the tube, pull off the band, and you have purified AAV."
+  },
+  {
+   "t": 111.61,
+   "text": "The classical material used for this gradient is cesium chloride — CsCl — which forms beautiful, well-resolved gradients but has the unfortunate property of being mildly toxic to cells, so you have to dialyze it out before using the virus."
+  },
+  {
+   "t": 127.33,
+   "text": "More recent practice has moved to iodixanol, sold under the trade name OptiPrep, which forms equally good gradients but is non-toxic and approved for clinical use as a contrast agent."
+  },
+  {
+   "t": 139.7,
+   "text": "An iodixanol step gradient — where you layer solutions of 15%, 25%, 40%, and 60% iodixanol on top of each other in a centrifuge tube, then load your crude prep on top and spin — has become the standard research-lab purification method."
+  },
+  {
+   "t": 157.2,
+   "text": "The AAV particles end up at the interface between the 40% and 60% layers, and you pull off that interface with a syringe."
+  },
+  {
+   "t": 165.54,
+   "text": "One of the most useful things about iodixanol gradients is that they actually separate full capsids from empty capsids."
+  },
+  {
+   "t": 172.96,
+   "text": "A full capsid — one that contains a vector genome inside — is denser than an empty capsid, because DNA is denser than the equivalent volume of empty space inside a protein shell."
+  },
+  {
+   "t": 185.26,
+   "text": "So full and empty capsids settle at slightly different densities and you can preferentially harvest the full ones, which are the only ones that will actually deliver your gene."
+  },
+  {
+   "t": 195.46,
+   "text": "This matters because AAV preps are typically a mixture of full and empty capsids, and the empty ones are essentially worthless cargo — they take up dosing capacity, they trigger immune responses, but they deliver no transgene."
+  },
+  {
+   "t": 209.64,
+   "text": "The full-to-empty ratio in a typical research prep might be anything from 10% full to 90% full depending on the construct and conditions."
+  },
+  {
+   "t": 219.1,
+   "text": "Clinical-grade preps target a high full-capsid fraction, often >70%, because empty capsids contribute to immunogenicity without contributing to therapy."
+  },
+  {
+   "t": 231.05,
+   "text": "Ion exchange chromatography, abbreviated AEX for anion exchange chromatography in the AAV context."
+  },
+  {
+   "t": 238.41,
+   "text": "The principle here is that AAV capsids have a net negative charge at neutral pH (so do empty ones, but with subtly different surface charge distribution than full ones)."
+  },
+  {
+   "t": 249.0,
+   "text": "You pass your prep over a column packed with a positively charged resin — the resin holds onto the negatively charged capsids while letting most other contaminants flow through."
+  },
+  {
+   "t": 259.1,
+   "text": "Then you elute the bound capsids by raising the salt concentration of your buffer, which competes with the capsid for binding to the resin."
+  },
+  {
+   "t": 267.55,
+   "text": "As you ramp salt slowly, different things elute at different salt concentrations, and — if you've optimized the column and the gradient — full capsids elute at a slightly different salt concentration than empty capsids."
+  },
+  {
+   "t": 280.84,
+   "text": "So AEX can also enrich for full capsids."
+  },
+  {
+   "t": 283.92,
+   "text": "AEX is the preferred method for scalable, GMP-compliant production because it doesn't require ultracentrifuges — which are limited in capacity and difficult to operate at clinical scale — and it lends itself to flow-through manufacturing."
+  },
+  {
+   "t": 298.55,
+   "text": "Most clinical AAV production processes use some combination of chromatography steps: affinity chromatography (with a resin that specifically binds AAV capsids) for capture, followed by AEX for polishing and full-empty separation, followed by buffer exchange and concentration."
+  },
+  {
+   "t": 317.22,
+   "text": "What does a purified AAV prep look like, physically?"
+  },
+  {
+   "t": 320.67,
+   "text": "Honestly, it looks like a tiny bit of clear liquid."
+  },
+  {
+   "t": 324.37,
+   "text": "AAV is so small that even at concentrations of 10^12 particles per milliliter — which is high — you can't see any cloudiness or color."
+  },
+  {
+   "t": 335.14,
+   "text": "A typical research-scale prep is a few hundred microliters of clear, slightly viscous solution."
+  },
+  {
+   "t": 341.43,
+   "text": "You wouldn't know there was anything in it by looking."
+  },
+  {
+   "t": 344.1,
+   "text": "To verify that there's actually virus in there, you have to do molecular assays — and that's the topic of Segment 10."
+  },
+  {
+   "t": 350.87,
+   "text": "Before we break, let me give you a brief sense of quality control."
+  },
+  {
+   "t": 354.94,
+   "text": "A clinical AAV product is characterized by a battery of analytical tests: vector genome titer (qPCR or ddPCR), capsid titer (ELISA), full-to-empty ratio (often by analytical ultracentrifugation, charge-detection mass spectrometry, or electron microscopy), identity (confirming the right transgene by sequencing or restriction digest), purity (host cell protein, residual plasmid DNA, residual helper proteins), potency (does the virus actually transduce cells and produce the expected protein), and"
+  },
+  {
+   "t": 390.72,
+   "text": "safety (replication-competent AAV testing, sterility, endotoxin)."
+  },
+  {
+   "t": 396.4,
+   "text": "That QC battery has gotten extremely sophisticated as the field has matured, because regulatory agencies want to know exactly what you're injecting into patients."
+  },
+  {
+   "t": 407.09,
+   "text": "Alright."
+  },
+  {
+   "t": 407.87,
+   "text": "We are now an hour in, more or less."
+  },
+  {
+   "t": 410.35,
+   "text": "We have covered: why AAV won, the wild virus, the anatomy of the particle, the ITRs as the packaging label, the 4.7 kb cargo limit, the serotypes and capsid as address label, the practical tissue tropism map, the triple transfection production scheme, and how we purify what comes out."
+  },
+  {
+   "t": 429.77,
+   "text": "That is, broadly, how AAV exists and how we make it."
+  },
+  {
+   "t": 433.93,
+   "text": "The second half of the lecture is going to shift toward how we engineer and use it in the clinic: titering and quality, self-complementary AAV, capsid engineering and directed evolution, the immunity problem, the approved gene therapies, AAV for CRISPR, dual-vector strategies for big genes, the manufacturing bottleneck, and where the field is heading."
+  },
+  {
+   "t": 455.59,
+   "text": "Take ten minutes."
+  },
+  {
+   "t": 456.89,
+   "text": "Stretch, drink water, ask me anything when we come back."
+  }
+ ]
+}

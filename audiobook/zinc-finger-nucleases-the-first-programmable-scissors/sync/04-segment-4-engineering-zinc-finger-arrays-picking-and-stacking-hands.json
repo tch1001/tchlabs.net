@@ -1,0 +1,223 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Engineering zinc finger arrays — picking and stacking hands",
+ "duration": 363.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Engineering zinc finger arrays — picking and stacking hands"
+  },
+  {
+   "t": 5.65,
+   "text": "Okay."
+  },
+  {
+   "t": 6.46,
+   "text": "So we've got the basic motif."
+  },
+  {
+   "t": 8.47,
+   "text": "A single zinc finger reads three bases."
+  },
+  {
+   "t": 11.65,
+   "text": "You can stack several in a row to read more bases."
+  },
+  {
+   "t": 14.74,
+   "text": "And there's some context dependence that complicates things."
+  },
+  {
+   "t": 18.2,
+   "text": "Let's now talk concretely about how people actually built zinc finger arrays in practice, because the engineering choices shaped the whole field."
+  },
+  {
+   "t": 26.76,
+   "text": "The first decision is how many fingers you want."
+  },
+  {
+   "t": 29.57,
+   "text": "The math is straightforward."
+  },
+  {
+   "t": 31.4,
+   "text": "Each finger reads three bases."
+  },
+  {
+   "t": 33.84,
+   "text": "If you string together three fingers, you read nine bases."
+  },
+  {
+   "t": 38.52,
+   "text": "Four fingers, twelve bases."
+  },
+  {
+   "t": 40.81,
+   "text": "Six fingers, eighteen bases."
+  },
+  {
+   "t": 43.26,
+   "text": "The longer the recognition site, the more specific your protein is — but also the harder it is to engineer, because more fingers mean more interfaces between fingers, and more places for the context-dependence problem to bite you."
+  },
+  {
+   "t": 56.84,
+   "text": "In practice, the sweet spot for zinc finger arrays in the early ZFN era was three to four fingers per protein."
+  },
+  {
+   "t": 64.49,
+   "text": "Three fingers gives you nine bases of recognition; four fingers gives you twelve."
+  },
+  {
+   "t": 70.29,
+   "text": "A twelve-base sequence is expected to appear about once every sixteen million bases by chance — so in a three-billion-base human genome, you'd expect about two hundred random matches to any twelve-base sequence."
+  },
+  {
+   "t": 83.36,
+   "text": "That's still a lot."
+  },
+  {
+   "t": 84.51,
+   "text": "Which is one reason ZFNs ended up working in pairs, so that the two halves together specified a much longer site."
+  },
+  {
+   "t": 91.99,
+   "text": "We'll get to that in Segment 6."
+  },
+  {
+   "t": 94.19,
+   "text": "For now, hold the picture: three to four fingers, stacked head-to-tail, gripping a stretch of nine to twelve bases."
+  },
+  {
+   "t": 102.04,
+   "text": "Here's the analogy I want you to hold."
+  },
+  {
+   "t": 104.34,
+   "text": "Imagine you're trying to grab a long rope, and your hands are tiny — each one can only grip about three inches of rope."
+  },
+  {
+   "t": 111.4,
+   "text": "You want to grab a foot of rope, securely."
+  },
+  {
+   "t": 113.81,
+   "text": "The natural thing to do is stack your hands along the rope, one above the other, each hand grabbing its own three-inch section, all aligned along the length of the rope."
+  },
+  {
+   "t": 123.47,
+   "text": "That's what a zinc finger array looks like."
+  },
+  {
+   "t": 125.59,
+   "text": "Three or four little hands, in a column, each gripping its own three-base stretch, all running along the DNA double helix."
+  },
+  {
+   "t": 135.14,
+   "text": "The hands are connected by short flexible loops of protein called linkers — typically a sequence like TGEKP, \"Thr-Gly-Glu-Lys-Pro,\" which is a kind of canonical zinc finger linker that allows the next finger to sit properly oriented relative to its neighbor."
+  },
+  {
+   "t": 150.85,
+   "text": "The linker length and sequence matter."
+  },
+  {
+   "t": 153.32,
+   "text": "Too short, and the next finger can't quite reach its proper position on the DNA."
+  },
+  {
+   "t": 158.57,
+   "text": "Too long, and the fingers flop around and lose specificity."
+  },
+  {
+   "t": 163.22,
+   "text": "The TGEKP linker, found in natural zinc finger proteins, turned out to be a good general-purpose choice, and most engineered ZFNs use it or a close variant."
+  },
+  {
+   "t": 173.32,
+   "text": "So the assembly recipe, in practice, looks like this."
+  },
+  {
+   "t": 177.03,
+   "text": "You decide on your target sequence — say, twelve bases of DNA inside the gene you want to edit."
+  },
+  {
+   "t": 183.43,
+   "text": "You break it into four three-base codewords."
+  },
+  {
+   "t": 186.51,
+   "text": "For each codeword, you go to your library of pre-characterized fingers and pick the finger that's been validated to bind that codeword."
+  },
+  {
+   "t": 193.69,
+   "text": "You synthesize a gene encoding the four fingers in order, connected by the TGEKP linker, all under the control of a promoter that will express the protein when you put the gene into a cell."
+  },
+  {
+   "t": 204.39,
+   "text": "You put this synthetic gene into a plasmid."
+  },
+  {
+   "t": 207.38,
+   "text": "You put the plasmid into bacteria, grow them up, harvest the plasmid, and now you have a piece of DNA that encodes your custom zinc finger array."
+  },
+  {
+   "t": 216.39,
+   "text": "There were several major libraries of fingers to choose from."
+  },
+  {
+   "t": 219.75,
+   "text": "The Barbas lab at Scripps published a widely-used library based on a single scaffold finger — the third finger of a transcription factor called Sp1 — into which they had introduced different combinations of mutations at the recognition positions."
+  },
+  {
+   "t": 234.32,
+   "text": "They covered most of the sixty-four possible three-base codewords, with multiple fingers per codeword for redundancy."
+  },
+  {
+   "t": 241.49,
+   "text": "The Joung lab at Harvard, in collaboration with Cathomen and others, published a different system called OPEN — Oligomerized Pool Engineering — which used a bacterial selection step to find fingers that actually worked well in the context of their final intended array, rather than just picking from a context-free library."
+  },
+  {
+   "t": 260.28,
+   "text": "And then there was a clever method called CoDA — Context-Dependent Assembly — developed by Joung's group, which acknowledged the context-dependence problem head-on."
+  },
+  {
+   "t": 270.31,
+   "text": "CoDA built arrays from pre-validated pairs of fingers rather than individual fingers, on the theory that the two-finger units would already have their inter-finger geometry sorted out."
+  },
+  {
+   "t": 281.54,
+   "text": "CoDA had higher success rates than naive modular assembly, though it required a more limited set of pre-validated pairs and so could only target a subset of possible genomic sites."
+  },
+  {
+   "t": 293.17,
+   "text": "Commercially, the dominant player — Sangamo Therapeutics, who we'll talk about extensively in Segment 8 — had its own proprietary library and its own proprietary assembly process."
+  },
+  {
+   "t": 304.55,
+   "text": "The details were trade secrets, but the basic outline was similar: a library of pre-characterized fingers, plus a lot of empirical testing of candidate arrays, plus iterative optimization when the first attempt didn't quite work."
+  },
+  {
+   "t": 319.01,
+   "text": "Sangamo's process worked, but it was slow and expensive — a single custom ZFN took weeks of skilled labor to build and validate, and cost on the order of tens of thousands of dollars."
+  },
+  {
+   "t": 331.13,
+   "text": "Compare that to a CRISPR guide RNA, which costs about ten dollars and arrives in your mailbox the next day."
+  },
+  {
+   "t": 337.92,
+   "text": "You can see, already, where the competitive pressure was going to come from."
+  },
+  {
+   "t": 342.56,
+   "text": "But in 2005, in 2008, in 2010 — none of those CRISPR comparisons existed yet."
+  },
+  {
+   "t": 349.23,
+   "text": "ZFNs were the only programmable nuclease in town, and the labs that could build them well were the only labs that could do site-specific genome editing in human cells at all."
+  },
+  {
+   "t": 359.63,
+   "text": "That capability, expensive as it was, was worth the cost."
+  }
+ ]
+}

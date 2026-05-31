@@ -1,0 +1,119 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Practical pitfalls: substrate stability, ATP dependence, tissue penetration",
+ "duration": 149.39,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Practical pitfalls: substrate stability, ATP dependence, tissue penetration"
+  },
+  {
+   "t": 7.62,
+   "text": "A few things will trip you up if you don't know to watch for them."
+  },
+  {
+   "t": 10.28,
+   "text": "Substrate stability and pharmacokinetics."
+  },
+  {
+   "t": 13.36,
+   "text": "D-luciferin in mice has to be given by injection, and its concentration in tissue peaks about ten minutes after IP injection then declines."
+  },
+  {
+   "t": 22.79,
+   "text": "So when you image, timing matters — image too early and the substrate hasn't reached the tumor; too late and it's gone."
+  },
+  {
+   "t": 30.9,
+   "text": "Standardize your timing."
+  },
+  {
+   "t": 32.45,
+   "text": "For coelenterazine and furimazine, the small-molecule stability is worse — they auto-oxidize, give off background luminescence, and have to be handled fresh."
+  },
+  {
+   "t": 43.38,
+   "text": "ATP dependence of firefly."
+  },
+  {
+   "t": 45.81,
+   "text": "As discussed, firefly luciferase depends on cellular ATP."
+  },
+  {
+   "t": 50.42,
+   "text": "If you're using firefly in a viability-affecting experiment, you can't cleanly separate \"is my drug affecting transcription?"
+  },
+  {
+   "t": 58.31,
+   "text": "\" from \"is my drug killing the cells and dropping ATP?"
+  },
+  {
+   "t": 62.83,
+   "text": "\" Use Renilla or NanoLuc as a parallel control, or move to an ATP-independent luciferase entirely."
+  },
+  {
+   "t": 70.46,
+   "text": "Tissue penetration for in vivo work."
+  },
+  {
+   "t": 73.26,
+   "text": "Blue and green light gets absorbed and scattered."
+  },
+  {
+   "t": 76.58,
+   "text": "NanoLuc's blue emission is suboptimal for deep imaging."
+  },
+  {
+   "t": 80.5,
+   "text": "Firefly's yellow-green is okay for moderate depths."
+  },
+  {
+   "t": 84.41,
+   "text": "For deep tissue, red-shifted variants like the click beetle red luciferase, or engineered NanoLuc red-shifted versions like Antares or LumiFluor, perform better."
+  },
+  {
+   "t": 95.7,
+   "text": "Promoter leakiness and copy number variation."
+  },
+  {
+   "t": 98.83,
+   "text": "In transient transfections, plasmid copy number varies enormously cell to cell."
+  },
+  {
+   "t": 104.75,
+   "text": "That's part of why dual luciferase normalization matters."
+  },
+  {
+   "t": 108.8,
+   "text": "For absolute quantification, stable cell lines or CRISPR knock-ins are better."
+  },
+  {
+   "t": 114.08,
+   "text": "Substrate access in tissues."
+  },
+  {
+   "t": 116.4,
+   "text": "Some tissues are poorly perfused or have barriers."
+  },
+  {
+   "t": 120.0,
+   "text": "Coelenterazine, in particular, gets actively exported by P-glycoprotein transporters in the brain, so getting it across the blood-brain barrier is hard."
+  },
+  {
+   "t": 129.85,
+   "text": "There are modified analogs to address this, but it's a known limitation."
+  },
+  {
+   "t": 134.39,
+   "text": "Inhibitors in serum and media."
+  },
+  {
+   "t": 136.88,
+   "text": "Serum components can interfere with some luciferase reactions."
+  },
+  {
+   "t": 141.24,
+   "text": "The Promega kits have buffer formulations that suppress these effects, but if you're improvising, watch for unexpected signal loss."
+  }
+ ]
+}

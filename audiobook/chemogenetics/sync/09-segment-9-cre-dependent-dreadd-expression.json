@@ -1,0 +1,319 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Cre-dependent DREADD expression",
+ "duration": 473.28,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Cre-dependent DREADD expression"
+  },
+  {
+   "t": 3.29,
+   "text": "Everything I've described so far assumes you can get hM3Dq, or hM4Di, into exactly the population of cells you want to manipulate — and only those cells."
+  },
+  {
+   "t": 14.75,
+   "text": "If your DREADD ends up in every neuron in the brain, then giving the drug activates every neuron, and you've just made the same sledgehammer that motivated the field in the first place."
+  },
+  {
+   "t": 25.75,
+   "text": "The \"exclusively\" in DREADD applies not just to the ligand, but also to the cells."
+  },
+  {
+   "t": 31.29,
+   "text": "You need the receptor to be in your cells of interest and nowhere else."
+  },
+  {
+   "t": 35.98,
+   "text": "So how do you put a gene into only some cells?"
+  },
+  {
+   "t": 39.08,
+   "text": "This is one of the great workhorse problems of modern neuroscience, and the solution that dominates the chemogenetics literature is a combination of two technologies: viral delivery for getting the DNA into brain tissue at all, and the Cre-lox system for restricting expression to specific genetically defined cell types."
+  },
+  {
+   "t": 59.01,
+   "text": "Let me walk through both."
+  },
+  {
+   "t": 60.5,
+   "text": "The viral delivery part is fairly direct."
+  },
+  {
+   "t": 63.36,
+   "text": "You take an adeno-associated virus, or AAV — a small, harmless virus that's been engineered to be a delivery vehicle, not a real pathogen — and you load it with the DNA encoding your DREADD."
+  },
+  {
+   "t": 76.58,
+   "text": "You inject a small volume of this virus directly into the brain region you care about, using a fine needle through a tiny hole in the skull."
+  },
+  {
+   "t": 85.35,
+   "text": "The virus diffuses through the local tissue and infects nearby neurons."
+  },
+  {
+   "t": 90.04,
+   "text": "Once inside the cell, the DREADD-encoding DNA is delivered to the nucleus and starts being expressed."
+  },
+  {
+   "t": 97.06,
+   "text": "After a few weeks, the neurons that the virus reached are now studded with DREADDs on their membranes."
+  },
+  {
+   "t": 103.33,
+   "text": "Inject your designer drug, and those neurons respond."
+  },
+  {
+   "t": 107.06,
+   "text": "That gets you spatial targeting — you can localize expression to one brain region by injecting only there."
+  },
+  {
+   "t": 114.03,
+   "text": "But it doesn't get you cell-type targeting."
+  },
+  {
+   "t": 116.4,
+   "text": "Within a single brain region, there are usually many kinds of neurons mixed together — excitatory and inhibitory, different developmental classes, different projection targets."
+  },
+  {
+   "t": 127.33,
+   "text": "A pure AAV injection hits all of them indiscriminately."
+  },
+  {
+   "t": 131.74,
+   "text": "If your hypothesis is about, say, parvalbumin-positive interneurons specifically, you don't want hM3Dq in every neuron in the region."
+  },
+  {
+   "t": 141.32,
+   "text": "You want it in the parvalbumin neurons only."
+  },
+  {
+   "t": 144.16,
+   "text": "That's where Cre-lox comes in."
+  },
+  {
+   "t": 146.06,
+   "text": "And here's where the elegance really shows up."
+  },
+  {
+   "t": 148.53,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 150.28,
+   "text": "Cre-dependent expression is the GPS for DREADDs."
+  },
+  {
+   "t": 154.11,
+   "text": "Only neurons that meet a particular genetic criterion — neurons that already express the Cre enzyme in their nucleus — get the receptor."
+  },
+  {
+   "t": 163.61,
+   "text": "Every other neuron in the injection area gets the DNA, but doesn't turn it on."
+  },
+  {
+   "t": 168.25,
+   "text": "The Cre enzyme acts as the address check: if the cell has Cre, it expresses the DREADD; if it doesn't, the DREADD gene stays silent."
+  },
+  {
+   "t": 178.61,
+   "text": "The mechanism is a clever piece of molecular biology."
+  },
+  {
+   "t": 182.03,
+   "text": "Cre is a recombinase enzyme from a bacterial virus."
+  },
+  {
+   "t": 186.54,
+   "text": "It recognizes specific short DNA sequences called loxP sites and cuts the DNA between any two loxP sites, joining the cut ends back together."
+  },
+  {
+   "t": 197.29,
+   "text": "If you put two loxP sites flanking a piece of DNA, Cre will excise that piece."
+  },
+  {
+   "t": 203.86,
+   "text": "If you put two loxP sites in opposite orientations flanking a piece of DNA, Cre will flip the piece."
+  },
+  {
+   "t": 211.19,
+   "text": "That's the trick."
+  },
+  {
+   "t": 212.29,
+   "text": "The standard chemogenetic construct is called a double-floxed inverted ORF, abbreviated DIO, or sometimes a FLEX cassette — different names for essentially the same architecture."
+  },
+  {
+   "t": 224.44,
+   "text": "Here's what's in it."
+  },
+  {
+   "t": 225.5,
+   "text": "You take the gene encoding your DREADD — the open reading frame, the ORF — and you put it into the AAV genome backwards."
+  },
+  {
+   "t": 233.07,
+   "text": "Upside down."
+  },
+  {
+   "t": 234.15,
+   "text": "The wrong orientation for being read by the cell's transcription machinery."
+  },
+  {
+   "t": 238.44,
+   "text": "If you just injected this construct into a neuron, the cell would try to read the DREADD gene, fail because it's backwards, and make nothing."
+  },
+  {
+   "t": 246.65,
+   "text": "The DREADD doesn't get expressed."
+  },
+  {
+   "t": 248.93,
+   "text": "Now you flank that backwards DREADD ORF with two pairs of loxP sites, arranged so that when Cre acts on them, it flips the ORF into the correct orientation and locks it there."
+  },
+  {
+   "t": 260.64,
+   "text": "The construct is inert until Cre shows up."
+  },
+  {
+   "t": 263.95,
+   "text": "No Cre, no flip, no DREADD."
+  },
+  {
+   "t": 267.29,
+   "text": "With Cre, the ORF gets flipped right-side-up and the cell starts making DREADDs."
+  },
+  {
+   "t": 272.49,
+   "text": "The brilliance is in how you get Cre into only the cells you want."
+  },
+  {
+   "t": 277.06,
+   "text": "The neuroscience community has, over the last twenty years, built up a huge collection of Cre driver lines — mouse lines in which the Cre gene has been inserted under the control of a cell-type-specific promoter."
+  },
+  {
+   "t": 291.05,
+   "text": "There's a parvalbumin-Cre line, in which Cre is expressed only in parvalbumin-positive interneurons."
+  },
+  {
+   "t": 298.79,
+   "text": "There's a Drd1-Cre line, with Cre only in dopamine D1 receptor-expressing neurons."
+  },
+  {
+   "t": 306.68,
+   "text": "There's a Vgat-Cre, a Vglut2-Cre, a tyrosine hydroxylase-Cre, and so on — dozens of these lines, each one giving you genetic access to a different cell type."
+  },
+  {
+   "t": 318.06,
+   "text": "So the standard chemogenetic experiment now looks like this."
+  },
+  {
+   "t": 322.1,
+   "text": "You pick the cell type you care about."
+  },
+  {
+   "t": 324.03,
+   "text": "You pick a Cre line in which Cre is expressed in those cells."
+  },
+  {
+   "t": 328.71,
+   "text": "You take a mouse from that line."
+  },
+  {
+   "t": 330.29,
+   "text": "You inject AAV carrying a Cre-dependent DREADD construct — DIO-hM3Dq, say — into your brain region of interest."
+  },
+  {
+   "t": 341.48,
+   "text": "The virus infects all the local neurons."
+  },
+  {
+   "t": 344.65,
+   "text": "Only the ones expressing Cre — the parvalbumin neurons, in our example — flip the construct and start expressing the DREADD."
+  },
+  {
+   "t": 353.09,
+   "text": "Every other neuron remains DREADD-free."
+  },
+  {
+   "t": 355.73,
+   "text": "You wait a few weeks for expression to develop."
+  },
+  {
+   "t": 358.58,
+   "text": "Then you inject the designer drug."
+  },
+  {
+   "t": 360.6,
+   "text": "When the drug arrives, only the parvalbumin neurons in your injected region respond."
+  },
+  {
+   "t": 366.08,
+   "text": "Every other neuron in the brain, including the parvalbumin neurons in other regions and the non-parvalbumin neurons in the injected region, is invisible to the drug."
+  },
+  {
+   "t": 376.5,
+   "text": "You have, in principle, manipulated a single genetically defined cell type in a single anatomical region, in a freely behaving animal, with an intraperitoneal injection."
+  },
+  {
+   "t": 387.76,
+   "text": "That is an extraordinary degree of precision."
+  },
+  {
+   "t": 390.56,
+   "text": "Two more refinements worth knowing about, because they come up in real experiments."
+  },
+  {
+   "t": 395.25,
+   "text": "First, you can use two recombinases at once — Cre plus another one called Flp — to require that a cell express both before it expresses the DREADD."
+  },
+  {
+   "t": 405.87,
+   "text": "This gives you \"intersectional\" targeting: you can label cells that express marker A and marker B, but not cells that express either alone."
+  },
+  {
+   "t": 414.87,
+   "text": "Even finer cell-type specificity."
+  },
+  {
+   "t": 417.71,
+   "text": "Second, you can use retrograde AAVs that infect axon terminals and travel backwards to the cell body, letting you express DREADDs in only those neurons that project to a particular brain region."
+  },
+  {
+   "t": 430.73,
+   "text": "So you can manipulate not just a cell type, but a cell type defined by its projection target."
+  },
+  {
+   "t": 436.3,
+   "text": "The combinatorics are extraordinary."
+  },
+  {
+   "t": 438.6,
+   "text": "Take the take-home: Cre-dependent expression is the GPS that gives your DREADD an address."
+  },
+  {
+   "t": 444.46,
+   "text": "Without it, you've installed a gas pedal in every car in the city."
+  },
+  {
+   "t": 448.55,
+   "text": "With it, you've installed the gas pedal in exactly the taxi fleet you wanted, leaving every other car untouched."
+  },
+  {
+   "t": 455.48,
+   "text": "That's the technique stack."
+  },
+  {
+   "t": 457.09,
+   "text": "Receptor, ligand, targeting."
+  },
+  {
+   "t": 459.55,
+   "text": "Three independent pieces of engineering that have to all work together for a chemogenetic experiment to mean anything."
+  },
+  {
+   "t": 467.42,
+   "text": "Now let's take a break before we get into the behavioral and translational work that all this enables."
+  }
+ ]
+}

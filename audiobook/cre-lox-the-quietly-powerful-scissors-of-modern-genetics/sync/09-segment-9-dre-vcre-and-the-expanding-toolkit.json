@@ -1,0 +1,215 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Dre, VCre, and the expanding toolkit",
+ "duration": 346.28,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Dre, VCre, and the expanding toolkit"
+  },
+  {
+   "t": 5.14,
+   "text": "So we have Cre-loxP."
+  },
+  {
+   "t": 6.91,
+   "text": "We have FLP-FRT."
+  },
+  {
+   "t": 8.96,
+   "text": "Two orthogonal recombinase systems."
+  },
+  {
+   "t": 11.76,
+   "text": "For a long time, those two were what you had."
+  },
+  {
+   "t": 14.57,
+   "text": "But over the last fifteen years or so, additional systems have been added to the toolkit, each one a new color of ink — and they all work essentially the same way, just with different enzymes that recognize different DNA sites."
+  },
+  {
+   "t": 28.45,
+   "text": "The most prominent third addition is the Dre-rox system."
+  },
+  {
+   "t": 31.96,
+   "text": "Dre is a recombinase derived from a relative of phage P1, called phage D6."
+  },
+  {
+   "t": 37.91,
+   "text": "It's structurally similar to Cre — same tyrosine recombinase family, same general architecture — but it recognizes a different sequence called rox (also 34 base pairs, also with inverted repeats and an asymmetric spacer, but the actual nucleotide sequence is different)."
+  },
+  {
+   "t": 56.8,
+   "text": "Dre does not act on loxP."
+  },
+  {
+   "t": 58.64,
+   "text": "Cre does not act on rox."
+  },
+  {
+   "t": 60.66,
+   "text": "So Dre and Cre are orthogonal to each other."
+  },
+  {
+   "t": 64.33,
+   "text": "This means a single animal can carry three independent recombinase systems — Cre, FLP, and Dre — each acting on its own dedicated set of sites, all completely independent."
+  },
+  {
+   "t": 77.3,
+   "text": "You can imagine the experimental possibilities."
+  },
+  {
+   "t": 80.0,
+   "text": "Three different cell-type-specific drivers, each driving a different recombinase, each acting on a different floxed allele, all in the same animal."
+  },
+  {
+   "t": 89.24,
+   "text": "The combinatorics get spectacular very fast."
+  },
+  {
+   "t": 92.31,
+   "text": "Beyond Dre, there are more recent additions: VCre and SCre, from related phages, with their own corresponding VloxP and SloxP sites."
+  },
+  {
+   "t": 103.11,
+   "text": "These are less commonly used but available for specialized experiments where four or more orthogonal recombinase channels are needed."
+  },
+  {
+   "t": 110.71,
+   "text": "There's also B2 and B3 recombinases from yeast, recognizing B2RT and B3RT sites."
+  },
+  {
+   "t": 119.17,
+   "text": "Each addition to the toolkit is a new channel of independent control."
+  },
+  {
+   "t": 123.42,
+   "text": "Even within the Cre-loxP system itself, people have engineered mutant loxP variants that don't recombine with wild-type loxP, only with other copies of the same mutant."
+  },
+  {
+   "t": 134.74,
+   "text": "These are crucial for advanced applications."
+  },
+  {
+   "t": 137.66,
+   "text": "The most famous variants are lox2272, loxN, and lox5171 — each one with a single mutation in the 8-base spacer that changes its recognition specificity."
+  },
+  {
+   "t": 150.21,
+   "text": "lox2272 will recombine efficiently with other lox2272 sites, but not with wild-type loxP."
+  },
+  {
+   "t": 159.34,
+   "text": "So if you put a wild-type loxP and a lox2272 in the same construct, Cre will treat them as orthogonal — it'll recombine pairs of loxP with each other and pairs of lox2272 with each other, but it won't cross-recombine."
+  },
+  {
+   "t": 176.26,
+   "text": "This gives you, in a single experiment with a single enzyme, multiple independent operations encoded in the DNA."
+  },
+  {
+   "t": 184.1,
+   "text": "There's another important variant called lox66/lox71."
+  },
+  {
+   "t": 189.74,
+   "text": "These are mutants designed so that when Cre recombines a lox66 with a lox71, the products are one wild-type loxP and one double-mutant loxP that Cre can no longer recognize."
+  },
+  {
+   "t": 203.74,
+   "text": "So recombination, once it happens, is irreversible in a particular way — the recombinant product can't be re-recombined by Cre."
+  },
+  {
+   "t": 212.97,
+   "text": "This solves a problem with inversion experiments, where you'd otherwise have Cre constantly flipping the cassette back and forth."
+  },
+  {
+   "t": 220.09,
+   "text": "With lox66/lox71, inversion happens once and locks in that orientation."
+  },
+  {
+   "t": 227.89,
+   "text": "The cassette flips, the loxP site mutates, Cre can no longer touch it."
+  },
+  {
+   "t": 233.26,
+   "text": "One-shot switch."
+  },
+  {
+   "t": 234.6,
+   "text": "These mutant lox variants are the basis of an entire class of clever conditional alleles you'll see in papers."
+  },
+  {
+   "t": 242.11,
+   "text": "The FLEx switch — Flip-Excision — is one of the most famous."
+  },
+  {
+   "t": 246.22,
+   "text": "The FLEx switch uses a combination of wild-type loxP and lox2272 sites in alternating orientations to create an allele that, in the presence of Cre, first inverts a cassette and then excises one of the alternative arrangements, leaving the cassette locked in a chosen orientation."
+  },
+  {
+   "t": 265.55,
+   "text": "The result is an irreversible, one-step switch from one state to another."
+  },
+  {
+   "t": 270.32,
+   "text": "FLEx is used in many of the most popular Cre-dependent expression vectors and viruses."
+  },
+  {
+   "t": 276.43,
+   "text": "The deep point I want you to take from this segment is that the original Cre-loxP system has been refined over decades into a rich toolkit."
+  },
+  {
+   "t": 285.34,
+   "text": "The original parts — Cre and loxP — are still there, doing what they always did."
+  },
+  {
+   "t": 291.53,
+   "text": "But the toolkit around them has grown enormously."
+  },
+  {
+   "t": 294.84,
+   "text": "Multiple recombinases."
+  },
+  {
+   "t": 296.81,
+   "text": "Multiple orthogonal lox sites."
+  },
+  {
+   "t": 299.25,
+   "text": "Multiple mutant variants for specialized uses."
+  },
+  {
+   "t": 302.9,
+   "text": "Codon-optimized versions for different organisms."
+  },
+  {
+   "t": 306.27,
+   "text": "Inducible versions for timing control."
+  },
+  {
+   "t": 309.24,
+   "text": "Split versions for AND-gate control."
+  },
+  {
+   "t": 311.75,
+   "text": "Each new variant extends what you can do without changing the underlying chemistry."
+  },
+  {
+   "t": 316.87,
+   "text": "The system has matured from a single-channel tool into a multi-channel programming language for genetics."
+  },
+  {
+   "t": 323.03,
+   "text": "And that programming language has, in turn, made possible a whole class of experiments that simply weren't feasible before — the kinds of experiments where you ask, with surgical precision, what one gene does in one cell type, at one moment, in one animal, while watching the consequences play out in real time."
+  },
+  {
+   "t": 340.97,
+   "text": "The next nine segments are going to walk through those applications."
+  },
+  {
+   "t": 344.49,
+   "text": "But first, we've earned a break."
+  }
+ ]
+}

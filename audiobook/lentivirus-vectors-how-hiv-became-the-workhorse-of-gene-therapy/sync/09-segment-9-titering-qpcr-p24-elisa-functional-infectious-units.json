@@ -1,0 +1,183 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Titering: qPCR, p24 ELISA, functional infectious units",
+ "duration": 327.55,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Titering: qPCR, p24 ELISA, functional infectious units"
+  },
+  {
+   "t": 6.71,
+   "text": "You have a tube of virus."
+  },
+  {
+   "t": 8.32,
+   "text": "The question is: how much virus is in the tube?"
+  },
+  {
+   "t": 11.35,
+   "text": "There are three common ways to measure lentiviral titer, and they measure subtly different things."
+  },
+  {
+   "t": 17.66,
+   "text": "You need to know which one you have, because they don't agree with each other and the units aren't interchangeable."
+  },
+  {
+   "t": 23.01,
+   "text": "Method one: p24 ELISA."
+  },
+  {
+   "t": 25.85,
+   "text": "The capsid protein of HIV-1, called p24 because it's roughly 24 kilodaltons, is the most abundant viral protein in a lentivirus particle."
+  },
+  {
+   "t": 36.81,
+   "text": "There are about 2000 to 5000 p24 monomers per particle."
+  },
+  {
+   "t": 42.04,
+   "text": "You can detect p24 with a sandwich ELISA — a 96-well plate coated with an anti-p24 antibody, virus added, washed, then a second labeled anti-p24 antibody, washed, then chromogenic substrate."
+  },
+  {
+   "t": 58.74,
+   "text": "Read the plate, compare to a standard curve of purified p24, and you get a quantitative readout of how much p24 is in your sample, which back-calculates to the number of physical particles."
+  },
+  {
+   "t": 70.64,
+   "text": "p24 ELISA tells you about total particles."
+  },
+  {
+   "t": 74.33,
+   "text": "It does not tell you about functional particles."
+  },
+  {
+   "t": 76.91,
+   "text": "Many of the particles in a lentivirus prep are non-infectious — they might be missing envelope, missing genome, partially assembled, damaged by storage."
+  },
+  {
+   "t": 87.1,
+   "text": "A typical lentivirus prep has a particle-to-infectivity ratio of around 100 to 1000, meaning for every functional virion you have hundreds of non-functional ones."
+  },
+  {
+   "t": 98.95,
+   "text": "p24 ELISA counts both."
+  },
+  {
+   "t": 101.22,
+   "text": "It overestimates effective titer."
+  },
+  {
+   "t": 103.78,
+   "text": "Method two: qPCR for integrated provirus."
+  },
+  {
+   "t": 107.71,
+   "text": "This is the gold-standard functional titer for many applications."
+  },
+  {
+   "t": 112.33,
+   "text": "You transduce a known number of target cells — typically HeLa or HEK293 — with a serial dilution of your virus prep."
+  },
+  {
+   "t": 121.46,
+   "text": "You wait 72 hours, long enough for any unintegrated DNA to be diluted out by cell division."
+  },
+  {
+   "t": 128.89,
+   "text": "You harvest genomic DNA."
+  },
+  {
+   "t": 130.97,
+   "text": "You run qPCR on the genomic DNA using primers specific for the vector (often targeting the WPRE or psi region) and a reference primer for a single-copy host gene like RPP30 or albumin."
+  },
+  {
+   "t": 144.59,
+   "text": "The ratio gives you the number of integrated vector copies per cell, and combined with the dilution factor and cell number, you can back-calculate transducing units per mL."
+  },
+  {
+   "t": 154.79,
+   "text": "qPCR-based titering measures functional integration events."
+  },
+  {
+   "t": 159.6,
+   "text": "It's the most relevant measure for most applications."
+  },
+  {
+   "t": 163.05,
+   "text": "It's also more work than p24 — requires a qPCR setup, primers, standards — but it's what you'll see in modern manuscripts."
+  },
+  {
+   "t": 171.94,
+   "text": "Method three: functional titer by fluorescence or selection."
+  },
+  {
+   "t": 176.4,
+   "text": "If your transfer plasmid encodes a fluorescent reporter — GFP, mCherry, whatever — you can titer by flow cytometry."
+  },
+  {
+   "t": 185.19,
+   "text": "Transduce a serial dilution into target cells, wait 72 hours, run on a flow cytometer, count the fraction of cells that are reporter-positive."
+  },
+  {
+   "t": 195.65,
+   "text": "At low MOIs, where each cell gets either zero or one integration event, the fraction of positive cells multiplied by the number of cells you transduced equals the number of transducing units in the volume of virus you used."
+  },
+  {
+   "t": 209.91,
+   "text": "This gives you a beautiful functional titer in units of transducing units per mL or GFP-forming units per mL."
+  },
+  {
+   "t": 217.84,
+   "text": "If you don't have a fluorescent reporter, but you have a selection marker like puromycin resistance, you can do the same thing with antibiotic selection — transduce dilutions, select with puromycin, count surviving colonies."
+  },
+  {
+   "t": 230.68,
+   "text": "This is slower than flow but works on any vector with a selectable marker."
+  },
+  {
+   "t": 235.29,
+   "text": "The three methods give you different numbers."
+  },
+  {
+   "t": 237.75,
+   "text": "A typical research-grade lentivirus prep might give you:"
+  },
+  {
+   "t": 241.44,
+   "text": "p24 ELISA: 10^9 to 10^10 particles per mL qPCR titer: 10^7 to 10^8 transducing units per mL Flow titer: 10^7 to 10^8 GFP-forming units per mL"
+  },
+  {
+   "t": 260.54,
+   "text": "The qPCR and flow numbers tend to agree within a factor of two or three."
+  },
+  {
+   "t": 265.76,
+   "text": "The p24 number is typically two to three logs higher, reflecting the particle-to-infectivity ratio."
+  },
+  {
+   "t": 272.55,
+   "text": "For an experiment, what you want is functional titer — qPCR or flow — and you want to plan your MOI (multiplicity of infection) from that number."
+  },
+  {
+   "t": 281.69,
+   "text": "MOI is the ratio of transducing units to target cells."
+  },
+  {
+   "t": 285.76,
+   "text": "For most applications you want MOI between 0.1 and 10, with 1 to 3 being typical."
+  },
+  {
+   "t": 292.9,
+   "text": "Low MOI minimizes multiple integrations per cell, which matters if you're doing things like CRISPR screens where you want one guide RNA per cell."
+  },
+  {
+   "t": 301.65,
+   "text": "High MOI maximizes transduction efficiency at the cost of more integrations per cell."
+  },
+  {
+   "t": 307.89,
+   "text": "Concentrated lentivirus stocks — after ultracentrifugation — can reach 10^8 to 10^9 transducing units per mL, which is enough for most demanding applications including primary T cell transduction, hematopoietic stem cell transduction, and in vivo injection in mouse models."
+  }
+ ]
+}

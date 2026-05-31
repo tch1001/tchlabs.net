@@ -1,0 +1,155 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Cre toxicity — the cautionary tales",
+ "duration": 258.51,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Cre toxicity — the cautionary tales"
+  },
+  {
+   "t": 4.79,
+   "text": "Up to this point, I've described Cre as a clean, surgical tool that does only what we tell it to."
+  },
+  {
+   "t": 10.9,
+   "text": "That's mostly true, but it's not entirely true, and the exceptions matter — because they cost researchers experiments, papers, and sometimes years."
+  },
+  {
+   "t": 20.54,
+   "text": "The first cautionary tale: Cre is not perfectly specific to canonical loxP."
+  },
+  {
+   "t": 27.02,
+   "text": "The genome is enormous, and within billions of base pairs of mammalian DNA, there are sequences that look enough like loxP for Cre to occasionally bind and cut."
+  },
+  {
+   "t": 38.88,
+   "text": "These are called pseudo-loxP sites or cryptic lox sites."
+  },
+  {
+   "t": 42.59,
+   "text": "They're not bona fide loxP — they don't match the canonical sequence exactly — but they're close enough that high levels of Cre, expressed for long enough, will recombine them at low frequency."
+  },
+  {
+   "t": 55.34,
+   "text": "The result is unintended chromosomal rearrangements, deletions, translocations, and chromosomal instability."
+  },
+  {
+   "t": 63.09,
+   "text": "In dividing cells, this is potentially catastrophic — the cells accumulate genomic damage, growth slows, some cells die, and you can get phenotypes in your Cre-only control mice that have nothing to do with the gene you intended to delete."
+  },
+  {
+   "t": 77.84,
+   "text": "This is why Cre-only controls matter."
+  },
+  {
+   "t": 79.96,
+   "text": "We mentioned them in Segment 7."
+  },
+  {
+   "t": 82.09,
+   "text": "The standard practice is to include in every experiment a group of mice that has the Cre transgene but no floxed allele — same Cre expression, no target."
+  },
+  {
+   "t": 93.24,
+   "text": "If those mice show phenotypes too, you've discovered that the Cre itself is causing trouble, and you have to interpret your knockout results with care."
+  },
+  {
+   "t": 102.54,
+   "text": "Multiple high-profile papers have had to be reinterpreted or partially retracted when it turned out their phenotypes were Cre toxicity rather than gene-loss-of-function."
+  },
+  {
+   "t": 112.85,
+   "text": "The problem is particularly bad in certain contexts."
+  },
+  {
+   "t": 116.06,
+   "text": "Highly proliferative cells are most vulnerable, because chromosomal instability is most damaging when cells are dividing and trying to maintain genome integrity."
+  },
+  {
+   "t": 126.45,
+   "text": "Tissues with high Cre expression are worse than low."
+  },
+  {
+   "t": 130.03,
+   "text": "Long-duration expression is worse than transient."
+  },
+  {
+   "t": 133.34,
+   "text": "The combination of strong promoter, dividing cells, and continuous expression is the worst case — and that combination is unfortunately exactly what some experiments require."
+  },
+  {
+   "t": 146.05,
+   "text": "There are mitigations."
+  },
+  {
+   "t": 147.49,
+   "text": "Inducible Cre (CreER^T2 with tamoxifen) gives you transient expression, which reduces off-target damage."
+  },
+  {
+   "t": 156.74,
+   "text": "Lower-expression Cre lines — engineered for moderate rather than maximal expression — produce less recombination both at canonical and at cryptic sites."
+  },
+  {
+   "t": 167.44,
+   "text": "Engineered Cre variants with improved specificity, such as iCre (codon-improved Cre) which expresses at lower but adequate levels, can help."
+  },
+  {
+   "t": 178.04,
+   "text": "And, increasingly, people are turning to alternative recombinases like Dre or VCre when Cre toxicity is suspected, because each recombinase has a different cryptic-site profile."
+  },
+  {
+   "t": 191.18,
+   "text": "The second cautionary tale is timing artifacts."
+  },
+  {
+   "t": 194.61,
+   "text": "Because Cre acts permanently, any transient burst of Cre expression — even at a stage where you didn't intend to act — leaves a permanent mark."
+  },
+  {
+   "t": 204.49,
+   "text": "A CreER mouse can have low baseline activity in the absence of tamoxifen — \"leakiness\" — that recombines a fraction of cells without you knowing."
+  },
+  {
+   "t": 214.01,
+   "text": "Tamoxifen itself can have biological effects on the animal independent of activating Cre."
+  },
+  {
+   "t": 220.22,
+   "text": "Reading any Cre-Lox paper carefully requires you to ask: what controls did they include?"
+  },
+  {
+   "t": 226.46,
+   "text": "Did they show Cre-only effects?"
+  },
+  {
+   "t": 228.35,
+   "text": "Did they assess leakiness?"
+  },
+  {
+   "t": 229.97,
+   "text": "Good papers address these explicitly."
+  },
+  {
+   "t": 232.81,
+   "text": "Bad ones don't."
+  },
+  {
+   "t": 234.01,
+   "text": "The takeaway: Cre is a powerful tool, but it is not a perfectly clean tool."
+  },
+  {
+   "t": 239.91,
+   "text": "Used carefully, with proper controls, it gives you exquisite genetic precision."
+  },
+  {
+   "t": 245.45,
+   "text": "Used carelessly, it can give you misleading results that look real until somebody else tries to replicate them."
+  },
+  {
+   "t": 252.12,
+   "text": "The field has learned this the hard way over thirty years, and modern best practices reflect that learning."
+  }
+ ]
+}

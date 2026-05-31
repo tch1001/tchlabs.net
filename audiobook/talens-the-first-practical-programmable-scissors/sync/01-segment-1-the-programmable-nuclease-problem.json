@@ -1,0 +1,299 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The programmable nuclease problem",
+ "duration": 431.33,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The programmable nuclease problem"
+  },
+  {
+   "t": 3.45,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 4.85,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 6.19,
+   "text": "Today and for the next two hours, we're going to talk about TALENs — Transcription Activator-Like Effector Nucleases — and I want to start, the way I always do, with the problem that TALENs were invented to solve."
+  },
+  {
+   "t": 18.86,
+   "text": "Because if you understand the problem, the elegance of the answer becomes obvious."
+  },
+  {
+   "t": 23.48,
+   "text": "And TALENs are, in my opinion, one of the most elegant answers anyone has ever found in molecular biology."
+  },
+  {
+   "t": 30.19,
+   "text": "So here's the problem."
+  },
+  {
+   "t": 31.52,
+   "text": "Your genome — the genome of any vertebrate, really — is roughly three billion base pairs long."
+  },
+  {
+   "t": 38.5,
+   "text": "Three billion letters, drawn from a four-letter alphabet, written in a continuous chain coiled up inside each of your cells."
+  },
+  {
+   "t": 46.86,
+   "text": "Suppose you want to make one specific change to that text."
+  },
+  {
+   "t": 50.12,
+   "text": "Maybe there's a single mutation that causes a disease — sickle cell disease, say, where one letter in the gene for hemoglobin is wrong — and you want to go in and fix that letter."
+  },
+  {
+   "t": 59.89,
+   "text": "Or you want to disable one specific gene in a mouse to see what it does."
+  },
+  {
+   "t": 64.75,
+   "text": "Or you want to insert a useful piece of DNA at one chosen spot."
+  },
+  {
+   "t": 68.97,
+   "text": "To do any of those things, you need a tool that can find one specific address in three billion letters, and cut the DNA there — only there — and not cut anywhere else."
+  },
+  {
+   "t": 80.35,
+   "text": "Because if you cut at the wrong place, you're slashing through the wrong gene, which the cell may need to survive."
+  },
+  {
+   "t": 86.45,
+   "text": "So the requirement is extraordinary."
+  },
+  {
+   "t": 89.01,
+   "text": "You need a molecular machine that reads DNA, finds a unique twenty-letter or so sequence among three billion, and snips precisely at that spot."
+  },
+  {
+   "t": 98.09,
+   "text": "Let me put a number on how hard that is."
+  },
+  {
+   "t": 100.19,
+   "text": "A unique twenty-letter sequence, in a random four-letter alphabet, would occur once every four-to-the-twentieth letters — which is about a trillion."
+  },
+  {
+   "t": 108.89,
+   "text": "Your genome is only three billion letters."
+  },
+  {
+   "t": 112.38,
+   "text": "So a well-chosen twenty-letter target should be unique, statistically, in your whole genome."
+  },
+  {
+   "t": 118.35,
+   "text": "The information content is there."
+  },
+  {
+   "t": 120.8,
+   "text": "The problem is engineering a protein that reads it."
+  },
+  {
+   "t": 124.31,
+   "text": "Here is the analogy I want you to hold for the next two hours."
+  },
+  {
+   "t": 128.29,
+   "text": "Imagine your genome is a library — and not just any library, the Library of Congress, with millions of books, hundreds of millions of pages, billions of words."
+  },
+  {
+   "t": 138.76,
+   "text": "And I hand you a pair of scissors, and I tell you: go find the one specific sentence on page 412 of one specific book in this library, and snip exactly there."
+  },
+  {
+   "t": 148.97,
+   "text": "Not somewhere near."
+  },
+  {
+   "t": 150.15,
+   "text": "Not even on the same page."
+  },
+  {
+   "t": 151.82,
+   "text": "Exactly there."
+  },
+  {
+   "t": 152.99,
+   "text": "Don't cut anywhere else in the entire library."
+  },
+  {
+   "t": 156.0,
+   "text": "If you do, we lose information we need."
+  },
+  {
+   "t": 158.7,
+   "text": "What kind of scissors would you need?"
+  },
+  {
+   "t": 160.35,
+   "text": "You'd need scissors that could read."
+  },
+  {
+   "t": 162.25,
+   "text": "Scissors that knew the alphabet."
+  },
+  {
+   "t": 164.34,
+   "text": "Scissors that you could program with the specific phrase you were hunting for, and that would refuse to cut anything else."
+  },
+  {
+   "t": 172.01,
+   "text": "That's the kind of tool molecular biology needed, and didn't have, for almost the entire twentieth century."
+  },
+  {
+   "t": 178.49,
+   "text": "We had cutting tools — restriction enzymes, which we discussed in plasmid biology — but those only cut at fixed sequences they evolved to recognize."
+  },
+  {
+   "t": 188.07,
+   "text": "You couldn't reprogram a restriction enzyme to cut at a sequence you wanted."
+  },
+  {
+   "t": 192.82,
+   "text": "They cut at their sequence, the one nature gave them, and that was that."
+  },
+  {
+   "t": 197.36,
+   "text": "For about thirty years, the dream of genome editing was the dream of building a programmable nuclease — scissors whose target you could specify."
+  },
+  {
+   "t": 206.81,
+   "text": "The dream of teaching the scissors to read."
+  },
+  {
+   "t": 209.59,
+   "text": "Several approaches were tried before TALENs."
+  },
+  {
+   "t": 212.6,
+   "text": "The first serious one was the zinc finger nuclease, or ZFN, built in the 1990s and early 2000s by taking small DNA-binding modules called zinc fingers — little protein loops that each recognize about three letters of DNA — and chaining them together."
+  },
+  {
+   "t": 229.44,
+   "text": "By stringing four to six zinc fingers in a row, you could get a protein that recognized a stretch of twelve to eighteen DNA letters."
+  },
+  {
+   "t": 237.66,
+   "text": "Then you fused that to a DNA-cutting enzyme called FokI, and you had your programmable scissors."
+  },
+  {
+   "t": 243.96,
+   "text": "In principle."
+  },
+  {
+   "t": 245.06,
+   "text": "In practice, zinc fingers were a nightmare."
+  },
+  {
+   "t": 248.4,
+   "text": "The trouble was that each zinc finger doesn't really recognize its three letters cleanly in isolation — its binding is influenced by its neighbors, by the context it sits in, by subtle structural effects you couldn't easily predict."
+  },
+  {
+   "t": 261.71,
+   "text": "Designing a custom zinc finger array for a new target was something like an art form."
+  },
+  {
+   "t": 266.85,
+   "text": "It took months."
+  },
+  {
+   "t": 268.1,
+   "text": "It required deep specialist expertise."
+  },
+  {
+   "t": 271.34,
+   "text": "It often didn't work the first time."
+  },
+  {
+   "t": 273.43,
+   "text": "Companies were founded around it, and they could deliver custom zinc finger nucleases — but at a price tag of tens of thousands of dollars per design and with no guarantees of success."
+  },
+  {
+   "t": 284.53,
+   "text": "So for fifteen years, programmable genome editing existed in principle, but it was a craft, not a tool."
+  },
+  {
+   "t": 291.54,
+   "text": "Most labs couldn't do it."
+  },
+  {
+   "t": 293.05,
+   "text": "The dream remained mostly a dream."
+  },
+  {
+   "t": 295.36,
+   "text": "And then, in 2009, two papers came out — back to back, in the same issue of Science — that decoded a different kind of natural DNA-binding protein, one that turned out to be far more modular and far more predictable than zinc fingers."
+  },
+  {
+   "t": 309.55,
+   "text": "The proteins were called TAL effectors — TALEs — and they came from a family of plant pathogenic bacteria called Xanthomonas."
+  },
+  {
+   "t": 318.63,
+   "text": "The decoding revealed that, in these proteins, one repeat unit recognizes exactly one DNA letter, with the recognition encoded by just two amino acids per repeat."
+  },
+  {
+   "t": 330.61,
+   "text": "One repeat, one letter."
+  },
+  {
+   "t": 332.43,
+   "text": "Snap them together like Lego bricks, and you build a protein that reads whatever sequence you want."
+  },
+  {
+   "t": 338.61,
+   "text": "Within months, labs around the world had fused TALE arrays to the same FokI cutting domain that zinc fingers used, and the TALEN was born."
+  },
+  {
+   "t": 347.81,
+   "text": "For the first time in history, designing a programmable nuclease was something you could do in a week, with no specialist expertise, for any target you wanted, with high reliability."
+  },
+  {
+   "t": 358.66,
+   "text": "The era of practical genome editing began."
+  },
+  {
+   "t": 361.85,
+   "text": "CRISPR, which would later eclipse TALENs in most labs, was still three years away."
+  },
+  {
+   "t": 367.43,
+   "text": "For those three years, TALENs were the way to edit genomes."
+  },
+  {
+   "t": 371.45,
+   "text": "And even now, more than a decade after CRISPR took over, TALENs are still being used in human therapeutic trials, in livestock engineering, in research — because in some applications, the things TALENs do better than CRISPR matter more than the things CRISPR does better."
+  },
+  {
+   "t": 387.98,
+   "text": "If you walk out of here in two hours and you can do three things — one, draw me a TALEN and explain why each piece is there; two, explain in plain English how the TALE code works and why it makes engineering so easy; three, look at any modern genome editing application and tell me whether a TALEN or a CRISPR is the better tool for the job, and why — then we've succeeded."
+  },
+  {
+   "t": 411.43,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 413.71,
+   "text": "Let's start by going back to the plant pathogens that gave us the TALE in the first place."
+  },
+  {
+   "t": 419.1,
+   "text": "Because the TALE was already, in its natural habitat, doing exactly the kind of sequence-specific DNA recognition we needed."
+  },
+  {
+   "t": 427.1,
+   "text": "Evolution had built the tool."
+  },
+  {
+   "t": 428.93,
+   "text": "We just had to find it and figure out how it worked."
+  }
+ ]
+}

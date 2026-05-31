@@ -1,0 +1,211 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Delivering ZFNs into cells",
+ "duration": 409.0,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Delivering ZFNs into cells"
+  },
+  {
+   "t": 4.19,
+   "text": "Welcome back."
+  },
+  {
+   "t": 5.25,
+   "text": "Let's pick up where we left off."
+  },
+  {
+   "t": 6.86,
+   "text": "We've spent the first hour establishing what a zinc finger nuclease is, where it came from, why it's hard to design, and what the first clinical trial looked like."
+  },
+  {
+   "t": 16.09,
+   "text": "Now I want to zoom in on the practical engineering problem of getting these things into cells in the first place, because the delivery problem is half the battle for any gene-editing therapy and it's where some of the most interesting trade-offs live."
+  },
+  {
+   "t": 29.54,
+   "text": "A ZFN is a protein."
+  },
+  {
+   "t": 31.59,
+   "text": "To get it to do its job inside a cell, you have to either deliver the protein directly, or you have to deliver something that the cell will translate into the protein — mRNA or DNA."
+  },
+  {
+   "t": 43.06,
+   "text": "Each option has trade-offs."
+  },
+  {
+   "t": 44.89,
+   "text": "The first and historically most common option is DNA delivery — specifically, delivering a plasmid that encodes the ZFN."
+  },
+  {
+   "t": 53.55,
+   "text": "You put the ZFN gene under the control of a strong promoter, you build the construct on a standard plasmid, and you deliver that plasmid into cells."
+  },
+  {
+   "t": 62.62,
+   "text": "The cell takes up the plasmid, transcribes it into mRNA, translates the mRNA into protein, and the protein does its work."
+  },
+  {
+   "t": 71.33,
+   "text": "DNA is cheap, stable, easy to manipulate, and you can get high expression."
+  },
+  {
+   "t": 76.79,
+   "text": "The downside is that the ZFN gets expressed for as long as the plasmid persists in the cell, which can be days or weeks, and prolonged expression of a nuclease increases the risk of off-target cuts."
+  },
+  {
+   "t": 88.89,
+   "text": "You want the ZFN to cut and then go away."
+  },
+  {
+   "t": 91.83,
+   "text": "The second option is mRNA delivery."
+  },
+  {
+   "t": 94.64,
+   "text": "You synthesize the mRNA encoding the ZFN in a test tube — there's a well-established technique called in vitro transcription that uses a bacterial RNA polymerase to copy a DNA template into mRNA — and you deliver that mRNA directly into the cells."
+  },
+  {
+   "t": 112.26,
+   "text": "The cell translates it for a few hours, then degrades it."
+  },
+  {
+   "t": 115.76,
+   "text": "You get a transient pulse of ZFN expression that's enough to do the editing but doesn't linger long enough to cause much off-target damage."
+  },
+  {
+   "t": 123.83,
+   "text": "This is the approach that has come to dominate clinical ZFN protocols, including the CCR5 program."
+  },
+  {
+   "t": 130.68,
+   "text": "The third option is direct protein delivery, sometimes called RNP delivery — though that term is more often used for CRISPR, with its ribonucleoprotein complex."
+  },
+  {
+   "t": 140.79,
+   "text": "With ZFNs, you can produce the ZFN protein in bacterial expression systems, purify it, and deliver it directly to cells."
+  },
+  {
+   "t": 149.34,
+   "text": "The protein has the shortest residence time of any delivery format — it does its work and then gets degraded by normal cellular protein turnover within hours."
+  },
+  {
+   "t": 159.31,
+   "text": "Direct protein delivery gives the cleanest editing window but is the most technically demanding, because purified ZFN protein is finicky, expensive to produce, and can be inactive if not handled correctly."
+  },
+  {
+   "t": 172.0,
+   "text": "How do you physically get any of these payloads into the cell?"
+  },
+  {
+   "t": 175.78,
+   "text": "Several methods, depending on what you're editing."
+  },
+  {
+   "t": 178.11,
+   "text": "Electroporation is the workhorse for ex vivo cell therapy."
+  },
+  {
+   "t": 182.46,
+   "text": "You take the cells out of the patient, suspend them in a buffer with your ZFN payload — DNA, mRNA, or protein — and apply a brief electrical pulse that creates transient pores in the cell membrane."
+  },
+  {
+   "t": 194.86,
+   "text": "The payload diffuses in through the pores during the pulse, and within minutes the pores reseal."
+  },
+  {
+   "t": 201.75,
+   "text": "Electroporation is brutal but effective; a significant fraction of the cells die from the procedure, but the survivors take up the payload at high efficiency."
+  },
+  {
+   "t": 212.51,
+   "text": "For CD4 T cells, hematopoietic stem cells, and other primary human cells that you can isolate, expand, and reinfuse, electroporation is the standard delivery method for ZFNs and for CRISPR alike."
+  },
+  {
+   "t": 226.65,
+   "text": "For in vivo delivery — delivering ZFNs directly to cells inside a living patient — the most successful approach has been viral vectors, particularly adeno-associated viruses, or AAVs."
+  },
+  {
+   "t": 239.9,
+   "text": "AAV is a small virus that infects human cells naturally without causing disease; biologists have hollowed it out and use it as a gene-delivery vehicle for a wide range of therapies."
+  },
+  {
+   "t": 251.62,
+   "text": "You can engineer an AAV to carry a ZFN-encoding cassette and deliver it directly into the patient."
+  },
+  {
+   "t": 258.91,
+   "text": "Sangamo's in vivo clinical programs — including their hemophilia and lysosomal storage disorder programs — have used AAV delivery to bring ZFNs to the liver, where the AAV preferentially infects hepatocytes and the ZFN edits the patient's liver cells in place."
+  },
+  {
+   "t": 276.41,
+   "text": "There are constraints."
+  },
+  {
+   "t": 277.76,
+   "text": "AAV has a small cargo capacity — about four to five kilobases of DNA, which is enough to fit a ZFN pair but not much more."
+  },
+  {
+   "t": 287.0,
+   "text": "So if you want to deliver a ZFN pair plus a donor DNA template for a knock-in, you may need multiple AAVs co-infecting the same cell, or you have to be clever about how you package things."
+  },
+  {
+   "t": 298.78,
+   "text": "There's also lipid nanoparticle delivery — the same kind of technology that the COVID mRNA vaccines made famous — which can in principle deliver ZFN mRNA into cells in vivo."
+  },
+  {
+   "t": 310.94,
+   "text": "This is more recent, more experimental for ZFNs, and again competes with the more mature CRISPR delivery infrastructure."
+  },
+  {
+   "t": 318.96,
+   "text": "The delivery decisions matter enormously, because they determine what diseases you can treat."
+  },
+  {
+   "t": 324.99,
+   "text": "Ex vivo editing — take cells out, edit, put back — works for blood disorders, for immune disorders, for any disease where you can isolate the relevant cells."
+  },
+  {
+   "t": 334.91,
+   "text": "That's how CCR5-ZFN was done, and that's how the modern CRISPR sickle cell therapies are done."
+  },
+  {
+   "t": 341.24,
+   "text": "But it doesn't scale to diseases where the affected cells are spread throughout the body and can't be conveniently extracted."
+  },
+  {
+   "t": 348.59,
+   "text": "In vivo editing — delivering the nuclease directly to cells in the patient — opens up a much wider range of diseases, but it's harder."
+  },
+  {
+   "t": 357.4,
+   "text": "You have less control over the dose, less control over which cells get edited, and more risk of immune responses to the delivery vehicle."
+  },
+  {
+   "t": 365.9,
+   "text": "Most of the current in vivo ZFN programs target the liver, because AAV-liver delivery is well-established and the liver has good tolerance for genetic interventions."
+  },
+  {
+   "t": 376.25,
+   "text": "Whatever the delivery method, once the ZFN is inside the cell, the editing process itself is the same."
+  },
+  {
+   "t": 383.49,
+   "text": "The ZFN finds its target, cuts the DNA, and the cell's repair machinery takes over."
+  },
+  {
+   "t": 389.54,
+   "text": "The repair machinery is, in many ways, the most important and least appreciated piece of the editing puzzle, because the ZFN doesn't do the edit — the cell does the edit."
+  },
+  {
+   "t": 400.83,
+   "text": "The ZFN just makes the cut, and the cell decides what to do about it."
+  },
+  {
+   "t": 404.94,
+   "text": "Let's compare that to what other technologies do with the same machinery."
+  }
+ ]
+}

@@ -1,0 +1,291 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — The opsin family: depolarizing and hyperpolarizing variants",
+ "duration": 463.28,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — The opsin family: depolarizing and hyperpolarizing variants"
+  },
+  {
+   "t": 6.14,
+   "text": "Once you understand the basic ChR2 mechanism, the whole zoo of optogenetic tools becomes a family tree, and I want to walk you through the family."
+  },
+  {
+   "t": 15.44,
+   "text": "The opsins divide cleanly into two big groups based on what they do to a neuron: depolarizing opsins, which make the neuron fire, and hyperpolarizing opsins, which make the neuron go silent."
+  },
+  {
+   "t": 27.93,
+   "text": "On and off."
+  },
+  {
+   "t": 28.95,
+   "text": "Excite and inhibit."
+  },
+  {
+   "t": 30.5,
+   "text": "We'll start with the on switches, because they came first."
+  },
+  {
+   "t": 33.4,
+   "text": "The depolarizing opsins are channelrhodopsins and their engineered descendants."
+  },
+  {
+   "t": 39.0,
+   "text": "ChR2 itself, the original 2005 tool, is still in heavy use today, but it has limitations."
+  },
+  {
+   "t": 47.38,
+   "text": "Its kinetics are a little slow — once a spike is triggered, the channel takes about ten milliseconds to close, which means at very high frequencies the cell can lose track of the light pulses."
+  },
+  {
+   "t": 58.61,
+   "text": "So engineers and natural-product hunters set out to find faster, brighter, more useful variants."
+  },
+  {
+   "t": 65.16,
+   "text": "Three names worth knowing."
+  },
+  {
+   "t": 66.84,
+   "text": "ChETA is a point-mutant variant of ChR2 — meaning Deisseroth's group changed exactly one amino acid in the channel — and the mutation speeds up the channel closing, letting neurons follow light pulses at up to two hundred hertz."
+  },
+  {
+   "t": 82.47,
+   "text": "ChETA stands for \"ChR2-E123T accelerated,\" which is a typical mouthful of an opsin name."
+  },
+  {
+   "t": 91.62,
+   "text": "ChETA trades a little bit of current amplitude for a lot of speed."
+  },
+  {
+   "t": 96.38,
+   "text": "It's the tool you'd pick if you wanted to drive cells at very high frequencies, mimicking fast-spiking interneurons, for instance."
+  },
+  {
+   "t": 104.08,
+   "text": "Chronos is a different beast."
+  },
+  {
+   "t": 106.05,
+   "text": "It was discovered by Ed Boyden's group at MIT, who went hunting through algae genomes — sequencing the photoreceptive proteins of hundreds of newly-collected algal species, expressing them in cells, and screening for useful ones."
+  },
+  {
+   "t": 120.84,
+   "text": "Chronos came from an algae called Stigeoclonium helveticum."
+  },
+  {
+   "t": 124.75,
+   "text": "It's fast, like ChETA, but it also has higher light sensitivity and a slightly shifted absorption spectrum, peaking around 500 nanometers — more in the green than the blue."
+  },
+  {
+   "t": 136.11,
+   "text": "That spectral shift turns out to matter a lot in a second when we talk about combining opsins."
+  },
+  {
+   "t": 141.99,
+   "text": "Chrimson, and its faster cousin ChrimsonR, came from the same Boyden screening effort."
+  },
+  {
+   "t": 147.39,
+   "text": "Chrimson is from Chlamydomonas noctigama, a relative of the original ChR2 algae."
+  },
+  {
+   "t": 154.2,
+   "text": "And the punchline is that Chrimson is dramatically red-shifted — its peak absorption is around 590 nanometers, in the orange-red, rather than 470 in the blue."
+  },
+  {
+   "t": 166.36,
+   "text": "We'll come back to why that matters in Segment 9."
+  },
+  {
+   "t": 169.25,
+   "text": "For now, just file: blue light opsins, ChR2 and ChETA."
+  },
+  {
+   "t": 175.06,
+   "text": "Green-ish, Chronos."
+  },
+  {
+   "t": 176.59,
+   "text": "Red, Chrimson and ChrimsonR."
+  },
+  {
+   "t": 179.21,
+   "text": "The natural world has been generous with the color palette."
+  },
+  {
+   "t": 182.32,
+   "text": "Now the off switches."
+  },
+  {
+   "t": 183.8,
+   "text": "The hyperpolarizing opsins are the mirror image of channelrhodopsins, and they came online a year or two after ChR2."
+  },
+  {
+   "t": 191.55,
+   "text": "The analogy I want you to use here is: if channelrhodopsin is the on-switch shade that rolls up to let ions stream in and fire the neuron, then halorhodopsin and archaerhodopsin are the opposite switch — shine yellow light, and instead of letting positive ions in, they pump ions across the membrane to silence the cell."
+  },
+  {
+   "t": 212.11,
+   "text": "There are two main flavors, distinguished by what they pump."
+  },
+  {
+   "t": 215.68,
+   "text": "Halorhodopsins are light-driven chloride pumps, originally found in halophilic archaea — salt-loving microorganisms that live in places like the Dead Sea."
+  },
+  {
+   "t": 226.14,
+   "text": "When you shine yellow light, around 590 nanometers, on a halorhodopsin, it pumps chloride ions from outside the cell to inside."
+  },
+  {
+   "t": 235.38,
+   "text": "Chloride is a negative ion."
+  },
+  {
+   "t": 237.64,
+   "text": "Pumping negative ions into the neuron makes the inside of the cell more negative — hyperpolarization."
+  },
+  {
+   "t": 244.6,
+   "text": "The cell drops away from threshold, and any action potential it was about to fire gets aborted."
+  },
+  {
+   "t": 250.89,
+   "text": "The version of halorhodopsin most people use in neuroscience is called eNpHR3.0 — \"enhanced Natronomonas pharaonis halorhodopsin, version 3.0\" — which has been progressively engineered, by Deisseroth's group and others, to traffic better to the neuronal membrane."
+  },
+  {
+   "t": 268.94,
+   "text": "You'll see it called \"enhanced halorhodopsin 3.0\" or just \"eNpHR\" in papers."
+  },
+  {
+   "t": 275.33,
+   "text": "Archaerhodopsins, or \"Arch\" for short, are light-driven proton pumps, from a different group of archaea."
+  },
+  {
+   "t": 281.95,
+   "text": "They absorb yellow-green light, around 570 nanometers, and they pump protons out of the cell."
+  },
+  {
+   "t": 289.33,
+   "text": "Protons are positive."
+  },
+  {
+   "t": 290.81,
+   "text": "Pumping positive ions out also makes the inside of the cell more negative — same hyperpolarization, different ion."
+  },
+  {
+   "t": 298.5,
+   "text": "Arch and its variants — ArchT and eArch3.0 — tend to give bigger silencing currents than halorhodopsins, and have become the dominant inhibitory tools."
+  },
+  {
+   "t": 309.86,
+   "text": "There's also Jaws, a red-shifted chloride pump from another halophile, engineered to be activated by deep red light at around 630 nanometers — useful when you need to inhibit cells deep in tissue, for the same reasons we'll get to in Segment 9."
+  },
+  {
+   "t": 325.31,
+   "text": "And there's a newer family worth knowing about: anion channelrhodopsins, abbreviated ACRs or GtACRs."
+  },
+  {
+   "t": 332.72,
+   "text": "These are not pumps."
+  },
+  {
+   "t": 334.03,
+   "text": "They're true light-gated channels — like ChR2 — but for chloride."
+  },
+  {
+   "t": 338.93,
+   "text": "Found in cryptophyte algae a few years ago."
+  },
+  {
+   "t": 342.43,
+   "text": "They're extremely powerful inhibitors, sometimes too powerful — they can sometimes paradoxically excite cells in certain compartments — but for many applications they're now the strongest silencing tool we have."
+  },
+  {
+   "t": 355.81,
+   "text": "There's one more group worth mentioning before we move on: the kalium channelrhodopsins, sometimes abbreviated KCRs."
+  },
+  {
+   "t": 363.54,
+   "text": "These are recently discovered light-gated potassium channels."
+  },
+  {
+   "t": 367.61,
+   "text": "Potassium efflux — potassium flowing out of the cell — is, biophysically, the most natural way to silence a neuron, because it's exactly how the cell silences itself after every action potential."
+  },
+  {
+   "t": 381.42,
+   "text": "Light-gated potassium channels are, in some sense, the most physiologically sensible silencers, and they're becoming popular for new in vivo work."
+  },
+  {
+   "t": 391.56,
+   "text": "So step back and look at the family tree."
+  },
+  {
+   "t": 393.77,
+   "text": "Channels that flow cations in, depolarizing — ChR2, ChETA, Chronos, Chrimson."
+  },
+  {
+   "t": 401.82,
+   "text": "Pumps that move chloride in or protons out, hyperpolarizing — eNpHR3.0, Arch, ArchT, Jaws."
+  },
+  {
+   "t": 410.27,
+   "text": "Channels that flow anions, hyperpolarizing — GtACRs."
+  },
+  {
+   "t": 415.43,
+   "text": "Channels that flow potassium out, hyperpolarizing — KCRs."
+  },
+  {
+   "t": 420.29,
+   "text": "Different speeds, different colors, different ion selectivities."
+  },
+  {
+   "t": 424.47,
+   "text": "Every experiment requires a thoughtful choice about which tool to pick."
+  },
+  {
+   "t": 429.53,
+   "text": "And the basic logic, every time, is the same."
+  },
+  {
+   "t": 433.04,
+   "text": "Which way do you want to push the neuron?"
+  },
+  {
+   "t": 434.63,
+   "text": "What color of light can you deliver?"
+  },
+  {
+   "t": 436.92,
+   "text": "How fast do you need to switch?"
+  },
+  {
+   "t": 438.82,
+   "text": "How deep into the tissue do you need to reach?"
+  },
+  {
+   "t": 441.39,
+   "text": "Now, the next problem."
+  },
+  {
+   "t": 442.68,
+   "text": "We've got these beautiful switches."
+  },
+  {
+   "t": 444.92,
+   "text": "But putting a switch into every cell in the brain is exactly as useless as having no switch at all — because then light hits everything, and you've lost your specificity."
+  },
+  {
+   "t": 455.67,
+   "text": "We need a way to get the opsin into just the cells we care about."
+  },
+  {
+   "t": 459.45,
+   "text": "That's the targeting problem, and it's the topic of the next segment."
+  }
+ ]
+}

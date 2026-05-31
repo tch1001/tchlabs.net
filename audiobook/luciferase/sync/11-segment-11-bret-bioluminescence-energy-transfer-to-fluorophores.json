@@ -1,0 +1,199 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — BRET: bioluminescence energy transfer to fluorophores",
+ "duration": 316.79,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — BRET: bioluminescence energy transfer to fluorophores"
+  },
+  {
+   "t": 5.75,
+   "text": "Now I want to introduce a beautiful trick that combines luciferases with fluorescent proteins, drawing on the best of both worlds."
+  },
+  {
+   "t": 14.34,
+   "text": "It's called BRET — bioluminescence resonance energy transfer."
+  },
+  {
+   "t": 18.71,
+   "text": "If you've heard of FRET — Förster resonance energy transfer, often used in the fluorescent protein lecture — BRET is its luciferase-powered cousin."
+  },
+  {
+   "t": 28.46,
+   "text": "Let me set up FRET briefly first, then show you how BRET extends it."
+  },
+  {
+   "t": 33.06,
+   "text": "In FRET, you have two fluorescent proteins, a donor and an acceptor."
+  },
+  {
+   "t": 38.27,
+   "text": "The donor absorbs excitation light and would normally emit at its own wavelength."
+  },
+  {
+   "t": 43.86,
+   "text": "But if an acceptor fluorescent protein is sitting within about ten nanometers of the donor, and if the acceptor's absorption spectrum overlaps with the donor's emission spectrum, then instead of emitting a photon, the donor can hand its excited-state energy directly to the acceptor through a non-radiative dipole-dipole coupling."
+  },
+  {
+   "t": 62.8,
+   "text": "The acceptor then emits a photon at its own (longer) wavelength."
+  },
+  {
+   "t": 68.01,
+   "text": "So you shine blue light at the donor and you see — if the two proteins are close enough — green light coming out, from the acceptor."
+  },
+  {
+   "t": 75.76,
+   "text": "The energy transferred without ever becoming a photon in between."
+  },
+  {
+   "t": 80.1,
+   "text": "FRET is a fantastic distance ruler for the nanoscale."
+  },
+  {
+   "t": 83.89,
+   "text": "It can tell you whether two proteins are in molecular contact."
+  },
+  {
+   "t": 87.44,
+   "text": "It can detect conformational changes."
+  },
+  {
+   "t": 89.92,
+   "text": "It's a workhorse sensor design."
+  },
+  {
+   "t": 91.7,
+   "text": "But FRET has a drawback."
+  },
+  {
+   "t": 93.28,
+   "text": "It requires a flashlight — excitation light shone at the donor."
+  },
+  {
+   "t": 97.76,
+   "text": "And that excitation light has all the usual problems: background autofluorescence, photobleaching, phototoxicity to the cells, scattering in thick samples."
+  },
+  {
+   "t": 108.54,
+   "text": "BRET swaps the donor."
+  },
+  {
+   "t": 110.15,
+   "text": "Instead of a fluorescent protein donor that needs to be excited, BRET uses a luciferase donor that makes its own light from chemistry."
+  },
+  {
+   "t": 118.25,
+   "text": "The luciferase produces a photon's worth of energy through its bioluminescent reaction."
+  },
+  {
+   "t": 124.15,
+   "text": "That energy can then transfer to a nearby fluorescent acceptor protein — same physics, dipole-dipole coupling, same ten-nanometer range — and the acceptor emits at its own wavelength."
+  },
+  {
+   "t": 137.29,
+   "text": "The analogy I want you to hold is — well, this is exactly the segment-opener analogy."
+  },
+  {
+   "t": 143.16,
+   "text": "BRET is FRET, but the donor brings its own battery."
+  },
+  {
+   "t": 146.86,
+   "text": "No flashlight required."
+  },
+  {
+   "t": 148.7,
+   "text": "The donor lights itself up from internal chemistry."
+  },
+  {
+   "t": 152.45,
+   "text": "Anything happening at the acceptor's longer wavelength is downstream of energy transferred from the luciferase."
+  },
+  {
+   "t": 159.94,
+   "text": "If the acceptor isn't close, there's no transfer and you only see luciferase color."
+  },
+  {
+   "t": 165.61,
+   "text": "If the acceptor is close, you see luciferase color plus acceptor color, and the ratio between the two tells you about the closeness."
+  },
+  {
+   "t": 174.06,
+   "text": "The classic BRET pair was Renilla luciferase as donor, YFP as acceptor."
+  },
+  {
+   "t": 179.94,
+   "text": "Renilla emits at 480 nanometers, YFP absorbs around 514 nanometers, the overlap is good, and the system works."
+  },
+  {
+   "t": 189.62,
+   "text": "But the workhorse modern BRET system is NanoLuc as donor, a red fluorescent protein as acceptor — usually a red-shifted variant like HaloTag conjugated to a synthetic far-red dye, in a system called NanoBRET."
+  },
+  {
+   "t": 204.59,
+   "text": "NanoBRET has revolutionized live-cell measurements of protein-protein interactions, drug-target engagement, and conformational dynamics."
+  },
+  {
+   "t": 213.28,
+   "text": "Because NanoLuc is so bright, the donor signal is enormous, and small fractional transfers to the acceptor produce easily measurable acceptor signals."
+  },
+  {
+   "t": 223.81,
+   "text": "The lack of excitation light means no autofluorescence, no photobleaching, no phototoxicity."
+  },
+  {
+   "t": 230.95,
+   "text": "You can run BRET experiments for hours on living cells."
+  },
+  {
+   "t": 234.62,
+   "text": "A common application: drug-target engagement."
+  },
+  {
+   "t": 237.66,
+   "text": "You tag your target protein with NanoLuc."
+  },
+  {
+   "t": 240.54,
+   "text": "You add a fluorescent ligand — a drug candidate conjugated to a red fluorescent dye."
+  },
+  {
+   "t": 245.91,
+   "text": "If the drug binds the target, the fluorescent dye is brought close to the NanoLuc, and you see BRET signal."
+  },
+  {
+   "t": 252.96,
+   "text": "If the drug doesn't bind, no BRET."
+  },
+  {
+   "t": 255.84,
+   "text": "You can do competition experiments where unlabeled candidate drugs compete with the labeled tracer, displacing it from the target and reducing the BRET signal."
+  },
+  {
+   "t": 265.3,
+   "text": "This has become a standard way to measure drug binding to targets in live cells, in real time, without lysis."
+  },
+  {
+   "t": 272.46,
+   "text": "Another application: G-protein-coupled receptor signaling."
+  },
+  {
+   "t": 276.66,
+   "text": "You tag the receptor with NanoLuc, you tag the G-protein subunit with a fluorescent label, and you can watch in real time as the receptor activates, recruits G-proteins, and then dissociates as the signaling cycle completes."
+  },
+  {
+   "t": 291.56,
+   "text": "The whole choreography is visible as changes in BRET ratio over time."
+  },
+  {
+   "t": 296.69,
+   "text": "BRET, like split luciferase, takes advantage of the fact that bioluminescence produces signal with zero background and no excitation needed, and combines it with the spectral tunability and spatial precision of fluorescent proteins."
+  },
+  {
+   "t": 311.8,
+   "text": "It's a sensor architecture that genuinely uses the best of both worlds."
+  }
+ ]
+}

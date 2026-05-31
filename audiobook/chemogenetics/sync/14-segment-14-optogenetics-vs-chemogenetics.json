@@ -1,0 +1,215 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Optogenetics vs chemogenetics",
+ "duration": 247.95,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Optogenetics vs chemogenetics"
+  },
+  {
+   "t": 4.17,
+   "text": "I've been making the optogenetics-versus-chemogenetics comparison piecemeal through this whole lecture."
+  },
+  {
+   "t": 10.21,
+   "text": "Let me now do it explicitly, side by side, because the choice between these two tools is one of the most common decisions a circuit neuroscientist has to make, and getting the trade-offs right matters."
+  },
+  {
+   "t": 21.82,
+   "text": "Both are designer-receptor techniques."
+  },
+  {
+   "t": 24.2,
+   "text": "Both let you control specific cell populations in a freely behaving animal."
+  },
+  {
+   "t": 29.71,
+   "text": "Both have transformed the field."
+  },
+  {
+   "t": 31.5,
+   "text": "They are complementary, not competing, and most modern circuit labs use both."
+  },
+  {
+   "t": 36.54,
+   "text": "The question is when you reach for which."
+  },
+  {
+   "t": 38.84,
+   "text": "Here is the full table, in narrative form."
+  },
+  {
+   "t": 42.1,
+   "text": "Timing."
+  },
+  {
+   "t": 42.9,
+   "text": "Optogenetics is millisecond-precise."
+  },
+  {
+   "t": 46.0,
+   "text": "You can fire a neuron during one specific 5-millisecond window in a behavior and silence it during the next 5-millisecond window."
+  },
+  {
+   "t": 54.3,
+   "text": "Chemogenetics is minute-to-hour-scale."
+  },
+  {
+   "t": 57.17,
+   "text": "The drug takes 20 to 40 minutes to reach peak effect after injection, and the effect lasts 1 to 4 hours depending on the ligand."
+  },
+  {
+   "t": 65.47,
+   "text": "Opto is the surgical scalpel of timing; chemo is the slow tide."
+  },
+  {
+   "t": 70.64,
+   "text": "Hardware."
+  },
+  {
+   "t": 71.58,
+   "text": "Optogenetics requires a fiber-optic cable implanted into the brain, connected to a laser or LED."
+  },
+  {
+   "t": 78.34,
+   "text": "The animal is tethered to the light source — modern systems use slip rings to let the mouse rotate, but the fiber is always present."
+  },
+  {
+   "t": 86.85,
+   "text": "Chemogenetics requires only that you can give the animal an injection."
+  },
+  {
+   "t": 91.04,
+   "text": "No implants beyond the initial viral injection (which leaves no residual hardware), no tethers, no fiber."
+  },
+  {
+   "t": 98.92,
+   "text": "Opto is hardware-heavy; chemo is hardware-free."
+  },
+  {
+   "t": 102.78,
+   "text": "Cell-type specificity."
+  },
+  {
+   "t": 104.74,
+   "text": "Both use AAV plus Cre-dependent expression for cell-type targeting, so this is a wash — both can be exquisitely specific, both rely on the same set of Cre driver lines and viral tricks."
+  },
+  {
+   "t": 117.85,
+   "text": "Reversibility."
+  },
+  {
+   "t": 119.01,
+   "text": "Both are reversible."
+  },
+  {
+   "t": 120.33,
+   "text": "Opto reverses the instant you turn off the light."
+  },
+  {
+   "t": 123.11,
+   "text": "Chemo reverses as the drug clears, over the course of an hour or two."
+  },
+  {
+   "t": 127.71,
+   "text": "Both let you run within-subject before/after comparisons."
+  },
+  {
+   "t": 132.22,
+   "text": "Off-target effects."
+  },
+  {
+   "t": 133.72,
+   "text": "Optogenetics has very few off-target concerns in the brain itself — light doesn't activate native receptors."
+  },
+  {
+   "t": 141.5,
+   "text": "But the light itself can heat the tissue slightly, especially at high powers, which can independently affect neural activity."
+  },
+  {
+   "t": 149.56,
+   "text": "Chemogenetics has the off-target ligand problem we discussed at length — CNO back-conversion, and so on — which is why proper controls matter so much."
+  },
+  {
+   "t": 158.78,
+   "text": "Opto's main confound is thermal; chemo's main confound is metabolic."
+  },
+  {
+   "t": 164.16,
+   "text": "Behavioral access."
+  },
+  {
+   "t": 165.7,
+   "text": "This is where the choice really matters."
+  },
+  {
+   "t": 167.9,
+   "text": "If your behavioral question requires manipulating cells with millisecond precision during a fast task — say, optimizing a decision in the middle of a perceptual judgment — you need optogenetics."
+  },
+  {
+   "t": 181.04,
+   "text": "If your question involves long behaviors in freely moving animals over hours — sleep, feeding, anxiety states, complex social interactions — chemogenetics is often a better fit."
+  },
+  {
+   "t": 192.97,
+   "text": "Opto is the precision strike, deployed against a moment."
+  },
+  {
+   "t": 196.76,
+   "text": "Chemo is the mood adjustment, deployed across a session."
+  },
+  {
+   "t": 200.49,
+   "text": "In practice, the best papers use both."
+  },
+  {
+   "t": 203.35,
+   "text": "A standard pattern is: use chemogenetics to establish the broad necessity or sufficiency of a circuit (\"silencing these cells for an hour eliminates the behavior\"), then use optogenetics to dissect the temporal dynamics (\"silencing these cells specifically during the choice phase eliminates the effect, but silencing them during the approach phase doesn't\")."
+  },
+  {
+   "t": 225.56,
+   "text": "The two tools answer different layers of the question."
+  },
+  {
+   "t": 228.49,
+   "text": "Chemogenetics tells you the circuit is involved."
+  },
+  {
+   "t": 231.6,
+   "text": "Optogenetics tells you when in the behavior it's doing its work."
+  },
+  {
+   "t": 236.01,
+   "text": "Take the simple decision rule."
+  },
+  {
+   "t": 238.07,
+   "text": "Need fast and timed?"
+  },
+  {
+   "t": 239.6,
+   "text": "Use opto."
+  },
+  {
+   "t": 240.71,
+   "text": "Need long and free-moving?"
+  },
+  {
+   "t": 242.88,
+   "text": "Use chemo."
+  },
+  {
+   "t": 243.94,
+   "text": "Need the full answer?"
+  },
+  {
+   "t": 245.29,
+   "text": "Use both."
+  },
+  {
+   "t": 246.39,
+   "text": "That's the modern standard."
+  }
+ ]
+}

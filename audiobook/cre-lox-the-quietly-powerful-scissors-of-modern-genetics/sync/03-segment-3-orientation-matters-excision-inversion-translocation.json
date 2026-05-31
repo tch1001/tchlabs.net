@@ -1,0 +1,283 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Orientation matters — excision, inversion, translocation",
+ "duration": 402.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Orientation matters — excision, inversion, translocation"
+  },
+  {
+   "t": 6.05,
+   "text": "So we've established that loxP sites have direction."
+  },
+  {
+   "t": 9.24,
+   "text": "They point."
+  },
+  {
+   "t": 10.14,
+   "text": "They have an asymmetric spacer in the middle that makes them not symmetric, and so two loxP sites in a piece of DNA can be arranged in three fundamentally different geometric relationships."
+  },
+  {
+   "t": 22.09,
+   "text": "And — this is the beautiful part — Cre does the same chemistry in all three cases, but the geometric arrangement of the inputs determines what the output looks like."
+  },
+  {
+   "t": 33.08,
+   "text": "Three different arrangements; three completely different outcomes."
+  },
+  {
+   "t": 37.39,
+   "text": "Same enzyme."
+  },
+  {
+   "t": 38.77,
+   "text": "Same reaction."
+  },
+  {
+   "t": 39.94,
+   "text": "Different results because of how the substrates are laid out."
+  },
+  {
+   "t": 43.64,
+   "text": "Let me give you the analogy first."
+  },
+  {
+   "t": 45.59,
+   "text": "Imagine you have a piece of paper with two arrows printed on it."
+  },
+  {
+   "t": 49.41,
+   "text": "You're going to do a single piece of origami — fold the paper so the two arrows meet, then cut and tape — and the result depends entirely on whether the two arrows point the same direction or opposite directions."
+  },
+  {
+   "t": 62.06,
+   "text": "Case one: two loxP sites in the same direction on the same piece of DNA."
+  },
+  {
+   "t": 67.34,
+   "text": "Both bookmarks pointing the same way, both on the same chromosome."
+  },
+  {
+   "t": 71.92,
+   "text": "When Cre brings them together — and to do this the DNA has to bend, looping the intervening sequence out — the geometry of the synaptic complex causes the two ends of the loop to be cleaved and the loose ends to be re-joined to each other rather than the original partners."
+  },
+  {
+   "t": 88.54,
+   "text": "The result is: the DNA between the two loxP sites pops out as a small circular molecule with one loxP site in it, and the main chromosome is left intact with a single loxP site at the deletion junction."
+  },
+  {
+   "t": 102.34,
+   "text": "This is excision."
+  },
+  {
+   "t": 103.7,
+   "text": "It's the most common use of Cre-Lox in the lab."
+  },
+  {
+   "t": 106.95,
+   "text": "Place loxP sites in the same orientation on either side of a gene; add Cre; the gene gets cut out and lost."
+  },
+  {
+   "t": 114.21,
+   "text": "I say \"lost\" because that little circular excised piece has no origin of replication, no way to copy itself, and so over the next few cell divisions it dilutes out and disappears."
+  },
+  {
+   "t": 126.47,
+   "text": "Excision is therefore, for practical purposes, irreversible."
+  },
+  {
+   "t": 130.71,
+   "text": "Once the gene is out, it's out."
+  },
+  {
+   "t": 132.74,
+   "text": "You can't put it back."
+  },
+  {
+   "t": 133.99,
+   "text": "That irreversibility is what makes excision the go-to tool for permanent genetic alteration in a chosen cell population."
+  },
+  {
+   "t": 142.01,
+   "text": "Case two: two loxP sites in opposite directions on the same piece of DNA."
+  },
+  {
+   "t": 147.96,
+   "text": "Bookmarks pointing toward each other, or away from each other — either way, opposite orientations."
+  },
+  {
+   "t": 154.68,
+   "text": "Now when Cre brings the two sites together, the geometry of the synaptic complex flips the intervening sequence end-for-end."
+  },
+  {
+   "t": 163.31,
+   "text": "The DNA between the two loxP sites doesn't get cut out — it gets inverted."
+  },
+  {
+   "t": 168.05,
+   "text": "Flipped."
+  },
+  {
+   "t": 168.91,
+   "text": "Read in reverse."
+  },
+  {
+   "t": 170.24,
+   "text": "The two loxP sites stay in the genome, still opposite each other, and the sequence between them is now running backwards relative to its original orientation."
+  },
+  {
+   "t": 180.64,
+   "text": "This is inversion."
+  },
+  {
+   "t": 181.89,
+   "text": "And here's the kicker."
+  },
+  {
+   "t": 183.29,
+   "text": "Inversion, unlike excision, is reversible."
+  },
+  {
+   "t": 186.96,
+   "text": "Because the two loxP sites are still there, still in opposite orientations, and Cre is still around, Cre can flip the sequence back."
+  },
+  {
+   "t": 196.46,
+   "text": "Or flip it forward again."
+  },
+  {
+   "t": 197.91,
+   "text": "Or back."
+  },
+  {
+   "t": 198.75,
+   "text": "In a steady state, an inversion cassette in a cell with active Cre is constantly being flipped back and forth, ending up in roughly fifty percent of cells in one orientation and fifty percent in the other."
+  },
+  {
+   "t": 212.57,
+   "text": "Inversion is therefore stochastic when applied at a population level — you can use it to randomly assign cells to one of two states, which turns out to be enormously useful for things like Brainbow that we'll discuss later."
+  },
+  {
+   "t": 224.99,
+   "text": "To make inversion behave like a one-shot switch rather than a constantly oscillating one, people developed clever variants — mutant loxP sites that recombine once and then become unrecombinable."
+  },
+  {
+   "t": 237.49,
+   "text": "We'll come back to those."
+  },
+  {
+   "t": 238.88,
+   "text": "Case three: two loxP sites on separate pieces of DNA."
+  },
+  {
+   "t": 243.31,
+   "text": "Two different chromosomes, or two different plasmids, or a chromosome and an injected plasmid."
+  },
+  {
+   "t": 249.25,
+   "text": "When Cre brings these together and cuts and re-joins, the result is that the two pieces of DNA get fused to each other at the loxP site."
+  },
+  {
+   "t": 258.51,
+   "text": "The piece of one chromosome ends up attached to a piece of the other."
+  },
+  {
+   "t": 263.43,
+   "text": "This is translocation or, when used deliberately in molecular biology, integration — you can use Cre to splice an incoming piece of DNA into a chromosome at a defined loxP site."
+  },
+  {
+   "t": 276.25,
+   "text": "This is the basis of an elegant cloning technique called recombinase-mediated cassette exchange, or RMCE, which we'll meet in a later segment."
+  },
+  {
+   "t": 286.24,
+   "text": "So, same enzyme, same chemistry, three different geometric outcomes."
+  },
+  {
+   "t": 291.96,
+   "text": "The system is, in this sense, like a programmable Swiss Army knife."
+  },
+  {
+   "t": 296.45,
+   "text": "You decide what you want — to delete, to flip, to integrate — by where you put the bookmarks and how you orient them."
+  },
+  {
+   "t": 303.21,
+   "text": "Cre just does what the geometry tells it to do."
+  },
+  {
+   "t": 306.1,
+   "text": "Now, why is this such a big deal?"
+  },
+  {
+   "t": 307.88,
+   "text": "Because in the lab, most of the time, you want excision."
+  },
+  {
+   "t": 311.2,
+   "text": "You want to delete a gene."
+  },
+  {
+   "t": 312.54,
+   "text": "So the standard pattern is: same-direction loxP sites, flanking the gene of interest."
+  },
+  {
+   "t": 318.49,
+   "text": "That arrangement has its own name in the lab — the gene is said to be floxed, short for \"flanked by loxP."
+  },
+  {
+   "t": 325.21,
+   "text": "\" If I tell you a mouse has a floxed p53 allele, you should immediately picture: the p53 gene, with two same-direction loxP sites bracketing it, sitting in the genome, doing nothing until Cre shows up."
+  },
+  {
+   "t": 339.61,
+   "text": "When Cre does show up, snip-snip, p53 falls out as a little circular scrap, the chromosome stitches up with a single loxP site at the junction, and the cell is now p53-null."
+  },
+  {
+   "t": 352.0,
+   "text": "Notice what's happened: before Cre, the gene was completely normal — the loxP sites are short and they don't usually disrupt gene function if placed carefully in introns."
+  },
+  {
+   "t": 362.63,
+   "text": "So the mouse is wild-type for p53 everywhere except where Cre acts."
+  },
+  {
+   "t": 368.33,
+   "text": "After Cre, p53 is gone in exactly the cells that expressed Cre, and only in those cells."
+  },
+  {
+   "t": 376.11,
+   "text": "Everywhere else, p53 is still working perfectly normally."
+  },
+  {
+   "t": 380.65,
+   "text": "You have a tissue-specific knockout."
+  },
+  {
+   "t": 382.9,
+   "text": "You have asked your question, in the cells where you wanted to ask it, with no collateral damage."
+  },
+  {
+   "t": 388.19,
+   "text": "That, in one image, is the whole power of conditional genetics."
+  },
+  {
+   "t": 392.71,
+   "text": "But hold on — that whole picture rested on the loxP sites already being in the genome."
+  },
+  {
+   "t": 398.51,
+   "text": "How do they get there?"
+  },
+  {
+   "t": 399.64,
+   "text": "How do you build a floxed mouse?"
+  },
+  {
+   "t": 401.48,
+   "text": "That's the next segment."
+  }
+ ]
+}

@@ -1,0 +1,315 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Cargo: what fits, what doesn't, and the 4.7-kilobase limit",
+ "duration": 488.66,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Cargo: what fits, what doesn't, and the 4.7-kilobase limit"
+  },
+  {
+   "t": 6.61,
+   "text": "So now we get to the fundamental constraint of the AAV world."
+  },
+  {
+   "t": 10.47,
+   "text": "The packaging limit."
+  },
+  {
+   "t": 11.88,
+   "text": "This single number — 4.7 kilobases — shapes more design decisions in AAV gene therapy than any other parameter, and you have to internalize it to understand why so much of the field looks the way it looks."
+  },
+  {
+   "t": 24.9,
+   "text": "Remember, the AAV capsid is only about 25 nanometers across."
+  },
+  {
+   "t": 30.12,
+   "text": "The interior volume holds only so much DNA."
+  },
+  {
+   "t": 33.88,
+   "text": "The natural AAV genome is, conveniently, very close to the maximum that can be packaged — about 4.7 kilobases, including the two ITRs."
+  },
+  {
+   "t": 44.59,
+   "text": "So when you engineer an AAV vector by replacing the natural genome with your own construct, you have about 4.7 kb of total space to work with, ITRs included."
+  },
+  {
+   "t": 55.25,
+   "text": "Once you subtract the two ITRs (about 145 bases each, plus some surrounding sequence — call it 300 bases total), you have around 4.4 to 4.5 kb of effective cargo space for your actual gene of interest plus its regulatory elements."
+  },
+  {
+   "t": 72.75,
+   "text": "And that needs to include everything."
+  },
+  {
+   "t": 75.08,
+   "text": "A promoter to drive expression of your gene — typically 200 to 800 base pairs depending on the promoter."
+  },
+  {
+   "t": 82.44,
+   "text": "The gene itself — the coding sequence, which can range from a few hundred bases for a small protein to many kilobases for a large protein."
+  },
+  {
+   "t": 91.46,
+   "text": "A polyadenylation signal at the end to properly terminate the mRNA — typically 100 to 500 base pairs."
+  },
+  {
+   "t": 99.72,
+   "text": "Maybe a small intron to boost expression."
+  },
+  {
+   "t": 102.56,
+   "text": "Maybe some regulatory enhancers."
+  },
+  {
+   "t": 104.83,
+   "text": "All of it has to fit in that 4.5 kilobases between the ITRs."
+  },
+  {
+   "t": 109.74,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 111.05,
+   "text": "The AAV capsid is a car trunk."
+  },
+  {
+   "t": 113.28,
+   "text": "A small one."
+  },
+  {
+   "t": 114.39,
+   "text": "A Mini Cooper trunk, not an SUV."
+  },
+  {
+   "t": 117.06,
+   "text": "You can fit some grocery bags in there."
+  },
+  {
+   "t": 119.01,
+   "text": "You cannot fit a couch."
+  },
+  {
+   "t": 120.46,
+   "text": "You cannot fit a refrigerator."
+  },
+  {
+   "t": 122.69,
+   "text": "You have to plan your shopping with the trunk size in mind."
+  },
+  {
+   "t": 125.35,
+   "text": "If your gene plus its regulatory sequences is bigger than the trunk, you simply cannot use a single AAV vector — you have to either shrink your cargo, find a different vehicle, or split your cargo across two trunks and reassemble at the destination."
+  },
+  {
+   "t": 140.86,
+   "text": "Now let me give you a feel for what fits and what doesn't, with real examples."
+  },
+  {
+   "t": 145.28,
+   "text": "The gene for factor IX, which is missing in hemophilia B, is about 1.5 kilobases."
+  },
+  {
+   "t": 151.84,
+   "text": "That fits easily in a single AAV; the FDA-approved therapy Hemgenix uses a single AAV to deliver factor IX."
+  },
+  {
+   "t": 160.39,
+   "text": "The gene for SMN1, missing in spinal muscular atrophy, is about 1.5 kilobases — fits in one AAV; that's Zolgensma."
+  },
+  {
+   "t": 170.21,
+   "text": "The gene for RPE65, the retinal gene whose loss causes one form of Leber congenital amaurosis, is about 1.6 kilobases — fits in one AAV; that's Luxturna."
+  },
+  {
+   "t": 183.43,
+   "text": "Now the harder ones."
+  },
+  {
+   "t": 184.79,
+   "text": "CFTR, the cystic fibrosis gene, is about 4.4 kilobases."
+  },
+  {
+   "t": 190.19,
+   "text": "That barely fits, and once you add a promoter and a polyA, you're over."
+  },
+  {
+   "t": 195.06,
+   "text": "Cas9, the workhorse CRISPR enzyme from Streptococcus pyogenes, is about 4.2 kilobases."
+  },
+  {
+   "t": 202.19,
+   "text": "Plus a promoter, plus a polyA, plus an sgRNA, and you've blown past the limit."
+  },
+  {
+   "t": 208.7,
+   "text": "Dystrophin, the gene missing in Duchenne muscular dystrophy, is the real heartbreaker — its coding sequence is around 11 kilobases."
+  },
+  {
+   "t": 218.51,
+   "text": "That's more than twice the AAV capacity."
+  },
+  {
+   "t": 221.5,
+   "text": "You cannot fit dystrophin in an AAV, period."
+  },
+  {
+   "t": 225.0,
+   "text": "So what do you do when your gene doesn't fit?"
+  },
+  {
+   "t": 227.68,
+   "text": "Three main strategies, and we'll spend a whole segment on them later, but let me give you the headlines now."
+  },
+  {
+   "t": 233.79,
+   "text": "Strategy one: shrink the gene."
+  },
+  {
+   "t": 236.46,
+   "text": "Sometimes you can engineer a smaller version of the protein that still works."
+  },
+  {
+   "t": 240.57,
+   "text": "The dystrophin field famously developed micro-dystrophins — engineered shortened versions of dystrophin that are only 4 kilobases and fit in an AAV."
+  },
+  {
+   "t": 251.05,
+   "text": "They don't have the full function of natural dystrophin, but they have enough to be therapeutic, and several micro-dystrophin AAV products have entered clinical trials or been approved."
+  },
+  {
+   "t": 261.98,
+   "text": "For Cas9, there are smaller versions from other bacteria — SaCas9 from Staphylococcus aureus at about 3.2 kb, or CjCas9 from Campylobacter jejuni at about 2.9 kb — that fit comfortably in AAV with room to spare for an sgRNA."
+  },
+  {
+   "t": 279.18,
+   "text": "Strategy two: split the gene across two AAV particles."
+  },
+  {
+   "t": 284.43,
+   "text": "Make one particle carry the first half of the gene, another particle carry the second half, co-administer both, and let the cell reassemble them — either at the DNA level (concatamerization or trans-splicing) or at the protein level (split-intein protein splicing)."
+  },
+  {
+   "t": 301.06,
+   "text": "We'll go deep on this in Segment 16."
+  },
+  {
+   "t": 303.68,
+   "text": "It works, but with reduced efficiency, because both halves have to land in the same cell to produce a functional product."
+  },
+  {
+   "t": 311.0,
+   "text": "Strategy three: use a different delivery vehicle."
+  },
+  {
+   "t": 314.53,
+   "text": "If your cargo is truly too large for any AAV strategy to handle, you might use a lentivirus (which can hold around 8-10 kb of cargo), or HSV-derived vectors (which can hold 30+ kb), or non-viral delivery like lipid nanoparticles (which can hold pretty much arbitrary cargo at lower efficiency)."
+  },
+  {
+   "t": 334.24,
+   "text": "Each comes with its own trade-offs around immune response, integration risk, duration of expression, and manufacturability."
+  },
+  {
+   "t": 342.25,
+   "text": "The reason the 4.7 kilobase limit is so unyielding is that it's set by physics, not by engineering."
+  },
+  {
+   "t": 349.56,
+   "text": "The capsid is a fixed-volume box."
+  },
+  {
+   "t": 352.0,
+   "text": "You cannot stuff more DNA into it than the volume allows."
+  },
+  {
+   "t": 355.98,
+   "text": "There has been some interesting recent work on engineered capsids with slightly expanded packaging capacity — pushing the limit to maybe 5.2 kilobases by tweaking capsid geometry — but the gains are modest and come with reduced yield."
+  },
+  {
+   "t": 369.78,
+   "text": "You can sometimes overstuff the natural capsid a little — packaging 5 or even 5.5 kilobases — but at the cost of getting incomplete particles, fragmented genomes, and lower titer."
+  },
+  {
+   "t": 381.93,
+   "text": "The hard physical wall is around 4.7, and the practical clean wall is around 4.5."
+  },
+  {
+   "t": 388.45,
+   "text": "So when you sit down to design an AAV vector, the first question is always does my construct fit."
+  },
+  {
+   "t": 394.36,
+   "text": "You count the base pairs of your promoter, your gene, your polyA, your ITRs, you add them up, and if the total is over 4.7 kilobases you have to redesign."
+  },
+  {
+   "t": 405.0,
+   "text": "Sometimes that means using a shorter promoter — switching from the full CMV promoter at 800 bases to a minimal one at 200 bases."
+  },
+  {
+   "t": 414.44,
+   "text": "Sometimes it means using a tissue-specific small promoter to save space and to confer cell-type specificity at the same time."
+  },
+  {
+   "t": 422.21,
+   "text": "Sometimes it means dropping an intron you would have liked to include."
+  },
+  {
+   "t": 425.91,
+   "text": "The 4.7 kb limit is a constant pressure on every design decision."
+  },
+  {
+   "t": 430.98,
+   "text": "And it is, simultaneously, the single biggest weakness of AAV as a delivery platform."
+  },
+  {
+   "t": 437.14,
+   "text": "Every other major property of AAV is favorable."
+  },
+  {
+   "t": 440.74,
+   "text": "Safety: favorable."
+  },
+  {
+   "t": 442.59,
+   "text": "Immunogenicity: tolerable."
+  },
+  {
+   "t": 444.8,
+   "text": "Manufacturing: getting better."
+  },
+  {
+   "t": 446.89,
+   "text": "Durability of expression in non-dividing cells: excellent."
+  },
+  {
+   "t": 451.03,
+   "text": "But the trunk space — that's the bottleneck."
+  },
+  {
+   "t": 453.78,
+   "text": "If we had an AAV variant with twice the cargo capacity, the field would be transformed overnight."
+  },
+  {
+   "t": 459.83,
+   "text": "Many of the diseases we can't currently address with AAV — large-gene disorders like full-length dystrophin replacement, multi-gene constructs, big regulatory cassettes — would suddenly come into reach."
+  },
+  {
+   "t": 472.5,
+   "text": "People have been trying to expand the limit for thirty years, with only modest success."
+  },
+  {
+   "t": 477.84,
+   "text": "The geometry resists."
+  },
+  {
+   "t": 479.7,
+   "text": "For now, we live with 4.7 kilobases."
+  },
+  {
+   "t": 483.39,
+   "text": "And we have built an entire field of clever engineering around that constraint."
+  }
+ ]
+}

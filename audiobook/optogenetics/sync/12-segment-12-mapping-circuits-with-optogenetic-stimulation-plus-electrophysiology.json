@@ -1,0 +1,123 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Mapping circuits with optogenetic stimulation plus electrophysiology",
+ "duration": 232.86,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Mapping circuits with optogenetic stimulation plus electrophysiology"
+  },
+  {
+   "t": 6.44,
+   "text": "The all-optical experiments I just described work beautifully in dishes and slices and even in some superficial in vivo preparations."
+  },
+  {
+   "t": 15.21,
+   "text": "But for many in vivo experiments — especially in deep structures of awake behaving mice — the workhorse readout is still multi-electrode recording."
+  },
+  {
+   "t": 24.73,
+   "text": "You implant a probe with many electrodes — modern Neuropixels probes have nearly a thousand recording sites packed onto a single shank — and you simultaneously record from hundreds of cells while doing your behavior."
+  },
+  {
+   "t": 37.36,
+   "text": "Now combine that recording with optogenetic stimulation, and you have a circuit-mapping engine."
+  },
+  {
+   "t": 43.12,
+   "text": "Express ChR2 in, say, a defined long-range projection — say, dopamine neurons projecting from VTA to nucleus accumbens."
+  },
+  {
+   "t": 52.71,
+   "text": "Implant a recording probe in the nucleus accumbens."
+  },
+  {
+   "t": 56.2,
+   "text": "Implant a stimulating fiber over the VTA."
+  },
+  {
+   "t": 59.41,
+   "text": "Now, in the behaving mouse, pulse the VTA fiber and watch what happens in nucleus accumbens."
+  },
+  {
+   "t": 65.4,
+   "text": "Which cells in nucleus accumbens respond, and how quickly?"
+  },
+  {
+   "t": 69.36,
+   "text": "Cells that respond within a few milliseconds, with very low jitter — meaning the timing of the response is locked tightly to the light pulse — are likely receiving direct input from the stimulated population."
+  },
+  {
+   "t": 81.9,
+   "text": "Cells that respond more slowly, or less reliably, may be downstream of the directly-driven ones."
+  },
+  {
+   "t": 88.58,
+   "text": "The latency and reliability of the response, together, give you a window into which cells in the recording area are actually connected to the stimulated population."
+  },
+  {
+   "t": 98.74,
+   "text": "This technique has a name."
+  },
+  {
+   "t": 100.44,
+   "text": "It's called opto-tagging, or sometimes PINP for photo-identification of neuronal populations."
+  },
+  {
+   "t": 107.12,
+   "text": "And it solves another long-standing problem in in vivo electrophysiology: when you record extracellularly, you typically can't tell what kind of cell you're looking at."
+  },
+  {
+   "t": 117.21,
+   "text": "The probe gives you spikes, but a spike from a parvalbumin interneuron looks pretty similar to a spike from a pyramidal cell."
+  },
+  {
+   "t": 124.62,
+   "text": "With opto-tagging, you flash a brief light pulse and see which of your recorded cells respond — and the responders, by construction, must be the cells expressing the opsin, which means they are the cell type your Cre line targeted."
+  },
+  {
+   "t": 138.45,
+   "text": "You've now classified every cell on your probe into \"this one expresses parvalbumin\" or \"this one doesn't."
+  },
+  {
+   "t": 145.22,
+   "text": "\" That cell-type identification, layered on top of your behavioral data, lets you ask much more refined questions about what each cell type does."
+  },
+  {
+   "t": 153.82,
+   "text": "Opto-tagging plus high-density recording is now, arguably, the dominant method in modern systems neuroscience."
+  },
+  {
+   "t": 162.07,
+   "text": "The combination of cell-type-specific perturbation, cell-type-specific identification, and large-scale recording lets you map circuits, identify cell types, and dissect causality all in the same experiment."
+  },
+  {
+   "t": 175.54,
+   "text": "It is, frankly, where the field's most important behavioral neuroscience papers now live."
+  },
+  {
+   "t": 181.32,
+   "text": "The Allen Institute's published recordings, many of the modern hippocampal and prefrontal cortex papers, the work coming out of the basal ganglia and amygdala labs — most of it depends on this approach."
+  },
+  {
+   "t": 194.16,
+   "text": "Optogenetics is not just a stimulation tool; it is a labeling tool too, and the labeling-by-light works in tissues where no other label could be read out so quickly."
+  },
+  {
+   "t": 205.18,
+   "text": "The general principle here is one I want you to internalize."
+  },
+  {
+   "t": 208.91,
+   "text": "Optogenetics turned out to be useful not just for the manipulations it makes possible, but for the identifications it makes possible."
+  },
+  {
+   "t": 217.44,
+   "text": "Any time you can shine light on a specific cell type and watch what fires, you have a way to identify what kind of cell you're looking at."
+  },
+  {
+   "t": 224.88,
+   "text": "That second use — labeling by causation — was an unanticipated bonus that has reshaped how we record from brains."
+  }
+ ]
+}

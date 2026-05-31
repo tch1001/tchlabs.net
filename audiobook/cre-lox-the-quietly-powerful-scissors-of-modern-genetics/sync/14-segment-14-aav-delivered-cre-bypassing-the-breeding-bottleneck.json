@@ -1,0 +1,151 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — AAV-delivered Cre — bypassing the breeding bottleneck",
+ "duration": 260.18,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — AAV-delivered Cre — bypassing the breeding bottleneck"
+  },
+  {
+   "t": 5.45,
+   "text": "Mouse breeding, as we discussed in Segment 7, is the slow part."
+  },
+  {
+   "t": 10.09,
+   "text": "A year of breeding to set up a single conditional knockout experiment is a substantial investment."
+  },
+  {
+   "t": 16.25,
+   "text": "So there's a constant push to find ways to deliver Cre without having to breed yet another mouse line."
+  },
+  {
+   "t": 23.14,
+   "text": "The biggest single answer here is viral delivery — specifically, packaging Cre into an adeno-associated virus (AAV) and injecting that virus directly into the tissue of interest in an adult animal."
+  },
+  {
+   "t": 36.49,
+   "text": "AAV is a small DNA virus that's been engineered into one of the workhorse gene delivery vehicles in modern biology."
+  },
+  {
+   "t": 44.41,
+   "text": "It infects neurons, hepatocytes, muscle cells, and many other cell types efficiently; it doesn't cause disease; the DNA it delivers persists for years in non-dividing cells; and the immune response to it is manageable."
+  },
+  {
+   "t": 59.1,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 60.38,
+   "text": "Instead of breeding two mouse lines together for a year to get Cre into the target tissue, you take a mouse that already has the floxed allele — just one line, no Cre — and you inject a virus directly into the part of the body you care about."
+  },
+  {
+   "t": 75.81,
+   "text": "The virus carries the Cre gene under a chosen promoter."
+  },
+  {
+   "t": 79.66,
+   "text": "Cells infected by the virus start expressing Cre."
+  },
+  {
+   "t": 83.31,
+   "text": "The floxed gene gets deleted in those cells."
+  },
+  {
+   "t": 86.36,
+   "text": "Effectively, you've turned that one mouse into a tissue-specific conditional knockout in a few weeks instead of a year."
+  },
+  {
+   "t": 94.21,
+   "text": "A standard experimental setup looks like this."
+  },
+  {
+   "t": 97.25,
+   "text": "You have a Brca1^fl/fl mouse."
+  },
+  {
+   "t": 101.8,
+   "text": "You want to delete Brca1 in adult mammary epithelium."
+  },
+  {
+   "t": 105.88,
+   "text": "You take an AAV packaging Cre under a strong promoter — often the ubiquitous CAG promoter, or a tissue-specific promoter like a mammary-specific one if available — and you inject the virus directly into the mammary fat pad."
+  },
+  {
+   "t": 121.19,
+   "text": "Cells at the injection site take up the virus, express Cre, and excise Brca1."
+  },
+  {
+   "t": 127.86,
+   "text": "You can then track tumor formation, mammary morphology, gene expression — whatever you want — in the locally-deleted tissue, with adjacent non-infected tissue serving as an internal control."
+  },
+  {
+   "t": 140.31,
+   "text": "The same trick is enormously popular in neuroscience."
+  },
+  {
+   "t": 144.26,
+   "text": "To delete a gene only in a specific brain region — say, only in the prelimbic cortex — you take a floxed mouse, anesthetize it, drill a tiny hole in the skull at stereotactic coordinates, and inject a few microliters of AAV-Cre."
+  },
+  {
+   "t": 159.47,
+   "text": "Within a few weeks, neurons in the injection volume have the gene deleted."
+  },
+  {
+   "t": 164.06,
+   "text": "The mouse can be tested behaviorally, recorded electrophysiologically, imaged — all while carrying a deletion that exists only in a few cubic millimeters of the brain."
+  },
+  {
+   "t": 174.81,
+   "text": "The spatial precision is something straight tissue-specific Cre cannot match."
+  },
+  {
+   "t": 180.05,
+   "text": "You can also combine viral delivery with Cre-dependent expression vectors."
+  },
+  {
+   "t": 184.54,
+   "text": "The famous DIO (double-floxed inverse orientation) or FLEx vectors — we mentioned FLEx in Segment 9 — carry a transgene in inverted orientation between alternating loxP and lox2272 sites."
+  },
+  {
+   "t": 198.97,
+   "text": "The transgene is silent unless Cre acts."
+  },
+  {
+   "t": 202.43,
+   "text": "Inject DIO-channelrhodopsin into a Cre-positive mouse, and only the Cre-expressing cells turn on channelrhodopsin, giving you optogenetic control of that specific cell population."
+  },
+  {
+   "t": 214.68,
+   "text": "This is the standard design pattern for cell-type-specific optogenetics and chemogenetics in the modern neuroscience literature."
+  },
+  {
+   "t": 222.75,
+   "text": "AAV-Cre is not a perfect substitute for transgenic Cre."
+  },
+  {
+   "t": 227.46,
+   "text": "The recombination efficiency varies cell to cell with how much virus each cell got."
+  },
+  {
+   "t": 232.91,
+   "text": "The expression is mosaic rather than uniform."
+  },
+  {
+   "t": 236.34,
+   "text": "Off-target infection of neighboring tissues happens."
+  },
+  {
+   "t": 239.89,
+   "text": "But for many experiments — especially exploratory ones where you don't want to commit to a year of breeding — viral Cre is the practical answer."
+  },
+  {
+   "t": 248.35,
+   "text": "The combination of a single floxed mouse line plus a panel of AAV-Cre constructs lets a lab ask many questions with minimal mouse work."
+  },
+  {
+   "t": 257.16,
+   "text": "That flexibility has been transformative."
+  }
+ ]
+}

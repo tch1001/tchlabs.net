@@ -1,0 +1,219 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The mouse genetics workflow — breeding the two lines",
+ "duration": 396.24,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The mouse genetics workflow — breeding the two lines"
+  },
+  {
+   "t": 4.74,
+   "text": "Let's walk through what an actual conditional knockout experiment looks like, from mouse cage to data."
+  },
+  {
+   "t": 10.04,
+   "text": "Because in the abstract, \"delete the gene in this cell type\" sounds like one experiment."
+  },
+  {
+   "t": 15.4,
+   "text": "In practice, it's typically a year or more of breeding to get the right mice in the right combinations, before any biology can even be measured."
+  },
+  {
+   "t": 24.59,
+   "text": "Understanding the workflow tells you a lot about why these experiments are designed the way they are."
+  },
+  {
+   "t": 30.19,
+   "text": "You need two mouse lines to start with."
+  },
+  {
+   "t": 32.39,
+   "text": "The first is the floxed line — a mouse carrying the floxed allele of your gene of interest, ideally homozygous."
+  },
+  {
+   "t": 39.7,
+   "text": "The second is the Cre driver line — a mouse carrying the Cre transgene under whatever cell-type-specific promoter you've chosen."
+  },
+  {
+   "t": 48.73,
+   "text": "Each of these mice is, on its own, normal."
+  },
+  {
+   "t": 51.7,
+   "text": "The floxed mouse has its gene fully functional — remember, the loxP sites in the introns don't disrupt anything until Cre acts."
+  },
+  {
+   "t": 60.42,
+   "text": "The Cre driver mouse is just making Cre in one cell type, and since that cell type doesn't have any loxP sites in its genome, the Cre is doing nothing."
+  },
+  {
+   "t": 71.3,
+   "text": "Both single-line mice are essentially wild-type in phenotype."
+  },
+  {
+   "t": 75.3,
+   "text": "The magic happens only in the offspring of a cross."
+  },
+  {
+   "t": 79.09,
+   "text": "You breed the two lines together."
+  },
+  {
+   "t": 81.19,
+   "text": "The F1 generation — the first cross — gives you animals that are heterozygous for the floxed allele and carry one copy of the Cre transgene."
+  },
+  {
+   "t": 90.64,
+   "text": "In those animals, the Cre is on in the target cell type, and the floxed allele can be cut — but only one of the two copies of the gene is floxed; the other is wild-type."
+  },
+  {
+   "t": 101.17,
+   "text": "So those animals are, in the target cell type, heterozygous knockouts."
+  },
+  {
+   "t": 105.85,
+   "text": "That's often not enough to see a phenotype, because most cells can compensate when only one copy of a gene is lost."
+  },
+  {
+   "t": 112.96,
+   "text": "You want a homozygous knockout — both copies of the gene deleted in the target cell type."
+  },
+  {
+   "t": 118.58,
+   "text": "That requires another round of breeding."
+  },
+  {
+   "t": 120.85,
+   "text": "To get there, you intercross the F1 animals, or you backcross them to the floxed line, and you wait."
+  },
+  {
+   "t": 127.69,
+   "text": "Mouse generation time is around three months."
+  },
+  {
+   "t": 130.95,
+   "text": "After a couple of generations of careful breeding and genotyping every pup at every step, you eventually produce the animal you actually want: a mouse that is homozygous for the floxed allele on both chromosomes and carries the Cre transgene."
+  },
+  {
+   "t": 146.46,
+   "text": "That mouse's genotype, written formally, is something like Brca1^fl/fl ; Albumin-Cre^+."
+  },
+  {
+   "t": 155.88,
+   "text": "In every cell of that mouse, both copies of Brca1 are floxed."
+  },
+  {
+   "t": 160.65,
+   "text": "In hepatocytes, where albumin-Cre is on, both copies get deleted — and you have a tissue-specific knockout."
+  },
+  {
+   "t": 168.26,
+   "text": "In every other cell type, the loxP sites sit silently in the introns, the gene is fully functional, and the rest of the body proceeds as normal."
+  },
+  {
+   "t": 178.53,
+   "text": "You also need controls."
+  },
+  {
+   "t": 180.31,
+   "text": "This is where careful experimental design matters."
+  },
+  {
+   "t": 183.45,
+   "text": "The phenotype you observe in your knockout mouse — the conditional Brca1^fl/fl ; Cre^+ animal — has to be compared to littermate controls that differ only in the Cre status."
+  },
+  {
+   "t": 197.95,
+   "text": "So you also need Brca1^fl/fl ; Cre^- littermates — same floxed allele, but no Cre."
+  },
+  {
+   "t": 207.25,
+   "text": "These are your \"floxed-only\" controls."
+  },
+  {
+   "t": 209.68,
+   "text": "They have the loxP sites but no scissors, so the gene is intact, and they tell you what the floxed allele does in the absence of recombination."
+  },
+  {
+   "t": 218.18,
+   "text": "You also typically want Cre^+ animals with a wild-type allele — Brca1^+/+ ; Cre^+ — to tell you whether expressing Cre on its own, even without a target, has any effect."
+  },
+  {
+   "t": 234.12,
+   "text": "Cre, as we'll discuss in Segment 15, is not entirely innocent — it can be toxic in some contexts — and the Cre-only control catches that."
+  },
+  {
+   "t": 244.35,
+   "text": "So a single, properly controlled conditional knockout experiment requires at least three genotype groups bred from the same parents: floxed plus Cre, floxed without Cre, Cre alone."
+  },
+  {
+   "t": 257.46,
+   "text": "Each group needs enough animals for statistics — usually a minimum of five or six per group, often more."
+  },
+  {
+   "t": 264.27,
+   "text": "You have to genotype every pup, which means PCR on tail clips at weaning, which means roughly a week of lab time per litter."
+  },
+  {
+   "t": 271.71,
+   "text": "And you have to keep the mouse colony running for the whole duration of the experiment, which can be a year or more if you want to look at aging phenotypes."
+  },
+  {
+   "t": 279.52,
+   "text": "The mouse work alone, for a single conditional knockout study, is a substantial chunk of a graduate student's PhD."
+  },
+  {
+   "t": 287.23,
+   "text": "There are tricks to make this faster."
+  },
+  {
+   "t": 289.38,
+   "text": "Multi-line breeding schemes can simultaneously incorporate floxed alleles for several genes plus Cre plus reporter alleles, but each additional component roughly doubles the breeding time."
+  },
+  {
+   "t": 301.72,
+   "text": "Mouse genetics services offered by companies and core facilities can do some of the heavy lifting."
+  },
+  {
+   "t": 307.96,
+   "text": "Frozen sperm and embryos can preserve lines without keeping them all alive in active cages."
+  },
+  {
+   "t": 314.27,
+   "text": "The more recent trend toward CRISPR-based direct embryonic editing can sometimes bypass the traditional breeding altogether — you can generate a floxed allele directly in zygotes, or even introduce Cre with a viral vector in adult animals — but for most experiments, the classical floxed-line-times-Cre-line scheme is still standard."
+  },
+  {
+   "t": 334.67,
+   "text": "One important workflow detail."
+  },
+  {
+   "t": 336.56,
+   "text": "When you read a paper that says \"conditional knockout of Xyz in dopamine neurons,\" what's almost always happening is the experiment I just described — a researcher has crossed a floxed-Xyz mouse with a DAT-Cre or TH-Cre mouse, bred for a couple of generations, genotyped many pups, and produced a small cohort of mice with the desired genotype."
+  },
+  {
+   "t": 359.01,
+   "text": "The mouse genetics, more than any individual molecular biology step, is the rate-limiting part of the science."
+  },
+  {
+   "t": 366.02,
+   "text": "Which is why everything we're going to discuss from here on — viral delivery, intersectional approaches, AAV-Cre — is partly motivated by the desire to avoid having to breed yet another mouse line."
+  },
+  {
+   "t": 377.89,
+   "text": "Mouse breeding is slow."
+  },
+  {
+   "t": 379.54,
+   "text": "Anything that lets you get to the experiment faster is welcome."
+  },
+  {
+   "t": 383.12,
+   "text": "Right."
+  },
+  {
+   "t": 383.81,
+   "text": "Now let me introduce a sibling system to Cre-Lox — a second, completely orthogonal pair of scissors and bookmarks that lets you do two independent recombinations in the same animal."
+  }
+ ]
+}

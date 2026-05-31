@@ -1,0 +1,227 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Building TALENs in the lab — Golden Gate assembly",
+ "duration": 450.21,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Building TALENs in the lab — Golden Gate assembly"
+  },
+  {
+   "t": 5.14,
+   "text": "So you've designed your TALEN on paper."
+  },
+  {
+   "t": 7.1,
+   "text": "You know the RVD sequence you want for each repeat in your array."
+  },
+  {
+   "t": 11.18,
+   "text": "Now you need to actually build the DNA construct that encodes this protein."
+  },
+  {
+   "t": 15.85,
+   "text": "And here you run into a problem that's specific to TALE arrays."
+  },
+  {
+   "t": 20.06,
+   "text": "The problem is that the repeats are nearly identical at the DNA level."
+  },
+  {
+   "t": 24.71,
+   "text": "Each repeat encodes 33 or 34 amino acids of nearly the same sequence, with only the two RVD codons differing."
+  },
+  {
+   "t": 34.41,
+   "text": "In DNA terms, that means each repeat is about 100 base pairs long, and the 100-base-pair sequences are 95% or more identical to each other."
+  },
+  {
+   "t": 45.05,
+   "text": "When you try to clone or amplify a stretch of DNA containing 20 such repeats in a row, the DNA molecules tend to misalign with each other — homologous regions recombine, repeats get duplicated or deleted, the array collapses."
+  },
+  {
+   "t": 60.75,
+   "text": "Standard cloning methods don't work reliably for tandem repeat arrays."
+  },
+  {
+   "t": 65.62,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 67.41,
+   "text": "Imagine you're trying to assemble a deck of cards in a specific order — say, ten cards in a sequence — but the cards are all nearly identical, differing only in some small mark on one corner."
+  },
+  {
+   "t": 79.5,
+   "text": "If you drop the cards and try to pick them up in order, you'll get confused, because they all look the same."
+  },
+  {
+   "t": 85.0,
+   "text": "The traditional assembly methods of molecular biology — restriction-and-ligation cloning, PCR-based assembly — are like trying to sort that deck blindfolded."
+  },
+  {
+   "t": 94.67,
+   "text": "The cards keep recombining, swapping positions, getting lost."
+  },
+  {
+   "t": 98.79,
+   "text": "The solution that emerged for TALE construction is called Golden Gate assembly, originally developed by Carola Engler and colleagues in 2008 for a different purpose, and adapted brilliantly for TALE construction by the labs of Daniel Voytas and Adam Bogdanove in the early 2010s."
+  },
+  {
+   "t": 116.62,
+   "text": "Golden Gate is a clever assembly method that lets you join many DNA fragments in a specific order in a single one-pot reaction, with the order determined entirely by short overhang sequences that you design."
+  },
+  {
+   "t": 129.97,
+   "text": "Here's how Golden Gate works at the conceptual level."
+  },
+  {
+   "t": 133.44,
+   "text": "It uses a special class of restriction enzymes called Type IIS enzymes — enzymes like BsaI, BsmBI, and others."
+  },
+  {
+   "t": 142.59,
+   "text": "The defining feature of a Type IIS enzyme is that it cuts the DNA at a specific distance away from its recognition sequence, rather than within its recognition sequence."
+  },
+  {
+   "t": 153.41,
+   "text": "So BsaI recognizes the sequence GGTCTC, and cuts at a position one base downstream — and crucially, the four bases that end up as the sticky end are not part of the recognition sequence at all."
+  },
+  {
+   "t": 166.88,
+   "text": "You can choose what sticky end overhang any given BsaI cut produces, simply by what four bases you put one base downstream of the recognition site."
+  },
+  {
+   "t": 176.32,
+   "text": "This is a small thing but a profound one."
+  },
+  {
+   "t": 179.03,
+   "text": "With ordinary restriction enzymes, the sticky ends are dictated by the enzyme — every EcoRI cut produces the same AATT overhang."
+  },
+  {
+   "t": 187.99,
+   "text": "With Type IIS enzymes, you can design any 4-base overhang you want."
+  },
+  {
+   "t": 192.76,
+   "text": "Which means: if you have multiple DNA fragments, each flanked by Type IIS sites configured to produce different unique 4-base overhangs at each end, then in a single reaction with the Type IIS enzyme and DNA ligase, every fragment will join only to its uniquely matching neighbor."
+  },
+  {
+   "t": 211.28,
+   "text": "The assembly is enforced by the design of the overhangs."
+  },
+  {
+   "t": 215.26,
+   "text": "You can assemble dozens of fragments in a defined order, in one tube, with high efficiency."
+  },
+  {
+   "t": 221.41,
+   "text": "For TALE assembly, this works as follows."
+  },
+  {
+   "t": 224.22,
+   "text": "You start with a library of pre-made plasmids, one for each of the four RVDs (HD, NG, NI, NN), where each plasmid contains a TALE repeat coding sequence flanked by Type IIS sites engineered to produce specific overhangs."
+  },
+  {
+   "t": 240.21,
+   "text": "There are typically multiple \"position\" versions of each RVD plasmid — a position-1 HD plasmid, a position-2 HD plasmid, and so on — each with different overhangs that match the position the repeat will occupy in the final array."
+  },
+  {
+   "t": 256.23,
+   "text": "To assemble a TALE array encoding the RVD sequence NI HD NI NG NI NN..., you pick the position-1 NI plasmid, the position-2 HD plasmid, the position-3 NI plasmid, the position-4 NG plasmid, the position-5 NI plasmid, the position-6 NN plasmid, and so on, up to your array length."
+  },
+  {
+   "t": 279.95,
+   "text": "You mix all of these in one tube, along with a destination plasmid that has compatible overhangs at the ends of the array, plus BsaI and DNA ligase."
+  },
+  {
+   "t": 290.43,
+   "text": "You run a thermal cycle program that alternates between cutting and ligating conditions."
+  },
+  {
+   "t": 295.84,
+   "text": "After a few hours, the reaction produces a single assembled plasmid containing your custom TALE array in the correct order."
+  },
+  {
+   "t": 303.9,
+   "text": "Verification by sequencing usually confirms the right product."
+  },
+  {
+   "t": 308.23,
+   "text": "The whole assembly process, once the libraries are in your freezer, takes maybe two days from start to validated construct."
+  },
+  {
+   "t": 315.83,
+   "text": "That's still much more work than ordering a CRISPR guide RNA, but it's a manageable workflow that doesn't require any specialist expertise."
+  },
+  {
+   "t": 324.26,
+   "text": "The two most common TALE assembly kits, both distributed openly by Addgene, are the Voytas/Bogdanove TALEN Kit (a Golden Gate-based system using their MR/AB sets — basically pre-made libraries of monomer repeats labeled MR for Module Repeats, in arrangements that allow construction of any TALE array up to a defined length) and the Joung Lab TALE Toolbox (a related set of plasmids with their own conventions)."
+  },
+  {
+   "t": 353.4,
+   "text": "Both have been used by thousands of labs around the world."
+  },
+  {
+   "t": 356.46,
+   "text": "Both are available for the cost of a shipping fee from the Addgene plasmid repository, which is a nonprofit that distributes research plasmids globally."
+  },
+  {
+   "t": 366.08,
+   "text": "The accessibility of these kits is part of why TALENs became as popular as they did, as fast as they did."
+  },
+  {
+   "t": 373.63,
+   "text": "Within about a year of the recognition code being published in 2009, off-the-shelf assembly kits were available, with detailed protocols, supporting any TALEN design."
+  },
+  {
+   "t": 384.25,
+   "text": "The friction of construction was reduced to about a week of work."
+  },
+  {
+   "t": 387.95,
+   "text": "That low barrier to entry meant any lab with basic molecular biology skills could be doing genome editing experiments by 2012 or so."
+  },
+  {
+   "t": 397.48,
+   "text": "The field exploded."
+  },
+  {
+   "t": 398.85,
+   "text": "A few honest notes about Golden Gate TALE assembly."
+  },
+  {
+   "t": 402.11,
+   "text": "It's not foolproof."
+  },
+  {
+   "t": 403.63,
+   "text": "Sometimes assemblies fail and have to be repeated."
+  },
+  {
+   "t": 407.05,
+   "text": "Sequencing verification is essential — you don't want to spend weeks on downstream experiments only to discover later that your TALE has a missing repeat."
+  },
+  {
+   "t": 416.48,
+   "text": "There are slight variants of the kits with different conventions (the Voytas kit uses a slightly different naming scheme than the Joung kit, for example), and switching between them requires some attention to detail."
+  },
+  {
+   "t": 428.11,
+   "text": "But these are all manageable issues, the kind of routine technical care that any working lab is used to."
+  },
+  {
+   "t": 434.38,
+   "text": "The big idea: Golden Gate assembly turned the construction of TALE genes from a research project into a routine technique."
+  },
+  {
+   "t": 442.43,
+   "text": "Without it, TALENs would have remained an arcane specialty."
+  },
+  {
+   "t": 446.56,
+   "text": "With it, they became a tool any lab could use."
+  }
+ ]
+}

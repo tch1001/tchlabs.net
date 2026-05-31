@@ -1,0 +1,255 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — ZFN versus TALEN versus CRISPR",
+ "duration": 413.64,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — ZFN versus TALEN versus CRISPR"
+  },
+  {
+   "t": 4.34,
+   "text": "Now that you understand ZFNs deeply, I want to put them in head-to-head comparison with the two technologies that succeeded them."
+  },
+  {
+   "t": 11.64,
+   "text": "This is the segment where I'll be honest about why CRISPR ate the world, and also where I'll explain why zinc fingers haven't gone away."
+  },
+  {
+   "t": 19.34,
+   "text": "All three technologies — ZFNs, TALENs, and CRISPR — do the same fundamental thing."
+  },
+  {
+   "t": 26.31,
+   "text": "They make a programmable double-strand break at a specific site in the genome."
+  },
+  {
+   "t": 31.07,
+   "text": "The cell then repairs the break, and the editing happens during the repair."
+  },
+  {
+   "t": 35.7,
+   "text": "The differences are in how each technology finds its target."
+  },
+  {
+   "t": 39.52,
+   "text": "ZFNs, as we've discussed at length, use a protein-based DNA recognition domain — a stacked array of zinc fingers — fused to the FokI cutting domain."
+  },
+  {
+   "t": 49.56,
+   "text": "Specificity comes from the combined recognition of two ZFN halves, each gripping nine to twelve bases of DNA."
+  },
+  {
+   "t": 57.88,
+   "text": "Designing a new ZFN is hard because of context dependence; assembly is artisanal; costs are high; success rates are middling."
+  },
+  {
+   "t": 66.99,
+   "text": "TALENs — transcription activator-like effector nucleases — were the next programmable nuclease to arrive, around 2010-2011."
+  },
+  {
+   "t": 77.09,
+   "text": "They use a different DNA-binding protein, derived from a family of plant-pathogen proteins called TAL effectors."
+  },
+  {
+   "t": 84.29,
+   "text": "The crucial feature of TAL effectors is that, unlike zinc fingers, they have an essentially one-to-one mapping between protein modules and DNA bases — one TALE module reads one base, with no significant context dependence."
+  },
+  {
+   "t": 98.58,
+   "text": "So you can build a TALEN that recognizes, say, an eighteen-base sequence by simply stringing together eighteen modules, one per base, picked from a small library of four module types — one each for A, T, G, and C."
+  },
+  {
+   "t": 113.86,
+   "text": "The modular assembly that didn't quite work for zinc fingers worked beautifully for TALENs, and for a brief moment in 2011-2012, TALENs looked like the future of genome editing."
+  },
+  {
+   "t": 125.64,
+   "text": "But TALENs are big."
+  },
+  {
+   "t": 126.89,
+   "text": "Each TAL module is about thirty-four amino acids long, and you need one per base."
+  },
+  {
+   "t": 132.74,
+   "text": "A typical TALEN protein is about a thousand amino acids long, much larger than a typical ZFN."
+  },
+  {
+   "t": 139.25,
+   "text": "That makes them harder to deliver — you can't fit them in AAV without effort — and harder to clone."
+  },
+  {
+   "t": 145.44,
+   "text": "And TALENs also use FokI as their cutting domain, with the same dimerization requirement and the same need to engineer obligate heterodimers."
+  },
+  {
+   "t": 155.24,
+   "text": "CRISPR-Cas9 arrived in 2012-2013 and changed the calculus completely."
+  },
+  {
+   "t": 162.04,
+   "text": "CRISPR doesn't use a protein for DNA recognition at all."
+  },
+  {
+   "t": 165.89,
+   "text": "Instead, it uses a short RNA molecule — a guide RNA, about twenty bases long — that base-pairs with the target DNA sequence."
+  },
+  {
+   "t": 175.93,
+   "text": "The Cas9 protein is a generic DNA-cutting machine that does whatever the guide RNA tells it."
+  },
+  {
+   "t": 181.74,
+   "text": "To target a new sequence, you order an oligonucleotide encoding the new guide RNA."
+  },
+  {
+   "t": 187.46,
+   "text": "It costs about ten dollars."
+  },
+  {
+   "t": 189.4,
+   "text": "It arrives in two days."
+  },
+  {
+   "t": 191.2,
+   "text": "You clone it into your CRISPR plasmid, and you've got a new editing reagent."
+  },
+  {
+   "t": 196.05,
+   "text": "Compare that to the weeks of work and tens of thousands of dollars required to build a new ZFN."
+  },
+  {
+   "t": 202.18,
+   "text": "The cost and time advantage of CRISPR is roughly three orders of magnitude."
+  },
+  {
+   "t": 207.28,
+   "text": "That difference is, all by itself, why CRISPR took over academic research within about three years of its publication."
+  },
+  {
+   "t": 215.28,
+   "text": "So if CRISPR is so much easier, why are zinc fingers still around?"
+  },
+  {
+   "t": 219.49,
+   "text": "Several reasons."
+  },
+  {
+   "t": 220.86,
+   "text": "First, patent landscape."
+  },
+  {
+   "t": 222.57,
+   "text": "Sangamo has a deep patent estate around zinc fingers that gives them clear freedom to operate for therapeutic ZFN development."
+  },
+  {
+   "t": 230.91,
+   "text": "The CRISPR patent landscape, by contrast, was famously contested between the Broad Institute and the University of California, with implications for who can commercialize CRISPR-based therapies for which applications."
+  },
+  {
+   "t": 243.39,
+   "text": "Companies building therapies have to think about IP, and zinc fingers offer a path that some companies have chosen."
+  },
+  {
+   "t": 250.21,
+   "text": "Second, size."
+  },
+  {
+   "t": 251.61,
+   "text": "ZFN proteins are small enough to fit in AAV cargo with room for accessory elements."
+  },
+  {
+   "t": 258.26,
+   "text": "CRISPR-Cas9 is large — about four kilobases for the gene encoding Cas9 alone — and packaging it into AAV is tight."
+  },
+  {
+   "t": 267.84,
+   "text": "Newer compact Cas variants like Cas12 and CasX help with this, but for AAV-delivered in vivo editing, ZFNs still have a size advantage that matters for some applications."
+  },
+  {
+   "t": 278.97,
+   "text": "Third, specificity."
+  },
+  {
+   "t": 280.87,
+   "text": "Well-designed ZFNs, particularly modern ones using obligate heterodimer FokI variants and carefully validated zinc finger arrays, can achieve very high specificity — possibly higher than first-generation CRISPR systems."
+  },
+  {
+   "t": 295.74,
+   "text": "Sangamo has invested heavily in this and their therapeutic ZFNs are typically validated to have undetectable off-target editing at thousands of candidate sites."
+  },
+  {
+   "t": 306.1,
+   "text": "That kind of specificity matters in clinical applications, where any unintended edit could have safety implications."
+  },
+  {
+   "t": 313.75,
+   "text": "Fourth, immunogenicity."
+  },
+  {
+   "t": 315.69,
+   "text": "ZFNs are built mostly from human-derived sequences — the zinc finger scaffold is a common feature of human proteins, so the immune system is unlikely to mount a strong response to it."
+  },
+  {
+   "t": 327.35,
+   "text": "Cas9, by contrast, is a bacterial protein, and a significant fraction of the human population has pre-existing immune memory to it from natural exposure to the streptococci that Cas9 originally came from."
+  },
+  {
+   "t": 341.28,
+   "text": "For in vivo therapies that need to persist for any length of time, this matters."
+  },
+  {
+   "t": 346.64,
+   "text": "Fifth, regulatory experience."
+  },
+  {
+   "t": 349.17,
+   "text": "ZFNs have been through clinical trials."
+  },
+  {
+   "t": 352.05,
+   "text": "The FDA has reviewed their safety packages."
+  },
+  {
+   "t": 355.23,
+   "text": "There's a known pathway."
+  },
+  {
+   "t": 356.63,
+   "text": "CRISPR is rapidly accumulating its own regulatory experience, but for the early companies that started programs before CRISPR was mature, ZFN regulatory experience was a real asset."
+  },
+  {
+   "t": 369.68,
+   "text": "So the practical division of labor today, roughly, looks like this."
+  },
+  {
+   "t": 373.95,
+   "text": "For academic research where you need to edit a gene quickly and cheaply, CRISPR is the default."
+  },
+  {
+   "t": 380.74,
+   "text": "It's just easier."
+  },
+  {
+   "t": 382.1,
+   "text": "For clinical applications where you need maximum specificity, minimum immunogenicity, and where the IP situation favors zinc fingers, ZFNs remain in play."
+  },
+  {
+   "t": 393.73,
+   "text": "They're not the dominant approach anymore, but they're not gone either."
+  },
+  {
+   "t": 397.19,
+   "text": "And for some specific applications — particularly the non-cutting zinc finger transcription factors we'll discuss in Segment 13 — zinc fingers have advantages that CRISPR-based approaches haven't fully matched."
+  },
+  {
+   "t": 409.82,
+   "text": "The technology is alive."
+  },
+  {
+   "t": 411.99,
+   "text": "It's just no longer the headline."
+  }
+ ]
+}

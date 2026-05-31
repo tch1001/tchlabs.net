@@ -1,0 +1,135 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Combining DREADDs with optogenetics",
+ "duration": 240.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Combining DREADDs with optogenetics"
+  },
+  {
+   "t": 3.94,
+   "text": "Now let me describe a class of experiment that's emerged in the last few years, where chemogenetics and optogenetics are used in the same animal, at the same time, on different cell populations, to control multiple variables at once."
+  },
+  {
+   "t": 18.38,
+   "text": "These are the kinds of experiments where modern circuit neuroscience flexes its full toolkit, and they let you ask questions that neither technique alone could answer."
+  },
+  {
+   "t": 28.24,
+   "text": "Here's the setup."
+  },
+  {
+   "t": 29.39,
+   "text": "Suppose you have two cell populations in two different brain regions, and you want to know how they interact."
+  },
+  {
+   "t": 36.27,
+   "text": "Population A is in cortex."
+  },
+  {
+   "t": 39.04,
+   "text": "Population B is in striatum."
+  },
+  {
+   "t": 41.51,
+   "text": "You suspect that A drives B during a particular behavior, and you want to test the contribution of each to the behavior, plus the dependence of B's activity on A's activity."
+  },
+  {
+   "t": 52.45,
+   "text": "You could do this with chemogenetics alone, but you'd lose temporal resolution."
+  },
+  {
+   "t": 57.48,
+   "text": "You could do it with optogenetics alone, but you'd need two fiber implants in two regions, and you'd need to maintain millisecond-precise control of both populations during the entire experiment, which is hardware-intensive."
+  },
+  {
+   "t": 70.16,
+   "text": "The clever modern approach: use chemogenetics for the sustained background manipulation, and optogenetics for the precision query."
+  },
+  {
+   "t": 77.9,
+   "text": "Express hM4Di in population A, the cortical cells."
+  },
+  {
+   "t": 82.72,
+   "text": "Express channelrhodopsin — the standard optogenetic activator — in population B, the striatal cells."
+  },
+  {
+   "t": 89.97,
+   "text": "Now, in a single experimental session, you can silence population A throughout — by giving the designer drug — and then ask, with optogenetic stimulation of population B, what happens to behavior when you fire B in isolation versus when B is silenced because its upstream input from A is gone."
+  },
+  {
+   "t": 108.1,
+   "text": "The chemogenetic manipulation sets the background condition."
+  },
+  {
+   "t": 112.11,
+   "text": "The optogenetic manipulation queries within that background."
+  },
+  {
+   "t": 115.91,
+   "text": "You're controlling all the variables of interest — slow stuff with chemo, fast stuff with opto — in the same animal, in the same session."
+  },
+  {
+   "t": 125.31,
+   "text": "This is the \"control all the variables\" pattern, and it lets you ask much more incisive questions than either tool alone."
+  },
+  {
+   "t": 132.32,
+   "text": "You can ask, for instance: is the contribution of cortical input A to the behavior via the activity of striatal cells B, or is it via some other pathway?"
+  },
+  {
+   "t": 142.11,
+   "text": "If you silence A and optogenetically rescue B's activity, does the behavior come back?"
+  },
+  {
+   "t": 148.62,
+   "text": "If yes, then A's job was just to drive B."
+  },
+  {
+   "t": 151.59,
+   "text": "If no, then A is doing something else as well."
+  },
+  {
+   "t": 154.46,
+   "text": "You can also do the reverse pattern: chemogenetically activate one population while optogenetically silencing another at specific moments."
+  },
+  {
+   "t": 163.35,
+   "text": "Or use two different chemogenetic tools that respond to different drugs — DREADD plus KORD, for instance, since KORD responds to salvinorin B rather than CNO — to independently manipulate two populations on slow time scales without an optogenetic fiber."
+  },
+  {
+   "t": 180.68,
+   "text": "The combinatorics get rich."
+  },
+  {
+   "t": 182.65,
+   "text": "The broader principle is: chemogenetics and optogenetics live in different parts of the time scale, and they can be used together rather than in competition."
+  },
+  {
+   "t": 191.74,
+   "text": "A modern circuit-dissection paper might have three or four manipulations layered on each other, each addressing a different aspect of the circuit."
+  },
+  {
+   "t": 201.0,
+   "text": "That's the state of the field."
+  },
+  {
+   "t": 202.6,
+   "text": "The simplicity of the chemogenetic injection — no hardware, no fiber, just a drug — makes it easy to layer underneath an optogenetic experiment, providing the slow contextual manipulation while opto handles the fast queries."
+  },
+  {
+   "t": 217.59,
+   "text": "If you're reading a paper that uses both techniques in the same animals, you're looking at the leading edge of modern circuit work."
+  },
+  {
+   "t": 224.79,
+   "text": "Five years ago this would have been remarkable; today it's becoming standard practice in well-equipped labs."
+  },
+  {
+   "t": 231.51,
+   "text": "The tools have matured to the point that experimental design is increasingly limited not by what's technically possible, but by what questions you can think to ask."
+  }
+ ]
+}

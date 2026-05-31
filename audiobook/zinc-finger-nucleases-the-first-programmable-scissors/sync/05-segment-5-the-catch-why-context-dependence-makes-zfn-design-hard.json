@@ -1,0 +1,227 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — The catch — why context dependence makes ZFN design hard",
+ "duration": 414.1,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — The catch — why context dependence makes ZFN design hard"
+  },
+  {
+   "t": 5.66,
+   "text": "I've been promising you a deeper look at the context dependence problem."
+  },
+  {
+   "t": 9.41,
+   "text": "Let's do it now, because it's the central technical reason ZFNs were hard, and understanding it tells you a lot about why molecular engineering in general is harder than it looks on paper."
+  },
+  {
+   "t": 20.5,
+   "text": "Here is the basic problem, restated."
+  },
+  {
+   "t": 23.43,
+   "text": "A single zinc finger, in isolation, has a preferred three-base binding site."
+  },
+  {
+   "t": 29.19,
+   "text": "You can measure that preference in a biochemical experiment — for example, by asking the finger to bind a library of random sequences and seeing which ones it picks."
+  },
+  {
+   "t": 38.67,
+   "text": "From those experiments, you can write down a kind of preference profile: this finger prefers GAA over CTG over AAT, and so on."
+  },
+  {
+   "t": 48.09,
+   "text": "Good."
+  },
+  {
+   "t": 48.71,
+   "text": "Now you take that finger, you snap it next to another finger, and you ask the same question: what does the array now prefer?"
+  },
+  {
+   "t": 56.09,
+   "text": "And the answer is — it doesn't quite prefer what you'd predict from just adding up the individual preferences."
+  },
+  {
+   "t": 61.95,
+   "text": "The array's overall binding behavior is influenced by which fingers sit next to which, in ways that are partially predictable but partially not."
+  },
+  {
+   "t": 70.46,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 71.76,
+   "text": "Imagine each zinc finger as a person trying to grip a section of rope."
+  },
+  {
+   "t": 76.84,
+   "text": "The problem is that the people are standing very close together — close enough that their elbows touch, their shoulders bump, and the way one person tilts their hand changes how the next person can position theirs."
+  },
+  {
+   "t": 88.38,
+   "text": "A grip technique that worked beautifully when the person was alone might not work at all when squeezed between two neighbors."
+  },
+  {
+   "t": 95.79,
+   "text": "And a grip that's awkward in isolation might actually work better when the neighbors are pressing in, because the neighbors are bracing the grip."
+  },
+  {
+   "t": 103.36,
+   "text": "That's the molecular reality."
+  },
+  {
+   "t": 105.11,
+   "text": "Adjacent zinc fingers physically contact each other."
+  },
+  {
+   "t": 109.09,
+   "text": "Their alpha helices are close in space, their side chains can interact, and the geometry of the DNA itself — its width, its groove depth, its degree of bending — depends on the sequence and on what's bound to it."
+  },
+  {
+   "t": 122.7,
+   "text": "So a finger that reads GAA cleanly when sitting alone might, when placed next to a finger that reads CTG, find that its own preferred binding geometry is incompatible with the CTG finger's preferred geometry, and the whole array binds poorly."
+  },
+  {
+   "t": 138.93,
+   "text": "There are a few specific mechanisms behind this, and it's worth knowing them at least by name."
+  },
+  {
+   "t": 144.28,
+   "text": "One is synergistic recognition — sometimes the contact a finger makes with its three bases is actually a four-base contact, where the side chain of one residue spills over and touches the first base of the next finger's binding site."
+  },
+  {
+   "t": 158.66,
+   "text": "So you can't really treat the binding sites as independent three-base units; they overlap at the edges."
+  },
+  {
+   "t": 165.7,
+   "text": "Another is DNA bending — different sequences bend the DNA helix to different degrees, and binding by one finger can change the local geometry enough to alter the binding of its neighbor."
+  },
+  {
+   "t": 178.18,
+   "text": "A third is steric clash — sometimes the side chains of two adjacent fingers are physically in each other's way, and one or both fingers has to compromise its preferred conformation."
+  },
+  {
+   "t": 190.25,
+   "text": "The practical upshot, in the early 2000s, was that modular assembly worked maybe one time in three."
+  },
+  {
+   "t": 197.15,
+   "text": "You'd pick your fingers, snap them together, test the array on its target, and most of the time the array would bind weakly, or bind the wrong site, or not bind at all."
+  },
+  {
+   "t": 206.51,
+   "text": "The labs that succeeded with modular assembly were the ones that built in a testing step — they'd assemble several candidate arrays per target, screen them, throw out the failures, and keep the winners."
+  },
+  {
+   "t": 218.06,
+   "text": "That gave you a working ZFN about two-thirds of the time, which is good but slow."
+  },
+  {
+   "t": 223.25,
+   "text": "The OPEN and CoDA systems we mentioned a moment ago were attempts to engineer around the context-dependence problem."
+  },
+  {
+   "t": 229.6,
+   "text": "OPEN selected fingers in the context of the array they'd actually be used in — you'd build a partially-randomized library, screen it in bacteria for binding to your target, and select winners that had the right geometry for that particular context."
+  },
+  {
+   "t": 244.15,
+   "text": "CoDA used pre-validated finger pairs, so the two-finger units came with their inter-finger geometry already sorted."
+  },
+  {
+   "t": 251.39,
+   "text": "Both approaches had higher success rates than naive modular assembly, but both had limitations — OPEN was technically demanding, and CoDA was limited to a finite menu of targetable sites."
+  },
+  {
+   "t": 263.95,
+   "text": "Sangamo, the commercial player, had what was widely considered the most reliable design process, and they got it by being absolutely systematic."
+  },
+  {
+   "t": 272.97,
+   "text": "They had spent fifteen years building and characterizing a proprietary library, validating thousands of fingers, mapping out which fingers worked well together and which didn't, and accumulating a vast trove of empirical knowledge that wasn't published."
+  },
+  {
+   "t": 287.99,
+   "text": "That knowledge was their moat."
+  },
+  {
+   "t": 289.8,
+   "text": "It was also part of why competitors couldn't easily catch up — you couldn't just read a paper and replicate Sangamo's success; you needed the institutional knowledge that came from a decade of hands-on building."
+  },
+  {
+   "t": 301.4,
+   "text": "I want to draw out a more general moral here, because it applies to a lot of biology."
+  },
+  {
+   "t": 306.6,
+   "text": "When you design proteins, the parts do not behave independently of each other."
+  },
+  {
+   "t": 311.87,
+   "text": "Lego works because each brick is rigid and the connections are standardized."
+  },
+  {
+   "t": 317.18,
+   "text": "Proteins are not rigid; they wiggle, they fold, they make incidental contacts with their neighbors, and their behavior depends on context in ways that are genuinely difficult to predict from first principles."
+  },
+  {
+   "t": 329.78,
+   "text": "The dream of \"design any protein you want by snapping together pre-characterized domains\" is a real dream — people are still pursuing versions of it today, with much better computational tools — but it has always been harder than it looked, and zinc fingers were the field's first big lesson in just how hard."
+  },
+  {
+   "t": 348.04,
+   "text": "The lesson is also why CRISPR was such a relief when it arrived."
+  },
+  {
+   "t": 352.08,
+   "text": "CRISPR's targeting is done by an RNA molecule that base-pairs with the DNA."
+  },
+  {
+   "t": 357.05,
+   "text": "Base pairing is, to a first approximation, context-independent — A pairs with T, G pairs with C, and the rules don't change based on what's next door."
+  },
+  {
+   "t": 367.18,
+   "text": "So CRISPR sidestepped the entire context-dependence problem by moving the recognition step from protein-DNA contact to RNA-DNA base pairing."
+  },
+  {
+   "t": 377.0,
+   "text": "That was the technical breakthrough that made genome editing democratic."
+  },
+  {
+   "t": 381.35,
+   "text": "Until that breakthrough, you needed Sangamo or you needed Joung's lab or you needed a small handful of other expert groups, because nobody else could reliably build the targeting domain."
+  },
+  {
+   "t": 392.19,
+   "text": "But now we have a programmable DNA-binding protein, however awkwardly built."
+  },
+  {
+   "t": 397.29,
+   "text": "The next question is — what do we attach to it to actually edit the genome?"
+  },
+  {
+   "t": 401.42,
+   "text": "Because a DNA-binding protein by itself doesn't edit anything."
+  },
+  {
+   "t": 405.68,
+   "text": "It just sits on the DNA."
+  },
+  {
+   "t": 407.18,
+   "text": "We need to give it a tool."
+  },
+  {
+   "t": 408.48,
+   "text": "And the tool the field landed on, beautifully, was a pair of scissors."
+  },
+  {
+   "t": 412.97,
+   "text": "Let's go meet them."
+  }
+ ]
+}

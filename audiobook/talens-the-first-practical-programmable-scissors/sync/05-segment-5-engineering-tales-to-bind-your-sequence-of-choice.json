@@ -1,0 +1,211 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Engineering TALEs to bind your sequence of choice",
+ "duration": 307.34,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Engineering TALEs to bind your sequence of choice"
+  },
+  {
+   "t": 5.45,
+   "text": "Suppose you have decided on a DNA sequence you want to target."
+  },
+  {
+   "t": 8.94,
+   "text": "Maybe it's a stretch of 18 bases in the human dystrophin gene."
+  },
+  {
+   "t": 12.93,
+   "text": "Maybe it's a region in a corn genome."
+  },
+  {
+   "t": 15.25,
+   "text": "Maybe it's a viral integration site in a patient's T cell."
+  },
+  {
+   "t": 18.96,
+   "text": "Doesn't matter what — you have your target, written out as a string of A's, T's, G's, and C's."
+  },
+  {
+   "t": 26.38,
+   "text": "The question is: how do you build a TALE that binds exactly this sequence?"
+  },
+  {
+   "t": 31.3,
+   "text": "Step one."
+  },
+  {
+   "t": 32.26,
+   "text": "Look at your sequence."
+  },
+  {
+   "t": 33.61,
+   "text": "The first base needs to be a T."
+  },
+  {
+   "t": 35.61,
+   "text": "If it isn't, shift the start position by one or two bases, or look on the complementary DNA strand, until you find a 15-to-20-base stretch that starts with T."
+  },
+  {
+   "t": 45.98,
+   "text": "Almost always you can find one within a few base pairs of where you originally wanted to target."
+  },
+  {
+   "t": 51.3,
+   "text": "We'll worry about exact spacing later."
+  },
+  {
+   "t": 53.76,
+   "text": "Step two."
+  },
+  {
+   "t": 54.71,
+   "text": "Take your sequence — say it's TACATAGGCTAGCTAGCAT, for the sake of argument — and translate each base, after the leading T, into an RVD."
+  },
+  {
+   "t": 64.5,
+   "text": "T means NG."
+  },
+  {
+   "t": 66.11,
+   "text": "A means NI."
+  },
+  {
+   "t": 67.3,
+   "text": "C means HD."
+  },
+  {
+   "t": 68.9,
+   "text": "G means NN."
+  },
+  {
+   "t": 70.67,
+   "text": "So TACATAGGCTAGCTAGCAT, after the leading T, gives us NI HD NI NG NI NN NN HD NG NI NN HD NG NI NN HD NI NG."
+  },
+  {
+   "t": 85.05,
+   "text": "Eighteen RVDs, one per base after the first."
+  },
+  {
+   "t": 88.96,
+   "text": "Step three."
+  },
+  {
+   "t": 90.08,
+   "text": "Build a protein in which the array of repeats has those RVDs in that order."
+  },
+  {
+   "t": 95.19,
+   "text": "The rest of the repeat scaffold is identical from one repeat to the next; only positions 12 and 13 differ."
+  },
+  {
+   "t": 102.53,
+   "text": "You're not redesigning a protein; you're writing down which RVD to put in each repeat position."
+  },
+  {
+   "t": 108.89,
+   "text": "That's the design."
+  },
+  {
+   "t": 110.0,
+   "text": "That is literally the entire intellectual problem of TALE design."
+  },
+  {
+   "t": 114.4,
+   "text": "It is so trivially simple that you can do it by hand, on paper, in about ten minutes, for any sequence in any genome."
+  },
+  {
+   "t": 122.7,
+   "text": "There are, of course, software tools that automate it — programs like TALE-NT from the Bogdanove lab, Mojo Hand from Tom Lin's group, the TAL Effector Targeter from the Voytas lab — and these tools also do useful things like check for off-target sites elsewhere in your genome of interest, suggest optimal spacer lengths for the TALEN pair, and so on."
+  },
+  {
+   "t": 143.36,
+   "text": "But the core design step is so simple that the software is doing the bookkeeping, not solving any real engineering problem."
+  },
+  {
+   "t": 150.45,
+   "text": "Compare this to the zinc finger world."
+  },
+  {
+   "t": 152.7,
+   "text": "To design a zinc finger array for a new target, you had to consult lookup tables of which zinc finger modules might work in which contexts, choose modules from a library, build the protein, test whether it actually bound, observe that it usually didn't bind well, redesign, iterate."
+  },
+  {
+   "t": 169.22,
+   "text": "Specialist labs would charge tens of thousands of dollars and take months for a single design, with a real risk of failure."
+  },
+  {
+   "t": 176.78,
+   "text": "TALE design, by contrast, is something an undergraduate can do in an afternoon, and it almost always works."
+  },
+  {
+   "t": 183.88,
+   "text": "Here is the analogy I want to leave you with for the difference."
+  },
+  {
+   "t": 187.46,
+   "text": "Zinc finger design is like building a custom watch — you have to fit precisely machined gears that all interact with their neighbors, and a mistake anywhere cascades."
+  },
+  {
+   "t": 197.4,
+   "text": "TALE design is like building with Lego bricks — every brick has a standard footprint, the bricks don't interact with each other in surprising ways, and any kid can snap together a custom design that works."
+  },
+  {
+   "t": 209.39,
+   "text": "That Lego-brick character is the entire reason TALENs took off."
+  },
+  {
+   "t": 213.62,
+   "text": "Programmable genome editing, for the first time, became accessible to ordinary labs."
+  },
+  {
+   "t": 219.51,
+   "text": "You didn't need to be a specialist."
+  },
+  {
+   "t": 221.36,
+   "text": "You didn't need to license technology from a company."
+  },
+  {
+   "t": 224.55,
+   "text": "You could read the Boch and Moscou papers, look at the open-source design tools, build your own TALEN, and have it cutting DNA in your gene of interest within weeks."
+  },
+  {
+   "t": 234.69,
+   "text": "There is a real engineering challenge in building the array of repeats at the DNA level — actually constructing the gene that encodes 18 nearly-identical repeats in a row."
+  },
+  {
+   "t": 246.54,
+   "text": "Because the repeats are so similar in DNA sequence, traditional cloning methods don't work well; the DNA itself wants to recombine and collapse the array."
+  },
+  {
+   "t": 257.5,
+   "text": "There are clever assembly methods to get around this — we'll get to Golden Gate cloning in Segment 15 — but the conceptual point for now is: the engineering problem of TALE design is essentially solved at the design level, and the assembly problem at the cloning level, while real, has straightforward solutions."
+  },
+  {
+   "t": 275.67,
+   "text": "So the recognition problem — the long-standing dream of programmable DNA binding — was solved in 2009."
+  },
+  {
+   "t": 282.96,
+   "text": "The natural protein from Xanthomonas gave us the recognition module."
+  },
+  {
+   "t": 287.22,
+   "text": "Boch and Moscou gave us the decoded code."
+  },
+  {
+   "t": 290.37,
+   "text": "Within a year, anybody who wanted a custom DNA-binding protein for any sequence in any genome could have one."
+  },
+  {
+   "t": 297.61,
+   "text": "The remaining question was: what do we do with our new programmable DNA-binding protein?"
+  },
+  {
+   "t": 303.44,
+   "text": "The most obvious answer was: fuse it to a pair of scissors."
+  }
+ ]
+}

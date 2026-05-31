@@ -1,0 +1,251 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — Fusing fingers to FokI — making the scissors",
+ "duration": 427.41,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — Fusing fingers to FokI — making the scissors"
+  },
+  {
+   "t": 4.74,
+   "text": "Here is the conceptual move that turned zinc fingers into zinc finger nucleases."
+  },
+  {
+   "t": 10.31,
+   "text": "It was made in 1996 by a researcher named Srinivasan Chandrasegaran at Johns Hopkins, and it is the foundational insight of the entire programmable-nuclease era."
+  },
+  {
+   "t": 21.26,
+   "text": "Chandrasegaran asked a simple-sounding question."
+  },
+  {
+   "t": 24.89,
+   "text": "We have these zinc finger proteins that can be engineered to bind any DNA sequence we want."
+  },
+  {
+   "t": 30.93,
+   "text": "What if we attached, to that binding domain, an enzymatic domain that would actually do something to the DNA?"
+  },
+  {
+   "t": 38.29,
+   "text": "Specifically — what if we attached a DNA-cutting enzyme?"
+  },
+  {
+   "t": 42.04,
+   "text": "Then we'd have a protein that finds a specific sequence and cuts it."
+  },
+  {
+   "t": 46.42,
+   "text": "A programmable molecular scissors."
+  },
+  {
+   "t": 48.88,
+   "text": "The cutting enzyme he chose was a domain from a bacterial restriction enzyme called FokI."
+  },
+  {
+   "t": 55.42,
+   "text": "Pronounced \"fok-one."
+  },
+  {
+   "t": 56.83,
+   "text": "\" It comes from a bacterium called Flavobacterium okeanokoites, where it serves as part of a defense system against viral DNA."
+  },
+  {
+   "t": 65.16,
+   "text": "FokI is what's called a type IIS restriction enzyme, and the \"S\" matters."
+  },
+  {
+   "t": 70.15,
+   "text": "Most familiar restriction enzymes — the ones you may have used in a lab class, like EcoRI or BamHI — have their DNA-recognition and DNA-cutting activities fused together in a single domain that does both jobs at the same place."
+  },
+  {
+   "t": 85.08,
+   "text": "Type IIS enzymes are different."
+  },
+  {
+   "t": 87.49,
+   "text": "They have a DNA-recognition domain that finds a specific sequence, and a separate cutting domain that cleaves the DNA at a defined distance away from the recognition site."
+  },
+  {
+   "t": 98.4,
+   "text": "The recognition and cutting are spatially decoupled."
+  },
+  {
+   "t": 101.89,
+   "text": "This is the crucial feature for our story."
+  },
+  {
+   "t": 104.78,
+   "text": "Because the cutting domain of FokI doesn't have its own DNA sequence preference — it just cuts whatever DNA is presented to it, wherever it happens to be tethered — you can in principle chop off the natural FokI recognition domain and replace it with any other DNA-binding domain you want, and the cutting domain will faithfully cut wherever the new binding domain places it."
+  },
+  {
+   "t": 126.78,
+   "text": "Chandrasegaran did exactly that."
+  },
+  {
+   "t": 129.35,
+   "text": "He chopped off the natural FokI recognition domain and fused, in its place, a three-finger zinc finger array."
+  },
+  {
+   "t": 137.64,
+   "text": "The result was a protein that found the DNA sequence specified by the zinc fingers and cut the DNA nearby."
+  },
+  {
+   "t": 144.35,
+   "text": "He published this in PNAS in 1996, and looking back, that paper is one of the truly foundational papers in genome engineering."
+  },
+  {
+   "t": 152.69,
+   "text": "He had built the first programmable nuclease."
+  },
+  {
+   "t": 155.69,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 156.96,
+   "text": "The zinc finger array is the targeting hand — it grips the DNA at the address you've specified."
+  },
+  {
+   "t": 163.07,
+   "text": "The FokI domain is a small pair of scissors stuck to the wrist of that hand."
+  },
+  {
+   "t": 167.5,
+   "text": "The hand finds the right spot on the rope, and once it's there, the scissors come down and cut."
+  },
+  {
+   "t": 172.8,
+   "text": "Now there's one more wrinkle that turns out to be enormously important, and it goes back to a quirk of the FokI cutting domain's natural biology."
+  },
+  {
+   "t": 181.3,
+   "text": "The FokI cutting domain doesn't actually cut DNA on its own."
+  },
+  {
+   "t": 185.36,
+   "text": "It only cuts when two copies of the cutting domain come together — dimerize — at the cut site."
+  },
+  {
+   "t": 191.31,
+   "text": "One FokI domain is inert; two FokI domains, brought into close proximity on the DNA, cut."
+  },
+  {
+   "t": 198.65,
+   "text": "This is a natural feature of FokI."
+  },
+  {
+   "t": 200.76,
+   "text": "In its wild-type bacterial form, FokI binds its recognition site, and through some conformational rearrangement, two FokI molecules can pair up at the site to perform the cleavage."
+  },
+  {
+   "t": 212.68,
+   "text": "The biochemistry was worked out by several groups including those of Aggarwal and Halford in the 1990s."
+  },
+  {
+   "t": 219.51,
+   "text": "The key point for us is: one FokI domain cannot cut; two together can."
+  },
+  {
+   "t": 224.86,
+   "text": "When Chandrasegaran and others started building zinc finger nucleases for real applications, they realized this dimerization requirement was not a bug — it was an opportunity."
+  },
+  {
+   "t": 235.47,
+   "text": "Because if the cutting only happens when two FokI domains come together, then you can design your editing system to require two separate zinc finger proteins, each with its own three-finger array, each targeted to a sequence on opposite sides of the spot you want to cut."
+  },
+  {
+   "t": 251.43,
+   "text": "Each ZFN by itself binds its half-site but does nothing."
+  },
+  {
+   "t": 255.63,
+   "text": "Only when both ZFNs are simultaneously bound, on opposite strands of the DNA, with the right spacing between them, do the two FokI domains come into close enough contact to dimerize and cut."
+  },
+  {
+   "t": 268.25,
+   "text": "This is the architecture that became standard."
+  },
+  {
+   "t": 270.7,
+   "text": "A ZFN edit involves a pair of zinc finger nucleases, not just one."
+  },
+  {
+   "t": 275.38,
+   "text": "One ZFN binds the left half-site; the other binds the right half-site; the two FokI domains meet in the middle, dimerize, and cut the DNA between the two binding sites — typically in a five-to-seven base spacer region."
+  },
+  {
+   "t": 290.44,
+   "text": "And here's why this matters enormously for specificity."
+  },
+  {
+   "t": 294.44,
+   "text": "Each three-finger ZFN binds nine bases of DNA."
+  },
+  {
+   "t": 298.88,
+   "text": "Nine bases is not very specific in a three-billion-base genome — that nine-base sequence will appear, on average, every two hundred and sixty thousand bases, so you'd expect over ten thousand exact matches in the human genome."
+  },
+  {
+   "t": 312.64,
+   "text": "But you need two ZFNs to bind, in the right orientation, with the right spacing between them, before any cutting happens."
+  },
+  {
+   "t": 320.71,
+   "text": "The combined specification is then nine bases plus nine bases plus the geometry of the spacer — call it eighteen bases of specific sequence with constraints on the spacing."
+  },
+  {
+   "t": 331.69,
+   "text": "That's much, much more specific."
+  },
+  {
+   "t": 333.85,
+   "text": "An eighteen-base sequence has only a few expected matches in the entire genome."
+  },
+  {
+   "t": 338.71,
+   "text": "So the dimerization requirement isn't just a quirk — it's the feature that makes ZFN cutting specific enough to actually use therapeutically."
+  },
+  {
+   "t": 347.76,
+   "text": "We'll explore the dimerization architecture in much more detail in the next segment, because there are clever engineering moves that have made it even better."
+  },
+  {
+   "t": 356.36,
+   "text": "But first let me make sure you have the basic ZFN picture in your head, because we're going to refer back to it constantly."
+  },
+  {
+   "t": 362.78,
+   "text": "A ZFN pair consists of two proteins."
+  },
+  {
+   "t": 366.35,
+   "text": "Each protein has two parts: a zinc finger array at the front, made of three or four fingers, grabbing nine to twelve bases of DNA; and a FokI cutting domain at the back."
+  },
+  {
+   "t": 378.08,
+   "text": "The two proteins are designed to bind opposite strands of the DNA, on opposite sides of the target site."
+  },
+  {
+   "t": 384.81,
+   "text": "When both are bound, with the correct spacing between them — typically five to seven bases of DNA between the two binding sites — the two FokI domains meet in the middle of that spacer, dimerize, and introduce a double-strand break in the DNA."
+  },
+  {
+   "t": 400.15,
+   "text": "The cell then has to repair the break, and the repair process is what allows us to actually edit the gene."
+  },
+  {
+   "t": 406.6,
+   "text": "We'll spend a whole segment on that repair in a moment."
+  },
+  {
+   "t": 409.58,
+   "text": "The image to hold: two three-fingered hands gripping opposite strands of a rope, with the tips of their pinkies meeting in the middle, and where the pinkies meet, a pair of tiny scissors snaps shut and cuts the rope through both strands."
+  },
+  {
+   "t": 424.28,
+   "text": "That's what a ZFN does, every time it works."
+  }
+ ]
+}

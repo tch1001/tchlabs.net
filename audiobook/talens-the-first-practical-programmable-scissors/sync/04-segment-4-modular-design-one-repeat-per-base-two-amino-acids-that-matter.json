@@ -1,0 +1,239 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Modular design — one repeat per base, two amino acids that matter",
+ "duration": 410.81,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Modular design — one repeat per base, two amino acids that matter"
+  },
+  {
+   "t": 6.36,
+   "text": "Let me zoom in on the TALE protein itself."
+  },
+  {
+   "t": 9.25,
+   "text": "We've said it's a string of repeats, each one recognizing one DNA base, with the recognition encoded by two amino acids per repeat."
+  },
+  {
+   "t": 18.38,
+   "text": "Now let me show you what that actually looks like at a structural level — not in terrible detail, just enough that you can see why the modularity works."
+  },
+  {
+   "t": 27.09,
+   "text": "A typical TALE protein from Xanthomonas has a tripartite structure."
+  },
+  {
+   "t": 31.85,
+   "text": "At the N-terminus — the front end — there is a stretch of protein that, among other things, includes a translocation signal that lets the bacterium inject the protein into the plant cell, and a region that contacts the very first T base in the target."
+  },
+  {
+   "t": 47.3,
+   "text": "We don't need to worry too much about the front end for engineering purposes; most engineered TALEs and TALENs keep a stripped-down version of this region."
+  },
+  {
+   "t": 56.19,
+   "text": "In the middle — the heart of the protein, and the part that does the DNA recognition — sits the array of repeats."
+  },
+  {
+   "t": 63.02,
+   "text": "Each repeat is 33 or 34 amino acids long."
+  },
+  {
+   "t": 67.49,
+   "text": "Twenty repeats in a row gives you about 680 amino acids."
+  },
+  {
+   "t": 72.5,
+   "text": "In natural TALEs, you commonly find arrays of 12 to 30 repeats."
+  },
+  {
+   "t": 77.59,
+   "text": "The repeats fold into nearly identical structural units — each one a small two-helix bundle that wraps around the DNA major groove — and stacked end to end, they form a beautiful helical staircase that spirals around the DNA double helix like a vine wrapping around a pole."
+  },
+  {
+   "t": 95.11,
+   "text": "At the C-terminus — the back end — there are nuclear localization signals (so the protein finds the nucleus) and, in natural TALEs, an acidic transcription activation domain (so the protein recruits the plant's transcription machinery to start making mRNA)."
+  },
+  {
+   "t": 112.17,
+   "text": "For engineering TALENs, we'll throw away the back-end transcription stuff and replace it with the FokI nuclease, but that comes later."
+  },
+  {
+   "t": 119.95,
+   "text": "For now, focus on the middle."
+  },
+  {
+   "t": 121.94,
+   "text": "So picture this in your mind."
+  },
+  {
+   "t": 123.55,
+   "text": "The DNA double helix runs through the middle of the picture, twisted up in its usual way."
+  },
+  {
+   "t": 129.62,
+   "text": "The TALE protein wraps around it, with each of its 20-or-so repeats stacking on top of the one before, like vertebrae on a spine, and each repeat reaching one little loop into the DNA major groove."
+  },
+  {
+   "t": 142.68,
+   "text": "The loops are where the RVD amino acids — those two key residues at positions 12 and 13 — make direct contact with one specific base of the DNA."
+  },
+  {
+   "t": 153.29,
+   "text": "Twenty repeats wrap around twenty consecutive base pairs of DNA, each repeat reading the base immediately in front of it."
+  },
+  {
+   "t": 161.9,
+   "text": "The protein, in total, is essentially a sequence-specific DNA-reading staircase."
+  },
+  {
+   "t": 167.89,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 169.16,
+   "text": "Imagine running your finger down the spine of a book, and at each vertebra of the spine, a tiny mechanical sensor reaches in and reads one letter of the title."
+  },
+  {
+   "t": 179.56,
+   "text": "The whole staircase of sensors, together, reads the whole title."
+  },
+  {
+   "t": 184.15,
+   "text": "Each sensor is identical to its neighbors except for one tiny mechanical setting — that's the RVD — which determines which letter that sensor responds to."
+  },
+  {
+   "t": 194.03,
+   "text": "Set the sensors correctly, and the staircase will recognize any specific title written on the book's spine."
+  },
+  {
+   "t": 200.94,
+   "text": "That's, structurally, what a TALE does to DNA."
+  },
+  {
+   "t": 204.22,
+   "text": "Now the deep question: why does this work so cleanly when zinc fingers don't?"
+  },
+  {
+   "t": 209.4,
+   "text": "Why does each TALE repeat behave as an independent unit, when zinc fingers were so context-sensitive?"
+  },
+  {
+   "t": 216.14,
+   "text": "The answer is structural, and it took some beautiful crystallography to nail down — papers in 2012 by groups including those of Phil Bradley and Barry Stoddard, and others by Ronald Mak and Phil Bradley, showed crystal structures of TALE proteins bound to DNA."
+  },
+  {
+   "t": 233.34,
+   "text": "What they revealed is that each TALE repeat sits on its own base in essentially the same geometry."
+  },
+  {
+   "t": 240.12,
+   "text": "The contact between the RVD and the base is local — only the two amino acids of the RVD touch the base."
+  },
+  {
+   "t": 248.03,
+   "text": "The rest of the repeat is structural scaffolding that doesn't talk to the DNA bases at all; it just holds the RVD in the right position."
+  },
+  {
+   "t": 256.43,
+   "text": "Neighboring repeats don't share atomic-level contacts with each other's bases."
+  },
+  {
+   "t": 261.57,
+   "text": "They each do their own job, in their own physical space, and don't interfere."
+  },
+  {
+   "t": 266.79,
+   "text": "This is mechanically why TALEs are so modular."
+  },
+  {
+   "t": 269.95,
+   "text": "The recognition unit is small, local, and doesn't depend on what's around it."
+  },
+  {
+   "t": 274.92,
+   "text": "The price of modularity, in protein engineering generally, is that you don't get the cooperative effects that can make some other recognition systems exquisitely tight."
+  },
+  {
+   "t": 284.72,
+   "text": "TALE binding to its target is good — typically nanomolar affinity — but it's not preposterously good."
+  },
+  {
+   "t": 291.19,
+   "text": "It's modular-good."
+  },
+  {
+   "t": 292.42,
+   "text": "And modular-good was exactly what the field needed."
+  },
+  {
+   "t": 295.66,
+   "text": "Let me also name a few things about the RVD code that matter for practical design."
+  },
+  {
+   "t": 300.67,
+   "text": "First, while HD, NG, NI, and NN are the canonical four RVDs, there are others."
+  },
+  {
+   "t": 308.5,
+   "text": "Variants like NH and NK also recognize G, with somewhat better specificity than NN — NN, remember, recognizes G but also weakly recognizes A."
+  },
+  {
+   "t": 321.12,
+   "text": "If you want a cleaner G-only repeat, NH or NK might be a better choice."
+  },
+  {
+   "t": 326.1,
+   "text": "NK gives you more specificity but slightly less binding strength."
+  },
+  {
+   "t": 330.85,
+   "text": "NH is a reasonable middle ground."
+  },
+  {
+   "t": 333.17,
+   "text": "Second, in natural Xanthomonas TALEs, you sometimes see other RVDs — N (where is a star meaning a deletion, an absent amino acid), HG, HA, H."
+  },
+  {
+   "t": 345.5,
+   "text": "These have various properties: N recognizes C or T with some flexibility, for example."
+  },
+  {
+   "t": 352.15,
+   "text": "For designing TALENs, you almost always stick to the four canonical RVDs because they give the best balance of activity and specificity, but the natural diversity of the code is broader than the four-letter version we use day to day."
+  },
+  {
+   "t": 366.02,
+   "text": "Third, the affinity of a TALE for its target depends not just on the RVDs but on the length of the array."
+  },
+  {
+   "t": 372.77,
+   "text": "More repeats means more base contacts means tighter binding — up to a point."
+  },
+  {
+   "t": 377.92,
+   "text": "Below about 12 repeats, the binding tends to get sloppy."
+  },
+  {
+   "t": 382.05,
+   "text": "Above about 30, you're investing a lot of protein for diminishing returns."
+  },
+  {
+   "t": 387.14,
+   "text": "The sweet spot for engineered TALENs is typically 15 to 20 repeats per TALE, recognizing a target stretch of 15 to 20 bases."
+  },
+  {
+   "t": 396.76,
+   "text": "That's the molecular architecture."
+  },
+  {
+   "t": 398.67,
+   "text": "Now let me show you how, with this code in hand, you would actually go about engineering a TALE to bind a sequence of your choice."
+  },
+  {
+   "t": 405.99,
+   "text": "The procedure is, as we'll see, almost suspiciously easy."
+  }
+ ]
+}

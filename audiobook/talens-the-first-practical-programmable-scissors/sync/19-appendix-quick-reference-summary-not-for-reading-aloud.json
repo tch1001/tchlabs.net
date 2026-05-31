@@ -1,0 +1,259 @@
+{
+ "n": 19,
+ "title": "APPENDIX — Quick-reference summary (not for reading aloud)",
+ "duration": 428.29,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX — Quick-reference summary (not for reading aloud)"
+  },
+  {
+   "t": 3.86,
+   "text": "The molecule."
+  },
+  {
+   "t": 4.99,
+   "text": "A TALEN is a fusion protein with three main parts: nuclear localization signal, a customizable array of 15–20 TALE repeats (~33–34 amino acids each), and a FokI nuclease domain at the C-terminus."
+  },
+  {
+   "t": 20.75,
+   "text": "Used as obligate heterodimer pairs — TALEN-left + TALEN-right — that bind flanking targets on opposite DNA strands and dimerize FokI in the spacer to cut."
+  },
+  {
+   "t": 32.33,
+   "text": "The recognition code (Boch and Moscou, 2009)."
+  },
+  {
+   "t": 36.27,
+   "text": "Each TALE repeat contacts one DNA base, with recognition determined by two amino acids (the repeat-variable di-residue, RVD) at positions 12 and 13 of the repeat."
+  },
+  {
+   "t": 49.34,
+   "text": "HD → C (cytosine) NG → T (thymine) NI → A (adenine) NN → G (guanine; also weakly A) NH, NK → G (improved specificity variants) Target must start with a T (a constraint from the N-terminal half-repeat)."
+  },
+  {
+   "t": 66.71,
+   "text": "Origin."
+  },
+  {
+   "t": 67.56,
+   "text": "TALEs come from Xanthomonas plant pathogens, where they are injected into host plant cells via type III secretion and bind specific plant gene promoters to activate transcription of bacterium-favoring genes."
+  },
+  {
+   "t": 80.69,
+   "text": "The natural protein has an N-terminal translocation signal, a central repeat array (DNA recognition), and a C-terminal acidic activation domain — for engineering TALENs, the activation domain is replaced with FokI."
+  },
+  {
+   "t": 94.91,
+   "text": "FokI and dimerization."
+  },
+  {
+   "t": 96.9,
+   "text": "FokI is a Type IIS restriction enzyme with separable recognition and nuclease domains."
+  },
+  {
+   "t": 103.61,
+   "text": "The nuclease domain only cuts as a dimer."
+  },
+  {
+   "t": 107.1,
+   "text": "Modern TALEN pairs use obligate heterodimer FokI variants (e.g., ELD/KKR or DD/RR) to suppress unwanted homodimerization, dramatically improving specificity."
+  },
+  {
+   "t": 121.15,
+   "text": "Spacer length."
+  },
+  {
+   "t": 122.38,
+   "text": "The gap between the two TALEN binding sites — where the FokI dimer forms and cuts — is typically 12–21 bp, with 14–18 bp being the sweet spot for productive dimerization."
+  },
+  {
+   "t": 135.12,
+   "text": "Cellular outcomes."
+  },
+  {
+   "t": 136.66,
+   "text": "NHEJ (non-homologous end joining): cell slaps broken ends together, often introducing small indels."
+  },
+  {
+   "t": 145.03,
+   "text": "Used for gene knockouts."
+  },
+  {
+   "t": 146.79,
+   "text": "HDR (homology-directed repair): with a provided donor template, cell copies the donor across the break."
+  },
+  {
+   "t": 154.05,
+   "text": "Used for precise edits — but much rarer than NHEJ, mostly in dividing cells."
+  },
+  {
+   "t": 160.1,
+   "text": "Engineering workflow."
+  },
+  {
+   "t": 161.68,
+   "text": "Pick a target sequence (must start with T)."
+  },
+  {
+   "t": 164.51,
+   "text": "Design left and right TALEN pair with appropriate spacer using software (TALE-NT, Mojo Hand, etc.)."
+  },
+  {
+   "t": 172.5,
+   "text": "Translate target bases → RVDs."
+  },
+  {
+   "t": 175.29,
+   "text": "Assemble the TALE-encoding gene via Golden Gate assembly (Voytas/Bogdanove or Joung lab kits) using pre-made RVD libraries."
+  },
+  {
+   "t": 185.39,
+   "text": "Sequence-verify, deliver into cells, validate cutting (T7 endonuclease assay or deep sequencing)."
+  },
+  {
+   "t": 193.62,
+   "text": "Comparison with CRISPR-Cas9."
+  },
+  {
+   "t": 196.25,
+   "text": "TALEN: high specificity, high predictability, tedious carpentry per design (~2 weeks, ~$2,000 per pair), poor multiplexing, large delivery payload."
+  },
+  {
+   "t": 208.6,
+   "text": "CRISPR: high convenience, fast iteration, cheap guides (~$5, overnight), easy multiplexing, but historically higher off-target rates (largely fixed in modern high-fidelity variants) and more guide-to-guide activity variability."
+  },
+  {
+   "t": 223.55,
+   "text": "Rule of thumb: CRISPR for most research labs; TALENs for therapeutic editing, mitochondrial editing, difficult targets, certain agricultural products."
+  },
+  {
+   "t": 233.35,
+   "text": "Therapeutic applications."
+  },
+  {
+   "t": 235.29,
+   "text": "Cellectis uses TALENs to engineer allogeneic UCART (Universal CAR-T) therapies — donor T cells with TRAC and CD52 knocked out, plus a CAR inserted, for off-the-shelf cancer cell therapy."
+  },
+  {
+   "t": 249.53,
+   "text": "Notable: UCART19 for B-ALL (Layla Richards case, 2015), UCART123 for AML, UCART22, UCARTCS1."
+  },
+  {
+   "t": 260.05,
+   "text": "TALEN-based mitochondrial base editors (DddA fusions) for mitochondrial disease — a uniquely TALE-accessible application."
+  },
+  {
+   "t": 269.52,
+   "text": "Agricultural applications."
+  },
+  {
+   "t": 271.51,
+   "text": "Slick-coat cattle (Acceligen, FDA-cleared 2022) — heat-tolerant dairy cattle via PRLR edit."
+  },
+  {
+   "t": 279.12,
+   "text": "Hornless dairy cattle — animal welfare improvement."
+  },
+  {
+   "t": 282.56,
+   "text": "High-oleic soybean (Calyxt, marketed 2019) — first commercially marketed TALEN-edited food crop."
+  },
+  {
+   "t": 290.0,
+   "text": "Disease-resistant pigs — PRRSV resistance, others."
+  },
+  {
+   "t": 294.36,
+   "text": "TALE-fusions beyond cutting."
+  },
+  {
+   "t": 296.55,
+   "text": "TALE-TF (VP64 activator or KRAB repressor) — programmable gene activation/repression."
+  },
+  {
+   "t": 304.71,
+   "text": "TALE-fluorophore (TALE-GFP) — live-cell DNA imaging of specific loci."
+  },
+  {
+   "t": 310.83,
+   "text": "TALE-recombinase, TALE-methyltransferase, TALE-histone modifier — programmable site-specific recombination and epigenome editing."
+  },
+  {
+   "t": 319.84,
+   "text": "TALE-DddA — programmable mitochondrial base editing."
+  },
+  {
+   "t": 324.83,
+   "text": "Construction."
+  },
+  {
+   "t": 325.9,
+   "text": "Golden Gate assembly with Type IIS enzymes (BsaI, BsmBI) and pre-made RVD libraries (Voytas/Bogdanove MR/AB sets, Joung Lab TALE Toolbox, distributed via Addgene)."
+  },
+  {
+   "t": 341.13,
+   "text": "One-pot directional assembly of 15–20 repeats in 2 days."
+  },
+  {
+   "t": 346.33,
+   "text": "History."
+  },
+  {
+   "t": 347.21,
+   "text": "1990s–2000s: Zinc finger nucleases (ZFNs) — first programmable nucleases, but hard to design, context-sensitive, expensive."
+  },
+  {
+   "t": 358.39,
+   "text": "2009: Boch and Moscou independently decode the TALE recognition code."
+  },
+  {
+   "t": 364.4,
+   "text": "2010–2011: First TALENs published, applied to genome editing."
+  },
+  {
+   "t": 370.14,
+   "text": "2012–2015: TALENs are the dominant programmable nuclease in research and early therapeutic development."
+  },
+  {
+   "t": 379.13,
+   "text": "2012 onward: CRISPR-Cas9 emerges and progressively displaces TALENs in research, but TALENs persist in therapeutics, agriculture, and special applications."
+  },
+  {
+   "t": 391.04,
+   "text": "2020: TALE-DddA mitochondrial base editor opens a new application area."
+  },
+  {
+   "t": 397.46,
+   "text": "2022: First TALEN-edited animal (slick cattle) clears FDA for marketing."
+  },
+  {
+   "t": 403.93,
+   "text": "Frontier directions."
+  },
+  {
+   "t": 405.51,
+   "text": "Compact TALE scaffolds for viral delivery."
+  },
+  {
+   "t": 408.84,
+   "text": "Improved RVDs (NH, NK) for cleaner specificity."
+  },
+  {
+   "t": 414.48,
+   "text": "TALE-based base editors and prime editors."
+  },
+  {
+   "t": 417.46,
+   "text": "Hybrid TALE-CRISPR systems."
+  },
+  {
+   "t": 420.11,
+   "text": "Mitochondrial editing translation to clinic."
+  },
+  {
+   "t": 423.21,
+   "text": "Industrial and biosensor applications of TALE recognition modules."
+  }
+ ]
+}

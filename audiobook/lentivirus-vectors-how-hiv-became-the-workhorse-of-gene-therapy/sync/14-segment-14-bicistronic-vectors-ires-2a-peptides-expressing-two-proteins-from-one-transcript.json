@@ -1,0 +1,147 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Bicistronic vectors: IRES, 2A peptides, expressing two proteins from one transcript",
+ "duration": 226.56,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Bicistronic vectors: IRES, 2A peptides, expressing two proteins from one transcript"
+  },
+  {
+   "t": 8.65,
+   "text": "Often you want a lentiviral vector to express more than one protein."
+  },
+  {
+   "t": 13.21,
+   "text": "A CAR plus a fluorescent reporter so you can sort for transduced cells."
+  },
+  {
+   "t": 17.75,
+   "text": "Cas9 plus a guide RNA."
+  },
+  {
+   "t": 20.19,
+   "text": "A transcription factor plus a selectable marker."
+  },
+  {
+   "t": 23.74,
+   "text": "Two subunits of a heteromeric receptor."
+  },
+  {
+   "t": 26.79,
+   "text": "The cargo capacity of lentivirus is large enough to accommodate two coding sequences, but you have to arrange them so both get translated."
+  },
+  {
+   "t": 35.65,
+   "text": "There are two main strategies."
+  },
+  {
+   "t": 37.51,
+   "text": "IRES — internal ribosome entry site."
+  },
+  {
+   "t": 40.83,
+   "text": "An IRES is a structured RNA element, usually 500 to 600 nucleotides long, that recruits ribosomes directly without needing a 5' cap."
+  },
+  {
+   "t": 51.64,
+   "text": "The classic IRES is from encephalomyocarditis virus, EMCV."
+  },
+  {
+   "t": 56.76,
+   "text": "You design a bicistronic mRNA with the first coding sequence at the 5' end, an IRES in the middle, and the second coding sequence downstream."
+  },
+  {
+   "t": 66.42,
+   "text": "The first ORF gets translated normally by cap-dependent scanning."
+  },
+  {
+   "t": 70.94,
+   "text": "The IRES recruits ribosomes to its internal site, and they initiate translation of the second ORF."
+  },
+  {
+   "t": 78.06,
+   "text": "Both proteins get made from one transcript."
+  },
+  {
+   "t": 80.79,
+   "text": "The drawbacks of IRES: it's big — 500-600 bp eats into your cargo budget."
+  },
+  {
+   "t": 87.42,
+   "text": "And the second ORF usually gets translated at 10 to 20 percent of the efficiency of the first."
+  },
+  {
+   "t": 93.84,
+   "text": "So the stoichiometry is unbalanced."
+  },
+  {
+   "t": 96.9,
+   "text": "If you want roughly equal amounts of both proteins, you put the one you need less of downstream of the IRES."
+  },
+  {
+   "t": 103.96,
+   "text": "2A peptides — self-cleaving peptides."
+  },
+  {
+   "t": 107.3,
+   "text": "This is the more popular modern approach."
+  },
+  {
+   "t": 109.66,
+   "text": "A 2A peptide is a short sequence, about 18 to 22 amino acids, derived from picornaviruses (T2A from Thosea asigna virus, P2A from porcine teschovirus, E2A, F2A from other species)."
+  },
+  {
+   "t": 126.42,
+   "text": "The mechanism is technically not cleavage — it's a ribosomal skip."
+  },
+  {
+   "t": 131.04,
+   "text": "The ribosome, encountering the 2A sequence, fails to form a peptide bond between a glycine and a proline at the end of the 2A, releases the upstream protein, and continues translating the downstream protein."
+  },
+  {
+   "t": 144.78,
+   "text": "So you end up with two separate proteins from one ORF."
+  },
+  {
+   "t": 148.11,
+   "text": "2A peptides are tiny — 60 nucleotides instead of 600 for an IRES."
+  },
+  {
+   "t": 154.66,
+   "text": "The stoichiometry is much more balanced — both proteins are made at near-equal levels."
+  },
+  {
+   "t": 160.59,
+   "text": "The upstream protein ends up with the 2A sequence appended to its C terminus, which is a few extra amino acids you have to think about for some applications."
+  },
+  {
+   "t": 170.32,
+   "text": "The downstream protein ends up with a single extra proline at its N terminus."
+  },
+  {
+   "t": 175.45,
+   "text": "You can chain 2A peptides — P2A and T2A in sequence — to express three or even four proteins from one ORF."
+  },
+  {
+   "t": 185.29,
+   "text": "CAR-T constructs often use a 2A to link the CAR to a truncated EGFR or CD20 marker that allows the cells to be tracked and, if necessary, depleted with an antibody."
+  },
+  {
+   "t": 197.71,
+   "text": "Cas9 plus guide RNA constructs sometimes use 2A to link Cas9 to a fluorescent reporter or selection marker."
+  },
+  {
+   "t": 206.12,
+   "text": "For most modern applications, 2A has replaced IRES as the default for multi-cistronic expression."
+  },
+  {
+   "t": 212.89,
+   "text": "IRES is still around for cases where you want very different stoichiometries, or where the upstream protein cannot tolerate a C-terminal extension."
+  },
+  {
+   "t": 221.85,
+   "text": "But if you're designing a new bicistronic vector today, start with a 2A."
+  }
+ ]
+}

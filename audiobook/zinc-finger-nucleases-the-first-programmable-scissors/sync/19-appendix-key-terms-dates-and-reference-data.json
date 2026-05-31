@@ -1,0 +1,439 @@
+{
+ "n": 19,
+ "title": "APPENDIX — Key terms, dates, and reference data",
+ "duration": 811.67,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX — Key terms, dates, and reference data"
+  },
+  {
+   "t": 3.94,
+   "text": "This appendix is meant as a quick-reference card for the technical and historical material covered in the lecture."
+  },
+  {
+   "t": 10.41,
+   "text": "It is not part of the spoken script; it is provided so that students can review the material in compact form before exams or while reading further."
+  },
+  {
+   "t": 18.95,
+   "text": "Aaron Klug — South African-born British crystallographer, Nobel laureate in Chemistry 1982 for the development of electron crystallography of biological macromolecules."
+  },
+  {
+   "t": 31.81,
+   "text": "Discovered and characterized the Cys2-His2 zinc finger motif in the mid-1980s while studying the transcription factor TFIIIA from Xenopus."
+  },
+  {
+   "t": 41.67,
+   "text": "Cys2-His2 zinc finger — A small protein folding unit, approximately 30 amino acids long, stabilized by a single zinc ion coordinated by two cysteine and two histidine residues."
+  },
+  {
+   "t": 55.33,
+   "text": "The most common DNA-binding motif in the eukaryotic genome; approximately 3% of human genes encode proteins containing zinc fingers."
+  },
+  {
+   "t": 65.5,
+   "text": "Each finger contacts approximately 3 base pairs of DNA in the major groove."
+  },
+  {
+   "t": 71.11,
+   "text": "Zinc finger array — A linear arrangement of multiple zinc fingers connected by short flexible linkers (typically the TGEKP sequence), used to recognize longer DNA sequences."
+  },
+  {
+   "t": 82.83,
+   "text": "Three-finger arrays recognize 9 bases; four-finger arrays recognize 12 bases; six-finger arrays recognize 18 bases."
+  },
+  {
+   "t": 92.11,
+   "text": "Arrays of more than four fingers are uncommon in engineered ZFNs due to context dependence problems."
+  },
+  {
+   "t": 98.86,
+   "text": "Context dependence — The phenomenon by which the DNA-binding behavior of one zinc finger is influenced by its neighbors in an array, due to inter-finger contacts, DNA bending, and overlapping binding contacts."
+  },
+  {
+   "t": 113.1,
+   "text": "The main reason why naive modular assembly of zinc finger arrays succeeds only about 30% of the time."
+  },
+  {
+   "t": 120.58,
+   "text": "Modular assembly — The original approach to designing zinc finger arrays, based on snapping together pre-validated fingers from a library, one per target codon."
+  },
+  {
+   "t": 131.57,
+   "text": "Suffers from context dependence problems."
+  },
+  {
+   "t": 134.28,
+   "text": "OPEN — Oligomerized Pool Engineering."
+  },
+  {
+   "t": 137.46,
+   "text": "An assembly method developed primarily in the Joung lab that uses bacterial selection to identify finger combinations that work well together for a given target."
+  },
+  {
+   "t": 147.93,
+   "text": "CoDA — Context-Dependent Assembly."
+  },
+  {
+   "t": 150.85,
+   "text": "An assembly method developed by the Joung lab that uses pre-validated finger pairs rather than individual fingers, with higher success rates but more limited targetable space."
+  },
+  {
+   "t": 161.96,
+   "text": "FokI — A type IIS restriction enzyme from Flavobacterium okeanokoites."
+  },
+  {
+   "t": 168.41,
+   "text": "Its cleavage domain operates independently of its DNA-recognition domain, making it useful as a generic cutting module that can be fused to any DNA-binding domain."
+  },
+  {
+   "t": 179.12,
+   "text": "The cleavage domain requires dimerization to cut."
+  },
+  {
+   "t": 182.82,
+   "text": "ZFN (Zinc Finger Nuclease) — A chimeric protein composed of an engineered zinc finger array fused to the FokI cleavage domain."
+  },
+  {
+   "t": 192.18,
+   "text": "Used in pairs, with each ZFN binding one half of a target site on opposite strands, separated by a 5-7 base spacer."
+  },
+  {
+   "t": 201.64,
+   "text": "The FokI domains dimerize across the spacer to introduce a double-strand break."
+  },
+  {
+   "t": 207.53,
+   "text": "First demonstrated by Chandrasegaran's lab in 1996."
+  },
+  {
+   "t": 212.14,
+   "text": "Obligate heterodimer FokI — Engineered variants of the FokI cleavage domain with charge-swap mutations at the dimer interface, designed to prevent homodimerization."
+  },
+  {
+   "t": 223.28,
+   "text": "The two variants only dimerize with each other, not with themselves."
+  },
+  {
+   "t": 227.95,
+   "text": "Substantially reduces off-target cutting."
+  },
+  {
+   "t": 230.91,
+   "text": "Common variant pairs include ELD/KKR."
+  },
+  {
+   "t": 235.45,
+   "text": "Developed around 2007."
+  },
+  {
+   "t": 238.01,
+   "text": "Sharkey — A directed-evolution variant of FokI with enhanced catalytic activity, developed in the lab of David Liu at Harvard."
+  },
+  {
+   "t": 246.97,
+   "text": "Often combined with obligate heterodimer architecture in modern ZFN designs."
+  },
+  {
+   "t": 252.31,
+   "text": "NHEJ (Non-Homologous End Joining) — The cell's fast, sloppy double-strand break repair pathway."
+  },
+  {
+   "t": 259.29,
+   "text": "Active throughout the cell cycle."
+  },
+  {
+   "t": 261.76,
+   "text": "Introduces small insertions or deletions (indels) at repair sites at a rate of approximately 30-70%."
+  },
+  {
+   "t": 270.43,
+   "text": "Used in ZFN gene-knockout applications."
+  },
+  {
+   "t": 273.93,
+   "text": "HDR (Homology-Directed Repair) — The cell's careful, template-based double-strand break repair pathway."
+  },
+  {
+   "t": 281.21,
+   "text": "Active primarily in late S and G2 phases."
+  },
+  {
+   "t": 285.04,
+   "text": "Used in ZFN knock-in applications when an external donor DNA template is provided."
+  },
+  {
+   "t": 290.38,
+   "text": "Efficiency typically 1-5%, much lower than NHEJ."
+  },
+  {
+   "t": 295.12,
+   "text": "ZFP-TF (Zinc Finger Protein - Transcription Factor) — An engineered transcription factor consisting of a zinc finger array fused to an activation domain (e.g., VP64) or a repression domain (e.g., KRAB)."
+  },
+  {
+   "t": 311.84,
+   "text": "Modulates gene expression without cutting DNA."
+  },
+  {
+   "t": 315.45,
+   "text": "Used by Sangamo in clinical programs for tauopathies, Huntington's disease, and others."
+  },
+  {
+   "t": 321.44,
+   "text": "VP64 — A strong activation domain consisting of four tandem copies of the activation region of the herpes simplex virus protein VP16."
+  },
+  {
+   "t": 331.73,
+   "text": "Standard activator domain for ZFP-activator and CRISPRa constructs."
+  },
+  {
+   "t": 337.44,
+   "text": "KRAB — Krüppel-associated box."
+  },
+  {
+   "t": 340.33,
+   "text": "A natural repression domain found in many human zinc finger proteins."
+  },
+  {
+   "t": 345.19,
+   "text": "Standard repressor domain for ZFP-repressor and CRISPRi constructs."
+  },
+  {
+   "t": 350.83,
+   "text": "CCR5 — C-C chemokine receptor type 5."
+  },
+  {
+   "t": 355.09,
+   "text": "A co-receptor used by most HIV strains to enter CD4 T cells."
+  },
+  {
+   "t": 360.73,
+   "text": "The target of Sangamo's first ZFN clinical program."
+  },
+  {
+   "t": 365.07,
+   "text": "CCR5-delta-32 — A natural deletion in the CCR5 gene that confers resistance to HIV infection in homozygous individuals."
+  },
+  {
+   "t": 376.95,
+   "text": "Approximately 1% of people of European ancestry are homozygous."
+  },
+  {
+   "t": 382.09,
+   "text": "The biological basis for the CCR5-ZFN therapeutic strategy."
+  },
+  {
+   "t": 388.29,
+   "text": "Berlin Patient (Timothy Ray Brown) — HIV-positive man who was effectively cured of HIV in 2008 after receiving a bone marrow transplant from a donor homozygous for CCR5-delta-32."
+  },
+  {
+   "t": 402.79,
+   "text": "The first documented HIV cure."
+  },
+  {
+   "t": 405.23,
+   "text": "Proof of concept for the CCR5-disruption therapeutic approach."
+  },
+  {
+   "t": 410.27,
+   "text": "Sangamo Therapeutics — Biotech company founded in 1995, based in Richmond, California."
+  },
+  {
+   "t": 417.05,
+   "text": "The dominant industrial developer of zinc finger nuclease technology."
+  },
+  {
+   "t": 421.88,
+   "text": "Pioneered the first clinical use of programmable nucleases in humans (CCR5-ZFN trial)."
+  },
+  {
+   "t": 429.58,
+   "text": "Current clinical pipeline includes ZFN and ZFP-TF programs for sickle cell disease, beta thalassemia, Hunter syndrome, Hurler syndrome, Fabry disease, and tauopathies."
+  },
+  {
+   "t": 441.6,
+   "text": "Srinivasan Chandrasegaran — Researcher at Johns Hopkins University who, in 1996, first fused a zinc finger array to the FokI cleavage domain, creating the first zinc finger nuclease."
+  },
+  {
+   "t": 455.28,
+   "text": "The foundational invention of the programmable nuclease era."
+  },
+  {
+   "t": 459.5,
+   "text": "Carl Pabo — Structural biologist who established much of the molecular understanding of zinc finger-DNA recognition through crystallographic studies in the 1990s."
+  },
+  {
+   "t": 470.53,
+   "text": "Carlos Barbas — Researcher at Scripps who published widely-used libraries of zinc fingers with characterized three-base specificities."
+  },
+  {
+   "t": 479.65,
+   "text": "Keith Joung — Researcher at Harvard who developed the OPEN and CoDA assembly methods and contributed to the Zinc Finger Consortium's open-source efforts."
+  },
+  {
+   "t": 489.37,
+   "text": "Zinc Finger Consortium — A collaborative academic effort, primarily in the late 2000s, to develop and distribute open-source ZFN reagents to bypass commercial IP barriers."
+  },
+  {
+   "t": 502.02,
+   "text": "Distributed reagents through Addgene and other channels."
+  },
+  {
+   "t": 505.85,
+   "text": "Addgene — Nonprofit plasmid repository that distributes plasmids including many zinc finger and ZFN reagents to academic researchers worldwide."
+  },
+  {
+   "t": 516.49,
+   "text": "AAV (Adeno-Associated Virus) — A small non-pathogenic virus used as a delivery vehicle for in vivo gene therapy."
+  },
+  {
+   "t": 524.38,
+   "text": "Cargo capacity approximately 4-5 kb."
+  },
+  {
+   "t": 528.29,
+   "text": "Used to deliver ZFNs to liver and other tissues in clinical programs."
+  },
+  {
+   "t": 533.44,
+   "text": "Electroporation — A delivery method that uses brief electrical pulses to create transient pores in cell membranes, allowing uptake of DNA, mRNA, or protein."
+  },
+  {
+   "t": 545.22,
+   "text": "The standard delivery method for ex vivo ZFN editing of T cells and hematopoietic stem cells."
+  },
+  {
+   "t": 552.27,
+   "text": "Ex vivo editing — A therapeutic workflow in which cells are removed from the patient, edited in the lab, and returned to the patient."
+  },
+  {
+   "t": 560.72,
+   "text": "Used for CCR5-ZFN and for most current CRISPR-based cell therapies."
+  },
+  {
+   "t": 566.4,
+   "text": "In vivo editing — A therapeutic workflow in which the editing reagent is delivered directly to cells inside the patient, typically via viral vector."
+  },
+  {
+   "t": 576.52,
+   "text": "Used for some Sangamo programs targeting liver hepatocytes and central nervous system neurons."
+  },
+  {
+   "t": 582.55,
+   "text": "TALEN (Transcription Activator-Like Effector Nuclease) — A programmable nuclease developed around 2010-2011 using TALE proteins from plant pathogens as the DNA-binding domain, fused to FokI."
+  },
+  {
+   "t": 597.82,
+   "text": "Easier to design than ZFNs due to a strict one-module-per-base architecture, but proteins are larger."
+  },
+  {
+   "t": 605.07,
+   "text": "CRISPR-Cas9 — RNA-guided programmable nuclease developed for genome editing around 2012-2013."
+  },
+  {
+   "t": 614.21,
+   "text": "Uses a guide RNA for DNA targeting instead of a protein-based recognition domain."
+  },
+  {
+   "t": 620.74,
+   "text": "Much easier and cheaper to design than ZFNs."
+  },
+  {
+   "t": 624.69,
+   "text": "The dominant academic gene-editing technology since the mid-2010s."
+  },
+  {
+   "t": 629.82,
+   "text": "Base editing — A genome-editing technique that chemically modifies a single DNA base without making a double-strand break, using a deaminase fused to a catalytically impaired Cas9 or zinc finger."
+  },
+  {
+   "t": 643.42,
+   "text": "Allows precise single-letter edits."
+  },
+  {
+   "t": 646.06,
+   "text": "Developed in David Liu's lab at Harvard."
+  },
+  {
+   "t": 649.09,
+   "text": "Key dates:"
+  },
+  {
+   "t": 650.18,
+   "text": "1985: Klug and Miller describe the Cys2-His2 zinc finger motif in TFIIIA."
+  },
+  {
+   "t": 657.17,
+   "text": "1991-1996: Structural and biochemical work by Pabo, Berg, and others establishes the zinc finger DNA-recognition code."
+  },
+  {
+   "t": 667.33,
+   "text": "1996: Chandrasegaran's lab publishes the first zinc finger nuclease, fusing a three-finger array to the FokI cleavage domain."
+  },
+  {
+   "t": 677.07,
+   "text": "1995: Sangamo BioSciences founded."
+  },
+  {
+   "t": 680.92,
+   "text": "2001: Sangamo acquires Gendaq, consolidating zinc finger IP."
+  },
+  {
+   "t": 686.58,
+   "text": "2005-2007: Modular assembly libraries published by Barbas and others; OPEN and CoDA methods developed by Joung lab."
+  },
+  {
+   "t": 696.26,
+   "text": "2007: Obligate heterodimer FokI variants developed by Cathomen and Sangamo."
+  },
+  {
+   "t": 703.13,
+   "text": "2008: First CCR5-ZFN clinical trial begins."
+  },
+  {
+   "t": 709.04,
+   "text": "2010-2011: TALENs developed and published."
+  },
+  {
+   "t": 713.83,
+   "text": "2012-2013: CRISPR-Cas9 published as a programmable genome-editing tool."
+  },
+  {
+   "t": 721.02,
+   "text": "2014: NEJM publication of first CCR5-ZFN trial results."
+  },
+  {
+   "t": 728.64,
+   "text": "2016-2017: First in vivo ZFN clinical trial (Sangamo, hemophilia and Hunter syndrome programs)."
+  },
+  {
+   "t": 737.73,
+   "text": "2017: Base editing published by David Liu's lab."
+  },
+  {
+   "t": 742.28,
+   "text": "2023: First CRISPR-based therapy approved (Casgevy for sickle cell disease)."
+  },
+  {
+   "t": 748.01,
+   "text": "2020s: Ongoing development of ZFP-TF programs for neurodegenerative disease; zinc finger base editor development; renewed interest in zinc fingers for in vivo applications."
+  },
+  {
+   "t": 760.47,
+   "text": "Approximate sizing reference:"
+  },
+  {
+   "t": 762.58,
+   "text": "Single zinc finger: ~30 amino acids Three-finger zinc finger array: ~90 amino acids plus linkers, ~10 kDa FokI cleavage domain: ~200 amino acids, ~25 kDa Single ZFN protein: ~35 kDa total TALEN protein: ~120 kDa Cas9 protein: ~160 kDa Coding gene for single ZFN: ~1 kb Coding gene for Cas9: ~4 kb"
+  },
+  {
+   "t": 789.22,
+   "text": "Approximate editing efficiencies (very rough, depend heavily on target and cell type"
+  },
+  {
+   "t": 795.12,
+   "text": "NHEJ-mediated knockout with optimized ZFN: 30-70% HDR-mediated knock-in with optimized ZFN plus donor: 1-10% ZFP-TF activation or repression: 5-20 fold modulation of target gene expression"
+  }
+ ]
+}

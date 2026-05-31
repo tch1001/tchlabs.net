@@ -1,0 +1,247 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Tissue tropism: AAV9 to brain, AAV8 to liver, AAV2 to retina",
+ "duration": 505.47,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Tissue tropism: AAV9 to brain, AAV8 to liver, AAV2 to retina"
+  },
+  {
+   "t": 8.21,
+   "text": "So we've established that different capsids go to different tissues."
+  },
+  {
+   "t": 12.49,
+   "text": "Now I want to spend a segment on why — what's the molecular mechanism by which an AAV capsid \"decides\" which tissues to enter — and on the practical tissue-by-tissue map that you'll use when you're picking a capsid for a project."
+  },
+  {
+   "t": 24.9,
+   "text": "The mechanism, in broad outline, is this."
+  },
+  {
+   "t": 28.11,
+   "text": "The cell surface of any tissue is covered with thousands of different proteins, sugars, and glycolipids — the glycocalyx, the sticky outer coat of a cell."
+  },
+  {
+   "t": 38.41,
+   "text": "Different tissues have different cell-surface compositions."
+  },
+  {
+   "t": 42.05,
+   "text": "The AAV capsid surface displays patches that bind certain of those cell-surface molecules with reasonable affinity."
+  },
+  {
+   "t": 49.69,
+   "text": "If a tissue presents the right molecule on its surface, the capsid binds, the cell internalizes the bound particle (typically via clathrin-mediated endocytosis or similar pathways), and the virus enters the cell."
+  },
+  {
+   "t": 63.74,
+   "text": "If the tissue doesn't present the right molecule, the capsid doesn't stick, and the virus circulates past."
+  },
+  {
+   "t": 70.95,
+   "text": "So tissue tropism is really receptor matching."
+  },
+  {
+   "t": 74.78,
+   "text": "Each serotype has evolved to bind one or a few specific cell-surface molecules, and the distribution of those molecules across tissues determines where the virus accumulates."
+  },
+  {
+   "t": 86.1,
+   "text": "A few concrete examples to fix this in your mind."
+  },
+  {
+   "t": 89.5,
+   "text": "AAV2 binds heparan sulfate proteoglycans (HSPG) as its primary cell-surface attachment receptor."
+  },
+  {
+   "t": 97.92,
+   "text": "HSPGs are highly expressed on many cell types, which is why AAV2 has fairly broad tropism in cell culture, but in vivo the distribution and accessibility of HSPGs varies — and in addition to HSPG, AAV2 needs a co-receptor (like the fibroblast growth factor receptor or integrins) to actually be internalized efficiently."
+  },
+  {
+   "t": 120.99,
+   "text": "So even though HSPG is everywhere, AAV2's in vivo tropism is more restricted than you might predict, and it has been particularly successful for delivery to the eye via subretinal injection."
+  },
+  {
+   "t": 134.71,
+   "text": "AAV5 binds sialic acids — specifically N-linked sialic acids on glycoproteins."
+  },
+  {
+   "t": 141.18,
+   "text": "Sialic acid distribution shapes its tropism toward retina, airway epithelium, and certain CNS tissues."
+  },
+  {
+   "t": 149.88,
+   "text": "AAV6 binds both sialic acids and HSPG, which combined with some post-entry properties makes it good for muscle and hematopoietic cells."
+  },
+  {
+   "t": 159.76,
+   "text": "AAV8 and AAV9 were both originally found to bind a particular glycan called N-linked galactose as their primary receptor, although there's also a protein receptor called AAVR (a multi-pass transmembrane protein, technically KIAA0319L) that nearly all AAVs require for productive entry."
+  },
+  {
+   "t": 180.43,
+   "text": "AAVR is on the surface of most cell types, so it's not the main determinant of tropism, but it's required — knock out AAVR in cells, and almost no AAV serotype can transduce them."
+  },
+  {
+   "t": 193.05,
+   "text": "Then on top of AAVR, each serotype has its own preferred attachment molecule that biases it toward particular tissues."
+  },
+  {
+   "t": 200.78,
+   "text": "AAV9's galactose binding, combined with its ability to cross certain endothelial barriers, gives it the systemic and CNS distribution that makes it so clinically useful."
+  },
+  {
+   "t": 212.0,
+   "text": "Now let me give you the practical tissue map."
+  },
+  {
+   "t": 214.35,
+   "text": "If you're a researcher or a clinician trying to pick a capsid for a particular tissue, here is roughly what the field uses today."
+  },
+  {
+   "t": 222.06,
+   "text": "Liver — AAV8."
+  },
+  {
+   "t": 224.04,
+   "text": "Or AAV5, or AAV-LK03 (a hybrid)."
+  },
+  {
+   "t": 229.81,
+   "text": "AAV8 is the workhorse; intravenous injection puts the vast majority of dose into hepatocytes."
+  },
+  {
+   "t": 237.12,
+   "text": "This is why so many of the inherited metabolic and clotting disorders — hemophilia A and B, ornithine transcarbamylase deficiency, various lysosomal storage diseases — have been targeted with AAV8-based therapies."
+  },
+  {
+   "t": 251.45,
+   "text": "Retina — AAV2 for retinal pigment epithelium (RPE) via subretinal injection."
+  },
+  {
+   "t": 259.14,
+   "text": "AAV8 for photoreceptors."
+  },
+  {
+   "t": 261.64,
+   "text": "Engineered variants like AAV2.7m8 for intravitreal injection that better penetrates the retinal layers without requiring subretinal surgery."
+  },
+  {
+   "t": 272.43,
+   "text": "The retina is small, immune-privileged, and easy to inject locally with very small AAV doses, which has made it the first really successful clinical target."
+  },
+  {
+   "t": 283.11,
+   "text": "Central nervous system, broad — AAV9 via intravenous, intrathecal, or intracerebroventricular routes for systemic CNS coverage."
+  },
+  {
+   "t": 293.13,
+   "text": "In mice, AAV-PHP.eB via tail vein gives spectacular brain-wide labeling, but as I'll repeat in Segment 18, PHP.eB doesn't translate well to primates."
+  },
+  {
+   "t": 305.83,
+   "text": "Central nervous system, focal — direct injection of AAV2, AAV5, or AAVrh10 into specific brain regions."
+  },
+  {
+   "t": 315.84,
+   "text": "Used for things like delivering aromatic L-amino acid decarboxylase into the striatum for Parkinson's-related trials, or delivering gene therapy directly into the basal ganglia."
+  },
+  {
+   "t": 328.48,
+   "text": "Skeletal muscle, focal — AAV1, AAV6, AAV8, AAV9 via intramuscular injection."
+  },
+  {
+   "t": 337.06,
+   "text": "Skeletal muscle, systemic — AAV9, AAVrh74, or engineered \"myotropic\" capsids like AAV-MYO via intravenous injection."
+  },
+  {
+   "t": 348.16,
+   "text": "Used in Duchenne muscular dystrophy trials."
+  },
+  {
+   "t": 351.28,
+   "text": "Heart — AAV9, AAV6, AAV1 via intracoronary or intravenous administration."
+  },
+  {
+   "t": 358.44,
+   "text": "Lung — historically a hard target."
+  },
+  {
+   "t": 360.93,
+   "text": "AAV6 has some lung tropism."
+  },
+  {
+   "t": 363.37,
+   "text": "Engineered variants are being developed."
+  },
+  {
+   "t": 365.87,
+   "text": "T cells (ex vivo)** — AAV6 is the standard for ex vivo transduction of primary T cells, used in some next-generation gene-edited cell therapies."
+  },
+  {
+   "t": 376.46,
+   "text": "A practical note about how dose interacts with tropism."
+  },
+  {
+   "t": 380.29,
+   "text": "When we say AAV8 is \"the liver capsid,\" we don't mean every single particle goes to the liver."
+  },
+  {
+   "t": 387.13,
+   "text": "We mean that when you administer a clinical-size dose intravenously, a very large fraction of the particles end up in hepatocytes — maybe seventy or eighty percent or more — and the remainder distributes to other tissues at much lower levels."
+  },
+  {
+   "t": 402.39,
+   "text": "Tropism is a statistical bias, not a deterministic address."
+  },
+  {
+   "t": 406.82,
+   "text": "And it can be modulated by the route of administration — direct intramuscular injection of AAV8 puts the dose in muscle, even though intravenous AAV8 would have gone to liver."
+  },
+  {
+   "t": 417.86,
+   "text": "The route is part of the targeting strategy."
+  },
+  {
+   "t": 420.34,
+   "text": "It can also be modulated by the dose."
+  },
+  {
+   "t": 422.73,
+   "text": "At very high doses, the tropism-defining receptor on the preferred tissue gets saturated, and \"spillover\" to other tissues becomes significant."
+  },
+  {
+   "t": 432.46,
+   "text": "Clinical AAV gene therapies are typically administered at doses of 10^13 to 10^14 vector genomes per kilogram of body weight — that's between ten trillion and a hundred trillion particles per kilogram, which for an adult means between 10^14 and 10^16 particles total in a single intravenous dose."
+  },
+  {
+   "t": 454.99,
+   "text": "Those numbers are enormous, and at those doses you do get distribution to multiple tissues even with the most selective capsids."
+  },
+  {
+   "t": 464.11,
+   "text": "The tropism wins on average, but the tails of the distribution matter."
+  },
+  {
+   "t": 468.52,
+   "text": "Last point on tropism: it differs between species."
+  },
+  {
+   "t": 472.08,
+   "text": "AAV9 crosses the blood-brain barrier well in mice and reasonably well in non-human primates and infant humans, but adult human BBB penetration is more modest."
+  },
+  {
+   "t": 483.38,
+   "text": "AAV-PHP.eB, again, works astonishingly in mice but barely at all in primates."
+  },
+  {
+   "t": 490.31,
+   "text": "Always check that the capsid tropism you're relying on has been validated in the species you actually care about."
+  },
+  {
+   "t": 497.33,
+   "text": "Mouse-to-human translation of capsid tropism is one of the leading sources of clinical disappointment in AAV gene therapy."
+  }
+ ]
+}

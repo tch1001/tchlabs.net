@@ -1,0 +1,171 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — TALEN limitations vs CRISPR — synthesis cost, design time",
+ "duration": 325.67,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — TALEN limitations vs CRISPR — synthesis cost, design time"
+  },
+  {
+   "t": 6.28,
+   "text": "Let me steelman the case for CRISPR over TALENs, because for the average research lab, doing the average gene editing experiment, the case is overwhelming."
+  },
+  {
+   "t": 15.94,
+   "text": "Here is the analogy I want to use, and I want it to land."
+  },
+  {
+   "t": 20.35,
+   "text": "Engineering a TALEN is tedious carpentry."
+  },
+  {
+   "t": 23.56,
+   "text": "For every new cut site, you have to build a custom protein array, repeat by repeat."
+  },
+  {
+   "t": 28.95,
+   "text": "Engineering a CRISPR is more like just typing a search query — you change a 20-base guide RNA sequence in the same Cas9 protein, and you're done."
+  },
+  {
+   "t": 38.25,
+   "text": "The Cas9 protein itself is the same for every target; only the small guide RNA changes."
+  },
+  {
+   "t": 45.01,
+   "text": "The guide RNA is cheap to synthesize — a single oligonucleotide order, costing a few dollars, ready overnight."
+  },
+  {
+   "t": 52.92,
+   "text": "A TALEN, by contrast, requires building a whole new protein gene with twenty custom repeats arrayed in the right order."
+  },
+  {
+   "t": 60.8,
+   "text": "Even with Golden Gate making this much easier than it would otherwise be, it's still a multi-day construction job, requires careful sequence verification, and costs significantly more per design."
+  },
+  {
+   "t": 72.65,
+   "text": "So if you want to edit ten different genes in parallel, with CRISPR you order ten guide RNAs — a hundred dollars, a day of waiting."
+  },
+  {
+   "t": 81.04,
+   "text": "With TALENs, you build twenty custom proteins (ten left, ten right), each a multi-day construction project."
+  },
+  {
+   "t": 89.0,
+   "text": "The scaling advantage of CRISPR is enormous."
+  },
+  {
+   "t": 92.21,
+   "text": "Let me put numbers on this."
+  },
+  {
+   "t": 93.89,
+   "text": "A typical TALEN pair, ordered as ready-made constructs from a commercial supplier, might cost two thousand dollars and take two weeks to deliver."
+  },
+  {
+   "t": 102.71,
+   "text": "A CRISPR guide RNA, ordered from the same kinds of suppliers, costs a few dollars per oligo and arrives the next day."
+  },
+  {
+   "t": 110.4,
+   "text": "For a small lab doing routine genome editing, the cost difference alone is dispositive."
+  },
+  {
+   "t": 116.67,
+   "text": "Beyond cost and time, there are other differences worth knowing."
+  },
+  {
+   "t": 120.45,
+   "text": "Multiplexing."
+  },
+  {
+   "t": 121.58,
+   "text": "With CRISPR, you can deliver multiple guide RNAs into the same cell to edit multiple genes simultaneously — multiplex editing."
+  },
+  {
+   "t": 130.85,
+   "text": "Each guide is tiny; you can easily deliver ten of them in one experiment."
+  },
+  {
+   "t": 135.61,
+   "text": "With TALENs, multiplex editing requires delivering multiple large protein-encoding genes, which is technically harder."
+  },
+  {
+   "t": 143.18,
+   "text": "CRISPR multiplexing has enabled experiments that would be impractical with TALENs — large-scale knockout screens covering thousands of genes, simultaneous editing of multiple loci to model polygenic diseases, and so on."
+  },
+  {
+   "t": 157.88,
+   "text": "Delivery."
+  },
+  {
+   "t": 158.81,
+   "text": "TALEN proteins are large — about 1,000 amino acids per monomer, or roughly 3 kilobases of DNA per gene."
+  },
+  {
+   "t": 167.44,
+   "text": "A TALEN pair, encoded as two genes, totals about 6 kilobases."
+  },
+  {
+   "t": 172.76,
+   "text": "That's a lot of cargo to deliver into cells, especially via viral vectors with packaging limits."
+  },
+  {
+   "t": 179.19,
+   "text": "CRISPR's Cas9, while also large at about 4 kilobases, is at least one gene for any target, and the small guide RNA adds little to delivery payload."
+  },
+  {
+   "t": 189.7,
+   "text": "For some delivery methods, particularly adeno-associated virus (AAV) vectors which have a packaging limit around 4.7 kilobases, TALENs are challenging to deliver and Cas9 is also tight; smaller Cas variants like Cas12 or compact engineered Cas9s have made viral delivery easier for CRISPR than for TALENs."
+  },
+  {
+   "t": 210.78,
+   "text": "Library-scale applications."
+  },
+  {
+   "t": 213.11,
+   "text": "Genome-wide CRISPR screens — where you deliver a library of tens of thousands of different guide RNAs to a population of cells, then ask which guides drop out under some selection pressure — have become a routine tool of modern biology, enabling discovery of gene functions across whole genomes in a single experiment."
+  },
+  {
+   "t": 234.85,
+   "text": "TALEN library screens are theoretically possible but practically far harder, because synthesizing libraries of distinct TALEN-encoding genes at scale is much more expensive than synthesizing libraries of guide RNA oligos."
+  },
+  {
+   "t": 249.03,
+   "text": "For most research questions, then, CRISPR wins on convenience, cost, speed, and scale."
+  },
+  {
+   "t": 255.28,
+   "text": "If you walk into a typical molecular biology lab today and ask \"what tool would you use to knock out gene X?"
+  },
+  {
+   "t": 262.59,
+   "text": "\", the answer will almost always be CRISPR."
+  },
+  {
+   "t": 265.31,
+   "text": "TALENs lost the popularity contest, and they lost it fairly."
+  },
+  {
+   "t": 269.67,
+   "text": "But — and here is where the picture gets interesting — for some applications, the advantages of TALENs (specificity, predictability, very low off-target rates, possibly slightly broader targetability) outweigh the disadvantages (cost, design time, harder multiplexing)."
+  },
+  {
+   "t": 286.22,
+   "text": "The applications where TALENs win tend to be those where you're going to invest significant effort in a small number of carefully chosen edits, and where being absolutely sure of where you cut is more important than being able to try many guides quickly."
+  },
+  {
+   "t": 299.65,
+   "text": "That, more or less, describes therapeutic genome editing, where each candidate cell therapy involves a small number of edits, validated to extraordinary depth, and infused into human patients."
+  },
+  {
+   "t": 312.82,
+   "text": "It's a context where the carpentry effort of TALEN construction is a small part of the total cost, and the specificity advantage is worth what it costs."
+  },
+  {
+   "t": 322.08,
+   "text": "Which brings us to Cellectis, and to the UCART program."
+  }
+ ]
+}

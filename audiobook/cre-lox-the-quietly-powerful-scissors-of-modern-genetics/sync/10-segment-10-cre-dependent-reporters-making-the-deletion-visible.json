@@ -1,0 +1,187 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Cre-dependent reporters — making the deletion visible",
+ "duration": 278.23,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Cre-dependent reporters — making the deletion visible"
+  },
+  {
+   "t": 5.0,
+   "text": "Welcome back."
+  },
+  {
+   "t": 6.0,
+   "text": "So far we've talked about Cre as a tool for deleting genes — flox a gene, add Cre in the right cell type, the gene disappears."
+  },
+  {
+   "t": 15.05,
+   "text": "But the very same machinery has a second, equally important use: turning genes on."
+  },
+  {
+   "t": 20.79,
+   "text": "Not just off."
+  },
+  {
+   "t": 21.81,
+   "text": "On."
+  },
+  {
+   "t": 22.52,
+   "text": "And the most common use of Cre-Lox in modern neuroscience and developmental biology is, frankly, not for knocking genes out but for switching reporter genes on — making a cell that has experienced Cre activity light up, permanently, in a chosen color, so that the cell and all its descendants can be tracked."
+  },
+  {
+   "t": 41.69,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 43.0,
+   "text": "Imagine you want to know which houses in a city had a particular package delivered."
+  },
+  {
+   "t": 47.92,
+   "text": "The deliveryman has come and gone — you don't see him in action."
+  },
+  {
+   "t": 51.7,
+   "text": "But before he arrived, you stuck a little spring-loaded mechanism on the door of every house in the city."
+  },
+  {
+   "t": 57.92,
+   "text": "The mechanism is closed: if you visit the house, you see nothing special."
+  },
+  {
+   "t": 63.1,
+   "text": "But the deliveryman, when he drops off the package, triggers the spring."
+  },
+  {
+   "t": 67.4,
+   "text": "The door now glows red, permanently."
+  },
+  {
+   "t": 70.24,
+   "text": "Days later, you can walk down the street and tell at a glance which houses got the delivery."
+  },
+  {
+   "t": 75.3,
+   "text": "Just look for the red doors."
+  },
+  {
+   "t": 76.84,
+   "text": "That's what a Cre-dependent reporter allele is."
+  },
+  {
+   "t": 79.7,
+   "text": "The reporter — most often a fluorescent protein like tdTomato or GFP — is engineered into the genome behind a strong, ubiquitous promoter."
+  },
+  {
+   "t": 90.05,
+   "text": "But in front of the reporter, between the promoter and the reporter coding sequence, there's a piece of DNA called a STOP cassette, flanked by loxP sites in the same orientation."
+  },
+  {
+   "t": 100.79,
+   "text": "The STOP cassette contains transcription terminators and polyadenylation signals that completely prevent the downstream reporter from being expressed."
+  },
+  {
+   "t": 110.42,
+   "text": "The promoter is on, in every cell."
+  },
+  {
+   "t": 113.42,
+   "text": "But the STOP cassette blocks the signal from reaching the reporter."
+  },
+  {
+   "t": 117.19,
+   "text": "Result: no fluorescence anywhere."
+  },
+  {
+   "t": 120.38,
+   "text": "Then Cre acts."
+  },
+  {
+   "t": 122.1,
+   "text": "In any cell where Cre is expressed, even briefly, Cre excises the lox-STOP-lox cassette — the famous LSL cassette — leaving the strong promoter directly upstream of the reporter coding sequence."
+  },
+  {
+   "t": 136.8,
+   "text": "Transcription now sails through and the cell starts making tdTomato."
+  },
+  {
+   "t": 141.74,
+   "text": "The cell turns red."
+  },
+  {
+   "t": 143.36,
+   "text": "Permanently."
+  },
+  {
+   "t": 144.32,
+   "text": "And every daughter of that cell, when it divides, inherits the recombined allele and is also red."
+  },
+  {
+   "t": 151.28,
+   "text": "The most widely used reporter mouse line in modern biology is called Ai14 — also known as Rosa26-LSL-tdTomato."
+  },
+  {
+   "t": 161.31,
+   "text": "The reporter — tdTomato — is inserted into a permissive site in the mouse genome called the Rosa26 locus, downstream of a strong CAG promoter, with an LSL cassette in between."
+  },
+  {
+   "t": 174.05,
+   "text": "In any cell where Cre has acted, the cassette gets excised, and the cell expresses bright red tdTomato."
+  },
+  {
+   "t": 182.03,
+   "text": "The Ai-series — Ai9, Ai14, Ai27 with channelrhodopsin, Ai32, Ai38, and on through dozens of variants — were developed at the Allen Institute and have become the standard reporter toolkit for the field."
+  },
+  {
+   "t": 199.25,
+   "text": "If you read a neuroscience paper and see \"we crossed our Cre line with Ai14,\" they're using exactly this system."
+  },
+  {
+   "t": 207.56,
+   "text": "Red cells equal cells that have ever, at any point in their history, expressed Cre."
+  },
+  {
+   "t": 213.97,
+   "text": "This is useful for two completely different reasons."
+  },
+  {
+   "t": 217.2,
+   "text": "First, as a validation tool — to actually see which cells your Cre line is acting in."
+  },
+  {
+   "t": 223.07,
+   "text": "We talked in Segment 5 about how no promoter is perfectly cell-type-specific."
+  },
+  {
+   "t": 228.93,
+   "text": "A reporter cross is the standard way to ask: where in the body is my Cre line actually causing recombination?"
+  },
+  {
+   "t": 236.29,
+   "text": "You cross Cre to Ai14, look at the resulting mouse, and you get a permanent record of every cell — and every descendant of every cell — that ever turned on the Cre transgene."
+  },
+  {
+   "t": 249.24,
+   "text": "Sometimes the result is exactly what the promoter is supposed to give you."
+  },
+  {
+   "t": 253.39,
+   "text": "Sometimes there are surprises — Cre activity in unexpected tissues, broad early-developmental expression that later refines, sprinkles of off-target cells."
+  },
+  {
+   "t": 264.5,
+   "text": "Reporter crosses are how you find out."
+  },
+  {
+   "t": 266.75,
+   "text": "Second, and even more importantly, the same trick gives you lineage tracing — the ability to mark a cell and watch what becomes of its descendants."
+  },
+  {
+   "t": 276.18,
+   "text": "That's the topic of the next segment."
+  }
+ ]
+}

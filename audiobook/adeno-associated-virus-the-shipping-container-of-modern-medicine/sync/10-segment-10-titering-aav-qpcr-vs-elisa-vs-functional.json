@@ -1,0 +1,215 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Titering AAV: qPCR vs ELISA vs functional",
+ "duration": 408.92,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Titering AAV: qPCR vs ELISA vs functional"
+  },
+  {
+   "t": 6.56,
+   "text": "Welcome back."
+  },
+  {
+   "t": 7.62,
+   "text": "Let's restart with what is, on the surface, a boring topic — how we measure how much AAV is in a tube — but which turns out to be one of the most consequential and most argued-about subjects in the entire field."
+  },
+  {
+   "t": 19.77,
+   "text": "Because the number you put on a tube of AAV depends on how you measured it, and different methods give different numbers, sometimes by an order of magnitude."
+  },
+  {
+   "t": 28.27,
+   "text": "If you dose a mouse or a patient based on the wrong number, you've either under-dosed (no effect) or over-dosed (toxicity)."
+  },
+  {
+   "t": 36.19,
+   "text": "So titering matters more than it sounds."
+  },
+  {
+   "t": 39.24,
+   "text": "There are three main approaches, and they measure three different things."
+  },
+  {
+   "t": 43.75,
+   "text": "Method one: qPCR or ddPCR."
+  },
+  {
+   "t": 47.12,
+   "text": "This measures vector genomes — the number of copies of your transgene DNA in the prep."
+  },
+  {
+   "t": 52.92,
+   "text": "You release the DNA from the capsids by treating with proteinase (or just by heating), then run a quantitative PCR reaction with primers that amplify a known region of your transgene (often within the ITRs or within the transgene's coding sequence)."
+  },
+  {
+   "t": 69.6,
+   "text": "The amount of amplification, calibrated against a standard curve of known DNA quantities, gives you the number of genome copies per microliter."
+  },
+  {
+   "t": 78.28,
+   "text": "ddPCR (digital droplet PCR) is a more recent variant that partitions the reaction into thousands of tiny droplets, counts positive droplets, and gives you an absolute count without needing a standard curve."
+  },
+  {
+   "t": 92.26,
+   "text": "ddPCR has become the gold-standard titering method because it's more reproducible across labs."
+  },
+  {
+   "t": 98.25,
+   "text": "What does the number tell you?"
+  },
+  {
+   "t": 99.53,
+   "text": "It tells you how many vector genomes are in your prep."
+  },
+  {
+   "t": 102.54,
+   "text": "That's typically reported in units of vector genomes per milliliter (vg/mL), with research preps commonly in the 10^12 to 10^13 vg/mL range and clinical lots being made in much larger volumes at similar concentrations."
+  },
+  {
+   "t": 120.99,
+   "text": "Doses to patients are reported in vector genomes per kilogram (vg/kg) of body weight; Zolgensma, for example, is dosed at approximately 1.1 × 10^14 vg/kg, meaning roughly 7.5 × 10^15 vector genomes for an average 7 kg infant."
+  },
+  {
+   "t": 143.84,
+   "text": "Those are extraordinary numbers."
+  },
+  {
+   "t": 145.74,
+   "text": "But here's the catch: qPCR counts every vector genome, regardless of whether it's in a functional capsid or not."
+  },
+  {
+   "t": 153.16,
+   "text": "Free DNA, partially packaged genomes, fragmented genomes — they all contribute."
+  },
+  {
+   "t": 159.34,
+   "text": "So qPCR is a measure of \"how much transgene DNA is in this tube\" — not necessarily \"how many functional particles."
+  },
+  {
+   "t": 167.46,
+   "text": "\""
+  },
+  {
+   "t": 167.66,
+   "text": "Method two: ELISA for capsid protein."
+  },
+  {
+   "t": 170.9,
+   "text": "This measures total capsids — full plus empty plus everything in between."
+  },
+  {
+   "t": 176.53,
+   "text": "You use an antibody specific to your AAV capsid serotype (commercial ELISA kits are available for the common ones — A20 antibody for AAV2, ADK8 for AAV8, ADK9 for AAV9, etc.) to detect and quantify capsid protein."
+  },
+  {
+   "t": 194.79,
+   "text": "The number you get is capsid particles per milliliter (cp/mL)."
+  },
+  {
+   "t": 199.61,
+   "text": "Critically, this includes both full and empty capsids, because the antibody binds the outside of the capsid and doesn't care whether there's DNA inside."
+  },
+  {
+   "t": 209.06,
+   "text": "The ratio of capsid titer (from ELISA) to vector genome titer (from qPCR) tells you the full-to-empty ratio of your prep."
+  },
+  {
+   "t": 217.71,
+   "text": "If you have 10^13 cp/mL by ELISA and 10^12 vg/mL by qPCR, then only one in ten of your capsids is full."
+  },
+  {
+   "t": 229.57,
+   "text": "That's a not-great prep."
+  },
+  {
+   "t": 231.11,
+   "text": "If they match — 10^13 cp/mL and 10^13 vg/mL — every capsid carries a genome, which is essentially impossible in practice but is the theoretical ideal."
+  },
+  {
+   "t": 246.45,
+   "text": "Most clinical preps target full fractions of 50% or higher."
+  },
+  {
+   "t": 251.09,
+   "text": "Method three: functional or transducing titer."
+  },
+  {
+   "t": 255.06,
+   "text": "This actually measures biological activity."
+  },
+  {
+   "t": 257.71,
+   "text": "You take your AAV prep and apply it to a cultured cell line, wait a day or two, and count how many cells express the transgene (if your transgene is GFP, you count green cells; if it's a reporter enzyme, you measure the enzyme activity)."
+  },
+  {
+   "t": 273.66,
+   "text": "You report the result as transducing units per milliliter (TU/mL)."
+  },
+  {
+   "t": 279.38,
+   "text": "This number is almost always lower than the genome titer or capsid titer, because not every full capsid actually succeeds in transducing a cell — many particles get internalized but never deliver their DNA to the nucleus, or deliver it but the gene never gets expressed."
+  },
+  {
+   "t": 296.62,
+   "text": "The ratio of transducing units to vector genomes is your particle-to-infectivity ratio, and for AAV this ratio is typically very poor — somewhere between 10:1 and 1000:1 vector genomes per transducing unit, depending on cell type, serotype, and assay conditions."
+  },
+  {
+   "t": 315.86,
+   "text": "That means the vast majority of your AAV particles are not biologically active in the assay."
+  },
+  {
+   "t": 321.71,
+   "text": "Some of that is the limit of the assay; some is real biology — most AAV particles dead-end in the cell somewhere along the entry pathway."
+  },
+  {
+   "t": 330.97,
+   "text": "This is one of the reasons we have to dose at such high vector-genome numbers."
+  },
+  {
+   "t": 335.57,
+   "text": "So when somebody hands you a tube and says \"this is 10^13 of AAV,\" your first question should be: 10^13 of what?"
+  },
+  {
+   "t": 345.57,
+   "text": "Vector genomes?"
+  },
+  {
+   "t": 346.96,
+   "text": "Capsids?"
+  },
+  {
+   "t": 348.07,
+   "text": "Transducing units?"
+  },
+  {
+   "t": 349.78,
+   "text": "Each of those numbers is meaningful, but they describe different things, and the right one depends on what you're trying to do."
+  },
+  {
+   "t": 356.63,
+   "text": "For dosing in animals or patients, vector genomes (qPCR/ddPCR) is the universal standard."
+  },
+  {
+   "t": 364.72,
+   "text": "For understanding how good your prep is, the ratio of vector genomes to capsids tells you about full-to-empty."
+  },
+  {
+   "t": 372.38,
+   "text": "For predicting how well your virus will work biologically, the transducing titer is closest to what you actually care about, but it's also the noisiest measurement."
+  },
+  {
+   "t": 381.81,
+   "text": "This sounds like obsessive detail, but it's the source of an astonishing amount of confusion in the literature."
+  },
+  {
+   "t": 388.61,
+   "text": "Two papers reporting \"similar doses\" of AAV may, depending on titering methods, actually have used doses that differ by ten-fold."
+  },
+  {
+   "t": 397.38,
+   "text": "The field has slowly converged on ddPCR for vector genome quantification as the standard reporting unit, but you still have to read papers carefully to know what you're really comparing."
+  }
+ ]
+}

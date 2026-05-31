@@ -1,0 +1,291 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Designing TALENs in practice — software tools, spacer length",
+ "duration": 454.9,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Designing TALENs in practice — software tools, spacer length"
+  },
+  {
+   "t": 5.54,
+   "text": "Let me walk you through what designing a TALEN pair actually looks like, in practice, as if you were going to do it yourself for a real experiment tomorrow."
+  },
+  {
+   "t": 14.59,
+   "text": "Step one."
+  },
+  {
+   "t": 15.56,
+   "text": "Identify the gene or region you want to edit."
+  },
+  {
+   "t": 18.9,
+   "text": "Maybe it's a particular exon of a particular gene."
+  },
+  {
+   "t": 22.19,
+   "text": "You go to the genome browser — the UCSC browser, Ensembl, whatever your preferred tool — and pull up the DNA sequence around the position you want to cut."
+  },
+  {
+   "t": 31.56,
+   "text": "Maybe you want to cut early in the coding sequence, to make a clean knockout by frameshift."
+  },
+  {
+   "t": 36.64,
+   "text": "Maybe you want to cut at a specific point near a disease-causing mutation, to enable HDR-based correction."
+  },
+  {
+   "t": 43.27,
+   "text": "Step two."
+  },
+  {
+   "t": 44.25,
+   "text": "Find a pair of TALEN binding sites that flank the cut site appropriately."
+  },
+  {
+   "t": 49.36,
+   "text": "You need a left site, on the top strand, starting with T, about 15 to 20 bases long."
+  },
+  {
+   "t": 55.56,
+   "text": "Then a spacer of about 14 to 18 bases."
+  },
+  {
+   "t": 59.14,
+   "text": "Then a right site, on the bottom strand, starting with T (which means the top strand at that position ends with A — the complement)."
+  },
+  {
+   "t": 66.84,
+   "text": "Both 15-to-20-base recognition stretches need to be unique enough that there are no obvious matches elsewhere in your target genome."
+  },
+  {
+   "t": 75.3,
+   "text": "This is exactly where the design software earns its keep."
+  },
+  {
+   "t": 78.91,
+   "text": "Tools like TAL Effector Nucleotide Targeter 2.0 (TALE-NT) from the Bogdanove lab, or Mojo Hand from Stephen Ekker's group, or various online platforms hosted by Addgene and others, scan the genome for valid TALEN pairs around your region of interest."
+  },
+  {
+   "t": 95.54,
+   "text": "They identify candidate left and right sites, check for the T-at-position-one constraint, check that the spacer length is in the productive range, and predict off-target binding by searching the rest of the genome for sequences similar to your candidate sites."
+  },
+  {
+   "t": 110.83,
+   "text": "They produce a ranked list of suggested TALEN pairs, with the best-predicted candidate at the top."
+  },
+  {
+   "t": 116.74,
+   "text": "You pick a pair from the list."
+  },
+  {
+   "t": 118.3,
+   "text": "Now you have, on paper, the exact RVD sequence for TALEN-left and TALEN-right."
+  },
+  {
+   "t": 123.67,
+   "text": "For example, you might end up with TALEN-left being 17 repeats long with the RVD sequence NI HD NI NG NI NN NN HD NG NI NN HD NG NI NN HD NI, and TALEN-right being a different 17 repeats with its own RVD sequence based on the right-side target read off the bottom strand."
+  },
+  {
+   "t": 146.6,
+   "text": "The design is done."
+  },
+  {
+   "t": 148.01,
+   "text": "Step three."
+  },
+  {
+   "t": 149.15,
+   "text": "Build the actual DNA constructs that encode these proteins."
+  },
+  {
+   "t": 153.71,
+   "text": "This is the tedious part, and it's where TALEN construction differs from CRISPR construction."
+  },
+  {
+   "t": 159.01,
+   "text": "To express a TALEN protein in a cell, you need a gene encoding the TALEN protein — meaning a stretch of DNA that, when transcribed and translated, produces a protein with the right sequence of repeats with the right RVDs."
+  },
+  {
+   "t": 173.62,
+   "text": "Building that gene is non-trivial, because the repeats are so similar to each other in DNA sequence that conventional cloning methods don't work — the homologous DNA sequences want to recombine and collapse the array."
+  },
+  {
+   "t": 187.2,
+   "text": "This is where Golden Gate assembly — which we'll discuss in detail in Segment 15 — comes in."
+  },
+  {
+   "t": 193.44,
+   "text": "Golden Gate is a clever assembly method that allows you to combine many DNA fragments, each encoding one TALE repeat with a specific RVD, in a defined order, in a single one-pot reaction."
+  },
+  {
+   "t": 206.59,
+   "text": "With pre-made libraries of all four RVD repeats sitting in your freezer, you can build a custom TALE-encoding gene of any sequence in just a few days."
+  },
+  {
+   "t": 216.76,
+   "text": "Companies like Addgene distribute these RVD libraries — kits like the TALEN Kit from Voytas and Bogdanove, or the Joung Lab TALE Toolbox, contain everything you need to construct any TALEN."
+  },
+  {
+   "t": 229.1,
+   "text": "For most labs that use TALENs today, the workflow looks like this: design the TALEN on a computer in an afternoon."
+  },
+  {
+   "t": 236.25,
+   "text": "Run a Golden Gate assembly over a couple of days."
+  },
+  {
+   "t": 239.5,
+   "text": "Sequence-verify the assembled construct."
+  },
+  {
+   "t": 242.41,
+   "text": "Transfect into cells."
+  },
+  {
+   "t": 244.25,
+   "text": "Test for cutting activity using a mismatch assay or sequencing."
+  },
+  {
+   "t": 248.85,
+   "text": "Total time from design to validated editing: maybe two weeks."
+  },
+  {
+   "t": 253.16,
+   "text": "For something as powerful as programmable genome editing, that's astonishingly fast."
+  },
+  {
+   "t": 258.96,
+   "text": "Step four."
+  },
+  {
+   "t": 260.02,
+   "text": "Validate that your TALENs actually cut."
+  },
+  {
+   "t": 263.14,
+   "text": "The simplest assay is a T7 endonuclease assay, sometimes called a mismatch assay, where you amplify the target region by PCR from edited cells, denature and re-anneal the products to create heteroduplexes wherever the cells were edited differently from each other, and then treat with an enzyme called T7 endonuclease I that cuts at mismatched DNA."
+  },
+  {
+   "t": 286.08,
+   "text": "If your TALENs cut and NHEJ created different indels in different cells, you'll see cleavage in your PCR product."
+  },
+  {
+   "t": 293.89,
+   "text": "If the TALENs didn't cut, no mismatches, no cleavage."
+  },
+  {
+   "t": 298.14,
+   "text": "Modern labs increasingly skip this and just sequence the target region with deep sequencing to directly read out the indel patterns."
+  },
+  {
+   "t": 306.13,
+   "text": "Step five."
+  },
+  {
+   "t": 307.18,
+   "text": "If you're after HDR-based precision editing rather than just knockout, you provide a donor template along with the TALENs, then screen the resulting cells or animals for the desired edit."
+  },
+  {
+   "t": 318.0,
+   "text": "Screening is harder than for knockout — you need to find the rare HDR events among the more common NHEJ outcomes — but it's manageable with good design."
+  },
+  {
+   "t": 327.51,
+   "text": "That's the basic workflow."
+  },
+  {
+   "t": 329.29,
+   "text": "None of it is hard."
+  },
+  {
+   "t": 330.44,
+   "text": "None of it requires deep expertise."
+  },
+  {
+   "t": 333.06,
+   "text": "The accessibility is the point."
+  },
+  {
+   "t": 335.35,
+   "text": "Let me mention a few practical rules that experimentalists have learned, the kind of folklore that gets passed around in labs."
+  },
+  {
+   "t": 341.98,
+   "text": "Rule one: avoid methylated cytosines in your target."
+  },
+  {
+   "t": 346.03,
+   "text": "TALEs, like a lot of DNA-binding proteins, can be disrupted by 5-methylcytosine — the methylated form of C — particularly when an HD repeat tries to bind a methylated C in a CpG site."
+  },
+  {
+   "t": 359.85,
+   "text": "If your target lies in a heavily methylated region, your TALEN may have reduced activity."
+  },
+  {
+   "t": 365.89,
+   "text": "There are workarounds (RVDs other than HD can sometimes bind methylated C), but the cleanest fix is to choose a target outside of methylated regions when possible."
+  },
+  {
+   "t": 376.69,
+   "text": "Rule two: stay away from regions of repetitive DNA."
+  },
+  {
+   "t": 380.33,
+   "text": "If your target sequence happens to occur elsewhere in the genome multiple times — say, in transposon-derived repeats — your TALEN will cut at all those off-target sites too, which is bad."
+  },
+  {
+   "t": 391.75,
+   "text": "Good design tools flag this."
+  },
+  {
+   "t": 393.8,
+   "text": "Rule three: even with the heterodimeric FokI variants, choose your spacer length carefully."
+  },
+  {
+   "t": 399.98,
+   "text": "Spacers of 14 to 16 bases tend to give the highest activity; longer spacers reduce activity, shorter spacers can sterically interfere with FokI dimerization."
+  },
+  {
+   "t": 411.46,
+   "text": "Rule four: validate, validate, validate."
+  },
+  {
+   "t": 415.09,
+   "text": "Even with great design, every TALEN pair is different in its actual activity."
+  },
+  {
+   "t": 420.55,
+   "text": "Some pairs cut beautifully."
+  },
+  {
+   "t": 422.31,
+   "text": "Some cut weakly."
+  },
+  {
+   "t": 423.63,
+   "text": "Some don't cut at all."
+  },
+  {
+   "t": 424.89,
+   "text": "The only way to know is to test in the cell type you actually care about, with quantitative readouts."
+  },
+  {
+   "t": 430.81,
+   "text": "So the design and engineering process for TALENs is, in practice, a few days of design and a couple of weeks of construction and validation, after which you have a custom genome-editing tool for any locus you want to target."
+  },
+  {
+   "t": 443.8,
+   "text": "That's the practical reality of using TALENs."
+  },
+  {
+   "t": 447.06,
+   "text": "Now let's pull back and ask: when this works well, what are the advantages?"
+  },
+  {
+   "t": 451.95,
+   "text": "Why would you still pick a TALEN over a CRISPR today?"
+  }
+ ]
+}

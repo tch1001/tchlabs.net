@@ -1,0 +1,127 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — The TALE-FokI architecture for base editing",
+ "duration": 242.08,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — The TALE-FokI architecture for base editing"
+  },
+  {
+   "t": 4.41,
+   "text": "I want to take a brief segment to mention one of the more interesting recent developments in TALE-based editing — the use of TALE-fusion proteins for base editing, in which a single base is changed in the genome without making a double-strand break."
+  },
+  {
+   "t": 18.19,
+   "text": "The classical TALEN, as we've discussed, makes a double-strand cut and relies on the cell's repair machinery — NHEJ or HDR — to produce an edit."
+  },
+  {
+   "t": 28.24,
+   "text": "This works well for knockouts (via NHEJ-induced indels) but is much less efficient for precise base changes (which require HDR)."
+  },
+  {
+   "t": 37.56,
+   "text": "For many therapeutic applications, particularly where you want to correct a single-base point mutation that causes a disease, the inefficiency of HDR has been a major bottleneck."
+  },
+  {
+   "t": 48.42,
+   "text": "Base editing is a different approach."
+  },
+  {
+   "t": 50.84,
+   "text": "Instead of cutting the DNA and letting the cell repair, you bring a chemistry to the DNA that directly converts one base into another, in place."
+  },
+  {
+   "t": 61.41,
+   "text": "No double-strand break."
+  },
+  {
+   "t": 62.9,
+   "text": "No reliance on HDR."
+  },
+  {
+   "t": 64.92,
+   "text": "Just a direct chemical conversion."
+  },
+  {
+   "t": 67.04,
+   "text": "The first base editors were CRISPR-based — fusing a DNA-base-modifying enzyme to a Cas9 nickase or to dead Cas9."
+  },
+  {
+   "t": 75.4,
+   "text": "But the same architecture has been adapted to TALEs."
+  },
+  {
+   "t": 78.49,
+   "text": "TALE-base editors fuse the TALE array (for addressing) to a base-modifying enzyme (for chemistry)."
+  },
+  {
+   "t": 85.34,
+   "text": "One particularly important variant is the TALE-deaminase fusion."
+  },
+  {
+   "t": 89.54,
+   "text": "Fuse a TALE to a cytidine deaminase enzyme — an enzyme that chemically converts cytosine (C) to uracil (U), which the cell then reads and replicates as thymine (T)."
+  },
+  {
+   "t": 101.59,
+   "text": "The result is a TALE-base editor that, when targeted to a specific spot, converts a C in the local DNA to a T, in place, without a double-strand break."
+  },
+  {
+   "t": 112.84,
+   "text": "A remarkable variant of this is the DddA-derived cytosine base editor developed by David Liu's lab at the Broad Institute, published in 2020."
+  },
+  {
+   "t": 122.28,
+   "text": "They identified an unusual DNA-modifying enzyme called DddA, from a bacterium, that can deaminate cytosine in double-stranded DNA — which most deaminases can't do."
+  },
+  {
+   "t": 134.4,
+   "text": "By splitting DddA into two pieces, fusing each piece to one TALE of a TALEN-like pair, and reassembling the active enzyme at the target site, they created a programmable C-to-T base editor that works in places where other base editors don't."
+  },
+  {
+   "t": 150.29,
+   "text": "Most strikingly, this TALE-based editor works in mitochondrial DNA — the small genome inside the mitochondrial organelle of every cell."
+  },
+  {
+   "t": 160.71,
+   "text": "Mitochondrial DNA had been essentially uneditable, because CRISPR can't easily deliver its guide RNA into mitochondria."
+  },
+  {
+   "t": 169.22,
+   "text": "The TALE-DddA editor, being protein-only and easily targetable to mitochondria with a localization signal, opened up mitochondrial editing for the first time."
+  },
+  {
+   "t": 179.44,
+   "text": "This has real medical implications."
+  },
+  {
+   "t": 181.81,
+   "text": "Mitochondrial diseases — caused by mutations in mitochondrial DNA — affect thousands of patients and have been essentially untreatable."
+  },
+  {
+   "t": 190.94,
+   "text": "A precise programmable editor for mitochondrial DNA is the foundation for thinking about therapeutic correction of mitochondrial mutations."
+  },
+  {
+   "t": 200.41,
+   "text": "The TALE-DddA work has spawned an entire subfield of mitochondrial editing, with active clinical translation in progress as of the mid-2020s."
+  },
+  {
+   "t": 210.36,
+   "text": "The deeper point is that the TALE architecture is not yesterday's technology."
+  },
+  {
+   "t": 215.3,
+   "text": "New applications continue to emerge."
+  },
+  {
+   "t": 217.84,
+   "text": "Whenever there's a need for programmable DNA targeting in a context where CRISPR doesn't work well — mitochondria are one such context, methylated DNA can be another, certain difficult chromatin contexts a third — the TALE remains a powerful platform."
+  },
+  {
+   "t": 233.78,
+   "text": "Researchers and clinicians keep finding new TALE applications precisely because the underlying technology is so general."
+  }
+ ]
+}

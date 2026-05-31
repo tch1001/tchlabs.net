@@ -1,0 +1,159 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — All-optical experiments: combining opsins with indicators",
+ "duration": 284.55,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — All-optical experiments: combining opsins with indicators"
+  },
+  {
+   "t": 5.56,
+   "text": "Now I want to take you into one of the most beautiful experimental developments of the last decade, and to explain it well I have to reach back to the previous lecture in this series, on fluorescent proteins."
+  },
+  {
+   "t": 17.4,
+   "text": "In the fluorescent proteins lecture I told you about GCaMP, a green fluorescent protein engineered to change its brightness in response to calcium."
+  },
+  {
+   "t": 26.84,
+   "text": "When a neuron fires an action potential, calcium pours into the cell — and a cell expressing GCaMP gets visibly brighter for a fraction of a second."
+  },
+  {
+   "t": 37.49,
+   "text": "By imaging GCaMP under a microscope, you can watch which neurons fire, in real time, in living tissue, across hundreds or thousands of cells."
+  },
+  {
+   "t": 48.08,
+   "text": "GCaMP is now the dominant tool for reading out neural activity optically."
+  },
+  {
+   "t": 53.66,
+   "text": "I also mentioned, near the end of that lecture, that there are now voltage indicators — fluorescent proteins that report not calcium but the actual membrane voltage of the cell, with millisecond temporal resolution."
+  },
+  {
+   "t": 66.17,
+   "text": "Calcium indicators are a slow proxy for spiking — every spike produces a calcium transient that takes a few hundred milliseconds to evolve."
+  },
+  {
+   "t": 75.35,
+   "text": "Voltage indicators give you the raw electrical signal, the same signal you'd get from a patch electrode, but optically."
+  },
+  {
+   "t": 82.12,
+   "text": "Tools like Archon, Voltron, and the QuasAr family are now usable in vivo, though they have their own tradeoffs."
+  },
+  {
+   "t": 89.85,
+   "text": "Now think about what happens when you combine an indicator and an opsin in the same cell."
+  },
+  {
+   "t": 94.86,
+   "text": "You can both control and read out the cell's activity, in the same recording, with two colors of light."
+  },
+  {
+   "t": 101.4,
+   "text": "The rare combination where you can turn neurons on with one color and watch them fire with another."
+  },
+  {
+   "t": 107.06,
+   "text": "No electrode needed."
+  },
+  {
+   "t": 108.46,
+   "text": "The cell is the recording site."
+  },
+  {
+   "t": 110.54,
+   "text": "The light is both the input and the output."
+  },
+  {
+   "t": 113.45,
+   "text": "This is called all-optical electrophysiology, and the original implementation, called Optopatch, was published by Adam Cohen's group at Harvard in 2014."
+  },
+  {
+   "t": 123.59,
+   "text": "They put a red-shifted voltage indicator — QuasAr — and a blue-activated channelrhodopsin — CheRiff, a Boyden lab variant — into the same neuron."
+  },
+  {
+   "t": 133.2,
+   "text": "They activated the channelrhodopsin with blue light, driving spikes."
+  },
+  {
+   "t": 137.47,
+   "text": "They imaged the voltage indicator with red light, watching the membrane voltage in real time."
+  },
+  {
+   "t": 143.0,
+   "text": "They could deliver patterns of stimulation and record the cell's response — every spike, every subthreshold event — all without ever touching the cell."
+  },
+  {
+   "t": 152.88,
+   "text": "They could do it in many cells simultaneously, across a dish, in a way that no electrode array could match."
+  },
+  {
+   "t": 159.95,
+   "text": "The fact that this works at all depends on careful color choice."
+  },
+  {
+   "t": 163.68,
+   "text": "The opsin and the indicator must respond to non-overlapping wavelengths, so the indicator's imaging light doesn't accidentally activate the opsin, and vice versa."
+  },
+  {
+   "t": 173.56,
+   "text": "In practice, this means pairing a blue-shifted opsin like ChR2 or CheRiff with a red-shifted indicator like QuasAr or jRGECO."
+  },
+  {
+   "t": 183.16,
+   "text": "Or, alternatively, a red-shifted opsin like Chrimson with a green indicator like GCaMP."
+  },
+  {
+   "t": 189.44,
+   "text": "Either combination works, with care."
+  },
+  {
+   "t": 191.76,
+   "text": "The implications, scaled up, are enormous."
+  },
+  {
+   "t": 195.06,
+   "text": "Imagine an entire small brain region — say a few hundred cells in a slice — where every cell expresses both a controllable opsin and a readable indicator."
+  },
+  {
+   "t": 205.16,
+   "text": "You can drive any pattern of activity you want, in any subset of cells you choose with patterned light, and you can watch the network response, cell by cell, in real time."
+  },
+  {
+   "t": 215.8,
+   "text": "You can perturb and observe simultaneously."
+  },
+  {
+   "t": 218.8,
+   "text": "You can do causal connectivity mapping at a scale and a precision that electrodes simply cannot match."
+  },
+  {
+   "t": 225.86,
+   "text": "Patterned-light microscopes — using devices like digital micromirror arrays or holographic spatial light modulators — can project arbitrary patterns of activating light onto the tissue, hitting only the cells you choose, in any combination, on demand."
+  },
+  {
+   "t": 242.51,
+   "text": "Optical microcircuit analysis is now genuinely a field, with its own journals and methods, and it grew directly out of pairing opsins with indicators."
+  },
+  {
+   "t": 252.72,
+   "text": "The general principle worth taking away: optogenetics is not just about driving behavior."
+  },
+  {
+   "t": 258.94,
+   "text": "Combined with optical readouts, it is also about dissecting the wiring of neural circuits with light alone."
+  },
+  {
+   "t": 265.54,
+   "text": "The microscope becomes a tool for both intervention and measurement, and the boundary between physiology and stimulation experiments dissolves."
+  },
+  {
+   "t": 274.34,
+   "text": "Which leads us naturally to the next segment, where we put the optogenetics together with the older electrical recording methods, in the context of in vivo circuit mapping."
+  }
+ ]
+}

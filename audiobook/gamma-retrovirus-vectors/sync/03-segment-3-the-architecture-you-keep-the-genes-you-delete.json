@@ -1,0 +1,223 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The architecture you keep, the genes you delete",
+ "duration": 416.52,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The architecture you keep, the genes you delete"
+  },
+  {
+   "t": 4.6,
+   "text": "Take an MoMLV genome and lay it out."
+  },
+  {
+   "t": 7.54,
+   "text": "From left to right, 5' to 3', you have: LTR, then a region containing the packaging signal called psi, then gag, then pol, then env, then LTR."
+  },
+  {
+   "t": 19.6,
+   "text": "That's the wild-type virus."
+  },
+  {
+   "t": 21.66,
+   "text": "About 8.3 kilobases total, with the LTRs taking up about 1.2 kilobases of that between them."
+  },
+  {
+   "t": 29.23,
+   "text": "When we build a vector, we want to keep all the parts that are needed to act on the RNA itself — the parts that say \"this is a retroviral genome, package me, reverse-transcribe me, integrate me."
+  },
+  {
+   "t": 41.23,
+   "text": "\" Those are the cis-acting elements."
+  },
+  {
+   "t": 43.36,
+   "text": "And we want to delete all the parts that encode proteins — gag, pol, env — because those are the parts that, if expressed, would let the virus replicate, package itself again, and spread."
+  },
+  {
+   "t": 56.06,
+   "text": "Those proteins, we'll supply separately, from another piece of DNA in a producer cell, where they assemble particles around our cargo and then disappear."
+  },
+  {
+   "t": 66.75,
+   "text": "So the principle is: cis stays, trans goes elsewhere."
+  },
+  {
+   "t": 71.06,
+   "text": "The packaging signal stays on our vector RNA."
+  },
+  {
+   "t": 74.46,
+   "text": "The proteins that recognize the packaging signal live on a different plasmid."
+  },
+  {
+   "t": 79.64,
+   "text": "Let me make that concrete."
+  },
+  {
+   "t": 81.21,
+   "text": "What do we keep on the vector itself?"
+  },
+  {
+   "t": 83.05,
+   "text": "We keep both LTRs, because they contain the att sites needed for integration and they contain the promoter and the polyadenylation signal that define the boundaries of the RNA."
+  },
+  {
+   "t": 94.35,
+   "text": "We keep the psi packaging signal, that structured RNA element just downstream of the 5' LTR, because without it our vector RNA won't be recognized by the nucleocapsid protein and won't get loaded into virions."
+  },
+  {
+   "t": 108.22,
+   "text": "We keep the primer binding site, the PBS, just downstream of psi, because reverse transcription needs it."
+  },
+  {
+   "t": 114.7,
+   "text": "We keep the polypurine tract, the PPT, just upstream of the 3' LTR, because plus-strand DNA synthesis primes from there."
+  },
+  {
+   "t": 123.91,
+   "text": "These are the four cis-acting elements that, between them, are sufficient to make a piece of RNA behave like a retroviral genome from the standpoint of packaging, reverse transcription, and integration."
+  },
+  {
+   "t": 136.06,
+   "text": "What do we throw out?"
+  },
+  {
+   "t": 137.24,
+   "text": "All of gag, all of pol, all of env."
+  },
+  {
+   "t": 141.16,
+   "text": "Every coding region."
+  },
+  {
+   "t": 142.53,
+   "text": "They get cut out and replaced with our payload — the gene or genes we actually want to deliver."
+  },
+  {
+   "t": 148.16,
+   "text": "Where gag-pol-env used to live, we drop in a promoter, an open reading frame, maybe a selectable marker, maybe a fluorescent reporter, maybe a polyadenylation signal if we want to terminate transcription early."
+  },
+  {
+   "t": 161.35,
+   "text": "The payload is whatever we want to deliver to the target cell, packaged within the structural constraint that retroviral particles can carry about 8 to 9 kilobases of RNA, and once you've kept the LTRs and the cis-acting elements, you have maybe 7 kilobases of payload room."
+  },
+  {
+   "t": 177.75,
+   "text": "So the transfer plasmid — also called the vector plasmid, or just \"the vector\" when people are being loose — is a piece of DNA that looks like this end to end: bacterial backbone (a plasmid origin and a bacterial selection marker like ampicillin resistance, so we can grow it in E. coli), then the 5' LTR, then psi, then PBS, then your payload (typically a strong internal promoter and a gene of interest), then PPT, then the 3' LTR, then back around to the bacterial backbone."
+  },
+  {
+   "t": 210.12,
+   "text": "When you grow this plasmid in E. coli, it behaves like any other plasmid — replicates by its origin, gets selected by its marker."
+  },
+  {
+   "t": 218.75,
+   "text": "When you transfect this plasmid into a mammalian producer cell that's also expressing gag, pol, and env, the producer cell transcribes the RNA from the 5' LTR through the 3' LTR, that RNA gets packaged into virions because it has psi, and those virions bud off ready to deliver the payload to target cells."
+  },
+  {
+   "t": 240.01,
+   "text": "Now, the analogy here."
+  },
+  {
+   "t": 241.99,
+   "text": "Think of the wild-type retrovirus as a small van that drives itself, carries a delivery package, and on arrival unloads the package and a copy of the van's own self-assembly instructions, so the recipient can build more vans and keep delivering."
+  },
+  {
+   "t": 257.99,
+   "text": "That's a self-replicating system."
+  },
+  {
+   "t": 260.06,
+   "text": "A vector is what you get when you take the van, throw out the self-assembly instructions, and load your own payload in the cargo bay."
+  },
+  {
+   "t": 267.67,
+   "text": "The van still drives itself to the destination — one trip — but on arrival it just unloads your payload and doesn't make more vans."
+  },
+  {
+   "t": 275.77,
+   "text": "To get more vans, you have to keep building them in your van factory."
+  },
+  {
+   "t": 279.52,
+   "text": "The factory is the producer cell."
+  },
+  {
+   "t": 282.22,
+   "text": "The instructions for building the van are split across other plasmids in the factory, where they make vans but never get loaded into the cargo."
+  },
+  {
+   "t": 290.75,
+   "text": "So vans come out of the factory carrying payloads, deliver them to patients or to cell cultures, and there are no instructions in the delivered payload to make new vans."
+  },
+  {
+   "t": 300.85,
+   "text": "One-shot delivery, no replication, no spread."
+  },
+  {
+   "t": 304.52,
+   "text": "That is the design contract of a vector."
+  },
+  {
+   "t": 306.96,
+   "text": "A few practical features of modern transfer plasmids."
+  },
+  {
+   "t": 310.4,
+   "text": "The internal promoter — the one driving expression of your gene of interest, sitting inside the payload region — used to be the LTR itself, with the gene of interest immediately downstream."
+  },
+  {
+   "t": 322.67,
+   "text": "The LTR's U3 enhancer/promoter is strong in most cell types and was the easy default."
+  },
+  {
+   "t": 329.57,
+   "text": "We will see, very painfully, why that became a problem."
+  },
+  {
+   "t": 333.96,
+   "text": "In modern vectors, the LTR's enhancer is usually deleted entirely — making the vector \"self-inactivating\" or SIN — and a separate internal promoter is used to drive payload expression."
+  },
+  {
+   "t": 346.86,
+   "text": "We'll spend an entire segment on SIN architecture in Segment 8."
+  },
+  {
+   "t": 351.06,
+   "text": "For now, just know that the choice of internal promoter — viral promoters like SFFV or CMV, cellular promoters like PGK or EF1-alpha, tissue-specific promoters — is one of the key design choices in vector engineering."
+  },
+  {
+   "t": 365.97,
+   "text": "You can also pack a second open reading frame on the same vector if you want to deliver more than one gene — typically by using an internal ribosome entry site, an IRES, or a self-cleaving 2A peptide between the two open reading frames."
+  },
+  {
+   "t": 379.8,
+   "text": "Two genes, one transcript, both expressed."
+  },
+  {
+   "t": 383.32,
+   "text": "The cargo limit is still about 7 kilobases, so you have to budget."
+  },
+  {
+   "t": 387.91,
+   "text": "The big take-home for this segment: you keep what acts on RNA, you throw away what makes proteins, and you replace the proteins with your payload."
+  },
+  {
+   "t": 396.59,
+   "text": "That principle — cis stays, trans goes elsewhere — is the foundation of the entire vector field."
+  },
+  {
+   "t": 403.54,
+   "text": "Lentiviral vectors do the same thing."
+  },
+  {
+   "t": 406.27,
+   "text": "Adeno-associated viral vectors do a version of the same thing."
+  },
+  {
+   "t": 410.69,
+   "text": "The split-component architecture is what makes viral vectors safe enough to use in patients."
+  }
+ ]
+}

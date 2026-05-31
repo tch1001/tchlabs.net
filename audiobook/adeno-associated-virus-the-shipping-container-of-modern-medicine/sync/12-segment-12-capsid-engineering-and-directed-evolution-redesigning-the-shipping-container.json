@@ -1,0 +1,255 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Capsid engineering and directed evolution: redesigning the shipping container",
+ "duration": 492.74,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Capsid engineering and directed evolution: redesigning the shipping container"
+  },
+  {
+   "t": 6.8,
+   "text": "We've talked about the natural serotypes."
+  },
+  {
+   "t": 9.22,
+   "text": "Now I want to talk about how we go beyond nature — how we design and select new capsids that nature never produced, that target tissues nature never optimized for, and that solve problems the natural serotypes can't solve."
+  },
+  {
+   "t": 23.46,
+   "text": "The motivation is straightforward."
+  },
+  {
+   "t": 25.65,
+   "text": "The natural serotypes are good at some things."
+  },
+  {
+   "t": 28.81,
+   "text": "AAV8 is great for liver."
+  },
+  {
+   "t": 31.2,
+   "text": "AAV9 is great for systemic CNS, in some species."
+  },
+  {
+   "t": 35.84,
+   "text": "But the natural repertoire doesn't perfectly cover every clinical need."
+  },
+  {
+   "t": 40.36,
+   "text": "There are tissues — adult human brain via intravenous administration, kidney, lung, certain populations of immune cells — where no natural serotype works really well."
+  },
+  {
+   "t": 51.33,
+   "text": "There are situations where you want a capsid that evades pre-existing antibodies against the natural serotypes."
+  },
+  {
+   "t": 58.24,
+   "text": "There are situations where you want enhanced specificity for a single cell type to reduce off-target effects."
+  },
+  {
+   "t": 65.25,
+   "text": "Capsid engineering is the toolbox for going after these goals."
+  },
+  {
+   "t": 69.53,
+   "text": "There are two main approaches: rational design and directed evolution, and most of the interesting work uses some combination."
+  },
+  {
+   "t": 77.3,
+   "text": "Rational design means: you know something specific about capsid biology, you make a targeted modification based on that knowledge, you test the result."
+  },
+  {
+   "t": 86.15,
+   "text": "Example: you know that AAV2 binds heparan sulfate via specific arginine residues on the capsid surface."
+  },
+  {
+   "t": 93.8,
+   "text": "You mutate those arginines and your capsid loses heparan sulfate binding, which redirects its tropism away from heparan-rich tissues."
+  },
+  {
+   "t": 102.95,
+   "text": "Or: you know that certain capsid surface loops are recognized by neutralizing antibodies."
+  },
+  {
+   "t": 109.09,
+   "text": "You swap those loops with sequences from a different serotype, and you get a capsid that escapes antibodies against the parent serotype."
+  },
+  {
+   "t": 116.89,
+   "text": "Rational design is powerful when you have specific knowledge to act on, but it's slow and limited by what you can predict in advance."
+  },
+  {
+   "t": 124.75,
+   "text": "Directed evolution is more like rolling dice — many, many dice."
+  },
+  {
+   "t": 129.85,
+   "text": "You generate an enormous library of randomly varied capsid sequences, you put that library into your selection system, and you let the system pick the winners."
+  },
+  {
+   "t": 140.12,
+   "text": "The library can be generated in several ways."
+  },
+  {
+   "t": 143.07,
+   "text": "DNA shuffling takes the capsid genes from multiple natural serotypes, chops them up into small fragments, and reassembles them into chimeric capsid genes that draw bits from each parent — like genetic decoupage."
+  },
+  {
+   "t": 157.3,
+   "text": "The product is a library of chimeric capsids, each one a different mix of pieces from the parents."
+  },
+  {
+   "t": 163.36,
+   "text": "Random mutagenesis introduces point mutations throughout the capsid gene by error-prone PCR."
+  },
+  {
+   "t": 169.78,
+   "text": "Peptide insertion systematically inserts random short peptide sequences into specific surface-exposed loops of the capsid, displaying a different little \"decoration\" on each variant."
+  },
+  {
+   "t": 182.56,
+   "text": "Once you have your library — typically containing 10^6 to 10^9 different capsid variants — you put it through a selection that rewards variants with the property you want."
+  },
+  {
+   "t": 194.01,
+   "text": "For tissue tropism selection, you inject the library into an animal, wait, harvest the target tissue, and PCR-amplify out the capsid genes from particles that successfully reached that tissue."
+  },
+  {
+   "t": 207.38,
+   "text": "Then you take those enriched genes, package them again, and do another round."
+  },
+  {
+   "t": 212.19,
+   "text": "After several rounds of selection-and-amplification, the library has been winnowed down to the variants that are best at reaching your target tissue."
+  },
+  {
+   "t": 220.71,
+   "text": "You sequence the top survivors, characterize them individually, and pick a winner."
+  },
+  {
+   "t": 225.93,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 227.72,
+   "text": "Directed evolution is redesigning the container's surface by making millions of slightly different ones, painting each one a slightly different shade, dropping them all into the city, and seeing which ones slip past customs into the neighborhoods you couldn't previously reach."
+  },
+  {
+   "t": 243.99,
+   "text": "You don't have to know in advance which shade will work."
+  },
+  {
+   "t": 247.04,
+   "text": "You just have to be able to recover the winners after the fact."
+  },
+  {
+   "t": 250.4,
+   "text": "The Darwinian search does the design for you."
+  },
+  {
+   "t": 253.07,
+   "text": "The most famous example, and one of the most important capsids in modern neuroscience research, is AAV-PHP."
+  },
+  {
+   "t": 260.91,
+   "text": "B and its descendant AAV-PHP.eB."
+  },
+  {
+   "t": 265.23,
+   "text": "These were produced by Viviana Gradinaru's lab using a method called CREATE (Cre-recombination-based AAV targeted evolution)."
+  },
+  {
+   "t": 273.71,
+   "text": "The idea: you make a peptide-insertion library on the AAV9 capsid, you inject it into mice that express Cre recombinase in a specific cell type (in this case, GFAP-Cre mice with Cre in astrocytes throughout the brain), and any AAV that delivers its genome into a Cre-expressing cell gets its genome recombined into a form that can be selectively PCR-amplified back out."
+  },
+  {
+   "t": 299.39,
+   "text": "So you preferentially recover the capsid genes from particles that successfully reached the target cell type."
+  },
+  {
+   "t": 305.83,
+   "text": "After several rounds, you have a winning capsid."
+  },
+  {
+   "t": 308.82,
+   "text": "PHP."
+  },
+  {
+   "t": 309.92,
+   "text": "B, and especially the second-generation PHP.eB, transduce neurons throughout the mouse brain after a simple intravenous tail-vein injection at a previously unthinkable efficiency."
+  },
+  {
+   "t": 323.16,
+   "text": "That capability transformed mouse neuroscience — you can now deliver an opsin or a calcium indicator brain-wide without doing brain surgery."
+  },
+  {
+   "t": 332.87,
+   "text": "Other notable engineered capsids: AAV-DJ, produced by DNA shuffling of eight different serotypes, with very broad in vitro tropism."
+  },
+  {
+   "t": 343.39,
+   "text": "AAV-7m8, produced by random peptide insertion and selection on the retina, which enables intravitreal-injection-based gene delivery to photoreceptors without requiring subretinal surgery."
+  },
+  {
+   "t": 356.42,
+   "text": "AAV-Anc80, a \"reconstructed ancestral\" capsid built by computational inference of what the common ancestor of modern AAV serotypes might have looked like — and it turns out the ancestral form has excellent properties for cochlea and inner ear, which has applications in genetic deafness."
+  },
+  {
+   "t": 374.86,
+   "text": "And dozens of others, with new ones being reported regularly."
+  },
+  {
+   "t": 378.63,
+   "text": "A practical caveat I have to repeat: capsid tropism that's been selected in one species often doesn't translate to another."
+  },
+  {
+   "t": 386.98,
+   "text": "PHP.eB is the cautionary tale."
+  },
+  {
+   "t": 390.68,
+   "text": "In mice, it is a miracle."
+  },
+  {
+   "t": 392.73,
+   "text": "In macaques, it doesn't cross the blood-brain barrier nearly as efficiently."
+  },
+  {
+   "t": 397.64,
+   "text": "In humans, it has essentially the same poor BBB penetration as AAV9."
+  },
+  {
+   "t": 403.99,
+   "text": "The reason turned out to be that PHP.eB's enhanced mouse tropism depends on binding to a specific mouse cell-surface protein — LY6A, a mouse-specific GPI-anchored protein — that doesn't exist in primates."
+  },
+  {
+   "t": 418.99,
+   "text": "The capsid was evolved on a mouse-specific receptor that happens to be present at the blood-brain barrier, and that receptor doesn't exist in humans."
+  },
+  {
+   "t": 427.87,
+   "text": "The lesson: if you want a capsid that works in humans, you have to either select on a human-relevant model (which is hard — humanized mice, non-human primates, in vitro human tissue models) or include human-specific selection steps in your evolution scheme."
+  },
+  {
+   "t": 443.03,
+   "text": "This is a very active area of capsid engineering today, and the next generation of PHP-like capsids — selected on primate or human tissue from the start — are starting to deliver on the original promise."
+  },
+  {
+   "t": 455.23,
+   "text": "Directed evolution of AAV capsids is, in a sense, biotechnology recapitulating natural evolution at industrial speed."
+  },
+  {
+   "t": 465.29,
+   "text": "Natural evolution shaped the existing serotypes over millions of years for the particular ecological niches AAV inhabits."
+  },
+  {
+   "t": 474.57,
+   "text": "We're doing the same thing — variation and selection — but compressed into months, and aimed at niches that have nothing to do with AAV's natural lifestyle and everything to do with what humans want to deliver where."
+  },
+  {
+   "t": 487.31,
+   "text": "It's a beautiful blending of evolutionary biology and engineering."
+  }
+ ]
+}

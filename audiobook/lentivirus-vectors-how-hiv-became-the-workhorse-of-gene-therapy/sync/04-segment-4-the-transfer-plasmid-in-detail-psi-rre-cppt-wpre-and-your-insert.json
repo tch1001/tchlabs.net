@@ -1,0 +1,235 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The transfer plasmid in detail: psi, RRE, cPPT, WPRE, and your insert",
+ "duration": 453.58,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The transfer plasmid in detail: psi, RRE, cPPT, WPRE, and your insert"
+  },
+  {
+   "t": 8.32,
+   "text": "Open up any modern third-generation lentiviral transfer plasmid in a sequence viewer and you will see a recognizable architecture."
+  },
+  {
+   "t": 17.25,
+   "text": "Let me walk you through it from 5' to 3' as the RNA would be read inside the virion."
+  },
+  {
+   "t": 23.57,
+   "text": "At the far 5' end is the 5' LTR."
+  },
+  {
+   "t": 27.01,
+   "text": "In a third-generation transfer plasmid, this LTR is a hybrid — the U3 region of HIV has been replaced by a constitutive viral promoter, typically the RSV promoter (Rous sarcoma virus) or the CMV promoter (cytomegalovirus)."
+  },
+  {
+   "t": 43.12,
+   "text": "Why?"
+  },
+  {
+   "t": 43.83,
+   "text": "Because in wild-type HIV, transcription from the LTR requires the viral protein Tat, which we have deleted from our safety-stripped packaging plasmid."
+  },
+  {
+   "t": 53.36,
+   "text": "With no Tat around, the wild-type LTR is essentially silent."
+  },
+  {
+   "t": 58.15,
+   "text": "To produce virus efficiently in the 293T producer cell, we swap in a Tat-independent promoter at the 5' end of the transfer plasmid, so that the producer cell can transcribe full-length vector RNA without needing Tat."
+  },
+  {
+   "t": 72.11,
+   "text": "Inside the producer cell, this hybrid 5' LTR drives transcription of the entire vector RNA, including the packaging signal, all the cis-elements, your transgene, and the 3' LTR."
+  },
+  {
+   "t": 85.04,
+   "text": "Immediately downstream of the 5' LTR, you encounter the packaging signal, ψ (psi)."
+  },
+  {
+   "t": 91.6,
+   "text": "This is a structured RNA element of about 100 nucleotides that includes the major splice donor and a series of stem-loops."
+  },
+  {
+   "t": 100.04,
+   "text": "The nucleocapsid domain of Gag binds psi specifically and selectively."
+  },
+  {
+   "t": 105.22,
+   "text": "Without psi, RNA does not get loaded into virions, even if the cell is making it abundantly."
+  },
+  {
+   "t": 112.24,
+   "text": "With psi, RNA gets selected, dimerized with a second copy, and packaged."
+  },
+  {
+   "t": 117.9,
+   "text": "Removing psi from the packaging and envelope plasmids — which we have done — means the proteins from those plasmids assemble into virions, but the plasmid RNA itself doesn't ride along."
+  },
+  {
+   "t": 129.54,
+   "text": "Only the transfer plasmid's RNA, with its psi, gets loaded."
+  },
+  {
+   "t": 133.85,
+   "text": "A little further downstream, you'll see the Rev response element, RRE."
+  },
+  {
+   "t": 138.5,
+   "text": "The RRE is a complex stem-loop structure inside the env coding region of wild-type HIV."
+  },
+  {
+   "t": 145.88,
+   "text": "In the wild-type virus, unspliced and partially spliced viral RNAs would normally be retained in the nucleus, because they contain introns and the cellular splicing surveillance machinery hates exporting unspliced RNA."
+  },
+  {
+   "t": 160.29,
+   "text": "HIV solves this with the Rev protein, which binds the RRE, oligomerizes, and recruits the cellular export factor CRM1 to ferry the unspliced RNA out of the nucleus into the cytoplasm."
+  },
+  {
+   "t": 174.45,
+   "text": "In our vector system, Rev is supplied in trans from the packaging plasmid (or its own separate plasmid in the splittest third-generation systems)."
+  },
+  {
+   "t": 183.47,
+   "text": "The RRE has to stay on the transfer plasmid as a cis element, because Rev needs something on the vector RNA to bind."
+  },
+  {
+   "t": 190.57,
+   "text": "If you accidentally delete the RRE from your transfer plasmid, your full-length vector RNA gets stuck in the nucleus and your titer collapses."
+  },
+  {
+   "t": 199.14,
+   "text": "Next, in the middle of the vector, you'll often see a small element called the central polypurine tract, cPPT."
+  },
+  {
+   "t": 206.53,
+   "text": "This is a sequence that, during reverse transcription inside the target cell, serves as a second priming site for plus-strand DNA synthesis, generating a triple-stranded \"DNA flap\" in the middle of the vector DNA."
+  },
+  {
+   "t": 221.01,
+   "text": "That flap helps the pre-integration complex enter the nucleus and improves transduction efficiency, particularly in non-dividing cells, by something like 2- to 5-fold."
+  },
+  {
+   "t": 232.28,
+   "text": "The cPPT is short, maybe 100 base pairs, and it costs you nothing to include, so essentially every modern third-generation transfer plasmid has it."
+  },
+  {
+   "t": 242.56,
+   "text": "Now you reach the internal promoter and the transgene."
+  },
+  {
+   "t": 246.05,
+   "text": "This is where you, the experimenter, make most of your choices."
+  },
+  {
+   "t": 250.5,
+   "text": "The internal promoter is whatever you want to use to drive expression of your gene of interest inside the target cell."
+  },
+  {
+   "t": 257.61,
+   "text": "Common choices include CMV (strong, ubiquitous, but can silence over time in some cell types), EF1α (strong, more stable in stem cells), PGK (moderate strength, very stable), CAG (a strong synthetic hybrid), or any number of tissue-specific promoters if you want expression restricted to, say, neurons or hepatocytes."
+  },
+  {
+   "t": 282.17,
+   "text": "Downstream of the internal promoter sits your transgene — a cDNA, a CAR construct, a Cas9 cassette, an shRNA, a guide RNA, whatever the experiment calls for."
+  },
+  {
+   "t": 294.47,
+   "text": "The size of this region is limited by the overall cargo capacity of the lentivirus, which is around 8 to 10 kilobases of total vector length between LTRs."
+  },
+  {
+   "t": 305.02,
+   "text": "After the transgene, you very often see the WPRE — woodchuck hepatitis virus posttranscriptional regulatory element."
+  },
+  {
+   "t": 313.42,
+   "text": "WPRE is a roughly 600-base-pair sequence from the woodchuck hepatitis virus that, when placed in the 3' UTR of an mRNA, enhances expression severalfold by stabilizing the transcript, promoting polyadenylation, and improving nuclear export."
+  },
+  {
+   "t": 331.03,
+   "text": "It's a free expression boost."
+  },
+  {
+   "t": 332.81,
+   "text": "There is some discussion in the field about a small open reading frame within WPRE that might encode a fragment of the woodchuck X protein, and most modern vectors use a mutated WPRE that disables that ORF as a precaution."
+  },
+  {
+   "t": 347.25,
+   "text": "But WPRE in some form is essentially standard."
+  },
+  {
+   "t": 351.23,
+   "text": "Then the 3' LTR, which in a self-inactivating vector — and every modern vector is self-inactivating — has had its U3 region largely deleted."
+  },
+  {
+   "t": 361.35,
+   "text": "We'll talk about SIN vectors in detail in Segment 7."
+  },
+  {
+   "t": 364.93,
+   "text": "The headline is that during reverse transcription, the U3 from the 3' LTR gets copied to both ends of the integrated provirus."
+  },
+  {
+   "t": 373.32,
+   "text": "So if you delete U3 from the 3' LTR, both LTRs of the integrated provirus end up with the deletion."
+  },
+  {
+   "t": 380.72,
+   "text": "The viral promoter and enhancer are gone."
+  },
+  {
+   "t": 383.31,
+   "text": "The integrated vector cannot transcribe itself from its own LTRs, and crucially, those LTRs cannot reach over and activate nearby cellular genes — which dramatically reduces insertional mutagenesis risk."
+  },
+  {
+   "t": 398.75,
+   "text": "Finally, outside the LTRs, the transfer plasmid has the usual bacterial backbone — an E. coli origin of replication, an ampicillin or kanamycin resistance gene — so you can grow the plasmid in bacteria and prep it by maxiprep before transfection."
+  },
+  {
+   "t": 415.02,
+   "text": "That backbone never ends up in the virion; it's only there for you, the cloner."
+  },
+  {
+   "t": 420.25,
+   "text": "Let me give you the mnemonic."
+  },
+  {
+   "t": 421.71,
+   "text": "Inside the LTRs, on your transfer plasmid, you have, in order: psi, RRE, cPPT, promoter, transgene, WPRE."
+  },
+  {
+   "t": 431.42,
+   "text": "If you remember those six elements, you remember the entire transfer plasmid."
+  },
+  {
+   "t": 436.47,
+   "text": "Psi gets it packaged."
+  },
+  {
+   "t": 437.91,
+   "text": "RRE gets the unspliced RNA out of the nucleus."
+  },
+  {
+   "t": 442.0,
+   "text": "cPPT helps it get into the target cell nucleus."
+  },
+  {
+   "t": 445.87,
+   "text": "The promoter drives your gene."
+  },
+  {
+   "t": 447.92,
+   "text": "WPRE boosts expression."
+  },
+  {
+   "t": 450.38,
+   "text": "Six elements."
+  },
+  {
+   "t": 451.76,
+   "text": "Stamp them onto your memory."
+  }
+ ]
+}

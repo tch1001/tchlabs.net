@@ -1,0 +1,227 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — One finger, three bases — the modular reading dream",
+ "duration": 386.97,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — One finger, three bases — the modular reading dream"
+  },
+  {
+   "t": 5.41,
+   "text": "So we've got this beautiful picture."
+  },
+  {
+   "t": 7.49,
+   "text": "A zinc finger is a tiny protein module."
+  },
+  {
+   "t": 10.29,
+   "text": "It reads three bases of DNA."
+  },
+  {
+   "t": 12.81,
+   "text": "You can string several together to read longer sequences."
+  },
+  {
+   "t": 16.56,
+   "text": "If each finger is a Lego block, then in principle you should be able to assemble any DNA-binding protein you want, just by picking the right fingers and snapping them together."
+  },
+  {
+   "t": 26.82,
+   "text": "That is the dream."
+  },
+  {
+   "t": 27.95,
+   "text": "Let me tell you about how people tried to make the dream real, because the story is more interesting — and more cautionary — than the rosy version you'll see in textbook diagrams."
+  },
+  {
+   "t": 38.73,
+   "text": "The first big push happened in the early 1990s, primarily in the lab of Carl Pabo at MIT (later at Caltech and Harvard), with Pabo's student Yen Choo doing a lot of the foundational work, and in parallel in the lab of Jeremy Berg at Johns Hopkins."
+  },
+  {
+   "t": 54.34,
+   "text": "They asked the basic structural question: when a zinc finger binds DNA, which amino acids on the finger actually touch which bases on the DNA?"
+  },
+  {
+   "t": 63.42,
+   "text": "And can we figure out a code — a translation table — that tells us, \"if you want to read this three-letter sequence, use these amino acids at these positions on the finger\"?"
+  },
+  {
+   "t": 73.53,
+   "text": "Through a combination of solving crystal structures and doing painstaking binding experiments, they worked out a rough version of this code."
+  },
+  {
+   "t": 81.34,
+   "text": "The key positions turn out to be on the alpha helix of the finger, at amino acid positions that are conventionally numbered minus-one, two, three, and six."
+  },
+  {
+   "t": 91.69,
+   "text": "The amino acid at position minus-one tends to contact the third base of the three-letter binding site."
+  },
+  {
+   "t": 98.1,
+   "text": "The amino acid at position three contacts the middle base."
+  },
+  {
+   "t": 102.39,
+   "text": "The amino acid at position six contacts the first base."
+  },
+  {
+   "t": 106.74,
+   "text": "Position two does some helper contacts."
+  },
+  {
+   "t": 109.6,
+   "text": "So you have, roughly, three or four amino acids on each finger that determine which three bases that finger prefers."
+  },
+  {
+   "t": 117.29,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 118.6,
+   "text": "Think of each zinc finger as a little hand with three fingers, and each finger has a different fingerprint — a different chemical preference for one of the four DNA letters."
+  },
+  {
+   "t": 129.74,
+   "text": "By changing the fingerprint — by mutating the amino acid at the relevant position — you change which letter that fingertip likes to grip."
+  },
+  {
+   "t": 137.47,
+   "text": "Pick the right combination of fingerprints, and you build a hand that grips exactly the three-letter sequence you want."
+  },
+  {
+   "t": 144.59,
+   "text": "This was the modular assembly dream."
+  },
+  {
+   "t": 146.8,
+   "text": "The idea was: build a library of well-characterized fingers, each one optimized to read a particular three-letter codeword — a finger for GAA, a finger for CTG, a finger for AAT, and so on, ideally all sixty-four possible three-letter codes."
+  },
+  {
+   "t": 164.54,
+   "text": "Once you had this library, designing a ZFN became a problem of looking up your target sequence in a table, picking the right fingers from the shelf, snapping them together with a short flexible linker, and you'd have a custom DNA-binding protein ready to go."
+  },
+  {
+   "t": 179.99,
+   "text": "Several groups built such libraries and made them public, including a really important one published by the Zinc Finger Consortium in the mid-2000s."
+  },
+  {
+   "t": 189.18,
+   "text": "The consortium was a deliberate open-science effort, led by people like Carlos Barbas at Scripps and Toni Cathomen in Germany and Keith Joung at Harvard, to put zinc finger reagents into academic hands without the patent thickets that surrounded the commercial efforts."
+  },
+  {
+   "t": 205.18,
+   "text": "The consortium published designs, distributed plasmids — many of them through Addgene, the nonprofit plasmid repository that's now a quiet backbone of academic molecular biology — and tried to make ZFNs accessible to labs that couldn't pay licensing fees."
+  },
+  {
+   "t": 221.22,
+   "text": "And here is where I have to give you the catch, because if modular assembly had just worked, this would be a much shorter lecture."
+  },
+  {
+   "t": 227.9,
+   "text": "It didn't quite work."
+  },
+  {
+   "t": 229.25,
+   "text": "Or rather, it worked, but with a much lower success rate than the dream had promised."
+  },
+  {
+   "t": 234.69,
+   "text": "When researchers picked fingers from the library, assembled them according to the lookup table, and tested the resulting protein on its predicted DNA target, only a fraction — perhaps thirty percent, maybe less — actually bound their target with useful affinity and specificity."
+  },
+  {
+   "t": 252.15,
+   "text": "The rest either bound weakly, bound the wrong sequence, or didn't bind at all."
+  },
+  {
+   "t": 257.57,
+   "text": "Why?"
+  },
+  {
+   "t": 258.28,
+   "text": "Because of something we'll dedicate a whole segment to in a moment, called context dependence."
+  },
+  {
+   "t": 264.26,
+   "text": "The short version is: a zinc finger doesn't just read its own three bases in isolation."
+  },
+  {
+   "t": 270.76,
+   "text": "Its behavior depends on which fingers are sitting next to it."
+  },
+  {
+   "t": 274.06,
+   "text": "Two fingers that work fine independently can interfere with each other when placed adjacent."
+  },
+  {
+   "t": 279.58,
+   "text": "The finger on the left changes the geometry of the DNA, or makes a stray contact with the finger on the right, or its preferred orientation conflicts with what the right finger wants."
+  },
+  {
+   "t": 289.68,
+   "text": "The Lego analogy turned out to be too clean."
+  },
+  {
+   "t": 292.88,
+   "text": "Real zinc fingers behave less like Lego and more like — I don't know — bickering siblings in the back seat of a car."
+  },
+  {
+   "t": 300.6,
+   "text": "Put two together, fine."
+  },
+  {
+   "t": 302.13,
+   "text": "Put three together, somebody's elbow is in somebody's face."
+  },
+  {
+   "t": 306.17,
+   "text": "That insight took years to fully understand, and the workarounds — which we'll get to in Segment 5 — are the reason ZFN design remained, until quite recently, an art that only a handful of labs could do reliably."
+  },
+  {
+   "t": 320.27,
+   "text": "It's also a huge part of why CRISPR, when it came along with its much simpler guide-RNA targeting, was so devastatingly attractive."
+  },
+  {
+   "t": 328.95,
+   "text": "CRISPR didn't have a context-dependence problem at all."
+  },
+  {
+   "t": 332.17,
+   "text": "You wrote down the twenty-letter target sequence, you ordered an oligonucleotide of the matching RNA, and it worked."
+  },
+  {
+   "t": 338.98,
+   "text": "With zinc fingers, you wrote down the sequence, you assembled the fingers, you tested the construct in a yeast or bacterial reporter, and there was a sixty-percent chance you'd be back at the drawing board."
+  },
+  {
+   "t": 350.65,
+   "text": "But — and this is the point I want to leave you with before we move on — the modular reading idea was not wrong, it was just incomplete."
+  },
+  {
+   "t": 358.76,
+   "text": "Zinc fingers really do read three bases at a time."
+  },
+  {
+   "t": 362.48,
+   "text": "The fingerprint idea really does work, in the limit."
+  },
+  {
+   "t": 365.7,
+   "text": "The problem is the elbows."
+  },
+  {
+   "t": 367.71,
+   "text": "Once you understand the elbows, you can engineer around them."
+  },
+  {
+   "t": 371.06,
+   "text": "And that engineering, painful as it was, eventually produced the ZFNs that went into human patients."
+  },
+  {
+   "t": 378.45,
+   "text": "So hold this picture — fingers reading three bases, in a line, like stacked hands gripping a rope — but be ready to add the complication."
+  }
+ ]
+}

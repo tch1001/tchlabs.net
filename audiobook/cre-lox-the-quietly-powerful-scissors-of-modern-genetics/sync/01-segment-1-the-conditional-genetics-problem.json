@@ -1,0 +1,363 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The conditional genetics problem",
+ "duration": 480.99,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The conditional genetics problem"
+  },
+  {
+   "t": 3.09,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 4.58,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 5.96,
+   "text": "Today, for the next two hours, we're going to talk about one of the most quietly powerful tools in all of modern biology — a system called Cre-Lox."
+  },
+  {
+   "t": 14.86,
+   "text": "You may not have heard of it."
+  },
+  {
+   "t": 16.25,
+   "text": "It doesn't have the glamour of CRISPR, the cinematic appeal of mRNA vaccines, the household name recognition of insulin."
+  },
+  {
+   "t": 23.88,
+   "text": "But I will make you a promise: if you read a serious neuroscience paper, a cancer biology paper, a developmental biology paper, a stem cell paper from the last twenty-five years, there is a very good chance — better than half, in some fields — that somewhere in the methods section, the authors used Cre-Lox to do the actual experiment."
+  },
+  {
+   "t": 43.8,
+   "text": "It is the workhorse of conditional genetics."
+  },
+  {
+   "t": 46.49,
+   "text": "It is the technology that lets researchers ask, with surgical precision, what a gene does in one cell type, at one moment, in one tissue, in a living animal."
+  },
+  {
+   "t": 57.74,
+   "text": "And once you understand it, a huge swath of modern molecular biology — what's possible, what isn't, why experiments are designed the way they are — clicks into place."
+  },
+  {
+   "t": 67.95,
+   "text": "So let me start, the way I always do, with a problem."
+  },
+  {
+   "t": 71.15,
+   "text": "Because Cre-Lox is the answer to a problem, and if you understand the problem first, the answer becomes inevitable."
+  },
+  {
+   "t": 78.65,
+   "text": "Here's the problem."
+  },
+  {
+   "t": 79.72,
+   "text": "You're a biologist."
+  },
+  {
+   "t": 81.14,
+   "text": "You want to know what a gene does."
+  },
+  {
+   "t": 82.8,
+   "text": "The classic way to figure that out is to break the gene — knock it out — and see what goes wrong."
+  },
+  {
+   "t": 88.39,
+   "text": "If the animal still walks fine but can't smell, you've learned that the gene is involved in smell."
+  },
+  {
+   "t": 94.16,
+   "text": "If the animal develops cancer, the gene was suppressing tumors."
+  },
+  {
+   "t": 98.5,
+   "text": "If the animal dies in the womb, the gene is essential for early development."
+  },
+  {
+   "t": 103.55,
+   "text": "Knock it out, see what breaks."
+  },
+  {
+   "t": 105.54,
+   "text": "That's been the basic logic of mammalian genetics since the 1980s."
+  },
+  {
+   "t": 110.03,
+   "text": "Now here's where the problem gets sharp."
+  },
+  {
+   "t": 112.12,
+   "text": "A huge number of interesting genes are needed in many tissues, at many times in life."
+  },
+  {
+   "t": 118.16,
+   "text": "Knock them out in the whole animal, from conception forward, and the embryo never makes it."
+  },
+  {
+   "t": 123.71,
+   "text": "The mouse dies in utero."
+  },
+  {
+   "t": 125.45,
+   "text": "You learn that the gene is essential."
+  },
+  {
+   "t": 128.05,
+   "text": "Great."
+  },
+  {
+   "t": 128.85,
+   "text": "But you learn nothing about what it does in the adult brain, because the embryo never made an adult brain."
+  },
+  {
+   "t": 135.1,
+   "text": "You learn nothing about what it does in muscle, because the embryo never grew muscle."
+  },
+  {
+   "t": 139.88,
+   "text": "You've extinguished the gene before the question you wanted to ask could even be posed."
+  },
+  {
+   "t": 144.43,
+   "text": "Take a real example."
+  },
+  {
+   "t": 145.86,
+   "text": "The gene Brca1 — the famous breast cancer gene."
+  },
+  {
+   "t": 149.41,
+   "text": "You want to know what it does in mature mammary tissue."
+  },
+  {
+   "t": 152.53,
+   "text": "Knock it out in the whole mouse from conception?"
+  },
+  {
+   "t": 155.45,
+   "text": "The embryo dies at around day seven."
+  },
+  {
+   "t": 158.26,
+   "text": "You never get a mammary gland to look at."
+  },
+  {
+   "t": 160.71,
+   "text": "Worthless."
+  },
+  {
+   "t": 161.7,
+   "text": "You need a different approach."
+  },
+  {
+   "t": 163.21,
+   "text": "You need to leave the gene functional everywhere in the body during development, and then, sometime in adulthood, only in the mammary cells, switch it off."
+  },
+  {
+   "t": 172.72,
+   "text": "Now you can ask the actual question — what does losing Brca1 do to adult breast tissue?"
+  },
+  {
+   "t": 178.62,
+   "text": "Or take a gene that's needed in many cell types in the brain."
+  },
+  {
+   "t": 182.1,
+   "text": "You want to know what it does in one specific population — say, the dopamine-producing neurons of the substantia nigra."
+  },
+  {
+   "t": 189.51,
+   "text": "Knock it out everywhere, and you can't disentangle the dopamine-neuron effect from all the other effects in all the other cell types."
+  },
+  {
+   "t": 197.0,
+   "text": "You need a way to delete the gene only in dopamine neurons and nowhere else."
+  },
+  {
+   "t": 202.14,
+   "text": "Same problem, same flavor."
+  },
+  {
+   "t": 204.39,
+   "text": "You need control."
+  },
+  {
+   "t": 205.62,
+   "text": "What you need, in other words, is conditional genetics — a way to break a gene not in the whole animal forever, but in a particular cell type, or at a particular moment, or both."
+  },
+  {
+   "t": 216.11,
+   "text": "You need a switch."
+  },
+  {
+   "t": 217.3,
+   "text": "A switch with a key."
+  },
+  {
+   "t": 218.56,
+   "text": "A switch where you decide where it gets thrown and when."
+  },
+  {
+   "t": 221.74,
+   "text": "And that is exactly what Cre-Lox gives you."
+  },
+  {
+   "t": 224.46,
+   "text": "Here's the headline analogy I want you to carry for the next two hours."
+  },
+  {
+   "t": 228.35,
+   "text": "Imagine you have a giant book — the genome — and you want to remove one specific paragraph from it."
+  },
+  {
+   "t": 234.84,
+   "text": "Not by tearing the page out; that's clumsy and the page might have other things on it."
+  },
+  {
+   "t": 240.03,
+   "text": "You want a much more precise tool."
+  },
+  {
+   "t": 241.86,
+   "text": "So you do two things."
+  },
+  {
+   "t": 243.6,
+   "text": "First, you put little bookmarks on either side of the paragraph you might want to remove — little physical tags stuck into the book, one before, one after."
+  },
+  {
+   "t": 252.78,
+   "text": "Second, you keep, in a separate drawer, a special pair of scissors that does exactly one thing: it walks along the book, finds any two of those bookmarks, cuts at one, cuts at the other, and seamlessly stitches the cut edges of the page back together."
+  },
+  {
+   "t": 268.8,
+   "text": "The paragraph between the two bookmarks falls out as a little circular scrap."
+  },
+  {
+   "t": 273.74,
+   "text": "The book closes up around the gap."
+  },
+  {
+   "t": 275.91,
+   "text": "Clean."
+  },
+  {
+   "t": 276.68,
+   "text": "Precise."
+  },
+  {
+   "t": 277.76,
+   "text": "Reversible only in the sense that the scrap can sometimes be put back, but otherwise — that paragraph is gone, and nothing else in the book has been touched."
+  },
+  {
+   "t": 287.01,
+   "text": "The scissors, in this analogy, are a protein called Cre recombinase."
+  },
+  {
+   "t": 291.98,
+   "text": "The bookmarks are short DNA sequences called loxP sites."
+  },
+  {
+   "t": 296.16,
+   "text": "The paragraph in between is whatever DNA you've chosen to \"flox\" — to flank with loxP sites."
+  },
+  {
+   "t": 302.84,
+   "text": "And here is the part that makes the whole system so powerful: you can choose, separately and independently, which cells get the bookmarks and which cells get the scissors."
+  },
+  {
+   "t": 313.4,
+   "text": "If a cell has the bookmarks but no scissors, nothing happens — the paragraph stays put."
+  },
+  {
+   "t": 319.34,
+   "text": "If a cell has the scissors but no bookmarks, also nothing happens — the scissors wander around the genome finding nothing to cut."
+  },
+  {
+   "t": 327.58,
+   "text": "Only the cells that have both end up with the paragraph removed."
+  },
+  {
+   "t": 331.11,
+   "text": "And that AND-gate logic is the trick that gives you conditional control."
+  },
+  {
+   "t": 335.84,
+   "text": "Bookmarks everywhere; scissors only in dopamine neurons; only dopamine neurons get the deletion."
+  },
+  {
+   "t": 342.81,
+   "text": "Bookmarks everywhere; scissors only after you give the mouse a drug; only after the drug goes in does the deletion happen."
+  },
+  {
+   "t": 350.65,
+   "text": "The combinatorics of \"where\" and \"when\" come from independently choosing where the scissors get expressed and when they get activated."
+  },
+  {
+   "t": 358.69,
+   "text": "So that's the contract for today."
+  },
+  {
+   "t": 360.6,
+   "text": "By the end of these two hours, you should be able to do three things."
+  },
+  {
+   "t": 364.83,
+   "text": "One: explain to a curious friend what Cre and loxP are, using the bookmarks-and-scissors analogy, and walk through why this gives you control that a whole-animal knockout cannot."
+  },
+  {
+   "t": 376.74,
+   "text": "Two: walk through, in rough terms, the standard mouse genetics workflow — how researchers breed two mouse lines together to delete a gene only in one tissue, and what the controls have to look like."
+  },
+  {
+   "t": 390.4,
+   "text": "Three: read a modern paper that uses Cre-Lox — and there are thousands of them — and understand at least roughly what each ingredient is doing, why the authors chose a particular Cre line, why they added tamoxifen at one age and not another, and what the reporter is telling you."
+  },
+  {
+   "t": 407.34,
+   "text": "If you walk out of here able to do those three things, we've succeeded."
+  },
+  {
+   "t": 411.84,
+   "text": "One more thing before we get into the molecule itself."
+  },
+  {
+   "t": 415.2,
+   "text": "Cre-Lox is the conditional genetics tool that opened up entire fields of biology."
+  },
+  {
+   "t": 421.0,
+   "text": "Tissue-specific knockouts in cancer biology, lineage tracing in stem cell research, the entire enterprise of dissecting the mammalian brain by neuron type — these things were either impossible or impractical before Cre-Lox."
+  },
+  {
+   "t": 435.39,
+   "text": "The system was first described in the 1980s, adapted to mouse genetics in the late 1980s and early 1990s, and over the next three decades it spread through biology the way a really good tool always does — quietly, ubiquitously, becoming the default before anyone noticed."
+  },
+  {
+   "t": 453.03,
+   "text": "Today there are thousands of mouse lines, fly lines, fish lines, rat lines, all built around Cre and loxP."
+  },
+  {
+   "t": 460.88,
+   "text": "The Allen Institute, the Jackson Laboratory, MMRRC — large research consortia exist substantially to make, catalog, and distribute these lines."
+  },
+  {
+   "t": 471.36,
+   "text": "It's an entire infrastructure."
+  },
+  {
+   "t": 473.39,
+   "text": "And it all rests on a tiny piece of biology stolen from a virus that infects bacteria."
+  },
+  {
+   "t": 479.53,
+   "text": "Which is where we go next."
+  }
+ ]
+}

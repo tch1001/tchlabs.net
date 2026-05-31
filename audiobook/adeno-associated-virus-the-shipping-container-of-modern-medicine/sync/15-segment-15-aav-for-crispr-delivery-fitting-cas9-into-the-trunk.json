@@ -1,0 +1,131 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — AAV for CRISPR delivery: fitting Cas9 into the trunk",
+ "duration": 254.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — AAV for CRISPR delivery: fitting Cas9 into the trunk"
+  },
+  {
+   "t": 6.1,
+   "text": "Now let's talk about a use of AAV that is rapidly becoming the second major application after gene replacement: delivering CRISPR."
+  },
+  {
+   "t": 14.36,
+   "text": "The combination of AAV as a vehicle and CRISPR as a payload is one of the most promising therapeutic platforms in development today, but it runs immediately into the cargo limit problem we've been discussing."
+  },
+  {
+   "t": 27.69,
+   "text": "Here's the issue."
+  },
+  {
+   "t": 28.85,
+   "text": "The standard Cas9 enzyme — SpCas9 from Streptococcus pyogenes, the workhorse of the CRISPR revolution — is about 4.2 kilobases of coding sequence."
+  },
+  {
+   "t": 40.16,
+   "text": "Add a promoter (200-800 bp), a polyadenylation signal (100-500 bp), the U6 promoter for the sgRNA (~250 bp), and the sgRNA itself (~100 bp), and you blow past the 4.7 kb AAV limit."
+  },
+  {
+   "t": 56.26,
+   "text": "So you cannot fit a complete SpCas9 + sgRNA expression cassette in a single AAV."
+  },
+  {
+   "t": 63.02,
+   "text": "Period."
+  },
+  {
+   "t": 63.85,
+   "text": "What do you do?"
+  },
+  {
+   "t": 64.76,
+   "text": "Three strategies, all in active clinical use or development."
+  },
+  {
+   "t": 69.08,
+   "text": "Strategy one: use a smaller Cas9."
+  },
+  {
+   "t": 72.09,
+   "text": "Other bacteria have Cas9 variants that are substantially smaller."
+  },
+  {
+   "t": 76.74,
+   "text": "SaCas9 from Staphylococcus aureus is about 3.2 kb — small enough to fit in a single AAV with a promoter and sgRNA."
+  },
+  {
+   "t": 86.69,
+   "text": "CjCas9 from Campylobacter jejuni is even smaller at about 2.9 kb."
+  },
+  {
+   "t": 93.15,
+   "text": "These smaller Cas9s have somewhat different PAM (protospacer adjacent motif) requirements — meaning they recognize different short sequences adjacent to the target — so they're not always a drop-in replacement for SpCas9, but for many editing applications they work well."
+  },
+  {
+   "t": 110.38,
+   "text": "Editas Medicine's clinical program for sickle cell disease uses SaCas9 in AAV6 for ex vivo editing of hematopoietic stem cells."
+  },
+  {
+   "t": 120.33,
+   "text": "Strategy two: use two AAVs in parallel."
+  },
+  {
+   "t": 124.58,
+   "text": "Put SpCas9 in one AAV particle and the sgRNA(s) in another."
+  },
+  {
+   "t": 130.88,
+   "text": "Co-administer both."
+  },
+  {
+   "t": 132.32,
+   "text": "Cells that get both will edit; cells that get only one won't."
+  },
+  {
+   "t": 136.18,
+   "text": "The efficiency penalty for needing both vectors to land in the same cell is meaningful but not catastrophic, especially at high doses where most target cells get multiple particles."
+  },
+  {
+   "t": 147.59,
+   "text": "This is a workable strategy for in vivo delivery and is used in several preclinical programs."
+  },
+  {
+   "t": 154.09,
+   "text": "Strategy three: use base editors or prime editors, which are bigger but enable different chemistry."
+  },
+  {
+   "t": 161.41,
+   "text": "These Cas9-fusion enzymes are typically too big for single AAV (often >5 kb), so they require dual-AAV strategies, which brings us to the next segment."
+  },
+  {
+   "t": 171.9,
+   "text": "Beyond Cas9 delivery, AAV is also used for non-editing CRISPR applications: catalytically dead Cas9 (dCas9) fused to transcriptional activators (CRISPRa) or repressors (CRISPRi) for tunable gene expression modulation; epigenetic editors that modify chromatin without changing DNA sequence; and various combinations."
+  },
+  {
+   "t": 196.05,
+   "text": "Each comes with its own size challenges and requires careful AAV design."
+  },
+  {
+   "t": 200.76,
+   "text": "The convergence of CRISPR and AAV is creating a new class of therapies that go beyond simple gene replacement."
+  },
+  {
+   "t": 208.11,
+   "text": "Instead of adding a healthy copy of a gene, you can repair the broken copy in place."
+  },
+  {
+   "t": 213.24,
+   "text": "This matters because for many diseases, regulatory expression of the gene from its native locus is important — you can't just blast in a constitutive overexpression cassette."
+  },
+  {
+   "t": 223.84,
+   "text": "In vivo CRISPR via AAV is the technology that lets you do precise, targeted, native-context gene correction in the actual tissue where the disease lives."
+  },
+  {
+   "t": 234.93,
+   "text": "There are now early clinical trials using AAV-delivered CRISPR for inherited retinal diseases (Editas/Allergan's EDIT-101 for CEP290-related LCA, using SaCas9 in AAV5 by subretinal injection), and the next decade will tell us how broadly the platform can deliver."
+  }
+ ]
+}

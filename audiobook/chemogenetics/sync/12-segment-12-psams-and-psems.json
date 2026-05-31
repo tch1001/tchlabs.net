@@ -1,0 +1,139 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — PSAMs and PSEMs",
+ "duration": 260.86,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — PSAMs and PSEMs"
+  },
+  {
+   "t": 3.26,
+   "text": "DREADDs are not the only chemogenetic tool."
+  },
+  {
+   "t": 6.12,
+   "text": "They are by far the most popular, but they have one important limitation that motivates a second-generation toolkit: they signal through G-proteins, which is biochemistry, which is slow."
+  },
+  {
+   "t": 17.35,
+   "text": "Even a \"fast\" hM3Dq response takes seconds to minutes to develop after drug arrival, because Gq signaling has to ripple through phospholipase C, IP3, calcium release, and so on."
+  },
+  {
+   "t": 30.93,
+   "text": "For experiments where you need faster control of neural activity — sub-second changes rather than minute-scale ones — DREADDs aren't ideal."
+  },
+  {
+   "t": 39.49,
+   "text": "So a different class of chemogenetic tool was developed, based on a completely different chassis."
+  },
+  {
+   "t": 45.65,
+   "text": "Instead of engineering a GPCR, you engineer a ligand-gated ion channel — a receptor that, when bound by its ligand, opens directly to let ions flow."
+  },
+  {
+   "t": 56.09,
+   "text": "No second messengers, no cascade, just immediate ionic current."
+  },
+  {
+   "t": 61.3,
+   "text": "Much faster."
+  },
+  {
+   "t": 62.51,
+   "text": "The dominant example is the class called PSAMs and PSEMs — Pharmacologically Selective Actuator Modules, and the matching Pharmacologically Selective Effector Molecules."
+  },
+  {
+   "t": 73.41,
+   "text": "PSAMs are the engineered receptors; PSEMs are the engineered ligands."
+  },
+  {
+   "t": 78.36,
+   "text": "The naming is parallel to DREADDs and CNO, but the underlying molecule is different."
+  },
+  {
+   "t": 84.33,
+   "text": "PSAMs were developed by Scott Sternson and colleagues, originally at Janelia Research Campus, and they're built on the ligand-binding domain of the alpha-7 nicotinic acetylcholine receptor."
+  },
+  {
+   "t": 96.06,
+   "text": "The alpha-7 nicotinic receptor is a natural ligand-gated ion channel — when it binds acetylcholine, it opens and lets ions through."
+  },
+  {
+   "t": 105.26,
+   "text": "The PSAM trick is to take the ligand-binding part of this receptor and mutate it so that it no longer responds to acetylcholine, but instead responds to a designer molecule called a PSEM."
+  },
+  {
+   "t": 117.22,
+   "text": "Then you fuse this engineered ligand-binding domain onto the ion-conducting part of a different channel — a glycine receptor channel, for instance — to control what kind of ion flows when the receptor opens."
+  },
+  {
+   "t": 130.03,
+   "text": "So you can build a PSAM-glycine receptor: engineered binding domain, glycine receptor pore, opens to let chloride in when the PSEM ligand arrives."
+  },
+  {
+   "t": 140.36,
+   "text": "Chloride entering a neuron makes it harder to fire — you've silenced the cell, fast, in milliseconds, with a drug."
+  },
+  {
+   "t": 148.66,
+   "text": "Or you can build a PSAM-serotonin receptor: engineered binding domain, serotonin receptor pore, opens to let cations in when the PSEM arrives."
+  },
+  {
+   "t": 159.24,
+   "text": "Cations entering a neuron depolarize it — you've activated the cell, fast, with a drug."
+  },
+  {
+   "t": 165.32,
+   "text": "The modularity lets you build a small family of fast chemogenetic tools that complement the slower DREADDs."
+  },
+  {
+   "t": 171.9,
+   "text": "Here's the analogy I want you to carry."
+  },
+  {
+   "t": 174.32,
+   "text": "DREADDs are the slower, biochemistry-driven first generation."
+  },
+  {
+   "t": 178.72,
+   "text": "PSAMs are the second-generation toolkit — ligand-gated ion channels instead of GPCRs, with custom pharmacology, and millisecond-scale kinetics rather than minute-scale."
+  },
+  {
+   "t": 189.55,
+   "text": "Think of them as a different point in the speed-versus-simplicity trade-off space."
+  },
+  {
+   "t": 194.7,
+   "text": "DREADDs are simpler, more popular, slower."
+  },
+  {
+   "t": 197.95,
+   "text": "PSAMs are faster, more complicated to engineer, and have a smaller user base, but they fill the gap when speed matters."
+  },
+  {
+   "t": 205.76,
+   "text": "The other advantage of PSAMs is that the off-target story is, in many ways, cleaner — the PSEM ligands like PSEM-89 or PSEM-308 are not based on a clinically used drug like clozapine, so they don't have a pre-existing problem with back-conversion to a psychoactive species."
+  },
+  {
+   "t": 225.04,
+   "text": "The pharmacology was designed from scratch with cleanliness in mind, after the CNO controversy had taught the field what to watch for."
+  },
+  {
+   "t": 232.7,
+   "text": "PSAMs are less widely used than DREADDs, partly because the field had so much momentum behind DREADDs already, partly because the ion channel chassis is harder to engineer than the GPCR one."
+  },
+  {
+   "t": 244.43,
+   "text": "But for specific kinds of fast chemogenetic manipulation, they're the right tool."
+  },
+  {
+   "t": 249.22,
+   "text": "The takeaway: chemogenetics is not just DREADDs."
+  },
+  {
+   "t": 253.2,
+   "text": "It's a family of techniques, with DREADDs as the popular eldest sibling and PSAMs as the speedier younger one."
+  }
+ ]
+}

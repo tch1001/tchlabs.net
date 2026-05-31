@@ -1,0 +1,263 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Modern adenovirus production and purification: CsCl, AEX, and GMP scale",
+ "duration": 511.73,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Modern adenovirus production and purification: CsCl, AEX, and GMP scale"
+  },
+  {
+   "t": 8.6,
+   "text": "Let me walk you through how adenoviral vectors are actually made at scale, because the manufacturing reality has shaped the field's deployment as much as any biology."
+  },
+  {
+   "t": 19.1,
+   "text": "The Gelsinger trial used vector produced in academic facilities."
+  },
+  {
+   "t": 23.76,
+   "text": "The AstraZeneca COVID vaccine campaign produced billions of doses across multiple commercial facilities."
+  },
+  {
+   "t": 30.44,
+   "text": "Bridging that gap involved enormous engineering work in production and purification."
+  },
+  {
+   "t": 36.25,
+   "text": "Producer cells."
+  },
+  {
+   "t": 37.6,
+   "text": "As we've discussed, first-generation adenoviral vectors are grown in HEK293 cells or close derivatives like HEK293T or PER."
+  },
+  {
+   "t": 48.94,
+   "text": "C6."
+  },
+  {
+   "t": 50.06,
+   "text": "The producer line must supply, in trans, whatever viral genes are deleted from the vector."
+  },
+  {
+   "t": 56.19,
+   "text": "HEK293 stably expresses E1, so it complements E1-deleted vectors."
+  },
+  {
+   "t": 63.77,
+   "text": "For chimpanzee adenoviral vectors like ChAdOx1, modified producer lines that express the chimpanzee E1 are used."
+  },
+  {
+   "t": 72.05,
+   "text": "For higher-deletion second-generation vectors, more elaborate producer lines are required."
+  },
+  {
+   "t": 78.29,
+   "text": "The producer cells are grown in bioreactors — large stirred tanks of culture medium, typically from a few liters at lab scale up to thousands of liters at commercial scale."
+  },
+  {
+   "t": 89.0,
+   "text": "Historically, producer cells were grown adherent on plastic surfaces, which was a scaling nightmare — you can only put so much surface area in a given volume."
+  },
+  {
+   "t": 98.66,
+   "text": "Modern adenoviral production has largely moved to suspension culture, where the cells grow free-floating in stirred medium, allowing direct scaling by simply using a larger tank."
+  },
+  {
+   "t": 111.1,
+   "text": "The shift from adherent to suspension culture in the 2000s and 2010s was one of the major engineering enablers of pandemic-scale adenoviral vaccine production."
+  },
+  {
+   "t": 121.51,
+   "text": "The producer cells are infected with the vector at low multiplicity, allowed to expand for a few days, and then the culture is harvested when most cells are producing vector at maximum yield."
+  },
+  {
+   "t": 132.75,
+   "text": "The cells are lysed — chemically, with detergents — to release the vector particles from inside the cells, since adenovirus largely accumulates intracellularly before lysing."
+  },
+  {
+   "t": 144.05,
+   "text": "The crude lysate, after some clarification, contains the vector along with cellular debris, host cell proteins, host cell DNA, and a great deal of other contamination that needs to be removed."
+  },
+  {
+   "t": 156.36,
+   "text": "Purification, classical method: cesium chloride gradients."
+  },
+  {
+   "t": 160.94,
+   "text": "The original purification method for adenovirus, used since the 1960s, exploits the density of the viral particle."
+  },
+  {
+   "t": 169.61,
+   "text": "Adenovirus has a buoyant density of about 1.34 grams per milliliter, distinct from cellular debris and most other contaminants."
+  },
+  {
+   "t": 179.43,
+   "text": "You make a tube of concentrated cesium chloride solution, layer the crude lysate on top, and centrifuge at very high speed for many hours."
+  },
+  {
+   "t": 188.79,
+   "text": "The CsCl forms a density gradient — denser at the bottom, less dense at the top — and the viral particles migrate to the position in the gradient where the local density matches their buoyant density."
+  },
+  {
+   "t": 201.18,
+   "text": "A sharp band of pure virus forms at that position; everything else bands elsewhere or sediments to the bottom."
+  },
+  {
+   "t": 208.91,
+   "text": "You puncture the tube with a needle, collect the viral band, dialyze out the CsCl, and you have purified vector."
+  },
+  {
+   "t": 216.57,
+   "text": "CsCl gradient centrifugation produces very pure vector — pure enough for research use and for many early clinical trials."
+  },
+  {
+   "t": 226.25,
+   "text": "But it has serious limitations for large-scale production."
+  },
+  {
+   "t": 229.85,
+   "text": "The centrifuges are expensive, the throughput is low (you can only process so many tubes at once), the CsCl is toxic and has to be carefully removed, and the process is hard to validate to GMP — good manufacturing practice — standards."
+  },
+  {
+   "t": 246.61,
+   "text": "CsCl gradients are still used in research labs, but commercial production has moved to chromatography."
+  },
+  {
+   "t": 253.84,
+   "text": "Purification, modern method: chromatography."
+  },
+  {
+   "t": 257.39,
+   "text": "The dominant modern method is anion exchange chromatography — AEX."
+  },
+  {
+   "t": 262.43,
+   "text": "Adenoviral particles have a net negative surface charge at physiological pH, so they bind to a column packed with positively charged beads."
+  },
+  {
+   "t": 271.54,
+   "text": "You load the crude lysate onto the column, the virus binds while most other proteins and cellular contaminants wash through, and then you elute the virus by raising the salt concentration."
+  },
+  {
+   "t": 283.15,
+   "text": "The bound virus is displaced from the column at a specific salt threshold and comes off as a relatively pure peak."
+  },
+  {
+   "t": 290.91,
+   "text": "The eluate is then often run over a second column — size exclusion chromatography, or hydrophobic interaction chromatography — to remove residual contaminants and to put the virus into the final formulation buffer."
+  },
+  {
+   "t": 305.19,
+   "text": "AEX-based purification scales beautifully."
+  },
+  {
+   "t": 308.35,
+   "text": "You can run columns of any size, processing thousands of liters of bioreactor harvest in continuous workflows."
+  },
+  {
+   "t": 315.85,
+   "text": "The process is amenable to GMP validation, with well-defined inputs and outputs and quantitative quality controls at each step."
+  },
+  {
+   "t": 324.95,
+   "text": "The yields are reasonable — typically 30 to 70 percent of input virus recovered as pure vector."
+  },
+  {
+   "t": 332.31,
+   "text": "And the resulting material meets stringent purity standards for clinical use."
+  },
+  {
+   "t": 337.48,
+   "text": "Quality control."
+  },
+  {
+   "t": 338.9,
+   "text": "Once purified, the vector preparation has to be characterized extensively before it can be released for clinical use."
+  },
+  {
+   "t": 346.38,
+   "text": "Key parameters include:"
+  },
+  {
+   "t": 348.08,
+   "text": "Particle count — typically measured by HPLC or by spectroscopic methods that exploit the absorption of viral DNA at 260 nm."
+  },
+  {
+   "t": 358.18,
+   "text": "The particle count tells you the total number of viral particles per milliliter, including both infectious and defective particles."
+  },
+  {
+   "t": 366.46,
+   "text": "Infectious titer — typically measured by infecting indicator cells with serial dilutions of vector and counting plaques or transduced cells."
+  },
+  {
+   "t": 375.74,
+   "text": "The infectious titer tells you how many functional vector particles you have."
+  },
+  {
+   "t": 380.36,
+   "text": "The ratio of particles to infectious units (the P:I ratio) is a key quality measure."
+  },
+  {
+   "t": 387.09,
+   "text": "Good adenoviral preparations have ratios of 10 to 50; ratios above 100 suggest a lot of defective particles and reduced clinical performance."
+  },
+  {
+   "t": 397.16,
+   "text": "Identity and integrity — sequencing or restriction analysis to confirm the vector genome is correct."
+  },
+  {
+   "t": 404.66,
+   "text": "Adenoviral vectors can recombine or rearrange during production, particularly during multiple passages in producer cells, so genome integrity has to be confirmed."
+  },
+  {
+   "t": 415.54,
+   "text": "Replication competent adenovirus (RCA) contamination — this is critical for E1-deleted vectors produced in E1-complementing cells."
+  },
+  {
+   "t": 426.95,
+   "text": "Through homologous recombination between the vector and the E1 sequence in the producer cell, occasional revertant viruses can arise that have re-acquired E1 and can replicate autonomously."
+  },
+  {
+   "t": 440.01,
+   "text": "Such revertants are dangerous and have to be screened out."
+  },
+  {
+   "t": 443.46,
+   "text": "Modern producer cell lines like PER."
+  },
+  {
+   "t": 446.21,
+   "text": "C6 were specifically designed to minimize the sequence overlap that allows RCA formation, but every clinical lot is still tested for RCA contamination."
+  },
+  {
+   "t": 457.26,
+   "text": "Endotoxin — bacterial lipopolysaccharide contamination from the production process must be below clinical thresholds."
+  },
+  {
+   "t": 465.58,
+   "text": "Even small amounts of endotoxin cause severe febrile reactions in patients."
+  },
+  {
+   "t": 470.88,
+   "text": "The overall picture: adenoviral vector production at clinical scale is a mature industrial process, capable of producing billions of doses per year worldwide."
+  },
+  {
+   "t": 481.46,
+   "text": "The COVID-19 vaccine campaigns demonstrated this conclusively."
+  },
+  {
+   "t": 485.95,
+   "text": "The technology stack — suspension culture in bioreactors, anion exchange chromatography, robust QC analytics — is well established and well validated."
+  },
+  {
+   "t": 497.09,
+   "text": "For future pandemic responses or for new adenoviral therapies, the manufacturing bottleneck is not technical capability; it's deployment of capacity."
+  },
+  {
+   "t": 507.18,
+   "text": "The how-to of making adenoviral vectors at scale is now a solved problem."
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Lentivirus for CRISPR screens: pooled libraries, the GeCKO and Brunello workhorses",
+ "duration": 220.21,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Lentivirus for CRISPR screens: pooled libraries, the GeCKO and Brunello workhorses"
+  },
+  {
+   "t": 7.94,
+   "text": "I want to spend a segment on a use case that has transformed functional genomics: pooled CRISPR screens delivered by lentivirus."
+  },
+  {
+   "t": 15.75,
+   "text": "The setup."
+  },
+  {
+   "t": 16.64,
+   "text": "You want to systematically test the function of every gene in the genome, or every gene in some defined subset — say, all kinases, all G-protein-coupled receptors, all transcription factors."
+  },
+  {
+   "t": 30.29,
+   "text": "The reagents are guide RNAs, one per gene, that direct Cas9 to cut and disable that gene."
+  },
+  {
+   "t": 37.61,
+   "text": "You want to introduce one guide RNA into each cell, screen the cells under some selective pressure, and figure out which guides — and therefore which gene knockouts — gave the cells a phenotype."
+  },
+  {
+   "t": 49.49,
+   "text": "The delivery vehicle is lentivirus, and the form of the experiment is the pooled library."
+  },
+  {
+   "t": 55.38,
+   "text": "You synthesize tens of thousands of guide RNAs as a mixed oligonucleotide pool, clone them in a single reaction into a lentiviral transfer plasmid that carries a U6-driven guide RNA cassette plus a constitutive Cas9 (or just the guide if Cas9 is expressed separately)."
+  },
+  {
+   "t": 73.97,
+   "text": "You package the library as a pool of lentiviral particles."
+  },
+  {
+   "t": 78.05,
+   "text": "You transduce a large population of target cells at low MOI — typically 0.3 to 0.5 — so that each cell gets at most one integrated guide."
+  },
+  {
+   "t": 88.94,
+   "text": "You select for transduced cells with puromycin or by sorting."
+  },
+  {
+   "t": 92.78,
+   "text": "Then you apply your selection — a drug, a pathogen, a sorting criterion — and after some weeks you sequence the guide RNAs in the surviving cells."
+  },
+  {
+   "t": 102.84,
+   "text": "The guides that are enriched in the surviving cells correspond to genes whose loss confers an advantage under your selection."
+  },
+  {
+   "t": 110.33,
+   "text": "The guides that are depleted correspond to genes whose loss confers a disadvantage."
+  },
+  {
+   "t": 115.61,
+   "text": "From a single experiment you get a genome-wide map of fitness contributions."
+  },
+  {
+   "t": 120.97,
+   "text": "The standard libraries — GeCKO (Genome-scale CRISPR Knockout) from the Zhang lab, Brunello from the Doench lab at the Broad — are lentiviral."
+  },
+  {
+   "t": 129.49,
+   "text": "They are distributed through Addgene."
+  },
+  {
+   "t": 131.89,
+   "text": "You can order them, package them yourself or have someone package them for you, and run a screen in any cell line that you can grow at scale."
+  },
+  {
+   "t": 139.82,
+   "text": "Why lentivirus, specifically?"
+  },
+  {
+   "t": 141.81,
+   "text": "Three reasons."
+  },
+  {
+   "t": 143.1,
+   "text": "One, it integrates, so the guide RNA persists permanently in the cell and its progeny, which means you can run selections that take weeks."
+  },
+  {
+   "t": 152.14,
+   "text": "Two, the per-cell integration is essentially clonal at low MOI — one guide per cell — which gives you clean readouts."
+  },
+  {
+   "t": 160.34,
+   "text": "Three, the integrated guide can be amplified by PCR from genomic DNA at the end of the screen, sequenced, and counted, which gives you a quantitative measure of guide abundance."
+  },
+  {
+   "t": 171.51,
+   "text": "Pooled CRISPR screens have become a standard tool in functional genomics."
+  },
+  {
+   "t": 176.2,
+   "text": "They've identified essential genes, drug-resistance pathways, host factors for viral infection (including SARS-CoV-2), immune evasion mechanisms in cancer, dependencies that distinguish tumor cells from normal cells."
+  },
+  {
+   "t": 190.32,
+   "text": "They are arguably the highest-throughput functional genetics methodology in current use."
+  },
+  {
+   "t": 195.96,
+   "text": "And underneath every one of them is a lentivirus carrying a guide RNA into a cell."
+  },
+  {
+   "t": 202.82,
+   "text": "This use case is not what HIV evolved for."
+  },
+  {
+   "t": 206.51,
+   "text": "The fact that it works so well — that a pathogen's machinery can be repurposed at this scale, in this configuration, to do this kind of biology — is a small reminder of why the field stays excited about lentiviral vectors."
+  }
+ ]
+}

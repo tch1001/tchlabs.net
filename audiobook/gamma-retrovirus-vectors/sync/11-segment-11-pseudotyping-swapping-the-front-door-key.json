@@ -1,0 +1,199 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Pseudotyping — swapping the front door key",
+ "duration": 357.96,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Pseudotyping — swapping the front door key"
+  },
+  {
+   "t": 4.09,
+   "text": "Now let's talk about a different kind of engineering choice — one that doesn't affect safety but does affect which cells the vector can enter."
+  },
+  {
+   "t": 12.44,
+   "text": "This is pseudotyping, and it's one of the most useful tricks in viral vector engineering generally, not just for gamma-retro."
+  },
+  {
+   "t": 20.36,
+   "text": "Here's the basic idea."
+  },
+  {
+   "t": 22.04,
+   "text": "The envelope glycoprotein on a retroviral particle — the spike sticking out of the membrane — determines which host receptor it binds, and therefore which cells it can enter."
+  },
+  {
+   "t": 32.51,
+   "text": "The wild-type MoMLV envelope, called the ecotropic envelope, binds a mouse cationic amino acid transporter called CAT1."
+  },
+  {
+   "t": 40.92,
+   "text": "That receptor is essentially mouse-only — human cells don't have it."
+  },
+  {
+   "t": 45.45,
+   "text": "So a particle bearing wild-type MoMLV envelope can only infect mouse cells."
+  },
+  {
+   "t": 51.27,
+   "text": "That was fine when MoMLV was being studied as a mouse leukemia virus."
+  },
+  {
+   "t": 56.3,
+   "text": "It is not fine when you want to use a MoMLV-derived vector to transduce human cells in a clinical trial."
+  },
+  {
+   "t": 63.6,
+   "text": "So the workaround is pseudotyping — building viral particles that carry a different envelope protein than they normally would."
+  },
+  {
+   "t": 71.53,
+   "text": "Because the envelope is supplied in trans from a separate plasmid in the producer cell, you can just swap which envelope plasmid you use."
+  },
+  {
+   "t": 79.66,
+   "text": "Use the ecotropic envelope plasmid, you get particles that infect mouse cells."
+  },
+  {
+   "t": 85.08,
+   "text": "Use a different envelope plasmid, you get particles that infect whatever cells the alternative envelope's receptor is on."
+  },
+  {
+   "t": 91.99,
+   "text": "The analogy here is swapping the front door key."
+  },
+  {
+   "t": 95.31,
+   "text": "The vector inside the particle — the cargo — is the same."
+  },
+  {
+   "t": 99.69,
+   "text": "The factory that makes the cargo is the same."
+  },
+  {
+   "t": 102.66,
+   "text": "The packaging machinery is the same."
+  },
+  {
+   "t": 105.24,
+   "text": "The only thing you change is the key, the surface protein that fits into the lock on the target cell's door."
+  },
+  {
+   "t": 112.17,
+   "text": "Change the key, change which doors the vector can open."
+  },
+  {
+   "t": 115.7,
+   "text": "A few common envelopes used for pseudotyping gamma-retroviral vectors."
+  },
+  {
+   "t": 120.47,
+   "text": "VSV-G — vesicular stomatitis virus G protein."
+  },
+  {
+   "t": 124.91,
+   "text": "This is the workhorse."
+  },
+  {
+   "t": 126.3,
+   "text": "VSV-G binds a receptor called LDLR (low-density lipoprotein receptor), which is present on essentially every cell type in the body — it's basically universal."
+  },
+  {
+   "t": 137.9,
+   "text": "So VSV-G-pseudotyped particles have extremely broad tropism — they can transduce almost any cell, including most human cells."
+  },
+  {
+   "t": 147.39,
+   "text": "VSV-G also has a great property for manufacturing: it's mechanically stable, so VSV-G-pseudotyped particles can be concentrated 100- or 1000-fold by ultracentrifugation without losing infectivity."
+  },
+  {
+   "t": 162.18,
+   "text": "This makes high-titer clinical preparations practical."
+  },
+  {
+   "t": 165.59,
+   "text": "The downside is that VSV-G is mildly cytotoxic when overexpressed in producer cells, which means you can't make stable VSV-G-producer cell lines easily — you typically use inducible systems or just accept transient production."
+  },
+  {
+   "t": 180.62,
+   "text": "VSV-G is the default for most academic gamma-retro work and for many clinical applications."
+  },
+  {
+   "t": 187.21,
+   "text": "GALV — gibbon ape leukemia virus envelope."
+  },
+  {
+   "t": 191.24,
+   "text": "GALV binds a different receptor, a phosphate transporter called PiT-1, which is well expressed on human hematopoietic cells, including T cells and CD34-positive stem cells."
+  },
+  {
+   "t": 205.39,
+   "text": "GALV-pseudotyped particles transduce human hematopoietic cells more efficiently than ecotropic, are less cytotoxic than VSV-G in producer cells (so stable producer lines are easier), but don't concentrate quite as well as VSV-G."
+  },
+  {
+   "t": 221.32,
+   "text": "GALV is widely used in clinical CAR-T manufacturing because of the combination of good hematopoietic tropism and producer-cell-line compatibility."
+  },
+  {
+   "t": 231.68,
+   "text": "RD114 — feline endogenous retrovirus envelope."
+  },
+  {
+   "t": 236.79,
+   "text": "RD114 binds another phosphate transporter called ASCT2 (also known as RDR), which is expressed on hematopoietic cells including primitive stem cells."
+  },
+  {
+   "t": 248.89,
+   "text": "RD114-pseudotyped particles have been used for hematopoietic stem cell transduction in clinical trials."
+  },
+  {
+   "t": 256.69,
+   "text": "Like GALV, it offers good hematopoietic tropism with reasonable producer cell compatibility."
+  },
+  {
+   "t": 263.74,
+   "text": "Amphotropic MLV envelope — the amphotropic version of MLV's own envelope (binds the phosphate transporter PiT-2)."
+  },
+  {
+   "t": 272.05,
+   "text": "This was historically the standard for human cell transduction before pseudotyping with non-retroviral envelopes became routine."
+  },
+  {
+   "t": 280.42,
+   "text": "It works, but it's been largely superseded by VSV-G and GALV."
+  },
+  {
+   "t": 285.49,
+   "text": "Engineered envelopes."
+  },
+  {
+   "t": 287.42,
+   "text": "There's an active area of research on building modified envelopes that target specific cell types — for instance, MLV envelopes fused to antibody single-chain fragments that recognize particular cell-surface markers."
+  },
+  {
+   "t": 301.14,
+   "text": "The goal is to restrict transduction to only the desired cell type, eliminating off-target delivery."
+  },
+  {
+   "t": 307.56,
+   "text": "These are mostly research-stage but represent the frontier of vector targeting."
+  },
+  {
+   "t": 312.43,
+   "text": "The big take-home for pseudotyping: the envelope determines tropism, and you can swap envelopes freely between producer-cell envelope plasmids without changing anything about the vector itself."
+  },
+  {
+   "t": 324.51,
+   "text": "This is one of the reasons the split-component architecture is so flexible — same transfer plasmid, same packaging plasmid, three different envelope plasmids gives you three different tropisms with three different production runs."
+  },
+  {
+   "t": 338.11,
+   "text": "The choice of envelope is usually driven by what cell type you're trying to transduce, and what the manufacturing constraints are."
+  },
+  {
+   "t": 345.52,
+   "text": "VSV-G for breadth and concentration; GALV or RD114 for hematopoietic specificity and producer-cell-line compatibility; engineered envelopes for restricted targeting."
+  }
+ ]
+}

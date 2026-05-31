@@ -1,0 +1,291 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — Targeting neurons of interest: the GPS of expression",
+ "duration": 439.77,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — Targeting neurons of interest: the GPS of expression"
+  },
+  {
+   "t": 5.7,
+   "text": "Here is the conceptual move I most want you to take away from this segment, and I think it's the move that makes optogenetics finally click as a serious scientific tool: the light is the trigger, but the gene is the address."
+  },
+  {
+   "t": 19.89,
+   "text": "The light hits the whole region, indiscriminately."
+  },
+  {
+   "t": 23.25,
+   "text": "What makes the experiment selective is that only the right cells have the opsin in their membrane."
+  },
+  {
+   "t": 28.81,
+   "text": "Light without an opsin is just illumination."
+  },
+  {
+   "t": 31.7,
+   "text": "An opsin without light is just a quiet membrane protein."
+  },
+  {
+   "t": 35.81,
+   "text": "The selectivity is born from the combination, and it depends utterly on getting the opsin into only the cells you care about."
+  },
+  {
+   "t": 43.69,
+   "text": "So how do we do that?"
+  },
+  {
+   "t": 44.94,
+   "text": "How do we hand a gene to one specific cell type in a brain full of dozens of cell types, and make sure no other cells get it?"
+  },
+  {
+   "t": 52.91,
+   "text": "This is a problem molecular biology had been working on long before optogenetics existed, and optogenetics inherited a wonderfully mature toolkit."
+  },
+  {
+   "t": 62.41,
+   "text": "The simplest tool is the cell-type-specific promoter."
+  },
+  {
+   "t": 66.26,
+   "text": "Recall, from your introductory molecular biology, that every gene in your genome is preceded by a regulatory region called a promoter, which controls when and where the gene is turned on."
+  },
+  {
+   "t": 77.67,
+   "text": "Some promoters are active in essentially every cell — the cytomegalovirus promoter, CMV, is the classic example, and you'll see it on the front of many lab plasmids."
+  },
+  {
+   "t": 88.94,
+   "text": "Others are active in only one cell type."
+  },
+  {
+   "t": 91.96,
+   "text": "The promoter for parvalbumin, for instance, is active only in parvalbumin-expressing interneurons."
+  },
+  {
+   "t": 99.03,
+   "text": "The promoter for tyrosine hydroxylase is active only in dopamine and noradrenaline neurons."
+  },
+  {
+   "t": 105.33,
+   "text": "The promoter for calcium/calmodulin-dependent kinase II — CaMKII — is active in excitatory pyramidal neurons in the cortex."
+  },
+  {
+   "t": 114.67,
+   "text": "So if you take your ChR2 gene and put it behind a parvalbumin promoter, and deliver this construct to a whole region of cortex, then the opsin will only be expressed in parvalbumin neurons."
+  },
+  {
+   "t": 127.26,
+   "text": "Everything else in the region — the pyramidal cells, the other interneuron subtypes, the glia — will be opsin-free."
+  },
+  {
+   "t": 135.38,
+   "text": "Now you can shine light, and only parvalbumin neurons respond."
+  },
+  {
+   "t": 139.45,
+   "text": "Cell-type specificity, achieved."
+  },
+  {
+   "t": 141.99,
+   "text": "There's a problem, though."
+  },
+  {
+   "t": 143.61,
+   "text": "Many of the most interesting cell-type-specific promoters are huge — tens of kilobases of regulatory DNA, full of distant enhancers — and you can't fit them into the small genetic cargo of a virus."
+  },
+  {
+   "t": 157.09,
+   "text": "You can use a transgenic animal where the promoter and the opsin are both built into the genome, but that requires making the animal from scratch, which takes years."
+  },
+  {
+   "t": 166.81,
+   "text": "So neuroscience adopted a much more flexible trick: Cre-dependent expression."
+  },
+  {
+   "t": 172.51,
+   "text": "Cre is an enzyme borrowed from a bacteriophage."
+  },
+  {
+   "t": 176.31,
+   "text": "It recognizes short DNA sequences called loxP sites and cuts and recombines DNA between them."
+  },
+  {
+   "t": 183.76,
+   "text": "In molecular biology, Cre is used as a kind of genetic scissors — you can put loxP sites around any piece of DNA you want, and Cre will excise it or flip it depending on the orientation of the sites."
+  },
+  {
+   "t": 197.18,
+   "text": "Here's the trick."
+  },
+  {
+   "t": 198.26,
+   "text": "Make a transgenic mouse where Cre is expressed under the control of, say, the parvalbumin promoter — so Cre exists only in parvalbumin neurons, and nowhere else."
+  },
+  {
+   "t": 210.85,
+   "text": "There are now thousands of such Cre driver lines available, covering essentially every interesting cell type in the mouse brain — dopamine neurons, serotonin neurons, somatostatin interneurons, every layer of cortex, you name it."
+  },
+  {
+   "t": 225.39,
+   "text": "The Allen Institute and other consortia have systematically generated and characterized them."
+  },
+  {
+   "t": 231.12,
+   "text": "Now make a virus — almost always an adeno-associated virus, or AAV — carrying your opsin gene."
+  },
+  {
+   "t": 238.49,
+   "text": "But arrange the gene cleverly: insert it in the wrong orientation, flanked by loxP sites in such a way that without Cre, the gene cannot be transcribed."
+  },
+  {
+   "t": 249.71,
+   "text": "This arrangement is called a DIO — double-floxed inverted open reading frame — or sometimes a FLEX cassette."
+  },
+  {
+   "t": 257.18,
+   "text": "The opsin is genetically dormant inside the virus."
+  },
+  {
+   "t": 261.14,
+   "text": "Inject this virus into the brain."
+  },
+  {
+   "t": 263.84,
+   "text": "It infects every neuron in the injection area, indiscriminately."
+  },
+  {
+   "t": 268.75,
+   "text": "But only the Cre-expressing neurons — the parvalbumin neurons — have the enzyme to flip the gene into the correct orientation."
+  },
+  {
+   "t": 277.39,
+   "text": "In those cells, and only those cells, the opsin gets expressed."
+  },
+  {
+   "t": 281.87,
+   "text": "So now you have two layers of specificity stacked."
+  },
+  {
+   "t": 285.33,
+   "text": "The viral injection limits expression to one brain region — you only infect cells near the needle."
+  },
+  {
+   "t": 292.13,
+   "text": "The Cre dependence further restricts expression to one cell type within that region."
+  },
+  {
+   "t": 298.0,
+   "text": "The opsin is in only the right cells, in only the right region."
+  },
+  {
+   "t": 302.2,
+   "text": "Shine light."
+  },
+  {
+   "t": 303.25,
+   "text": "Only the cells you wanted respond."
+  },
+  {
+   "t": 305.23,
+   "text": "Surgical precision, from molecular biology."
+  },
+  {
+   "t": 308.3,
+   "text": "I want to put this concept in a simple analogy."
+  },
+  {
+   "t": 311.05,
+   "text": "Think of the opsin gene as a package you want delivered to a specific house."
+  },
+  {
+   "t": 315.73,
+   "text": "The virus is the delivery vehicle — it drives down every street in the neighborhood and drops a package at every house."
+  },
+  {
+   "t": 323.12,
+   "text": "The Cre-loxP system is the GPS: the package only opens at the house with the right address, which in our case is the cell expressing Cre."
+  },
+  {
+   "t": 332.64,
+   "text": "Everywhere else, the package sits unopened and useless."
+  },
+  {
+   "t": 336.87,
+   "text": "The combination of virus plus Cre is a delivery system that gets the gene to a defined set of cells, in a defined region, with a precision no broadcast tool could ever match."
+  },
+  {
+   "t": 348.43,
+   "text": "There are now elaborate extensions of this trick."
+  },
+  {
+   "t": 351.27,
+   "text": "You can use intersectional strategies, where expression requires two different recombinases at the same time — Cre and another one called Flp — letting you target the overlap of two cell-type populations."
+  },
+  {
+   "t": 365.69,
+   "text": "You can use retrograde viruses, which travel backwards along axons, to label cells based on where they project rather than what they look like."
+  },
+  {
+   "t": 374.63,
+   "text": "You can use anterograde transsynaptic viruses to jump across synapses and identify post-synaptic partners."
+  },
+  {
+   "t": 382.38,
+   "text": "The molecular plumbing of optogenetics targeting is a full graduate course on its own."
+  },
+  {
+   "t": 387.82,
+   "text": "But for our purposes today, hold the simple version."
+  },
+  {
+   "t": 390.99,
+   "text": "Promoter or Cre defines which cells."
+  },
+  {
+   "t": 394.27,
+   "text": "Virus defines where the cells are."
+  },
+  {
+   "t": 396.58,
+   "text": "Light defines when they fire."
+  },
+  {
+   "t": 398.47,
+   "text": "Three layers of selectivity, stacked."
+  },
+  {
+   "t": 401.25,
+   "text": "With those three working together, you can — for the first time in the history of neuroscience — say \"I want these specific cells, in this specific place, to fire at this specific time,\" and you can actually make it happen."
+  },
+  {
+   "t": 413.34,
+   "text": "That is what optogenetics gives you."
+  },
+  {
+   "t": 415.43,
+   "text": "That capability did not exist before 2005."
+  },
+  {
+   "t": 419.68,
+   "text": "It now does."
+  },
+  {
+   "t": 420.79,
+   "text": "And that capability is what has reshaped, fundamentally, what kinds of questions neuroscience can answer."
+  },
+  {
+   "t": 428.43,
+   "text": "So we've got the switch, and we've got the address."
+  },
+  {
+   "t": 431.24,
+   "text": "The last thing we need is to get the light to where the switch lives."
+  },
+  {
+   "t": 435.19,
+   "text": "That's the next segment — and it turns out to be much more interesting than it sounds."
+  }
+ ]
+}

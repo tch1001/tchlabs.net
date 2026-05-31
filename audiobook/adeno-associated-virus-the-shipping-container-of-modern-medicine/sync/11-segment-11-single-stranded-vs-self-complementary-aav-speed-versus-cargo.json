@@ -1,0 +1,183 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Single-stranded vs self-complementary AAV: speed versus cargo",
+ "duration": 353.32,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Single-stranded vs self-complementary AAV: speed versus cargo"
+  },
+  {
+   "t": 6.56,
+   "text": "I mentioned earlier — back in Segment 3 — that AAV packages a single-stranded DNA genome, and that when the virus enters a cell, that single strand has to be converted to double-stranded DNA before the gene can be expressed."
+  },
+  {
+   "t": 21.02,
+   "text": "That conversion is rate-limiting, and it introduces a delay between AAV delivery and the onset of gene expression."
+  },
+  {
+   "t": 28.39,
+   "text": "For many applications, that delay is fine."
+  },
+  {
+   "t": 31.54,
+   "text": "For some applications, it's a problem."
+  },
+  {
+   "t": 33.84,
+   "text": "So the field developed a clever workaround called self-complementary AAV, abbreviated scAAV, that bypasses the second-strand synthesis bottleneck by pre-folding the cargo into double-stranded form before packaging."
+  },
+  {
+   "t": 48.27,
+   "text": "The trade-off, as you might expect, is in cargo capacity."
+  },
+  {
+   "t": 52.34,
+   "text": "Let me explain how scAAV actually works, because the idea is elegant and worth grasping."
+  },
+  {
+   "t": 58.49,
+   "text": "In normal single-stranded AAV — ssAAV — the construct between the two ITRs is, well, the construct: a promoter, your gene, a polyA, all in normal arrangement, packaged as a single strand of about 4.7 kb."
+  },
+  {
+   "t": 73.72,
+   "text": "Once that single strand enters a cell, the cell has to make a complementary strand using its own DNA polymerase, and only then does the now-double-stranded DNA become a template for transcription."
+  },
+  {
+   "t": 86.78,
+   "text": "In self-complementary AAV, you do something different."
+  },
+  {
+   "t": 90.49,
+   "text": "You make a construct between the two ITRs that is a tandem inverted repeat of itself — your promoter-gene-polyA cassette, immediately followed by the reverse complement of the same cassette."
+  },
+  {
+   "t": 102.3,
+   "text": "So the construct reads, conceptually, \"cassette → mutated middle ITR → cassette-reverse-complement."
+  },
+  {
+   "t": 109.53,
+   "text": "\" When this construct gets packaged and delivered to a cell, the single strand that comes out of the capsid contains, at one end, your gene cassette, and at the other end, the reverse complement of the same cassette."
+  },
+  {
+   "t": 121.85,
+   "text": "Because those two halves are complementary to each other, the single strand spontaneously folds back on itself and base-pairs into a double-stranded hairpin."
+  },
+  {
+   "t": 131.96,
+   "text": "No DNA synthesis required."
+  },
+  {
+   "t": 134.56,
+   "text": "The cell immediately has double-stranded DNA available for transcription, and gene expression starts very fast — sometimes within hours rather than days."
+  },
+  {
+   "t": 145.3,
+   "text": "The mutated middle ITR I mentioned is the key engineering trick."
+  },
+  {
+   "t": 150.1,
+   "text": "In normal AAV replication, the natural process involves resolving certain replication intermediates at the ITR."
+  },
+  {
+   "t": 158.03,
+   "text": "If you cripple the ITR's resolution site (by a specific small mutation), the replication intermediate fails to resolve, and you end up packaging a double-length, self-complementary structure into the capsid."
+  },
+  {
+   "t": 171.14,
+   "text": "So the engineering is: mutate one ITR's terminal resolution site, design your construct as a single cassette, and AAV's own replication machinery folds it into a double-stranded product during packaging."
+  },
+  {
+   "t": 184.7,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 185.99,
+   "text": "Self-complementary AAV is preassembled cargo."
+  },
+  {
+   "t": 189.62,
+   "text": "Imagine you're shipping a piece of furniture that normally arrives as a flat box of parts that the recipient has to assemble — that's ssAAV; the cell has to do work to make it usable."
+  },
+  {
+   "t": 200.9,
+   "text": "Self-complementary AAV is the same furniture but pre-assembled at the factory and shipped ready to use."
+  },
+  {
+   "t": 207.61,
+   "text": "The recipient saves time."
+  },
+  {
+   "t": 209.54,
+   "text": "But pre-assembled furniture takes up more shipping volume — you can't fit as many of them in a truck."
+  },
+  {
+   "t": 216.24,
+   "text": "So scAAV uses up the same packaging capacity for half the unique cargo, because both halves of the strand are essentially the same information, mirror-imaged."
+  },
+  {
+   "t": 226.94,
+   "text": "Specifically, the effective cargo capacity of scAAV is about 2.4 kilobases, roughly half of the 4.7 kb of ssAAV."
+  },
+  {
+   "t": 237.29,
+   "text": "So scAAV is great when (a) your gene is small enough to fit in 2.4 kb with regulatory sequences and (b) you want fast onset of expression."
+  },
+  {
+   "t": 249.35,
+   "text": "It's not an option when your gene is larger than that."
+  },
+  {
+   "t": 252.07,
+   "text": "When is scAAV preferred clinically?"
+  },
+  {
+   "t": 254.62,
+   "text": "Several of the approved AAV gene therapies use it."
+  },
+  {
+   "t": 258.56,
+   "text": "Zolgensma uses scAAV9 to deliver SMN1 to motor neurons — SMN1 is small enough (about 1.5 kb) and fast onset of expression is desirable for treating a rapidly progressive disease."
+  },
+  {
+   "t": 274.15,
+   "text": "Luxturna uses single-stranded AAV2 (RPE65 is closer to the size limit at 1.6 kb, plus regulatory elements)."
+  },
+  {
+   "t": 285.07,
+   "text": "The choice between ss and sc depends on size constraints and onset speed."
+  },
+  {
+   "t": 290.43,
+   "text": "A subtler point: scAAV tends to give higher peak expression per vector genome than ssAAV, because every particle that enters a cell can immediately express, whereas with ssAAV many particles get stuck waiting for second-strand synthesis and may never express within the relevant time window."
+  },
+  {
+   "t": 308.4,
+   "text": "So for the same dose in vector genomes, scAAV often produces more protein."
+  },
+  {
+   "t": 313.88,
+   "text": "But again — only for small enough genes."
+  },
+  {
+   "t": 316.77,
+   "text": "Self-complementary AAV is one of the cleverest pieces of vector engineering in the entire AAV story."
+  },
+  {
+   "t": 323.84,
+   "text": "It exploits the natural replication mechanism — specifically the ITR resolution step — to deliver a pre-doubled product, simply by deliberately breaking one of the resolution sites."
+  },
+  {
+   "t": 335.32,
+   "text": "It's the kind of trick that you look at once and think, \"of course."
+  },
+  {
+   "t": 338.77,
+   "text": "\" It also illustrates a recurring theme: AAV engineering is often a matter of finding small modifications that work with the natural biology rather than against it."
+  },
+  {
+   "t": 349.1,
+   "text": "The virus's own machinery does most of the work; you just nudge it."
+  }
+ ]
+}

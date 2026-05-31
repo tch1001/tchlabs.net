@@ -1,0 +1,119 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Intersectional approaches — Cre AND Flp",
+ "duration": 199.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Intersectional approaches — Cre AND Flp"
+  },
+  {
+   "t": 5.51,
+   "text": "We talked back in Segment 5 about a frustration with Cre lines: no promoter is perfectly specific."
+  },
+  {
+   "t": 12.88,
+   "text": "Most Cre drivers label a population that overlaps your target cells but also includes some cells you didn't want."
+  },
+  {
+   "t": 20.0,
+   "text": "The biology of promoters is what it is — most genes are expressed in more than one cell type, and finding a single promoter that's perfectly restricted to your population of interest is often impossible."
+  },
+  {
+   "t": 32.7,
+   "text": "But here's an idea."
+  },
+  {
+   "t": 33.98,
+   "text": "What if you required two promoters to be active simultaneously?"
+  },
+  {
+   "t": 38.23,
+   "text": "Cells that express promoter A alone, no effect."
+  },
+  {
+   "t": 42.29,
+   "text": "Cells that express promoter B alone, no effect."
+  },
+  {
+   "t": 45.77,
+   "text": "Only cells that express both promoter A AND promoter B get the genetic alteration."
+  },
+  {
+   "t": 52.12,
+   "text": "The intersection of two leaky patterns is much tighter than either pattern alone, because the off-target cells of one promoter are unlikely to also be the off-target cells of the other."
+  },
+  {
+   "t": 63.46,
+   "text": "This is the AND gate of mouse genetics — and it's exactly what intersectional approaches give you."
+  },
+  {
+   "t": 69.75,
+   "text": "Here's how it works."
+  },
+  {
+   "t": 71.0,
+   "text": "You use two recombinases — Cre and FLP — driven by two different cell-type-specific promoters."
+  },
+  {
+   "t": 79.58,
+   "text": "So you might have TH-Cre (driving Cre in tyrosine-hydroxylase-positive neurons, which includes dopamine and noradrenaline neurons) crossed with DAT-FLP (driving FLP in dopamine-transporter-positive neurons, which is more restricted to dopamine specifically)."
+  },
+  {
+   "t": 97.42,
+   "text": "Each line on its own labels a broader population than dopamine neurons proper."
+  },
+  {
+   "t": 102.4,
+   "text": "But the intersection — cells that express both TH and DAT — is essentially pure dopamine neurons."
+  },
+  {
+   "t": 110.19,
+   "text": "To make the intersection visible, you need a reporter allele that requires both recombinases to activate."
+  },
+  {
+   "t": 116.75,
+   "text": "The standard design is a cassette with both a FRT-STOP-FRT and a lox-STOP-lox blocking expression of, say, GFP."
+  },
+  {
+   "t": 125.79,
+   "text": "Only cells in which both FLP and Cre have acted — removing both STOPs — turn on the reporter."
+  },
+  {
+   "t": 132.72,
+   "text": "Anything else stays dark."
+  },
+  {
+   "t": 134.56,
+   "text": "The result is genetic access to a precisely defined cell population that no single promoter could deliver."
+  },
+  {
+   "t": 141.84,
+   "text": "The Allen Institute has built a library of intersectional reporter alleles — RC::FLTG, Ai65, Ai66, and many others — that combine FLP-dependent and Cre-dependent activation in various configurations."
+  },
+  {
+   "t": 158.47,
+   "text": "Some report the intersection; some report the cells that have one recombinase but not the other; some give you simultaneous readout of three populations in different colors."
+  },
+  {
+   "t": 169.54,
+   "text": "The combinatorics give you a level of specificity that, twenty years ago, would have been considered science fiction."
+  },
+  {
+   "t": 176.9,
+   "text": "This is the frontier of mammalian cell-type genetics — moving from labeling populations defined by a single marker to populations defined by the intersection of multiple markers, which more closely matches how cell types are actually defined in nature."
+  },
+  {
+   "t": 192.46,
+   "text": "Single markers are blunt."
+  },
+  {
+   "t": 194.15,
+   "text": "Intersections are precise."
+  },
+  {
+   "t": 196.3,
+   "text": "AND gates beat OR gates when you're trying to be specific."
+  }
+ ]
+}

@@ -1,0 +1,223 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Precise edits — using ZFNs with homologous recombination",
+ "duration": 410.11,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Precise edits — using ZFNs with homologous recombination"
+  },
+  {
+   "t": 6.12,
+   "text": "Let's now zoom in on what the cell does with a ZFN-induced cut, because this is where the actual editing happens and it determines what kinds of edits you can achieve."
+  },
+  {
+   "t": 14.91,
+   "text": "When a ZFN cuts the DNA, the cell sees a double-strand break — a piece of damage that, if left unrepaired, would be lethal."
+  },
+  {
+   "t": 24.26,
+   "text": "The cell has two main repair pathways for double-strand breaks, and the choice between them is at the heart of every gene-editing application."
+  },
+  {
+   "t": 32.67,
+   "text": "The first pathway is non-homologous end joining, often abbreviated NHEJ."
+  },
+  {
+   "t": 38.74,
+   "text": "NHEJ is the cell's fast, sloppy repair pathway."
+  },
+  {
+   "t": 43.39,
+   "text": "It grabs the two broken ends, trims them back a little, and rejoins them."
+  },
+  {
+   "t": 48.49,
+   "text": "The process is error-prone — small insertions or deletions, called indels, are introduced at the join site about thirty to seventy percent of the time."
+  },
+  {
+   "t": 58.46,
+   "text": "NHEJ is active throughout the cell cycle and is the default repair pathway in most cell types."
+  },
+  {
+   "t": 65.08,
+   "text": "If you want to knock out a gene — disable it permanently — NHEJ is what you want."
+  },
+  {
+   "t": 70.76,
+   "text": "You target a ZFN to an early coding exon of the gene, the cut happens, NHEJ rejoins the ends with a small indel, and the indel disrupts the reading frame of the gene."
+  },
+  {
+   "t": 81.94,
+   "text": "The protein is no longer made properly, and the gene is functionally disabled."
+  },
+  {
+   "t": 87.19,
+   "text": "This is exactly how the CCR5-ZFN program worked — they targeted CCR5, cut it, let NHEJ patch the cut with indels, and the CCR5 gene became non-functional in the edited cells."
+  },
+  {
+   "t": 101.85,
+   "text": "The second pathway is homology-directed repair, or HDR."
+  },
+  {
+   "t": 106.41,
+   "text": "HDR is the cell's careful, template-based repair pathway."
+  },
+  {
+   "t": 110.54,
+   "text": "When the cell has a homologous template — usually the sister chromatid, in dividing cells — it can use that template to copy the correct sequence across the break, restoring the original DNA."
+  },
+  {
+   "t": 122.21,
+   "text": "HDR is much slower than NHEJ, much more restricted in when it operates — primarily in late S and G2 phase, when sister chromatids are available — and much rarer overall."
+  },
+  {
+   "t": 134.76,
+   "text": "But here's the trick."
+  },
+  {
+   "t": 135.97,
+   "text": "If you provide an external DNA template that matches the regions around the cut, the cell will sometimes use that template for HDR instead of its own sister chromatid."
+  },
+  {
+   "t": 146.22,
+   "text": "And if your template has been engineered to carry a specific edit — a single-base change, a small insertion, a large insertion of a new gene — that edit will get copied into the genome at the cut site."
+  },
+  {
+   "t": 158.99,
+   "text": "HDR with an engineered template is how you do precise gene knock-ins — adding new sequences at defined locations, correcting specific disease mutations, inserting reporter genes at exact positions."
+  },
+  {
+   "t": 172.35,
+   "text": "For example, you could use a ZFN to cut at a specific intron in a patient's beta-globin gene, and provide an HDR donor template that carries the correct sequence to replace a sickle-cell mutation."
+  },
+  {
+   "t": 185.45,
+   "text": "The ZFN cuts, HDR uses your donor template, the mutation is corrected."
+  },
+  {
+   "t": 191.35,
+   "text": "That's the conceptual basis for an entire class of gene-correction therapies."
+  },
+  {
+   "t": 196.5,
+   "text": "The catch is that HDR is rare."
+  },
+  {
+   "t": 198.69,
+   "text": "In a typical experiment, you might get a fifty percent indel rate from NHEJ but only a one or two percent HDR rate, even when you provide a perfect donor template."
+  },
+  {
+   "t": 209.41,
+   "text": "The cell just prefers NHEJ."
+  },
+  {
+   "t": 212.2,
+   "text": "Boosting HDR efficiency is one of the major ongoing challenges in genome editing, and many tricks have been developed — synchronizing cells in the right cell cycle phase, providing donor templates as single-stranded DNA, using small-molecule inhibitors of NHEJ to bias the choice toward HDR, and so on."
+  },
+  {
+   "t": 232.43,
+   "text": "None of these are silver bullets."
+  },
+  {
+   "t": 234.22,
+   "text": "Sangamo and their academic collaborators have used HDR with ZFNs to do some genuinely impressive things."
+  },
+  {
+   "t": 241.79,
+   "text": "There's a program called ZFN-mediated insertion at AAVS1, where the AAVS1 site — a so-called \"safe harbor\" locus on chromosome 19 where insertions are well-tolerated — is targeted by a ZFN, and a therapeutic gene is inserted there by HDR."
+  },
+  {
+   "t": 259.71,
+   "text": "This approach has been used for delivering Factor IX, the missing clotting factor in hemophilia B, into patients' liver cells."
+  },
+  {
+   "t": 268.2,
+   "text": "The patient's hepatocytes get edited in vivo by AAV-delivered ZFNs and an AAV-delivered donor template, the Factor IX gene gets inserted at AAVS1, and the liver starts producing Factor IX."
+  },
+  {
+   "t": 280.71,
+   "text": "The clinical trial for this approach, run by Sangamo with partners, was one of the first in vivo gene-editing trials ever conducted."
+  },
+  {
+   "t": 289.28,
+   "text": "The results were mixed."
+  },
+  {
+   "t": 290.76,
+   "text": "The approach was safe; ZFNs delivered to the liver via AAV did edit hepatocytes without significant off-target damage."
+  },
+  {
+   "t": 299.35,
+   "text": "But the levels of Factor IX produced were lower than hoped, and the program has been refined over the years."
+  },
+  {
+   "t": 305.78,
+   "text": "The CRISPR-based alternatives, including a competing program from another company, have also struggled with similar issues."
+  },
+  {
+   "t": 313.09,
+   "text": "The fundamental challenge — getting HDR to work efficiently enough in vivo to produce therapeutic levels of protein — is hard for any nuclease platform."
+  },
+  {
+   "t": 322.84,
+   "text": "But the principle, again, was established by ZFNs first."
+  },
+  {
+   "t": 327.51,
+   "text": "ZFN knock-ins demonstrated that precise gene insertion at chosen sites in the human genome was clinically feasible."
+  },
+  {
+   "t": 335.54,
+   "text": "Every CRISPR-based knock-in therapy now in development is built on top of that demonstration."
+  },
+  {
+   "t": 341.96,
+   "text": "The Sangamo programs showed how to manufacture the reagents, how to deliver them, how to monitor for safety, and what the limits were."
+  },
+  {
+   "t": 350.49,
+   "text": "They were the pioneers, even if the territory they pioneered is now being homesteaded by newer technologies."
+  },
+  {
+   "t": 357.16,
+   "text": "So that's the ZFN editing toolbox, end to end."
+  },
+  {
+   "t": 360.7,
+   "text": "You design the ZFN."
+  },
+  {
+   "t": 362.51,
+   "text": "You deliver it into cells via electroporation or AAV or mRNA."
+  },
+  {
+   "t": 368.39,
+   "text": "The ZFN finds its target and cuts."
+  },
+  {
+   "t": 371.09,
+   "text": "The cell repairs the cut, either sloppily through NHEJ — giving you a gene knockout — or carefully through HDR using a template you provide, giving you a precise edit."
+  },
+  {
+   "t": 382.16,
+   "text": "Cells with the desired edit can be expanded, selected, returned to the patient, or left in place."
+  },
+  {
+   "t": 388.78,
+   "text": "The whole pipeline, end to end, was first built around ZFNs, and it's the pipeline every subsequent technology has inherited."
+  },
+  {
+   "t": 397.85,
+   "text": "Now let's pivot to the other half of the zinc finger toolkit — the part that doesn't cut at all."
+  },
+  {
+   "t": 402.95,
+   "text": "Because some of the most interesting recent work in this space isn't about cutting genes."
+  },
+  {
+   "t": 408.6,
+   "text": "It's about controlling them."
+  }
+ ]
+}

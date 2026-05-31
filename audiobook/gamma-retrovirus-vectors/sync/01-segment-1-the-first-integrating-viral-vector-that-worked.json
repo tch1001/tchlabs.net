@@ -1,0 +1,191 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The first integrating viral vector that worked",
+ "duration": 296.3,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The first integrating viral vector that worked"
+  },
+  {
+   "t": 4.24,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 5.83,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 7.26,
+   "text": "Today and for the next two hours, we're going to talk about gamma-retroviral vectors."
+  },
+  {
+   "t": 12.5,
+   "text": "And if you have heard the word \"retrovirus\" thrown around in a molecular biology class, or maybe you've heard about gene therapy or CAR-T cells in the news, what I want to do today is take you under the hood of one very specific tool — the gamma-retroviral vector — and walk you through what it actually is, how it got built, how it has been used in medicine, and the really hard lessons the field learned along the way."
+  },
+  {
+   "t": 35.24,
+   "text": "Here's the framing I want you to carry through the whole lecture."
+  },
+  {
+   "t": 38.74,
+   "text": "Gamma-retroviral vectors are the first integrating viral vector that worked."
+  },
+  {
+   "t": 43.54,
+   "text": "They are the technology that taught the entire field of gene therapy what was possible, and they are also the technology that taught the field, the hard way, what insertional mutagenesis can do to a child."
+  },
+  {
+   "t": 54.92,
+   "text": "And then, after the field nearly abandoned them in the mid-2000s, they came roaring back as the workhorse behind one of the first commercially successful CAR-T cell therapies."
+  },
+  {
+   "t": 66.79,
+   "text": "So this is a tool with three lives — a hopeful early adolescence, a tragic young adulthood, and a strange, productive middle age."
+  },
+  {
+   "t": 75.62,
+   "text": "And along the way it taught us almost everything we know about how to engineer, package, and quality-control a viral vector."
+  },
+  {
+   "t": 82.95,
+   "text": "Now let me say what this lecture is not."
+  },
+  {
+   "t": 85.2,
+   "text": "This is not a virology lecture."
+  },
+  {
+   "t": 87.11,
+   "text": "I'm going to assume you have at least a vague memory of what a retrovirus is — a virus with an RNA genome that gets reverse-transcribed into DNA and integrated into the host chromosome."
+  },
+  {
+   "t": 98.34,
+   "text": "If you want the full virology, the deep dive into reverse transcription, the central dogma surprise, the structure of the LTRs, the integrase chemistry — that lives in the Retroviruses lecture, the companion to this one."
+  },
+  {
+   "t": 112.78,
+   "text": "Today we're not going to spend any time on whether retroviruses can integrate; we're going to spend our time on what happens when you take that integration ability, strip out everything dangerous about the virus, and try to use it as a delivery vehicle for therapeutic genes."
+  },
+  {
+   "t": 127.88,
+   "text": "We're moving from biology to engineering."
+  },
+  {
+   "t": 130.49,
+   "text": "From \"what does this virus do in nature\" to \"how do you build a tool out of it that you can put into a patient."
+  },
+  {
+   "t": 137.05,
+   "text": "\""
+  },
+  {
+   "t": 137.25,
+   "text": "Here's what I want you to walk out of here in two hours being able to do."
+  },
+  {
+   "t": 141.5,
+   "text": "If you can do these three things, we've succeeded."
+  },
+  {
+   "t": 144.44,
+   "text": "One."
+  },
+  {
+   "t": 145.25,
+   "text": "If a friend asks you \"what's the difference between a gamma-retroviral vector and a lentiviral vector and why does it matter,\" you can give them a confident two-minute answer."
+  },
+  {
+   "t": 154.38,
+   "text": "You can tell them: gamma-retro needs the cell to be actively dividing, lentivirus doesn't; gamma-retro likes to integrate near active promoters, lentivirus prefers gene bodies; gamma-retro was the first one approved for clinical use; lentivirus is now the dominant choice for most applications; and there's still a class of CAR-T therapies that use gamma-retro because the manufacturing economics work better."
+  },
+  {
+   "t": 179.64,
+   "text": "Two."
+  },
+  {
+   "t": 180.31,
+   "text": "You can sketch on a napkin how a gamma-retroviral vector is actually produced."
+  },
+  {
+   "t": 184.93,
+   "text": "Three plasmids, a packaging cell line, transient transfection, harvest the supernatant, concentrate, titer, and use."
+  },
+  {
+   "t": 194.26,
+   "text": "You can name the three plasmids — transfer, packaging, envelope — and you can tell me what's on each one and why we split them up."
+  },
+  {
+   "t": 201.72,
+   "text": "Three."
+  },
+  {
+   "t": 202.54,
+   "text": "You can tell me the story of the SCID-X1 gene therapy trial, what went wrong, why it went wrong at the molecular level, what the field did to fix it, and what we now call those fixed vectors."
+  },
+  {
+   "t": 213.43,
+   "text": "The SCID-X1 arc — first cure, then leukemia, then SIN vectors — is the most important single story in the history of gene therapy, and if you understand it, you understand the regulatory landscape we still live in today."
+  },
+  {
+   "t": 227.61,
+   "text": "Here's the analogy I want you to hold in your head for the next two hours."
+  },
+  {
+   "t": 231.86,
+   "text": "The gamma-retroviral vector is the older sibling of the lentiviral vector."
+  },
+  {
+   "t": 236.65,
+   "text": "Same family — both are retroviruses, both use reverse transcriptase, both integrate into the host genome."
+  },
+  {
+   "t": 244.75,
+   "text": "Similar architecture — three core genes called gag, pol, and env, two long terminal repeats at the ends, the same general life cycle."
+  },
+  {
+   "t": 254.98,
+   "text": "But slightly different rules."
+  },
+  {
+   "t": 256.77,
+   "text": "The older sibling is older for a reason; it was developed first, it was simpler, it taught us how to do this."
+  },
+  {
+   "t": 263.94,
+   "text": "But the older sibling also got into the most trouble, in the way older siblings often do — by being the first one to try the dangerous thing and the first one to learn why it was dangerous."
+  },
+  {
+   "t": 274.54,
+   "text": "The younger sibling, lentivirus, watched what happened and grew up cautiously."
+  },
+  {
+   "t": 279.3,
+   "text": "Today, when people say \"viral vector,\" they usually mean the younger sibling."
+  },
+  {
+   "t": 284.2,
+   "text": "But the older one is still around, still doing real work, and in some applications still the better choice."
+  },
+  {
+   "t": 290.5,
+   "text": "That's the through-line."
+  },
+  {
+   "t": 291.83,
+   "text": "Older sibling."
+  },
+  {
+   "t": 292.93,
+   "text": "First mover."
+  },
+  {
+   "t": 294.0,
+   "text": "Hard-won wisdom."
+  },
+  {
+   "t": 295.34,
+   "text": "Let's begin."
+  }
+ ]
+}

@@ -1,0 +1,295 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The dimerization requirement — why TALENs come in pairs",
+ "duration": 443.36,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The dimerization requirement — why TALENs come in pairs"
+  },
+  {
+   "t": 5.26,
+   "text": "So FokI's cutting domain is, by nature, what biochemists call an obligate dimer."
+  },
+  {
+   "t": 11.6,
+   "text": "That phrase just means: it only works in pairs."
+  },
+  {
+   "t": 14.85,
+   "text": "A single FokI nuclease domain, sitting on the DNA all by itself, is inert."
+  },
+  {
+   "t": 20.9,
+   "text": "It cannot cut."
+  },
+  {
+   "t": 22.09,
+   "text": "For the chemistry of cutting to happen, two FokI domains have to find each other, come into physical contact, and form a dimer."
+  },
+  {
+   "t": 30.66,
+   "text": "Only then do the active sites of the two domains come together to produce a double-strand break in the DNA between them."
+  },
+  {
+   "t": 37.69,
+   "text": "Now think about what this means for a TALEN."
+  },
+  {
+   "t": 40.49,
+   "text": "You design your TALE to bind to one specific 18-base sequence in the genome."
+  },
+  {
+   "t": 46.12,
+   "text": "You attach it to FokI."
+  },
+  {
+   "t": 47.75,
+   "text": "You deliver it into the cell."
+  },
+  {
+   "t": 49.69,
+   "text": "The TALEN drifts around, finds its target, anchors there — and nothing happens."
+  },
+  {
+   "t": 55.46,
+   "text": "Because there's only one FokI sitting on the DNA, and one FokI cannot cut."
+  },
+  {
+   "t": 61.83,
+   "text": "So how do you cut anything?"
+  },
+  {
+   "t": 63.31,
+   "text": "You design two TALENs."
+  },
+  {
+   "t": 65.59,
+   "text": "One that binds, say, an 18-base sequence on the top strand of the DNA at the position you want to cut."
+  },
+  {
+   "t": 72.66,
+   "text": "And a second one that binds another 18-base sequence on the bottom strand, just downstream of the first site, with a short gap — typically 12 to 21 base pairs — between the two binding sites."
+  },
+  {
+   "t": 85.33,
+   "text": "This gap is called the spacer."
+  },
+  {
+   "t": 87.34,
+   "text": "Both TALENs find their respective sites."
+  },
+  {
+   "t": 89.88,
+   "text": "Both anchor."
+  },
+  {
+   "t": 90.97,
+   "text": "And now the two FokI domains — one dangling off each TALEN — are dangling into the spacer, close enough to find each other."
+  },
+  {
+   "t": 100.56,
+   "text": "They dimerize."
+  },
+  {
+   "t": 101.86,
+   "text": "The dimer cuts."
+  },
+  {
+   "t": 103.21,
+   "text": "The DNA breaks."
+  },
+  {
+   "t": 104.66,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 106.38,
+   "text": "Two scissors must meet at the cut site, and both halves have to find their targets independently before the cut can happen."
+  },
+  {
+   "t": 113.41,
+   "text": "Imagine two pairs of scissors, each one held by a different person who has been blindfolded and told to wander around a library looking for a specific sentence."
+  },
+  {
+   "t": 123.08,
+   "text": "Until both people independently find their sentences, the scissors don't cut."
+  },
+  {
+   "t": 128.16,
+   "text": "Only when both have arrived at the right spot — separately — and brought their scissors together does the cut happen."
+  },
+  {
+   "t": 135.1,
+   "text": "The cut requires both recognitions to be correct, simultaneously."
+  },
+  {
+   "t": 139.54,
+   "text": "Why is this elegant?"
+  },
+  {
+   "t": 140.95,
+   "text": "Because it doubles the specificity."
+  },
+  {
+   "t": 143.18,
+   "text": "Recall that each TALE recognizes 18 bases."
+  },
+  {
+   "t": 147.01,
+   "text": "Statistically, an 18-base sequence is unique in a three-billion-base genome only just barely — there might be one or two random matches elsewhere."
+  },
+  {
+   "t": 156.91,
+   "text": "But if you require two separate 18-base sequences to be matched, in specific orientation, with a short specific spacer between them, the combined target is effectively 36 bases of recognized DNA, with positional constraints on top."
+  },
+  {
+   "t": 172.22,
+   "text": "That combined recognition is astronomically specific."
+  },
+  {
+   "t": 175.89,
+   "text": "A pair of TALENs, each recognizing 18 bases, together makes a programmable nuclease whose effective target uniqueness is essentially absolute in any vertebrate genome."
+  },
+  {
+   "t": 187.76,
+   "text": "This is the deep reason TALENs are known for high specificity."
+  },
+  {
+   "t": 191.86,
+   "text": "The obligate dimerization of FokI turns a single sequence-recognition event into a two-site recognition event."
+  },
+  {
+   "t": 199.89,
+   "text": "Off-target cutting requires not just one wrong-place binding, but two wrong-place bindings in the right configuration."
+  },
+  {
+   "t": 207.32,
+   "text": "The combinatorial improbability of two simultaneous off-target events is the source of the precision."
+  },
+  {
+   "t": 214.3,
+   "text": "Now there is one subtle problem with the natural FokI dimerization that early TALEN designers had to fix."
+  },
+  {
+   "t": 221.32,
+   "text": "The natural FokI nuclease domain forms a homodimer — meaning, two identical FokI domains pair with each other."
+  },
+  {
+   "t": 229.26,
+   "text": "That sounds fine, but consider what happens in a cell that's expressing both members of your TALEN pair."
+  },
+  {
+   "t": 235.46,
+   "text": "You have TALEN-left and TALEN-right floating around."
+  },
+  {
+   "t": 239.16,
+   "text": "TALEN-left can find its target on the left side; TALEN-right can find its target on the right side; the FokI domains meet in the spacer; great, you get the cut you wanted."
+  },
+  {
+   "t": 249.09,
+   "text": "But TALEN-left can also bump into another TALEN-left somewhere else in the genome — wherever the left target sequence appears — and the two left-FokIs can dimerize there, producing an unwanted cut."
+  },
+  {
+   "t": 261.52,
+   "text": "Same for two right-TALENs meeting at a right target."
+  },
+  {
+   "t": 265.01,
+   "text": "The homodimerization allowed for promiscuous self-pairing that increased off-target activity."
+  },
+  {
+   "t": 271.41,
+   "text": "The solution, developed in the late 2000s for zinc finger nucleases and inherited by TALENs, was to engineer obligate heterodimer versions of FokI."
+  },
+  {
+   "t": 281.15,
+   "text": "By introducing specific mutations into the dimerization interface — mutation sets called things like ELD and KKR, or DD and RR — you can engineer two FokI variants that no longer dimerize with themselves, but only with the complementary partner."
+  },
+  {
+   "t": 297.15,
+   "text": "ELD-FokI can pair with KKR-FokI, but ELD won't pair with ELD, and KKR won't pair with KKR."
+  },
+  {
+   "t": 305.25,
+   "text": "In a standard modern TALEN design, you attach the ELD variant to TALEN-left and the KKR variant to TALEN-right."
+  },
+  {
+   "t": 313.3,
+   "text": "Now the only productive dimerization is between a left and a right TALEN — which only happens when both have found their correct adjacent targets in the spacer configuration."
+  },
+  {
+   "t": 323.35,
+   "text": "The unwanted left-left and right-right pairings simply cannot form."
+  },
+  {
+   "t": 327.99,
+   "text": "Specificity is dramatically improved."
+  },
+  {
+   "t": 331.04,
+   "text": "Two more practical details about the dimerization geometry."
+  },
+  {
+   "t": 335.02,
+   "text": "First, the spacer length matters."
+  },
+  {
+   "t": 337.65,
+   "text": "The two FokI domains have to be close enough to dimerize, but not so close that they sterically clash, and they have to be oriented correctly relative to each other."
+  },
+  {
+   "t": 347.67,
+   "text": "In practice, spacers of 12 to 21 base pairs work, with 14 to 18 base pairs being the typical sweet spot."
+  },
+  {
+   "t": 355.4,
+   "text": "When you design a TALEN pair, the software tools we mentioned earlier will help you choose a spacer length that gives good activity."
+  },
+  {
+   "t": 362.26,
+   "text": "Second, the orientation."
+  },
+  {
+   "t": 364.31,
+   "text": "The two TALEs must point toward each other — meaning, the FokI domains, which dangle off the C-termini of the TALEs, must be on the inside of the pair, facing each other across the spacer."
+  },
+  {
+   "t": 376.36,
+   "text": "This is achieved by designing TALEN-left to recognize a sequence on the top strand of the DNA and TALEN-right to recognize a sequence on the bottom strand, both reading inward toward the spacer."
+  },
+  {
+   "t": 388.19,
+   "text": "The result, in cartoon form, is a pair of TALENs facing each other like two readers approaching the same gap from opposite sides, with their scissors meeting in the middle."
+  },
+  {
+   "t": 399.24,
+   "text": "The combination of TALE recognition specificity plus obligate heterodimerization in the spacer makes TALENs one of the most precise programmable cutting tools ever developed."
+  },
+  {
+   "t": 411.2,
+   "text": "In well-designed pairs, off-target cutting is typically very low — better, in many published comparisons, than first-generation CRISPR-Cas9 systems."
+  },
+  {
+   "t": 421.62,
+   "text": "This precision is part of why TALENs persist in therapeutic applications where avoiding off-target cuts is paramount."
+  },
+  {
+   "t": 429.6,
+   "text": "OK, so now you have a double-strand break in the DNA."
+  },
+  {
+   "t": 433.02,
+   "text": "The TALENs have done their job — they've cut the genome at the spot you wanted."
+  },
+  {
+   "t": 437.13,
+   "text": "Now the question becomes: what does the cell do with the cut?"
+  },
+  {
+   "t": 440.8,
+   "text": "And that's where editing actually happens."
+  }
+ ]
+}

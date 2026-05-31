@@ -1,0 +1,287 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Firefly luciferase plus D-luciferin: the canonical reaction",
+ "duration": 445.79,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Firefly luciferase plus D-luciferin: the canonical reaction"
+  },
+  {
+   "t": 6.35,
+   "text": "Let me draw firefly luciferase for you."
+  },
+  {
+   "t": 9.03,
+   "text": "It's a single-chain enzyme, sixty-two kilodaltons in size — meaning a protein of about five hundred and fifty amino acids, which makes it pretty big as cellular proteins go."
+  },
+  {
+   "t": 21.26,
+   "text": "About twice the size of green fluorescent protein."
+  },
+  {
+   "t": 24.66,
+   "text": "It has two domains, a large N-terminal domain and a small C-terminal domain, and the substrate-binding pocket sits in the cleft between them — picture a clamshell with the fuel cradled in the hinge."
+  },
+  {
+   "t": 36.77,
+   "text": "The fuel, D-luciferin, is a small organic molecule — molecular weight 280, which is tiny compared to most drugs and trivial compared to the enzyme."
+  },
+  {
+   "t": 47.33,
+   "text": "It's a yellow-green crystalline powder that dissolves in water."
+  },
+  {
+   "t": 51.02,
+   "text": "You can buy it from any reagent supplier for a few dollars per milligram."
+  },
+  {
+   "t": 55.16,
+   "text": "And crucially, it can cross cell membranes pretty well — it's small and not too charged, so when you add it to the medium of a cell culture, or inject it into a mouse, it diffuses into cells and reaches the luciferase enzyme inside."
+  },
+  {
+   "t": 69.8,
+   "text": "Here's the reaction, and I want to walk you through it carefully because the components matter for understanding the assay's quirks."
+  },
+  {
+   "t": 77.03,
+   "text": "Step one."
+  },
+  {
+   "t": 77.97,
+   "text": "Luciferase grabs the D-luciferin and a molecule of ATP — adenosine triphosphate, the universal energy currency of all cells — and uses the ATP to activate the luciferin."
+  },
+  {
+   "t": 90.97,
+   "text": "Specifically, it transfers AMP — the adenosine monophosphate part of ATP — onto the luciferin, creating a high-energy intermediate called luciferyl-adenylate."
+  },
+  {
+   "t": 102.15,
+   "text": "The two phosphate groups from ATP get released as pyrophosphate."
+  },
+  {
+   "t": 107.11,
+   "text": "This activation step is required because raw D-luciferin doesn't react with oxygen on its own; the AMP group makes it chemically reactive."
+  },
+  {
+   "t": 115.69,
+   "text": "Step two."
+  },
+  {
+   "t": 116.67,
+   "text": "The activated luciferyl-adenylate now reacts with molecular oxygen — the O2 you breathe — and undergoes an oxidative decarboxylation."
+  },
+  {
+   "t": 126.1,
+   "text": "A bunch of bonds rearrange, carbon dioxide pops out, the AMP leaves, and the resulting molecule, called oxyluciferin, is created in an electronically excited state."
+  },
+  {
+   "t": 138.25,
+   "text": "Step three."
+  },
+  {
+   "t": 139.38,
+   "text": "Oxyluciferin in its excited state drops down to its ground state, and on the way down, it emits a photon."
+  },
+  {
+   "t": 147.14,
+   "text": "The photon's wavelength is around 560 nanometers — yellow-green light, which is, not coincidentally, very close to the color you see when a real firefly flashes its tail."
+  },
+  {
+   "t": 159.45,
+   "text": "So count what the reaction needs."
+  },
+  {
+   "t": 161.51,
+   "text": "Luciferase, D-luciferin, ATP, magnesium, oxygen."
+  },
+  {
+   "t": 166.65,
+   "text": "Five ingredients."
+  },
+  {
+   "t": 168.15,
+   "text": "Take any one of them away and there's no light."
+  },
+  {
+   "t": 171.04,
+   "text": "The enzyme is what you've engineered into your cells — that's the variable you control."
+  },
+  {
+   "t": 176.47,
+   "text": "The luciferin is what you add to the medium or inject into the animal — also under your control."
+  },
+  {
+   "t": 182.41,
+   "text": "The ATP, the magnesium, the oxygen — those come from the cell."
+  },
+  {
+   "t": 187.66,
+   "text": "Every living, metabolically active cell has plenty of ATP."
+  },
+  {
+   "t": 192.28,
+   "text": "Every cell has magnesium."
+  },
+  {
+   "t": 194.14,
+   "text": "Most cells have access to oxygen."
+  },
+  {
+   "t": 196.5,
+   "text": "So those are usually free."
+  },
+  {
+   "t": 198.18,
+   "text": "But the ATP requirement is interesting and worth pausing on."
+  },
+  {
+   "t": 202.3,
+   "text": "Because firefly luciferase needs ATP, the reaction is, in effect, coupled to cellular metabolism."
+  },
+  {
+   "t": 210.32,
+   "text": "A healthy cell with lots of ATP will produce lots of light per enzyme molecule."
+  },
+  {
+   "t": 216.21,
+   "text": "A dying cell with depleted ATP will produce less light, even if the same amount of enzyme is present."
+  },
+  {
+   "t": 223.2,
+   "text": "For most reporter purposes, you don't worry about this — you're comparing cells that are equally healthy."
+  },
+  {
+   "t": 228.94,
+   "text": "But it does mean that firefly luciferase is, in a sense, also a viability sensor."
+  },
+  {
+   "t": 235.47,
+   "text": "If you treat cells with a drug that kills them, and you measure firefly luciferase signal, you'll see signal drop even if the enzyme itself hasn't gone anywhere — just because the dying cells no longer have ATP to fuel the reaction."
+  },
+  {
+   "t": 250.12,
+   "text": "We'll come back to this in the segment on pitfalls."
+  },
+  {
+   "t": 253.06,
+   "text": "The other useful consequence of the ATP requirement: in some specialized contexts, firefly luciferase is actually used as an ATP detection reagent, the other direction."
+  },
+  {
+   "t": 263.98,
+   "text": "Add D-luciferin and luciferase to a lysate, and the amount of light produced tells you how much ATP was in the lysate."
+  },
+  {
+   "t": 272.5,
+   "text": "There are commercial kits sold on exactly this principle — for measuring cell viability across thousands of wells of a drug screen, for example, by lysing the cells and reading out ATP via luciferase light."
+  },
+  {
+   "t": 285.96,
+   "text": "Now, why is luciferase such a beautiful reporter compared to, say, just measuring fluorescence?"
+  },
+  {
+   "t": 293.9,
+   "text": "Here's the single biggest reason, and I want you to remember this: luciferase assays have essentially zero background."
+  },
+  {
+   "t": 301.42,
+   "text": "What does that mean?"
+  },
+  {
+   "t": 302.5,
+   "text": "Think about how you measure fluorescence."
+  },
+  {
+   "t": 304.99,
+   "text": "You shine bright excitation light at the sample."
+  },
+  {
+   "t": 308.66,
+   "text": "Some of that light bounces off everything in the dish — plastic, medium, cell debris — and ends up in your detector as scatter."
+  },
+  {
+   "t": 316.65,
+   "text": "Some of it excites molecules that aren't your fluorescent protein — flavins in cells, NADH, plastic additives, ingredients in the medium — and those molecules emit their own background fluorescence."
+  },
+  {
+   "t": 329.66,
+   "text": "Even the cleanest fluorescence measurement has a noticeable baseline that you have to subtract."
+  },
+  {
+   "t": 335.19,
+   "text": "Now think about how you measure luciferase."
+  },
+  {
+   "t": 337.94,
+   "text": "You don't shine any light at all."
+  },
+  {
+   "t": 339.75,
+   "text": "You put the sample in a dark chamber."
+  },
+  {
+   "t": 342.02,
+   "text": "You add the substrate."
+  },
+  {
+   "t": 343.56,
+   "text": "You count photons coming out."
+  },
+  {
+   "t": 345.5,
+   "text": "The only photons coming out are from the luciferase reaction."
+  },
+  {
+   "t": 349.24,
+   "text": "There's no scatter because there's no excitation beam."
+  },
+  {
+   "t": 352.59,
+   "text": "There's no autofluorescence because there's no excitation light to drive it."
+  },
+  {
+   "t": 357.24,
+   "text": "The background reading is, essentially, the detector's own dark current — a tiny number of electrons that get counted even when no light is hitting the sensor."
+  },
+  {
+   "t": 367.39,
+   "text": "That gives you an unbelievable dynamic range."
+  },
+  {
+   "t": 370.54,
+   "text": "A modern luminometer — that's the instrument that reads luciferase signal — can detect light from as few as a few hundred to a few thousand luciferase molecules in a single well."
+  },
+  {
+   "t": 381.92,
+   "text": "And it can also handle wells with billions of molecules."
+  },
+  {
+   "t": 385.41,
+   "text": "The signal can vary by a factor of a million or more, all measured cleanly on the same instrument."
+  },
+  {
+   "t": 391.57,
+   "text": "Try doing that with fluorescence and you'll find your detector saturates long before the dynamic range stops being useful, because of all that background."
+  },
+  {
+   "t": 400.06,
+   "text": "The take-home: fluorescent proteins are great for seeing where; luciferases are great for measuring how much."
+  },
+  {
+   "t": 407.41,
+   "text": "When you need to count molecules across many orders of magnitude, when you need to detect a small fold-change against a clean baseline, when you need to measure whether a promoter is being read at one-tenth its baseline rate or ten times its baseline rate — luciferase is the right tool."
+  },
+  {
+   "t": 424.6,
+   "text": "It's the most sensitive, most quantitative reporter we have."
+  },
+  {
+   "t": 428.34,
+   "text": "That makes it absolutely perfect for the application we'll talk about next: measuring how active a promoter is, in response to whatever signal you're studying."
+  },
+  {
+   "t": 437.76,
+   "text": "That's the original killer app for luciferase as a reporter, and it's still where most luciferase assays in published papers live today."
+  }
+ ]
+}

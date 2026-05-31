@@ -1,0 +1,219 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — Fusing TALE arrays to FokI — TALENs are born",
+ "duration": 337.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — Fusing TALE arrays to FokI — TALENs are born"
+  },
+  {
+   "t": 4.97,
+   "text": "So you have a custom-designed TALE protein that binds, with high specificity, any 18-base sequence in any genome."
+  },
+  {
+   "t": 13.45,
+   "text": "By itself, that's already useful — it means you have a DNA-binding domain you can use as a building block."
+  },
+  {
+   "t": 19.93,
+   "text": "But the TALE protein, on its own, does not cut DNA."
+  },
+  {
+   "t": 23.46,
+   "text": "It just sits on it."
+  },
+  {
+   "t": 24.59,
+   "text": "To make a genome editing tool, you need to give the TALE a pair of scissors."
+  },
+  {
+   "t": 28.85,
+   "text": "The scissors that the field reached for, immediately, was a particular DNA-cutting enzyme called FokI."
+  },
+  {
+   "t": 36.17,
+   "text": "FokI is a restriction enzyme — one of those molecular scissors we discussed in plasmid biology — but it's a special kind."
+  },
+  {
+   "t": 44.02,
+   "text": "Unlike most restriction enzymes, where the recognition function and the cutting function are tightly intertwined in the same compact domain, FokI has its recognition and its cutting on separate parts of the same protein."
+  },
+  {
+   "t": 56.58,
+   "text": "The recognition domain reads a specific DNA sequence."
+  },
+  {
+   "t": 60.89,
+   "text": "The cutting domain — also called the nuclease domain — does the actual chopping."
+  },
+  {
+   "t": 66.05,
+   "text": "And critically, the cutting domain can be physically separated from the recognition domain, and it will still cut DNA, just non-specifically."
+  },
+  {
+   "t": 75.44,
+   "text": "This was discovered in the 1990s by Srinivasan Chandrasegaran and his colleagues, who realized that if you could chop off FokI's recognition domain and replace it with some other recognition system, you'd have a programmable nuclease — your new recognition system would target the cutting domain to wherever your new recognition system bound."
+  },
+  {
+   "t": 94.94,
+   "text": "They tried this first with zinc fingers, building the original zinc finger nucleases."
+  },
+  {
+   "t": 100.58,
+   "text": "Same logic applied to TALE arrays."
+  },
+  {
+   "t": 103.09,
+   "text": "You take your designer TALE, you delete the C-terminal transcription activation domain of the natural Xanthomonas TALE, and you replace it with the FokI nuclease domain."
+  },
+  {
+   "t": 113.46,
+   "text": "Result: a hybrid protein in which the TALE provides the addressing — the GPS coordinates — and the FokI provides the cutting."
+  },
+  {
+   "t": 122.16,
+   "text": "Here is the analogy that I want you to commit to memory, because it explains the entire architecture of a TALEN."
+  },
+  {
+   "t": 129.45,
+   "text": "The TALE array is the GPS."
+  },
+  {
+   "t": 131.97,
+   "text": "The FokI domain is the blade."
+  },
+  {
+   "t": 134.2,
+   "text": "The GPS knows where to take the blade, and once there, the blade does the cutting."
+  },
+  {
+   "t": 139.79,
+   "text": "The GPS doesn't cut."
+  },
+  {
+   "t": 141.66,
+   "text": "The blade doesn't navigate."
+  },
+  {
+   "t": 143.62,
+   "text": "Each component does one job, and the job-division is so clean that you can swap out either component independently."
+  },
+  {
+   "t": 150.89,
+   "text": "Want a different target?"
+  },
+  {
+   "t": 152.09,
+   "text": "Change the GPS — re-engineer the TALE array."
+  },
+  {
+   "t": 155.79,
+   "text": "Want a different kind of cut?"
+  },
+  {
+   "t": 157.06,
+   "text": "Swap out the blade."
+  },
+  {
+   "t": 158.28,
+   "text": "The architecture is modular at the functional level as well as the structural level."
+  },
+  {
+   "t": 163.69,
+   "text": "This is the TALEN — Transcription Activator-Like Effector Nuclease."
+  },
+  {
+   "t": 169.07,
+   "text": "The first papers describing TALENs came out in 2010 and early 2011, from groups including Dan Voytas and his collaborators, J."
+  },
+  {
+   "t": 178.76,
+   "text": "Keith Joung, Feng Zhang (who would later be central in CRISPR but was here doing TALEN work), and others."
+  },
+  {
+   "t": 185.8,
+   "text": "Within a year of the Boch and Moscou code-decoding papers, TALENs were a real tool."
+  },
+  {
+   "t": 191.3,
+   "text": "Within two years, dozens of labs around the world were using them to edit genomes of mice, zebrafish, rats, pigs, plants, and human cells in culture."
+  },
+  {
+   "t": 202.15,
+   "text": "The era of practical, accessible, programmable genome editing had begun."
+  },
+  {
+   "t": 207.62,
+   "text": "Let me describe a TALEN protein in a little more detail, because the architecture matters for what comes next."
+  },
+  {
+   "t": 213.97,
+   "text": "A single TALEN monomer — by which I mean one half of a working pair, since as we'll see in the next segment, you always use them in pairs — consists of, in order from N to C terminus: a nuclear localization signal (so the protein gets into the nucleus), a stripped-down version of the natural TALE N-terminal region (which provides the binding to the leading T base and some structural framing), the array of 15 to 20 RVD-containing repeats (the customized DNA-recognition module, your GPS), a short"
+  },
+  {
+   "t": 245.89,
+   "text": "half-repeat at the end (more structural framing), some linker amino acids, and finally the FokI nuclease domain (the blade)."
+  },
+  {
+   "t": 254.6,
+   "text": "The whole thing is a single polypeptide chain, expressed from a single gene, that you can deliver into cells like any other protein."
+  },
+  {
+   "t": 263.26,
+   "text": "The TALE part of the TALEN is what you redesign for each new target."
+  },
+  {
+   "t": 267.21,
+   "text": "The FokI part is the same in every TALEN."
+  },
+  {
+   "t": 270.88,
+   "text": "The linker between them, while not glamorous, does matter — its length affects how the protein folds and how cleanly the FokI domain hangs off the TALE — but standard linkers of about 30 to 60 amino acids work well for most designs."
+  },
+  {
+   "t": 285.95,
+   "text": "A delivered TALEN protein wanders around in the nucleus, scanning the genome, and stops when its TALE array finds the 18-base sequence it was designed for."
+  },
+  {
+   "t": 296.2,
+   "text": "At that point, the protein is anchored to that spot on the DNA."
+  },
+  {
+   "t": 300.51,
+   "text": "The FokI nuclease domain, dangling off the C-terminus, is now positioned near the DNA, just downstream of the TALE binding site."
+  },
+  {
+   "t": 309.82,
+   "text": "And it's ready to cut."
+  },
+  {
+   "t": 311.01,
+   "text": "But there's a catch — FokI doesn't cut as a monomer."
+  },
+  {
+   "t": 314.46,
+   "text": "It only cuts when two FokI domains come together to form a dimer."
+  },
+  {
+   "t": 318.82,
+   "text": "So a single TALEN, by itself, can't cut."
+  },
+  {
+   "t": 322.23,
+   "text": "You need a pair."
+  },
+  {
+   "t": 323.22,
+   "text": "That's the topic of the next segment, and it's not a bug — it's a critical feature for specificity."
+  },
+  {
+   "t": 329.02,
+   "text": "The requirement for two TALENs to come together at the cut site is what gives the TALEN system its remarkable precision."
+  },
+  {
+   "t": 336.7,
+   "text": "Let's see why."
+  }
+ ]
+}

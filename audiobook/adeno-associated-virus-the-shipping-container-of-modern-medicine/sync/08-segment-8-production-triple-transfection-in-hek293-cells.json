@@ -1,0 +1,255 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Production: triple transfection in HEK293 cells",
+ "duration": 463.86,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Production: triple transfection in HEK293 cells"
+  },
+  {
+   "t": 6.34,
+   "text": "Alright, theory aside."
+  },
+  {
+   "t": 7.8,
+   "text": "How do you actually make AAV in a lab or in a factory?"
+  },
+  {
+   "t": 11.22,
+   "text": "This is one of the most important practical pieces of the field, and the standard method is one of those beautiful pieces of biotech engineering that, once you see it, feels almost obvious."
+  },
+  {
+   "t": 22.68,
+   "text": "It's called triple transfection, and it works like this."
+  },
+  {
+   "t": 26.16,
+   "text": "The strategy is: you take a producer cell — almost always HEK293 or its derivative HEK293T, the same cultured human kidney cell line that does so much of biotech's heavy lifting — and you give that cell three plasmids all at once."
+  },
+  {
+   "t": 43.26,
+   "text": "Each plasmid carries a different piece of what the cell needs to make AAV."
+  },
+  {
+   "t": 47.98,
+   "text": "Individually, no one plasmid is sufficient."
+  },
+  {
+   "t": 51.62,
+   "text": "Together, the three plasmids supply everything required for the cell to build complete, infectious AAV particles."
+  },
+  {
+   "t": 59.8,
+   "text": "The cell does all the work."
+  },
+  {
+   "t": 61.39,
+   "text": "You just supply the ingredients and provide the kitchen."
+  },
+  {
+   "t": 64.47,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 65.75,
+   "text": "Triple transfection is like baking a cake by giving three different mixing bowls to a kitchen and letting the kitchen combine them."
+  },
+  {
+   "t": 72.84,
+   "text": "Bowl one has the flour and sugar — the cargo you want in the final product."
+  },
+  {
+   "t": 77.53,
+   "text": "Bowl two has the eggs and butter — the structural components of the cake."
+  },
+  {
+   "t": 82.09,
+   "text": "Bowl three has the leavening — the helper functions that make the rest react."
+  },
+  {
+   "t": 86.85,
+   "text": "You dump all three into the kitchen, walk away for a few days, and come back to find baked cakes."
+  },
+  {
+   "t": 93.34,
+   "text": "Except instead of cakes, the products are AAV particles, and instead of one cake per batch, you get something like 10^11 to 10^14 viral particles per liter of cell culture, depending on how well-optimized your process is."
+  },
+  {
+   "t": 109.47,
+   "text": "Let me walk you through the three plasmids."
+  },
+  {
+   "t": 112.06,
+   "text": "Plasmid one: the transfer plasmid."
+  },
+  {
+   "t": 114.6,
+   "text": "This is your therapeutic construct, the one you actually care about."
+  },
+  {
+   "t": 118.46,
+   "text": "It contains your gene of interest, flanked by the AAV2 ITRs, plus whatever promoter, polyadenylation signal, and other regulatory elements you've designed."
+  },
+  {
+   "t": 129.45,
+   "text": "The transfer plasmid is essentially \"the cargo plus the packaging labels."
+  },
+  {
+   "t": 134.78,
+   "text": "\" When the cell makes AAV particles, it's the DNA between the ITRs on this plasmid that gets cut out, replicated, and packaged into the capsids."
+  },
+  {
+   "t": 144.07,
+   "text": "Everything between the ITRs ends up inside the final virus."
+  },
+  {
+   "t": 148.75,
+   "text": "Plasmid two: the Rep/Cap plasmid (also called the packaging plasmid)."
+  },
+  {
+   "t": 154.21,
+   "text": "This carries the natural AAV genes rep and cap, but with their natural ITRs removed."
+  },
+  {
+   "t": 160.41,
+   "text": "Why is this important?"
+  },
+  {
+   "t": 161.75,
+   "text": "Because without the ITRs flanking rep and cap, this plasmid's DNA cannot itself be packaged into capsids — only DNA flanked by ITRs can be packaged, and only the transfer plasmid has the ITRs."
+  },
+  {
+   "t": 176.41,
+   "text": "So rep and cap get expressed as proteins, those proteins do their jobs (replicating the transgene from the transfer plasmid and assembling capsids), but the genes for those proteins do not end up inside the final viral particles."
+  },
+  {
+   "t": 191.44,
+   "text": "The capsid genes are the factory, not the product."
+  },
+  {
+   "t": 194.89,
+   "text": "That separation — putting the production machinery on one plasmid and the cargo on another — is what makes the final AAV particles replication-incompetent."
+  },
+  {
+   "t": 204.32,
+   "text": "They have the capsid proteins on their outside, the therapeutic gene on their inside, but they do not carry the genes needed to ever make more of themselves."
+  },
+  {
+   "t": 213.5,
+   "text": "Critical safety feature."
+  },
+  {
+   "t": 215.22,
+   "text": "The Rep/Cap plasmid is also where you choose your serotype."
+  },
+  {
+   "t": 219.34,
+   "text": "To make AAV2, you use a Rep/Cap plasmid where cap encodes AAV2 capsid proteins."
+  },
+  {
+   "t": 226.97,
+   "text": "To make AAV9, you use one where cap encodes AAV9 capsid proteins."
+  },
+  {
+   "t": 232.85,
+   "text": "To make PHP.eB, you use one with the engineered PHP.eB cap gene."
+  },
+  {
+   "t": 238.95,
+   "text": "Same procedure, different recipe ingredient, different output."
+  },
+  {
+   "t": 242.76,
+   "text": "Plasmid three: the helper plasmid."
+  },
+  {
+   "t": 245.4,
+   "text": "This provides the adenoviral helper functions that AAV naturally requires for productive replication."
+  },
+  {
+   "t": 252.05,
+   "text": "Specifically, the helper plasmid carries the adenovirus genes E2A, E4, and VA RNA, which together support AAV replication and capsid assembly."
+  },
+  {
+   "t": 264.07,
+   "text": "It does not carry the adenoviral gene E1, which would be a serious safety issue — instead, E1 is supplied by the HEK293 cell line itself, because HEK293 cells were originally created by stably integrating a piece of adenovirus DNA containing E1 into their genome."
+  },
+  {
+   "t": 283.5,
+   "text": "So the cell line provides one piece of the helper, and the helper plasmid provides the rest."
+  },
+  {
+   "t": 289.62,
+   "text": "This was an extremely clever piece of engineering — in the early days of AAV production, people used to co-infect cells with actual adenovirus to provide helper functions, which meant their final AAV preps were contaminated with infectious adenovirus."
+  },
+  {
+   "t": 305.49,
+   "text": "Replacing the live helper virus with a helper plasmid that supplies only the necessary genes — and not the genes that would let adenovirus replicate — eliminated that contamination."
+  },
+  {
+   "t": 316.8,
+   "text": "So you dump these three plasmids onto your HEK293 cells, typically using polyethylenimine (PEI) or calcium phosphate as the transfection reagent."
+  },
+  {
+   "t": 329.21,
+   "text": "The cells take up the plasmids."
+  },
+  {
+   "t": 331.22,
+   "text": "Within a few hours, the cells start expressing rep and cap from the Rep/Cap plasmid, and the helper functions from the helper plasmid."
+  },
+  {
+   "t": 339.29,
+   "text": "Rep proteins recognize the ITRs on the transfer plasmid, start replicating the transgene cassette, and produce many copies of single-stranded DNA flanked by ITRs."
+  },
+  {
+   "t": 351.39,
+   "text": "Cap proteins assemble into empty capsid shells."
+  },
+  {
+   "t": 355.09,
+   "text": "Then the single-stranded transgene DNA gets threaded into the empty capsids — Rep proteins doing the threading — and you end up with full AAV particles containing your transgene."
+  },
+  {
+   "t": 366.25,
+   "text": "Two or three days after transfection, you have producer cells full of AAV particles."
+  },
+  {
+   "t": 372.94,
+   "text": "Some particles are released into the culture medium; many are still inside the cells."
+  },
+  {
+   "t": 378.15,
+   "text": "You harvest both — typically by lysing the cells (freeze-thaw cycles, detergent, or osmotic shock) to release the intracellular virus, then combining the cell lysate with the spent medium and processing the whole mixture for purification."
+  },
+  {
+   "t": 393.82,
+   "text": "That processing is the next segment."
+  },
+  {
+   "t": 396.14,
+   "text": "A few practical numbers to fix your intuition."
+  },
+  {
+   "t": 399.17,
+   "text": "A typical research-scale prep starts with a few large flasks or roller bottles of HEK293 cells — let's say 200 million cells total — and produces something like 10^11 to 10^12 vector genomes after purification, enough for a few mouse experiments."
+  },
+  {
+   "t": 418.54,
+   "text": "A clinical-scale prep, run in suspension culture in bioreactors of 200 or 2000 liters, can produce 10^16 to 10^17 vector genomes per batch."
+  },
+  {
+   "t": 430.77,
+   "text": "The yield per cell, though, has been frustratingly hard to push up — somewhere around 10^4 to 10^5 functional particles per cell, depending on conditions, with a lot of variation between serotypes and constructs."
+  },
+  {
+   "t": 445.37,
+   "text": "AAV manufacturing yield is a major area of active engineering, because the doses required for systemic gene therapy in adult humans are enormous, and meeting those doses at scale and at affordable cost is one of the main bottlenecks of the entire field."
+  },
+  {
+   "t": 461.09,
+   "text": "We'll come back to that in Segment 17."
+  }
+ ]
+}

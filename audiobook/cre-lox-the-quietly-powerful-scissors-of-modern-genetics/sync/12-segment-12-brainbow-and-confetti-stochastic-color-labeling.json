@@ -1,0 +1,211 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Brainbow and Confetti — stochastic color labeling",
+ "duration": 355.93,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Brainbow and Confetti — stochastic color labeling"
+  },
+  {
+   "t": 4.85,
+   "text": "So imagine you've done a lineage tracing experiment."
+  },
+  {
+   "t": 8.32,
+   "text": "You labeled stem cells with red, you waited, and now you have many red patches in the tissue."
+  },
+  {
+   "t": 14.75,
+   "text": "Great."
+  },
+  {
+   "t": 15.51,
+   "text": "But here's a frustration: if you see two red patches close together, you cannot tell if they came from one original cell or two."
+  },
+  {
+   "t": 23.18,
+   "text": "They both look the same."
+  },
+  {
+   "t": 24.57,
+   "text": "Red and red."
+  },
+  {
+   "t": 25.57,
+   "text": "You can't distinguish clones from neighbors."
+  },
+  {
+   "t": 28.16,
+   "text": "What if every cell got a different color?"
+  },
+  {
+   "t": 30.66,
+   "text": "Not just red, but a unique combination — this cell red, that one green, that one yellow-with-a-bit-of-blue, that one purple, that one cyan."
+  },
+  {
+   "t": 39.73,
+   "text": "If every clonally distinct lineage in your tissue had its own random color, you could trace each clone independently, even when they're packed shoulder to shoulder."
+  },
+  {
+   "t": 49.6,
+   "text": "You could see the boundaries between neighboring clones."
+  },
+  {
+   "t": 52.41,
+   "text": "You could count individual progenitors."
+  },
+  {
+   "t": 54.71,
+   "text": "You could ask, in a single experiment, how many separate clones contribute to a piece of tissue."
+  },
+  {
+   "t": 61.27,
+   "text": "That's exactly what Brainbow does."
+  },
+  {
+   "t": 63.51,
+   "text": "Brainbow is one of the most beautiful applications of Cre-Lox in all of biology, and it's worth understanding in detail because it shows the system at its cleverest."
+  },
+  {
+   "t": 74.66,
+   "text": "Here's the trick."
+  },
+  {
+   "t": 75.72,
+   "text": "You build a transgene with three or four different fluorescent protein genes — say, red, yellow, cyan — arranged in a cassette with strategically placed loxP and lox2272 and other mutant lox sites between them."
+  },
+  {
+   "t": 91.4,
+   "text": "The geometry is set up so that, when Cre acts, the cassette can rearrange into one of several possible final configurations — each configuration expressing a different fluorescent protein, or a different combination of them."
+  },
+  {
+   "t": 105.94,
+   "text": "Crucially, which configuration Cre ends up producing in any given cell is stochastic — random."
+  },
+  {
+   "t": 112.81,
+   "text": "Cre acts on whichever pair of compatible lox sites it happens to engage first, and that determines which color the cell ends up."
+  },
+  {
+   "t": 121.34,
+   "text": "Different cells, even right next to each other, end up with different colors purely by chance."
+  },
+  {
+   "t": 127.17,
+   "text": "If you put two or three of these Brainbow cassettes into the same cell — by inserting multiple copies of the transgene into the genome — then each cassette independently rolls its own color die."
+  },
+  {
+   "t": 138.93,
+   "text": "A cell with three Brainbow cassettes that each randomly express one of three colors gives you something like ten distinguishable combinations — varying amounts of red, green, and blue blended together to make distinct hues."
+  },
+  {
+   "t": 153.03,
+   "text": "Mathematically, with a small number of base colors and a few copies, you can get a hundred or more visually distinguishable colors per cell."
+  },
+  {
+   "t": 161.04,
+   "text": "Now apply this to neurons."
+  },
+  {
+   "t": 163.0,
+   "text": "Take a Cre line that drives in all neurons, cross it to a Brainbow transgenic mouse, induce recombination, and look at the brain."
+  },
+  {
+   "t": 172.64,
+   "text": "Every neuron has rolled its own color."
+  },
+  {
+   "t": 175.11,
+   "text": "Adjacent neurons that look identical morphologically now look completely different chromatically — one's magenta, one's teal, one's pale yellow-green."
+  },
+  {
+   "t": 185.26,
+   "text": "The result is some of the most spectacular images in all of biology — a tangle of neurons in vivid color, each cell traceable along its full length because its color distinguishes it from every neighbor."
+  },
+  {
+   "t": 197.84,
+   "text": "The original Brainbow paper, from Lichtman and Sanes at Harvard, produced images that have been on the cover of magazines and in art exhibits."
+  },
+  {
+   "t": 206.31,
+   "text": "The technique is gorgeous."
+  },
+  {
+   "t": 208.31,
+   "text": "But more importantly, it's powerful."
+  },
+  {
+   "t": 210.71,
+   "text": "With Brainbow, you can trace individual neurons through dense neural tissue, mapping their connections."
+  },
+  {
+   "t": 217.41,
+   "text": "You can count the number of progenitor cells that contributed to a region of cortex by counting the distinguishable color patches."
+  },
+  {
+   "t": 225.22,
+   "text": "You can ask whether neighboring neurons in a circuit are related by lineage — same color — or by coincidence — different colors."
+  },
+  {
+   "t": 232.84,
+   "text": "You can watch how clonal patches expand and intermingle over development."
+  },
+  {
+   "t": 237.79,
+   "text": "A relative of Brainbow called Confetti works on the same principle and is used heavily for stem cell biology in tissues like the intestine and skin."
+  },
+  {
+   "t": 247.25,
+   "text": "Confetti — Rosa26-Confetti — generates four possible colors at the Rosa26 locus depending on how Cre acts."
+  },
+  {
+   "t": 256.66,
+   "text": "Inducing recombination in intestinal stem cells with low-dose tamoxifen produces crypts of mixed colors initially — each stem cell rolled a different color — but over time, by a process of stem cell competition called neutral drift, single crypts gradually become monochromatic, as one stem cell's descendants take over the entire crypt by chance."
+  },
+  {
+   "t": 278.67,
+   "text": "Watching this monochromatic conversion happen over weeks gave the field a precise quantitative model of intestinal stem cell dynamics — something that would have been almost impossible to extract any other way."
+  },
+  {
+   "t": 291.71,
+   "text": "The principle behind Brainbow and Confetti is the same."
+  },
+  {
+   "t": 295.72,
+   "text": "Stochastic recombination with multiple lox variants in the same cassette gives you multiple possible outcomes, each one specifying a different color."
+  },
+  {
+   "t": 305.07,
+   "text": "Apply Cre once, get a random outcome per cell, see the result for the rest of the cell's life."
+  },
+  {
+   "t": 311.36,
+   "text": "The unpredictability is the feature — it's what gives you the diversity you need to distinguish neighbors."
+  },
+  {
+   "t": 318.13,
+   "text": "It's worth pausing on the cleverness here for a moment."
+  },
+  {
+   "t": 320.85,
+   "text": "The same Cre-Lox machinery that we use to delete a single gene in a tissue can also, with the right substrate design, generate fifty distinguishable colors in fifty adjacent cells."
+  },
+  {
+   "t": 332.57,
+   "text": "The system itself isn't different."
+  },
+  {
+   "t": 334.8,
+   "text": "The DNA substrate is different."
+  },
+  {
+   "t": 337.21,
+   "text": "The chemistry is exactly the same chemistry that the bacteriophage uses to keep its plasmid in monomer form."
+  },
+  {
+   "t": 344.27,
+   "text": "What we've built on top of it is a programming language whose vocabulary, once you understand it, lets you ask questions about tissues that previous generations of biologists could only dream of asking."
+  }
+ ]
+}

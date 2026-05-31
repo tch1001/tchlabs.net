@@ -1,0 +1,171 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Red-shifted variants: pushing light deeper into tissue",
+ "duration": 303.72,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Red-shifted variants: pushing light deeper into tissue"
+  },
+  {
+   "t": 5.05,
+   "text": "I told you earlier that blue light penetrates about a millimeter into brain tissue before it's mostly gone."
+  },
+  {
+   "t": 11.76,
+   "text": "Let me sharpen the physics, because it explains the entire push toward red-shifted opsins."
+  },
+  {
+   "t": 17.56,
+   "text": "Tissue scatters light, and the scattering is wavelength-dependent."
+  },
+  {
+   "t": 21.96,
+   "text": "Shorter wavelengths — blue, violet — scatter much more strongly than longer wavelengths — orange, red, infrared."
+  },
+  {
+   "t": 30.14,
+   "text": "The relationship is, very roughly, that scattering goes up sharply as wavelength goes down, in part because of the geometry of cells and organelles relative to the wavelength of the light."
+  },
+  {
+   "t": 42.23,
+   "text": "On top of scattering, hemoglobin in blood vessels absorbs strongly in the blue-green range, eating photons before they can do anything useful."
+  },
+  {
+   "t": 51.58,
+   "text": "The combination — strong scattering at short wavelengths plus strong absorption by blood at green-ish wavelengths — means there's a sweet spot, often called the optical window of tissue, in the deep red and near-infrared, roughly 650 to 900 nanometers, where light can travel several millimeters through tissue with much less loss."
+  },
+  {
+   "t": 73.0,
+   "text": "This is why surgeons use red and infrared lasers for procedures that need to penetrate."
+  },
+  {
+   "t": 78.67,
+   "text": "It's why pulse oximeters use red and infrared light — they're the wavelengths that get through your fingertip."
+  },
+  {
+   "t": 85.22,
+   "text": "And it is why the next generation of optogenetic tools, after the original blue ChR2, has been pushed steadily toward redder activation wavelengths."
+  },
+  {
+   "t": 94.59,
+   "text": "The analogy I want you to use: red-shifted opsins are deeper-tissue-penetrating switches — red light scatters less than blue, so it can reach the cells you couldn't reach before."
+  },
+  {
+   "t": 105.89,
+   "text": "The pioneers of red-shifted optogenetics include VChR1, a channelrhodopsin from a different algae, Volvox carteri, with a peak around 545 nanometers — yellower than ChR2."
+  },
+  {
+   "t": 120.05,
+   "text": "Then came C1V1, a chimera engineered by combining pieces of ChR1 and VChR1, with a peak around 560 nanometers and improved current amplitude."
+  },
+  {
+   "t": 132.24,
+   "text": "Then ReaChR — \"red-activatable channelrhodopsin\" — engineered by Roger Tsien's group before his death, with a peak around 590 nanometers and decent activation even up to 630."
+  },
+  {
+   "t": 145.65,
+   "text": "ReaChR was, briefly, the best deep-tissue cation channel available."
+  },
+  {
+   "t": 151.32,
+   "text": "And then came Chrimson and ChrimsonR, from Ed Boyden's screen, which we mentioned earlier."
+  },
+  {
+   "t": 157.04,
+   "text": "Chrimson activates beautifully at 590 nanometers — in the orange — and even responds to red light around 630."
+  },
+  {
+   "t": 166.68,
+   "text": "ChrimsonR is a faster variant with the K176R mutation, with improved on-off kinetics that let it follow spike trains better."
+  },
+  {
+   "t": 175.75,
+   "text": "These are now the workhorses of red optogenetics."
+  },
+  {
+   "t": 178.94,
+   "text": "One additional family that's caused a lot of excitement recently: ChRmine, discovered through structural-genomic screening, has a peak around 520 nanometers but produces enormous currents — large enough that some experiments can now drive deep brain regions from a fiber placed outside the skull, with light that has traveled millimeters through tissue."
+  },
+  {
+   "t": 200.89,
+   "text": "There are red-shifted and high-speed variants — rsChRmine, hsChRmine — and the field is actively engineering new tunings every year."
+  },
+  {
+   "t": 210.22,
+   "text": "There's a second reason red matters, beyond depth."
+  },
+  {
+   "t": 213.51,
+   "text": "It's that if you have a red-activated opsin and a blue-activated opsin in the same brain, in different cells, you can independently control them with different colors of light."
+  },
+  {
+   "t": 223.62,
+   "text": "This is called multiplexing."
+  },
+  {
+   "t": 225.56,
+   "text": "Express ChR2 in one cell type, Chrimson in another."
+  },
+  {
+   "t": 230.35,
+   "text": "Blue pulse fires one population."
+  },
+  {
+   "t": 232.82,
+   "text": "Red pulse fires the other."
+  },
+  {
+   "t": 234.82,
+   "text": "You can ask, in a single animal, what each cell type contributes, separately and in combination."
+  },
+  {
+   "t": 241.26,
+   "text": "This kind of two-color experiment was simply impossible with the original blue-only toolkit."
+  },
+  {
+   "t": 246.84,
+   "text": "Now it's routine."
+  },
+  {
+   "t": 247.94,
+   "text": "And as the palette has expanded — into the deep red and beyond — the possibilities for orthogonal control of multiple populations have multiplied."
+  },
+  {
+   "t": 257.44,
+   "text": "One important caveat about color, though, that you'll learn the hard way if you ever try to do these experiments."
+  },
+  {
+   "t": 263.46,
+   "text": "The absorption spectra of opsins are wide."
+  },
+  {
+   "t": 265.93,
+   "text": "They overlap."
+  },
+  {
+   "t": 267.17,
+   "text": "Chrimson doesn't only respond to red — it also has a smaller but real response to blue."
+  },
+  {
+   "t": 272.81,
+   "text": "So if you have ChR2 and Chrimson in different cells, your blue light will fire your ChR2 cells beautifully, but it will also slightly fire your Chrimson cells, contaminating the experiment."
+  },
+  {
+   "t": 285.75,
+   "text": "Multiplexing requires careful titration of light intensities, careful biophysical characterization of cross-talk, and often clever experimental design to subtract it out."
+  },
+  {
+   "t": 297.12,
+   "text": "The opsins are good, but they are not perfect filters."
+  },
+  {
+   "t": 300.22,
+   "text": "Use them carefully."
+  },
+  {
+   "t": 301.56,
+   "text": "That's a good place for us to take a break."
+  }
+ ]
+}

@@ -1,0 +1,207 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — FLP and FRT — the second pair of scissors",
+ "duration": 372.23,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — FLP and FRT — the second pair of scissors"
+  },
+  {
+   "t": 5.67,
+   "text": "Cre-Lox is wonderful, but it's a single system."
+  },
+  {
+   "t": 9.45,
+   "text": "One enzyme, one recognition site."
+  },
+  {
+   "t": 12.15,
+   "text": "If you want to do two independent genetic operations in the same cell — say, delete gene A and simultaneously activate reporter B — you'd be in trouble using only Cre, because Cre would act on both pairs of loxP sites and you couldn't separate the two events."
+  },
+  {
+   "t": 29.51,
+   "text": "You need an orthogonal system — a second pair of scissors that recognizes different bookmarks and doesn't interfere with Cre at all."
+  },
+  {
+   "t": 37.54,
+   "text": "Same chemistry, different sequence."
+  },
+  {
+   "t": 40.26,
+   "text": "So Cre acts on its sites, the other enzyme acts on its sites, and the two operations are independent."
+  },
+  {
+   "t": 46.77,
+   "text": "That second system exists."
+  },
+  {
+   "t": 48.76,
+   "text": "It comes from yeast — specifically from a plasmid called the 2-micron plasmid found in Saccharomyces cerevisiae."
+  },
+  {
+   "t": 56.49,
+   "text": "The enzyme is called FLP — usually pronounced \"flip\" — and its recognition sites are called FRT sites, for \"FLP recognition target."
+  },
+  {
+   "t": 65.8,
+   "text": "\""
+  },
+  {
+   "t": 66.0,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 67.31,
+   "text": "If Cre is a pair of scissors that cuts only at red bookmarks, FLP is a second pair of scissors that cuts only at blue bookmarks."
+  },
+  {
+   "t": 76.17,
+   "text": "The two pairs of scissors don't talk to each other."
+  },
+  {
+   "t": 79.08,
+   "text": "They don't recognize each other's bookmarks."
+  },
+  {
+   "t": 81.42,
+   "text": "You can have red bookmarks flanking one gene and blue bookmarks flanking another gene in the same cell, and applying Cre will excise the first gene while leaving the second untouched; applying FLP will excise the second while leaving the first untouched."
+  },
+  {
+   "t": 98.7,
+   "text": "Apply both and both come out."
+  },
+  {
+   "t": 101.05,
+   "text": "The two systems are independent channels."
+  },
+  {
+   "t": 103.55,
+   "text": "Biochemically, FLP is also a tyrosine recombinase, just like Cre — same general mechanism, snipping DNA via a tyrosine intermediate, no ATP required."
+  },
+  {
+   "t": 115.95,
+   "text": "The FRT site is also 34 base pairs of double-stranded DNA, structured as a pair of 13-base inverted repeats around an 8-base asymmetric spacer — the same general architecture as loxP."
+  },
+  {
+   "t": 129.84,
+   "text": "But the actual sequences are completely different."
+  },
+  {
+   "t": 133.09,
+   "text": "FRT is \"GAAGTTCCTATTC-tctagaaa-GTATAGGAACTTC\" or something close — a different recognition sequence that FLP binds but Cre does not."
+  },
+  {
+   "t": 142.64,
+   "text": "And vice versa: loxP is invisible to FLP."
+  },
+  {
+   "t": 147.07,
+   "text": "The two systems are like two different lock-and-key pairs that happen to have the same general shape but don't open each other's locks."
+  },
+  {
+   "t": 154.46,
+   "text": "FLP was originally discovered, in its native yeast context, doing essentially the same kind of dimer resolution that Cre does in P1 — keeping the 2-micron plasmid in its monomer form, separating fused circles."
+  },
+  {
+   "t": 168.91,
+   "text": "The native FLP, however, is not very active at mammalian body temperature; it evolved to work in yeast at around 30 degrees Celsius."
+  },
+  {
+   "t": 178.1,
+   "text": "The version most commonly used in mice is an engineered variant called FLPe (\"FLP enhanced\") or, more recently, FLPo (\"FLP optimized,\" referring to codon optimization), which has been mutated and codon-optimized to work efficiently at 37 degrees in mammalian cells."
+  },
+  {
+   "t": 196.18,
+   "text": "With FLPe or FLPo, you get clean, efficient recombination in mouse cells."
+  },
+  {
+   "t": 202.85,
+   "text": "How do you use FLP in practice?"
+  },
+  {
+   "t": 205.05,
+   "text": "Same way as Cre."
+  },
+  {
+   "t": 206.57,
+   "text": "You make mouse lines that express FLP under a chosen promoter — the FLP analog of the Cre driver lines we discussed."
+  },
+  {
+   "t": 214.85,
+   "text": "You make floxed-with-FRT alleles — colloquially \"FRT-ed\" alleles, though that's less commonly said than \"floxed\" — by inserting FRT sites flanking a gene of interest."
+  },
+  {
+   "t": 227.03,
+   "text": "Cross the two, and you get FLP-mediated excision in the chosen cells."
+  },
+  {
+   "t": 232.18,
+   "text": "But the big use of FLP, the use that justifies having a whole second system in addition to Cre, is layered experiments."
+  },
+  {
+   "t": 240.84,
+   "text": "With both systems in the same animal, you can build experiments where two independent things happen, one driven by Cre, one driven by FLP."
+  },
+  {
+   "t": 249.82,
+   "text": "You can, for example, use Cre to delete gene A in cell type X, and FLP to delete gene B in cell type Y, and ask what happens when both deletions are present together."
+  },
+  {
+   "t": 261.85,
+   "text": "You can also use the two systems sequentially: use FLP to remove a selectable marker from a complex allele, leaving behind a clean floxed-by-loxP version that's ready for Cre experiments."
+  },
+  {
+   "t": 274.37,
+   "text": "We talked about this in Segment 4 — the targeting marker is often FRT-flanked exactly so it can be removed by an early FLP cross before the experimental Cre cross."
+  },
+  {
+   "t": 285.82,
+   "text": "There's one application of FLP combined with Cre that's so important it gets its own segment — and that's the intersectional approach, which we'll cover in Segment 13."
+  },
+  {
+   "t": 296.6,
+   "text": "The basic idea: instead of saying \"do something in cells that express promoter X,\" you can say \"do something in cells that express BOTH promoter X AND promoter Y\" — which is a much more specific population, because the intersection of two promoter patterns is almost always smaller and more precise than either pattern alone."
+  },
+  {
+   "t": 316.17,
+   "text": "This is the AND gate of mouse genetics, and it requires two independent recombinases — Cre under one promoter, FLP under another, plus a reporter or floxed allele engineered to require both for activation."
+  },
+  {
+   "t": 330.97,
+   "text": "We'll save the full discussion for Segment 13."
+  },
+  {
+   "t": 334.16,
+   "text": "For now, just hold the idea: FLP exists so that you can do two independent things, and the most powerful uses of FLP are in combination with Cre, not as a replacement for it."
+  },
+  {
+   "t": 346.63,
+   "text": "For now, the main thing to remember is: FLP and FRT are to Cre and loxP what blue ink is to red ink."
+  },
+  {
+   "t": 356.07,
+   "text": "Same kind of pen, different color."
+  },
+  {
+   "t": 358.28,
+   "text": "Two independent writing systems on the same page."
+  },
+  {
+   "t": 361.35,
+   "text": "That orthogonality is the real gift."
+  },
+  {
+   "t": 364.27,
+   "text": "And as it turns out, FLP isn't even the only sibling system."
+  },
+  {
+   "t": 369.06,
+   "text": "There are now several others."
+  },
+  {
+   "t": 370.87,
+   "text": "Which is the next segment."
+  }
+ ]
+}

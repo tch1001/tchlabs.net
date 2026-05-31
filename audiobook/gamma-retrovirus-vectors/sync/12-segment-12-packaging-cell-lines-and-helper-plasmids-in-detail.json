@@ -1,0 +1,135 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Packaging cell lines and helper plasmids in detail",
+ "duration": 387.36,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Packaging cell lines and helper plasmids in detail"
+  },
+  {
+   "t": 4.94,
+   "text": "Let's go a level deeper on the producer system, because the practical details of how vector is actually made matter a lot when you read clinical trial methods, and the names of specific cell lines come up constantly."
+  },
+  {
+   "t": 17.41,
+   "text": "We already met Phoenix in Segment 4."
+  },
+  {
+   "t": 20.09,
+   "text": "Let me give you the fuller picture."
+  },
+  {
+   "t": 21.74,
+   "text": "The Phoenix lines were developed by Garry Nolan's lab in the mid-1990s, based on the HEK293 cell line (human embryonic kidney 293), which was already well-established as a workhorse for mammalian transfection because it has a very high transfection efficiency."
+  },
+  {
+   "t": 39.55,
+   "text": "The Phoenix lines have MLV gag-pol stably integrated, plus either ecotropic envelope (Phoenix-Eco, for mouse cell transduction) or amphotropic envelope (Phoenix-Ampho, for broader mammalian tropism)."
+  },
+  {
+   "t": 53.94,
+   "text": "Variants like Phoenix-Gp lack the env entirely and require co-transfection of an envelope plasmid, which gives you flexibility to pseudotype with whatever envelope you want."
+  },
+  {
+   "t": 64.91,
+   "text": "The standard workflow with Phoenix is: thaw the cells, grow them adherent in tissue culture flasks, transfect them with your transfer plasmid (and, for Phoenix-Gp, also an envelope plasmid) using a transient transfection reagent like calcium phosphate or lipofectamine, change the medium after a day to allow virus to accumulate, harvest the supernatant 48 to 72 hours post-transfection, filter through a 0.45-micron filter to remove cell debris, and use the resulting virus-containing supernatant"
+  },
+  {
+   "t": 100.26,
+   "text": "either fresh or after concentration by ultracentrifugation."
+  },
+  {
+   "t": 104.66,
+   "text": "A typical Phoenix prep gives you 10^5 to 10^7 transducing units per milliliter, depending on how well the transfection worked and how efficient your particular vector is."
+  },
+  {
+   "t": 117.96,
+   "text": "GP2-293 is a similar HEK293-based line that stably expresses only gag-pol, leaving you to supply the envelope on a separate plasmid."
+  },
+  {
+   "t": 131.04,
+   "text": "The advantage over Phoenix-Gp is that GP2-293 was selected for higher gag-pol expression and tends to give somewhat higher titers."
+  },
+  {
+   "t": 141.22,
+   "text": "The trade-off is that you have to always co-transfect three plasmids — transfer, gag-pol if you want to boost it further (optional), and envelope — instead of just transfer plus envelope as with Phoenix-Gp."
+  },
+  {
+   "t": 153.94,
+   "text": "FLY cell lines — FLYA13 and FLYRD18 are examples — were developed in the late 1990s for clinical-grade production."
+  },
+  {
+   "t": 164.07,
+   "text": "They have MLV gag-pol plus an amphotropic or RD114 envelope, stably integrated, in TE671 human rhabdomyosarcoma cells."
+  },
+  {
+   "t": 176.1,
+   "text": "These were used in some of the original SCID-X1 vector preparations."
+  },
+  {
+   "t": 180.53,
+   "text": "STAR packaging cells, also developed for clinical use, similarly express gag-pol and a pseudotyping envelope stably."
+  },
+  {
+   "t": 189.26,
+   "text": "There are several other clinical-grade producer lines specific to particular manufacturers."
+  },
+  {
+   "t": 195.38,
+   "text": "For modern clinical CAR-T manufacturing, the producer cell line is one of the most heavily regulated parts of the whole process."
+  },
+  {
+   "t": 203.36,
+   "text": "The line has to be clonally derived from a single ancestor cell, fully characterized by genomic sequencing and karyotyping, tested for the absence of contaminating viruses, and maintained as a master cell bank — typically hundreds of vials of cells frozen at very low passage number, with strict controls on how many times each working batch can be passaged before retirement."
+  },
+  {
+   "t": 226.22,
+   "text": "A single qualified master cell bank can supply vector for thousands of patient doses, but it's also a single point of failure — if the line gets contaminated or loses its productivity, the entire downstream manufacturing has to be requalified."
+  },
+  {
+   "t": 241.2,
+   "text": "This is why companies invest heavily in characterizing and maintaining their producer cell lines, and why switching producer lines mid-program is a major regulatory event."
+  },
+  {
+   "t": 251.89,
+   "text": "The corresponding helper plasmids that get transfected into the producer cells, or that are stably integrated in them, also have a defined architecture."
+  },
+  {
+   "t": 261.01,
+   "text": "For a typical modern gamma-retroviral system the helper construct contains the MLV gag and pol open reading frames, often codon-optimized for high expression in human cells, driven by a strong promoter like CMV."
+  },
+  {
+   "t": 275.71,
+   "text": "The construct has the packaging signal psi deleted (so its own RNA doesn't get packaged) and has been modified to remove the att sites that would allow integrase to integrate the helper construct itself (so the construct stays where it was put)."
+  },
+  {
+   "t": 290.18,
+   "text": "The envelope plasmid, supplied separately, contains the envelope gene of choice — VSV-G, GALV, RD114, or amphotropic — driven by another strong promoter."
+  },
+  {
+   "t": 303.03,
+   "text": "The conceptual architecture is the same as it was in 1981 when Mulligan did the original experiment: cis-acting elements on the transfer vector, trans-acting proteins from helper constructs, with as many splits between helpers as possible to minimize the chance that any single recombination event could regenerate a replication-competent virus."
+  },
+  {
+   "t": 323.88,
+   "text": "Modern systems often split gag-pol from env on separate plasmids; sometimes the env is split into its components; sometimes there are tetracycline-inducible expression elements that allow the producer cell to grow without virus production and then be induced to produce virus on demand."
+  },
+  {
+   "t": 341.85,
+   "text": "These engineering refinements are not safety-critical in the sense that they prevent insertional mutagenesis — they're safety-critical in the sense that they prevent the accidental regeneration of a wild-type virus."
+  },
+  {
+   "t": 354.69,
+   "text": "The big take-home: the producer cell line is a stably engineered factory, the helper plasmids supply the proteins in trans, and the architecture is deliberately split to maximize the number of recombination events that would be required to regenerate a replication-competent virus."
+  },
+  {
+   "t": 372.84,
+   "text": "Phoenix and GP2-293 are the academic workhorses; FLY, STAR, and proprietary clinical producer lines are the clinical workhorses."
+  },
+  {
+   "t": 383.33,
+   "text": "The split-component logic has been the same for forty years."
+  }
+ ]
+}

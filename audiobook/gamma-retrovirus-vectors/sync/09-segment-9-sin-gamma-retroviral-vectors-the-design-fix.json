@@ -1,0 +1,207 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — SIN gamma-retroviral vectors — the design fix",
+ "duration": 411.68,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — SIN gamma-retroviral vectors — the design fix"
+  },
+  {
+   "t": 4.64,
+   "text": "So how do you take a gamma-retroviral vector and engineer it so the LTR enhancer can't trans-activate nearby host genes?"
+  },
+  {
+   "t": 13.53,
+   "text": "The answer is the self-inactivating vector — SIN, often pronounced just \"sin\" — and it is a design fix that exploits a quirk of how retroviral reverse transcription rebuilds the LTRs."
+  },
+  {
+   "t": 26.18,
+   "text": "Here's the key biochemical fact you need."
+  },
+  {
+   "t": 28.7,
+   "text": "When a retroviral RNA is reverse-transcribed into double-stranded DNA, the resulting provirus has two LTRs, one at each end."
+  },
+  {
+   "t": 38.51,
+   "text": "Both LTRs are identical in sequence."
+  },
+  {
+   "t": 41.65,
+   "text": "But — and this is the trick — they were not both encoded as full LTRs in the RNA template."
+  },
+  {
+   "t": 47.99,
+   "text": "The RNA template starts with R-U5 at the 5' end and ends with U3-R at the 3' end."
+  },
+  {
+   "t": 54.9,
+   "text": "The full U3-R-U5 sequence of each LTR is reconstructed during reverse transcription by a complicated process of strand transfers that copies U3 from the 3' end of the RNA template back to the 5' end of the DNA product, and copies U5 from the 5' end of the RNA back to the 3' end of the DNA."
+  },
+  {
+   "t": 75.9,
+   "text": "The relevant detail is this: the U3 sequence at both ends of the integrated provirus comes from a single U3 in the original RNA template — the one at the 3' end."
+  },
+  {
+   "t": 87.05,
+   "text": "This has a wild consequence."
+  },
+  {
+   "t": 89.14,
+   "text": "If you delete a chunk of U3 from the 3' LTR of your transfer plasmid, but leave the 5' LTR intact, then during the production round of transcription, the producer cell still transcribes the vector RNA using the intact 5' LTR's promoter — so you still get plenty of RNA."
+  },
+  {
+   "t": 106.72,
+   "text": "The RNA gets packaged, delivered, and reverse-transcribed in the target cell."
+  },
+  {
+   "t": 111.8,
+   "text": "During reverse transcription, the U3 from the 3' end gets copied to both ends of the integrated provirus."
+  },
+  {
+   "t": 119.4,
+   "text": "And that 3' U3 is the one with the deletion."
+  },
+  {
+   "t": 122.88,
+   "text": "So the integrated provirus, in the target cell, has the U3 deletion at both LTRs."
+  },
+  {
+   "t": 129.44,
+   "text": "The enhancer/promoter that was in U3 is now gone from both ends."
+  },
+  {
+   "t": 134.72,
+   "text": "The provirus has \"self-inactivated\" its own LTR."
+  },
+  {
+   "t": 139.16,
+   "text": "Let me say that again, because it's the most important single design trick in modern integrating vector engineering."
+  },
+  {
+   "t": 145.71,
+   "text": "You delete the enhancer from one LTR — the 3' one — on the plasmid."
+  },
+  {
+   "t": 151.44,
+   "text": "The producer cell still makes RNA, because the 5' LTR on the plasmid is intact."
+  },
+  {
+   "t": 157.6,
+   "text": "But once that RNA is reverse-transcribed and integrated in the target cell, both LTRs come from the deleted version, and the integrated provirus has no functional LTR enhancer at all."
+  },
+  {
+   "t": 169.6,
+   "text": "The therapeutic gene, of course, still has to be expressed in the target cell."
+  },
+  {
+   "t": 174.74,
+   "text": "So you put an internal promoter inside the vector — between the LTRs, driving the gene of interest."
+  },
+  {
+   "t": 181.76,
+   "text": "Common choices include cellular promoters like PGK (phosphoglycerate kinase, a housekeeping gene promoter, moderate strength) and EF1-alpha (elongation factor 1 alpha, stronger, broadly active), as well as viral promoters like CMV (cytomegalovirus immediate-early, very strong but sometimes silenced over time) and SFFV (spleen focus-forming virus, very strong, which we'll discuss in a moment because it has its own complications)."
+  },
+  {
+   "t": 212.84,
+   "text": "The internal promoter drives expression of the payload."
+  },
+  {
+   "t": 216.31,
+   "text": "The LTR enhancer that used to drive expression is gone."
+  },
+  {
+   "t": 219.71,
+   "text": "So the only thing inside the provirus that's recruiting transcription factors and looping out toward neighboring host genes is the internal promoter — typically a weaker, more contained element than the wild-type LTR enhancer."
+  },
+  {
+   "t": 233.65,
+   "text": "The result, in practice, is that SIN vectors have dramatically reduced insertional activation potential."
+  },
+  {
+   "t": 240.6,
+   "text": "In animal models, SIN gamma-retroviral vectors cause leukemia at rates an order of magnitude lower than wild-type-LTR vectors, and in clinical trials the reduction has been even more pronounced."
+  },
+  {
+   "t": 252.65,
+   "text": "SIN design is not a perfect fix — there is still some residual risk, because internal promoters can occasionally trans-activate nearby genes, and because gamma-retro still preferentially integrates near transcription start sites."
+  },
+  {
+   "t": 267.19,
+   "text": "But it's the single biggest safety improvement in the history of integrating vector design."
+  },
+  {
+   "t": 273.16,
+   "text": "A few more things worth knowing about SIN architecture."
+  },
+  {
+   "t": 276.34,
+   "text": "First, the deletion of the U3 enhancer must be done carefully — you have to remove the enhancer and the promoter elements, but you have to leave the att sites at the very edges of the LTR intact, because integrase needs them to do integration."
+  },
+  {
+   "t": 291.2,
+   "text": "You also have to leave the polyadenylation signal in the R region intact, because that signal terminates the producer-cell transcript."
+  },
+  {
+   "t": 298.94,
+   "text": "So the SIN deletion is a precise excision of a few hundred base pairs of enhancer/promoter sequence in the middle of U3, leaving the flanking regions untouched."
+  },
+  {
+   "t": 310.2,
+   "text": "Second, the SIN trick was actually invented in lentiviral vector engineering before it was applied to gamma-retro."
+  },
+  {
+   "t": 317.11,
+   "text": "The first SIN lentiviral vectors were published in the late 1990s; the SIN gamma-retroviral vectors that became the next generation of clinical gene therapy tools were developed in the mid-2000s, partly in response to the SCID-X1 disaster."
+  },
+  {
+   "t": 332.08,
+   "text": "So in this case, the older sibling learned from the younger one — gamma-retro adopted a fix that lentivirus had pioneered."
+  },
+  {
+   "t": 339.59,
+   "text": "Third, the same logic — delete a key enhancer to render the integrated provirus less dangerous — is the basis of what people call \"third-generation\" gamma-retroviral vectors, which we'll discuss in Segment 10."
+  },
+  {
+   "t": 352.26,
+   "text": "SIN is the central architectural feature."
+  },
+  {
+   "t": 355.2,
+   "text": "Additional safety features build on top of SIN."
+  },
+  {
+   "t": 358.85,
+   "text": "The big take-home: SIN vectors are gamma-retroviral vectors with the LTR enhancer deleted, so the integrated provirus can't trans-activate nearby host genes."
+  },
+  {
+   "t": 369.56,
+   "text": "The trick exploits the asymmetry of reverse transcription: delete the enhancer from the 3' LTR of the plasmid, and both LTRs of the integrated provirus end up enhancerless."
+  },
+  {
+   "t": 381.16,
+   "text": "The internal promoter takes over the job of driving payload expression."
+  },
+  {
+   "t": 385.89,
+   "text": "This is the most important safety fix in integrating vector design, and it's the architecture every clinical gamma-retroviral vector now uses."
+  },
+  {
+   "t": 395.49,
+   "text": "We're about an hour in."
+  },
+  {
+   "t": 396.69,
+   "text": "Take ten minutes."
+  },
+  {
+   "t": 398.04,
+   "text": "When we come back, we're going to dig into the modern vector — promoter choices, pseudotyping, packaging cell lines, the things you need to know to actually use one of these tools in a lab or interpret a clinical trial."
+  },
+  {
+   "t": 409.94,
+   "text": "Stretch, get water."
+  }
+ ]
+}

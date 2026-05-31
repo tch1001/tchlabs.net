@@ -1,0 +1,227 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The three-plasmid production system: packaging, envelope, transfer",
+ "duration": 405.8,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The three-plasmid production system: packaging, envelope, transfer"
+  },
+  {
+   "t": 6.4,
+   "text": "Alright."
+  },
+  {
+   "t": 7.19,
+   "text": "We have a chassis."
+  },
+  {
+   "t": 8.39,
+   "text": "We have a payload."
+  },
+  {
+   "t": 9.49,
+   "text": "How do we actually make virus?"
+  },
+  {
+   "t": 11.39,
+   "text": "Here is the central trick of lentiviral vector production, and once you see it, the whole system makes sense."
+  },
+  {
+   "t": 18.79,
+   "text": "We separate the viral genome into three pieces, put each piece on its own plasmid, and we co-transfect all three plasmids into a producer cell line."
+  },
+  {
+   "t": 29.12,
+   "text": "The producer cell expresses all the proteins from all three plasmids simultaneously."
+  },
+  {
+   "t": 35.17,
+   "text": "The proteins find each other, assemble into virions, and the virions package only the RNA that has the packaging signal — which is on only one of the three plasmids, the transfer plasmid."
+  },
+  {
+   "t": 47.16,
+   "text": "The other two plasmids contribute proteins to the virion but their RNA does not get loaded as a genome."
+  },
+  {
+   "t": 54.08,
+   "text": "The virions bud off, we harvest the supernatant, and we have a stock of single-use delivery vans that contain only the cargo we want."
+  },
+  {
+   "t": 62.27,
+   "text": "Imagine you are baking."
+  },
+  {
+   "t": 63.71,
+   "text": "You mix three ingredients in a bowl — packaging, envelope, transfer — and a few days later the bowl spits out finished cookies."
+  },
+  {
+   "t": 71.44,
+   "text": "The cookies have the wrapper from the envelope plasmid, the structural dough from the packaging plasmid, and the message inside the fortune cookie from the transfer plasmid."
+  },
+  {
+   "t": 80.7,
+   "text": "The message is the only thing the customer cares about."
+  },
+  {
+   "t": 83.95,
+   "text": "The wrapper and the dough are necessary infrastructure that get consumed in the making."
+  },
+  {
+   "t": 88.76,
+   "text": "Let me name the three plasmids and tell you what each one does."
+  },
+  {
+   "t": 92.44,
+   "text": "The packaging plasmid."
+  },
+  {
+   "t": 94.03,
+   "text": "This carries gag and pol."
+  },
+  {
+   "t": 96.17,
+   "text": "Gag encodes the structural proteins — matrix, capsid, nucleocapsid — that build the virion shell."
+  },
+  {
+   "t": 103.89,
+   "text": "Pol encodes the enzymes that the virion has to bring with it because the target cell can't supply them: reverse transcriptase, integrase, and the viral protease."
+  },
+  {
+   "t": 114.54,
+   "text": "In a third-generation system, the packaging plasmid has been stripped down: tat is gone, the accessory genes are gone, and even rev has been moved off onto its own separate fourth plasmid in some commercial systems."
+  },
+  {
+   "t": 127.6,
+   "text": "What's left is the bare minimum — the proteins you need to build a virion and to make it functional inside a target cell."
+  },
+  {
+   "t": 134.81,
+   "text": "Crucially, the packaging plasmid does not have a packaging signal, so its own RNA does not get loaded into the virion."
+  },
+  {
+   "t": 142.89,
+   "text": "The Gag and Pol proteins it produces go off and build particles, but the producer cell does not put the packaging plasmid's RNA inside those particles."
+  },
+  {
+   "t": 153.21,
+   "text": "The envelope plasmid."
+  },
+  {
+   "t": 154.82,
+   "text": "This carries the gene for the glycoprotein that sits on the outside of the virion and determines which cells the virion can enter."
+  },
+  {
+   "t": 162.53,
+   "text": "In almost every lentiviral vector you'll ever use, this is not HIV's own envelope."
+  },
+  {
+   "t": 168.95,
+   "text": "HIV's envelope, gp120/gp41, only enters CD4-positive cells, which is far too narrow a tropism for a gene therapy tool."
+  },
+  {
+   "t": 181.01,
+   "text": "Instead, we use a glycoprotein from a completely different virus — usually the G protein of vesicular stomatitis virus, VSV-G."
+  },
+  {
+   "t": 190.56,
+   "text": "We'll talk about pseudotyping in detail in Segment 5; the headline is that VSV-G binds an essentially universal cellular receptor, the LDL receptor, and lets your vector enter almost any cell type."
+  },
+  {
+   "t": 204.07,
+   "text": "The envelope plasmid expresses just this glycoprotein, in trans, and the producer cell's secretory pathway sticks it into the plasma membrane, where budding virions pick it up."
+  },
+  {
+   "t": 216.03,
+   "text": "The transfer plasmid."
+  },
+  {
+   "t": 217.44,
+   "text": "This is the only plasmid whose RNA actually gets packaged into the virion."
+  },
+  {
+   "t": 222.49,
+   "text": "It is the plasmid that carries your gene of interest, the cargo you want to deliver."
+  },
+  {
+   "t": 227.38,
+   "text": "Between two LTRs — which, as we'll see, are heavily modified — sits everything that the virion needs in cis: the packaging signal, the Rev response element, a few helper cis-acting elements like the central polypurine tract and the WPRE, and in the middle, where the viral genes used to be, your transgene driven by your favorite promoter."
+  },
+  {
+   "t": 248.49,
+   "text": "We'll dissect the transfer plasmid in detail in Segment 4."
+  },
+  {
+   "t": 252.74,
+   "text": "The key point for now is that the transfer plasmid is the only one that becomes the viral genome."
+  },
+  {
+   "t": 258.71,
+   "text": "The other two contribute proteins; the transfer plasmid contributes the genome."
+  },
+  {
+   "t": 264.58,
+   "text": "Now think about the safety logic of this arrangement."
+  },
+  {
+   "t": 267.89,
+   "text": "For wild-type HIV to be produced, you need gag, pol, env, rev, tat, and a genome with a packaging signal all in the same cell, all on the same piece of DNA, or at least on pieces of DNA that can recombine to reconstruct that arrangement."
+  },
+  {
+   "t": 284.74,
+   "text": "By separating those functions onto three or four different plasmids, with no sequence overlap between them, we make it essentially impossible for a single recombination event to reconstruct a replication-competent lentivirus."
+  },
+  {
+   "t": 299.7,
+   "text": "You would need multiple independent recombination events between non-homologous plasmids, all in the same cell, all preserving function."
+  },
+  {
+   "t": 308.49,
+   "text": "That is vanishingly improbable."
+  },
+  {
+   "t": 310.48,
+   "text": "This is the central safety principle of lentiviral vector engineering: safety by separation."
+  },
+  {
+   "t": 316.73,
+   "text": "No single plasmid is sufficient to make replicating virus."
+  },
+  {
+   "t": 320.8,
+   "text": "The viral functions are scattered across multiple plasmids that share as little sequence as possible."
+  },
+  {
+   "t": 327.82,
+   "text": "Any one plasmid, alone, is biologically inert."
+  },
+  {
+   "t": 331.84,
+   "text": "The producer cell, by the way, is almost always HEK293T — a human embryonic kidney cell line that has been engineered to constitutively express the SV40 large T antigen."
+  },
+  {
+   "t": 345.79,
+   "text": "The T antigen has nothing directly to do with lentivirus production, but it allows plasmids that contain the SV40 origin of replication to be episomally amplified inside the 293T cell, which boosts the amount of mRNA you can produce from each plasmid and therefore the yield of virus."
+  },
+  {
+   "t": 364.25,
+   "text": "293Ts also grow fast, transfect easily, and produce robust amounts of virus."
+  },
+  {
+   "t": 371.52,
+   "text": "They are not the only producer cell line — suspension-adapted variants exist for large-scale manufacturing, and packaging cell lines that stably express Gag-Pol and Env are used in some commercial settings — but for a research lab making lentivirus for the first time, you will be transfecting 293Ts."
+  },
+  {
+   "t": 391.03,
+   "text": "That's the production system."
+  },
+  {
+   "t": 392.6,
+   "text": "Three plasmids, one producer cell, three days, harvest the supernatant."
+  },
+  {
+   "t": 398.3,
+   "text": "Now let's look in detail at what's on the transfer plasmid, because that's where you, the experimenter, do most of your design work."
+  }
+ ]
+}

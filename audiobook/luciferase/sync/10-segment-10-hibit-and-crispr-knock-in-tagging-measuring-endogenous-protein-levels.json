@@ -1,0 +1,163 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — HiBiT and CRISPR knock-in tagging: measuring endogenous protein levels",
+ "duration": 268.18,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — HiBiT and CRISPR knock-in tagging: measuring endogenous protein levels"
+  },
+  {
+   "t": 6.83,
+   "text": "Okay, welcome back."
+  },
+  {
+   "t": 8.21,
+   "text": "Get comfortable, refill your coffee, let's pick up where we left off."
+  },
+  {
+   "t": 12.71,
+   "text": "I want to introduce one of the most clever applications of split luciferase, because it solves a problem that's been haunting cell biology for decades."
+  },
+  {
+   "t": 22.36,
+   "text": "The problem is this: how do you measure the level of an endogenous protein — a protein expressed from its normal chromosomal location, at its normal physiological level, regulated by its normal regulatory elements — without overexpression artifacts?"
+  },
+  {
+   "t": 38.1,
+   "text": "Most of the time, when we want to tag a protein for tracking or measurement, we make a plasmid with a strong promoter driving an overexpression of our tagged version."
+  },
+  {
+   "t": 47.4,
+   "text": "That works."
+  },
+  {
+   "t": 48.39,
+   "text": "But the cell is now making ten or a hundred times more of that protein than it normally would, which can perturb the biology."
+  },
+  {
+   "t": 55.58,
+   "text": "And the tagged copy may not respond to normal regulation, because it's not in its normal genomic context."
+  },
+  {
+   "t": 62.9,
+   "text": "What you really want is to tag the endogenous protein in place — to add a small tag to the gene at its normal chromosomal location, leaving regulation entirely intact, so that you're measuring exactly what the cell normally produces, with a tiny additional tag for detection."
+  },
+  {
+   "t": 80.25,
+   "text": "CRISPR-Cas9 makes this kind of knock-in tagging much easier than it used to be."
+  },
+  {
+   "t": 86.1,
+   "text": "But you still want the tag itself to be small, so it doesn't perturb folding or function."
+  },
+  {
+   "t": 91.42,
+   "text": "Enter HiBiT."
+  },
+  {
+   "t": 92.35,
+   "text": "HiBiT is the same tiny 11-amino-acid peptide as SmBiT — actually a slightly higher-affinity variant, hence the \"Hi\" — used not as an interaction sensor but as an affinity tag for quantification."
+  },
+  {
+   "t": 106.35,
+   "text": "Here's the trick."
+  },
+  {
+   "t": 107.53,
+   "text": "You use CRISPR to knock an HiBiT-coding sequence — just thirty-three nucleotides of DNA — into your gene of interest, at either the N-terminus or C-terminus, leaving the rest of the gene untouched."
+  },
+  {
+   "t": 121.11,
+   "text": "Now your endogenous protein, expressed from its normal locus, normally regulated, has an HiBiT tag stuck on the end."
+  },
+  {
+   "t": 129.43,
+   "text": "The tag is too small to matter for protein function in almost all cases — eleven amino acids is the size of a flexible loop, not a domain."
+  },
+  {
+   "t": 139.01,
+   "text": "The protein behaves normally."
+  },
+  {
+   "t": 141.44,
+   "text": "To measure how much of the protein the cell has, you lyse the cells and add LgBiT — the large fragment of NanoLuc, supplied as purified recombinant protein in a reagent kit — along with furimazine."
+  },
+  {
+   "t": 155.28,
+   "text": "The LgBiT finds and binds the HiBiT-tagged protein."
+  },
+  {
+   "t": 159.75,
+   "text": "The reassembled NanoLuc enzyme glows."
+  },
+  {
+   "t": 162.94,
+   "text": "The amount of light tells you, quantitatively, how much HiBiT-tagged protein was in the lysate."
+  },
+  {
+   "t": 169.55,
+   "text": "Which, because of the CRISPR knock-in, is how much of your endogenous protein was in the cell."
+  },
+  {
+   "t": 174.95,
+   "text": "The analogy is a label that only becomes a barcode when scanned."
+  },
+  {
+   "t": 179.12,
+   "text": "Your protein walks around the cell with a tiny passive sticker on it — invisible, doesn't do anything."
+  },
+  {
+   "t": 185.14,
+   "text": "When you want to count copies of the protein, you spray a developer onto the sticker that turns it into a glowing barcode and reads itself."
+  },
+  {
+   "t": 192.93,
+   "text": "Until you spray, no signal."
+  },
+  {
+   "t": 195.29,
+   "text": "After you spray, signal proportional to copies."
+  },
+  {
+   "t": 198.7,
+   "text": "This is enormously powerful."
+  },
+  {
+   "t": 200.99,
+   "text": "It lets you ask, for the first time, things like: \"what's the half-life of this protein when expressed at endogenous levels?"
+  },
+  {
+   "t": 208.8,
+   "text": "\" \"How much does this drug affect endogenous protein turnover?"
+  },
+  {
+   "t": 212.79,
+   "text": "\" \"Which cell types express more of this protein at baseline?"
+  },
+  {
+   "t": 216.56,
+   "text": "\" All without overexpression artifacts."
+  },
+  {
+   "t": 219.01,
+   "text": "Pharmaceutical companies have built whole drug discovery platforms around HiBiT-tagged target proteins, because measuring drug-induced changes in endogenous protein levels is exactly what you need for evaluating things like targeted protein degraders."
+  },
+  {
+   "t": 234.61,
+   "text": "You can also do this in live cells, not just lysates, using a membrane-permeable LgBiT analog and live-cell furimazine — though the live-cell version is dimmer and has more background than the lysate version."
+  },
+  {
+   "t": 247.47,
+   "text": "For most applications, lysate is the gold standard."
+  },
+  {
+   "t": 251.4,
+   "text": "The take-home: HiBiT plus CRISPR knock-in tagging is a way to put a barcode on an endogenous protein and read its copy number with light."
+  },
+  {
+   "t": 259.68,
+   "text": "It's one of the most elegant applications of the entire luciferase toolkit, and it's reshaping how we measure protein abundance in cells."
+  }
+ ]
+}

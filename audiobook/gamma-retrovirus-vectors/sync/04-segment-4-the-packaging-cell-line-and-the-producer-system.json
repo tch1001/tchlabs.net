@@ -1,0 +1,223 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The packaging cell line and the producer system",
+ "duration": 411.71,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The packaging cell line and the producer system"
+  },
+  {
+   "t": 3.94,
+   "text": "Okay, so the transfer plasmid carries the payload but not the proteins."
+  },
+  {
+   "t": 9.12,
+   "text": "The proteins — gag, pol, env — have to come from somewhere."
+  },
+  {
+   "t": 13.94,
+   "text": "In the original 1981 system Mulligan built, the answer was: a separate plasmid, transiently co-transfected into the producer cell alongside the transfer vector."
+  },
+  {
+   "t": 24.88,
+   "text": "You put both plasmids in."
+  },
+  {
+   "t": 26.48,
+   "text": "The cell expresses gag, pol, env from one."
+  },
+  {
+   "t": 30.29,
+   "text": "It transcribes the vector RNA from the other."
+  },
+  {
+   "t": 33.58,
+   "text": "The proteins find the vector RNA, recognize the psi packaging signal, assemble particles around it, and bud them off as virions."
+  },
+  {
+   "t": 42.8,
+   "text": "Harvest the supernatant."
+  },
+  {
+   "t": 44.81,
+   "text": "Filter."
+  },
+  {
+   "t": 45.7,
+   "text": "Apply to target cells."
+  },
+  {
+   "t": 47.52,
+   "text": "That works, but it has a problem."
+  },
+  {
+   "t": 49.75,
+   "text": "Transient transfection is inefficient — only a fraction of the producer cells take up both plasmids, and the production yield is variable from batch to batch."
+  },
+  {
+   "t": 59.8,
+   "text": "So pretty quickly in the early 1980s, the field developed packaging cell lines — cell lines that have been stably engineered to express gag, pol, and env from a permanently integrated copy, so that all you have to do is introduce the transfer plasmid and you immediately get particles out."
+  },
+  {
+   "t": 78.36,
+   "text": "The analogy here."
+  },
+  {
+   "t": 79.75,
+   "text": "Think of the packaging cell line as a virus factory floor that's been pre-staffed with the workers who build the chassis and the engine."
+  },
+  {
+   "t": 87.31,
+   "text": "You don't have to hire those workers every morning."
+  },
+  {
+   "t": 90.14,
+   "text": "They're permanently on payroll."
+  },
+  {
+   "t": 92.03,
+   "text": "All you do is wheel in your custom payload — your transfer plasmid — and the line builds it into a van and ships it out."
+  },
+  {
+   "t": 98.84,
+   "text": "The factory line is the packaging cell line."
+  },
+  {
+   "t": 101.78,
+   "text": "The custom payload is your vector."
+  },
+  {
+   "t": 104.22,
+   "text": "The vans coming off the line are the virions."
+  },
+  {
+   "t": 107.04,
+   "text": "The first widely used packaging line was called Psi-2, built in 1983 by the same Mulligan group."
+  },
+  {
+   "t": 113.89,
+   "text": "Psi-2 was a NIH/3T3 mouse fibroblast that had been stably transfected with an MLV provirus from which the psi packaging signal had been deleted."
+  },
+  {
+   "t": 125.79,
+   "text": "Why delete psi?"
+  },
+  {
+   "t": 126.89,
+   "text": "Because you want the producer cell to make gag, pol, and env, but you do not want the RNA encoding those genes to itself get packaged into a virion."
+  },
+  {
+   "t": 137.11,
+   "text": "If it did, your virions would contain the wild-type viral genome and would be replication-competent — they could infect a cell, deliver gag-pol-env, and start the whole cycle over again."
+  },
+  {
+   "t": 148.91,
+   "text": "That is exactly the thing you are trying to prevent."
+  },
+  {
+   "t": 151.46,
+   "text": "So you delete psi from the helper construct, and now the gag-pol-env RNA gets transcribed and translated into proteins, but it doesn't get packaged."
+  },
+  {
+   "t": 161.38,
+   "text": "Only the transfer vector RNA, which still has psi, gets packaged."
+  },
+  {
+   "t": 166.15,
+   "text": "Clean separation."
+  },
+  {
+   "t": 167.53,
+   "text": "Psi-2 worked, but it had a subtle problem: there was still a low rate of recombination between the helper construct and the transfer vector, which could occasionally regenerate a replication-competent virus."
+  },
+  {
+   "t": 180.47,
+   "text": "To minimize this, the next generation of packaging lines — PA317, GP+E-86, GP+envAm12, and so on — split gag-pol from env onto separate stably integrated constructs, so that a single recombination event between the helper and the transfer vector could not regenerate everything you need to make a competent virus."
+  },
+  {
+   "t": 204.82,
+   "text": "You'd need two simultaneous recombinations, which is enormously less likely."
+  },
+  {
+   "t": 210.4,
+   "text": "This is the same logic by which third-generation lentiviral vectors split their helper components — minimize the chance that any recombination event could regenerate a full virus."
+  },
+  {
+   "t": 221.88,
+   "text": "The modern descendants of those early lines are things like Phoenix-Ampho and Phoenix-Eco, built by Garry Nolan's lab at Stanford in the 1990s, which are HEK293-based (human embryonic kidney cells) stably expressing MLV gag-pol-env."
+  },
+  {
+   "t": 238.51,
+   "text": "The Phoenix lines became the de facto standard for transient gamma-retroviral production in academic labs — you grow the Phoenix cells, you transfect them with your transfer plasmid, you collect the supernatant 48 to 72 hours later, and you have virus."
+  },
+  {
+   "t": 254.31,
+   "text": "There are also lines like GP2-293, which stably express only gag-pol, and require you to also transfect an envelope plasmid separately — this gives you flexibility to choose which envelope you want to use, which matters for tropism, and we'll come back to that in Segment 11 on pseudotyping."
+  },
+  {
+   "t": 272.86,
+   "text": "For clinical-grade manufacturing, the picture is more controlled."
+  },
+  {
+   "t": 277.22,
+   "text": "Companies producing gamma-retroviral vectors for CAR-T cells use stable producer cell lines — fully validated, clonally derived, characterized down to the single-cell level, often grown in suspension in bioreactors rather than in adherent flasks."
+  },
+  {
+   "t": 293.18,
+   "text": "The line is treated like a master cell bank, frozen down in many vials, and qualified for clinical use under GMP — Good Manufacturing Practice — regulations."
+  },
+  {
+   "t": 304.96,
+   "text": "A single qualified producer line can support hundreds of patient doses; the line is the foundation of the manufacturing process and is one of the most heavily regulated parts of the whole pipeline."
+  },
+  {
+   "t": 316.77,
+   "text": "So the producer system, end to end, looks like this."
+  },
+  {
+   "t": 320.59,
+   "text": "You have a producer cell — adherent or suspension, transient transfection or stable line."
+  },
+  {
+   "t": 326.98,
+   "text": "You introduce, by one of several routes, the genes for gag-pol, the gene for env, and your transfer plasmid carrying the payload."
+  },
+  {
+   "t": 335.74,
+   "text": "The cell expresses all of those proteins, transcribes your vector RNA, assembles particles, and buds them off into the surrounding culture medium."
+  },
+  {
+   "t": 345.38,
+   "text": "You harvest the medium, filter out cell debris, often concentrate the virus by ultracentrifugation or tangential flow filtration, titer the resulting preparation to figure out how many functional particles per milliliter you have, and either use it fresh or freeze it for later."
+  },
+  {
+   "t": 362.83,
+   "text": "That preparation is the vector lot."
+  },
+  {
+   "t": 365.13,
+   "text": "A typical research-grade prep might be 10^6 to 10^7 transducing units per milliliter, post-concentration; a clinical prep might be 10^8 or higher."
+  },
+  {
+   "t": 378.09,
+   "text": "The thing to remember about the producer system: the vector you ship is a single-use delivery vehicle, and the factory that makes it is a separately maintained, never-shipped infrastructure."
+  },
+  {
+   "t": 388.88,
+   "text": "The factory contains all the dangerous genes — gag, pol, env."
+  },
+  {
+   "t": 394.33,
+   "text": "The vector contains only the payload and the cis-acting elements."
+  },
+  {
+   "t": 398.53,
+   "text": "The two are intentionally separated and never travel together."
+  },
+  {
+   "t": 402.07,
+   "text": "This is the central safety design of every modern viral vector platform, and it was first established for gamma-retroviral vectors in the early 1980s."
+  }
+ ]
+}
