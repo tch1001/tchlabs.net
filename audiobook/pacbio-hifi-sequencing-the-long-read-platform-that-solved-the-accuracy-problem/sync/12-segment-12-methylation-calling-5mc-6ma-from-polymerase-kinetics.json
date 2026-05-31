@@ -1,0 +1,183 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Methylation calling: 5mC, 6mA from polymerase kinetics",
+ "duration": 393.11,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Methylation calling: 5mC, 6mA from polymerase kinetics"
+  },
+  {
+   "t": 7.17,
+   "text": "We mentioned in passing, earlier, that PacBio reads carry kinetic information — the timing of each pulse — as well as identity information."
+  },
+  {
+   "t": 17.04,
+   "text": "I want to spend this segment showing you what that kinetic information is good for."
+  },
+  {
+   "t": 21.4,
+   "text": "The headline application is direct detection of DNA methylation, without any chemical conversion of the sample, just from the polymerase's natural behavior as it reads modified bases."
+  },
+  {
+   "t": 33.45,
+   "text": "Let me set up why this matters."
+  },
+  {
+   "t": 35.44,
+   "text": "DNA methylation is one of the most important kinds of epigenetic modification."
+  },
+  {
+   "t": 41.36,
+   "text": "In mammalian genomes, the most common modification is 5-methylcytosine (5mC) — a methyl group added to the fifth carbon of cytosine, typically in the context of CpG dinucleotides."
+  },
+  {
+   "t": 55.1,
+   "text": "Methylated CpGs in promoters generally silence gene expression; methylated CpGs in gene bodies have more complex effects."
+  },
+  {
+   "t": 64.26,
+   "text": "Methylation patterns differ between cell types, between healthy and cancerous cells, between maternal and paternal alleles (genomic imprinting), and they change over the lifespan."
+  },
+  {
+   "t": 75.51,
+   "text": "Reading the methylome — the pattern of methylation across the genome — is essential for understanding gene regulation, development, cancer, and many other things."
+  },
+  {
+   "t": 85.64,
+   "text": "In bacteria, the dominant modification is 6-methyladenine (6mA) and 4-methylcytosine (4mC) — these mark the bacterium's own DNA so that its restriction enzymes don't chop it up, and they also play roles in DNA repair and gene regulation."
+  },
+  {
+   "t": 103.94,
+   "text": "Bacterial methylome patterns differ between species and even between strains, and are useful for typing and tracking."
+  },
+  {
+   "t": 111.81,
+   "text": "For decades, the standard way to read methylation was bisulfite sequencing: treat the DNA with sodium bisulfite, which chemically converts unmethylated cytosines to uracil (read as thymine by sequencers) while leaving methylated cytosines intact."
+  },
+  {
+   "t": 129.3,
+   "text": "Then sequence with Illumina, and methylated Cs show up as Cs while unmethylated ones show up as Ts."
+  },
+  {
+   "t": 137.75,
+   "text": "Clever, but it has problems: the bisulfite treatment is harsh and damages the DNA, only methylated cytosines are read (5mC) — not 6mA or other modifications — and the workflow is laborious."
+  },
+  {
+   "t": 153.21,
+   "text": "PacBio offers a totally different approach."
+  },
+  {
+   "t": 156.14,
+   "text": "The polymerase, when it encounters a methylated base on the template, takes slightly longer to incorporate the next nucleotide."
+  },
+  {
+   "t": 164.47,
+   "text": "The methyl group sterically interferes with the active site geometry, slowing the polymerase by a few milliseconds."
+  },
+  {
+   "t": 171.78,
+   "text": "This delay shows up directly in the timing of the fluorescent pulses, and PacBio's software can analyze that timing — what they call the interpulse duration, IPD — and infer the presence and identity of modifications."
+  },
+  {
+   "t": 185.04,
+   "text": "The information is right there, in the kinetics of the polymerase, which the platform records anyway as part of every read."
+  },
+  {
+   "t": 193.06,
+   "text": "No special sample prep."
+  },
+  {
+   "t": 194.8,
+   "text": "No bisulfite."
+  },
+  {
+   "t": 196.1,
+   "text": "No chemical conversion."
+  },
+  {
+   "t": 197.84,
+   "text": "The methylation calls fall out of the same data that gives you the sequence."
+  },
+  {
+   "t": 202.2,
+   "text": "Run a HiFi sample, and you get both the sequence and the methylation pattern, on every read, for every CpG and every methylated adenine in the genome."
+  },
+  {
+   "t": 213.64,
+   "text": "Free of charge, more or less."
+  },
+  {
+   "t": 216.04,
+   "text": "The accuracy of methylation calling depends on the number of passes per read and the depth of coverage."
+  },
+  {
+   "t": 222.03,
+   "text": "For high-accuracy 5mC calling at every CpG in a human genome, you typically want around twenty-x HiFi coverage, which is well within the normal sequencing depth for an assembly."
+  },
+  {
+   "t": 234.93,
+   "text": "PacBio has explicit tools — the most recent ones use deep learning models trained on known methylation patterns — for calling 5mC, 6mA, and 4mC from HiFi kinetics data."
+  },
+  {
+   "t": 248.15,
+   "text": "The applications are real."
+  },
+  {
+   "t": 249.82,
+   "text": "Bacterial methylomes can be completely characterized in a single PacBio run — you get the genome and the methylation map together, which has revealed that bacterial methylation patterns are far more diverse and complex than anyone realized before long-read sequencing."
+  },
+  {
+   "t": 266.52,
+   "text": "Cancer methylomes can be analyzed with single-molecule resolution, meaning you can see methylation heterogeneity between individual tumor cells reflected in individual reads."
+  },
+  {
+   "t": 277.95,
+   "text": "Imprinted regions of the human genome — where the methylation differs between maternal and paternal alleles — can be analyzed directly, with phasing, because HiFi reads are long enough to link methylation patterns to specific haplotypes."
+  },
+  {
+   "t": 293.08,
+   "text": "The deep advantage here is that PacBio's methylation calling preserves the link between methylation and the underlying genetic variation, in the same molecule."
+  },
+  {
+   "t": 302.78,
+   "text": "You can say: \"This particular CpG, on this particular haplotype, in this particular cell-of-origin, is methylated."
+  },
+  {
+   "t": 311.42,
+   "text": "\" That kind of three-way linkage — variant, haplotype, methylation — is essentially impossible with bisulfite-based methods, which destroy the original molecule and require statistical reconstruction."
+  },
+  {
+   "t": 324.33,
+   "text": "Nanopore can also detect methylation directly, by a similar principle — the current through the nanopore is slightly different when a methylated base passes through."
+  },
+  {
+   "t": 334.25,
+   "text": "Both long-read platforms therefore offer this capability, and both are widely used for methylation analysis today."
+  },
+  {
+   "t": 341.37,
+   "text": "The market has split: Illumina still dominates classical bulk methylation surveys (via bisulfite), while PacBio and Nanopore have taken over for single-molecule, phased, or comprehensive methylome work."
+  },
+  {
+   "t": 355.38,
+   "text": "The key insight to leave the segment with: PacBio reads carry epigenetic information as a free side-channel, because the polymerase's kinetics are sensitive to base modifications and the platform records those kinetics natively."
+  },
+  {
+   "t": 369.46,
+   "text": "This is one of the unexpected dividends of real-time single-molecule observation."
+  },
+  {
+   "t": 374.55,
+   "text": "The same physical fact that lets you sequence — watching the polymerase work — also lets you read the chemical modifications on the template."
+  },
+  {
+   "t": 382.61,
+   "text": "One sample, one run, two layers of data."
+  },
+  {
+   "t": 386.03,
+   "text": "That's a profound capability, and it's one of the things that has cemented PacBio's role in modern genomics."
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Structural variant calling: what only long reads can see",
+ "duration": 261.61,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Structural variant calling: what only long reads can see"
+  },
+  {
+   "t": 5.59,
+   "text": "Let me spend a segment on a specific application where PacBio HiFi has made a clinical and scientific difference that's worth understanding in its own right: structural variant calling."
+  },
+  {
+   "t": 16.79,
+   "text": "A structural variant — an SV — is a genomic change larger than fifty base pairs."
+  },
+  {
+   "t": 22.8,
+   "text": "They include large insertions, large deletions, inversions (where a chunk of chromosome gets flipped), duplications (where a chunk gets copied), translocations (where pieces from different chromosomes get joined), and complex rearrangements."
+  },
+  {
+   "t": 37.9,
+   "text": "SVs are biologically and clinically very important."
+  },
+  {
+   "t": 41.89,
+   "text": "They cause major developmental disorders, drive cancer, contribute to evolution, and account for far more total base-pair difference between any two human genomes than do single-nucleotide variants."
+  },
+  {
+   "t": 55.06,
+   "text": "The typical human carries something like twenty thousand SVs relative to the reference."
+  },
+  {
+   "t": 60.66,
+   "text": "Short reads are bad at SVs."
+  },
+  {
+   "t": 63.0,
+   "text": "To detect an SV with short reads, you have to infer the event from indirect signals: split reads (one end maps to one location, the other end to a distant location), discordant read pairs (paired ends map at unexpected distances or orientations), abnormal coverage (a region with twice or zero coverage suggests duplication or deletion), and so on."
+  },
+  {
+   "t": 87.2,
+   "text": "These signals are noisy, and they fail completely for SVs that lie within repetitive regions — which is most SVs, because repeats are where most structural change happens."
+  },
+  {
+   "t": 98.56,
+   "text": "HiFi reads change the game."
+  },
+  {
+   "t": 100.62,
+   "text": "A HiFi read can directly span an SV from its left flanking unique sequence, through the breakpoint, into the variant sequence, through the second breakpoint, into the right flanking unique sequence — all in a single read."
+  },
+  {
+   "t": 115.0,
+   "text": "No inference needed."
+  },
+  {
+   "t": 116.45,
+   "text": "You see the event directly."
+  },
+  {
+   "t": 118.1,
+   "text": "You can sequence the insertion."
+  },
+  {
+   "t": 120.05,
+   "text": "You can read the breakpoints with single-base resolution."
+  },
+  {
+   "t": 123.15,
+   "text": "You can characterize complex events that involve multiple breakpoints in a small region."
+  },
+  {
+   "t": 128.34,
+   "text": "The result is that HiFi-based SV calling is dramatically more sensitive and dramatically more accurate than short-read SV calling."
+  },
+  {
+   "t": 137.46,
+   "text": "Studies comparing the two have consistently found that short reads miss roughly half of all SVs that long reads can find, and the SVs they miss are skewed toward larger events and events in repetitive regions — exactly the events that are most often clinically important."
+  },
+  {
+   "t": 154.04,
+   "text": "For clinical genomics, this matters enormously."
+  },
+  {
+   "t": 157.49,
+   "text": "Many rare disease cases have a structural variant as the underlying cause, and these have historically gone undiagnosed by exome or even short-read whole-genome sequencing because the SV was invisible."
+  },
+  {
+   "t": 170.9,
+   "text": "With HiFi, those cases now have a real shot at diagnosis."
+  },
+  {
+   "t": 175.79,
+   "text": "PacBio has been actively pursuing rare disease clinical applications precisely on this basis — there are now reports of patients receiving long-awaited molecular diagnoses, after years of failed short-read workups, when long-read sequencing finally revealed an SV."
+  },
+  {
+   "t": 192.76,
+   "text": "For cancer genomics, SV detection is also transforming."
+  },
+  {
+   "t": 197.3,
+   "text": "Cancer genomes are full of complex rearrangements — chromothripsis, breakage-fusion-bridge cycles, oncogene amplifications — that short reads can only partially characterize."
+  },
+  {
+   "t": 209.7,
+   "text": "Long reads see these directly and reveal their structure."
+  },
+  {
+   "t": 214.01,
+   "text": "This is starting to influence cancer diagnostics and the choice of targeted therapies."
+  },
+  {
+   "t": 219.4,
+   "text": "The analogy I want to leave you with."
+  },
+  {
+   "t": 221.57,
+   "text": "Short reads detecting structural variants are like trying to identify a car wreck by looking at scattered debris."
+  },
+  {
+   "t": 228.35,
+   "text": "You can sometimes infer that there was a wreck, you might guess what kind of vehicles were involved, but you can't see the wreck itself."
+  },
+  {
+   "t": 235.2,
+   "text": "Long reads are like having an aerial photograph of the wreck."
+  },
+  {
+   "t": 238.8,
+   "text": "You can see exactly what happened, where each car ended up, what's missing, what's misplaced."
+  },
+  {
+   "t": 244.51,
+   "text": "The event is directly observable rather than inferred."
+  },
+  {
+   "t": 248.11,
+   "text": "That difference, for the things SVs cause — diseases, cancers, evolution — is enormous, and it's part of why HiFi is rapidly becoming the standard for any application where structural variation matters."
+  }
+ ]
+}

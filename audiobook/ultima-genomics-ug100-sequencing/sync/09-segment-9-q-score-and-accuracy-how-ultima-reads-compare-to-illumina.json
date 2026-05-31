@@ -1,0 +1,171 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Q score and accuracy — how Ultima reads compare to Illumina",
+ "duration": 304.65,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Q score and accuracy — how Ultima reads compare to Illumina"
+  },
+  {
+   "t": 5.78,
+   "text": "We need to talk about quality, because cost-per-base only matters if the bases you're getting are accurate enough to use."
+  },
+  {
+   "t": 12.6,
+   "text": "Quick refresher on Q scores."
+  },
+  {
+   "t": 14.71,
+   "text": "The quality of a sequencing base call is reported on a logarithmic scale called the Phred quality score, or Q score."
+  },
+  {
+   "t": 21.44,
+   "text": "A base called at Q20 has, by definition, a one-in-a-hundred chance of being wrong."
+  },
+  {
+   "t": 26.88,
+   "text": "Q30 means one in a thousand."
+  },
+  {
+   "t": 29.44,
+   "text": "Q40 means one in ten thousand."
+  },
+  {
+   "t": 32.0,
+   "text": "The cutoff that most genomics workflows consider \"high quality\" is Q30 or above."
+  },
+  {
+   "t": 38.49,
+   "text": "The fraction of bases in a run that hit at least Q30 is often called the percent-Q30 metric, and it's a standard summary statistic."
+  },
+  {
+   "t": 47.86,
+   "text": "Illumina NovaSeq X, in standard operation, delivers about 85 to 90 percent of bases at Q30 or above, depending on read length and library quality."
+  },
+  {
+   "t": 59.3,
+   "text": "The error rate of an Illumina base call is dominated by substitution errors — A called as G, or T called as C — and the errors are roughly randomly distributed, with some systematic biases around certain sequence contexts."
+  },
+  {
+   "t": 73.86,
+   "text": "Ultima's UG100 delivers, according to their published numbers, about 85 percent of bases at Q30 in standard runs — comparable to Illumina, though slightly behind in some configurations."
+  },
+  {
+   "t": 86.72,
+   "text": "So at the surface level, the accuracy is in the same ballpark."
+  },
+  {
+   "t": 91.21,
+   "text": "But the error structure is different, and this matters for downstream analysis."
+  },
+  {
+   "t": 96.35,
+   "text": "Illumina errors are predominantly substitutions."
+  },
+  {
+   "t": 99.7,
+   "text": "Ultima errors, because of the flow-based chemistry we discussed in Segment 6, are predominantly homopolymer length errors — calling a run of seven A's as six or eight A's."
+  },
+  {
+   "t": 111.28,
+   "text": "These two error modes have very different consequences."
+  },
+  {
+   "t": 114.59,
+   "text": "Substitution errors look, to a variant caller, like potential SNPs that need to be discriminated from real variants by depth and quality."
+  },
+  {
+   "t": 123.41,
+   "text": "Homopolymer length errors look like indels — small insertions or deletions — and they're particularly damaging because indels are themselves the hardest class of real variant to call accurately."
+  },
+  {
+   "t": 136.16,
+   "text": "So an Ultima dataset will have a higher false-positive rate for short indels in or near homopolymer regions than an Illumina dataset of equivalent coverage."
+  },
+  {
+   "t": 146.56,
+   "text": "This is a real, characteristic limitation, and the Ultima bioinformatics team has put substantial effort into compensating for it."
+  },
+  {
+   "t": 155.14,
+   "text": "They report what's called a flow-space quality score, which carries more information about the certainty of the homopolymer length call than a per-base Q score can."
+  },
+  {
+   "t": 164.56,
+   "text": "They've developed custom variant callers that account for the platform's specific error model."
+  },
+  {
+   "t": 169.74,
+   "text": "And the per-base Q30 numbers, when filtered properly, are competitive."
+  },
+  {
+   "t": 174.89,
+   "text": "There's an interesting second-order effect, too."
+  },
+  {
+   "t": 177.43,
+   "text": "Because Ultima's chemistry is fundamentally different, the systematic errors are not correlated with Illumina's systematic errors."
+  },
+  {
+   "t": 185.03,
+   "text": "So in a project where you run a sample on both platforms, errors that show up on one don't show up on the other — they're orthogonal."
+  },
+  {
+   "t": 192.49,
+   "text": "That makes cross-platform validation very powerful: a variant called by both Ultima and Illumina is much more likely to be real than a variant called by two independent Illumina runs, because the two platforms can't both be wrong in the same systematic way."
+  },
+  {
+   "t": 207.99,
+   "text": "Some clinical labs use this as a quality strategy."
+  },
+  {
+   "t": 211.95,
+   "text": "A specific application where Ultima shines is in single-nucleotide variant calling in non-repetitive, non-homopolymer regions."
+  },
+  {
+   "t": 220.41,
+   "text": "For the bulk of the human genome — which is the vast majority of clinically relevant content — Ultima's SNP calls are competitive with Illumina's, and at deeper coverage may even exceed them, because the orthogonal error mode lets variant callers achieve very high specificity."
+  },
+  {
+   "t": 237.19,
+   "text": "The published accuracy figures for SNP calling on a high-quality Ultima run hit the part-per-million range, which is the relevant accuracy level for finding rare variants in large cohorts."
+  },
+  {
+   "t": 249.32,
+   "text": "Where Ultima struggles is in indel calling, especially in or near homopolymer regions, and in repetitive sequence."
+  },
+  {
+   "t": 257.79,
+   "text": "These are exactly the cases where the platform's error model bites hardest."
+  },
+  {
+   "t": 262.01,
+   "text": "For applications that need clean indel calling — certain rare-disease workflows, certain tumor variant detection workflows — Illumina is still the safer bet."
+  },
+  {
+   "t": 272.35,
+   "text": "Ultima is honest about this and recommends that customers who need high-accuracy indel calling in difficult regions use a complementary platform for those specific cases."
+  },
+  {
+   "t": 282.87,
+   "text": "So the summary: comparable per-base accuracy to Illumina overall; orthogonal error structure; better SNP-calling in good regions, worse indel-calling in tough regions."
+  },
+  {
+   "t": 294.19,
+   "text": "Use accordingly."
+  },
+  {
+   "t": 295.44,
+   "text": "That's the platform end of the story."
+  },
+  {
+   "t": 297.74,
+   "text": "We've covered the architecture, the chemistry, the optics, the cost structure, and the quality."
+  },
+  {
+   "t": 303.38,
+   "text": "Now let's take a break."
+  }
+ ]
+}

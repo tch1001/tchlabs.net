@@ -1,0 +1,167 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — PacBio for human genome assembly: telomere-to-telomere, T2T-CHM13",
+ "duration": 330.65,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — PacBio for human genome assembly: telomere-to-telomere, T2T-CHM13"
+  },
+  {
+   "t": 8.36,
+   "text": "We need to spend a segment on what is probably PacBio HiFi's single most celebrated achievement: the completion of the human genome."
+  },
+  {
+   "t": 16.79,
+   "text": "Not the original Human Genome Project completion of 2003 — that was a draft, with about eight percent of the sequence missing."
+  },
+  {
+   "t": 25.12,
+   "text": "I mean the truly complete genome, gap-free, every base from telomere to telomere on every chromosome, which was published in 2022 by the Telomere-to-Telomere (T2T) consortium."
+  },
+  {
+   "t": 37.62,
+   "text": "That achievement was made possible by long-read sequencing — predominantly PacBio HiFi, with help from Oxford Nanopore for the longest repeats."
+  },
+  {
+   "t": 47.02,
+   "text": "It is the proof of concept that the long-read era can actually finish what the short-read era could not."
+  },
+  {
+   "t": 53.3,
+   "text": "Let me set the stakes."
+  },
+  {
+   "t": 54.79,
+   "text": "The 2003 reference human genome, refined over the next two decades into versions like GRCh38, was overwhelmingly an Illumina-and-Sanger product, mapped against original BAC-based clones."
+  },
+  {
+   "t": 68.4,
+   "text": "It contained gaps — regions where the assembly software simply could not figure out the sequence, marked with strings of N's, meaning \"we know there's DNA here, but we don't know what it says."
+  },
+  {
+   "t": 81.12,
+   "text": "\" Those gaps were concentrated in centromeres (the big repetitive structures at chromosome middles), in heterochromatic regions on the short arms of acrocentric chromosomes (where the ribosomal RNA gene arrays live), in segmental duplication blocks, and in some hard-to-sequence GC-rich regions."
+  },
+  {
+   "t": 99.91,
+   "text": "About two hundred million bases were missing — a meaningful chunk of the genome, and the most genomically active chunk in many ways."
+  },
+  {
+   "t": 108.11,
+   "text": "The T2T consortium decided to attack this head-on with long reads."
+  },
+  {
+   "t": 113.28,
+   "text": "They chose a sample called CHM13 — a hydatidiform mole cell line, which is essentially a haploid genome (only one copy of each chromosome, because of unusual reproductive biology) — to simplify the assembly by removing heterozygosity."
+  },
+  {
+   "t": 129.9,
+   "text": "They sequenced CHM13 deeply with PacBio HiFi (around thirty-x coverage) and Oxford Nanopore ultra-long reads, and they used both data types together: HiFi for accuracy, Nanopore for spanning the very longest repeat arrays where even HiFi reads weren't long enough."
+  },
+  {
+   "t": 148.72,
+   "text": "The result, published in Science in 2022 as the T2T-CHM13 assembly, was a complete, gap-free human genome."
+  },
+  {
+   "t": 157.29,
+   "text": "Every centromere reconstructed."
+  },
+  {
+   "t": 159.43,
+   "text": "Every telomere assembled."
+  },
+  {
+   "t": 161.07,
+   "text": "The acrocentric short arms, including the ribosomal RNA gene arrays, all sequenced."
+  },
+  {
+   "t": 167.51,
+   "text": "About two hundred new megabases of sequence revealed, and within that, around two thousand new gene annotations."
+  },
+  {
+   "t": 175.56,
+   "text": "Whole satellite array structures, never seen before, characterized base by base."
+  },
+  {
+   "t": 181.5,
+   "text": "It was a landmark."
+  },
+  {
+   "t": 182.8,
+   "text": "The role of PacBio HiFi specifically in that work cannot be overstated."
+  },
+  {
+   "t": 188.31,
+   "text": "HiFi reads were the backbone of the assembly."
+  },
+  {
+   "t": 191.35,
+   "text": "The Nanopore ultralong reads provided extra reach into the longest repeat arrays, but for most of the genome — for the gene-rich euchromatic majority, for the segmental duplications, for the small-to-medium repeats — HiFi alone was sufficient."
+  },
+  {
+   "t": 207.47,
+   "text": "The accuracy of HiFi made it possible to align reads against themselves without confusing similar but non-identical repeat copies."
+  },
+  {
+   "t": 216.31,
+   "text": "The length of HiFi made it possible to span almost everything short reads couldn't."
+  },
+  {
+   "t": 221.56,
+   "text": "Without HiFi, the assembly would not have been possible at the accuracy and completeness achieved."
+  },
+  {
+   "t": 227.76,
+   "text": "The T2T paper was followed by the Human Pangenome Reference Consortium, which is building HiFi-based diploid assemblies for hundreds of diverse human samples — a real pangenome, capturing the structural variation that the single reference genome cannot represent."
+  },
+  {
+   "t": 244.5,
+   "text": "That project, ongoing as of the time of this lecture, is also overwhelmingly powered by PacBio HiFi data, supplemented with other technologies."
+  },
+  {
+   "t": 254.14,
+   "text": "The conceptual lesson here is significant."
+  },
+  {
+   "t": 257.06,
+   "text": "The \"reference genome\" of any species is only as complete as the sequencing technology that built it."
+  },
+  {
+   "t": 264.49,
+   "text": "For two decades, our reference genome had holes shaped exactly like the limits of short-read sequencing."
+  },
+  {
+   "t": 271.8,
+   "text": "We told ourselves those holes weren't important, because we couldn't see what was in them."
+  },
+  {
+   "t": 276.3,
+   "text": "The HiFi era showed us what was in them — including thousands of genes, vast amounts of structural variation, key elements of chromosome biology."
+  },
+  {
+   "t": 286.48,
+   "text": "Long reads have not just completed the genome; they have revealed that the genome we thought we knew was substantively incomplete in important regions."
+  },
+  {
+   "t": 295.53,
+   "text": "The same revolution is now underway for every other species in genomics."
+  },
+  {
+   "t": 301.08,
+   "text": "The Vertebrate Genomes Project, the Earth BioGenome Project, the Darwin Tree of Life — all of these are building reference-quality HiFi assemblies for thousands of species, replacing the fragmented short-read drafts of the previous decade with telomere-to-telomere assemblies for organism after organism."
+  },
+  {
+   "t": 320.36,
+   "text": "We're, essentially, redoing genomics across the entire tree of life, this time properly."
+  },
+  {
+   "t": 326.26,
+   "text": "That's a thirty-year project."
+  },
+  {
+   "t": 328.13,
+   "text": "PacBio HiFi is the engine of it."
+  }
+ ]
+}

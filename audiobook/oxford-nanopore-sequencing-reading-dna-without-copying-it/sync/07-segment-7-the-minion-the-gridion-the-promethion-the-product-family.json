@@ -1,0 +1,283 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The MinION, the GridION, the PromethION: the product family",
+ "duration": 460.73,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The MinION, the GridION, the PromethION: the product family"
+  },
+  {
+   "t": 5.65,
+   "text": "Now let's talk about the devices themselves, because the form factor of Oxford Nanopore's products is, in itself, a piece of the story."
+  },
+  {
+   "t": 14.05,
+   "text": "No other sequencing company has anything remotely like this product line."
+  },
+  {
+   "t": 18.7,
+   "text": "Start with the MinION."
+  },
+  {
+   "t": 20.05,
+   "text": "The MinION is, physically, a small plastic box about the size of a stapler — or, more famously, about the size of a USB stick."
+  },
+  {
+   "t": 28.26,
+   "text": "It plugs into your laptop via a USB-C cable."
+  },
+  {
+   "t": 31.84,
+   "text": "It weighs less than a hundred grams."
+  },
+  {
+   "t": 34.05,
+   "text": "It costs, depending on the configuration, around a thousand dollars to get started."
+  },
+  {
+   "t": 38.86,
+   "text": "That's not the price of a sequencing run; that's the price of the device."
+  },
+  {
+   "t": 43.59,
+   "text": "You can order one online, like you'd order a graphics card."
+  },
+  {
+   "t": 46.86,
+   "text": "It arrives in a small cardboard box."
+  },
+  {
+   "t": 49.25,
+   "text": "Inside the MinION is essentially nothing but an electrical connector and a temperature control system."
+  },
+  {
+   "t": 54.98,
+   "text": "The actual sequencing happens on a flow cell — a separate disposable cartridge, about the size of a credit card, that you snap into the top of the device for each experiment."
+  },
+  {
+   "t": 65.46,
+   "text": "The flow cell is where the membrane is, where the pores are, where the chemistry happens."
+  },
+  {
+   "t": 71.41,
+   "text": "The MinION itself is just a holder and a USB interface."
+  },
+  {
+   "t": 75.65,
+   "text": "You buy the MinION once and use it for years."
+  },
+  {
+   "t": 78.53,
+   "text": "You buy flow cells per experiment."
+  },
+  {
+   "t": 80.75,
+   "text": "Let me unpack the flow cell, because it's the consumable that actually matters."
+  },
+  {
+   "t": 85.86,
+   "text": "A MinION flow cell contains 2048 individual sensing wells, each one with its own membrane and ideally its own pore."
+  },
+  {
+   "t": 95.25,
+   "text": "The wells are wired to a custom application-specific integrated circuit — an ASIC — that measures the picoamp-scale current from each well independently and reports the values back to the computer at thousands of samples per second per well."
+  },
+  {
+   "t": 110.29,
+   "text": "Of those 2048 wells, typically 1500 or so will have a functional pore loaded at the start of an experiment; the rest are dead or empty."
+  },
+  {
+   "t": 120.46,
+   "text": "As the run proceeds, pores die — they get damaged, or they get clogged by aggregated DNA, or the membrane around them ruptures — and the number of active pores declines over the lifetime of the run, which typically lasts 72 hours."
+  },
+  {
+   "t": 134.21,
+   "text": "The total throughput of a single MinION flow cell, at full performance, is around 50 gigabases — that is, 50 billion bases of sequencing data — over those 72 hours."
+  },
+  {
+   "t": 146.71,
+   "text": "For comparison, an Illumina NovaSeq run produces about 6 terabases — 6000 gigabases — but it costs more than a million dollars in capital and runs for several days."
+  },
+  {
+   "t": 158.16,
+   "text": "The MinION gives you, very roughly, one-hundredth the throughput of a NovaSeq for one-thousandth the capital cost."
+  },
+  {
+   "t": 165.76,
+   "text": "So per-base, MinION sequencing is more expensive than Illumina by maybe a factor of ten."
+  },
+  {
+   "t": 171.85,
+   "text": "But the capital cost barrier is essentially zero."
+  },
+  {
+   "t": 175.09,
+   "text": "Now the GridION."
+  },
+  {
+   "t": 176.43,
+   "text": "The GridION is, essentially, five MinIONs in a desktop box, plus a built-in computer to do basecalling in real time."
+  },
+  {
+   "t": 184.66,
+   "text": "It's about the size of a large desktop computer or a small microwave."
+  },
+  {
+   "t": 188.9,
+   "text": "You snap up to five MinION-format flow cells into the top, and you can run them all in parallel, each independently controlled."
+  },
+  {
+   "t": 197.11,
+   "text": "The throughput scales accordingly — five times a MinION, or up to 250 gigabases per run."
+  },
+  {
+   "t": 203.38,
+   "text": "The cost of the GridION instrument is around fifty thousand dollars, plus the flow cells."
+  },
+  {
+   "t": 209.04,
+   "text": "The GridION is for labs that want more throughput than a single MinION but don't need the absolute maximum scale."
+  },
+  {
+   "t": 215.94,
+   "text": "A typical use case is a small core facility, or a clinical microbiology lab, or a research group that runs sequencing routinely but at moderate scale."
+  },
+  {
+   "t": 225.69,
+   "text": "Now the big one."
+  },
+  {
+   "t": 226.74,
+   "text": "The PromethION."
+  },
+  {
+   "t": 227.75,
+   "text": "The PromethION is a desktop appliance designed for industrial-scale nanopore sequencing."
+  },
+  {
+   "t": 233.45,
+   "text": "It comes in two main configurations: the PromethION 24, which runs up to 24 flow cells in parallel, and the PromethION 48, which runs up to 48."
+  },
+  {
+   "t": 244.24,
+   "text": "And — critically — the PromethION flow cells are not the same as MinION flow cells."
+  },
+  {
+   "t": 250.24,
+   "text": "They're physically larger and contain 3000 wells each instead of 2048."
+  },
+  {
+   "t": 256.56,
+   "text": "So a single PromethION 48 flow cell produces more data than a MinION, and the device can run 48 of them simultaneously."
+  },
+  {
+   "t": 265.47,
+   "text": "Total throughput, at full performance, can exceed 14 terabases per run — competitive with Illumina's largest machines."
+  },
+  {
+   "t": 273.85,
+   "text": "The PromethION costs more — somewhere in the few-hundred-thousand-dollar range for the instrument — and the flow cells cost around two to three thousand dollars each."
+  },
+  {
+   "t": 282.92,
+   "text": "It's still substantially cheaper, in capital terms, than an Illumina NovaSeq, but it's no longer a casual purchase."
+  },
+  {
+   "t": 290.78,
+   "text": "PromethION is for human genome sequencing at scale, for population studies, for large clinical projects, for major reference labs."
+  },
+  {
+   "t": 299.05,
+   "text": "And then there are some other, smaller members of the product family worth mentioning briefly."
+  },
+  {
+   "t": 303.72,
+   "text": "The Flongle is an adapter that lets you run mini flow cells on a MinION or GridION."
+  },
+  {
+   "t": 309.1,
+   "text": "A Flongle flow cell has only 126 wells and produces only about 1 to 2 gigabases of data per run — but it costs about a hundred dollars instead of nine hundred."
+  },
+  {
+   "t": 320.18,
+   "text": "So the Flongle is for very small, exploratory experiments where you don't need much data and you want to keep costs minimal."
+  },
+  {
+   "t": 327.25,
+   "text": "Sequence a single bacterial genome, identify a pathogen in a clinical sample, do quick quality control on a library."
+  },
+  {
+   "t": 335.22,
+   "text": "The Flongle is the appetizer-sized version of nanopore sequencing."
+  },
+  {
+   "t": 339.99,
+   "text": "The VolTRAX is an automated library preparation device."
+  },
+  {
+   "t": 344.18,
+   "text": "Library prep — which we'll discuss in detail in Segment 8 — normally involves a series of pipetting steps, enzyme reactions, and cleanups, all done by hand."
+  },
+  {
+   "t": 354.67,
+   "text": "VolTRAX is a programmable cartridge with built-in valves and reservoirs that runs those reactions automatically with no manual intervention."
+  },
+  {
+   "t": 363.52,
+   "text": "Load your sample, press a button, walk away."
+  },
+  {
+   "t": 366.69,
+   "text": "It's aimed at non-specialist users in field settings."
+  },
+  {
+   "t": 370.18,
+   "text": "And there's a long-rumored, never-quite-shipped product called the SmidgION, which is meant to be a smartphone-attached sequencer."
+  },
+  {
+   "t": 377.37,
+   "text": "It's been announced multiple times but as of writing has not yet reached general availability."
+  },
+  {
+   "t": 383.23,
+   "text": "The goal is a nanopore sequencer that runs off a smartphone, with no laptop at all — pure portability."
+  },
+  {
+   "t": 390.18,
+   "text": "Step back and look at the product line as a whole, because there's something genuinely unusual about it."
+  },
+  {
+   "t": 396.18,
+   "text": "Most sequencing companies — Illumina, PacBio, the Chinese player BGI — sell big-ticket instruments at the high end, with prices that start in the high six figures and go up from there."
+  },
+  {
+   "t": 407.63,
+   "text": "The whole product strategy is centered on capital sales to well-funded labs and core facilities."
+  },
+  {
+   "t": 414.29,
+   "text": "Nanopore sells across the entire range — from the Flongle at a hundred bucks a run, through the MinION at a thousand-dollar instrument, up through the PromethION at industrial scale."
+  },
+  {
+   "t": 424.62,
+   "text": "The same chemistry, the same software, the same data format, scaled from a single experiment in a hotel room to a national genome project."
+  },
+  {
+   "t": 433.8,
+   "text": "That coverage of the entire scale range is, I think, the most distinctive thing about nanopore as a company."
+  },
+  {
+   "t": 440.82,
+   "text": "It's why MinIONs have been deployed in places no Illumina machine has ever gone, while PromethIONs anchor the back-end pipeline of major reference sequencing projects."
+  },
+  {
+   "t": 451.34,
+   "text": "One technology, one platform, scaling from a USB stick to a server rack."
+  },
+  {
+   "t": 456.83,
+   "text": "We'll come back to the field-deployment stories in Segment 15."
+  }
+ ]
+}

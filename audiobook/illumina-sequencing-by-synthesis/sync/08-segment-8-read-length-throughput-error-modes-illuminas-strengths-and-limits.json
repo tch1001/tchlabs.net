@@ -1,0 +1,247 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Read length, throughput, error modes: Illumina's strengths and limits",
+ "duration": 426.45,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Read length, throughput, error modes: Illumina's strengths and limits"
+  },
+  {
+   "t": 6.42,
+   "text": "Let me now try to give you an honest, calibrated picture of what Illumina sequencing actually produces — what's good about it, what's not, and where the limits are."
+  },
+  {
+   "t": 14.6,
+   "text": "Because there's a lot of marketing around sequencing platforms, and it's easy to come away with either an inflated or a deflated sense of what these machines do."
+  },
+  {
+   "t": 23.41,
+   "text": "Read length."
+  },
+  {
+   "t": 24.38,
+   "text": "Illumina's defining strength has always been throughput."
+  },
+  {
+   "t": 28.31,
+   "text": "Its defining limitation has always been read length."
+  },
+  {
+   "t": 31.77,
+   "text": "The longest reads Illumina produces in routine use today are 300 base pairs per end — so 600 bp total per paired-end fragment, with a gap in the middle if the insert is longer."
+  },
+  {
+   "t": 43.89,
+   "text": "Compare that to Sanger sequencing, which produces single reads of about 800 to 1000 bp."
+  },
+  {
+   "t": 51.0,
+   "text": "Compare it to long-read platforms like Pacific Biosciences and Oxford Nanopore, which we'll meet in Segment 16 — those routinely produce reads of 10,000, 30,000, sometimes over a million base pairs."
+  },
+  {
+   "t": 64.89,
+   "text": "Illumina's reads are short."
+  },
+  {
+   "t": 66.78,
+   "text": "There's no getting around it."
+  },
+  {
+   "t": 68.26,
+   "text": "The chemistry doesn't scale gracefully past a few hundred bases per cycle because errors compound, and a thing called dephasing — which we'll cover in Segment 14 — gradually degrades the signal as the cycles progress."
+  },
+  {
+   "t": 83.22,
+   "text": "Why is short-read length a problem?"
+  },
+  {
+   "t": 85.5,
+   "text": "Mainly for two reasons."
+  },
+  {
+   "t": 87.28,
+   "text": "First, repeat regions — places in the genome where the same short sequence is repeated dozens or hundreds of times in a row, like the centromeres of chromosomes, or the tandem repeats associated with diseases like Huntington's."
+  },
+  {
+   "t": 101.86,
+   "text": "If your read is shorter than the repeat, you can't tell where in the repeat your read came from, and you can't tell how long the repeat is."
+  },
+  {
+   "t": 109.42,
+   "text": "Illumina reads simply cannot resolve a repeat region longer than the read length."
+  },
+  {
+   "t": 114.96,
+   "text": "Second, de novo assembly — when you don't have a reference genome and you're trying to piece together the sequence from scratch."
+  },
+  {
+   "t": 122.3,
+   "text": "Short reads make assembly hard, because every repeat in the genome becomes an ambiguous junction in the assembly graph."
+  },
+  {
+   "t": 129.96,
+   "text": "The original human genome was assembled from much longer Sanger reads partly for this reason."
+  },
+  {
+   "t": 136.18,
+   "text": "Modern de novo assembly of a new organism's genome usually combines Illumina short reads (for accuracy) with long-read data from PacBio or Nanopore (for spanning repeats)."
+  },
+  {
+   "t": 148.35,
+   "text": "Long-read platforms exist precisely because of these failure modes of short reads."
+  },
+  {
+   "t": 154.03,
+   "text": "Throughput."
+  },
+  {
+   "t": 154.86,
+   "text": "Here's where Illumina is unbeatable."
+  },
+  {
+   "t": 157.57,
+   "text": "A NovaSeq X at full configuration produces about 16 terabases of data per run, in roughly a day to a day and a half."
+  },
+  {
+   "t": 165.88,
+   "text": "That's about five thousand human genomes' worth of data per machine per run."
+  },
+  {
+   "t": 170.59,
+   "text": "A single NovaSeq X facility can sequence twenty thousand human genomes a year."
+  },
+  {
+   "t": 176.44,
+   "text": "That throughput — the sheer number of base pairs per dollar, per day, per machine — is what makes population-scale genomics possible."
+  },
+  {
+   "t": 185.11,
+   "text": "Projects like the UK Biobank, which is sequencing half a million genomes; the All of Us Research Program in the United States, which is sequencing a million; large clinical implementations like national newborn screening programs — none of these would be financially possible without Illumina-scale throughput."
+  },
+  {
+   "t": 203.93,
+   "text": "For smaller-scale work, Illumina also makes smaller instruments."
+  },
+  {
+   "t": 208.44,
+   "text": "A MiSeq, the workhorse for small labs, produces a few gigabases per run — enough for a few small bacterial genomes, or a focused panel, or a low-throughput RNA-seq experiment."
+  },
+  {
+   "t": 220.39,
+   "text": "A NextSeq sits in the middle — a few hundred gigabases per run, enough for a few dozen exomes or a hundred-sample transcriptome study."
+  },
+  {
+   "t": 229.46,
+   "text": "There's an instrument scaled to almost every project size."
+  },
+  {
+   "t": 233.68,
+   "text": "We'll cover the instrument family in Segment 9."
+  },
+  {
+   "t": 236.43,
+   "text": "Error modes."
+  },
+  {
+   "t": 237.6,
+   "text": "Illumina sequencing has an overall error rate, in the well-behaved middle of a read, of about one error per thousand bases — what we call a Q30 quality."
+  },
+  {
+   "t": 247.7,
+   "text": "(Quality scores get a whole segment, Segment 12.)"
+  },
+  {
+   "t": 251.22,
+   "text": "This is excellent."
+  },
+  {
+   "t": 252.67,
+   "text": "Other technologies — Oxford Nanopore in particular — have much higher raw error rates, in the range of one error per fifty bases or worse, though they've improved enormously in recent years."
+  },
+  {
+   "t": 265.34,
+   "text": "Illumina's per-base accuracy is one of the major reasons it dominates clinical sequencing and variant calling."
+  },
+  {
+   "t": 272.77,
+   "text": "But — and this matters — the errors Illumina makes are not random."
+  },
+  {
+   "t": 277.37,
+   "text": "They have specific patterns."
+  },
+  {
+   "t": 279.21,
+   "text": "The dominant error mode is substitution errors, where the wrong base is called in place of the correct one."
+  },
+  {
+   "t": 285.24,
+   "text": "Insertions and deletions are rare in Illumina data, which is excellent for variant calling."
+  },
+  {
+   "t": 290.8,
+   "text": "Errors are more common at the 3-prime end of reads — the bases read last — because of the dephasing problem."
+  },
+  {
+   "t": 297.67,
+   "text": "Errors are more common in homopolymer runs — long stretches of the same base — though much less so than in some competing platforms."
+  },
+  {
+   "t": 306.47,
+   "text": "Errors are biased toward particular base substitutions; one common pattern is that G-to-T substitutions are over-represented because of damage to the DNA during library prep, particularly oxidative damage."
+  },
+  {
+   "t": 319.7,
+   "text": "Errors are also concentrated in regions of extreme GC content — very high or very low GC — because these regions don't amplify well during bridge amplification and PCR steps."
+  },
+  {
+   "t": 332.54,
+   "text": "Understanding the error profile is critical for variant calling."
+  },
+  {
+   "t": 336.46,
+   "text": "When you see a single read with a particular variant, it might be a real biological variant, or it might be a Illumina error — and the probability of each depends heavily on which type of variant it is, where in the read it appears, what the surrounding sequence context is."
+  },
+  {
+   "t": 351.5,
+   "text": "Variant callers like GATK and DeepVariant have been trained on millions of Illumina runs to know these patterns and adjust the calling accordingly."
+  },
+  {
+   "t": 360.27,
+   "text": "A modern Illumina variant call is, statistically, extremely reliable when the right tools are used."
+  },
+  {
+   "t": 366.97,
+   "text": "So the calibrated picture."
+  },
+  {
+   "t": 368.62,
+   "text": "Illumina: short reads, around 150 to 300 bp, paired-end."
+  },
+  {
+   "t": 374.94,
+   "text": "Phenomenal throughput, billions to tens of billions of reads per run."
+  },
+  {
+   "t": 379.65,
+   "text": "Excellent per-base accuracy, around one error per thousand, with specific error patterns concentrated at read ends and in extreme-GC regions."
+  },
+  {
+   "t": 389.05,
+   "text": "Bad at long repeats, bad at de novo assembly of repeat-rich genomes, bad at directly reading methylation or other modifications without special chemistry."
+  },
+  {
+   "t": 399.67,
+   "text": "Excellent at variant calling, at expression profiling, at any application where having millions of accurate short reads matters more than having a few really long ones."
+  },
+  {
+   "t": 410.6,
+   "text": "The platform that built modern genomics is, in every sense, the right tool for the most common jobs and the wrong tool for some specific others."
+  },
+  {
+   "t": 419.72,
+   "text": "The competition we'll discuss in Segment 16 has carved out niches in exactly those wrong-tool areas."
+  }
+ ]
+}

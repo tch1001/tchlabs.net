@@ -1,0 +1,195 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The two-step cycle — read with avidite, then extend with clean nucleotide",
+ "duration": 392.77,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The two-step cycle — read with avidite, then extend with clean nucleotide"
+  },
+  {
+   "t": 6.76,
+   "text": "Before we go fully into how polonies get made, let me complete the picture of the sequencing cycle itself, because I want you to have the full rhythm in your head before we get into the engineering details."
+  },
+  {
+   "t": 17.52,
+   "text": "The Element AVITI sequencing cycle, end to end, looks like this."
+  },
+  {
+   "t": 22.88,
+   "text": "Picture a flow cell — Element calls it a \"flow cell\" too, like Illumina, and it's roughly similar in scale: a glass surface with millions of microscopic features, each one a polony, sitting in a fluid channel through which reagents flow."
+  },
+  {
+   "t": 39.11,
+   "text": "At the start of a sequencing run, the flow cell has been loaded with a library of DNA fragments, the fragments have been clonally amplified into polonies by rolling circle amplification, and primers have been annealed to each polony so that a polymerase can extend from the primer using the polony's template strands."
+  },
+  {
+   "t": 57.38,
+   "text": "Cycle starts."
+  },
+  {
+   "t": 58.75,
+   "text": "Step one: wash in the avidite mix — all four avidites at nanomolar concentrations, plus polymerase."
+  },
+  {
+   "t": 66.59,
+   "text": "The polymerase at each polony grabs the cognate avidite and forms a stable ternary complex: polymerase bound to template, holding the avidite by multivalent base-pairing."
+  },
+  {
+   "t": 77.91,
+   "text": "The avidite is not incorporated."
+  },
+  {
+   "t": 80.56,
+   "text": "It's just held in place."
+  },
+  {
+   "t": 82.05,
+   "text": "Step two: wash away excess avidite, image the flow cell, read out the color at each polony."
+  },
+  {
+   "t": 89.17,
+   "text": "The color tells you which base is the next one to be added at that polony."
+  },
+  {
+   "t": 93.55,
+   "text": "Step three: another wash to strip the bound avidites off — this is a chemical step that disrupts the avidity binding and releases the avidite from the complex, leaving the polymerase still sitting at the end of the growing strand."
+  },
+  {
+   "t": 108.67,
+   "text": "Step four: wash in the extension mix — four ordinary nucleotides, each carrying a reversible blocker on the three-prime hydroxyl, but no dyes."
+  },
+  {
+   "t": 118.89,
+   "text": "The polymerase incorporates the correct one."
+  },
+  {
+   "t": 121.94,
+   "text": "The blocker stops further extension."
+  },
+  {
+   "t": 124.22,
+   "text": "Step five: a final wash and a cleavage step to remove the blocker, opening up the three-prime hydroxyl for the next cycle."
+  },
+  {
+   "t": 132.05,
+   "text": "That's one full cycle of avidity sequencing."
+  },
+  {
+   "t": 135.39,
+   "text": "Avidite-bind, image, strip, extend, cleave."
+  },
+  {
+   "t": 139.04,
+   "text": "Five steps if you count the cleavage separately, four if you fold it in."
+  },
+  {
+   "t": 143.9,
+   "text": "Repeat this cycle 150 or 300 times, depending on how long a read you want, and you get a sequence read at every polony on the flow cell."
+  },
+  {
+   "t": 154.31,
+   "text": "The total number of distinct chemical reagents you have to ship to a customer for one sequencing run is therefore larger than for Illumina — you've got four avidites plus four extension nucleotides plus polymerases plus wash buffers plus cleavage reagents — but the dollar cost per cycle is lower, because the avidites are used at nanomolar concentrations (tiny amounts) and the extension nucleotides are chemically simpler than Illumina's combined dye-plus-blocker-plus-base nucleotides."
+  },
+  {
+   "t": 184.96,
+   "text": "The economic logic of the chemistry is that you're trading molecular complexity in any one reagent for total reagent simplicity, and the trade comes out favorably."
+  },
+  {
+   "t": 195.03,
+   "text": "Here's another way to think about it."
+  },
+  {
+   "t": 196.72,
+   "text": "In Illumina, every cycle uses one expensive chimeric molecule that has to do everything."
+  },
+  {
+   "t": 203.11,
+   "text": "In Element, every cycle uses two cheaper molecules, each of which does one thing."
+  },
+  {
+   "t": 209.0,
+   "text": "Two cheap things together cost less than one expensive thing that combines them."
+  },
+  {
+   "t": 213.93,
+   "text": "That's the structural argument for why Element's per-base reagent cost should, in steady state, be lower than Illumina's."
+  },
+  {
+   "t": 221.86,
+   "text": "And it appears to hold up in published comparisons — Element's reagent cost per gigabase is roughly thirty to forty percent lower than Illumina's equivalent benchtop instruments, at the time of this lecture."
+  },
+  {
+   "t": 234.49,
+   "text": "There's one more design feature of the two-step cycle worth flagging, because it has implications for accuracy."
+  },
+  {
+   "t": 240.84,
+   "text": "In Illumina, the imaging happens after the nucleotide has been incorporated."
+  },
+  {
+   "t": 245.62,
+   "text": "By the time you take the picture, the base is already locked into the strand."
+  },
+  {
+   "t": 250.01,
+   "text": "If the picture says \"this base is A\" and you call A at that position, but actually the polymerase incorporated a T and the dye signal was noisy, you've made a permanent error — the wrong base is in the strand, and the next cycle will extend from a wrong base, and you may get a chain of phasing errors."
+  },
+  {
+   "t": 268.6,
+   "text": "In Element, the imaging happens before incorporation."
+  },
+  {
+   "t": 272.44,
+   "text": "You read the avidite, see what the polymerase chose to bind, and then in a separate step the polymerase actually does the incorporation."
+  },
+  {
+   "t": 281.0,
+   "text": "This separation gives the system, at least in principle, an opportunity to be more conservative."
+  },
+  {
+   "t": 288.19,
+   "text": "If the avidite binding signal at a particular polony is weak or ambiguous — if no single color clearly dominates — the software can flag that cycle for that polony as a low-confidence call, and the extension step still proceeds, but the base call carries an explicit \"I'm not sure\" quality score."
+  },
+  {
+   "t": 306.21,
+   "text": "The decoupling of binding from incorporation also means that the binding chemistry can be more discriminating without slowing down the incorporation, because the two steps don't compete for the same molecular features."
+  },
+  {
+   "t": 318.99,
+   "text": "This is part of why the Q40-and-beyond accuracy numbers that Element advertises are credible — the architecture of the chemistry just makes it easier to read out signal with high confidence, separate from the question of whether the polymerase will actually add the right base."
+  },
+  {
+   "t": 335.3,
+   "text": "We'll talk about what Q40 means and what it buys you in the next segment."
+  },
+  {
+   "t": 339.62,
+   "text": "But before we get there, let me close this segment by emphasizing the architectural symmetry."
+  },
+  {
+   "t": 345.61,
+   "text": "The avidity-sequencing cycle has four conceptual moves: bind to read, image to decide, strip to reset, extend to advance."
+  },
+  {
+   "t": 355.7,
+   "text": "The Illumina cycle has three: incorporate-and-bind in one move, image, cleave-and-reset."
+  },
+  {
+   "t": 362.66,
+   "text": "Element added a step, but the step they added — the strip — is what gives them the freedom to optimize the binding chemistry and the extension chemistry independently."
+  },
+  {
+   "t": 372.51,
+   "text": "The added step is the price of the architectural cleanness."
+  },
+  {
+   "t": 376.12,
+   "text": "And the architectural cleanness is what produces the accuracy and the cost numbers that make Element a real competitor."
+  },
+  {
+   "t": 383.35,
+   "text": "Onward — let's understand what Q40 actually means, because the accuracy claim is a big part of Element's pitch, and you should know how to read it skeptically."
+  }
+ ]
+}

@@ -1,0 +1,259 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — The homopolymer problem: Ion Torrent's biggest weakness",
+ "duration": 426.49,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — The homopolymer problem: Ion Torrent's biggest weakness"
+  },
+  {
+   "t": 4.94,
+   "text": "This is the segment where we get serious about Ion Torrent's most famous limitation."
+  },
+  {
+   "t": 9.78,
+   "text": "Every sequencing platform has a characteristic error profile — the kind of mistakes it makes more often than others — and Ion Torrent's signature error is the homopolymer length call."
+  },
+  {
+   "t": 20.74,
+   "text": "Specifically: when the template has a long run of the same base, Ion Torrent has trouble counting exactly how many bases are in the run."
+  },
+  {
+   "t": 28.81,
+   "text": "Let's understand why, mechanistically."
+  },
+  {
+   "t": 30.94,
+   "text": "Go back to Segment 6, where we walked through the flow cycle."
+  },
+  {
+   "t": 35.12,
+   "text": "When you flow dATP over a template with a single T, you get one incorporation, one proton, one unit of pH dip."
+  },
+  {
+   "t": 43.31,
+   "text": "When you flow dATP over a template with two T's in a row, you get two incorporations back to back — because there's no terminator, the polymerase just keeps adding — and you get two protons."
+  },
+  {
+   "t": 54.91,
+   "text": "The pH dip is bigger, the ISFET signal is bigger, by approximately a factor of two."
+  },
+  {
+   "t": 61.05,
+   "text": "So far so good."
+  },
+  {
+   "t": 62.36,
+   "text": "But now think about what happens at TTTTT — five T's."
+  },
+  {
+   "t": 66.53,
+   "text": "You flow dATP, you get five incorporations, you get five protons, you get a pH dip approximately five times the size of a single incorporation."
+  },
+  {
+   "t": 76.05,
+   "text": "The signal magnitude is supposed to encode the length of the run."
+  },
+  {
+   "t": 79.92,
+   "text": "And for short runs — 2, 3, maybe 4 in a row — the differences between adjacent length signals are clean enough that you can call confidently."
+  },
+  {
+   "t": 89.05,
+   "text": "1 vs 2 vs 3 — those are easily distinguishable."
+  },
+  {
+   "t": 93.65,
+   "text": "But the higher you go, the noisier it gets."
+  },
+  {
+   "t": 96.53,
+   "text": "Partly because the pH response is logarithmic, so as the proton release grows linearly, the voltage signal grows sublinearly, and the difference between, say, 7 and 8 protons is a much smaller fractional voltage change than the difference between 2 and 3."
+  },
+  {
+   "t": 113.78,
+   "text": "Partly because not every template on the bead extends in perfect lockstep — some templates lag, some lead, some fail to incorporate at all — so the population signal smears out, and the smearing is proportional to the homopolymer length."
+  },
+  {
+   "t": 129.25,
+   "text": "And partly because the polymerase reaction isn't perfectly synchronous; it takes a moment to add each base, and the protons released across the run come out spread over a slightly broader time window, which softens the signal peak."
+  },
+  {
+   "t": 143.22,
+   "text": "The result is that Ion Torrent's accuracy degrades sharply for long homopolymers."
+  },
+  {
+   "t": 148.94,
+   "text": "For a single base, accuracy is over 99%."
+  },
+  {
+   "t": 153.66,
+   "text": "For runs of 5, accuracy drops to maybe 97-98%."
+  },
+  {
+   "t": 159.79,
+   "text": "For runs of 7 or 8, it starts to drop noticeably below that."
+  },
+  {
+   "t": 164.4,
+   "text": "By the time you're at 10 or more bases in a row, the signal is essentially saturated and length calling is much less reliable."
+  },
+  {
+   "t": 171.97,
+   "text": "The errors aren't substitutions, which is what Illumina mostly makes — they're length errors, called indels for \"insertions and deletions."
+  },
+  {
+   "t": 180.95,
+   "text": "\" Ion Torrent makes more indel errors than substitution errors, and most of those indels happen at or near homopolymer runs."
+  },
+  {
+   "t": 188.9,
+   "text": "The analogy I want here is trying to count drops by listening to the splash."
+  },
+  {
+   "t": 194.44,
+   "text": "One drop in a bucket: distinct splash, easy to count."
+  },
+  {
+   "t": 198.25,
+   "text": "Two drops, one after another: you can hear two splashes."
+  },
+  {
+   "t": 202.79,
+   "text": "Three drops in a row, fast: still mostly countable."
+  },
+  {
+   "t": 206.46,
+   "text": "But ten drops in a row, in less than a second?"
+  },
+  {
+   "t": 209.28,
+   "text": "They blur into one continuous noise."
+  },
+  {
+   "t": 212.74,
+   "text": "You can tell there were \"a lot\" of drops, but the difference between nine and ten is hard to hear."
+  },
+  {
+   "t": 217.97,
+   "text": "That's the homopolymer problem in caricature."
+  },
+  {
+   "t": 221.04,
+   "text": "Ion Torrent is counting drops by listening to splashes, and beyond about four or five drops in a row, the splashes blend."
+  },
+  {
+   "t": 228.82,
+   "text": "This is the same flaw 454 had."
+  },
+  {
+   "t": 232.01,
+   "text": "Pyrosequencing — flowing one base at a time and counting incorporations by signal magnitude — has the same fundamental architecture, and so it has the same fundamental weakness."
+  },
+  {
+   "t": 244.05,
+   "text": "Whether you read the signal as a light flash from luciferase (454) or a pH dip from an ISFET (Ion Torrent), you're still trying to quantify a multi-base incorporation event from a single bulk readout, and that bulk readout's accuracy degrades with length."
+  },
+  {
+   "t": 260.02,
+   "text": "The two platforms inherited this from their shared design lineage."
+  },
+  {
+   "t": 264.19,
+   "text": "Illumina, by contrast, doesn't have a homopolymer problem in the same way — because its reversible-terminator chemistry forces one base at a time, every cycle, and reads the base from color rather than from magnitude."
+  },
+  {
+   "t": 277.07,
+   "text": "So homopolymer runs in Illumina data are just long stretches of the same base color, called one at a time, with normal per-base accuracy."
+  },
+  {
+   "t": 286.64,
+   "text": "No magnitude estimation required."
+  },
+  {
+   "t": 289.31,
+   "text": "The implication for what you can and can't do with Ion Torrent is important."
+  },
+  {
+   "t": 294.13,
+   "text": "Any application where the answer depends on the exact length of a homopolymer run is dangerous."
+  },
+  {
+   "t": 300.54,
+   "text": "For example: variant calling in regions of the genome that contain stretches of repetitive bases — like the polyA tracts that appear in many genes — is prone to false indel calls on Ion Torrent."
+  },
+  {
+   "t": 312.94,
+   "text": "Microsatellite repeat length determination is harder."
+  },
+  {
+   "t": 316.67,
+   "text": "De novo genome assembly across repetitive regions is harder."
+  },
+  {
+   "t": 321.16,
+   "text": "Any clinical assay that needs to distinguish, say, a 7-base run from an 8-base run as a pathogenic indel will have to do orthogonal confirmation, usually by Sanger sequencing or by an Illumina assay, before reporting the result."
+  },
+  {
+   "t": 336.48,
+   "text": "For most applications, though — calling point mutations in a clinical panel, identifying which species are in a microbial sample, looking for known fusion oncogenes — the homopolymer issue is annoying but manageable."
+  },
+  {
+   "t": 350.37,
+   "text": "The bioinformatics tools have been trained on it; they apply special filters around homopolymer regions; clinical panels are designed to avoid placing critical variants inside or adjacent to long runs."
+  },
+  {
+   "t": 363.32,
+   "text": "It's a known weakness with known workarounds."
+  },
+  {
+   "t": 366.26,
+   "text": "I want to leave you with the right framing."
+  },
+  {
+   "t": 368.42,
+   "text": "The homopolymer problem isn't a defect of execution — it's a structural consequence of the platform's defining design choice, which was: flow one base at a time, use natural unmodified nucleotides, count by signal magnitude."
+  },
+  {
+   "t": 383.39,
+   "text": "The same design choice that makes Ion Torrent fast and chemically simple is exactly what makes it bad at long homopolymers."
+  },
+  {
+   "t": 392.11,
+   "text": "You can't have one without the other."
+  },
+  {
+   "t": 394.39,
+   "text": "It's the tradeoff at the heart of the platform."
+  },
+  {
+   "t": 397.26,
+   "text": "Anyone who tells you Ion Torrent is \"just as good as Illumina\" is either selling you something or hasn't actually looked at the data."
+  },
+  {
+   "t": 405.27,
+   "text": "And anyone who tells you Ion Torrent is unusable because of homopolymers hasn't either, because for most clinical and microbiome applications, it works fine."
+  },
+  {
+   "t": 415.41,
+   "text": "It's a tool."
+  },
+  {
+   "t": 416.37,
+   "text": "Tools have edges."
+  },
+  {
+   "t": 417.74,
+   "text": "Know the edges."
+  },
+  {
+   "t": 418.97,
+   "text": "That's the end of our first hour."
+  },
+  {
+   "t": 420.84,
+   "text": "Let's take a fifteen-minute break and come back to the instrument family, the workflows, and the markets."
+  }
+ ]
+}

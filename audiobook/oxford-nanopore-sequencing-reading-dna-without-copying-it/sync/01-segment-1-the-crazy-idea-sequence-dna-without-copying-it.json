@@ -1,0 +1,307 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The crazy idea: sequence DNA without copying it",
+ "duration": 432.62,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The crazy idea: sequence DNA without copying it"
+  },
+  {
+   "t": 5.29,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 6.71,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 8.04,
+   "text": "Today and for the next two hours, we're going to talk about nanopore sequencing — and specifically the version of it commercialized by a company called Oxford Nanopore Technologies."
+  },
+  {
+   "t": 18.54,
+   "text": "And I want to begin by telling you, very directly, that this is the strangest sequencing technology in the world."
+  },
+  {
+   "t": 25.38,
+   "text": "It is unlike anything else you've learned about."
+  },
+  {
+   "t": 27.95,
+   "text": "If you've taken a previous genetics course, you've probably heard about Sanger sequencing, where DNA polymerase builds copies of a template with chain-terminating dyes, and you've probably heard about Illumina sequencing, where you build clusters of identical DNA fragments on a glass slide and watch fluorescent bases get added one at a time."
+  },
+  {
+   "t": 46.8,
+   "text": "Both of those technologies, despite their differences, share something fundamental — they sequence DNA by synthesizing a new copy of it, base by base, and reading what got added."
+  },
+  {
+   "t": 58.39,
+   "text": "Nanopore sequencing does not do that."
+  },
+  {
+   "t": 60.79,
+   "text": "There is no polymerase."
+  },
+  {
+   "t": 62.52,
+   "text": "There are no fluorescent dyes."
+  },
+  {
+   "t": 64.26,
+   "text": "There are no cameras."
+  },
+  {
+   "t": 65.74,
+   "text": "There is no copying of any kind."
+  },
+  {
+   "t": 68.29,
+   "text": "The DNA molecule you start with is the DNA molecule you read."
+  },
+  {
+   "t": 73.04,
+   "text": "You take the strand, you thread it through a tiny hole in a membrane, you measure how the electrical current through that hole changes as the strand passes through, and from the wiggles in the current you infer the sequence of bases."
+  },
+  {
+   "t": 85.76,
+   "text": "The molecule is interrogated directly — physically — as it passes through a sensor that is itself a single protein."
+  },
+  {
+   "t": 94.11,
+   "text": "I want you to feel how weird that is."
+  },
+  {
+   "t": 96.39,
+   "text": "Every other major sequencing technology in widespread use today is a variation on the theme of \"watch a polymerase do its job and record what it's doing."
+  },
+  {
+   "t": 106.14,
+   "text": "\" Sanger watches a polymerase fall off when it incorporates a terminator."
+  },
+  {
+   "t": 111.09,
+   "text": "Illumina watches a polymerase add one fluorescent base at a time."
+  },
+  {
+   "t": 115.36,
+   "text": "Even PacBio, the other long-read platform, watches a single polymerase incorporating fluorescent bases in real time inside a tiny well."
+  },
+  {
+   "t": 125.55,
+   "text": "They're all variations on the theme of using a synthesis enzyme as an indirect reporter for what the original template said."
+  },
+  {
+   "t": 133.28,
+   "text": "Nanopore throws that whole approach out the window."
+  },
+  {
+   "t": 136.47,
+   "text": "It says: forget synthesis."
+  },
+  {
+   "t": 138.84,
+   "text": "Forget polymerases."
+  },
+  {
+   "t": 140.68,
+   "text": "Let's just take the original molecule and pull it through a sensor."
+  },
+  {
+   "t": 144.31,
+   "text": "The sensor is a protein with a hole in it just big enough for one strand of DNA."
+  },
+  {
+   "t": 149.35,
+   "text": "We apply a voltage across the membrane the hole sits in."
+  },
+  {
+   "t": 153.12,
+   "text": "Ions flow through the hole, creating a small but measurable electrical current."
+  },
+  {
+   "t": 158.3,
+   "text": "When DNA is in the hole, it partially blocks the ions, and the current drops."
+  },
+  {
+   "t": 163.66,
+   "text": "Different bases in the hole block by different amounts."
+  },
+  {
+   "t": 167.1,
+   "text": "We measure the current, hundreds of times per second, and we work backwards from the current trace to the sequence."
+  },
+  {
+   "t": 173.82,
+   "text": "That's it."
+  },
+  {
+   "t": 174.61,
+   "text": "That's the entire technology, conceptually."
+  },
+  {
+   "t": 177.93,
+   "text": "A hole, a voltage, a current, and a strand of DNA being dragged through."
+  },
+  {
+   "t": 183.39,
+   "text": "Here's the analogy I want you to hold in your head for the next two hours."
+  },
+  {
+   "t": 187.68,
+   "text": "Imagine you are standing on the bank of a stream, watching water flow through a narrow channel between two rocks."
+  },
+  {
+   "t": 194.36,
+   "text": "The water is flowing at a steady rate, and you have a meter measuring how much water passes per second."
+  },
+  {
+   "t": 200.66,
+   "text": "Now I throw a long piece of beaded jewelry into the stream — a necklace, say — and it gets caught in the channel, threading through the gap one bead at a time."
+  },
+  {
+   "t": 210.04,
+   "text": "Each bead, as it sits in the channel, partially blocks the flow."
+  },
+  {
+   "t": 214.36,
+   "text": "A small bead blocks a little."
+  },
+  {
+   "t": 216.16,
+   "text": "A big bead blocks a lot."
+  },
+  {
+   "t": 217.93,
+   "text": "A bumpy bead causes a different shape of disruption than a smooth one."
+  },
+  {
+   "t": 222.5,
+   "text": "By watching the water-flow meter, you can — in principle — figure out the sequence of beads on the necklace just from how each one disrupts the flow as it passes through."
+  },
+  {
+   "t": 232.84,
+   "text": "That's nanopore sequencing."
+  },
+  {
+   "t": 234.55,
+   "text": "The channel is the pore — a protein with a sub-nanometer-scale hole through the middle of it."
+  },
+  {
+   "t": 240.51,
+   "text": "The water is the ionic current — actually a stream of charged ions, mostly potassium and chloride, being pushed through by an electrical voltage."
+  },
+  {
+   "t": 250.44,
+   "text": "The necklace is your DNA strand."
+  },
+  {
+   "t": 253.03,
+   "text": "The beads are the bases — A, T, G, C."
+  },
+  {
+   "t": 257.15,
+   "text": "The meter is a tiny patch-clamp amplifier that measures the current with picoamp precision."
+  },
+  {
+   "t": 262.63,
+   "text": "And the trick — the part that's taken thirty-five years of work to get right — is the inference."
+  },
+  {
+   "t": 268.05,
+   "text": "Given the current trace, how do you figure out what beads were in the channel?"
+  },
+  {
+   "t": 272.16,
+   "text": "If you walk out of here in two hours and you can do three things — one, explain in plain English how a nanopore turns DNA sequence into electrical current and back; two, list the three big things this technology lets you do that no other sequencing platform can; three, look at a paper or a news story about a sequencing result and tell me whether nanopore was the right tool for the job and why — then we've succeeded."
+  },
+  {
+   "t": 297.78,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 300.36,
+   "text": "Let me tell you those three big things up front, because they're going to recur throughout the lecture as the things that make people care about nanopore at all."
+  },
+  {
+   "t": 308.96,
+   "text": "First: nanopore produces ultra-long reads."
+  },
+  {
+   "t": 312.58,
+   "text": "Illumina sequencing maxes out at about three hundred bases per read."
+  },
+  {
+   "t": 317.01,
+   "text": "Nanopore routinely produces reads of a hundred thousand bases."
+  },
+  {
+   "t": 321.41,
+   "text": "The current record is over four million bases — that's longer than many bacterial genomes, read in a single uninterrupted stretch."
+  },
+  {
+   "t": 330.2,
+   "text": "Long reads are what you need to span repetitive regions, to assemble structural variants, to phase haplotypes, to resolve full-length genes including all their introns."
+  },
+  {
+   "t": 340.68,
+   "text": "There are biological problems that simply cannot be solved with short reads, no matter how many of them you collect."
+  },
+  {
+   "t": 347.62,
+   "text": "Nanopore solves them."
+  },
+  {
+   "t": 349.11,
+   "text": "Second: nanopore is the only platform that can read native RNA directly."
+  },
+  {
+   "t": 354.33,
+   "text": "Every other RNA-sequencing technology has to reverse-transcribe RNA into complementary DNA first, and in doing so loses all the modifications — the methylations, the pseudouridines, the m6A marks — that decorate real cellular RNA."
+  },
+  {
+   "t": 372.0,
+   "text": "Nanopore can take the actual RNA molecule out of your cell and thread it through the pore, and the modifications produce their own characteristic current signatures."
+  },
+  {
+   "t": 381.98,
+   "text": "You get the sequence and the modifications, in one shot."
+  },
+  {
+   "t": 385.75,
+   "text": "Third: nanopore is real-time and portable."
+  },
+  {
+   "t": 389.15,
+   "text": "The flagship device, the MinION, is the size of a USB stick."
+  },
+  {
+   "t": 393.78,
+   "text": "It plugs into a laptop."
+  },
+  {
+   "t": 395.41,
+   "text": "It produces reads as the DNA goes through the pore — you can start analyzing your data thirty seconds after the experiment begins."
+  },
+  {
+   "t": 403.82,
+   "text": "People have used it on Antarctic expeditions, in the middle of the Amazon rainforest, during Ebola outbreaks in West Africa, and on the International Space Station."
+  },
+  {
+   "t": 414.81,
+   "text": "It is the first sequencing technology that has genuinely escaped the lab."
+  },
+  {
+   "t": 419.56,
+   "text": "Those three things — long reads, native RNA, and real-time portability — are why nanopore exists as a viable platform alongside the established giants."
+  },
+  {
+   "t": 430.26,
+   "text": "Hold onto them."
+  },
+  {
+   "t": 431.32,
+   "text": "We'll keep coming back."
+  }
+ ]
+}

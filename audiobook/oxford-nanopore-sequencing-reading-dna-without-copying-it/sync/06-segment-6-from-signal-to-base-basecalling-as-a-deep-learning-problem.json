@@ -1,0 +1,239 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — From signal to base: basecalling as a deep learning problem",
+ "duration": 455.67,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — From signal to base: basecalling as a deep learning problem"
+  },
+  {
+   "t": 5.49,
+   "text": "Basecalling is, by a wide margin, the hardest software problem in nanopore sequencing."
+  },
+  {
+   "t": 11.4,
+   "text": "It's also one of the most beautiful applications of deep learning in molecular biology."
+  },
+  {
+   "t": 17.26,
+   "text": "And it's one of the reasons the technology took a decade longer to mature than people initially expected — because converting a noisy time series of current levels into a sequence of bases is, fundamentally, a hard machine learning problem."
+  },
+  {
+   "t": 31.59,
+   "text": "Let me explain why it's hard."
+  },
+  {
+   "t": 33.35,
+   "text": "The current level at any moment is determined by a k-mer window of bases, as we discussed."
+  },
+  {
+   "t": 38.99,
+   "text": "So if the sensing window is five bases wide, the current trace tells you a sequence of k-mer levels — but the k-mers overlap, and each base contributes to several consecutive measurements."
+  },
+  {
+   "t": 51.52,
+   "text": "To recover the underlying base sequence, you have to deconvolve overlapping contributions, account for the variable speed of the motor (which sometimes pauses, sometimes skips a base, sometimes stutters and reads the same base twice), and do all of this in the presence of significant random noise from thermal fluctuations of the ions."
+  },
+  {
+   "t": 71.6,
+   "text": "If you think about it abstractly: you have a noisy observation sequence (the current trace) and you want to recover a hidden underlying sequence (the bases) where the mapping from hidden to observed is many-to-one — many possible base sequences could plausibly explain a given current trace."
+  },
+  {
+   "t": 88.91,
+   "text": "The problem is to find the most likely base sequence given the observation."
+  },
+  {
+   "t": 93.45,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 94.74,
+   "text": "Imagine you're trying to read someone's handwriting, but instead of seeing the letters, you can only feel the indentations they made on the page through the back of the paper."
+  },
+  {
+   "t": 103.78,
+   "text": "You can feel that there's a tall vertical stroke here, a curve there, a dot somewhere else."
+  },
+  {
+   "t": 109.31,
+   "text": "From the pattern of indentations you have to infer what letters were written."
+  },
+  {
+   "t": 113.69,
+   "text": "Now imagine that the indentations from neighboring letters overlap — each indent you feel actually contains information about three or four letters at once — and that the writer's pen sometimes stuttered or skipped."
+  },
+  {
+   "t": 126.62,
+   "text": "That's basecalling."
+  },
+  {
+   "t": 127.9,
+   "text": "You're reading the back of a page where the writer pressed hard with a fountain pen, and the indentations from successive letters bleed into each other, and your job is to figure out what was written."
+  },
+  {
+   "t": 138.93,
+   "text": "In the early days — 2014 to about 2017 — basecalling was done with hidden Markov models, which are a classical machine learning method for exactly this kind of problem."
+  },
+  {
+   "t": 149.61,
+   "text": "You build a model of the system: there are some hidden states (the underlying base sequence), there are observations (the current levels), and you have a model of how observations relate to states."
+  },
+  {
+   "t": 161.14,
+   "text": "Then you use an algorithm called Viterbi to find the most likely hidden state sequence that explains the observed signal."
+  },
+  {
+   "t": 168.56,
+   "text": "HMM basecallers worked, sort of."
+  },
+  {
+   "t": 170.59,
+   "text": "They gave you sequences with about 70 to 80 percent accuracy on the early R7 chemistry."
+  },
+  {
+   "t": 176.7,
+   "text": "That's not good."
+  },
+  {
+   "t": 177.7,
+   "text": "That's catastrophically bad for most applications."
+  },
+  {
+   "t": 181.19,
+   "text": "But it was a start."
+  },
+  {
+   "t": 182.35,
+   "text": "The breakthrough came when Oxford Nanopore — and several academic groups — started replacing HMMs with recurrent neural networks for basecalling."
+  },
+  {
+   "t": 191.8,
+   "text": "The structure of the problem turns out to be exactly what RNNs were designed for: take a sequence of inputs (current levels), produce a sequence of outputs (bases), where the mapping is context-dependent."
+  },
+  {
+   "t": 203.96,
+   "text": "By training a recurrent neural network on a huge dataset of nanopore reads where you already know the true sequence — for example, reads from a well-characterized reference genome like E. coli — you can let the network learn the mapping from current trace to base sequence directly, without having to model the physics by hand."
+  },
+  {
+   "t": 223.07,
+   "text": "The first generation of neural basecallers, around 2017, were based on bidirectional long short-term memory networks — BiLSTMs."
+  },
+  {
+   "t": 232.51,
+   "text": "These pushed accuracy from the 70 to 80 percent range up to about 90 percent."
+  },
+  {
+   "t": 238.15,
+   "text": "The second generation, around 2019 to 2020, introduced more sophisticated architectures including a connectionist temporal classification loss — CTC — that handled the variable-length output problem more gracefully."
+  },
+  {
+   "t": 253.17,
+   "text": "Accuracy climbed to 95 percent."
+  },
+  {
+   "t": 256.22,
+   "text": "The latest generations, post 2022, use transformer-based architectures borrowed from natural language processing, and accuracy is now well above 99 percent on R10.4 chemistry with duplex reads."
+  },
+  {
+   "t": 270.37,
+   "text": "I want to dwell on one thing about this trajectory, because it's an underappreciated piece of the nanopore story."
+  },
+  {
+   "t": 277.19,
+   "text": "The hardware — the pores, the motors, the membranes — has been improving steadily but incrementally."
+  },
+  {
+   "t": 283.92,
+   "text": "The software — the basecallers — has been the dominant driver of accuracy improvements over the last five to seven years."
+  },
+  {
+   "t": 291.89,
+   "text": "The same R9 chemistry that gave 85 percent accuracy with a 2018 basecaller gives 95 percent accuracy with a 2022 basecaller."
+  },
+  {
+   "t": 302.13,
+   "text": "The signal is the same."
+  },
+  {
+   "t": 303.64,
+   "text": "The interpretation has gotten better."
+  },
+  {
+   "t": 305.79,
+   "text": "This means nanopore sequencing has a remarkable property that most other technologies don't share: your old data gets better."
+  },
+  {
+   "t": 313.52,
+   "text": "If you sequenced a sample on a MinION in 2018 and saved the raw current traces, you can rerun the data through a modern basecaller today and get higher accuracy than you got at the time."
+  },
+  {
+   "t": 324.32,
+   "text": "The raw signal contains more information than the early basecallers could extract."
+  },
+  {
+   "t": 329.47,
+   "text": "Every basecaller release unlocks more of that latent information."
+  },
+  {
+   "t": 333.74,
+   "text": "Compare that to Illumina, where the basecalling is essentially deterministic — a flash of one of four colors maps to one of four bases, with high confidence, in a matter that's been mature for fifteen years."
+  },
+  {
+   "t": 346.99,
+   "text": "Illumina basecalling has nowhere left to improve."
+  },
+  {
+   "t": 350.53,
+   "text": "Nanopore basecalling, by contrast, is still actively a research frontier, with new architectures and new training datasets being released every few months."
+  },
+  {
+   "t": 360.74,
+   "text": "One technical detail worth knowing."
+  },
+  {
+   "t": 363.1,
+   "text": "The basecaller's job is not only to decide which base is at each position; it also has to decide how many bases were at each position."
+  },
+  {
+   "t": 371.49,
+   "text": "Because the motor sometimes pauses — the current sits at the same level for an extended time — and sometimes skips — the current jumps to a new level without going through intermediate values."
+  },
+  {
+   "t": 382.39,
+   "text": "The basecaller has to decide, from the duration of each current level, whether the motor was sitting still for one base or two or three."
+  },
+  {
+   "t": 390.68,
+   "text": "This is the classic homopolymer problem in nanopore sequencing — long runs of the same base, like AAAAAAA, are hard because the current sits at a constant level for the whole run and the basecaller has to count carefully to determine how many A's were there."
+  },
+  {
+   "t": 405.4,
+   "text": "This was a major weakness of the older R9 chemistry."
+  },
+  {
+   "t": 409.07,
+   "text": "R10's dual-reader-head design specifically improves homopolymer accuracy because the two readers give independent estimates of position, and combining them helps disambiguate run length."
+  },
+  {
+   "t": 420.85,
+   "text": "So basecalling is hard, basecalling is a deep learning problem, basecalling has been the dominant axis of improvement in nanopore for the last decade, and basecalling is still actively improving."
+  },
+  {
+   "t": 432.94,
+   "text": "When you read a nanopore paper that quotes a particular accuracy number, you should always ask which basecaller version was used."
+  },
+  {
+   "t": 439.92,
+   "text": "The same raw data, with a basecaller from two years later, will likely give you noticeably better numbers."
+  },
+  {
+   "t": 446.32,
+   "text": "That's enough on basecalling."
+  },
+  {
+   "t": 448.15,
+   "text": "Let's switch gears and talk about the actual physical devices people use — the MinION, the GridION, and the PromethION."
+  }
+ ]
+}

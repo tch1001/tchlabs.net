@@ -1,0 +1,251 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — The read length advantage: why 454 mattered when Illumina was short",
+ "duration": 430.28,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — The read length advantage: why 454 mattered when Illumina was short"
+  },
+  {
+   "t": 6.49,
+   "text": "Here's where we come to 454's main competitive advantage, the one thing it could do that nothing else could do for several years."
+  },
+  {
+   "t": 15.1,
+   "text": "454 reads were long."
+  },
+  {
+   "t": 17.5,
+   "text": "Or rather, 454 reads were long for the era."
+  },
+  {
+   "t": 21.54,
+   "text": "In 2005, when the GS20 launched, it gave you 100-base reads."
+  },
+  {
+   "t": 26.74,
+   "text": "By 2008, the FLX gave you 400-base reads."
+  },
+  {
+   "t": 31.54,
+   "text": "By 2010, the FLX+ pushed to 700 bases on its best runs."
+  },
+  {
+   "t": 37.14,
+   "text": "Throughout this period, Illumina was at 35 bases, then 50, then 75, then 100."
+  },
+  {
+   "t": 44.69,
+   "text": "So 454 had a roughly fourfold to tenfold read-length advantage for years."
+  },
+  {
+   "t": 50.56,
+   "text": "Why did this matter?"
+  },
+  {
+   "t": 51.67,
+   "text": "Because in many sequencing applications, read length is critical."
+  },
+  {
+   "t": 56.26,
+   "text": "Let me give you a few cases."
+  },
+  {
+   "t": 58.08,
+   "text": "Genome assembly."
+  },
+  {
+   "t": 59.58,
+   "text": "When you sequence an unknown genome — say, you're characterizing a newly discovered bacterium — you have to take all your reads and stitch them together into a single contiguous sequence."
+  },
+  {
+   "t": 71.86,
+   "text": "This is called assembly, and it's a hard combinatorial problem."
+  },
+  {
+   "t": 76.39,
+   "text": "The longer your reads, the more reliably you can place them in the overall picture, because longer reads carry more unique sequence context."
+  },
+  {
+   "t": 85.24,
+   "text": "If your reads are only 35 bases long, and the genome you're assembling has many repeated stretches longer than 35 bases — which is very common — then short reads will get confused, fitting equally well at multiple places in the genome, and your assembly will be fragmented into many small pieces."
+  },
+  {
+   "t": 103.55,
+   "text": "With 400-base 454 reads, most repeated stretches are shorter than the read, so the assembler can place reads unambiguously, and you end up with a much more contiguous assembly."
+  },
+  {
+   "t": 115.28,
+   "text": "For de novo genome assembly in the years 2007 to 2012, 454 was the platform of choice precisely because of its read length."
+  },
+  {
+   "t": 125.28,
+   "text": "Metagenomics."
+  },
+  {
+   "t": 126.56,
+   "text": "This is the application where 454 really shined."
+  },
+  {
+   "t": 130.69,
+   "text": "Metagenomics means you take a sample — soil, ocean water, the human gut, the lining of a sponge — and you sequence all the DNA in it, from all the organisms living there, without separating them."
+  },
+  {
+   "t": 142.5,
+   "text": "From the resulting reads, you try to figure out what species are present and what they're doing."
+  },
+  {
+   "t": 147.49,
+   "text": "The trick is, to identify a species from a fragment of DNA, you usually need to match the fragment to a reference database — and the longer the fragment, the more reliably you can match it."
+  },
+  {
+   "t": 158.96,
+   "text": "A 35-base Illumina read might match equally well to dozens of related bacteria."
+  },
+  {
+   "t": 164.93,
+   "text": "A 400-base 454 read often matches uniquely to one species."
+  },
+  {
+   "t": 171.26,
+   "text": "So for the first half-decade of metagenomics — roughly 2005 through 2010 — almost every important metagenomics study was done on 454."
+  },
+  {
+   "t": 182.38,
+   "text": "The Human Microbiome Project, the early ocean metagenomics surveys, soil microbiology, ancient DNA work — all 454, all leveraging the read length."
+  },
+  {
+   "t": 194.21,
+   "text": "Amplicon sequencing."
+  },
+  {
+   "t": 195.91,
+   "text": "Specifically, 16S ribosomal RNA gene sequencing — a standard method for identifying bacteria in a mixed sample by sequencing a particular conserved gene."
+  },
+  {
+   "t": 207.06,
+   "text": "The 16S gene is about 1,500 bases long."
+  },
+  {
+   "t": 211.38,
+   "text": "To distinguish different bacterial species, you generally need to read at least 250-500 bases of variable region from it."
+  },
+  {
+   "t": 220.28,
+   "text": "454's read length was perfect for this."
+  },
+  {
+   "t": 223.94,
+   "text": "Illumina's short reads could only cover a small slice of the gene and gave you less taxonomic resolution."
+  },
+  {
+   "t": 230.81,
+   "text": "So 16S amplicon sequencing — used in everything from gut microbiome studies to wastewater monitoring — was a 454 specialty for years."
+  },
+  {
+   "t": 241.81,
+   "text": "Ancient DNA."
+  },
+  {
+   "t": 243.16,
+   "text": "When you sequence DNA from a Neanderthal bone, or a mammoth tooth, or a thousand-year-old Egyptian mummy, you're dealing with DNA that has been degraded into very small fragments — often only 50 to 100 bases long."
+  },
+  {
+   "t": 257.04,
+   "text": "454's longer reads weren't an advantage here, but its low substitution error rate and its ability to handle the awkward chemistry of degraded DNA samples made it a workhorse for paleogenomics."
+  },
+  {
+   "t": 269.54,
+   "text": "The first million bases of the Neanderthal genome were sequenced on a 454 in 2006."
+  },
+  {
+   "t": 276.48,
+   "text": "The whole field of high-throughput ancient DNA, leading directly to the eventual Neanderthal and Denisovan genomes that Svante Pääbo won the Nobel Prize for in 2022, started on 454 machines."
+  },
+  {
+   "t": 291.31,
+   "text": "So for these years — roughly 2005 through 2012 — 454 had a real, defensible niche."
+  },
+  {
+   "t": 299.64,
+   "text": "Anyone doing de novo assembly, metagenomics, 16S, or ancient DNA had a good reason to choose 454 over Illumina, despite the higher cost per base."
+  },
+  {
+   "t": 311.4,
+   "text": "The longer reads bought scientific value that the shorter reads couldn't provide."
+  },
+  {
+   "t": 316.04,
+   "text": "But here's the thing about niches."
+  },
+  {
+   "t": 317.99,
+   "text": "They erode."
+  },
+  {
+   "t": 318.94,
+   "text": "Year by year, Illumina pushed its read lengths longer."
+  },
+  {
+   "t": 322.93,
+   "text": "35 to 50 to 75 to 100 to 150 to 250 to 300."
+  },
+  {
+   "t": 330.63,
+   "text": "By 2014, Illumina's MiSeq could give you 300-base paired-end reads — meaning 600 bases of context per fragment — at a fraction of the per-base cost of 454."
+  },
+  {
+   "t": 343.1,
+   "text": "The read-length advantage that 454 had had a five-year head start on was slowly compressed."
+  },
+  {
+   "t": 349.55,
+   "text": "Meanwhile, on the other end of the read-length spectrum, two new technologies were emerging — PacBio in 2011 and Oxford Nanopore in 2014 — that produced reads of 10,000 to 100,000 bases or more, vastly longer than 454 had ever managed."
+  },
+  {
+   "t": 367.6,
+   "text": "Suddenly, if you really cared about long reads, you went to PacBio or Nanopore, not 454."
+  },
+  {
+   "t": 374.93,
+   "text": "And if you wanted high throughput and didn't care quite so much about read length, Illumina would do the job for an order of magnitude cheaper."
+  },
+  {
+   "t": 383.69,
+   "text": "454 was being squeezed from both sides."
+  },
+  {
+   "t": 386.64,
+   "text": "But that erosion is the story of Segments 13 and 14."
+  },
+  {
+   "t": 391.05,
+   "text": "For now, hold this picture: from 2005 to about 2012, 454 was the read-length king."
+  },
+  {
+   "t": 399.19,
+   "text": "It produced reads longer than anyone else's, and that was enough to build a substantial user base, enable major discoveries, and earn Roche its $155 million purchase price in 2007."
+  },
+  {
+   "t": 412.66,
+   "text": "The read-length advantage was real."
+  },
+  {
+   "t": 414.94,
+   "text": "It was just temporary."
+  },
+  {
+   "t": 416.38,
+   "text": "We're at the halfway point now."
+  },
+  {
+   "t": 418.04,
+   "text": "Let's take a break — about ten minutes — and then we'll come back and talk about the human story behind all of this."
+  },
+  {
+   "t": 424.3,
+   "text": "Jonathan Rothberg, Jim Watson's genome, the Roche acquisition, and the slow decline."
+  }
+ ]
+}

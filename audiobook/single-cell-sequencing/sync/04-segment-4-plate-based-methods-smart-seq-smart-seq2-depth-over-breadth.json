@@ -1,0 +1,259 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Plate-based methods — Smart-seq, Smart-seq2, depth over breadth",
+ "duration": 388.62,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Plate-based methods — Smart-seq, Smart-seq2, depth over breadth"
+  },
+  {
+   "t": 6.6,
+   "text": "The first family of single-cell methods to really mature was plate-based."
+  },
+  {
+   "t": 11.18,
+   "text": "The setup is conceptually simple."
+  },
+  {
+   "t": 13.61,
+   "text": "You take a multi-well plate — typically 96 wells, sometimes 384 — and you sort one cell into each well, usually using a fluorescence-activated cell sorter, FACS, which spits cells one at a time into target wells based on whatever markers you're sorting on."
+  },
+  {
+   "t": 31.16,
+   "text": "Now each well contains exactly one cell, suspended in a few microliters of buffer with lysis reagents."
+  },
+  {
+   "t": 38.88,
+   "text": "From there, every well is its own miniature single-cell library prep."
+  },
+  {
+   "t": 43.67,
+   "text": "Reverse transcription happens in the well."
+  },
+  {
+   "t": 46.29,
+   "text": "PCR amplification happens in the well."
+  },
+  {
+   "t": 49.65,
+   "text": "Library tagmentation happens in the well, or right after."
+  },
+  {
+   "t": 53.94,
+   "text": "Then, before sequencing, you pool the contents of all the wells together — with sample indexing so you know which read came from which well — and load the pooled library onto an Illumina flow cell."
+  },
+  {
+   "t": 66.06,
+   "text": "The most successful version of this approach is called Smart-seq, and especially its second-generation refinement Smart-seq2, published in 2013 by Rickard Sandberg's group in Stockholm."
+  },
+  {
+   "t": 77.88,
+   "text": "SMART, in this name, stands for Switching Mechanism At the 5' end of RNA Template — and it refers to a clever trick involving a particular reverse transcriptase enzyme that, when it reaches the 5' end of an mRNA, adds a few extra cytosines as overhang, allowing a complementary template-switching oligo to bind and let the enzyme keep going."
+  },
+  {
+   "t": 101.04,
+   "text": "The upshot is that you can capture the full length of each transcript, end to end, in a single reverse-transcription reaction."
+  },
+  {
+   "t": 108.97,
+   "text": "That's the key feature of Smart-seq2: full-length transcript coverage, not just the three-prime end."
+  },
+  {
+   "t": 115.79,
+   "text": "Why does full-length matter?"
+  },
+  {
+   "t": 117.3,
+   "text": "Two reasons."
+  },
+  {
+   "t": 118.49,
+   "text": "First, it lets you detect splice variants — different isoforms of the same gene that include or skip particular exons."
+  },
+  {
+   "t": 126.54,
+   "text": "If you only sequence the three-prime end, all isoforms look the same."
+  },
+  {
+   "t": 131.56,
+   "text": "With full-length, you see which exons are present in each transcript and you can tell isoforms apart."
+  },
+  {
+   "t": 137.74,
+   "text": "Second, full-length captures more total signal per transcript."
+  },
+  {
+   "t": 142.43,
+   "text": "You get more reads per gene, you can detect lower-abundance transcripts, you can call mutations within the coding sequence."
+  },
+  {
+   "t": 149.47,
+   "text": "Smart-seq2 typically detects something like five thousand to ten thousand genes per cell, with high sensitivity and low dropout."
+  },
+  {
+   "t": 157.93,
+   "text": "That's a deep, rich per-cell profile."
+  },
+  {
+   "t": 160.95,
+   "text": "Here is the analogy I want you to hold for Smart-seq2 and the plate-based methods in general."
+  },
+  {
+   "t": 167.12,
+   "text": "Plate-based is the high-coverage alternative — one cell per well, full-length cDNA, more transcripts per cell, but vastly fewer cells per experiment."
+  },
+  {
+   "t": 177.56,
+   "text": "When you need depth, not breadth."
+  },
+  {
+   "t": 179.96,
+   "text": "What do I mean by depth versus breadth?"
+  },
+  {
+   "t": 182.19,
+   "text": "Depth means: how much do you learn about each individual cell?"
+  },
+  {
+   "t": 186.6,
+   "text": "How many genes do you detect per cell?"
+  },
+  {
+   "t": 188.9,
+   "text": "How accurately can you measure low-abundance transcripts?"
+  },
+  {
+   "t": 192.84,
+   "text": "How well can you distinguish splice isoforms or mutations?"
+  },
+  {
+   "t": 197.32,
+   "text": "Breadth means: how many cells do you process in one experiment?"
+  },
+  {
+   "t": 201.51,
+   "text": "Is it a hundred, a thousand, ten thousand, a hundred thousand, a million?"
+  },
+  {
+   "t": 206.96,
+   "text": "These two dimensions trade off against each other, given a fixed sequencing budget."
+  },
+  {
+   "t": 212.12,
+   "text": "Sequencing is expensive."
+  },
+  {
+   "t": 214.32,
+   "text": "Every read you assign to one cell is a read you can't assign to another."
+  },
+  {
+   "t": 219.46,
+   "text": "If you want very deep coverage of each cell, you have to give each cell a lot of reads, which means you can only afford to process a small number of cells."
+  },
+  {
+   "t": 228.44,
+   "text": "If you want a lot of cells, you have to spread your reads thin, giving each cell less coverage."
+  },
+  {
+   "t": 234.0,
+   "text": "Plate-based methods sit firmly on the depth side."
+  },
+  {
+   "t": 237.64,
+   "text": "You get a few hundred cells per plate, with maybe a million reads per cell, detecting most of each cell's transcriptome with high quality."
+  },
+  {
+   "t": 245.72,
+   "text": "Droplet methods, which we'll get to, sit firmly on the breadth side."
+  },
+  {
+   "t": 250.0,
+   "text": "You get tens of thousands of cells per run, with maybe twenty thousand reads per cell, detecting only a slice of each cell's transcriptome but capturing the diversity of the population."
+  },
+  {
+   "t": 261.45,
+   "text": "The right choice depends on the question."
+  },
+  {
+   "t": 263.57,
+   "text": "If you want to characterize a small number of rare cells in fine detail — say, you've FACS-sorted out a hundred putative stem cells from a tissue, and you want to know what makes them tick — Smart-seq2 is your tool."
+  },
+  {
+   "t": 275.75,
+   "text": "Deep, full-length, mutation-callable transcriptomes of a hundred cells."
+  },
+  {
+   "t": 281.19,
+   "text": "If you want to make an atlas of a whole tissue, characterizing tens of cell types and their relative proportions, droplets are the tool."
+  },
+  {
+   "t": 289.69,
+   "text": "Shallow but broad."
+  },
+  {
+   "t": 291.06,
+   "text": "The newer evolution of plate-based methods is Smart-seq3, published in 2020, which adds unique molecular identifiers — UMIs — to the full-length data, so you get both the depth advantages of Smart-seq2 and the molecule-counting capability of droplets."
+  },
+  {
+   "t": 309.02,
+   "text": "We'll come back to UMIs in Segment 8 because they deserve a segment of their own."
+  },
+  {
+   "t": 313.72,
+   "text": "For now, the point is that plate-based has not stood still."
+  },
+  {
+   "t": 317.51,
+   "text": "It continues to be developed for the use cases where depth matters more than throughput."
+  },
+  {
+   "t": 322.92,
+   "text": "One more practical note."
+  },
+  {
+   "t": 324.37,
+   "text": "Plate-based methods, because each well is its own physical reaction, are easier to integrate with other measurements on the same cell."
+  },
+  {
+   "t": 332.63,
+   "text": "You can image the cell before lysing it."
+  },
+  {
+   "t": 334.94,
+   "text": "You can patch-clamp it to record its electrical activity, then sequence its RNA — that's a technique called Patch-seq, very valuable in neuroscience for linking electrophysiology to transcriptome."
+  },
+  {
+   "t": 347.28,
+   "text": "You can FACS-sort cells based on surface markers, putting only the cells you care about into each well."
+  },
+  {
+   "t": 353.77,
+   "text": "Plates give you a level of per-cell control that droplets, by their nature, cannot match."
+  },
+  {
+   "t": 359.13,
+   "text": "Droplets are statistical and bulk-flow; plates are deterministic and individual."
+  },
+  {
+   "t": 364.81,
+   "text": "Each has its place."
+  },
+  {
+   "t": 366.18,
+   "text": "But for sheer scale — for the kinds of cell-atlas projects that catalogued every cell type in the human body — plates were too slow."
+  },
+  {
+   "t": 374.67,
+   "text": "The field needed something that could process a hundred thousand cells in an afternoon, with one technician and one machine."
+  },
+  {
+   "t": 381.98,
+   "text": "That something was the droplet."
+  },
+  {
+   "t": 383.53,
+   "text": "And it arrived, in two papers back-to-back, in May 2015."
+  }
+ ]
+}

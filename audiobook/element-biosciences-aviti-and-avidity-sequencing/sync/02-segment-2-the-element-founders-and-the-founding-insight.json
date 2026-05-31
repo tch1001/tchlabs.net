@@ -1,0 +1,275 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — The Element founders and the founding insight",
+ "duration": 481.05,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — The Element founders and the founding insight"
+  },
+  {
+   "t": 4.12,
+   "text": "Element Biosciences was founded in 2017 by three people: Molly He, Mike Previte, and Matthew Kellinger."
+  },
+  {
+   "t": 11.65,
+   "text": "All three were chemists or biochemists with senior or near-senior positions at established sequencing companies before they left to start Element."
+  },
+  {
+   "t": 20.91,
+   "text": "The combined résumé matters here, because it's not the usual startup story of three graduate students in a garage."
+  },
+  {
+   "t": 27.82,
+   "text": "It's three mid-career industrial scientists, each with seven or eight years of experience at a sequencing-platform company, who looked at the constraints of the chemistry they were working on, decided they could do better with a clean slate, and walked out."
+  },
+  {
+   "t": 41.69,
+   "text": "Molly He is the CEO."
+  },
+  {
+   "t": 43.33,
+   "text": "Her doctorate is in structural biology, and before Element she spent about seven years at Illumina, where she ran chemistry R&D — meaning she was the senior person responsible for the very sequencing chemistry we covered in the Illumina lecture."
+  },
+  {
+   "t": 58.06,
+   "text": "Before Illumina, she spent two years at Pacific Biosciences, which is the long-read company we covered in another lecture."
+  },
+  {
+   "t": 65.22,
+   "text": "So her career has been a tour of essentially every major short-read and long-read platform that exists, at the level of the person who decides which chemistry experiments to fund."
+  },
+  {
+   "t": 75.86,
+   "text": "When you talk to people who knew her at Illumina, the consistent description is that she was the chief scientist who knew, in fine detail, what was wrong with the reversible-terminator chemistry — every compromise, every workaround, every place where the chemistry had to be patched to keep working at scale."
+  },
+  {
+   "t": 92.71,
+   "text": "She left, and a year later she had a company."
+  },
+  {
+   "t": 96.04,
+   "text": "Mike Previte is the CTO."
+  },
+  {
+   "t": 98.45,
+   "text": "His doctorate is in physical chemistry, and he spent about six years at Illumina as a principal scientist working on next-generation sequencing platforms."
+  },
+  {
+   "t": 107.45,
+   "text": "Before Illumina, he was at Life Technologies — the company that eventually became part of Thermo Fisher — working on single-molecule sequencing."
+  },
+  {
+   "t": 115.99,
+   "text": "He holds a stack of patents in optical detection and chemistry for sequencing instruments."
+  },
+  {
+   "t": 121.95,
+   "text": "He is, in the small world of people who can actually build a sequencer from scratch, one of the maybe fifty people on Earth qualified to do so."
+  },
+  {
+   "t": 130.56,
+   "text": "Matthew Kellinger is the VP of Biochemistry."
+  },
+  {
+   "t": 133.8,
+   "text": "His doctorate is in biochemistry, and he spent about five years at Illumina working on the enzyme chemistry that makes reversible-terminator sequencing run — the polymerases, the binding kinetics, the nucleotide analogs."
+  },
+  {
+   "t": 146.79,
+   "text": "He's the deep enzyme person on the founding team."
+  },
+  {
+   "t": 149.81,
+   "text": "So here's the picture."
+  },
+  {
+   "t": 151.19,
+   "text": "You have three people who collectively spent close to twenty person-years inside Illumina, at senior levels, working on every layer of the sequencing chemistry stack — structural biology, optics, enzyme engineering, instrument design."
+  },
+  {
+   "t": 165.49,
+   "text": "They knew where every bone in the body was buried."
+  },
+  {
+   "t": 168.5,
+   "text": "And in 2017, they left, together, to start a competing sequencing company."
+  },
+  {
+   "t": 174.49,
+   "text": "That kind of founding team is rare."
+  },
+  {
+   "t": 176.93,
+   "text": "It almost never happens in life sciences, because the people senior enough to start a credible competitor are usually too senior to want to take the risk."
+  },
+  {
+   "t": 185.91,
+   "text": "It happened here because, as Molly He has said in interviews, the three of them looked at the future of the sequencing market — at the throughput plateau, at the per-base cost plateau, at the patent expiry calendar — and concluded that there was about to be a window."
+  },
+  {
+   "t": 200.6,
+   "text": "They had two-to-five years to design a clean-slate chemistry that would be ready when that window opened."
+  },
+  {
+   "t": 206.5,
+   "text": "They took the window."
+  },
+  {
+   "t": 207.7,
+   "text": "The founding insight — and this is the part you need to internalize, because it organizes everything else in this lecture — is structural."
+  },
+  {
+   "t": 216.51,
+   "text": "It goes like this."
+  },
+  {
+   "t": 217.76,
+   "text": "The Illumina chemistry, sequencing-by-synthesis with reversible terminators, asks one molecule to do two completely different jobs at the same time."
+  },
+  {
+   "t": 227.39,
+   "text": "That one molecule is a fluorescent nucleotide."
+  },
+  {
+   "t": 230.71,
+   "text": "It has to be the right nucleotide — meaning it has to base-pair with the template, and only the correct one of the four bases should do so — and it has to get incorporated by the polymerase into the growing strand."
+  },
+  {
+   "t": 244.2,
+   "text": "Both jobs have to happen in the same chemical step, with the same molecule."
+  },
+  {
+   "t": 249.14,
+   "text": "And those two jobs, it turns out, pull in different chemical directions."
+  },
+  {
+   "t": 253.33,
+   "text": "Why?"
+  },
+  {
+   "t": 254.0,
+   "text": "Because the molecular features that make a nucleotide bind selectively and tightly — high binding affinity, slow off-rate, careful base-pairing geometry — are not the same features that make it a good substrate for the polymerase."
+  },
+  {
+   "t": 267.95,
+   "text": "The polymerase wants a small, simple, unmodified nucleotide that it can grab and incorporate quickly."
+  },
+  {
+   "t": 275.25,
+   "text": "The binding step wants something bulky enough to carry a fluorescent dye and a chemical blocker."
+  },
+  {
+   "t": 280.75,
+   "text": "The incorporation step wants something clean enough to slide through the polymerase active site and form a clean phosphodiester bond."
+  },
+  {
+   "t": 288.85,
+   "text": "These are not compatible asks."
+  },
+  {
+   "t": 290.73,
+   "text": "Every fluorescent nucleotide that ships in an Illumina kit is a compromise — a molecule that's good enough at both jobs to work, but not optimal at either."
+  },
+  {
+   "t": 300.65,
+   "text": "And every compromise costs you something."
+  },
+  {
+   "t": 303.2,
+   "text": "It costs you raw signal — because the dye has to be small enough not to interfere with incorporation, so it's dimmer than it could be."
+  },
+  {
+   "t": 310.49,
+   "text": "It costs you incorporation speed — because the blocked, dye-loaded nucleotide is bulkier than a natural one, so the polymerase works slower."
+  },
+  {
+   "t": 319.11,
+   "text": "It costs you reagent — because the binding affinity isn't as high as you'd like, you have to use the nucleotides at relatively high concentrations to drive the chemistry forward, and at high concentrations the unincorporated nucleotides also generate background signal that you have to wash away."
+  },
+  {
+   "t": 336.23,
+   "text": "And it costs you accuracy — because at high concentrations, the wrong nucleotide occasionally binds too, and gets miscalled."
+  },
+  {
+   "t": 343.99,
+   "text": "The founders' insight was — what if we separated the two jobs?"
+  },
+  {
+   "t": 348.06,
+   "text": "What if we used one molecule for the binding-and-imaging step, and a completely different molecule for the incorporation step?"
+  },
+  {
+   "t": 354.69,
+   "text": "Then we could optimize each one independently."
+  },
+  {
+   "t": 357.59,
+   "text": "The binding molecule could be huge and bright and tight-binding, with no concern for whether the polymerase likes it, because the polymerase isn't going to incorporate it."
+  },
+  {
+   "t": 368.1,
+   "text": "The incorporation molecule could be small and clean and fast, with no dye attached at all, because the imaging has already happened by the time we ask the polymerase to extend the strand."
+  },
+  {
+   "t": 379.63,
+   "text": "Two molecules."
+  },
+  {
+   "t": 380.98,
+   "text": "Two jobs."
+  },
+  {
+   "t": 382.1,
+   "text": "Each one optimized for its own purpose."
+  },
+  {
+   "t": 384.85,
+   "text": "No compromise."
+  },
+  {
+   "t": 386.18,
+   "text": "That is the entire conceptual move at the heart of avidity sequencing."
+  },
+  {
+   "t": 391.04,
+   "text": "Decouple binding from incorporation."
+  },
+  {
+   "t": 393.65,
+   "text": "Everything else — the avidite polymer, the polony, the two-step cycle, the Q40 accuracy claim — is implementation detail on top of that one insight."
+  },
+  {
+   "t": 404.61,
+   "text": "And once you see the insight, it becomes hard to understand why nobody did it earlier."
+  },
+  {
+   "t": 410.21,
+   "text": "The answer is partly that it took twenty years of working inside Illumina's chemistry to see the constraint with that kind of clarity, and partly that the engineering required to build the alternative — synthesizing the multivalent polymer, getting the imaging to work cleanly, building an instrument and the software stack — is non-trivial and took the founders five years even with their pedigree."
+  },
+  {
+   "t": 432.29,
+   "text": "Element raised about thirty million in seed money to start."
+  },
+  {
+   "t": 436.04,
+   "text": "They went on to raise something like seven hundred million dollars in total venture funding through 2024, in five rounds, with their most recent round in mid-2024 — a Series D of two hundred and seventy-seven million dollars — valuing the company at about a billion dollars."
+  },
+  {
+   "t": 453.48,
+   "text": "They are profitable on a gross-margin basis, growing fast, and widely expected to file for an IPO when public-market conditions improve."
+  },
+  {
+   "t": 462.11,
+   "text": "As of this lecture they are still private."
+  },
+  {
+   "t": 464.5,
+   "text": "But the funding history tells you that serious institutional capital believes the avidity-sequencing thesis is real."
+  },
+  {
+   "t": 472.53,
+   "text": "Now let's actually look at the chemistry — first by understanding, in more detail, exactly what the Illumina compromise is that they're attacking."
+  }
+ ]
+}

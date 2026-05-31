@@ -1,0 +1,151 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Loading the chip: getting beads into wells without doubles",
+ "duration": 265.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Loading the chip: getting beads into wells without doubles"
+  },
+  {
+   "t": 5.5,
+   "text": "This is one of those engineering problems that sounds trivial at the description level — \"put one bead in each well\" — and turns out to be devilishly hard in practice."
+  },
+  {
+   "t": 15.1,
+   "text": "And the way Ion Torrent solves it tells you something about how the platform performs."
+  },
+  {
+   "t": 20.29,
+   "text": "The wells on the chip, remember, are sized to fit exactly one bead."
+  },
+  {
+   "t": 25.38,
+   "text": "They're slightly bigger than a bead — typically a couple of microns — so a bead can drop in but can't easily stack two."
+  },
+  {
+   "t": 32.36,
+   "text": "That's already half the battle: physical exclusion."
+  },
+  {
+   "t": 35.75,
+   "text": "The geometry of the well discourages doubles."
+  },
+  {
+   "t": 39.24,
+   "text": "But you still have to actually deliver beads to wells, and the delivery method matters."
+  },
+  {
+   "t": 43.92,
+   "text": "The way Ion Torrent loads the chip is, essentially, gravity plus shaking plus some fluid mechanics."
+  },
+  {
+   "t": 51.44,
+   "text": "You take the bead suspension and pipet it onto the chip surface; the beads settle into the wells under gravity, and a brief centrifugation step helps them seat properly."
+  },
+  {
+   "t": 61.54,
+   "text": "Any beads that don't make it into a well — that settle on the flat areas between wells — get washed off."
+  },
+  {
+   "t": 67.92,
+   "text": "What you're left with is a chip whose wells contain, ideally, exactly one bead each."
+  },
+  {
+   "t": 73.59,
+   "text": "In practice, \"ideally\" hides a lot of variation."
+  },
+  {
+   "t": 77.7,
+   "text": "A typical loaded chip will have somewhere around 70% to 90% well occupancy, depending on chip generation and how good the operator's prep was."
+  },
+  {
+   "t": 87.75,
+   "text": "The remaining wells are empty — they'll just produce a flat signal during the run and be ignored."
+  },
+  {
+   "t": 93.58,
+   "text": "More problematically, a small percentage of wells will end up with two beads, or with a bead plus a fragment of another bead, or with poor seating that causes signal artifacts."
+  },
+  {
+   "t": 105.06,
+   "text": "These get flagged during analysis and their reads thrown out."
+  },
+  {
+   "t": 109.09,
+   "text": "This is one of those places where Ion Torrent has a structural disadvantage compared to Illumina."
+  },
+  {
+   "t": 114.6,
+   "text": "On an Illumina flowcell, clusters self-assemble by amplification, so every cluster is naturally a single clonal patch on the surface — there's no separate \"loading\" step to mess up."
+  },
+  {
+   "t": 126.42,
+   "text": "Each cluster is built in place from one molecule."
+  },
+  {
+   "t": 129.74,
+   "text": "With Ion Torrent, you make the beads off-chip and then have to physically place them onto the chip, and that placement is never perfect."
+  },
+  {
+   "t": 137.0,
+   "text": "Ion Torrent has spent years engineering both the bead chemistry and the loading robotics — the Ion Chef does most of the work now — to push occupancy up and double-bead rates down."
+  },
+  {
+   "t": 147.96,
+   "text": "The Ion S5 generation hit much better loading consistency than the original PGM, and that's part of why the per-chip data yield has improved over time even when the underlying chip well count didn't change."
+  },
+  {
+   "t": 160.8,
+   "text": "A subtle point: even when you successfully get exactly one bead per well, the bead might not be perfectly loaded with template."
+  },
+  {
+   "t": 168.85,
+   "text": "Remember from Segment 7 that emPCR is a probabilistic process — some beads come out with full template coverage, some come out with sparse coverage."
+  },
+  {
+   "t": 178.29,
+   "text": "Sparse-coverage beads produce weaker signals because fewer protons get released per incorporation."
+  },
+  {
+   "t": 184.84,
+   "text": "The software has to handle a population of beads with a distribution of template loadings, and very weakly loaded beads get filtered out as low-quality reads."
+  },
+  {
+   "t": 194.21,
+   "text": "What this means in practice is that the number of useful reads from a chip is significantly less than the number of wells on the chip."
+  },
+  {
+   "t": 201.65,
+   "text": "A chip with 100 million wells might give you 60-80 million reads of usable quality."
+  },
+  {
+   "t": 208.16,
+   "text": "The marketing numbers and the actual yield always have some gap, just as they do on every sequencing platform."
+  },
+  {
+   "t": 214.78,
+   "text": "When you're estimating whether a chip can give you enough coverage for your experiment, you have to factor in well occupancy, double-bead exclusion, low-quality template filtering, and read-quality filtering after the fact."
+  },
+  {
+   "t": 227.45,
+   "text": "The headline number is usually 70-80% of the well count, in real-world conditions."
+  },
+  {
+   "t": 234.16,
+   "text": "This is all the kind of housekeeping that nobody mentions when they're selling you a sequencer, but it matters when you're actually planning experiments and budgeting chip purchases."
+  },
+  {
+   "t": 243.75,
+   "text": "Ion Torrent chip costs are mostly fixed regardless of how full they get — you pay per chip, not per read — so loading efficiency directly affects your cost per base."
+  },
+  {
+   "t": 254.31,
+   "text": "Operator skill, library quality, and instrument maintenance all matter for keeping those efficiencies high."
+  },
+  {
+   "t": 261.17,
+   "text": "Now let's confront the platform's defining problem: homopolymers."
+  }
+ ]
+}

@@ -1,0 +1,391 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The flow cycle: one nucleotide at a time, same as pyrosequencing",
+ "duration": 454.06,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The flow cycle: one nucleotide at a time, same as pyrosequencing"
+  },
+  {
+   "t": 6.41,
+   "text": "Let's talk about flow ordering, because this is where Ion Torrent looks most obviously like its 454 ancestor and where it differs most sharply from Illumina."
+  },
+  {
+   "t": 16.1,
+   "text": "In an Illumina sequencer, you flow all four bases over the chip at the same time."
+  },
+  {
+   "t": 21.43,
+   "text": "Each base carries a different fluorescent dye, and each base has a reversible terminator on its 3'-OH that prevents the polymerase from adding more than one in a single cycle."
+  },
+  {
+   "t": 33.08,
+   "text": "The polymerase grabs whichever base is correct, incorporates it once, and stops."
+  },
+  {
+   "t": 38.99,
+   "text": "Then the camera takes a picture of every cluster, sees which color of dye lit up at each spot, calls the base, and then chemistry is run to clip off the dye and unblock the 3' end so the next cycle can start."
+  },
+  {
+   "t": 52.38,
+   "text": "Illumina is colored-base, four-at-a-time, one-at-a-time-per-cycle."
+  },
+  {
+   "t": 56.99,
+   "text": "Beautiful, slow, accurate, expensive."
+  },
+  {
+   "t": 60.35,
+   "text": "Ion Torrent does it the other way."
+  },
+  {
+   "t": 62.58,
+   "text": "Inspired by — actually, directly continuing — the pyrosequencing approach that 454 used."
+  },
+  {
+   "t": 70.42,
+   "text": "You flow just one kind of nucleotide at a time."
+  },
+  {
+   "t": 73.67,
+   "text": "No dye."
+  },
+  {
+   "t": 74.51,
+   "text": "No terminator."
+  },
+  {
+   "t": 75.74,
+   "text": "Just dATP, dCTP, dGTP, or dTTP, in their natural unmodified forms."
+  },
+  {
+   "t": 83.78,
+   "text": "You flow dATP across the chip."
+  },
+  {
+   "t": 86.53,
+   "text": "Wherever the template's next base calls for an A, the polymerase incorporates one — or, if the template has a run of T's, the polymerase incorporates several A's back to back, because there's no terminator to stop it."
+  },
+  {
+   "t": 100.08,
+   "text": "You read the pH dip in every well."
+  },
+  {
+   "t": 102.86,
+   "text": "Wells that dipped: an A or a run of A's was incorporated."
+  },
+  {
+   "t": 107.06,
+   "text": "Wells that didn't: no A was needed there."
+  },
+  {
+   "t": 110.01,
+   "text": "Then you wash, flow dCTP, and repeat."
+  },
+  {
+   "t": 113.61,
+   "text": "Then dGTP."
+  },
+  {
+   "t": 115.09,
+   "text": "Then dTTP."
+  },
+  {
+   "t": 116.31,
+   "text": "Cycle through."
+  },
+  {
+   "t": 117.56,
+   "text": "A standard Ion Torrent flow order is the simple repeating pattern T, A, C, G — though the precise order has been tweaked over the years for better performance."
+  },
+  {
+   "t": 128.66,
+   "text": "Each one of those four flows is called a flow cycle in aggregate, or each individual one is just called a flow."
+  },
+  {
+   "t": 135.93,
+   "text": "A single run will go through hundreds of flow cycles — typically 500 or more — and from the pattern of dips and silences in each well across all those flows, the software reconstructs the sequence."
+  },
+  {
+   "t": 149.2,
+   "text": "Let me walk through a concrete tiny example so this lands."
+  },
+  {
+   "t": 153.39,
+   "text": "Suppose your template, read 5' to 3' from the primer onward, has the sequence ATCCGGGTA."
+  },
+  {
+   "t": 159.74,
+   "text": "The polymerase needs to add, in order, the complementary bases: T, A, G, G, C, C, C, A, T."
+  },
+  {
+   "t": 170.75,
+   "text": "You flow T first."
+  },
+  {
+   "t": 172.46,
+   "text": "The polymerase adds a T."
+  },
+  {
+   "t": 174.71,
+   "text": "One proton released, pH dips by one unit's worth, ISFET registers a signal of magnitude 1."
+  },
+  {
+   "t": 181.97,
+   "text": "Software calls: one T incorporated."
+  },
+  {
+   "t": 184.84,
+   "text": "Wash."
+  },
+  {
+   "t": 185.94,
+   "text": "Then you flow A."
+  },
+  {
+   "t": 187.21,
+   "text": "The polymerase adds an A."
+  },
+  {
+   "t": 189.21,
+   "text": "Same single-incorporation event."
+  },
+  {
+   "t": 191.38,
+   "text": "Signal of 1."
+  },
+  {
+   "t": 192.49,
+   "text": "Software calls: one A."
+  },
+  {
+   "t": 194.41,
+   "text": "Wash."
+  },
+  {
+   "t": 195.49,
+   "text": "Then you flow C."
+  },
+  {
+   "t": 196.82,
+   "text": "But the template here calls for G — wait, let me redo this."
+  },
+  {
+   "t": 201.04,
+   "text": "The template position now is... actually let me restart and be careful."
+  },
+  {
+   "t": 205.75,
+   "text": "The template is ATCCGGGTA."
+  },
+  {
+   "t": 208.65,
+   "text": "The polymerase is building the complement."
+  },
+  {
+   "t": 211.38,
+   "text": "So it needs T across from A, A across from T, G across from C, G across from C, C across from G, C across from G, C across from G, A across from T, T across from A."
+  },
+  {
+   "t": 225.04,
+   "text": "So in order: T, A, G, G, C, C, C, A, T."
+  },
+  {
+   "t": 232.1,
+   "text": "Flow T: incorporates one T."
+  },
+  {
+   "t": 234.86,
+   "text": "Signal 1."
+  },
+  {
+   "t": 235.86,
+   "text": "Flow A: incorporates one A."
+  },
+  {
+   "t": 238.34,
+   "text": "Signal 1."
+  },
+  {
+   "t": 239.3,
+   "text": "Flow C: nothing happens."
+  },
+  {
+   "t": 241.75,
+   "text": "Signal 0."
+  },
+  {
+   "t": 242.91,
+   "text": "Flow G: incorporates two G's back to back."
+  },
+  {
+   "t": 246.71,
+   "text": "Signal 2 — the well's pH drops twice as much as before, because two protons came out."
+  },
+  {
+   "t": 252.94,
+   "text": "Flow T: nothing."
+  },
+  {
+   "t": 254.93,
+   "text": "Signal 0."
+  },
+  {
+   "t": 256.14,
+   "text": "Flow A: nothing."
+  },
+  {
+   "t": 257.62,
+   "text": "Signal 0."
+  },
+  {
+   "t": 258.84,
+   "text": "Flow C: incorporates three C's back to back."
+  },
+  {
+   "t": 262.86,
+   "text": "Signal 3 — three protons released, pH dips three times as much."
+  },
+  {
+   "t": 268.88,
+   "text": "Flow G: nothing."
+  },
+  {
+   "t": 270.88,
+   "text": "Signal 0."
+  },
+  {
+   "t": 272.0,
+   "text": "Flow T: nothing."
+  },
+  {
+   "t": 273.95,
+   "text": "Signal 0."
+  },
+  {
+   "t": 275.07,
+   "text": "Flow A: incorporates one A."
+  },
+  {
+   "t": 277.57,
+   "text": "Signal 1."
+  },
+  {
+   "t": 278.54,
+   "text": "Flow C: nothing."
+  },
+  {
+   "t": 280.29,
+   "text": "Flow G: nothing."
+  },
+  {
+   "t": 282.39,
+   "text": "Flow T: incorporates one T."
+  },
+  {
+   "t": 285.25,
+   "text": "Signal 1."
+  },
+  {
+   "t": 286.23,
+   "text": "And so on."
+  },
+  {
+   "t": 287.19,
+   "text": "The software reads the sequence of signal magnitudes — 1, 1, 0, 2, 0, 0, 3, 0, 0, 1, 0, 0, 1 — and from that, plus knowledge of the flow order, reconstructs: T, A, GG, CCC, A, T."
+  },
+  {
+   "t": 304.4,
+   "text": "Which is the complement of the template, which is what we wanted."
+  },
+  {
+   "t": 307.51,
+   "text": "The crucial feature here, and you can already feel it, is that the signal magnitude has to encode the number of bases incorporated."
+  },
+  {
+   "t": 315.41,
+   "text": "If the well dips by an amount you interpret as 2 protons' worth, you call it GG."
+  },
+  {
+   "t": 321.26,
+   "text": "If it dips by 3, you call CCC."
+  },
+  {
+   "t": 323.99,
+   "text": "If it dips by 5, you call CCCCC."
+  },
+  {
+   "t": 327.22,
+   "text": "The platform is committing to the idea that you can quantitatively read out the number of incorporations from the strength of the pH change."
+  },
+  {
+   "t": 335.61,
+   "text": "For one, two, three bases in a row, this works fine."
+  },
+  {
+   "t": 339.42,
+   "text": "The differences in signal magnitude are crisp."
+  },
+  {
+   "t": 342.51,
+   "text": "But the longer the run, the harder it gets."
+  },
+  {
+   "t": 345.12,
+   "text": "We'll devote Segment 9 entirely to this problem — the homopolymer problem — because it's Ion Torrent's defining weakness and it follows directly from the flow architecture we just walked through."
+  },
+  {
+   "t": 356.88,
+   "text": "Compare to Illumina."
+  },
+  {
+   "t": 358.41,
+   "text": "In Illumina, every incorporation cycle adds exactly one base, by chemical design, because the reversible terminator blocks further extension."
+  },
+  {
+   "t": 368.5,
+   "text": "So the platform never has to count incorporations from signal magnitude — it always counts one at a time, and just reads what color the dye was."
+  },
+  {
+   "t": 376.95,
+   "text": "Illumina has effectively traded slower chemistry (because of the terminator and the deblock step) for cleaner per-base calling."
+  },
+  {
+   "t": 384.63,
+   "text": "Ion Torrent traded faster chemistry (natural unmodified bases, no terminator) for the burden of homopolymer length calling."
+  },
+  {
+   "t": 393.3,
+   "text": "That trade — speed vs. homopolymer accuracy — defines the platform."
+  },
+  {
+   "t": 398.33,
+   "text": "One more detail to leave this segment with: the wash step between flows has to be very thorough."
+  },
+  {
+   "t": 404.4,
+   "text": "If any leftover dATP is sitting around when you flow dCTP, you'll get a spurious incorporation that messes up the next call."
+  },
+  {
+   "t": 412.95,
+   "text": "So the chip's fluidics include extensive wash buffers between every nucleotide flow."
+  },
+  {
+   "t": 418.96,
+   "text": "And inevitably, despite the washes, you get a small fraction of templates that fall out of phase with the rest — either they didn't incorporate when they should have (incomplete extension) or they incorporated an extra base from carry-over reagent (carry forward)."
+  },
+  {
+   "t": 433.9,
+   "text": "Over hundreds of flows, this dephasing accumulates, and it's one of the reasons Ion Torrent read lengths are limited."
+  },
+  {
+   "t": 441.58,
+   "text": "After about 400 bases or so, the signal gets noisy enough that calling becomes unreliable."
+  },
+  {
+   "t": 448.16,
+   "text": "Now let's talk about how those millions of identical template copies get onto the bead in the first place."
+  }
+ ]
+}

@@ -1,0 +1,231 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — Why sequencing matters",
+ "duration": 340.19,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — Why sequencing matters"
+  },
+  {
+   "t": 2.64,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 4.33,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 5.75,
+   "text": "Today and for the next two hours, we're going to talk about Sanger sequencing — the chain-termination method that Frederick Sanger published in 1977 — and I want to tell you up front that this is, in my opinion, one of the most elegant tricks in the entire history of biochemistry."
+  },
+  {
+   "t": 20.85,
+   "text": "It is also the technique that, more than any single other piece of laboratory craft, built modern biology."
+  },
+  {
+   "t": 27.7,
+   "text": "The Human Genome Project ran on it."
+  },
+  {
+   "t": 29.85,
+   "text": "Every gene you've ever read about in a textbook was, at some point in its history, sequenced by this method."
+  },
+  {
+   "t": 35.83,
+   "text": "And here is the part that surprises students every year: it is still in use."
+  },
+  {
+   "t": 40.56,
+   "text": "Today."
+  },
+  {
+   "t": 41.29,
+   "text": "In real labs."
+  },
+  {
+   "t": 42.56,
+   "text": "Not as a museum piece, but as a working tool."
+  },
+  {
+   "t": 45.49,
+   "text": "Even in a world of next-generation sequencing, of nanopores, of Illumina runs that produce a trillion bases overnight — Sanger sequencing keeps its corner of the bench, because for certain jobs it is still the right answer."
+  },
+  {
+   "t": 59.61,
+   "text": "So before you can understand any of the modern techniques you've probably heard of, you have to understand this one."
+  },
+  {
+   "t": 65.79,
+   "text": "It is the foundation on which everything else was built."
+  },
+  {
+   "t": 69.1,
+   "text": "Let me start by telling you what the problem is, because the problem is the thing that motivates the cleverness of the solution."
+  },
+  {
+   "t": 75.86,
+   "text": "DNA is a long polymer made out of four kinds of subunit — four nucleotides, the famous A, T, G, and C."
+  },
+  {
+   "t": 84.81,
+   "text": "The order of those four letters along the strand is, essentially, the entire genetic information content."
+  },
+  {
+   "t": 91.89,
+   "text": "Where in your DNA there's an A versus a T versus a G versus a C is the difference between making insulin and making hemoglobin, between brown eyes and blue eyes, between healthy and sick."
+  },
+  {
+   "t": 105.42,
+   "text": "To know what a piece of DNA does, you have to know its sequence."
+  },
+  {
+   "t": 109.33,
+   "text": "You have to be able to read the letters in order."
+  },
+  {
+   "t": 111.78,
+   "text": "Now, that sounds straightforward when I say it like that, but stop and think for a second about what you're actually being asked to do."
+  },
+  {
+   "t": 118.09,
+   "text": "A typical gene is a thousand letters long."
+  },
+  {
+   "t": 120.96,
+   "text": "A bacterial chromosome is a few million letters."
+  },
+  {
+   "t": 124.38,
+   "text": "The human genome is three billion letters."
+  },
+  {
+   "t": 127.66,
+   "text": "And these letters are not printed on a page; they are hidden inside a molecule about two nanometers wide, packaged as a double helix, wound up inside a cell, and the four letters themselves differ from each other only by a single nitrogen here, a single oxygen there."
+  },
+  {
+   "t": 144.36,
+   "text": "They are chemically almost identical."
+  },
+  {
+   "t": 146.64,
+   "text": "Telling them apart is hard."
+  },
+  {
+   "t": 148.29,
+   "text": "Telling them apart in order, one after another, along a strand, with no errors — that's the problem."
+  },
+  {
+   "t": 155.05,
+   "text": "The analogy I want you to hold in your head for this whole lecture is this."
+  },
+  {
+   "t": 159.84,
+   "text": "DNA sequencing is reading the genetic alphabet, one base at a time."
+  },
+  {
+   "t": 164.45,
+   "text": "You have a book."
+  },
+  {
+   "t": 165.4,
+   "text": "The book is written in a four-letter alphabet."
+  },
+  {
+   "t": 167.93,
+   "text": "You can't see the letters with your eyes, you can't see them with a regular microscope, and the print is so small that the letters themselves are smaller than the wavelength of visible light."
+  },
+  {
+   "t": 178.07,
+   "text": "You can't just look."
+  },
+  {
+   "t": 179.29,
+   "text": "You have to invent a chemistry that translates the position of each letter on the strand into a physical signal you can detect."
+  },
+  {
+   "t": 186.45,
+   "text": "That's the central design problem."
+  },
+  {
+   "t": 188.38,
+   "text": "And there have been many attempts at solving it over the years, but the one that won — the one that worked, the one that was good enough to keep using for forty years — is Sanger's chain-termination method."
+  },
+  {
+   "t": 199.75,
+   "text": "If you walk out of here in two hours and you can do three things — one, explain in plain English the chain-termination trick and why it produces a ladder of every possible length of DNA fragment; two, look at a Sanger chromatogram — those four-colored peaks you've probably seen in a lab report — and tell me what each peak means and what its height tells you about confidence; three, articulate why we still use Sanger sequencing in 2026, in an era of cheap massively-parallel sequencing, and what"
+  },
+  {
+   "t": 229.96,
+   "text": "the specific jobs are where it remains the right tool — then we've succeeded."
+  },
+  {
+   "t": 234.71,
+   "text": "Everything else will hang off those three."
+  },
+  {
+   "t": 237.1,
+   "text": "One more piece of motivation before we dive in."
+  },
+  {
+   "t": 239.91,
+   "text": "Frederick Sanger, the man who invented this method, is one of only a handful of scientists in history to have won two Nobel Prizes."
+  },
+  {
+   "t": 248.22,
+   "text": "His first, in 1958, was for figuring out the amino acid sequence of insulin — that is, for inventing protein sequencing."
+  },
+  {
+   "t": 256.39,
+   "text": "His second, in 1980, was for inventing DNA sequencing — the very method we are about to spend two hours dissecting."
+  },
+  {
+   "t": 264.63,
+   "text": "Two Nobels."
+  },
+  {
+   "t": 265.86,
+   "text": "Both of them for the same fundamental contribution: figuring out how to read the sequence of a biological polymer, letter by letter."
+  },
+  {
+   "t": 274.02,
+   "text": "He worked, by all accounts, in a small lab, quietly, almost obsessively, on this single problem — how do you read a sequence — for most of his career."
+  },
+  {
+   "t": 283.06,
+   "text": "He didn't run a giant empire of postdocs."
+  },
+  {
+   "t": 285.91,
+   "text": "He did the bench work himself."
+  },
+  {
+   "t": 287.81,
+   "text": "And he changed biology twice."
+  },
+  {
+   "t": 290.09,
+   "text": "We're going to spend a few minutes on him in the next segment, because the human story matters here, and because the way he thought about the problem is itself a lesson in scientific taste."
+  },
+  {
+   "t": 299.94,
+   "text": "But the headline I want you to walk away from Segment 1 with is this."
+  },
+  {
+   "t": 303.94,
+   "text": "Sanger sequencing is the technique that made it possible to read the genetic instructions of life — directly, accurately, base by base."
+  },
+  {
+   "t": 313.12,
+   "text": "Everything we know about gene structure, protein evolution, disease genetics, microbial diversity, drug targets, ancient DNA, forensic identification — all of it traces back to this one chemical trick, invented in a Cambridge basement in the mid-1970s."
+  },
+  {
+   "t": 330.09,
+   "text": "And the trick itself, when you finally see it, is so elegant that you'll wonder why nobody thought of it sooner."
+  },
+  {
+   "t": 336.99,
+   "text": "That elegance is the story I want to tell you today."
+  }
+ ]
+}

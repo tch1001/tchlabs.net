@@ -1,0 +1,295 @@
+{
+ "n": 19,
+ "title": "APPENDIX",
+ "duration": 443.71,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX"
+  },
+  {
+   "t": 1.05,
+   "text": "Key terms."
+  },
+  {
+   "t": 2.15,
+   "text": "DNB — DNA nanoball."
+  },
+  {
+   "t": 4.78,
+   "text": "A single DNA molecule, produced by rolling circle amplification of a circular template, containing roughly three hundred head-to-tail copies of the original fragment, folded into a compact sphere about two hundred nanometers across."
+  },
+  {
+   "t": 19.7,
+   "text": "The fundamental sequencing unit on a DNBSEQ instrument."
+  },
+  {
+   "t": 23.15,
+   "text": "RCA — Rolling circle amplification."
+  },
+  {
+   "t": 26.59,
+   "text": "The Phi 29 polymerase-driven process that produces the long single-stranded concatemer that becomes a nanoball."
+  },
+  {
+   "t": 34.09,
+   "text": "Linear, not exponential, amplification."
+  },
+  {
+   "t": 37.65,
+   "text": "Phi 29 — A bacteriophage-derived DNA polymerase with strong strand displacement activity and high processivity."
+  },
+  {
+   "t": 45.74,
+   "text": "The workhorse enzyme of DNB production."
+  },
+  {
+   "t": 48.76,
+   "text": "cPAL — Combinatorial probe-anchor ligation."
+  },
+  {
+   "t": 52.14,
+   "text": "The original Complete Genomics sequencing chemistry, used from 2009 to roughly 2016."
+  },
+  {
+   "t": 59.77,
+   "text": "Ligation-based, produced gappy non-contiguous reads."
+  },
+  {
+   "t": 64.31,
+   "text": "Now obsolete."
+  },
+  {
+   "t": 65.5,
+   "text": "cPAS — Combinatorial probe-anchor synthesis."
+  },
+  {
+   "t": 69.41,
+   "text": "The modern MGI sequencing chemistry."
+  },
+  {
+   "t": 72.47,
+   "text": "Polymerase-based, uses fluorescent reversible-terminator nucleotides, produces contiguous reads of one hundred fifty bases or more."
+  },
+  {
+   "t": 81.75,
+   "text": "Functionally analogous to Illumina SBS but on a DNB substrate."
+  },
+  {
+   "t": 86.86,
+   "text": "Reversible terminator — A modified nucleotide carrying both a fluorescent dye and a chemical blocker on the 3-prime hydroxyl."
+  },
+  {
+   "t": 95.94,
+   "text": "After incorporation, the polymerase cannot extend until the blocker is chemically cleaved."
+  },
+  {
+   "t": 102.14,
+   "text": "Used by both Illumina SBS and MGI cPAS."
+  },
+  {
+   "t": 107.0,
+   "text": "Patterned flow cell — A flow cell with a regular array of nanoscale spots, each one sized to bind exactly one sequencing unit (one cluster for Illumina, one nanoball for MGI)."
+  },
+  {
+   "t": 120.01,
+   "text": "Provides high density without spatial overlap."
+  },
+  {
+   "t": 123.64,
+   "text": "Aminosilane — The positively charged surface chemistry used on DNBSEQ flow cell spots to electrostatically attract negatively charged nanoballs."
+  },
+  {
+   "t": 134.09,
+   "text": "Index hopping — A failure mode of bridge-amplification platforms where adapter sequences from one sample swap to fragments from another during flow-cell amplification, contaminating demultiplexed output."
+  },
+  {
+   "t": 147.62,
+   "text": "Does not occur on DNBSEQ because no amplification happens on the flow cell."
+  },
+  {
+   "t": 152.45,
+   "text": "Multiplexing / Demultiplexing — Pooling many samples on one flow cell using sample-specific index sequences (multiplexing), then sorting reads back into per-sample bins after sequencing using those indexes (demultiplexing)."
+  },
+  {
+   "t": 168.78,
+   "text": "Instrument cheat sheet."
+  },
+  {
+   "t": 170.36,
+   "text": "DNBSEQ-G50 — Small benchtop, low throughput, targeted panels and microbial work."
+  },
+  {
+   "t": 177.79,
+   "text": "Analog of Illumina MiSeq."
+  },
+  {
+   "t": 179.95,
+   "text": "DNBSEQ-G99 — Fast small instrument for clinical panels."
+  },
+  {
+   "t": 185.01,
+   "text": "DNBSEQ-G400 — Mid-throughput workhorse, the most common MGI instrument in published research."
+  },
+  {
+   "t": 192.55,
+   "text": "Analog of Illumina NextSeq."
+  },
+  {
+   "t": 195.12,
+   "text": "DNBSEQ-T7 — High-throughput, four parallel flow cells, multiple terabases per day."
+  },
+  {
+   "t": 202.04,
+   "text": "DNBSEQ-T10×4 — Higher-density T-series, ten parallel flow cells."
+  },
+  {
+   "t": 208.61,
+   "text": "DNBSEQ-T20×2 — Current flagship, two T20 flow cells, up to fifty thousand human genomes per year at roughly one hundred dollars each."
+  },
+  {
+   "t": 219.25,
+   "text": "Direct competitor to Illumina NovaSeq X."
+  },
+  {
+   "t": 222.72,
+   "text": "DNBSEQ-T1+ and T7+ — 2025 refreshes targeting faster turnaround and increased throughput."
+  },
+  {
+   "t": 231.07,
+   "text": "Timeline."
+  },
+  {
+   "t": 231.97,
+   "text": "2005 — Complete Genomics founded in Mountain View, California, by Clifford Reid, Radoje Drmanac, and John Curson."
+  },
+  {
+   "t": 240.81,
+   "text": "2009 — Complete Genomics publishes the first DNB-based human genome in Science."
+  },
+  {
+   "t": 247.59,
+   "text": "2010 — Complete Genomics demonstrates per-genome cost around $4,400 using cPAL chemistry."
+  },
+  {
+   "t": 256.19,
+   "text": "2013 — BGI Group acquires Complete Genomics for $118 million; CFIUS approval granted."
+  },
+  {
+   "t": 264.86,
+   "text": "2015-2017 — Transition from cPAL to cPAS chemistry; BGISEQ instrument family introduced."
+  },
+  {
+   "t": 273.93,
+   "text": "2016 — MGI Tech spun out as the equipment-arm subsidiary of BGI."
+  },
+  {
+   "t": 280.3,
+   "text": "2019 — Illumina v."
+  },
+  {
+   "t": 283.35,
+   "text": "MGI patent litigation begins in multiple jurisdictions."
+  },
+  {
+   "t": 287.68,
+   "text": "2019 — DNBSEQ-T7 introduced."
+  },
+  {
+   "t": 291.88,
+   "text": "2020 — MGI raises $1 billion Series B. 2022 — MGI Tech goes public on Shanghai STAR Market."
+  },
+  {
+   "t": 301.21,
+   "text": "2022 — Major US patent disputes settled; MGI free to sell in the US."
+  },
+  {
+   "t": 307.83,
+   "text": "2023 — DNBSEQ-T20×2 announced with $100-per-genome target."
+  },
+  {
+   "t": 313.95,
+   "text": "2024 — US BIOSECURE Act introduced (does not pass in original form); MGI stock loses over a third of market capitalization."
+  },
+  {
+   "t": 324.21,
+   "text": "2025 — DNBSEQ-T1+ and T7+ refresh instruments announced."
+  },
+  {
+   "t": 330.32,
+   "text": "Suggested further reading."
+  },
+  {
+   "t": 332.28,
+   "text": "Drmanac et al."
+  },
+  {
+   "t": 333.67,
+   "text": "(2010)."
+  },
+  {
+   "t": 334.98,
+   "text": "\"Human genome sequencing using unchained base reads on self-assembling DNA nanoarrays."
+  },
+  {
+   "t": 341.15,
+   "text": "\" Science."
+  },
+  {
+   "t": 342.16,
+   "text": "The foundational paper introducing DNB-based sequencing on the Complete Genomics platform."
+  },
+  {
+   "t": 348.3,
+   "text": "Wang et al."
+  },
+  {
+   "t": 349.46,
+   "text": "(2019)."
+  },
+  {
+   "t": 351.2,
+   "text": "\"Efficient and unique cobarcoding of second-generation sequencing reads from long DNA molecules enabling cost-effective and accurate sequencing, haplotyping, and de novo assembly."
+  },
+  {
+   "t": 363.6,
+   "text": "\" Genome Research."
+  },
+  {
+   "t": 365.0,
+   "text": "The stLFR paper."
+  },
+  {
+   "t": 366.98,
+   "text": "Reviews comparing DNBSEQ and Illumina platforms have appeared regularly in Briefings in Bioinformatics, Nature Biotechnology, and BMC Genomics from the late 2010s onward."
+  },
+  {
+   "t": 378.27,
+   "text": "One-sentence summaries."
+  },
+  {
+   "t": 379.81,
+   "text": "The chemistry."
+  },
+  {
+   "t": 380.91,
+   "text": "DNB sequencing reads short DNA fragments by rolling-circle-amplifying each fragment into a nanoball containing three hundred head-to-tail copies, loading the nanoballs one-per-spot on a patterned silicon flow cell, and reading them by sequencing-by-synthesis with reversible-terminator nucleotides (cPAS) — functionally similar to Illumina SBS but on a structurally different substrate."
+  },
+  {
+   "t": 406.15,
+   "text": "The company."
+  },
+  {
+   "t": 407.1,
+   "text": "MGI Tech is a 2016 spin-out of the Chinese genomics giant BGI, built on technology acquired from California-based Complete Genomics in 2013, and is now the dominant short-read sequencing platform in China and a growing competitor to Illumina globally."
+  },
+  {
+   "t": 425.36,
+   "text": "The competition."
+  },
+  {
+   "t": 426.6,
+   "text": "At the data layer, MGI and Illumina are nearly interchangeable; at the cost layer MGI is often meaningfully cheaper, especially at high throughput; the choice between them is increasingly about geography, regulation, and supply chain rather than technology."
+  }
+ ]
+}

@@ -1,0 +1,275 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Limitations — dropout, batch effects, mRNA-only sees a slice of biology",
+ "duration": 435.17,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Limitations — dropout, batch effects, mRNA-only sees a slice of biology"
+  },
+  {
+   "t": 7.7,
+   "text": "I have spent the last fifteen segments telling you why single-cell sequencing is transformative."
+  },
+  {
+   "t": 14.03,
+   "text": "Now I want to spend one segment telling you, honestly, what it cannot do — because every paper you read should be read with these limits in mind."
+  },
+  {
+   "t": 22.86,
+   "text": "The first and most important limitation is dropout."
+  },
+  {
+   "t": 26.41,
+   "text": "We touched on it earlier."
+  },
+  {
+   "t": 27.76,
+   "text": "Current single-cell methods capture only a small fraction of the mRNA molecules present in each cell — typically five to twenty percent for droplet methods, somewhat higher for plate-based."
+  },
+  {
+   "t": 39.54,
+   "text": "The rest of the mRNA is missed."
+  },
+  {
+   "t": 41.81,
+   "text": "For abundant transcripts — say, a gene expressed at five hundred copies per cell — capturing ten percent gives you fifty copies, plenty to measure reliably."
+  },
+  {
+   "t": 52.79,
+   "text": "For rare transcripts — say, a transcription factor expressed at five copies per cell — capturing ten percent gives you, on average, half a copy."
+  },
+  {
+   "t": 63.11,
+   "text": "Which rounds down to zero most of the time."
+  },
+  {
+   "t": 65.62,
+   "text": "That's dropout: genes that are really expressed in a cell but show up as zero in the data, just because they didn't happen to get captured."
+  },
+  {
+   "t": 73.84,
+   "text": "The consequence is that single-cell expression matrices are full of false zeros."
+  },
+  {
+   "t": 79.01,
+   "text": "Some zeros are real biology — the gene really isn't expressed."
+  },
+  {
+   "t": 83.81,
+   "text": "Some zeros are technical — the gene is expressed but not captured."
+  },
+  {
+   "t": 88.41,
+   "text": "Distinguishing the two is hard."
+  },
+  {
+   "t": 90.58,
+   "text": "Methods like MAGIC, SAVER, and scVI try to impute the missing values by borrowing information from similar cells."
+  },
+  {
+   "t": 98.88,
+   "text": "Whether the imputed values are real or smoothing artifacts is a matter of debate."
+  },
+  {
+   "t": 103.8,
+   "text": "The honest answer is: low-abundance gene expression is undermeasured in single-cell data, and you should be cautious about claims that depend on small numbers of UMIs in individual cells."
+  },
+  {
+   "t": 115.49,
+   "text": "The second limitation is batch effects, which we mentioned in the QC segment but bears repeating."
+  },
+  {
+   "t": 121.65,
+   "text": "Cross-sample, cross-lab, cross-platform integration is a major analysis challenge."
+  },
+  {
+   "t": 127.38,
+   "text": "Even when you do everything carefully, two datasets generated in different conditions will not be perfectly comparable."
+  },
+  {
+   "t": 134.62,
+   "text": "Batch correction methods help, but they can also over-correct — erasing real biological differences along with the technical ones."
+  },
+  {
+   "t": 142.47,
+   "text": "Any single-cell paper that compares conditions across batches should be scrutinized for how the batch correction was done and whether it might have suppressed real signal."
+  },
+  {
+   "t": 152.01,
+   "text": "The third limitation is that single-cell RNA-seq sees mRNA, and mRNA is only one layer of biology."
+  },
+  {
+   "t": 160.28,
+   "text": "The cell's actual functional state depends on protein levels, post-translational modifications, metabolite concentrations, ion channel states, organelle distribution."
+  },
+  {
+   "t": 171.06,
+   "text": "mRNA is a useful but imperfect proxy."
+  },
+  {
+   "t": 174.41,
+   "text": "The correlation between mRNA level and protein level for any given gene is moderate — typically around 0.4 to 0.6 — meaning a lot of variation in protein is not predicted by variation in mRNA."
+  },
+  {
+   "t": 188.97,
+   "text": "So when a single-cell paper says \"this cell type expresses high X,\" what it actually means is \"this cell type has high X mRNA."
+  },
+  {
+   "t": 197.99,
+   "text": "\" Whether the protein is also high, whether the protein is active, whether the protein is doing what you think it's doing — all that is downstream and not directly measured."
+  },
+  {
+   "t": 207.88,
+   "text": "Multi-omic methods help — CITE-seq adds proteins, single-cell proteomics is emerging, methylation can be measured per cell."
+  },
+  {
+   "t": 217.24,
+   "text": "But each added layer comes with its own technical compromises."
+  },
+  {
+   "t": 221.46,
+   "text": "Comprehensive single-cell multi-omics on the same individual cells, across all relevant molecular layers, with full sensitivity, is still a distant goal."
+  },
+  {
+   "t": 232.07,
+   "text": "The fourth limitation is dissociation bias and snapshot bias."
+  },
+  {
+   "t": 236.8,
+   "text": "The act of dissociating tissue, as I mentioned in Segment 10, alters the cells you measure."
+  },
+  {
+   "t": 243.3,
+   "text": "Some cell types are fragile and don't survive dissociation — neurons in some brain regions, large adipocytes, polyploid hepatocytes — so they're underrepresented or absent in scRNA-seq data."
+  },
+  {
+   "t": 256.76,
+   "text": "The cells that do make it through are biased toward the ones that survived."
+  },
+  {
+   "t": 260.79,
+   "text": "Single-nucleus sequencing partially addresses this but introduces its own biases (lower per-cell mRNA, mostly nuclear transcripts)."
+  },
+  {
+   "t": 269.97,
+   "text": "The data you get is never a perfectly representative sample of the tissue you started with."
+  },
+  {
+   "t": 275.56,
+   "text": "And the snapshot problem: a single-cell experiment captures one moment in time."
+  },
+  {
+   "t": 280.56,
+   "text": "Cell states change on timescales of minutes to days; gene expression fluctuates; cells respond to stimuli."
+  },
+  {
+   "t": 288.01,
+   "text": "One snapshot is one moment."
+  },
+  {
+   "t": 290.21,
+   "text": "To study dynamics, you need either time-course sampling (expensive) or computational inference like RNA velocity (noisy)."
+  },
+  {
+   "t": 298.82,
+   "text": "Single-cell sees the static distribution but only weakly the temporal flow."
+  },
+  {
+   "t": 304.19,
+   "text": "The fifth limitation, more philosophical, is that cell type is a fuzzy concept."
+  },
+  {
+   "t": 310.19,
+   "text": "Single-cell sequencing produces clusters, which we tend to call cell types."
+  },
+  {
+   "t": 315.19,
+   "text": "But cell type, cell state, and cell substate are not well-distinguished concepts in biology."
+  },
+  {
+   "t": 321.32,
+   "text": "Is a CD8 T cell a cell type?"
+  },
+  {
+   "t": 324.36,
+   "text": "Or are exhausted CD8 T cells and memory CD8 T cells different types, or different states of the same type?"
+  },
+  {
+   "t": 332.82,
+   "text": "Different clustering resolutions give different answers."
+  },
+  {
+   "t": 336.24,
+   "text": "There's no biological gold standard."
+  },
+  {
+   "t": 338.76,
+   "text": "The field has converged on rough conventions — tied to lineage, function, transcriptional pattern — but they're conventions, not facts."
+  },
+  {
+   "t": 348.17,
+   "text": "When a paper says \"we identified twelve cell types,\" that's a useful summary, but the twelve is somewhat arbitrary."
+  },
+  {
+   "t": 356.21,
+   "text": "Be careful when comparing numbers across papers and tissues."
+  },
+  {
+   "t": 360.02,
+   "text": "The sixth limitation, finally, is cost and scale."
+  },
+  {
+   "t": 364.01,
+   "text": "Even at current prices, sequencing one tissue sample at single-cell resolution costs several thousand dollars."
+  },
+  {
+   "t": 371.51,
+   "text": "Sequencing dozens of samples across a clinical study costs hundreds of thousands."
+  },
+  {
+   "t": 377.17,
+   "text": "Sequencing thousands of patients — the kind of scale you'd want for population genetics or large clinical trials — costs millions."
+  },
+  {
+   "t": 385.36,
+   "text": "This is much cheaper than it used to be, but it's still a constraint."
+  },
+  {
+   "t": 389.19,
+   "text": "The Human Cell Atlas is feasible only because of consortium funding and global collaboration."
+  },
+  {
+   "t": 395.57,
+   "text": "Routine clinical use of single-cell sequencing — for, say, every cancer patient at diagnosis — is not yet economical."
+  },
+  {
+   "t": 404.2,
+   "text": "Bulk sequencing remains far cheaper and is still the standard for most clinical applications."
+  },
+  {
+   "t": 409.95,
+   "text": "Single-cell is a research tool, mostly."
+  },
+  {
+   "t": 413.19,
+   "text": "It's slowly entering clinical use for specific high-value applications, but it has not yet become routine."
+  },
+  {
+   "t": 419.84,
+   "text": "These limitations are not reasons to dismiss single-cell."
+  },
+  {
+   "t": 424.1,
+   "text": "They're reasons to read single-cell papers critically."
+  },
+  {
+   "t": 427.57,
+   "text": "Every method has limits."
+  },
+  {
+   "t": 429.45,
+   "text": "Knowing the limits is what separates real understanding from cargo-cult method-citing."
+  }
+ ]
+}

@@ -1,0 +1,223 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Emulsion PCR and beads: clonal amplification before sequencing",
+ "duration": 405.09,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Emulsion PCR and beads: clonal amplification before sequencing"
+  },
+  {
+   "t": 6.45,
+   "text": "Here's the problem you need to solve before you can do any of this in parallel."
+  },
+  {
+   "t": 10.55,
+   "text": "The pyrosequencing reaction produces one photon per incorporation event."
+  },
+  {
+   "t": 16.12,
+   "text": "One photon is far too few for any camera to see."
+  },
+  {
+   "t": 20.54,
+   "text": "To detect anything reliably, you need a lot of incorporation events happening simultaneously at the same spot — thousands at least, ideally tens or hundreds of thousands."
+  },
+  {
+   "t": 31.46,
+   "text": "Which means: you need not one molecule of template at each well, but thousands of identical molecules at each well."
+  },
+  {
+   "t": 38.91,
+   "text": "They all need to be copies of the same starting fragment, so they all incorporate the same base at the same time during each flow, producing a synchronized flash."
+  },
+  {
+   "t": 49.01,
+   "text": "And — crucially — each well needs to contain copies of one particular fragment, not a mixture of fragments, because otherwise the flashes would mix signals from different sequences and you'd get gibberish."
+  },
+  {
+   "t": 61.67,
+   "text": "So the task is: take a starting library of millions of different DNA fragments, and produce millions of bead-clusters, each bead-cluster being thousands of identical clones of one specific starting fragment, ready to be loaded into a separate well."
+  },
+  {
+   "t": 77.76,
+   "text": "We want each well to be clonal — meaning the DNA in that well is all the same sequence."
+  },
+  {
+   "t": 84.34,
+   "text": "We want each well to be dense — meaning thousands of copies, so the signal is strong."
+  },
+  {
+   "t": 90.03,
+   "text": "And we want this to happen in massive parallel, automatically, with no human picking individual fragments."
+  },
+  {
+   "t": 97.46,
+   "text": "How?"
+  },
+  {
+   "t": 98.16,
+   "text": "454's answer was a beautiful piece of biochemistry called emulsion PCR."
+  },
+  {
+   "t": 104.33,
+   "text": "Picture this."
+  },
+  {
+   "t": 105.39,
+   "text": "You have your library — millions of different DNA fragments, all in solution, each one with little adapter sequences glued onto the ends so that PCR primers can latch onto them."
+  },
+  {
+   "t": 117.21,
+   "text": "You mix that library with a slurry of tiny beads, micron-scale beads, each bead coated with PCR primers — the same primer sequence on every bead, complementary to the adapter on the DNA fragments."
+  },
+  {
+   "t": 130.79,
+   "text": "You also mix in the PCR reagents — polymerase, dNTPs, buffer — everything you'd put in a normal PCR tube."
+  },
+  {
+   "t": 138.78,
+   "text": "Now, here's the magic."
+  },
+  {
+   "t": 140.22,
+   "text": "You take that whole mixture and vigorously shake it together with oil."
+  },
+  {
+   "t": 144.41,
+   "text": "Not just any oil — a specific water-in-oil emulsion formulation."
+  },
+  {
+   "t": 149.46,
+   "text": "What you get is millions and millions of tiny water droplets, each one a few microns across, suspended in oil."
+  },
+  {
+   "t": 156.71,
+   "text": "Each droplet is, in effect, a tiny PCR tube."
+  },
+  {
+   "t": 161.18,
+   "text": "And here's the key: if you set the concentration of beads and the concentration of DNA fragments correctly, then on average, each droplet contains zero or one DNA fragment and zero or one bead."
+  },
+  {
+   "t": 174.38,
+   "text": "By Poisson statistics, a meaningful fraction of droplets — maybe 20% or so — will contain exactly one fragment and exactly one bead together."
+  },
+  {
+   "t": 184.97,
+   "text": "The rest are wasted, but the ones with a single fragment-bead pair are where the magic happens."
+  },
+  {
+   "t": 190.45,
+   "text": "Now you put this whole oil-water emulsion into a thermocycler and run PCR."
+  },
+  {
+   "t": 195.95,
+   "text": "Inside each droplet, the lonely DNA fragment gets amplified, just like in a normal PCR — except that the primers it amplifies onto are attached to the bead."
+  },
+  {
+   "t": 206.57,
+   "text": "So as the PCR runs, the copies of the fragment get glued onto the bead, one copy at a time, with each cycle."
+  },
+  {
+   "t": 214.8,
+   "text": "After thirty or forty PCR cycles, each successful droplet contains a bead coated with thousands or tens of thousands of identical copies of the one DNA fragment that happened to be in that droplet to start with."
+  },
+  {
+   "t": 229.46,
+   "text": "Different droplets contain different starting fragments, so different beads end up with different sequences."
+  },
+  {
+   "t": 236.55,
+   "text": "But within each droplet, the bead is clonal."
+  },
+  {
+   "t": 240.11,
+   "text": "Every copy on that bead is the same."
+  },
+  {
+   "t": 242.74,
+   "text": "The oil walls have prevented the contents of different droplets from mixing, so there's no cross-contamination."
+  },
+  {
+   "t": 249.19,
+   "text": "Once PCR is done, you crack the emulsion — break the oil-water interface, recover all the beads — wash everything, and you're left with millions of beads, each one carrying its own clonal population of DNA copies."
+  },
+  {
+   "t": 263.32,
+   "text": "The cost is that you've done all this without ever having to identify, pick, or culture individual fragments."
+  },
+  {
+   "t": 270.58,
+   "text": "You started with a library in a tube and ended with a slurry of millions of clonal beads, ready to load into the picotiter plate."
+  },
+  {
+   "t": 278.88,
+   "text": "I want you to feel the elegance of this for a moment."
+  },
+  {
+   "t": 281.77,
+   "text": "The traditional way to make a clonal population of any DNA fragment would be to clone it into a plasmid, transform that plasmid into a bacterium, grow up a colony, extract the DNA from that colony."
+  },
+  {
+   "t": 294.73,
+   "text": "That process — pick the colony, grow it overnight, extract the DNA — takes a day or two per fragment, and a single human can maybe do a few hundred a day if they're really fast."
+  },
+  {
+   "t": 306.69,
+   "text": "Emulsion PCR replaces all of that with a single tube, a single shake step, a single thermocycle, no human intervention, and produces millions of clonal populations in parallel."
+  },
+  {
+   "t": 318.99,
+   "text": "It is a complete end-run around the traditional cloning bottleneck."
+  },
+  {
+   "t": 323.55,
+   "text": "It is the molecular equivalent of replacing a craftsman with a factory line."
+  },
+  {
+   "t": 328.05,
+   "text": "No individual fragments are ever handled."
+  },
+  {
+   "t": 330.82,
+   "text": "No colonies are picked."
+  },
+  {
+   "t": 332.24,
+   "text": "The clonality emerges from the physics of the water-oil interface and the dilution statistics."
+  },
+  {
+   "t": 338.2,
+   "text": "That's the whole point."
+  },
+  {
+   "t": 339.4,
+   "text": "This same concept — clonal amplification of single fragments to enable parallel sequencing — is the foundation of essentially every NGS platform."
+  },
+  {
+   "t": 349.52,
+   "text": "Illumina uses a different mechanism, called bridge amplification, where the fragments are tethered to a flat surface and amplify into little clusters in place — no beads, no emulsion, but the same underlying logic: get from a single starting molecule to thousands of clonal copies, in parallel, with each cluster in a distinct physical location."
+  },
+  {
+   "t": 372.22,
+   "text": "Ion Torrent, Rothberg's next company after 454, uses emulsion PCR on beads almost identical to 454's version."
+  },
+  {
+   "t": 382.6,
+   "text": "SOLiD used emulsion PCR on beads too."
+  },
+  {
+   "t": 385.85,
+   "text": "The technique is everywhere because the problem it solves — turning singletons into clonal clusters in parallel — is universal in NGS."
+  },
+  {
+   "t": 395.49,
+   "text": "Now you have your library of beads, each carrying thousands of clonal copies of a different starting fragment."
+  },
+  {
+   "t": 402.29,
+   "text": "You're ready to load them into the picotiter plate."
+  }
+ ]
+}

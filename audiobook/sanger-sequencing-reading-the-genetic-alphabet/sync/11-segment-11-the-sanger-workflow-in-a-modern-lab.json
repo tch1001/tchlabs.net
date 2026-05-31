@@ -1,0 +1,203 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — The Sanger workflow in a modern lab",
+ "duration": 427.32,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — The Sanger workflow in a modern lab"
+  },
+  {
+   "t": 3.84,
+   "text": "Let me walk you through, step by step, what it actually looks like when a researcher in a modern lab uses Sanger sequencing."
+  },
+  {
+   "t": 11.22,
+   "text": "This will give you a concrete picture of the technique as a working tool, and it'll set up the chromatogram-reading we'll do in the next segment."
+  },
+  {
+   "t": 19.23,
+   "text": "Step one: template preparation."
+  },
+  {
+   "t": 21.65,
+   "text": "You need clean DNA, and a lot of it relative to what NGS needs."
+  },
+  {
+   "t": 26.57,
+   "text": "For a Sanger reaction, you typically want somewhere between 50 nanograms and 500 nanograms of high-quality double-stranded DNA per reaction — that's a lot more than NGS's nanogram-or-less requirements, but it's trivial to obtain for most templates."
+  },
+  {
+   "t": 42.85,
+   "text": "The two most common template types are plasmids (you mini-prep a few micrograms from an overnight culture) and PCR products (you amplify your region of interest, then clean up the PCR with a column or enzymatic treatment to remove leftover primers and dNTPs)."
+  },
+  {
+   "t": 59.8,
+   "text": "The template needs to be reasonably pure — leftover salts, ethanol, primers, or proteins can all interfere with the sequencing reaction or the capillary run."
+  },
+  {
+   "t": 69.61,
+   "text": "Step two: primer design."
+  },
+  {
+   "t": 71.6,
+   "text": "Sanger sequencing requires a primer to give polymerase a place to start."
+  },
+  {
+   "t": 76.76,
+   "text": "The primer is a short single-stranded DNA, usually 18 to 25 bases long, complementary to a region on your template just upstream of the sequence you want to read."
+  },
+  {
+   "t": 87.6,
+   "text": "If you're sequencing a plasmid, you typically use a primer that anneals to a known vector sequence — every standard cloning vector has its sequencing primer sites built in, and the most common ones (M13 forward, M13 reverse, T7, T3, SP6) are sold by every primer vendor as pre-made standard products."
+  },
+  {
+   "t": 109.36,
+   "text": "If you're sequencing a PCR product, you can often just reuse one of the PCR primers as your sequencing primer."
+  },
+  {
+   "t": 116.15,
+   "text": "If you need a custom primer for an unusual region, you design one to be 18-25 bases, with a melting temperature around 55-60°C, balanced GC content, no hairpins, no primer-dimer self-complementarity."
+  },
+  {
+   "t": 132.19,
+   "text": "There are free online primer design tools that do this for you."
+  },
+  {
+   "t": 135.5,
+   "text": "The primer is critically important because the first 15-40 bases of any Sanger read are generally garbage — the chromatogram is noisy right at the start, before the polymerase has settled into a steady cadence and before the shortest fragments have separated cleanly."
+  },
+  {
+   "t": 152.09,
+   "text": "So you design your primer to be 40 to 50 bases upstream of the region you actually care about, so that by the time the chromatogram becomes readable, you're past the noise and into your region of interest."
+  },
+  {
+   "t": 164.01,
+   "text": "Step three: the sequencing reaction itself."
+  },
+  {
+   "t": 167.41,
+   "text": "This is what your sequencing core does in the back room, or what you do at the bench if your lab runs its own machine."
+  },
+  {
+   "t": 173.5,
+   "text": "You mix template, primer, and BigDye terminator mix (which contains the polymerase, the buffer, the four normal dNTPs, and the four colored ddNTPs) in a small PCR tube, total volume around 10-20 microliters."
+  },
+  {
+   "t": 189.14,
+   "text": "You put the tube in a thermocycler and run a program that cycles temperature: denature at 96°C to melt the template, anneal at 50-60°C to let the primer bind, extend at 60°C to let the polymerase synthesize."
+  },
+  {
+   "t": 206.07,
+   "text": "About 25-30 cycles of this."
+  },
+  {
+   "t": 209.35,
+   "text": "Each cycle generates more terminated fragments, building up the population we talked about in Segment 3."
+  },
+  {
+   "t": 216.35,
+   "text": "This is sometimes called cycle sequencing, because it borrows the temperature cycling logic of PCR — though unlike PCR, it's linear amplification rather than exponential, because only one primer is used per reaction and only one strand is being copied."
+  },
+  {
+   "t": 232.88,
+   "text": "Step four: cleanup."
+  },
+  {
+   "t": 234.59,
+   "text": "After cycle sequencing, the reaction contains a lot of unincorporated fluorescent ddNTPs floating around in solution."
+  },
+  {
+   "t": 243.5,
+   "text": "If you put that directly on the capillary, the unincorporated dyes would create a massive blob of signal at the front of the run and obscure everything."
+  },
+  {
+   "t": 252.91,
+   "text": "So you clean up the reaction first — typically by ethanol precipitation, a magnetic bead method, or a small spin column — to remove the unincorporated dye terminators while keeping the labeled DNA fragments."
+  },
+  {
+   "t": 266.25,
+   "text": "The cleaned-up reaction is what gets loaded onto the capillary instrument."
+  },
+  {
+   "t": 270.51,
+   "text": "Step five: capillary electrophoresis."
+  },
+  {
+   "t": 273.66,
+   "text": "The capillary machine sips your cleaned-up reaction into a capillary, applies the voltage, separates the fragments by size, reads the colors as they cross the laser detector, and saves the result as a data file — typically an AB1 file or a SCF file, both standard formats that contain the four-color trace data and the metadata (primer name, instrument run info, etc.)."
+  },
+  {
+   "t": 298.37,
+   "text": "Run time per capillary is about half an hour to an hour, depending on the read length you've requested."
+  },
+  {
+   "t": 303.99,
+   "text": "Step six: base calling and trace inspection."
+  },
+  {
+   "t": 307.48,
+   "text": "The instrument's software (or downstream programs like Phred, which is the classic base-calling tool, or any of a dozen modern equivalents) reads the chromatogram and converts the colored peaks into a string of A's, T's, G's, and C's."
+  },
+  {
+   "t": 323.28,
+   "text": "Each base call comes with a quality score — typically Phred-style, with higher values meaning higher confidence — that estimates the probability the call is wrong."
+  },
+  {
+   "t": 332.83,
+   "text": "Phred 20 means a 1% chance of error; Phred 30 means 0.1%; Phred 40 means 0.01%."
+  },
+  {
+   "t": 342.78,
+   "text": "The middle of a good Sanger read is typically Phred 40 or better, which is extraordinarily high accuracy."
+  },
+  {
+   "t": 349.39,
+   "text": "The ends are lower."
+  },
+  {
+   "t": 350.61,
+   "text": "Step seven: interpretation."
+  },
+  {
+   "t": 353.07,
+   "text": "You open the chromatogram in a viewer — common ones are SnapGene, Geneious, ApE, or the free 4Peaks — and you align your read to your expected sequence."
+  },
+  {
+   "t": 363.92,
+   "text": "You confirm the bases match."
+  },
+  {
+   "t": 365.92,
+   "text": "You look at any disagreements between read and reference and ask yourself: is that a real difference (a mutation, an edit, a variant), or is it a sequencing artifact?"
+  },
+  {
+   "t": 377.34,
+   "text": "That judgment call is the part of Sanger sequencing that still requires a human, and it's the topic of the next segment."
+  },
+  {
+   "t": 383.97,
+   "text": "Total time from sending a sample to getting back a readable chromatogram: typically overnight at most academic sequencing cores, sometimes same-day if you submit in the morning."
+  },
+  {
+   "t": 395.44,
+   "text": "Total cost: $5 to $15 per reaction, depending on the core's pricing."
+  },
+  {
+   "t": 400.92,
+   "text": "Total expertise required to read the result: an undergraduate molecular biologist with about half an hour of training can become competent at reading a clean trace."
+  },
+  {
+   "t": 411.47,
+   "text": "That's why Sanger persists."
+  },
+  {
+   "t": 413.29,
+   "text": "The workflow is short, cheap, mature, well-understood, and gives you an answer about a specific small piece of DNA in a day."
+  },
+  {
+   "t": 422.09,
+   "text": "For the questions it answers, nothing else is as fast and as simple."
+  }
+ ]
+}

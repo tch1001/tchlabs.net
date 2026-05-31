@@ -1,0 +1,207 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Developmental trajectories — pseudotime, RNA velocity",
+ "duration": 373.59,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Developmental trajectories — pseudotime, RNA velocity"
+  },
+  {
+   "t": 5.95,
+   "text": "The second area where single-cell changed the questions is developmental biology — the study of how cells differentiate, mature, and specialize over time, from a single fertilized egg to a complex organism with hundreds of cell types."
+  },
+  {
+   "t": 21.45,
+   "text": "Here's the old problem."
+  },
+  {
+   "t": 22.8,
+   "text": "Development is a continuous process."
+  },
+  {
+   "t": 25.51,
+   "text": "A stem cell becomes a progenitor becomes a precursor becomes a differentiated cell, through intermediate states that have no names and no clean boundaries."
+  },
+  {
+   "t": 35.62,
+   "text": "Bulk RNA-seq, even when applied to tissues at different developmental stages, gives you population averages — useful for seeing big shifts, useless for resolving the continuous trajectory."
+  },
+  {
+   "t": 47.91,
+   "text": "To watch the trajectory, you need to see individual cells, ideally cells captured at many points along the path, and reconstruct the trajectory from the static snapshots."
+  },
+  {
+   "t": 58.91,
+   "text": "Single-cell sequencing made this possible, in a beautiful way."
+  },
+  {
+   "t": 63.7,
+   "text": "The insight is that even when you collect cells at a single time point, the cells you collect represent every state along the developmental trajectory — some are still progenitors, some are partway differentiated, some are fully mature."
+  },
+  {
+   "t": 78.24,
+   "text": "If you can computationally order these cells along a trajectory based on their gene expression patterns, you've reconstructed the dynamics from static data."
+  },
+  {
+   "t": 86.83,
+   "text": "This computational ordering is called pseudotime."
+  },
+  {
+   "t": 90.06,
+   "text": "Pseudotime works like this."
+  },
+  {
+   "t": 91.86,
+   "text": "You have a cell-by-gene matrix."
+  },
+  {
+   "t": 93.88,
+   "text": "You cluster the cells."
+  },
+  {
+   "t": 95.36,
+   "text": "You see that one cluster looks like progenitors, another like partway-differentiated, another like terminal."
+  },
+  {
+   "t": 102.11,
+   "text": "You ask software — tools like Monocle, Slingshot, PAGA — to find a smooth trajectory through the data that connects the clusters in their developmental order."
+  },
+  {
+   "t": 111.83,
+   "text": "The software assigns each cell a pseudotime coordinate — a number representing how far along the trajectory it is, with low values for early progenitors and high values for terminal differentiated cells."
+  },
+  {
+   "t": 125.28,
+   "text": "You can then ask: which genes turn on as pseudotime increases?"
+  },
+  {
+   "t": 129.45,
+   "text": "Which turn off?"
+  },
+  {
+   "t": 130.46,
+   "text": "Which transcription factors mark each transition?"
+  },
+  {
+   "t": 133.79,
+   "text": "The trajectory is the answer, reconstructed from one snapshot of mixed cells."
+  },
+  {
+   "t": 139.32,
+   "text": "This was a revolution in developmental biology."
+  },
+  {
+   "t": 142.46,
+   "text": "Previously, characterizing a developmental trajectory required time-course experiments — collect cells at day one, day two, day three, and so on, characterize each time point, infer the trajectory from the time series."
+  },
+  {
+   "t": 156.74,
+   "text": "Slow, expensive, often impossible if you can't reliably get cells at every time point."
+  },
+  {
+   "t": 162.96,
+   "text": "With pseudotime, one cross-sectional sample at a moment when the developing tissue contains all stages simultaneously is enough."
+  },
+  {
+   "t": 171.38,
+   "text": "The static distribution of cells across the trajectory tells you the dynamics."
+  },
+  {
+   "t": 176.54,
+   "text": "The technique took another leap with RNA velocity, introduced in 2018 by a group led by Sten Linnarsson."
+  },
+  {
+   "t": 183.97,
+   "text": "RNA velocity exploits a clever biochemical detail: most mRNAs in a cell exist in two flavors — unspliced precursors with introns still in them, and spliced mature mRNAs with introns removed."
+  },
+  {
+   "t": 198.16,
+   "text": "In a cell where a particular gene is being actively turned on, the ratio of unspliced to spliced rises, because new transcripts are being made faster than the splicing machinery can process them."
+  },
+  {
+   "t": 209.81,
+   "text": "In a cell where the gene is being turned off, the ratio falls."
+  },
+  {
+   "t": 214.06,
+   "text": "So by measuring the unspliced-to-spliced ratio for every gene in every cell, you can infer, for each cell, the direction in which its transcriptome is currently moving."
+  },
+  {
+   "t": 225.14,
+   "text": "You're not just placing cells along a trajectory — you're measuring, locally, which way each cell is heading."
+  },
+  {
+   "t": 231.74,
+   "text": "The visual result is striking."
+  },
+  {
+   "t": 233.99,
+   "text": "Take a UMAP of your data."
+  },
+  {
+   "t": 235.93,
+   "text": "Overlay arrows on each cell pointing in the direction RNA velocity says the cell is moving."
+  },
+  {
+   "t": 242.96,
+   "text": "The arrows form a flow field that traces the developmental trajectories live, from progenitors to terminal states, with branch points where progenitors choose between alternative fates."
+  },
+  {
+   "t": 254.39,
+   "text": "It's like watching a satellite map of currents on the surface of an ocean."
+  },
+  {
+   "t": 258.36,
+   "text": "The flow tells you where development is going, in this very moment, from one snapshot of cells."
+  },
+  {
+   "t": 265.04,
+   "text": "There are caveats."
+  },
+  {
+   "t": 266.46,
+   "text": "RNA velocity is sensitive to noise, to choice of preprocessing, and to assumptions about splicing kinetics that don't always hold."
+  },
+  {
+   "t": 275.26,
+   "text": "Different parameter settings can produce different flows."
+  },
+  {
+   "t": 278.75,
+   "text": "Real-world velocity work requires care and validation."
+  },
+  {
+   "t": 282.56,
+   "text": "But when it works, it's a beautiful technique — it gives you, from a static experiment, a dynamic readout of cell-fate decisions."
+  },
+  {
+   "t": 291.26,
+   "text": "Beyond pseudotime and velocity, single-cell has enabled lineage tracing."
+  },
+  {
+   "t": 296.41,
+   "text": "By introducing heritable barcodes — using CRISPR-edited scars at specific genomic loci, or transposon insertions, or lentiviral barcodes — you can give each ancestor cell a unique mark that gets inherited by its descendants."
+  },
+  {
+   "t": 311.19,
+   "text": "Then, in a single-cell RNA-seq experiment, you can read out both the gene expression of each cell and its lineage barcode, telling you not just what the cell is now but what it was."
+  },
+  {
+   "t": 322.06,
+   "text": "Tools like CARLIN and GESTALT have been used to reconstruct lineage trees of developing organisms — tracing, cell by cell, who came from whom — at unprecedented resolution."
+  },
+  {
+   "t": 334.34,
+   "text": "The combined picture single-cell has given us of development is one of branching, continuous, often noisy trajectories — cells making fate decisions probabilistically at branch points, with intermediate states that don't always have clean names."
+  },
+  {
+   "t": 349.26,
+   "text": "The textbook view of development as a tree of discrete, well-defined cell types is giving way to a view of development as a flow on a high-dimensional landscape, with cells flowing along attractor trajectories that the gene regulatory network defines."
+  },
+  {
+   "t": 365.16,
+   "text": "Single-cell didn't just measure that landscape — it forced biology to think about development in landscape terms in the first place."
+  }
+ ]
+}

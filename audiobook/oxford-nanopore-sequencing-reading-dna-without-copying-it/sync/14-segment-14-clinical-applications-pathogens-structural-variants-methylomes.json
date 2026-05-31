@@ -1,0 +1,199 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Clinical applications: pathogens, structural variants, methylomes",
+ "duration": 339.72,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Clinical applications: pathogens, structural variants, methylomes"
+  },
+  {
+   "t": 6.65,
+   "text": "Let's switch from technology to application."
+  },
+  {
+   "t": 9.25,
+   "text": "Nanopore has found its strongest clinical footholds in three areas: pathogen identification, structural variant detection, and methylome-based diagnostics."
+  },
+  {
+   "t": 19.71,
+   "text": "Each one exploits a specific nanopore feature."
+  },
+  {
+   "t": 23.41,
+   "text": "Pathogen identification."
+  },
+  {
+   "t": 25.45,
+   "text": "This is, I think, the most mature clinical use of nanopore today."
+  },
+  {
+   "t": 30.26,
+   "text": "The setup: a patient comes into the clinic with an unidentified infection."
+  },
+  {
+   "t": 34.73,
+   "text": "Could be bacterial."
+  },
+  {
+   "t": 36.11,
+   "text": "Could be viral."
+  },
+  {
+   "t": 37.17,
+   "text": "Could be fungal."
+  },
+  {
+   "t": 38.31,
+   "text": "Could be a parasite."
+  },
+  {
+   "t": 39.71,
+   "text": "You want to know what's growing in them, as fast as possible, so you can start the right treatment."
+  },
+  {
+   "t": 44.55,
+   "text": "Traditional clinical microbiology takes days to weeks — culture the organism, do biochemical tests, send samples to a reference lab."
+  },
+  {
+   "t": 54.3,
+   "text": "Nanopore can give you an answer in hours."
+  },
+  {
+   "t": 56.54,
+   "text": "The workflow: extract DNA or RNA from a clinical sample — blood, CSF, sputum, whatever's appropriate."
+  },
+  {
+   "t": 65.47,
+   "text": "Use the rapid kit to make a library in 10 minutes."
+  },
+  {
+   "t": 68.95,
+   "text": "Load onto a flow cell."
+  },
+  {
+   "t": 70.99,
+   "text": "Within the first few minutes of sequencing, you start getting reads."
+  },
+  {
+   "t": 74.69,
+   "text": "You align them in real time against a database of known pathogen genomes."
+  },
+  {
+   "t": 80.3,
+   "text": "The species that match are your candidates."
+  },
+  {
+   "t": 82.75,
+   "text": "Within an hour or two, you typically have a confident species call, sometimes a strain call, and even early reads of antibiotic resistance genes if any are present on the pathogen genome."
+  },
+  {
+   "t": 93.88,
+   "text": "This kind of metagenomic clinical diagnosis is now in routine use in several major hospitals for cases of unknown CNS infections, complex pneumonia, and fever of unknown origin."
+  },
+  {
+   "t": 107.26,
+   "text": "It's also been deployed for outbreak investigations — sequencing patient samples and contact samples in real time during an outbreak to track transmission chains."
+  },
+  {
+   "t": 117.53,
+   "text": "Structural variants in clinical genetics."
+  },
+  {
+   "t": 120.35,
+   "text": "This is the area where nanopore's long reads pay off most clearly in mainstream medical genetics."
+  },
+  {
+   "t": 126.86,
+   "text": "Many genetic diseases are caused not by single-base mutations but by large rearrangements — deletions or insertions or inversions of thousands or millions of bases."
+  },
+  {
+   "t": 137.84,
+   "text": "Short-read sequencing struggles to detect these because the breakpoints often fall in repetitive regions and the rearranged segments are longer than any individual short read."
+  },
+  {
+   "t": 148.56,
+   "text": "Long reads catch these variants directly."
+  },
+  {
+   "t": 151.11,
+   "text": "Specific examples include the FMR1 repeat expansion that causes Fragile X syndrome — a repeat of CGG that expands from a normal length of around 30 copies to over 200 in disease."
+  },
+  {
+   "t": 164.28,
+   "text": "The expanded repeat is hard for short reads to size accurately."
+  },
+  {
+   "t": 168.85,
+   "text": "Nanopore can read across the entire expanded repeat in a single read and count the copies directly."
+  },
+  {
+   "t": 175.55,
+   "text": "The C9orf72 repeat expansion that causes ALS and frontotemporal dementia is similar — a hexanucleotide repeat that expands into the thousands of copies in disease, sized accurately only by long reads."
+  },
+  {
+   "t": 190.2,
+   "text": "Repeat expansion disorders more generally — myotonic dystrophy, several spinocerebellar ataxias, Huntington's disease — are all candidates for nanopore-based clinical sizing."
+  },
+  {
+   "t": 201.71,
+   "text": "Then there are large structural rearrangements in cancer."
+  },
+  {
+   "t": 205.36,
+   "text": "Many cancers carry fusions, translocations, or large deletions that drive the disease."
+  },
+  {
+   "t": 211.84,
+   "text": "Detecting these and characterizing them at base-pair resolution requires reads that span the breakpoints, which often means nanopore long reads."
+  },
+  {
+   "t": 221.65,
+   "text": "Methylome diagnostics."
+  },
+  {
+   "t": 223.49,
+   "text": "This is the newest clinical application area, and it's growing fast."
+  },
+  {
+   "t": 228.1,
+   "text": "Brain tumor classification is the headline use case: tumor methylation patterns are now used clinically to distinguish tumor subtypes that traditional histology cannot reliably separate."
+  },
+  {
+   "t": 240.26,
+   "text": "Several centers have demonstrated that nanopore sequencing of fresh tumor tissue during surgery can produce a methylation-based classification within an hour — fast enough to influence surgical decisions in real time."
+  },
+  {
+   "t": 254.29,
+   "text": "That's a genuine workflow change that no other sequencing technology can support, because the combination of speed, methylation calling, and minimal sample prep is unique to nanopore."
+  },
+  {
+   "t": 265.9,
+   "text": "There are also applications in cell-free DNA analysis — sequencing the small fragments of DNA shed into the blood by cells throughout the body, including tumor cells."
+  },
+  {
+   "t": 276.45,
+   "text": "The methylation patterns of these fragments encode their tissue of origin, allowing detection and rough localization of cancers from a blood draw."
+  },
+  {
+   "t": 285.22,
+   "text": "Nanopore can sequence and methylation-call these fragments in the same workflow, opening up liquid biopsy applications that previously required separate experiments."
+  },
+  {
+   "t": 296.02,
+   "text": "The general clinical theme: nanopore is finding its strongest niches in problems where speed, long reads, or methylation matter more than absolute lowest cost per base."
+  },
+  {
+   "t": 307.21,
+   "text": "For routine clinical sequencing where you just need to call SNPs accurately in a million samples per year, Illumina remains dominant."
+  },
+  {
+   "t": 316.31,
+   "text": "But for time-critical, complex, or methylation-dependent applications, nanopore is increasingly the platform of choice."
+  },
+  {
+   "t": 324.72,
+   "text": "The clinical adoption curve is currently steep — the technology has only really matured in the last few years, regulatory pathways are being established, and the next decade should see substantial expansion of nanopore in clinical settings."
+  }
+ ]
+}

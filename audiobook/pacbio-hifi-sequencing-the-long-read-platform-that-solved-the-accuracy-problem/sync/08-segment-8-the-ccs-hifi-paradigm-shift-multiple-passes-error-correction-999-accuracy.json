@@ -1,0 +1,319 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — The CCS / HiFi paradigm shift: multiple passes, error correction, 99.9% accuracy",
+ "duration": 501.91,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — The CCS / HiFi paradigm shift: multiple passes, error correction, 99.9% accuracy"
+  },
+  {
+   "t": 9.7,
+   "text": "So we've now arrived at the most important conceptual moment in the whole history of PacBio: the circular consensus sequencing workflow, or CCS, also called HiFi in the modern PacBio branding."
+  },
+  {
+   "t": 22.77,
+   "text": "This is the change that, in 2019 and 2020, took PacBio from being a niche specialty platform to being the gold standard for serious genome assembly."
+  },
+  {
+   "t": 33.23,
+   "text": "I want to spend this whole segment on it, because if you understand only one thing about PacBio sequencing in the modern era, it should be this."
+  },
+  {
+   "t": 41.55,
+   "text": "Let me set the stage."
+  },
+  {
+   "t": 43.05,
+   "text": "For most of PacBio's history, the platform produced what were called continuous long reads, or CLR."
+  },
+  {
+   "t": 49.65,
+   "text": "The polymerase would read across the SMRTbell once or twice, generating a long, single-pass read of maybe ten or twenty kilobases."
+  },
+  {
+   "t": 59.4,
+   "text": "The accuracy of these CLR reads was poor — somewhere between eighty-five and ninety percent base accuracy."
+  },
+  {
+   "t": 66.6,
+   "text": "That's the raw error rate of single-molecule sequencing chemistry: about ten to fifteen percent of bases are wrong, either substitutions, insertions, or — most commonly — deletions, where the polymerase added a base but the camera missed the pulse."
+  },
+  {
+   "t": 82.46,
+   "text": "Eighty-five percent accuracy sounds terrible."
+  },
+  {
+   "t": 85.89,
+   "text": "It is, by Illumina standards."
+  },
+  {
+   "t": 88.15,
+   "text": "Illumina reads are around ninety-nine point nine percent accurate per base, raw, no correction needed."
+  },
+  {
+   "t": 95.25,
+   "text": "Comparing on a per-base basis, PacBio CLR was a thousand times worse than Illumina."
+  },
+  {
+   "t": 100.81,
+   "text": "For many years, this was the standard rap against PacBio — \"PacBio reads are too noisy to use directly."
+  },
+  {
+   "t": 108.3,
+   "text": "\""
+  },
+  {
+   "t": 108.5,
+   "text": "But — and here's the original PacBio insight — even with a fifteen percent per-base error rate, the errors are essentially random."
+  },
+  {
+   "t": 116.7,
+   "text": "They happen at random positions, with random identities."
+  },
+  {
+   "t": 120.55,
+   "text": "If you can read the same molecule many times and align the reads, the errors cancel out and the true sequence emerges."
+  },
+  {
+   "t": 127.95,
+   "text": "You can either align across multiple molecules (which is what you do when assembling a genome — overlap many independent reads and consensus the result), or you can align across multiple passes of the same molecule (which is what CCS does using the SMRTbell)."
+  },
+  {
+   "t": 143.44,
+   "text": "Either way, the consensus accuracy is way better than the raw accuracy."
+  },
+  {
+   "t": 148.8,
+   "text": "For years, PacBio's strategy was the \"many independent molecules\" approach."
+  },
+  {
+   "t": 154.0,
+   "text": "You'd run a sample on PacBio, get a bunch of long noisy reads, and use them to construct a genome assembly by finding overlaps."
+  },
+  {
+   "t": 162.84,
+   "text": "The assembly itself would be highly accurate even though individual reads were not, because each genomic position was covered by, say, fifty different reads, and the consensus was reliable."
+  },
+  {
+   "t": 174.21,
+   "text": "This worked, but it required heavy sequencing — you needed lots of coverage to overcome the per-read noise — and the noisy reads were hard to use for any application that didn't involve assembly."
+  },
+  {
+   "t": 185.79,
+   "text": "You couldn't really use a single PacBio CLR read for, say, accurate variant calling, because the read itself was too unreliable."
+  },
+  {
+   "t": 194.62,
+   "text": "Then in 2019, PacBio rolled out the CCS workflow as a major product, and renamed the output HiFi reads."
+  },
+  {
+   "t": 202.56,
+   "text": "The idea was: instead of optimizing for read length — which had been the obsession of the previous decade — optimize for the number of passes."
+  },
+  {
+   "t": 211.29,
+   "text": "Use a slightly shorter insert, say fifteen to twenty kilobases instead of fifty."
+  },
+  {
+   "t": 216.8,
+   "text": "Let the polymerase read around it many times, accumulating many passes per molecule."
+  },
+  {
+   "t": 223.05,
+   "text": "Then run a consensus algorithm on those passes, in software, to produce a single corrected read."
+  },
+  {
+   "t": 230.11,
+   "text": "The math works out beautifully."
+  },
+  {
+   "t": 231.86,
+   "text": "With ten or more passes, the consensus accuracy reaches ninety-nine point nine percent — that's Q30 quality, equivalent to Illumina, but on a read that's fifteen to twenty kilobases long instead of one hundred fifty bases."
+  },
+  {
+   "t": 246.64,
+   "text": "With twenty or more passes, you can hit ninety-nine point ninety-nine percent — Q40, better than Illumina."
+  },
+  {
+   "t": 253.53,
+   "text": "Long and accurate, in a single read, from a single molecule."
+  },
+  {
+   "t": 258.01,
+   "text": "The headline here is worth saying as clearly as I can: HiFi reads are long-read and high-accuracy at the same time, for the first time in sequencing history."
+  },
+  {
+   "t": 267.79,
+   "text": "Until HiFi, there was always a tradeoff."
+  },
+  {
+   "t": 270.84,
+   "text": "Illumina: short and accurate."
+  },
+  {
+   "t": 273.38,
+   "text": "Nanopore CLR-style: long and noisy."
+  },
+  {
+   "t": 277.07,
+   "text": "PacBio CLR: long and noisy too."
+  },
+  {
+   "t": 280.59,
+   "text": "You picked one or the other; you couldn't have both."
+  },
+  {
+   "t": 283.49,
+   "text": "With HiFi, that tradeoff collapses."
+  },
+  {
+   "t": 286.41,
+   "text": "You get fifteen to twenty kilobases of read length, and you get Q30 to Q40 quality at every base."
+  },
+  {
+   "t": 293.73,
+   "text": "It's the long-read holy grail."
+  },
+  {
+   "t": 295.87,
+   "text": "This is genuinely a paradigm shift, and the field's reaction over the following few years was to reorganize itself around it."
+  },
+  {
+   "t": 303.66,
+   "text": "Major genome assembly projects rebuilt their pipelines for HiFi."
+  },
+  {
+   "t": 308.19,
+   "text": "The first true telomere-to-telomere human genome assembly, T2T-CHM13 — the one that filled in those missing eight percent of the human reference — was driven by PacBio HiFi data, along with Oxford Nanopore data."
+  },
+  {
+   "t": 322.72,
+   "text": "The Vertebrate Genomes Project, building reference-quality assemblies for thousands of species, standardized on HiFi."
+  },
+  {
+   "t": 330.76,
+   "text": "Clinical sequencing labs that had been Illumina-only started adopting HiFi for cases where structural variation mattered."
+  },
+  {
+   "t": 338.31,
+   "text": "Within about two years, HiFi had become the de facto standard for serious de novo assembly."
+  },
+  {
+   "t": 344.57,
+   "text": "Let me give you the analogy I want you to remember for this."
+  },
+  {
+   "t": 348.06,
+   "text": "A raw PacBio read is like a single hand-copy of a manuscript by a tired scribe — about fifteen percent of the words are slightly wrong."
+  },
+  {
+   "t": 356.51,
+   "text": "A HiFi read is what you get when you ask twenty different tired scribes to each independently copy the same manuscript, and then you compare their copies side by side."
+  },
+  {
+   "t": 366.13,
+   "text": "The places where they all agree are almost certainly right."
+  },
+  {
+   "t": 369.42,
+   "text": "The places where they disagree, you use majority vote, and you're almost certainly right there too."
+  },
+  {
+   "t": 375.12,
+   "text": "Twenty noisy copies, one accurate consensus."
+  },
+  {
+   "t": 378.77,
+   "text": "The SMRTbell gives you the twenty copies."
+  },
+  {
+   "t": 381.43,
+   "text": "The CCS algorithm gives you the consensus."
+  },
+  {
+   "t": 384.64,
+   "text": "The output is a HiFi read."
+  },
+  {
+   "t": 386.83,
+   "text": "Long."
+  },
+  {
+   "t": 387.63,
+   "text": "Accurate."
+  },
+  {
+   "t": 388.52,
+   "text": "Single-molecule."
+  },
+  {
+   "t": 389.79,
+   "text": "No PCR."
+  },
+  {
+   "t": 391.16,
+   "text": "The product of a beautifully integrated chain of physics, chemistry, biology, and software, with the final accuracy coming from statistical aggregation over many passes of the same molecule."
+  },
+  {
+   "t": 403.43,
+   "text": "Two more things I want to mention about HiFi before we move on."
+  },
+  {
+   "t": 407.16,
+   "text": "First — HiFi reads are sometimes mislabeled as \"consensus reads\" in a way that suggests they come from averaging many different molecules."
+  },
+  {
+   "t": 416.68,
+   "text": "They don't."
+  },
+  {
+   "t": 417.47,
+   "text": "They come from averaging many passes of the same molecule."
+  },
+  {
+   "t": 421.34,
+   "text": "The distinction is crucial for downstream applications."
+  },
+  {
+   "t": 424.97,
+   "text": "A consensus across molecules averages away true single-molecule properties — for instance, methylation, which can differ from one molecule to another."
+  },
+  {
+   "t": 435.41,
+   "text": "A consensus across passes of one molecule preserves those properties, because every pass is sampling the same physical molecule."
+  },
+  {
+   "t": 444.19,
+   "text": "PacBio HiFi data, therefore, carries methylation information for every read, which is something Illumina simply cannot do (because of PCR amplification) and which Nanopore can do but in a slightly different way."
+  },
+  {
+   "t": 458.69,
+   "text": "Second — the move to HiFi was, internally at PacBio, a major bet."
+  },
+  {
+   "t": 464.39,
+   "text": "For years the platform's marketing had emphasized read length, and the engineering had been pushed in that direction."
+  },
+  {
+   "t": 471.11,
+   "text": "Switching to shorter inserts to get more passes per molecule was a strategic reversal."
+  },
+  {
+   "t": 476.91,
+   "text": "But it was the right call."
+  },
+  {
+   "t": 478.18,
+   "text": "The combination of long-and-accurate has turned out to be more valuable than long-and-noisy, for almost every application."
+  },
+  {
+   "t": 485.61,
+   "text": "The HiFi era of PacBio is, in essence, the company finally finding its market fit, fifteen years after founding."
+  },
+  {
+   "t": 494.59,
+   "text": "Now let's look at what those reads actually look like in practice — the read length distribution, the throughput, what you do with them."
+  }
+ ]
+}

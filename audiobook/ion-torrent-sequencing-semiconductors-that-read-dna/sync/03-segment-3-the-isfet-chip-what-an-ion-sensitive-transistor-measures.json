@@ -1,0 +1,235 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The ISFET chip: what an ion-sensitive transistor measures",
+ "duration": 364.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The ISFET chip: what an ion-sensitive transistor measures"
+  },
+  {
+   "t": 5.78,
+   "text": "Let's talk about the sensor."
+  },
+  {
+   "t": 7.31,
+   "text": "The single most important piece of hardware in an Ion Torrent machine is something called an ISFET — I-S-F-E-T — which stands for ion-sensitive field-effect transistor."
+  },
+  {
+   "t": 17.84,
+   "text": "If you understand the ISFET, you understand the chip; if you understand the chip, you understand the platform."
+  },
+  {
+   "t": 23.89,
+   "text": "Let me build it up from scratch."
+  },
+  {
+   "t": 25.69,
+   "text": "You all know what a transistor is, at least in caricature: it's a tiny electronic switch with three terminals."
+  },
+  {
+   "t": 32.85,
+   "text": "In a standard MOSFET — metal-oxide-semiconductor field-effect transistor, the kind that lives by the billion inside every chip in your laptop — you have a piece of silicon with two heavily-doped regions called the source and the drain, separated by a small gap."
+  },
+  {
+   "t": 48.67,
+   "text": "Sitting on top of that gap, separated from the silicon by a thin layer of insulating oxide, is a third terminal called the gate."
+  },
+  {
+   "t": 56.48,
+   "text": "When you put voltage on the gate, you create an electric field that reaches down into the silicon, and that field controls whether current can flow from source to drain."
+  },
+  {
+   "t": 65.74,
+   "text": "Gate voltage up: switch on, current flows."
+  },
+  {
+   "t": 69.11,
+   "text": "Gate voltage down: switch off, no current."
+  },
+  {
+   "t": 72.39,
+   "text": "That's the basic transistor."
+  },
+  {
+   "t": 74.58,
+   "text": "Repeat a few billion times, wire them together cleverly, and you have a computer."
+  },
+  {
+   "t": 80.53,
+   "text": "Now here's the ISFET trick."
+  },
+  {
+   "t": 82.25,
+   "text": "You take that basic transistor and you remove the metal gate."
+  },
+  {
+   "t": 85.84,
+   "text": "You just rip it off."
+  },
+  {
+   "t": 86.96,
+   "text": "What you're left with is the silicon, the source, the drain, the insulating oxide on top — but now the oxide is exposed to the world."
+  },
+  {
+   "t": 94.94,
+   "text": "And then, instead of putting a wire on the gate, you put a drop of liquid on top of the oxide, and you put a reference electrode somewhere in the liquid to set its electrical baseline."
+  },
+  {
+   "t": 105.45,
+   "text": "Now the voltage at the surface of the oxide — the effective gate voltage — depends not on a wire you control, but on the chemistry of the liquid sitting on top of the chip."
+  },
+  {
+   "t": 115.31,
+   "text": "Specifically, it depends on how many ions are stuck to the oxide surface."
+  },
+  {
+   "t": 119.92,
+   "text": "And here's the magic for our purposes."
+  },
+  {
+   "t": 122.31,
+   "text": "The oxide layer on top of the transistor — typically silicon dioxide, sometimes with a thin layer of something like tantalum oxide on top for sensitivity — has surface chemical groups, hydroxyl groups, that can pick up or release protons depending on the pH of the liquid touching them."
+  },
+  {
+   "t": 139.12,
+   "text": "In acidic solution, lots of protons stick to the surface; the surface becomes more positively charged."
+  },
+  {
+   "t": 146.3,
+   "text": "In basic solution, protons leave; the surface becomes less positive."
+  },
+  {
+   "t": 151.66,
+   "text": "So the surface charge of the oxide tracks the pH of the solution."
+  },
+  {
+   "t": 155.66,
+   "text": "And surface charge of the oxide is, electrically, the gate voltage of the transistor."
+  },
+  {
+   "t": 161.56,
+   "text": "So a small change in the pH of the liquid over the chip changes the gate voltage, which changes the current flowing from source to drain."
+  },
+  {
+   "t": 169.32,
+   "text": "The transistor's current becomes a readout of pH."
+  },
+  {
+   "t": 172.74,
+   "text": "That's the ISFET."
+  },
+  {
+   "t": 173.93,
+   "text": "The analogy I want you to carry is this: an ISFET is a transistor that has been hot-wired so that the gate is the liquid itself."
+  },
+  {
+   "t": 182.2,
+   "text": "It's a normal silicon transistor with the electrical gate removed and a chemical gate put in its place."
+  },
+  {
+   "t": 188.35,
+   "text": "The current it passes is now a measurement of the pH of whatever solution is on top of it."
+  },
+  {
+   "t": 194.03,
+   "text": "And here's what makes the ISFET extraordinary for sequencing: it's tiny."
+  },
+  {
+   "t": 198.55,
+   "text": "The whole sensor is a few microns across — small enough that you can pack millions of them onto a single chip, the same way you pack millions of pixels onto a camera sensor."
+  },
+  {
+   "t": 208.88,
+   "text": "It's fast."
+  },
+  {
+   "t": 209.95,
+   "text": "PH changes propagate to the transistor current in microseconds, so you can sample millions of these things many times per second."
+  },
+  {
+   "t": 218.79,
+   "text": "And it's cheap, because — and this is the key — it's made in standard CMOS fabrication, in the same fabs that make every other chip in the world."
+  },
+  {
+   "t": 227.53,
+   "text": "Ion Torrent doesn't have to run its own semiconductor fab; it can pay TSMC or whoever to print these things in massive volume."
+  },
+  {
+   "t": 235.55,
+   "text": "One technical wrinkle worth mentioning because it matters for the homopolymer story later."
+  },
+  {
+   "t": 240.62,
+   "text": "The ISFET's response to pH is approximately logarithmic — like any pH measurement, because pH itself is a logarithmic scale."
+  },
+  {
+   "t": 250.06,
+   "text": "So if one proton gets released into the well, you get some voltage shift."
+  },
+  {
+   "t": 254.65,
+   "text": "If ten protons get released, you don't get ten times the voltage shift; you get approximately one pH unit's worth — call it 59 millivolts at room temperature, by the Nernst equation."
+  },
+  {
+   "t": 265.95,
+   "text": "If a hundred protons get released, you get two pH units, or about 118 millivolts."
+  },
+  {
+   "t": 271.7,
+   "text": "This logarithmic response is fine when you're counting one or two or three nucleotides being incorporated; the differences in signal are clean."
+  },
+  {
+   "t": 280.83,
+   "text": "But when you're trying to distinguish seven incorporations from eight — both of which produce signals on a flat part of the log curve — you're trying to resolve small differences in a noisy log-scaled signal, and that gets hard."
+  },
+  {
+   "t": 293.23,
+   "text": "We'll come back to this in Segment 9."
+  },
+  {
+   "t": 295.45,
+   "text": "The ISFET itself, as a device, has been around since the 1970s — a Dutch researcher named Piet Bergveld invented it in 1970 as a tool for biomedical pH measurement, mainly for things like monitoring acid in the stomach with a tiny probe."
+  },
+  {
+   "t": 311.22,
+   "text": "It puttered along as an academic curiosity for thirty-some years, occasionally used in chemical sensing applications."
+  },
+  {
+   "t": 319.82,
+   "text": "What Rothberg and his team did was take this old, well-characterized device and scale it."
+  },
+  {
+   "t": 325.35,
+   "text": "Instead of making one ISFET, they made millions."
+  },
+  {
+   "t": 328.76,
+   "text": "Instead of using it to measure pH in a beaker, they used it to detect base incorporation in a sequencing well."
+  },
+  {
+   "t": 336.0,
+   "text": "That move — from one sensor to an array of millions, from chemistry to genomics — is what turned an obscure biomedical sensor into a sequencing platform."
+  },
+  {
+   "t": 346.71,
+   "text": "So now you have one ISFET."
+  },
+  {
+   "t": 348.53,
+   "text": "One transistor with the gate hot-wired to liquid pH."
+  },
+  {
+   "t": 352.21,
+   "text": "Tiny, cheap, fast, accurate enough."
+  },
+  {
+   "t": 355.53,
+   "text": "The next question is: how do you make millions of them, and how do you use them as sequencing pixels?"
+  },
+  {
+   "t": 361.58,
+   "text": "That's the chip architecture, and it's the next segment."
+  }
+ ]
+}

@@ -1,0 +1,251 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Read length distribution: 10-25 kb is the sweet spot",
+ "duration": 404.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Read length distribution: 10-25 kb is the sweet spot"
+  },
+  {
+   "t": 6.25,
+   "text": "Let's talk about what a HiFi read actually looks like."
+  },
+  {
+   "t": 9.62,
+   "text": "Concretely."
+  },
+  {
+   "t": 10.61,
+   "text": "How long are these reads, in practice, and how do they distribute across a sequencing run?"
+  },
+  {
+   "t": 16.96,
+   "text": "A typical HiFi library is built from DNA fragments sheared to about fifteen to twenty kilobases."
+  },
+  {
+   "t": 23.94,
+   "text": "After SMRTbell prep — ligating the hairpins — and size selection on a special bead-based system to enrich for the right size range, you end up with a population of SMRTbell molecules whose insert sizes are tightly distributed around the target."
+  },
+  {
+   "t": 39.34,
+   "text": "You load that library onto a SMRT cell and run the instrument."
+  },
+  {
+   "t": 43.9,
+   "text": "The polymerase makes many passes around each SMRTbell, generating the multi-pass polymerase read."
+  },
+  {
+   "t": 51.6,
+   "text": "After the run, the CCS software takes those polymerase reads, identifies the passes by locating the hairpin sequences, aligns them, and outputs HiFi reads."
+  },
+  {
+   "t": 62.75,
+   "text": "The HiFi read length is the length of one pass — which is the insert size of the SMRTbell."
+  },
+  {
+   "t": 69.19,
+   "text": "In practice, a typical HiFi run produces reads distributed roughly between ten and twenty-five kilobases, with a peak around fifteen to twenty."
+  },
+  {
+   "t": 79.11,
+   "text": "That's your sweet spot."
+  },
+  {
+   "t": 80.45,
+   "text": "Long enough to span essentially all small repeats, all gene regions, almost all individual structural variants."
+  },
+  {
+   "t": 88.29,
+   "text": "Short enough to get many passes per molecule, hence very high accuracy."
+  },
+  {
+   "t": 93.51,
+   "text": "To give you a sense of why fifteen to twenty kilobases is so useful, let me compare it to what fits in a read."
+  },
+  {
+   "t": 100.33,
+   "text": "A typical human gene — including its exons and introns — is somewhere between ten and a hundred kilobases long."
+  },
+  {
+   "t": 108.67,
+   "text": "The median is maybe twenty kilobases."
+  },
+  {
+   "t": 111.24,
+   "text": "So a single HiFi read can span an entire small-to-medium gene from start to finish, with no assembly required."
+  },
+  {
+   "t": 118.75,
+   "text": "That's huge for things like phasing — figuring out which variants are on the same chromosome — because variants linked on a single read are by definition on the same parental chromosome."
+  },
+  {
+   "t": 129.0,
+   "text": "A typical processed mRNA transcript is one to five kilobases."
+  },
+  {
+   "t": 134.45,
+   "text": "A single HiFi read can easily span an entire transcript, including the 5' UTR, all the exons stitched together, and the 3' UTR with its polyA tail."
+  },
+  {
+   "t": 145.8,
+   "text": "That's what makes PacBio Iso-Seq — full-length transcript sequencing — possible."
+  },
+  {
+   "t": 151.82,
+   "text": "We'll get to that in segment fifteen."
+  },
+  {
+   "t": 154.15,
+   "text": "A typical structural variant — an insertion, deletion, or inversion of, say, a few hundred to a few thousand bases — fits comfortably within a single HiFi read."
+  },
+  {
+   "t": 165.45,
+   "text": "The breakpoints, the inserted sequence, the flanking context — all visible in one piece of data."
+  },
+  {
+   "t": 172.43,
+   "text": "Compare this to Illumina, where structural variants have to be inferred from indirect signals (split reads, discordant pairs, abnormal coverage) because no single read can span the event."
+  },
+  {
+   "t": 184.43,
+   "text": "HiFi makes structural variant calling direct and unambiguous."
+  },
+  {
+   "t": 189.22,
+   "text": "A typical region of segmental duplication — where multi-kilobase chunks of the genome have been copied to multiple loci — is often spannable by a single HiFi read if the unique flanking sequence is captured."
+  },
+  {
+   "t": 202.94,
+   "text": "This is what allows HiFi to resolve segmental duplications that short reads cannot."
+  },
+  {
+   "t": 208.29,
+   "text": "PacBio has also experimented with longer inserts, in modes sometimes called \"ultralong HiFi\" or just \"long-insert\" runs."
+  },
+  {
+   "t": 216.85,
+   "text": "With inserts of thirty to fifty kilobases, you can get longer reads, but you sacrifice some accuracy because the polymerase completes fewer passes per molecule."
+  },
+  {
+   "t": 226.99,
+   "text": "With inserts of a hundred kilobases or more, you essentially fall back to CLR-style noisy reads with one or two passes — useful for some niche assembly problems but not the HiFi standard."
+  },
+  {
+   "t": 238.9,
+   "text": "For comparison, Oxford Nanopore's reads are typically much longer — twenty to a hundred kilobases is routine, and with the right library prep you can get individual reads in the megabase range."
+  },
+  {
+   "t": 251.21,
+   "text": "Nanopore reads are longer than PacBio HiFi reads, often by a factor of five or ten."
+  },
+  {
+   "t": 257.85,
+   "text": "But they're noisier — typical Nanopore Q-scores for simplex reads are around Q15 to Q20, an order of magnitude worse than HiFi."
+  },
+  {
+   "t": 267.27,
+   "text": "So the two platforms occupy slightly different niches."
+  },
+  {
+   "t": 271.25,
+   "text": "Need maximum length, willing to tolerate some noise — Nanopore."
+  },
+  {
+   "t": 275.83,
+   "text": "Need maximum accuracy at moderate length — PacBio HiFi."
+  },
+  {
+   "t": 280.36,
+   "text": "We'll come back to this comparison in detail in segment sixteen."
+  },
+  {
+   "t": 284.4,
+   "text": "One last point."
+  },
+  {
+   "t": 285.52,
+   "text": "The read length distribution out of a HiFi run isn't uniform."
+  },
+  {
+   "t": 289.97,
+   "text": "There's a peak, but there are also tails — some shorter reads from molecules where the polymerase quit early, some longer reads from rare oversized inserts that got through size selection."
+  },
+  {
+   "t": 300.47,
+   "text": "When you're planning an experiment, you typically calculate your expected coverage in terms of bases sequenced, not reads sequenced."
+  },
+  {
+   "t": 308.05,
+   "text": "A typical Revio run produces something like one hundred and twenty gigabases of HiFi data per SMRT cell."
+  },
+  {
+   "t": 315.67,
+   "text": "Divided by an average read length of seventeen kilobases, that's roughly seven million reads per cell."
+  },
+  {
+   "t": 322.97,
+   "text": "For a thirty-x coverage human genome (which has three gigabases), you need about ninety gigabases of HiFi data, which fits on a single Revio cell with room to spare."
+  },
+  {
+   "t": 333.4,
+   "text": "That's a huge change from earlier generations — in 2019 it took a full Sequel II run to get thirty-x human coverage; now you can get it on a fraction of a Revio cell."
+  },
+  {
+   "t": 344.7,
+   "text": "The economics, in other words, have shifted dramatically."
+  },
+  {
+   "t": 348.48,
+   "text": "We'll cover that in segment eleven."
+  },
+  {
+   "t": 350.8,
+   "text": "For now, hold this picture."
+  },
+  {
+   "t": 353.0,
+   "text": "HiFi reads cluster around fifteen to twenty kilobases."
+  },
+  {
+   "t": 356.93,
+   "text": "That length is the sweet spot for spanning genes, transcripts, structural variants, segmental duplications, and most repeats."
+  },
+  {
+   "t": 365.77,
+   "text": "The combination of that length with Q30-plus accuracy is what makes HiFi the dominant platform for high-quality genome work in the modern era."
+  },
+  {
+   "t": 375.36,
+   "text": "Alright."
+  },
+  {
+   "t": 376.17,
+   "text": "We've covered the core technology — zero-mode waveguides, SMRT cells, phospholinked nucleotides, phi29 polymerase, SMRTbells, CCS, HiFi reads, and read length."
+  },
+  {
+   "t": 389.51,
+   "text": "That's the first half."
+  },
+  {
+   "t": 390.92,
+   "text": "Take ten minutes."
+  },
+  {
+   "t": 392.21,
+   "text": "Stretch."
+  },
+  {
+   "t": 393.15,
+   "text": "Grab water."
+  },
+  {
+   "t": 394.26,
+   "text": "When we come back, we'll move from the technology itself to the platform's commercial history, its modern applications, and how it compares to its competitors."
+  },
+  {
+   "t": 403.8,
+   "text": "Back in ten."
+  }
+ ]
+}

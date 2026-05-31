@@ -1,0 +1,175 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — cPAL: the original Complete Genomics chemistry, sequencing by ligation",
+ "duration": 349.72,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — cPAL: the original Complete Genomics chemistry, sequencing by ligation"
+  },
+  {
+   "t": 6.7,
+   "text": "The first generation of Complete Genomics instruments — the ones running between roughly 2009 and the mid-2010s — did not use polymerase-based sequencing at all."
+  },
+  {
+   "t": 17.46,
+   "text": "They used a fundamentally different chemistry called combinatorial probe-anchor ligation, abbreviated cPAL."
+  },
+  {
+   "t": 24.15,
+   "text": "cPAL is now obsolete on commercial MGI instruments, replaced by cPAS, which we'll get to next."
+  },
+  {
+   "t": 31.62,
+   "text": "But understanding cPAL is worth a few minutes for two reasons: it's a clever piece of chemistry in its own right, and the historical reasons it was replaced tell you something real about why the modern platform looks the way it does."
+  },
+  {
+   "t": 44.44,
+   "text": "The big idea of cPAL is to read bases by DNA ligation rather than by polymerase-mediated synthesis."
+  },
+  {
+   "t": 51.8,
+   "text": "Here is how it works."
+  },
+  {
+   "t": 53.09,
+   "text": "Each adapter on each end of each starting fragment contains a known constant sequence."
+  },
+  {
+   "t": 59.04,
+   "text": "On the nanoball, those adapter sequences appear at every junction between copies — three hundred copies, three hundred adapter junctions per ball."
+  },
+  {
+   "t": 68.16,
+   "text": "You can use those adapters as anchor points."
+  },
+  {
+   "t": 70.8,
+   "text": "Specifically, you flow in a short single-stranded DNA called an anchor probe, complementary to the adapter sequence."
+  },
+  {
+   "t": 78.65,
+   "text": "The anchor probe binds to the adapter on every copy in the ball, leaving its 3-prime or 5-prime end positioned at a known offset from the adapter — for example, exactly five bases into the unknown insert sequence."
+  },
+  {
+   "t": 93.1,
+   "text": "Now you bring in a pool of interrogation probes — short, partially degenerate oligonucleotides, each one carrying a fluorescent dye at one specific position."
+  },
+  {
+   "t": 103.42,
+   "text": "The position you're trying to read — say, base five of the insert — is encoded in the probe at a specific spot, and the dye color tells you which base is there."
+  },
+  {
+   "t": 113.08,
+   "text": "The probes that match perfectly to the local sequence on the nanoball will hybridize, and a DNA ligase enzyme will ligate them onto the anchor."
+  },
+  {
+   "t": 122.81,
+   "text": "The mismatched probes — the ones whose interrogated position doesn't match the template — won't ligate properly."
+  },
+  {
+   "t": 130.06,
+   "text": "Wash away the unligated probes, image the flow cell, see what color is at each nanoball position, and you've just read base five at every nanoball in parallel."
+  },
+  {
+   "t": 140.26,
+   "text": "Then you wash the ligated probe off, bring in a new anchor probe positioned at a different offset, and read a different position."
+  },
+  {
+   "t": 147.66,
+   "text": "By varying the position of the dye within the interrogation probe — sometimes one base away from the anchor, sometimes two, sometimes three, and so on — you can read out a series of positions around each anchor."
+  },
+  {
+   "t": 160.51,
+   "text": "With cPAL, you typically read about ten bases on either side of each adapter junction, then move to the next adapter junction on the other end of the insert, and read another ten or so bases from there."
+  },
+  {
+   "t": 172.09,
+   "text": "The total read length you can get this way is around thirty-five to fifty bases per end of the insert, with gaps between the readable positions where no probe could reach."
+  },
+  {
+   "t": 181.7,
+   "text": "That gappy structure is what the Complete Genomics 2009 Science paper meant by \"unchained base reads."
+  },
+  {
+   "t": 189.2,
+   "text": "\" The reads were not contiguous stretches of sequence the way Illumina reads are."
+  },
+  {
+   "t": 194.01,
+   "text": "They were a few short sub-reads, separated by gaps, with the positions known but the intervening bases unsequenced."
+  },
+  {
+   "t": 201.89,
+   "text": "You could still align them to a reference genome and call variants, because the spaced sub-reads gave you enough constraint, but the workflow felt different from Illumina, and the resulting data was awkward to use with off-the-shelf alignment tools designed for contiguous reads."
+  },
+  {
+   "t": 217.34,
+   "text": "The advantages of cPAL were real."
+  },
+  {
+   "t": 219.72,
+   "text": "Ligation-based reading has different error modes than synthesis-based reading — there is no compounded \"phasing\" error from the polymerase falling behind, because each cycle is independent."
+  },
+  {
+   "t": 230.86,
+   "text": "Reads of any one base do not depend on the success of the previous base read."
+  },
+  {
+   "t": 235.89,
+   "text": "The chemistry is very robust."
+  },
+  {
+   "t": 238.24,
+   "text": "And the original Complete Genomics instruments produced quite accurate calls — comparable to Illumina of the same era for SNP calling."
+  },
+  {
+   "t": 247.1,
+   "text": "But cPAL had two big disadvantages, and they were the reasons it eventually got replaced."
+  },
+  {
+   "t": 253.63,
+   "text": "First, the gappy reads were annoying."
+  },
+  {
+   "t": 256.15,
+   "text": "The bioinformatics ecosystem of the 2010s was being built around contiguous Illumina-style reads — ten-base anchors with gaps in between didn't fit cleanly into BWA, bowtie, or any of the standard aligners."
+  },
+  {
+   "t": 270.28,
+   "text": "Complete Genomics had to provide their own analysis pipeline, which kept them outside the mainstream of NGS analysis tooling."
+  },
+  {
+   "t": 278.27,
+   "text": "For a platform trying to compete with Illumina, that ecosystem mismatch was a serious drag."
+  },
+  {
+   "t": 284.5,
+   "text": "Second, read length was hard to extend."
+  },
+  {
+   "t": 287.5,
+   "text": "With cPAL, every additional base of read length required a separate anchor probe positioned further from the adapter, with a separate cycle of ligation and imaging."
+  },
+  {
+   "t": 297.95,
+   "text": "The chemistry didn't scale gracefully past a few tens of bases per end."
+  },
+  {
+   "t": 303.32,
+   "text": "As Illumina pushed read lengths past one hundred and fifty base pairs in the early 2010s, cPAL fell behind, and the gap was structural — not something you could close with engineering improvements alone."
+  },
+  {
+   "t": 315.45,
+   "text": "These two problems — gappy reads and short reads — made cPAL look increasingly outdated by about 2014, just as BGI was integrating Complete Genomics."
+  },
+  {
+   "t": 326.7,
+   "text": "The strategic decision was made, fairly early after the acquisition, to develop a new chemistry that would produce contiguous Illumina-compatible reads at competitive read lengths, while keeping the DNB structural advantages — no flow-cell amplification, no PCR bias, no index hopping."
+  },
+  {
+   "t": 345.8,
+   "text": "That new chemistry is cPAS, and we'll cover it next."
+  }
+ ]
+}

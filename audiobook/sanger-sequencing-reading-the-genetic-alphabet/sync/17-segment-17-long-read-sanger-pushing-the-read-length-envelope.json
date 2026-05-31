@@ -1,0 +1,151 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Long-read Sanger? Pushing the read length envelope",
+ "duration": 284.16,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Long-read Sanger?"
+  },
+  {
+   "t": 2.91,
+   "text": "Pushing the read length envelope"
+  },
+  {
+   "t": 5.65,
+   "text": "A natural question, given everything we've talked about, is: can Sanger be pushed to longer read lengths?"
+  },
+  {
+   "t": 12.53,
+   "text": "If we could get Sanger to read, say, 3000 or 5000 bases per reaction instead of 800, that would significantly extend its utility — and people have tried."
+  },
+  {
+   "t": 23.56,
+   "text": "The short answer is: yes, with effort, you can get Sanger reads out past 1000 bases, sometimes even close to 1200 bases, but it's not really worth it."
+  },
+  {
+   "t": 34.23,
+   "text": "Let me explain why."
+  },
+  {
+   "t": 35.59,
+   "text": "The fundamental limit on Sanger read length is the resolving power of capillary electrophoresis."
+  },
+  {
+   "t": 41.73,
+   "text": "As fragments get longer, the difference in migration time between adjacent lengths gets smaller and smaller."
+  },
+  {
+   "t": 48.4,
+   "text": "The relationship is roughly logarithmic: the resolution between two fragments scales as a function of their length ratio, not their absolute size difference."
+  },
+  {
+   "t": 58.76,
+   "text": "So a 1% size difference between 100-base fragments is easy to resolve; a 0.1% difference between 1000-base fragments is hard; a 0.05% difference between 2000-base fragments is essentially impossible with conventional capillary chemistry."
+  },
+  {
+   "t": 76.53,
+   "text": "People have pushed against this limit with longer capillaries, more dilute polymer matrices, lower running voltages, longer run times, and modified BigDye chemistries."
+  },
+  {
+   "t": 87.51,
+   "text": "Each of these helps a little."
+  },
+  {
+   "t": 88.97,
+   "text": "With optimization, a really good run on a modern instrument with a long capillary and an extended run protocol can push the useful read length out to perhaps 1100-1200 bases."
+  },
+  {
+   "t": 100.51,
+   "text": "But you're paying for it: each run takes hours instead of half an hour, the throughput per machine drops, and the chemistry costs more."
+  },
+  {
+   "t": 108.79,
+   "text": "And here's the killer fact: if you really need long reads — multi-kilobase reads, tens of kilobases, sometimes hundreds of kilobases — there are entire technologies now that do this natively."
+  },
+  {
+   "t": 121.16,
+   "text": "PacBio HiFi sequencing gives you reads of 15,000 to 25,000 bases each, at Sanger-comparable per-base accuracy."
+  },
+  {
+   "t": 130.28,
+   "text": "Oxford Nanopore sequencing gives you reads that can stretch into the hundreds of thousands of bases, at lower accuracy per read but with massive average length."
+  },
+  {
+   "t": 139.94,
+   "text": "Both of these technologies are essentially designed to do what Sanger can't: read very long stretches of DNA without breaking them up."
+  },
+  {
+   "t": 148.64,
+   "text": "For the applications where long reads matter — assembling complex genomes, resolving structural variants, sequencing through repetitive regions, phasing variants across long distances — PacBio and Nanopore have just eaten that part of the market."
+  },
+  {
+   "t": 164.36,
+   "text": "Sanger never really competed there, even after the read-length optimization push."
+  },
+  {
+   "t": 169.55,
+   "text": "The chemistry just doesn't scale that far."
+  },
+  {
+   "t": 172.16,
+   "text": "So the answer to \"can we make long-read Sanger?"
+  },
+  {
+   "t": 175.43,
+   "text": "\" is \"we tried, we got an incremental improvement, but the fundamental physics of capillary separation puts a ceiling on it that competing technologies have already blown through by orders of magnitude."
+  },
+  {
+   "t": 187.34,
+   "text": "\" Sanger lives comfortably in the 500-900 base range."
+  },
+  {
+   "t": 191.53,
+   "text": "That's its sweet spot."
+  },
+  {
+   "t": 192.97,
+   "text": "Trying to stretch it further is fighting against the physics, and the other technologies do that battle better."
+  },
+  {
+   "t": 199.71,
+   "text": "There is a related question that's more interesting: can we make Sanger better in its existing range — same read length, but cleaner traces, higher accuracy, better automation, lower cost?"
+  },
+  {
+   "t": 211.51,
+   "text": "And here there has been steady incremental progress over the years."
+  },
+  {
+   "t": 215.55,
+   "text": "The BigDye chemistry has gone through multiple generations, each with slightly more even peak heights and slightly cleaner signal."
+  },
+  {
+   "t": 224.1,
+   "text": "The capillary instruments have gotten more reliable and easier to maintain."
+  },
+  {
+   "t": 228.72,
+   "text": "The base-calling software has improved at handling the tricky positions."
+  },
+  {
+   "t": 233.59,
+   "text": "Each of these improvements has been small in isolation, but cumulatively, a modern Sanger trace from a 2026 ABI 3730 with current chemistry is meaningfully better than a Sanger trace from a 2005 ABI 3730 with first-generation BigDye."
+  },
+  {
+   "t": 252.29,
+   "text": "The wall, though, is still in roughly the same place — about 800 bases of usable sequence per read."
+  },
+  {
+   "t": 259.18,
+   "text": "So my honest assessment is: Sanger's read length has plateaued, and it's not going much higher."
+  },
+  {
+   "t": 265.3,
+   "text": "The technology will continue to incrementally improve in accuracy and cost, but the read-length frontier is owned by other platforms, and Sanger will continue to occupy its current niche — the short, accurate, cheap, single-sample workflow."
+  },
+  {
+   "t": 280.32,
+   "text": "That niche isn't going anywhere, but it isn't growing either."
+  }
+ ]
+}

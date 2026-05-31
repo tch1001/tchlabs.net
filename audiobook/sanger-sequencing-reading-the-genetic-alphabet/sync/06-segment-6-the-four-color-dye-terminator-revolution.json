@@ -1,0 +1,243 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The four-color dye-terminator revolution",
+ "duration": 367.88,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The four-color dye-terminator revolution"
+  },
+  {
+   "t": 4.05,
+   "text": "So through the early-to-mid 1980s, Sanger sequencing was running, but it was running in the four-tube, radioactive, slab-gel, hand-reading format."
+  },
+  {
+   "t": 13.34,
+   "text": "Each sequencing reaction took up a quarter of a gel lane."
+  },
+  {
+   "t": 16.99,
+   "text": "A researcher could read maybe a few hundred bases of sequence per gel, and a gel ran for half a day."
+  },
+  {
+   "t": 23.68,
+   "text": "The throughput was on the order of a few thousand bases per person-month, with a lot of staring at film."
+  },
+  {
+   "t": 29.35,
+   "text": "Then came a series of innovations that, taken together, transformed the technique into something a machine could do."
+  },
+  {
+   "t": 36.8,
+   "text": "The biggest single conceptual leap was the four-color dye-terminator trick, introduced by Leroy Hood's group at Caltech in the mid-1980s and commercialized by Applied Biosystems, who released the first automated DNA sequencer — the ABI 370A — in 1987."
+  },
+  {
+   "t": 55.38,
+   "text": "Here's the trick."
+  },
+  {
+   "t": 56.49,
+   "text": "Instead of using a single radioactive label and running four separate tubes for the four bases, what if you labeled each ddNTP with a different colored fluorescent dye and ran them all together in one tube?"
+  },
+  {
+   "t": 69.01,
+   "text": "Let me say what that means concretely."
+  },
+  {
+   "t": 71.03,
+   "text": "You take ddATP and you chemically attach a fluorescent dye that emits red light when illuminated."
+  },
+  {
+   "t": 77.3,
+   "text": "You take ddTTP and attach a green dye."
+  },
+  {
+   "t": 80.17,
+   "text": "ddGTP, yellow."
+  },
+  {
+   "t": 82.42,
+   "text": "ddCTP, blue."
+  },
+  {
+   "t": 84.14,
+   "text": "Now you put all four dye-labeled ddNTPs into a single reaction, along with the normal dNTPs, polymerase, primer, and template."
+  },
+  {
+   "t": 93.92,
+   "text": "The reaction proceeds exactly as before — polymerase elongates the strand, and occasionally a ddNTP slips in and terminates it — but now every terminated fragment is color-coded by which base it terminated on."
+  },
+  {
+   "t": 109.44,
+   "text": "Fragments ending in A glow red."
+  },
+  {
+   "t": 111.99,
+   "text": "Fragments ending in T glow green."
+  },
+  {
+   "t": 114.76,
+   "text": "Fragments ending in G glow yellow."
+  },
+  {
+   "t": 117.76,
+   "text": "Fragments ending in C glow blue."
+  },
+  {
+   "t": 120.53,
+   "text": "You run all this on a single gel lane (or, later, in a single capillary — we'll get to that next segment), and the fragments separate by length as before."
+  },
+  {
+   "t": 130.46,
+   "text": "But now, as each fragment crosses the detector at the bottom of the gel, you don't just see \"there's a band here\" — you see what color that band is."
+  },
+  {
+   "t": 139.38,
+   "text": "And the color tells you the base."
+  },
+  {
+   "t": 141.36,
+   "text": "Sit with this for a second, because it's beautiful."
+  },
+  {
+   "t": 144.32,
+   "text": "You have collapsed four tubes into one."
+  },
+  {
+   "t": 146.69,
+   "text": "You have collapsed four gel lanes into one."
+  },
+  {
+   "t": 149.24,
+   "text": "You have replaced the human reading of a gel — the eye-straining \"compare bands across four lanes\" exercise — with a machine that reads a stream of colors at a single detector."
+  },
+  {
+   "t": 159.78,
+   "text": "The information content is the same."
+  },
+  {
+   "t": 162.39,
+   "text": "The presentation is wildly more efficient."
+  },
+  {
+   "t": 165.41,
+   "text": "The analogy I like for this is a runner with a colored bib."
+  },
+  {
+   "t": 169.07,
+   "text": "Imagine a long-distance race."
+  },
+  {
+   "t": 171.5,
+   "text": "Hundreds of runners, all carrying different colored bibs — red, green, yellow, blue."
+  },
+  {
+   "t": 177.79,
+   "text": "The finish line has an observer with a camera."
+  },
+  {
+   "t": 180.43,
+   "text": "As each runner crosses, the camera records the color of the bib and the time of crossing."
+  },
+  {
+   "t": 185.85,
+   "text": "By the end of the race, you have a list: at minute one, a blue runner crossed."
+  },
+  {
+   "t": 190.91,
+   "text": "At minute one-point-five, a red runner crossed."
+  },
+  {
+   "t": 194.38,
+   "text": "At minute two, a green runner crossed."
+  },
+  {
+   "t": 197.12,
+   "text": "And so on."
+  },
+  {
+   "t": 198.09,
+   "text": "You've read out a string of colors in time order."
+  },
+  {
+   "t": 200.53,
+   "text": "That string of colors, in Sanger sequencing, is the sequence."
+  },
+  {
+   "t": 205.68,
+   "text": "Each color is a base; each finishing time corresponds to a position in the sequence."
+  },
+  {
+   "t": 211.74,
+   "text": "The chemistry to make this work was nontrivial."
+  },
+  {
+   "t": 215.15,
+   "text": "The fluorescent dyes have to be attached to the ddNTPs without interfering with the polymerase's ability to incorporate them — and polymerase, which has evolved over billions of years to discriminate against unnatural nucleotides, doesn't always cooperate."
+  },
+  {
+   "t": 231.16,
+   "text": "The early dye-terminator chemistry was finicky, and you'd see uneven peak heights — fragments terminated by one particular base would consistently be brighter or dimmer than the others, which made the reads harder to call accurately at low signal."
+  },
+  {
+   "t": 246.82,
+   "text": "Applied Biosystems' big commercial breakthrough was a chemistry called BigDye terminators, introduced in the late 1990s, which used a clever two-piece dye system — a donor dye and an acceptor dye linked by a spacer, exchanging energy via fluorescence resonance energy transfer — that gave much more even peak heights and much brighter signal across all four bases."
+  },
+  {
+   "t": 270.11,
+   "text": "BigDye is the chemistry that almost all modern Sanger sequencing still uses."
+  },
+  {
+   "t": 275.03,
+   "text": "If you send DNA to a Sanger sequencing core in 2026, the reaction in the back room is almost certainly running BigDye terminators on an ABI machine."
+  },
+  {
+   "t": 285.36,
+   "text": "And there's a parallel innovation worth naming here."
+  },
+  {
+   "t": 288.33,
+   "text": "The original Sanger method also required separately labeling the primer with radioactivity or fluorescence."
+  },
+  {
+   "t": 295.53,
+   "text": "In the four-color dye-terminator version, the label is on the ddNTP itself, so the primer is unmodified — which means you can use any primer you want, off the shelf, without custom labeling."
+  },
+  {
+   "t": 306.91,
+   "text": "That simplified the workflow enormously."
+  },
+  {
+   "t": 309.58,
+   "text": "You design a primer, order it from a synthesis company for a few dollars, mix it with your template and the BigDye reaction mix, and you're ready to go."
+  },
+  {
+   "t": 317.97,
+   "text": "The whole front-end of the sequencing experiment became trivial."
+  },
+  {
+   "t": 322.47,
+   "text": "So by the late 1990s, Sanger sequencing had transformed from a four-tube radioactive slab-gel artisanal process into a one-tube fluorescent reaction that could be loaded into a machine and forgotten about."
+  },
+  {
+   "t": 335.02,
+   "text": "The reaction mix went in; a chromatogram — that's the four-colored peak trace — came out a few hours later."
+  },
+  {
+   "t": 342.29,
+   "text": "The human role had shrunk to designing the primer and interpreting the chromatogram."
+  },
+  {
+   "t": 347.37,
+   "text": "The actual sequence reading was machine work."
+  },
+  {
+   "t": 350.29,
+   "text": "But to fully realize that automation, you needed one more piece of engineering: a way to run the fragment separation itself inside the machine, without slab gels, without manual loading, without anyone touching it."
+  },
+  {
+   "t": 364.01,
+   "text": "That's capillary electrophoresis, and that's the next segment."
+  }
+ ]
+}

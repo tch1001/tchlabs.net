@@ -1,0 +1,247 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Why 454 lost: a postmortem",
+ "duration": 356.19,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Why 454 lost: a postmortem"
+  },
+  {
+   "t": 4.46,
+   "text": "Let me pull together the various threads from previous segments into a single coherent postmortem of why 454 lost the NGS race."
+  },
+  {
+   "t": 13.97,
+   "text": "There are at least four distinct reasons, and I think it's worth seeing them clearly because they generalize beyond this one platform."
+  },
+  {
+   "t": 21.77,
+   "text": "Reason one: cost per base."
+  },
+  {
+   "t": 23.95,
+   "text": "This was the big one."
+  },
+  {
+   "t": 25.2,
+   "text": "454 was always more expensive per base than Illumina, and the gap kept widening as Illumina improved while 454 plateaued."
+  },
+  {
+   "t": 34.81,
+   "text": "By 2012, you could get the same amount of sequence on Illumina for somewhere around a tenth the cost on 454."
+  },
+  {
+   "t": 42.27,
+   "text": "For high-volume customers — which is most of them — that's a non-negotiable."
+  },
+  {
+   "t": 47.2,
+   "text": "Cost wins."
+  },
+  {
+   "t": 48.42,
+   "text": "Reason two: the homopolymer problem."
+  },
+  {
+   "t": 51.12,
+   "text": "Built into the chemistry."
+  },
+  {
+   "t": 52.75,
+   "text": "No engineering fix."
+  },
+  {
+   "t": 54.62,
+   "text": "As soon as customers wanted to call indels — which became more important as clinical applications grew, since many disease-relevant mutations are small indels — 454's calls in homopolymer regions were untrustworthy."
+  },
+  {
+   "t": 68.01,
+   "text": "Illumina's reversible-terminator chemistry didn't have this problem."
+  },
+  {
+   "t": 71.79,
+   "text": "For any application where indels mattered, 454 was out."
+  },
+  {
+   "t": 76.69,
+   "text": "Reason three: no path to short reads."
+  },
+  {
+   "t": 80.11,
+   "text": "This sounds backwards — Illumina's reads were shorter than 454's, and that was supposedly a disadvantage."
+  },
+  {
+   "t": 87.66,
+   "text": "But here's the thing: Illumina's chemistry was scale-up friendly."
+  },
+  {
+   "t": 91.66,
+   "text": "They could pack clusters more densely, get more reads per run, drive cost down."
+  },
+  {
+   "t": 97.08,
+   "text": "454's fiber-optic picotiter plate was a one-bead-per-well architecture that was already at its physical density limit."
+  },
+  {
+   "t": 105.0,
+   "text": "Going to two million wells, then to three million wells, required new plate designs that were expensive to manufacture and never reached competitive density."
+  },
+  {
+   "t": 114.7,
+   "text": "454 couldn't out-throughput its way out of the cost-per-base problem."
+  },
+  {
+   "t": 119.7,
+   "text": "Illumina could."
+  },
+  {
+   "t": 120.81,
+   "text": "Reason four: cycle time penalty."
+  },
+  {
+   "t": 123.59,
+   "text": "Flow-based chemistry, where you flow one nucleotide at a time, takes about four times as many cycles to get the same number of bases as a per-cycle chemistry like Illumina's."
+  },
+  {
+   "t": 134.56,
+   "text": "Even if you optimized everything else, the flow chemistry was inherently slower at the level of individual molecules."
+  },
+  {
+   "t": 142.18,
+   "text": "Runs took longer."
+  },
+  {
+   "t": 143.45,
+   "text": "Throughput per hour was lower."
+  },
+  {
+   "t": 145.36,
+   "text": "Per-base cost stayed elevated."
+  },
+  {
+   "t": 147.7,
+   "text": "These four reasons compound."
+  },
+  {
+   "t": 149.55,
+   "text": "Cost was high because of plate density and cycle time."
+  },
+  {
+   "t": 153.06,
+   "text": "Density couldn't increase because the picotiter plate architecture was at its limit."
+  },
+  {
+   "t": 158.54,
+   "text": "Cycle time couldn't decrease because flow chemistry needs sequential nucleotide presentations."
+  },
+  {
+   "t": 165.44,
+   "text": "The homopolymer problem was structural."
+  },
+  {
+   "t": 168.03,
+   "text": "None of these problems had clear engineering solutions, so 454 couldn't get on a cost-reduction curve that matched Illumina's."
+  },
+  {
+   "t": 176.15,
+   "text": "The gap widened year by year."
+  },
+  {
+   "t": 178.01,
+   "text": "Now compare to the platforms that emerged later."
+  },
+  {
+   "t": 181.05,
+   "text": "Ion Torrent, Rothberg's second sequencing company, used the same flow chemistry as 454 and had the same homopolymer problem and the same cycle-time penalty."
+  },
+  {
+   "t": 192.46,
+   "text": "But by replacing the optical detection with a semiconductor chip, it got a dramatic cost reduction on the detection side."
+  },
+  {
+   "t": 199.45,
+   "text": "Ion Torrent's PGM and Proton instruments were cheap enough that they found a sustainable niche in clinical and small-lab applications, particularly when paired with targeted gene panels."
+  },
+  {
+   "t": 210.62,
+   "text": "Ion Torrent is still on the market, owned by Thermo Fisher, doing fine in its niche."
+  },
+  {
+   "t": 216.55,
+   "text": "It learned 454's lessons on detection cost."
+  },
+  {
+   "t": 220.21,
+   "text": "PacBio and Oxford Nanopore went a completely different direction: not parallelism of short reads, but long single-molecule reads."
+  },
+  {
+   "t": 229.61,
+   "text": "PacBio uses fluorescent detection of single polymerase molecules in tiny wells (zero-mode waveguides) and produces reads of 10,000 to 30,000 bases."
+  },
+  {
+   "t": 240.94,
+   "text": "Nanopore literally threads a single DNA molecule through a protein pore in a membrane and reads the bases by measuring the change in electrical current."
+  },
+  {
+   "t": 250.59,
+   "text": "These platforms have their own strengths and weaknesses — high per-base error rates traded for very long reads — but they took a path that 454 never could have taken."
+  },
+  {
+   "t": 261.25,
+   "text": "The long-read niche that 454 partly occupied for 16S and metagenomics is now better served by PacBio and Nanopore."
+  },
+  {
+   "t": 270.87,
+   "text": "So 454 lost on cost per base, lost on homopolymer fidelity, couldn't scale density, couldn't reduce cycle time, and watched its long-read niche evaporate to PacBio and Nanopore."
+  },
+  {
+   "t": 283.47,
+   "text": "By 2013, Roche had no good options, and the discontinuation was inevitable."
+  },
+  {
+   "t": 289.83,
+   "text": "The thing to note is that this is not a story of bad strategy or bad execution."
+  },
+  {
+   "t": 295.0,
+   "text": "454 was well-funded, well-led, and technically excellent."
+  },
+  {
+   "t": 299.87,
+   "text": "It just happened to be built on a chemistry that didn't have the scaling path Illumina's did."
+  },
+  {
+   "t": 304.5,
+   "text": "In a different world — one where reversible terminators didn't work well, or where fluorescent imaging on flat surfaces was harder than fiber-optic detection — 454 might have won."
+  },
+  {
+   "t": 315.95,
+   "text": "In ours, the structural advantages of Illumina's chemistry compounded over a decade and crowded out everything else at the high end."
+  },
+  {
+   "t": 324.43,
+   "text": "This is the kind of story I want you to be alert to when you read about technology platforms in any field."
+  },
+  {
+   "t": 330.7,
+   "text": "The platform that's first is rarely the platform that wins."
+  },
+  {
+   "t": 334.54,
+   "text": "The platform that wins is the one with the structural scaling advantages."
+  },
+  {
+   "t": 339.03,
+   "text": "And those advantages are usually visible to people in the field within a couple of years of multiple platforms emerging."
+  },
+  {
+   "t": 347.08,
+   "text": "The smart bet is rarely on the pioneer."
+  },
+  {
+   "t": 349.7,
+   "text": "It's on the platform whose engineering trajectory points to the lowest long-term marginal cost."
+  }
+ ]
+}

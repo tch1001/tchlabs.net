@@ -1,0 +1,203 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — The economics",
+ "duration": 325.95,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — The economics"
+  },
+  {
+   "t": 2.9,
+   "text": "Let me put concrete numbers on the cost comparison, because the economics of Sanger versus NGS is what really determines which technology gets used for which job in practice."
+  },
+  {
+   "t": 13.46,
+   "text": "A Sanger sequencing reaction at an academic core facility in 2026 costs somewhere between $5 and $15, depending on the institution."
+  },
+  {
+   "t": 22.98,
+   "text": "That covers the chemistry, the capillary instrument time, the basic data delivery."
+  },
+  {
+   "t": 28.27,
+   "text": "You submit a tube of DNA with a primer."
+  },
+  {
+   "t": 31.23,
+   "text": "A day later, you get back a chromatogram."
+  },
+  {
+   "t": 34.02,
+   "text": "The per-sample turnaround time is usually 24 hours."
+  },
+  {
+   "t": 37.9,
+   "text": "There is no batch minimum; you can submit a single sample and get a single result."
+  },
+  {
+   "t": 43.14,
+   "text": "Setup time on your end: maybe ten minutes to set up the reaction, label the tube, fill out the submission form."
+  },
+  {
+   "t": 50.02,
+   "text": "An NGS run, by contrast, has significant fixed costs."
+  },
+  {
+   "t": 54.7,
+   "text": "A single MiSeq run might cost $1500-$2000 in consumables, regardless of how many samples are on it."
+  },
+  {
+   "t": 63.3,
+   "text": "A NovaSeq run might cost $10,000-$20,000."
+  },
+  {
+   "t": 68.3,
+   "text": "To bring the per-sample cost down, you have to multiplex many samples on the same run — typical numbers are 96 samples per MiSeq run, or hundreds per NovaSeq."
+  },
+  {
+   "t": 79.3,
+   "text": "The per-sample cost amortized across a fully-loaded run can be impressively low — maybe $30-$100 per sample for a basic application — but only if you can fill the run."
+  },
+  {
+   "t": 90.39,
+   "text": "Library prep adds further cost."
+  },
+  {
+   "t": 93.14,
+   "text": "Each NGS sample needs to be turned into a sequencing library by a separate biochemical workflow — typically $50-$150 per sample in reagents, plus a day or two of bench time."
+  },
+  {
+   "t": 105.92,
+   "text": "That cost is per sample regardless of how cheap the run is."
+  },
+  {
+   "t": 110.0,
+   "text": "The bottom line is that Sanger is cheaper than NGS for small jobs, where \"small\" means: one to maybe a few hundred samples, each interrogating a region under about 1000 bases."
+  },
+  {
+   "t": 121.92,
+   "text": "At that scale, Sanger's $10 per sample beats NGS's $50-100 per sample plus the wait for a batched run."
+  },
+  {
+   "t": 130.78,
+   "text": "NGS dominates at large scale: thousands of samples, or whole-genome questions, or applications where you need millions of reads per sample (RNA-seq, single-cell, ChIP-seq, etc.)."
+  },
+  {
+   "t": 144.18,
+   "text": "At that scale, NGS's amortized per-base cost is unbeatably low."
+  },
+  {
+   "t": 149.49,
+   "text": "The crossover is somewhere around the range where you have, say, 50-100 samples each of which needs a single region sequenced."
+  },
+  {
+   "t": 158.3,
+   "text": "At that scale, the economics are close to a wash, and the choice often comes down to other factors: how fast you need the answer (Sanger is faster for small batches), how confident you need to be in heterozygous calls (Sanger is more visual), what your local infrastructure looks like (do you have an NGS core nearby?), and so on."
+  },
+  {
+   "t": 177.0,
+   "text": "There's also a fascinating long tail of one-off applications where Sanger is just hopelessly cheaper than anything else."
+  },
+  {
+   "t": 184.93,
+   "text": "Need to verify a single clone?"
+  },
+  {
+   "t": 187.22,
+   "text": "$10 in Sanger."
+  },
+  {
+   "t": 188.76,
+   "text": "Need to confirm a single CRISPR edit in a single cell line?"
+  },
+  {
+   "t": 192.3,
+   "text": "$10."
+  },
+  {
+   "t": 193.46,
+   "text": "Need to ID a single bacterium from a blood culture?"
+  },
+  {
+   "t": 197.29,
+   "text": "$10."
+  },
+  {
+   "t": 198.41,
+   "text": "The marginal cost of one more Sanger reaction is so low that, for these one-shot questions, NGS would have to drop another order of magnitude in price before it could compete."
+  },
+  {
+   "t": 209.47,
+   "text": "Conversely, there are applications where Sanger is hopelessly slow regardless of cost."
+  },
+  {
+   "t": 215.45,
+   "text": "Need to sequence a whole bacterial genome?"
+  },
+  {
+   "t": 218.25,
+   "text": "Sanger would take 5,000 reactions and weeks of work."
+  },
+  {
+   "t": 222.16,
+   "text": "NGS does it in a single run."
+  },
+  {
+   "t": 224.47,
+   "text": "Need to characterize the gut microbiome of 100 patients?"
+  },
+  {
+   "t": 229.19,
+   "text": "Sanger via 16S clone libraries is theoretically possible but would take person-years; NGS via 16S amplicon sequencing is a week's work."
+  },
+  {
+   "t": 239.55,
+   "text": "Need to find rare variants in a tumor sample?"
+  },
+  {
+   "t": 242.71,
+   "text": "Sanger can't see them; NGS with deep sequencing can."
+  },
+  {
+   "t": 246.76,
+   "text": "The mental model I want you to leave with: think of Sanger as the unit-cost-optimized technology for the small-question end of the market, and NGS as the bulk-shipping-optimized technology for the large-question end."
+  },
+  {
+   "t": 259.21,
+   "text": "Match the tool to the volume."
+  },
+  {
+   "t": 261.39,
+   "text": "There's no shame in using a forty-year-old technology for the jobs it's still best at; there's also no excuse for using Sanger when the question is large enough that NGS would do it ten times faster and cheaper."
+  },
+  {
+   "t": 274.02,
+   "text": "The mature molecular biologist learns to size the question first and pick the tool second."
+  },
+  {
+   "t": 279.94,
+   "text": "And one more economic note: NGS keeps getting cheaper."
+  },
+  {
+   "t": 283.91,
+   "text": "Every year, the per-base cost of NGS drops by some fraction."
+  },
+  {
+   "t": 289.41,
+   "text": "Sanger's per-sample cost has been roughly flat for fifteen years — the technology is mature, the infrastructure is amortized, there's no driving force to lower the cost much further."
+  },
+  {
+   "t": 301.39,
+   "text": "So the crossover point keeps shifting in NGS's favor."
+  },
+  {
+   "t": 305.8,
+   "text": "Twenty years from now, Sanger may have shrunk further into a smaller niche — but I suspect it'll still be there, doing the bread-and-butter clone verifications and edit confirmations, because the workflow is so simple and the per-sample cost is already so low that it's hard to beat for the small stuff."
+  },
+  {
+   "t": 325.06,
+   "text": "We'll see."
+  }
+ ]
+}

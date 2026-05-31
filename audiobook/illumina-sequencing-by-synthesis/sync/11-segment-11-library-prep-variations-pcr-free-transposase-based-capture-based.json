@@ -1,0 +1,227 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Library prep variations: PCR-free, transposase-based, capture-based",
+ "duration": 440.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Library prep variations: PCR-free, transposase-based, capture-based"
+  },
+  {
+   "t": 7.16,
+   "text": "We mentioned library prep variants briefly in Segment 4."
+  },
+  {
+   "t": 11.53,
+   "text": "Let me come back to them now in more detail, because the choice of library prep dramatically affects what you can and can't see in your data, and there are three or four library prep families that dominate modern Illumina sequencing."
+  },
+  {
+   "t": 24.05,
+   "text": "Each is optimized for a specific use case."
+  },
+  {
+   "t": 26.86,
+   "text": "PCR-free library prep."
+  },
+  {
+   "t": 29.14,
+   "text": "The basic library prep workflow I described in Segment 4 typically includes a PCR amplification step after adapter ligation — to bulk up the amount of DNA before loading the flow cell."
+  },
+  {
+   "t": 41.91,
+   "text": "PCR works, but it introduces some biases: regions of extreme GC content amplify less efficiently than balanced regions, and the polymerase introduces a small number of errors."
+  },
+  {
+   "t": 54.4,
+   "text": "For projects where you have plenty of starting DNA and you want the cleanest possible data — particularly germline variant calling, where you want to be sure your variants are real and not PCR artifacts — Illumina sells PCR-free kits that skip the amplification step entirely."
+  },
+  {
+   "t": 70.61,
+   "text": "The fragments come straight off ligation and onto the flow cell."
+  },
+  {
+   "t": 74.99,
+   "text": "The result is more uniform coverage across the genome, slightly lower error rates in some failure modes, and reduced false positives in variant calling."
+  },
+  {
+   "t": 83.96,
+   "text": "PCR-free is the gold standard for clinical germline genome sequencing."
+  },
+  {
+   "t": 89.17,
+   "text": "The tradeoff is you need more starting DNA — a few hundred nanograms versus a few nanograms for PCR-amplified protocols."
+  },
+  {
+   "t": 97.5,
+   "text": "Transposase-based library prep — Nextera."
+  },
+  {
+   "t": 100.89,
+   "text": "This is a faster, lower-input alternative to traditional library prep."
+  },
+  {
+   "t": 105.9,
+   "text": "Instead of fragmenting DNA with sonication and then doing separate end-repair and adapter-ligation steps, Nextera uses a modified bacterial transposase enzyme loaded with synthetic DNA fragments that include adapter sequences."
+  },
+  {
+   "t": 121.7,
+   "text": "When you add the enzyme to your DNA, it simultaneously cuts the DNA and inserts the adapter sequences at the cut sites."
+  },
+  {
+   "t": 130.14,
+   "text": "The process is called tagmentation — tagging plus fragmentation."
+  },
+  {
+   "t": 134.91,
+   "text": "It's faster, requires less starting material (sometimes as little as one nanogram of DNA), and is more automatable."
+  },
+  {
+   "t": 143.16,
+   "text": "Nextera kits dominate single-cell sequencing, low-input clinical sequencing, and any project where speed and minimal hands-on time matter."
+  },
+  {
+   "t": 152.49,
+   "text": "The tradeoff is somewhat less control over fragment size distribution and slightly higher GC bias in some applications."
+  },
+  {
+   "t": 160.46,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 161.74,
+   "text": "Tagmentation is like having a magic staple gun that cuts paper and attaches a colored tab at each cut, in one motion."
+  },
+  {
+   "t": 169.56,
+   "text": "Traditional library prep is like cutting the paper first with scissors, then stapling each piece by hand."
+  },
+  {
+   "t": 176.09,
+   "text": "Same end result — a stack of tabbed paper pieces — but the magic staple gun is much faster."
+  },
+  {
+   "t": 183.04,
+   "text": "Capture-based library prep — exome and targeted panels."
+  },
+  {
+   "t": 187.35,
+   "text": "Sometimes you don't want to sequence the whole genome."
+  },
+  {
+   "t": 189.89,
+   "text": "You only want to sequence specific regions — like just the protein-coding parts (the exome, which is about 1.5 percent of the genome), or just a panel of cancer-relevant genes, or just a specific set of inherited disease loci."
+  },
+  {
+   "t": 204.89,
+   "text": "Sequencing only what you care about means you can run many more samples per flow cell, at much higher coverage per region, at lower total cost."
+  },
+  {
+   "t": 213.89,
+   "text": "The way Illumina-compatible capture works: after fragmentation and adapter ligation, you do an additional step called hybridization capture."
+  },
+  {
+   "t": 222.8,
+   "text": "You design or buy a set of biotinylated DNA or RNA probes whose sequences match the regions you care about — for an exome, that's tens of thousands of probes targeting all the protein-coding exons."
+  },
+  {
+   "t": 236.41,
+   "text": "You mix your library with the probes; the probes hybridize to fragments containing your target regions."
+  },
+  {
+   "t": 242.84,
+   "text": "Then you pull down the probes using streptavidin-coated magnetic beads, which grab the biotin."
+  },
+  {
+   "t": 249.05,
+   "text": "Everything that didn't bind a probe — the vast majority of the library, the boring intergenic stuff you don't care about — gets washed away."
+  },
+  {
+   "t": 257.5,
+   "text": "What's left, eluted off the beads, is an enriched library: only the fragments overlapping your target regions."
+  },
+  {
+   "t": 265.42,
+   "text": "You then PCR-amplify that enriched library and sequence it."
+  },
+  {
+   "t": 269.68,
+   "text": "The dominant exome capture kits are made by a few companies: Illumina's own TruSeq Exome, plus competitors like Agilent's SureSelect and Twist Biosciences' exome panels."
+  },
+  {
+   "t": 281.11,
+   "text": "They all work on the same principle — biotinylated probes plus magnetic bead pulldown — and they all produce enriched libraries that you sequence on the same Illumina instruments."
+  },
+  {
+   "t": 292.13,
+   "text": "The economics are powerful: an exome sequencing run at 100x coverage gives you very deep, high-confidence calls on protein-coding regions, and costs maybe a quarter of what a whole genome at 30x coverage would cost."
+  },
+  {
+   "t": 305.72,
+   "text": "Amplicon-based library prep."
+  },
+  {
+   "t": 308.06,
+   "text": "For very focused targets — say, you want to sequence the spike protein of a SARS-CoV-2 virus, or you want to look at the BRCA1 and BRCA2 genes in a breast cancer panel — you can skip hybridization entirely and use PCR to amplify your specific regions of interest directly from sample DNA."
+  },
+  {
+   "t": 326.97,
+   "text": "Each region gets its own pair of primers."
+  },
+  {
+   "t": 329.46,
+   "text": "The amplicons are then prepared for Illumina sequencing by adding adapters, sometimes through a second PCR step."
+  },
+  {
+   "t": 336.62,
+   "text": "Amplicon sequencing is the cheapest and fastest library prep, gives you very deep coverage on a small number of regions, and dominates infectious disease surveillance, microbiome 16S studies, and many clinical panels of just a few genes."
+  },
+  {
+   "t": 351.68,
+   "text": "RNA-seq library prep."
+  },
+  {
+   "t": 353.94,
+   "text": "RNA can't be sequenced directly — Illumina sequences DNA."
+  },
+  {
+   "t": 358.89,
+   "text": "So RNA-seq libraries start with a reverse transcription step that converts RNA to complementary DNA, then proceeds with fragmentation, end repair, adapter ligation, and amplification just like any other library."
+  },
+  {
+   "t": 373.37,
+   "text": "There are many variants — poly-A selection to pull down only messenger RNAs with poly-A tails, ribosomal RNA depletion to remove the abundant ribosomal RNA, strand-specific protocols to preserve which strand of the gene was transcribed."
+  },
+  {
+   "t": 389.34,
+   "text": "Each protocol is optimized for a different question: gene expression quantification, splicing analysis, novel transcript discovery, small RNA profiling."
+  },
+  {
+   "t": 399.82,
+   "text": "The RNA-seq family of protocols is enormous, with new variants published regularly."
+  },
+  {
+   "t": 405.63,
+   "text": "The library prep is, in many ways, the most important decision in a sequencing project."
+  },
+  {
+   "t": 411.97,
+   "text": "The instrument and chemistry are determined by your scale."
+  },
+  {
+   "t": 415.38,
+   "text": "But the library prep determines what's in your data: which regions get sequenced, with what biases, at what depth, with what artifacts."
+  },
+  {
+   "t": 423.91,
+   "text": "A botched library prep can ruin a million-dollar sequencing project."
+  },
+  {
+   "t": 428.62,
+   "text": "A well-chosen library prep can squeeze useful data out of a sample that would otherwise have been hopeless."
+  },
+  {
+   "t": 435.67,
+   "text": "The library prep is where the sample scientist's expertise still matters most."
+  }
+ ]
+}

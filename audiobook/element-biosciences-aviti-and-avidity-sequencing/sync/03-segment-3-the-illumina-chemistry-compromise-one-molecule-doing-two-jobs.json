@@ -1,0 +1,263 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The Illumina-chemistry compromise — one molecule doing two jobs",
+ "duration": 382.91,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The Illumina-chemistry compromise — one molecule doing two jobs"
+  },
+  {
+   "t": 6.26,
+   "text": "Let me re-tell the Illumina chemistry from the perspective of the founders of Element, which is the perspective of \"what is wrong with this picture."
+  },
+  {
+   "t": 14.89,
+   "text": "\" This is going to be a refresher on Illumina sequencing for those of you who took the Illumina lecture, but I want you to listen with new ears, because we're listening for the compromises rather than the elegance."
+  },
+  {
+   "t": 26.05,
+   "text": "The Illumina chemistry, you'll remember, is a four-step cycle."
+  },
+  {
+   "t": 30.35,
+   "text": "Wash in a mix of all four fluorescent reversible-terminator nucleotides."
+  },
+  {
+   "t": 34.91,
+   "text": "The polymerase, sitting at the end of the growing strand on each cluster on the flow cell, finds the correct one of the four and incorporates it."
+  },
+  {
+   "t": 43.71,
+   "text": "The blocker on the three-prime hydroxyl group prevents the polymerase from extending further."
+  },
+  {
+   "t": 49.38,
+   "text": "Wash away the unincorporated nucleotides."
+  },
+  {
+   "t": 52.15,
+   "text": "Image the flow cell — laser light, four colors, four photographs, one base at each cluster."
+  },
+  {
+   "t": 58.95,
+   "text": "Then chemically cleave off the dye and the blocker simultaneously, exposing a fresh three-prime hydroxyl ready for the next round."
+  },
+  {
+   "t": 67.95,
+   "text": "Repeat."
+  },
+  {
+   "t": 68.75,
+   "text": "Incorporate, image, cleave, repeat."
+  },
+  {
+   "t": 71.62,
+   "text": "Now let's look at that fluorescent reversible-terminator nucleotide."
+  },
+  {
+   "t": 75.47,
+   "text": "It's a single small molecule."
+  },
+  {
+   "t": 77.59,
+   "text": "It has, attached to it, four functional features."
+  },
+  {
+   "t": 81.19,
+   "text": "First, the nucleobase — A, T, G, or C — that determines which template base it pairs with."
+  },
+  {
+   "t": 89.19,
+   "text": "Second, the deoxyribose-triphosphate sugar-phosphate backbone, which is the substrate the polymerase actually grabs."
+  },
+  {
+   "t": 96.99,
+   "text": "Third, a chemical blocker on the three-prime hydroxyl, which physically prevents the polymerase from adding the next base after this one is incorporated."
+  },
+  {
+   "t": 106.61,
+   "text": "Fourth, a fluorescent dye, tethered to the base, which carries the color the camera reads."
+  },
+  {
+   "t": 112.79,
+   "text": "Four functional pieces on one tiny molecule."
+  },
+  {
+   "t": 115.97,
+   "text": "Now think about what each of those pieces wants."
+  },
+  {
+   "t": 119.06,
+   "text": "The base wants to pair selectively with its complement."
+  },
+  {
+   "t": 122.22,
+   "text": "Pairing in solution is driven by hydrogen bonds and base-stacking energies."
+  },
+  {
+   "t": 127.26,
+   "text": "A small, clean nucleotide pairs cleanly."
+  },
+  {
+   "t": 130.43,
+   "text": "A nucleotide festooned with bulky modifications pairs less cleanly, because the modifications can sterically interfere with the geometry of base pairing."
+  },
+  {
+   "t": 140.4,
+   "text": "The blocker, sitting right next to the chemical handle the polymerase needs, has to be small enough that the polymerase will still accept the modified nucleotide as a substrate."
+  },
+  {
+   "t": 150.71,
+   "text": "The dye has to be small enough and tethered far enough from the active site that it doesn't interfere with incorporation."
+  },
+  {
+   "t": 156.88,
+   "text": "And the whole molecule has to be water-soluble at high concentrations, stable through dozens of wash cycles, and cleavable by mild chemistry that doesn't destroy anything else on the flow cell."
+  },
+  {
+   "t": 168.79,
+   "text": "These constraints are all in tension."
+  },
+  {
+   "t": 171.05,
+   "text": "If you make the dye bigger and brighter, it interferes more with incorporation, and the polymerase slows down or rejects the nucleotide."
+  },
+  {
+   "t": 179.55,
+   "text": "If you make the blocker bigger and more reliable, you make the cleavage step harder, and you get fewer cycles before the chemistry breaks down."
+  },
+  {
+   "t": 187.82,
+   "text": "If you make the nucleotide bind tighter to the template — by, say, modifying the base to be a better pairing partner — you risk also making it bind the wrong template, because tighter binding is less discriminating."
+  },
+  {
+   "t": 200.72,
+   "text": "Every dial you turn to fix one problem makes another problem worse."
+  },
+  {
+   "t": 205.19,
+   "text": "The result is that the actual Illumina nucleotide is a careful, hard-won engineering compromise that took the original Solexa team years to settle on, and that Illumina has refined incrementally ever since."
+  },
+  {
+   "t": 218.1,
+   "text": "The compromise works."
+  },
+  {
+   "t": 219.8,
+   "text": "It works well enough to run twenty thousand human genomes a year through a single NovaSeq X."
+  },
+  {
+   "t": 225.97,
+   "text": "But every compromise leaves performance on the table."
+  },
+  {
+   "t": 229.1,
+   "text": "And the performance left on the table shows up in three measurable places."
+  },
+  {
+   "t": 234.18,
+   "text": "First place: read length."
+  },
+  {
+   "t": 236.34,
+   "text": "Illumina chemistry tops out at about 300 base pairs per read, paired-end, on most instruments — 150 bases from each end of a fragment."
+  },
+  {
+   "t": 246.35,
+   "text": "The reason it tops out is that every cycle of incorporation-image-cleave introduces a small amount of error."
+  },
+  {
+   "t": 253.16,
+   "text": "Some clusters fail to incorporate."
+  },
+  {
+   "t": 255.91,
+   "text": "Some get an extra incorporation."
+  },
+  {
+   "t": 258.0,
+   "text": "The blocker doesn't always cleave perfectly, so sometimes the next cycle adds the wrong base."
+  },
+  {
+   "t": 264.79,
+   "text": "The dye doesn't always cleave perfectly, leaving residual signal that confuses the next cycle's call."
+  },
+  {
+   "t": 271.55,
+   "text": "These errors accumulate cycle by cycle."
+  },
+  {
+   "t": 275.0,
+   "text": "By cycle 150, the signal-to-noise has degraded enough that reads beyond that point are unreliable."
+  },
+  {
+   "t": 282.23,
+   "text": "The chemistry can't keep up."
+  },
+  {
+   "t": 284.33,
+   "text": "Second place: error rate at the end of reads."
+  },
+  {
+   "t": 287.73,
+   "text": "The same accumulation problem means that the quality of base calls drops as you go further into a read."
+  },
+  {
+   "t": 294.05,
+   "text": "The first fifty bases of a 150-base Illumina read have very low error rates — somewhere around one in a thousand bases wrong."
+  },
+  {
+   "t": 301.93,
+   "text": "The last fifty bases have substantially higher error rates, sometimes one in a hundred."
+  },
+  {
+   "t": 307.74,
+   "text": "The drop is gradual but real, and it's a direct consequence of the chemistry compromise."
+  },
+  {
+   "t": 313.71,
+   "text": "Every cycle the dye doesn't cleave perfectly, every cycle the blocker doesn't remove cleanly, you accumulate ghost signal."
+  },
+  {
+   "t": 322.68,
+   "text": "Third place: reagent cost."
+  },
+  {
+   "t": 325.06,
+   "text": "The fluorescent nucleotides are expensive to make."
+  },
+  {
+   "t": 328.14,
+   "text": "They're complex organic molecules with multiple chemical modifications, and they have to be used at relatively high concentrations — micromolar — because the binding affinity isn't as high as it could be."
+  },
+  {
+   "t": 340.91,
+   "text": "High concentration times complex synthesis times millions of cycles times billions of clusters equals a meaningful chunk of the per-sample cost."
+  },
+  {
+   "t": 351.35,
+   "text": "Every dollar Illumina charges for a sequencing kit is, to a first approximation, the cost of those nucleotides plus a margin."
+  },
+  {
+   "t": 360.15,
+   "text": "Now, all three of these — read-length cap, end-of-read quality drop, expensive reagents — are not absolute physical limits."
+  },
+  {
+   "t": 368.84,
+   "text": "They are consequences of the specific chemical compromise that Illumina settled on."
+  },
+  {
+   "t": 374.21,
+   "text": "A different chemistry, with different compromises, could in principle do better."
+  },
+  {
+   "t": 379.0,
+   "text": "And that is exactly what Element set out to build."
+  },
+  {
+   "t": 381.85,
+   "text": "Let's see how."
+  }
+ ]
+}

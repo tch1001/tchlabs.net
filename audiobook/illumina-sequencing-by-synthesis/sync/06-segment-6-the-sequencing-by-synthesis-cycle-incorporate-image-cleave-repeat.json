@@ -1,0 +1,287 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The sequencing-by-synthesis cycle: incorporate, image, cleave, repeat",
+ "duration": 442.98,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The sequencing-by-synthesis cycle: incorporate, image, cleave, repeat"
+  },
+  {
+   "t": 6.9,
+   "text": "Now we get to the actual reading."
+  },
+  {
+   "t": 8.7,
+   "text": "The four-step cycle that is the master rhythm of Illumina sequencing."
+  },
+  {
+   "t": 13.26,
+   "text": "I want to walk through each step in real detail, because once you have this cycle in your bones, everything else about the platform makes sense."
+  },
+  {
+   "t": 21.15,
+   "text": "Step one: incorporate."
+  },
+  {
+   "t": 23.27,
+   "text": "The instrument flows a mixture of four nucleotides — modified A, modified T, modified G, modified C — across the surface of the flow cell."
+  },
+  {
+   "t": 34.35,
+   "text": "Each of these nucleotides has been chemically modified in two ways."
+  },
+  {
+   "t": 38.65,
+   "text": "First, a fluorescent dye has been attached, with each base getting a different color: in the classical four-channel chemistry, A gets red, C gets one shade of green or sometimes yellow, G gets dark blue, T gets a different green."
+  },
+  {
+   "t": 53.58,
+   "text": "Second, the three-prime hydroxyl of each nucleotide — the oxygen that the polymerase needs to grab to extend the chain — has been chemically blocked with a removable protecting group."
+  },
+  {
+   "t": 65.15,
+   "text": "The polymerase that's sitting on each cluster's primer-template junction grabs the correct nucleotide that matches the next base in its template, attaches it to the growing strand, and then — because of the three-prime block — stops."
+  },
+  {
+   "t": 79.44,
+   "text": "It physically cannot add another nucleotide."
+  },
+  {
+   "t": 82.66,
+   "text": "The brake is on."
+  },
+  {
+   "t": 83.92,
+   "text": "After about a minute of incorporation time, every cluster on the flow cell has had exactly one new base added."
+  },
+  {
+   "t": 90.41,
+   "text": "Then a wash."
+  },
+  {
+   "t": 91.56,
+   "text": "All the unincorporated nucleotides — the ones that drifted in but never got attached — are flushed away."
+  },
+  {
+   "t": 98.16,
+   "text": "The flow cell is now in a clean state: each cluster has been extended by exactly one base, and that base carries a fluorescent dye corresponding to its identity."
+  },
+  {
+   "t": 109.17,
+   "text": "Step two: image."
+  },
+  {
+   "t": 110.94,
+   "text": "The instrument illuminates the flow cell with laser light at the wavelengths that excite the fluorescent dyes, and a camera takes a series of high-resolution photographs through a microscope objective, moving across the flow cell tile by tile."
+  },
+  {
+   "t": 125.66,
+   "text": "Each cluster shines with a color that reveals which base it just added."
+  },
+  {
+   "t": 129.91,
+   "text": "In the four-channel chemistry, you take four separate exposures — one for each dye's emission wavelength — and you record, for every cluster, which color shone brightest."
+  },
+  {
+   "t": 140.78,
+   "text": "That color tells you, unambiguously, which base was just added."
+  },
+  {
+   "t": 144.91,
+   "text": "Software running on the instrument processes the images in real time, extracting the color at each cluster's known position and recording a base call."
+  },
+  {
+   "t": 154.34,
+   "text": "A is red, C is yellow-green, G is dark, T is bright green — that base call is appended to the sequence record for that cluster."
+  },
+  {
+   "t": 164.86,
+   "text": "The imaging step is, in some ways, the most demanding piece of engineering in the whole instrument."
+  },
+  {
+   "t": 171.51,
+   "text": "To photograph a NovaSeq X flow cell with enough resolution to distinguish adjacent clusters, the optics have to be extraordinarily precise, the camera sensors extraordinarily sensitive, the focus has to be maintained over the entire surface despite tiny variations in flow cell thickness."
+  },
+  {
+   "t": 191.12,
+   "text": "The newest instruments use sensors based on the same kind of CMOS chips that go into smartphone cameras, scaled and tuned for this specific use."
+  },
+  {
+   "t": 199.75,
+   "text": "The throughput of the optics is one of the main things that has improved over instrument generations — newer cameras can image a whole tile in a fraction of a second, where older ones took several seconds per tile."
+  },
+  {
+   "t": 212.07,
+   "text": "Step three: cleave."
+  },
+  {
+   "t": 213.95,
+   "text": "Now you have to undo both modifications on the just-added nucleotide."
+  },
+  {
+   "t": 218.47,
+   "text": "The fluorescent dye has to come off, so it doesn't contaminate the next cycle's photograph."
+  },
+  {
+   "t": 223.86,
+   "text": "The three-prime block has to come off, so the polymerase can resume extending."
+  },
+  {
+   "t": 229.32,
+   "text": "Conveniently, both modifications are designed to be removed by the same chemical reagent, in a single wash step."
+  },
+  {
+   "t": 236.75,
+   "text": "The cleavage reagent is flowed across the surface, the dye drops off into solution, the three-prime block is converted back to a normal hydroxyl, and the cluster is now ready to receive the next nucleotide."
+  },
+  {
+   "t": 249.62,
+   "text": "The chemistry has, as my old advisor used to say, \"rolled back to a clean slate\" — except now the strand is one base longer than it was at the start of the cycle."
+  },
+  {
+   "t": 258.99,
+   "text": "Step four: repeat."
+  },
+  {
+   "t": 260.91,
+   "text": "Flow in the next round of modified nucleotides."
+  },
+  {
+   "t": 264.43,
+   "text": "Wait for incorporation."
+  },
+  {
+   "t": 266.13,
+   "text": "Wash."
+  },
+  {
+   "t": 267.26,
+   "text": "Image."
+  },
+  {
+   "t": 268.08,
+   "text": "Cleave."
+  },
+  {
+   "t": 268.87,
+   "text": "Wash."
+  },
+  {
+   "t": 269.87,
+   "text": "Repeat."
+  },
+  {
+   "t": 270.69,
+   "text": "And so on, for as many cycles as you want reads."
+  },
+  {
+   "t": 274.29,
+   "text": "A typical Illumina run for short-read sequencing does either 150 cycles or 300 cycles, producing reads of 150 base pairs or 300 base pairs from each cluster."
+  },
+  {
+   "t": 286.83,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 288.13,
+   "text": "Reversible terminator chemistry is the elegant trick."
+  },
+  {
+   "t": 291.91,
+   "text": "Each cycle: add one of four fluorescent nucleotides with a built-in blocker, so only ONE base gets added per round."
+  },
+  {
+   "t": 299.12,
+   "text": "Take a photo."
+  },
+  {
+   "t": 300.22,
+   "text": "Chemically remove the blocker and the dye in one step."
+  },
+  {
+   "t": 303.71,
+   "text": "Go again."
+  },
+  {
+   "t": 304.62,
+   "text": "That cycle, repeated 150 or 300 times, with the camera recording the color of every one of a billion clusters each cycle, is the whole reading process."
+  },
+  {
+   "t": 315.74,
+   "text": "Everything else — the cluster generation, the library prep, the paired-end reads, the indexing — is preparation or interpretation around that core rhythm."
+  },
+  {
+   "t": 325.47,
+   "text": "A few practical numbers."
+  },
+  {
+   "t": 327.22,
+   "text": "Each cycle takes a few minutes — incorporation, wash, image (which is the slowest part, because of the time to scan the whole flow cell), cleave, wash."
+  },
+  {
+   "t": 338.09,
+   "text": "A full 150-cycle run takes somewhere between four and twelve hours on a modern instrument, depending on the model and the chemistry kit."
+  },
+  {
+   "t": 346.13,
+   "text": "Throw in cluster generation and the additional steps for paired-end reads and indexing, and a full run on a NovaSeq is more like a day to a day and a half."
+  },
+  {
+   "t": 355.86,
+   "text": "That gets you, on a NovaSeq X with a full flow cell, on the order of fifty billion clusters times 300 cycles, or about fifteen terabases — fifteen trillion base pairs — of sequence."
+  },
+  {
+   "t": 368.13,
+   "text": "That's roughly five thousand human genomes' worth of data in one run."
+  },
+  {
+   "t": 372.96,
+   "text": "In one machine, in one day."
+  },
+  {
+   "t": 375.14,
+   "text": "Compare that to Sanger sequencing — the technology that produced the original Human Genome Project."
+  },
+  {
+   "t": 381.31,
+   "text": "A single Sanger reaction produces maybe a thousand base pairs of sequence and takes a few hours."
+  },
+  {
+   "t": 387.74,
+   "text": "To get fifteen trillion base pairs from Sanger sequencing, you would need to run something like ten billion separate reactions, which would consume the global capacity of every Sanger sequencer ever built, running continuously for decades."
+  },
+  {
+   "t": 402.09,
+   "text": "Illumina does this in a day."
+  },
+  {
+   "t": 404.34,
+   "text": "That is what parallelism, applied relentlessly to the four-step cycle, will buy you."
+  },
+  {
+   "t": 410.28,
+   "text": "Let's pause on the cycle."
+  },
+  {
+   "t": 411.78,
+   "text": "Incorporate, image, cleave, repeat."
+  },
+  {
+   "t": 414.76,
+   "text": "Four words."
+  },
+  {
+   "t": 415.82,
+   "text": "Burn them in."
+  },
+  {
+   "t": 416.66,
+   "text": "Every Illumina paper, every clinical sequencing test, every genome assembly, every variant call, every RNA-seq experiment ever published — somewhere underneath, there is a flow cell doing those four words, billions of times in parallel, until the read length is reached."
+  },
+  {
+   "t": 435.32,
+   "text": "Now let's add one more layer of cleverness — paired-end reads — and then we'll talk about how this all adds up in terms of what the data looks like."
+  }
+ ]
+}

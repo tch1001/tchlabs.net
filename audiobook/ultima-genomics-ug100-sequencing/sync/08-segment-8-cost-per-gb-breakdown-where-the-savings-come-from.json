@@ -1,0 +1,219 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Cost-per-Gb breakdown — where the savings come from",
+ "duration": 364.31,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Cost-per-Gb breakdown — where the savings come from"
+  },
+  {
+   "t": 4.36,
+   "text": "Let's pull everything together and ask the question that matters most to the people who buy these instruments: where does the cost saving actually come from?"
+  },
+  {
+   "t": 12.76,
+   "text": "Ultima's pitch number, the one they put on banners at conferences and in press releases, is one dollar per gigabase of sequence data, which works out to roughly one hundred dollars for a thirty-fold human genome."
+  },
+  {
+   "t": 24.4,
+   "text": "Illumina's NovaSeq X, by comparison, comes in at roughly two dollars per gigabase, or two hundred dollars per genome at thirty-fold coverage."
+  },
+  {
+   "t": 34.04,
+   "text": "So Ultima is claiming about a two-fold cost advantage at the high end."
+  },
+  {
+   "t": 38.59,
+   "text": "I want to break down where that two-fold actually comes from, because the answer is \"a lot of small wins layered on top of each other,\" not \"one big magic trick."
+  },
+  {
+   "t": 47.48,
+   "text": "\""
+  },
+  {
+   "t": 47.67,
+   "text": "Reagent cost."
+  },
+  {
+   "t": 49.01,
+   "text": "This is the biggest single contributor."
+  },
+  {
+   "t": 51.5,
+   "text": "Recall from Segment 6 that Ultima uses mostly unlabeled nucleotides, with only a small fraction labeled, and only one species per cycle instead of four."
+  },
+  {
+   "t": 62.73,
+   "text": "The labeled-nucleotide bill drops by roughly an order of magnitude."
+  },
+  {
+   "t": 66.99,
+   "text": "The unlabeled nucleotides are essentially commodity chemicals."
+  },
+  {
+   "t": 71.12,
+   "text": "The reversible terminators are gone entirely, which removes a major synthesis cost."
+  },
+  {
+   "t": 77.01,
+   "text": "Net effect: reagent cost per cycle on Ultima is a small fraction of what it is on Illumina."
+  },
+  {
+   "t": 83.12,
+   "text": "Consumable cost."
+  },
+  {
+   "t": 84.61,
+   "text": "A silicon wafer is, surprisingly, cheap compared to a custom-fabricated Illumina flow cell."
+  },
+  {
+   "t": 91.17,
+   "text": "The chip industry produces hundreds of millions of bare silicon wafers a year, and the unit cost at volume is a few dollars per wafer."
+  },
+  {
+   "t": 99.55,
+   "text": "An Illumina flow cell, with its custom etched glass channels and proprietary surface chemistry, costs a lot more per unit."
+  },
+  {
+   "t": 108.0,
+   "text": "The bead coating on the Ultima wafer adds cost, but the substrate itself is, paradoxically, less expensive than a flow cell."
+  },
+  {
+   "t": 116.9,
+   "text": "Imaging time and machine throughput."
+  },
+  {
+   "t": 119.58,
+   "text": "Faster cycles means more genomes per instrument per year, which means the fixed cost of buying and maintaining the instrument — the capital expense, the service contract, the floor space, the operator time — gets amortized across more samples."
+  },
+  {
+   "t": 133.89,
+   "text": "If your million-dollar machine can do fifty thousand genomes a year instead of twenty thousand, the capex contribution to per-genome cost drops by more than half."
+  },
+  {
+   "t": 144.15,
+   "text": "Labor and operations."
+  },
+  {
+   "t": 145.78,
+   "text": "Faster runs, simpler chemistry, fewer manual touchpoints, more automation-friendly workflows."
+  },
+  {
+   "t": 152.44,
+   "text": "The amount of skilled human time required to process a sample through Ultima is, the company claims, lower than on Illumina, especially because the rapid isothermal amplification step on newer Ultima platforms eliminates a fiddly emulsion-PCR step that the original UG100 used."
+  },
+  {
+   "t": 172.22,
+   "text": "Skip paired-end."
+  },
+  {
+   "t": 173.5,
+   "text": "Reading each fragment once instead of twice cuts the per-fragment chemistry cost roughly in half, all else being equal."
+  },
+  {
+   "t": 181.76,
+   "text": "Combined with the simpler one-color chemistry, this is a multiplicative win."
+  },
+  {
+   "t": 186.64,
+   "text": "Smaller and cheaper optics."
+  },
+  {
+   "t": 188.72,
+   "text": "As we discussed in Segment 7, the optical system is borrowed in large part from the semiconductor inspection industry, which has driven those optics costs down by decades of high-volume manufacturing."
+  },
+  {
+   "t": 200.8,
+   "text": "The optical bill of materials on a UG100 is probably lower than on an equivalent-throughput NovaSeq, though both are substantial."
+  },
+  {
+   "t": 210.06,
+   "text": "Add all these up — reagents down by, say, five-fold; consumables down by a factor; capex amortized across higher throughput; labor down; paired-end skipped; optics cheaper — and you can plausibly believe a two-fold overall cost-per-genome advantage."
+  },
+  {
+   "t": 228.11,
+   "text": "None of the individual wins are huge."
+  },
+  {
+   "t": 230.94,
+   "text": "But because they compound multiplicatively across many line items, the net effect is dramatic."
+  },
+  {
+   "t": 237.41,
+   "text": "Now, a couple of honest caveats."
+  },
+  {
+   "t": 239.47,
+   "text": "First, these are headline numbers that assume the instrument is running at full utilization, doing the kind of sample mix Ultima is best at."
+  },
+  {
+   "t": 248.32,
+   "text": "In practice, smaller customers running fewer samples won't hit these numbers."
+  },
+  {
+   "t": 253.53,
+   "text": "The economics only kick in at population scale."
+  },
+  {
+   "t": 257.23,
+   "text": "Second, the cost comparison depends on which Illumina configuration you compare to."
+  },
+  {
+   "t": 262.27,
+   "text": "NovaSeq X at full throughput is the right comparison; smaller Illuminas like the NextSeq are not, and Ultima is not really competing with them."
+  },
+  {
+   "t": 271.39,
+   "text": "Third, the operator skill required to keep an Ultima running at full efficiency is real; this is not a plug-and-play box."
+  },
+  {
+   "t": 279.69,
+   "text": "There's a deeper economic story here too, which I want to name explicitly."
+  },
+  {
+   "t": 284.44,
+   "text": "Illumina's business model has long depended on selling instruments at modest margins and capturing the lifetime value through consumables — selling the proprietary flow cells, reagents, and library prep kits at high margin to a captive customer base."
+  },
+  {
+   "t": 300.01,
+   "text": "That model is the reason Illumina has been so profitable."
+  },
+  {
+   "t": 303.87,
+   "text": "The reason it's also the reason Ultima can attack the market: if you can build a competitive instrument with consumables that are inherently cheaper to produce, you can undercut Illumina's pricing while still making healthy margins."
+  },
+  {
+   "t": 316.91,
+   "text": "Ultima is structurally a lower-cost-to-produce platform than Illumina, and that's a durable advantage if they can hold the technology lead."
+  },
+  {
+   "t": 325.24,
+   "text": "The question, of course, is whether Illumina responds."
+  },
+  {
+   "t": 328.95,
+   "text": "They have."
+  },
+  {
+   "t": 329.85,
+   "text": "The NovaSeq X is itself a significant cost reduction over its predecessor."
+  },
+  {
+   "t": 335.54,
+   "text": "The 25B flow cell, the new chemistry, the streamlined workflow — Illumina is not standing still."
+  },
+  {
+   "t": 342.95,
+   "text": "The genomics industry has been in a price war for the last three years, and Ultima's existence is part of what's been forcing Illumina's hand."
+  },
+  {
+   "t": 351.09,
+   "text": "Whether Ultima can sustain a price advantage as Illumina pushes its own costs down is, again, an open question."
+  },
+  {
+   "t": 358.87,
+   "text": "But for now, the price gap is real, and it is the engine of Ultima's commercial pitch."
+  }
+ ]
+}

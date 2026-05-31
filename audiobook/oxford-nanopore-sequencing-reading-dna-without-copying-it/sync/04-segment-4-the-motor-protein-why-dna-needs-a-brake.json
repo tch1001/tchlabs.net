@@ -1,0 +1,231 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The motor protein: why DNA needs a brake",
+ "duration": 358.68,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The motor protein: why DNA needs a brake"
+  },
+  {
+   "t": 4.64,
+   "text": "So we have the pore."
+  },
+  {
+   "t": 5.86,
+   "text": "Now we have the second hard problem: DNA, left to its own devices, threads through the pore much too fast."
+  },
+  {
+   "t": 13.2,
+   "text": "If you take a DNA strand and just apply a voltage across a nanopore, the negatively charged DNA gets pulled into the positively charged side, and it whips through at something like a million bases per second — maybe more."
+  },
+  {
+   "t": 27.02,
+   "text": "That sounds fast because it is fast."
+  },
+  {
+   "t": 29.52,
+   "text": "The patch-clamp amplifiers we use to measure ionic current can sample maybe a hundred thousand times per second."
+  },
+  {
+   "t": 36.61,
+   "text": "So if a base is in the pore for a microsecond, the amplifier essentially can't see it at all."
+  },
+  {
+   "t": 42.05,
+   "text": "The signal smears into an indistinguishable blur, and no amount of clever analysis can recover the sequence."
+  },
+  {
+   "t": 49.61,
+   "text": "To read the DNA, we need to slow it down."
+  },
+  {
+   "t": 52.49,
+   "text": "Dramatically."
+  },
+  {
+   "t": 53.5,
+   "text": "From a million bases per second to something like a few hundred bases per second — a factor of about ten thousand."
+  },
+  {
+   "t": 60.65,
+   "text": "And we need to slow it down in a controlled way — not just stop and start randomly, but move at a steady, regulated pace, one base after another after another."
+  },
+  {
+   "t": 70.58,
+   "text": "The solution Oxford Nanopore landed on is to attach an enzyme on top of the pore — a motor protein that grabs the DNA and feeds it through the pore at a controlled rate."
+  },
+  {
+   "t": 81.5,
+   "text": "The motor sits like a hat on top of the pore."
+  },
+  {
+   "t": 84.0,
+   "text": "The DNA enters the motor, gets ratcheted through one base at a time, and then exits down into the pore for sensing."
+  },
+  {
+   "t": 91.28,
+   "text": "The motor controls the speed."
+  },
+  {
+   "t": 93.1,
+   "text": "The pore measures the current."
+  },
+  {
+   "t": 94.91,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 96.19,
+   "text": "Imagine a long string being pulled through a hole in a wall by a vacuum cleaner on the other side."
+  },
+  {
+   "t": 101.74,
+   "text": "The vacuum is sucking the string through at high speed — too fast for you to read any pattern on it."
+  },
+  {
+   "t": 107.62,
+   "text": "What you do is, on the near side of the hole, you set up a little spool with a hand-crank, and you thread the string around the spool first."
+  },
+  {
+   "t": 115.09,
+   "text": "Now the string can only go into the hole as fast as you crank the spool."
+  },
+  {
+   "t": 119.75,
+   "text": "The vacuum is still pulling, but the crank limits how fast the string moves."
+  },
+  {
+   "t": 124.46,
+   "text": "By cranking at a steady rate, you control the speed precisely, and as the string moves through the hole at, say, one centimeter per second instead of ten meters per second, you can see whatever pattern is printed on it."
+  },
+  {
+   "t": 137.61,
+   "text": "The crank, in nanopore sequencing, is the motor protein."
+  },
+  {
+   "t": 141.71,
+   "text": "It is, in practice, a DNA helicase or a related enzyme — a protein that naturally uses ATP to move along DNA, breaking base pairs as it goes."
+  },
+  {
+   "t": 152.76,
+   "text": "Helicases are normally used by cells to unwind double-stranded DNA during replication."
+  },
+  {
+   "t": 159.4,
+   "text": "In the nanopore context, the helicase grabs the DNA, hydrolyzes ATP to ratchet itself forward one base at a time, and in doing so feeds the DNA through the pore at a rate controlled by the rate of ATP hydrolysis."
+  },
+  {
+   "t": 174.6,
+   "text": "Tune the conditions — temperature, ATP concentration, the choice of helicase variant — and you tune the speed."
+  },
+  {
+   "t": 181.9,
+   "text": "Now here's something that sounds technical but matters a lot."
+  },
+  {
+   "t": 185.2,
+   "text": "The motor doesn't just slow the DNA down; it also makes the translocation stepwise rather than continuous."
+  },
+  {
+   "t": 192.62,
+   "text": "Without the motor, even if you could slow the DNA down somehow, it would still be slithering through the pore in a more or less continuous flow, and the current signal would be a smooth analog trace."
+  },
+  {
+   "t": 204.81,
+   "text": "With the motor, the DNA moves in discrete one-base steps."
+  },
+  {
+   "t": 209.0,
+   "text": "The current goes to a particular level for a few milliseconds — that's one base sitting in the pore — and then the motor takes another step and the current jumps to a new level, where another base sits for another few milliseconds, and so on."
+  },
+  {
+   "t": 222.05,
+   "text": "The current trace is a staircase, not a slope."
+  },
+  {
+   "t": 225.54,
+   "text": "And staircases are much easier to read than slopes."
+  },
+  {
+   "t": 229.09,
+   "text": "Each step corresponds to a fixed position of the DNA in the pore, with a definite chemical environment, and so a definite current value."
+  },
+  {
+   "t": 237.25,
+   "text": "The original motors used in the early MinION devices ran at about 30 bases per second."
+  },
+  {
+   "t": 243.47,
+   "text": "That was slow enough to read but produced very low throughput."
+  },
+  {
+   "t": 247.55,
+   "text": "Newer motors run at 400 to 450 bases per second — fast enough to give meaningful throughput while still slow enough for the current signal to be resolved."
+  },
+  {
+   "t": 258.58,
+   "text": "The exact motor identity has changed over the generations, and as with the pore chemistry, the precise enzyme is a commercial secret."
+  },
+  {
+   "t": 267.5,
+   "text": "But the principle hasn't changed."
+  },
+  {
+   "t": 269.55,
+   "text": "One more thing worth mentioning about the motor before we move on."
+  },
+  {
+   "t": 273.24,
+   "text": "The motor isn't just a passive brake; it's also what enables directional sequencing."
+  },
+  {
+   "t": 278.42,
+   "text": "The motor binds at a specific end of the DNA — typically the end that has been ligated to a custom adapter during library preparation — and ratchets the DNA through the pore in a specific direction."
+  },
+  {
+   "t": 291.29,
+   "text": "This means the sequence comes out of the pore in a defined order, from one end of the molecule to the other."
+  },
+  {
+   "t": 298.1,
+   "text": "It also means that if both ends of the DNA have adapters and motors loaded, the molecule can be threaded through the pore from either end — which is exactly how duplex sequencing works in practice."
+  },
+  {
+   "t": 309.75,
+   "text": "The forward strand goes through with one motor, then the reverse strand goes through with another motor, and the two reads are combined into a high-accuracy consensus."
+  },
+  {
+   "t": 319.18,
+   "text": "So now you have the two halves of the physical sensor."
+  },
+  {
+   "t": 322.33,
+   "text": "The pore is the reader."
+  },
+  {
+   "t": 324.0,
+   "text": "It's the part that converts DNA position into electrical current."
+  },
+  {
+   "t": 328.22,
+   "text": "The motor is the brake and the conveyor."
+  },
+  {
+   "t": 330.79,
+   "text": "It's the part that controls how fast the DNA moves and ensures it moves stepwise rather than continuously."
+  },
+  {
+   "t": 337.48,
+   "text": "Together, pore plus motor, they form a single integrated machine for converting a DNA strand into a current trace."
+  },
+  {
+   "t": 345.79,
+   "text": "The next question — and it is genuinely hard — is how do you convert that current trace into a sequence of bases?"
+  },
+  {
+   "t": 353.1,
+   "text": "That's basecalling, and it deserves its own segment, because it turns out to be a deep learning problem."
+  }
+ ]
+}

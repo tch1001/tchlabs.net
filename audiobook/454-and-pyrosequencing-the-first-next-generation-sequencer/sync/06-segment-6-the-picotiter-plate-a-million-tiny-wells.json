@@ -1,0 +1,251 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The picotiter plate: a million tiny wells",
+ "duration": 425.42,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The picotiter plate: a million tiny wells"
+  },
+  {
+   "t": 4.99,
+   "text": "The picotiter plate is the centerpiece of the 454 machine, and it's a genuinely beautiful piece of engineering."
+  },
+  {
+   "t": 13.0,
+   "text": "I want to spend a full segment on it because the design solves several problems at once, and understanding why it's shaped the way it is will tell you a lot about how the whole platform fit together."
+  },
+  {
+   "t": 23.99,
+   "text": "Start with the basic problem."
+  },
+  {
+   "t": 25.73,
+   "text": "You have millions of beads, each one carrying clonal copies of one starting DNA fragment."
+  },
+  {
+   "t": 32.24,
+   "text": "You need to put them into a sequencing reaction such that — one, each bead is physically isolated from every other bead, so signals don't mix; two, you can flow nucleotides over all of them in parallel; three, you can detect the light flash from each bead individually, mapping each flash back to which specific bead — which specific starting fragment — produced it."
+  },
+  {
+   "t": 55.39,
+   "text": "The 454 solution was a slab of etched fused silica with a million wells in it, each well sized to hold exactly one bead."
+  },
+  {
+   "t": 64.15,
+   "text": "The plate was about the size of a microscope slide."
+  },
+  {
+   "t": 67.17,
+   "text": "Etched into its top surface were a few hundred thousand to a couple of million tiny circular wells, each one roughly 44 micrometers across — about half the diameter of a human hair — and a few micrometers deep."
+  },
+  {
+   "t": 80.78,
+   "text": "The wells were arranged in a hexagonal close-packed array, like a honeycomb, packed as densely as the etching technology allowed."
+  },
+  {
+   "t": 89.71,
+   "text": "Each well's volume was on the order of 75 picoliters — that's where the \"pico\" in picotiter comes from — small enough that a bead sized just under 35 micrometers would slot into one well and physically not fit into a second."
+  },
+  {
+   "t": 104.38,
+   "text": "So loading the plate was as simple as pouring the bead slurry over it and letting gravity and Brownian motion drop one bead into each well."
+  },
+  {
+   "t": 112.97,
+   "text": "Excess beads washed away."
+  },
+  {
+   "t": 115.29,
+   "text": "Each well now had exactly one bead — or zero, if the loading was sparse — and each bead was physically trapped in its own little reaction chamber."
+  },
+  {
+   "t": 125.71,
+   "text": "But here's the trick that makes the whole detection scheme work, and this is the part I really want you to appreciate."
+  },
+  {
+   "t": 132.99,
+   "text": "The plate wasn't just etched silica."
+  },
+  {
+   "t": 135.2,
+   "text": "It was made of fused fiber-optic strands."
+  },
+  {
+   "t": 138.24,
+   "text": "Imagine taking millions of glass fibers — each one a tiny light guide, like the ones used in fiber-optic cables — bundling them together so they all run parallel, and then slicing the bundle across to get a thin plate."
+  },
+  {
+   "t": 152.41,
+   "text": "Each fiber is now a vertical tube of glass, and the cross-section of the plate is a tightly packed array of fiber-ends."
+  },
+  {
+   "t": 160.43,
+   "text": "You etch the top surface to make a well at each fiber end."
+  },
+  {
+   "t": 164.31,
+   "text": "Now each well sits directly on top of one fiber."
+  },
+  {
+   "t": 167.69,
+   "text": "What this means is: any light emitted in a particular well travels down its own dedicated fiber-optic strand to the bottom of the plate, where a sensitive CCD camera sits and images the whole array at once."
+  },
+  {
+   "t": 181.62,
+   "text": "Each well is wired, optically, to its own pixel on the camera."
+  },
+  {
+   "t": 185.89,
+   "text": "There's no diffraction, no spreading of light from one well to the next, no need for fancy lensing — the fibers carry the light from each well straight down to a unique location on the camera sensor."
+  },
+  {
+   "t": 198.53,
+   "text": "The picotiter plate is, in effect, a million-pixel display where each pixel is wired to its own chemical reaction."
+  },
+  {
+   "t": 207.34,
+   "text": "That image is beautiful and I want you to hold onto it."
+  },
+  {
+   "t": 210.55,
+   "text": "So when the 454 machine runs, the picotiter plate sits in a flow cell."
+  },
+  {
+   "t": 216.05,
+   "text": "Reagents — the enzymes (sulfurylase, luciferase, apyrase), substrates (APS, luciferin), and the nucleotide of the current flow — wash over the top of the plate, soaking down into each well."
+  },
+  {
+   "t": 230.1,
+   "text": "The polymerase, which is on the bead along with the DNA, does its work inside the well."
+  },
+  {
+   "t": 235.62,
+   "text": "If the current nucleotide is the right one, pyrophosphate is released, the cascade runs, light comes out of that well."
+  },
+  {
+   "t": 243.43,
+   "text": "The light travels down the fiber to the camera."
+  },
+  {
+   "t": 246.9,
+   "text": "The camera, taking a long exposure during each flow, records the brightness of every well simultaneously."
+  },
+  {
+   "t": 254.54,
+   "text": "After the flow is done, apyrase has chewed up the leftover nucleotides, the reagents are washed out, the next nucleotide is flowed, and the camera grabs another image."
+  },
+  {
+   "t": 265.68,
+   "text": "Over the course of the run — a few hundred flows — the camera builds up a four-dimensional dataset: well location in x and y, flow number, and intensity."
+  },
+  {
+   "t": 276.63,
+   "text": "That dataset is the raw output of the machine."
+  },
+  {
+   "t": 279.49,
+   "text": "From it, by simple bookkeeping, you reconstruct the DNA sequence in every well."
+  },
+  {
+   "t": 285.81,
+   "text": "We'll talk about how that reconstruction works in Segment 7."
+  },
+  {
+   "t": 289.86,
+   "text": "Let me give you a feel for the scale."
+  },
+  {
+   "t": 291.73,
+   "text": "The first 454 GS20 in 2005 had a plate with about 1.6 million wells, of which maybe a quarter to a half were usefully loaded with a bead and produced readable sequence."
+  },
+  {
+   "t": 304.73,
+   "text": "So a single run might give you somewhere between 200,000 and 400,000 reads of about a hundred bases each — twenty to forty million bases of sequence per run."
+  },
+  {
+   "t": 314.99,
+   "text": "Three years later, the GS FLX could push 400-base reads at over a million reads per run — call it 400 million to 500 million bases per run."
+  },
+  {
+   "t": 325.48,
+   "text": "By Sanger standards, this was outlandish."
+  },
+  {
+   "t": 328.03,
+   "text": "A single Sanger machine running 96 capillaries gave you maybe 100,000 bases a day."
+  },
+  {
+   "t": 334.53,
+   "text": "The 454, in a single afternoon, gave you something like a hundred Sanger-machine-days of output."
+  },
+  {
+   "t": 341.11,
+   "text": "The economics of sequencing changed in one product cycle."
+  },
+  {
+   "t": 345.18,
+   "text": "And here's the genuinely lovely thing about the picotiter plate as an idea."
+  },
+  {
+   "t": 349.82,
+   "text": "It's a massively parallel detection system built on the fact that light, once you have a way to channel it, doesn't care how many parallel channels you run."
+  },
+  {
+   "t": 358.41,
+   "text": "Add more wells, add more fibers, get more reads, with no fundamental change to the chemistry."
+  },
+  {
+   "t": 365.37,
+   "text": "The chemistry in each well is exactly the same one Pål Nyrén worked out in 1996 for a single test tube."
+  },
+  {
+   "t": 373.18,
+   "text": "The 454 machine is, conceptually, just a million Nyrén test tubes running side by side, with a million pixels of camera looking at them."
+  },
+  {
+   "t": 381.74,
+   "text": "The scale-up is a triumph of engineering, but the idea is dead simple."
+  },
+  {
+   "t": 386.71,
+   "text": "Take a chemistry that works in one tube."
+  },
+  {
+   "t": 389.44,
+   "text": "Find a way to physically isolate millions of copies of that tube."
+  },
+  {
+   "t": 393.57,
+   "text": "Wire each one to its own pixel."
+  },
+  {
+   "t": 395.94,
+   "text": "Push reagents through all of them in parallel."
+  },
+  {
+   "t": 399.14,
+   "text": "Watch the camera."
+  },
+  {
+   "t": 400.29,
+   "text": "That's the whole machine."
+  },
+  {
+   "t": 401.57,
+   "text": "Polymerase, sulfurylase, luciferase, apyrase, on a clonal bead, in a fiber-optic well, with a CCD camera underneath."
+  },
+  {
+   "t": 410.99,
+   "text": "One reaction, replicated a million-fold."
+  },
+  {
+   "t": 414.18,
+   "text": "We've now built — conceptually — the 454 sequencer."
+  },
+  {
+   "t": 418.61,
+   "text": "Let's spend the next few segments on the data it produces and what its strengths and weaknesses turned out to be in practice."
+  }
+ ]
+}

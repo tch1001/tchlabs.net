@@ -1,0 +1,303 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The chemistry — mostly-unlabeled-with-one-labeled-probe approach",
+ "duration": 446.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The chemistry — mostly-unlabeled-with-one-labeled-probe approach"
+  },
+  {
+   "t": 5.89,
+   "text": "Now we get to the chemistry, which is — I think — the most interesting part of the whole platform, and also the hardest to explain quickly, so bear with me."
+  },
+  {
+   "t": 15.04,
+   "text": "Recall how Illumina chemistry works."
+  },
+  {
+   "t": 17.39,
+   "text": "Every cycle, you flow in a mixture of four nucleotides — A, T, G, C — each one carrying a different fluorescent dye, and each one chemically blocked so the polymerase can only add one base before stalling."
+  },
+  {
+   "t": 32.67,
+   "text": "The polymerase adds one of the four to each growing strand."
+  },
+  {
+   "t": 36.58,
+   "text": "You photograph the surface to see which of four colors lit up at each cluster."
+  },
+  {
+   "t": 42.14,
+   "text": "You chemically remove the dyes and the blockers."
+  },
+  {
+   "t": 45.48,
+   "text": "Repeat."
+  },
+  {
+   "t": 46.29,
+   "text": "Four colors, four dyes per cycle, four reversible terminators."
+  },
+  {
+   "t": 51.21,
+   "text": "Every cycle requires all four labeled nucleotides, which are the most expensive component of the chemistry."
+  },
+  {
+   "t": 58.25,
+   "text": "Now here is Ultima's move, and it is genuinely clever."
+  },
+  {
+   "t": 62.34,
+   "text": "Instead of running four labeled, blocked nucleotides per cycle, Ultima flows in just one nucleotide species per cycle — and that nucleotide is mostly unlabeled."
+  },
+  {
+   "t": 74.17,
+   "text": "Cheap, plain, natural-chemistry-grade A, T, G, or C."
+  },
+  {
+   "t": 79.28,
+   "text": "No fluorescent dye on most of the molecules."
+  },
+  {
+   "t": 82.29,
+   "text": "No reversible blocker."
+  },
+  {
+   "t": 83.92,
+   "text": "Just regular nucleotides."
+  },
+  {
+   "t": 85.84,
+   "text": "The polymerase pulls them in by ordinary base-pairing with the template, and crucially, if the template has a run of, say, three A's in a row, the polymerase adds three T's in a row in one shot — there's no terminator stopping after each base."
+  },
+  {
+   "t": 101.01,
+   "text": "This is sometimes called flow sequencing or non-terminating sequencing, and conceptually it's very close to the ion-detection chemistry pioneered by 454 pyrosequencing and Ion Torrent, but with optical detection rather than chemical or electrical."
+  },
+  {
+   "t": 117.88,
+   "text": "So you flow in unlabeled T's."
+  },
+  {
+   "t": 120.45,
+   "text": "The polymerase incorporates as many T's as the template demands in each cluster."
+  },
+  {
+   "t": 126.41,
+   "text": "Now: how do you read out how many T's just got incorporated?"
+  },
+  {
+   "t": 130.36,
+   "text": "Because if the template called for three T's, that cluster is now three bases longer than a cluster whose template only called for one T, and you need to know that."
+  },
+  {
+   "t": 140.49,
+   "text": "Here's the trick."
+  },
+  {
+   "t": 141.54,
+   "text": "A small fraction of the nucleotides in each flow — typically a few percent — are labeled with a fluorescent dye."
+  },
+  {
+   "t": 148.96,
+   "text": "So when the polymerase incorporates T's, most of them are unlabeled, but every so often a labeled T sneaks in."
+  },
+  {
+   "t": 156.81,
+   "text": "The total amount of fluorescent signal at a cluster, after the flow, is proportional to how many T's got incorporated total."
+  },
+  {
+   "t": 164.19,
+   "text": "Three T's incorporated means roughly three times the fluorescent signal of one T."
+  },
+  {
+   "t": 170.43,
+   "text": "You read out the intensity, you divide by your calibration of \"signal per incorporated base,\" and you get an integer estimate of how many T's the template called for in that position."
+  },
+  {
+   "t": 181.01,
+   "text": "Then you wash out the unincorporated nucleotides, and flow in the next species — say, A — and repeat."
+  },
+  {
+   "t": 187.39,
+   "text": "T, A, C, G, T, A, C, G — cycling through the four bases in a fixed order, reading out the homopolymer length each time."
+  },
+  {
+   "t": 199.01,
+   "text": "So in one Ultima cycle, you don't add one base; you add however many consecutive bases of one species the template calls for, and you read out the count by intensity."
+  },
+  {
+   "t": 209.74,
+   "text": "Mostly unlabeled nucleotides do the work."
+  },
+  {
+   "t": 213.11,
+   "text": "A small fraction of labeled nucleotides serve as a \"tracer dye\" that tells you how much got incorporated."
+  },
+  {
+   "t": 220.12,
+   "text": "That's the chemistry."
+  },
+  {
+   "t": 221.4,
+   "text": "Let me explain why this is so much cheaper than four-color Illumina chemistry."
+  },
+  {
+   "t": 226.66,
+   "text": "Three reasons."
+  },
+  {
+   "t": 227.96,
+   "text": "First, the labeled-nucleotide cost."
+  },
+  {
+   "t": 230.64,
+   "text": "Fluorescent dyes attached to nucleotides are expensive."
+  },
+  {
+   "t": 234.4,
+   "text": "Reversible terminators — the chemical blockers that stop the polymerase after each base — are even more expensive, and the synthesis chemistry is finicky."
+  },
+  {
+   "t": 244.43,
+   "text": "Illumina has to provide four fully-labeled, fully-blocked nucleotide species per cycle, all at high purity."
+  },
+  {
+   "t": 252.14,
+   "text": "Ultima provides one nucleotide species per cycle, and only a few percent of the molecules in that species are labeled."
+  },
+  {
+   "t": 260.23,
+   "text": "The rest are cheap, off-the-shelf, unmodified nucleotides — the kind of nucleotides you can buy by the kilogram for ordinary PCR reactions."
+  },
+  {
+   "t": 269.27,
+   "text": "Reagent cost per cycle drops by something like an order of magnitude."
+  },
+  {
+   "t": 274.39,
+   "text": "Second, the chemistry is simpler."
+  },
+  {
+   "t": 277.01,
+   "text": "No reversible terminator means no cleavage step after each cycle."
+  },
+  {
+   "t": 281.39,
+   "text": "The chemistry just runs forward."
+  },
+  {
+   "t": 283.47,
+   "text": "That eliminates a whole class of failure modes — incomplete cleavage, residual dye, blocker remnants — that Illumina has to engineer around."
+  },
+  {
+   "t": 293.31,
+   "text": "It also makes each cycle faster, because you've removed a step."
+  },
+  {
+   "t": 297.62,
+   "text": "Third, only one nucleotide species per cycle means you don't have to discriminate between four different fluorescent colors at each cluster."
+  },
+  {
+   "t": 306.34,
+   "text": "You only need one channel of detection — one dye, one laser wavelength, one filter."
+  },
+  {
+   "t": 312.48,
+   "text": "The optics get dramatically simpler."
+  },
+  {
+   "t": 314.96,
+   "text": "Single-color imaging is way faster than four-color imaging because you don't have to scan through four exposures and filter changes at each tile."
+  },
+  {
+   "t": 323.92,
+   "text": "Multiply that by the spin geometry and you get cycle times that are much, much shorter than anything Illumina can manage."
+  },
+  {
+   "t": 331.68,
+   "text": "Now, there's a price for all this elegance, and you should see it coming."
+  },
+  {
+   "t": 336.14,
+   "text": "The signal-versus-count problem."
+  },
+  {
+   "t": 338.08,
+   "text": "When you measure fluorescent intensity to infer \"how many bases of this species just got incorporated,\" the precision of that inference depends on how cleanly the intensity scales with the count."
+  },
+  {
+   "t": 349.38,
+   "text": "One base versus two bases versus three bases is easy to tell apart."
+  },
+  {
+   "t": 354.64,
+   "text": "But what about five versus six?"
+  },
+  {
+   "t": 356.99,
+   "text": "Or eight versus nine?"
+  },
+  {
+   "t": 358.71,
+   "text": "The intensity differences get proportionally smaller as the count grows, and the noise floor — from imaging noise, from chemistry variability, from cluster brightness differences — stays the same."
+  },
+  {
+   "t": 370.66,
+   "text": "So beyond some homopolymer length, you start mis-calling."
+  },
+  {
+   "t": 374.32,
+   "text": "A run of seven A's might get called as six, or eight."
+  },
+  {
+   "t": 378.12,
+   "text": "Homopolymer length errors are the characteristic error mode of flow-based sequencing chemistries."
+  },
+  {
+   "t": 384.23,
+   "text": "Pyrosequencing had them."
+  },
+  {
+   "t": 385.92,
+   "text": "Ion Torrent had them."
+  },
+  {
+   "t": 387.18,
+   "text": "Ultima has them, though their chemistry is more refined."
+  },
+  {
+   "t": 391.02,
+   "text": "The Ultima team has done a lot of work to push the homopolymer ceiling as high as possible — by careful calibration, by clever choice of dye chemistry, by extracting more information from the rise-and-fall shape of the intensity signal rather than just the peak value."
+  },
+  {
+   "t": 407.06,
+   "text": "But the fundamental limit is real."
+  },
+  {
+   "t": 409.37,
+   "text": "Ultima reads have more trouble in long homopolymer runs than Illumina reads do."
+  },
+  {
+   "t": 414.81,
+   "text": "And homopolymers are surprisingly common in the human genome, especially in certain functionally important regions."
+  },
+  {
+   "t": 422.07,
+   "text": "We'll come back to how this shows up in the data in Segment 11."
+  },
+  {
+   "t": 426.22,
+   "text": "That's the chemistry."
+  },
+  {
+   "t": 427.52,
+   "text": "One species at a time, mostly unlabeled, a small labeled fraction as tracer, intensity-based length readout, one color of fluorescence to image."
+  },
+  {
+   "t": 437.81,
+   "text": "It is a fundamentally different approach to sequencing chemistry from what Illumina does, and it is one of the deepest engineering bets in the whole platform."
+  }
+ ]
+}

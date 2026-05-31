@@ -1,0 +1,211 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Adaptive sampling: real-time decisions while sequencing",
+ "duration": 375.61,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Adaptive sampling: real-time decisions while sequencing"
+  },
+  {
+   "t": 5.34,
+   "text": "Now I want to tell you about a feature that I think is the cleverest software-side innovation in nanopore sequencing — something that no other platform can do, because no other platform has the right combination of real-time data and individually-controllable channels."
+  },
+  {
+   "t": 20.41,
+   "text": "It's called adaptive sampling, and it lets you make decisions about which reads to keep and which to throw away, while the sequencing is happening."
+  },
+  {
+   "t": 28.98,
+   "text": "Here's the setup."
+  },
+  {
+   "t": 30.11,
+   "text": "You're running a MinION."
+  },
+  {
+   "t": 31.34,
+   "text": "It has 1500 active pores, each one independently sequencing a different DNA molecule, all in parallel."
+  },
+  {
+   "t": 40.77,
+   "text": "Each pore is producing current signal in real time, which gets basecalled in real time, into base sequence in real time."
+  },
+  {
+   "t": 48.76,
+   "text": "Now imagine that as each read starts, you can — within a few seconds — get a rough basecall of the first few hundred bases of that read, align it against a reference genome, and figure out where in the genome this read came from."
+  },
+  {
+   "t": 62.21,
+   "text": "If you don't care about reads from this region — say, you're trying to enrich for a specific disease gene, and this read came from an unrelated region of the genome — you can reject the read."
+  },
+  {
+   "t": 72.79,
+   "text": "The flow cell software sends a quick voltage reversal to that particular pore."
+  },
+  {
+   "t": 77.95,
+   "text": "The voltage reversal pushes the DNA molecule back out of the pore, ejecting it into the cis-side chamber."
+  },
+  {
+   "t": 84.65,
+   "text": "The pore is now free again, immediately, to capture a new molecule, which might or might not be from a region you care about."
+  },
+  {
+   "t": 93.16,
+   "text": "If the new one is also uninteresting, you eject it too."
+  },
+  {
+   "t": 96.76,
+   "text": "If it's interesting, you let it sequence to completion."
+  },
+  {
+   "t": 100.01,
+   "text": "This is adaptive sampling, sometimes called read-until or selective sequencing."
+  },
+  {
+   "t": 105.2,
+   "text": "It is, I think, one of the most distinctive software features in the entire sequencing world."
+  },
+  {
+   "t": 110.88,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 112.17,
+   "text": "Imagine you're a librarian sorting books returned to the library."
+  },
+  {
+   "t": 116.15,
+   "text": "Each book takes about an hour to fully catalog."
+  },
+  {
+   "t": 119.28,
+   "text": "But you have a hundred books to process and only enough time to fully catalog ten of them."
+  },
+  {
+   "t": 124.62,
+   "text": "What you'd like is a way to skim the title page of each book in five seconds — just enough to decide whether this is a book you care about — and either keep it for full processing or put it back in the return bin to make room for the next one."
+  },
+  {
+   "t": 136.75,
+   "text": "That's exactly what adaptive sampling does for sequencing."
+  },
+  {
+   "t": 140.57,
+   "text": "The flow cell can capture a molecule, sequence the first few hundred bases, basecall them, align them, and decide — in about two seconds — whether this is a molecule worth fully sequencing."
+  },
+  {
+   "t": 153.31,
+   "text": "If yes, let it complete (which might take several minutes for a long read)."
+  },
+  {
+   "t": 158.07,
+   "text": "If no, eject it and capture another one."
+  },
+  {
+   "t": 161.06,
+   "text": "Over the course of a long sequencing run, you can effectively enrich for the regions of the genome you care about by a factor of ten or more, without doing any wet-lab enrichment step."
+  },
+  {
+   "t": 172.28,
+   "text": "This is genuinely unique to nanopore, for two reasons."
+  },
+  {
+   "t": 176.7,
+   "text": "First, the data is real-time — the basecaller is running while the read is being acquired, not afterward."
+  },
+  {
+   "t": 183.82,
+   "text": "No other major sequencing platform produces real-time basecalls during the run."
+  },
+  {
+   "t": 188.84,
+   "text": "Illumina has to wait until all cycles complete before doing anything with the data."
+  },
+  {
+   "t": 193.84,
+   "text": "PacBio basecalls per ZMW well but doesn't make decisions about whether to continue."
+  },
+  {
+   "t": 199.7,
+   "text": "Second, the pores are individually controllable — you can reject one molecule from one pore while letting the molecule in the next pore continue undisturbed."
+  },
+  {
+   "t": 208.93,
+   "text": "The voltage on each pore is independently switchable."
+  },
+  {
+   "t": 212.41,
+   "text": "So you can make per-molecule decisions in real time."
+  },
+  {
+   "t": 215.64,
+   "text": "The combination of those two — real-time basecalling and per-pore voltage control — is what makes adaptive sampling possible, and it's a combination that other platforms simply don't have."
+  },
+  {
+   "t": 227.07,
+   "text": "The applications are striking."
+  },
+  {
+   "t": 229.01,
+   "text": "Targeted enrichment without capture probes: if you want to sequence the BRCA1 and BRCA2 genes from a patient's blood, you can program adaptive sampling to keep only reads that align to those genes, ejecting everything else."
+  },
+  {
+   "t": 244.08,
+   "text": "You get effective enrichment of 10x to 100x without any wet-lab capture step, which would normally take hours and cost extra reagents."
+  },
+  {
+   "t": 253.77,
+   "text": "Negative selection: if you're sequencing a microbial sample but you have a lot of host contamination — like sequencing the microbiome of a stool sample where most of the DNA is from human cells — you can reject all the human reads and concentrate sequencing capacity on the microbial DNA."
+  },
+  {
+   "t": 272.27,
+   "text": "Depth control: if you're trying to get exactly 30x coverage of a particular region for variant calling, you can adaptively sample to stop sequencing the region once you've hit your target coverage, freeing capacity for other regions."
+  },
+  {
+   "t": 286.59,
+   "text": "In every case, the adaptive sampling is happening in real time, on the same flow cell, with no extra hardware required."
+  },
+  {
+   "t": 295.22,
+   "text": "It's purely software running against the live data stream from the device."
+  },
+  {
+   "t": 299.48,
+   "text": "The software side of this has matured rapidly."
+  },
+  {
+   "t": 302.54,
+   "text": "Early adaptive sampling implementations from around 2019 used homegrown read-until scripts running against the MinION's API."
+  },
+  {
+   "t": 311.01,
+   "text": "Modern implementations are well-tooled — there are software packages like Readfish, the MinKNOW built-in adaptive sampling support, and various third-party tools that make it easy to set up an adaptive sampling experiment without writing custom code."
+  },
+  {
+   "t": 325.29,
+   "text": "You just provide a reference, specify the regions you want to enrich or deplete, and the software handles the rest."
+  },
+  {
+   "t": 331.81,
+   "text": "The combined effect of adaptive sampling, when it works well, is to multiply the effective throughput of a flow cell for your specific question."
+  },
+  {
+   "t": 340.99,
+   "text": "If you care about 1 percent of the genome, adaptive sampling can effectively give you 50x to 100x more coverage of that 1 percent than you'd get from random sampling."
+  },
+  {
+   "t": 352.07,
+   "text": "That's a real-time, software-only enrichment factor that no other platform can match."
+  },
+  {
+   "t": 357.41,
+   "text": "This is one of the underappreciated arguments for nanopore in clinical and research settings: not just that it's a long-read sequencer, but that it's a long-read sequencer with software-controllable per-molecule decision-making baked in."
+  },
+  {
+   "t": 370.38,
+   "text": "That's a fundamentally different machine than anything Illumina or PacBio ships."
+  }
+ ]
+}

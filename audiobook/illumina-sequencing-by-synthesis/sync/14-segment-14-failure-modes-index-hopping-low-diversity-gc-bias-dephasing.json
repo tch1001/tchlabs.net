@@ -1,0 +1,227 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Failure modes: index hopping, low diversity, GC bias, dephasing",
+ "duration": 458.0,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Failure modes: index hopping, low diversity, GC bias, dephasing"
+  },
+  {
+   "t": 7.45,
+   "text": "No technology is without failure modes, and Illumina's failure modes are well-characterized — which means they're predictable, which means you can design experiments to avoid them."
+  },
+  {
+   "t": 17.96,
+   "text": "Let me walk you through the main ones, because if you ever run an Illumina experiment that doesn't quite work, you'll find yourself diagnosing one of these."
+  },
+  {
+   "t": 26.2,
+   "text": "Index hopping."
+  },
+  {
+   "t": 27.27,
+   "text": "When you pool multiple indexed samples on the same flow cell, you're trusting that the index sequence on each fragment correctly identifies its sample of origin."
+  },
+  {
+   "t": 36.74,
+   "text": "But in some library prep methods, particularly the ones that rely on PCR amplification of the pooled library, indices can swap between samples — fragments from sample A can end up carrying the index of sample B during the bridge amplification step."
+  },
+  {
+   "t": 52.39,
+   "text": "This is called index hopping or index switching, and at certain rates and in certain experimental designs it can be a serious problem."
+  },
+  {
+   "t": 60.54,
+   "text": "For most applications the hopping rate is well under one percent and doesn't matter."
+  },
+  {
+   "t": 65.86,
+   "text": "For sensitive applications — particularly single-cell sequencing, where you're trying to assign each read to a specific cell, or low-frequency variant detection where a hopping rate of 0.5 percent is enough to obscure real signal — it matters a lot."
+  },
+  {
+   "t": 82.62,
+   "text": "The standard mitigation is dual indexing, with both indices having to match correctly for a read to be assigned to a sample."
+  },
+  {
+   "t": 89.9,
+   "text": "Dual indexing reduces the hopping problem by orders of magnitude, because the chance of both indices hopping coordinately is much smaller than the chance of one hopping."
+  },
+  {
+   "t": 100.66,
+   "text": "Modern Illumina protocols use dual indexing almost universally for this reason."
+  },
+  {
+   "t": 106.14,
+   "text": "Low diversity."
+  },
+  {
+   "t": 107.36,
+   "text": "Illumina's base-calling algorithms work best when the four bases are roughly equally distributed across the clusters being imaged at each cycle."
+  },
+  {
+   "t": 116.39,
+   "text": "In a typical genomic library, that's automatically true — random DNA is roughly 50 percent A and T, 50 percent G and C, mixed across many fragments."
+  },
+  {
+   "t": 129.2,
+   "text": "But in some applications — particularly amplicon sequencing of a single PCR product, or 16S microbiome sequencing of a specific gene — every cluster on the flow cell has the same sequence at the same position."
+  },
+  {
+   "t": 142.86,
+   "text": "When the base caller looks at cycle 30, every cluster might be calling G."
+  },
+  {
+   "t": 147.94,
+   "text": "That's a problem for the imaging optics: with all clusters dark (in two-channel chemistry) or all clusters one color (in four-channel chemistry), it's harder to focus the optics and harder to calibrate per-cluster brightness."
+  },
+  {
+   "t": 161.3,
+   "text": "The standard mitigation is to add a small amount of unrelated DNA — called a PhiX spike-in, named after the bacteriophage genome that's used as the source — to the library, providing the base-call diversity the algorithm needs."
+  },
+  {
+   "t": 175.86,
+   "text": "PhiX is a genome that just happens to have nicely balanced composition and has become the universal calibration substrate for Illumina runs."
+  },
+  {
+   "t": 185.44,
+   "text": "A typical run includes 1 to 30 percent PhiX, depending on how diverse the main library is."
+  },
+  {
+   "t": 191.61,
+   "text": "GC bias."
+  },
+  {
+   "t": 193.1,
+   "text": "Some genomic regions are very GC-rich — sometimes 75 percent or more GC — and some are very AT-rich."
+  },
+  {
+   "t": 201.93,
+   "text": "Both extremes amplify less efficiently than balanced regions during the PCR steps of library prep and the bridge amplification on the flow cell."
+  },
+  {
+   "t": 212.03,
+   "text": "The result is uneven coverage across the genome: GC-rich regions get fewer reads, AT-rich regions get fewer reads, the well-behaved middle gets more reads than its share."
+  },
+  {
+   "t": 223.43,
+   "text": "For variant calling, low-coverage regions are blind spots — you can't call a variant if you have no reads."
+  },
+  {
+   "t": 230.32,
+   "text": "For copy-number analysis, GC bias creates systematic artifacts that can look like deletions and duplications where there are none."
+  },
+  {
+   "t": 238.55,
+   "text": "The standard mitigations are PCR-free library prep (when you can afford it), specialized polymerases tuned for difficult templates, and bioinformatic correction algorithms that estimate the GC bias from the data and adjust coverage accordingly."
+  },
+  {
+   "t": 253.2,
+   "text": "Dephasing."
+  },
+  {
+   "t": 254.26,
+   "text": "This is the most fundamental error mode of Illumina sequencing, and it's worth understanding in detail."
+  },
+  {
+   "t": 260.81,
+   "text": "Remember that each cluster contains about a thousand identical DNA molecules, and during each cycle the polymerase is supposed to add exactly one new base to each molecule."
+  },
+  {
+   "t": 272.58,
+   "text": "In practice, this isn't perfect."
+  },
+  {
+   "t": 274.97,
+   "text": "Some small fraction of the molecules don't incorporate a new base in a given cycle — maybe the polymerase missed, maybe the blocker wasn't fully cleaved from the previous cycle."
+  },
+  {
+   "t": 285.88,
+   "text": "Some small fraction incorporate two bases — maybe the blocker on the new nucleotide was defective."
+  },
+  {
+   "t": 292.76,
+   "text": "So after cycle one, the cluster is mostly synchronized — all molecules at position 1 — but a few are at position 0, and a few are at position 2."
+  },
+  {
+   "t": 303.0,
+   "text": "After cycle two, the distribution spreads further."
+  },
+  {
+   "t": 306.91,
+   "text": "After cycle 100, the cluster contains molecules at many different positions: most at position 100, some at 99, some at 98, some at 101, some at 102, and so on."
+  },
+  {
+   "t": 320.21,
+   "text": "This phase drift is called dephasing, and it causes the cluster's signal to become a mixture of multiple bases rather than a clean single-base signal."
+  },
+  {
+   "t": 329.3,
+   "text": "As dephasing grows over the cycles, the signal-to-noise ratio degrades, and quality scores drop."
+  },
+  {
+   "t": 336.16,
+   "text": "By cycle 300, the signal is noticeably mushier than at cycle 1."
+  },
+  {
+   "t": 341.26,
+   "text": "This is why Illumina reads can't be made arbitrarily long — past a few hundred cycles, dephasing overwhelms the signal."
+  },
+  {
+   "t": 349.79,
+   "text": "Modern instruments and chemistries are designed to minimize dephasing — more efficient incorporation, better blocker chemistry, more complete cleavage — and base-calling algorithms include explicit dephasing models that try to deconvolve the mixed signal back to the dominant base."
+  },
+  {
+   "t": 367.51,
+   "text": "But the fundamental limit is real."
+  },
+  {
+   "t": 369.95,
+   "text": "If you ever look at a quality-score-versus-cycle plot from a long Illumina run, you'll see quality starting high at cycle 1 and gradually declining toward the end."
+  },
+  {
+   "t": 379.7,
+   "text": "That decline is dephasing at work."
+  },
+  {
+   "t": 382.17,
+   "text": "Cluster density problems."
+  },
+  {
+   "t": 384.36,
+   "text": "Too few clusters on the flow cell — you waste capacity, your data is lower-volume than expected."
+  },
+  {
+   "t": 391.44,
+   "text": "Too many clusters — adjacent clusters overlap, the base caller can't distinguish them, you lose data to \"overclustering."
+  },
+  {
+   "t": 400.29,
+   "text": "\" Getting the cluster density right requires careful library quantification before loading."
+  },
+  {
+   "t": 406.08,
+   "text": "Underloading and overclustering are the two most common reasons a sequencing run gives less data than expected."
+  },
+  {
+   "t": 413.06,
+   "text": "Modern instruments are more forgiving than older ones, but cluster density is still something experienced operators pay attention to."
+  },
+  {
+   "t": 421.19,
+   "text": "These are the main failure modes."
+  },
+  {
+   "t": 423.05,
+   "text": "There are others — adapter dimers, where two adapter pieces ligate to each other without an insert in between and end up dominating the read population; chimeras, where two fragments accidentally join during library prep; barcode crosstalk with similar index sequences; cross-contamination between adjacent flow cell lanes — but they're relatively rare and well-managed by current protocols."
+  },
+  {
+   "t": 447.27,
+   "text": "The Illumina platform is robust, but it's not magical."
+  },
+  {
+   "t": 451.21,
+   "text": "Knowing the failure modes is the difference between troubleshooting a problem in an hour and being baffled for a week."
+  }
+ ]
+}

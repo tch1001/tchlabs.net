@@ -1,0 +1,251 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — Ultima's founders — semiconductor industry pivot to sequencing",
+ "duration": 401.18,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — Ultima's founders — semiconductor industry pivot to sequencing"
+  },
+  {
+   "t": 5.66,
+   "text": "To understand Ultima, you have to understand the man at the top of it, because the whole platform looks, structurally, like a long answer to the question \"what would a semiconductor engineer build if you told him to sequence DNA?"
+  },
+  {
+   "t": 17.11,
+   "text": "\""
+  },
+  {
+   "t": 17.31,
+   "text": "Gilad Almogy was born in Israel, did his undergraduate work there, and came to the United States for a PhD in applied physics at Caltech."
+  },
+  {
+   "t": 26.14,
+   "text": "So already the resume tells you something."
+  },
+  {
+   "t": 28.88,
+   "text": "Applied physics, not biology."
+  },
+  {
+   "t": 31.26,
+   "text": "Optics, not biochemistry."
+  },
+  {
+   "t": 33.49,
+   "text": "The lens through which he sees the world is the lens of an engineer who thinks about light, motion, and surfaces — not the lens of a molecular biologist who thinks about enzymes and base-pairing."
+  },
+  {
+   "t": 44.98,
+   "text": "After Caltech, Almogy joined a small Israeli startup called Orbot Instruments, which was building a very specific and very lucrative tool: machines that inspect silicon wafers in semiconductor fabs, looking for defects."
+  },
+  {
+   "t": 59.33,
+   "text": "Here's what that means."
+  },
+  {
+   "t": 60.7,
+   "text": "When you fabricate a computer chip, you start with a round silicon wafer about two hundred millimeters across, and over the course of dozens of steps, you etch billions of transistors onto its surface."
+  },
+  {
+   "t": 72.49,
+   "text": "A single dust particle, a single misaligned mask, a single chemical contamination can ruin an entire chip."
+  },
+  {
+   "t": 80.29,
+   "text": "So fabs need machines that can take a freshly processed wafer, spin it under a high-resolution optical inspection station, photograph the whole surface, and detect any defects that have appeared."
+  },
+  {
+   "t": 92.19,
+   "text": "That's wafer inspection."
+  },
+  {
+   "t": 93.86,
+   "text": "And it is a multi-billion-dollar industry."
+  },
+  {
+   "t": 96.64,
+   "text": "Orbot was acquired in 1997 by Applied Materials, one of the giants of semiconductor equipment."
+  },
+  {
+   "t": 102.99,
+   "text": "Almogy spent most of the next decade inside Applied Materials, eventually running their display group — which built the optical systems used to inspect flat-panel displays and chips."
+  },
+  {
+   "t": 113.95,
+   "text": "So pause and notice what that means."
+  },
+  {
+   "t": 116.1,
+   "text": "For about ten years, the person who would eventually found Ultima Genomics spent his professional life thinking about exactly one problem: how do you spin a circular wafer under a fixed optical system, image its entire surface at very high resolution, and extract clean signal from a very noisy environment?"
+  },
+  {
+   "t": 134.91,
+   "text": "That is the whole problem of semiconductor wafer inspection."
+  },
+  {
+   "t": 138.61,
+   "text": "It is also, as you'll see, structurally identical to the whole problem of high-throughput DNA sequencing."
+  },
+  {
+   "t": 145.5,
+   "text": "In 2010, Almogy left Applied Materials and founded a solar energy company called Cogenra Solar, which built high-efficiency shingled solar modules."
+  },
+  {
+   "t": 156.25,
+   "text": "Cogenra got acquired by SunPower in 2015."
+  },
+  {
+   "t": 160.28,
+   "text": "And it was in the wind-down of that company, in 2016, that Almogy started Ultima."
+  },
+  {
+   "t": 167.4,
+   "text": "The founding intuition was simple."
+  },
+  {
+   "t": 169.84,
+   "text": "He looked at the sequencing industry, looked at what an Illumina NovaSeq actually was — a high-precision optical scanner moving across a flat surface, taking pictures of fluorescent molecules — and recognized that he had spent his entire career building, basically, that machine, but for chips."
+  },
+  {
+   "t": 187.21,
+   "text": "The substrate was different."
+  },
+  {
+   "t": 188.82,
+   "text": "The chemistry on top was different."
+  },
+  {
+   "t": 191.06,
+   "text": "But the underlying engineering problem — moving a high-resolution optical imager systematically over a flat surface, while reagents do their work — was deeply familiar."
+  },
+  {
+   "t": 202.11,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 203.38,
+   "text": "Almogy looked at sequencing and saw a chip inspection problem with biology on top of it."
+  },
+  {
+   "t": 208.89,
+   "text": "And once you frame it that way, you start asking the questions a semiconductor engineer asks."
+  },
+  {
+   "t": 214.56,
+   "text": "Why is the substrate a glass slide instead of a silicon wafer?"
+  },
+  {
+   "t": 218.74,
+   "text": "Silicon is cheaper, more dimensionally stable, and has decades of process engineering behind it."
+  },
+  {
+   "t": 224.97,
+   "text": "Why is the surface static while reagents flow across it?"
+  },
+  {
+   "t": 228.82,
+   "text": "Spinning is faster and gives you more uniform delivery."
+  },
+  {
+   "t": 232.34,
+   "text": "Why are you using four colors when one color and a clever flow scheme might be cheaper?"
+  },
+  {
+   "t": 237.29,
+   "text": "Why are you doing paired-end reads when you're sequencing against a known reference genome anyway?"
+  },
+  {
+   "t": 242.88,
+   "text": "Why is the cycle time fifteen minutes when, with the right optics, it could be one?"
+  },
+  {
+   "t": 248.11,
+   "text": "Every one of those questions, asked by an Illumina engineer, would have to be weighed against decades of accumulated institutional commitment to the existing design."
+  },
+  {
+   "t": 257.94,
+   "text": "Asked by someone coming in fresh, with no biology priors and a deep grounding in optical-mechanical systems, they were just engineering questions."
+  },
+  {
+   "t": 267.44,
+   "text": "The answers Ultima arrived at — silicon wafer, spinning instead of flowing, one labeled probe instead of four labeled terminators, single-end only, much faster cycle times — were the natural answers from that perspective."
+  },
+  {
+   "t": 281.31,
+   "text": "I want to dwell for a moment on what this kind of cross-disciplinary founder represents, because it's not a fluke in modern biotech."
+  },
+  {
+   "t": 288.63,
+   "text": "Some of the most disruptive moves in the field have come from people who walked in from physics, engineering, or computer science and asked \"wait, why are you doing it that way?"
+  },
+  {
+   "t": 298.41,
+   "text": "\" The PacBio founders came from microfluidics."
+  },
+  {
+   "t": 301.44,
+   "text": "The Nanopore people came partly from electrical engineering."
+  },
+  {
+   "t": 304.79,
+   "text": "Element Biosciences, another challenger we'll meet later, was founded by an ex-Illumina engineer who thought he could do it differently."
+  },
+  {
+   "t": 312.84,
+   "text": "The pattern is that the deepest reimagining tends to come from people who understand the problem clearly but aren't bound by the orthodoxy of how the problem has historically been solved."
+  },
+  {
+   "t": 323.19,
+   "text": "Almogy assembled a team that mirrored that ethos."
+  },
+  {
+   "t": 327.06,
+   "text": "A lot of Israeli engineers from the semiconductor and defense optics world, plus a smaller core of biochemists and bioinformaticians hired from Illumina, Applied Biosystems, and the academic sequencing community."
+  },
+  {
+   "t": 339.28,
+   "text": "The mix mattered."
+  },
+  {
+   "t": 340.36,
+   "text": "The biology people kept the chemistry sane; the engineers built a machine that no biology-trained company would have built."
+  },
+  {
+   "t": 347.58,
+   "text": "That collision is the company."
+  },
+  {
+   "t": 349.64,
+   "text": "Ultima stayed in stealth for almost six years, which is unusual."
+  },
+  {
+   "t": 353.98,
+   "text": "Most genomics startups announce themselves loudly and early."
+  },
+  {
+   "t": 358.05,
+   "text": "Ultima did the opposite."
+  },
+  {
+   "t": 359.96,
+   "text": "They quietly raised hundreds of millions of dollars in private rounds, built prototypes, ran them at a few academic partner sites, iterated the chemistry, and didn't go public with the platform until 2022."
+  },
+  {
+   "t": 373.24,
+   "text": "When they finally did — at the AGBT conference, the big annual genomics meeting, with the Nature Biotechnology paper hitting at the same time — it was the loudest single announcement the sequencing world had seen since the launch of the NovaSeq five years earlier."
+  },
+  {
+   "t": 388.8,
+   "text": "Six hundred million dollars, a working platform, real data, and a claim — the hundred-dollar genome — that landed like a stone in the pond."
+  },
+  {
+   "t": 398.24,
+   "text": "That's the founder story."
+  },
+  {
+   "t": 399.74,
+   "text": "Now let's look at what they built."
+  }
+ ]
+}

@@ -1,0 +1,223 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — PacBio vs Nanopore: the long-read head-to-head",
+ "duration": 322.67,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — PacBio vs Nanopore: the long-read head-to-head"
+  },
+  {
+   "t": 5.46,
+   "text": "It's time to do the head-to-head comparison with Oxford Nanopore that I've been promising throughout the lecture."
+  },
+  {
+   "t": 11.75,
+   "text": "The two long-read platforms are the two parallel solutions to the same problem, and you really cannot understand the long-read field without understanding how they differ."
+  },
+  {
+   "t": 21.12,
+   "text": "The fundamental difference is in the physical principle."
+  },
+  {
+   "t": 24.29,
+   "text": "PacBio watches a polymerase incorporating nucleotides, by looking at fluorescent flashes."
+  },
+  {
+   "t": 30.36,
+   "text": "It's an optical platform."
+  },
+  {
+   "t": 31.91,
+   "text": "Read length is bounded by how long the polymerase stays bound and by the SMRTbell insert size."
+  },
+  {
+   "t": 38.64,
+   "text": "Oxford Nanopore threads a single DNA molecule through a tiny protein pore, and reads the sequence by measuring the change in electrical current as each base passes through."
+  },
+  {
+   "t": 49.69,
+   "text": "It's an electrical platform."
+  },
+  {
+   "t": 51.3,
+   "text": "Read length is bounded essentially only by the size of the input DNA molecule — if you can prep a megabase-long molecule intact, you can read it."
+  },
+  {
+   "t": 61.19,
+   "text": "So the platforms have totally different physics."
+  },
+  {
+   "t": 63.94,
+   "text": "They also have totally different form factors."
+  },
+  {
+   "t": 66.61,
+   "text": "PacBio instruments are large, expensive, lab-installed — a Revio is the size of a small fridge, costs hundreds of thousands of dollars."
+  },
+  {
+   "t": 76.49,
+   "text": "Nanopore instruments range from the MinION, a USB-stick-sized device that costs about a thousand dollars and runs on any laptop, up through the PromethION, a larger benchtop instrument competitive in throughput with a PacBio Sequel II."
+  },
+  {
+   "t": 90.71,
+   "text": "This portability is one of Nanopore's biggest selling points — Nanopore has been used in the field, in epidemics, in clinics, even on the International Space Station."
+  },
+  {
+   "t": 100.92,
+   "text": "Now the technical comparison."
+  },
+  {
+   "t": 102.69,
+   "text": "Read length."
+  },
+  {
+   "t": 103.7,
+   "text": "Nanopore wins, often by a lot."
+  },
+  {
+   "t": 106.34,
+   "text": "Nanopore reads can routinely exceed a hundred kilobases, and with careful prep can reach the megabase range."
+  },
+  {
+   "t": 113.67,
+   "text": "PacBio HiFi reads peak around fifteen to twenty kilobases."
+  },
+  {
+   "t": 118.54,
+   "text": "So if you need the longest possible reads — to span the longest repeats, or to do contiguous assembly of repetitive arrays — Nanopore is your tool."
+  },
+  {
+   "t": 128.57,
+   "text": "The T2T project used Nanopore ultralong reads, alongside HiFi, specifically for spanning the very longest centromeric repeats."
+  },
+  {
+   "t": 138.36,
+   "text": "Read accuracy."
+  },
+  {
+   "t": 139.76,
+   "text": "PacBio wins, clearly."
+  },
+  {
+   "t": 141.96,
+   "text": "HiFi reads are Q30-Q40 quality, with sub-percent per-base error rates."
+  },
+  {
+   "t": 148.5,
+   "text": "Nanopore simplex (single-pass) reads are typically Q15-Q20, which is roughly one to two percent error — better than they used to be but still meaningfully worse than HiFi."
+  },
+  {
+   "t": 160.5,
+   "text": "Nanopore has introduced duplex sequencing, where both strands of the same molecule are read sequentially and consensused, which gets to roughly Q30, comparable to HiFi but harder to achieve consistently and at lower yield."
+  },
+  {
+   "t": 175.57,
+   "text": "So for applications where every base matters — variant calling at the per-base level, accurate genome assembly without polishing, methylation calling with high specificity — PacBio HiFi tends to be preferred."
+  },
+  {
+   "t": 189.3,
+   "text": "Throughput and cost."
+  },
+  {
+   "t": 191.11,
+   "text": "Both platforms have similar throughput on their flagship instruments, in the hundreds of gigabases per run."
+  },
+  {
+   "t": 197.28,
+   "text": "Cost per gigabase is similar, with the exact comparison depending on chemistry version and time of measurement."
+  },
+  {
+   "t": 204.18,
+   "text": "Both are several times more expensive than Illumina."
+  },
+  {
+   "t": 207.19,
+   "text": "Methylation calling."
+  },
+  {
+   "t": 208.61,
+   "text": "Both can do it directly."
+  },
+  {
+   "t": 210.05,
+   "text": "PacBio uses kinetics; Nanopore uses raw signal."
+  },
+  {
+   "t": 214.43,
+   "text": "The results are largely comparable for 5mC; PacBio has historically been stronger for 4mC and 6mA, but Nanopore has been catching up."
+  },
+  {
+   "t": 224.84,
+   "text": "Both are widely used."
+  },
+  {
+   "t": 226.43,
+   "text": "Workflow."
+  },
+  {
+   "t": 227.3,
+   "text": "PacBio is more like a traditional lab instrument — big, fixed, requires trained operators, runs are tens of hours."
+  },
+  {
+   "t": 235.0,
+   "text": "Nanopore is much more flexible — runs can be as short as fifteen minutes, the user can read data in real time as it comes off the instrument, libraries are simpler."
+  },
+  {
+   "t": 246.14,
+   "text": "For rapid turnaround or unusual settings, Nanopore wins."
+  },
+  {
+   "t": 250.9,
+   "text": "The summary I want to leave you with."
+  },
+  {
+   "t": 252.62,
+   "text": "PacBio is the precision tool, Nanopore is the speed-and-length champion."
+  },
+  {
+   "t": 257.88,
+   "text": "If you need maximum accuracy at moderate length, PacBio."
+  },
+  {
+   "t": 262.25,
+   "text": "If you need maximum length or rapid turnaround, Nanopore."
+  },
+  {
+   "t": 266.57,
+   "text": "Many large-scale projects, including T2T-CHM13, use both — HiFi as the backbone for accuracy, Nanopore ultralong for spanning the longest repeats."
+  },
+  {
+   "t": 277.92,
+   "text": "The two platforms are complementary as often as they're competitive."
+  },
+  {
+   "t": 282.35,
+   "text": "The market has, at this point, settled into a duopoly within long reads."
+  },
+  {
+   "t": 287.47,
+   "text": "PacBio dominates de novo assembly of complex genomes at reference quality, Iso-Seq for isoform discovery, and clinical applications where accuracy matters."
+  },
+  {
+   "t": 298.75,
+   "text": "Nanopore dominates field deployment, portable sequencing, ultralong reads, and applications where flexibility and rapid turnaround matter."
+  },
+  {
+   "t": 307.66,
+   "text": "Both are growing."
+  },
+  {
+   "t": 308.73,
+   "text": "Both have huge installed bases."
+  },
+  {
+   "t": 311.03,
+   "text": "Both have clear roadmaps."
+  },
+  {
+   "t": 312.73,
+   "text": "The era when \"long reads\" meant one of these companies and you had to pick is essentially over; the field has matured to where you pick based on the specific application."
+  }
+ ]
+}

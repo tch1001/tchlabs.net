@@ -1,0 +1,91 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — PacBio + Illumina hybrid assemblies: historical workflow, less common now",
+ "duration": 194.56,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — PacBio + Illumina hybrid assemblies: historical workflow, less common now"
+  },
+  {
+   "t": 7.85,
+   "text": "A brief segment on a workflow that was the dominant long-read approach for several years and has become less common in the HiFi era: hybrid assembly combining PacBio long reads with Illumina short reads."
+  },
+  {
+   "t": 20.16,
+   "text": "The motivation was straightforward."
+  },
+  {
+   "t": 22.21,
+   "text": "In the CLR era — when PacBio raw reads were at 85-90% accuracy — you couldn't assemble a genome from PacBio alone, because the per-base errors would propagate into the assembly."
+  },
+  {
+   "t": 35.16,
+   "text": "The standard fix was to use PacBio long reads to determine the overall structure of the assembly — the contigs, the scaffolds, the spanning of repeats — and then use Illumina short reads, with their per-base accuracy, to polish the assembly: correct individual base errors in the PacBio-derived sequence."
+  },
+  {
+   "t": 54.26,
+   "text": "The workflow looked like: sequence the genome with PacBio CLR to about thirty- or fifty-x coverage, assemble using one of the long-read assemblers (Canu, Flye, Falcon, hifiasm in later versions), then sequence the same genome with Illumina to about thirty-x coverage and use the Illumina reads to polish the PacBio assembly with tools like Pilon, racon, or medaka."
+  },
+  {
+   "t": 78.89,
+   "text": "The output was a genome assembly with PacBio-derived structure and Illumina-derived per-base accuracy."
+  },
+  {
+   "t": 85.91,
+   "text": "The cost: two separate sequencing runs on two platforms."
+  },
+  {
+   "t": 90.03,
+   "text": "In the HiFi era, this is largely obsolete."
+  },
+  {
+   "t": 93.44,
+   "text": "HiFi reads are already Q30-Q40 accurate, so the Illumina polishing step is no longer needed."
+  },
+  {
+   "t": 101.26,
+   "text": "A standard HiFi assembly today uses HiFi reads only — assembled with a tool like hifiasm — and the resulting assembly is both highly contiguous and highly accurate without any short-read polishing."
+  },
+  {
+   "t": 115.72,
+   "text": "The workflow has simplified, and the per-genome cost has dropped because you don't need a second platform."
+  },
+  {
+   "t": 122.2,
+   "text": "Hybrid assembly persists in a few niches."
+  },
+  {
+   "t": 125.11,
+   "text": "For very large or very complex genomes, where adding any extra data source improves the result, some projects still incorporate Illumina data."
+  },
+  {
+   "t": 135.16,
+   "text": "For metagenomics, where you're assembling many species at once from mixed samples, hybrid approaches sometimes help."
+  },
+  {
+   "t": 142.5,
+   "text": "For some specialized applications where exquisite per-base accuracy is required, Illumina polishing of HiFi assemblies can still squeeze out marginal improvements."
+  },
+  {
+   "t": 153.38,
+   "text": "But the era when hybrid was the standard, default approach is over."
+  },
+  {
+   "t": 157.7,
+   "text": "The historical note matters because if you read papers from the 2015-2018 period describing genome assembly methodology, you'll see \"PacBio plus Illumina\" as the standard recipe."
+  },
+  {
+   "t": 170.28,
+   "text": "That was right for that era."
+  },
+  {
+   "t": 171.99,
+   "text": "The HiFi paradigm shift, in 2019-2020, made the second platform unnecessary for most cases."
+  },
+  {
+   "t": 179.72,
+   "text": "It's a small thing, but it's part of the simplification that HiFi brought — one platform, one library prep, one sequencing run, one assembly — that has made high-quality genome assembly accessible to a much wider range of labs."
+  }
+ ]
+}

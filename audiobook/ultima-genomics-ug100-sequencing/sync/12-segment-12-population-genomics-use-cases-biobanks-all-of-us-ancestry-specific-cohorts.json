@@ -1,0 +1,131 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Population genomics use cases — biobanks, All of Us, ancestry-specific cohorts",
+ "duration": 296.67,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Population genomics use cases — biobanks, All of Us, ancestry-specific cohorts"
+  },
+  {
+   "t": 7.74,
+   "text": "Now let's look at who's actually using Ultima, and what for, because the customer profile tells you a lot about where the platform really shines."
+  },
+  {
+   "t": 15.86,
+   "text": "The bullseye customer for Ultima is a large-scale human population genomics program."
+  },
+  {
+   "t": 21.19,
+   "text": "These projects share a set of characteristics: they're sequencing tens of thousands to millions of human samples; they're doing germline whole-genome sequencing or large exomes; they're variant-calling against the standard human reference; the per-sample cost is a dominant line item in the budget; and they have the bioinformatics sophistication to handle Ultima-specific data."
+  },
+  {
+   "t": 43.7,
+   "text": "The marquee programs that fit this profile include the UK Biobank, which has been sequencing its half-million participants over the last several years; the NIH's All of Us program, aiming at a million Americans across diverse ancestries; the Saudi Genome Program; various national-scale biobanks in Asia and Europe; pharmaceutical company genomics initiatives like Regeneron's collaborations with academic biobanks; and a wave of ancestry-specific cohorts focused on populations historically"
+  },
+  {
+   "t": 74.86,
+   "text": "underrepresented in genomic studies — African ancestry cohorts, Latinx cohorts, indigenous cohorts."
+  },
+  {
+   "t": 82.38,
+   "text": "For these programs, the value proposition of Ultima is simple math."
+  },
+  {
+   "t": 87.1,
+   "text": "A two-fold cost reduction across a million genomes is a hundred million dollars saved."
+  },
+  {
+   "t": 92.75,
+   "text": "Or, equivalently, twice as many samples sequenced for the same budget."
+  },
+  {
+   "t": 97.7,
+   "text": "At that scale, the engineering quirks of the platform — the homopolymer error mode, the single-end-only sequencing, the bioinformatics retuning — are absorbed into the operating costs of a project that's already so large that integrating a new platform is a manageable line item."
+  },
+  {
+   "t": 114.24,
+   "text": "A specific example."
+  },
+  {
+   "t": 115.8,
+   "text": "Regeneron Genetics Center, the pharma genomics arm of Regeneron, has been one of the largest exome sequencing operations on Earth for the better part of a decade."
+  },
+  {
+   "t": 125.28,
+   "text": "They've sequenced hundreds of thousands of exomes from collaborator biobanks, using primarily Illumina."
+  },
+  {
+   "t": 132.14,
+   "text": "Adopting Ultima for some portion of their pipeline is, for them, a serious cost-savings opportunity, and they're one of the early adopters Ultima has cited publicly."
+  },
+  {
+   "t": 141.68,
+   "text": "The University of Minnesota Genomics Center, the Broad Institute, the Wellcome Sanger Institute — these are the kinds of organizations that have brought UG100s into their facilities, often alongside their existing NovaSeq fleets, to handle the highest-volume work where cost dominates."
+  },
+  {
+   "t": 158.34,
+   "text": "A second category of customer is the contract sequencing provider — companies like Psomagen, GENEWIZ, Macrogen, and Ultima's own service-provider network."
+  },
+  {
+   "t": 168.6,
+   "text": "These businesses sell sequencing services to other companies and academic labs, and they compete primarily on price and turnaround time."
+  },
+  {
+   "t": 177.4,
+   "text": "For them, having a UG100 in their fleet means they can offer the cheapest tier of human genome sequencing on the market, which lets them win business at the high-volume end."
+  },
+  {
+   "t": 187.55,
+   "text": "A third, emerging category is single-cell and spatial omics at very large scale."
+  },
+  {
+   "t": 193.78,
+   "text": "Single-cell RNA sequencing, when scaled to millions of cells, generates an enormous volume of short-read data that fits the Ultima profile well."
+  },
+  {
+   "t": 203.86,
+   "text": "The Arc Institute's virtual cell atlas project, announced in 2025, is using Ultima as part of its sequencing infrastructure precisely because the per-cell economics matter at the scale they're operating at."
+  },
+  {
+   "t": 217.25,
+   "text": "This is a domain where, ironically, the trade-offs of Ultima — short reads, single-end, homopolymer error mode — matter less because the analysis is fundamentally about counting, not about reconstructing full-length transcripts."
+  },
+  {
+   "t": 232.79,
+   "text": "What's notably absent from the Ultima customer base is the long tail of small academic labs that buy individual sequencing runs for their own experiments."
+  },
+  {
+   "t": 241.91,
+   "text": "These customers, who are the bread and butter of Illumina's small and mid-range business, don't have the volume to make Ultima's economics work, and they don't have the bioinformatics infrastructure to absorb the integration cost."
+  },
+  {
+   "t": 254.69,
+   "text": "For them, Illumina remains the default."
+  },
+  {
+   "t": 257.5,
+   "text": "Ultima isn't really competing for that market; they're competing for the top end where volume dominates."
+  },
+  {
+   "t": 263.85,
+   "text": "There's a strategic point here."
+  },
+  {
+   "t": 265.68,
+   "text": "Ultima is following a classic disruption playbook — establish a foothold at the high-volume end of the market, where the cost-per-base economics give them a structural advantage, and build out from there as the platform matures."
+  },
+  {
+   "t": 279.46,
+   "text": "Whether they can expand downward into the mid-range and small-lab markets over time depends on the technology getting easier to use, the bioinformatics getting more transparent, and the price of consumables coming down with volume."
+  },
+  {
+   "t": 292.74,
+   "text": "All of these are plausible trajectories."
+  },
+  {
+   "t": 295.1,
+   "text": "None are guaranteed."
+  }
+ ]
+}

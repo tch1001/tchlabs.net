@@ -1,0 +1,259 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — 454 vs Illumina vs SOLiD: the competitive landscape of 2008-2012",
+ "duration": 459.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — 454 vs Illumina vs SOLiD: the competitive landscape of 2008-2012"
+  },
+  {
+   "t": 8.64,
+   "text": "Let me give you the snapshot of the NGS market in its formative years, because it's worth understanding the competitive dynamics."
+  },
+  {
+   "t": 15.81,
+   "text": "Between 2008 and 2012, three platforms dominated the conversation: 454, Illumina, and SOLiD."
+  },
+  {
+   "t": 24.26,
+   "text": "They had distinctly different chemistries, distinctly different strengths, and they competed fiercely for the same customer base."
+  },
+  {
+   "t": 32.42,
+   "text": "Understanding why one won and two lost — well, Illumina won and the other two are basically dead — tells you a lot about what matters in a sequencing market."
+  },
+  {
+   "t": 42.76,
+   "text": "454 we've discussed at length."
+  },
+  {
+   "t": 45.35,
+   "text": "Pyrosequencing on beads in a fiber-optic picotiter plate."
+  },
+  {
+   "t": 49.6,
+   "text": "Read length 250 to 400 bases, eventually 700."
+  },
+  {
+   "t": 54.88,
+   "text": "Around 1 million reads per run."
+  },
+  {
+   "t": 57.41,
+   "text": "Strengths: longest reads, mature ecosystem, well-understood error model."
+  },
+  {
+   "t": 63.58,
+   "text": "Weaknesses: homopolymer indels, high cost per base, slow cycle time."
+  },
+  {
+   "t": 68.89,
+   "text": "Illumina — originally a British company called Solexa, which Illumina acquired in 2007 — used reversible terminator chemistry on a flow cell."
+  },
+  {
+   "t": 79.01,
+   "text": "The starting fragments were tethered to a flat glass surface, where they amplified into little clonal clusters via a clever mechanism called bridge amplification."
+  },
+  {
+   "t": 89.35,
+   "text": "Bridge amplification is essentially emulsion PCR's flatland cousin: instead of clonal copies forming on a bead in an oil droplet, the copies form on a glass slide, anchored at each end alternately to different primers, forming little arched bridges that get extended into clusters."
+  },
+  {
+   "t": 107.67,
+   "text": "The advantage is that you don't have to load beads into wells — the cluster forms in place on the glass — and you can pack the clusters much more densely than 454 could pack beads in the picotiter plate."
+  },
+  {
+   "t": 120.25,
+   "text": "Higher density means more reads per run."
+  },
+  {
+   "t": 123.14,
+   "text": "The Illumina sequencing chemistry was already different: instead of flowing one nucleotide at a time, Illumina flowed all four nucleotides at once, each labeled with a different fluorescent dye and a reversible terminator that blocks further extension after one base is added."
+  },
+  {
+   "t": 140.29,
+   "text": "Imaging at four wavelengths told you which base went in at each cluster."
+  },
+  {
+   "t": 144.96,
+   "text": "Then a chemical wash removed the dye and the blocking group, and the next cycle ran."
+  },
+  {
+   "t": 150.12,
+   "text": "This gave one base per cycle, exactly, with no homopolymer ambiguity."
+  },
+  {
+   "t": 155.81,
+   "text": "Cycles were slow individually but you got dramatically more reads in parallel."
+  },
+  {
+   "t": 161.25,
+   "text": "The first Illumina sequencer, the Genome Analyzer, launched in 2006 with 35-base reads."
+  },
+  {
+   "t": 168.89,
+   "text": "By 2010 the HiSeq 2000 was at 100-base paired-end reads with about 200 million read pairs per run — almost a thousand times the throughput of 454."
+  },
+  {
+   "t": 180.91,
+   "text": "By 2014 the HiSeq X had achieved the long-promised thousand-dollar genome."
+  },
+  {
+   "t": 186.24,
+   "text": "Read length kept climbing: 100, 150, 250, 300 bases."
+  },
+  {
+   "t": 192.8,
+   "text": "SOLiD — Sequencing by Oligonucleotide Ligation and Detection — was Applied Biosystems' entry, eventually owned by Life Technologies."
+  },
+  {
+   "t": 202.34,
+   "text": "SOLiD used yet another chemistry: instead of polymerase incorporating individual nucleotides, SOLiD used a DNA ligase that joined short dye-labeled oligonucleotide probes onto a growing strand."
+  },
+  {
+   "t": 216.2,
+   "text": "The chemistry had a clever error-correction feature — each base was read in two different overlapping probes, so most substitution errors could be detected."
+  },
+  {
+   "t": 225.3,
+   "text": "SOLiD reads were short — 35 to 75 bases — but the error rate was the lowest of any platform at the time."
+  },
+  {
+   "t": 233.29,
+   "text": "SOLiD's downside was that the chemistry was complex, the run times were long, and the bioinformatics — encoding sequence in something called \"color space\" rather than directly in bases — was alien to most users and a barrier to adoption."
+  },
+  {
+   "t": 248.66,
+   "text": "So in 2010 you had three platforms with three different chemistries: 454's pyrosequencing on beads, Illumina's reversible-terminator on flow cells, SOLiD's ligation in color space."
+  },
+  {
+   "t": 262.88,
+   "text": "Each had a real technical case."
+  },
+  {
+   "t": 264.88,
+   "text": "Which would win?"
+  },
+  {
+   "t": 265.81,
+   "text": "Read these three numbers and you'll see the answer immediately."
+  },
+  {
+   "t": 269.54,
+   "text": "Reads per run: 454 around 1 million, Illumina around 200 million, SOLiD around 1.4 billion (in 2010 generation)."
+  },
+  {
+   "t": 280.27,
+   "text": "Read length: 454 around 400 bases, Illumina around 100 bases, SOLiD around 50 bases."
+  },
+  {
+   "t": 289.08,
+   "text": "Bases per run: 454 around 400 megabases, Illumina around 20 gigabases, SOLiD around 70 gigabases."
+  },
+  {
+   "t": 298.89,
+   "text": "Cost per gigabase: 454 around $20,000, Illumina around $400, SOLiD around $300."
+  },
+  {
+   "t": 308.13,
+   "text": "Cost per base was where the war was won."
+  },
+  {
+   "t": 310.56,
+   "text": "Both Illumina and SOLiD undercut 454 by something like a factor of 50 on cost."
+  },
+  {
+   "t": 317.51,
+   "text": "For users who needed lots of sequence — and over the period 2010 to 2014, that was essentially all the high-volume users in the field — 454 was prohibitive."
+  },
+  {
+   "t": 330.09,
+   "text": "They went to Illumina or SOLiD."
+  },
+  {
+   "t": 332.27,
+   "text": "Between Illumina and SOLiD, the deciding factor turned out to be read length and user-friendliness."
+  },
+  {
+   "t": 338.43,
+   "text": "SOLiD's reads were shorter than Illumina's, and they were in this strange color-space encoding that required converting before any analysis."
+  },
+  {
+   "t": 347.26,
+   "text": "Illumina's reads were normal bases, longer than SOLiD's, with a well-understood error profile."
+  },
+  {
+   "t": 354.23,
+   "text": "Illumina also iterated faster — releasing new versions of its instruments more frequently and pushing read lengths higher each year — while SOLiD's roadmap stagnated."
+  },
+  {
+   "t": 365.38,
+   "text": "By 2014, SOLiD was effectively done; Life Technologies, having bought Ion Torrent from Rothberg in 2010, was focusing its sequencing business there instead."
+  },
+  {
+   "t": 376.69,
+   "text": "So by mid-decade the field had collapsed to essentially Illumina plus a handful of niche players."
+  },
+  {
+   "t": 382.27,
+   "text": "454 was on the way out."
+  },
+  {
+   "t": 384.62,
+   "text": "SOLiD was dead."
+  },
+  {
+   "t": 385.82,
+   "text": "Ion Torrent had a real but small slice of the market, particularly for smaller targeted-panel applications and clinical use."
+  },
+  {
+   "t": 393.68,
+   "text": "PacBio and Nanopore were emerging as long-read specialists for applications where Illumina's short reads weren't enough."
+  },
+  {
+   "t": 401.16,
+   "text": "The lesson of this competitive period — and I want you to internalize it — is that in sequencing, throughput at low cost beats every other parameter, given enough time."
+  },
+  {
+   "t": 411.82,
+   "text": "Read length matters, accuracy matters, run time matters, ease of use matters."
+  },
+  {
+   "t": 417.91,
+   "text": "But over a five-year window, the platform with the steeper cost-decline curve wins."
+  },
+  {
+   "t": 423.02,
+   "text": "Illumina's chemistry happened to have a clear engineering path to greater density, more parallel clusters per flow cell, longer reads, faster cycles, lower reagent cost."
+  },
+  {
+   "t": 434.46,
+   "text": "454's chemistry didn't have a comparable scaling path."
+  },
+  {
+   "t": 438.52,
+   "text": "The fiber-optic picotiter plate was already pushing the limits of what was manufacturable."
+  },
+  {
+   "t": 444.31,
+   "text": "The flow cycle time was bound by enzyme kinetics."
+  },
+  {
+   "t": 447.79,
+   "text": "The homopolymer error didn't get better with engineering."
+  },
+  {
+   "t": 451.07,
+   "text": "Illumina was on a hockey-stick curve."
+  },
+  {
+   "t": 453.42,
+   "text": "454 was on a flat plateau."
+  },
+  {
+   "t": 456.14,
+   "text": "Over a few years that mismatch is everything."
+  }
+ ]
+}

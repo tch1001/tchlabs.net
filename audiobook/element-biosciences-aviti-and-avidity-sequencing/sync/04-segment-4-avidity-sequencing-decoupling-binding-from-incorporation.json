@@ -1,0 +1,271 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Avidity sequencing — decoupling binding from incorporation",
+ "duration": 410.51,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Avidity sequencing — decoupling binding from incorporation"
+  },
+  {
+   "t": 5.64,
+   "text": "Here is the avidity-sequencing cycle, in its simplest form."
+  },
+  {
+   "t": 10.34,
+   "text": "You have a flow cell with millions of clusters of DNA — we'll call them polonies, because that's the Element-specific term and we'll get to why in the next segment — each one a tight collection of identical copies of a starting template, just like an Illumina cluster."
+  },
+  {
+   "t": 25.01,
+   "text": "At the start of each cycle, the polymerase is sitting at the end of the growing strand on each polony, waiting to extend by one base."
+  },
+  {
+   "t": 33.9,
+   "text": "Step one: wash in a reagent called the avidite mix."
+  },
+  {
+   "t": 37.64,
+   "text": "The avidite mix contains four distinct multivalent polymers, one for each base."
+  },
+  {
+   "t": 43.71,
+   "text": "Each polymer is decorated with multiple copies of a single labeled nucleotide — a polymer carrying many A-nucleotides with one color, a polymer carrying many T-nucleotides with a different color, and so on for G and C."
+  },
+  {
+   "t": 57.27,
+   "text": "The polymerase at each polony grabs the cognate avidite — the one whose nucleotides pair with the next template base — and holds onto it through multiple polymerase molecules on the same polony, because there are many polymerases and many template strands at each polony, and the avidite is multivalent enough to be held by several of them simultaneously."
+  },
+  {
+   "t": 78.3,
+   "text": "We'll get into the geometry of that in the next segment."
+  },
+  {
+   "t": 81.19,
+   "text": "The point right now: the avidite is held in place at each polony by the cognate base, with a binding strength that is enormously stronger than a single nucleotide would have because multiple binding sites act in parallel."
+  },
+  {
+   "t": 95.66,
+   "text": "Step two: image."
+  },
+  {
+   "t": 97.0,
+   "text": "Wash away the unbound avidites."
+  },
+  {
+   "t": 99.78,
+   "text": "The remaining bound avidites, one per polony, glow in their characteristic color."
+  },
+  {
+   "t": 106.17,
+   "text": "The camera takes a photograph."
+  },
+  {
+   "t": 108.24,
+   "text": "From the color at each polony's position, the instrument calls the base."
+  },
+  {
+   "t": 112.94,
+   "text": "This is the read."
+  },
+  {
+   "t": 114.08,
+   "text": "Step three: remove the avidites."
+  },
+  {
+   "t": 116.9,
+   "text": "A wash strips the bound avidites off, leaving the polony in its original state — with the polymerase still sitting at the end of the growing strand, having identified the correct next base but having not yet incorporated it."
+  },
+  {
+   "t": 131.79,
+   "text": "The polymerase has, so to speak, been shown the right answer but not allowed to write it down yet."
+  },
+  {
+   "t": 137.99,
+   "text": "Step four: extend."
+  },
+  {
+   "t": 139.79,
+   "text": "Now you wash in a completely separate reagent — a mix of four ordinary reversibly-terminated nucleotides, with no dyes attached, at relatively low cost because they're chemically simpler."
+  },
+  {
+   "t": 152.45,
+   "text": "The polymerase incorporates the correct one — and only the correct one will incorporate, because the polymerase still has selectivity, it's just that the previous binding step has already pre-selected the right answer and made the incorporation faster and cleaner."
+  },
+  {
+   "t": 166.74,
+   "text": "The blocker on the three-prime hydroxyl prevents further extension."
+  },
+  {
+   "t": 171.16,
+   "text": "Wash, chemically cleave the blocker, and you're ready for the next cycle."
+  },
+  {
+   "t": 175.5,
+   "text": "So that's the four-step avidity cycle: avidite-bind, image, strip, extend."
+  },
+  {
+   "t": 181.61,
+   "text": "Notice what's different from the Illumina cycle."
+  },
+  {
+   "t": 183.97,
+   "text": "In Illumina, the imaging step and the incorporation step happen in one combined operation — the polymerase grabs the labeled nucleotide, incorporates it, and the dye gets read out from the incorporated base."
+  },
+  {
+   "t": 196.8,
+   "text": "The dye is physically attached to the base that just got added to the strand."
+  },
+  {
+   "t": 200.9,
+   "text": "In Element, those two steps are physically and chemically separate."
+  },
+  {
+   "t": 205.34,
+   "text": "The reading happens with one molecule (the avidite), and the extending happens with a completely different molecule (a plain unmodified-except-for-the-blocker nucleotide)."
+  },
+  {
+   "t": 215.39,
+   "text": "The reading molecule never gets incorporated."
+  },
+  {
+   "t": 218.25,
+   "text": "The incorporating molecule never gets imaged."
+  },
+  {
+   "t": 221.22,
+   "text": "Two molecules, two jobs, fully decoupled."
+  },
+  {
+   "t": 224.46,
+   "text": "Now let me give you the analogy."
+  },
+  {
+   "t": 226.18,
+   "text": "Illumina sequencing is like asking a single person to simultaneously hold up a colored sign with the answer to a question AND write the answer down in the official log book."
+  },
+  {
+   "t": 236.75,
+   "text": "The person has only two hands."
+  },
+  {
+   "t": 239.01,
+   "text": "One hand holds the sign, one hand writes."
+  },
+  {
+   "t": 242.0,
+   "text": "The sign has to be small and light enough to hold while writing, and the writing has to be done while keeping the sign visible."
+  },
+  {
+   "t": 248.72,
+   "text": "The compromise is real."
+  },
+  {
+   "t": 250.39,
+   "text": "Avidity sequencing is like splitting that job between two people."
+  },
+  {
+   "t": 254.57,
+   "text": "Person one — the avidite — holds up an enormous, brightly colored sign with the answer."
+  },
+  {
+   "t": 260.91,
+   "text": "They have nothing else to do."
+  },
+  {
+   "t": 262.46,
+   "text": "The sign can be as big and bright as you want."
+  },
+  {
+   "t": 265.51,
+   "text": "Person two — the unmodified nucleotide — comes in afterward, sees the answer that was just displayed, and writes it down in the log book."
+  },
+  {
+   "t": 274.08,
+   "text": "They have nothing in their hands but a pen."
+  },
+  {
+   "t": 276.68,
+   "text": "The writing is fast and clean."
+  },
+  {
+   "t": 278.82,
+   "text": "Each person is optimized for their one job."
+  },
+  {
+   "t": 281.72,
+   "text": "What does decoupling buy you, concretely?"
+  },
+  {
+   "t": 283.88,
+   "text": "Three things, corresponding directly to the three Illumina compromises we identified."
+  },
+  {
+   "t": 289.81,
+   "text": "It buys you brighter signal."
+  },
+  {
+   "t": 291.41,
+   "text": "The avidite can carry many dye molecules — Element's design typically has on the order of four to twenty fluorescent labels per avidite, depending on the version — because there's no constraint that the polymerase has to accept this molecule as a substrate."
+  },
+  {
+   "t": 306.11,
+   "text": "Brighter signal means cleaner base calls, which means lower error rates per cycle."
+  },
+  {
+   "t": 311.43,
+   "text": "It buys you tighter binding."
+  },
+  {
+   "t": 313.07,
+   "text": "The avidite uses multivalency — multiple base-pairing interactions in parallel — to achieve effective binding affinities that are roughly a hundred times stronger than a single labeled nucleotide."
+  },
+  {
+   "t": 326.02,
+   "text": "Tighter binding means you can use the avidite at much lower concentrations — nanomolar instead of micromolar — which dramatically reduces background fluorescence from unbound molecules in solution, and also reduces the amount of reagent you have to ship in every kit."
+  },
+  {
+   "t": 342.94,
+   "text": "It buys you cleaner incorporation."
+  },
+  {
+   "t": 345.11,
+   "text": "The extending nucleotide is small, simple, and unencumbered."
+  },
+  {
+   "t": 349.57,
+   "text": "The polymerase grabs it and adds it to the strand fast, with high accuracy, and the blocker chemistry can be optimized purely for clean cleavage without having to also accommodate a tethered dye."
+  },
+  {
+   "t": 362.0,
+   "text": "Cleaner incorporation means fewer phasing errors — fewer clusters out of sync because they failed to incorporate, or incorporated twice — which means the signal stays clean for longer, which means longer reads with lower error rates at the end."
+  },
+  {
+   "t": 375.85,
+   "text": "These three effects compound."
+  },
+  {
+   "t": 377.78,
+   "text": "Brighter signal lets you push the camera harder."
+  },
+  {
+   "t": 380.93,
+   "text": "Tighter binding lets you use less reagent."
+  },
+  {
+   "t": 384.17,
+   "text": "Cleaner incorporation lets you read longer."
+  },
+  {
+   "t": 387.12,
+   "text": "The aggregate result, on paper, is a chemistry that produces lower-error data at lower per-base cost than Illumina, with comparable or better read lengths."
+  },
+  {
+   "t": 397.17,
+   "text": "That is the avidity-sequencing pitch, in the abstract."
+  },
+  {
+   "t": 400.89,
+   "text": "Now let's look at the actual avidite — the multivalent polymer that does the binding work — because the design of that molecule is where most of the cleverness lives."
+  }
+ ]
+}

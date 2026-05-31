@@ -1,0 +1,239 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — From beads to FASTQ — the Cell Ranger / STARsolo bioinformatics flow",
+ "duration": 391.3,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — From beads to FASTQ — the Cell Ranger / STARsolo bioinformatics flow"
+  },
+  {
+   "t": 7.34,
+   "text": "Let's walk through what happens to your data after sequencing comes back, because the bioinformatics flow is where a single-cell experiment becomes a cell-by-gene matrix you can actually look at."
+  },
+  {
+   "t": 17.99,
+   "text": "You've run your Chromium experiment."
+  },
+  {
+   "t": 19.82,
+   "text": "You've sent the library to a sequencing facility, they've run it on a NovaSeq, and a few days later you have FASTQ files — gigabytes of compressed text, billions of reads, each with a unique identifier, a sequence, and a quality string."
+  },
+  {
+   "t": 35.2,
+   "text": "The FASTQs from a 10x experiment have a specific structure."
+  },
+  {
+   "t": 39.46,
+   "text": "There are typically three files per sample: an I1 file containing the sample index, an R1 file containing the cell barcode plus the UMI, and an R2 file containing the actual cDNA sequence."
+  },
+  {
+   "t": 52.92,
+   "text": "Software needs to parse these three files together, interpreting them according to the chemistry, to recover the per-cell, per-gene data."
+  },
+  {
+   "t": 61.36,
+   "text": "The standard software for processing 10x data is called Cell Ranger, written and distributed by 10x Genomics."
+  },
+  {
+   "t": 68.69,
+   "text": "Cell Ranger is a pipeline that takes raw FASTQs and a reference genome and outputs a cell-by-gene UMI count matrix, plus a bunch of quality metrics and visualizations."
+  },
+  {
+   "t": 79.94,
+   "text": "It's free to use, though not open source until recently."
+  },
+  {
+   "t": 83.67,
+   "text": "You run it on a Linux server or cluster."
+  },
+  {
+   "t": 86.22,
+   "text": "It takes some hours per sample, depending on read depth and computational resources."
+  },
+  {
+   "t": 91.9,
+   "text": "What does Cell Ranger actually do, under the hood?"
+  },
+  {
+   "t": 94.28,
+   "text": "Five main steps."
+  },
+  {
+   "t": 95.74,
+   "text": "Step one: barcode parsing."
+  },
+  {
+   "t": 97.83,
+   "text": "Read the first twenty-eight bases of every R1 read."
+  },
+  {
+   "t": 101.46,
+   "text": "Split into cell barcode (the first sixteen) and UMI (the last twelve)."
+  },
+  {
+   "t": 107.1,
+   "text": "Check the cell barcode against a known list of valid barcodes — there are about a million possible barcodes per chip, of which a typical experiment uses maybe a few hundred thousand."
+  },
+  {
+   "t": 118.16,
+   "text": "Discard or error-correct reads whose barcode doesn't match a known one."
+  },
+  {
+   "t": 123.28,
+   "text": "Step two: alignment."
+  },
+  {
+   "t": 125.19,
+   "text": "Take the R2 read — the actual transcript sequence — and align it to the reference genome using a fast splice-aware aligner."
+  },
+  {
+   "t": 133.25,
+   "text": "Cell Ranger uses STAR, the same aligner used in bulk RNA-seq."
+  },
+  {
+   "t": 138.28,
+   "text": "The output is a position in the genome for every read that aligns."
+  },
+  {
+   "t": 142.79,
+   "text": "Reads that don't align, or that align ambiguously, are flagged."
+  },
+  {
+   "t": 147.28,
+   "text": "Step three: gene assignment."
+  },
+  {
+   "t": 149.64,
+   "text": "Look up which gene each alignment falls within, using a gene annotation file."
+  },
+  {
+   "t": 155.36,
+   "text": "Each aligned read is now associated with a specific gene — or marked as intronic, intergenic, or ambiguous, depending on where it lands."
+  },
+  {
+   "t": 165.26,
+   "text": "Step four: UMI deduplication and counting."
+  },
+  {
+   "t": 168.85,
+   "text": "For every cell barcode and every gene, look at all the reads assigned to that combination."
+  },
+  {
+   "t": 175.21,
+   "text": "Group them by UMI."
+  },
+  {
+   "t": 176.7,
+   "text": "Count the number of distinct UMIs — that's the molecule count for that gene in that cell."
+  },
+  {
+   "t": 182.56,
+   "text": "This is where the UMI magic actually happens computationally."
+  },
+  {
+   "t": 187.11,
+   "text": "Reads with the same cell barcode, the same gene assignment, and the same UMI are collapsed to one count."
+  },
+  {
+   "t": 194.03,
+   "text": "Step five: cell calling."
+  },
+  {
+   "t": 196.09,
+   "text": "Out of the maybe million distinct cell barcodes the chemistry could have produced, only a small fraction — typically a few thousand to a hundred thousand — correspond to real cells."
+  },
+  {
+   "t": 207.72,
+   "text": "The rest are empty droplets that picked up trace amounts of ambient RNA from the buffer."
+  },
+  {
+   "t": 213.5,
+   "text": "Cell Ranger uses a statistical method, originally based on a knee-finding algorithm and more recently on a more rigorous Bayesian approach called EmptyDrops, to distinguish real cells from empty droplets based on the distribution of UMI counts per barcode."
+  },
+  {
+   "t": 229.59,
+   "text": "Real cells have hundreds to thousands of UMIs; empty droplets have a few."
+  },
+  {
+   "t": 234.95,
+   "text": "There's usually a clear gap in the distribution, which the cell-calling algorithm uses to set a threshold."
+  },
+  {
+   "t": 241.84,
+   "text": "The output is a sparse matrix — most entries are zero, because most cells don't express most genes — stored in a compressed format called MatrixMarket or h5."
+  },
+  {
+   "t": 252.89,
+   "text": "Rows are cells; columns are genes; values are UMI counts."
+  },
+  {
+   "t": 257.73,
+   "text": "That matrix is what you load into a downstream analysis tool — typically Seurat in R, or Scanpy in Python — and start doing science with."
+  },
+  {
+   "t": 266.55,
+   "text": "There's a competing open-source tool worth knowing about, called STARsolo, which is built directly into the STAR aligner."
+  },
+  {
+   "t": 274.16,
+   "text": "STARsolo does essentially the same thing as Cell Ranger — barcode parsing, alignment, UMI counting, cell calling — but it's open source, more flexible, and substantially faster on most workloads."
+  },
+  {
+   "t": 288.01,
+   "text": "It also produces output that's compatible with downstream tools."
+  },
+  {
+   "t": 291.87,
+   "text": "Many academic labs have migrated to STARsolo for these reasons."
+  },
+  {
+   "t": 296.73,
+   "text": "Another fast alternative is Salmon-Alevin or its successor Alevin-fry, which uses pseudo-alignment rather than full alignment for speed."
+  },
+  {
+   "t": 305.18,
+   "text": "The choice between these tools doesn't usually change the biological conclusions, but it changes how long the pipeline takes and how much computational resource you need."
+  },
+  {
+   "t": 315.15,
+   "text": "What does a typical 10x dataset look like, by the numbers?"
+  },
+  {
+   "t": 319.42,
+   "text": "A standard run might give you ten thousand cells, with twenty thousand reads per cell, and detect three thousand to four thousand genes per cell on average."
+  },
+  {
+   "t": 329.67,
+   "text": "The cell-by-gene matrix is ten thousand by twenty thousand, but ninety-five percent of the entries are zero, because each cell only expresses a few thousand of the twenty thousand possible genes — and even among those, most have low enough UMI counts that they often show up as zero in any given cell."
+  },
+  {
+   "t": 348.62,
+   "text": "The matrix is sparse."
+  },
+  {
+   "t": 350.57,
+   "text": "The sparseness is real biology, but it's also exacerbated by dropout — the technical failure to capture every mRNA from every cell."
+  },
+  {
+   "t": 360.6,
+   "text": "We'll come back to dropout in Segment 17."
+  },
+  {
+   "t": 363.61,
+   "text": "That matrix — sparse, cell-by-gene, UMI counts — is the universal data product of single-cell RNA-seq."
+  },
+  {
+   "t": 371.87,
+   "text": "Whatever the upstream chemistry, whatever the sequencing platform, the output that biologists actually work with is that matrix."
+  },
+  {
+   "t": 379.6,
+   "text": "Cell Ranger and its alternatives are the bridge from FASTQ to matrix."
+  },
+  {
+   "t": 385.18,
+   "text": "Everything downstream — and there is a lot downstream — operates on the matrix as input."
+  }
+ ]
+}

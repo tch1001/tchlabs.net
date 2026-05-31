@@ -1,0 +1,199 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Spatial transcriptomics — Visium, Slide-seq, MERFISH, the spatial revolution",
+ "duration": 388.18,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Spatial transcriptomics — Visium, Slide-seq, MERFISH, the spatial revolution"
+  },
+  {
+   "t": 8.06,
+   "text": "Now for the next frontier, the one that's currently reshaping the field again: spatial transcriptomics."
+  },
+  {
+   "t": 15.07,
+   "text": "Single-cell sequencing, in its standard form, requires you to dissociate your tissue — break the cells apart, suspend them in a tube, load them into droplets."
+  },
+  {
+   "t": 25.95,
+   "text": "In doing so, you destroy all spatial information."
+  },
+  {
+   "t": 29.81,
+   "text": "You no longer know where, in the original tissue, each cell was sitting."
+  },
+  {
+   "t": 34.08,
+   "text": "You don't know which cells were neighbors, what tissue architecture they were part of, what region they came from."
+  },
+  {
+   "t": 39.66,
+   "text": "For many questions, this loss is fine — if you just want to know which cell types are present, dissociation is acceptable."
+  },
+  {
+   "t": 47.09,
+   "text": "But for many other questions, where the spatial organization is the biology — the layered structure of the cortex, the architecture of a tumor with its core, edge, and invading front, the relationship between immune infiltrate and tumor cells — losing spatial information is losing the question."
+  },
+  {
+   "t": 65.2,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 66.51,
+   "text": "Spatial single-cell is the next generation — single-cell resolution plus the spatial location of each cell in the original tissue."
+  },
+  {
+   "t": 75.25,
+   "text": "Instead of a list of cells with no addresses, you get a map."
+  },
+  {
+   "t": 79.06,
+   "text": "There are two main families of spatial transcriptomics technologies, and they make different trade-offs."
+  },
+  {
+   "t": 85.15,
+   "text": "Family one: sequencing-based spatial."
+  },
+  {
+   "t": 88.21,
+   "text": "The original was published in 2016 by Patrik Ståhl, Joakim Lundeberg, and colleagues in Sweden, who built a slide with a regular grid of capture spots — each spot containing oligonucleotides with a known, position-specific barcode."
+  },
+  {
+   "t": 103.3,
+   "text": "Lay a tissue slice on the slide, permeabilize the tissue so RNA can diffuse out of the cells, capture the RNA on the underlying barcoded spots, then sequence."
+  },
+  {
+   "t": 115.11,
+   "text": "The barcodes tell you which spot each transcript was captured at — that is, where in the tissue the RNA originated."
+  },
+  {
+   "t": 121.99,
+   "text": "The Swedish team was acquired by 10x Genomics in 2018 and became the Visium platform, which is now the standard commercial sequencing-based spatial tool."
+  },
+  {
+   "t": 131.69,
+   "text": "Visium has a resolution of about fifty-five microns per spot — each spot captures RNA from one to ten cells, depending on cell density."
+  },
+  {
+   "t": 140.82,
+   "text": "That's not true single-cell resolution."
+  },
+  {
+   "t": 143.26,
+   "text": "The next generation — Visium HD launched in 2024, plus competing platforms like Slide-seq from the Broad Institute, Stereo-seq from BGI, and Curio Seeker — push the resolution down to ten microns or even one micron, true subcellular resolution, while still using a barcoded surface to capture RNA."
+  },
+  {
+   "t": 163.61,
+   "text": "The trade-off is sensitivity: smaller spots capture fewer molecules each, so per-spot data is sparser."
+  },
+  {
+   "t": 170.86,
+   "text": "Family two: imaging-based spatial."
+  },
+  {
+   "t": 173.81,
+   "text": "Rather than capturing RNA on a barcoded surface and sequencing it, imaging-based methods detect specific RNA molecules in their original location in the tissue using fluorescence microscopy."
+  },
+  {
+   "t": 187.12,
+   "text": "The pioneer is MERFISH — multiplexed error-robust fluorescence in situ hybridization — developed by Xiaowei Zhuang's lab at Harvard around 2015."
+  },
+  {
+   "t": 198.15,
+   "text": "You hybridize tens of thousands of small fluorescent probes to a tissue slice, where each probe binds a specific transcript at its real location in the cell."
+  },
+  {
+   "t": 208.76,
+   "text": "You image, photobleach, hybridize again with a new round of probes, image again."
+  },
+  {
+   "t": 214.39,
+   "text": "Over many rounds of hybridization and imaging, each transcript species gets a unique combinatorial barcode of which rounds it lit up in, allowing identification of hundreds to thousands of distinct transcripts per cell, in their original locations, at true single-molecule resolution."
+  },
+  {
+   "t": 232.15,
+   "text": "Variants and competitors include seqFISH+, HybISS, and the commercial Xenium platform from 10x Genomics, CosMx from NanoString, and MERSCOPE from Vizgen."
+  },
+  {
+   "t": 243.39,
+   "text": "The two families have complementary strengths."
+  },
+  {
+   "t": 245.94,
+   "text": "Sequencing-based spatial (Visium, Slide-seq) gives you transcriptome-wide coverage — you measure every gene — but at lower spatial resolution and lower per-cell sensitivity."
+  },
+  {
+   "t": 257.83,
+   "text": "Imaging-based spatial (MERFISH, Xenium) gives you true single-molecule, single-cell resolution and beautiful images of where each transcript sits, but only for a pre-defined panel of a few hundred to a few thousand genes — you have to choose your targets ahead of time."
+  },
+  {
+   "t": 274.6,
+   "text": "For atlas-style discovery work, sequencing-based is the natural fit; for hypothesis-driven characterization of known cell types in tissue context, imaging-based is the natural fit."
+  },
+  {
+   "t": 286.61,
+   "text": "What has spatial transcriptomics actually enabled?"
+  },
+  {
+   "t": 289.55,
+   "text": "It's letting biologists ask questions about tissue architecture that single-cell could never answer."
+  },
+  {
+   "t": 295.87,
+   "text": "In a tumor, where exactly are the exhausted T cells relative to the cancer cells — are they infiltrating the tumor mass or stuck at the edge?"
+  },
+  {
+   "t": 304.78,
+   "text": "In a developing brain, how does the layered cortex assemble — which progenitors give rise to which layers, in which spatial order?"
+  },
+  {
+   "t": 314.0,
+   "text": "In a fibrotic lung, where do the disease-associated cell types localize relative to airways and vasculature?"
+  },
+  {
+   "t": 321.42,
+   "text": "These are spatial questions, and spatial transcriptomics answers them."
+  },
+  {
+   "t": 325.8,
+   "text": "Combined with dissociated single-cell data — for the depth of transcriptome coverage — spatial data is becoming the standard reference layer for tissue biology."
+  },
+  {
+   "t": 335.72,
+   "text": "The Human Cell Atlas and the Tumor Atlas Network are both moving aggressively into spatial."
+  },
+  {
+   "t": 342.32,
+   "text": "Many recent papers combine multiple modalities: dissociated scRNA-seq for cell type discovery, then spatial transcriptomics for in-tissue localization, then validated with imaging-based confirmation."
+  },
+  {
+   "t": 355.48,
+   "text": "The future is multimodal and spatial together."
+  },
+  {
+   "t": 358.98,
+   "text": "This is a field moving so fast that anything specific I say today may be out of date by next year."
+  },
+  {
+   "t": 366.18,
+   "text": "But the direction is clear."
+  },
+  {
+   "t": 367.93,
+   "text": "The destruction of spatial information that bulk and dissociated single-cell required is being undone."
+  },
+  {
+   "t": 374.56,
+   "text": "We're getting closer to assays that measure every molecule in every cell in its real tissue location, simultaneously."
+  },
+  {
+   "t": 382.7,
+   "text": "That's the asymptote."
+  },
+  {
+   "t": 384.13,
+   "text": "We're not there, but the trajectory is unmistakable."
+  }
+ ]
+}

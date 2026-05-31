@@ -1,0 +1,287 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — The homopolymer problem: the killer flaw",
+ "duration": 412.93,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — The homopolymer problem: the killer flaw"
+  },
+  {
+   "t": 3.61,
+   "text": "We just hinted at it in the previous segment, but it deserves its own treatment because it's the single most-discussed limitation of 454 and the one that, more than any other, shaped how the platform was used and how it eventually died."
+  },
+  {
+   "t": 17.9,
+   "text": "Here's the problem in one sentence."
+  },
+  {
+   "t": 20.32,
+   "text": "In flowed sequencing, the only way to know how many identical bases were incorporated in a single flow is to measure the flash intensity, and intensity-to-count is fundamentally noisy."
+  },
+  {
+   "t": 32.09,
+   "text": "Let me unpack that."
+  },
+  {
+   "t": 33.52,
+   "text": "Recall: if the template at the current position calls for, say, three Ts in a row, then when you flow A — the complement of T — the polymerase will incorporate all three As in rapid succession during that one flow, and you'll see a flash that's three times the brightness of a single-base flash."
+  },
+  {
+   "t": 51.74,
+   "text": "Read intensity, divide by single-base brightness, round to the nearest integer, and you've called \"three As in a row."
+  },
+  {
+   "t": 59.41,
+   "text": "\" Easy."
+  },
+  {
+   "t": 60.24,
+   "text": "For three identical bases, the math is robust."
+  },
+  {
+   "t": 63.91,
+   "text": "Real flash for one A is about 1.0 units."
+  },
+  {
+   "t": 67.75,
+   "text": "For two it's about 2.0."
+  },
+  {
+   "t": 69.83,
+   "text": "For three about 3.0."
+  },
+  {
+   "t": 72.12,
+   "text": "The noise in any one measurement is small enough that these are easy to distinguish."
+  },
+  {
+   "t": 77.25,
+   "text": "But the relationship between intensity and base count, in real systems, is not perfectly linear."
+  },
+  {
+   "t": 83.79,
+   "text": "There are slight saturation effects at high incorporation counts."
+  },
+  {
+   "t": 87.89,
+   "text": "There's noise from the photon counting itself — Poisson noise in the camera."
+  },
+  {
+   "t": 92.78,
+   "text": "There are bead-to-bead differences in how many DNA copies were amplified during emulsion PCR, which set the absolute brightness floor of each well."
+  },
+  {
+   "t": 102.7,
+   "text": "There's phasing drift, as we discussed."
+  },
+  {
+   "t": 105.35,
+   "text": "So while the intensity might nominally be three units for a triple, in practice it might be 2.7, or 3.2, or 3.5."
+  },
+  {
+   "t": 115.45,
+   "text": "For two, three, four bases in a row, you can usually still tell."
+  },
+  {
+   "t": 120.34,
+   "text": "By the time you get to homopolymers of six, seven, or eight identical bases, the intensity range overlaps badly."
+  },
+  {
+   "t": 129.11,
+   "text": "A six-mer might give you a peak of 5.5; a seven-mer might give you 6.4."
+  },
+  {
+   "t": 135.57,
+   "text": "Round those to integers and you've got the wrong count."
+  },
+  {
+   "t": 138.61,
+   "text": "You've inserted or deleted a base."
+  },
+  {
+   "t": 141.01,
+   "text": "This is the homopolymer indel error — indels meaning insertions or deletions — and it's the dominant error mode of 454."
+  },
+  {
+   "t": 150.32,
+   "text": "Substitution errors, where one base gets called as a different base, are very rare in 454 because the chemistry is so unambiguous about which base was flowed during which cycle."
+  },
+  {
+   "t": 162.59,
+   "text": "But the count error — was that homopolymer five or six As?"
+  },
+  {
+   "t": 166.93,
+   "text": "— is structural and inescapable."
+  },
+  {
+   "t": 169.51,
+   "text": "The error rate climbs steeply as homopolymer length increases, and once you're past a homopolymer of about six or seven, the calls are essentially unreliable."
+  },
+  {
+   "t": 179.57,
+   "text": "Let me make this very concrete with a real example."
+  },
+  {
+   "t": 182.86,
+   "text": "The bacterium Helicobacter pylori — the one that causes ulcers — has a genome with a lot of homopolymeric tracts in it."
+  },
+  {
+   "t": 190.74,
+   "text": "Stretches of seven, eight, even ten identical bases."
+  },
+  {
+   "t": 195.15,
+   "text": "When the early 454 assemblies of H. pylori came out, they were riddled with insertions and deletions exactly at those homopolymer sites."
+  },
+  {
+   "t": 205.82,
+   "text": "The actual bacterial genome had, say, eight As in a row at a particular spot."
+  },
+  {
+   "t": 212.05,
+   "text": "The 454 reads at that spot had a mixture of calls — some seven As, some eight, some nine."
+  },
+  {
+   "t": 218.14,
+   "text": "Many of these miscalls produced a frameshift in the protein-coding sequence that followed, which made the predicted protein nonsensical."
+  },
+  {
+   "t": 226.45,
+   "text": "So a researcher sequencing H. pylori on 454 might end up with a \"draft genome\" full of pseudogenes — apparently broken protein-coding sequences — that were actually intact in the real organism but had been miscounted at homopolymers during sequencing."
+  },
+  {
+   "t": 243.71,
+   "text": "That was a serious functional impairment for any application that depended on accurate protein prediction."
+  },
+  {
+   "t": 249.93,
+   "text": "Genome annotation."
+  },
+  {
+   "t": 251.6,
+   "text": "Variant calling."
+  },
+  {
+   "t": 252.71,
+   "text": "Anything where you cared whether a gene was real or broken."
+  },
+  {
+   "t": 256.65,
+   "text": "Different bacteria, and different parts of the human genome, have different homopolymer densities."
+  },
+  {
+   "t": 262.5,
+   "text": "The 454 was tolerable for some applications and disastrous for others."
+  },
+  {
+   "t": 267.34,
+   "text": "Anywhere you cared about indels — anywhere you were calling small insertions and deletions as a clinical or biological feature — 454 was deeply suspect."
+  },
+  {
+   "t": 277.33,
+   "text": "Anywhere you cared about long contiguous reads of unique sequence — like in metagenomics, where the question was \"what species is this fragment from?"
+  },
+  {
+   "t": 287.34,
+   "text": "\" and homopolymer indels didn't really hurt the answer — 454 was great."
+  },
+  {
+   "t": 292.63,
+   "text": "This is also a great place to compare to Illumina's chemistry, because Illumina's design completely sidesteps the homopolymer problem."
+  },
+  {
+   "t": 301.15,
+   "text": "Illumina uses reversible terminator chemistry: each nucleotide carries a chemical group that blocks further extension after one base is added, plus a fluorescent dye that's read by the camera."
+  },
+  {
+   "t": 313.5,
+   "text": "Polymerase adds exactly one base, then stops."
+  },
+  {
+   "t": 317.71,
+   "text": "You image."
+  },
+  {
+   "t": 318.71,
+   "text": "Then you wash off the dye and the blocking group, in a chemical reaction."
+  },
+  {
+   "t": 323.23,
+   "text": "The polymerase can now add exactly one more base."
+  },
+  {
+   "t": 326.83,
+   "text": "You image."
+  },
+  {
+   "t": 327.85,
+   "text": "And so on."
+  },
+  {
+   "t": 328.85,
+   "text": "Each cycle, exactly one base."
+  },
+  {
+   "t": 331.31,
+   "text": "No matter what's in the template."
+  },
+  {
+   "t": 333.05,
+   "text": "A homopolymer of ten Ts is read as ten separate cycles, each adding one A and being individually imaged."
+  },
+  {
+   "t": 341.88,
+   "text": "The count is precise by construction."
+  },
+  {
+   "t": 344.46,
+   "text": "The flip side, of course, is that Illumina's chemistry is much harder to engineer."
+  },
+  {
+   "t": 349.96,
+   "text": "The blocking group has to be reliably installed on every nucleotide."
+  },
+  {
+   "t": 354.84,
+   "text": "The dye has to fluoresce cleanly enough to distinguish four bases."
+  },
+  {
+   "t": 359.63,
+   "text": "The deblocking step has to be efficient or you accumulate phasing problems of your own."
+  },
+  {
+   "t": 364.63,
+   "text": "Illumina spent years and an enormous amount of money perfecting these chemistries."
+  },
+  {
+   "t": 369.84,
+   "text": "454's flow approach was simpler — flow one nucleotide, watch, wash, flow the next — but it could never escape the homopolymer trap."
+  },
+  {
+   "t": 379.5,
+   "text": "The chemistry was the trap."
+  },
+  {
+   "t": 381.28,
+   "text": "So the picture you should hold: 454 produced reads with low substitution error but persistent indel error at homopolymers."
+  },
+  {
+   "t": 389.84,
+   "text": "Illumina produced reads with higher substitution error in early years but very low indel error."
+  },
+  {
+   "t": 396.64,
+   "text": "Different chemistries, different error profiles."
+  },
+  {
+   "t": 399.41,
+   "text": "For applications that cared about indels, Illumina won."
+  },
+  {
+   "t": 403.09,
+   "text": "For applications that didn't, 454 was competitive for a while — and its longer reads, which we'll discuss next, gave it a niche advantage that kept it alive."
+  }
+ ]
+}

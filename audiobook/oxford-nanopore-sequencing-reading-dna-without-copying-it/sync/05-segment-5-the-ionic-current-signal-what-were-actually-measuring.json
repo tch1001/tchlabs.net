@@ -1,0 +1,255 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — The ionic current signal: what we're actually measuring",
+ "duration": 427.11,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — The ionic current signal: what we're actually measuring"
+  },
+  {
+   "t": 4.66,
+   "text": "Before we get to basecalling, let me spend a segment on the signal itself, because if you don't understand what the raw data look like, the basecalling problem won't quite make sense."
+  },
+  {
+   "t": 14.46,
+   "text": "Picture a single pore embedded in a synthetic membrane."
+  },
+  {
+   "t": 18.19,
+   "text": "On one side of the membrane, the cis side, there's a solution of salt water — typically potassium chloride."
+  },
+  {
+   "t": 25.46,
+   "text": "On the other side, the trans side, there's another solution of salt water."
+  },
+  {
+   "t": 30.36,
+   "text": "There's a voltage applied across the membrane, typically around 180 millivolts."
+  },
+  {
+   "t": 35.86,
+   "text": "That voltage drives ions — potassium ions one way, chloride ions the other — through the pore."
+  },
+  {
+   "t": 42.06,
+   "text": "The flow of ions constitutes an electrical current, and we measure that current with an electrode on each side of the membrane connected to a sensitive amplifier called a patch-clamp amplifier."
+  },
+  {
+   "t": 53.27,
+   "text": "The current we measure is small — typically around 100 to 200 picoamps when the pore is open and empty."
+  },
+  {
+   "t": 60.21,
+   "text": "A picoamp is a trillionth of an amp."
+  },
+  {
+   "t": 62.88,
+   "text": "We are measuring exquisitely tiny currents from exquisitely small molecular events."
+  },
+  {
+   "t": 69.53,
+   "text": "When DNA enters the pore, two things happen at once."
+  },
+  {
+   "t": 73.36,
+   "text": "First, the DNA physically takes up space inside the pore."
+  },
+  {
+   "t": 78.11,
+   "text": "The narrow constriction, normally full of nothing but ions sloshing through, is now partly filled by a DNA strand."
+  },
+  {
+   "t": 86.06,
+   "text": "The volume available for ion flow is reduced, and the current drops."
+  },
+  {
+   "t": 90.9,
+   "text": "The amount the current drops depends on the specific chemistry of whatever piece of DNA is sitting in the constriction at that moment."
+  },
+  {
+   "t": 99.19,
+   "text": "Different bases have slightly different sizes, slightly different shapes, slightly different chemical interactions with the protein walls of the pore."
+  },
+  {
+   "t": 108.06,
+   "text": "A bulky purine like guanine blocks the current more than a smaller pyrimidine like cytosine."
+  },
+  {
+   "t": 114.28,
+   "text": "The exact relationship between base identity and current is not a simple one — it's a complicated nonlinear function — but it is reproducible, and that's all we need."
+  },
+  {
+   "t": 125.0,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 126.8,
+   "text": "Imagine the pore as a tunnel just wide enough for a single bicyclist to ride through, and the cis-to-trans voltage as a strong wind blowing down the tunnel."
+  },
+  {
+   "t": 136.1,
+   "text": "With no one in the tunnel, the wind blows through freely — that's the open-pore baseline current."
+  },
+  {
+   "t": 142.72,
+   "text": "When a bicyclist enters the tunnel, they partially block the wind, and the wind speed drops."
+  },
+  {
+   "t": 148.56,
+   "text": "A small thin bicyclist blocks less wind than a big bulky one."
+  },
+  {
+   "t": 153.26,
+   "text": "A bicyclist wearing baggy clothes blocks differently than one wearing tight clothes."
+  },
+  {
+   "t": 159.56,
+   "text": "By measuring how much the wind slows down at any given moment, you can — in principle — infer something about who's in the tunnel right now."
+  },
+  {
+   "t": 167.88,
+   "text": "In nanopore sequencing, each base going through the pore is one bicyclist."
+  },
+  {
+   "t": 173.19,
+   "text": "The \"wind speed\" — the ionic current — drops by a characteristic amount depending on which base is currently in the sensing zone."
+  },
+  {
+   "t": 181.46,
+   "text": "We measure the wind speed at a few thousand samples per second."
+  },
+  {
+   "t": 184.93,
+   "text": "We get a long time series of current values."
+  },
+  {
+   "t": 187.54,
+   "text": "That time series is the raw nanopore data."
+  },
+  {
+   "t": 190.39,
+   "text": "But now here's where it gets interesting, and where the basecalling problem starts to bite."
+  },
+  {
+   "t": 195.62,
+   "text": "I said the current drops depend on \"the base in the sensing zone."
+  },
+  {
+   "t": 199.97,
+   "text": "\" That's a slight simplification."
+  },
+  {
+   "t": 202.04,
+   "text": "What's actually true is that the current depends on the few bases in the sensing zone, all of them simultaneously, in a sort of overlapping way."
+  },
+  {
+   "t": 210.65,
+   "text": "Even with the sharp constriction of MspA-derived pores, the sensing zone isn't infinitely thin."
+  },
+  {
+   "t": 217.06,
+   "text": "It's perhaps half a nanometer to a nanometer wide, which corresponds to roughly two to five DNA bases."
+  },
+  {
+   "t": 223.85,
+   "text": "So at any moment, the current you measure is determined not by a single base but by a short window of bases — a five-base or so window, called a k-mer, of which one is in the most sensitive position and the others contribute as neighbors."
+  },
+  {
+   "t": 239.38,
+   "text": "This means the current trace isn't a simple sequence of four discrete levels corresponding to A, T, G, C."
+  },
+  {
+   "t": 247.31,
+   "text": "It's a sequence of levels corresponding to k-mers."
+  },
+  {
+   "t": 250.95,
+   "text": "If your sensing window is five bases wide, then with four possible bases you have four to the fifth — 1024 — possible k-mer combinations, and each one has its own characteristic current level."
+  },
+  {
+   "t": 264.38,
+   "text": "The signal you see is determined by which 1024-element set of k-mers your strand happens to contain, in what order, with whatever overlap as the strand moves base by base through the pore."
+  },
+  {
+   "t": 276.47,
+   "text": "So when the strand moves one base forward — when the motor ratchets one step — the k-mer in the sensing window shifts by one."
+  },
+  {
+   "t": 284.3,
+   "text": "The old first base falls out, a new last base comes in, and the four middle bases stay."
+  },
+  {
+   "t": 290.03,
+   "text": "The current level jumps from the level associated with the old k-mer to the level associated with the new k-mer, and these levels are determined by the chemistry of the pore and the bases."
+  },
+  {
+   "t": 300.56,
+   "text": "That overlapping-window structure is the thing that makes nanopore basecalling fundamentally different from, say, Illumina basecalling."
+  },
+  {
+   "t": 308.7,
+   "text": "In Illumina, every cycle gives you one base, cleanly — you see a flash of one color out of four, you call A or T or G or C, you move on."
+  },
+  {
+   "t": 318.88,
+   "text": "In nanopore, every step gives you a current level that depends on a window of bases, and you have to infer the underlying sequence from the trajectory of current levels as the window slides."
+  },
+  {
+   "t": 330.28,
+   "text": "This is a much harder inference problem."
+  },
+  {
+   "t": 332.47,
+   "text": "It's a problem of decoding a sequence of states from a sequence of noisy observations, where each observation depends on a window of the sequence."
+  },
+  {
+   "t": 341.58,
+   "text": "If you know your computer science, this is exactly the kind of problem that hidden Markov models were invented to solve — and indeed, early nanopore basecallers were HMMs."
+  },
+  {
+   "t": 351.93,
+   "text": "But the modern world has moved on, and these days basecalling is done by neural networks, which we'll talk about in the next segment."
+  },
+  {
+   "t": 359.63,
+   "text": "One more thing about the raw signal before we move on, because I want you to feel it as a physical phenomenon."
+  },
+  {
+   "t": 366.3,
+   "text": "The current trace you collect from a single pore over the course of sequencing a single DNA molecule looks, if you plot it on a screen, like a noisy staircase."
+  },
+  {
+   "t": 376.35,
+   "text": "Each step of the staircase corresponds to one base position."
+  },
+  {
+   "t": 380.5,
+   "text": "The height of each step encodes the local k-mer chemistry."
+  },
+  {
+   "t": 384.5,
+   "text": "The noise on each step — the up-and-down jitter — is the thermal noise of ions sloshing through the pore."
+  },
+  {
+   "t": 391.41,
+   "text": "The duration of each step is set by the motor speed and varies slightly base-by-base due to the stochastic nature of motor stepping."
+  },
+  {
+   "t": 398.97,
+   "text": "So your raw data is a time series of, say, four thousand samples per second, going on for as long as the molecule takes to pass through the pore — which for a 100,000-base molecule, at 400 bases per second, is about 250 seconds, or four minutes of continuous current measurement."
+  },
+  {
+   "t": 416.76,
+   "text": "That four-minute trace gets fed into the basecaller, and the basecaller spits out 100,000 letters."
+  },
+  {
+   "t": 423.41,
+   "text": "That's the signal."
+  },
+  {
+   "t": 424.6,
+   "text": "Now let's talk about how we turn it into letters."
+  }
+ ]
+}

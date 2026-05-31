@@ -1,0 +1,227 @@
+{
+ "n": 19,
+ "title": "APPENDIX",
+ "duration": 338.87,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX"
+  },
+  {
+   "t": 1.07,
+   "text": "A few items that didn't fit into the lecture flow but are worth knowing if you want to dig deeper."
+  },
+  {
+   "t": 6.14,
+   "text": "Key papers to read."
+  },
+  {
+   "t": 7.58,
+   "text": "Deamer and Akeson's 2000 review in Trends in Biotechnology lays out the original concept."
+  },
+  {
+   "t": 14.49,
+   "text": "The 2008 paper from the Gundlach lab introducing MspA for nanopore sequencing is a landmark, as is the 2012 Cherf et al. paper demonstrating motor-controlled translocation."
+  },
+  {
+   "t": 27.21,
+   "text": "The 2018 Jain et al. paper \"Nanopore sequencing and assembly of a human genome with ultra-long reads\" was the proof that nanopore could produce human-grade assemblies."
+  },
+  {
+   "t": 38.79,
+   "text": "For basecalling, the 2018 paper introducing the Bonito caller and the 2019 paper on the Guppy basecaller architecture are good entry points."
+  },
+  {
+   "t": 48.3,
+   "text": "For methylation, the 2017 paper from Simpson et al. on nanopolish methylation calling and the 2021 paper on Megalodon are key."
+  },
+  {
+   "t": 58.35,
+   "text": "For SARS-CoV-2 sequencing, the ARTIC Network protocol paper is essential reading."
+  },
+  {
+   "t": 64.92,
+   "text": "Key software tools."
+  },
+  {
+   "t": 66.46,
+   "text": "MinKNOW is the device control and live basecalling software shipped with the instruments."
+  },
+  {
+   "t": 72.2,
+   "text": "Guppy, Dorado, and Bonito are the production and research basecallers from Oxford Nanopore."
+  },
+  {
+   "t": 78.19,
+   "text": "Minimap2 is the standard long-read aligner."
+  },
+  {
+   "t": 81.45,
+   "text": "Medaka is the consensus polishing tool."
+  },
+  {
+   "t": 84.64,
+   "text": "Nanopolish is the original methylation caller; Megalodon and Remora are the modern ones."
+  },
+  {
+   "t": 91.16,
+   "text": "Flye, Canu, Hifiasm, and Shasta are commonly used assemblers for long-read data."
+  },
+  {
+   "t": 97.6,
+   "text": "NanoFilt and NanoPlot are common quality-control tools."
+  },
+  {
+   "t": 101.59,
+   "text": "Readfish is the community adaptive sampling tool."
+  },
+  {
+   "t": 105.26,
+   "text": "None of this software is hard to install, and most of it is open source."
+  },
+  {
+   "t": 109.71,
+   "text": "Key data formats."
+  },
+  {
+   "t": 111.11,
+   "text": "Raw nanopore data is stored in a format called FAST5 — an HDF5-based binary format containing the raw current signal as well as metadata."
+  },
+  {
+   "t": 121.26,
+   "text": "The newer POD5 format is replacing FAST5 for better performance."
+  },
+  {
+   "t": 125.97,
+   "text": "Basecalled data is in standard FASTQ format."
+  },
+  {
+   "t": 129.81,
+   "text": "Aligned data is in BAM format."
+  },
+  {
+   "t": 132.44,
+   "text": "Methylation calls are in BAM-format extended with MM and ML tags, an emerging standard for storing modified base calls alongside the underlying sequence."
+  },
+  {
+   "t": 143.29,
+   "text": "Key communities and resources."
+  },
+  {
+   "t": 145.69,
+   "text": "The Nanopore Community is the official Oxford Nanopore forum."
+  },
+  {
+   "t": 149.96,
+   "text": "Twitter/X has an active nanopore community under hashtags like nanopore and longreads."
+  },
+  {
+   "t": 156.5,
+   "text": "The NCM — Nanopore Community Meeting — and London Calling are the major annual conferences."
+  },
+  {
+   "t": 162.94,
+   "text": "The bioRxiv long-read sequencing channel has steady new methodology preprints."
+  },
+  {
+   "t": 168.88,
+   "text": "The Nanopore Sequencing wiki on Oxford's own site is well-maintained."
+  },
+  {
+   "t": 173.31,
+   "text": "For protocols, the protocols.io platform has many community-contributed nanopore workflows."
+  },
+  {
+   "t": 179.9,
+   "text": "Common pitfalls for new users."
+  },
+  {
+   "t": 182.24,
+   "text": "Pore mortality is real — flow cells degrade during use, and after 48 to 72 hours you typically have a small fraction of the original active pores."
+  },
+  {
+   "t": 194.35,
+   "text": "Library prep matters a lot — input DNA quality, fragment length, and adapter ligation efficiency all dominate the data you get."
+  },
+  {
+   "t": 203.74,
+   "text": "Basecalling is computationally expensive — modern basecallers require GPUs for reasonable throughput; CPU-only basecalling is slow."
+  },
+  {
+   "t": 213.59,
+   "text": "Storage adds up — raw FAST5/POD5 data is large; budget for terabytes of storage if you sequence regularly."
+  },
+  {
+   "t": 222.71,
+   "text": "Always sequence your reference samples first to characterize your local performance, before committing precious clinical samples."
+  },
+  {
+   "t": 230.32,
+   "text": "Glossary refresher."
+  },
+  {
+   "t": 231.89,
+   "text": "Adapter — short custom DNA with a motor protein loaded, ligated to the ends of library DNA to enable pore loading."
+  },
+  {
+   "t": 240.26,
+   "text": "Basecaller — software that converts raw current signal to base sequence."
+  },
+  {
+   "t": 245.1,
+   "text": "Duplex — sequencing both strands of a double-stranded DNA molecule and combining for higher accuracy."
+  },
+  {
+   "t": 252.18,
+   "text": "Flow cell — disposable cartridge containing the membrane, pores, and sensing electronics."
+  },
+  {
+   "t": 258.56,
+   "text": "k-mer — a short window of consecutive bases; nanopore current depends on the k-mer in the pore at any moment."
+  },
+  {
+   "t": 266.4,
+   "text": "Motor — enzyme attached to the adapter that ratchets DNA through the pore at controlled speed."
+  },
+  {
+   "t": 272.41,
+   "text": "N50 — a measure of read length distribution: half the bases are in reads at least this long."
+  },
+  {
+   "t": 279.1,
+   "text": "Pore — the engineered protein with a narrow constriction through which DNA threads."
+  },
+  {
+   "t": 284.86,
+   "text": "Q-score — logarithmic measure of base quality; Q20 means 1 percent error, Q30 means 0.1 percent error."
+  },
+  {
+   "t": 293.48,
+   "text": "R10.4 — the current generation of pore chemistry as of writing."
+  },
+  {
+   "t": 298.72,
+   "text": "One final analogy to take home."
+  },
+  {
+   "t": 301.18,
+   "text": "Every other sequencing technology asks the question: how do we build a faithful copy of this DNA and watch the copying happen?"
+  },
+  {
+   "t": 309.51,
+   "text": "Nanopore asks a different question: how do we feel the DNA itself, one base at a time, as it passes through our fingers?"
+  },
+  {
+   "t": 318.11,
+   "text": "That's the conceptual core."
+  },
+  {
+   "t": 319.93,
+   "text": "It is the only sequencing technology that reads the actual molecule, not a copy."
+  },
+  {
+   "t": 325.55,
+   "text": "Hold that in mind, and the rest of the technology — pore, motor, current, basecaller, MinION, methylation, RNA, adaptive sampling — falls into place as engineering in service of that one idea."
+  }
+ ]
+}

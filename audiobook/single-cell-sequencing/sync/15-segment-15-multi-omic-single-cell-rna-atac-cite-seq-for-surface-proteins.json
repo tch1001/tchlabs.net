@@ -1,0 +1,211 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Multi-omic single-cell — RNA + ATAC, CITE-seq for surface proteins",
+ "duration": 395.49,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Multi-omic single-cell — RNA + ATAC, CITE-seq for surface proteins"
+  },
+  {
+   "t": 8.32,
+   "text": "So far, everything we've discussed has been single-cell RNA."
+  },
+  {
+   "t": 12.24,
+   "text": "But RNA is only one layer of a cell's biology."
+  },
+  {
+   "t": 15.82,
+   "text": "There's the genome, the epigenome, the proteome, the chromatin state, the surface proteins, the secreted molecules."
+  },
+  {
+   "t": 24.16,
+   "text": "A real cell is all of those at once."
+  },
+  {
+   "t": 26.85,
+   "text": "The frontier of the field in the last several years has been measuring multiple layers in the same single cell — what people call multi-omic or multimodal single-cell sequencing."
+  },
+  {
+   "t": 37.29,
+   "text": "Let me cover the two most important examples."
+  },
+  {
+   "t": 39.94,
+   "text": "The first is single-cell ATAC-seq combined with single-cell RNA-seq."
+  },
+  {
+   "t": 44.96,
+   "text": "ATAC-seq — assay for transposase-accessible chromatin using sequencing — measures, genome-wide, which regions of DNA are in open, accessible chromatin states, versus closed, packaged chromatin."
+  },
+  {
+   "t": 58.99,
+   "text": "Open chromatin is where transcription factors can bind, where enhancers are active, where the genome is currently being read."
+  },
+  {
+   "t": 67.05,
+   "text": "So ATAC-seq gives you a map of the regulatory landscape — the set of cis-regulatory elements actively used in a cell."
+  },
+  {
+   "t": 75.26,
+   "text": "RNA-seq tells you which genes are being transcribed."
+  },
+  {
+   "t": 79.1,
+   "text": "Together they tell you both what the cell is doing and what regulatory infrastructure is in place to enable it."
+  },
+  {
+   "t": 85.86,
+   "text": "10x Genomics commercialized this in 2020 as Chromium Multiome — a chemistry that captures both RNA and ATAC from the same single cell in the same droplet."
+  },
+  {
+   "t": 97.49,
+   "text": "The cell nucleus is permeabilized, the transposase tags accessible chromatin in place, then the nuclear membrane is broken, mRNA is captured by the same bead chemistry as standard scRNA-seq, and the two libraries — RNA and ATAC — are sequenced separately but linked by cell barcode."
+  },
+  {
+   "t": 118.75,
+   "text": "The output: per-cell measurements of both gene expression and chromatin accessibility, simultaneously."
+  },
+  {
+   "t": 125.61,
+   "text": "This is enormously powerful for studying gene regulation, because you can see, cell by cell, which enhancers are open in cells where particular genes are being expressed, and infer the regulatory logic from the correlation."
+  },
+  {
+   "t": 139.25,
+   "text": "The second is CITE-seq — Cellular Indexing of Transcriptomes and Epitopes by sequencing."
+  },
+  {
+   "t": 145.94,
+   "text": "Published in 2017 by Marlon Stoeckius and colleagues at the New York Genome Center, CITE-seq adds protein measurement to single-cell RNA-seq."
+  },
+  {
+   "t": 155.7,
+   "text": "The trick is clever."
+  },
+  {
+   "t": 157.07,
+   "text": "You take a panel of antibodies — say, fifty antibodies against fifty different cell-surface markers — and you conjugate each antibody to a short DNA oligo."
+  },
+  {
+   "t": 167.28,
+   "text": "The oligo has a unique sequence identifying which antibody it's attached to, plus the same sequence features (polyA tail, PCR handle) that allow it to be captured by the same single-cell bead chemistry that captures mRNA."
+  },
+  {
+   "t": 182.24,
+   "text": "Stain your cells with the antibody-oligo panel before loading into Chromium."
+  },
+  {
+   "t": 187.44,
+   "text": "Inside the droplet, the antibody oligos get captured alongside the mRNAs by the bead, get barcoded with the same cell barcode, get sequenced in the same library."
+  },
+  {
+   "t": 197.93,
+   "text": "After sequencing, you can count both mRNA UMIs per gene per cell and antibody UMIs per protein per cell."
+  },
+  {
+   "t": 206.15,
+   "text": "You measure RNA and surface protein simultaneously."
+  },
+  {
+   "t": 210.62,
+   "text": "This is huge for immunology, where surface marker expression is the traditional way of defining cell types — CD4, CD8, CD19, all those familiar T-cell and B-cell markers."
+  },
+  {
+   "t": 223.71,
+   "text": "With CITE-seq, you get both the surface marker readout (matching decades of flow cytometry literature) and the transcriptome (telling you the cell's state in much richer detail), and you can correlate them."
+  },
+  {
+   "t": 236.47,
+   "text": "You can ask: among cells that look like CD8 T cells by surface protein, what transcriptional substates exist?"
+  },
+  {
+   "t": 243.79,
+   "text": "CITE-seq has become standard for immune profiling."
+  },
+  {
+   "t": 247.07,
+   "text": "There are now many flavors of multi-omic single-cell."
+  },
+  {
+   "t": 250.18,
+   "text": "SHARE-seq for joint RNA and ATAC."
+  },
+  {
+   "t": 253.78,
+   "text": "SNARE-seq for the same."
+  },
+  {
+   "t": 255.34,
+   "text": "Methylome plus transcriptome assays."
+  },
+  {
+   "t": 257.74,
+   "text": "Spatial multi-omics."
+  },
+  {
+   "t": 259.61,
+   "text": "Single-cell whole-genome plus transcriptome."
+  },
+  {
+   "t": 262.79,
+   "text": "The trend is clear: every individual molecular layer that can be measured in bulk is being adapted to single-cell, and every single-cell assay is being combined with every other."
+  },
+  {
+   "t": 274.11,
+   "text": "The end state will be assays that measure all relevant molecular layers in every cell, which would give an almost complete molecular description of each individual cell's state."
+  },
+  {
+   "t": 285.26,
+   "text": "We're not there yet — most multimodal assays still come with trade-offs in sensitivity or throughput — but the trajectory is clear."
+  },
+  {
+   "t": 294.62,
+   "text": "One more multimodal note worth mentioning: TCR and BCR sequencing."
+  },
+  {
+   "t": 299.87,
+   "text": "The T-cell receptor and B-cell receptor genes are the immune repertoire — the V(D)J-recombined receptors that we covered in the antibodies lecture."
+  },
+  {
+   "t": 309.56,
+   "text": "10x has a dedicated chemistry, Chromium Single Cell V(D)J, that captures full-length TCR or BCR sequences from the same cells whose transcriptomes you're profiling."
+  },
+  {
+   "t": 321.66,
+   "text": "This lets you ask: for each individual T cell or B cell, what receptor does it carry, and what transcriptional state is it in?"
+  },
+  {
+   "t": 330.11,
+   "text": "You can track clonal expansion — same TCR across many cells means they all came from one progenitor — and link clone identity to functional state."
+  },
+  {
+   "t": 339.77,
+   "text": "This has been transformative for vaccine response studies, tumor immunology, autoimmunity research."
+  },
+  {
+   "t": 346.43,
+   "text": "The TCR is the cell's identity tag in the immune system; pairing it with transcriptional state gives you the cell's identity and its current job, simultaneously."
+  },
+  {
+   "t": 356.36,
+   "text": "The pattern across all multimodal methods is the same: same cell, multiple measurements, linked by cell barcode."
+  },
+  {
+   "t": 364.22,
+   "text": "The bead-in-droplet architecture lends itself to this naturally, because every molecule that gets captured by the bead inherits the bead's barcode, regardless of what the molecule is."
+  },
+  {
+   "t": 374.79,
+   "text": "RNA, antibody-derived tags, chromatin fragments, TCR mRNAs — all get the same cell label, all end up in the same per-cell row of the final matrix."
+  },
+  {
+   "t": 385.66,
+   "text": "The cell barcode is the glue that ties multimodal measurements together."
+  },
+  {
+   "t": 389.99,
+   "text": "It's a beautiful piece of engineering, and we're still finding new things to glue onto it."
+  }
+ ]
+}

@@ -1,0 +1,327 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Why nucleotides are flowed one at a time",
+ "duration": 433.41,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Why nucleotides are flowed one at a time"
+  },
+  {
+   "t": 4.0,
+   "text": "Here's the question Segment 3 left dangling."
+  },
+  {
+   "t": 7.04,
+   "text": "If all four nucleotides — dATP, dCTP, dGTP, dTTP — produce identical flashes when incorporated, how do you know which base was added?"
+  },
+  {
+   "t": 18.29,
+   "text": "The answer is one of those moves that's obvious in retrospect: you only ever have one kind of nucleotide in the well at a time."
+  },
+  {
+   "t": 25.85,
+   "text": "You flow A first."
+  },
+  {
+   "t": 27.19,
+   "text": "Watch what happens."
+  },
+  {
+   "t": 28.4,
+   "text": "Apyrase cleans up."
+  },
+  {
+   "t": 29.82,
+   "text": "Then you flow C."
+  },
+  {
+   "t": 31.18,
+   "text": "Watch what happens."
+  },
+  {
+   "t": 32.41,
+   "text": "Apyrase cleans up."
+  },
+  {
+   "t": 33.76,
+   "text": "Then G."
+  },
+  {
+   "t": 34.74,
+   "text": "Then T."
+  },
+  {
+   "t": 35.96,
+   "text": "Then back to A."
+  },
+  {
+   "t": 37.16,
+   "text": "Cycle through the four bases over and over, and at each step, the well either flashes — meaning \"I just incorporated the base you flowed\" — or it doesn't flash — meaning \"I didn't need that base; my next position calls for something else, so I'm sitting still until you flow the right one."
+  },
+  {
+   "t": 53.86,
+   "text": "\""
+  },
+  {
+   "t": 54.06,
+   "text": "So picture the well across one full cycle."
+  },
+  {
+   "t": 57.17,
+   "text": "You flow A."
+  },
+  {
+   "t": 58.3,
+   "text": "The polymerase looks at the template."
+  },
+  {
+   "t": 60.38,
+   "text": "If the next template base is T, the polymerase incorporates an A, releases pyrophosphate, you get a flash."
+  },
+  {
+   "t": 67.83,
+   "text": "Record: \"A was incorporated."
+  },
+  {
+   "t": 70.35,
+   "text": "\" Apyrase cleans up the leftover A nucleotides."
+  },
+  {
+   "t": 73.9,
+   "text": "Now flow C."
+  },
+  {
+   "t": 75.38,
+   "text": "Polymerase checks the template."
+  },
+  {
+   "t": 77.53,
+   "text": "If the next position calls for C, incorporates, flash."
+  },
+  {
+   "t": 81.55,
+   "text": "Record: \"C was incorporated."
+  },
+  {
+   "t": 84.1,
+   "text": "\" Apyrase cleans up."
+  },
+  {
+   "t": 85.53,
+   "text": "Flow G."
+  },
+  {
+   "t": 86.74,
+   "text": "Maybe nothing happens — the next base isn't G."
+  },
+  {
+   "t": 90.35,
+   "text": "No flash."
+  },
+  {
+   "t": 91.4,
+   "text": "Record: \"G was not incorporated."
+  },
+  {
+   "t": 94.16,
+   "text": "\" Apyrase still cleans up, just in case."
+  },
+  {
+   "t": 96.81,
+   "text": "Flow T."
+  },
+  {
+   "t": 97.91,
+   "text": "And so on."
+  },
+  {
+   "t": 98.92,
+   "text": "After running through, say, a hundred cycles of A-C-G-T flows, you have a time-series of four hundred observations — flash or no-flash, flash or no-flash — and from that pattern you can reconstruct the sequence."
+  },
+  {
+   "t": 113.26,
+   "text": "Wherever you saw a flash during an A-flow, the template called for an A."
+  },
+  {
+   "t": 117.53,
+   "text": "Wherever you saw a flash during a C-flow, a C."
+  },
+  {
+   "t": 121.36,
+   "text": "Just read off the sequence from the order of flashes across the cycle, and there you have it."
+  },
+  {
+   "t": 126.2,
+   "text": "This is the flowgram."
+  },
+  {
+   "t": 127.59,
+   "text": "It's a graph of light intensity over time, where each spike corresponds to one or more incorporations of the base currently flowing."
+  },
+  {
+   "t": 136.07,
+   "text": "We'll come back to flowgrams in detail in Segment 7."
+  },
+  {
+   "t": 139.75,
+   "text": "For now, the point is just: by flowing nucleotides one at a time, you convert the question \"which base did the polymerase add?"
+  },
+  {
+   "t": 148.38,
+   "text": "\" into the question \"during which flow did the well light up?"
+  },
+  {
+   "t": 152.4,
+   "text": "\" And the second question has a clean, simple answer, because you control the order of the flows."
+  },
+  {
+   "t": 158.01,
+   "text": "Now let me name the cost of this trick, because it's a real cost."
+  },
+  {
+   "t": 161.78,
+   "text": "To extend the new DNA strand by one base, you have to flow nucleotides until you happen to flow the right one."
+  },
+  {
+   "t": 168.89,
+   "text": "On average, since there are four nucleotides, you'll need somewhere around two or three flows per base added — sometimes the right one comes up first, sometimes you have to wait."
+  },
+  {
+   "t": 179.72,
+   "text": "So if you want to sequence, say, 400 bases of DNA, you have to do roughly a thousand flows, give or take, each flow consisting of: flow the nucleotide, wait for incorporation, image the well, wait for apyrase cleanup, wash."
+  },
+  {
+   "t": 195.46,
+   "text": "Each cycle of all four nucleotides takes maybe a couple of minutes."
+  },
+  {
+   "t": 199.71,
+   "text": "Multiply out: a 400-base read on 454 took about ten hours of run time, mostly because of all those sequential flows."
+  },
+  {
+   "t": 208.93,
+   "text": "Compare that to Illumina, which we'll discuss in Segment 13."
+  },
+  {
+   "t": 213.31,
+   "text": "Illumina flows all four nucleotides at once, every cycle, with each nucleotide carrying a different colored fluorescent label."
+  },
+  {
+   "t": 222.07,
+   "text": "One cycle, four colors imaged, one base added per cycle, period."
+  },
+  {
+   "t": 227.18,
+   "text": "Illumina's cycle structure is dramatically more efficient because it doesn't have to wait through three bad guesses to make one good incorporation."
+  },
+  {
+   "t": 235.96,
+   "text": "The price Illumina pays is that its chemistry is more complex — the dyes and the blocking groups and the deblocking steps all have to be engineered carefully — but the throughput payoff is enormous."
+  },
+  {
+   "t": 248.18,
+   "text": "454's one-at-a-time flow strategy was a beautiful simplification of the chemistry, but it carried a permanent cycle-time penalty that the company never escaped."
+  },
+  {
+   "t": 259.31,
+   "text": "There's also a more subtle cost."
+  },
+  {
+   "t": 261.21,
+   "text": "Because you're flowing one nucleotide at a time, the cycle has a natural ambiguity at certain template configurations."
+  },
+  {
+   "t": 268.68,
+   "text": "Imagine the template has the sequence T-T-T-T-T at the next five positions."
+  },
+  {
+   "t": 273.39,
+   "text": "You flow A."
+  },
+  {
+   "t": 274.59,
+   "text": "The polymerase doesn't add one A; it adds five As, one after another, all in the same flow, because there's no chemistry to stop after just one."
+  },
+  {
+   "t": 283.93,
+   "text": "All five incorporations happen rapidly, each one releasing pyrophosphate, and the well produces five times the normal flash intensity in one go."
+  },
+  {
+   "t": 293.92,
+   "text": "You're supposed to read \"I just added five As\" from the fact that the flash was five times as bright."
+  },
+  {
+   "t": 299.94,
+   "text": "That works fine when the homopolymer is short — two or three bases of the same letter, the flash intensity is clearly two or three times normal."
+  },
+  {
+   "t": 309.73,
+   "text": "But when the homopolymer gets longer — five, six, seven, eight identical bases in a row — the intensity-to-base-count mapping gets noisy."
+  },
+  {
+   "t": 319.68,
+   "text": "Was that flash four times normal, or five?"
+  },
+  {
+   "t": 322.82,
+   "text": "Was it six or seven?"
+  },
+  {
+   "t": 324.27,
+   "text": "The variation in flash intensity from other sources — slight differences between wells, slight differences in enzyme kinetics, the natural noise floor of the optical detection — makes the homopolymer call unreliable."
+  },
+  {
+   "t": 338.08,
+   "text": "This is the famous homopolymer error problem, and we'll spend Segment 8 on it."
+  },
+  {
+   "t": 342.86,
+   "text": "For now, just notice that the one-base-at-a-time flow strategy creates this problem as a structural consequence."
+  },
+  {
+   "t": 350.92,
+   "text": "It's not a bug you can patch; it's baked into the chemistry."
+  },
+  {
+   "t": 354.24,
+   "text": "So flowed sequencing — pyrosequencing, and later Ion Torrent, which uses the same flow logic with a different detector — has this fundamental trade."
+  },
+  {
+   "t": 364.83,
+   "text": "You get a beautifully clean signal for each incorporation event, but you can't distinguish between one incorporation and several in a row except by signal intensity, which is inherently noisy."
+  },
+  {
+   "t": 377.01,
+   "text": "Illumina's chemistry, which adds exactly one base per cycle by design — using a chemical blocking group that prevents further extension until you wash and remove it — completely sidesteps this problem."
+  },
+  {
+   "t": 390.08,
+   "text": "Different chemistry, different trade-offs."
+  },
+  {
+   "t": 392.57,
+   "text": "Now, having understood how the chemistry of pyrosequencing works in a single well, we need to ask: how did 454 take this single-well reaction and turn it into a million parallel reactions?"
+  },
+  {
+   "t": 405.49,
+   "text": "That's two pieces."
+  },
+  {
+   "t": 407.04,
+   "text": "First, you have to get a single starting DNA fragment, amplified to a million copies, all stuck together so the signal is strong enough to see."
+  },
+  {
+   "t": 416.73,
+   "text": "That's emulsion PCR on beads, and that's the next segment."
+  },
+  {
+   "t": 420.78,
+   "text": "Second, you have to put a million of those amplified bead-clusters into a million separate tiny wells, with each well wired to its own pixel on a camera."
+  },
+  {
+   "t": 430.53,
+   "text": "That's the picotiter plate, Segment 6."
+  }
+ ]
+}

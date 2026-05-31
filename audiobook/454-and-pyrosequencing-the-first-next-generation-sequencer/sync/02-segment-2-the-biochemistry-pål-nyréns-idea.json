@@ -1,0 +1,279 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — The biochemistry: Pål Nyrén's idea",
+ "duration": 368.24,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — The biochemistry: Pål Nyrén's idea"
+  },
+  {
+   "t": 4.12,
+   "text": "Let's go back to 1996, Stockholm."
+  },
+  {
+   "t": 7.09,
+   "text": "A biochemist named Pål Nyrén, working with a graduate student named Mostafa Ronaghi at the Royal Institute of Technology — KTH — is trying to solve a particular problem."
+  },
+  {
+   "t": 18.31,
+   "text": "He wants a way to read DNA sequence without running it on a gel."
+  },
+  {
+   "t": 22.24,
+   "text": "Sanger sequencing, the gold standard at the time, worked by making lots of differently-terminated DNA fragments and separating them by size on an electrophoresis gel."
+  },
+  {
+   "t": 33.06,
+   "text": "It worked, but it was clunky."
+  },
+  {
+   "t": 34.74,
+   "text": "The gel was the bottleneck."
+  },
+  {
+   "t": 36.5,
+   "text": "Nyrén wanted something that gave you sequence information in real time, as the DNA was being synthesized, with no gel, no separation step, just a beaker and a detector."
+  },
+  {
+   "t": 47.76,
+   "text": "Here was his insight, and it's such a clean idea that once you hear it you wonder why nobody else thought of it."
+  },
+  {
+   "t": 53.61,
+   "text": "Every time DNA polymerase adds a single nucleotide to a growing DNA strand, it releases a tiny molecule as a byproduct."
+  },
+  {
+   "t": 62.65,
+   "text": "That byproduct is called pyrophosphate, abbreviated PPi."
+  },
+  {
+   "t": 67.22,
+   "text": "The chemistry, briefly: a dNTP — the nucleotide building block that polymerase uses — has three phosphate groups hanging off it, in a little chain."
+  },
+  {
+   "t": 77.21,
+   "text": "When the polymerase glues the nucleotide onto the end of the growing strand, only the innermost phosphate ends up in the new DNA."
+  },
+  {
+   "t": 85.88,
+   "text": "The outer two phosphates, still bonded to each other, get spat out as pyrophosphate."
+  },
+  {
+   "t": 91.33,
+   "text": "So in principle, if you could see the pyrophosphate, you could see polymerase doing its job."
+  },
+  {
+   "t": 96.65,
+   "text": "Every base added equals one pyrophosphate released."
+  },
+  {
+   "t": 101.01,
+   "text": "Nyrén's question was: can we make the release of pyrophosphate visible?"
+  },
+  {
+   "t": 105.45,
+   "text": "The answer was yes, and the answer required borrowing from a completely different corner of biochemistry: bioluminescence."
+  },
+  {
+   "t": 112.58,
+   "text": "The luciferase enzyme — the one fireflies use to glow in summer evenings — converts a molecule called luciferin into oxyluciferin, and in the process releases a photon of yellow-green light."
+  },
+  {
+   "t": 125.29,
+   "text": "But luciferase doesn't just run on its own."
+  },
+  {
+   "t": 128.07,
+   "text": "It needs ATP to power the reaction."
+  },
+  {
+   "t": 131.04,
+   "text": "No ATP, no light."
+  },
+  {
+   "t": 133.0,
+   "text": "So now Nyrén had two halves of a puzzle."
+  },
+  {
+   "t": 135.89,
+   "text": "Polymerase makes pyrophosphate."
+  },
+  {
+   "t": 138.15,
+   "text": "Luciferase needs ATP."
+  },
+  {
+   "t": 140.85,
+   "text": "If you could connect pyrophosphate to ATP — if you could convert one into the other — then you could chain polymerase activity to a flash of light."
+  },
+  {
+   "t": 149.45,
+   "text": "The bridge already existed in nature, in a soil enzyme called ATP sulfurylase."
+  },
+  {
+   "t": 155.62,
+   "text": "ATP sulfurylase takes pyrophosphate plus a molecule called adenosine-5'-phosphosulfate, abbreviated APS, and combines them to make ATP."
+  },
+  {
+   "t": 167.66,
+   "text": "Hand pyrophosphate to ATP sulfurylase, get ATP out."
+  },
+  {
+   "t": 172.47,
+   "text": "Hand that ATP to luciferase along with luciferin, get a photon out."
+  },
+  {
+   "t": 177.86,
+   "text": "So here is the chain — and I want you to picture it as a four-link daisy chain, because this is the whole conceptual core of pyrosequencing:"
+  },
+  {
+   "t": 186.7,
+   "text": "Polymerase incorporates a base."
+  },
+  {
+   "t": 189.14,
+   "text": "Pyrophosphate is released."
+  },
+  {
+   "t": 191.28,
+   "text": "Sulfurylase converts pyrophosphate plus APS into ATP."
+  },
+  {
+   "t": 196.41,
+   "text": "Luciferase converts ATP plus luciferin into light."
+  },
+  {
+   "t": 201.19,
+   "text": "A camera sees the flash."
+  },
+  {
+   "t": 203.45,
+   "text": "Four steps."
+  },
+  {
+   "t": 204.54,
+   "text": "Four enzymes."
+  },
+  {
+   "t": 205.82,
+   "text": "One photon out per base incorporated."
+  },
+  {
+   "t": 208.39,
+   "text": "That's pyrosequencing, in one sentence."
+  },
+  {
+   "t": 211.53,
+   "text": "Nyrén and Ronaghi published the proof of concept in 1996, refined a solution-phase version in 1998, and the world had a new way to sequence DNA without ever running a gel."
+  },
+  {
+   "t": 223.64,
+   "text": "Now, before we go further, let me name the conceptual move that makes this so different from Sanger sequencing."
+  },
+  {
+   "t": 230.95,
+   "text": "Sanger reads DNA by building all possible fragments and then sorting them by size."
+  },
+  {
+   "t": 236.53,
+   "text": "It's a retrospective method: you let polymerization run, you stop it at every possible position, you sort the products, you read the sequence from the size order."
+  },
+  {
+   "t": 245.84,
+   "text": "Pyrosequencing is prospective and real-time."
+  },
+  {
+   "t": 249.07,
+   "text": "You watch polymerase work, base by base, as it happens, and you record each incorporation event as a flash."
+  },
+  {
+   "t": 257.05,
+   "text": "No gel."
+  },
+  {
+   "t": 257.98,
+   "text": "No separation."
+  },
+  {
+   "t": 259.34,
+   "text": "No sizing."
+  },
+  {
+   "t": 260.56,
+   "text": "Just a polymerase doing its job in front of a camera."
+  },
+  {
+   "t": 264.0,
+   "text": "This is a really important conceptual shift."
+  },
+  {
+   "t": 266.66,
+   "text": "Sanger gave you the answer in the form of a static gel image."
+  },
+  {
+   "t": 270.52,
+   "text": "Pyrosequencing gives you the answer in the form of a time-series of light flashes."
+  },
+  {
+   "t": 275.69,
+   "text": "Every modern next-generation sequencing platform — Illumina, Ion Torrent, PacBio, Nanopore — is real-time in this same sense."
+  },
+  {
+   "t": 285.05,
+   "text": "They all watch polymerase, or some polymerase-like enzyme, do its work and they record events as they happen."
+  },
+  {
+   "t": 292.46,
+   "text": "That paradigm shift — from \"sort the products at the end\" to \"watch the reaction as it runs\" — is the conceptual gift that Nyrén's pyrosequencing handed to the whole field."
+  },
+  {
+   "t": 302.74,
+   "text": "454 was the first product built on that gift."
+  },
+  {
+   "t": 306.4,
+   "text": "But the idea predates the machine by almost a decade."
+  },
+  {
+   "t": 309.89,
+   "text": "There's one more wrinkle we need before we can think about how this becomes a sequencer rather than just a curiosity."
+  },
+  {
+   "t": 317.48,
+   "text": "If you just throw all four nucleotides — A, C, G, and T — into the soup at once, polymerase will incorporate whichever one is correct at each position, releasing pyrophosphate, and you'll see a flash."
+  },
+  {
+   "t": 332.35,
+   "text": "But you won't know which nucleotide was incorporated."
+  },
+  {
+   "t": 335.63,
+   "text": "A flash from an A incorporation looks identical to a flash from a T incorporation."
+  },
+  {
+   "t": 341.74,
+   "text": "Light is light."
+  },
+  {
+   "t": 343.21,
+   "text": "You don't get the identity of the base from the flash; you only get the fact that incorporation happened."
+  },
+  {
+   "t": 349.0,
+   "text": "So how do you know which base just got added?"
+  },
+  {
+   "t": 351.24,
+   "text": "You only put in one nucleotide at a time, and you cycle through them."
+  },
+  {
+   "t": 355.37,
+   "text": "That cycling is the topic of Segment 4."
+  },
+  {
+   "t": 358.33,
+   "text": "But first, let's go deeper into the four-enzyme cascade itself, because the details matter and they're where some of the platform's strengths and weaknesses come from."
+  }
+ ]
+}

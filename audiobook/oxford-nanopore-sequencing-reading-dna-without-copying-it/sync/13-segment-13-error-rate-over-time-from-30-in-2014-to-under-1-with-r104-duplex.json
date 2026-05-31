@@ -1,0 +1,247 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Error rate over time: from 30% in 2014 to under 1% with R10.4 duplex",
+ "duration": 391.49,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Error rate over time: from 30% in 2014 to under 1% with R10.4 duplex"
+  },
+  {
+   "t": 8.74,
+   "text": "I want to give you a more honest history of nanopore accuracy than you'll get from the marketing materials, because the accuracy story is genuinely dramatic and it's central to understanding whether the technology is right for any particular application."
+  },
+  {
+   "t": 23.52,
+   "text": "When the MinION first shipped to early-access users in 2014, the raw read accuracy was around 65 to 70 percent — meaning roughly one in three bases in any individual read was wrong."
+  },
+  {
+   "t": 36.96,
+   "text": "For some applications, even that was tolerable; you could assemble a bacterial genome from many low-accuracy reads by majority voting at each position, and the consensus would be much better than any single read."
+  },
+  {
+   "t": 50.12,
+   "text": "But for any application that needed accurate single-read calls — variant calling, methylation detection, anything where you couldn't easily get high coverage — that error rate was a non-starter."
+  },
+  {
+   "t": 61.77,
+   "text": "The community used the MinION anyway, because long reads at 30 percent error were still better than nothing for problems like assembling repetitive bacterial genomes or characterizing structural variants."
+  },
+  {
+   "t": 74.08,
+   "text": "There was a real risk, in the early years, that nanopore would be permanently relegated to a niche of low-accuracy, long-read applications, while Illumina and PacBio dominated everything else."
+  },
+  {
+   "t": 86.8,
+   "text": "Several rounds of chemistry and software improvement have changed that picture completely."
+  },
+  {
+   "t": 92.7,
+   "text": "Let me walk you through the trajectory."
+  },
+  {
+   "t": 95.2,
+   "text": "R7 chemistry, 2014."
+  },
+  {
+   "t": 98.35,
+   "text": "Raw accuracy: about 65 to 70 percent."
+  },
+  {
+   "t": 102.84,
+   "text": "Basecalling: HMM-based, primitive."
+  },
+  {
+   "t": 105.9,
+   "text": "This was the era of \"you can sequence anything but you have to bring your own error tolerance."
+  },
+  {
+   "t": 111.95,
+   "text": "\""
+  },
+  {
+   "t": 112.15,
+   "text": "R9 chemistry, 2016."
+  },
+  {
+   "t": 114.89,
+   "text": "Raw accuracy: about 85 to 90 percent on the best reads."
+  },
+  {
+   "t": 119.9,
+   "text": "Basecalling: first generation of neural network basecallers, BiLSTM-based."
+  },
+  {
+   "t": 125.75,
+   "text": "This is when nanopore started becoming usable for real research applications."
+  },
+  {
+   "t": 130.86,
+   "text": "The error mode at this point was dominated by problems with homopolymers — runs of the same base, where the current sits at a constant level and the basecaller can't reliably count how many bases were there."
+  },
+  {
+   "t": 142.9,
+   "text": "Inserting and deleting bases in homopolymer runs was the most common error type."
+  },
+  {
+   "t": 148.46,
+   "text": "R10 chemistry, 2019."
+  },
+  {
+   "t": 151.57,
+   "text": "The dual-reader-head design."
+  },
+  {
+   "t": 153.35,
+   "text": "Raw accuracy: about 92 to 95 percent."
+  },
+  {
+   "t": 157.84,
+   "text": "The dual readers specifically targeted the homopolymer problem — by measuring each base at two slightly different positions in the pore, the basecaller could disambiguate run lengths more reliably."
+  },
+  {
+   "t": 169.8,
+   "text": "Homopolymer accuracy improved dramatically."
+  },
+  {
+   "t": 173.35,
+   "text": "R10.4 chemistry, 2021 to present."
+  },
+  {
+   "t": 177.41,
+   "text": "Refined dual-reader pore, refined motor, refined basecaller."
+  },
+  {
+   "t": 181.81,
+   "text": "Raw accuracy: about 99 percent for single reads, with duplex consensus pushing well above 99.5 percent and approaching the Q30 quality threshold that historically only Illumina achieved."
+  },
+  {
+   "t": 196.15,
+   "text": "That trajectory — from 70 percent to 99 percent in less than a decade — is one of the most dramatic technology improvement curves in the history of sequencing."
+  },
+  {
+   "t": 206.38,
+   "text": "For comparison, Illumina accuracy has been roughly stable at 99.9 percent for over a decade now; there's been no equivalent improvement curve because there was no room to improve."
+  },
+  {
+   "t": 218.64,
+   "text": "Nanopore had a long way to climb, and it has climbed most of it."
+  },
+  {
+   "t": 222.69,
+   "text": "The thing I want to emphasize is that this improvement has come from both hardware and software."
+  },
+  {
+   "t": 227.97,
+   "text": "The pore chemistry got better — R7 to R9 to R10 to R10.4, each generation with sharper sensing geometry and better baseline currents."
+  },
+  {
+   "t": 237.74,
+   "text": "The motors got better — more stable stepping, fewer skipped bases, fewer stutters."
+  },
+  {
+   "t": 243.35,
+   "text": "The basecallers got better — from HMMs to BiLSTMs to CTC-based architectures to transformer-based architectures."
+  },
+  {
+   "t": 252.32,
+   "text": "Each of these axes contributed to the accuracy gains."
+  },
+  {
+   "t": 256.44,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 257.73,
+   "text": "Imagine you bought a low-end digital camera in 2005."
+  },
+  {
+   "t": 262.0,
+   "text": "The pictures were grainy, the colors were off, the autofocus missed half the time."
+  },
+  {
+   "t": 267.27,
+   "text": "If that same camera company kept improving the sensor, the lens, the autofocus algorithm, and the image processing pipeline over the next decade, you might end up with a camera in 2015 that took DSLR-quality pictures from the same form factor."
+  },
+  {
+   "t": 281.63,
+   "text": "That's roughly what's happened with nanopore."
+  },
+  {
+   "t": 284.02,
+   "text": "The form factor — a USB-stick-sized device — is the same."
+  },
+  {
+   "t": 288.39,
+   "text": "The pores and motors and basecallers have all been independently improving."
+  },
+  {
+   "t": 292.79,
+   "text": "The output quality has gone from grainy snapshot to publication-grade image."
+  },
+  {
+   "t": 297.78,
+   "text": "There's one more accuracy concept I should mention because it gets cited in papers all the time: Q-scores."
+  },
+  {
+   "t": 303.99,
+   "text": "Q is a logarithmic measure of error probability."
+  },
+  {
+   "t": 307.23,
+   "text": "Q10 means 10 percent error."
+  },
+  {
+   "t": 309.58,
+   "text": "Q20 means 1 percent error."
+  },
+  {
+   "t": 311.87,
+   "text": "Q30 means 0.1 percent error."
+  },
+  {
+   "t": 315.34,
+   "text": "Q40 means 0.01 percent error."
+  },
+  {
+   "t": 319.18,
+   "text": "Illumina has typically produced Q30 to Q35 data."
+  },
+  {
+   "t": 323.98,
+   "text": "Nanopore in 2014 produced about Q5 data."
+  },
+  {
+   "t": 328.27,
+   "text": "Nanopore in 2024 with R10.4 duplex produces around Q25 to Q30 data — competitive with Illumina for most purposes, and better when you factor in the long reads."
+  },
+  {
+   "t": 340.87,
+   "text": "The honest current state: nanopore accuracy is no longer the limiting factor for most applications."
+  },
+  {
+   "t": 347.57,
+   "text": "There are still some applications where you really want sub-0.1 percent error rates, and for those you might still prefer Illumina for short variants or PacBio HiFi for long-read variants."
+  },
+  {
+   "t": 359.19,
+   "text": "But for genome assembly, structural variants, methylation, RNA, full-length transcripts, native modifications — nanopore is now at a point where the accuracy is sufficient and the unique features dominate the decision."
+  },
+  {
+   "t": 373.39,
+   "text": "If you read a nanopore paper from 2016 and a nanopore paper from 2024, you are reading about two different technologies."
+  },
+  {
+   "t": 381.85,
+   "text": "Don't extrapolate from old reputations."
+  },
+  {
+   "t": 384.84,
+   "text": "The error rate has dropped by a factor of 50 in less than a decade."
+  },
+  {
+   "t": 389.19,
+   "text": "That's the technology improvement story."
+  }
+ ]
+}

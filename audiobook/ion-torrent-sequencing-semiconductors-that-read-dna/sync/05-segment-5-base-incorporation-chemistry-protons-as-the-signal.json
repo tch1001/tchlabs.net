@@ -1,0 +1,279 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Base-incorporation chemistry: protons as the signal",
+ "duration": 406.93,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Base-incorporation chemistry: protons as the signal"
+  },
+  {
+   "t": 5.3,
+   "text": "Let's get into the chemistry."
+  },
+  {
+   "t": 6.72,
+   "text": "I want to walk you through, slowly, what actually happens when a DNA polymerase adds a single nucleotide to a growing strand — because the proton release we keep talking about is a real chemical event, and the more concretely you can picture it, the more the whole platform makes sense."
+  },
+  {
+   "t": 23.07,
+   "text": "You probably remember from your intro biochemistry class that DNA polymerase, the enzyme that copies DNA, takes deoxyribonucleotide triphosphates — dNTPs, the building blocks, the A's and C's and G's and T's that come with three phosphate groups attached — and uses them to extend a growing DNA strand against a template."
+  },
+  {
+   "t": 43.8,
+   "text": "The template provides the order; the polymerase reads the next template base, grabs the matching dNTP from solution, and chemically attaches it to the growing strand."
+  },
+  {
+   "t": 54.38,
+   "text": "Let's slow that down."
+  },
+  {
+   "t": 55.62,
+   "text": "The growing strand has, at its 3' end, a sugar with a hydroxyl group — the 3'-OH."
+  },
+  {
+   "t": 62.88,
+   "text": "The incoming dNTP has, on its 5' end, three phosphates linked in a row."
+  },
+  {
+   "t": 69.08,
+   "text": "The polymerase positions the dNTP next to the 3'-OH, and catalyzes a chemical bond between them — specifically, the 3'-OH attacks the innermost phosphate of the dNTP, forms a new phosphodiester bond, and in doing so kicks off the outer two phosphates as a unit called pyrophosphate, which floats away."
+  },
+  {
+   "t": 90.04,
+   "text": "The dNTP is now part of the strand; the strand has grown by one base; and pyrophosphate has been released as a byproduct."
+  },
+  {
+   "t": 98.89,
+   "text": "That's the textbook picture."
+  },
+  {
+   "t": 100.66,
+   "text": "But here's the part that matters for Ion Torrent."
+  },
+  {
+   "t": 103.34,
+   "text": "The chemistry of forming that new bond isn't just \"pyrophosphate is released."
+  },
+  {
+   "t": 108.97,
+   "text": "\" The 3'-OH attacking the phosphate also releases a hydrogen ion — a proton — into solution."
+  },
+  {
+   "t": 116.78,
+   "text": "It has to."
+  },
+  {
+   "t": 117.81,
+   "text": "The reaction stoichiometry requires that for every phosphodiester bond formed, one H+ ion gets liberated."
+  },
+  {
+   "t": 125.26,
+   "text": "The polymerase reaction, in net, is: growing strand + dNTP → extended strand + pyrophosphate + H+."
+  },
+  {
+   "t": 135.07,
+   "text": "The proton is not a side effect or a trace product."
+  },
+  {
+   "t": 138.3,
+   "text": "It is a guaranteed, one-per-incorporation chemical signal."
+  },
+  {
+   "t": 142.59,
+   "text": "So now, picture an Ion Torrent well."
+  },
+  {
+   "t": 145.14,
+   "text": "The well contains a bead, and that bead is coated with millions of copies of the same single-stranded DNA template — we'll see how that template gets there in Segment 7, but for now just trust that the bead is essentially a fuzzy ball of identical template strands."
+  },
+  {
+   "t": 161.43,
+   "text": "Each template has a primer hybridized to it, and a DNA polymerase enzyme sitting at the primer's 3' end, ready to extend."
+  },
+  {
+   "t": 169.61,
+   "text": "The whole well is bathed in solution containing one species of nucleotide — let's say dATP — and the polymerase is just waiting to see if dATP is the next base it needs."
+  },
+  {
+   "t": 181.0,
+   "text": "If the template's next position is a T, the polymerase grabs the dATP, incorporates it across from the T, and releases a proton."
+  },
+  {
+   "t": 190.64,
+   "text": "One template, one proton."
+  },
+  {
+   "t": 192.96,
+   "text": "But remember, the bead has millions of copies of the template, all primed, all with polymerases sitting on them, all in lockstep because they all see the same flow."
+  },
+  {
+   "t": 203.72,
+   "text": "So if dATP is the right base, you don't release one proton; you release millions."
+  },
+  {
+   "t": 209.71,
+   "text": "Millions of protons, simultaneously, into the small volume of one well."
+  },
+  {
+   "t": 215.69,
+   "text": "That's a measurable surge in H+ concentration."
+  },
+  {
+   "t": 219.43,
+   "text": "The pH of the well drops — the solution gets more acidic — by a small but real amount."
+  },
+  {
+   "t": 224.66,
+   "text": "The ISFET underneath the well sees the pH change."
+  },
+  {
+   "t": 228.69,
+   "text": "The chip records a voltage spike."
+  },
+  {
+   "t": 231.06,
+   "text": "And the software, looking at that well in that flow, says: A was incorporated here."
+  },
+  {
+   "t": 236.55,
+   "text": "If the template's next position is not T — let's say it's G — then dATP can't be incorporated."
+  },
+  {
+   "t": 243.6,
+   "text": "The polymerase sits there idly."
+  },
+  {
+   "t": 245.9,
+   "text": "No reaction occurs."
+  },
+  {
+   "t": 247.57,
+   "text": "No proton is released."
+  },
+  {
+   "t": 249.75,
+   "text": "The pH stays flat."
+  },
+  {
+   "t": 251.36,
+   "text": "The ISFET sees nothing."
+  },
+  {
+   "t": 253.16,
+   "text": "The software, looking at that well in that flow, says: no A was incorporated here."
+  },
+  {
+   "t": 258.89,
+   "text": "That's the entire detection principle."
+  },
+  {
+   "t": 261.26,
+   "text": "One nucleotide flow over the chip."
+  },
+  {
+   "t": 263.81,
+   "text": "Wells where incorporation happened dip in pH."
+  },
+  {
+   "t": 267.27,
+   "text": "Wells where it didn't, stay flat."
+  },
+  {
+   "t": 269.61,
+   "text": "The chip is a millions-pixel snapshot of which wells just took up an A."
+  },
+  {
+   "t": 273.96,
+   "text": "Then you wash away the unused dATP, flow in dCTP, repeat."
+  },
+  {
+   "t": 279.4,
+   "text": "And dGTP."
+  },
+  {
+   "t": 281.11,
+   "text": "And dTTP."
+  },
+  {
+   "t": 282.43,
+   "text": "Cycle after cycle, base after base, building up a record of which wells incorporated which base at which flow."
+  },
+  {
+   "t": 290.5,
+   "text": "A couple of details to head off confusion."
+  },
+  {
+   "t": 293.11,
+   "text": "First: the bead-based amplification is essential for the signal."
+  },
+  {
+   "t": 297.5,
+   "text": "A single template molecule producing a single proton when one base incorporates would generate a pH change far too small to detect — the proton would diffuse away, get buffered, be lost in noise."
+  },
+  {
+   "t": 310.29,
+   "text": "By cloning the template thousands or millions of times onto a single bead, every incorporation event happens to thousands of identical templates simultaneously, producing a collective burst of protons that's big enough to measure."
+  },
+  {
+   "t": 324.38,
+   "text": "The bead is, in essence, a signal amplifier — it converts one molecular event into a coordinated bulk chemical event."
+  },
+  {
+   "t": 332.68,
+   "text": "This is the same conceptual move that 454 made, and that every cluster-based sequencer makes: clone the template so you can detect it."
+  },
+  {
+   "t": 342.01,
+   "text": "Second: the buffering of the well solution has to be tuned just right."
+  },
+  {
+   "t": 346.53,
+   "text": "Too much buffer and the protons get absorbed before the ISFET can see them."
+  },
+  {
+   "t": 350.83,
+   "text": "Too little buffer and the pH swings around wildly with every wash."
+  },
+  {
+   "t": 355.64,
+   "text": "Ion Torrent uses a low-buffering solution chemistry specifically so that the proton release is detectable — and the wells are designed to be small enough that the proton concentration spikes hard locally."
+  },
+  {
+   "t": 367.95,
+   "text": "The chip and the chemistry are co-engineered."
+  },
+  {
+   "t": 370.65,
+   "text": "Third: the signal is fast."
+  },
+  {
+   "t": 373.06,
+   "text": "Proton release happens essentially as soon as polymerase catalysis occurs, which is in milliseconds."
+  },
+  {
+   "t": 379.89,
+   "text": "The ISFET response is in microseconds."
+  },
+  {
+   "t": 382.69,
+   "text": "So a flow can be read within a few seconds of the nucleotide hitting the chip."
+  },
+  {
+   "t": 387.28,
+   "text": "There's no waiting for fluorophore excitation, no waiting for camera frames to accumulate, no waiting for laser scans."
+  },
+  {
+   "t": 395.15,
+   "text": "The signal is immediate and electrical."
+  },
+  {
+   "t": 397.58,
+   "text": "This is the deep reason Ion Torrent runs are so fast: physics, not engineering."
+  },
+  {
+   "t": 403.26,
+   "text": "Now let's talk about the flow cycle that uses this detection."
+  }
+ ]
+}

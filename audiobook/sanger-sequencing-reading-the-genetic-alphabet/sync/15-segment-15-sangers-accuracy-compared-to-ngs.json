@@ -1,0 +1,187 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Sanger's accuracy compared to NGS",
+ "duration": 379.8,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Sanger's accuracy compared to NGS"
+  },
+  {
+   "t": 4.2,
+   "text": "Let me spend a segment on accuracy, because this is one of those topics where the popular narrative — \"NGS is more accurate because you get many reads per position\" — is misleading in interesting ways, and the truth is more nuanced."
+  },
+  {
+   "t": 18.48,
+   "text": "A single Sanger read is accurate to about 99.99% in the high-quality middle region of the trace — that's Phred 40 or better."
+  },
+  {
+   "t": 28.26,
+   "text": "That means in a typical 700-base read, you expect maybe one error in the well-resolved region."
+  },
+  {
+   "t": 34.65,
+   "text": "The errors are non-random: they cluster in homopolymer runs, in regions of unusual secondary structure, and at the ends of the read."
+  },
+  {
+   "t": 43.84,
+   "text": "But in the main body of a clean trace, Sanger is essentially error-free."
+  },
+  {
+   "t": 48.38,
+   "text": "A single NGS read, by contrast, has a per-base error rate of maybe 0.1% to 1% depending on the platform — much higher than Sanger."
+  },
+  {
+   "t": 59.38,
+   "text": "But NGS makes up for this by reading every position many times."
+  },
+  {
+   "t": 63.67,
+   "text": "If you have 30 independent NGS reads at a position, you can average them out, demand a consensus, and reach effectively Sanger-level accuracy or better in the aggregate."
+  },
+  {
+   "t": 74.41,
+   "text": "So in a typical NGS pileup, the per-position accuracy is excellent, even though each individual read is much less accurate than a single Sanger read."
+  },
+  {
+   "t": 84.88,
+   "text": "That's the basic statistical story."
+  },
+  {
+   "t": 87.24,
+   "text": "Now let's get to the nuances."
+  },
+  {
+   "t": 88.96,
+   "text": "The first nuance is heterozygous sites."
+  },
+  {
+   "t": 91.89,
+   "text": "At a heterozygous position in a diploid sample, the truth is that 50% of the molecules have one allele and 50% have the other."
+  },
+  {
+   "t": 100.96,
+   "text": "Sanger reads this as a single double peak — directly, visually, in one read."
+  },
+  {
+   "t": 106.99,
+   "text": "NGS reads it as a pileup where roughly half the reads at that position carry one allele and half carry the other."
+  },
+  {
+   "t": 114.7,
+   "text": "In principle, both methods detect the heterozygosity."
+  },
+  {
+   "t": 118.9,
+   "text": "But in practice, NGS reads have noise."
+  },
+  {
+   "t": 122.47,
+   "text": "The reads at a position rarely split exactly 50/50; they might be 48/52 or 30/70 due to sampling variation, sequencing errors, mapping bias, or PCR bias."
+  },
+  {
+   "t": 136.54,
+   "text": "To call a heterozygous variant from NGS reliably, you typically want depth around 20-30x and an allele fraction in some reasonable range — and the noise floor for \"is this really a heterozygous variant or just sequencing noise\" sits around 5-10% allele fraction in most pipelines."
+  },
+  {
+   "t": 155.88,
+   "text": "Sanger, by contrast, can call a heterozygous variant from a single read, because the visual signature of two equal-height peaks at the same position is unambiguous."
+  },
+  {
+   "t": 166.65,
+   "text": "Sanger is, in a real sense, a better single-shot heterozygous variant caller than NGS at depth 30."
+  },
+  {
+   "t": 174.36,
+   "text": "Where NGS catches up, and surpasses, is in its ability to detect low-frequency variants — say, a mutation present in 5% of cells in a tumor sample, where Sanger would just see a hint of a secondary peak buried in the noise."
+  },
+  {
+   "t": 190.56,
+   "text": "For mosaic variants, subclonal cancer mutations, low-frequency drug resistance mutations in viral populations, NGS is dramatically better."
+  },
+  {
+   "t": 200.95,
+   "text": "Sanger's detection limit for minor variants is around 15-20% allele fraction; below that, you can't reliably distinguish the secondary peak from baseline noise."
+  },
+  {
+   "t": 212.45,
+   "text": "So the comparison is: Sanger wins at clean heterozygous calls from single reads; NGS wins at low-frequency variants and mass-scale calling."
+  },
+  {
+   "t": 222.05,
+   "text": "That's why clinical genetics labs often use both — NGS to scan for variants across hundreds of regions cheaply, Sanger to confirm specific findings unambiguously, especially heterozygous ones."
+  },
+  {
+   "t": 235.81,
+   "text": "The second nuance is systematic error."
+  },
+  {
+   "t": 238.5,
+   "text": "Both Sanger and NGS have characteristic places where they get the answer wrong, and the error modes are different — which is actually a good thing, because it means the two methods are independent and can cross-check each other."
+  },
+  {
+   "t": 250.59,
+   "text": "Sanger's systematic errors: homopolymer runs (slippage), regions of strong secondary structure (mid-trace dropouts), GC-extreme regions (uneven amplification), the first 30 and last 100 bases of the read (poor signal)."
+  },
+  {
+   "t": 266.93,
+   "text": "If you sequence the same template multiple times with the same primer, you'll get the same errors every time, because the errors are property of the trace, not random fluctuation."
+  },
+  {
+   "t": 277.82,
+   "text": "NGS's systematic errors: depend on the platform."
+  },
+  {
+   "t": 281.71,
+   "text": "Illumina has trouble with homopolymers too (similar reasons), with low-complexity regions, with GC-extreme regions (PCR bias during library prep), with certain quad-base motifs that the chemistry slightly mis-incorporates."
+  },
+  {
+   "t": 296.83,
+   "text": "Ion Torrent has worse homopolymer issues."
+  },
+  {
+   "t": 299.8,
+   "text": "PacBio and Nanopore have higher per-base error rates but the errors are more random and average out faster with depth."
+  },
+  {
+   "t": 307.23,
+   "text": "The implication is that when Sanger and NGS agree on a result, you can be very confident — they have different error modes and would have to be wrong in the same way, which is extremely rare."
+  },
+  {
+   "t": 318.93,
+   "text": "When they disagree, both are sometimes right, depending on the specific error context."
+  },
+  {
+   "t": 324.01,
+   "text": "The discipline in modern molecular biology is to use multiple independent techniques whenever a result really matters."
+  },
+  {
+   "t": 331.24,
+   "text": "The summary I want you to take from this segment: Sanger is not less accurate than NGS — it's accurate in a different way."
+  },
+  {
+   "t": 338.59,
+   "text": "A single Sanger read in its good region is more accurate per base than a single NGS read."
+  },
+  {
+   "t": 344.65,
+   "text": "A pileup of many NGS reads beats a single Sanger read by averaging out noise."
+  },
+  {
+   "t": 350.46,
+   "text": "Sanger sees heterozygous variants directly in one read; NGS sees low-frequency variants and rare events better with depth."
+  },
+  {
+   "t": 359.51,
+   "text": "The two methods are complementary, and for the specific question of \"is there a particular variant at a particular position in this sample, and am I sure?"
+  },
+  {
+   "t": 369.55,
+   "text": "\", many clinical and research workflows combine both — NGS to find, Sanger to confirm."
+  },
+  {
+   "t": 376.46,
+   "text": "The methods aren't rivals so much as collaborators."
+  }
+ ]
+}

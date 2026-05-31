@@ -1,0 +1,215 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Where Illumina struggles: long contiguous reads, low-frequency variants, methylation",
+ "duration": 407.87,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Where Illumina struggles: long contiguous reads, low-frequency variants, methylation"
+  },
+  {
+   "t": 8.7,
+   "text": "Let me close in on Illumina's weaknesses more sharply, because understanding what a platform can't do is as important as understanding what it can."
+  },
+  {
+   "t": 17.49,
+   "text": "There are several application areas where Illumina is the wrong tool, and either a different platform or extensive engineering work-arounds are required."
+  },
+  {
+   "t": 26.12,
+   "text": "Long contiguous reads."
+  },
+  {
+   "t": 28.09,
+   "text": "I've mentioned this already, but it's worth restating clearly."
+  },
+  {
+   "t": 31.9,
+   "text": "Illumina cannot produce reads longer than a few hundred bases."
+  },
+  {
+   "t": 36.42,
+   "text": "Any application that requires longer reads — phasing variants over long stretches of a chromosome, resolving large structural variants in cancer, assembling complex repeat regions, characterizing very long mRNA isoforms — has to use long-read platforms instead, or use elaborate work-arounds like linked reads (a now-defunct 10x Genomics technology), Hi-C scaffolding, or optical mapping."
+  },
+  {
+   "t": 62.24,
+   "text": "There is no Illumina sequencer that gives you a ten-thousand-base read."
+  },
+  {
+   "t": 65.95,
+   "text": "The chemistry simply doesn't support it."
+  },
+  {
+   "t": 68.53,
+   "text": "This is the single biggest fundamental limitation of the platform."
+  },
+  {
+   "t": 72.85,
+   "text": "Low-frequency variants."
+  },
+  {
+   "t": 74.74,
+   "text": "Illumina has a per-base error rate of about one in a thousand."
+  },
+  {
+   "t": 78.84,
+   "text": "That's excellent for finding germline variants — variants present in 50 or 100 percent of the cells in a tissue — because the signal is overwhelming."
+  },
+  {
+   "t": 88.89,
+   "text": "It's a problem for finding low-frequency variants, particularly in cancer (where a subclonal mutation might be present in 1 percent of tumor cells) or in liquid biopsy (where circulating tumor DNA might be 0.1 percent of total)."
+  },
+  {
+   "t": 104.96,
+   "text": "When you're looking for variants at 0.1 percent allele frequency in a sequencing run with 1-in-1000 error rate, the signal and the noise are at the same level."
+  },
+  {
+   "t": 116.14,
+   "text": "You can't distinguish a real low-frequency variant from a sequencing error."
+  },
+  {
+   "t": 120.88,
+   "text": "There are mitigations."
+  },
+  {
+   "t": 122.28,
+   "text": "Unique molecular identifiers (UMIs) — short random sequences added to each fragment during library prep — allow you to tag every original molecule individually, so that you can identify reads that came from the same starting molecule and use consensus calling within that group to suppress errors."
+  },
+  {
+   "t": 141.01,
+   "text": "With UMIs, the effective error rate can drop to one in a hundred thousand or better, enabling reliable detection of variants at very low frequencies."
+  },
+  {
+   "t": 150.68,
+   "text": "Most modern liquid biopsy and clonal evolution studies use UMI-based protocols for this reason."
+  },
+  {
+   "t": 157.32,
+   "text": "But the standard Illumina chemistry without UMIs hits a wall at about 1 percent allele frequency, and that's a real limitation for some clinical applications."
+  },
+  {
+   "t": 167.97,
+   "text": "Methylation and other DNA modifications."
+  },
+  {
+   "t": 171.36,
+   "text": "DNA in cells is decorated with various chemical modifications — most importantly, methylation of cytosines, which has major regulatory functions and is heavily studied in development, cancer, and aging research."
+  },
+  {
+   "t": 186.21,
+   "text": "Illumina sequencing, by default, doesn't read methylation directly."
+  },
+  {
+   "t": 190.76,
+   "text": "The polymerase that copies the DNA during library prep and the sequencing chemistry both treat methylated and unmethylated bases identically — both look like cytosine."
+  },
+  {
+   "t": 201.62,
+   "text": "To read methylation with Illumina, you have to chemically convert the DNA first, using bisulfite treatment (which deaminates unmethylated cytosines to uracils while leaving methylated cytosines intact, so that the methylation status shows up as a C-versus-T difference in the sequencing data)."
+  },
+  {
+   "t": 220.0,
+   "text": "Bisulfite conversion is harsh chemistry — it fragments DNA, reduces complexity, and adds bias — and it doubles the sequencing depth required for the same coverage because half your \"T\"s are now actually unmethylated C's."
+  },
+  {
+   "t": 235.19,
+   "text": "There are newer enzymatic conversion methods that are gentler, but the fundamental issue is that Illumina chemistry doesn't natively read modifications."
+  },
+  {
+   "t": 244.2,
+   "text": "Long-read platforms like PacBio and Nanopore can read methylation directly during normal sequencing, by detecting the small differences a modification makes in the chemistry or electrical signal."
+  },
+  {
+   "t": 256.66,
+   "text": "That's a significant Illumina disadvantage for the methylation field."
+  },
+  {
+   "t": 260.96,
+   "text": "De novo assembly of complex genomes."
+  },
+  {
+   "t": 264.17,
+   "text": "Building a genome from scratch — without a reference to align to — is much harder with short reads than with long reads."
+  },
+  {
+   "t": 271.58,
+   "text": "Repeat regions become ambiguous junctions in the assembly graph."
+  },
+  {
+   "t": 276.13,
+   "text": "Heterozygous regions in diploid organisms cause the assembler to get confused between the two parental alleles."
+  },
+  {
+   "t": 284.44,
+   "text": "The result is fragmented, incomplete assemblies."
+  },
+  {
+   "t": 288.27,
+   "text": "The original human genome was assembled from much longer Sanger reads."
+  },
+  {
+   "t": 292.94,
+   "text": "Modern de novo assemblies of complex genomes — plants, fungi, large animal genomes — almost always require long reads."
+  },
+  {
+   "t": 302.77,
+   "text": "Illumina-only assemblies are usable for simple bacterial genomes but increasingly inadequate for anything larger."
+  },
+  {
+   "t": 310.28,
+   "text": "Single-cell applications and very low input."
+  },
+  {
+   "t": 313.77,
+   "text": "Illumina sequencing in its standard form requires at least nanograms of input DNA."
+  },
+  {
+   "t": 319.97,
+   "text": "For some single-cell or low-input applications, you have only picograms — a thousandth of that — and you need to amplify the input dramatically before library prep."
+  },
+  {
+   "t": 330.53,
+   "text": "The amplification step introduces bias and noise, and even with the best protocols, single-cell sequencing has more uneven coverage and more dropouts than bulk sequencing."
+  },
+  {
+   "t": 341.96,
+   "text": "Specialized library prep methods like Smart-seq for single-cell RNA-seq, or whole-genome amplification kits for single-cell DNA-seq, have made this work but with significant data quality tradeoffs."
+  },
+  {
+   "t": 354.98,
+   "text": "Tandem repeat regions."
+  },
+  {
+   "t": 356.68,
+   "text": "Disease-associated repeats like the CAG expansion in Huntington's disease or the CGG expansion in fragile X can be hundreds to thousands of repeat units long."
+  },
+  {
+   "t": 367.22,
+   "text": "Illumina cannot resolve these — the read length is shorter than the repeat."
+  },
+  {
+   "t": 372.0,
+   "text": "These remain in the territory of long-read sequencing or targeted amplicon methods."
+  },
+  {
+   "t": 377.56,
+   "text": "These limits are real."
+  },
+  {
+   "t": 378.92,
+   "text": "The Illumina platform is dominant because it's the best general-purpose short-read sequencer, not because it's the best at everything."
+  },
+  {
+   "t": 387.11,
+   "text": "For applications where the limits matter, you need a different tool."
+  },
+  {
+   "t": 390.88,
+   "text": "And as long-read platforms get cheaper and more accurate, the fraction of work that gets done on long reads — or in hybrid Illumina-plus-long-read protocols — is going to grow."
+  },
+  {
+   "t": 401.31,
+   "text": "The future of sequencing is probably multi-platform, with each technology used for what it does best."
+  }
+ ]
+}

@@ -1,0 +1,211 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Library prep: from biological sample to pore-ready DNA",
+ "duration": 392.68,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Library prep: from biological sample to pore-ready DNA"
+  },
+  {
+   "t": 5.6,
+   "text": "Before any sequencing happens, you have to prepare your sample."
+  },
+  {
+   "t": 9.46,
+   "text": "This is called library preparation — turning your raw biological material, whether that's purified genomic DNA from a blood draw or RNA extracted from a tumor or environmental DNA from a swab of pond mud, into a form that the sequencer can actually read."
+  },
+  {
+   "t": 25.75,
+   "text": "Library prep is where a lot of the experimental variation in any sequencing project lives, and nanopore has its own particular flavor of it, with some unique advantages."
+  },
+  {
+   "t": 36.34,
+   "text": "The fundamental requirement for nanopore library prep is simple: you need to attach a sequencing adapter to each end of each DNA fragment in your sample."
+  },
+  {
+   "t": 46.08,
+   "text": "The adapter is a short, custom-designed piece of double-stranded DNA with a single-stranded overhang."
+  },
+  {
+   "t": 52.81,
+   "text": "The single-stranded overhang is what threads into the pore first, with the motor protein pre-loaded onto it."
+  },
+  {
+   "t": 59.46,
+   "text": "So the adapter is the on-ramp that gets the DNA into the pore in a controlled, motor-driven way."
+  },
+  {
+   "t": 65.91,
+   "text": "There are essentially two routes for adapter attachment, and they trade off speed against quality."
+  },
+  {
+   "t": 71.61,
+   "text": "The first route is the rapid kit — sometimes called the rapid sequencing kit, marketed under various product codes."
+  },
+  {
+   "t": 78.91,
+   "text": "Total prep time: about ten minutes."
+  },
+  {
+   "t": 81.67,
+   "text": "Number of pipetting steps: maybe three or four."
+  },
+  {
+   "t": 84.96,
+   "text": "The chemistry uses a clever enzyme called a transposase, which is a protein from bacteria that naturally cuts DNA and inserts its own cargo into the cut site."
+  },
+  {
+   "t": 95.17,
+   "text": "In this case, the cargo is the nanopore sequencing adapter."
+  },
+  {
+   "t": 99.28,
+   "text": "You mix your DNA sample with the transposase-loaded adapter, incubate for a few minutes, and the transposase chops up your DNA and inserts adapters into the cut sites simultaneously."
+  },
+  {
+   "t": 111.09,
+   "text": "Add a few more reagents, load the result onto a flow cell, and you're sequencing within fifteen minutes of starting."
+  },
+  {
+   "t": 118.05,
+   "text": "The rapid kit is what gets used in field deployments."
+  },
+  {
+   "t": 121.7,
+   "text": "It's what was used during the West African Ebola outbreak, in airport pathogen screening, on the ISS."
+  },
+  {
+   "t": 128.4,
+   "text": "It produces lower-quality libraries than the slow route — the transposase introduces some bias, the read lengths tend to be shorter because the chopping is random, and not every DNA molecule gets adapters on both ends — but for time-critical applications, ten minutes from sample to sequence is irreplaceable."
+  },
+  {
+   "t": 147.53,
+   "text": "The second route is the ligation kit, the high-quality workhorse for most laboratory applications."
+  },
+  {
+   "t": 153.79,
+   "text": "Total prep time: about 60 to 90 minutes."
+  },
+  {
+   "t": 157.55,
+   "text": "The chemistry is more conservative."
+  },
+  {
+   "t": 160.11,
+   "text": "You start with your DNA, you repair any damaged ends — broken bases, frayed overhangs — using an enzyme cocktail that polishes the DNA ends to a clean, blunt, double-stranded state."
+  },
+  {
+   "t": 173.01,
+   "text": "Then you add a single A nucleotide to the 3-prime end of each strand — a process called A-tailing — using another enzyme."
+  },
+  {
+   "t": 182.1,
+   "text": "Then you ligate the sequencing adapter, which has a complementary T overhang, onto the prepared ends using DNA ligase."
+  },
+  {
+   "t": 190.61,
+   "text": "Then you clean up the result with magnetic beads to remove unligated adapters and enzyme contaminants."
+  },
+  {
+   "t": 197.55,
+   "text": "Then you load onto the flow cell."
+  },
+  {
+   "t": 199.81,
+   "text": "The ligation kit produces higher-quality libraries — better adapter ligation efficiency, longer reads, less bias."
+  },
+  {
+   "t": 208.05,
+   "text": "It's what you use for any application where data quality matters more than turnaround time, which is most applications."
+  },
+  {
+   "t": 215.14,
+   "text": "The rapid kit is for emergencies and field work; the ligation kit is for everyday sequencing."
+  },
+  {
+   "t": 221.78,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 223.09,
+   "text": "Think of library prep as preparing letters for the mail."
+  },
+  {
+   "t": 226.45,
+   "text": "The rapid kit is like stuffing a stack of unfolded papers into a single envelope — fast, gets the job done, but not pretty and a few pages might slip out."
+  },
+  {
+   "t": 236.3,
+   "text": "The ligation kit is like neatly folding each letter, addressing each envelope, applying a stamp, and dropping it carefully in the mailbox — slower, but each letter arrives intact and in the right order."
+  },
+  {
+   "t": 249.09,
+   "text": "There are also specialized kits for specific applications."
+  },
+  {
+   "t": 253.15,
+   "text": "Direct RNA sequencing, which we'll talk about in Segment 10, uses a slightly different adapter chemistry that handles the structural differences between RNA and DNA — RNA is single-stranded, has a 2-prime hydroxyl, and is much more fragile, so the adapters have to be designed around those constraints."
+  },
+  {
+   "t": 272.55,
+   "text": "There are ultra-long kits that use specialized chemistry to preserve very large DNA fragments — hundreds of kilobases — through library prep without breaking them."
+  },
+  {
+   "t": 282.79,
+   "text": "There's the PCR-based kit for amplifying low-input samples, though using PCR sacrifices some of the unique advantages of nanopore, particularly the ability to detect modified bases."
+  },
+  {
+   "t": 295.85,
+   "text": "One thing that distinguishes nanopore library prep from other platforms is what you don't have to do."
+  },
+  {
+   "t": 301.52,
+   "text": "You don't have to amplify your DNA with PCR — most kits work directly with the native DNA from your sample."
+  },
+  {
+   "t": 308.32,
+   "text": "You don't have to fragment your DNA to a specific size — nanopore can read any length, so your fragments can be as long as your input DNA permits."
+  },
+  {
+   "t": 317.87,
+   "text": "You don't have to do bridge amplification on a flow cell to make clusters, like Illumina does."
+  },
+  {
+   "t": 323.92,
+   "text": "You don't have to construct a SMRT-bell with hairpin adapters, like PacBio does."
+  },
+  {
+   "t": 329.49,
+   "text": "The library prep is, in most cases, surprisingly minimal — just put adapters on the ends, load onto the flow cell, go."
+  },
+  {
+   "t": 337.3,
+   "text": "This minimalism is what makes the rapid kit possible."
+  },
+  {
+   "t": 340.99,
+   "text": "It's also what makes nanopore well-suited to native DNA sequencing — sequencing the actual molecule that came out of the sample, with all its original chemical modifications intact, without ever copying it through PCR."
+  },
+  {
+   "t": 354.67,
+   "text": "That's a recurring theme: nanopore reads what's there, not a synthetic copy of what's there."
+  },
+  {
+   "t": 360.53,
+   "text": "Library prep preserves that property because it doesn't synthesize anything."
+  },
+  {
+   "t": 366.02,
+   "text": "For the practical takeaway: if you're doing field work or pathogen ID, use the rapid kit and you'll have sequence in 15 minutes."
+  },
+  {
+   "t": 374.73,
+   "text": "If you're doing serious genome research and you want the highest data quality, use the ligation kit and budget about 90 minutes for the prep."
+  },
+  {
+   "t": 382.88,
+   "text": "Either way, the basic principle is the same — adapters with pre-loaded motors get attached to the ends of your DNA fragments, and that's what threads into the pore."
+  }
+ ]
+}

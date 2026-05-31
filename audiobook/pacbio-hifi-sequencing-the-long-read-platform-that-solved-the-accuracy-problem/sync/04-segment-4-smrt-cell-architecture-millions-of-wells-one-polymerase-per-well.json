@@ -1,0 +1,271 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — SMRT cell architecture: millions of wells, one polymerase per well",
+ "duration": 419.01,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — SMRT cell architecture: millions of wells, one polymerase per well"
+  },
+  {
+   "t": 6.99,
+   "text": "Alright."
+  },
+  {
+   "t": 7.79,
+   "text": "So we have the physical idea — the zero-mode waveguide, this exquisitely small illuminated volume at the bottom of a sub-wavelength hole."
+  },
+  {
+   "t": 17.89,
+   "text": "Now let's zoom out and look at how PacBio assembles millions of these wells into a sequencing chip, the SMRT cell."
+  },
+  {
+   "t": 26.0,
+   "text": "SMRT stands for Single Molecule Real Time."
+  },
+  {
+   "t": 29.45,
+   "text": "The acronym is the company's whole pitch, compressed into four letters."
+  },
+  {
+   "t": 34.12,
+   "text": "A SMRT cell is the consumable chip you load into a PacBio instrument to run a single sequencing experiment."
+  },
+  {
+   "t": 42.02,
+   "text": "Physically, it looks like a small rectangular slide, maybe the size of a microscope cover slip."
+  },
+  {
+   "t": 47.9,
+   "text": "Inside, it's an extraordinary piece of nanofabrication."
+  },
+  {
+   "t": 52.35,
+   "text": "Picture it this way."
+  },
+  {
+   "t": 53.6,
+   "text": "A SMRT cell is a metal plate with millions of microscopic holes — the zero-mode waveguides — punched through it, mounted on a transparent glass substrate, with a flow chamber on top to deliver the sequencing reagents."
+  },
+  {
+   "t": 68.33,
+   "text": "The metal is aluminum."
+  },
+  {
+   "t": 70.0,
+   "text": "The plate is about a hundred nanometers thick."
+  },
+  {
+   "t": 72.71,
+   "text": "The holes are about seventy nanometers across."
+  },
+  {
+   "t": 75.39,
+   "text": "And there are, in the modern chips, eight million or more of them, arranged in a precise grid."
+  },
+  {
+   "t": 81.45,
+   "text": "At the bottom of each hole sits — ideally — one DNA polymerase enzyme, anchored to the glass."
+  },
+  {
+   "t": 88.74,
+   "text": "Loaded onto that polymerase is one circular DNA template — the SMRTbell template, which we'll meet in segment seven."
+  },
+  {
+   "t": 96.66,
+   "text": "Above the polymerase, filling the flow chamber, is a solution containing all four nucleotide types, each one labeled with a different colored fluorescent dye."
+  },
+  {
+   "t": 106.65,
+   "text": "The instrument shines laser light up through the glass, into the bottom of every well, simultaneously."
+  },
+  {
+   "t": 114.54,
+   "text": "And the instrument's camera watches the array, recording the color and timing of fluorescent pulses from every well in parallel."
+  },
+  {
+   "t": 122.56,
+   "text": "That parallelism is what makes the throughput possible."
+  },
+  {
+   "t": 126.46,
+   "text": "Each well is producing one read from one polymerase."
+  },
+  {
+   "t": 130.26,
+   "text": "By itself, that's slow — a single polymerase reads only a few bases per second, so even running for hours, one well only generates tens of thousands of bases."
+  },
+  {
+   "t": 141.84,
+   "text": "But you have millions of wells running simultaneously."
+  },
+  {
+   "t": 145.18,
+   "text": "Eight million wells times some tens of kilobases per well equals on the order of hundreds of gigabases of sequence per cell."
+  },
+  {
+   "t": 153.19,
+   "text": "That's the magic of massive parallelism, the same trick Illumina uses, but executed on a totally different substrate."
+  },
+  {
+   "t": 160.89,
+   "text": "Now here's a subtle but important engineering problem: how do you get one polymerase into each well?"
+  },
+  {
+   "t": 167.05,
+   "text": "Not zero."
+  },
+  {
+   "t": 168.22,
+   "text": "Not two."
+  },
+  {
+   "t": 169.18,
+   "text": "Exactly one."
+  },
+  {
+   "t": 170.44,
+   "text": "The wells are loaded by simply incubating the chip in a solution of polymerase-template complexes — the polymerases already bound to their templates — and letting them diffuse into the wells."
+  },
+  {
+   "t": 182.05,
+   "text": "They get caught at the bottom by the streptavidin anchor."
+  },
+  {
+   "t": 185.45,
+   "text": "But the loading is statistical."
+  },
+  {
+   "t": 187.68,
+   "text": "If you use a low concentration of complexes, most wells get zero, a few get one, almost none get two."
+  },
+  {
+   "t": 194.88,
+   "text": "If you use a high concentration, most wells get two or more, which is unusable because you can't tell which polymerase's signal is which."
+  },
+  {
+   "t": 203.84,
+   "text": "This is Poisson loading."
+  },
+  {
+   "t": 205.41,
+   "text": "The math says that the maximum fraction of wells that can have exactly one polymerase, with random loading, is about thirty-seven percent — when the average loading is exactly one per well, the Poisson distribution gives about 37% empty, 37% single, and 26% with two or more."
+  },
+  {
+   "t": 224.78,
+   "text": "So under random loading, you can never use more than about a third of your wells productively."
+  },
+  {
+   "t": 230.2,
+   "text": "The rest are either empty (no signal) or multiply loaded (uninterpretable signal)."
+  },
+  {
+   "t": 236.45,
+   "text": "PacBio has worked very hard to push past this limit using what they call magnetic bead loading and other tricks that bias the loading away from purely random."
+  },
+  {
+   "t": 245.93,
+   "text": "With these methods, they can achieve much higher single-occupancy rates — sixty, seventy, even eighty percent of wells getting exactly one polymerase."
+  },
+  {
+   "t": 257.06,
+   "text": "That's enormous for throughput, because it directly multiplies the usable fraction of the chip."
+  },
+  {
+   "t": 263.01,
+   "text": "A few more architectural notes."
+  },
+  {
+   "t": 265.02,
+   "text": "The flow cell on top of the chip allows continuous delivery of fresh reagents during the sequencing run."
+  },
+  {
+   "t": 271.87,
+   "text": "The reactions take place at body temperature, roughly thirty degrees Celsius, in an aqueous buffer that mimics cellular conditions."
+  },
+  {
+   "t": 280.56,
+   "text": "The reactions can run for hours — a single SMRT cell run, on a modern instrument, takes about thirty hours."
+  },
+  {
+   "t": 288.66,
+   "text": "The optics underneath are complex."
+  },
+  {
+   "t": 291.49,
+   "text": "Multiple laser lines, one for each dye color."
+  },
+  {
+   "t": 295.1,
+   "text": "A field-of-view large enough to see every well at once, focused through high-numerical-aperture objectives."
+  },
+  {
+   "t": 302.36,
+   "text": "High-speed cameras, capturing at hundreds of frames per second, generating terabytes of raw image data per run."
+  },
+  {
+   "t": 310.17,
+   "text": "The instrument also has heating, fluidics, and stabilization to keep the optical alignment constant over the long run."
+  },
+  {
+   "t": 318.19,
+   "text": "And the chip is a single-use consumable."
+  },
+  {
+   "t": 320.97,
+   "text": "Once you've run it for thirty hours and harvested your data, you throw it away."
+  },
+  {
+   "t": 325.56,
+   "text": "The chip itself, with all its nanofabrication, is the bulk of the cost-per-run."
+  },
+  {
+   "t": 330.82,
+   "text": "Driving down the cost of the chip — which they do by making chips with more wells, so cost per gigabase drops even as cost per chip stays similar or grows — has been a major focus of PacBio's engineering for the past decade."
+  },
+  {
+   "t": 344.29,
+   "text": "The lineage of SMRT cells over time tracks the throughput growth of the platform."
+  },
+  {
+   "t": 350.19,
+   "text": "The original RS chips had around 75,000 wells per cell."
+  },
+  {
+   "t": 355.61,
+   "text": "The Sequel chips, launched in 2015, jumped to a million wells."
+  },
+  {
+   "t": 360.77,
+   "text": "The Sequel II chips, in 2019, jumped to eight million."
+  },
+  {
+   "t": 365.51,
+   "text": "The Revio chips, the current generation as of the early 2020s, are at twenty-five million per cell, and PacBio runs four of them simultaneously per instrument."
+  },
+  {
+   "t": 376.01,
+   "text": "Each generation has roughly an order of magnitude more throughput than the last."
+  },
+  {
+   "t": 381.41,
+   "text": "We'll cover the instrument lineage in detail in segment ten."
+  },
+  {
+   "t": 385.55,
+   "text": "The conceptual point I want to leave you with here is: the SMRT cell is a chip of independent single-molecule reactions, observed in parallel, made possible by integrating semiconductor-style nanofabrication with biological chemistry."
+  },
+  {
+   "t": 400.91,
+   "text": "It's a piece of physics, a piece of chemistry, and a piece of microfabrication, all stacked into a single consumable."
+  },
+  {
+   "t": 408.32,
+   "text": "The marriage of those three disciplines is what PacBio is, at its core."
+  },
+  {
+   "t": 413.74,
+   "text": "Now let's look at the chemistry of the nucleotides themselves, because that's the next piece of the puzzle."
+  }
+ ]
+}

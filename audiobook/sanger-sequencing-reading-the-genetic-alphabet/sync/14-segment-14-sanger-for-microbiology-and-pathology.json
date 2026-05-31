@@ -1,0 +1,183 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Sanger for microbiology and pathology",
+ "duration": 380.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Sanger for microbiology and pathology"
+  },
+  {
+   "t": 4.4,
+   "text": "Let me spend some time on another huge domain where Sanger sequencing remains absolutely central: microbiology, particularly the identification of bacteria, fungi, and other microorganisms."
+  },
+  {
+   "t": 17.35,
+   "text": "The fundamental tool here is a concept called marker gene sequencing, sometimes called amplicon sequencing."
+  },
+  {
+   "t": 23.99,
+   "text": "The idea is that you can identify what species an organism belongs to by sequencing a single specific gene — a gene that's present in every member of the group, but whose sequence varies just enough between species to give each species a unique signature."
+  },
+  {
+   "t": 40.15,
+   "text": "You amplify that gene by PCR, sequence the PCR product by Sanger, and look up the resulting sequence in a reference database."
+  },
+  {
+   "t": 48.85,
+   "text": "The hit you get back is the species ID."
+  },
+  {
+   "t": 51.48,
+   "text": "The most famous marker gene, by far, is the 16S ribosomal RNA gene in bacteria."
+  },
+  {
+   "t": 57.94,
+   "text": "The 16S rRNA gene is about 1500 base pairs long, present in every bacterium, and has a structure that mixes highly conserved regions (which let you design universal primers that work on every bacterial species) with variable regions (which provide the species-specific signature)."
+  },
+  {
+   "t": 76.66,
+   "text": "PCR-amplify the 16S gene from an unknown bacterium using universal primers, Sanger-sequence the amplicon with a few internal primers covering its length, blast the resulting sequence against the SILVA or GreenGenes or NCBI 16S databases, and you get a species ID — or at least a genus ID — within hours."
+  },
+  {
+   "t": 99.29,
+   "text": "This is the standard technique used in clinical microbiology labs to identify pathogenic bacteria, in food safety labs to identify contaminants, in environmental labs to characterize microbial communities, in research labs to identify whatever bacterium turned up in some unusual sample."
+  },
+  {
+   "t": 119.04,
+   "text": "For fungi, the equivalent marker is the ITS region — the internal transcribed spacer between the ribosomal RNA genes."
+  },
+  {
+   "t": 127.79,
+   "text": "Universal fungal primers amplify the ITS region, Sanger sequences it, and a database lookup gives you the species."
+  },
+  {
+   "t": 136.0,
+   "text": "For other groups there are other markers: the COI gene (cytochrome oxidase I) for animals — that's the basis of DNA barcoding programs that identify insects, fish, and other animals from tissue samples."
+  },
+  {
+   "t": 150.12,
+   "text": "The rbcL and matK genes for plants."
+  },
+  {
+   "t": 153.35,
+   "text": "There's a related concept called MLST, multi-locus sequence typing, which is used in clinical microbiology to distinguish strains within a species — say, different lineages of Staphylococcus aureus that might be circulating in a hospital."
+  },
+  {
+   "t": 169.81,
+   "text": "MLST involves Sanger-sequencing several housekeeping genes (typically seven) from a bacterial isolate and combining the sequences into a strain-specific profile."
+  },
+  {
+   "t": 181.81,
+   "text": "Each unique combination of allele sequences across the seven genes gets a sequence type number, and the type lets you track strains epidemiologically across hospitals, countries, and years."
+  },
+  {
+   "t": 193.85,
+   "text": "The Sanger sequencing for MLST is straightforward — seven amplicons per isolate, each a few hundred bases, all readable in a day."
+  },
+  {
+   "t": 203.05,
+   "text": "The whole MLST infrastructure for the major pathogens was built on Sanger and is still mostly run that way, though NGS-based alternatives are encroaching."
+  },
+  {
+   "t": 212.39,
+   "text": "Why does Sanger keep winning these applications even in the age of NGS?"
+  },
+  {
+   "t": 217.26,
+   "text": "Several reasons."
+  },
+  {
+   "t": 218.65,
+   "text": "First, the per-sample cost."
+  },
+  {
+   "t": 220.88,
+   "text": "If a clinical lab gets one positive blood culture and needs to ID the bacterium, paying for a whole NGS run is overkill."
+  },
+  {
+   "t": 229.57,
+   "text": "A single Sanger reaction on a 16S amplicon, costing $10, gives them the answer."
+  },
+  {
+   "t": 236.06,
+   "text": "Second, the turnaround time."
+  },
+  {
+   "t": 238.07,
+   "text": "A Sanger reaction can be loaded onto a capillary instrument and read out in a few hours."
+  },
+  {
+   "t": 243.86,
+   "text": "NGS typically takes a day or more, sometimes longer when you factor in batch scheduling and library prep."
+  },
+  {
+   "t": 251.1,
+   "text": "For clinical workflows where you want the bacterial ID by the end of the same day, Sanger is faster."
+  },
+  {
+   "t": 257.59,
+   "text": "Third, the analysis pipeline."
+  },
+  {
+   "t": 259.73,
+   "text": "Sanger gives you a single read per sample."
+  },
+  {
+   "t": 262.49,
+   "text": "You blast it against the database."
+  },
+  {
+   "t": 264.68,
+   "text": "You're done."
+  },
+  {
+   "t": 265.54,
+   "text": "NGS gives you millions of reads per sample, and the analysis to turn those reads into a species ID — particularly in a mixed sample with multiple organisms — is computationally and methodologically complex."
+  },
+  {
+   "t": 280.37,
+   "text": "For routine single-organism identification, that complexity is unnecessary."
+  },
+  {
+   "t": 286.63,
+   "text": "There's a more recent development in this space worth mentioning: NGS-based 16S sequencing (sometimes called amplicon NGS) is now standard for studies of microbial communities — like the gut microbiome — where you need to identify hundreds or thousands of bacterial species simultaneously in a single complex sample."
+  },
+  {
+   "t": 306.68,
+   "text": "In that context, Sanger can't compete; you'd have to pick and Sanger-sequence each colony individually, and most gut bacteria can't be cultured."
+  },
+  {
+   "t": 315.75,
+   "text": "NGS-based amplicon sequencing lets you skip the culturing step entirely and read the bacterial diversity of the whole sample in one go."
+  },
+  {
+   "t": 325.11,
+   "text": "So NGS owns the microbiome end of the market."
+  },
+  {
+   "t": 329.1,
+   "text": "But for the everyday clinical microbiology question — \"I have a pure isolate, what is it?"
+  },
+  {
+   "t": 334.55,
+   "text": "\" — Sanger is still standard, and probably will be for a long time."
+  },
+  {
+   "t": 338.35,
+   "text": "The infrastructure is mature, the cost is low, the turnaround is fast, and the answer is unambiguous."
+  },
+  {
+   "t": 345.97,
+   "text": "The unifying point of this segment: Sanger isn't just the workhorse of the molecular biology lab — it's also the workhorse of clinical and environmental microbiology, by way of marker gene sequencing."
+  },
+  {
+   "t": 357.91,
+   "text": "Whenever the question is \"what specific known organism is this,\" and you have a pure or near-pure sample to work from, Sanger via 16S, ITS, COI, or MLST is the standard answer."
+  },
+  {
+   "t": 371.52,
+   "text": "The technique is so embedded in the workflows of these fields that it'll take a long time to displace, even as NGS keeps getting cheaper."
+  }
+ ]
+}

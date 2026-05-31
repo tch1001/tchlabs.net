@@ -1,0 +1,339 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The conceptual breakthrough — barcoding to distinguish cells in a pool",
+ "duration": 405.4,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The conceptual breakthrough — barcoding to distinguish cells in a pool"
+  },
+  {
+   "t": 6.42,
+   "text": "Here is the central conceptual move, and if you understand only one thing from today's lecture, understand this one."
+  },
+  {
+   "t": 14.79,
+   "text": "I want to give you an analogy first, and then I'll show you the mechanism."
+  },
+  {
+   "t": 18.61,
+   "text": "Imagine you run a mail-sorting facility, and one day a hundred thousand letters arrive in a single enormous pile, all loose, no envelopes."
+  },
+  {
+   "t": 28.94,
+   "text": "Just paper."
+  },
+  {
+   "t": 30.06,
+   "text": "Your job is to figure out which house each letter came from."
+  },
+  {
+   "t": 33.76,
+   "text": "Impossible, right?"
+  },
+  {
+   "t": 34.91,
+   "text": "You have no information about origin."
+  },
+  {
+   "t": 37.1,
+   "text": "The letters are unlabeled."
+  },
+  {
+   "t": 38.62,
+   "text": "You can read what each letter says, but you can't know which letter came from which house."
+  },
+  {
+   "t": 44.24,
+   "text": "This is the problem with bulk sequencing."
+  },
+  {
+   "t": 46.55,
+   "text": "You sequence a pool of RNA molecules and get back the molecules, but every read is unlabeled."
+  },
+  {
+   "t": 53.49,
+   "text": "You have no way to know which cell each read came from."
+  },
+  {
+   "t": 56.74,
+   "text": "Now imagine the same hundred thousand letters, but with one change."
+  },
+  {
+   "t": 60.98,
+   "text": "Before the letters left their houses, every house in town was given a unique zip code — a number stamped onto every letter that house produced."
+  },
+  {
+   "t": 70.09,
+   "text": "House one stamps zip code AAAA on every letter."
+  },
+  {
+   "t": 73.56,
+   "text": "House two stamps BBBB."
+  },
+  {
+   "t": 75.83,
+   "text": "And so on."
+  },
+  {
+   "t": 76.8,
+   "text": "Now the letters arrive at the sorting facility in one enormous pile, but every single letter carries its zip code, written right there at the top."
+  },
+  {
+   "t": 85.76,
+   "text": "You can read each letter, read its zip code, and immediately sort it back into the right pile."
+  },
+  {
+   "t": 91.85,
+   "text": "Suddenly the pool of letters is not unsortable."
+  },
+  {
+   "t": 95.36,
+   "text": "It is exquisitely sortable."
+  },
+  {
+   "t": 97.61,
+   "text": "You can recover, for every house, exactly which letters came from it."
+  },
+  {
+   "t": 102.04,
+   "text": "The pile itself didn't change."
+  },
+  {
+   "t": 104.16,
+   "text": "What changed is that you put information into the pile before it became a pile."
+  },
+  {
+   "t": 108.86,
+   "text": "That is single-cell sequencing in one analogy."
+  },
+  {
+   "t": 112.16,
+   "text": "Every cell gets its own zip code attached to every transcript it produces."
+  },
+  {
+   "t": 117.39,
+   "text": "When you sequence the pool, you can sort reads back to their cell of origin by reading the zip code."
+  },
+  {
+   "t": 122.96,
+   "text": "Mechanically, the zip code is a short stretch of DNA — typically twelve to sixteen base pairs long — appended to the start of every cDNA molecule made from a particular cell's mRNA."
+  },
+  {
+   "t": 136.6,
+   "text": "The barcode is the same for every transcript in that cell."
+  },
+  {
+   "t": 140.22,
+   "text": "The barcode is different between cells."
+  },
+  {
+   "t": 143.01,
+   "text": "When the sequencer reads each molecule, the first sixteen bases of the read are the barcode, telling you which cell."
+  },
+  {
+   "t": 150.47,
+   "text": "The rest of the read is the actual transcript sequence, telling you what gene."
+  },
+  {
+   "t": 154.81,
+   "text": "With both pieces of information together, every read becomes a per-cell, per-gene measurement."
+  },
+  {
+   "t": 161.14,
+   "text": "That's the data type."
+  },
+  {
+   "t": 162.36,
+   "text": "That's what comes out of a single-cell experiment."
+  },
+  {
+   "t": 164.94,
+   "text": "How do you actually accomplish this physically?"
+  },
+  {
+   "t": 167.34,
+   "text": "How do you make sure that all the mRNA molecules from one specific cell get tagged with one specific barcode, and a different cell gets a different barcode?"
+  },
+  {
+   "t": 176.65,
+   "text": "The answer is: you have to physically isolate each cell into its own tiny reaction chamber, while the barcoding happens, then pool back together once the barcodes are securely attached."
+  },
+  {
+   "t": 188.04,
+   "text": "There are basically three families of ways to make these tiny isolated reaction chambers."
+  },
+  {
+   "t": 194.4,
+   "text": "The first is plate-based — put one cell into each well of a 96-well or 384-well plate, do the chemistry, then pool."
+  },
+  {
+   "t": 203.86,
+   "text": "This is Smart-seq and its descendants."
+  },
+  {
+   "t": 206.56,
+   "text": "The second is droplet-based — encapsulate each cell into a tiny water-in-oil droplet, do the chemistry inside the droplet, then break the droplets and pool."
+  },
+  {
+   "t": 217.4,
+   "text": "This is Drop-seq, inDrops, and 10x Chromium."
+  },
+  {
+   "t": 221.36,
+   "text": "The third is nanowell-based — etch tens of thousands of nanoliter-sized wells into a chip, load cells into them by gravity, do the chemistry on the chip."
+  },
+  {
+   "t": 231.91,
+   "text": "This is BD Rhapsody and a few others."
+  },
+  {
+   "t": 234.8,
+   "text": "We'll focus on plates and droplets, because those dominate the field."
+  },
+  {
+   "t": 238.78,
+   "text": "But across all three approaches, the principle is the same."
+  },
+  {
+   "t": 242.44,
+   "text": "Physical isolation, so that the barcoding reaction in one chamber can't contaminate the barcoding reaction in another."
+  },
+  {
+   "t": 250.24,
+   "text": "A different barcode delivered to each chamber."
+  },
+  {
+   "t": 253.21,
+   "text": "Then pool everything and let sequencing read it all back out."
+  },
+  {
+   "t": 256.76,
+   "text": "The chamber is the source of the partitioning."
+  },
+  {
+   "t": 259.51,
+   "text": "The barcode is the source of the identity."
+  },
+  {
+   "t": 262.35,
+   "text": "Together, they let you reconstruct a per-cell measurement from a pooled library."
+  },
+  {
+   "t": 267.22,
+   "text": "Now, why does this matter so much?"
+  },
+  {
+   "t": 269.07,
+   "text": "Why does this one engineering move open up so much new biology?"
+  },
+  {
+   "t": 273.52,
+   "text": "Let me give you the answer in three forms."
+  },
+  {
+   "t": 276.15,
+   "text": "First, rare cells become visible."
+  },
+  {
+   "t": 279.01,
+   "text": "In a bulk RNA-seq experiment, a cell type that represents one percent of your sample contributes one percent of the signal."
+  },
+  {
+   "t": 287.06,
+   "text": "It is drowned out by the other ninety-nine percent."
+  },
+  {
+   "t": 290.33,
+   "text": "You literally cannot find it in the data; the average has erased it."
+  },
+  {
+   "t": 294.52,
+   "text": "In single-cell, every cell is a separate measurement."
+  },
+  {
+   "t": 298.42,
+   "text": "The one-percent population shows up as its own cluster of cells with its own distinct expression profile."
+  },
+  {
+   "t": 305.17,
+   "text": "Rare populations — stem cells, rare neuron types, the one tumor cell out of a hundred that's resistant to chemotherapy — become trivially findable."
+  },
+  {
+   "t": 315.01,
+   "text": "Second, heterogeneity within a type becomes visible."
+  },
+  {
+   "t": 319.37,
+   "text": "Bulk RNA-seq of a tumor biopsy tells you the average."
+  },
+  {
+   "t": 323.61,
+   "text": "But the tumor cells in that biopsy are not uniform."
+  },
+  {
+   "t": 327.11,
+   "text": "Some are dividing, some are quiescent."
+  },
+  {
+   "t": 329.57,
+   "text": "Some are stem-like, some are differentiated."
+  },
+  {
+   "t": 332.26,
+   "text": "Some have one mutation, some have another."
+  },
+  {
+   "t": 335.15,
+   "text": "Bulk averages over all of them."
+  },
+  {
+   "t": 337.07,
+   "text": "Single-cell shows you the distribution."
+  },
+  {
+   "t": 339.7,
+   "text": "You can see whether the tumor has two states or twenty, whether the states change after treatment, which states predict outcomes."
+  },
+  {
+   "t": 347.62,
+   "text": "Third, mixed tissues become decomposable."
+  },
+  {
+   "t": 350.9,
+   "text": "A piece of tissue is never just one cell type."
+  },
+  {
+   "t": 354.48,
+   "text": "Brain tissue contains dozens of cell types — many flavors of neurons, several flavors of glia, vascular cells, immune cells."
+  },
+  {
+   "t": 363.91,
+   "text": "Bulk RNA-seq smears them all together."
+  },
+  {
+   "t": 367.06,
+   "text": "Single-cell lets you decompose the tissue into its component cell types and study each one separately."
+  },
+  {
+   "t": 374.46,
+   "text": "This is the foundation of every cell atlas project, every developmental trajectory, every tissue-wide map of a disease state."
+  },
+  {
+   "t": 383.73,
+   "text": "These three things — rare cells visible, heterogeneity visible, mixtures decomposable — are why single-cell took over biology."
+  },
+  {
+   "t": 393.21,
+   "text": "They're the answers you couldn't get from bulk, no matter how hard you tried."
+  },
+  {
+   "t": 397.28,
+   "text": "The barcoding trick made them all suddenly accessible."
+  },
+  {
+   "t": 400.95,
+   "text": "Now let me show you the methods that put the trick into practice, starting with plates."
+  }
+ ]
+}

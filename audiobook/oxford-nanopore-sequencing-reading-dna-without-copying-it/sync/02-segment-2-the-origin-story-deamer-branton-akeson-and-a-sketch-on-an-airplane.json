@@ -1,0 +1,287 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — The origin story: Deamer, Branton, Akeson, and a sketch on an airplane",
+ "duration": 430.98,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — The origin story: Deamer, Branton, Akeson, and a sketch on an airplane"
+  },
+  {
+   "t": 7.01,
+   "text": "Now let's go back to where this all started, because the origin story is genuinely beautiful, and it'll help you understand why the technology took so long to mature."
+  },
+  {
+   "t": 17.1,
+   "text": "The year is 1989."
+  },
+  {
+   "t": 19.34,
+   "text": "A biochemist named David Deamer, working at UC Santa Cruz, is on a plane."
+  },
+  {
+   "t": 25.14,
+   "text": "He is thinking about DNA."
+  },
+  {
+   "t": 26.94,
+   "text": "Specifically, he's thinking about a much older observation from electrophysiology — the field that studies electrical currents through biological membranes."
+  },
+  {
+   "t": 36.56,
+   "text": "For decades, biologists had known that you could measure tiny currents through individual ion channels in cell membranes using a technique called the patch clamp."
+  },
+  {
+   "t": 46.19,
+   "text": "A single channel — a single protein with a hole through it — could be isolated in a tiny patch of membrane, and the picoamp-scale current through that one molecule could be measured."
+  },
+  {
+   "t": 57.31,
+   "text": "Erwin Neher and Bert Sakmann had won the Nobel Prize for this kind of work."
+  },
+  {
+   "t": 62.06,
+   "text": "Deamer's insight, scribbled on a napkin on that plane, was this."
+  },
+  {
+   "t": 66.11,
+   "text": "What if you took a protein pore — a hole in a membrane just big enough for a strand of DNA to pass through — and pulled a DNA strand through it using an applied voltage?"
+  },
+  {
+   "t": 75.76,
+   "text": "The DNA would partially block the ionic current through the pore."
+  },
+  {
+   "t": 79.96,
+   "text": "Different bases, with their different chemistry and different shapes, ought to block the current by different amounts."
+  },
+  {
+   "t": 86.46,
+   "text": "If you watched the current trace as the strand went through, you might be able to read off the sequence."
+  },
+  {
+   "t": 92.65,
+   "text": "Deamer wrote down the idea, did some back-of-the-envelope calculations, and then went looking for collaborators."
+  },
+  {
+   "t": 100.0,
+   "text": "He found two — Dan Branton at Harvard, and a younger postdoc named Mark Akeson, who would eventually move to Santa Cruz to work with Deamer directly."
+  },
+  {
+   "t": 108.8,
+   "text": "The three of them spent the next decade trying to make this idea work."
+  },
+  {
+   "t": 113.06,
+   "text": "Now I want to be honest with you about what \"trying to make this idea work\" actually meant in the 1990s, because there's something instructive in the difficulty."
+  },
+  {
+   "t": 122.22,
+   "text": "The first paper showing that DNA actually does translocate through a biological pore in response to an applied voltage came out in 1996 — that's seven years after Deamer's napkin."
+  },
+  {
+   "t": 134.05,
+   "text": "The pore they used was a bacterial toxin called alpha-hemolysin, made by Staphylococcus aureus."
+  },
+  {
+   "t": 140.65,
+   "text": "Alpha-hemolysin is a beautiful molecule."
+  },
+  {
+   "t": 143.76,
+   "text": "It self-assembles in membranes into a mushroom-shaped seven-subunit pore with a narrow stem and a wider cap, and the hole through the middle is just about wide enough to accommodate a single strand of DNA."
+  },
+  {
+   "t": 157.32,
+   "text": "Hagan Bayley, who would later co-found Oxford Nanopore, had been working with alpha-hemolysin for stochastic sensing — using the pore to detect small molecules by how they perturbed the current."
+  },
+  {
+   "t": 168.94,
+   "text": "Deamer and his collaborators showed that DNA threads through this pore too, when you turn on the voltage."
+  },
+  {
+   "t": 176.03,
+   "text": "So the basic concept was validated by the late 1990s."
+  },
+  {
+   "t": 180.34,
+   "text": "DNA goes through."
+  },
+  {
+   "t": 181.84,
+   "text": "The current does change."
+  },
+  {
+   "t": 183.78,
+   "text": "But here's where the difficulty starts to bite."
+  },
+  {
+   "t": 186.74,
+   "text": "Alpha-hemolysin, as a sequencing pore, is bad."
+  },
+  {
+   "t": 190.72,
+   "text": "The hole isn't really a single narrow constriction — it's a long tunnel about ten nanometers deep, and at any given moment something like ten or fifteen bases are sitting inside the pore, all simultaneously affecting the current."
+  },
+  {
+   "t": 204.35,
+   "text": "The signal you measure isn't from one base at a time; it's an average over a whole stretch."
+  },
+  {
+   "t": 209.7,
+   "text": "Distinguishing which base is where, when the signal blends contributions from many neighbors, is genuinely hard."
+  },
+  {
+   "t": 217.2,
+   "text": "And on top of that, DNA threads through the pore at a ferocious speed — millions of bases per second under typical voltages — which is way too fast for any electrical measurement to resolve individual bases."
+  },
+  {
+   "t": 230.47,
+   "text": "The signal smears out into a noisy blur."
+  },
+  {
+   "t": 233.54,
+   "text": "So for years, the field knew the concept worked but didn't know how to extract real sequence from the messy current trace."
+  },
+  {
+   "t": 241.43,
+   "text": "The problem split into two hard sub-problems."
+  },
+  {
+   "t": 244.47,
+   "text": "One: find a better pore."
+  },
+  {
+   "t": 246.49,
+   "text": "Two: find a way to slow the DNA down."
+  },
+  {
+   "t": 249.65,
+   "text": "Both of those took roughly fifteen years of dogged work, by multiple labs, to solve."
+  },
+  {
+   "t": 255.1,
+   "text": "Let me give you the analogy."
+  },
+  {
+   "t": 256.75,
+   "text": "Imagine you've designed a coin-sorting machine."
+  },
+  {
+   "t": 259.27,
+   "text": "The coins fall through a chute, past a sensor, and the sensor measures their thickness so you can tell pennies from nickels from dimes."
+  },
+  {
+   "t": 266.87,
+   "text": "Great idea."
+  },
+  {
+   "t": 268.1,
+   "text": "But two problems."
+  },
+  {
+   "t": 269.48,
+   "text": "First, the chute is so long that two or three coins are inside it at once, and the sensor measures the sum of their thicknesses rather than each one individually."
+  },
+  {
+   "t": 278.97,
+   "text": "Second, the coins fall through too fast for the sensor to resolve each one cleanly."
+  },
+  {
+   "t": 284.49,
+   "text": "To make the machine work, you need to redesign the chute so only one coin is in the sensor zone at a time, and you need a brake at the top to release the coins one by one at a controlled rate."
+  },
+  {
+   "t": 295.54,
+   "text": "That, in essence, is exactly what nanopore researchers spent the 2000s and early 2010s figuring out."
+  },
+  {
+   "t": 302.68,
+   "text": "A new pore — that's the redesigned chute."
+  },
+  {
+   "t": 305.45,
+   "text": "A motor protein — that's the brake at the top."
+  },
+  {
+   "t": 308.39,
+   "text": "We'll get to both in the next two segments."
+  },
+  {
+   "t": 310.77,
+   "text": "What I want you to appreciate is that the path from Deamer's napkin sketch to a commercial sequencer took about twenty-five years."
+  },
+  {
+   "t": 318.29,
+   "text": "Deamer himself joked, in later interviews, that he had thought the whole thing would be solved in five."
+  },
+  {
+   "t": 324.3,
+   "text": "It wasn't."
+  },
+  {
+   "t": 325.22,
+   "text": "The reason it wasn't is that biological sensors at the single-molecule scale are extraordinarily noisy, and the dynamic range of the signal you're trying to read — the current difference between, say, an A and a G sitting in the pore — is a few picoamps out of a baseline of maybe a hundred picoamps."
+  },
+  {
+   "t": 344.15,
+   "text": "That's a few percent signal in a noisy background, and it has to be inferred at a rate of hundreds of times per second, on hundreds of pores in parallel."
+  },
+  {
+   "t": 353.97,
+   "text": "Every part of the engineering had to be tuned for it to work."
+  },
+  {
+   "t": 357.4,
+   "text": "Oxford Nanopore Technologies was founded in 2005, mostly built around Bayley's intellectual property and a vision that you could commercialize this."
+  },
+  {
+   "t": 367.04,
+   "text": "They didn't ship their first product until 2014 — nine years of internal R&D, much of it secret, to get the technology to the point where someone outside the lab could actually use it."
+  },
+  {
+   "t": 378.78,
+   "text": "When the MinION shipped, it shipped with an error rate of about thirty percent — meaning roughly one in three bases was wrong."
+  },
+  {
+   "t": 386.09,
+   "text": "That's catastrophic for almost any application."
+  },
+  {
+   "t": 389.3,
+   "text": "The early access community used it anyway, because long reads at thirty percent error were still better, for some problems, than short reads at no error."
+  },
+  {
+   "t": 398.14,
+   "text": "Over the next decade the error rate dropped from thirty percent to two percent to under one percent with the latest chemistries."
+  },
+  {
+   "t": 405.67,
+   "text": "We'll come back to that error-rate story later in the lecture, because it's one of the most dramatic technology improvement curves in the history of sequencing."
+  },
+  {
+   "t": 414.2,
+   "text": "For now: hold onto the origin story."
+  },
+  {
+   "t": 416.99,
+   "text": "Napkin in 1989."
+  },
+  {
+   "t": 418.87,
+   "text": "First DNA translocation in 1996."
+  },
+  {
+   "t": 422.8,
+   "text": "First commercial product in 2014."
+  },
+  {
+   "t": 425.64,
+   "text": "Mature, accurate, useful technology by about 2020."
+  },
+  {
+   "t": 429.93,
+   "text": "That's the arc."
+  }
+ ]
+}

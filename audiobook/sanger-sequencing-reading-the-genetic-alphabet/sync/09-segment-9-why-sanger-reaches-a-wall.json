@@ -1,0 +1,231 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Why Sanger reaches a wall",
+ "duration": 398.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Why Sanger reaches a wall"
+  },
+  {
+   "t": 2.91,
+   "text": "So let's talk about why, despite all its elegance and all its industrial polish, Sanger sequencing eventually hit a wall — and why the next wave of sequencing technologies had to be invented from scratch rather than just by adding more capillary machines."
+  },
+  {
+   "t": 18.1,
+   "text": "There are three fundamental limits to Sanger that you can't engineer your way past, no matter how clever your chemistry."
+  },
+  {
+   "t": 24.93,
+   "text": "Let me take them in order."
+  },
+  {
+   "t": 26.36,
+   "text": "First: read length."
+  },
+  {
+   "t": 28.12,
+   "text": "A single Sanger reaction can read, at best, about 800 to 1000 bases."
+  },
+  {
+   "t": 34.1,
+   "text": "Most production runs are more like 500 to 700."
+  },
+  {
+   "t": 38.05,
+   "text": "Why is that the limit?"
+  },
+  {
+   "t": 39.35,
+   "text": "It comes down to the basic physics of the chain-termination reaction."
+  },
+  {
+   "t": 43.41,
+   "text": "Remember, the sequence is read by separating fragments of different lengths in a capillary, and the longer fragments take longer to migrate."
+  },
+  {
+   "t": 52.76,
+   "text": "As the fragments get longer, the difference in migration time between, say, a 900-base fragment and a 901-base fragment gets smaller and smaller — they're nearly the same size relative to each other, and the resolving power of the gel matrix gets worse."
+  },
+  {
+   "t": 68.34,
+   "text": "The peaks start to merge."
+  },
+  {
+   "t": 69.99,
+   "text": "You can't tell which one came first."
+  },
+  {
+   "t": 72.04,
+   "text": "There's also the issue of signal."
+  },
+  {
+   "t": 73.95,
+   "text": "The longer the fragment, the rarer it is — because the ddNTP termination is a probabilistic event, and the chance of any given polymerase getting all the way to position 1000 without being terminated earlier is small."
+  },
+  {
+   "t": 87.33,
+   "text": "So the long fragments are sparse, the peaks are dim, and they get drowned out by noise as you go further."
+  },
+  {
+   "t": 94.09,
+   "text": "And there's also polymerase processivity."
+  },
+  {
+   "t": 96.79,
+   "text": "The polymerases used in Sanger sequencing are good — modified versions of T7 DNA polymerase, optimized for ddNTP incorporation — but they're not infinite."
+  },
+  {
+   "t": 107.34,
+   "text": "They occasionally fall off the template, especially in regions of unusual secondary structure or repetitive sequence."
+  },
+  {
+   "t": 115.22,
+   "text": "The longer the read, the higher the chance the polymerase has dropped off somewhere in the middle."
+  },
+  {
+   "t": 120.15,
+   "text": "Add it all up and you get a hard ceiling around 800 to 1000 bases."
+  },
+  {
+   "t": 124.81,
+   "text": "You can't push it much further with the chemistry as it exists."
+  },
+  {
+   "t": 128.5,
+   "text": "And for a three-billion-base genome, 800-base reads is a lot of reads."
+  },
+  {
+   "t": 133.65,
+   "text": "Thirty to forty million of them, as we said."
+  },
+  {
+   "t": 136.64,
+   "text": "Second: throughput per dollar."
+  },
+  {
+   "t": 138.97,
+   "text": "Each Sanger read costs something like a few dollars all-in — chemistry, primer, machine time, technician time, the per-reaction cost of the capillary instrument and its consumables."
+  },
+  {
+   "t": 150.01,
+   "text": "Modern Sanger costs have come down with time, but they're still in the range of $5 to $10 per read at most academic core facilities."
+  },
+  {
+   "t": 158.35,
+   "text": "So a human genome — forty million reads at five dollars each — would cost two hundred million dollars in raw sequencing alone, even with all the modern Sanger infrastructure."
+  },
+  {
+   "t": 168.89,
+   "text": "That is wildly more expensive than what NGS does."
+  },
+  {
+   "t": 172.25,
+   "text": "An Illumina NovaSeq, in 2026, can sequence a whole human genome at thirty-fold coverage for a few hundred dollars in consumables."
+  },
+  {
+   "t": 181.3,
+   "text": "That is a six-orders-of-magnitude improvement in cost per genome."
+  },
+  {
+   "t": 185.28,
+   "text": "Sanger simply can't get there."
+  },
+  {
+   "t": 187.26,
+   "text": "The fundamental cost per base of running an enzymatic reaction in a capillary, with manual sample handling at the front end, doesn't scale below a certain floor."
+  },
+  {
+   "t": 197.41,
+   "text": "Third: parallelism."
+  },
+  {
+   "t": 199.26,
+   "text": "A capillary instrument runs 96 reactions at a time, and a single run takes about half an hour."
+  },
+  {
+   "t": 206.0,
+   "text": "That's two hundred reactions per hour per machine, or a few thousand per day."
+  },
+  {
+   "t": 210.47,
+   "text": "NGS, by contrast, runs billions of reactions in parallel on a single chip."
+  },
+  {
+   "t": 216.46,
+   "text": "The Illumina flow cell is a small piece of glass, the size of a microscope slide, with maybe a billion DNA molecules attached to its surface, each being sequenced simultaneously by imaging cycles."
+  },
+  {
+   "t": 229.56,
+   "text": "The whole flow cell takes a day or two to run; the output is a few hundred billion bases of sequence."
+  },
+  {
+   "t": 236.04,
+   "text": "The factor of difference between Sanger and NGS in raw parallelism is something like seven or eight orders of magnitude."
+  },
+  {
+   "t": 243.76,
+   "text": "There is no way to parallelize Sanger to compete; you would need millions of capillaries, each loaded individually, each with its own chemistry tube — the physical infrastructure just doesn't make sense."
+  },
+  {
+   "t": 256.83,
+   "text": "So Sanger reaches a wall on read length (around 800-1000 bases), on cost per base (way too expensive for whole genomes), and on parallelism (can't run more than 96 things at once per machine)."
+  },
+  {
+   "t": 271.3,
+   "text": "NGS broke through all three walls simultaneously, by switching to a totally different paradigm — instead of generating a population of length-truncated fragments and separating them by size, NGS reads each base of a single DNA molecule in place by cycling chemistry across an imaging surface."
+  },
+  {
+   "t": 292.09,
+   "text": "It traded off read length (early NGS reads were only 50-100 bases, much shorter than Sanger) for massive parallelism."
+  },
+  {
+   "t": 301.96,
+   "text": "The deal was: short reads, but billions of them at once."
+  },
+  {
+   "t": 306.18,
+   "text": "That trade unlocked the entire modern genomics revolution."
+  },
+  {
+   "t": 310.48,
+   "text": "But here's the thing — and this is the part that matters most for the second half of this lecture — Sanger didn't disappear."
+  },
+  {
+   "t": 317.26,
+   "text": "It got displaced from the high-throughput, whole-genome end of the market, where NGS owned it."
+  },
+  {
+   "t": 322.99,
+   "text": "But for a whole class of jobs at the low-throughput, high-accuracy end, Sanger is still the best tool we have."
+  },
+  {
+   "t": 330.06,
+   "text": "We're going to spend the second hour of this lecture on what those jobs are, why Sanger is still right for them, how the technique actually gets used in modern labs day to day, and what the future of this old technology looks like in a world where everything else has moved on."
+  },
+  {
+   "t": 344.08,
+   "text": "So let's take a break."
+  },
+  {
+   "t": 345.33,
+   "text": "Welcome back."
+  },
+  {
+   "t": 346.35,
+   "text": "In the first hour we built up the chemistry of Sanger sequencing from the chain-termination idea through the four-color dye terminator chemistry, the capillary instruments, the Human Genome Project, and the limits that eventually forced the field to move beyond Sanger for large-scale work."
+  },
+  {
+   "t": 363.74,
+   "text": "In this second hour, we'll spend our time on how Sanger is actually used today, in real labs, for real problems — because despite the rise of NGS, this technique is alive and well, and learning to use it competently is a basic skill for any working molecular biologist."
+  },
+  {
+   "t": 380.94,
+   "text": "We'll cover the modern workflow, how to read chromatograms, the clinical uses, the microbiology applications, accuracy comparisons with NGS, the economics, the rare attempts to push read length further, and finally what Sanger's legacy means for sequencing in general."
+  },
+  {
+   "t": 398.0,
+   "text": "Let's go."
+  }
+ ]
+}

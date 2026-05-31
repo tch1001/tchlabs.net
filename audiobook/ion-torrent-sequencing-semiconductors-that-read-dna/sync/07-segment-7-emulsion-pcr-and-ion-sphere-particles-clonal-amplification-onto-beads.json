@@ -1,0 +1,239 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Emulsion PCR and Ion Sphere Particles: clonal amplification onto beads",
+ "duration": 400.06,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Emulsion PCR and Ion Sphere Particles: clonal amplification onto beads"
+  },
+  {
+   "t": 7.4,
+   "text": "We've been assuming, this whole time, that each well contains a bead, and each bead is covered with many many identical copies of one template DNA strand."
+  },
+  {
+   "t": 17.86,
+   "text": "Now let's see how that bead actually gets made."
+  },
+  {
+   "t": 20.59,
+   "text": "This is the library preparation and template amplification step, and it happens before any chip ever touches the instrument."
+  },
+  {
+   "t": 28.5,
+   "text": "Step one is to make the library."
+  },
+  {
+   "t": 30.89,
+   "text": "You take your input DNA — could be human genomic DNA, could be a bacterial isolate, could be a PCR amplicon panel — and you fragment it (or, in the case of a panel, you already have it as discrete amplicons)."
+  },
+  {
+   "t": 44.73,
+   "text": "You ligate adapter sequences to the ends of each fragment."
+  },
+  {
+   "t": 48.91,
+   "text": "The adapters are crucial."
+  },
+  {
+   "t": 50.7,
+   "text": "One of them carries a sequence that's complementary to a primer attached to the bead."
+  },
+  {
+   "t": 56.05,
+   "text": "The other carries a sequence that's complementary to the sequencing primer."
+  },
+  {
+   "t": 60.66,
+   "text": "So now every fragment in your library is, schematically: bead-adapter, then your insert, then sequencing-adapter."
+  },
+  {
+   "t": 68.72,
+   "text": "That's the library."
+  },
+  {
+   "t": 70.04,
+   "text": "Make billions of these, all different inserts, all the same adapter ends."
+  },
+  {
+   "t": 74.72,
+   "text": "Step two is the amplification."
+  },
+  {
+   "t": 77.01,
+   "text": "Ion Torrent uses emulsion PCR, abbreviated emPCR, which is the same fundamental trick 454 used."
+  },
+  {
+   "t": 85.72,
+   "text": "The idea is this."
+  },
+  {
+   "t": 87.54,
+   "text": "You want to amplify each library fragment into a clonal population — many identical copies — and you want each clonal population physically isolated from every other one, so they don't mix."
+  },
+  {
+   "t": 99.85,
+   "text": "The way you achieve this is to do PCR not in a tube, but in millions of tiny droplets."
+  },
+  {
+   "t": 106.0,
+   "text": "You mix your library with PCR reagents — polymerase, dNTPs, primers, buffer — and with a vast excess of tiny beads."
+  },
+  {
+   "t": 115.26,
+   "text": "Each bead is coated with primers complementary to one of the adapter sequences on your library fragments."
+  },
+  {
+   "t": 121.8,
+   "text": "Then you take all of that aqueous mix and you emulsify it into oil — vigorously, with surfactants, until the aqueous phase breaks up into millions and millions of tiny water-in-oil droplets, each one a few microns across, each one suspended separately in the oil."
+  },
+  {
+   "t": 139.53,
+   "text": "The key statistical magic is this: at the right dilution, each droplet contains, on average, less than one library molecule."
+  },
+  {
+   "t": 148.44,
+   "text": "So most droplets get either zero library molecules or one."
+  },
+  {
+   "t": 152.64,
+   "text": "And each droplet also contains, on average, around one bead."
+  },
+  {
+   "t": 157.28,
+   "text": "Most useful droplets — the ones that produce sequenceable data — will end up with exactly one template molecule and exactly one bead."
+  },
+  {
+   "t": 166.22,
+   "text": "The rest will get thrown away later."
+  },
+  {
+   "t": 168.4,
+   "text": "Now you do PCR on the whole emulsion."
+  },
+  {
+   "t": 170.85,
+   "text": "The droplets each act as a tiny independent reaction tube."
+  },
+  {
+   "t": 175.39,
+   "text": "In a droplet with one template and one bead, the PCR amplifies that single template, and the new strands get captured by the primers on the bead, growing as a population physically anchored to that bead's surface."
+  },
+  {
+   "t": 188.49,
+   "text": "By the end of the PCR, the bead is coated with a few million identical copies of that one starting template."
+  },
+  {
+   "t": 195.71,
+   "text": "Every other droplet has done the same thing with its own one starting template, producing a bead coated with a clonal population of that sequence."
+  },
+  {
+   "t": 204.6,
+   "text": "So the emulsion has, in effect, parallelized clonal amplification across millions of independent reactions."
+  },
+  {
+   "t": 212.49,
+   "text": "You break the emulsion at the end, recover the beads, and you now have a population of beads, each one carrying a clonal population of a single library member."
+  },
+  {
+   "t": 222.38,
+   "text": "Ion Torrent calls these beads Ion Sphere Particles, or ISPs."
+  },
+  {
+   "t": 227.91,
+   "text": "They're a few microns across, made of a polymer like polystyrene, coated with primers and then, after emPCR, coated with clonal template."
+  },
+  {
+   "t": 237.5,
+   "text": "The analogy here is: emPCR is a way to run millions of tiny PCRs in parallel without them contaminating each other."
+  },
+  {
+   "t": 246.6,
+   "text": "Each droplet is a tiny tube."
+  },
+  {
+   "t": 248.89,
+   "text": "The oil is the wall between tubes."
+  },
+  {
+   "t": 251.25,
+   "text": "The bead inside each droplet is a Velcro pad that captures the amplified product, so when you break the emulsion, you can recover the products as discrete physical objects (beads) rather than a soup of mixed DNA."
+  },
+  {
+   "t": 265.05,
+   "text": "After emPCR, you have to do some enrichment."
+  },
+  {
+   "t": 268.15,
+   "text": "Many of the beads in the population will have nothing on them — those came from droplets that got no template molecule."
+  },
+  {
+   "t": 275.47,
+   "text": "You want to discard the empty beads and keep only the template-loaded ones."
+  },
+  {
+   "t": 279.74,
+   "text": "Ion Torrent does this with a system involving magnetic capture beads that bind to a separate adapter sequence on the amplified DNA; loaded beads get pulled out, empties get washed away."
+  },
+  {
+   "t": 291.8,
+   "text": "After enrichment, you've got a clean population of template-loaded ISPs ready to load onto the chip."
+  },
+  {
+   "t": 298.15,
+   "text": "The whole emPCR plus enrichment process takes a few hours and is done on a separate instrument from the sequencer — the Ion Chef, in modern workflows, which automates the library-to-loaded-chip pipeline."
+  },
+  {
+   "t": 311.19,
+   "text": "The Ion Chef takes your prepared library, runs the emPCR, enriches the beads, and even loads them onto the sequencing chip for you."
+  },
+  {
+   "t": 320.19,
+   "text": "It's an attempt to push the hands-on workflow down to \"pipet some library into a cartridge, walk away, come back to a loaded chip."
+  },
+  {
+   "t": 328.56,
+   "text": "\" That kind of workflow simplification is critical in a clinical lab, where the operators may not be sequencing experts."
+  },
+  {
+   "t": 336.1,
+   "text": "One contrast to keep in mind: Illumina's amplification step is completely different."
+  },
+  {
+   "t": 341.4,
+   "text": "Illumina does bridge amplification on a flowcell surface — the templates aren't on beads, they're directly attached to the flowcell glass, and they grow as clusters by repeatedly arching over and copying themselves against neighbor primers."
+  },
+  {
+   "t": 356.06,
+   "text": "Different geometry, same goal: clonal amplification of each library member into a population large enough to be detected."
+  },
+  {
+   "t": 364.7,
+   "text": "Ion Torrent inherited 454's emulsion-bead approach because the chip architecture demands physical particles you can drop into wells."
+  },
+  {
+   "t": 374.2,
+   "text": "Illumina inherited bridge amplification because its detection is on a flat imaging surface."
+  },
+  {
+   "t": 380.46,
+   "text": "Each method co-evolved with its detection chemistry."
+  },
+  {
+   "t": 383.84,
+   "text": "Now the beads exist."
+  },
+  {
+   "t": 385.45,
+   "text": "Each is a few microns across, carrying millions of copies of a single template."
+  },
+  {
+   "t": 390.49,
+   "text": "The next problem is getting them onto the chip — and specifically, getting them into the wells, one bead per well, without doubles."
+  },
+  {
+   "t": 398.34,
+   "text": "That's harder than it sounds."
+  }
+ ]
+}

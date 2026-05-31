@@ -1,0 +1,171 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — The Sanger trace as a clinical document",
+ "duration": 349.5,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — The Sanger trace as a clinical document"
+  },
+  {
+   "t": 4.51,
+   "text": "Now let me sharpen the chromatogram discussion by walking into a clinical context — because in a diagnostic lab, the Sanger trace is not just a research artifact, it's a legal document that gets reported to a patient's doctor, and the standards for reading it are correspondingly high."
+  },
+  {
+   "t": 20.85,
+   "text": "The setup: a patient with a suspected inherited disease comes into a clinical genetics service."
+  },
+  {
+   "t": 27.18,
+   "text": "Maybe a family history of breast cancer; we're checking BRCA1 and BRCA2."
+  },
+  {
+   "t": 33.05,
+   "text": "Maybe a child with intellectual disability; we're looking at the genes on a developmental disorder panel."
+  },
+  {
+   "t": 38.76,
+   "text": "The lab takes blood, extracts DNA, and either (in the modern workflow) runs a targeted gene panel by NGS first, or (in some labs and for some specific genes) directly Sanger-sequences the genes of interest."
+  },
+  {
+   "t": 53.77,
+   "text": "Either way, Sanger plays a role: either as the primary sequencing method, or as the confirmatory step after an NGS finding."
+  },
+  {
+   "t": 61.99,
+   "text": "The pattern of peaks the lab is looking for tells specific biological stories."
+  },
+  {
+   "t": 67.28,
+   "text": "Let me walk you through three of them, because they cover most of what clinical Sanger interpretation actually involves."
+  },
+  {
+   "t": 74.51,
+   "text": "First: heterozygous SNPs."
+  },
+  {
+   "t": 77.72,
+   "text": "A heterozygous variant at a single base — say, the patient has one copy of the reference C and one copy of a variant T at a particular position — shows up on Sanger as a clean double peak at that position."
+  },
+  {
+   "t": 90.97,
+   "text": "Half the template molecules give a C peak; the other half give a T peak."
+  },
+  {
+   "t": 96.69,
+   "text": "The two peaks are roughly equal in height, sitting side by side at the same x-axis position."
+  },
+  {
+   "t": 102.81,
+   "text": "The base-caller will usually call this position with a IUPAC ambiguity code — Y, in this case, for \"C or T\" — and the trace will be unambiguous."
+  },
+  {
+   "t": 112.94,
+   "text": "This is the gold standard heterozygous-variant signature in Sanger."
+  },
+  {
+   "t": 117.4,
+   "text": "NGS data, by contrast, would show this same variant as a pile of reads where roughly 50% have C and 50% have T at this position — that's the same information, but it's presented as a statistical summary across many independent observations rather than as a single visual readout."
+  },
+  {
+   "t": 136.74,
+   "text": "The Sanger trace is, in a real sense, more intuitive: you can see the heterozygosity in the shape of the peak."
+  },
+  {
+   "t": 144.85,
+   "text": "It's a beautiful display of a beautiful piece of biology."
+  },
+  {
+   "t": 148.95,
+   "text": "Second: allele dropout."
+  },
+  {
+   "t": 151.24,
+   "text": "This is a failure mode you have to know about."
+  },
+  {
+   "t": 153.76,
+   "text": "Allele dropout happens when, for some reason, one of the two chromosomal copies isn't amplified or sequenced as efficiently as the other — maybe there's a SNP under the primer that prevents the primer from annealing to one allele, so PCR only amplifies the other allele."
+  },
+  {
+   "t": 170.57,
+   "text": "The Sanger trace then shows a clean single peak at the variant position, looking homozygous, even though the patient is actually heterozygous."
+  },
+  {
+   "t": 179.7,
+   "text": "You miss the variant entirely."
+  },
+  {
+   "t": 181.78,
+   "text": "This is a real and documented problem in clinical sequencing, and the standard mitigation is to use two independent primer sets and confirm that they give consistent results, or to combine Sanger with another technique (like NGS) that has different amplification biases."
+  },
+  {
+   "t": 199.12,
+   "text": "Allele dropout is the silent killer of clinical Sanger interpretation, because the trace looks beautiful — it just happens to be reporting only half the truth."
+  },
+  {
+   "t": 209.38,
+   "text": "Third: deletion signatures."
+  },
+  {
+   "t": 211.7,
+   "text": "If the patient has a heterozygous deletion of a few bases at a particular position, the Sanger trace shows something distinctive."
+  },
+  {
+   "t": 220.15,
+   "text": "Up to the deletion site, the trace is clean."
+  },
+  {
+   "t": 222.95,
+   "text": "From the deletion site onwards, the trace becomes a superposition of two reading frames — the reference sequence and the deleted sequence — offset by however many bases were deleted."
+  },
+  {
+   "t": 234.35,
+   "text": "So instead of clean single peaks, you see overlapping double peaks at every position downstream of the deletion."
+  },
+  {
+   "t": 241.99,
+   "text": "This is the same pattern you see with mixed-population CRISPR edits, for exactly the same reason: you're reading two sequences simultaneously, and they're offset."
+  },
+  {
+   "t": 252.1,
+   "text": "The presence of this signature, in a clinical context, immediately tells you there's an indel — and you can often work out the size of the indel by looking at where the trace \"re-syncs\" with the reference, if you know the sequence well enough."
+  },
+  {
+   "t": 265.49,
+   "text": "Software tools like Mutation Surveyor and Indigo and CRISP-ID are designed to deconvolve these mixed traces and report the underlying indels."
+  },
+  {
+   "t": 274.74,
+   "text": "The point I want to make in this segment is that the Sanger trace, properly read, is an extraordinarily rich source of clinical information."
+  },
+  {
+   "t": 283.17,
+   "text": "It tells you not just what bases are there, but in what proportions, and in what configuration."
+  },
+  {
+   "t": 288.22,
+   "text": "The heterozygous double peak, the allele dropout, the deletion signature — these are all directly readable from the trace by a trained eye."
+  },
+  {
+   "t": 296.89,
+   "text": "Clinical labs employ certified molecular pathologists whose specific job is to interpret these traces, and the interpretation involves a combination of trace reading, comparison to the reference, knowledge of the gene's variant landscape, and clinical context."
+  },
+  {
+   "t": 312.54,
+   "text": "In a world where NGS dominates the production of raw variant data, Sanger remains the technique that lets you look at a specific position with your own eyes."
+  },
+  {
+   "t": 322.51,
+   "text": "It's the diagnostic equivalent of going from a CT scan back to the original X-ray to confirm a finding — you go back to the simpler, more direct technique because you can see what's there without trusting a complex pipeline to summarize it for you."
+  },
+  {
+   "t": 337.1,
+   "text": "The clinical community trusts Sanger because the chain of inference is short: the trace shows you the bases, the bases tell you the genotype, the genotype tells you the diagnosis."
+  },
+  {
+   "t": 347.67,
+   "text": "Nothing is hidden in software."
+  }
+ ]
+}

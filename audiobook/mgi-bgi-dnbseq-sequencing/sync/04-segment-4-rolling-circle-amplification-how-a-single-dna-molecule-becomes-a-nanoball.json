@@ -1,0 +1,239 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Rolling circle amplification: how a single DNA molecule becomes a nanoball",
+ "duration": 409.12,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Rolling circle amplification: how a single DNA molecule becomes a nanoball"
+  },
+  {
+   "t": 6.64,
+   "text": "Okay."
+  },
+  {
+   "t": 7.41,
+   "text": "Now let's open the hood and look at how a nanoball is actually built."
+  },
+  {
+   "t": 10.96,
+   "text": "This is the most distinctive piece of the whole platform, and it's a beautiful piece of biochemistry, and once you have it in your head, the rest of the chemistry follows."
+  },
+  {
+   "t": 20.96,
+   "text": "You start with a library — DNA fragments, somewhere between two hundred and five hundred base pairs long, depending on the application — produced by the same kinds of library prep we discussed for Illumina."
+  },
+  {
+   "t": 31.95,
+   "text": "Fragmentation, end repair, A-tailing, adapter ligation."
+  },
+  {
+   "t": 36.73,
+   "text": "The same general workflow."
+  },
+  {
+   "t": 38.44,
+   "text": "The adapters MGI uses are specific to their platform — they have their own primer binding sites and their own anchor sequences — but the basic library construction is, at a high level, the same kind of thing you'd do for an Illumina run."
+  },
+  {
+   "t": 53.09,
+   "text": "You end up with a tube of double-stranded fragments, each one with adapters on both ends."
+  },
+  {
+   "t": 58.52,
+   "text": "Now here is where DNBSEQ diverges sharply from Illumina."
+  },
+  {
+   "t": 62.34,
+   "text": "Instead of loading these linear fragments onto a flow cell and letting them bridge-amplify, the DNB workflow takes an extra in-tube step: circularize each fragment."
+  },
+  {
+   "t": 74.38,
+   "text": "A specific enzyme — a single-stranded DNA ligase — joins the two ends of each fragment together, through an intermediate splint oligo, so that what was a linear fragment becomes a small closed circle."
+  },
+  {
+   "t": 87.62,
+   "text": "Each circle is your original fragment, now joined head-to-tail with itself, with a single ligation junction."
+  },
+  {
+   "t": 95.28,
+   "text": "Why circularize?"
+  },
+  {
+   "t": 96.7,
+   "text": "Because of what comes next, which is the magic."
+  },
+  {
+   "t": 99.3,
+   "text": "The circularized libraries are then fed into a reaction with a remarkable enzyme called Phi 29 DNA polymerase."
+  },
+  {
+   "t": 107.55,
+   "text": "Phi 29 is a polymerase from a bacteriophage — a virus that infects bacteria — and it has two properties that make it almost uniquely suited to this job."
+  },
+  {
+   "t": 117.84,
+   "text": "First, it is highly processive, meaning it can synthesize tens of thousands of bases without falling off the template."
+  },
+  {
+   "t": 125.15,
+   "text": "Second, and even more importantly, it has strong strand displacement activity, meaning that when it encounters double-stranded DNA in front of it, it doesn't stop or get stuck — it just peels the existing strand off the template and keeps going."
+  },
+  {
+   "t": 140.41,
+   "text": "Now imagine what happens when you put Phi 29 on a small circular template."
+  },
+  {
+   "t": 145.64,
+   "text": "The polymerase grabs the circle, starts synthesizing a complementary strand around it, and goes once around."
+  },
+  {
+   "t": 153.32,
+   "text": "After one full lap, the polymerase encounters the strand it just finished — the first base it laid down is now in front of it."
+  },
+  {
+   "t": 161.72,
+   "text": "With a normal polymerase, that would be the end of the line."
+  },
+  {
+   "t": 165.03,
+   "text": "With Phi 29's strand displacement activity, the enzyme just peels its own previous lap off the template and keeps walking around the circle, leaving the displaced strand dangling out behind it."
+  },
+  {
+   "t": 177.24,
+   "text": "It does another lap."
+  },
+  {
+   "t": 178.51,
+   "text": "Then another."
+  },
+  {
+   "t": 179.49,
+   "text": "Then another."
+  },
+  {
+   "t": 180.45,
+   "text": "The polymerase walks around the circle hundreds of times, like a runner on a track, never stopping, leaving behind a single very long single-stranded concatemer of head-to-tail copies of the original circle."
+  },
+  {
+   "t": 194.16,
+   "text": "This is rolling circle amplification, or RCA."
+  },
+  {
+   "t": 197.72,
+   "text": "The name is exact — the polymerase rolls around the circle, amplifying it linearly with each lap."
+  },
+  {
+   "t": 204.8,
+   "text": "After a few minutes of reaction, each starting circle has produced a single-stranded DNA molecule containing roughly three hundred copies of the original fragment sequence, all in a row, connected head to tail, with the original adapter sequences appearing at the boundary between every pair of copies."
+  },
+  {
+   "t": 223.22,
+   "text": "But that long single-stranded molecule is not yet a ball."
+  },
+  {
+   "t": 227.1,
+   "text": "It is just a long, floppy piece of single-stranded DNA — roughly one hundred thousand bases long, total — and if you left it in solution it would just flop around."
+  },
+  {
+   "t": 238.31,
+   "text": "What turns it into a ball is the next step, which is mostly physics rather than enzymology."
+  },
+  {
+   "t": 243.45,
+   "text": "The reaction conditions are tuned — salt, temperature, the presence of certain crowding agents — such that the long concatemer collapses, by its own internal hybridization and folding, into a compact ball roughly two hundred nanometers across."
+  },
+  {
+   "t": 259.59,
+   "text": "The exact ball-formation kinetics involve some clever buffer chemistry, but the principle is straightforward: a sufficiently long single-stranded DNA, in the right ionic conditions, naturally condenses into a compact spherical structure."
+  },
+  {
+   "t": 274.95,
+   "text": "The negative charges on the phosphate backbone make sure that the ball doesn't get too big — beyond a certain size, electrostatic repulsion limits further condensation — and they also make sure that the balls repel each other in solution, so they don't aggregate into clumps."
+  },
+  {
+   "t": 290.4,
+   "text": "The end product is what gives the platform its name."
+  },
+  {
+   "t": 293.37,
+   "text": "A DNA nanoball."
+  },
+  {
+   "t": 295.11,
+   "text": "A single particle, on the order of two hundred nanometers in diameter, containing about three hundred head-to-tail copies of your starting fragment, all on a single covalent backbone."
+  },
+  {
+   "t": 306.15,
+   "text": "Three hundred copies, one molecule."
+  },
+  {
+   "t": 308.71,
+   "text": "One nanoball is, structurally, one starting fragment amplified linearly, then folded up."
+  },
+  {
+   "t": 315.75,
+   "text": "Contrast that with an Illumina cluster, which is roughly one thousand independent molecules, exponentially amplified in place, sitting next to each other on a glass surface."
+  },
+  {
+   "t": 326.82,
+   "text": "The Illumina cluster is a colony of clones."
+  },
+  {
+   "t": 329.89,
+   "text": "The DNB is a single molecule with internal redundancy."
+  },
+  {
+   "t": 333.8,
+   "text": "The implications of this structural difference will show up over and over in the rest of the lecture."
+  },
+  {
+   "t": 339.42,
+   "text": "No exponential amplification, so no PCR bias from compounded efficiency differences."
+  },
+  {
+   "t": 345.59,
+   "text": "No clonal amplification of errors — if Phi 29 makes a mistake on one lap of the circle, it's one error out of three hundred copies, which gets outvoted in the consensus signal."
+  },
+  {
+   "t": 357.02,
+   "text": "No bridge amplification step on the flow cell at all, so loading is faster and the flow cell chemistry is simpler."
+  },
+  {
+   "t": 364.54,
+   "text": "And — this is the big one for clinical work — no opportunity for index hopping, the failure mode where adapter sequences from one sample get mistakenly attached to fragments from another during the on-flow-cell amplification step."
+  },
+  {
+   "t": 379.46,
+   "text": "We'll devote a whole segment to that in Segment 13."
+  },
+  {
+   "t": 383.09,
+   "text": "So: take a circular DNA template."
+  },
+  {
+   "t": 385.77,
+   "text": "Add Phi 29 polymerase."
+  },
+  {
+   "t": 388.55,
+   "text": "Let it walk around the circle three hundred times, displacing its own previous strands."
+  },
+  {
+   "t": 394.57,
+   "text": "Watch the resulting concatemer fold into a ball."
+  },
+  {
+   "t": 398.12,
+   "text": "That's how a nanoball gets built."
+  },
+  {
+   "t": 400.16,
+   "text": "The whole reaction takes maybe twenty to thirty minutes in a tube, before any flow cell is involved."
+  },
+  {
+   "t": 406.36,
+   "text": "Now let's load those balls onto a surface."
+  }
+ ]
+}

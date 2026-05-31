@@ -1,0 +1,219 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Sanger today",
+ "duration": 333.19,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Sanger today"
+  },
+  {
+   "t": 2.35,
+   "text": "So if Sanger is no longer the technique you'd reach for to sequence a whole genome — and it isn't — what is it the right tool for?"
+  },
+  {
+   "t": 11.03,
+   "text": "Let me give you the working answer that any practicing molecular biologist would give you in 2026."
+  },
+  {
+   "t": 16.96,
+   "text": "Sanger sequencing today is the technique you use when you need to read a small, specific piece of DNA, with high accuracy, at low cost per sample, and you don't need to read very many samples."
+  },
+  {
+   "t": 28.94,
+   "text": "That's the niche."
+  },
+  {
+   "t": 30.1,
+   "text": "And it turns out to be a huge and important niche, because the daily work of most molecular biology labs involves exactly that kind of question."
+  },
+  {
+   "t": 38.41,
+   "text": "Let me give you concrete examples."
+  },
+  {
+   "t": 40.51,
+   "text": "Verifying a cloned construct."
+  },
+  {
+   "t": 42.88,
+   "text": "You spent two weeks building a plasmid in the lab — cutting and pasting your gene of interest into a vector, ligating it together, transforming it into bacteria, picking colonies."
+  },
+  {
+   "t": 54.15,
+   "text": "Before you use that plasmid for anything, you want to confirm that the sequence is correct — that the gene is in the right orientation, that the junctions are clean, that no errors crept in during the cloning."
+  },
+  {
+   "t": 65.8,
+   "text": "The standard quality-control move is to send the plasmid for Sanger sequencing with a couple of primers that flank the insert."
+  },
+  {
+   "t": 73.39,
+   "text": "You get back a chromatogram for each primer, you align it to the expected sequence, and you confirm that everything is as designed."
+  },
+  {
+   "t": 81.39,
+   "text": "Total time: overnight."
+  },
+  {
+   "t": 83.33,
+   "text": "Total cost: maybe ten dollars per primer reaction."
+  },
+  {
+   "t": 86.84,
+   "text": "This is the bread and butter of every cloning lab in the world, and it has been since the 1990s."
+  },
+  {
+   "t": 93.14,
+   "text": "Confirming a CRISPR edit."
+  },
+  {
+   "t": 94.81,
+   "text": "You designed a guide RNA to target a specific site in a gene, you delivered it to your cells along with Cas9, and the cells should now have a mutation at that site — either a small insertion or deletion, or a precise edit if you supplied a repair template."
+  },
+  {
+   "t": 110.55,
+   "text": "To confirm that the edit happened, you PCR-amplify the targeted region from the edited cells and send the PCR product for Sanger sequencing."
+  },
+  {
+   "t": 119.11,
+   "text": "The chromatogram tells you what's at that site."
+  },
+  {
+   "t": 121.83,
+   "text": "If you see a clean single sequence matching your intended edit, you have a successful edit."
+  },
+  {
+   "t": 127.29,
+   "text": "If you see overlapping double peaks starting at the cut site, you've got a heterozygous edit or a mixture of edited and unedited cells."
+  },
+  {
+   "t": 135.59,
+   "text": "If you see no change, the edit didn't take."
+  },
+  {
+   "t": 138.6,
+   "text": "Cheap, fast, definitive."
+  },
+  {
+   "t": 141.2,
+   "text": "Almost every CRISPR validation in the world uses Sanger."
+  },
+  {
+   "t": 145.25,
+   "text": "Validating a single variant."
+  },
+  {
+   "t": 147.44,
+   "text": "A patient comes into a clinical lab with a suspected genetic disease."
+  },
+  {
+   "t": 151.7,
+   "text": "Whole-exome or whole-genome sequencing on NGS has flagged a candidate variant — a single base change in a particular gene, possibly disease-causing."
+  },
+  {
+   "t": 161.86,
+   "text": "Before reporting that variant to the patient's doctor, the clinical lab typically confirms it by Sanger sequencing the relevant region from the patient's DNA."
+  },
+  {
+   "t": 171.54,
+   "text": "NGS has, despite its accuracy improvements, a small but real false-positive rate at single-base resolution, and Sanger — being a fundamentally different chemistry with different failure modes — provides an independent confirmation."
+  },
+  {
+   "t": 186.21,
+   "text": "The clinical standard, in many labs and many jurisdictions, is \"NGS finds it, Sanger confirms it."
+  },
+  {
+   "t": 193.41,
+   "text": "\" Sanger has the role of the trusted second opinion."
+  },
+  {
+   "t": 196.53,
+   "text": "Sequencing a small region from many samples."
+  },
+  {
+   "t": 199.76,
+   "text": "You're a microbial ecologist studying the bacterial diversity in soil samples."
+  },
+  {
+   "t": 205.32,
+   "text": "You PCR-amplify the 16S ribosomal RNA gene — a roughly 1500-base marker gene that's standard for bacterial identification — from each sample, clone it, pick colonies, and Sanger-sequence each colony."
+  },
+  {
+   "t": 220.49,
+   "text": "Each read gives you the identity of one bacterium in your sample."
+  },
+  {
+   "t": 225.46,
+   "text": "You can get reasonable diversity profiles from a few hundred Sanger reads per sample."
+  },
+  {
+   "t": 230.62,
+   "text": "We'll come back to this in detail in Segment 14."
+  },
+  {
+   "t": 234.2,
+   "text": "The unifying logic of all these uses is: the unit of interest is small (a few hundred to a thousand bases), the number of samples is modest (one to a few hundred), the accuracy required is high, and you need the answer in a day or two with minimal infrastructure."
+  },
+  {
+   "t": 251.45,
+   "text": "NGS, by contrast, makes sense when the unit of interest is huge (whole genomes, transcriptomes, metagenomes) and the cost per base needs to be at the absolute floor."
+  },
+  {
+   "t": 263.19,
+   "text": "If you've only got one little region you care about, paying to run a whole Illumina lane for it is overkill — it costs more, takes longer to get the data processed, and produces vastly more data than you need."
+  },
+  {
+   "t": 274.94,
+   "text": "The fixed costs of running an NGS lane are high; the marginal cost per read is low."
+  },
+  {
+   "t": 280.75,
+   "text": "The opposite is true of Sanger: low fixed cost, higher marginal cost per read."
+  },
+  {
+   "t": 286.32,
+   "text": "Sanger wins at low volume; NGS wins at high volume."
+  },
+  {
+   "t": 291.23,
+   "text": "There's a useful analogy here."
+  },
+  {
+   "t": 293.01,
+   "text": "Sanger is the postcard."
+  },
+  {
+   "t": 294.86,
+   "text": "NGS is the freight container."
+  },
+  {
+   "t": 297.3,
+   "text": "If you want to send one personal note to one friend, you write a postcard, you put a stamp on it, you drop it in the mail."
+  },
+  {
+   "t": 304.09,
+   "text": "Cheap, fast, one-to-one."
+  },
+  {
+   "t": 306.05,
+   "text": "If you want to ship ten thousand identical packages across the Pacific, you load a freight container onto a ship."
+  },
+  {
+   "t": 312.89,
+   "text": "Per-package cost is tiny, but you'd be insane to use a freight container for a single postcard."
+  },
+  {
+   "t": 318.25,
+   "text": "The fixed cost of loading the container, sailing the ship, unloading at the dock, dwarfs whatever you're moving."
+  },
+  {
+   "t": 324.52,
+   "text": "Match the technology to the volume of the job."
+  },
+  {
+   "t": 327.56,
+   "text": "That's why both Sanger and NGS coexist, and probably will for decades to come."
+  }
+ ]
+}

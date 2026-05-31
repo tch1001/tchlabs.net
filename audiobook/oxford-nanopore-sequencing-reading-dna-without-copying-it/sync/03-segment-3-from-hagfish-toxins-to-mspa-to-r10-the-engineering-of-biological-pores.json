@@ -1,0 +1,219 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — From hagfish toxins to MspA to R10: the engineering of biological pores",
+ "duration": 463.78,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — From hagfish toxins to MspA to R10: the engineering of biological pores"
+  },
+  {
+   "t": 7.78,
+   "text": "So let's get into the actual chemistry."
+  },
+  {
+   "t": 9.66,
+   "text": "The pore is, physically, the heart of the technology."
+  },
+  {
+   "t": 13.96,
+   "text": "Everything else — the motor, the basecaller, the device, the cloud software — exists to serve the pore."
+  },
+  {
+   "t": 21.14,
+   "text": "So if we're going to understand nanopore sequencing, we need to understand how the pore was engineered."
+  },
+  {
+   "t": 26.75,
+   "text": "The first-generation pore, as I mentioned, was alpha-hemolysin — a bacterial toxin from Staphylococcus aureus."
+  },
+  {
+   "t": 34.34,
+   "text": "It's a beautiful molecule for laboratory demonstration: seven identical subunits self-assemble in a lipid membrane to form a stable, well-defined pore with a known structure."
+  },
+  {
+   "t": 46.2,
+   "text": "You can stick DNA in it, apply voltage, and watch the strand translocate."
+  },
+  {
+   "t": 51.1,
+   "text": "As a research tool, alpha-hemolysin was perfect."
+  },
+  {
+   "t": 54.89,
+   "text": "As a sequencing tool, as I said, it had a fundamental problem: the constriction inside the pore — the narrowest part, where the DNA most strongly interacts with the protein walls — is too long."
+  },
+  {
+   "t": 66.42,
+   "text": "About four or five nanometers of the pore's interior contributes meaningfully to the ionic current."
+  },
+  {
+   "t": 73.14,
+   "text": "At any moment, ten or so bases of the DNA are in that sensitive zone, and they all contribute, and the resulting signal is a smeared-out average that doesn't have enough information in it to reliably distinguish A from T from G from C at single-base resolution."
+  },
+  {
+   "t": 90.12,
+   "text": "So the field went hunting for a better pore."
+  },
+  {
+   "t": 93.03,
+   "text": "The question was: is there a protein out there in nature that already has a sharper constriction — a single, narrow ring through which DNA must pass, such that only one or two bases are interacting with the protein at a time?"
+  },
+  {
+   "t": 107.17,
+   "text": "The answer turned out to be yes, and the protein is called MspA — porin A from Mycobacterium smegmatis."
+  },
+  {
+   "t": 114.49,
+   "text": "Mycobacteria are the family that includes the tuberculosis bug, and they have unusual cell walls that require unusual pores to ferry molecules across."
+  },
+  {
+   "t": 124.66,
+   "text": "MspA is a porin — a passive channel through the bacterial outer membrane — and it has a goblet-like shape with a very narrow constriction at the bottom, only about one nanometer wide and only about half a nanometer deep."
+  },
+  {
+   "t": 138.9,
+   "text": "That's a sharp constriction."
+  },
+  {
+   "t": 140.61,
+   "text": "Only about one or two bases of a DNA strand can fit inside the sensing zone at a time."
+  },
+  {
+   "t": 147.16,
+   "text": "Which means the current signal you read from MspA is much more localized — much closer to a single-base measurement than alpha-hemolysin can ever be."
+  },
+  {
+   "t": 156.56,
+   "text": "Jens Gundlach's lab at the University of Washington did the foundational work on MspA in the late 2000s and early 2010s, showing that with engineered versions of the protein you could distinguish all four bases by their characteristic current levels, with much better separation than alpha-hemolysin gave."
+  },
+  {
+   "t": 174.89,
+   "text": "This was a major breakthrough."
+  },
+  {
+   "t": 176.59,
+   "text": "It meant that — in principle — single-base resolution was achievable with a biological pore."
+  },
+  {
+   "t": 183.09,
+   "text": "Oxford Nanopore's commercial pores have evolved through several generations since, and while the exact protein identity of each generation is a closely-guarded commercial secret, the engineering principle is the same one MspA established: find a protein with a sharp, narrow constriction, and tune it for the highest possible signal-to-noise."
+  },
+  {
+   "t": 203.47,
+   "text": "The generations of pore chemistry have been given short, cryptic names that you'll see in nanopore papers."
+  },
+  {
+   "t": 210.14,
+   "text": "R7 was an early generation, retired by about 2016."
+  },
+  {
+   "t": 214.75,
+   "text": "R9 was the workhorse for several years, based on a different protein from MspA but with a similarly sharp constriction."
+  },
+  {
+   "t": 222.56,
+   "text": "R10 came in around 2019, with what is, I think, the most important engineering improvement in the platform's history: a dual-reader-head design."
+  },
+  {
+   "t": 231.93,
+   "text": "The R10 pore has not one but two constrictions stacked on top of each other, separated by a few nanometers."
+  },
+  {
+   "t": 239.01,
+   "text": "As DNA threads through, each base passes through the first constriction, then through the second, and the current is influenced by both readings."
+  },
+  {
+   "t": 248.94,
+   "text": "You get, effectively, two measurements of every base — taken at slightly different positions and combined to reduce uncertainty."
+  },
+  {
+   "t": 257.43,
+   "text": "R10.4, the current generation as of the time this lecture was written, refines that dual-reader design further and is the basis for the highest-accuracy nanopore data being produced today."
+  },
+  {
+   "t": 270.08,
+   "text": "Let me give you the analogy."
+  },
+  {
+   "t": 271.6,
+   "text": "Imagine you're trying to identify which book is being slid through a slot in a wall, and you can only feel the spine as it passes by your fingertips."
+  },
+  {
+   "t": 280.76,
+   "text": "With alpha-hemolysin, your fingertips are spread out over a long zone — you're feeling several pages worth of spine all at once, and you can't tell where one chapter ends and the next begins."
+  },
+  {
+   "t": 292.24,
+   "text": "With MspA, your fingertips are concentrated into a single point, and you can feel one letter of the title at a time as the book slides past."
+  },
+  {
+   "t": 301.83,
+   "text": "With R10, you have two fingertips, one just behind the other, both reading the spine in sequence."
+  },
+  {
+   "t": 307.99,
+   "text": "You get two independent reads of every letter, separated in time, which lets you cross-check yourself and catch errors that any single reader would miss."
+  },
+  {
+   "t": 317.59,
+   "text": "That's the dual-reader-head idea in plain English."
+  },
+  {
+   "t": 321.0,
+   "text": "There's a related innovation called duplex sequencing, which is the software-side equivalent of the dual-reader-head idea."
+  },
+  {
+   "t": 328.05,
+   "text": "In duplex, you sequence both strands of a double-stranded DNA molecule — the forward strand goes through the pore, then the reverse strand goes through the same pore — and you combine the two reads into a single consensus call."
+  },
+  {
+   "t": 342.0,
+   "text": "The reverse strand reads the complementary bases, so a real base will appear in both reads in complementary form, while a random error will appear in only one."
+  },
+  {
+   "t": 352.0,
+   "text": "By combining the two reads you can push the error rate down dramatically."
+  },
+  {
+   "t": 356.36,
+   "text": "R10.4 with duplex is, as of writing, the most accurate nanopore data ever produced, with raw accuracies above 99 percent and consensus accuracies pushing into the Q30+ range that historically only Illumina could reach."
+  },
+  {
+   "t": 373.01,
+   "text": "One footnote, because it's a fun piece of history that connects to the title of this segment."
+  },
+  {
+   "t": 377.88,
+   "text": "Early in the nanopore field there was a lot of interest in using hagfish toxins — proteins from the slime of the hagfish, a primitive fish that produces vast quantities of mucus when threatened — because some of those toxins form pores in cell membranes."
+  },
+  {
+   "t": 393.4,
+   "text": "Several other naturally occurring pores were screened in the 2000s, including pores from bacteriophages and other bacterial toxins."
+  },
+  {
+   "t": 402.43,
+   "text": "The field tried a lot of things."
+  },
+  {
+   "t": 404.38,
+   "text": "MspA and its relatives won out because of the sharp constriction."
+  },
+  {
+   "t": 408.63,
+   "text": "But the screening exercise — testing dozens of natural pores to see which ones gave the best sequencing signal — is a beautiful example of how protein engineering today often starts with mining biology for raw material and then refining what nature provides."
+  },
+  {
+   "t": 424.73,
+   "text": "The big idea to leave this segment with: a nanopore sequencer is, at its physical heart, one engineered protein with a hole through it, mounted in a synthetic membrane, with a voltage applied across it."
+  },
+  {
+   "t": 437.76,
+   "text": "Everything in the rest of the technology stack — the motors, the basecalling, the device design, the cloud — exists to extract sequence information from the current that flows through that one hole."
+  },
+  {
+   "t": 449.58,
+   "text": "And the central engineering problem is making the hole as discriminating as possible, so that the difference in current between an A and a G sitting in the pore is as large as it can be relative to the inevitable thermal noise."
+  }
+ ]
+}

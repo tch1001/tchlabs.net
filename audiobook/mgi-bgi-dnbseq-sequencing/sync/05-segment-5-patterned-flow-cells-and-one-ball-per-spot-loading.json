@@ -1,0 +1,211 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Patterned flow cells and one-ball-per-spot loading",
+ "duration": 370.17,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Patterned flow cells and one-ball-per-spot loading"
+  },
+  {
+   "t": 4.79,
+   "text": "We now have a tube full of nanoballs."
+  },
+  {
+   "t": 7.31,
+   "text": "Maybe a billion of them, suspended in buffer, each one about two hundred nanometers across, each one containing three hundred copies of one starting fragment."
+  },
+  {
+   "t": 17.39,
+   "text": "The next step is to get those balls onto a flow cell, in a regular pattern, one ball per spot, with no two balls overlapping."
+  },
+  {
+   "t": 25.35,
+   "text": "This is where the engineering of DNBSEQ flow cells gets clever and where the platform's distinctive advantages start to show up."
+  },
+  {
+   "t": 32.8,
+   "text": "Let me first remind you of the Illumina situation, because the contrast is sharp."
+  },
+  {
+   "t": 37.99,
+   "text": "On an early Illumina flow cell — the kind used on the original Genome Analyzer and the early HiSeq instruments — the inner surface was uniformly coated with anchor oligos, with no spatial pattern."
+  },
+  {
+   "t": 50.7,
+   "text": "Library fragments bound to the surface at random positions."
+  },
+  {
+   "t": 55.23,
+   "text": "When clusters grew via bridge amplification, two clusters that happened to start too close together would overlap as they grew — and the camera would see them as one blurry signal, ruining both reads."
+  },
+  {
+   "t": 68.66,
+   "text": "To avoid this, you had to load the flow cell sparsely, so that the random binding positions were far enough apart that clusters didn't run into each other."
+  },
+  {
+   "t": 77.8,
+   "text": "Sparse loading meant you wasted most of the surface area of the flow cell."
+  },
+  {
+   "t": 82.47,
+   "text": "There was a hard physical ceiling on density, set by the random-positioning problem."
+  },
+  {
+   "t": 87.58,
+   "text": "Around 2014, Illumina solved this with their own version of patterned flow cells."
+  },
+  {
+   "t": 94.17,
+   "text": "They etched the flow cell surface with regular arrays of tiny wells, each well containing the anchor oligos, surrounded by inert space where no DNA could bind."
+  },
+  {
+   "t": 104.89,
+   "text": "A single fragment, once it lands in a well, fills that well and clusters there; the next-nearest cluster is geometrically guaranteed to be far enough away to be optically distinct."
+  },
+  {
+   "t": 116.78,
+   "text": "The patterned-flow-cell trick let Illumina dramatically increase density on the HiSeq X and later instruments, and it is one of the reasons throughput per run jumped sharply in the mid-2010s."
+  },
+  {
+   "t": 129.45,
+   "text": "DNBSEQ flow cells use the same general principle — patterned spots with controlled spacing — but with a twist that fits the nanoball workflow."
+  },
+  {
+   "t": 138.46,
+   "text": "Here is how the MGI version works."
+  },
+  {
+   "t": 141.19,
+   "text": "The flow cell surface is a silicon wafer, coated with layers of silicon dioxide, titanium, and other materials, then patterned through photolithography to create a regular grid of small spots, typically a few hundred nanometers across."
+  },
+  {
+   "t": 157.03,
+   "text": "Each spot is functionalized with aminosilane, a chemical that gives the spot a positive surface charge."
+  },
+  {
+   "t": 164.15,
+   "text": "The spaces between spots are coated with a different chemistry that is hydrophobic and uncharged — essentially repellent to DNA."
+  },
+  {
+   "t": 172.65,
+   "text": "Now think about what happens when you flow a suspension of nanoballs across this surface."
+  },
+  {
+   "t": 178.22,
+   "text": "The nanoballs are negatively charged on their outside, because of the phosphate backbones of all that single-stranded DNA."
+  },
+  {
+   "t": 185.85,
+   "text": "They are electrostatically attracted to the positively charged aminosilane spots, and they have no affinity for the regions in between."
+  },
+  {
+   "t": 194.9,
+   "text": "Each ball drifts onto a spot, sticks, and stays."
+  },
+  {
+   "t": 198.4,
+   "text": "But here is the kicker: the spots are sized to fit exactly one ball."
+  },
+  {
+   "t": 202.65,
+   "text": "A ball that lands on a spot occupies that spot entirely."
+  },
+  {
+   "t": 206.25,
+   "text": "There is no room for a second ball to bind there — the geometry is wrong, the charge has been satisfied by the first ball, and any incoming nanoball just bounces off and lands somewhere else."
+  },
+  {
+   "t": 218.03,
+   "text": "So every spot ends up with at most one ball."
+  },
+  {
+   "t": 220.57,
+   "text": "The pattern fills evenly, one ball per spot, like a tray of eggs filling up an egg carton."
+  },
+  {
+   "t": 226.74,
+   "text": "This is what MGI calls size-exclusion patterned arrays, and it gives you a very high density — billions of spots per flow cell — with very clean spatial separation between every neighbor."
+  },
+  {
+   "t": 238.86,
+   "text": "The analogy I want you to hold: a patterned DNB flow cell is an array of grippy little spots, each one just big enough for one nanoball, no more, no less."
+  },
+  {
+   "t": 250.0,
+   "text": "Pour the balls on, they self-assemble into a regular grid, no overlaps, no waste of surface area."
+  },
+  {
+   "t": 257.04,
+   "text": "That's the loading step."
+  },
+  {
+   "t": 258.51,
+   "text": "It takes a few minutes, and at the end of it the flow cell has — depending on the instrument — somewhere between two billion and ten billion individual nanoballs anchored, each in its own well, each ready to be read."
+  },
+  {
+   "t": 272.91,
+   "text": "There are two important consequences of this loading geometry, and they're worth noting because they distinguish DNB workflows from Illumina workflows operationally."
+  },
+  {
+   "t": 282.69,
+   "text": "First, loading is fast and deterministic."
+  },
+  {
+   "t": 286.13,
+   "text": "You don't need a lengthy cluster generation step at the start of the run, because the nanoballs were already built in a tube before they were loaded."
+  },
+  {
+   "t": 293.61,
+   "text": "Once the flow cell is loaded, you can begin sequencing within minutes."
+  },
+  {
+   "t": 297.89,
+   "text": "An Illumina run, by contrast, spends a couple of hours on the instrument doing bridge amplification before the first base is read."
+  },
+  {
+   "t": 305.71,
+   "text": "The DNB workflow front-loads that step into the tube, where you can do it in parallel for many samples and at higher throughput."
+  },
+  {
+   "t": 313.42,
+   "text": "Second, loading density is essentially calibrated by the pattern, not by the user."
+  },
+  {
+   "t": 319.39,
+   "text": "On an unpatterned flow cell you have to load the right amount of library — too much and clusters overlap, too little and you waste capacity."
+  },
+  {
+   "t": 327.59,
+   "text": "With size-exclusion patterning, the chip itself enforces a ceiling on how many balls can bind."
+  },
+  {
+   "t": 333.48,
+   "text": "If you flood it with library, the extras just wash away."
+  },
+  {
+   "t": 337.39,
+   "text": "This makes the loading step more forgiving and reduces the kind of run-quality variation that operators of older Illumina instruments are familiar with."
+  },
+  {
+   "t": 346.41,
+   "text": "Now we have a loaded flow cell."
+  },
+  {
+   "t": 348.42,
+   "text": "Billions of nanoballs, each one a single molecule containing three hundred copies of a different starting fragment, anchored on a regular grid."
+  },
+  {
+   "t": 357.81,
+   "text": "We have to actually read them."
+  },
+  {
+   "t": 359.21,
+   "text": "That's the sequencing chemistry, and DNBSEQ has used two different chemistries over its history — the older cPAL, and the modern cPAS."
+  },
+  {
+   "t": 367.97,
+   "text": "We'll do them in historical order."
+  }
+ ]
+}

@@ -1,0 +1,243 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Methylation calling: the free epigenetic side product",
+ "duration": 403.73,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Methylation calling: the free epigenetic side product"
+  },
+  {
+   "t": 5.35,
+   "text": "Speaking of modifications: let's talk about DNA methylation, which is, in my view, the most underappreciated nanopore feature."
+  },
+  {
+   "t": 14.07,
+   "text": "It's so good that I'd argue most users get it without even knowing they're getting it."
+  },
+  {
+   "t": 18.68,
+   "text": "They sequence DNA, they hand the data to a basecaller, and out comes the sequence — plus a complete methylation map of every methylatable position in the genome, included free of charge."
+  },
+  {
+   "t": 30.74,
+   "text": "Let me back up and explain what DNA methylation is."
+  },
+  {
+   "t": 34.38,
+   "text": "In addition to the four standard DNA bases — A, T, G, C — your cells carry around modified versions of those bases at specific positions."
+  },
+  {
+   "t": 45.92,
+   "text": "The most common modification in mammalian genomes is 5-methylcytosine, abbreviated 5mC."
+  },
+  {
+   "t": 53.36,
+   "text": "It's just a cytosine with an extra methyl group attached to the fifth carbon of the pyrimidine ring."
+  },
+  {
+   "t": 59.65,
+   "text": "From a chemical standpoint it's a small change."
+  },
+  {
+   "t": 62.4,
+   "text": "From a biological standpoint it's massive: 5mC is the central mark of epigenetic regulation in mammals."
+  },
+  {
+   "t": 69.71,
+   "text": "It silences genes."
+  },
+  {
+   "t": 71.5,
+   "text": "It marks tissue identity."
+  },
+  {
+   "t": 73.29,
+   "text": "It changes with age."
+  },
+  {
+   "t": 74.76,
+   "text": "It goes haywire in cancer."
+  },
+  {
+   "t": 76.76,
+   "text": "The pattern of 5mC across the genome — the methylome — is a major axis of regulation, comparable in importance to the underlying DNA sequence."
+  },
+  {
+   "t": 87.09,
+   "text": "There are other DNA modifications too — 5-hydroxymethylcytosine, 6-methyladenine — but 5mC is the big one for mammals."
+  },
+  {
+   "t": 96.54,
+   "text": "To measure 5mC, you traditionally have to do a specialized experiment called bisulfite sequencing."
+  },
+  {
+   "t": 103.53,
+   "text": "The idea is clever: bisulfite is a chemical that converts unmodified cytosines into uracils, but leaves 5mC untouched."
+  },
+  {
+   "t": 113.33,
+   "text": "So you treat your DNA with bisulfite, sequence the result, and any position where you see a C in the bisulfite-treated read was a 5mC in the original; any position where you see a T was an unmodified C."
+  },
+  {
+   "t": 127.96,
+   "text": "The math works."
+  },
+  {
+   "t": 129.29,
+   "text": "But the chemistry is brutal — bisulfite treatment is harsh, it fragments DNA, it introduces errors — and it requires a completely separate experimental workflow from regular sequencing."
+  },
+  {
+   "t": 142.32,
+   "text": "You can either sequence the bases or sequence the methylation, but not both at once."
+  },
+  {
+   "t": 147.82,
+   "text": "And bisulfite sequencing data is fundamentally short-read data, because the bisulfite damage limits read length."
+  },
+  {
+   "t": 155.8,
+   "text": "Nanopore changes all of this."
+  },
+  {
+   "t": 157.93,
+   "text": "Because the pore reads the actual chemistry of the bases as they pass through, a 5-methylcytosine produces a different current signal than a regular cytosine."
+  },
+  {
+   "t": 167.54,
+   "text": "The methyl group is a real physical thing — it adds a tiny amount of mass and changes the local interactions with the pore — and the current signature reflects it."
+  },
+  {
+   "t": 177.75,
+   "text": "With a basecaller trained to recognize modified bases, you can call 5mC directly from the current trace, at every cytosine position in the genome, in a single experiment, from native DNA, with no separate workflow."
+  },
+  {
+   "t": 192.56,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 193.89,
+   "text": "Imagine you're a postal worker sorting envelopes by feel."
+  },
+  {
+   "t": 197.81,
+   "text": "A standard envelope and an envelope with a wax seal on the back feel different — the seal is a small bump, but distinct."
+  },
+  {
+   "t": 205.46,
+   "text": "If you handle enough envelopes you can learn to detect the bump reliably."
+  },
+  {
+   "t": 210.2,
+   "text": "That's nanopore methylation calling."
+  },
+  {
+   "t": 212.38,
+   "text": "The methyl group is the wax seal."
+  },
+  {
+   "t": 214.68,
+   "text": "The pore feels it."
+  },
+  {
+   "t": 215.97,
+   "text": "The basecaller learns the pattern."
+  },
+  {
+   "t": 218.31,
+   "text": "You get methylation for free, baked into the same read that gives you the sequence."
+  },
+  {
+   "t": 223.78,
+   "text": "This is, I think, the single biggest practical advantage nanopore has for clinical and research applications that care about epigenetics."
+  },
+  {
+   "t": 231.68,
+   "text": "Bisulfite sequencing is a pain."
+  },
+  {
+   "t": 234.28,
+   "text": "Whole-genome bisulfite sequencing on Illumina costs more than regular sequencing and gives you short reads only."
+  },
+  {
+   "t": 242.19,
+   "text": "Nanopore gives you whole-genome methylation in long reads, at the same time as you get the sequence, in a single library prep, for the same price as regular DNA sequencing."
+  },
+  {
+   "t": 253.6,
+   "text": "There are real applications driving this."
+  },
+  {
+   "t": 256.44,
+   "text": "Cancer methylation is one of the most active areas — tumor cells have characteristic methylation changes that distinguish them from normal cells, and these changes can be diagnostic, prognostic, and therapeutic targets."
+  },
+  {
+   "t": 269.74,
+   "text": "Brain tumor classification in particular has been transformed by methylation profiling, with methylation patterns being used clinically to subtype tumors better than histology can."
+  },
+  {
+   "t": 280.76,
+   "text": "Cell-free DNA in blood carries methylation signatures from its tissue of origin, opening the door to liquid biopsies that can detect cancers from a blood draw based on the methylation patterns of the tumor-derived DNA fragments."
+  },
+  {
+   "t": 294.86,
+   "text": "Imprinting disorders — diseases where the methylation patterns inherited from each parent are abnormal — can be diagnosed by phased methylation analysis, which requires long reads to assign methyl marks to the maternal versus paternal allele."
+  },
+  {
+   "t": 309.88,
+   "text": "In every one of these cases, nanopore's combined sequence-plus-methylation output, in long reads, is a real practical advantage."
+  },
+  {
+   "t": 318.8,
+   "text": "You don't have to run two experiments."
+  },
+  {
+   "t": 321.05,
+   "text": "You don't have to align two separate datasets."
+  },
+  {
+   "t": 323.99,
+   "text": "The methylation is right there in the same read as the sequence."
+  },
+  {
+   "t": 328.38,
+   "text": "There are caveats."
+  },
+  {
+   "t": 329.83,
+   "text": "Methylation calling accuracy from nanopore is good but not perfect — modern R10.4 basecallers call 5mC with about 95 to 98 percent accuracy at individual positions, and consensus accuracy improves with coverage."
+  },
+  {
+   "t": 345.45,
+   "text": "For most applications this is sufficient."
+  },
+  {
+   "t": 348.23,
+   "text": "For some very precise applications — measuring small changes in methylation between samples — you may want bisulfite as a confirmatory experiment."
+  },
+  {
+   "t": 358.34,
+   "text": "But for the broad strokes of methylome characterization, nanopore is now competitive with or better than bisulfite, especially when you factor in long-read advantages like haplotype-resolved methylation."
+  },
+  {
+   "t": 370.83,
+   "text": "So the takeaway: methylation calling is, on nanopore, a free side product of regular sequencing."
+  },
+  {
+   "t": 377.98,
+   "text": "You don't pay extra for it."
+  },
+  {
+   "t": 379.5,
+   "text": "You don't do extra work for it."
+  },
+  {
+   "t": 381.28,
+   "text": "You just get it, in every read, for every cytosine position in the genome."
+  },
+  {
+   "t": 386.18,
+   "text": "This is one of those rare cases in technology where a single platform happens to give you two valuable measurements at once, and the second measurement was almost an accident of physics — the pore was already going to be sensitive to chemical modifications, because that's how it reads the bases at all."
+  }
+ ]
+}

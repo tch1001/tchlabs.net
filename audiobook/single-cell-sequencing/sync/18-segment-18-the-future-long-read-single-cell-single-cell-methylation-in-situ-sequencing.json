@@ -1,0 +1,255 @@
+{
+ "n": 18,
+ "title": "SEGMENT 18 — The future — long-read single-cell, single-cell methylation, in-situ sequencing",
+ "duration": 385.88,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 18 — The future — long-read single-cell, single-cell methylation, in-situ sequencing"
+  },
+  {
+   "t": 7.49,
+   "text": "Let me close with what's coming next."
+  },
+  {
+   "t": 9.51,
+   "text": "Predictions in a field this fast-moving are dangerous, but a few trends are clear enough to call."
+  },
+  {
+   "t": 15.89,
+   "text": "Long-read single-cell."
+  },
+  {
+   "t": 17.54,
+   "text": "The Illumina short-read backbone that all current single-cell methods rely on has limitations — it can't easily resolve full-length isoforms, structural variants, or distantly-paired sequences within a single transcript."
+  },
+  {
+   "t": 31.2,
+   "text": "Long-read platforms — PacBio HiFi and Oxford Nanopore — can read full-length transcripts in one go, capturing splice patterns, gene fusions, allele-specific expression."
+  },
+  {
+   "t": 43.16,
+   "text": "Combining long-read sequencing with single-cell barcoding is now feasible, though expensive."
+  },
+  {
+   "t": 49.69,
+   "text": "The 10x Single Cell Long Read kit, the ScNanoGPS approach, and other emerging methods are bringing full-length transcript resolution to single-cell."
+  },
+  {
+   "t": 59.92,
+   "text": "Expect this to become standard for isoform-level questions over the next few years."
+  },
+  {
+   "t": 65.28,
+   "text": "Single-cell methylation, chromatin, and 3D genome."
+  },
+  {
+   "t": 69.61,
+   "text": "DNA methylation patterns per cell, captured by bisulfite-converted single-cell sequencing (snmC-seq and variants)."
+  },
+  {
+   "t": 78.71,
+   "text": "Single-cell Hi-C, capturing 3D genome organization per cell."
+  },
+  {
+   "t": 83.76,
+   "text": "Single-cell repli-seq, capturing replication timing."
+  },
+  {
+   "t": 87.5,
+   "text": "Each of these adds a new molecular layer at single-cell resolution."
+  },
+  {
+   "t": 92.42,
+   "text": "The field is steadily expanding the set of measurements you can make on individual cells."
+  },
+  {
+   "t": 97.61,
+   "text": "Single-cell proteomics."
+  },
+  {
+   "t": 99.74,
+   "text": "Mass spectrometry-based proteomics at single-cell resolution is moving from heroic experiment to feasible technique."
+  },
+  {
+   "t": 108.08,
+   "text": "Methods like SCoPE-MS and SCoPE2 from Nikolai Slavov's lab, plus emerging commercial platforms, can quantify a few thousand proteins per cell."
+  },
+  {
+   "t": 118.53,
+   "text": "The throughput is far lower than scRNA-seq — tens to hundreds of cells per day, not tens of thousands — but it's improving."
+  },
+  {
+   "t": 126.89,
+   "text": "Eventually, single-cell proteomics will give the protein-level readout that complements the mRNA readout we've focused on today."
+  },
+  {
+   "t": 135.31,
+   "text": "In-situ sequencing."
+  },
+  {
+   "t": 136.88,
+   "text": "The logical endpoint of the spatial transcriptomics trajectory."
+  },
+  {
+   "t": 141.22,
+   "text": "Methods like in-situ sequencing (ISS), STARmap, and others sequence transcripts in their original cellular location, by performing the chemistry on the fixed tissue itself rather than capturing onto a slide."
+  },
+  {
+   "t": 155.14,
+   "text": "Currently these methods can detect a few hundred to a thousand transcript species per cell with subcellular spatial resolution."
+  },
+  {
+   "t": 163.14,
+   "text": "Pushed to its limit, in-situ sequencing would let you read every transcript in every cell in a tissue slice, in its real three-dimensional location."
+  },
+  {
+   "t": 173.25,
+   "text": "We're not there yet, but it's the direction."
+  },
+  {
+   "t": 175.78,
+   "text": "AI-driven analysis."
+  },
+  {
+   "t": 177.55,
+   "text": "Foundation models trained on hundreds of millions of single cells — scGPT, Geneformer, scFoundation — are starting to enable transfer learning across tissues, species, and conditions."
+  },
+  {
+   "t": 190.88,
+   "text": "These models learn general representations of cell state that can be fine-tuned to specific tasks: cell type prediction, perturbation response prediction, cross-species mapping."
+  },
+  {
+   "t": 201.5,
+   "text": "They're early stage, but they suggest a future where a vast accumulated single-cell corpus serves as background knowledge for any new study, the way pretrained language models do for natural language."
+  },
+  {
+   "t": 214.05,
+   "text": "Whether this lives up to the hype is yet to be seen."
+  },
+  {
+   "t": 217.32,
+   "text": "Perturbation single-cell."
+  },
+  {
+   "t": 219.36,
+   "text": "Methods like Perturb-seq, CROP-seq, and SHARE-seq with CRISPR screens link genetic perturbations to single-cell phenotypes at massive scale."
+  },
+  {
+   "t": 228.84,
+   "text": "You can perturb a thousand genes, one per cell, in a million-cell screen, and read out the transcriptional consequence of each perturbation at single-cell resolution."
+  },
+  {
+   "t": 239.15,
+   "text": "This is changing functional genomics from low-throughput one-gene-at-a-time biology to high-throughput parallel screens with rich readouts."
+  },
+  {
+   "t": 247.69,
+   "text": "It's one of the most active areas of methods development."
+  },
+  {
+   "t": 250.72,
+   "text": "Clinical translation."
+  },
+  {
+   "t": 252.7,
+   "text": "The slow but real move of single-cell from research tool to clinical assay."
+  },
+  {
+   "t": 258.7,
+   "text": "Diagnostic applications in hematology (myelodysplasia, leukemia classification), in transplant rejection monitoring, in cancer immunotherapy response prediction."
+  },
+  {
+   "t": 269.64,
+   "text": "Some are already used in specific contexts; many more are in development."
+  },
+  {
+   "t": 274.23,
+   "text": "The cost has to come down further, the workflow has to standardize, the analysis pipelines have to become turnkey enough for clinical labs."
+  },
+  {
+   "t": 283.2,
+   "text": "All of those are happening, just slowly."
+  },
+  {
+   "t": 285.88,
+   "text": "The unifying theme across all of these is more measurements per cell, more cells per experiment, more dimensions integrated into one picture."
+  },
+  {
+   "t": 295.87,
+   "text": "Single-cell as it exists today is already a fundamental advance over bulk."
+  },
+  {
+   "t": 301.5,
+   "text": "Single-cell as it will exist in ten years will look like a different field again — multimodal, spatial, perturbational, long-read, with foundation models providing analytic glue."
+  },
+  {
+   "t": 312.99,
+   "text": "The bulk era is over."
+  },
+  {
+   "t": 314.93,
+   "text": "The single-cell era is barely starting."
+  },
+  {
+   "t": 317.62,
+   "text": "If you walk out of here with one big idea, let it be this: when biology moves from averages to distributions, the questions you can ask change qualitatively, not just quantitatively."
+  },
+  {
+   "t": 329.12,
+   "text": "Bulk RNA-seq told you the mean expression of a tissue."
+  },
+  {
+   "t": 332.79,
+   "text": "Single-cell tells you the population structure."
+  },
+  {
+   "t": 335.84,
+   "text": "Once you have population structure, you can see rare cells, heterogeneity, trajectories, ecosystems, spatial architecture."
+  },
+  {
+   "t": 344.35,
+   "text": "None of those questions were even askable before."
+  },
+  {
+   "t": 347.3,
+   "text": "They're all askable now, and the field is in the middle of asking them."
+  },
+  {
+   "t": 351.47,
+   "text": "Cell atlases of every organ."
+  },
+  {
+   "t": 354.28,
+   "text": "Maps of every tumor."
+  },
+  {
+   "t": 355.93,
+   "text": "Trajectories of every developmental decision."
+  },
+  {
+   "t": 359.22,
+   "text": "The technology that opened all of that up is exactly the thing we've been talking about for the past two hours — partitioning plus barcoding, droplets plus beads, UMIs plus sequencing, integrated through software into per-cell measurements."
+  },
+  {
+   "t": 373.34,
+   "text": "A sample-prep trick on top of Illumina chemistry that fundamentally changed what biology could ask of itself."
+  },
+  {
+   "t": 380.23,
+   "text": "That's the story."
+  },
+  {
+   "t": 381.44,
+   "text": "Thank you for staying with me."
+  },
+  {
+   "t": 382.99,
+   "text": "Questions are welcome."
+  },
+  {
+   "t": 384.27,
+   "text": "The appendix follows."
+  }
+ ]
+}

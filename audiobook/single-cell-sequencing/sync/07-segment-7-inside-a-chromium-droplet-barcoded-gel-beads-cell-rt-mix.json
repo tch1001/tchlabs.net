@@ -1,0 +1,263 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Inside a Chromium droplet — barcoded gel beads + cell + RT mix",
+ "duration": 445.69,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Inside a Chromium droplet — barcoded gel beads + cell + RT mix"
+  },
+  {
+   "t": 7.3,
+   "text": "Let's slow down and look at one droplet."
+  },
+  {
+   "t": 9.57,
+   "text": "I want you to picture this clearly, because the whole platform is just billions of these tiny chambers, each running the same little reaction in parallel."
+  },
+  {
+   "t": 19.05,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 20.36,
+   "text": "A Chromium chip is like an ice-cube tray that makes a hundred thousand tiny water-in-oil droplets, each containing one cell and one barcoded gel bead."
+  },
+  {
+   "t": 30.24,
+   "text": "Inside each droplet, the bead releases its unique zip-code primer and starts barcoding the cell's mRNAs."
+  },
+  {
+   "t": 38.11,
+   "text": "Hold that."
+  },
+  {
+   "t": 39.05,
+   "text": "An ice-cube tray."
+  },
+  {
+   "t": 40.4,
+   "text": "Tiny cubes."
+  },
+  {
+   "t": 41.69,
+   "text": "Each cube its own little reaction."
+  },
+  {
+   "t": 43.91,
+   "text": "Now the details."
+  },
+  {
+   "t": 45.24,
+   "text": "The Chromium chip has eight parallel channel networks etched into it, one per sample."
+  },
+  {
+   "t": 50.66,
+   "text": "Each channel network has three inputs and one output."
+  },
+  {
+   "t": 54.23,
+   "text": "Input one: the cell suspension — a few thousand to tens of thousands of cells in buffer."
+  },
+  {
+   "t": 60.55,
+   "text": "Input two: the bead suspension — gel beads, each one a soft sphere of polyacrylamide hydrogel with millions of oligonucleotide primers chemically tethered to its surface."
+  },
+  {
+   "t": 72.84,
+   "text": "Input three: oil, with surfactants that stabilize the emulsion."
+  },
+  {
+   "t": 78.04,
+   "text": "The output is a single channel where the three streams meet at a junction."
+  },
+  {
+   "t": 82.6,
+   "text": "At that junction — a microscopic T-shape or cross-shape — the oil flow pinches off the aqueous stream into discrete droplets, one after another, at a rate of thousands per second."
+  },
+  {
+   "t": 94.94,
+   "text": "Each droplet is about a nanoliter — roughly the size of a fine grain of sand, suspended in oil."
+  },
+  {
+   "t": 101.61,
+   "text": "The dilutions are tuned according to a statistical model called Poisson loading."
+  },
+  {
+   "t": 106.51,
+   "text": "Cells go in at low density, so the probability of any given droplet containing a cell is small — maybe ten percent."
+  },
+  {
+   "t": 114.91,
+   "text": "Most droplets contain no cell at all."
+  },
+  {
+   "t": 117.45,
+   "text": "A small fraction, mathematically determined by the Poisson distribution, contain two cells — these are the doublets we'll discuss later."
+  },
+  {
+   "t": 125.84,
+   "text": "The bead suspension is loaded at higher density — most droplets contain exactly one bead — because the beads themselves act as a Poisson-buster: they pack closely in the input channel, and the geometry of the chip ensures roughly one bead per droplet on average."
+  },
+  {
+   "t": 143.01,
+   "text": "The combination — cells loaded sparsely, beads loaded near-deterministically — gives you the productive combination of one cell plus one bead in a tunable fraction of droplets."
+  },
+  {
+   "t": 154.55,
+   "text": "Now the chemistry inside the droplet."
+  },
+  {
+   "t": 157.32,
+   "text": "As soon as the droplet forms, three things happen, in fast sequence."
+  },
+  {
+   "t": 162.49,
+   "text": "First, the cell lyses."
+  },
+  {
+   "t": 164.35,
+   "text": "The aqueous buffer contains a lytic detergent that breaks open the cell membrane within seconds."
+  },
+  {
+   "t": 170.76,
+   "text": "The cell's cytoplasm — its mRNA, its proteins, its small molecules — diffuses out into the droplet's nanoliter volume."
+  },
+  {
+   "t": 180.04,
+   "text": "The cell's nuclear membrane usually stays largely intact, so nuclear RNA stays mostly inside, but the mature cytoplasmic mRNA is released and freely diffusible."
+  },
+  {
+   "t": 192.28,
+   "text": "Second, the gel bead dissolves."
+  },
+  {
+   "t": 194.82,
+   "text": "Chromium beads are not solid spheres — they're polyacrylamide hydrogel, cross-linked with bonds that can be chemically cleaved."
+  },
+  {
+   "t": 202.81,
+   "text": "The buffer contains a reducing agent — typically dithiothreitol, DTT — that breaks those cross-links."
+  },
+  {
+   "t": 210.31,
+   "text": "As the bead dissolves, the millions of primer molecules that were tethered to it are released into the droplet's aqueous volume."
+  },
+  {
+   "t": 217.75,
+   "text": "Each primer is a single-stranded DNA molecule about a hundred nucleotides long, carrying — from one end to the other — a Read 1 sequencing primer site, the cell barcode (sixteen bases, identical across all primers from this one bead), a UMI (twelve bases, randomly different on every primer), and a poly-T tail that will grab any poly-A-tailed mRNA."
+  },
+  {
+   "t": 241.22,
+   "text": "Third, the freed primers diffuse to the released mRNAs and hybridize via the poly-T to poly-A interaction."
+  },
+  {
+   "t": 249.4,
+   "text": "Now every captured mRNA has a primer hybridized to its tail, ready for reverse transcription."
+  },
+  {
+   "t": 255.95,
+   "text": "The reverse transcriptase enzyme, which was also present in the buffer, walks down each mRNA, synthesizing a complementary cDNA strand that has the cell barcode and UMI built into its 5' end."
+  },
+  {
+   "t": 270.05,
+   "text": "By the time reverse transcription is done — maybe ten or fifteen minutes — every cDNA from this cell carries this bead's cell barcode and a different UMI per molecule."
+  },
+  {
+   "t": 280.95,
+   "text": "The cell's identity is now permanently encoded in the chemistry."
+  },
+  {
+   "t": 285.0,
+   "text": "After droplet generation and reverse transcription, you take the emulsion off the instrument and break it."
+  },
+  {
+   "t": 291.65,
+   "text": "Breaking the emulsion means destabilizing the oil-water interface so the droplets coalesce back into a single bulk aqueous phase."
+  },
+  {
+   "t": 300.57,
+   "text": "You add a chemical that destabilizes the surfactants, you spin briefly in a centrifuge, the oil separates as a layer, and you collect the aqueous phase from below."
+  },
+  {
+   "t": 311.8,
+   "text": "That aqueous phase now contains billions of cDNA molecules, all in one tube — pooled."
+  },
+  {
+   "t": 318.76,
+   "text": "But every cDNA carries a cell-specific barcode, so the pooling has not lost the per-cell identity."
+  },
+  {
+   "t": 325.36,
+   "text": "From here, you do PCR amplification, fragmentation, adapter ligation, and sample indexing, all in bulk, in standard library-prep formats."
+  },
+  {
+   "t": 335.9,
+   "text": "The final library is loaded onto an Illumina instrument and sequenced like any other library."
+  },
+  {
+   "t": 342.07,
+   "text": "The barcodes are read out as part of the sequence."
+  },
+  {
+   "t": 345.29,
+   "text": "So the whole droplet phase — the part that's distinctive about Chromium — takes about eight minutes of instrument time, plus a few hours of reverse transcription and library prep."
+  },
+  {
+   "t": 355.61,
+   "text": "The sequencing afterward is the same Illumina chemistry we covered before."
+  },
+  {
+   "t": 360.12,
+   "text": "The data that comes back gets demultiplexed by sample index, then further sorted by cell barcode using software."
+  },
+  {
+   "t": 367.23,
+   "text": "We'll go through that flow in Segment 9."
+  },
+  {
+   "t": 369.79,
+   "text": "One more thing about the droplet biochemistry that's worth understanding."
+  },
+  {
+   "t": 374.02,
+   "text": "Inside a droplet, the concentrations of mRNA and primer are very high — a single cell's worth of RNA, plus millions of primers, in a nanoliter volume."
+  },
+  {
+   "t": 385.07,
+   "text": "That's chemically very different from a normal reverse-transcription reaction in a tube, where you have the same molecules in microliters."
+  },
+  {
+   "t": 393.2,
+   "text": "The high local concentration is what makes the reaction efficient enough to work at all on a single cell's tiny RNA payload."
+  },
+  {
+   "t": 400.98,
+   "text": "A single mammalian cell typically contains about a picogram of mRNA, maybe two hundred thousand individual molecules."
+  },
+  {
+   "t": 409.45,
+   "text": "You're trying to convert as many of those as possible to cDNA before the reaction stops."
+  },
+  {
+   "t": 415.51,
+   "text": "In practice, current Chromium chemistries capture somewhere between five and twenty percent of a cell's mRNA molecules — meaning, for an average cell, you detect maybe twenty to forty thousand individual transcripts, corresponding to a few thousand distinct genes."
+  },
+  {
+   "t": 432.51,
+   "text": "That's a fraction."
+  },
+  {
+   "t": 433.75,
+   "text": "It's the dropout problem, which we'll come back to in Segment 17."
+  },
+  {
+   "t": 437.88,
+   "text": "But it's enough to characterize the cell's identity and state."
+  },
+  {
+   "t": 441.65,
+   "text": "The droplet hands you a useful, if imperfect, snapshot."
+  }
+ ]
+}

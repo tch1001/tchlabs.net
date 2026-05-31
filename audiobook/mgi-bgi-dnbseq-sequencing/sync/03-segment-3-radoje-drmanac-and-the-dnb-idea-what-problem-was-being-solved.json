@@ -1,0 +1,139 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Radoje Drmanac and the DNB idea — what problem was being solved",
+ "duration": 310.2,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Radoje Drmanac and the DNB idea — what problem was being solved"
+  },
+  {
+   "t": 6.34,
+   "text": "It's worth spending a segment specifically on Radoje Drmanac, because the DNB concept is unusually attributable to one person's long-running research program, and understanding what he was trying to solve clarifies what the technology is for."
+  },
+  {
+   "t": 20.93,
+   "text": "Drmanac began working on sequencing in the 1980s, in Belgrade, on a related but distinct approach called sequencing by hybridization."
+  },
+  {
+   "t": 29.8,
+   "text": "The idea behind sequencing by hybridization was that if you had an array of every possible short DNA probe — every possible sequence of, say, eight or ten base pairs — and you let your target DNA hybridize against that array, you could in principle deduce the sequence of your target by which probes it stuck to."
+  },
+  {
+   "t": 48.91,
+   "text": "This was an alternative to sequencing by synthesis, which we've already met in the Illumina context."
+  },
+  {
+   "t": 55.19,
+   "text": "Drmanac developed sequencing by hybridization through the 1990s, eventually moving to the United States and founding a company called Hyseq, which had real scientific traction but never quite became a commercial product."
+  },
+  {
+   "t": 68.88,
+   "text": "The general lesson from that decade was that hybridization-based readout, while elegant in principle, has a stubborn signal-to-noise problem when you scale it up to large genomes — too many similar probes binding too many similar targets, with mismatches and bulges and off-target hybridizations that the system can't reliably distinguish."
+  },
+  {
+   "t": 89.4,
+   "text": "But Drmanac took several ideas from that work into Complete Genomics in 2005."
+  },
+  {
+   "t": 95.47,
+   "text": "Two of them became core to DNBSEQ."
+  },
+  {
+   "t": 98.28,
+   "text": "The first idea was: don't try to clonally amplify on a flow cell."
+  },
+  {
+   "t": 103.22,
+   "text": "At the time, in the mid-2000s, Solexa — the company that would become Illumina — was perfecting bridge amplification, the technique we discussed last lecture, where one molecule on a flow cell becomes a thousand clonal molecules clustered next to each other via roughly thirty-five cycles of bridge formation."
+  },
+  {
+   "t": 122.86,
+   "text": "Bridge amplification is a beautiful technique but it has costs."
+  },
+  {
+   "t": 127.06,
+   "text": "It is exponential PCR, with all the biases that come with that — fragments with extreme GC content amplify poorly, very short and very long fragments amplify at different rates, and after thirty-five cycles small differences in efficiency become large differences in cluster brightness and density."
+  },
+  {
+   "t": 146.62,
+   "text": "Drmanac wanted a way to get clonal copies of a starting molecule without doing exponential amplification on the flow cell."
+  },
+  {
+   "t": 154.57,
+   "text": "The second idea was: make each readable unit a single molecule rather than a clonal colony."
+  },
+  {
+   "t": 161.31,
+   "text": "If you could get a single physical particle that contained hundreds of copies of your target sequence — all carried by one DNA chain — then the readout would be from one molecule, with no risk of cross-contamination between neighboring clusters, and no compounded amplification bias from a colony of independently growing molecules."
+  },
+  {
+   "t": 179.66,
+   "text": "One ball, one starting fragment, no second-cycle errors."
+  },
+  {
+   "t": 184.05,
+   "text": "These two ideas led, eventually, to the DNB concept."
+  },
+  {
+   "t": 188.85,
+   "text": "The mechanism for getting many head-to-tail copies of a sequence onto one molecule was already known in molecular biology — it is called rolling circle amplification, and we'll devote the next segment to it."
+  },
+  {
+   "t": 201.11,
+   "text": "The mechanism for getting those long single-stranded concatemers to condense into compact, regularly shaped particles was new, and required a lot of careful work on buffer conditions, oligonucleotide spacers, and the physics of single-stranded DNA folding."
+  },
+  {
+   "t": 217.94,
+   "text": "The mechanism for laying out the resulting nanoballs in a regular pattern on a flow cell — one ball per defined spot, no overlaps — was also new, and required developing patterned silicon wafers with positively charged binding spots that geometrically restrict where a ball can land."
+  },
+  {
+   "t": 235.47,
+   "text": "We'll cover that in Segment 5."
+  },
+  {
+   "t": 237.65,
+   "text": "The deeper insight, though — the one I want you to absorb — is that DNBSEQ is fundamentally an answer to a problem Illumina solved differently."
+  },
+  {
+   "t": 246.41,
+   "text": "Both platforms have to get enough signal off each starting molecule to be detected by a camera."
+  },
+  {
+   "t": 251.98,
+   "text": "Illumina's answer is: make a clonal cluster of a thousand independent molecules through bridge amplification, accept the costs of doing exponential PCR on the flow cell."
+  },
+  {
+   "t": 262.98,
+   "text": "Complete Genomics' answer was: make one long molecule containing three hundred copies of your target via linear amplification of a circle, no exponential step."
+  },
+  {
+   "t": 273.49,
+   "text": "Both answers work."
+  },
+  {
+   "t": 274.83,
+   "text": "Both have been engineered to very high quality."
+  },
+  {
+   "t": 277.84,
+   "text": "But they are structurally different solutions to the same physics problem, and that structural difference is what gives DNBSEQ its distinctive set of trade-offs — which we'll see in Segments 12 and 13."
+  },
+  {
+   "t": 289.7,
+   "text": "So: hold on to the picture of Drmanac, working for thirty years on the idea that you could read DNA without doing exponential PCR."
+  },
+  {
+   "t": 298.67,
+   "text": "Sequencing by hybridization didn't work for the reasons I mentioned."
+  },
+  {
+   "t": 302.64,
+   "text": "But the DNB-plus-sequencing-chemistry hybrid, which his team finally landed on at Complete Genomics, did."
+  },
+  {
+   "t": 308.92,
+   "text": "That's the lineage."
+  }
+ ]
+}

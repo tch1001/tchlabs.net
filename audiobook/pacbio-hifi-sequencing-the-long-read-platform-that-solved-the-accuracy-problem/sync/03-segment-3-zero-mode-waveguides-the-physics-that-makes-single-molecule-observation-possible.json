@@ -1,0 +1,331 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Zero-mode waveguides: the physics that makes single-molecule observation possible",
+ "duration": 496.37,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Zero-mode waveguides: the physics that makes single-molecule observation possible"
+  },
+  {
+   "t": 7.16,
+   "text": "We need to spend a real segment on zero-mode waveguides, because the zero-mode waveguide — abbreviated ZMW — is the single most important physical innovation in PacBio sequencing."
+  },
+  {
+   "t": 19.49,
+   "text": "Everything else in the platform is enabled by this one piece of physics."
+  },
+  {
+   "t": 24.07,
+   "text": "So let me try to give you the intuition for what it is and why it works."
+  },
+  {
+   "t": 28.1,
+   "text": "The problem, again, is background fluorescence."
+  },
+  {
+   "t": 31.74,
+   "text": "You want to watch a single polymerase incorporating a single nucleotide, and that nucleotide is carrying a fluorescent dye that flashes when you shine the laser on it."
+  },
+  {
+   "t": 42.06,
+   "text": "But there are millions of other nucleotides in solution, all carrying the same dye, all of which will also flash if the laser hits them."
+  },
+  {
+   "t": 50.26,
+   "text": "If your laser illuminates a typical microscope field — a volume of, say, ten femtoliters — there might be a few thousand free dye molecules in that volume at any moment."
+  },
+  {
+   "t": 61.99,
+   "text": "Their combined fluorescence is enormous compared to your single incorporated nucleotide."
+  },
+  {
+   "t": 67.69,
+   "text": "You'd see a glowing soup with no signal."
+  },
+  {
+   "t": 70.36,
+   "text": "What you really want is to illuminate only a tiny, tiny volume — small enough that, on average, there's much less than one free dye molecule in it at any time."
+  },
+  {
+   "t": 80.7,
+   "text": "If your observation volume is small enough, the background goes from \"thousands of dye molecules\" to \"essentially zero dye molecules most of the time,\" and the single dye you actually care about — the one held in place by the polymerase, the one being incorporated — becomes visible against a black background."
+  },
+  {
+   "t": 98.7,
+   "text": "The question is: how do you illuminate a volume that small?"
+  },
+  {
+   "t": 102.33,
+   "text": "Standard light microscopy has a fundamental resolution limit — the so-called diffraction limit — that says you can't focus light to a spot much smaller than about half its wavelength."
+  },
+  {
+   "t": 113.11,
+   "text": "For visible light, that means you can't get an illumination spot smaller than roughly two hundred nanometers across."
+  },
+  {
+   "t": 120.29,
+   "text": "Two hundred nanometers cubed is still hundreds of attoliters, which still contains many free dye molecules."
+  },
+  {
+   "t": 127.8,
+   "text": "Conventional optics can't shrink the illumination volume small enough."
+  },
+  {
+   "t": 132.86,
+   "text": "Here is where the trick comes in, and it's one of the most beautiful applications of physics in biotechnology."
+  },
+  {
+   "t": 140.05,
+   "text": "You make a hole in a metal sheet that's smaller than the wavelength of light."
+  },
+  {
+   "t": 144.28,
+   "text": "Let me build up the intuition."
+  },
+  {
+   "t": 146.29,
+   "text": "Imagine you have a metal plate — aluminum, say — and you drill a hole through it."
+  },
+  {
+   "t": 151.56,
+   "text": "If the hole is large compared to the wavelength of light, then light shining on one side of the plate will pass through the hole and emerge on the other side as a beam, just like light through a window."
+  },
+  {
+   "t": 162.43,
+   "text": "Standard optics."
+  },
+  {
+   "t": 163.8,
+   "text": "Now shrink the hole."
+  },
+  {
+   "t": 165.1,
+   "text": "Make it smaller than the wavelength of light."
+  },
+  {
+   "t": 167.71,
+   "text": "For green light, that's smaller than about five hundred nanometers."
+  },
+  {
+   "t": 171.79,
+   "text": "What happens?"
+  },
+  {
+   "t": 172.85,
+   "text": "Counterintuitively, light still tries to enter the hole."
+  },
+  {
+   "t": 176.74,
+   "text": "But it can't propagate through."
+  },
+  {
+   "t": 178.68,
+   "text": "The hole is too small to support a propagating light wave at that wavelength."
+  },
+  {
+   "t": 183.66,
+   "text": "Instead, the light field inside the hole becomes what physicists call an evanescent field — a wave that doesn't travel but instead decays exponentially as you move into the hole."
+  },
+  {
+   "t": 195.2,
+   "text": "The deeper you go, the dimmer it gets, very fast."
+  },
+  {
+   "t": 198.49,
+   "text": "Within about twenty or thirty nanometers of the entrance, the light field has dropped by something like a factor of ten."
+  },
+  {
+   "t": 205.16,
+   "text": "By fifty nanometers in, the field is essentially zero."
+  },
+  {
+   "t": 209.75,
+   "text": "The hole, in effect, has a finite depth of illumination — only the bottom-most twenty or thirty nanometers see significant light."
+  },
+  {
+   "t": 218.76,
+   "text": "Everything above that is dark."
+  },
+  {
+   "t": 220.78,
+   "text": "That's the zero-mode waveguide."
+  },
+  {
+   "t": 222.75,
+   "text": "A hole in a metal sheet, smaller than the wavelength of visible light, illuminated from below."
+  },
+  {
+   "t": 228.71,
+   "text": "Light tries to enter from below but only penetrates a tiny depth into the hole."
+  },
+  {
+   "t": 233.09,
+   "text": "The illuminated volume at the bottom of the hole is on the order of twenty zeptoliters — that's two times ten to the minus twenty liters."
+  },
+  {
+   "t": 241.15,
+   "text": "To give you a sense of scale, that volume is something like a millionth of a millionth of the volume of a small bacterial cell."
+  },
+  {
+   "t": 249.91,
+   "text": "It's absurdly small."
+  },
+  {
+   "t": 251.38,
+   "text": "And here's why that matters."
+  },
+  {
+   "t": 253.27,
+   "text": "A typical concentration of fluorescent nucleotides in the sequencing reaction is in the micromolar range."
+  },
+  {
+   "t": 259.95,
+   "text": "At one micromolar concentration, you have roughly six hundred molecules per attoliter."
+  },
+  {
+   "t": 265.37,
+   "text": "In a twenty zeptoliter volume — twenty thousandths of an attoliter — you'd expect, on average, only about twelve molecules."
+  },
+  {
+   "t": 273.56,
+   "text": "But most of those are not lit up at any given moment, because the dyes are only emitting fluorescence when excited by light, and the dye has to find itself in the illuminated zone to fluoresce."
+  },
+  {
+   "t": 285.07,
+   "text": "Free dyes in solution diffuse very fast — microseconds — so even when one enters the zone, it's gone before the camera can integrate a single frame."
+  },
+  {
+   "t": 295.76,
+   "text": "The result is that on average, the background fluorescence from free nucleotides inside the ZMW is essentially negligible."
+  },
+  {
+   "t": 304.5,
+   "text": "The volume is so small, and free molecules pass through it so fast, that they contribute almost nothing to the signal."
+  },
+  {
+   "t": 312.8,
+   "text": "But the polymerase at the bottom of the well — that's a different story."
+  },
+  {
+   "t": 317.02,
+   "text": "The polymerase is stuck."
+  },
+  {
+   "t": 318.95,
+   "text": "It's attached to the bottom of the ZMW."
+  },
+  {
+   "t": 321.64,
+   "text": "It doesn't diffuse anywhere."
+  },
+  {
+   "t": 323.9,
+   "text": "And when it grabs a nucleotide and holds it during the incorporation reaction, that nucleotide is held still, in the illuminated zone, for the millisecond or so it takes to be added to the growing strand."
+  },
+  {
+   "t": 336.84,
+   "text": "During that millisecond, the dye on the nucleotide is bathed in laser light, fluorescing at full intensity."
+  },
+  {
+   "t": 344.54,
+   "text": "The camera, which is integrating its signal over those milliseconds, picks up a bright, clear pulse from a single molecule, against a black background."
+  },
+  {
+   "t": 354.11,
+   "text": "You can see the elegance of it."
+  },
+  {
+   "t": 355.79,
+   "text": "The zero-mode waveguide doesn't make the dye brighter."
+  },
+  {
+   "t": 358.97,
+   "text": "It doesn't make the laser stronger."
+  },
+  {
+   "t": 360.85,
+   "text": "It just suppresses the background, by making the illuminated volume so small that essentially nothing other than the trapped polymerase's current nucleotide is ever lit up."
+  },
+  {
+   "t": 371.52,
+   "text": "Signal-to-noise goes from impossible to easy."
+  },
+  {
+   "t": 374.81,
+   "text": "Single-molecule fluorescence detection, which was a heroic feat in the 1990s, becomes routine on every well of every SMRT cell."
+  },
+  {
+   "t": 384.52,
+   "text": "The analogy I love for this."
+  },
+  {
+   "t": 386.51,
+   "text": "Imagine you're trying to listen to one person whisper in a stadium full of people whispering."
+  },
+  {
+   "t": 392.22,
+   "text": "Hopeless."
+  },
+  {
+   "t": 393.21,
+   "text": "Now imagine you put a long narrow tube down to the person's mouth, and the tube's walls absorb sound."
+  },
+  {
+   "t": 399.62,
+   "text": "Now you can only hear sound from the very bottom of the tube — from that one person's whispers — and the surrounding hubbub is shut out."
+  },
+  {
+   "t": 407.44,
+   "text": "The zero-mode waveguide is the tube."
+  },
+  {
+   "t": 409.82,
+   "text": "It restricts your listening — your observation — to the very bottom, where the polymerase sits, and everything floating above is acoustically, or in this case optically, shut out."
+  },
+  {
+   "t": 421.76,
+   "text": "A few technical notes for completeness."
+  },
+  {
+   "t": 424.41,
+   "text": "The ZMW is typically a cylindrical hole, about seventy nanometers in diameter and a hundred nanometers deep, drilled or photolithographically patterned through a hundred-nanometer-thick layer of aluminum deposited on a transparent glass substrate."
+  },
+  {
+   "t": 440.14,
+   "text": "Laser light is delivered from below, through the glass, up into the bottom of each well."
+  },
+  {
+   "t": 446.57,
+   "text": "The polymerase is anchored to the glass at the bottom of the well by a biotin-streptavidin linkage."
+  },
+  {
+   "t": 452.65,
+   "text": "There's one polymerase per well, ideally — and getting one and only one polymerase per well, rather than zero or two, is itself a Poisson statistics problem that PacBio has spent a lot of engineering on."
+  },
+  {
+   "t": 466.71,
+   "text": "Modern SMRT cells have millions of these ZMWs packed onto a single chip, each one independently watched by the camera."
+  },
+  {
+   "t": 475.57,
+   "text": "We'll talk about the chip itself in the next segment."
+  },
+  {
+   "t": 478.39,
+   "text": "The fundamental innovation, though, is the physics."
+  },
+  {
+   "t": 481.49,
+   "text": "A hole smaller than the wavelength of light, illuminating only its bottom twenty or thirty nanometers, is the trick that makes single-molecule sequencing observable in real time."
+  },
+  {
+   "t": 493.21,
+   "text": "Hold that picture."
+  },
+  {
+   "t": 494.39,
+   "text": "It's the heart of the platform."
+  }
+ ]
+}

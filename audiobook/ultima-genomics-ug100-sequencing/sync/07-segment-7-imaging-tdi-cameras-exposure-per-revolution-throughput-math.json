@@ -1,0 +1,179 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Imaging — TDI cameras, exposure-per-revolution, throughput math",
+ "duration": 308.54,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Imaging — TDI cameras, exposure-per-revolution, throughput math"
+  },
+  {
+   "t": 6.53,
+   "text": "Let's do the imaging math, because this is where the throughput claims come from and you should be able to do this back-of-the-envelope yourself."
+  },
+  {
+   "t": 13.68,
+   "text": "Start with the wafer."
+  },
+  {
+   "t": 15.14,
+   "text": "Two hundred millimeters across, with a usable annular region that's, say, one hundred and fifty millimeters outer radius minus thirty millimeters inner radius."
+  },
+  {
+   "t": 24.24,
+   "text": "That gives a usable area of about pi times the difference of squares — call it roughly seven hundred square centimeters of usable surface."
+  },
+  {
+   "t": 32.86,
+   "text": "On that surface, beads are packed at a density of, depending on the bead size and the optical resolution, somewhere between five and ten billion individually resolvable cluster positions per wafer."
+  },
+  {
+   "t": 45.06,
+   "text": "Different generations of the platform give different numbers; the original UG100 was around ten to twelve billion reads per run, and the newer UG200 hit twenty billion."
+  },
+  {
+   "t": 56.16,
+   "text": "Now consider how you image that surface."
+  },
+  {
+   "t": 58.71,
+   "text": "The wafer spins."
+  },
+  {
+   "t": 60.26,
+   "text": "The TDI camera sits above it."
+  },
+  {
+   "t": 62.35,
+   "text": "As the wafer rotates, every point on its surface passes under the camera once per revolution."
+  },
+  {
+   "t": 68.75,
+   "text": "To image the whole annular region, you need the camera's field of view to cover the entire radial extent — which means either a wide camera, or a camera that scans radially in addition to the wafer spinning."
+  },
+  {
+   "t": 81.54,
+   "text": "Ultima uses the latter: two fixed cameras, each covering part of the radial range, with the wafer spinning underneath."
+  },
+  {
+   "t": 89.42,
+   "text": "Over the course of one revolution, the entire usable area gets imaged once."
+  },
+  {
+   "t": 94.97,
+   "text": "Now compare cycle times."
+  },
+  {
+   "t": 97.05,
+   "text": "A revolution takes, depending on the spin rate, a few seconds — let's say two to ten seconds for a full sweep depending on the configuration."
+  },
+  {
+   "t": 105.59,
+   "text": "Compare that to Illumina, where imaging a NovaSeq flow cell takes a substantial fraction of every fifteen-minute cycle, because the optics have to step tile by tile across the surface."
+  },
+  {
+   "t": 117.22,
+   "text": "On Ultima, the imaging itself is fast — a single revolution — and the chemistry steps are also fast because they're driven by spin coating rather than channel flow."
+  },
+  {
+   "t": 128.09,
+   "text": "The result is that one Ultima sequencing cycle, including reagent delivery, incorporation, and imaging, can run in well under a minute."
+  },
+  {
+   "t": 137.64,
+   "text": "Total run time for a few hundred cycles ends up around twenty hours, compared to a couple of days for an equivalent Illumina run."
+  },
+  {
+   "t": 146.34,
+   "text": "Now let's do the throughput math."
+  },
+  {
+   "t": 148.46,
+   "text": "Twenty billion reads per run, each about three hundred bases long on average, gives roughly six terabases of raw data per run."
+  },
+  {
+   "t": 156.81,
+   "text": "After quality filtering — trimming low-quality ends, removing reads that failed various QC checks — you get something like two and a half to three terabases of usable sequence per wafer."
+  },
+  {
+   "t": 168.89,
+   "text": "A human genome at thirty-fold coverage requires about a hundred gigabases."
+  },
+  {
+   "t": 173.82,
+   "text": "So one wafer can do about thirty human genomes per run, and the platform runs about thirty to forty wafers per week."
+  },
+  {
+   "t": 181.53,
+   "text": "Roughly a thousand genomes a week per instrument, fifty thousand genomes a year per instrument, all running on a single shift."
+  },
+  {
+   "t": 189.94,
+   "text": "Run it twenty-four-seven and you can push it higher."
+  },
+  {
+   "t": 192.64,
+   "text": "That is genuinely a lot of throughput for one machine."
+  },
+  {
+   "t": 196.06,
+   "text": "NovaSeq X tops out at roughly the same order of magnitude, and you have to run two flow cells in parallel to get there."
+  },
+  {
+   "t": 203.57,
+   "text": "So per-instrument throughput is comparable to a top-end Illumina, while the per-run economics are different."
+  },
+  {
+   "t": 210.0,
+   "text": "A subtle point about TDI imaging that's worth understanding."
+  },
+  {
+   "t": 213.93,
+   "text": "TDI cameras work by reading out one row of pixels at a time, but each pixel is read out multiple times as the object moves under it — typically a few hundred rows worth of integration time per pixel position."
+  },
+  {
+   "t": 226.93,
+   "text": "That integration gives you signal-to-noise much better than a single snapshot exposure would."
+  },
+  {
+   "t": 232.94,
+   "text": "So even though the wafer is spinning at meters per second under the camera, the effective exposure per cluster is long enough to detect even faint fluorescence cleanly."
+  },
+  {
+   "t": 243.32,
+   "text": "This trick — high-speed continuous imaging with effectively long exposures — is exactly what semiconductor wafer inspection machines have been doing for thirty years."
+  },
+  {
+   "t": 254.09,
+   "text": "The TDI sensors, the timing electronics, the precision spindles that keep the wafer wobble-free at high speed: all of these are mature technologies in the chip industry."
+  },
+  {
+   "t": 264.53,
+   "text": "Ultima didn't have to invent them."
+  },
+  {
+   "t": 266.68,
+   "text": "They bought them, integrated them, and pointed them at DNA instead of silicon."
+  },
+  {
+   "t": 271.73,
+   "text": "That technology transfer is part of why a small startup could build a competitive imaging system without a billion-dollar R&D investment."
+  },
+  {
+   "t": 280.05,
+   "text": "The lens-and-camera assembly on a UG100 is, in cost terms, expensive — high-quality industrial machine vision is not cheap — but it is far less expensive than the corresponding ultra-high-throughput optics on a NovaSeq, which Illumina has had to engineer in-house essentially from scratch."
+  },
+  {
+   "t": 298.18,
+   "text": "Different supply chain, different cost structure, different scaling characteristics."
+  },
+  {
+   "t": 302.98,
+   "text": "Optics borrowed from the chip industry, applied to biology."
+  },
+  {
+   "t": 306.6,
+   "text": "That's the throughput story."
+  }
+ ]
+}

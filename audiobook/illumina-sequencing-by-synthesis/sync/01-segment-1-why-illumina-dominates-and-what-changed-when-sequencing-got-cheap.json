@@ -1,0 +1,195 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — Why Illumina dominates, and what changed when sequencing got cheap",
+ "duration": 351.94,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — Why Illumina dominates, and what changed when sequencing got cheap"
+  },
+  {
+   "t": 5.59,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 7.24,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 8.62,
+   "text": "Today and for the next two hours, we're going to talk about Illumina sequencing — specifically, the technology that single-handedly turned reading a human genome from a multi-billion-dollar international megaproject into a routine assay you can order online for a few hundred bucks and have results back in a couple of days."
+  },
+  {
+   "t": 27.7,
+   "text": "That sentence sounds like marketing copy."
+  },
+  {
+   "t": 30.01,
+   "text": "It's not."
+  },
+  {
+   "t": 30.91,
+   "text": "It's an understatement of one of the most dramatic technological shifts in the history of biology."
+  },
+  {
+   "t": 36.86,
+   "text": "And the engine of that shift is a single platform — sequencing by synthesis, abbreviated SBS — which Illumina perfected and now sells from instruments that range from a desktop box the size of a coffee maker to a refrigerator-sized monster that can read twenty thousand human genomes a year."
+  },
+  {
+   "t": 55.16,
+   "text": "So let me start with a number that should genuinely shock you."
+  },
+  {
+   "t": 58.23,
+   "text": "The Human Genome Project, which ran from 1990 to 2003, cost roughly three billion dollars and took about thirteen years to produce the first complete human genome sequence."
+  },
+  {
+   "t": 69.72,
+   "text": "That's a single genome, by an international consortium of hundreds of labs, using the best technology available at the time — Sanger sequencing, which we'll come back to."
+  },
+  {
+   "t": 80.03,
+   "text": "By 2014, an Illumina instrument called the HiSeq X Ten could sequence a human genome for about a thousand dollars in a couple of days, on its own."
+  },
+  {
+   "t": 90.36,
+   "text": "By 2023, the NovaSeq X — Illumina's latest flagship — pushed that cost down to roughly two hundred dollars per genome."
+  },
+  {
+   "t": 98.61,
+   "text": "So in twenty years, the cost of sequencing one human dropped from three billion dollars to two hundred."
+  },
+  {
+   "t": 104.91,
+   "text": "That's a factor of fifteen million."
+  },
+  {
+   "t": 107.03,
+   "text": "Moore's law, the famous trajectory of computer chips, looks tame next to it."
+  },
+  {
+   "t": 112.19,
+   "text": "Sequencing got cheaper, faster than anything else in modern technology has ever gotten cheaper."
+  },
+  {
+   "t": 118.44,
+   "text": "And the reason is Illumina."
+  },
+  {
+   "t": 120.4,
+   "text": "Here's the analogy I want you to hold in your head for the next two hours."
+  },
+  {
+   "t": 124.65,
+   "text": "Imagine you wanted to figure out, letter by letter, the contents of a very long book — say, three billion letters long, which is roughly the size of the human genome."
+  },
+  {
+   "t": 134.82,
+   "text": "The old way of doing it, Sanger sequencing, was like reading the book carefully with a single very precise person sitting at a desk, taking their time, reading one section at a time, then moving on to the next."
+  },
+  {
+   "t": 147.95,
+   "text": "The careful reader is accurate — they don't make many mistakes — but they're slow, and they're expensive, and if you want to read the whole book you have to wait."
+  },
+  {
+   "t": 156.61,
+   "text": "Illumina sequencing, by contrast, is like ripping the book into millions of tiny scraps — each scrap a couple of sentences long — pasting all the scraps onto a glass slide, and then having millions of tiny readers, each one assigned to one scrap, all reading their scrap at the same time while a camera takes a photograph every few seconds to record what each reader has just read."
+  },
+  {
+   "t": 179.97,
+   "text": "Millions of tiny sequencing reactions, happening side by side on a glass slide, all watched by a camera that takes a photo after each cycle."
+  },
+  {
+   "t": 189.62,
+   "text": "That's the picture."
+  },
+  {
+   "t": 190.84,
+   "text": "Hold it."
+  },
+  {
+   "t": 191.59,
+   "text": "The key word in that sentence is parallelism."
+  },
+  {
+   "t": 194.39,
+   "text": "Sanger sequencing reads one fragment of DNA at a time."
+  },
+  {
+   "t": 198.43,
+   "text": "Illumina reads, depending on the instrument, somewhere between a few million and a few billion fragments simultaneously, all on the same surface, in the same run."
+  },
+  {
+   "t": 208.31,
+   "text": "That parallelism is where all the speed and all the cost reduction come from."
+  },
+  {
+   "t": 213.36,
+   "text": "The chemistry of reading any single fragment, on an Illumina instrument, is not dramatically faster than reading a single fragment with Sanger."
+  },
+  {
+   "t": 222.6,
+   "text": "It's actually slower per base."
+  },
+  {
+   "t": 224.46,
+   "text": "But because you're reading ten billion fragments at the same time instead of one, the total throughput is something like ten billion times higher."
+  },
+  {
+   "t": 232.82,
+   "text": "That's the trick."
+  },
+  {
+   "t": 234.07,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the four-step cycle of Illumina sequencing on a whiteboard and explain what each step does and why; two, explain in plain English why bridge amplification and clusters are necessary, given how dim a single molecule's signal is; three, look at any modern genomics paper that says \"Illumina sequencing was performed\" and have a real intuition for what that means about cost, read length, error rates, and what the data"
+  },
+  {
+   "t": 264.09,
+   "text": "looks like — then we've succeeded."
+  },
+  {
+   "t": 266.2,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 268.44,
+   "text": "One more orienting fact before we go deeper."
+  },
+  {
+   "t": 271.46,
+   "text": "Illumina, the company, controls something like seventy to eighty percent of the global next-generation sequencing market — and at various times in the last decade that share has been higher than ninety percent."
+  },
+  {
+   "t": 284.26,
+   "text": "When you read a paper that says \"we sequenced this with Illumina\" or \"we performed RNA-seq\" or \"we did whole-exome sequencing on these patients,\" what you're almost certainly reading about is data produced by an Illumina machine."
+  },
+  {
+   "t": 298.02,
+   "text": "The big competitors — and we'll meet a few of them in Segment 16 — are real but small."
+  },
+  {
+   "t": 303.69,
+   "text": "For now, when I say \"next-generation sequencing,\" I mean, in the overwhelming majority of cases, Illumina."
+  },
+  {
+   "t": 310.21,
+   "text": "The platform is so dominant that \"Illumina-style data\" has become a kind of generic format that the rest of bioinformatics is built around — short reads, paired-end, with quality scores attached, in files called FASTQ."
+  },
+  {
+   "t": 324.46,
+   "text": "The whole downstream ecosystem of variant callers, aligners, expression quantifiers, and analysis tools was shaped by what Illumina produces."
+  },
+  {
+   "t": 333.67,
+   "text": "So that's the contract."
+  },
+  {
+   "t": 335.15,
+   "text": "We're going to spend two hours on one platform — the platform — and we're going to do it the way you'd want to understand any dominant technology: by getting the chemistry right, then the engineering, then the economics, then the failure modes, then the competitive landscape."
+  },
+  {
+   "t": 350.32,
+   "text": "Let's start with where it came from."
+  }
+ ]
+}

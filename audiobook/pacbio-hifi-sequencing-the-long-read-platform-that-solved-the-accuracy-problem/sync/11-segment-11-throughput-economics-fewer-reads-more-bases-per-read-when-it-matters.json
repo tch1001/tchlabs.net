@@ -1,0 +1,187 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Throughput economics: fewer reads, more bases per read, when it matters",
+ "duration": 361.5,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Throughput economics: fewer reads, more bases per read, when it matters"
+  },
+  {
+   "t": 6.88,
+   "text": "Let me spend a segment on the economics of PacBio versus its competitors, because the cost structure of long-read sequencing is unintuitive and matters a lot for figuring out when to use which platform."
+  },
+  {
+   "t": 18.15,
+   "text": "The basic cost equation in sequencing is: you have a fixed cost per run (the consumables — chip, reagents — plus a fraction of the instrument's amortized cost), and you divide that by the number of bases you generate per run, to get a cost per gigabase."
+  },
+  {
+   "t": 33.51,
+   "text": "For Illumina NovaSeq, the cost per gigabase is, roughly, a few dollars at scale."
+  },
+  {
+   "t": 39.83,
+   "text": "For PacBio Revio HiFi, it's somewhere in the tens of dollars per gigabase — three to ten times more expensive per base than Illumina."
+  },
+  {
+   "t": 48.91,
+   "text": "For Oxford Nanopore on their high-end PromethION, it's in between, somewhere around five to fifteen dollars per gigabase depending on chemistry."
+  },
+  {
+   "t": 58.01,
+   "text": "So the headline comparison is: PacBio HiFi data is more expensive per base than Illumina data."
+  },
+  {
+   "t": 64.88,
+   "text": "Significantly so."
+  },
+  {
+   "t": 66.54,
+   "text": "That's the eternal trade-off — paying for the long reads and the high accuracy."
+  },
+  {
+   "t": 71.39,
+   "text": "But the relevant question is not \"how much per base\" — it's \"how much for the answer I'm trying to get."
+  },
+  {
+   "t": 77.26,
+   "text": "\" And there, the calculus changes depending on the application."
+  },
+  {
+   "t": 81.25,
+   "text": "If you want to do a million-sample GWAS — genome-wide association study — where you genotype a few hundred thousand known variants, Illumina is irreplaceable."
+  },
+  {
+   "t": 92.3,
+   "text": "PacBio is overkill, and you can't afford it at that scale."
+  },
+  {
+   "t": 96.62,
+   "text": "If you want to count RNA transcripts in ten thousand single cells, Illumina is the answer."
+  },
+  {
+   "t": 102.34,
+   "text": "PacBio doesn't have the right chemistry or throughput for that workload, although PacBio Iso-Seq has a niche for full-length transcript characterization in smaller numbers of samples."
+  },
+  {
+   "t": 113.79,
+   "text": "If you want to do a clinical exome on a patient, Illumina is the answer."
+  },
+  {
+   "t": 118.3,
+   "text": "It's cheap, fast, accurate enough, and well-supported by clinical pipelines."
+  },
+  {
+   "t": 123.25,
+   "text": "But — and this is the \"when it matters\" part — if you want to assemble a new genome from scratch, to a reference-quality standard, including the previously unassemblable regions — PacBio HiFi is the answer, not Illumina."
+  },
+  {
+   "t": 137.5,
+   "text": "The cost per gigabase is higher, but the cost per assembled genome is lower, because you need much less coverage (thirty-x HiFi is enough for a high-quality human assembly, where you'd need much more Illumina to even attempt the same job, and you still couldn't assemble the repeats)."
+  },
+  {
+   "t": 154.07,
+   "text": "The number of reads needed is far fewer, but each read does more work."
+  },
+  {
+   "t": 159.03,
+   "text": "If you want to catalog structural variants in a tumor or a rare disease patient, HiFi is the answer, because each HiFi read can directly span the event."
+  },
+  {
+   "t": 169.09,
+   "text": "Short reads only see structural variants through indirect signals that are unreliable for any but the largest events."
+  },
+  {
+   "t": 177.26,
+   "text": "If you want to resolve the two parental copies of a chromosome — phased, diploid assembly — HiFi reads, being long enough to span most heterozygous variants, make this routine."
+  },
+  {
+   "t": 188.72,
+   "text": "Short reads collapse the two copies together, and reconstructing phase from short reads requires statistical inference that is often unreliable."
+  },
+  {
+   "t": 198.35,
+   "text": "If you want to detect DNA methylation directly, without bisulfite conversion, HiFi (and Nanopore) can do it."
+  },
+  {
+   "t": 206.07,
+   "text": "Illumina cannot, fundamentally, because PCR amplification erases the modification."
+  },
+  {
+   "t": 212.55,
+   "text": "We'll spend the next segment on methylation."
+  },
+  {
+   "t": 214.97,
+   "text": "If you want to characterize a microbial genome to closure, including any plasmids, prophages, and mobile elements — HiFi is the answer."
+  },
+  {
+   "t": 224.7,
+   "text": "A single PacBio run on a bacterial isolate gives you a complete, closed, polished assembly."
+  },
+  {
+   "t": 231.22,
+   "text": "Illumina can give you a draft, but the draft is fragmented and the repetitive elements are unresolved."
+  },
+  {
+   "t": 237.21,
+   "text": "The pattern is: PacBio HiFi wins when accuracy at every position, including in difficult regions, matters more than raw throughput."
+  },
+  {
+   "t": 246.96,
+   "text": "The cost per useful answer can be much lower than Illumina, even if the cost per base is higher."
+  },
+  {
+   "t": 252.67,
+   "text": "The applications where this is true — de novo assembly, structural variants, phasing, methylation, complete microbial genomics — are exactly the applications where PacBio HiFi has become the standard."
+  },
+  {
+   "t": 265.74,
+   "text": "The reverse pattern is: Illumina wins when you're counting things — transcripts, variants at known positions, allele frequencies — and you can tolerate some loss of information in repetitive regions, because the regions you care about are well-behaved."
+  },
+  {
+   "t": 281.15,
+   "text": "Most clinical and population-scale work falls in this category, which is why Illumina remains overwhelmingly dominant."
+  },
+  {
+   "t": 289.05,
+   "text": "Then there's the niche where PacBio Iso-Seq is unique: full-length transcript sequencing for isoform discovery in a single sample."
+  },
+  {
+   "t": 297.61,
+   "text": "We'll cover Iso-Seq specifically in segment fifteen."
+  },
+  {
+   "t": 301.81,
+   "text": "And there's the comparison with Nanopore, which we'll dedicate segment sixteen to in detail."
+  },
+  {
+   "t": 307.41,
+   "text": "One throughput note: as of the early-2020s, the Revio instrument has dramatically narrowed the cost gap with Illumina for whole-genome sequencing."
+  },
+  {
+   "t": 317.49,
+   "text": "A Revio human genome at thirty-x HiFi coverage runs in the low hundreds of dollars — not equal to Illumina, but close enough that for many clinical applications the extra accuracy and SV detection ability is worth it."
+  },
+  {
+   "t": 332.47,
+   "text": "PacBio's trajectory is to continue driving this cost down, and they've publicly targeted human genomes in the very-low-hundreds or even sub-hundred range over the next few generations."
+  },
+  {
+   "t": 343.82,
+   "text": "If that happens, the cost-per-gigabase argument against PacBio largely disappears, and the platform becomes a real contender for clinical genomics at scale."
+  },
+  {
+   "t": 353.89,
+   "text": "We'll come back to this in segment eighteen."
+  },
+  {
+   "t": 356.14,
+   "text": "Now let's look at what HiFi can see that other platforms cannot."
+  },
+  {
+   "t": 359.81,
+   "text": "Starting with methylation."
+  }
+ ]
+}

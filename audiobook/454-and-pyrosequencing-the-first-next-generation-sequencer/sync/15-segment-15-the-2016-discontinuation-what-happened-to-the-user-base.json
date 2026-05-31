@@ -1,0 +1,183 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — The 2016 discontinuation: what happened to the user base",
+ "duration": 313.67,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — The 2016 discontinuation: what happened to the user base"
+  },
+  {
+   "t": 6.28,
+   "text": "Let me spend a few minutes on the practical aftermath of the 454 shutdown, because it illustrates how technology transitions play out in real research communities."
+  },
+  {
+   "t": 16.79,
+   "text": "Roche announced the discontinuation in October 2013."
+  },
+  {
+   "t": 21.23,
+   "text": "Reagent production wound down over the following two years."
+  },
+  {
+   "t": 25.12,
+   "text": "Support ended in mid-2016."
+  },
+  {
+   "t": 27.89,
+   "text": "At the time of the announcement, there were estimated to be several hundred 454 instruments installed worldwide — most of them in core sequencing facilities at universities, pharmaceutical companies, and government labs."
+  },
+  {
+   "t": 40.76,
+   "text": "For the user community, the news triggered a scramble."
+  },
+  {
+   "t": 44.11,
+   "text": "Researchers who had been investing years of work in 454 workflows had to think hard about what to do."
+  },
+  {
+   "t": 50.9,
+   "text": "Roughly three groups emerged."
+  },
+  {
+   "t": 53.08,
+   "text": "Group one: migrate to Illumina."
+  },
+  {
+   "t": 55.64,
+   "text": "This was the dominant choice."
+  },
+  {
+   "t": 57.44,
+   "text": "For most applications — genome sequencing, transcriptome sequencing, exome sequencing — Illumina was a clearly better platform at this point, and the migration was a matter of adapting protocols and analysis pipelines."
+  },
+  {
+   "t": 71.22,
+   "text": "The Illumina MiSeq was a natural replacement for the GS Junior in benchtop applications."
+  },
+  {
+   "t": 77.33,
+   "text": "The HiSeq was the obvious successor for high-throughput work."
+  },
+  {
+   "t": 81.25,
+   "text": "Most users made this jump within a year or two of the discontinuation announcement."
+  },
+  {
+   "t": 86.78,
+   "text": "Group two: migrate to Ion Torrent or another platform."
+  },
+  {
+   "t": 90.55,
+   "text": "For applications where flow-based chemistry was a feature rather than a bug — particularly clinical applications using small targeted gene panels — Ion Torrent was a natural transition."
+  },
+  {
+   "t": 102.21,
+   "text": "Ion Torrent had inherited not just the chemistry but a lot of the bioinformatics conventions of 454, so the workflow change was smaller."
+  },
+  {
+   "t": 111.75,
+   "text": "Some clinical labs and small research groups went this route."
+  },
+  {
+   "t": 115.84,
+   "text": "Group three: keep running the 454 until it dies."
+  },
+  {
+   "t": 120.15,
+   "text": "Some labs, particularly those with very specific established workflows — long-read metagenomics, 16S amplicon studies, ancient DNA — kept their 454s alive as long as possible."
+  },
+  {
+   "t": 134.26,
+   "text": "They stockpiled reagents from Roche, then started buying from gray-market suppliers when official supply dried up."
+  },
+  {
+   "t": 141.15,
+   "text": "Some collaborations passed reagents around."
+  },
+  {
+   "t": 144.07,
+   "text": "By 2018 or so, most of these holdouts had given up and migrated."
+  },
+  {
+   "t": 148.78,
+   "text": "A few were rumored to still be running into the early 2020s, in particularly determined labs."
+  },
+  {
+   "t": 154.8,
+   "text": "The data side of the transition was interesting too."
+  },
+  {
+   "t": 158.11,
+   "text": "A lot of important reference datasets — early metagenomics studies, the original Neanderthal genome data, many 16S microbiome studies — had been generated on 454."
+  },
+  {
+   "t": 169.97,
+   "text": "Those datasets continued to be used and reanalyzed for years after the platform was dead."
+  },
+  {
+   "t": 175.96,
+   "text": "New software pipelines had to maintain support for 454 flowgrams and 454-format reads even though no new 454 data was being produced."
+  },
+  {
+   "t": 187.21,
+   "text": "There was a kind of data afterlife that lasted longer than the instrument."
+  },
+  {
+   "t": 191.86,
+   "text": "Specifically, the 16S amplicon community had a hard transition."
+  },
+  {
+   "t": 196.96,
+   "text": "For years, the standard pipeline for microbial community analysis — programs like QIIME and mothur — was built around 454 reads and 454-style error correction."
+  },
+  {
+   "t": 208.53,
+   "text": "Migrating to Illumina paired-end reads of the same gene meant rebuilding pipelines, recalibrating error models, and figuring out how to compare new Illumina-based studies to older 454-based studies."
+  },
+  {
+   "t": 221.25,
+   "text": "There were genuine questions about whether the two platforms gave equivalent answers in terms of which microbes you would identify and at what abundance."
+  },
+  {
+   "t": 230.53,
+   "text": "Several papers were written about cross-platform comparability."
+  },
+  {
+   "t": 234.66,
+   "text": "The community more or less settled out by 2018, but it took years."
+  },
+  {
+   "t": 239.7,
+   "text": "The ancient DNA community had a smoother transition because their workflow had already largely moved to Illumina by the time 454 was discontinued."
+  },
+  {
+   "t": 249.76,
+   "text": "Illumina's short reads were a natural match for ancient DNA, where the input molecules were short fragments anyway."
+  },
+  {
+   "t": 257.46,
+   "text": "The lasting impact on the user community was, I think, a kind of healthy paranoia about platform lock-in."
+  },
+  {
+   "t": 264.72,
+   "text": "Researchers who had bet heavily on 454 and then had to migrate emerged with a strong appreciation for the fact that any commercial sequencing platform might die in a five-to-ten-year window."
+  },
+  {
+   "t": 277.22,
+   "text": "The lesson generalized: design your analyses to be portable across platforms when possible, don't get too locked into one vendor's quirks, keep an eye on which platform is winning the cost-per-base war."
+  },
+  {
+   "t": 289.7,
+   "text": "This kind of platform-agnostic thinking became standard practice in the field after 454's death, partly because of 454's death."
+  },
+  {
+   "t": 299.42,
+   "text": "Today, when researchers plan new sequencing projects, they think hard about platform choice in a way that 2005-era researchers didn't have to."
+  },
+  {
+   "t": 308.78,
+   "text": "The 454 shutdown was an educational event for the whole community."
+  }
+ ]
+}

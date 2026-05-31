@@ -1,0 +1,179 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Why DNBSEQ has no index hopping: the structural reason",
+ "duration": 414.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Why DNBSEQ has no index hopping: the structural reason"
+  },
+  {
+   "t": 5.58,
+   "text": "Let me spend a full segment on index hopping, because it is one of the cleanest examples of how a chemistry choice ripples out into a clinical and operational difference between platforms — and because it is one of the few places where MGI has a genuinely structural advantage over Illumina that Illumina cannot fix with engineering alone."
+  },
+  {
+   "t": 25.57,
+   "text": "Recall, from the Illumina lecture, what an index is."
+  },
+  {
+   "t": 28.65,
+   "text": "When you multiplex many samples on one flow cell — say, ninety-six samples on a single NovaSeq run — each sample gets a unique short index sequence ligated into its adapters during library prep."
+  },
+  {
+   "t": 41.81,
+   "text": "Sample one gets index AAGCTT, sample two gets index TTCAGG, and so on."
+  },
+  {
+   "t": 47.23,
+   "text": "After sequencing, the analysis software reads the index portion of each read and uses it to demultiplex — to sort the reads back into per-sample bins."
+  },
+  {
+   "t": 57.0,
+   "text": "The whole multiplexing scheme depends absolutely on the index being faithful: a fragment that started life in sample one had better still be tagged with sample one's index by the time it gets sequenced."
+  },
+  {
+   "t": 68.42,
+   "text": "Here is the failure mode."
+  },
+  {
+   "t": 70.35,
+   "text": "During bridge amplification on an Illumina flow cell, the fragments are flowing across a surface densely covered with anchor oligos."
+  },
+  {
+   "t": 78.95,
+   "text": "Most of the time, each fragment binds, bridges, amplifies, and stays in place."
+  },
+  {
+   "t": 85.22,
+   "text": "But sometimes — at rates that vary from less than half a percent to several percent depending on instrument generation, sample preparation, and reagent batch — an adapter from one sample can detach from its fragment and re-anneal to a fragment from a different sample."
+  },
+  {
+   "t": 101.09,
+   "text": "The resulting hybrid fragment, with the original insert from sample two but the index from sample one, then bridge-amplifies normally, gets sequenced normally, and gets demultiplexed into sample one's bin."
+  },
+  {
+   "t": 114.25,
+   "text": "The result is a contaminating read — a read with sample two's biological content but tagged with sample one's identity."
+  },
+  {
+   "t": 122.03,
+   "text": "This is index hopping."
+  },
+  {
+   "t": 123.5,
+   "text": "It was first widely characterized in 2017, when researchers running large pooled experiments on Illumina HiSeq 4000 and NovaSeq instruments noticed that they were getting unexpectedly high rates of \"wrong sample\" reads in their data."
+  },
+  {
+   "t": 138.81,
+   "text": "Investigation revealed that the bridge amplification step itself was the culprit: free adapters in the loaded library, plus the high density of fragments on the flow cell, plus the multiple cycles of denaturation and re-annealing during bridge formation, created the conditions for indexes to swap between fragments."
+  },
+  {
+   "t": 158.62,
+   "text": "For research applications with hundreds of samples sequenced in a pool, an index hopping rate of one to two percent is annoying but tolerable."
+  },
+  {
+   "t": 167.85,
+   "text": "For clinical applications — especially cancer sequencing, where you might be looking for a variant present in a small fraction of reads — a one percent contamination rate from index hopping can be the difference between calling a variant correctly and producing a false positive."
+  },
+  {
+   "t": 184.01,
+   "text": "Illumina has worked hard on mitigations: dual indexing (so the chance of both indexes happening to hop coordinately is much lower), unique dual indexing (where each sample has a totally unique pair rather than from a fixed plate of combinations), and bead-based clean-up protocols that remove free adapters before loading."
+  },
+  {
+   "t": 203.29,
+   "text": "These mitigations reduce the problem but do not eliminate it, because the underlying mechanism — adapter swapping during flow-cell amplification — is fundamentally part of how bridge amplification works."
+  },
+  {
+   "t": 216.24,
+   "text": "Now consider what happens on a DNBSEQ instrument."
+  },
+  {
+   "t": 219.3,
+   "text": "The library is loaded as fully formed nanoballs."
+  },
+  {
+   "t": 223.01,
+   "text": "Each nanoball was constructed in a tube, by rolling circle amplification of a single circular template, before it ever touched the flow cell."
+  },
+  {
+   "t": 232.56,
+   "text": "The adapter sequences, including the indexes, are part of the circular template — they were ligated in during library prep, then locked in place by the circularization step, then physically built into the nanoball as part of the long single-stranded concatemer."
+  },
+  {
+   "t": 248.71,
+   "text": "By the time the nanoball is sitting on the patterned flow cell, ready to be sequenced, the index sequence is baked into three hundred head-to-tail copies on a single covalent molecule."
+  },
+  {
+   "t": 259.56,
+   "text": "There is no opportunity, on the flow cell, for an adapter from one nanoball to swap to a different nanoball — because no amplification is happening on the flow cell at all."
+  },
+  {
+   "t": 270.63,
+   "text": "The chemistry that would enable index hopping simply isn't there."
+  },
+  {
+   "t": 275.0,
+   "text": "This is what I mean when I say it is a structural advantage."
+  },
+  {
+   "t": 278.55,
+   "text": "It is not that MGI has engineered a workaround."
+  },
+  {
+   "t": 281.88,
+   "text": "It is that the architecture of the platform — the choice to do amplification in a tube as RCA rather than on the flow cell as bridge amplification — makes the failure mode geometrically impossible."
+  },
+  {
+   "t": 293.94,
+   "text": "There is no adapter pool floating around on the flow cell."
+  },
+  {
+   "t": 297.45,
+   "text": "There is no re-annealing during cycles."
+  },
+  {
+   "t": 300.09,
+   "text": "There is just one ball, one starting molecule, one index, sequenced once."
+  },
+  {
+   "t": 305.61,
+   "text": "The practical consequence: published index hopping rates on MGI instruments are essentially at the limit of detection — far below the rates measured on Illumina flow cells, with no mitigations needed."
+  },
+  {
+   "t": 318.65,
+   "text": "For clinical multiplexing — pooling many patient samples on one run for cost reasons, then demultiplexing back out — MGI offers a cleaner workflow."
+  },
+  {
+   "t": 329.73,
+   "text": "This matters most for cancer sequencing, somatic variant calling, low-allele-fraction detection, and any application where small fractions of contaminating reads matter to the conclusion."
+  },
+  {
+   "t": 341.08,
+   "text": "I want to flag a subtle point: index hopping is not the only kind of cross-sample contamination in sequencing."
+  },
+  {
+   "t": 348.0,
+   "text": "You can also get contamination during library prep itself — droplets crossing between wells during pipetting, evaporation and condensation in plate seals, sample mix-ups at the bench."
+  },
+  {
+   "t": 360.08,
+   "text": "These pre-flow-cell sources of contamination affect both platforms equally, and they are the dominant cross-sample contamination source in most real labs."
+  },
+  {
+   "t": 370.18,
+   "text": "The DNB structural advantage applies only to the flow-cell-amplification source of contamination."
+  },
+  {
+   "t": 377.01,
+   "text": "So when MGI marketing materials say \"no index hopping,\" they mean \"no flow-cell-amplification-induced index hopping,\" which is true, but it doesn't mean your samples cannot be contaminated by other means."
+  },
+  {
+   "t": 389.9,
+   "text": "Still, the elimination of one entire class of contamination — for free, as a consequence of the chemistry choice — is a real and clean advantage."
+  },
+  {
+   "t": 400.51,
+   "text": "It is one of the reasons MGI has been adopted faster in certain clinical applications than its overall market share would suggest, particularly in oncology workflows where low-fraction variants are biologically important."
+  }
+ ]
+}

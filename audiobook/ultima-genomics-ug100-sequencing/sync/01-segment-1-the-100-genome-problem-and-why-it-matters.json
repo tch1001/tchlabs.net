@@ -1,0 +1,295 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The $100 genome problem and why it matters",
+ "duration": 450.76,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The $100 genome problem and why it matters"
+  },
+  {
+   "t": 4.28,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 5.71,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 7.12,
+   "text": "Today and for the next two hours, we're going to talk about Ultima Genomics — a company that almost nobody outside of professional genomics has heard of, and which, depending on how the next five years play out, will either be remembered as the boldest engineering bet anyone has ever made in DNA sequencing, or as a fascinating footnote in the history of how Illumina cemented its monopoly."
+  },
+  {
+   "t": 29.66,
+   "text": "The verdict is genuinely still out."
+  },
+  {
+   "t": 32.25,
+   "text": "And that's part of what makes this such a rich case to think about."
+  },
+  {
+   "t": 35.96,
+   "text": "But before we get into Ultima itself, I want to start with a number."
+  },
+  {
+   "t": 39.6,
+   "text": "Two hundred dollars."
+  },
+  {
+   "t": 40.91,
+   "text": "That's roughly what it costs, in 2024 and 2025, to read a complete human genome on Illumina's NovaSeq X — the dominant sequencing platform on the planet."
+  },
+  {
+   "t": 52.0,
+   "text": "Two hundred dollars to read three billion bases of DNA, accurately enough to find the medically relevant variants, in a sample from a single human being."
+  },
+  {
+   "t": 62.08,
+   "text": "That number is the result of about twenty years of relentless engineering improvements, layered on top of the same fundamental chemistry that came out of Cambridge in the late 1990s."
+  },
+  {
+   "t": 73.22,
+   "text": "And it's astonishingly cheap."
+  },
+  {
+   "t": 75.06,
+   "text": "The Human Genome Project, two decades ago, cost three billion dollars for one genome."
+  },
+  {
+   "t": 80.96,
+   "text": "Now it's two hundred."
+  },
+  {
+   "t": 82.26,
+   "text": "So why is anyone trying to go lower?"
+  },
+  {
+   "t": 84.51,
+   "text": "Why would you build an entire company, raise six hundred million dollars in venture capital, and bet your career on undercutting a price that's already, by any historical standard, miraculous?"
+  },
+  {
+   "t": 96.06,
+   "text": "Here's the answer, and it's the framing I want you to hold for the rest of this lecture."
+  },
+  {
+   "t": 100.59,
+   "text": "There is a price point — somewhere around one hundred dollars per genome, maybe a bit lower — below which something qualitatively new becomes possible."
+  },
+  {
+   "t": 109.49,
+   "text": "Not just incrementally cheaper sequencing."
+  },
+  {
+   "t": 112.11,
+   "text": "Something different in kind."
+  },
+  {
+   "t": 113.62,
+   "text": "At a hundred dollars a genome, you can do what people in the field call population-scale sequencing — projects that aim to sequence not thousands of people, not tens of thousands, but millions."
+  },
+  {
+   "t": 124.55,
+   "text": "The UK Biobank, which has half a million participants."
+  },
+  {
+   "t": 128.46,
+   "text": "The NIH's All of Us program, aiming at a million Americans."
+  },
+  {
+   "t": 132.88,
+   "text": "The Saudi Genome Program, GenomeAsia 100K, the Million Veteran Program, Iceland's deCODE work."
+  },
+  {
+   "t": 140.21,
+   "text": "Every one of these projects has, as its dominant line item, the cost of actually sequencing all those samples."
+  },
+  {
+   "t": 147.57,
+   "text": "If you can cut that cost in half, you save tens of millions of dollars — or, equivalently, you can sequence twice as many people for the same budget."
+  },
+  {
+   "t": 157.01,
+   "text": "And here's why that matters scientifically."
+  },
+  {
+   "t": 159.31,
+   "text": "A lot of human genetic variation is rare."
+  },
+  {
+   "t": 162.38,
+   "text": "Most of the variants that drive disease risk or drug response are present in less than one in a thousand people, or one in ten thousand, or one in a hundred thousand."
+  },
+  {
+   "t": 172.57,
+   "text": "To find them, and to figure out what they do, you need to sequence enormous cohorts."
+  },
+  {
+   "t": 178.22,
+   "text": "The statistical power of a genetic study scales roughly with the square root of the number of people you've sequenced."
+  },
+  {
+   "t": 185.25,
+   "text": "Going from one hundred thousand genomes to one million genomes more than triples your power to detect rare effects."
+  },
+  {
+   "t": 192.32,
+   "text": "And the only thing standing between us and routine million-person studies is the per-genome cost."
+  },
+  {
+   "t": 199.06,
+   "text": "Drop the cost, and the studies that were impossible last year become straightforward this year."
+  },
+  {
+   "t": 204.8,
+   "text": "That is the bet Ultima Genomics has made."
+  },
+  {
+   "t": 207.34,
+   "text": "The whole company, from the day it was founded, has been organized around one question: how do you build a sequencer that costs roughly half what an Illumina costs to run, on a per-genome basis?"
+  },
+  {
+   "t": 219.18,
+   "text": "And the answer they arrived at is so different from how Illumina works, so structurally weird, that even competitors who hate them have had to admit it's an impressive piece of engineering."
+  },
+  {
+   "t": 229.62,
+   "text": "Here's the analogy I want you to hold in your head for the next two hours."
+  },
+  {
+   "t": 233.9,
+   "text": "Illumina sequencing happens on a glass flow cell — basically a microscope slide, with channels etched into it, sitting still while reagents are pumped across its surface and a camera takes pictures."
+  },
+  {
+   "t": 246.45,
+   "text": "It's a static stage."
+  },
+  {
+   "t": 248.11,
+   "text": "Liquid moves; the stage doesn't."
+  },
+  {
+   "t": 250.76,
+   "text": "Now imagine, instead of that static glass slide, you took a silicon wafer — the same kind of round, polished silicon disk that semiconductor fabs use to make computer chips — and you spun it."
+  },
+  {
+   "t": 262.73,
+   "text": "Like a hard drive platter."
+  },
+  {
+   "t": 264.4,
+   "text": "Like a record on a turntable."
+  },
+  {
+   "t": 266.35,
+   "text": "Like a compact disc."
+  },
+  {
+   "t": 267.98,
+   "text": "You drip reagents onto the center of the spinning wafer, and centrifugal force pulls them outward in a thin, even film across the entire surface."
+  },
+  {
+   "t": 278.2,
+   "text": "Above the wafer, fixed cameras stare down through the optics, and as the wafer spins under them, every point on the surface eventually passes through the field of view, gets imaged, and moves on."
+  },
+  {
+   "t": 290.38,
+   "text": "That's the picture."
+  },
+  {
+   "t": 291.58,
+   "text": "Hold it."
+  },
+  {
+   "t": 292.3,
+   "text": "Instead of a flow cell with liquid flowing through it, you have a spinning wafer with liquid spreading across it by centrifugal force, like a record under a microscope, with the camera as the needle."
+  },
+  {
+   "t": 304.46,
+   "text": "That single architectural choice — spin the surface instead of flowing across it — is the seed from which everything else about Ultima grows."
+  },
+  {
+   "t": 313.4,
+   "text": "The chemistry, the read length, the single-end-only sequencing, the optics, the cost structure, the kind of customer the platform is sold to."
+  },
+  {
+   "t": 322.2,
+   "text": "All of it cascades from the wafer."
+  },
+  {
+   "t": 324.54,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the spinning-wafer architecture on a whiteboard and explain why it changes the economics of sequencing; two, explain in plain English what Ultima's \"mostly unlabeled nucleotides with a single labeled probe\" chemistry is and why it's cheaper than Illumina's four-color reversible terminators; three, look at a population genomics paper that says \"we sequenced this cohort on the UG100\" and have real intuition for what"
+  },
+  {
+   "t": 355.4,
+   "text": "that means about cost, read length, accuracy, and what the data will look like compared to an Illumina dataset — then we've succeeded."
+  },
+  {
+   "t": 363.26,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 365.39,
+   "text": "One more orienting fact before we go deeper."
+  },
+  {
+   "t": 368.85,
+   "text": "Ultima Genomics is a small company."
+  },
+  {
+   "t": 371.59,
+   "text": "About three hundred and fifty employees."
+  },
+  {
+   "t": 373.99,
+   "text": "Founded in 2016 by an Israeli-American engineer named Gilad Almogy, in stealth for nearly six years, finally announced to the world in May of 2022 with a six-hundred-million-dollar funding round and a paper in Nature Biotechnology that constituted the first real public look at the platform."
+  },
+  {
+   "t": 392.28,
+   "text": "The instrument they launched — the UG100 — went into early-access in 2023, and into broader commercial availability in 2024."
+  },
+  {
+   "t": 401.98,
+   "text": "By 2025, a successor called the UG200 was already on the market, with double the throughput."
+  },
+  {
+   "t": 408.49,
+   "text": "For context: Illumina is a thirty-billion-dollar company."
+  },
+  {
+   "t": 412.4,
+   "text": "Ultima, even at the height of its valuation, was worth around eight billion."
+  },
+  {
+   "t": 417.63,
+   "text": "Ultima sells maybe a few dozen instruments a year."
+  },
+  {
+   "t": 420.98,
+   "text": "Illumina has thousands of NovaSeqs deployed."
+  },
+  {
+   "t": 423.95,
+   "text": "So we are absolutely talking about a David-versus-Goliath situation, with Ultima as the David, and with all the long odds that implies."
+  },
+  {
+   "t": 432.4,
+   "text": "Whether Ultima becomes the next Illumina, or gets absorbed, or quietly winds down, is genuinely an open question."
+  },
+  {
+   "t": 440.35,
+   "text": "What's not open is whether the engineering is interesting."
+  },
+  {
+   "t": 443.84,
+   "text": "It is."
+  },
+  {
+   "t": 444.61,
+   "text": "It's some of the most interesting engineering in genomics in the last fifteen years."
+  },
+  {
+   "t": 449.68,
+   "text": "Let's go look at it."
+  }
+ ]
+}

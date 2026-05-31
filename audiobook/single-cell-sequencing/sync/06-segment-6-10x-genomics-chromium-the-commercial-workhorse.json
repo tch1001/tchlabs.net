@@ -1,0 +1,259 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — 10x Genomics Chromium — the commercial workhorse",
+ "duration": 398.57,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — 10x Genomics Chromium — the commercial workhorse"
+  },
+  {
+   "t": 5.53,
+   "text": "10x Genomics was founded in 2012 by Serge Saxonov, Ben Hindson, and Kevin Ness, in Pleasanton, California."
+  },
+  {
+   "t": 13.41,
+   "text": "Hindson had come from QuantaLife, a digital-PCR company that was acquired by Bio-Rad — so he brought deep expertise in droplet microfluidics."
+  },
+  {
+   "t": 22.75,
+   "text": "Saxonov had been an early employee at 23andMe; Ness had been at Verinata."
+  },
+  {
+   "t": 28.11,
+   "text": "The original product idea, going back to 2014 and 2015, was actually not single-cell — it was something called Linked-Reads, a clever way of using droplets to barcode long stretches of genomic DNA so that short Illumina reads from the same long molecule could be computationally linked back together."
+  },
+  {
+   "t": 47.65,
+   "text": "Linked-Reads was a real product, briefly, but it would be surpassed by long-read sequencing platforms."
+  },
+  {
+   "t": 54.2,
+   "text": "The company's real future was in single-cell."
+  },
+  {
+   "t": 57.14,
+   "text": "In early 2016, 10x launched the Chromium Controller — a refrigerator-sized benchtop instrument that automated droplet generation for single-cell RNA-seq."
+  },
+  {
+   "t": 69.78,
+   "text": "The first chemistry was a 3'-end counting assay, similar in concept to Drop-seq, but with proprietary bead chemistry, optimized microfluidic chips, and a fully turnkey workflow."
+  },
+  {
+   "t": 83.01,
+   "text": "You load your cell suspension, your reagent mix, and the bead suspension into a microfluidic chip."
+  },
+  {
+   "t": 89.36,
+   "text": "The Chromium machine drives the chip's pumps for a few minutes."
+  },
+  {
+   "t": 92.94,
+   "text": "Out comes an emulsion — a tube of barcoded droplets, ready for downstream library prep."
+  },
+  {
+   "t": 98.94,
+   "text": "The whole droplet-generation step takes about eight minutes per sample."
+  },
+  {
+   "t": 103.46,
+   "text": "The machine processes up to eight samples in parallel."
+  },
+  {
+   "t": 106.92,
+   "text": "The genius of 10x's commercial move was the combination of three things."
+  },
+  {
+   "t": 112.3,
+   "text": "First, engineering — their droplets are more uniform, their beads are more reliable, their cell capture rate is higher than the academic methods."
+  },
+  {
+   "t": 121.22,
+   "text": "Drop-seq might capture five to ten percent of input cells; Chromium captures sixty to seventy percent."
+  },
+  {
+   "t": 129.29,
+   "text": "That's a big difference when you're trying to recover rare populations."
+  },
+  {
+   "t": 133.01,
+   "text": "Second, integration with software — they shipped a software package called Cell Ranger that takes raw sequencing reads and produces a fully analyzed per-cell gene-expression matrix, with no bioinformatics expertise required."
+  },
+  {
+   "t": 147.11,
+   "text": "We'll discuss Cell Ranger in Segment 9."
+  },
+  {
+   "t": 149.79,
+   "text": "Third, business model — they sell the instrument once, and then they sell consumables — the chips, the bead kits, the reagent kits — every time you run an experiment."
+  },
+  {
+   "t": 160.1,
+   "text": "The instrument is the razor; the chips are the blades."
+  },
+  {
+   "t": 163.57,
+   "text": "The recurring revenue from consumables is what built 10x Genomics into a multi-billion-dollar company."
+  },
+  {
+   "t": 170.47,
+   "text": "Here's the analogy that captures the relationship between academic and commercial single-cell."
+  },
+  {
+   "t": 176.28,
+   "text": "Drop-seq is a homemade microfluidic device plus barcoded beads."
+  },
+  {
+   "t": 181.29,
+   "text": "Chromium is the boxed product version, with better engineering and worse pricing."
+  },
+  {
+   "t": 186.15,
+   "text": "Same biological idea."
+  },
+  {
+   "t": 188.0,
+   "text": "This is the standard pattern in any laboratory-technology field."
+  },
+  {
+   "t": 192.07,
+   "text": "Academic groups invent something; a startup commercializes it; the commercial version becomes the standard tool because most labs would rather pay for reliability than build their own."
+  },
+  {
+   "t": 203.19,
+   "text": "10x didn't invent single-cell sequencing."
+  },
+  {
+   "t": 206.57,
+   "text": "They invented the version of it that anyone can run on Tuesday afternoon without crying."
+  },
+  {
+   "t": 211.61,
+   "text": "The price tag, in 2024, looks roughly like this."
+  },
+  {
+   "t": 215.53,
+   "text": "The Chromium Controller costs somewhere between fifty and a hundred thousand dollars to buy."
+  },
+  {
+   "t": 220.54,
+   "text": "Each Chromium chip — single-use, one chip per sample — costs a few hundred dollars."
+  },
+  {
+   "t": 226.39,
+   "text": "The reagent kits add another fifteen hundred to two thousand dollars per sample."
+  },
+  {
+   "t": 231.44,
+   "text": "Then sequencing — typically a billion or more reads, depending on how many cells — adds another thousand to several thousand."
+  },
+  {
+   "t": 239.89,
+   "text": "So a single 10x experiment on one tissue sample, with maybe ten thousand cells recovered, costs roughly five thousand dollars all-in."
+  },
+  {
+   "t": 249.95,
+   "text": "That's not cheap."
+  },
+  {
+   "t": 251.05,
+   "text": "But it's vastly cheaper than the equivalent amount of Smart-seq2 data, which would cost tens of thousands of dollars and take months."
+  },
+  {
+   "t": 259.05,
+   "text": "In 2017, 10x launched the Chromium V2 chemistry, which improved cell capture and reduced ambient RNA contamination."
+  },
+  {
+   "t": 268.3,
+   "text": "In 2019, V3 chemistry, with another sensitivity improvement."
+  },
+  {
+   "t": 274.35,
+   "text": "In 2020, they launched the Next GEM chip design with better droplet uniformity."
+  },
+  {
+   "t": 279.92,
+   "text": "In parallel, they expanded the product line."
+  },
+  {
+   "t": 282.87,
+   "text": "Single-cell ATAC-seq for chromatin accessibility, launched in 2018."
+  },
+  {
+   "t": 288.47,
+   "text": "Single-cell V(D)J for immune-repertoire profiling."
+  },
+  {
+   "t": 293.61,
+   "text": "The Chromium X instrument, in 2022, which can process up to a million cells per run."
+  },
+  {
+   "t": 300.12,
+   "text": "The Chromium iX, a smaller version for low-throughput labs."
+  },
+  {
+   "t": 304.12,
+   "text": "And in 2018 they acquired Spatial Transcriptomics, a Swedish company that became the Visium product line for spatial single-cell sequencing — we'll cover that in Segment 16."
+  },
+  {
+   "t": 315.74,
+   "text": "The company went public in September 2019 at a valuation of about three billion dollars and now does over six hundred million dollars in annual revenue."
+  },
+  {
+   "t": 326.06,
+   "text": "What I want you to take from this segment is the lineage."
+  },
+  {
+   "t": 328.96,
+   "text": "The conceptual idea — partition cells into droplets, give each droplet a unique barcoded bead, do reverse transcription inside the droplet — is academic."
+  },
+  {
+   "t": 339.42,
+   "text": "Macosko, McCarroll, Klein, Kirschner, all in 2015."
+  },
+  {
+   "t": 344.36,
+   "text": "The commercial execution that put the idea in every lab on Earth is 10x's."
+  },
+  {
+   "t": 350.69,
+   "text": "Both pieces are necessary."
+  },
+  {
+   "t": 352.39,
+   "text": "Without the academic invention, there's nothing to commercialize."
+  },
+  {
+   "t": 356.87,
+   "text": "Without the commercial execution, the academic invention reaches a few hundred labs instead of tens of thousands."
+  },
+  {
+   "t": 364.2,
+   "text": "That's the pattern."
+  },
+  {
+   "t": 365.34,
+   "text": "And it's why, when you read a single-cell paper today, in something like nine cases out of ten the data was generated on a Chromium instrument."
+  },
+  {
+   "t": 373.42,
+   "text": "The competing droplet platforms — BD Rhapsody, the older Fluidigm C1, Parse Biosciences' split-pool approach — exist and have niches."
+  },
+  {
+   "t": 383.5,
+   "text": "But 10x is the workhorse."
+  },
+  {
+   "t": 385.89,
+   "text": "When people say \"we did scRNA-seq,\" they overwhelmingly mean \"we did 10x scRNA-seq."
+  },
+  {
+   "t": 393.22,
+   "text": "\""
+  },
+  {
+   "t": 393.42,
+   "text": "Now let me open the hood and show you what's actually happening inside a Chromium droplet."
+  }
+ ]
+}

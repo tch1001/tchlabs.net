@@ -1,0 +1,187 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Quality scores, Phred scaling, and what Q30 really means",
+ "duration": 350.58,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Quality scores, Phred scaling, and what Q30 really means"
+  },
+  {
+   "t": 5.66,
+   "text": "When you get your data back from an Illumina run, every single base call comes with a number attached to it — a quality score — telling you how confident the base caller is that the call was correct."
+  },
+  {
+   "t": 16.71,
+   "text": "This score is one of the most important pieces of information in the entire data file, and almost every downstream analysis tool uses it heavily."
+  },
+  {
+   "t": 25.85,
+   "text": "We need to spend a segment on what these scores mean and how to read them, because they show up everywhere."
+  },
+  {
+   "t": 31.5,
+   "text": "The quality score Illumina uses is called the Phred score, named after a much older base-calling program called Phred that was originally developed in the late 1990s for Sanger sequencing data."
+  },
+  {
+   "t": 43.6,
+   "text": "The Phred score, abbreviated Q, is logarithmically related to the probability of error in the base call."
+  },
+  {
+   "t": 50.25,
+   "text": "The formula is:"
+  },
+  {
+   "t": 51.84,
+   "text": "Q equals negative ten times the base-ten logarithm of P, where P is the probability that the base call is wrong."
+  },
+  {
+   "t": 59.31,
+   "text": "Let me unpack that with concrete numbers, because the log scaling is where most people lose intuition."
+  },
+  {
+   "t": 65.49,
+   "text": "A Phred score of 10 means a one-in-ten chance of error, or 10 percent error rate."
+  },
+  {
+   "t": 70.67,
+   "text": "A Phred score of 20 means a one-in-a-hundred chance, or 1 percent error."
+  },
+  {
+   "t": 75.33,
+   "text": "A Phred score of 30 means one-in-a-thousand, 0.1 percent error."
+  },
+  {
+   "t": 80.78,
+   "text": "A Phred score of 40 means one-in-ten-thousand."
+  },
+  {
+   "t": 84.16,
+   "text": "Each ten units of Phred is one decimal order of magnitude in error probability."
+  },
+  {
+   "t": 89.49,
+   "text": "The higher the Q, the more confident the call."
+  },
+  {
+   "t": 92.4,
+   "text": "Q30 — one error in a thousand — is the standard threshold for \"high-quality\" base calls in most pipelines, which is why you'll hear people talking about the percentage of bases above Q30 as a quality metric for a sequencing run."
+  },
+  {
+   "t": 106.42,
+   "text": "A good Illumina run typically has more than 80 percent of bases above Q30, often 90 percent or more."
+  },
+  {
+   "t": 113.95,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 115.21,
+   "text": "A Phred quality score is like a confidence rating on a weather forecast."
+  },
+  {
+   "t": 119.45,
+   "text": "Q10 means \"I'm 90 percent sure it'll be sunny\" — there's a noticeable chance you'll get rained on."
+  },
+  {
+   "t": 125.42,
+   "text": "Q20 means \"99 percent sure\" — basically reliable but not guaranteed."
+  },
+  {
+   "t": 131.49,
+   "text": "Q30 means \"99.9 percent sure\" — you'd plan a wedding around it."
+  },
+  {
+   "t": 136.99,
+   "text": "Q40 means \"99.99 percent sure\" — you can essentially treat it as certain for any practical purpose."
+  },
+  {
+   "t": 145.25,
+   "text": "The log scaling matches how we intuitively reason about probabilities of rare events: each extra decimal of confidence costs about the same amount of effort to achieve."
+  },
+  {
+   "t": 155.61,
+   "text": "How does the instrument actually assign quality scores?"
+  },
+  {
+   "t": 158.88,
+   "text": "In the early days, Illumina used hand-tuned base-calling algorithms that estimated quality from the intensity, sharpness, and color purity of each cluster signal."
+  },
+  {
+   "t": 169.04,
+   "text": "The current generation uses machine-learning models — neural networks trained on huge datasets of real reads with known correct sequences — that look at the raw signals in the context of surrounding cycles and predict the probability of error for each base."
+  },
+  {
+   "t": 184.43,
+   "text": "These ML-based base callers have substantially improved both accuracy and the calibration of quality scores over the last several years."
+  },
+  {
+   "t": 193.54,
+   "text": "A modern Illumina Q30 call really is correct about 999 times out of 1000, as a well-calibrated quality score should be."
+  },
+  {
+   "t": 202.4,
+   "text": "Quality scores are stored in the data files using a notation called ASCII offset encoding."
+  },
+  {
+   "t": 208.29,
+   "text": "Each quality score is converted to a printable character — Q30 becomes the character ?, Q40 becomes I, and so on — by adding 33 to the score and looking up the corresponding ASCII character."
+  },
+  {
+   "t": 221.49,
+   "text": "This is what produces those weird-looking strings of seemingly random punctuation in FASTQ files, the standard Illumina output format."
+  },
+  {
+   "t": 230.74,
+   "text": "Every base in the FASTQ has its corresponding quality character right below it."
+  },
+  {
+   "t": 236.29,
+   "text": "If you're a bioinformatician you stop noticing the encoding after a while; if you're not, those FASTQ files look like alphabet soup, but every character is a calibrated probability."
+  },
+  {
+   "t": 247.49,
+   "text": "What do you do with quality scores?"
+  },
+  {
+   "t": 249.35,
+   "text": "Several things."
+  },
+  {
+   "t": 250.65,
+   "text": "Filtering: variant callers and aligners typically apply a quality cutoff, ignoring bases below some threshold like Q20."
+  },
+  {
+   "t": 260.04,
+   "text": "Recalibration: for clinical variant calling, the GATK pipeline includes a step called base quality score recalibration, which adjusts the instrument's reported quality scores against known true-call sets to correct for systematic biases."
+  },
+  {
+   "t": 275.17,
+   "text": "Variant call confidence: when calling a variant, the underlying base qualities contribute to the variant's confidence score, so a variant supported by many high-quality reads scores higher than one supported by a few low-quality reads."
+  },
+  {
+   "t": 288.74,
+   "text": "Trimming: most analyses include a step that trims the low-quality tails off the ends of reads, because the last few bases of an Illumina read are often noticeably worse than the middle — that dephasing problem again."
+  },
+  {
+   "t": 302.35,
+   "text": "The standard tool, called Trimmomatic or fastp, uses a sliding-window quality calculation to clip off the bad ends while keeping the good middle."
+  },
+  {
+   "t": 311.49,
+   "text": "The point of quality scores is that they let you reason quantitatively about confidence."
+  },
+  {
+   "t": 316.65,
+   "text": "Without them, a base call is just a letter; with them, a base call is a calibrated probability distribution, and downstream tools can propagate that uncertainty through the entire analysis."
+  },
+  {
+   "t": 329.17,
+   "text": "The single most useful piece of metadata in sequencing data is the quality score, and getting it right is one of the reasons Illumina has been so dominant: their quality scores are reliable, well-calibrated, and consistent across instruments and runs."
+  },
+  {
+   "t": 344.13,
+   "text": "Other platforms have struggled with quality calibration; Illumina, in the modern era, has it nailed."
+  }
+ ]
+}

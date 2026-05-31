@@ -1,0 +1,351 @@
+{
+ "n": 19,
+ "title": "APPENDIX",
+ "duration": 416.07,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX"
+  },
+  {
+   "t": 1.09,
+   "text": "A short reference of names, dates, and orienting facts mentioned in this lecture, plus a few additional notes useful for further reading."
+  },
+  {
+   "t": 9.66,
+   "text": "The foundational papers and people."
+  },
+  {
+   "t": 12.04,
+   "text": "Tang et al., 2009."
+  },
+  {
+   "t": 14.11,
+   "text": "Fuchou Tang, working in Azim Surani's lab at the Gurdon Institute in Cambridge, published the first complete single-cell mRNA sequencing experiment, using a mouse blastomere."
+  },
+  {
+   "t": 26.11,
+   "text": "This is the conventional starting point of the modern scRNA-seq era."
+  },
+  {
+   "t": 31.05,
+   "text": "STRT, 2011."
+  },
+  {
+   "t": 33.58,
+   "text": "Sten Linnarsson and colleagues in Stockholm published single-cell tagged reverse transcription, an early barcoded scRNA-seq method."
+  },
+  {
+   "t": 41.9,
+   "text": "CEL-seq, 2012."
+  },
+  {
+   "t": 45.14,
+   "text": "Itai Yanai's group introduced linear amplification by T7 polymerase as an alternative to PCR-based methods, reducing amplification bias."
+  },
+  {
+   "t": 55.44,
+   "text": "Smart-seq, 2012; Smart-seq2, 2013; Smart-seq3, 2020."
+  },
+  {
+   "t": 63.77,
+   "text": "Rickard Sandberg's group in Stockholm."
+  },
+  {
+   "t": 66.2,
+   "text": "Plate-based, full-length, deep single-cell transcriptome profiling."
+  },
+  {
+   "t": 71.0,
+   "text": "The standard for depth-over-breadth experiments."
+  },
+  {
+   "t": 74.06,
+   "text": "Drop-seq, 2015."
+  },
+  {
+   "t": 76.44,
+   "text": "Evan Macosko, Steven McCarroll, and colleagues at Harvard."
+  },
+  {
+   "t": 80.4,
+   "text": "Droplet-based, barcoded-bead scRNA-seq."
+  },
+  {
+   "t": 83.9,
+   "text": "Published in Cell on May 21, 2015."
+  },
+  {
+   "t": 87.74,
+   "text": "Demonstrated on the mouse retina."
+  },
+  {
+   "t": 89.85,
+   "text": "inDrops, 2015."
+  },
+  {
+   "t": 92.12,
+   "text": "Allon Klein, Marc Kirschner, and colleagues at Harvard."
+  },
+  {
+   "t": 95.74,
+   "text": "Published back-to-back with Drop-seq in the same issue of Cell."
+  },
+  {
+   "t": 99.6,
+   "text": "Hydrogel beads with photo-cleavable primers."
+  },
+  {
+   "t": 102.99,
+   "text": "10x Chromium launch, 2016."
+  },
+  {
+   "t": 106.06,
+   "text": "Founded 2012 by Serge Saxonov, Ben Hindson, Kevin Ness."
+  },
+  {
+   "t": 111.38,
+   "text": "Chromium Controller launched 2016 for single-cell."
+  },
+  {
+   "t": 115.8,
+   "text": "Visium acquired 2018 from Spatial Transcriptomics (Lundeberg/Ståhl)."
+  },
+  {
+   "t": 122.12,
+   "text": "Multiome launched 2020."
+  },
+  {
+   "t": 124.42,
+   "text": "Xenium launched 2022."
+  },
+  {
+   "t": 126.76,
+   "text": "Human Cell Atlas, 2016 onward."
+  },
+  {
+   "t": 129.96,
+   "text": "Co-led by Aviv Regev (Broad Institute, later Genentech) and Sarah Teichmann (Wellcome Sanger Institute)."
+  },
+  {
+   "t": 137.62,
+   "text": "Founded at a London meeting in October 2016."
+  },
+  {
+   "t": 141.62,
+   "text": "Global consortium of 3,600+ scientists, 100+ countries."
+  },
+  {
+   "t": 147.49,
+   "text": "CITE-seq, 2017."
+  },
+  {
+   "t": 150.07,
+   "text": "Marlon Stoeckius and colleagues at the New York Genome Center."
+  },
+  {
+   "t": 154.11,
+   "text": "Antibody-DNA conjugates for simultaneous protein and RNA measurement."
+  },
+  {
+   "t": 159.78,
+   "text": "RNA velocity, 2018."
+  },
+  {
+   "t": 162.44,
+   "text": "Gioele La Manno, Peter Kharchenko, Sten Linnarsson, and colleagues."
+  },
+  {
+   "t": 167.8,
+   "text": "Spliced/unspliced ratio inference of transcriptional dynamics."
+  },
+  {
+   "t": 173.31,
+   "text": "MERFISH, 2015 onward."
+  },
+  {
+   "t": 176.15,
+   "text": "Xiaowei Zhuang's lab at Harvard."
+  },
+  {
+   "t": 178.43,
+   "text": "Multiplexed error-robust fluorescence in situ hybridization."
+  },
+  {
+   "t": 182.89,
+   "text": "Key numbers."
+  },
+  {
+   "t": 183.96,
+   "text": "Mammalian cell: roughly 200,000 mRNA molecules total, perhaps a picogram of mRNA mass."
+  },
+  {
+   "t": 191.97,
+   "text": "Capture efficiency in droplet methods: 5-20% of mRNA molecules."
+  },
+  {
+   "t": 198.18,
+   "text": "Typical 10x Chromium experiment: 5,000-20,000 cells per channel, 20,000-50,000 reads per cell, 1,500-4,000 genes detected per cell on average."
+  },
+  {
+   "t": 211.86,
+   "text": "Chromium V3 cell barcode length: 16 bases."
+  },
+  {
+   "t": 216.54,
+   "text": "UMI length: 12 bases."
+  },
+  {
+   "t": 219.04,
+   "text": "Theoretical barcode space: ~4 billion, of which ~6 million are used per chip."
+  },
+  {
+   "t": 224.43,
+   "text": "Visium spot size: 55 micrometers."
+  },
+  {
+   "t": 228.06,
+   "text": "Visium HD bin sizes: 2 and 8 micrometers."
+  },
+  {
+   "t": 233.12,
+   "text": "Human Cell Atlas as of 2024: ~62 million cells mapped, 18 biological networks, 3,600+ scientists in 100+ countries."
+  },
+  {
+   "t": 244.29,
+   "text": "Tools and software."
+  },
+  {
+   "t": 245.79,
+   "text": "Cell Ranger: 10x Genomics' standard processing pipeline (FASTQ to count matrix)."
+  },
+  {
+   "t": 252.78,
+   "text": "STARsolo: Open-source alternative built into the STAR aligner."
+  },
+  {
+   "t": 257.21,
+   "text": "Alevin-fry / Salmon-Alevin: Fast pseudo-alignment alternatives."
+  },
+  {
+   "t": 261.88,
+   "text": "Seurat: Standard analysis package in R (Rahul Satija's lab)."
+  },
+  {
+   "t": 266.96,
+   "text": "Scanpy: Standard analysis package in Python (Fabian Theis's lab)."
+  },
+  {
+   "t": 272.11,
+   "text": "Monocle, Slingshot, PAGA: Trajectory and pseudotime tools."
+  },
+  {
+   "t": 277.48,
+   "text": "scVelo: RNA velocity implementation."
+  },
+  {
+   "t": 281.36,
+   "text": "Harmony, BBKNN, scVI: Batch correction and integration."
+  },
+  {
+   "t": 286.95,
+   "text": "Scrublet, DoubletFinder, Solo: Doublet detection."
+  },
+  {
+   "t": 291.52,
+   "text": "SoupX, CellBender: Ambient RNA correction."
+  },
+  {
+   "t": 295.24,
+   "text": "CellTypist, SingleR: Automated cell type annotation."
+  },
+  {
+   "t": 300.15,
+   "text": "A note on dissociation versus nucleus protocols."
+  },
+  {
+   "t": 303.84,
+   "text": "scRNA-seq: whole-cell suspension, requires gentle dissociation, captures cytoplasmic and nuclear mRNA."
+  },
+  {
+   "t": 312.05,
+   "text": "Higher molecule count per cell."
+  },
+  {
+   "t": 314.2,
+   "text": "Dissociation stress is a concern."
+  },
+  {
+   "t": 316.75,
+   "text": "snRNA-seq: isolated nuclei from frozen or fresh tissue, no dissociation stress, captures mostly nuclear mRNA, especially unspliced."
+  },
+  {
+   "t": 328.18,
+   "text": "Lower molecule count per cell but works on hard-to-dissociate tissues (brain, heart, muscle) and on archived frozen samples."
+  },
+  {
+   "t": 336.91,
+   "text": "Further reading."
+  },
+  {
+   "t": 338.07,
+   "text": "The Tang 2009 paper in Nature Methods for the original demonstration."
+  },
+  {
+   "t": 342.74,
+   "text": "The Macosko 2015 and Klein 2015 papers in Cell for the droplet revolution."
+  },
+  {
+   "t": 349.73,
+   "text": "Single-cell RNA sequencing technologies and statistical methods by Stegle, Teichmann, Marioni (2015) for an early review."
+  },
+  {
+   "t": 359.67,
+   "text": "The Human Cell Atlas white paper, on the HCA website, for the project's goals and structure."
+  },
+  {
+   "t": 365.83,
+   "text": "Eleven grand challenges in single-cell data science by Lahnemann et al."
+  },
+  {
+   "t": 370.9,
+   "text": "(2020) for an honest list of open analytical problems."
+  },
+  {
+   "t": 375.37,
+   "text": "The Seurat and Scanpy tutorials, online, for hands-on practice with real data."
+  },
+  {
+   "t": 380.84,
+   "text": "That's the lecture."
+  },
+  {
+   "t": 382.1,
+   "text": "The technology is younger than most of you in the room."
+  },
+  {
+   "t": 385.47,
+   "text": "Its inventors are still active."
+  },
+  {
+   "t": 387.49,
+   "text": "The atlases are still being built."
+  },
+  {
+   "t": 389.49,
+   "text": "You are stepping into a field whose foundational period is still happening, which means the work you do over the next decade may itself become part of the foundational literature."
+  },
+  {
+   "t": 399.93,
+   "text": "Use the technology wisely, read papers critically, and remember the smoothie versus fruit-salad distinction every time you look at a tissue sample."
+  },
+  {
+   "t": 409.25,
+   "text": "That, more than any specific tool or chemistry, is the lesson worth keeping."
+  },
+  {
+   "t": 415.24,
+   "text": "Thank you."
+  }
+ ]
+}

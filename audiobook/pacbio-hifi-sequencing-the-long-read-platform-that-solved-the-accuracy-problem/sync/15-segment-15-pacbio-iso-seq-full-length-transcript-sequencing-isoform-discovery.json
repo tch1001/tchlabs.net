@@ -1,0 +1,147 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — PacBio Iso-Seq: full-length transcript sequencing, isoform discovery",
+ "duration": 278.06,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — PacBio Iso-Seq: full-length transcript sequencing, isoform discovery"
+  },
+  {
+   "t": 7.41,
+   "text": "Let's spend a segment on a PacBio application that doesn't get as much press as genome assembly, but which is uniquely powerful and uniquely PacBio: Iso-Seq, the platform's full-length transcript sequencing workflow."
+  },
+  {
+   "t": 21.57,
+   "text": "Here's the motivation."
+  },
+  {
+   "t": 22.93,
+   "text": "RNA, in eukaryotic cells, is processed from primary transcripts into mature mRNAs through splicing — the cutting out of introns and the joining of exons."
+  },
+  {
+   "t": 33.55,
+   "text": "Most genes produce multiple distinct mRNAs through alternative splicing — different combinations of exons joined together in different ways, producing protein isoforms with subtly different functions."
+  },
+  {
+   "t": 46.2,
+   "text": "A typical human gene has, on average, four to ten major isoforms, and many genes have dozens."
+  },
+  {
+   "t": 53.51,
+   "text": "Knowing which isoforms a gene produces, in which tissues, at which developmental stages, is fundamental for understanding what the gene actually does."
+  },
+  {
+   "t": 63.74,
+   "text": "Short-read RNA-seq, the standard tool, doesn't see isoforms directly."
+  },
+  {
+   "t": 69.45,
+   "text": "It sees short fragments of transcripts — 150-base reads from random positions along the mRNA — and the isoform structure has to be inferred from which exon junctions are observed in the reads."
+  },
+  {
+   "t": 82.05,
+   "text": "This inference works for simple cases but fails for genes with many isoforms, especially when isoforms differ only at distant points along the transcript."
+  },
+  {
+   "t": 91.94,
+   "text": "You see lots of evidence for various splice junctions, but you can't tell which combinations of junctions actually co-occur on the same molecule."
+  },
+  {
+   "t": 100.55,
+   "text": "The full isoform structure is a guess."
+  },
+  {
+   "t": 103.33,
+   "text": "Iso-Seq solves this directly."
+  },
+  {
+   "t": 106.06,
+   "text": "A single HiFi read can span a complete transcript from 5' cap to polyA tail."
+  },
+  {
+   "t": 111.92,
+   "text": "You see exactly which exons are joined together on that molecule."
+  },
+  {
+   "t": 116.25,
+   "text": "No inference."
+  },
+  {
+   "t": 117.44,
+   "text": "The isoform is observed as a single piece of data."
+  },
+  {
+   "t": 120.95,
+   "text": "The Iso-Seq workflow takes total RNA, converts it to full-length cDNA using a clever oligo-dT-and-template-switching method that captures complete transcripts, builds these into SMRTbells, sequences with HiFi chemistry, and outputs full-length transcript reads."
+  },
+  {
+   "t": 138.81,
+   "text": "Each read is a single mature mRNA, in full, from one end to the other."
+  },
+  {
+   "t": 144.6,
+   "text": "Tens of thousands of distinct transcripts can be characterized in a single run."
+  },
+  {
+   "t": 149.79,
+   "text": "The applications are powerful."
+  },
+  {
+   "t": 151.82,
+   "text": "Isoform discovery in new species — for any organism whose transcriptome hasn't been thoroughly characterized, Iso-Seq is the tool of choice."
+  },
+  {
+   "t": 162.43,
+   "text": "Cancer-specific isoforms — tumors often produce aberrant transcripts (gene fusions, exon skipping events) that Iso-Seq can directly characterize."
+  },
+  {
+   "t": 174.0,
+   "text": "Tissue-specific isoforms — Iso-Seq across tissue types reveals which isoforms are expressed where."
+  },
+  {
+   "t": 181.86,
+   "text": "Developmental dynamics — Iso-Seq across developmental stages reveals isoform switching that drives differentiation."
+  },
+  {
+   "t": 190.01,
+   "text": "A specific contrast with short-read RNA-seq."
+  },
+  {
+   "t": 193.71,
+   "text": "Suppose a gene has three isoforms: ABCD, ABD, and BCD (where each letter represents an exon)."
+  },
+  {
+   "t": 202.46,
+   "text": "Short reads can see junctions A-B, B-C, C-D, B-D, A-C — but it cannot tell whether a read crossing A-B and a read crossing C-D came from the same molecule."
+  },
+  {
+   "t": 214.61,
+   "text": "The assignment of junctions to isoforms is statistical, and for genes with many junctions, the answer can be ambiguous."
+  },
+  {
+   "t": 222.81,
+   "text": "Iso-Seq reads, by contrast, directly observe each molecule from A through D, and the isoform identity is read off in one piece."
+  },
+  {
+   "t": 232.93,
+   "text": "ABCD is ABCD; you don't have to infer it."
+  },
+  {
+   "t": 237.36,
+   "text": "Iso-Seq is therefore the gold standard for any work that requires accurate isoform-level resolution."
+  },
+  {
+   "t": 243.85,
+   "text": "It's been used to build comprehensive isoform catalogs for human tissues, to discover novel isoforms in disease contexts, to characterize complex transcriptomes in non-model organisms, and to validate isoform predictions from short-read pipelines."
+  },
+  {
+   "t": 259.6,
+   "text": "Nanopore offers a similar capability, sometimes called direct RNA sequencing in their version, which has its own appeal (no cDNA conversion)."
+  },
+  {
+   "t": 269.29,
+   "text": "But for accurate, full-length, quantitative isoform sequencing in the standard mode, PacBio Iso-Seq is the dominant tool today."
+  }
+ ]
+}

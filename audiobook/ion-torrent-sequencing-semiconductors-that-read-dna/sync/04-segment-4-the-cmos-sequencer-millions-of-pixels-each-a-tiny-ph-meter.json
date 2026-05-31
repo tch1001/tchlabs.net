@@ -1,0 +1,235 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The CMOS sequencer: millions of pixels, each a tiny pH meter",
+ "duration": 336.76,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The CMOS sequencer: millions of pixels, each a tiny pH meter"
+  },
+  {
+   "t": 6.75,
+   "text": "Okay."
+  },
+  {
+   "t": 7.55,
+   "text": "So we have one ISFET."
+  },
+  {
+   "t": 9.26,
+   "text": "Now we want millions, because each one is going to be a tiny sequencing reactor."
+  },
+  {
+   "t": 14.36,
+   "text": "Let me describe what the Ion Torrent chip actually looks like, because if you've never held one in your hand, the image will help."
+  },
+  {
+   "t": 20.91,
+   "text": "Picture a small chip — roughly the size of a postage stamp, or maybe a little smaller, depending on which generation we're talking about."
+  },
+  {
+   "t": 29.26,
+   "text": "It looks, honestly, like any other silicon chip."
+  },
+  {
+   "t": 32.77,
+   "text": "Same gold contacts around the edges."
+  },
+  {
+   "t": 35.11,
+   "text": "Same green or tan substrate."
+  },
+  {
+   "t": 37.61,
+   "text": "Same plastic carrier package."
+  },
+  {
+   "t": 39.54,
+   "text": "If you handed one to a hardware engineer who didn't know what it was, they'd assume it was a camera sensor or a memory chip; it has that same generic CMOS look."
+  },
+  {
+   "t": 48.27,
+   "text": "The chip slots into a cartridge that you load into the Ion Torrent machine like a videogame cartridge into an old console."
+  },
+  {
+   "t": 55.38,
+   "text": "Snap it in, run the sequencing, snap it out, throw it away."
+  },
+  {
+   "t": 59.64,
+   "text": "The chip is a consumable — single-use."
+  },
+  {
+   "t": 62.46,
+   "text": "You pay per chip, the way you'd pay per kit on any sequencing platform."
+  },
+  {
+   "t": 67.2,
+   "text": "Now zoom in."
+  },
+  {
+   "t": 68.29,
+   "text": "The surface of the chip, under a microscope, looks like a grid of millions of tiny circular wells."
+  },
+  {
+   "t": 74.9,
+   "text": "Each well is a few microns across — small enough that you could fit dozens of red blood cells in one, and just barely big enough to hold a single Ion Torrent sequencing bead, which we'll meet in Segment 7."
+  },
+  {
+   "t": 87.36,
+   "text": "The wells are arranged in a regular pattern, just like the pixels on a camera sensor."
+  },
+  {
+   "t": 92.19,
+   "text": "Depending on the chip generation, you have anywhere from about 1 million wells (on the original 314 chip in the PGM) up to over 600 million wells (on the latest Ion 550 chip in the S5)."
+  },
+  {
+   "t": 106.34,
+   "text": "That's the throughput knob — more wells, more parallel reactions, more sequence per run."
+  },
+  {
+   "t": 112.74,
+   "text": "And it scales with the same Moore's-law process improvements that scale CPU transistor counts."
+  },
+  {
+   "t": 118.75,
+   "text": "Ion Torrent's chip generations are essentially node shrinks on the underlying CMOS process."
+  },
+  {
+   "t": 124.6,
+   "text": "Underneath each well, embedded in the silicon, is one ISFET."
+  },
+  {
+   "t": 129.56,
+   "text": "One per well."
+  },
+  {
+   "t": 130.53,
+   "text": "So every well is, electrically, an independent pH meter."
+  },
+  {
+   "t": 134.88,
+   "text": "The wells share the upper liquid layer — the solution that floods over the whole chip during sequencing — but each well's pH is read independently by its own dedicated transistor."
+  },
+  {
+   "t": 146.41,
+   "text": "The CMOS routing layer underneath the wells carries all the readout signals out to the chip's edge, where they get amplified, multiplexed, and shipped off to the instrument's computer."
+  },
+  {
+   "t": 157.0,
+   "text": "The analogy I want here is the chip is a CMOS image sensor where every pixel has been re-engineered to detect protons instead of photons."
+  },
+  {
+   "t": 166.81,
+   "text": "Same silicon."
+  },
+  {
+   "t": 168.0,
+   "text": "Same fabrication process."
+  },
+  {
+   "t": 170.14,
+   "text": "Same readout architecture."
+  },
+  {
+   "t": 171.95,
+   "text": "Same massive parallelism."
+  },
+  {
+   "t": 173.8,
+   "text": "The only difference is that the sensitive element on top of each pixel is an oxide layer in contact with a chemical well rather than a photodiode in contact with a microlens."
+  },
+  {
+   "t": 184.96,
+   "text": "Functionally, it's a camera."
+  },
+  {
+   "t": 187.05,
+   "text": "Functionally, an Ion Torrent run is a CMOS camera taking many many frames of pH images of a chip surface, and software stitching those pH images into base calls."
+  },
+  {
+   "t": 198.44,
+   "text": "If you've ever read about how a phone camera sensor works — millions of pixels, each generating a tiny voltage, all read out very fast — you already know how an Ion Torrent chip works."
+  },
+  {
+   "t": 210.46,
+   "text": "Just substitute \"proton\" for \"photon\" and \"pH\" for \"brightness."
+  },
+  {
+   "t": 215.34,
+   "text": "\""
+  },
+  {
+   "t": 215.54,
+   "text": "A few more details that matter for understanding the run."
+  },
+  {
+   "t": 218.96,
+   "text": "The wells are arranged so that each well is roughly the size of a single bead — and that's deliberate, because we want exactly one DNA-laden bead per well."
+  },
+  {
+   "t": 229.09,
+   "text": "We'll see in Segment 8 why that matters and why it's so hard to achieve."
+  },
+  {
+   "t": 233.82,
+   "text": "Above the wells, the chip has a thin fluidic channel that lets solution wash across the entire surface — flowing in one nucleotide species, letting it react in the wells, flowing it back out, washing in the next."
+  },
+  {
+   "t": 247.72,
+   "text": "The fluidics are simple by sequencing standards, because there's no optics to align, no laser to focus, no camera to keep stable."
+  },
+  {
+   "t": 256.51,
+   "text": "You're just pumping liquid across a chip and reading its electrical output."
+  },
+  {
+   "t": 260.61,
+   "text": "The whole thing is fast."
+  },
+  {
+   "t": 262.42,
+   "text": "The readout electronics in the chip can sample every well multiple times per second."
+  },
+  {
+   "t": 268.07,
+   "text": "A complete nucleotide flow — wash in, react, read, wash out — takes a few seconds."
+  },
+  {
+   "t": 275.32,
+   "text": "The entire sequencing run, depending on how many bases you want, takes a few hours, not a few days."
+  },
+  {
+   "t": 281.89,
+   "text": "That speed is one of the biggest selling points of the platform, and we'll come back to it in Segment 11."
+  },
+  {
+   "t": 287.29,
+   "text": "And the cost dynamics are striking."
+  },
+  {
+   "t": 289.54,
+   "text": "Because the chip is mass-produced in standard CMOS, and because there are no precision optics in the instrument, the instrument itself is small and inexpensive — the original PGM sold for $50,000, which by the standards of next-gen sequencing in 2010 was startlingly cheap."
+  },
+  {
+   "t": 307.59,
+   "text": "An Illumina HiSeq at the time was closer to $750,000."
+  },
+  {
+   "t": 313.06,
+   "text": "Ion Torrent's pitch was: we are democratizing sequencing."
+  },
+  {
+   "t": 317.24,
+   "text": "Any clinical lab, any small university group, anyone with a half-decent equipment budget, can have a sequencer of their own."
+  },
+  {
+   "t": 324.48,
+   "text": "That promise — sequencing for every lab, not just genome centers — was central to the early Ion Torrent identity."
+  },
+  {
+   "t": 332.71,
+   "text": "Now, with the chip in hand, let's flow some chemistry over it."
+  }
+ ]
+}

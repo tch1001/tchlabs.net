@@ -1,0 +1,315 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Unique Molecular Identifiers (UMIs) — counting molecules without PCR bias",
+ "duration": 436.85,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Unique Molecular Identifiers (UMIs) — counting molecules without PCR bias"
+  },
+  {
+   "t": 7.42,
+   "text": "Let me now take a segment to talk about UMIs, because they are one of the cleanest, most beautiful pieces of molecular bookkeeping in modern sequencing, and they matter for every single-cell experiment you'll ever look at."
+  },
+  {
+   "t": 19.76,
+   "text": "Here's the problem they solve."
+  },
+  {
+   "t": 21.39,
+   "text": "PCR amplification is exponential."
+  },
+  {
+   "t": 24.49,
+   "text": "It doubles the number of copies of a molecule every cycle."
+  },
+  {
+   "t": 28.24,
+   "text": "After thirty cycles of PCR, a single starting molecule has become a billion copies, in theory."
+  },
+  {
+   "t": 35.36,
+   "text": "But the doubling is not perfectly uniform."
+  },
+  {
+   "t": 38.24,
+   "text": "Some molecules get amplified more efficiently than others — for reasons of GC content, secondary structure, primer affinity, random chance."
+  },
+  {
+   "t": 48.15,
+   "text": "So after PCR, the relative abundance of different molecules in your library doesn't perfectly match the relative abundance they started at."
+  },
+  {
+   "t": 56.83,
+   "text": "PCR introduces noise."
+  },
+  {
+   "t": 58.94,
+   "text": "PCR introduces bias."
+  },
+  {
+   "t": 61.17,
+   "text": "This matters enormously for single-cell experiments, because the whole point is to count how many copies of each gene's mRNA were present in each cell."
+  },
+  {
+   "t": 71.09,
+   "text": "If PCR has distorted those counts — making some molecules look more abundant than they really were, others less — then your per-cell, per-gene expression matrix is contaminated by amplification noise."
+  },
+  {
+   "t": 84.04,
+   "text": "You're measuring the PCR, not the cell."
+  },
+  {
+   "t": 87.0,
+   "text": "Here's the trick UMIs use to solve this."
+  },
+  {
+   "t": 89.59,
+   "text": "In addition to the cell zip code, every individual mRNA molecule gets a random serial number — that way if PCR amplification produces twenty copies of the same molecule, you only count it once."
+  },
+  {
+   "t": 102.35,
+   "text": "Picture it like this."
+  },
+  {
+   "t": 103.67,
+   "text": "You have a hundred coins in a jar."
+  },
+  {
+   "t": 105.51,
+   "text": "You want to count them, but the only way you have to look at them is to first photocopy each coin ten times, dump all the photocopies in a pile, and then count the pile."
+  },
+  {
+   "t": 116.05,
+   "text": "If you just count the pile, you'll get a thousand, not a hundred — you've counted the photocopies."
+  },
+  {
+   "t": 121.19,
+   "text": "But suppose before photocopying, you wrote a random three-digit number on each coin."
+  },
+  {
+   "t": 126.67,
+   "text": "Coin one has 472 written on it."
+  },
+  {
+   "t": 129.46,
+   "text": "Coin two has 819."
+  },
+  {
+   "t": 131.71,
+   "text": "Coin three has 305."
+  },
+  {
+   "t": 134.29,
+   "text": "And so on, all different."
+  },
+  {
+   "t": 136.01,
+   "text": "Now you photocopy each coin ten times."
+  },
+  {
+   "t": 139.25,
+   "text": "Every photocopy of coin one says 472."
+  },
+  {
+   "t": 143.57,
+   "text": "Every photocopy of coin two says 819."
+  },
+  {
+   "t": 147.56,
+   "text": "When you count the pile, instead of counting all the photocopies, you count the number of distinct numbers you see."
+  },
+  {
+   "t": 154.21,
+   "text": "Each distinct number corresponds to one original coin."
+  },
+  {
+   "t": 158.22,
+   "text": "You collapse the photocopies down to their originating originals, and you recover the true count of one hundred."
+  },
+  {
+   "t": 165.3,
+   "text": "That's exactly what UMIs do."
+  },
+  {
+   "t": 167.46,
+   "text": "Before PCR amplification, every individual mRNA molecule captured in the droplet is labeled with a random short sequence — typically twelve nucleotides — that's the molecule's serial number."
+  },
+  {
+   "t": 180.46,
+   "text": "Four to the twelfth power is about sixteen million possible UMIs, far more than any single cell has mRNA molecules."
+  },
+  {
+   "t": 188.32,
+   "text": "So the chance of two different molecules in the same cell ending up with the same UMI is small."
+  },
+  {
+   "t": 194.22,
+   "text": "After PCR, you sequence the library, and for every cell-and-gene combination, you count the number of distinct UMIs you see."
+  },
+  {
+   "t": 203.06,
+   "text": "If you see twelve reads of gene X in cell Y, all carrying the same UMI, that's one original molecule, amplified twelve times."
+  },
+  {
+   "t": 212.99,
+   "text": "You count it as one."
+  },
+  {
+   "t": 214.14,
+   "text": "If you see twelve reads of gene X in cell Y, with twelve different UMIs, that's twelve original molecules."
+  },
+  {
+   "t": 222.21,
+   "text": "You count them as twelve."
+  },
+  {
+   "t": 223.59,
+   "text": "PCR amplification doesn't change your count, because you're counting distinct UMIs, not reads."
+  },
+  {
+   "t": 230.21,
+   "text": "UMIs were not invented for single-cell — they were a general molecular-counting trick first described around 2011 and 2012 by several groups, most influentially by Tomas Kivioja and colleagues."
+  },
+  {
+   "t": 244.19,
+   "text": "But single-cell adopted them immediately, because the single-cell problem is so much more sensitive to amplification bias than bulk."
+  },
+  {
+   "t": 253.41,
+   "text": "In bulk RNA-seq, you might have ten million mRNA molecules going into the library prep; even with PCR bias, the relative counts of common genes are pretty stable."
+  },
+  {
+   "t": 264.7,
+   "text": "In single-cell, you might have a thousand mRNA molecules per cell."
+  },
+  {
+   "t": 269.34,
+   "text": "Every molecule matters."
+  },
+  {
+   "t": 271.15,
+   "text": "Amplification noise can swamp the signal."
+  },
+  {
+   "t": 274.44,
+   "text": "UMIs make per-molecule counting feasible in that low-input regime."
+  },
+  {
+   "t": 279.2,
+   "text": "When you analyze a 10x Chromium dataset, what you actually get out at the end is a cell-by-gene matrix of UMI counts."
+  },
+  {
+   "t": 286.67,
+   "text": "Each row is a cell, identified by its cell barcode."
+  },
+  {
+   "t": 290.32,
+   "text": "Each column is a gene."
+  },
+  {
+   "t": 292.0,
+   "text": "Each entry is the number of distinct UMIs you observed for that gene in that cell — that is, the number of original mRNA molecules of that gene that were captured from that cell."
+  },
+  {
+   "t": 303.2,
+   "text": "Not reads."
+  },
+  {
+   "t": 304.34,
+   "text": "Molecules."
+  },
+  {
+   "t": 305.53,
+   "text": "The UMI collapse has converted your raw read counts into molecule counts."
+  },
+  {
+   "t": 310.48,
+   "text": "That matrix is the fundamental data type of single-cell genomics."
+  },
+  {
+   "t": 315.09,
+   "text": "Everything downstream — the clustering, the cell type identification, the trajectory analysis — operates on that matrix."
+  },
+  {
+   "t": 322.85,
+   "text": "There's a subtle but important point about UMIs that's worth mentioning."
+  },
+  {
+   "t": 327.02,
+   "text": "They only work if your sequencing reads cover the UMI position."
+  },
+  {
+   "t": 331.22,
+   "text": "In 10x Chromium chemistry, the UMI is at the 5' end of the cDNA, right after the cell barcode."
+  },
+  {
+   "t": 338.69,
+   "text": "The Read 1 sequencing read covers the cell barcode plus the UMI — that's typically twenty-eight bases of Read 1."
+  },
+  {
+   "t": 346.7,
+   "text": "The Read 2 sequencing read covers the actual transcript sequence — typically ninety bases."
+  },
+  {
+   "t": 353.2,
+   "text": "Cell barcode plus UMI on Read 1, transcript on Read 2."
+  },
+  {
+   "t": 357.7,
+   "text": "That's the read structure."
+  },
+  {
+   "t": 359.33,
+   "text": "When you look at FASTQ files from a 10x experiment, that's what you're seeing."
+  },
+  {
+   "t": 363.77,
+   "text": "The first twenty-eight bases of every Read 1 are the cell-identifying and molecule-identifying information; everything else is biology."
+  },
+  {
+   "t": 372.23,
+   "text": "One last thing on UMIs."
+  },
+  {
+   "t": 373.99,
+   "text": "Because the UMI is random and short, occasionally two different mRNA molecules in the same cell happen to get the same UMI just by chance."
+  },
+  {
+   "t": 384.12,
+   "text": "This is called UMI collision."
+  },
+  {
+   "t": 386.05,
+   "text": "With twelve-base UMIs and a thousand molecules per cell per gene, collisions are rare but not zero."
+  },
+  {
+   "t": 392.78,
+   "text": "There are statistical corrections — the Lander-Waterman correction, applied to UMI counting — that adjust for the expected number of collisions and give you a more accurate molecule count."
+  },
+  {
+   "t": 403.64,
+   "text": "Most software handles this automatically."
+  },
+  {
+   "t": 406.43,
+   "text": "You don't need to think about it for most purposes; just know that the correction exists, and that very high-count genes are slightly under-counted by raw UMI counting before correction."
+  },
+  {
+   "t": 416.59,
+   "text": "UMIs are one of those rare ideas that, once you've seen them, you wonder how anyone ever did molecular counting without them."
+  },
+  {
+   "t": 424.34,
+   "text": "They're cheap to add — just a random sequence appended to a primer — and they completely eliminate amplification bias from the count."
+  },
+  {
+   "t": 432.92,
+   "text": "Every single-cell platform now uses them."
+  },
+  {
+   "t": 435.79,
+   "text": "They're standard."
+  }
+ ]
+}

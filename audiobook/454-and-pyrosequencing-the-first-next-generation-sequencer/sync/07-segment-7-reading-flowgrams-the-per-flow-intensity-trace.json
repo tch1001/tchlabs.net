@@ -1,0 +1,375 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Reading flowgrams: the per-flow intensity trace",
+ "duration": 439.09,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Reading flowgrams: the per-flow intensity trace"
+  },
+  {
+   "t": 5.36,
+   "text": "So the picotiter plate is running."
+  },
+  {
+   "t": 7.84,
+   "text": "The camera is grabbing images, one per nucleotide flow, hundreds of flows per run."
+  },
+  {
+   "t": 13.97,
+   "text": "What we get out, for each well on the plate, is a sequence of numbers — one number per flow — measuring how bright that well was during that flow."
+  },
+  {
+   "t": 22.82,
+   "text": "That sequence of numbers is called a flowgram."
+  },
+  {
+   "t": 25.69,
+   "text": "Let me draw the picture for you."
+  },
+  {
+   "t": 27.27,
+   "text": "Pretend we have one specific well and we're watching its flowgram over time."
+  },
+  {
+   "t": 32.34,
+   "text": "The x-axis is the flow number, marching from one to several hundred."
+  },
+  {
+   "t": 37.08,
+   "text": "The y-axis is the light intensity recorded from that well during each flow."
+  },
+  {
+   "t": 42.65,
+   "text": "The cycle order of the flows is fixed — typically A, then C, then G, then T, then A again, then C again, repeating."
+  },
+  {
+   "t": 52.71,
+   "text": "So flow one is A, flow two is C, flow three is G, flow four is T, flow five is A, and so on."
+  },
+  {
+   "t": 62.27,
+   "text": "You know which nucleotide was in the well at each flow because you know the flow order."
+  },
+  {
+   "t": 67.69,
+   "text": "Now imagine a particular sequence — say, the DNA in this well, the template, is C-G-A-A-T-T-T-C."
+  },
+  {
+   "t": 75.91,
+   "text": "Walk with me through what the flowgram looks like."
+  },
+  {
+   "t": 78.78,
+   "text": "We start with flow one: A."
+  },
+  {
+   "t": 81.19,
+   "text": "The next template base — read by the polymerase — is C."
+  },
+  {
+   "t": 84.99,
+   "text": "So we need a C, but we got an A."
+  },
+  {
+   "t": 87.59,
+   "text": "The polymerase doesn't incorporate."
+  },
+  {
+   "t": 89.97,
+   "text": "No pyrophosphate."
+  },
+  {
+   "t": 91.4,
+   "text": "No flash."
+  },
+  {
+   "t": 92.49,
+   "text": "The flowgram value for flow one is zero, or near zero, just background noise."
+  },
+  {
+   "t": 98.34,
+   "text": "Flow two: C."
+  },
+  {
+   "t": 99.65,
+   "text": "The next template base is C."
+  },
+  {
+   "t": 101.59,
+   "text": "Polymerase incorporates."
+  },
+  {
+   "t": 103.64,
+   "text": "One pyrophosphate."
+  },
+  {
+   "t": 105.16,
+   "text": "One unit of flash."
+  },
+  {
+   "t": 106.67,
+   "text": "The flowgram value is approximately 1.0."
+  },
+  {
+   "t": 110.04,
+   "text": "Flow three: G."
+  },
+  {
+   "t": 111.94,
+   "text": "The next template base — now, after that C was added — is G."
+  },
+  {
+   "t": 116.66,
+   "text": "Polymerase incorporates."
+  },
+  {
+   "t": 118.75,
+   "text": "Flash."
+  },
+  {
+   "t": 119.8,
+   "text": "Flowgram value 1.0."
+  },
+  {
+   "t": 122.58,
+   "text": "Flow four: T."
+  },
+  {
+   "t": 124.03,
+   "text": "The next template base is A."
+  },
+  {
+   "t": 126.06,
+   "text": "No incorporation."
+  },
+  {
+   "t": 127.56,
+   "text": "Flowgram value 0."
+  },
+  {
+   "t": 129.45,
+   "text": "Flow five: A."
+  },
+  {
+   "t": 131.32,
+   "text": "The next two template positions are A, A."
+  },
+  {
+   "t": 134.36,
+   "text": "So the polymerase incorporates the first A, releases pyrophosphate, then immediately sees that the next position is also A, and since there's plenty of A in the well, incorporates the second A, releasing another pyrophosphate."
+  },
+  {
+   "t": 149.62,
+   "text": "Two incorporations in one flow."
+  },
+  {
+   "t": 152.22,
+   "text": "The flowgram value is approximately 2.0 — twice the normal intensity, because twice the pyrophosphate was released in a synchronized burst."
+  },
+  {
+   "t": 162.21,
+   "text": "Flow six: C."
+  },
+  {
+   "t": 163.76,
+   "text": "Next position is T."
+  },
+  {
+   "t": 165.53,
+   "text": "No incorporation."
+  },
+  {
+   "t": 167.03,
+   "text": "Zero."
+  },
+  {
+   "t": 167.88,
+   "text": "Flow seven: G."
+  },
+  {
+   "t": 169.35,
+   "text": "Next position is T."
+  },
+  {
+   "t": 171.19,
+   "text": "No incorporation."
+  },
+  {
+   "t": 172.64,
+   "text": "Zero."
+  },
+  {
+   "t": 173.46,
+   "text": "Flow eight: T."
+  },
+  {
+   "t": 174.82,
+   "text": "Next three positions are T, T, T."
+  },
+  {
+   "t": 178.3,
+   "text": "Three incorporations in this single flow."
+  },
+  {
+   "t": 181.18,
+   "text": "Flowgram value 3.0."
+  },
+  {
+   "t": 184.03,
+   "text": "And so on."
+  },
+  {
+   "t": 185.05,
+   "text": "The flowgram for our sequence C-G-A-A-T-T-T-C ends up reading something like: 0, 1, 1, 0, 2, 0, 0, 3, 1 — corresponding to flows of A, C, G, T, A, C, G, T, C."
+  },
+  {
+   "t": 201.06,
+   "text": "Read off the cycle: from the C of flow two you get one C."
+  },
+  {
+   "t": 205.22,
+   "text": "From the G of flow three you get one G."
+  },
+  {
+   "t": 208.36,
+   "text": "From the A of flow five you get two As."
+  },
+  {
+   "t": 211.78,
+   "text": "From the T of flow eight you get three Ts."
+  },
+  {
+   "t": 215.11,
+   "text": "From the C of flow nine — well, you complete the sequence."
+  },
+  {
+   "t": 219.39,
+   "text": "You read: C, G, A-A, T-T-T, C — exactly the template, recovered from the flowgram."
+  },
+  {
+   "t": 227.84,
+   "text": "So the flowgram is the raw output, and the base-calling algorithm — the software that converts flowgrams into letters of DNA — does this kind of bookkeeping for every well, in parallel, for every flow."
+  },
+  {
+   "t": 241.06,
+   "text": "The algorithm walks through the flowgram, picks out the non-zero peaks, rounds the intensities to the nearest whole number, and writes out a base for each unit of intensity at each non-zero flow."
+  },
+  {
+   "t": 252.71,
+   "text": "I want to stop and admire something."
+  },
+  {
+   "t": 254.55,
+   "text": "The flowgram is a fundamentally different kind of sequencing output from anything that had come before."
+  },
+  {
+   "t": 260.41,
+   "text": "Sanger gives you a four-color trace — at each position along the new strand, one of four colors lights up indicating which base was incorporated."
+  },
+  {
+   "t": 269.68,
+   "text": "You read the sequence position by position."
+  },
+  {
+   "t": 272.23,
+   "text": "Pyrosequencing flowgrams are time-series of intensities — at each flow in time, you see how much DNA was synthesized during that flow."
+  },
+  {
+   "t": 281.48,
+   "text": "You read the sequence flow by flow, with the position along the strand implied by accumulation."
+  },
+  {
+   "t": 287.93,
+   "text": "It's a different format."
+  },
+  {
+   "t": 289.27,
+   "text": "It carries different information."
+  },
+  {
+   "t": 291.22,
+   "text": "In particular, it explicitly encodes runs of identical bases as single tall peaks, rather than as four separate signals as in Sanger."
+  },
+  {
+   "t": 300.88,
+   "text": "That's both a feature and a bug, as we'll see in a minute."
+  },
+  {
+   "t": 304.12,
+   "text": "The feature: flowgrams are extremely informative about the local context."
+  },
+  {
+   "t": 308.84,
+   "text": "The shape of the peaks, the slope of the baseline between peaks, the noise characteristics of each well — all of that data is preserved in the flowgram and can be used by sophisticated algorithms to assign quality scores, detect anomalies, and even do partial error correction."
+  },
+  {
+   "t": 325.61,
+   "text": "The 454 quality score, called a Q-score in the standard FASTQ-like format, was derived from flowgram features."
+  },
+  {
+   "t": 333.29,
+   "text": "Different parts of the run had different quality, and the flowgram captured that."
+  },
+  {
+   "t": 337.96,
+   "text": "The bug: every well's flowgram is also a record of how poorly the well was synchronized with itself."
+  },
+  {
+   "t": 344.91,
+   "text": "Real wells are noisy."
+  },
+  {
+   "t": 346.42,
+   "text": "The bead might have only 30,000 copies on it instead of 100,000."
+  },
+  {
+   "t": 351.22,
+   "text": "The polymerase might be slightly delayed on some copies."
+  },
+  {
+   "t": 354.61,
+   "text": "Over many flows, the copies on a bead can get out of phase with each other — some copies are one base ahead, some are one base behind."
+  },
+  {
+   "t": 363.08,
+   "text": "This phasing problem accumulates over the run, and the flowgrams get noisier and noisier as the read length increases."
+  },
+  {
+   "t": 370.94,
+   "text": "By the time you're at flow 500 or 600, the synchrony between copies on a bead is so degraded that the flash intensities become unreliable."
+  },
+  {
+   "t": 380.34,
+   "text": "That's the fundamental reason 454 reads have a maximum useful length around 400 to 700 bases."
+  },
+  {
+   "t": 388.37,
+   "text": "Beyond that, the signal is too dephased to call."
+  },
+  {
+   "t": 391.99,
+   "text": "So the flowgram is both the gift and the curse of 454."
+  },
+  {
+   "t": 396.64,
+   "text": "It carries beautiful raw information, but it also carries the integrated noise of every flow that came before, and that noise eventually drowns out the signal."
+  },
+  {
+   "t": 407.57,
+   "text": "Every other NGS platform that came after 454 had to deal with phasing problems in its own way."
+  },
+  {
+   "t": 414.34,
+   "text": "Illumina's approach was a chemical blocker that forces exactly one base per cycle, dramatically reducing phasing drift — and Illumina's reads went to 100, then 150, then 250 bases as the chemistry improved."
+  },
+  {
+   "t": 430.41,
+   "text": "454's approach was just to live with the phasing and stop the run when it got too noisy."
+  },
+  {
+   "t": 436.22,
+   "text": "Different trade-offs, different read lengths."
+  }
+ ]
+}

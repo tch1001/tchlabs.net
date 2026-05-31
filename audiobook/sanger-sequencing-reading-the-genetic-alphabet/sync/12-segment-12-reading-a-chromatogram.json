@@ -1,0 +1,287 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Reading a chromatogram",
+ "duration": 464.28,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Reading a chromatogram"
+  },
+  {
+   "t": 3.08,
+   "text": "Okay."
+  },
+  {
+   "t": 3.88,
+   "text": "Let's actually look at a chromatogram."
+  },
+  {
+   "t": 5.71,
+   "text": "I want you to be able, by the end of this segment, to pick up a Sanger trace, look at it, and tell me what's going on — what's a clean call, what's a suspicious call, what's an artifact, what's a real biological signal."
+  },
+  {
+   "t": 16.9,
+   "text": "A chromatogram is a graph."
+  },
+  {
+   "t": 19.15,
+   "text": "The x-axis is time, or equivalently fragment length — going from short fragments on the left to long fragments on the right."
+  },
+  {
+   "t": 27.44,
+   "text": "The y-axis is fluorescence intensity."
+  },
+  {
+   "t": 30.31,
+   "text": "There are four overlaid traces, one for each dye color: typically green for A, red for T, black or yellow for G, blue for C."
+  },
+  {
+   "t": 41.12,
+   "text": "(The exact color conventions vary slightly by software, but those are the most common.)"
+  },
+  {
+   "t": 46.23,
+   "text": "As each fragment crosses the detector, you see a peak rise in one of the four colored traces, and then fall back to baseline as the fragment passes."
+  },
+  {
+   "t": 56.69,
+   "text": "The next fragment causes the next peak."
+  },
+  {
+   "t": 59.23,
+   "text": "And so on."
+  },
+  {
+   "t": 60.21,
+   "text": "The sequence of peak colors, left to right, gives you the sequence of bases."
+  },
+  {
+   "t": 65.04,
+   "text": "A clean, healthy chromatogram has these features."
+  },
+  {
+   "t": 68.8,
+   "text": "The peaks are tall and sharp."
+  },
+  {
+   "t": 70.81,
+   "text": "They are roughly evenly spaced."
+  },
+  {
+   "t": 73.24,
+   "text": "They are roughly equal in height across the four colors — no one color is dramatically dimmer than the others."
+  },
+  {
+   "t": 80.62,
+   "text": "The baseline between peaks is flat and near zero."
+  },
+  {
+   "t": 84.03,
+   "text": "There is one peak per position — no secondary peaks under the main one."
+  },
+  {
+   "t": 89.01,
+   "text": "The first 20-40 positions look noisy or unevenly resolved (that's the dead zone right after the primer), then the trace stabilizes into a beautiful run of evenly spaced bright peaks that you can read off effortlessly, and somewhere out past 700 or 800 bases the peaks start to broaden, lose intensity, and become hard to distinguish — that's the end of the useful read."
+  },
+  {
+   "t": 112.55,
+   "text": "You can read a good trace by eye."
+  },
+  {
+   "t": 114.36,
+   "text": "Each position has one dominant color; you call the base by the color; you write down the sequence."
+  },
+  {
+   "t": 120.41,
+   "text": "The base-calling software does the same thing, automatically, and assigns a quality score based on how confidently it could pick the dominant color at each position."
+  },
+  {
+   "t": 130.97,
+   "text": "In the middle of a clean read, the software is essentially never wrong."
+  },
+  {
+   "t": 135.26,
+   "text": "Where it gets harder is at the ends, in repetitive regions, and at positions of biological complexity — and that's where you, the human, have to look."
+  },
+  {
+   "t": 145.97,
+   "text": "Let me walk through the common things you'll see that aren't clean single peaks, and what each one means."
+  },
+  {
+   "t": 151.57,
+   "text": "Double peaks at a single position — that is, two different colored peaks of comparable height stacked on top of each other at the same point in the trace."
+  },
+  {
+   "t": 160.2,
+   "text": "This means the template at that position is a mixture of two different bases."
+  },
+  {
+   "t": 165.03,
+   "text": "The classic biological interpretation is heterozygosity: you have a diploid template (say, human genomic DNA) where the two chromosomes have different bases at this position, and Sanger reads both at once."
+  },
+  {
+   "t": 178.29,
+   "text": "A heterozygous SNP shows up as a double peak."
+  },
+  {
+   "t": 182.12,
+   "text": "This is, in fact, one of Sanger's superpowers — heterozygosity is visible at a glance — and we'll come back to this in Segments 13 and 15."
+  },
+  {
+   "t": 192.06,
+   "text": "Double peaks starting at one position and continuing for the rest of the read."
+  },
+  {
+   "t": 196.88,
+   "text": "This usually means your template is a mixture of two sequences that align cleanly up to a certain point and then diverge — most commonly because you've got a CRISPR-edited population where some cells have an indel at the cut site and some don't."
+  },
+  {
+   "t": 211.01,
+   "text": "The trace reads clean up to the cut site, then becomes a superposition of the edited and unedited sequences from the cut site onwards."
+  },
+  {
+   "t": 219.15,
+   "text": "This is so common, in modern CRISPR labs, that there are specific software tools — TIDE, ICE, Synthego ICE — that quantify the editing efficiency by deconvolving the mixed-trace region."
+  },
+  {
+   "t": 231.88,
+   "text": "They take your Sanger trace from edited cells, compare it to a Sanger trace from unedited cells, and back out the percentage of cells that have each edit type."
+  },
+  {
+   "t": 241.55,
+   "text": "It's a fast, cheap, semi-quantitative way to measure CRISPR efficiency without going to NGS."
+  },
+  {
+   "t": 248.2,
+   "text": "A peak that's substantially shorter than its neighbors."
+  },
+  {
+   "t": 251.57,
+   "text": "This usually doesn't indicate a problem — peak heights are inherently variable, particularly because the BigDye chemistry has slightly different incorporation efficiencies for the four bases, and the local sequence context matters."
+  },
+  {
+   "t": 264.98,
+   "text": "As long as the dominant color at that position is clearly higher than the other three colors, the base call is usually fine."
+  },
+  {
+   "t": 272.98,
+   "text": "The software's quality score will reflect the lower confidence."
+  },
+  {
+   "t": 276.86,
+   "text": "A long stretch where every peak looks the same color, then suddenly things go to garbage."
+  },
+  {
+   "t": 282.56,
+   "text": "This is the classic signature of a homopolymer run — a stretch of the same base, like AAAAAAA."
+  },
+  {
+   "t": 289.01,
+   "text": "Sanger handles short homopolymer runs (up to maybe 8 or 10) reasonably well, but at longer runs the polymerase can slip during synthesis, generating fragments that are off by one or two bases in the homopolymer length."
+  },
+  {
+   "t": 303.78,
+   "text": "The trace downstream of a long homopolymer becomes a confused superposition of the slipped and unslipped products."
+  },
+  {
+   "t": 312.0,
+   "text": "If your sequence has a 15-base poly-A tract, expect the trace after the tract to be unusable."
+  },
+  {
+   "t": 318.72,
+   "text": "This is a well-known limitation; it bites people every once in a while."
+  },
+  {
+   "t": 323.47,
+   "text": "A gradual decay in peak height and resolution starting around base 600-800."
+  },
+  {
+   "t": 329.87,
+   "text": "This is just the end of the useful read length."
+  },
+  {
+   "t": 332.69,
+   "text": "The polymerase has gotten as far as it can; the long fragments are too rare and too poorly resolved."
+  },
+  {
+   "t": 339.17,
+   "text": "You'll see the peaks broaden, the baseline rise, the quality scores drop."
+  },
+  {
+   "t": 344.18,
+   "text": "The conventional rule is to trust the trace from about base 30 to about base 700 as your \"good\" region, and treat anything outside that with skepticism."
+  },
+  {
+   "t": 354.11,
+   "text": "Sudden noise spikes or huge baseline jumps."
+  },
+  {
+   "t": 357.71,
+   "text": "Usually instrument artifacts — a bubble in the capillary, a salt crystal in the sample, a brief problem with the laser."
+  },
+  {
+   "t": 365.13,
+   "text": "These typically affect one or two positions and are pretty obviously not real biology."
+  },
+  {
+   "t": 370.92,
+   "text": "The base-caller usually flags them with low quality scores."
+  },
+  {
+   "t": 374.78,
+   "text": "The mental model I want you to have for chromatogram reading is this."
+  },
+  {
+   "t": 378.82,
+   "text": "Sanger gives you a direct, visual representation of the underlying sequence as a one-dimensional plot of colored peaks."
+  },
+  {
+   "t": 386.63,
+   "text": "Most of the time, the bases are obvious — the peaks are clean, the colors are clear, the call is unambiguous."
+  },
+  {
+   "t": 393.98,
+   "text": "The interesting cases are the deviations: double peaks (heterozygosity or mixtures), homopolymer slippage, the decay at the ends."
+  },
+  {
+   "t": 403.56,
+   "text": "Learning to read those deviations — to recognize what they mean biologically — is what separates a Sanger user who just reads off the called sequence from one who actually understands what their trace is telling them."
+  },
+  {
+   "t": 416.06,
+   "text": "And one more practical note: always look at the trace."
+  },
+  {
+   "t": 420.16,
+   "text": "Don't just trust the base-called text file."
+  },
+  {
+   "t": 422.77,
+   "text": "The text says \"GATC\" because the software made a call; the trace tells you whether to trust that call."
+  },
+  {
+   "t": 430.03,
+   "text": "In the rare but important cases where the trace disagrees with what the software wrote, the trace is right, and the software is wrong."
+  },
+  {
+   "t": 437.93,
+   "text": "Build the habit of opening the AB1 file in a viewer and scrolling through it."
+  },
+  {
+   "t": 443.46,
+   "text": "It takes thirty seconds, and it has saved many labs from publishing papers based on miscalled bases."
+  },
+  {
+   "t": 450.06,
+   "text": "A bad call in the middle of a clean trace is hugely suspicious; a borderline call in a noisy region you should treat with caution."
+  },
+  {
+   "t": 458.56,
+   "text": "The trace is the truth; the text file is an interpretation."
+  },
+  {
+   "t": 462.72,
+   "text": "Always go to the source."
+  }
+ ]
+}

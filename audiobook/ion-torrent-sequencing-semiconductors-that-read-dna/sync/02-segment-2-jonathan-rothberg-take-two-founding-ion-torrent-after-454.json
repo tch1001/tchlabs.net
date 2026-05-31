@@ -1,0 +1,199 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — Jonathan Rothberg, take two: founding Ion Torrent after 454",
+ "duration": 367.55,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — Jonathan Rothberg, take two: founding Ion Torrent after 454"
+  },
+  {
+   "t": 6.89,
+   "text": "To understand Ion Torrent you have to understand a little bit about Jonathan Rothberg, because Ion Torrent is, in a very real sense, his second attempt at the same problem."
+  },
+  {
+   "t": 16.48,
+   "text": "His do-over."
+  },
+  {
+   "t": 17.61,
+   "text": "Rothberg is a biologist by training, a serial entrepreneur by disposition, and a man who, by his own account, was driven into sequencing by personal circumstance."
+  },
+  {
+   "t": 28.56,
+   "text": "The story he tells — and it's a good story, even if it's been polished a few times — is that in 1999, he was sitting in a hospital with his newborn son who'd been put in the NICU with breathing trouble."
+  },
+  {
+   "t": 40.25,
+   "text": "And Rothberg, with nothing to do for hours, started thinking: if I had the kid's genome in front of me right now, I might know what was wrong with him."
+  },
+  {
+   "t": 48.95,
+   "text": "And then he started thinking: we don't have a way to get a kid's genome in front of a doctor in any reasonable timeframe."
+  },
+  {
+   "t": 55.7,
+   "text": "Sequencing in 1999 was the Human Genome Project, which had taken a decade and three billion dollars and was barely finishing up."
+  },
+  {
+   "t": 64.11,
+   "text": "You couldn't just sequence a person."
+  },
+  {
+   "t": 66.22,
+   "text": "So he started a company to fix that."
+  },
+  {
+   "t": 68.58,
+   "text": "That company was 454 Life Sciences, and 454 invented what we now call next-generation sequencing — the first commercial massively-parallel platform, the first to break the Sanger monopoly, the first to sequence a human genome (James Watson's, in 2007) for under a million dollars."
+  },
+  {
+   "t": 88.05,
+   "text": "If you've taken the next-generation sequencing lecture or read about 454, you know the rough story there."
+  },
+  {
+   "t": 94.7,
+   "text": "454 used pyrosequencing — flowing one base at a time over millions of beads in tiny wells on a glass plate, watching for flashes of light using a luciferase cascade."
+  },
+  {
+   "t": 107.42,
+   "text": "It was elegant, it was first, and it made Rothberg rich when Roche acquired the company in 2007 for about $155 million."
+  },
+  {
+   "t": 117.21,
+   "text": "But by 2007 it was already becoming clear that 454 had problems."
+  },
+  {
+   "t": 123.12,
+   "text": "The reads were getting longer, sure, but the per-base costs weren't dropping fast enough, the chemistry was complicated, the runs were slow, the homopolymer issue we'll discuss later was painful, and a young upstart called Solexa — soon to be Illumina — was building a platform with shorter reads but much higher throughput and a much steeper cost-decline curve."
+  },
+  {
+   "t": 144.45,
+   "text": "By 2010, 454 would be in serious trouble, and by 2013 Roche would shut it down entirely."
+  },
+  {
+   "t": 151.94,
+   "text": "So Rothberg, in the mid-2000s, was in an interesting position."
+  },
+  {
+   "t": 156.57,
+   "text": "He'd built one sequencing platform, sold it to Roche, made his money, and was watching from outside as the platform he'd invented started losing the race."
+  },
+  {
+   "t": 166.36,
+   "text": "And he asked himself, I think the most useful question an inventor can ask: knowing what I know now, if I had to start over, what would I do differently?"
+  },
+  {
+   "t": 175.25,
+   "text": "His answer was the Ion Torrent insight we just walked through."
+  },
+  {
+   "t": 178.84,
+   "text": "He'd do everything the same — the bead-based, one-base-at-a-time, parallel-wells architecture — but he'd rip out the optics."
+  },
+  {
+   "t": 186.53,
+   "text": "Get rid of the camera."
+  },
+  {
+   "t": 187.9,
+   "text": "Get rid of the luciferase."
+  },
+  {
+   "t": 190.06,
+   "text": "Detect the chemistry directly with a chip."
+  },
+  {
+   "t": 193.1,
+   "text": "So in 2007, with personal money and then about $23 million of venture capital, he founded Ion Torrent."
+  },
+  {
+   "t": 200.85,
+   "text": "And — this is important, this is Rothberg learning the lesson of his earlier company — he structured the equity carefully so that he kept supervoting shares."
+  },
+  {
+   "t": 210.84,
+   "text": "He'd been pushed out of 454; he wasn't going to be pushed out of Ion Torrent."
+  },
+  {
+   "t": 215.79,
+   "text": "He kept control."
+  },
+  {
+   "t": 216.91,
+   "text": "The technology came together remarkably fast."
+  },
+  {
+   "t": 220.3,
+   "text": "The first PGM — Personal Genome Machine, the debut instrument — launched in February 2010."
+  },
+  {
+   "t": 227.64,
+   "text": "From founding to commercial product in about three years, which is fast for any hardware company and very fast for a sequencing company."
+  },
+  {
+   "t": 235.85,
+   "text": "And in August of that same year, Life Technologies acquired Ion Torrent for $375 million in cash and stock up front, plus another up to $350 million in milestone payments depending on how well sales went."
+  },
+  {
+   "t": 250.1,
+   "text": "So Rothberg sold his second company for more than twice what he'd sold his first one for, less than a year after launching the product."
+  },
+  {
+   "t": 257.4,
+   "text": "Not a bad second act."
+  },
+  {
+   "t": 259.06,
+   "text": "I want to dwell for a second on what was being bought and sold here, because the structure of the deal tells you something about how the industry valued the bet."
+  },
+  {
+   "t": 266.9,
+   "text": "Life Technologies — which would itself later be absorbed by ThermoFisher in 2014 — paid the upfront money on the strength of the technology and the early sales."
+  },
+  {
+   "t": 277.63,
+   "text": "But more than half the deal value was in milestones tied to revenue targets, which means the buyer was hedging."
+  },
+  {
+   "t": 284.1,
+   "text": "They were saying: we believe this could be big, but we're not sure, so we'll pay you the rest if it actually grows into a major franchise."
+  },
+  {
+   "t": 291.65,
+   "text": "As it turned out, Ion Torrent grew into a substantial franchise but not the world-dominating one some people had hoped for."
+  },
+  {
+   "t": 299.71,
+   "text": "The milestones partially hit, partially didn't, depending on how you count."
+  },
+  {
+   "t": 304.08,
+   "text": "Ion Torrent did not become the Illumina-killer that some early commentators expected."
+  },
+  {
+   "t": 309.27,
+   "text": "Instead it became a stable, profitable, clinically-important niche product — which, in business terms, is actually a great outcome, even if it's not the moonshot outcome."
+  },
+  {
+   "t": 319.55,
+   "text": "So that's the founder and the company arc in broad strokes."
+  },
+  {
+   "t": 323.28,
+   "text": "Rothberg, having invented the first major next-gen platform, invented the second, sold it for a small fortune, and then went on to do a half-dozen other companies — most notably Butterfly Network, which puts a portable ultrasound on your phone, again using cheap silicon to replace expensive medical-imaging hardware."
+  },
+  {
+   "t": 342.05,
+   "text": "There's a pattern in his work, and the pattern is: take an expensive piece of scientific instrumentation, ask which sensor inside it is doing the actual physics, ask whether that sensor could be implemented in CMOS, and if it could, do it."
+  },
+  {
+   "t": 356.16,
+   "text": "Ion Torrent is the most successful execution of that pattern."
+  },
+  {
+   "t": 360.07,
+   "text": "Now let's leave the people and the business behind and look at the chip itself, which is the real technical hero of this story."
+  }
+ ]
+}

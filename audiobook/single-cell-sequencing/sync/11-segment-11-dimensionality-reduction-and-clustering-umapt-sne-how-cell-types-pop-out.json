@@ -1,0 +1,235 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Dimensionality reduction and clustering — UMAP/t-SNE, how cell types pop out",
+ "duration": 370.95,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Dimensionality reduction and clustering — UMAP/t-SNE, how cell types pop out"
+  },
+  {
+   "t": 8.09,
+   "text": "So you have your cleaned cell-by-gene matrix."
+  },
+  {
+   "t": 10.64,
+   "text": "Ten thousand cells."
+  },
+  {
+   "t": 12.38,
+   "text": "Twenty thousand genes."
+  },
+  {
+   "t": 14.2,
+   "text": "How do you find the cell types?"
+  },
+  {
+   "t": 15.91,
+   "text": "Each cell is a point in twenty-thousand-dimensional space, where each dimension is one gene's expression level."
+  },
+  {
+   "t": 23.09,
+   "text": "You can't visualize twenty thousand dimensions."
+  },
+  {
+   "t": 26.04,
+   "text": "You can't easily cluster in twenty thousand dimensions, because most of those dimensions are noise."
+  },
+  {
+   "t": 32.11,
+   "text": "You need to reduce the dimensionality — find the few directions that actually capture the biological variation — and then look at the cells in that reduced space, where biologically similar cells will cluster together."
+  },
+  {
+   "t": 44.61,
+   "text": "The standard workflow has three steps: normalize, reduce dimensions, cluster and visualize."
+  },
+  {
+   "t": 51.49,
+   "text": "Step one: normalize."
+  },
+  {
+   "t": 53.36,
+   "text": "Different cells have different total UMI counts — some cells were captured better than others, some are bigger and have more mRNA."
+  },
+  {
+   "t": 61.69,
+   "text": "To compare cells fairly, you have to normalize."
+  },
+  {
+   "t": 65.25,
+   "text": "The simplest method is to divide each cell's gene counts by the cell's total UMI count, multiply by some standard value (typically ten thousand), and log-transform."
+  },
+  {
+   "t": 75.7,
+   "text": "The output is what people call log-normalized expression, where each value roughly represents the log of how concentrated that gene is in the cell."
+  },
+  {
+   "t": 84.58,
+   "text": "This puts cells on a common scale."
+  },
+  {
+   "t": 86.86,
+   "text": "Step two: dimensionality reduction."
+  },
+  {
+   "t": 89.72,
+   "text": "Take the normalized matrix and run principal component analysis — PCA — to find the directions of greatest variance in the data."
+  },
+  {
+   "t": 98.55,
+   "text": "The first few dozen principal components typically capture most of the biological signal, while the remaining thousands of dimensions are noise."
+  },
+  {
+   "t": 107.53,
+   "text": "So you reduce from twenty thousand gene dimensions to maybe fifty PC dimensions."
+  },
+  {
+   "t": 113.08,
+   "text": "That's already a huge compression, and most downstream analysis happens in PC space."
+  },
+  {
+   "t": 118.89,
+   "text": "But fifty dimensions still isn't visualizable."
+  },
+  {
+   "t": 122.12,
+   "text": "For visualization, you do a second nonlinear reduction from PC space down to two dimensions."
+  },
+  {
+   "t": 128.64,
+   "text": "The standard tools here are t-SNE (t-distributed stochastic neighbor embedding) and UMAP (uniform manifold approximation and projection)."
+  },
+  {
+   "t": 138.7,
+   "text": "Both take high-dimensional points and project them into 2D in a way that tries to preserve local neighborhoods — cells that were close together in high dimensions end up close together on the 2D plot."
+  },
+  {
+   "t": 150.45,
+   "text": "UMAP has largely replaced t-SNE in modern usage because it's faster, preserves global structure better, and runs on bigger datasets."
+  },
+  {
+   "t": 159.43,
+   "text": "The result is a 2D scatter plot — every cell a dot, with dots arranged in space such that biologically similar cells form visible clusters."
+  },
+  {
+   "t": 169.2,
+   "text": "When you've never seen one before, the first time you look at a UMAP of a tissue you've never characterized, with twenty colored clusters of cells in different regions of the plot, it feels like magic."
+  },
+  {
+   "t": 181.4,
+   "text": "You're literally seeing the cell types of the tissue as visible clumps, just because their gene expression patterns differ enough that they end up in different parts of the plot."
+  },
+  {
+   "t": 191.12,
+   "text": "Step three: clustering."
+  },
+  {
+   "t": 193.15,
+   "text": "UMAP is for visualization, but you also want a categorical assignment — which cluster does each cell belong to?"
+  },
+  {
+   "t": 200.25,
+   "text": "For that, you run a clustering algorithm in the PC space, not the UMAP space."
+  },
+  {
+   "t": 206.11,
+   "text": "The standard is graph-based clustering, specifically the Leiden algorithm."
+  },
+  {
+   "t": 210.43,
+   "text": "You build a k-nearest-neighbor graph in PC space, where each cell is connected to its closest neighbors, then partition the graph into densely connected communities."
+  },
+  {
+   "t": 221.55,
+   "text": "Each community is a cluster."
+  },
+  {
+   "t": 223.71,
+   "text": "The clusters typically correspond to cell types or cell states."
+  },
+  {
+   "t": 227.93,
+   "text": "Then comes the part that's still partly manual: cell type annotation."
+  },
+  {
+   "t": 232.19,
+   "text": "The software gives you clusters labeled \"0,\" \"1,\" \"2,\" and so on."
+  },
+  {
+   "t": 237.06,
+   "text": "You have to figure out what each cluster is."
+  },
+  {
+   "t": 239.43,
+   "text": "The standard approach is to look at the genes that are differentially expressed in each cluster compared to the others — the marker genes — and match them against known cell-type marker gene lists."
+  },
+  {
+   "t": 251.01,
+   "text": "Cluster 3 expresses high CD3D, CD8A, CD8B — those are T-cell markers, so cluster 3 is CD8 T cells."
+  },
+  {
+   "t": 261.87,
+   "text": "Cluster 7 expresses MS4A1 and CD79A — those are B-cell markers."
+  },
+  {
+   "t": 269.89,
+   "text": "And so on."
+  },
+  {
+   "t": 270.88,
+   "text": "There are now automated annotation tools (CellTypist, SingleR) that do this matching by referencing curated databases of marker genes from previously annotated atlases."
+  },
+  {
+   "t": 281.64,
+   "text": "They work pretty well for common cell types in well-characterized tissues; they struggle for rare or unusual cell types where the markers aren't established."
+  },
+  {
+   "t": 290.99,
+   "text": "The output of all this — UMAP plot, clusters, annotations — is the visual representation you see in every modern single-cell paper."
+  },
+  {
+   "t": 300.5,
+   "text": "The famous \"rainbow blob\" figure where each cell type is a colored island."
+  },
+  {
+   "t": 305.77,
+   "text": "That image, when you really understand it, is a compressed summary of an enormous amount of biological structure: which cells are present in this tissue, in what proportions, in what continuous or discrete states, with what relationships."
+  },
+  {
+   "t": 320.52,
+   "text": "Single-cell papers spend most of their figures unpacking what's in that UMAP."
+  },
+  {
+   "t": 326.09,
+   "text": "It's the gateway to everything else."
+  },
+  {
+   "t": 328.35,
+   "text": "A subtle but important point: clusters in a UMAP are not necessarily real biological categories."
+  },
+  {
+   "t": 335.7,
+   "text": "They're produced by an algorithm that's trying to find structure, and it will always find some."
+  },
+  {
+   "t": 340.9,
+   "text": "If your tissue has continuous variation rather than discrete cell types — which is true for, say, neurons along a cortical column, or for cells differentiating along a developmental trajectory — the clusters will represent arbitrary cuts of a continuum rather than real categories."
+  },
+  {
+   "t": 358.08,
+   "text": "Be careful when you read papers that make strong claims about exactly how many cell types are in a tissue."
+  },
+  {
+   "t": 364.25,
+   "text": "The number depends on the resolution parameter of the clustering algorithm."
+  },
+  {
+   "t": 368.03,
+   "text": "It's not a fact of nature."
+  },
+  {
+   "t": 369.75,
+   "text": "It's a choice."
+  }
+ ]
+}

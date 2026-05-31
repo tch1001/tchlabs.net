@@ -1,0 +1,227 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Paired-end reads and insert size: what they enable",
+ "duration": 438.44,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Paired-end reads and insert size: what they enable"
+  },
+  {
+   "t": 5.42,
+   "text": "So far I've described the sequencing cycle as if it just runs one direction along the fragment, from the adapter inward, producing a single read of some length — call it 150 base pairs."
+  },
+  {
+   "t": 17.89,
+   "text": "That's called a single-end read."
+  },
+  {
+   "t": 19.59,
+   "text": "It's perfectly fine for some applications."
+  },
+  {
+   "t": 22.41,
+   "text": "But almost every serious Illumina sequencing project today does something more clever: after finishing the first read in one direction, the instrument actually goes back and reads the same fragment from the other end, producing a second read."
+  },
+  {
+   "t": 37.2,
+   "text": "We call this paired-end sequencing, and the two reads from the same fragment are called the \"mate pair\" or just \"the pair."
+  },
+  {
+   "t": 44.27,
+   "text": "\""
+  },
+  {
+   "t": 44.48,
+   "text": "Here's the mechanics."
+  },
+  {
+   "t": 45.89,
+   "text": "After completing the first 150-cycle read from the forward adapter, the instrument performs another short series of operations on the cluster."
+  },
+  {
+   "t": 54.98,
+   "text": "It does what's called a read 2 turnaround: it resynthesizes the cluster from the other primer, doing a kind of mini-bridge amplification step to regenerate the strand starting from the opposite anchor, then attaches a new sequencing primer that's complementary to the other adapter."
+  },
+  {
+   "t": 71.3,
+   "text": "Now, when the next round of incorporate-image-cleave-repeat starts, the polymerase begins at the other end of the original fragment and reads back toward the middle."
+  },
+  {
+   "t": 81.1,
+   "text": "Another 150 cycles, another 150 base pairs of sequence, but this time from the opposite end of the same fragment that produced the first read."
+  },
+  {
+   "t": 91.38,
+   "text": "So at the end, every cluster gives you not one read but two — a forward read of 150 bp and a reverse read of 150 bp — both derived from the same original fragment."
+  },
+  {
+   "t": 103.59,
+   "text": "We call them Read 1 and Read 2."
+  },
+  {
+   "t": 105.91,
+   "text": "They are linked."
+  },
+  {
+   "t": 106.92,
+   "text": "We know they came from the same fragment because they came from the same cluster on the flow cell, and the instrument keeps track of that linkage."
+  },
+  {
+   "t": 115.17,
+   "text": "Why do this?"
+  },
+  {
+   "t": 116.28,
+   "text": "Why pay the time cost of running essentially two sequencing runs on the same flow cell?"
+  },
+  {
+   "t": 122.19,
+   "text": "Three reasons, and they're worth understanding because they shape almost everything about how Illumina data is used downstream."
+  },
+  {
+   "t": 129.95,
+   "text": "Reason one: insert size as a constraint for mapping."
+  },
+  {
+   "t": 133.61,
+   "text": "If your library was prepared so that the original fragments were about 400 base pairs long, and you read 150 bp from each end, then you know — for every read pair — that the two reads should map back to the genome roughly 400 base pairs apart, with the forward read on one strand and the reverse read on the other strand."
+  },
+  {
+   "t": 154.55,
+   "text": "That distance and orientation constraint is enormously useful for the bioinformatics step."
+  },
+  {
+   "t": 160.74,
+   "text": "When you're aligning short reads back to a reference genome and you hit ambiguous regions — places where the reference has repeated sequences, places where the read could plausibly map to several locations — the paired-end constraint disambiguates."
+  },
+  {
+   "t": 176.01,
+   "text": "Among the possible mapping locations for Read 1, the right one is almost always the one where Read 2 also maps to a location about 400 bp away with the correct orientation."
+  },
+  {
+   "t": 188.07,
+   "text": "The pair-mate-distance becomes a check that resolves ambiguity."
+  },
+  {
+   "t": 191.84,
+   "text": "Without paired-end reads, you'd lose a substantial fraction of your mapped data to repeat-region ambiguity."
+  },
+  {
+   "t": 198.22,
+   "text": "Reason two: detecting structural variants."
+  },
+  {
+   "t": 201.53,
+   "text": "Sometimes when you map a paired-end library, you find a read pair where Read 1 and Read 2 map to the genome, but with the wrong distance between them — way too far apart, or way too close, or on completely different chromosomes."
+  },
+  {
+   "t": 216.75,
+   "text": "Those discordant pairs are biological signal."
+  },
+  {
+   "t": 220.16,
+   "text": "They tell you that the original DNA molecule had a structural rearrangement compared to the reference — a deletion (which makes the apparent insert size larger than expected), an insertion (which makes it smaller), an inversion, or a translocation between chromosomes."
+  },
+  {
+   "t": 235.69,
+   "text": "The whole field of structural variant detection in cancer genomics, in rare disease, in population studies, relies on this signal."
+  },
+  {
+   "t": 244.09,
+   "text": "A single discordant read pair is just noise."
+  },
+  {
+   "t": 247.32,
+   "text": "A cluster of dozens of discordant pairs all suggesting the same rearrangement is a structural variant call."
+  },
+  {
+   "t": 254.28,
+   "text": "Paired-end sequencing is what makes this kind of analysis possible."
+  },
+  {
+   "t": 258.58,
+   "text": "Reason three: better quality at the fragment ends."
+  },
+  {
+   "t": 262.24,
+   "text": "Illumina sequencing tends to be slightly less accurate at the ends of reads — particularly the 3-prime end, the part read last."
+  },
+  {
+   "t": 270.65,
+   "text": "By reading from both ends, you get the high-quality early bases of Read 1 at one end of the fragment, and the high-quality early bases of Read 2 at the other end."
+  },
+  {
+   "t": 280.37,
+   "text": "The middle of the fragment is more reliably called."
+  },
+  {
+   "t": 283.55,
+   "text": "For variant calling in particular, this matters: a paired-end run with 150-bp reads from a 400-bp fragment gives you very high-confidence reads at both ends, with overlap or near-overlap in the middle."
+  },
+  {
+   "t": 297.37,
+   "text": "Here's the analogy I want you to hold."
+  },
+  {
+   "t": 299.73,
+   "text": "Paired-end reads are like reading both ends of a long sentence."
+  },
+  {
+   "t": 304.44,
+   "text": "You don't see the middle, but knowing the beginning and end gives you a strong constraint on what the sentence is and how long it is."
+  },
+  {
+   "t": 312.59,
+   "text": "If a sentence on the original page started with \"The quick brown fox\" and ended with \"over the lazy dog,\" and you know it was a sentence of roughly that span, then you can place it in the original book even if you can't read the middle."
+  },
+  {
+   "t": 325.28,
+   "text": "Single-end reads give you the beginning of every sentence."
+  },
+  {
+   "t": 329.24,
+   "text": "Paired-end reads give you the beginning and the end, with the distance between them as a verification."
+  },
+  {
+   "t": 335.68,
+   "text": "In modern practice, almost all Illumina sequencing is done paired-end."
+  },
+  {
+   "t": 340.77,
+   "text": "Notation: a run described as \"2 by 150\" means paired-end with 150 bp from each end — so 300 bp of sequence per fragment, with a gap of unknown sequence in the middle if your insert is longer than 300 bp."
+  },
+  {
+   "t": 356.23,
+   "text": "A run described as \"2 by 75\" is paired-end with 75 bp reads from each end."
+  },
+  {
+   "t": 363.39,
+   "text": "Single-end runs are still done for some applications — small RNA sequencing, certain types of expression profiling, very low-depth survey sequencing — but for genomics, exome sequencing, structural variant detection, anything where you care about precision and completeness, paired-end is the default."
+  },
+  {
+   "t": 381.85,
+   "text": "One more practical detail."
+  },
+  {
+   "t": 383.59,
+   "text": "The choice of insert size matters and depends on what you want to do."
+  },
+  {
+   "t": 387.17,
+   "text": "For variant calling and de novo assembly, you usually want inserts in the 350-to-500 base pair range — long enough to bridge most short repeats but short enough that the fragments stay intact through library prep and amplification."
+  },
+  {
+   "t": 402.55,
+   "text": "For applications like ChIP-seq, where the input DNA is already fragmented by the experimental protocol, the insert size is determined by the biology and is typically shorter, maybe 200 base pairs."
+  },
+  {
+   "t": 415.68,
+   "text": "For special applications like mate-pair libraries — which are an older technique for spanning long repeats — you can construct libraries with much larger effective insert sizes, but we won't get into that today."
+  },
+  {
+   "t": 427.63,
+   "text": "The headline is: paired-end is standard, insert size is something you choose during library prep, and the pair-mate-distance is one of the most useful pieces of information in your data."
+  }
+ ]
+}

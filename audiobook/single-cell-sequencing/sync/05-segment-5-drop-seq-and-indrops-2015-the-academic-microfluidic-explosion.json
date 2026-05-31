@@ -1,0 +1,275 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Drop-seq and inDrops (2015) — the academic microfluidic explosion",
+ "duration": 460.27,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Drop-seq and inDrops (2015) — the academic microfluidic explosion"
+  },
+  {
+   "t": 7.79,
+   "text": "May 21, 2015."
+  },
+  {
+   "t": 10.32,
+   "text": "The journal Cell publishes two papers, back to back, from two different academic labs, that together announce the arrival of high-throughput droplet-based single-cell RNA sequencing."
+  },
+  {
+   "t": 22.24,
+   "text": "The first paper, from Evan Macosko and Steve McCarroll's lab at Harvard, describes a method called Drop-seq."
+  },
+  {
+   "t": 29.44,
+   "text": "The second, from Allon Klein and Marc Kirschner's lab also at Harvard, describes a method called inDrops."
+  },
+  {
+   "t": 36.56,
+   "text": "Both methods solve essentially the same problem in essentially the same way, using microfluidic devices to encapsulate single cells in water-in-oil droplets together with barcoded primers, then doing the reverse transcription inside the droplets so each cell's transcripts come out tagged with that cell's barcode."
+  },
+  {
+   "t": 55.61,
+   "text": "The simultaneity of the two papers — independent groups arriving at the same solution at the same time — is the field's signal that an idea has come of age."
+  },
+  {
+   "t": 65.58,
+   "text": "Let me focus on Drop-seq, because it's the cleaner pedagogical example, and because the engineering of Drop-seq is essentially what 10x Chromium would later commercialize at scale."
+  },
+  {
+   "t": 76.58,
+   "text": "Here's the setup."
+  },
+  {
+   "t": 77.7,
+   "text": "You have a microfluidic chip — a piece of polymer the size of a postage stamp, with channels etched into its surface, like a tiny plumbing diagram."
+  },
+  {
+   "t": 86.9,
+   "text": "There are three inputs to the chip."
+  },
+  {
+   "t": 89.0,
+   "text": "From one input, you flow in a suspension of single cells in buffer."
+  },
+  {
+   "t": 93.94,
+   "text": "From a second input, you flow in a suspension of barcoded beads — these are about the same size as a cell, made of a soft gel-like material, with millions of copies of a DNA primer attached to each bead's surface."
+  },
+  {
+   "t": 107.71,
+   "text": "From the third input, you flow in oil, the carrier fluid that will form the droplets."
+  },
+  {
+   "t": 113.31,
+   "text": "The three streams meet at a junction where they pinch off into discrete water-in-oil droplets — picture little spherical pearls of water, each containing whatever happened to be in the water at the moment of pinch-off, suspended in a continuous stream of oil."
+  },
+  {
+   "t": 128.61,
+   "text": "Each droplet is about a nanoliter in volume."
+  },
+  {
+   "t": 131.45,
+   "text": "The dilution of cells and beads in their respective streams is carefully tuned so that, on average, each droplet contains zero or one cell, and zero or one bead."
+  },
+  {
+   "t": 143.16,
+   "text": "Most droplets contain neither — they're just empty pearls of buffer in oil."
+  },
+  {
+   "t": 147.79,
+   "text": "A small fraction contain one cell and one bead together — and those are the productive droplets, the ones that will give you data."
+  },
+  {
+   "t": 155.68,
+   "text": "Empty droplets get discarded computationally at the end."
+  },
+  {
+   "t": 159.45,
+   "text": "Droplets with two cells or two beads are problems we'll discuss in Segment 10 as \"doublets."
+  },
+  {
+   "t": 166.38,
+   "text": "\""
+  },
+  {
+   "t": 166.57,
+   "text": "Now here is the critical part: what's on the bead, and what happens inside the droplet?"
+  },
+  {
+   "t": 171.96,
+   "text": "Each bead carries millions of copies of a short DNA primer."
+  },
+  {
+   "t": 176.29,
+   "text": "Every primer on a single bead has the same sequence, and that sequence has four functional pieces."
+  },
+  {
+   "t": 182.62,
+   "text": "From the bead surface outward: first, a PCR handle — a constant sequence that lets you amplify the products later."
+  },
+  {
+   "t": 190.99,
+   "text": "Second, a cell barcode — twelve nucleotides, the same for every primer on this bead, but different from every other bead."
+  },
+  {
+   "t": 198.53,
+   "text": "This is the zip code."
+  },
+  {
+   "t": 199.86,
+   "text": "Third, a UMI — eight degenerate nucleotides, randomly synthesized so they're different on every primer, even on the same bead."
+  },
+  {
+   "t": 209.15,
+   "text": "We'll discuss what UMIs do in Segment 8."
+  },
+  {
+   "t": 212.1,
+   "text": "Fourth, an oligo-dT tail — thirty thymines that will hybridize to the poly-A tail of any messenger RNA, since eukaryotic mRNAs all carry poly-A tails."
+  },
+  {
+   "t": 224.2,
+   "text": "The bead, in other words, is a chemistry kit on a sphere."
+  },
+  {
+   "t": 228.01,
+   "text": "Every primer is ready to grab an mRNA by its tail, tag it with the bead's cell barcode and a per-molecule UMI, and start a reverse transcription reaction."
+  },
+  {
+   "t": 238.04,
+   "text": "How are the bead-specific cell barcodes manufactured?"
+  },
+  {
+   "t": 241.38,
+   "text": "Through a beautiful technique called split-and-pool synthesis."
+  },
+  {
+   "t": 245.49,
+   "text": "You start with a pool of beads, all blank."
+  },
+  {
+   "t": 248.26,
+   "text": "You split the pool into four sub-pools — one for each of the four DNA bases, A, T, G, C — and in each sub-pool you chemically attach one of those bases to every bead."
+  },
+  {
+   "t": 261.15,
+   "text": "Then you re-pool and mix everything back together."
+  },
+  {
+   "t": 264.26,
+   "text": "Now split into four again, attach the next base, repool."
+  },
+  {
+   "t": 268.59,
+   "text": "After twelve rounds of split-pool-extend, every bead has a twelve-nucleotide barcode that's, with high probability, unique to that bead, because each bead followed a random path through the splits."
+  },
+  {
+   "t": 280.57,
+   "text": "Four to the twelfth power is about sixteen million possible barcodes, more than enough to label every bead in a Drop-seq run uniquely."
+  },
+  {
+   "t": 289.02,
+   "text": "Split-and-pool is how you cheaply manufacture millions of distinct barcoded beads without ever individually addressing each one."
+  },
+  {
+   "t": 297.71,
+   "text": "So now you have a stream of droplets, most empty, some containing one cell plus one bead."
+  },
+  {
+   "t": 304.17,
+   "text": "What happens inside the productive droplets?"
+  },
+  {
+   "t": 307.06,
+   "text": "The cell lyses, immediately, because the droplet buffer contains a lytic detergent."
+  },
+  {
+   "t": 312.7,
+   "text": "Lysis releases the cell's mRNA — thousands of polyadenylated transcripts — into the tiny droplet volume."
+  },
+  {
+   "t": 320.7,
+   "text": "The oligo-dT primers on the bead's surface, which are millions of them, grab the poly-A tails of the mRNAs."
+  },
+  {
+   "t": 328.05,
+   "text": "Each captured mRNA is now physically attached to a primer that carries the bead's cell barcode and a unique UMI."
+  },
+  {
+   "t": 336.15,
+   "text": "The droplets are collected, then broken — the oil is removed, the aqueous contents pooled — and reverse transcriptase is added to convert each captured mRNA into cDNA."
+  },
+  {
+   "t": 348.14,
+   "text": "After reverse transcription, every cDNA molecule from a single cell carries the same cell barcode (because they all touched the same bead) and a unique UMI (because each primer molecule had its own)."
+  },
+  {
+   "t": 360.14,
+   "text": "Different cells' molecules carry different cell barcodes."
+  },
+  {
+   "t": 364.09,
+   "text": "The pool is now barcoded, and from here on you can treat it like any other Illumina library — amplify it, fragment it, sequence it."
+  },
+  {
+   "t": 372.84,
+   "text": "The original Drop-seq paper demonstrated the method by sequencing forty-four thousand cells from a mouse retina and recovering thirty-nine distinct cell populations — many already known, some new — in a single experiment."
+  },
+  {
+   "t": 387.12,
+   "text": "That had never been done before."
+  },
+  {
+   "t": 388.87,
+   "text": "Before Drop-seq, characterizing thirty-nine cell types from a tissue would have been a multi-year project."
+  },
+  {
+   "t": 395.56,
+   "text": "After Drop-seq, it was a week."
+  },
+  {
+   "t": 397.65,
+   "text": "The throughput leap was something like a hundredfold over plate-based, at maybe a tenth the cost per cell."
+  },
+  {
+   "t": 403.52,
+   "text": "The field went a bit crazy."
+  },
+  {
+   "t": 405.29,
+   "text": "inDrops, the parallel paper from the Kirschner lab, did essentially the same thing with slightly different bead chemistry — they used hydrogel beads with photo-cleavable primers, released by UV light inside the droplet."
+  },
+  {
+   "t": 418.46,
+   "text": "The biology was the same; the bead engineering was different."
+  },
+  {
+   "t": 422.54,
+   "text": "Both methods worked."
+  },
+  {
+   "t": 423.99,
+   "text": "Both opened the floodgates."
+  },
+  {
+   "t": 425.77,
+   "text": "What was missing was commercialization."
+  },
+  {
+   "t": 428.16,
+   "text": "Drop-seq and inDrops were academic protocols — you could build the microfluidic chip yourself if you had access to a soft-lithography facility, you could synthesize the beads, you could tune the flow rates, but it was real labwork."
+  },
+  {
+   "t": 441.96,
+   "text": "Not every biology lab in the world has microfluidics expertise."
+  },
+  {
+   "t": 446.8,
+   "text": "For single-cell sequencing to spread to every lab on Earth — for it to become the default tool of modern biology — somebody needed to take the Drop-seq idea and turn it into a boxed product."
+  },
+  {
+   "t": 458.07,
+   "text": "That somebody was 10x Genomics."
+  }
+ ]
+}

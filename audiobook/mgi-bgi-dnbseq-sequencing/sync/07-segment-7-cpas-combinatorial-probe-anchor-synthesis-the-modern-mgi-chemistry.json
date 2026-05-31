@@ -1,0 +1,199 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — cPAS: combinatorial probe-anchor synthesis, the modern MGI chemistry",
+ "duration": 403.72,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — cPAS: combinatorial probe-anchor synthesis, the modern MGI chemistry"
+  },
+  {
+   "t": 7.16,
+   "text": "The modern MGI chemistry is called combinatorial probe-anchor synthesis, abbreviated cPAS."
+  },
+  {
+   "t": 14.07,
+   "text": "The name preserves the \"probe-anchor\" lineage from cPAL, but the \"synthesis\" replaces \"ligation."
+  },
+  {
+   "t": 20.75,
+   "text": "\" That single word change is the whole story."
+  },
+  {
+   "t": 23.6,
+   "text": "cPAS is, at its core, sequencing by synthesis with reversible terminator nucleotides — the same chemical strategy Illumina has used since the Solexa days — performed on a DNA nanoball instead of an Illumina cluster."
+  },
+  {
+   "t": 38.44,
+   "text": "Let me walk through a cPAS cycle."
+  },
+  {
+   "t": 40.95,
+   "text": "You have a flow cell loaded with nanoballs."
+  },
+  {
+   "t": 43.9,
+   "text": "Each nanoball has hundreds of head-to-tail copies of the insert, with adapter sequences at every junction."
+  },
+  {
+   "t": 51.05,
+   "text": "The first step is the anchor: you flow in a short single-stranded DNA primer that is complementary to the adapter region, and it hybridizes to every adapter copy in every nanoball."
+  },
+  {
+   "t": 62.66,
+   "text": "Once the primer is in place, you've created a free 3-prime hydroxyl right at the boundary between the adapter and the insert — the starting line for the sequencing reaction."
+  },
+  {
+   "t": 73.24,
+   "text": "Now you flow in a mix of four fluorescent reversible-terminator nucleotides — A, C, G, and T — each labeled with a different colored dye, each carrying a chemical blocking group on the 3-prime hydroxyl."
+  },
+  {
+   "t": 87.46,
+   "text": "You add a DNA polymerase."
+  },
+  {
+   "t": 89.69,
+   "text": "The polymerase, working from the anchor primer, incorporates exactly one nucleotide at each starting position."
+  },
+  {
+   "t": 97.35,
+   "text": "The 3-prime blocker prevents extension past the first base."
+  },
+  {
+   "t": 101.8,
+   "text": "You wash away the unincorporated nucleotides, illuminate the flow cell with laser light, and take a series of images."
+  },
+  {
+   "t": 109.26,
+   "text": "Each nanoball's spot shows one of four colors, corresponding to the base just added."
+  },
+  {
+   "t": 114.58,
+   "text": "Then you chemically cleave off both the dye and the 3-prime blocker, restoring an unblocked hydroxyl."
+  },
+  {
+   "t": 121.64,
+   "text": "The polymerase is now ready for the next cycle."
+  },
+  {
+   "t": 124.97,
+   "text": "Incorporate, image, cleave, repeat."
+  },
+  {
+   "t": 127.76,
+   "text": "If that sounds exactly like the Illumina master rhythm — well, that's because it is."
+  },
+  {
+   "t": 132.64,
+   "text": "The differences are in the details, and the details matter."
+  },
+  {
+   "t": 136.26,
+   "text": "First, what gets imaged."
+  },
+  {
+   "t": 137.91,
+   "text": "On an Illumina flow cell, the imaged unit is a cluster of about a thousand clonal molecules, all extending in lockstep."
+  },
+  {
+   "t": 146.51,
+   "text": "On a DNB flow cell, the imaged unit is a single nanoball containing about three hundred head-to-tail copies, all extending in lockstep from three hundred anchor primers, one per copy."
+  },
+  {
+   "t": 158.66,
+   "text": "Both produce a bright dot in the camera image."
+  },
+  {
+   "t": 161.66,
+   "text": "The DNB dot is dimmer, all else equal, because it has fewer fluorophores — three hundred versus a thousand — but the spots are more compact and the spatial separation between neighbors is better controlled by the patterned array, so the imaging system can pick out individual signals reliably even at high density."
+  },
+  {
+   "t": 180.44,
+   "text": "Second, the polymerase and the nucleotides."
+  },
+  {
+   "t": 183.78,
+   "text": "MGI uses their own proprietary engineered polymerase and their own proprietary set of reversible-terminator nucleotides, with chemistry that is broadly analogous to Illumina's but distinct in detail — different blocking group, different linker chemistry, different cleavage reagents."
+  },
+  {
+   "t": 201.57,
+   "text": "The intellectual property here is genuinely separate from Illumina's, which has been important in the patent litigation we'll cover in Segment 16."
+  },
+  {
+   "t": 210.43,
+   "text": "The net behavior, however, is similar: each cycle adds exactly one base, the dye is read out, the dye and the blocker are cleaved off, the next cycle begins."
+  },
+  {
+   "t": 221.69,
+   "text": "Third, the synchronization across copies within a ball."
+  },
+  {
+   "t": 225.46,
+   "text": "On an Illumina cluster, the thousand clonal molecules are all independent — some of them might fall a base behind during a cycle, due to incomplete cleavage or incorporation, and over many cycles this \"phasing\" error builds up, making the cluster signal smear across multiple bases."
+  },
+  {
+   "t": 243.3,
+   "text": "On a DNB, the three hundred copies are physically linked into one continuous polymer, but they extend independently from their anchor primers, so phasing behaves similarly to Illumina — bounded by the same per-cycle error rates."
+  },
+  {
+   "t": 258.07,
+   "text": "In practice, both platforms manage phasing to comparable levels, and both top out at read lengths in the one-hundred-fifty-to-three-hundred-base range before quality starts degrading seriously."
+  },
+  {
+   "t": 269.4,
+   "text": "What cPAS gives you, compared to cPAL, is two big things."
+  },
+  {
+   "t": 273.65,
+   "text": "Contiguous reads, because the polymerase walks forward one base at a time, base by base, without the gaps that cPAL's anchor-positioning scheme imposed."
+  },
+  {
+   "t": 284.26,
+   "text": "And longer read lengths, because polymerase-driven extension can run for one hundred and fifty cycles, or two hundred, or three hundred, in a way that ligation-based reading cannot."
+  },
+  {
+   "t": 296.06,
+   "text": "Modern MGI instruments routinely produce paired-end one-hundred-fifty-base reads — the workhorse format of human genome sequencing — and several models can do paired-end three-hundred-base reads for applications like 16S rRNA microbiome work where longer is helpful."
+  },
+  {
+   "t": 312.11,
+   "text": "What cPAS gives you compared to Illumina is, conceptually, the same chemistry on a different substrate."
+  },
+  {
+   "t": 319.49,
+   "text": "The reaction is sequencing by synthesis with reversible terminators."
+  },
+  {
+   "t": 324.09,
+   "text": "The substrate is a DNA nanoball on a patterned flow cell, not a bridge-amplified cluster on an Illumina flow cell."
+  },
+  {
+   "t": 332.1,
+   "text": "The downstream consequences of that substrate choice — no PCR bias, no index hopping, simpler loading, slightly different error profiles — are what give the platform its distinct character."
+  },
+  {
+   "t": 344.64,
+   "text": "The core chemistry of base reading is, broadly, comparable."
+  },
+  {
+   "t": 349.17,
+   "text": "So when you read a paper that says \"sequencing was performed on a DNBSEQ-G400\" or \"DNBSEQ-T7,\" what is happening inside that instrument is: library prep with circularization, rolling circle amplification to make nanoballs, loading onto a patterned silicon flow cell, anchor primer binding, then one hundred and fifty cycles of cPAS — incorporate a fluorescent reversible terminator, image, cleave the dye and the blocker, repeat — followed by a paired-end turnaround step where the second read is"
+  },
+  {
+   "t": 382.12,
+   "text": "initiated from the other adapter, and another one hundred and fifty cycles."
+  },
+  {
+   "t": 387.07,
+   "text": "Total run time on the modern high-throughput instruments is around twenty-four to thirty hours."
+  },
+  {
+   "t": 392.52,
+   "text": "Output is FASTQ files, one read pair per nanoball, ready for downstream analysis."
+  },
+  {
+   "t": 399.34,
+   "text": "Same general flow as Illumina, different chemistry under the hood."
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — The UG100 instrument — physical footprint, throughput per run",
+ "duration": 275.06,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — The UG100 instrument — physical footprint, throughput per run"
+  },
+  {
+   "t": 6.46,
+   "text": "Welcome back."
+  },
+  {
+   "t": 7.49,
+   "text": "We've spent the first half of the lecture inside the engineering."
+  },
+  {
+   "t": 11.26,
+   "text": "Now let's pull back and look at the machine as a physical object in a lab, and at the practical workflows around it."
+  },
+  {
+   "t": 17.84,
+   "text": "The UG100 is, by sequencer standards, a fairly normal-looking piece of capital equipment."
+  },
+  {
+   "t": 23.84,
+   "text": "It's roughly the size of a chest freezer — say, two meters wide, one meter deep, two meters tall — with a sealed front access door, internal robotics, and a touchscreen interface."
+  },
+  {
+   "t": 34.66,
+   "text": "It sits in a temperature-controlled lab, plugged into ordinary lab power and a chilled water supply for thermal management."
+  },
+  {
+   "t": 42.09,
+   "text": "It needs about as much floor space as a NovaSeq, and the operator workflow is broadly similar to other large sequencers."
+  },
+  {
+   "t": 50.49,
+   "text": "Inside, the heart of the machine is the spin chamber — the sealed enclosure containing the wafer spindle, the spin coater, the dispensing arm, and the imaging head."
+  },
+  {
+   "t": 60.96,
+   "text": "Below that, racks of reagent reservoirs, a wafer handling robot that loads and unloads wafers from cassettes, and the fluidics that connect everything."
+  },
+  {
+   "t": 71.56,
+   "text": "On the side, a computing rack handling real-time image processing and base calling."
+  },
+  {
+   "t": 77.26,
+   "text": "The instrument generates a lot of data — terabytes per run — so the on-board compute and storage is substantial."
+  },
+  {
+   "t": 85.05,
+   "text": "A run starts with the operator loading prepared sequencing libraries into the input port."
+  },
+  {
+   "t": 90.2,
+   "text": "The library is a pool of indexed DNA fragments, prepared upstream using one of several supported library prep kits."
+  },
+  {
+   "t": 98.29,
+   "text": "On the original UG100, the library went through an emulsion PCR step — where each fragment is amplified inside its own water-in-oil droplet to produce a clonal cluster on a bead — and then the bead-bound clusters were loaded onto the wafer."
+  },
+  {
+   "t": 114.36,
+   "text": "The newer UG200 replaced emulsion PCR with rapid isothermal amplification, a simpler workflow that integrates more cleanly with standard lab automation."
+  },
+  {
+   "t": 125.06,
+   "text": "Both approaches end with the same result: a wafer surface densely populated with beads, each bead carrying a clonal cluster derived from one fragment."
+  },
+  {
+   "t": 135.74,
+   "text": "Once the wafer is loaded, the instrument runs autonomously for the duration of the sequencing — roughly twenty hours for a standard run."
+  },
+  {
+   "t": 143.89,
+   "text": "During the run, the wafer spins continuously, reagents cycle through, and the cameras image."
+  },
+  {
+   "t": 150.94,
+   "text": "At the end, the wafer comes out, the base-called data flows to the on-board compute, and after some additional processing time, FASTQ files are available for downstream analysis."
+  },
+  {
+   "t": 163.09,
+   "text": "A typical UG100 run delivers ten to twelve billion reads, at average read length around three hundred bases, for total yield of two and a half to three terabases of usable sequence."
+  },
+  {
+   "t": 176.3,
+   "text": "That's enough to do roughly thirty human genomes at thirty-fold coverage from a single run, or about a thousand small-genome bacterial samples, or about a hundred exomes — depending on what the customer is sequencing."
+  },
+  {
+   "t": 188.59,
+   "text": "Run-to-run cycle time is short enough that a well-run facility can do thirty to forty wafers per week per instrument."
+  },
+  {
+   "t": 196.89,
+   "text": "The total cost of ownership picture, briefly."
+  },
+  {
+   "t": 200.0,
+   "text": "The list price of a UG100 is around one million dollars, in the same ballpark as a NovaSeq X."
+  },
+  {
+   "t": 207.1,
+   "text": "Annual service contracts are typically around ten percent of the instrument price."
+  },
+  {
+   "t": 212.4,
+   "text": "Consumables — wafers, reagents, library prep kits — are the dominant operating cost over the instrument's lifetime, as is universal in this industry."
+  },
+  {
+   "t": 223.05,
+   "text": "At full utilization, the per-genome cost on a UG100, including everything, lands at the hundred-dollar mark Ultima advertises."
+  },
+  {
+   "t": 232.06,
+   "text": "At lower utilization, the per-genome cost rises as fixed costs get amortized over fewer samples."
+  },
+  {
+   "t": 238.84,
+   "text": "The instrument is, in practice, mostly sold to a small number of large customers — pharma genomics teams, large biobanks, contract sequencing providers — who can saturate it."
+  },
+  {
+   "t": 250.51,
+   "text": "Ultima has also created a category they call Certified Service Providers, which is essentially a network of partner labs running UG100s on behalf of smaller customers who can't justify owning one."
+  },
+  {
+   "t": 263.31,
+   "text": "This service-provider model is a way to bring the per-genome cost advantage to customers below the volume threshold for instrument ownership."
+  },
+  {
+   "t": 271.88,
+   "text": "That's the box."
+  },
+  {
+   "t": 273.06,
+   "text": "Now let's talk about what comes out of it."
+  }
+ ]
+}

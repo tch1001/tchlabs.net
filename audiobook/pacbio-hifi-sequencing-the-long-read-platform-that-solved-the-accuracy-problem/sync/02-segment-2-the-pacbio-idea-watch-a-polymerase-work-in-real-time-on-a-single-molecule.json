@@ -1,0 +1,299 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — The PacBio idea: watch a polymerase work, in real time, on a single molecule",
+ "duration": 415.53,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — The PacBio idea: watch a polymerase work, in real time, on a single molecule"
+  },
+  {
+   "t": 7.45,
+   "text": "So before we look at the physics, let me give you the central idea of PacBio in one sentence, because the elegance of the idea is genuinely worth pausing over."
+  },
+  {
+   "t": 17.38,
+   "text": "The idea is this."
+  },
+  {
+   "t": 19.14,
+   "text": "Take one single molecule of DNA polymerase."
+  },
+  {
+   "t": 22.52,
+   "text": "Stick it to the bottom of a tiny well."
+  },
+  {
+   "t": 25.07,
+   "text": "Give it a template strand to copy."
+  },
+  {
+   "t": 27.29,
+   "text": "Provide it with fluorescently labeled nucleotides — each base type carries a different color of dye."
+  },
+  {
+   "t": 33.98,
+   "text": "Then watch, under a microscope, as the polymerase incorporates one nucleotide at a time."
+  },
+  {
+   "t": 40.33,
+   "text": "Each incorporation produces a flash of color."
+  },
+  {
+   "t": 43.95,
+   "text": "Red flash means a T was added."
+  },
+  {
+   "t": 46.66,
+   "text": "Green flash means a C."
+  },
+  {
+   "t": 48.58,
+   "text": "And so on."
+  },
+  {
+   "t": 49.55,
+   "text": "Record the sequence of flashes, and you've read the sequence of the DNA."
+  },
+  {
+   "t": 54.34,
+   "text": "That's it."
+  },
+  {
+   "t": 55.12,
+   "text": "That's the whole concept."
+  },
+  {
+   "t": 56.67,
+   "text": "Sequencing by watching a single polymerase work in real time."
+  },
+  {
+   "t": 60.88,
+   "text": "Stay with me."
+  },
+  {
+   "t": 61.83,
+   "text": "Now, every single piece of that sentence sounds straightforward and is, in practice, fiendishly hard."
+  },
+  {
+   "t": 67.75,
+   "text": "Let me walk through why."
+  },
+  {
+   "t": 69.16,
+   "text": "First — you have to be able to see a single molecule of fluorescent dye."
+  },
+  {
+   "t": 74.03,
+   "text": "Not a million copies."
+  },
+  {
+   "t": 75.55,
+   "text": "One."
+  },
+  {
+   "t": 76.34,
+   "text": "Not a population."
+  },
+  {
+   "t": 77.64,
+   "text": "A single molecule, when it's flashing for a few milliseconds in solution."
+  },
+  {
+   "t": 82.34,
+   "text": "To see a single molecule of fluorescence is already, by itself, the kind of thing that would have won a Nobel Prize twenty years before PacBio existed."
+  },
+  {
+   "t": 92.11,
+   "text": "It requires extremely sensitive cameras, low backgrounds, and clever optics."
+  },
+  {
+   "t": 97.78,
+   "text": "But that's just the entry fee."
+  },
+  {
+   "t": 99.49,
+   "text": "Second — the polymerase is constantly being bombarded by free nucleotides floating around in solution."
+  },
+  {
+   "t": 106.91,
+   "text": "To do its job, the polymerase needs a pool of all four nucleotides at fairly high concentration, micromolar at minimum, hovering around it ready to be grabbed."
+  },
+  {
+   "t": 117.33,
+   "text": "Now, every one of those free nucleotides is carrying a fluorescent dye."
+  },
+  {
+   "t": 122.53,
+   "text": "If you tried to image the polymerase under a normal microscope, the background fluorescence from millions of unincorporated nucleotides drifting through the field of view would completely swamp the signal from the one nucleotide actually being incorporated."
+  },
+  {
+   "t": 137.34,
+   "text": "It would be like trying to spot a candle in a stadium full of stadium lights."
+  },
+  {
+   "t": 141.97,
+   "text": "The signal-to-background problem is catastrophic."
+  },
+  {
+   "t": 145.12,
+   "text": "Third — you need to know that the flash you just saw came from the correct molecule, not from some other reaction happening nearby."
+  },
+  {
+   "t": 152.55,
+   "text": "If you have thousands of polymerases all working at once and you want to read each one's output independently, you can't have them confusing each other's signals."
+  },
+  {
+   "t": 161.88,
+   "text": "Fourth — the polymerase itself has to be fast enough to be practical but slow enough that you can see each step."
+  },
+  {
+   "t": 169.21,
+   "text": "If it incorporates a hundred bases a second, that's two milliseconds per base, which is doable with a fast camera, but tight."
+  },
+  {
+   "t": 177.15,
+   "text": "If it incorporates ten bases a second, your sequencing throughput collapses."
+  },
+  {
+   "t": 182.82,
+   "text": "There's a sweet spot."
+  },
+  {
+   "t": 184.26,
+   "text": "Fifth — you need a polymerase that can keep going for a long, long time on a single template, without falling off, without getting tired, without losing accuracy."
+  },
+  {
+   "t": 194.28,
+   "text": "Most polymerases run for a few hundred bases and stop."
+  },
+  {
+   "t": 198.44,
+   "text": "You want one that runs for tens of thousands of bases, on the same molecule, without giving up."
+  },
+  {
+   "t": 204.19,
+   "text": "Each of these problems, individually, was a research challenge."
+  },
+  {
+   "t": 208.32,
+   "text": "Solving all of them together, in one integrated instrument — that's what PacBio spent more than a decade and several hundred million dollars doing."
+  },
+  {
+   "t": 217.14,
+   "text": "The conceptual breakthrough that made the whole approach possible was the zero-mode waveguide, which we're going to spend the next segment on."
+  },
+  {
+   "t": 224.09,
+   "text": "The zero-mode waveguide solves the background problem — it lets you illuminate only a tiny volume right at the bottom of a well, the volume where the polymerase sits, so unincorporated nucleotides floating around above the polymerase never get hit by the laser and never fluoresce."
+  },
+  {
+   "t": 241.55,
+   "text": "The result is that essentially the only fluorescence you see is from the dye actually attached to the nucleotide currently being incorporated by the polymerase."
+  },
+  {
+   "t": 251.74,
+   "text": "Background problem solved."
+  },
+  {
+   "t": 253.37,
+   "text": "The polymerase problem was solved by adapting an enzyme called the phi29 polymerase — pronounced \"phi twenty-nine\" — which is a real workhorse of an enzyme borrowed from a bacterial virus."
+  },
+  {
+   "t": 265.12,
+   "text": "Phi29 has the unusual properties of being extremely processive (meaning it stays on the template for a long time without falling off), and being able to displace any strand it bumps into as it moves along (which becomes crucial for circular templates)."
+  },
+  {
+   "t": 280.93,
+   "text": "We'll meet phi29 in segment six."
+  },
+  {
+   "t": 283.58,
+   "text": "PacBio has further engineered it to slow it down a bit, make it more error-tolerant, and make it work with their specific chemistry."
+  },
+  {
+   "t": 291.23,
+   "text": "The chemistry problem — how to attach a dye to a nucleotide in a way that the dye lights up briefly during incorporation and then disappears — was solved by attaching the dye to the phosphate group of the nucleotide."
+  },
+  {
+   "t": 303.85,
+   "text": "We'll see that in segment five."
+  },
+  {
+   "t": 305.94,
+   "text": "When the polymerase incorporates the nucleotide, the natural reaction cleaves off the phosphate group, taking the dye with it."
+  },
+  {
+   "t": 313.96,
+   "text": "So the dye is present, attached, fluorescing only during the moment of incorporation, and then it's gone."
+  },
+  {
+   "t": 320.97,
+   "text": "The result is a clean, time-resolved pulse of color, one per base."
+  },
+  {
+   "t": 326.13,
+   "text": "Beautiful chemistry."
+  },
+  {
+   "t": 327.57,
+   "text": "So the PacBio idea, packaged up, is: zero-mode waveguides plus phi29 polymerase plus phospholinked fluorescent nucleotides, all integrated on a chip with millions of independent wells, observed in parallel by a camera."
+  },
+  {
+   "t": 344.08,
+   "text": "That's the platform."
+  },
+  {
+   "t": 345.39,
+   "text": "The product is a real-time movie of polymerase activity, played back as a sequence of colored flashes, which the software translates into a base sequence."
+  },
+  {
+   "t": 355.26,
+   "text": "Now, here's the thing I want you to feel about this approach, before we go into the details."
+  },
+  {
+   "t": 360.36,
+   "text": "It's a fundamentally different paradigm from short-read sequencing."
+  },
+  {
+   "t": 364.13,
+   "text": "Illumina, Sanger, and every other short-read method works by amplifying DNA — making many many many copies — and reading the average signal from that population."
+  },
+  {
+   "t": 375.18,
+   "text": "The signal is loud because it's redundant."
+  },
+  {
+   "t": 377.68,
+   "text": "PacBio doesn't amplify."
+  },
+  {
+   "t": 379.6,
+   "text": "It reads a single molecule, the original one, directly."
+  },
+  {
+   "t": 383.76,
+   "text": "There's no PCR step, no amplification bias, no copying errors introduced by polymerases other than the sequencing polymerase itself."
+  },
+  {
+   "t": 393.1,
+   "text": "What you're reading is the actual DNA molecule that came out of the cell."
+  },
+  {
+   "t": 397.66,
+   "text": "That's a profound difference."
+  },
+  {
+   "t": 399.47,
+   "text": "We'll come back to its implications throughout the lecture — especially when we get to methylation calling, where the lack of amplification turns out to be a huge advantage because PCR erases methylation marks."
+  },
+  {
+   "t": 411.64,
+   "text": "So that's the idea."
+  },
+  {
+   "t": 412.98,
+   "text": "Now let's look at the physics that makes it possible."
+  }
+ ]
+}

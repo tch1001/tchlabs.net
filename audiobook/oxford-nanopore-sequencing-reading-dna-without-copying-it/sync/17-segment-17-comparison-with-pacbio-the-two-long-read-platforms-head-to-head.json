@@ -1,0 +1,251 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Comparison with PacBio: the two long-read platforms head-to-head",
+ "duration": 351.29,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Comparison with PacBio: the two long-read platforms head-to-head"
+  },
+  {
+   "t": 5.72,
+   "text": "A natural question to ask, having spent fifteen segments on nanopore: how does it compare with the other major long-read sequencing platform, PacBio?"
+  },
+  {
+   "t": 15.14,
+   "text": "Both nanopore and PacBio produce reads dramatically longer than Illumina."
+  },
+  {
+   "t": 20.15,
+   "text": "Both have their strongest applications in assembly, structural variants, and full-length transcripts."
+  },
+  {
+   "t": 26.48,
+   "text": "They're often spoken of together as \"the long-read platforms."
+  },
+  {
+   "t": 30.6,
+   "text": "\" But they are, technologically, completely different machines, and the comparison is instructive."
+  },
+  {
+   "t": 36.86,
+   "text": "PacBio — Pacific Biosciences — uses a technology called single-molecule real-time sequencing, or SMRT sequencing."
+  },
+  {
+   "t": 45.96,
+   "text": "The fundamental unit is a tiny well, called a zero-mode waveguide, etched into a glass chip."
+  },
+  {
+   "t": 52.09,
+   "text": "Inside each well there's a single DNA polymerase enzyme."
+  },
+  {
+   "t": 55.96,
+   "text": "The polymerase synthesizes a complementary strand of DNA from a circular template, and as it incorporates each fluorescent nucleotide, a brief flash of one of four colors is detected by a camera."
+  },
+  {
+   "t": 69.04,
+   "text": "The DNA template is circular — you ligate hairpin adapters onto both ends of your DNA fragment to make a closed loop, called a SMRT-bell — and the polymerase goes around the loop multiple times, sequencing the same fragment over and over to build up high-confidence consensus reads."
+  },
+  {
+   "t": 87.16,
+   "text": "That's PacBio HiFi, the current high-accuracy mode, with raw accuracy above 99 percent per pass and consensus accuracy approaching Q40."
+  },
+  {
+   "t": 97.72,
+   "text": "So the philosophical contrast is sharp."
+  },
+  {
+   "t": 100.6,
+   "text": "PacBio is still a synthesis-based technology — there's a polymerase, there's fluorescence, there's a camera, there are fluorescent nucleotides — it's just that the polymerase is observed in real time at single-molecule resolution."
+  },
+  {
+   "t": 114.91,
+   "text": "Nanopore has none of that."
+  },
+  {
+   "t": 116.55,
+   "text": "No synthesis."
+  },
+  {
+   "t": 117.96,
+   "text": "No fluorescence."
+  },
+  {
+   "t": 119.44,
+   "text": "No camera."
+  },
+  {
+   "t": 120.49,
+   "text": "Just a strand pulled through a hole and a current measurement."
+  },
+  {
+   "t": 124.04,
+   "text": "Practically, the two platforms have different strengths."
+  },
+  {
+   "t": 127.38,
+   "text": "Read length."
+  },
+  {
+   "t": 128.39,
+   "text": "Nanopore wins on maximum read length."
+  },
+  {
+   "t": 131.29,
+   "text": "PacBio HiFi reads max out around 25 kilobases."
+  },
+  {
+   "t": 135.62,
+   "text": "Nanopore routinely produces reads of 100,000 bases, and ultra-long protocols push to a million bases or more."
+  },
+  {
+   "t": 144.21,
+   "text": "For applications that need the very longest reads — assembling through centromeres, traversing massive structural variants — nanopore is the better choice."
+  },
+  {
+   "t": 154.62,
+   "text": "Per-read accuracy."
+  },
+  {
+   "t": 156.4,
+   "text": "PacBio HiFi wins on per-read accuracy."
+  },
+  {
+   "t": 159.8,
+   "text": "The consensus reads from circular sequencing reach Q35 to Q40, comparable to Illumina, with median accuracy above 99.9 percent."
+  },
+  {
+   "t": 170.9,
+   "text": "Nanopore single-read accuracy with R10.4 duplex reaches around Q25 to Q30, very competitive but still slightly below HiFi."
+  },
+  {
+   "t": 181.24,
+   "text": "For applications that need the highest possible per-read accuracy in long reads — particularly small variant calling in long reads — PacBio HiFi is preferred."
+  },
+  {
+   "t": 192.24,
+   "text": "Throughput per dollar."
+  },
+  {
+   "t": 194.06,
+   "text": "PacBio has a higher capital cost and higher per-run cost but produces more data per run on their larger machines."
+  },
+  {
+   "t": 201.93,
+   "text": "Per gigabase, PacBio is competitive with nanopore PromethION but more expensive than Illumina."
+  },
+  {
+   "t": 208.45,
+   "text": "Nanopore MinION is more expensive per gigabase but accessible at much lower capital cost."
+  },
+  {
+   "t": 214.69,
+   "text": "Portability."
+  },
+  {
+   "t": 215.75,
+   "text": "Nanopore wins overwhelmingly."
+  },
+  {
+   "t": 218.09,
+   "text": "The MinION is the only sequencer of any kind that's actually portable."
+  },
+  {
+   "t": 223.07,
+   "text": "PacBio's smallest instrument is a benchtop machine that weighs hundreds of pounds and requires a fixed lab setup."
+  },
+  {
+   "t": 230.35,
+   "text": "Real-time."
+  },
+  {
+   "t": 231.29,
+   "text": "Nanopore wins."
+  },
+  {
+   "t": 232.69,
+   "text": "The data comes out during the run."
+  },
+  {
+   "t": 234.93,
+   "text": "PacBio you have to wait for the run to complete to get useful data."
+  },
+  {
+   "t": 238.84,
+   "text": "Direct RNA, methylation."
+  },
+  {
+   "t": 241.57,
+   "text": "Nanopore wins."
+  },
+  {
+   "t": 243.0,
+   "text": "Both platforms can detect modifications, but nanopore can read native RNA directly while PacBio requires conversion."
+  },
+  {
+   "t": 251.46,
+   "text": "Nanopore's methylation calling is now mature and integrated; PacBio's is improving but less integrated."
+  },
+  {
+   "t": 258.8,
+   "text": "Read length distribution."
+  },
+  {
+   "t": 260.76,
+   "text": "PacBio HiFi has tighter, more controllable distribution."
+  },
+  {
+   "t": 265.09,
+   "text": "Nanopore is a wider distribution that includes some very long reads and some shorter ones, depending on input DNA quality."
+  },
+  {
+   "t": 272.69,
+   "text": "Here's the analogy that I think captures the comparison best."
+  },
+  {
+   "t": 276.53,
+   "text": "PacBio is a Swiss watch — exquisitely engineered, very accurate, requires careful handling, expensive."
+  },
+  {
+   "t": 285.07,
+   "text": "Nanopore is a multi-tool — versatile, scrappy, works in unconventional settings, sometimes less precise on any individual function but capable of an unusually wide range of jobs."
+  },
+  {
+   "t": 298.29,
+   "text": "Different tools for different problems."
+  },
+  {
+   "t": 300.68,
+   "text": "In practice, many of the most important genome assembly papers in the last few years have used both platforms together."
+  },
+  {
+   "t": 308.28,
+   "text": "PacBio HiFi for high-accuracy contigs, nanopore ultra-long for spanning the longest repeats."
+  },
+  {
+   "t": 315.34,
+   "text": "The combination produces results neither platform could achieve alone."
+  },
+  {
+   "t": 319.77,
+   "text": "The T2T human genome assembly I mentioned earlier was a PacBio-plus-nanopore project."
+  },
+  {
+   "t": 326.13,
+   "text": "Many large-scale animal and plant reference genome projects today use both."
+  },
+  {
+   "t": 331.03,
+   "text": "So the right frame is not nanopore versus PacBio but nanopore and PacBio as complementary tools that together cover the long-read sequencing space, with Illumina dominating short reads underneath both of them."
+  },
+  {
+   "t": 345.0,
+   "text": "Each technology has its niche."
+  },
+  {
+   "t": 347.48,
+   "text": "The good experimentalist picks the right tool for the question."
+  }
+ ]
+}

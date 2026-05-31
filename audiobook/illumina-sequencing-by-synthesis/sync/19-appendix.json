@@ -1,0 +1,199 @@
+{
+ "n": 19,
+ "title": "APPENDIX",
+ "duration": 375.69,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX"
+  },
+  {
+   "t": 1.06,
+   "text": "Glossary of key terms"
+  },
+  {
+   "t": 3.16,
+   "text": "Adapter — Synthetic DNA sequence ligated to both ends of every fragment during library prep, providing binding sites for the flow cell, primer binding sites for sequencing, and the index sequence."
+  },
+  {
+   "t": 16.6,
+   "text": "Bridge amplification — The flow cell process by which a single anchored DNA fragment is amplified into a clonal cluster of about 1000 identical copies through repeated cycles of strand folding, hybridization to a second anchor, and polymerase extension."
+  },
+  {
+   "t": 33.26,
+   "text": "Cluster — A patch of about 1000 identical DNA molecules on the flow cell surface, produced by bridge amplification from one starting fragment, that produces a single signal during sequencing."
+  },
+  {
+   "t": 46.15,
+   "text": "Dephasing — The gradual loss of synchronization within a cluster as cycles progress, caused by occasional missed or double incorporations, leading to declining quality scores at the ends of long reads."
+  },
+  {
+   "t": 58.84,
+   "text": "FASTQ — The standard data file format containing both base calls and per-base quality scores from Illumina runs."
+  },
+  {
+   "t": 66.46,
+   "text": "Flow cell — The glass slide, internally channeled and surface-functionalized with anchor oligonucleotides, on which all the sequencing chemistry takes place."
+  },
+  {
+   "t": 76.65,
+   "text": "Index / barcode — A short synthetic sequence in the adapter that identifies which sample a read came from, enabling multiplexing of many samples on one flow cell."
+  },
+  {
+   "t": 88.33,
+   "text": "Indexing / multiplexing — Pooling many indexed samples for sequencing in a single run, with sample assignment recovered by demultiplexing the index sequences from each read."
+  },
+  {
+   "t": 100.14,
+   "text": "Library — The collection of DNA fragments, each with adapters and an index, ready to be loaded onto a flow cell."
+  },
+  {
+   "t": 108.78,
+   "text": "PhiX — A bacteriophage genome with balanced base composition used as a spike-in control to maintain base-call diversity in low-complexity libraries."
+  },
+  {
+   "t": 120.6,
+   "text": "Phred score / Q score — Log-scaled measure of confidence in a base call."
+  },
+  {
+   "t": 125.89,
+   "text": "Q30 means one error in a thousand."
+  },
+  {
+   "t": 129.03,
+   "text": "Paired-end sequencing — Reading each fragment from both ends, producing two linked reads per cluster, used for mapping and structural variant detection."
+  },
+  {
+   "t": 138.96,
+   "text": "Reversible terminator — A modified nucleotide carrying both a fluorescent dye and a 3-prime blocker that prevents the polymerase from adding more than one base per cycle."
+  },
+  {
+   "t": 150.0,
+   "text": "Both modifications are removed by a single cleavage step."
+  },
+  {
+   "t": 153.94,
+   "text": "Sequencing by synthesis (SBS) — The general term for Illumina's approach: read a DNA template by watching a polymerase incorporate fluorescent nucleotides one at a time."
+  },
+  {
+   "t": 165.11,
+   "text": "Tagmentation — The Nextera library prep technique using a transposase to simultaneously fragment DNA and insert adapter sequences in one step."
+  },
+  {
+   "t": 175.76,
+   "text": "UMI (Unique Molecular Identifier) — Short random sequence added to each fragment during library prep, allowing identification of reads derived from the same starting molecule for error suppression."
+  },
+  {
+   "t": 188.29,
+   "text": "Quick numerical reference"
+  },
+  {
+   "t": 190.05,
+   "text": "Read length: typically 2 by 150 bp paired-end; up to 2 by 300 on MiSeq."
+  },
+  {
+   "t": 197.09,
+   "text": "Cluster signal: ~1000 molecules per cluster after bridge amplification."
+  },
+  {
+   "t": 202.41,
+   "text": "Flow cell cluster count: ~25 million on MiSeq, ~50 billion on NovaSeq X."
+  },
+  {
+   "t": 208.95,
+   "text": "Throughput: ~15 Gb per MiSeq run, ~16 Tb per NovaSeq X run."
+  },
+  {
+   "t": 215.43,
+   "text": "Run time: ~24 hours on MiSeq, ~24-44 hours on NovaSeq X."
+  },
+  {
+   "t": 221.85,
+   "text": "Per-base error rate: roughly 0.1% in well-behaved middle of read (Q30)."
+  },
+  {
+   "t": 228.47,
+   "text": "Cost per human genome: ~$3B (2003), ~$1000 (2014), ~$200 (2022)."
+  },
+  {
+   "t": 238.22,
+   "text": "Illumina market share of NGS: ~70-80% as of mid-2020s."
+  },
+  {
+   "t": 245.04,
+   "text": "Key dates"
+  },
+  {
+   "t": 246.1,
+   "text": "1998 — Balasubramanian and Klenerman conceive the reversible terminator approach; Solexa founded in Cambridge."
+  },
+  {
+   "t": 254.66,
+   "text": "2006 — Solexa launches first commercial sequencer."
+  },
+  {
+   "t": 259.18,
+   "text": "2007 — Illumina acquires Solexa for ~$650M."
+  },
+  {
+   "t": 264.81,
+   "text": "2010-2014 — HiSeq dominance era; cost drops 100-fold."
+  },
+  {
+   "t": 271.41,
+   "text": "2014 — HiSeq X Ten launch; \"$1000 genome\" announced."
+  },
+  {
+   "t": 277.68,
+   "text": "2017 — NovaSeq 6000 launch."
+  },
+  {
+   "t": 282.06,
+   "text": "2018 — iSeq launch (smallest Illumina instrument)."
+  },
+  {
+   "t": 287.07,
+   "text": "2022 — NovaSeq X launch; cost drops toward $200 per genome; competition from MGI, Element, Ultima visible."
+  },
+  {
+   "t": 297.01,
+   "text": "Suggested further reading"
+  },
+  {
+   "t": 299.04,
+   "text": "The original Solexa technology paper: Bentley et al., \"Accurate whole human genome sequencing using reversible terminator chemistry,\" Nature 2008."
+  },
+  {
+   "t": 310.78,
+   "text": "A good textbook treatment: Goodwin, McPherson, McCombie, \"Coming of age: ten years of next-generation sequencing technologies,\" Nature Reviews Genetics, 2016."
+  },
+  {
+   "t": 323.0,
+   "text": "For the historical Solexa story: Glyn Moody, Digital Code of Life; and various interviews with Balasubramanian and Klenerman in the trade press."
+  },
+  {
+   "t": 332.69,
+   "text": "For practical bioinformatics: Heng Li's tools (BWA, samtools, minimap2) and the GATK Best Practices documentation, both freely available online."
+  },
+  {
+   "t": 344.15,
+   "text": "A final note for the lecturer"
+  },
+  {
+   "t": 346.28,
+   "text": "The cost trajectory and instrument family will continue to shift."
+  },
+  {
+   "t": 350.62,
+   "text": "When you reuse this script, check the current price per genome, the current top-of-line instrument, and the current state of the long-read competition before delivering."
+  },
+  {
+   "t": 359.92,
+   "text": "The core chemistry — the four-step cycle, bridge amplification, reversible terminators — is stable and is unlikely to be displaced soon."
+  },
+  {
+   "t": 369.49,
+   "text": "But the numbers around it shift every couple of years, and you want to keep your students' picture of the field current."
+  }
+ ]
+}

@@ -1,0 +1,223 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Capillary electrophoresis",
+ "duration": 408.58,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Capillary electrophoresis"
+  },
+  {
+   "t": 3.56,
+   "text": "So we have, by the mid-1990s, one-tube fluorescent Sanger chemistry."
+  },
+  {
+   "t": 7.9,
+   "text": "The reaction in a single tube gives you a population of fragments, each terminated by a colored ddNTP."
+  },
+  {
+   "t": 14.62,
+   "text": "The next problem is: how do you separate that population by length, fast, reproducibly, with the laser detector built into the machine?"
+  },
+  {
+   "t": 23.14,
+   "text": "And the answer that Applied Biosystems and a few competing instrument makers landed on is capillary electrophoresis."
+  },
+  {
+   "t": 30.84,
+   "text": "Let me back up and explain why this was such a big deal, because if you've only ever worked with the modern instruments, the contribution of the capillary may not be obvious."
+  },
+  {
+   "t": 40.25,
+   "text": "The original Sanger gels were slab gels."
+  },
+  {
+   "t": 43.24,
+   "text": "A flat rectangular plate of polyacrylamide, maybe thirty centimeters tall, half a centimeter thick, with a comb at the top that formed wells for loading samples."
+  },
+  {
+   "t": 53.35,
+   "text": "You poured the gel between two glass plates, let it polymerize for an hour, loaded your sample into a well at the top, applied a voltage across it, and waited."
+  },
+  {
+   "t": 63.39,
+   "text": "The DNA migrated downward through the gel toward the positive electrode."
+  },
+  {
+   "t": 68.4,
+   "text": "Smaller fragments moved faster, larger fragments slower, and after a few hours the fragments separated into bands distributed down the length of the gel."
+  },
+  {
+   "t": 78.36,
+   "text": "To read the fragments out, you either exposed an X-ray film over the gel (old radioactive version) or you scanned a laser across the bottom of the gel and recorded the fluorescence as fragments migrated past (early automated version, the ABI 370A and 373A)."
+  },
+  {
+   "t": 97.83,
+   "text": "Slab gels worked, but they were a pain."
+  },
+  {
+   "t": 100.46,
+   "text": "You had to pour them."
+  },
+  {
+   "t": 101.54,
+   "text": "You had to load them manually with a pipette."
+  },
+  {
+   "t": 103.67,
+   "text": "Loading is fiddly — the wells are tiny, the gel is fragile, neighboring lanes can cross-contaminate."
+  },
+  {
+   "t": 110.69,
+   "text": "You could only run a limited number of samples per gel — maybe 24 or 48 at most."
+  },
+  {
+   "t": 116.17,
+   "text": "The gel itself took up bench real estate inside the machine."
+  },
+  {
+   "t": 120.04,
+   "text": "And the throughput per machine, even with automation, capped out at a few hundred reads per day."
+  },
+  {
+   "t": 125.62,
+   "text": "Capillary electrophoresis does the same thing — separate DNA fragments by length using an electric field through a polymer matrix — but instead of doing it in a flat slab, it does it inside a very thin glass tube."
+  },
+  {
+   "t": 139.32,
+   "text": "Picture a piece of glass capillary tubing, about thirty centimeters long, with an inner diameter of fifty microns — that's about the thickness of a human hair."
+  },
+  {
+   "t": 149.99,
+   "text": "You fill the tube with a viscous polymer solution that serves the same sieving function as the polyacrylamide in a slab gel."
+  },
+  {
+   "t": 157.38,
+   "text": "You dip one end of the capillary into a tiny well containing your sample, you apply a voltage, and the DNA gets pulled into the capillary and migrates down through the polymer toward the detector at the other end."
+  },
+  {
+   "t": 170.15,
+   "text": "At the detector end, a laser shines through the capillary, the dyes attached to the passing fragments fluoresce, and a photodetector records the color and timing of each pulse of fluorescence."
+  },
+  {
+   "t": 182.36,
+   "text": "The advantages over a slab gel are dramatic."
+  },
+  {
+   "t": 185.64,
+   "text": "First, much faster heat dissipation."
+  },
+  {
+   "t": 189.3,
+   "text": "The thin capillary geometry has an enormous surface-to-volume ratio, which means heat from the electrophoresis voltage flows out efficiently into the surrounding air."
+  },
+  {
+   "t": 199.47,
+   "text": "That means you can run at much higher voltages without melting the gel — which means you get faster separations."
+  },
+  {
+   "t": 205.82,
+   "text": "A slab gel run might take three or four hours."
+  },
+  {
+   "t": 209.31,
+   "text": "A capillary run takes about half an hour, sometimes less."
+  },
+  {
+   "t": 213.4,
+   "text": "Second, no manual gel loading."
+  },
+  {
+   "t": 216.1,
+   "text": "The capillary just sips up a sample from a well in a microplate."
+  },
+  {
+   "t": 220.46,
+   "text": "The plates can be loaded by a robot, the capillaries can be auto-refilled with fresh polymer between runs, and the whole instrument can run unattended for hours, processing plate after plate of samples."
+  },
+  {
+   "t": 232.26,
+   "text": "Third, you can run many capillaries in parallel."
+  },
+  {
+   "t": 235.66,
+   "text": "The flagship instrument of the Human Genome Project era — the ABI 3700, and later the ABI 3730 — had 96 capillaries running side by side, each reading a different sample."
+  },
+  {
+   "t": 249.04,
+   "text": "That meant 96 sequences per half-hour run, which adds up to several thousand reads per day per machine."
+  },
+  {
+   "t": 255.96,
+   "text": "Stack a building with these machines and you have a sequencing factory."
+  },
+  {
+   "t": 260.23,
+   "text": "The analogy I want you to hold for capillary electrophoresis is a long thin race track."
+  },
+  {
+   "t": 266.02,
+   "text": "The starting line is the loading well."
+  },
+  {
+   "t": 268.35,
+   "text": "The finish line is the laser detector."
+  },
+  {
+   "t": 271.0,
+   "text": "The runners — your DNA fragments — line up at the starting block, the voltage gun goes off, and they start migrating down the track."
+  },
+  {
+   "t": 279.62,
+   "text": "The short fragments are the fast runners; the long fragments are slow."
+  },
+  {
+   "t": 284.18,
+   "text": "As each fragment crosses the finish line, the laser reads the color of its bib — the color of the ddNTP terminator — and a computer records both the time of crossing and the color."
+  },
+  {
+   "t": 295.46,
+   "text": "The result, after the longest fragments have finally limped across, is a list of colors in time order: red at 12.3 minutes, green at 12.4 minutes, blue at 12.5 minutes, yellow at 12.6 minutes — and so on, for hundreds of bases."
+  },
+  {
+   "t": 311.85,
+   "text": "That list of colors, converted to letters, is your sequence."
+  },
+  {
+   "t": 316.27,
+   "text": "The output that the machine produces, by the way, is what's called a chromatogram — a graph of fluorescence intensity versus time, with one trace for each of the four colors."
+  },
+  {
+   "t": 326.83,
+   "text": "You see four squiggly lines, mostly flat, but with peaks rising one after another in sequence."
+  },
+  {
+   "t": 334.02,
+   "text": "Each peak corresponds to a base in your sequence: a tall blue peak followed by a tall green peak followed by a tall red peak means C, then T, then A."
+  },
+  {
+   "t": 344.68,
+   "text": "We'll spend a whole segment, Segment 12, looking at chromatograms and how to read them."
+  },
+  {
+   "t": 350.16,
+   "text": "For now, the picture I want you to leave with is: capillary in, electric field on, laser at the far end, four-colored peaks coming out one after the other, sequence reconstructed in real time."
+  },
+  {
+   "t": 362.0,
+   "text": "The ABI 3730 — the workhorse capillary instrument that came out around 2002 — is still the workhorse of Sanger sequencing today."
+  },
+  {
+   "t": 371.35,
+   "text": "Many of the sequencing cores at universities are running 3730s that are fifteen or twenty years old at this point, because the technology was so mature, so reliable, so deeply optimized, that there hasn't been much pressure to replace it."
+  },
+  {
+   "t": 386.53,
+   "text": "If you send a tube of DNA off for Sanger sequencing tomorrow, you can bet at very good odds that the actual electrophoresis is happening in a 3730."
+  },
+  {
+   "t": 396.61,
+   "text": "The chemistry is BigDye, the separation is capillary, and the readout is a chromatogram — that's the entire modern Sanger pipeline, essentially unchanged for two decades."
+  }
+ ]
+}

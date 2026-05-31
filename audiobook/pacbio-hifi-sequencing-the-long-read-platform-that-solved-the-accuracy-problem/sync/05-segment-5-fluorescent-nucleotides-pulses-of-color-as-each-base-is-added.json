@@ -1,0 +1,291 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Fluorescent nucleotides: pulses of color as each base is added",
+ "duration": 415.37,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Fluorescent nucleotides: pulses of color as each base is added"
+  },
+  {
+   "t": 6.17,
+   "text": "We've built the chip."
+  },
+  {
+   "t": 7.36,
+   "text": "We've got the zero-mode waveguides."
+  },
+  {
+   "t": 9.49,
+   "text": "We've got the polymerase anchored at the bottom of each well."
+  },
+  {
+   "t": 13.29,
+   "text": "Now we need to ask: what's actually flashing?"
+  },
+  {
+   "t": 16.12,
+   "text": "Where does the colored signal come from, and how does it correctly tell us which base was added?"
+  },
+  {
+   "t": 21.11,
+   "text": "This is one of the prettiest pieces of chemistry in the whole platform, and it has a name that sounds intimidating but actually describes the chemistry exactly: phospholinked fluorescent nucleotides."
+  },
+  {
+   "t": 32.83,
+   "text": "Let me unpack what that means."
+  },
+  {
+   "t": 34.92,
+   "text": "A normal nucleotide that gets incorporated into DNA looks like this: a base — A, T, G, or C — attached to a sugar, which is attached to a chain of three phosphate groups."
+  },
+  {
+   "t": 47.26,
+   "text": "When the polymerase incorporates the nucleotide into the growing DNA strand, it forms a chemical bond between the sugar and the previous nucleotide, releasing the last two phosphate groups — what's called pyrophosphate — as a byproduct."
+  },
+  {
+   "t": 61.86,
+   "text": "So the base and the first phosphate stay on the DNA; the second and third phosphates fly off as waste."
+  },
+  {
+   "t": 69.29,
+   "text": "PacBio's trick was to attach the fluorescent dye to the terminal phosphate group of the nucleotide — the very phosphate that gets cleaved off and discarded during normal incorporation."
+  },
+  {
+   "t": 80.41,
+   "text": "Read that again, because it's the key."
+  },
+  {
+   "t": 82.44,
+   "text": "The dye is attached, not to the base, not to the sugar, but to the very part of the nucleotide that the polymerase chops off as part of doing its job."
+  },
+  {
+   "t": 91.69,
+   "text": "When the polymerase grabs a nucleotide, the dye is held in the active site for a fraction of a second — illuminated by the ZMW, fluorescing as the laser hits it."
+  },
+  {
+   "t": 102.96,
+   "text": "Then the polymerase forms the new phosphodiester bond, cleaves off the pyrophosphate group, and the dye floats away with the pyrophosphate."
+  },
+  {
+   "t": 111.67,
+   "text": "The dye is gone."
+  },
+  {
+   "t": 112.89,
+   "text": "The new nucleotide is now in the DNA strand, dye-free, as if it had been a normal nucleotide all along."
+  },
+  {
+   "t": 120.1,
+   "text": "The result is a clean, time-resolved pulse of fluorescence — bright while the polymerase is holding the nucleotide for incorporation, gone the moment incorporation completes."
+  },
+  {
+   "t": 131.26,
+   "text": "One nucleotide, one pulse."
+  },
+  {
+   "t": 133.47,
+   "text": "The duration of the pulse is on the order of milliseconds — long enough for the camera to integrate the signal, short enough that the polymerase keeps moving along the template at a reasonable speed."
+  },
+  {
+   "t": 144.26,
+   "text": "And here's why the four bases give four different signals."
+  },
+  {
+   "t": 147.82,
+   "text": "PacBio attaches a different colored dye to each base type."
+  },
+  {
+   "t": 152.0,
+   "text": "The A nucleotides carry one dye."
+  },
+  {
+   "t": 154.59,
+   "text": "The T nucleotides carry a second."
+  },
+  {
+   "t": 156.9,
+   "text": "The G nucleotides carry a third."
+  },
+  {
+   "t": 159.36,
+   "text": "The C nucleotides carry a fourth."
+  },
+  {
+   "t": 161.9,
+   "text": "The dyes have different emission spectra — different colors of fluorescence."
+  },
+  {
+   "t": 166.69,
+   "text": "The camera, with appropriate filters and split optical paths, can distinguish the four colors."
+  },
+  {
+   "t": 173.25,
+   "text": "So when you see a pulse of color X, you know an A was added; a pulse of color Y, a T was added; and so on."
+  },
+  {
+   "t": 180.84,
+   "text": "The output of a single ZMW, over the course of a run, is a movie."
+  },
+  {
+   "t": 185.61,
+   "text": "A movie of colored flashes — pulse, pulse, pulse — each one tagged with a color and a timestamp."
+  },
+  {
+   "t": 192.76,
+   "text": "The software watches the movie, identifies each pulse, calls the color, and translates the sequence of pulses into a sequence of bases."
+  },
+  {
+   "t": 202.01,
+   "text": "That base sequence is the read."
+  },
+  {
+   "t": 204.2,
+   "text": "Let me give you the analogy."
+  },
+  {
+   "t": 205.75,
+   "text": "Imagine a typist at a typewriter, where each key, when pressed, briefly lights up with a different color depending on which letter it is."
+  },
+  {
+   "t": 213.8,
+   "text": "A key flashes red — you record \"A."
+  },
+  {
+   "t": 216.7,
+   "text": "\" Another key flashes green — you record \"C."
+  },
+  {
+   "t": 220.11,
+   "text": "\" Another flashes blue — \"G."
+  },
+  {
+   "t": 222.24,
+   "text": "\" The typist types out a whole sentence, and you can read off the sentence from the sequence of colored flashes, even though you can't see the typist directly."
+  },
+  {
+   "t": 231.76,
+   "text": "The colors plus the timing are enough."
+  },
+  {
+   "t": 234.32,
+   "text": "That's PacBio sequencing."
+  },
+  {
+   "t": 236.21,
+   "text": "The polymerase is the typist."
+  },
+  {
+   "t": 238.53,
+   "text": "The dye-labeled nucleotides are the keys."
+  },
+  {
+   "t": 241.4,
+   "text": "Each incorporation is a keystroke."
+  },
+  {
+   "t": 243.8,
+   "text": "And the colored flashes, watched in sequence, spell out the DNA."
+  },
+  {
+   "t": 248.51,
+   "text": "Now, this scheme has a few practical wrinkles."
+  },
+  {
+   "t": 251.59,
+   "text": "First, the polymerase has to be able to use these modified nucleotides — nucleotides with a bulky fluorescent dye stuck on the terminal phosphate — at all."
+  },
+  {
+   "t": 261.91,
+   "text": "Most polymerases are picky about substrate shape and will refuse to incorporate dye-labeled nucleotides."
+  },
+  {
+   "t": 268.71,
+   "text": "PacBio's phi29 variant has been engineered specifically to tolerate this modification."
+  },
+  {
+   "t": 275.36,
+   "text": "That engineering is non-trivial."
+  },
+  {
+   "t": 277.78,
+   "text": "Second, the nucleotides have to be delivered to the polymerase at a high enough concentration that the polymerase doesn't sit waiting for a substrate — but not so high that the background creeps up despite the ZMW's tiny illuminated volume."
+  },
+  {
+   "t": 292.62,
+   "text": "There's a Goldilocks zone."
+  },
+  {
+   "t": 294.26,
+   "text": "Third, the kinetics matter."
+  },
+  {
+   "t": 295.97,
+   "text": "The amount of time the polymerase spends holding a nucleotide before incorporating it depends on the local sequence context, on the identity of the nucleotide, and importantly on whether the template base — the one being read — has chemical modifications, like methylation."
+  },
+  {
+   "t": 312.31,
+   "text": "Methylated bases slow the polymerase down."
+  },
+  {
+   "t": 315.73,
+   "text": "That's the basis for PacBio's methylation calling, which we'll cover in segment twelve."
+  },
+  {
+   "t": 321.09,
+   "text": "Fourth, the chemistry isn't perfect."
+  },
+  {
+   "t": 323.71,
+   "text": "Sometimes the polymerase grabs a nucleotide, holds it briefly, and then releases it without incorporating — a so-called \"branch\" event."
+  },
+  {
+   "t": 332.96,
+   "text": "Sometimes it incorporates very fast and the pulse is missed by the camera — an undercall."
+  },
+  {
+   "t": 338.92,
+   "text": "Sometimes two pulses overlap."
+  },
+  {
+   "t": 341.32,
+   "text": "The result is that raw PacBio reads have an error rate on the order of ten to fifteen percent — high enough that you can't use a single raw read for serious analysis."
+  },
+  {
+   "t": 351.81,
+   "text": "But — and this is the whole point of HiFi — you can correct those errors by reading the same molecule many times."
+  },
+  {
+   "t": 358.61,
+   "text": "That's the topic of segment eight."
+  },
+  {
+   "t": 360.57,
+   "text": "For now, just know that the chemistry is noisy at the level of single passes, and the cleverness is in how PacBio gets accurate sequence out of noisy chemistry."
+  },
+  {
+   "t": 370.59,
+   "text": "The deep insight here, the thing I want you to feel, is that PacBio's chemistry produces a real-time movie of polymerase activity, not just a sequence."
+  },
+  {
+   "t": 380.67,
+   "text": "The pulse durations carry information beyond just identity — they carry kinetic information about what the polymerase is doing at each step."
+  },
+  {
+   "t": 389.91,
+   "text": "This is something Illumina chemistry simply doesn't have."
+  },
+  {
+   "t": 393.28,
+   "text": "Illumina reads are static snapshots; PacBio reads are videos."
+  },
+  {
+   "t": 397.81,
+   "text": "The video carries extra channels of data — kinetic data — that turn out to be useful for things like methylation calling, which we'll come to."
+  },
+  {
+   "t": 405.78,
+   "text": "That's an unexpected dividend of doing real-time single-molecule observation: you get the sequence, and you get the dynamics of how it was read, both for free."
+  }
+ ]
+}

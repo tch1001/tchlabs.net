@@ -1,0 +1,247 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Read length: the killer feature",
+ "duration": 426.51,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Read length: the killer feature"
+  },
+  {
+   "t": 3.45,
+   "text": "Now we come to what I think is the single most important advantage of nanopore sequencing — the feature that makes it indispensable for whole classes of biological problems."
+  },
+  {
+   "t": 13.66,
+   "text": "Read length."
+  },
+  {
+   "t": 14.66,
+   "text": "To understand why read length matters, you have to first understand what short reads — Illumina-style reads — cannot do."
+  },
+  {
+   "t": 22.89,
+   "text": "Illumina reads are typically 150 to 300 bases long."
+  },
+  {
+   "t": 27.43,
+   "text": "That's enough to identify a gene, enough to call SNPs, enough to estimate gene expression levels."
+  },
+  {
+   "t": 34.6,
+   "text": "But there are large parts of the genome where 300 bases is not enough."
+  },
+  {
+   "t": 39.4,
+   "text": "Consider repetitive regions."
+  },
+  {
+   "t": 41.25,
+   "text": "The human genome is full of repeats — long stretches where the same short sequence is copied over and over and over."
+  },
+  {
+   "t": 49.36,
+   "text": "The telomeres at the ends of chromosomes are made of TTAGGG repeated thousands of times."
+  },
+  {
+   "t": 55.65,
+   "text": "The centromeres in the middle of chromosomes are made of complex satellite repeats spanning hundreds of kilobases."
+  },
+  {
+   "t": 63.09,
+   "text": "Transposable elements — LINEs and SINEs — are repeated tens of thousands of times throughout the genome."
+  },
+  {
+   "t": 70.7,
+   "text": "If you sequence a region full of repeats with 300-base reads, you can read each repeat unit individually, but you can't tell where in the long repeat array any given read came from."
+  },
+  {
+   "t": 82.15,
+   "text": "You can't assemble the array."
+  },
+  {
+   "t": 83.81,
+   "text": "You can't know how many copies there are."
+  },
+  {
+   "t": 85.75,
+   "text": "You can't detect changes in the array length between individuals."
+  },
+  {
+   "t": 89.58,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 90.89,
+   "text": "Imagine you're trying to reconstruct a long passage of text, but you can only see fragments of it at a time, and each fragment is 30 characters long."
+  },
+  {
+   "t": 99.89,
+   "text": "If the text is \"the quick brown fox jumps over the lazy dog,\" you can probably reconstruct it from overlapping 30-character fragments, because each chunk is unique."
+  },
+  {
+   "t": 110.53,
+   "text": "But now imagine the text is \"AAAAAAAAAAAAAA …"
+  },
+  {
+   "t": 113.5,
+   "text": "AAAAAAAA\" for a thousand A's in a row."
+  },
+  {
+   "t": 116.42,
+   "text": "Every 30-character fragment is identical — just thirty A's."
+  },
+  {
+   "t": 121.15,
+   "text": "You have no idea how long the original passage is."
+  },
+  {
+   "t": 124.94,
+   "text": "You can't reconstruct it."
+  },
+  {
+   "t": 126.56,
+   "text": "You can't even tell if it's a hundred A's or ten thousand."
+  },
+  {
+   "t": 130.1,
+   "text": "Now imagine you had a single 5000-character fragment that spans the entire repetitive region."
+  },
+  {
+   "t": 136.25,
+   "text": "You can count the A's directly."
+  },
+  {
+   "t": 138.2,
+   "text": "You know exactly how long it is."
+  },
+  {
+   "t": 140.34,
+   "text": "The problem is solved trivially."
+  },
+  {
+   "t": 142.45,
+   "text": "That's the difference between short reads and long reads."
+  },
+  {
+   "t": 146.0,
+   "text": "Long reads span the repetitive region."
+  },
+  {
+   "t": 148.86,
+   "text": "They don't get lost inside it."
+  },
+  {
+   "t": 150.57,
+   "text": "They anchor at unique sequence on either side, walk through the repeats, and tell you exactly what's in there."
+  },
+  {
+   "t": 157.3,
+   "text": "The human genome has remained partially uncharted for decades because of repeats."
+  },
+  {
+   "t": 162.81,
+   "text": "The original Human Genome Project announced \"completion\" in 2003 but actually left about eight percent of the sequence unresolved — including most of the centromeres, the rRNA gene arrays, and large parts of the Y chromosome."
+  },
+  {
+   "t": 177.71,
+   "text": "These regions were called gaps in the reference genome, and they sat empty for nearly twenty years because no sequencing technology could reliably traverse them."
+  },
+  {
+   "t": 187.61,
+   "text": "It wasn't until 2022 that the T2T Consortium — Telomere to Telomere — finally published a truly complete human genome reference, with every base of every chromosome resolved end to end."
+  },
+  {
+   "t": 201.0,
+   "text": "They did it using a combination of Oxford Nanopore ultra-long reads and PacBio HiFi reads."
+  },
+  {
+   "t": 207.25,
+   "text": "Nanopore reads of a million bases or more were essential for assembling through the longest repeat arrays."
+  },
+  {
+   "t": 214.74,
+   "text": "Without long-read sequencing, those gaps would still be open."
+  },
+  {
+   "t": 218.65,
+   "text": "There are other things long reads unlock besides assembly through repeats."
+  },
+  {
+   "t": 223.91,
+   "text": "Structural variants — large rearrangements of the genome, including deletions, insertions, inversions, and translocations of thousands or millions of bases — are largely invisible to short reads, because the breakpoints often fall in repetitive sequence and the rearrangements span longer distances than any individual short read."
+  },
+  {
+   "t": 244.74,
+   "text": "Long reads see structural variants directly, by reading across the breakpoints in a single molecule."
+  },
+  {
+   "t": 252.07,
+   "text": "Haplotype phasing — figuring out which variants on a chromosome are inherited together, versus separately — requires reads long enough to span multiple variants, which is rare with 300-base reads but easy with 100,000-base reads."
+  },
+  {
+   "t": 267.1,
+   "text": "Full-length transcripts — reading an entire messenger RNA from poly-A tail to 5-prime cap, including all the exons and the splice junctions between them — requires reads as long as the transcript, which can be many kilobases for long genes."
+  },
+  {
+   "t": 284.1,
+   "text": "Short reads can read fragments of the transcript and infer the structure; long reads can read the whole transcript and know the structure directly."
+  },
+  {
+   "t": 292.82,
+   "text": "The killer demonstrations of long reads, in the public imagination, have been the assembly of complete bacterial genomes from a single MinION flow cell — circular chromosomes closed in one read, no gaps, no ambiguity — and the resolution of complex disease loci in human genetics."
+  },
+  {
+   "t": 311.94,
+   "text": "The HLA region, on chromosome 6, is one of the most polymorphic and most repetitive regions in the human genome, and it controls transplant compatibility, autoimmune susceptibility, and immune response."
+  },
+  {
+   "t": 325.27,
+   "text": "Short reads can never properly phase HLA."
+  },
+  {
+   "t": 329.07,
+   "text": "Long reads can read across the entire HLA region in a single molecule, giving you full haplotypes — what you actually need for clinical transplant matching."
+  },
+  {
+   "t": 338.6,
+   "text": "How long can the reads get?"
+  },
+  {
+   "t": 340.22,
+   "text": "Routinely, with good library prep, you get an N50 read length of around 30 to 50 kilobases — meaning half your bases are in reads longer than 30 to 50 thousand bases."
+  },
+  {
+   "t": 352.02,
+   "text": "With ultra-long library prep, you can push the N50 to several hundred kilobases."
+  },
+  {
+   "t": 356.96,
+   "text": "The longest single nanopore read on record, as of writing, is over four million bases — longer than several entire bacterial genomes, read in a single uninterrupted molecule taking about four hours to translocate through one pore."
+  },
+  {
+   "t": 373.15,
+   "text": "Read length is, in the end, the feature that most clearly distinguishes nanopore from short-read sequencing."
+  },
+  {
+   "t": 380.54,
+   "text": "It's the reason long-read platforms exist as a category."
+  },
+  {
+   "t": 384.65,
+   "text": "It's the reason you can't replace nanopore with cheap Illumina sequencing even though Illumina is cheaper per base."
+  },
+  {
+   "t": 391.42,
+   "text": "And it's the reason the reference genomes of every major organism are being redone, in the 2020s, with long-read data — because the short-read genomes that anchored the field for the previous twenty years were quietly riddled with errors and gaps in every repetitive region."
+  },
+  {
+   "t": 408.4,
+   "text": "If you take one technical fact from this lecture, take this: nanopore reads are routinely a hundred to a thousand times longer than Illumina reads, and that single fact unlocks a whole category of biological problems that short reads simply cannot solve."
+  },
+  {
+   "t": 424.26,
+   "text": "Read length is the killer feature."
+  }
+ ]
+}

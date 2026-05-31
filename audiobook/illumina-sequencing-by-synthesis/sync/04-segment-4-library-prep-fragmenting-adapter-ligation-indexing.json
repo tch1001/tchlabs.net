@@ -1,0 +1,247 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Library prep: fragmenting, adapter ligation, indexing",
+ "duration": 417.17,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Library prep: fragmenting, adapter ligation, indexing"
+  },
+  {
+   "t": 5.96,
+   "text": "Before any DNA goes anywhere near a flow cell, it has to be turned into what Illumina calls a library — a collection of DNA fragments, each one of a defined size range, each one with specific synthetic sequences attached to both ends."
+  },
+  {
+   "t": 22.18,
+   "text": "The library is what gets loaded onto the instrument."
+  },
+  {
+   "t": 25.11,
+   "text": "Library prep is the step that converts whatever DNA you started with — genomic DNA from a blood sample, RNA from a tumor, environmental DNA from a soil sample — into a form that the Illumina chemistry can grab onto and read."
+  },
+  {
+   "t": 39.67,
+   "text": "Library prep has three stages, in this order: fragmentation, end repair and adapter ligation, and indexing."
+  },
+  {
+   "t": 48.65,
+   "text": "Let me walk through each."
+  },
+  {
+   "t": 50.23,
+   "text": "Stage one: fragmentation."
+  },
+  {
+   "t": 52.6,
+   "text": "Genomic DNA, as it comes out of a cell, is enormous — chromosomes hundreds of millions of base pairs long."
+  },
+  {
+   "t": 60.38,
+   "text": "Illumina can only read short fragments, typically a few hundred base pairs at a time."
+  },
+  {
+   "t": 65.9,
+   "text": "So the first thing you have to do is chop your starting DNA into pieces of roughly the right size."
+  },
+  {
+   "t": 71.96,
+   "text": "There are several ways to do this."
+  },
+  {
+   "t": 74.03,
+   "text": "The classical method is sonication — you put the DNA in a tube, blast it with high-frequency sound waves, and the mechanical shearing fractures the DNA into random fragments of a tunable size, depending on how long you sonicate and at what intensity."
+  },
+  {
+   "t": 90.38,
+   "text": "The newer and increasingly popular method is tagmentation — using a modified enzyme called a transposase that simultaneously cuts the DNA and inserts adapter sequences in one step."
+  },
+  {
+   "t": 103.09,
+   "text": "Tagmentation is faster, requires less starting material, and we'll come back to it in Segment 11 when we discuss the Nextera library prep family."
+  },
+  {
+   "t": 112.84,
+   "text": "Either way, the output is the same: a tube full of DNA fragments, somewhere between two hundred and a thousand base pairs long, with random ends."
+  },
+  {
+   "t": 122.45,
+   "text": "Stage two: end repair and adapter ligation."
+  },
+  {
+   "t": 126.14,
+   "text": "Random fragmentation produces ragged ends — some single-stranded overhangs, some blunt, some with chemical groups in the wrong place."
+  },
+  {
+   "t": 135.61,
+   "text": "The first thing you do is enzymatically \"polish\" the ends, making them blunt and chemically compatible with the next step."
+  },
+  {
+   "t": 143.1,
+   "text": "Then you add an A-tailing step — appending a single A nucleotide to the 3-prime end of each fragment — to set up a sticky end for ligation."
+  },
+  {
+   "t": 152.69,
+   "text": "Now you bring in the adapters."
+  },
+  {
+   "t": 154.59,
+   "text": "The adapters are synthetic, double-stranded pieces of DNA, designed in the lab, that get ligated onto both ends of every fragment in the library."
+  },
+  {
+   "t": 164.55,
+   "text": "Each adapter contains three functional regions."
+  },
+  {
+   "t": 167.9,
+   "text": "First, a sequence that's complementary to the oligonucleotides anchored on the flow cell — this is what lets the fragment bind to the flow cell surface in the next stage."
+  },
+  {
+   "t": 178.59,
+   "text": "Second, a primer binding site that the sequencing reaction will use to start reading."
+  },
+  {
+   "t": 183.97,
+   "text": "Third, an index sequence, which we'll come to in a moment."
+  },
+  {
+   "t": 188.04,
+   "text": "The adapters are the plug-and-play interface between your sample and the instrument."
+  },
+  {
+   "t": 192.81,
+   "text": "Without adapters, your fragment is just a random piece of DNA."
+  },
+  {
+   "t": 196.97,
+   "text": "With adapters, it has a barcode, a binding handle, and a starting line."
+  },
+  {
+   "t": 202.12,
+   "text": "Stage three: indexing."
+  },
+  {
+   "t": 204.5,
+   "text": "This is the trick that makes Illumina sequencing economically practical for studying many samples."
+  },
+  {
+   "t": 211.18,
+   "text": "Suppose you have a hundred patient samples that you want to sequence."
+  },
+  {
+   "t": 215.06,
+   "text": "You don't want to run a hundred separate flow cells — that would be expensive and slow."
+  },
+  {
+   "t": 220.0,
+   "text": "Instead, during library prep, you give each sample its own unique short sequence — typically eight to ten base pairs long — that gets ligated into the adapters."
+  },
+  {
+   "t": 230.84,
+   "text": "We call this the index or barcode."
+  },
+  {
+   "t": 233.11,
+   "text": "Sample one gets index AAGCTT, sample two gets index TTCAGG, sample three gets index CGATAC, and so on."
+  },
+  {
+   "t": 241.03,
+   "text": "After all the samples have been individually indexed, you pool them together into a single tube — multiplexing — and load the pooled library onto a single flow cell."
+  },
+  {
+   "t": 251.31,
+   "text": "The instrument sequences everything together."
+  },
+  {
+   "t": 254.3,
+   "text": "Then, in the data analysis step, the software reads the index portion of each read and uses it to demultiplex — that is, to sort the reads back into per-sample bins based on which index they carry."
+  },
+  {
+   "t": 266.48,
+   "text": "A hundred samples on one flow cell."
+  },
+  {
+   "t": 269.52,
+   "text": "A thousand samples, if you're being aggressive."
+  },
+  {
+   "t": 272.41,
+   "text": "Indexing is the bookkeeping system that makes Illumina sequencing feasible at the scale of large clinical and population studies."
+  },
+  {
+   "t": 281.15,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 282.43,
+   "text": "Indexing is like adding return-address barcodes to a thousand different envelopes before you dump them all into the same mail sorting machine."
+  },
+  {
+   "t": 290.46,
+   "text": "The machine processes them all together — much faster than processing one envelope at a time — and the barcodes let you re-sort them into the right destinations at the end."
+  },
+  {
+   "t": 300.85,
+   "text": "Without indexing, you'd be stuck running one sample per flow cell."
+  },
+  {
+   "t": 304.97,
+   "text": "With indexing, you can run thousands."
+  },
+  {
+   "t": 307.51,
+   "text": "A subtle point that matters for any clinical work: modern Illumina libraries usually use dual indexing — two separate index sequences, one at each end of the fragment, both of which the instrument reads independently."
+  },
+  {
+   "t": 321.18,
+   "text": "Dual indexing is much more robust against a failure mode called index hopping, which we'll cover in Segment 14."
+  },
+  {
+   "t": 328.35,
+   "text": "For now, just know that the index sometimes lives at both ends rather than one."
+  },
+  {
+   "t": 333.21,
+   "text": "There are many variants on library prep, customized for different starting materials."
+  },
+  {
+   "t": 338.37,
+   "text": "RNA-seq libraries start by converting RNA to DNA with reverse transcriptase, then proceed with adapter ligation."
+  },
+  {
+   "t": 346.68,
+   "text": "ChIP-seq libraries start with DNA that's been pulled down by a specific antibody."
+  },
+  {
+   "t": 352.43,
+   "text": "Exome libraries undergo a hybridization-based capture step after adapter ligation, where biotinylated probes pull out only the protein-coding regions of the genome and discard everything else."
+  },
+  {
+   "t": 365.22,
+   "text": "Methylation libraries use a chemical treatment called bisulfite conversion before fragmentation, to read out which cytosines are methylated."
+  },
+  {
+   "t": 374.43,
+   "text": "Every one of these variants is a riff on the same theme: fragment your starting material, attach adapters, add an index, sometimes do an enrichment step, and then load it onto the flow cell."
+  },
+  {
+   "t": 386.6,
+   "text": "The whole library prep workflow takes a few hours, can be automated on robots, and is now the most expensive and time-consuming bottleneck of a typical sequencing project."
+  },
+  {
+   "t": 397.73,
+   "text": "The instrument run itself, ironically, is often faster and cheaper than getting the samples ready for it."
+  },
+  {
+   "t": 404.07,
+   "text": "We'll come back to library prep variants in Segment 11."
+  },
+  {
+   "t": 407.63,
+   "text": "For now, you have a tube of fragments, each one with adapters on both ends and a barcode in the middle of the adapter."
+  },
+  {
+   "t": 415.06,
+   "text": "You're ready to load the flow cell."
+  }
+ ]
+}

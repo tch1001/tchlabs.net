@@ -1,0 +1,299 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — SMRTbell circular templates: the design that enables circular consensus",
+ "duration": 482.39,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — SMRTbell circular templates: the design that enables circular consensus"
+  },
+  {
+   "t": 7.05,
+   "text": "We're now ready for one of the genuinely elegant pieces of design in modern sequencing."
+  },
+  {
+   "t": 12.6,
+   "text": "The SMRTbell template."
+  },
+  {
+   "t": 14.61,
+   "text": "It is a small piece of clever DNA architecture that turns a single linear molecule into a sequencing substrate the polymerase can read again and again, without ever falling off, and which delivers the same sequence information from multiple independent passes."
+  },
+  {
+   "t": 30.99,
+   "text": "The SMRTbell is what makes HiFi sequencing possible."
+  },
+  {
+   "t": 35.26,
+   "text": "Let me build the picture from the ground up."
+  },
+  {
+   "t": 37.5,
+   "text": "You start with a normal piece of double-stranded DNA — say, a fifteen-kilobase fragment of genomic DNA, the kind you'd get from breaking up a human genome into manageable chunks."
+  },
+  {
+   "t": 49.17,
+   "text": "It's a linear double helix, with two ends."
+  },
+  {
+   "t": 52.0,
+   "text": "Each end has the usual structure: the top strand stops, the bottom strand stops, both blunt or with short overhangs."
+  },
+  {
+   "t": 59.69,
+   "text": "The trick is this: you take a small hairpin-shaped piece of DNA — a single-stranded DNA that folds back on itself to form a short double-stranded stem with a loop at the top — and you ligate one of these hairpins onto each end of your linear DNA fragment."
+  },
+  {
+   "t": 75.75,
+   "text": "The hairpin's stem matches up with the end of your fragment, and DNA ligase fuses them together."
+  },
+  {
+   "t": 82.11,
+   "text": "What you now have, structurally, is no longer a linear molecule with two free ends."
+  },
+  {
+   "t": 87.74,
+   "text": "You have a single closed loop, in which one strand of the original double-stranded fragment connects through a hairpin loop at one end into the other strand, which connects back through a hairpin loop at the other end into the first strand."
+  },
+  {
+   "t": 101.11,
+   "text": "If you traced the molecule with your finger, you'd go along one strand of the fragment, around a hairpin loop, back along the other strand, around the other hairpin loop, and back to where you started."
+  },
+  {
+   "t": 112.26,
+   "text": "It's one continuous single-stranded loop of DNA, with internal base pairing forming the double-stranded segments."
+  },
+  {
+   "t": 120.5,
+   "text": "This is the SMRTbell."
+  },
+  {
+   "t": 122.39,
+   "text": "The shape, if you sketched it, looks roughly like a dumbbell or a bell — two loops at the ends connected by a long double-stranded middle section, the two strands of the middle section continuous with each other through the end loops."
+  },
+  {
+   "t": 135.29,
+   "text": "Hence the name."
+  },
+  {
+   "t": 136.28,
+   "text": "Why is this useful?"
+  },
+  {
+   "t": 137.66,
+   "text": "Here's the magic."
+  },
+  {
+   "t": 138.79,
+   "text": "You load the SMRTbell into a ZMW, with a phi29 polymerase ready to copy it."
+  },
+  {
+   "t": 145.22,
+   "text": "The polymerase grabs the template at some starting point and begins copying around the loop."
+  },
+  {
+   "t": 150.85,
+   "text": "It copies one strand of the long middle section — let's call it the \"top\" strand."
+  },
+  {
+   "t": 155.74,
+   "text": "It reads through, all fifteen kilobases or so, until it hits a hairpin loop at the end."
+  },
+  {
+   "t": 162.0,
+   "text": "Now, in a normal polymerase, that hairpin would be a problem — it's a structure, it's double-stranded, the polymerase would stop."
+  },
+  {
+   "t": 170.18,
+   "text": "But phi29 has strand displacement activity."
+  },
+  {
+   "t": 173.29,
+   "text": "It plows right through the hairpin, displacing the loop structure as it goes, and finds itself reading along what used to be the \"bottom\" strand of the original fragment — fifteen more kilobases — until it reaches the other hairpin loop at the other end."
+  },
+  {
+   "t": 188.25,
+   "text": "It plows through that one too, and now it's back to reading the top strand again, going around the loop a second time."
+  },
+  {
+   "t": 195.16,
+   "text": "The polymerase reads around the SMRTbell loop, over and over."
+  },
+  {
+   "t": 199.45,
+   "text": "Each pass through the loop reads the same sequence — the original fragment, both strands, joined by hairpins."
+  },
+  {
+   "t": 206.9,
+   "text": "After the first pass, the polymerase is reading copies of its own previous output, because the SMRTbell has now been partially double-stranded by what the polymerase just made."
+  },
+  {
+   "t": 217.31,
+   "text": "But strand displacement keeps the polymerase going."
+  },
+  {
+   "t": 220.7,
+   "text": "It just chugs around, copying, displacing, copying, displacing, around and around."
+  },
+  {
+   "t": 226.8,
+   "text": "If the polymerase stays bound for a long time — say, an hour or two — and the SMRTbell is, say, fifteen kilobases per pass, the polymerase might make ten, twenty, even thirty complete passes around the loop, generating an enormous output read called the polymerase read — the raw output from a single ZMW for an entire run."
+  },
+  {
+   "t": 248.36,
+   "text": "Here's the magic."
+  },
+  {
+   "t": 249.56,
+   "text": "Each pass reads the same sequence."
+  },
+  {
+   "t": 252.1,
+   "text": "The errors made on each pass are independent — they happen at random positions, by random misincorporations or missed pulses."
+  },
+  {
+   "t": 259.99,
+   "text": "The signal — the actual underlying base — is consistent across all passes."
+  },
+  {
+   "t": 265.52,
+   "text": "So if you take the polymerase read, split it back into individual passes by locating the hairpin sequences, and align all the passes against each other — you get a multiple sequence alignment of, say, twenty different reads of the same molecule."
+  },
+  {
+   "t": 279.89,
+   "text": "At each position, the consensus call across all twenty passes is overwhelmingly likely to be the correct base, even if individual passes are noisy."
+  },
+  {
+   "t": 289.76,
+   "text": "This is the circular consensus sequence, or CCS."
+  },
+  {
+   "t": 293.75,
+   "text": "And we'll spend the whole next segment on what it does for accuracy."
+  },
+  {
+   "t": 297.36,
+   "text": "But the structural innovation that enables it — that's the SMRTbell."
+  },
+  {
+   "t": 302.07,
+   "text": "Let me give you the analogy."
+  },
+  {
+   "t": 303.59,
+   "text": "Imagine you're trying to read a letter that's been handwritten in messy cursive."
+  },
+  {
+   "t": 307.96,
+   "text": "You read it once, and you get most of the words right but miss a few — maybe ten percent of the words you can't quite make out."
+  },
+  {
+   "t": 315.45,
+   "text": "Now imagine you photocopied the letter onto a piece of paper twenty times in a row, and you read it twenty times."
+  },
+  {
+   "t": 322.44,
+   "text": "The places where you misread are random — different words each time."
+  },
+  {
+   "t": 326.95,
+   "text": "So if you compile all twenty readings, at each word, the majority answer is almost certainly the right one."
+  },
+  {
+   "t": 333.97,
+   "text": "Twenty noisy reads collapse into one accurate consensus."
+  },
+  {
+   "t": 338.52,
+   "text": "The SMRTbell is the trick that turns one molecule into twenty noisy reads."
+  },
+  {
+   "t": 344.14,
+   "text": "Hairpins on each end, connecting the two strands into a single closed loop, that the polymerase reads around and around."
+  },
+  {
+   "t": 352.77,
+   "text": "Such a simple structural insight."
+  },
+  {
+   "t": 355.01,
+   "text": "Such an enormous payoff."
+  },
+  {
+   "t": 356.74,
+   "text": "A couple of practical notes."
+  },
+  {
+   "t": 358.46,
+   "text": "The size of the SMRTbell insert — the length of the original DNA fragment — controls how many passes you can get."
+  },
+  {
+   "t": 366.11,
+   "text": "Short inserts can be read many times because each lap is fast; long inserts can only be read a few times because each lap is slow."
+  },
+  {
+   "t": 375.19,
+   "text": "So there's a tradeoff."
+  },
+  {
+   "t": 376.54,
+   "text": "PacBio HiFi sequencing typically uses inserts of fifteen to twenty-five kilobases."
+  },
+  {
+   "t": 383.07,
+   "text": "That's the sweet spot where you get long reads, but the polymerase can still complete eight to twenty passes per molecule during a run."
+  },
+  {
+   "t": 390.91,
+   "text": "Shorter inserts give shorter HiFi reads with very high accuracy from many passes."
+  },
+  {
+   "t": 397.06,
+   "text": "Longer inserts — fifty kilobases, a hundred — give longer reads but fewer passes per read, and the accuracy drops."
+  },
+  {
+   "t": 405.5,
+   "text": "The hairpin adapters themselves are specifically designed sequences that PacBio software recognizes and uses to delineate where one pass ends and the next begins."
+  },
+  {
+   "t": 416.14,
+   "text": "They're standardized — every SMRTbell prep uses the same hairpin sequence — so the software always knows what to look for."
+  },
+  {
+   "t": 424.09,
+   "text": "Library prep for PacBio HiFi is essentially: shear the DNA to the right size, repair the ends, ligate the hairpins, purify, load."
+  },
+  {
+   "t": 434.09,
+   "text": "It's a few hours of bench work."
+  },
+  {
+   "t": 436.12,
+   "text": "Same as any library prep, just slightly different chemistry."
+  },
+  {
+   "t": 439.89,
+   "text": "The point I want to leave you with from this segment: the SMRTbell takes the inherently noisy single-molecule signal and amplifies the signal-to-noise ratio in software, by reading the same molecule many times."
+  },
+  {
+   "t": 453.84,
+   "text": "It does this without amplifying the DNA itself — no PCR — so all the molecule-level information about chemical modifications, methylation, and so on is preserved."
+  },
+  {
+   "t": 464.76,
+   "text": "The accuracy comes from multiple passes of the same molecule, not from copies of it."
+  },
+  {
+   "t": 470.21,
+   "text": "That's a key distinction."
+  },
+  {
+   "t": 471.75,
+   "text": "PacBio HiFi reads are the actual original molecule, read many times."
+  },
+  {
+   "t": 477.69,
+   "text": "That property is going to matter again and again as we go through the applications."
+  }
+ ]
+}

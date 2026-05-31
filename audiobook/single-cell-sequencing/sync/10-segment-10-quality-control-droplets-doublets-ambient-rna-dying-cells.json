@@ -1,0 +1,259 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Quality control — droplets, doublets, ambient RNA, dying cells",
+ "duration": 461.33,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Quality control — droplets, doublets, ambient RNA, dying cells"
+  },
+  {
+   "t": 6.25,
+   "text": "Welcome back."
+  },
+  {
+   "t": 7.29,
+   "text": "We're going to spend the second half of the lecture on the analysis side and the biology that single-cell has unlocked, plus the limits."
+  },
+  {
+   "t": 14.88,
+   "text": "Let's start with the quality-control problems you need to handle before any analysis, because single-cell data has several characteristic artifacts that, if you don't deal with them, will make your downstream analysis lie to you in interesting ways."
+  },
+  {
+   "t": 27.99,
+   "text": "The first artifact is empty droplets — droplets that received no cell, but picked up a small amount of ambient RNA floating in the cell suspension."
+  },
+  {
+   "t": 37.96,
+   "text": "Every single-cell experiment has some free-floating mRNA in the input — released by cells that died during sample preparation, leaking from membranes, contamination from the environment."
+  },
+  {
+   "t": 49.71,
+   "text": "That ambient RNA ends up distributed across all the droplets, including the empty ones."
+  },
+  {
+   "t": 55.85,
+   "text": "So an empty droplet might still have, say, fifty UMIs of background, all matching its cell barcode by chance because that's the barcode of the bead that happened to be in it."
+  },
+  {
+   "t": 66.31,
+   "text": "If you naively call every cell barcode that has any UMIs a \"cell,\" you'll have a hundred thousand \"cells,\" most of which are background."
+  },
+  {
+   "t": 74.31,
+   "text": "That's why cell calling, which we just discussed in Segment 9, is a critical step."
+  },
+  {
+   "t": 79.3,
+   "text": "The second artifact is the one I want to dwell on, because it's the most insidious."
+  },
+  {
+   "t": 84.53,
+   "text": "Doublets."
+  },
+  {
+   "t": 85.5,
+   "text": "Sometimes two cells end up in the same droplet by accident — Poisson loading guarantees this happens at a predictable rate, typically about one percent doublets per thousand cells captured, scaling roughly linearly."
+  },
+  {
+   "t": 99.33,
+   "text": "Two cells in one droplet means both their transcriptomes get the same cell barcode."
+  },
+  {
+   "t": 104.75,
+   "text": "When you analyze the data, that droplet looks like a single cell with a hybrid transcriptome — a cell that expresses both T-cell markers and B-cell markers, or both neuronal markers and glial markers."
+  },
+  {
+   "t": 117.99,
+   "text": "A real cell would never have that combination."
+  },
+  {
+   "t": 120.99,
+   "text": "A doublet does."
+  },
+  {
+   "t": 122.28,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 123.59,
+   "text": "If two cells get into the same droplet by accident, their transcripts all get the same zip code and look like one weird hybrid cell."
+  },
+  {
+   "t": 131.53,
+   "text": "Solved statistically plus algorithmically post-hoc."
+  },
+  {
+   "t": 135.3,
+   "text": "How do you solve it?"
+  },
+  {
+   "t": 136.44,
+   "text": "Two ways."
+  },
+  {
+   "t": 137.53,
+   "text": "First, algorithmic detection."
+  },
+  {
+   "t": 139.82,
+   "text": "Software tools like Scrublet, DoubletFinder, and Solo simulate fake doublets by computationally combining pairs of cells from your data, then look for real cells in the data that look like the simulated combinations."
+  },
+  {
+   "t": 153.01,
+   "text": "Suspected doublets are flagged and removed."
+  },
+  {
+   "t": 156.2,
+   "text": "This works reasonably well, catching maybe seventy to ninety percent of doublets, but not all."
+  },
+  {
+   "t": 161.72,
+   "text": "Second, multiplexing with antibody hashing or genetic demultiplexing."
+  },
+  {
+   "t": 166.76,
+   "text": "If you tag different samples with different cell-surface antibody-oligo conjugates before pooling them and loading them into one Chromium run, then each cell carries the antibody tag of its original sample."
+  },
+  {
+   "t": 179.62,
+   "text": "If a droplet shows two different sample tags, that's a doublet between samples — you can confidently identify and remove it."
+  },
+  {
+   "t": 187.93,
+   "text": "Similarly, if you pool cells from two genetically distinct donors, single-nucleotide polymorphisms in the RNA reads can be used to identify which donor each cell came from, and droplets that show alleles from two donors are doublets."
+  },
+  {
+   "t": 202.64,
+   "text": "This approach — called demuxlet or Vireo, depending on the software — can identify inter-sample doublets with high confidence, though it doesn't catch intra-sample doublets."
+  },
+  {
+   "t": 213.68,
+   "text": "The third artifact is ambient RNA contamination of real cells."
+  },
+  {
+   "t": 218.84,
+   "text": "Even the cells you correctly identify as real are not pure — they've absorbed a small amount of ambient RNA from the buffer, so their counts include a low-level background contribution from whatever was floating around."
+  },
+  {
+   "t": 231.36,
+   "text": "For most cells this is a minor problem, but for genes that are very highly expressed in one cell type and absent in another — say, hemoglobin genes from red blood cells contaminating other cell types — the ambient contribution can produce misleading low-level expression that looks biologically meaningful but isn't."
+  },
+  {
+   "t": 251.4,
+   "text": "Tools like SoupX and CellBender try to estimate the ambient profile and subtract it from each cell's counts."
+  },
+  {
+   "t": 258.21,
+   "text": "They help, but they're not perfect."
+  },
+  {
+   "t": 260.29,
+   "text": "The fourth artifact is dying or stressed cells."
+  },
+  {
+   "t": 264.01,
+   "text": "Cells that were damaged during dissociation — by enzymatic digestion to separate them from tissue, by mechanical shear, by prolonged time on ice — will have abnormal transcriptomes."
+  },
+  {
+   "t": 276.35,
+   "text": "The classic signature is a high fraction of mitochondrial transcripts."
+  },
+  {
+   "t": 280.99,
+   "text": "In healthy cells, mitochondrial mRNAs make up maybe two to five percent of total mRNA."
+  },
+  {
+   "t": 287.93,
+   "text": "In dying cells, where the cytoplasmic membrane has been compromised and cytoplasmic mRNA has leaked out while the mitochondria are still intact, the mitochondrial fraction climbs to ten, twenty, fifty percent."
+  },
+  {
+   "t": 301.98,
+   "text": "So a standard QC filter is to remove any cell with more than a threshold fraction of mitochondrial reads — typically ten or twenty percent for most tissues."
+  },
+  {
+   "t": 312.34,
+   "text": "Cells that pass this filter are presumed healthy."
+  },
+  {
+   "t": 315.34,
+   "text": "Cells that fail are presumed dying and discarded."
+  },
+  {
+   "t": 318.7,
+   "text": "Then there are dissociation-induced stress signatures more broadly."
+  },
+  {
+   "t": 323.26,
+   "text": "The act of separating cells from tissue — usually with collagenase or similar enzymes at thirty-seven degrees for half an hour — triggers immediate-early genes like Fos and Jun."
+  },
+  {
+   "t": 334.95,
+   "text": "So every cell in your dataset is, to some extent, expressing stress-response genes that it wasn't expressing in vivo."
+  },
+  {
+   "t": 343.06,
+   "text": "You can identify cells where this is severe and remove them, or you can computationally regress out the stress signature, or you can do a different sample-prep protocol — for example, single-nucleus sequencing, where you start from frozen tissue and isolate nuclei rather than cells, which avoids the dissociation stress because the nuclei don't have the cytoplasmic machinery to mount a stress response."
+  },
+  {
+   "t": 366.86,
+   "text": "Single-nucleus sequencing — often called snRNA-seq — is now widely used for tissues where dissociation is difficult, like brain or heart muscle."
+  },
+  {
+   "t": 376.84,
+   "text": "The trade-off is that nuclei have fewer mRNA molecules than whole cells, so you get less signal per cell."
+  },
+  {
+   "t": 383.76,
+   "text": "But you avoid the dissociation artifacts."
+  },
+  {
+   "t": 386.79,
+   "text": "The fifth artifact, common across all sequencing, is batch effects."
+  },
+  {
+   "t": 391.31,
+   "text": "Two single-cell experiments run on different days, by different operators, on different chips, with different reagent lots, will look subtly different even if the underlying biology is the same."
+  },
+  {
+   "t": 402.63,
+   "text": "The differences can be modest or severe."
+  },
+  {
+   "t": 405.39,
+   "text": "For an atlas project that integrates dozens of samples across labs, batch correction is a major analysis challenge."
+  },
+  {
+   "t": 413.69,
+   "text": "Tools like Harmony, BBKNN, scVI, and Seurat's integration anchors try to computationally align datasets so that the same cell types from different batches end up in the same place in the reduced-dimensional embedding."
+  },
+  {
+   "t": 427.14,
+   "text": "These methods are imperfect but essential for any cross-sample work."
+  },
+  {
+   "t": 431.68,
+   "text": "QC is unglamorous."
+  },
+  {
+   "t": 433.89,
+   "text": "It's the part of single-cell analysis that you don't see in a finished paper, because by the time you see the paper, the bad cells have been filtered out and the doublets are gone."
+  },
+  {
+   "t": 443.3,
+   "text": "But every paper you read had to do this work."
+  },
+  {
+   "t": 446.05,
+   "text": "And if you're doing your own analysis, you have to do it too."
+  },
+  {
+   "t": 449.13,
+   "text": "A reasonable rule of thumb: expect to filter out somewhere between ten and forty percent of your initial droplets as either empty, doublets, or dying."
+  },
+  {
+   "t": 458.68,
+   "text": "Whatever's left is your real dataset."
+  }
+ ]
+}

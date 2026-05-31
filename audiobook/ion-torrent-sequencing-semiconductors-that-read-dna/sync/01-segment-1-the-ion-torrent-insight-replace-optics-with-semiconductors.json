@@ -1,0 +1,231 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The Ion Torrent insight: replace optics with semiconductors",
+ "duration": 406.8,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The Ion Torrent insight: replace optics with semiconductors"
+  },
+  {
+   "t": 5.35,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 7.0,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 8.41,
+   "text": "Today and for the next two hours, we're going to talk about Ion Torrent sequencing — and I want to begin not with the chemistry or the chip, but with an idea."
+  },
+  {
+   "t": 18.11,
+   "text": "A single, slightly heretical idea that one man had in the mid-2000s, and that turned into a real machine, a real company, and a real chunk of the sequencing market that still exists today."
+  },
+  {
+   "t": 30.43,
+   "text": "The idea is this: detecting DNA shouldn't require a camera."
+  },
+  {
+   "t": 35.0,
+   "text": "That sounds harmless, but at the time it was almost unthinkable."
+  },
+  {
+   "t": 38.9,
+   "text": "Every serious next-generation sequencing platform that was being built — 454, Solexa which became Illumina, SOLiD, the whole crowd — assumed that the way you detected base incorporation was you made the base do something optical."
+  },
+  {
+   "t": 54.21,
+   "text": "You attached a fluorescent dye to it."
+  },
+  {
+   "t": 56.42,
+   "text": "You ran an enzymatic cascade that produced light."
+  },
+  {
+   "t": 59.83,
+   "text": "You put a very expensive, very cold, very sensitive camera over the top of a glass slide and you took pictures of millions of tiny flashes, frame by frame, hour after hour."
+  },
+  {
+   "t": 71.09,
+   "text": "Sequencing, in 2007, was fundamentally a photography business."
+  },
+  {
+   "t": 76.41,
+   "text": "Every byte of genomic data came out of a camera."
+  },
+  {
+   "t": 80.15,
+   "text": "And Jonathan Rothberg — who we'll properly meet in the next segment, but who's the founder of this whole story — looked at that and said: this is insane."
+  },
+  {
+   "t": 89.74,
+   "text": "We are paying for very expensive optics, very expensive lasers, very expensive cooled CCDs, very expensive precision optical alignment, to detect a chemical event whose actual signal — the molecule that comes off when a base gets added — is a hydrogen ion."
+  },
+  {
+   "t": 106.56,
+   "text": "A proton."
+  },
+  {
+   "t": 107.55,
+   "text": "A single charged particle."
+  },
+  {
+   "t": 109.44,
+   "text": "We are spending a fortune to convert chemistry into light, light into electrons, and electrons into bits, when there is a much shorter path: convert the chemistry directly into electrons, on a chip, the same way every modern microelectronic sensor works."
+  },
+  {
+   "t": 127.35,
+   "text": "Skip the light show entirely."
+  },
+  {
+   "t": 129.46,
+   "text": "That's the Ion Torrent insight in one sentence."
+  },
+  {
+   "t": 133.07,
+   "text": "Here's the analogy I want you to hold for the next two hours."
+  },
+  {
+   "t": 136.53,
+   "text": "Ion Torrent is pyrosequencing without the light show."
+  },
+  {
+   "t": 140.45,
+   "text": "Pyrosequencing — which we'll review properly in Segment 5 — is the method the 454 machine used."
+  },
+  {
+   "t": 147.38,
+   "text": "You flow one nucleotide at a time over template DNA; if the base is the right one, the polymerase incorporates it; that incorporation releases a chemical byproduct; and a multi-step enzymatic cascade turns that byproduct, eventually, into a flash of light, which a camera records."
+  },
+  {
+   "t": 167.03,
+   "text": "Ion Torrent does almost exactly the same chemistry — flows one nucleotide at a time, same incorporation, same byproduct production — but instead of running a luciferase cascade to produce light, it just watches the pH dip in the well."
+  },
+  {
+   "t": 182.93,
+   "text": "Because every time a base gets incorporated, a hydrogen ion is released, and a hydrogen ion in solution is a pH change, and pH change is the easiest thing in the world to measure with a piece of silicon."
+  },
+  {
+   "t": 196.99,
+   "text": "The proton is the signal."
+  },
+  {
+   "t": 199.05,
+   "text": "No light, no camera, no laser, no dye."
+  },
+  {
+   "t": 202.85,
+   "text": "Now, that's a beautiful idea, but the real engineering trick is the chip."
+  },
+  {
+   "t": 207.47,
+   "text": "Because Rothberg's other insight — and this is the one that makes Ion Torrent a story about Moore's law as much as about biology — was that you could build the pH sensor using the exact same chip-fabrication process used for the camera in your phone, the processor in your laptop, the memory in your SSD."
+  },
+  {
+   "t": 225.97,
+   "text": "The semiconductor industry has spent fifty years and trillions of dollars learning to make tiny structures on silicon, cheap and at massive scale."
+  },
+  {
+   "t": 235.32,
+   "text": "So instead of trying to invent a new sensor from scratch, you take a CMOS chip — complementary metal-oxide semiconductor, the workhorse of the entire electronics industry — and you redesign it so that instead of each pixel being a light detector, each pixel is a tiny pH meter."
+  },
+  {
+   "t": 253.15,
+   "text": "Millions of tiny pH meters."
+  },
+  {
+   "t": 255.71,
+   "text": "On one chip."
+  },
+  {
+   "t": 256.8,
+   "text": "Made in the same fabs that make iPhone cameras."
+  },
+  {
+   "t": 260.14,
+   "text": "So every time the semiconductor industry's process node shrinks from 130 nanometers to 90 nanometers to 65 to 45 to 28, the pixel density on a sequencing chip doubles essentially for free."
+  },
+  {
+   "t": 275.06,
+   "text": "Sequencing capacity rides Moore's law down the cost curve."
+  },
+  {
+   "t": 279.5,
+   "text": "That was the pitch."
+  },
+  {
+   "t": 280.75,
+   "text": "If you walk out of here in two hours and you can do four things, we've succeeded."
+  },
+  {
+   "t": 285.4,
+   "text": "One: explain to a curious friend why Ion Torrent doesn't need a camera, in terms of what gets released when a base incorporates and how silicon detects it."
+  },
+  {
+   "t": 295.21,
+   "text": "Two: draw, roughly, a single Ion Torrent well — a bead full of DNA sitting on top of a tiny transistor — and tell me what's happening when a nucleotide flows over it."
+  },
+  {
+   "t": 307.23,
+   "text": "Three: name and describe the homopolymer problem, because that's the platform's fundamental weakness and you'll see it in real data the first time you look at any Ion Torrent run."
+  },
+  {
+   "t": 317.84,
+   "text": "Four: explain, in business terms, why Ion Torrent occupies the niche it occupies — fast clinical panels, microbiome work, pathogen ID — instead of dominating whole-genome sequencing the way Illumina does."
+  },
+  {
+   "t": 332.15,
+   "text": "Those four things — the chemistry, the chip, the homopolymer flaw, and the market niche — that's the whole shape of this lecture."
+  },
+  {
+   "t": 340.99,
+   "text": "One last framing comment before we get into the people and the chemistry."
+  },
+  {
+   "t": 345.28,
+   "text": "Ion Torrent did not win the sequencing wars."
+  },
+  {
+   "t": 348.49,
+   "text": "Illumina did."
+  },
+  {
+   "t": 349.58,
+   "text": "We're going to be honest about that throughout."
+  },
+  {
+   "t": 351.76,
+   "text": "But Ion Torrent did something more interesting than win: it proved a point."
+  },
+  {
+   "t": 356.24,
+   "text": "It proved that you could detect biology with silicon rather than with optics, at scale, in a commercial product, in a clinical lab."
+  },
+  {
+   "t": 364.29,
+   "text": "That proof reshaped what people thought was possible."
+  },
+  {
+   "t": 367.78,
+   "text": "The platforms that are coming next — nanopore sequencing from Oxford Nanopore, the various direct-electronic biosensors people are building — they all stand, in some sense, on the foundation that Ion Torrent laid."
+  },
+  {
+   "t": 380.18,
+   "text": "Ion Torrent is the platform that taught the industry that the cheapest, fastest sensor for a biological event is probably going to be a chip."
+  },
+  {
+   "t": 388.81,
+   "text": "And once you believe that, the long arc of sequencing bends toward semiconductors."
+  },
+  {
+   "t": 394.55,
+   "text": "So even if Ion Torrent itself is now a stable but mid-sized niche product inside ThermoFisher, the idea it embodied is everywhere."
+  },
+  {
+   "t": 403.99,
+   "text": "Alright, let's meet the man who had the idea."
+  }
+ ]
+}

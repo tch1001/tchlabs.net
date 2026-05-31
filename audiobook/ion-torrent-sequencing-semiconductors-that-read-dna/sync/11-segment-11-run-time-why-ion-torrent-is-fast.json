@@ -1,0 +1,183 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Run time: why Ion Torrent is fast",
+ "duration": 319.49,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Run time: why Ion Torrent is fast"
+  },
+  {
+   "t": 4.42,
+   "text": "If you have a single sentence to remember about why people choose Ion Torrent today, it's this: Ion Torrent runs in hours, not days."
+  },
+  {
+   "t": 12.78,
+   "text": "A typical sequencing run on an Ion S5 takes somewhere between 2 and 4 hours, depending on chip size and how many bases you're reading."
+  },
+  {
+   "t": 21.73,
+   "text": "A library-to-data turnaround, including emPCR and chip loading on the Ion Chef, is typically under a working day — you can start in the morning and have data in the afternoon."
+  },
+  {
+   "t": 33.64,
+   "text": "Compare that to a typical Illumina MiSeq run, which takes anywhere from 4 to 56 hours depending on the chemistry and read length, with most clinical workflows landing somewhere around 24 hours."
+  },
+  {
+   "t": 46.33,
+   "text": "And a HiSeq or NovaSeq run is measured in days, sometimes most of a week."
+  },
+  {
+   "t": 52.01,
+   "text": "That speed differential is not a marketing exaggeration."
+  },
+  {
+   "t": 55.98,
+   "text": "It comes from the physics of the detection method, and once you understand the physics, you understand why the speed advantage is structural and not something Illumina is likely to close."
+  },
+  {
+   "t": 66.96,
+   "text": "The fundamental thing is that pH detection is instantaneous."
+  },
+  {
+   "t": 71.49,
+   "text": "When the polymerase incorporates a base, the proton is released within milliseconds, and the ISFET's response to the pH change is in microseconds."
+  },
+  {
+   "t": 81.4,
+   "text": "So the rate-limiting step for a flow is not \"wait for the signal,\" it's \"wait for the chemistry to finish and then wash the chip."
+  },
+  {
+   "t": 89.39,
+   "text": "\" Both of those steps are seconds."
+  },
+  {
+   "t": 91.59,
+   "text": "A flow cycle — flow in nucleotide, react, read, wash out — takes maybe 5 to 15 seconds."
+  },
+  {
+   "t": 99.05,
+   "text": "Times 500 flow cycles in a standard run, that's roughly 1 to 2 hours of pure sequencing time."
+  },
+  {
+   "t": 105.47,
+   "text": "The rest of the run time is overhead — chip warmup, calibration, post-run processing."
+  },
+  {
+   "t": 111.54,
+   "text": "Compare to Illumina."
+  },
+  {
+   "t": 113.33,
+   "text": "Illumina uses reversible-terminator chemistry."
+  },
+  {
+   "t": 116.5,
+   "text": "Each cycle, you flow in all four labeled, terminated nucleotides, let the polymerase add one, image the entire flowcell with a camera (which itself takes minutes because you have to image millions of clusters across a large area), then run a chemical deblock step to remove the terminator and the dye so the next cycle can start."
+  },
+  {
+   "t": 136.8,
+   "text": "The imaging is a real bottleneck — a flowcell imaging pass takes a substantial amount of time because you're physically scanning a camera across a large surface, taking many many pictures, processing them, and the chemistry of deblocking is itself a multi-step reaction that takes minutes."
+  },
+  {
+   "t": 154.55,
+   "text": "So Illumina's cycle time is several minutes, not several seconds, and over 150 or 300 cycles for a typical paired-end read, that adds up to many hours or days of total run time."
+  },
+  {
+   "t": 167.79,
+   "text": "The architectural reason for the difference, again: Ion Torrent reads electrically, in parallel, in real time."
+  },
+  {
+   "t": 175.75,
+   "text": "Illumina reads optically, by scanning, in sequential frames."
+  },
+  {
+   "t": 180.32,
+   "text": "Electricity is faster than light in this context, because the readout doesn't require a mechanical scan."
+  },
+  {
+   "t": 187.01,
+   "text": "Every well on the Ion Torrent chip is read at the same instant by its own dedicated transistor."
+  },
+  {
+   "t": 193.1,
+   "text": "That's the parallelism that compresses run time."
+  },
+  {
+   "t": 196.57,
+   "text": "Why does run time matter?"
+  },
+  {
+   "t": 198.04,
+   "text": "For many research applications, it doesn't much — you start a run on Friday, you come in Monday and the data is there, who cares if it took 28 hours or 4 hours."
+  },
+  {
+   "t": 209.11,
+   "text": "But for clinical applications, run time can matter enormously."
+  },
+  {
+   "t": 213.55,
+   "text": "If a hospital is doing rapid pathogen identification on a critically ill patient — say, a sepsis case where you don't know what bug is in the blood — the difference between a 4-hour result and a 24-hour result is the difference between targeted antibiotic therapy on the first night and empirical broad-spectrum coverage for an extra day."
+  },
+  {
+   "t": 233.18,
+   "text": "In oncology, faster turnaround on a tumor genotyping panel can mean a treatment decision made at this week's tumor board rather than next week's."
+  },
+  {
+   "t": 242.12,
+   "text": "In infectious disease outbreak response, faster genotyping of an emerging pathogen can mean public health decisions made in days rather than weeks."
+  },
+  {
+   "t": 251.35,
+   "text": "So the run-time advantage is one of the genuine strategic differentiators of the platform."
+  },
+  {
+   "t": 256.66,
+   "text": "Ion Torrent is the fast NGS."
+  },
+  {
+   "t": 259.73,
+   "text": "If you need results today, not tomorrow, Ion Torrent is hard to beat among second-generation sequencing platforms."
+  },
+  {
+   "t": 267.18,
+   "text": "(Nanopore is faster still for some workflows, but that's a separate platform with its own characteristics, and a separate lecture.)"
+  },
+  {
+   "t": 275.38,
+   "text": "A practical note for budgeting: the speed of a run is not the speed of your overall workflow."
+  },
+  {
+   "t": 280.88,
+   "text": "Library prep is its own time cost."
+  },
+  {
+   "t": 283.54,
+   "text": "Quality control is its own time cost."
+  },
+  {
+   "t": 286.61,
+   "text": "Data analysis is its own time cost."
+  },
+  {
+   "t": 289.52,
+   "text": "A 4-hour run on the instrument is one part of a workflow that may take a day or two end-to-end."
+  },
+  {
+   "t": 295.39,
+   "text": "Ion Torrent's integration push — the Ion Chef, the Genexus — is specifically aimed at squeezing the rest of the workflow down to match the instrument's speed."
+  },
+  {
+   "t": 305.47,
+   "text": "The dream is sample in the morning, report by end of day."
+  },
+  {
+   "t": 308.93,
+   "text": "The platform isn't all the way there for all assays, but it's closer than most competitors."
+  },
+  {
+   "t": 314.5,
+   "text": "Now let's look at the library prep that feeds these fast runs: AmpliSeq."
+  }
+ ]
+}

@@ -1,0 +1,283 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The bulk problem — why averaging across cells hides the biology",
+ "duration": 350.59,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The bulk problem — why averaging across cells hides the biology"
+  },
+  {
+   "t": 5.78,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 7.25,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 8.66,
+   "text": "Today and for the next two hours, we're going to talk about single-cell sequencing — a technology that, in the space of about a decade, has fundamentally changed what biologists can ask of a sample."
+  },
+  {
+   "t": 20.06,
+   "text": "Not \"what is the average gene expression of this tissue,\" which is what we could already do."
+  },
+  {
+   "t": 25.2,
+   "text": "But \"what cells are in this tissue, in what proportions, in what states, and how does each individual cell differ from its neighbors."
+  },
+  {
+   "t": 33.35,
+   "text": "\" That shift — from average to individual — sounds modest."
+  },
+  {
+   "t": 37.31,
+   "text": "It is not."
+  },
+  {
+   "t": 38.29,
+   "text": "It is the difference between knowing the mean income of a country and knowing the actual distribution of incomes, household by household."
+  },
+  {
+   "t": 45.76,
+   "text": "It changes every question you can ask."
+  },
+  {
+   "t": 48.26,
+   "text": "So let me start with an analogy that I want you to hold onto for the next two hours."
+  },
+  {
+   "t": 52.94,
+   "text": "Imagine you have a fruit salad."
+  },
+  {
+   "t": 54.83,
+   "text": "A real fruit salad — strawberries, grapes, blueberries, kiwi, mango, the works."
+  },
+  {
+   "t": 61.24,
+   "text": "You want to know what's in it."
+  },
+  {
+   "t": 62.55,
+   "text": "There are two ways you could find out."
+  },
+  {
+   "t": 64.33,
+   "text": "Option one: throw the whole bowl into a blender, hit puree, and analyze the resulting smoothie."
+  },
+  {
+   "t": 71.15,
+   "text": "You measure sugars, acids, pigments, fibers — and you get back an average."
+  },
+  {
+   "t": 77.09,
+   "text": "The smoothie is forty percent strawberry sugar, twenty percent grape, fifteen percent mango, and so on."
+  },
+  {
+   "t": 83.92,
+   "text": "Useful, in a limited sense."
+  },
+  {
+   "t": 86.4,
+   "text": "But you've lost something profound."
+  },
+  {
+   "t": 88.19,
+   "text": "You can't see the individual fruits anymore."
+  },
+  {
+   "t": 91.09,
+   "text": "You can't tell whether there are two kinds of grapes or one."
+  },
+  {
+   "t": 94.5,
+   "text": "You can't find the single weird piece of dragon fruit that's only one percent of the mass."
+  },
+  {
+   "t": 99.74,
+   "text": "You can't see structure."
+  },
+  {
+   "t": 101.45,
+   "text": "Option two: pick the fruit salad apart, piece by piece."
+  },
+  {
+   "t": 105.51,
+   "text": "Strawberry — it's a strawberry."
+  },
+  {
+   "t": 107.84,
+   "text": "Grape — it's a grape."
+  },
+  {
+   "t": 109.42,
+   "text": "Repeat for every piece."
+  },
+  {
+   "t": 111.72,
+   "text": "Now you have a list — this many strawberries, this many grapes, three pieces of mango, one piece of dragon fruit."
+  },
+  {
+   "t": 118.74,
+   "text": "You can see the rare types."
+  },
+  {
+   "t": 120.45,
+   "text": "You can see whether the grapes are red or green."
+  },
+  {
+   "t": 123.36,
+   "text": "You can see the actual composition of the bowl, not just an average."
+  },
+  {
+   "t": 127.26,
+   "text": "That is the difference between bulk RNA sequencing and single-cell RNA sequencing."
+  },
+  {
+   "t": 132.88,
+   "text": "Bulk RNA-seq, which we'll come back to, is the smoothie approach."
+  },
+  {
+   "t": 137.43,
+   "text": "You take a piece of tissue — say, a chunk of mouse brain, or a tumor biopsy, or a tube of blood — you lyse all the cells together in one tube, you extract the RNA from the pool, and you sequence it."
+  },
+  {
+   "t": 149.43,
+   "text": "What you get back is the average gene expression of every cell in that sample, weighted by how much RNA each cell contributed."
+  },
+  {
+   "t": 156.79,
+   "text": "It's useful."
+  },
+  {
+   "t": 157.82,
+   "text": "It's been the workhorse of molecular biology for fifteen years."
+  },
+  {
+   "t": 161.82,
+   "text": "But it has one terrible limitation: it cannot tell you which cells were there."
+  },
+  {
+   "t": 166.61,
+   "text": "A tumor biopsy is not one cell type."
+  },
+  {
+   "t": 169.61,
+   "text": "It's tumor cells, plus immune infiltrate, plus stromal fibroblasts, plus endothelial cells from blood vessels, plus dying cells, plus a few stem cells if you're lucky."
+  },
+  {
+   "t": 180.99,
+   "text": "Bulk RNA-seq blends them all together and gives you a number that doesn't correspond to any real cell in the sample."
+  },
+  {
+   "t": 188.5,
+   "text": "It's the smoothie."
+  },
+  {
+   "t": 189.71,
+   "text": "Single-cell RNA-seq is the fruit-salad approach."
+  },
+  {
+   "t": 193.34,
+   "text": "You take that same tissue, but instead of pooling, you physically separate the cells from each other, label each one with its own molecular tag, and then sequence them."
+  },
+  {
+   "t": 203.31,
+   "text": "At the end you get back not one expression profile but tens of thousands — one per cell."
+  },
+  {
+   "t": 208.9,
+   "text": "You can see the tumor cells separately from the immune cells."
+  },
+  {
+   "t": 212.39,
+   "text": "You can see that there are actually three sub-populations of immune cells, not one."
+  },
+  {
+   "t": 217.47,
+   "text": "You can find the rare population that's only one percent of the sample."
+  },
+  {
+   "t": 221.9,
+   "text": "You can ask questions that bulk could not answer, because bulk was already averaging the answers together before you ever saw them."
+  },
+  {
+   "t": 228.94,
+   "text": "If you walk out of here in two hours and you can do three things — one, explain in plain English why bulk RNA-seq fundamentally cannot answer questions about cell type composition, and how partitioning plus barcoding solves that problem; two, sketch the inside of a 10x Chromium droplet and tell me what each component is doing and why; three, look at any modern paper that says \"we performed single-cell RNA-seq\" and have a real intuition for what the data looks like, what the limitations are, and"
+  },
+  {
+   "t": 259.14,
+   "text": "what biological questions it can and cannot answer — then we've succeeded."
+  },
+  {
+   "t": 263.83,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 266.15,
+   "text": "One orienting fact before we go deeper."
+  },
+  {
+   "t": 269.28,
+   "text": "Single-cell sequencing is not a sequencing chemistry."
+  },
+  {
+   "t": 272.98,
+   "text": "It is a sample-preparation technology."
+  },
+  {
+   "t": 275.21,
+   "text": "The actual reading of bases is still done on an Illumina instrument, or sometimes on a long-read platform, using exactly the same sequencing-by-synthesis chemistry we covered when we talked about Illumina."
+  },
+  {
+   "t": 287.9,
+   "text": "What changes is everything upstream of the sequencer."
+  },
+  {
+   "t": 291.89,
+   "text": "What changes is how you prepare the sample, how you label each cell's RNA before pooling, how you turn the resulting reads back into per-cell measurements."
+  },
+  {
+   "t": 301.48,
+   "text": "Single-cell sequencing sits on top of next-generation sequencing the way an operating system sits on top of a CPU — it uses the underlying hardware to do something the hardware alone couldn't have done."
+  },
+  {
+   "t": 314.3,
+   "text": "The whole conceptual breakthrough is in the library preparation, not the sequencing."
+  },
+  {
+   "t": 319.56,
+   "text": "And the conceptual breakthrough is, in one phrase, partition and barcode."
+  },
+  {
+   "t": 324.89,
+   "text": "Separate the cells from each other physically, so each one is in its own compartment."
+  },
+  {
+   "t": 330.44,
+   "text": "Inside each compartment, tag every molecule with a unique cell-specific zip code."
+  },
+  {
+   "t": 336.64,
+   "text": "Then pool everything back together, sequence it on a normal Illumina machine, and use software to sort the reads back by their zip codes."
+  },
+  {
+   "t": 344.69,
+   "text": "That's it."
+  },
+  {
+   "t": 345.5,
+   "text": "That's the whole trick."
+  },
+  {
+   "t": 346.79,
+   "text": "Everything else is engineering."
+  },
+  {
+   "t": 348.91,
+   "text": "Let me tell you where it came from."
+  }
+ ]
+}

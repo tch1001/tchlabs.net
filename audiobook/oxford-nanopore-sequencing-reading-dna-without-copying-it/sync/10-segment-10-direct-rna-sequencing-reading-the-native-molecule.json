@@ -1,0 +1,255 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Direct RNA sequencing: reading the native molecule",
+ "duration": 427.91,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Direct RNA sequencing: reading the native molecule"
+  },
+  {
+   "t": 5.42,
+   "text": "Welcome back."
+  },
+  {
+   "t": 6.5,
+   "text": "We're going to use the second hour to cover the other distinctive capabilities of nanopore — the ones that go beyond just sequencing DNA — and then end with the clinical, field, and future contexts."
+  },
+  {
+   "t": 18.2,
+   "text": "Let's start with what I think is the most genuinely unique capability nanopore offers: the ability to read native RNA directly."
+  },
+  {
+   "t": 27.01,
+   "text": "Here's why this is a big deal."
+  },
+  {
+   "t": 28.65,
+   "text": "Every other RNA-sequencing technology on the planet starts by reverse-transcribing the RNA into complementary DNA, then sequencing the cDNA."
+  },
+  {
+   "t": 39.1,
+   "text": "Illumina RNA-seq does this."
+  },
+  {
+   "t": 41.59,
+   "text": "PacBio Iso-Seq does this."
+  },
+  {
+   "t": 44.29,
+   "text": "Even bulk RNA quantification methods like RT-PCR do this."
+  },
+  {
+   "t": 48.71,
+   "text": "The reason is that historically, the sequencing hardware could only handle DNA — DNA polymerases, DNA primers, DNA chemistry."
+  },
+  {
+   "t": 57.88,
+   "text": "RNA is more fragile, single-stranded by default, and has a 2-prime hydroxyl that makes it less stable."
+  },
+  {
+   "t": 65.1,
+   "text": "So you convert it to DNA first, and you sequence DNA."
+  },
+  {
+   "t": 69.1,
+   "text": "The problem with this approach is that you lose information in the conversion step."
+  },
+  {
+   "t": 73.46,
+   "text": "Real cellular RNA is decorated with chemical modifications — methylations, pseudouridines, inosines, m6A marks, m5C marks, and many others."
+  },
+  {
+   "t": 85.65,
+   "text": "These modifications are biologically important."
+  },
+  {
+   "t": 88.81,
+   "text": "They affect how messenger RNAs are translated, how transfer RNAs fold, how the cell regulates gene expression."
+  },
+  {
+   "t": 96.89,
+   "text": "They are, collectively, called the epitranscriptome — the layer of chemical decoration on top of the basic RNA sequence — and they're a hot area of research because we're only just beginning to understand what they all do."
+  },
+  {
+   "t": 109.58,
+   "text": "When you reverse-transcribe RNA into cDNA, you erase all of those modifications."
+  },
+  {
+   "t": 116.33,
+   "text": "The reverse transcriptase reads the RNA base — A, U, G, or C — and writes the corresponding cDNA base — T, A, C, or G."
+  },
+  {
+   "t": 128.97,
+   "text": "The modification gets dropped."
+  },
+  {
+   "t": 130.95,
+   "text": "The methyl group on an m6A becomes just an A."
+  },
+  {
+   "t": 134.64,
+   "text": "The pseudouridine becomes just a U."
+  },
+  {
+   "t": 137.19,
+   "text": "The information about which positions were modified is destroyed, and downstream you can't recover it without doing separate, specialized experiments for each modification type."
+  },
+  {
+   "t": 148.0,
+   "text": "Nanopore is different, because nanopore doesn't have to convert RNA to DNA."
+  },
+  {
+   "t": 153.25,
+   "text": "The pore can read RNA directly."
+  },
+  {
+   "t": 155.81,
+   "text": "You attach a custom adapter — with a motor protein pre-loaded — to the 3-prime end of your RNA."
+  },
+  {
+   "t": 162.26,
+   "text": "You load the result onto the flow cell."
+  },
+  {
+   "t": 164.66,
+   "text": "The motor grabs the RNA, threads it through the pore in the 3-prime to 5-prime direction, and the current signal encodes the RNA sequence."
+  },
+  {
+   "t": 174.05,
+   "text": "Now here's the beautiful part."
+  },
+  {
+   "t": 175.79,
+   "text": "The chemical modifications on the RNA — the methyl groups, the pseudouridines, the m6A marks — also affect the current signal as the modified bases pass through the pore."
+  },
+  {
+   "t": 187.25,
+   "text": "A regular A and an m6A have slightly different chemistry, slightly different size, slightly different interactions with the pore walls."
+  },
+  {
+   "t": 197.03,
+   "text": "They produce slightly different current signatures."
+  },
+  {
+   "t": 200.24,
+   "text": "With the right basecaller — and basecallers specifically trained to detect modifications are now publicly available, both from Oxford Nanopore and from third parties — you can call the modifications directly from the current signal."
+  },
+  {
+   "t": 213.07,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 214.38,
+   "text": "Imagine you're identifying coins by their thickness with a sensitive caliper."
+  },
+  {
+   "t": 218.75,
+   "text": "A regular penny is one thickness."
+  },
+  {
+   "t": 221.7,
+   "text": "A penny with a tiny sticker on it is a fractionally different thickness."
+  },
+  {
+   "t": 226.07,
+   "text": "If your caliper is precise enough, you can tell them apart."
+  },
+  {
+   "t": 229.85,
+   "text": "Now generalize: every modified base has its own characteristic \"thickness\" — its own current signature — and a nanopore pore is precise enough to distinguish them."
+  },
+  {
+   "t": 240.61,
+   "text": "So with direct RNA sequencing on a nanopore, you get the RNA sequence and a map of where the modifications are, in one experiment, from native molecules, with no enzymatic conversion to erase the information."
+  },
+  {
+   "t": 254.43,
+   "text": "This is the only sequencing technology that can do this."
+  },
+  {
+   "t": 257.95,
+   "text": "Nothing else comes close."
+  },
+  {
+   "t": 259.56,
+   "text": "There are practical limitations."
+  },
+  {
+   "t": 261.75,
+   "text": "Direct RNA sequencing is currently slower and lower-throughput than DNA sequencing — the motors that work with RNA are different from the ones used with DNA, and they tend to be slower, and the chemistry has been less aggressively optimized."
+  },
+  {
+   "t": 277.02,
+   "text": "Read accuracy on RNA is also a bit worse than on DNA — historically around 90 percent on R9, somewhat better on newer chemistries."
+  },
+  {
+   "t": 286.52,
+   "text": "And the input requirements are higher, because you can't amplify RNA without losing the modifications."
+  },
+  {
+   "t": 293.28,
+   "text": "So direct RNA is, today, used by relatively specialized labs studying the epitranscriptome — virology labs sequencing native viral RNA, neuroscience labs studying m6A in the brain, mRNA therapeutics companies validating their products."
+  },
+  {
+   "t": 310.48,
+   "text": "But the capability exists, and the application space is growing fast."
+  },
+  {
+   "t": 315.48,
+   "text": "The COVID-19 pandemic gave direct RNA sequencing a real-world stress test — SARS-CoV-2 is an RNA virus with a 30 kilobase genome, and direct RNA sequencing on a MinION was used by several labs to read the entire viral genome from infected cells, including post-transcriptional modifications, in a single experiment."
+  },
+  {
+   "t": 338.6,
+   "text": "That kind of comprehensive viral characterization was unavailable on any other platform."
+  },
+  {
+   "t": 343.96,
+   "text": "Beyond modifications, direct RNA sequencing also reads the poly-A tail of every messenger RNA, including its exact length."
+  },
+  {
+   "t": 353.91,
+   "text": "Poly-A tail length is biologically regulated — it controls mRNA stability and translation efficiency — and most RNA-sequencing methods either truncate it or normalize it during library prep."
+  },
+  {
+   "t": 367.32,
+   "text": "Direct RNA preserves it."
+  },
+  {
+   "t": 369.38,
+   "text": "You can measure poly-A tail length distributions across thousands of transcripts in a single experiment."
+  },
+  {
+   "t": 376.53,
+   "text": "You can also read full-length transcripts, including all the alternative splicing patterns, in a single molecule."
+  },
+  {
+   "t": 383.95,
+   "text": "Short-read RNA-seq has to infer splicing from junction reads, which gets ambiguous for complex transcripts with many possible splice forms."
+  },
+  {
+   "t": 393.26,
+   "text": "Direct RNA reads the whole transcript end to end, so you see exactly which exons were included in that particular molecule."
+  },
+  {
+   "t": 401.78,
+   "text": "The core takeaway: direct RNA sequencing is a capability nanopore has and nothing else has."
+  },
+  {
+   "t": 408.98,
+   "text": "It reads native molecules."
+  },
+  {
+   "t": 411.1,
+   "text": "It preserves modifications."
+  },
+  {
+   "t": 413.13,
+   "text": "It captures full-length transcripts with poly-A tails."
+  },
+  {
+   "t": 416.76,
+   "text": "For research questions about the epitranscriptome, about regulatory RNA biology, about post-transcriptional control, nanopore is, frankly, the only game in town."
+  }
+ ]
+}
