@@ -1,0 +1,179 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Limitations of prime editing: efficiency, pegRNA design, and payload size",
+ "duration": 297.34,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Limitations of prime editing: efficiency, pegRNA design, and payload size"
+  },
+  {
+   "t": 7.42,
+   "text": "Let me be honest about what prime editing can't do well, because no tool is universal and the limitations matter."
+  },
+  {
+   "t": 14.43,
+   "text": "Limitation one: efficiency."
+  },
+  {
+   "t": 16.95,
+   "text": "Even with PEmax, PE5, epegRNAs, and every optimization in the book, prime editing is still less efficient at most sites than base editing or Cas9-based knockout editing."
+  },
+  {
+   "t": 28.55,
+   "text": "You routinely see 50-80% knockout efficiency with Cas9 plus NHEJ."
+  },
+  {
+   "t": 35.36,
+   "text": "You see 30-70% base editing at well-designed CBE or ABE sites."
+  },
+  {
+   "t": 41.62,
+   "text": "Prime editing in well-optimized cultured cells with the best modern tools often reaches 30-50% on average across sites — sometimes much higher, sometimes much lower, depending heavily on the local sequence context."
+  },
+  {
+   "t": 55.8,
+   "text": "In primary cells, in vivo, and in difficult cell types, the efficiency drops further."
+  },
+  {
+   "t": 62.39,
+   "text": "This is the central tradeoff: prime editing is more flexible and more precise than base editing, but it pays for that flexibility in efficiency."
+  },
+  {
+   "t": 72.15,
+   "text": "Limitation two: pegRNA design is genuinely hard."
+  },
+  {
+   "t": 76.83,
+   "text": "A pegRNA has three functional regions that all have to work together."
+  },
+  {
+   "t": 81.35,
+   "text": "The spacer has to be specific and target-matching."
+  },
+  {
+   "t": 84.46,
+   "text": "The PBS has to anneal to the freshly nicked 3' end with the right strength — too short and it doesn't anneal stably, too long and it might invade off-target sites."
+  },
+  {
+   "t": 95.1,
+   "text": "The RT template has to encode the edit, terminate at a sensible position, and be free of secondary structures that would block the RT."
+  },
+  {
+   "t": 103.4,
+   "text": "And the whole pegRNA has to be stable in cells."
+  },
+  {
+   "t": 107.16,
+   "text": "Get any one of those wrong and the edit doesn't install."
+  },
+  {
+   "t": 110.39,
+   "text": "The analogy: the pegRNA is the hardest part of prime editing."
+  },
+  {
+   "t": 114.7,
+   "text": "You have to engineer the guide to be specific, the primer binding site to anneal, the RT template to encode the edit, and the whole thing to be stable — and you have to do all of those simultaneously."
+  },
+  {
+   "t": 126.65,
+   "text": "A bad pegRNA can give you a thousand-fold lower editing efficiency at the same site as a good pegRNA."
+  },
+  {
+   "t": 133.76,
+   "text": "This is why so much engineering effort has gone into pegRNA design tools and into systematic screens of pegRNA designs."
+  },
+  {
+   "t": 142.19,
+   "text": "Limitation three: large payloads are still hard."
+  },
+  {
+   "t": 146.22,
+   "text": "Even with twinPE, even with PASTE, even with the cleverest combinations, prime editing of large payloads — multi-kilobase insertions — is still much less efficient and much less flexible than what AAV-based gene addition or lentivirus-based gene addition can deliver."
+  },
+  {
+   "t": 163.32,
+   "text": "PASTE works, but the editing efficiency drops as the payload grows."
+  },
+  {
+   "t": 168.05,
+   "text": "The current sweet spot for prime editing is edits up to about 100 base pairs done by single pegRNAs or twinPE, plus rare large-payload installations using PASTE at lower efficiency."
+  },
+  {
+   "t": 180.14,
+   "text": "Limitation four: cell-type and delivery dependence."
+  },
+  {
+   "t": 183.89,
+   "text": "Prime editing efficiency varies enormously by cell type."
+  },
+  {
+   "t": 187.68,
+   "text": "T cells edit well."
+  },
+  {
+   "t": 189.55,
+   "text": "Hematopoietic stem cells edit moderately well after extensive optimization."
+  },
+  {
+   "t": 195.28,
+   "text": "Liver cells in vivo edit at reasonable efficiency when prime editor mRNA is delivered by lipid nanoparticle."
+  },
+  {
+   "t": 203.26,
+   "text": "Neurons and other terminally differentiated cells edit poorly, partly because they're not dividing and many of the cellular repair machinery the editor uses is less active."
+  },
+  {
+   "t": 214.26,
+   "text": "So in vivo prime editing is still very much a tissue-by-tissue, delivery-by-delivery problem."
+  },
+  {
+   "t": 220.79,
+   "text": "Limitation five: protein size."
+  },
+  {
+   "t": 223.62,
+   "text": "The prime editor — Cas9 nickase plus M-MLV RT — is a big protein."
+  },
+  {
+   "t": 229.43,
+   "text": "It's about 6.3 kilobases of coding sequence, which is too big to fit in a single AAV (whose payload limit is about 4.7 kilobases)."
+  },
+  {
+   "t": 239.74,
+   "text": "This is a real delivery problem for in vivo applications."
+  },
+  {
+   "t": 243.94,
+   "text": "The Liu lab and others have developed split prime editors — where the Cas9 and the RT are delivered on two separate AAVs and reassembled by intein splicing inside the cell — but this adds complexity."
+  },
+  {
+   "t": 257.3,
+   "text": "Smaller Cas variants, like SaCas9, have been used as alternatives, but they have their own tradeoffs."
+  },
+  {
+   "t": 263.96,
+   "text": "I want you to understand: every one of these limitations is being actively worked on."
+  },
+  {
+   "t": 268.9,
+   "text": "The field is moving fast."
+  },
+  {
+   "t": 270.94,
+   "text": "The PE1-to-PEmax improvement was three orders of magnitude in five years."
+  },
+  {
+   "t": 276.7,
+   "text": "There's every reason to think the next five years will see further substantial improvements."
+  },
+  {
+   "t": 282.42,
+   "text": "But as of today, in mid-2026, prime editing is a powerful tool with real constraints."
+  },
+  {
+   "t": 288.99,
+   "text": "Knowing those constraints is what separates a thoughtful user from someone who'll burn a year on an experiment that was never going to work."
+  }
+ ]
+}

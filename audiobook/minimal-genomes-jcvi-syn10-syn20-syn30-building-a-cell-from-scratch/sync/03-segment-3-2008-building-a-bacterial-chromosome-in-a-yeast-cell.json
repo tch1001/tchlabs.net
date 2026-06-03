@@ -1,0 +1,275 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — 2008: Building a bacterial chromosome in a yeast cell",
+ "duration": 433.72,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — 2008: Building a bacterial chromosome in a yeast cell"
+  },
+  {
+   "t": 6.09,
+   "text": "The first thing the JCVI team had to prove was that you could chemically build an entire bacterial chromosome — not a single gene, not a short stretch, but the whole thing."
+  },
+  {
+   "t": 16.19,
+   "text": "Until then, the largest piece of DNA anybody had ever assembled from synthetic oligonucleotides was a few tens of thousands of base pairs."
+  },
+  {
+   "t": 26.02,
+   "text": "A Mycoplasma genitalium genome is 583,000 base pairs."
+  },
+  {
+   "t": 31.96,
+   "text": "That's an order of magnitude bigger than anything that had been done before."
+  },
+  {
+   "t": 35.92,
+   "text": "It was, in 2007, an open question whether the existing techniques could be scaled up to that range at all."
+  },
+  {
+   "t": 42.62,
+   "text": "Let me walk you through how they did it, because the strategy is beautiful, and it tells you a lot about how modern DNA assembly works."
+  },
+  {
+   "t": 51.38,
+   "text": "You start with synthetic oligonucleotides."
+  },
+  {
+   "t": 54.14,
+   "text": "These are short pieces of DNA — typically a few tens to a few hundred base pairs long — that you can order from a commercial supplier."
+  },
+  {
+   "t": 62.62,
+   "text": "A machine somewhere chemically synthesizes them one base at a time."
+  },
+  {
+   "t": 67.7,
+   "text": "The technology is well established, and in 2007 it was already affordable enough to order tens of thousands of oligonucleotides for a single project."
+  },
+  {
+   "t": 78.21,
+   "text": "That gave the JCVI team their building blocks."
+  },
+  {
+   "t": 81.49,
+   "text": "Now, individually, those oligonucleotides are far too short."
+  },
+  {
+   "t": 85.71,
+   "text": "You can't just stitch hundreds of thousands of them together in a single reaction; it would never work."
+  },
+  {
+   "t": 91.22,
+   "text": "So you do it in stages."
+  },
+  {
+   "t": 92.75,
+   "text": "You take, say, fifty oligonucleotides that overlap with each other and span about 5,000 base pairs of your target sequence."
+  },
+  {
+   "t": 101.16,
+   "text": "You mix them together with some enzymes, and they self-assemble — the overlaps find each other, polymerase fills in the gaps, ligase seals the seams — and out comes a 5,000-base-pair piece."
+  },
+  {
+   "t": 113.58,
+   "text": "You repeat that with a different set of oligonucleotides, and you get a different 5,000-base-pair piece."
+  },
+  {
+   "t": 120.65,
+   "text": "Do that 100 times and you have 100 different 5,000-base-pair pieces."
+  },
+  {
+   "t": 125.74,
+   "text": "Now you do the assembly again, one level up."
+  },
+  {
+   "t": 128.75,
+   "text": "You take groups of those 5,000-base-pair pieces, each set chosen so that adjacent pieces overlap, and you assemble them into 25,000-base-pair pieces."
+  },
+  {
+   "t": 139.36,
+   "text": "Now you have a smaller number of larger pieces."
+  },
+  {
+   "t": 141.94,
+   "text": "Do it again: 25,000 becomes 75,000."
+  },
+  {
+   "t": 146.09,
+   "text": "Do it again: 75,000 becomes 200,000."
+  },
+  {
+   "t": 150.07,
+   "text": "Do it again: 200,000 becomes 600,000."
+  },
+  {
+   "t": 153.88,
+   "text": "This is called hierarchical assembly."
+  },
+  {
+   "t": 156.11,
+   "text": "It is exactly like how you build a large building out of smaller parts: you don't try to fit every brick in place in one pass, you make wall panels, you make rooms, you make floors, you make wings, you stack the wings to make the building."
+  },
+  {
+   "t": 169.97,
+   "text": "At each stage you check that the piece is correct before moving on."
+  },
+  {
+   "t": 173.65,
+   "text": "The advantage is that at every level, the components are still small enough to handle with established lab techniques — small enough to clone into bacterial plasmids, small enough to verify by sequencing, small enough to PCR if you need to."
+  },
+  {
+   "t": 188.51,
+   "text": "But here is the catch the JCVI team ran into."
+  },
+  {
+   "t": 191.75,
+   "text": "Once your assembled pieces get past about 150,000 to 200,000 base pairs, E. coli — the bacterium normally used to clone things — does not want to hold them anymore."
+  },
+  {
+   "t": 203.06,
+   "text": "The plasmids get too big."
+  },
+  {
+   "t": 204.78,
+   "text": "They become unstable."
+  },
+  {
+   "t": 206.78,
+   "text": "The cells either lose them or rearrange them."
+  },
+  {
+   "t": 209.89,
+   "text": "You can't reliably propagate a half-megabase circle of DNA inside E. coli; it was a brick wall."
+  },
+  {
+   "t": 216.99,
+   "text": "So the JCVI team did something elegant."
+  },
+  {
+   "t": 219.89,
+   "text": "They moved up to a different host: yeast."
+  },
+  {
+   "t": 222.8,
+   "text": "Saccharomyces cerevisiae, baker's yeast, will happily carry around enormous pieces of DNA as so-called yeast artificial chromosomes."
+  },
+  {
+   "t": 233.06,
+   "text": "Yeast has its own native chromosome-handling machinery, with origins of replication and centromeres and telomeres, and it doesn't seem to mind if you hand it a few hundred kilobases of extra DNA — it'll treat it like one of its own chromosomes, replicate it during cell division, and pass it down."
+  },
+  {
+   "t": 250.7,
+   "text": "Even better, yeast has an extraordinary capacity to perform DNA assembly inside itself."
+  },
+  {
+   "t": 257.79,
+   "text": "If you give yeast a bunch of DNA fragments with overlapping ends, yeast's own homologous recombination machinery will glue them together inside the cell."
+  },
+  {
+   "t": 268.13,
+   "text": "You can hand yeast a couple dozen fragments and let the yeast assemble them, in vivo, into one giant molecule."
+  },
+  {
+   "t": 276.29,
+   "text": "The yeast does the work for you."
+  },
+  {
+   "t": 278.17,
+   "text": "So the final stages of the Mycoplasma genitalium assembly happened inside yeast cells."
+  },
+  {
+   "t": 284.5,
+   "text": "They took six big chunks of the chromosome — about 100,000 base pairs each — handed them all to a yeast cell, let the yeast recombine them into one circular molecule, and then verified that the resulting molecule was the full 583,000-base-pair Mycoplasma chromosome."
+  },
+  {
+   "t": 304.13,
+   "text": "It worked."
+  },
+  {
+   "t": 305.0,
+   "text": "It was published in Science in January 2008."
+  },
+  {
+   "t": 308.61,
+   "text": "That paper, by Gibson and colleagues, established something profound: you could now build, from chemical building blocks, a chromosome the size of a bacterial genome."
+  },
+  {
+   "t": 319.33,
+   "text": "Not just a gene."
+  },
+  {
+   "t": 320.45,
+   "text": "Not just a cluster."
+  },
+  {
+   "t": 321.72,
+   "text": "A whole chromosome."
+  },
+  {
+   "t": 323.06,
+   "text": "The technology stack — oligonucleotide synthesis, hierarchical assembly, yeast as the final integrator — could in principle scale to even larger genomes."
+  },
+  {
+   "t": 333.52,
+   "text": "A small but important detail about that 2008 paper."
+  },
+  {
+   "t": 337.87,
+   "text": "The team did not just copy the Mycoplasma genitalium sequence letter for letter."
+  },
+  {
+   "t": 343.38,
+   "text": "They put watermarks into the DNA."
+  },
+  {
+   "t": 345.74,
+   "text": "They encoded short messages — names of the lab members, identifying tags — using base substitutions in non-essential parts of the genome."
+  },
+  {
+   "t": 354.92,
+   "text": "They picked spots where the changes would not break the genes, and they used a custom encoding to translate text characters into DNA letters."
+  },
+  {
+   "t": 363.86,
+   "text": "So the assembled chromosome was identifiable, by sequencing, as the synthetic version rather than the natural version."
+  },
+  {
+   "t": 371.59,
+   "text": "If a stray sample got mixed up in a lab somewhere, you could tell which one was theirs."
+  },
+  {
+   "t": 376.23,
+   "text": "That's a small detail in 2008, but it foreshadows the much more famous version of it that we'll see in the 2010 paper."
+  },
+  {
+   "t": 384.87,
+   "text": "The watermarks are, in the analogy I am going to come back to, a signature in the DNA."
+  },
+  {
+   "t": 391.04,
+   "text": "The point is not just that you can build a chromosome, the point is that you can make it yours, identifiably so, by writing things into it that no natural process would ever have produced."
+  },
+  {
+   "t": 402.02,
+   "text": "It is the equivalent of carving your initials into a tree, except the tree is alive and the carving is in its DNA."
+  },
+  {
+   "t": 410.34,
+   "text": "Now, in 2008, the chromosome built inside yeast had not yet been put into a cell to see if it would actually function."
+  },
+  {
+   "t": 418.36,
+   "text": "It was sitting there as a passive molecule."
+  },
+  {
+   "t": 421.2,
+   "text": "The next question — the much harder question — was whether you could transplant such a chromosome into a recipient cell and have it take over."
+  },
+  {
+   "t": 429.33,
+   "text": "That's the 2010 story, and it's where the lecture gets dramatic."
+  }
+ ]
+}

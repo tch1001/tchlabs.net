@@ -1,0 +1,267 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — The implementation problem",
+ "duration": 345.32,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — The implementation problem"
+  },
+  {
+   "t": 3.29,
+   "text": "Let me talk about why we're not already there."
+  },
+  {
+   "t": 5.51,
+   "text": "Because the science of pharmacogenomics is, for the canonical drug-gene pairs, settled."
+  },
+  {
+   "t": 11.22,
+   "text": "We know what to test."
+  },
+  {
+   "t": 12.47,
+   "text": "We know what to do with the results."
+  },
+  {
+   "t": 14.28,
+   "text": "CPIC has written the guidelines."
+  },
+  {
+   "t": 16.65,
+   "text": "The labs can do the assays."
+  },
+  {
+   "t": 18.54,
+   "text": "And yet, in 2026, most patients who would benefit from pharmacogenomics testing are not getting it."
+  },
+  {
+   "t": 25.88,
+   "text": "Why?"
+  },
+  {
+   "t": 26.54,
+   "text": "The honest answer is that delivering a genetic test result to a busy clinician at the right moment in their workflow, in a form they can actually act on, turns out to be one of the hardest informatics problems in medicine."
+  },
+  {
+   "t": 39.2,
+   "text": "Let me walk you through the implementation pipeline as it has to work."
+  },
+  {
+   "t": 43.19,
+   "text": "Step one."
+  },
+  {
+   "t": 44.1,
+   "text": "You have to genotype the patient."
+  },
+  {
+   "t": 46.21,
+   "text": "This is the easy part."
+  },
+  {
+   "t": 47.64,
+   "text": "The lab work is mature."
+  },
+  {
+   "t": 49.3,
+   "text": "Commercial assays cover the major variants for the major pharmacogenes for under $300."
+  },
+  {
+   "t": 56.12,
+   "text": "Some hospital systems do it in-house; many send specimens to commercial reference labs."
+  },
+  {
+   "t": 62.35,
+   "text": "Turnaround is days, sometimes weeks."
+  },
+  {
+   "t": 65.22,
+   "text": "Not great for an urgent prescription, but fine for preemptive testing."
+  },
+  {
+   "t": 69.92,
+   "text": "Step two."
+  },
+  {
+   "t": 70.9,
+   "text": "You have to get the result into the patient's electronic health record."
+  },
+  {
+   "t": 74.42,
+   "text": "This is where it starts to get hard."
+  },
+  {
+   "t": 76.19,
+   "text": "Pharmacogenomics results are not a single number like a glucose level."
+  },
+  {
+   "t": 81.16,
+   "text": "They're a list of variants, which translate into a list of star alleles, which translate into a list of phenotypes, which translate into recommendations for specific drugs."
+  },
+  {
+   "t": 92.61,
+   "text": "The EHR has to store all of this in a structured way that other parts of the system can query — not as a PDF attached to the chart, which is, embarrassingly, where many pharmacogenomics results currently live in many hospital systems."
+  },
+  {
+   "t": 107.1,
+   "text": "A PDF in the chart is invisible to the prescribing module."
+  },
+  {
+   "t": 111.08,
+   "text": "If the prescriber doesn't open it, the information might as well not exist."
+  },
+  {
+   "t": 115.76,
+   "text": "Step three."
+  },
+  {
+   "t": 116.89,
+   "text": "You have to integrate the genotype with the prescribing decision-support system."
+  },
+  {
+   "t": 121.25,
+   "text": "This is the holy grail."
+  },
+  {
+   "t": 122.95,
+   "text": "When a doctor in the EHR types a prescription for clopidogrel, the system has to automatically check the patient's CYP2C19 status, and if the patient is a poor metabolizer, fire an alert in real time — not buried in some sidebar that nobody reads, but actually interrupting the prescribing workflow with \"this patient is a CYP2C19 poor metabolizer; clopidogrel is not recommended; consider prasugrel or ticagrelor."
+  },
+  {
+   "t": 151.29,
+   "text": "\" That's what you need."
+  },
+  {
+   "t": 152.36,
+   "text": "Building that in a way that works across hundreds of drug-gene pairs, doesn't fire so many alerts that prescribers ignore all of them (the \"alert fatigue\" problem), and updates as the guidelines update — that is genuinely hard software engineering."
+  },
+  {
+   "t": 166.72,
+   "text": "The major EHR vendors have started rolling out pharmacogenomics decision-support modules, but uptake has been uneven and the user experience is, frankly, often clunky."
+  },
+  {
+   "t": 177.72,
+   "text": "Step four."
+  },
+  {
+   "t": 178.78,
+   "text": "You need clinicians who know how to interpret and act on the results."
+  },
+  {
+   "t": 182.99,
+   "text": "Most physicians in practice today were trained before pharmacogenomics was clinically routine."
+  },
+  {
+   "t": 189.04,
+   "text": "Continuing medical education has tried to fill the gap, but knowledge varies enormously."
+  },
+  {
+   "t": 194.8,
+   "text": "This is where clinical pharmacists have stepped into a critical role."
+  },
+  {
+   "t": 198.49,
+   "text": "Many hospital systems now have pharmacogenomics-trained pharmacists who function as consultants — the prescriber writes the initial order, the pharmacist checks against the patient's genotype, the pharmacist contacts the prescriber if there's a mismatch, the order gets adjusted."
+  },
+  {
+   "t": 214.53,
+   "text": "Pharmacist-mediated pharmacogenomics is, in many places, what's actually making the system work."
+  },
+  {
+   "t": 221.44,
+   "text": "Step five."
+  },
+  {
+   "t": 222.49,
+   "text": "You need reimbursement."
+  },
+  {
+   "t": 224.18,
+   "text": "In the U."
+  },
+  {
+   "t": 225.04,
+   "text": "S., insurance coverage for pharmacogenomics testing has been patchy."
+  },
+  {
+   "t": 229.88,
+   "text": "Some payers cover specific drug-indication pairs (HLA-B\\*5701 before abacavir, for instance)."
+  },
+  {
+   "t": 239.66,
+   "text": "Some cover panel testing for psychiatric indications."
+  },
+  {
+   "t": 243.35,
+   "text": "Some don't cover much of anything."
+  },
+  {
+   "t": 245.07,
+   "text": "In single-payer systems — the UK, the Netherlands, Estonia, parts of Asia — coverage decisions are made centrally and tend to be more uniform."
+  },
+  {
+   "t": 255.39,
+   "text": "The economics are clearly favorable when you do the analysis at the population level, but getting from \"clearly favorable in the analysis\" to \"actually paid for in this prescriber's clinic\" is its own challenge."
+  },
+  {
+   "t": 267.37,
+   "text": "So the implementation problem is real."
+  },
+  {
+   "t": 270.01,
+   "text": "It is not a \"science isn't ready\" problem."
+  },
+  {
+   "t": 272.7,
+   "text": "The science has been ready for years."
+  },
+  {
+   "t": 275.04,
+   "text": "It is a \"the healthcare system is not yet structured to use the science\" problem."
+  },
+  {
+   "t": 280.14,
+   "text": "And that's slowly changing — major academic medical centers have led the way, large integrated systems like Mayo, Vanderbilt, the VA, Geisinger, Mount Sinai have built world-class pharmacogenomics programs and demonstrated what's possible — but the diffusion to community medicine and to global health settings has been gradual."
+  },
+  {
+   "t": 299.99,
+   "text": "The optimistic view, which I share, is that we're at the inflection point."
+  },
+  {
+   "t": 304.5,
+   "text": "EHR integration is catching up."
+  },
+  {
+   "t": 307.05,
+   "text": "Sequencing costs are falling."
+  },
+  {
+   "t": 308.97,
+   "text": "Pharmacist-led models are scaling."
+  },
+  {
+   "t": 311.54,
+   "text": "CPIC and equivalent bodies are aggressively expanding guidelines."
+  },
+  {
+   "t": 316.19,
+   "text": "Patient demand is increasing as direct-to-consumer testing makes more people aware that their genotype matters for their prescriptions."
+  },
+  {
+   "t": 324.34,
+   "text": "The trajectory is toward universal preemptive testing being the standard of care within a decade, maybe two."
+  },
+  {
+   "t": 331.82,
+   "text": "The pessimistic view is that healthcare informatics has been almost-there for twenty years, and these problems are persistently harder than they look."
+  },
+  {
+   "t": 340.64,
+   "text": "Both views have evidence on their side."
+  },
+  {
+   "t": 342.85,
+   "text": "But the direction of travel is clear."
+  }
+ ]
+}

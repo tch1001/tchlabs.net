@@ -1,0 +1,263 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Differential expression analysis — DESeq2 and the negative binomial",
+ "duration": 460.4,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Differential expression analysis — DESeq2 and the negative binomial"
+  },
+  {
+   "t": 5.79,
+   "text": "Differential expression is the question RNA-seq is almost always asked."
+  },
+  {
+   "t": 10.74,
+   "text": "Given two conditions — treated versus untreated, tumor versus normal, day zero versus day seven of differentiation — which genes are expressed at significantly different levels?"
+  },
+  {
+   "t": 23.24,
+   "text": "This is the bread and butter of bulk RNA-seq."
+  },
+  {
+   "t": 26.7,
+   "text": "Almost every published RNA-seq paper has, at its core, a differential expression analysis."
+  },
+  {
+   "t": 33.79,
+   "text": "The statistical problem is harder than it looks."
+  },
+  {
+   "t": 36.98,
+   "text": "Naively, you might think: compute the mean expression of each gene in condition A, the mean in condition B, do a t-test, done."
+  },
+  {
+   "t": 46.11,
+   "text": "But this fails for several reasons."
+  },
+  {
+   "t": 48.24,
+   "text": "First, RNA-seq counts are integer counts of discrete events, not continuous values."
+  },
+  {
+   "t": 54.62,
+   "text": "The t-test assumes continuous, normally distributed data."
+  },
+  {
+   "t": 58.91,
+   "text": "The right family of statistics for count data is the Poisson distribution or its generalizations."
+  },
+  {
+   "t": 64.76,
+   "text": "Second, RNA-seq data is overdispersed compared to Poisson."
+  },
+  {
+   "t": 69.76,
+   "text": "A pure Poisson process predicts that the variance equals the mean."
+  },
+  {
+   "t": 73.78,
+   "text": "In real RNA-seq data, the variance is much larger than the mean, especially for highly expressed genes, because of biological variability between replicate samples."
+  },
+  {
+   "t": 85.05,
+   "text": "The right distribution for modeling this overdispersion is the negative binomial, which has two parameters — a mean and a dispersion — and can fit the actual variance-mean relationship of real data."
+  },
+  {
+   "t": 96.36,
+   "text": "Third, you typically have only a handful of replicates per condition — three to six samples, often — so estimating the dispersion for each gene independently is unreliable."
+  },
+  {
+   "t": 108.85,
+   "text": "You don't have enough data per gene."
+  },
+  {
+   "t": 110.9,
+   "text": "The trick the modern tools use is to share information across genes — to assume that genes with similar mean expression have similar dispersion, and to fit a shared dispersion model across the whole dataset."
+  },
+  {
+   "t": 122.92,
+   "text": "This dramatically improves the statistical power."
+  },
+  {
+   "t": 126.4,
+   "text": "Fourth, you're testing twenty thousand or more genes simultaneously."
+  },
+  {
+   "t": 131.05,
+   "text": "Without multiple testing correction, even at a per-test alpha of 0.05, you'd expect a thousand false positives by chance."
+  },
+  {
+   "t": 140.14,
+   "text": "You need to control either the family-wise error rate (Bonferroni) or, more commonly, the false discovery rate (Benjamini-Hochberg) at some chosen threshold, typically 5%."
+  },
+  {
+   "t": 152.8,
+   "text": "The two dominant tools that solve this problem are DESeq2 and edgeR."
+  },
+  {
+   "t": 157.61,
+   "text": "They were developed independently, in parallel, in different labs — DESeq2 by Mike Love, Simon Anders, and Wolfgang Huber at the EMBL; edgeR by Mark Robinson, Davis McCarthy, and Gordon Smyth in Australia."
+  },
+  {
+   "t": 172.15,
+   "text": "They produce very similar results in practice, and both have stood the test of time."
+  },
+  {
+   "t": 177.06,
+   "text": "A third related tool, limma-voom, developed by the Smyth group, takes a different approach: it transforms counts to log space, models them as linear, and uses the linear model framework — but it's most commonly used for microarray-like analysis and large-sample studies."
+  },
+  {
+   "t": 193.6,
+   "text": "For typical bulk RNA-seq with small replicate numbers, DESeq2 or edgeR is what you want."
+  },
+  {
+   "t": 200.26,
+   "text": "Let me describe DESeq2 in more detail, because it's the more commonly used of the two and it's a beautifully designed tool."
+  },
+  {
+   "t": 208.32,
+   "text": "DESeq2 takes as input the raw count matrix and a metadata table describing each sample's experimental condition."
+  },
+  {
+   "t": 217.0,
+   "text": "It does five things internally:"
+  },
+  {
+   "t": 219.26,
+   "text": "One: it normalizes library sizes using the median-of-ratios method we discussed in Segment 8."
+  },
+  {
+   "t": 225.96,
+   "text": "Two: it estimates dispersion for each gene, then shrinks those estimates toward a fitted trend using empirical Bayes — borrowing strength across genes to stabilize the dispersion estimates."
+  },
+  {
+   "t": 238.9,
+   "text": "This is the variance-mean modeling that lets DESeq2 work with small replicate numbers."
+  },
+  {
+   "t": 244.34,
+   "text": "Three: it fits a generalized linear model to each gene, using the negative binomial as the underlying distribution."
+  },
+  {
+   "t": 252.36,
+   "text": "Four: it tests the coefficient corresponding to your experimental condition — does adding the condition variable significantly improve the model fit?"
+  },
+  {
+   "t": 261.04,
+   "text": "— using a Wald test or a likelihood ratio test."
+  },
+  {
+   "t": 264.46,
+   "text": "Five: it adjusts all the per-gene p-values for multiple testing using the Benjamini-Hochberg false discovery rate method."
+  },
+  {
+   "t": 272.15,
+   "text": "The output is a table with one row per gene, containing the log fold change (how much the gene went up or down between conditions, in log-2 space), the standard error of that estimate, the raw p-value, and the adjusted (FDR-corrected) p-value."
+  },
+  {
+   "t": 288.67,
+   "text": "Genes with adjusted p-value below your chosen threshold — usually 0.05 or 0.1 — are your differentially expressed genes."
+  },
+  {
+   "t": 298.6,
+   "text": "Here's the analogy I want you to hold."
+  },
+  {
+   "t": 300.8,
+   "text": "DESeq2 is the statistician's tool."
+  },
+  {
+   "t": 303.88,
+   "text": "It knows that highly expressed genes are noisier than lowly expressed ones, it accounts for the right variance structure, it borrows strength across genes to estimate dispersion robustly, and it corrects for multiple testing."
+  },
+  {
+   "t": 317.61,
+   "text": "When you read a paper that says \"we identified 247 differentially expressed genes at FDR less than 0.05,\" what they almost certainly did is run DESeq2 (or edgeR), and the 247 number reflects all of that machinery."
+  },
+  {
+   "t": 334.06,
+   "text": "A few things to know about interpreting differential expression results."
+  },
+  {
+   "t": 338.28,
+   "text": "Fold change matters as well as significance."
+  },
+  {
+   "t": 341.28,
+   "text": "A gene with a tiny fold change — say, log-2 fold change of 0.1, meaning the gene went up by about 7% — can still have a tiny p-value if you have very many replicates and very precise measurements."
+  },
+  {
+   "t": 354.48,
+   "text": "But that 7% change may not be biologically meaningful."
+  },
+  {
+   "t": 359.07,
+   "text": "Most papers filter for both adjusted p-value below some threshold AND absolute log fold change above some threshold, typically 1 (meaning a 2-fold change)."
+  },
+  {
+   "t": 370.41,
+   "text": "That's the right thing to do."
+  },
+  {
+   "t": 372.0,
+   "text": "Direction matters."
+  },
+  {
+   "t": 373.35,
+   "text": "A gene with log-2 fold change of +2 went UP by 4-fold."
+  },
+  {
+   "t": 378.01,
+   "text": "A gene with log-2 fold change of -2 went DOWN by 4-fold."
+  },
+  {
+   "t": 383.17,
+   "text": "Most volcano plots — the standard visualization — show fold change on the x-axis and minus-log p-value on the y-axis, so the upregulated genes are on the right and the downregulated are on the left, both rising to the top as significance increases."
+  },
+  {
+   "t": 398.33,
+   "text": "Sample size matters a lot."
+  },
+  {
+   "t": 400.21,
+   "text": "With three replicates per condition, your power to detect modest fold changes is limited."
+  },
+  {
+   "t": 405.86,
+   "text": "With six or eight replicates per condition, you have substantially more power."
+  },
+  {
+   "t": 410.63,
+   "text": "Most rigorous experiments aim for at least four to six replicates per condition."
+  },
+  {
+   "t": 415.96,
+   "text": "If you only have three — which is unfortunately common — you should be especially conservative about interpreting marginal results."
+  },
+  {
+   "t": 424.03,
+   "text": "That's differential expression."
+  },
+  {
+   "t": 425.96,
+   "text": "The core statistical workflow of bulk RNA-seq."
+  },
+  {
+   "t": 429.7,
+   "text": "The tools are mature, the methods are well-validated, and the community has converged on best practices."
+  },
+  {
+   "t": 436.06,
+   "text": "Now let's talk about what to do with your list of differentially expressed genes."
+  },
+  {
+   "t": 440.7,
+   "text": "After we come back from the break, we'll pick up with what to do with a list of differentially expressed genes — gene set enrichment, pathway analysis — then alternative splicing, then quality control, then long-read RNA-seq, then bulk versus single-cell, then clinical applications and the public datasets."
+  },
+  {
+   "t": 459.12,
+   "text": "Take ten minutes."
+  }
+ ]
+}

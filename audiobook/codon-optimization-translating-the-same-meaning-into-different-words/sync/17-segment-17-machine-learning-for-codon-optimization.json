@@ -1,0 +1,203 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Machine learning for codon optimization",
+ "duration": 396.27,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Machine learning for codon optimization"
+  },
+  {
+   "t": 4.19,
+   "text": "The traditional codon optimization algorithms — CAI maximization with GC and constraint satisfaction — are rule-based."
+  },
+  {
+   "t": 12.53,
+   "text": "You write down the rules, you apply them, you get a sequence."
+  },
+  {
+   "t": 16.39,
+   "text": "They work reasonably well, but they have a fundamental limitation: they're based on indirect proxies for what you actually care about, which is protein yield."
+  },
+  {
+   "t": 24.98,
+   "text": "The CAI is a proxy."
+  },
+  {
+   "t": 26.64,
+   "text": "The codon usage table is a proxy."
+  },
+  {
+   "t": 29.12,
+   "text": "The secondary structure prediction is a proxy."
+  },
+  {
+   "t": 31.99,
+   "text": "None of these is the actual experimental yield of protein from a given sequence."
+  },
+  {
+   "t": 37.25,
+   "text": "And the relationship between the proxies and the yield is approximate, sometimes badly approximate."
+  },
+  {
+   "t": 43.65,
+   "text": "So the natural next step, given the explosion of high-throughput protein expression data over the last decade, is to train machine learning models directly on experimental data."
+  },
+  {
+   "t": 54.3,
+   "text": "Take a large dataset of genes that have been expressed at known levels in a host organism."
+  },
+  {
+   "t": 60.24,
+   "text": "Train a model that takes a DNA sequence as input and predicts the protein yield as output."
+  },
+  {
+   "t": 66.72,
+   "text": "Then use that model to design new sequences by optimizing for predicted yield directly, rather than for proxies."
+  },
+  {
+   "t": 74.21,
+   "text": "This approach has been emerging over the last five to ten years, and it's getting better as the available datasets grow."
+  },
+  {
+   "t": 81.45,
+   "text": "The data come from a few different sources."
+  },
+  {
+   "t": 84.03,
+   "text": "There are studies where labs have synthesized thousands of synonymous variants of a single gene and measured the expression of each, generating large datasets of sequence-to-expression relationships for that gene."
+  },
+  {
+   "t": 96.56,
+   "text": "There are large-scale proteomics datasets from organisms like E. coli and yeast and HEK293 cells, where you know the codon usage of every gene and the resulting protein level."
+  },
+  {
+   "t": 109.54,
+   "text": "There are public databases of protein expression data from biopharma development programs, where companies have characterized hundreds of variants of an antibody or therapeutic protein."
+  },
+  {
+   "t": 120.44,
+   "text": "From these data, modern machine learning approaches train sequence-to-expression models — convolutional networks, transformers, language-model-style architectures that look at the DNA sequence as a string and predict expression level."
+  },
+  {
+   "t": 135.0,
+   "text": "These models can pick up on patterns that the rule-based approaches miss — subtle interactions between codons, context-dependent preferences, structural features that don't show up in any simple metric."
+  },
+  {
+   "t": 146.78,
+   "text": "The resulting models can predict expression substantially better than CAI or tAI on held-out test data."
+  },
+  {
+   "t": 153.81,
+   "text": "A particularly interesting line of work uses protein language models — models pre-trained on large protein databases — and combines them with codon-level models."
+  },
+  {
+   "t": 163.66,
+   "text": "The idea is that the protein language model knows something about which amino acid sequences are likely to fold and function, and the codon model knows about translation efficiency, and together they can design sequences that are optimized at both levels."
+  },
+  {
+   "t": 179.1,
+   "text": "This is closer to \"co-design\" of the protein and its encoding than to traditional codon optimization, but the line is blurring."
+  },
+  {
+   "t": 187.31,
+   "text": "Another direction is closed-loop design — where the machine learning model proposes sequences, those sequences are synthesized and tested, the results feed back into the model, and the model improves with each iteration."
+  },
+  {
+   "t": 200.45,
+   "text": "This is essentially Bayesian optimization applied to protein expression."
+  },
+  {
+   "t": 205.5,
+   "text": "With high-throughput screening, you can do thousands of synthesis-test cycles per project, and the iterative learning produces better optimized sequences than any one-shot algorithm."
+  },
+  {
+   "t": 216.39,
+   "text": "The commercial impact of these machine learning approaches is starting to show up in industrial protein production."
+  },
+  {
+   "t": 223.07,
+   "text": "Some of the big biopharma companies have proprietary in-house tools that combine traditional codon optimization with machine learning models trained on their internal production data."
+  },
+  {
+   "t": 233.51,
+   "text": "The result, for some therapeutic proteins, is sequences that produce twenty or thirty percent more protein than the best traditional codon-optimized version."
+  },
+  {
+   "t": 243.0,
+   "text": "That's a meaningful improvement at industrial scale, where every percent of yield matters."
+  },
+  {
+   "t": 249.24,
+   "text": "It's also worth noting that machine learning approaches can capture context-dependent codon choice better than rule-based approaches."
+  },
+  {
+   "t": 256.44,
+   "text": "The classical CAI treats every codon position equally, but as we discussed in Segment 10, codon choice matters more in some places than others."
+  },
+  {
+   "t": 265.83,
+   "text": "A trained model can learn where the sensitive positions are and treat them differently."
+  },
+  {
+   "t": 270.97,
+   "text": "This is closer to what evolution actually does, and it produces sequences that look more like high-expression native genes than maximally CAI-optimized sequences do."
+  },
+  {
+   "t": 281.25,
+   "text": "There are limitations."
+  },
+  {
+   "t": 282.8,
+   "text": "Machine learning models are only as good as the training data, and most of the public data are from a handful of well-studied host organisms — E. coli, yeast, HEK293, CHO."
+  },
+  {
+   "t": 296.64,
+   "text": "For unusual hosts — say, you want to express a gene in a fish embryo or a plant tissue or a recently-isolated environmental microbe — there's not much data to train on, and the machine learning approach can't help much."
+  },
+  {
+   "t": 310.92,
+   "text": "The rule-based approaches, applied with a codon usage table for that organism, are still better."
+  },
+  {
+   "t": 316.78,
+   "text": "There's also a question of interpretability."
+  },
+  {
+   "t": 319.47,
+   "text": "The machine learning models are black boxes — you put in a sequence, you get out a predicted expression level, but you don't really know why the model gave that prediction."
+  },
+  {
+   "t": 328.79,
+   "text": "For research purposes this is fine, but for regulatory submissions in pharma development, the lack of interpretability can be a problem."
+  },
+  {
+   "t": 337.5,
+   "text": "Regulators sometimes want to know why a particular sequence was chosen, and \"the model said so\" is not a satisfying answer."
+  },
+  {
+   "t": 345.8,
+   "text": "So the field is currently in a transition state."
+  },
+  {
+   "t": 348.87,
+   "text": "Traditional codon optimization based on CAI and constraint satisfaction is still the workhorse for most projects."
+  },
+  {
+   "t": 357.09,
+   "text": "Machine learning approaches are starting to outperform on benchmark datasets and are being adopted in industrial settings."
+  },
+  {
+   "t": 364.3,
+   "text": "The future is probably a hybrid — rule-based approaches providing the scaffold, machine learning providing the fine-tuning, with experimental iteration closing the loop on the most demanding applications."
+  },
+  {
+   "t": 376.67,
+   "text": "Now, having gone through how codon optimization is done in practice and how it's evolving, let's step back and look at the frontier — the open scientific questions that are still being worked out, and the surprising places where codon usage is turning out to matter in biology beyond just protein production."
+  },
+  {
+   "t": 394.73,
+   "text": "That's our final segment."
+  }
+ ]
+}

@@ -1,0 +1,239 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The contact matrix and the heatmap visualization",
+ "duration": 382.02,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The contact matrix and the heatmap visualization"
+  },
+  {
+   "t": 4.62,
+   "text": "Now we have a list of contact pairs."
+  },
+  {
+   "t": 7.0,
+   "text": "Each row is a single observed contact: chromosome 1, position 35,200,000, contacted chromosome 1, position 35,750,000."
+  },
+  {
+   "t": 19.55,
+   "text": "Multiplied by billions of rows."
+  },
+  {
+   "t": 21.96,
+   "text": "How do we visualize that?"
+  },
+  {
+   "t": 23.65,
+   "text": "How do we turn this list into a picture that reveals structure?"
+  },
+  {
+   "t": 27.55,
+   "text": "The answer is the contact matrix, sometimes called the Hi-C heatmap."
+  },
+  {
+   "t": 31.85,
+   "text": "Here is the construction."
+  },
+  {
+   "t": 33.73,
+   "text": "Take the genome and divide it into bins of some fixed size — typical choices are one megabase for low-resolution views, one hundred kilobases for medium-resolution, ten kilobases for high-resolution, five kilobases or finer for the highest-resolution experiments."
+  },
+  {
+   "t": 51.11,
+   "text": "The total number of bins for the human genome at one megabase resolution is about three thousand."
+  },
+  {
+   "t": 57.51,
+   "text": "At ten kilobase resolution, it's about three hundred thousand."
+  },
+  {
+   "t": 61.75,
+   "text": "Now build a square matrix where rows and columns are bins."
+  },
+  {
+   "t": 65.53,
+   "text": "Cell (i, j) of the matrix contains the number of contacts observed between bin i and bin j — that is, how many read pairs in your Hi-C data had one end in bin i and the other end in bin j."
+  },
+  {
+   "t": 78.86,
+   "text": "Fill in the matrix from your contact list."
+  },
+  {
+   "t": 81.53,
+   "text": "Symmetric, of course, because contacts are unordered pairs."
+  },
+  {
+   "t": 85.54,
+   "text": "To visualize the matrix, we render it as a heatmap."
+  },
+  {
+   "t": 89.06,
+   "text": "Color each cell by the contact count, on a logarithmic scale — typically red for high contact counts, blue or white for low, with shades in between."
+  },
+  {
+   "t": 98.6,
+   "text": "The result is a square image where every pixel represents the contact frequency between two genomic regions."
+  },
+  {
+   "t": 105.88,
+   "text": "For a single chromosome, the matrix is a square the size of the chromosome's bin count."
+  },
+  {
+   "t": 111.28,
+   "text": "For the whole genome, it's a much larger matrix where each chromosome occupies a sub-block along the diagonal."
+  },
+  {
+   "t": 118.16,
+   "text": "Here is what you see when you look at a Hi-C heatmap."
+  },
+  {
+   "t": 121.01,
+   "text": "First, the diagonal is intensely red."
+  },
+  {
+   "t": 124.29,
+   "text": "Every bin contacts itself, and adjacent bins contact each other extremely often, because regions that are close on the linear genome are almost always close in 3D as well — the chromatin fiber is continuous, and proximity in linear sequence implies proximity in 3D space at short distances."
+  },
+  {
+   "t": 144.89,
+   "text": "The diagonal fades out as you move away from it; the further apart two regions are on the linear genome, the less often they contact each other."
+  },
+  {
+   "t": 154.0,
+   "text": "This monotonic decay is called the distance-dependent contact frequency and it follows a power law — typically as the negative one-power of linear distance for the close range, with a steeper falloff at longer distances."
+  },
+  {
+   "t": 167.32,
+   "text": "We'll see in Segment 14 that this power law is a clue to the polymer physics of chromatin."
+  },
+  {
+   "t": 173.04,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 174.34,
+   "text": "A Hi-C contact matrix is a 2D map of the genome contacting itself."
+  },
+  {
+   "t": 179.66,
+   "text": "The diagonal is local contacts — the bright red band of nearby regions touching each other."
+  },
+  {
+   "t": 186.14,
+   "text": "The off-diagonal pattern is long-range contacts."
+  },
+  {
+   "t": 189.6,
+   "text": "The diagonal is the dominant feature."
+  },
+  {
+   "t": 192.22,
+   "text": "But the patterns off the diagonal are where the biology lives."
+  },
+  {
+   "t": 196.49,
+   "text": "Off the diagonal, you see structure."
+  },
+  {
+   "t": 199.11,
+   "text": "You see square blocks along the diagonal — clusters of regions that contact each other more than expected."
+  },
+  {
+   "t": 205.76,
+   "text": "We'll call these TADs in Segment 6."
+  },
+  {
+   "t": 208.35,
+   "text": "You see a checkerboard pattern at large scales — alternating bins that contact each other more or less than expected, in a pattern that segregates active from inactive chromatin."
+  },
+  {
+   "t": 219.12,
+   "text": "We'll call this the compartmentalization pattern in Segment 5."
+  },
+  {
+   "t": 223.07,
+   "text": "You see dots — sharp, focal, off-diagonal points of intense contact between specific pairs of regions, often megabases apart."
+  },
+  {
+   "t": 232.45,
+   "text": "These are loops, and we'll meet them in Segment 8."
+  },
+  {
+   "t": 235.39,
+   "text": "And you see, occasionally, dramatic blocks of contact between regions on different chromosomes, which can indicate translocations or other large-scale rearrangements."
+  },
+  {
+   "t": 246.34,
+   "text": "A practical detail about visualization."
+  },
+  {
+   "t": 249.25,
+   "text": "When you plot a Hi-C contact matrix as a heatmap, the conventional orientation is with the diagonal running from the top-left to the bottom-right of the image, and the matrix flipped so that the upper-triangle is shown."
+  },
+  {
+   "t": 261.58,
+   "text": "Sometimes people show only the upper-triangle as a triangular plot, with the diagonal at the bottom — this is the \"pyramid\" or \"triangle\" view that you'll see in papers, particularly for visualizing TADs along a region."
+  },
+  {
+   "t": 274.43,
+   "text": "The pyramid view is easier to overlay with linear annotations like gene tracks and ChIP-seq signal, so it's common in publications that compare Hi-C to other regulatory genomics data."
+  },
+  {
+   "t": 286.55,
+   "text": "Another practical detail: the raw matrix has biases."
+  },
+  {
+   "t": 290.42,
+   "text": "Some regions in the genome are more accessible to the restriction enzyme than others."
+  },
+  {
+   "t": 296.0,
+   "text": "Some regions PCR-amplify more efficiently than others."
+  },
+  {
+   "t": 300.24,
+   "text": "These biases distort the apparent contact frequencies, so we have to normalize the matrix before interpreting it."
+  },
+  {
+   "t": 307.64,
+   "text": "Standard normalization methods — iterative correction, or ICE; vanilla coverage normalization; KR normalization — adjust the matrix so that each row and column sums to the same total, on the assumption that any deviations from a uniform distribution are due to bias rather than biology."
+  },
+  {
+   "t": 327.45,
+   "text": "After normalization, what's left is the structure."
+  },
+  {
+   "t": 331.02,
+   "text": "When you look at a clean, well-normalized Hi-C heatmap of a human chromosome at, say, twenty-five-kilobase resolution, you see a hierarchy."
+  },
+  {
+   "t": 340.78,
+   "text": "At the largest scale, there's the checkerboard pattern of compartments — regions tens of megabases across that contact each other more than expected, regardless of linear distance."
+  },
+  {
+   "t": 351.94,
+   "text": "At the megabase scale, there's the block structure of TADs — squares along the diagonal that mark the boundaries of contact neighborhoods."
+  },
+  {
+   "t": 360.2,
+   "text": "At the finer scale, there are focal contact dots — loops between specific points."
+  },
+  {
+   "t": 365.88,
+   "text": "The hierarchy is real."
+  },
+  {
+   "t": 367.95,
+   "text": "It is reproducible across experiments."
+  },
+  {
+   "t": 370.69,
+   "text": "And each level corresponds to a different mechanism for organizing chromatin in 3D."
+  },
+  {
+   "t": 376.55,
+   "text": "The next several segments are going to unpack each level in turn, starting with compartments."
+  }
+ ]
+}

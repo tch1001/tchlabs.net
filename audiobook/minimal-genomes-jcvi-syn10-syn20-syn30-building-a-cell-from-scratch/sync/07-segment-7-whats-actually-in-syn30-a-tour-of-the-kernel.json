@@ -1,0 +1,319 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — What's actually in syn3.0: a tour of the kernel",
+ "duration": 448.73,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — What's actually in syn3.0: a tour of the kernel"
+  },
+  {
+   "t": 5.46,
+   "text": "Let's slow down and look at the 473 genes in a little more detail, because I want you to come away with a real feel for what a minimal cell actually has in it, not just a list of categories."
+  },
+  {
+   "t": 16.82,
+   "text": "Imagine I'm walking you around the inside of a syn3.0 cell with a flashlight."
+  },
+  {
+   "t": 22.6,
+   "text": "Let me show you what you see."
+  },
+  {
+   "t": 24.27,
+   "text": "The cell is small."
+  },
+  {
+   "t": 25.52,
+   "text": "Even by bacterial standards, Mycoplasma mycoides is small — about half a micrometer across — and syn3.0 is, if anything, smaller and more irregular."
+  },
+  {
+   "t": 37.01,
+   "text": "We'll come back to the morphology problem in Segment 10."
+  },
+  {
+   "t": 40.64,
+   "text": "For now, picture a roughly round sack of cytoplasm, a few hundred nanometers across, surrounded by a single lipid membrane."
+  },
+  {
+   "t": 49.58,
+   "text": "Now let's go through what's inside."
+  },
+  {
+   "t": 51.36,
+   "text": "The largest single complex by mass, probably, is the ribosome population."
+  },
+  {
+   "t": 56.95,
+   "text": "The cell makes ribosomes constantly."
+  },
+  {
+   "t": 59.74,
+   "text": "Each ribosome is a machine of about 50 proteins plus three pieces of ribosomal RNA, the entire assembly being a couple of megadaltons of protein-RNA hybrid."
+  },
+  {
+   "t": 70.64,
+   "text": "In syn3.0, roughly 90 to 100 of the 473 genes are dedicated entirely to making ribosomes and the things they need to function — that's the ribosomal proteins, the rRNA genes, the tRNAs, the aminoacyl-tRNA synthetases that charge the tRNAs with amino acids, the initiation factors, the elongation factors."
+  },
+  {
+   "t": 94.11,
+   "text": "Translation is the single biggest expense in the cell's gene budget."
+  },
+  {
+   "t": 98.92,
+   "text": "If you tried to compress the cell further, the first place you'd look — and the first place you'd fail — is here."
+  },
+  {
+   "t": 105.69,
+   "text": "The translation machinery is highly evolved, highly interlocked, and stubborn."
+  },
+  {
+   "t": 110.92,
+   "text": "You cannot easily remove an aminoacyl-tRNA synthetase, because then one amino acid won't get loaded onto its tRNA, and every protein containing that amino acid will fail to be made, and the cell will die in seconds."
+  },
+  {
+   "t": 125.78,
+   "text": "You cannot easily remove a ribosomal protein, because the ribosome will misassemble."
+  },
+  {
+   "t": 131.54,
+   "text": "The translation apparatus is the part of the cell that is most evolutionarily ancient and least amenable to redesign."
+  },
+  {
+   "t": 139.07,
+   "text": "Around that ribosome population is the transcription apparatus."
+  },
+  {
+   "t": 143.32,
+   "text": "RNA polymerase, with its associated subunits, is sitting on the DNA."
+  },
+  {
+   "t": 148.64,
+   "text": "Sigma factors are guiding it to the right promoters."
+  },
+  {
+   "t": 151.85,
+   "text": "Terminators are stopping it at the right places."
+  },
+  {
+   "t": 154.82,
+   "text": "About 10 to 15 genes' worth of machinery, all in service of getting RNA out of the DNA."
+  },
+  {
+   "t": 161.46,
+   "text": "The DNA itself — the 531,000-base-pair circular chromosome — is sitting in a loose tangle in the cytoplasm."
+  },
+  {
+   "t": 170.59,
+   "text": "Mycoplasma has no nucleus, no formal chromosome packaging the way bigger cells do, just the DNA loosely associated with some small DNA-binding proteins."
+  },
+  {
+   "t": 181.66,
+   "text": "Around the DNA you have the replication apparatus, which the cell deploys whenever it's time to copy itself: a DNA polymerase, a helicase, a primase, the single-strand binding proteins, the ligase, the topoisomerase."
+  },
+  {
+   "t": 196.96,
+   "text": "About 35 genes."
+  },
+  {
+   "t": 199.09,
+   "text": "Together, all these are the minimal kit you need to replicate a circular bacterial chromosome."
+  },
+  {
+   "t": 204.49,
+   "text": "Now the cytoplasm is full of metabolic enzymes."
+  },
+  {
+   "t": 208.28,
+   "text": "Let me list a few of the most important ones, because they tell you what kind of life syn3.0 is set up for."
+  },
+  {
+   "t": 215.22,
+   "text": "It has glycolysis."
+  },
+  {
+   "t": 216.85,
+   "text": "The full ten-step pathway, from glucose to pyruvate, is present."
+  },
+  {
+   "t": 222.09,
+   "text": "Glycolysis produces ATP — that's how syn3.0 gets most of its energy."
+  },
+  {
+   "t": 228.59,
+   "text": "It does not have a citric acid cycle."
+  },
+  {
+   "t": 230.89,
+   "text": "It does not have oxidative phosphorylation."
+  },
+  {
+   "t": 233.55,
+   "text": "It does not have a true respiratory chain."
+  },
+  {
+   "t": 236.12,
+   "text": "Energy in syn3.0 comes almost entirely from glycolysis, and the cell handles its electron flow with simpler systems, including a pathway that produces lactate as a waste product."
+  },
+  {
+   "t": 249.18,
+   "text": "This is a fermentative organism."
+  },
+  {
+   "t": 251.26,
+   "text": "It is anaerobic in spirit even when oxygen is around."
+  },
+  {
+   "t": 255.09,
+   "text": "It has a minimal set of nucleotide salvage enzymes."
+  },
+  {
+   "t": 259.05,
+   "text": "Syn3.0 can't make purines and pyrimidines from scratch — those biosynthesis pathways have been removed because the lab medium provides nucleosides directly."
+  },
+  {
+   "t": 270.36,
+   "text": "The cell has just enough enzymes to phosphorylate those imported nucleosides into the triphosphates that DNA and RNA polymerases need."
+  },
+  {
+   "t": 279.59,
+   "text": "About 15 to 20 genes here."
+  },
+  {
+   "t": 281.93,
+   "text": "It has lipid handling."
+  },
+  {
+   "t": 283.51,
+   "text": "Syn3.0 has lost most of fatty acid biosynthesis — it imports fatty acids from the medium."
+  },
+  {
+   "t": 290.58,
+   "text": "It has the enzymes needed to assemble those fatty acids into the phospholipids of its membrane."
+  },
+  {
+   "t": 297.2,
+   "text": "It can recycle membrane components."
+  },
+  {
+   "t": 299.79,
+   "text": "About a dozen genes' worth of lipid metabolism."
+  },
+  {
+   "t": 303.09,
+   "text": "It has chaperones."
+  },
+  {
+   "t": 304.65,
+   "text": "When proteins get misfolded — which happens all the time, especially under stress — the cell needs proteins whose job is to refold the bad ones or destroy them."
+  },
+  {
+   "t": 315.53,
+   "text": "Chaperones like the GroEL/GroES system, and proteases like Clp and FtsH, are in syn3.0."
+  },
+  {
+   "t": 324.95,
+   "text": "Without them, misfolded proteins would accumulate and the cell would die."
+  },
+  {
+   "t": 329.54,
+   "text": "And then there are the membrane transporters."
+  },
+  {
+   "t": 332.03,
+   "text": "Syn3.0 has lost almost all biosynthesis, which means it has to import almost everything."
+  },
+  {
+   "t": 339.21,
+   "text": "Amino acids, nucleosides, lipids, vitamins, ions — all of them are coming in through transporters."
+  },
+  {
+   "t": 346.93,
+   "text": "The cell has, roughly, 80 genes' worth of transport machinery embedded in its membrane."
+  },
+  {
+   "t": 353.25,
+   "text": "That's a striking number."
+  },
+  {
+   "t": 354.76,
+   "text": "The cell that has the smallest known genome has dedicated about a sixth of its genes to the problem of moving stuff across its outer envelope."
+  },
+  {
+   "t": 364.16,
+   "text": "That's because, of course, when you are a parasite, your defining characteristic is that you depend on someone else's chemistry, and the way you tap into that chemistry is through transporters."
+  },
+  {
+   "t": 375.65,
+   "text": "What's not there is almost as interesting as what is."
+  },
+  {
+   "t": 378.73,
+   "text": "Syn3.0 has no flagella."
+  },
+  {
+   "t": 381.66,
+   "text": "It cannot move."
+  },
+  {
+   "t": 382.95,
+   "text": "It has no chemotaxis."
+  },
+  {
+   "t": 384.89,
+   "text": "It cannot sense or respond to gradients."
+  },
+  {
+   "t": 387.9,
+   "text": "It has only a vestigial set of stress responses; it cannot, in any meaningful sense, react to environmental change."
+  },
+  {
+   "t": 396.75,
+   "text": "It has no defense against viruses — no restriction-modification system, no CRISPR."
+  },
+  {
+   "t": 402.88,
+   "text": "It has no quorum sensing, no biofilm formation, no competence for natural transformation."
+  },
+  {
+   "t": 409.34,
+   "text": "It has none of the things that bacteria normally use to make their living in nature."
+  },
+  {
+   "t": 413.99,
+   "text": "It is, in every sense, a stripped-down lab organism."
+  },
+  {
+   "t": 417.88,
+   "text": "It can do exactly two things: live and divide."
+  },
+  {
+   "t": 421.85,
+   "text": "Everything else has been removed."
+  },
+  {
+   "t": 423.69,
+   "text": "In the operating system analogy, syn3.0 is what you get when you remove every driver, every application, every utility, every networking stack, and you are left with only the bits that boot the kernel and copy it forward in time."
+  },
+  {
+   "t": 437.63,
+   "text": "It's the kernel."
+  },
+  {
+   "t": 438.66,
+   "text": "Just the kernel."
+  },
+  {
+   "t": 439.73,
+   "text": "Nothing else."
+  },
+  {
+   "t": 440.76,
+   "text": "Now, with the kernel laid out, let's go look more carefully at the genes inside it whose function we don't understand."
+  },
+  {
+   "t": 447.46,
+   "text": "That's Segment 8."
+  }
+ ]
+}

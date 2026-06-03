@@ -1,0 +1,239 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Esvelt 2014: the CRISPR gene drive",
+ "duration": 378.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Esvelt 2014: the CRISPR gene drive"
+  },
+  {
+   "t": 4.99,
+   "text": "In July 2014, a postdoctoral researcher named Kevin Esvelt, working in George Church's lab at Harvard, published a paper in eLife titled \"Concerning RNA-guided gene drives for the alteration of wild populations."
+  },
+  {
+   "t": 20.12,
+   "text": "\" The paper's first author list also includes Andrea Smidler, Flaminia Catteruccia, and George Church."
+  },
+  {
+   "t": 27.2,
+   "text": "The paper is theoretical — it proposes the design, it does not yet demonstrate it — but it lays out the entire modern field of CRISPR gene drives in one piece."
+  },
+  {
+   "t": 37.89,
+   "text": "Every later experimental paper traces directly back to this proposal."
+  },
+  {
+   "t": 42.95,
+   "text": "The insight is exactly what you would expect, once you have CRISPR in your hands."
+  },
+  {
+   "t": 47.58,
+   "text": "Burt's drive needed a homing endonuclease — a custom-engineered protein for each target."
+  },
+  {
+   "t": 53.76,
+   "text": "CRISPR replaces the custom-engineered protein with a universal cutting protein (Cas9) plus a programmable guide RNA."
+  },
+  {
+   "t": 62.0,
+   "text": "So just swap out the homing endonuclease for CRISPR."
+  },
+  {
+   "t": 65.58,
+   "text": "Use Cas9 as the cutting enzyme."
+  },
+  {
+   "t": 68.29,
+   "text": "Use a guide RNA as the targeting element."
+  },
+  {
+   "t": 71.26,
+   "text": "And, critically, encode all of it — Cas9, guide RNA, and any cargo you want to spread — into a single DNA cassette flanked by homology arms matching the target site in the genome."
+  },
+  {
+   "t": 83.99,
+   "text": "Let me walk through the mechanism slowly, because this is the central trick of the entire field."
+  },
+  {
+   "t": 89.76,
+   "text": "Picture a chromosome in a mosquito."
+  },
+  {
+   "t": 92.19,
+   "text": "Pick a specific gene — let's say a gene called doublesex that controls fertility."
+  },
+  {
+   "t": 97.84,
+   "text": "You design a CRISPR guide RNA targeting a specific 20-letter sequence in doublesex."
+  },
+  {
+   "t": 104.34,
+   "text": "You build a cassette of DNA that contains: first, the Cas9 gene; second, the guide RNA gene (under its own promoter); third, whatever cargo you want to carry — maybe nothing, maybe an anti-malaria gene, maybe just a fluorescent reporter; and fourth, on either side of all of that, homology arms — sequences of DNA that exactly match the regions flanking the guide RNA's target site in the wild-type doublesex gene."
+  },
+  {
+   "t": 132.39,
+   "text": "You insert that entire cassette into one allele of doublesex, at the spot where the guide RNA was supposed to cut."
+  },
+  {
+   "t": 139.24,
+   "text": "So now one of the mosquito's two doublesex alleles is the wild-type sequence — uninterrupted, cuttable — and the other is the drive cassette — with the guide RNA's target site replaced by the entire drive payload."
+  },
+  {
+   "t": 152.82,
+   "text": "Now you let that mosquito mate with a wild-type mosquito."
+  },
+  {
+   "t": 156.57,
+   "text": "The offspring are heterozygous: one allele carries the drive, one carries the wild type."
+  },
+  {
+   "t": 162.93,
+   "text": "In a normal world, that heterozygous offspring would pass the drive to fifty percent of its kids."
+  },
+  {
+   "t": 169.43,
+   "text": "But this is not a normal world."
+  },
+  {
+   "t": 171.16,
+   "text": "Inside the cells of that heterozygous offspring — specifically, in germ cells, where the drive's promoter is active — the drive cassette starts expressing Cas9 and the guide RNA."
+  },
+  {
+   "t": 182.53,
+   "text": "Cas9 plus the guide RNA find the wild-type doublesex allele — because the wild type still has the intact target site, while the drive allele has the cassette there instead."
+  },
+  {
+   "t": 193.43,
+   "text": "Cas9 cuts the wild-type allele."
+  },
+  {
+   "t": 196.35,
+   "text": "The cell sees a double-strand break."
+  },
+  {
+   "t": 198.49,
+   "text": "The cell looks for a homologous template to repair it."
+  },
+  {
+   "t": 201.68,
+   "text": "The homologous template is the other chromosome, which carries the drive cassette flanked by homology arms exactly matching the surrounding sequence."
+  },
+  {
+   "t": 210.93,
+   "text": "The cell's homology-directed repair machinery copies the drive cassette across, from the drive chromosome onto the wild-type chromosome."
+  },
+  {
+   "t": 219.7,
+   "text": "Now both alleles carry the drive."
+  },
+  {
+   "t": 222.16,
+   "text": "That heterozygous mosquito has just converted itself into a homozygote, in its germ cells, before it produces gametes."
+  },
+  {
+   "t": 230.71,
+   "text": "When it does produce gametes, every single gamete carries the drive — not fifty percent, one hundred percent."
+  },
+  {
+   "t": 237.54,
+   "text": "And every offspring of that mosquito carries the drive."
+  },
+  {
+   "t": 241.21,
+   "text": "And every offspring's offspring."
+  },
+  {
+   "t": 243.19,
+   "text": "And so on."
+  },
+  {
+   "t": 244.2,
+   "text": "Take a moment with that."
+  },
+  {
+   "t": 245.64,
+   "text": "The drive cassette is, in essence, a self-installing genetic patch."
+  },
+  {
+   "t": 250.61,
+   "text": "It carries the scissors (Cas9), the guide (the sgRNA), and the cargo (whatever you want to spread), all wrapped between homology arms that direct the cell's repair machinery to copy the whole thing into the matching position on the other chromosome."
+  },
+  {
+   "t": 265.32,
+   "text": "Each generation, every heterozygote becomes a homozygote."
+  },
+  {
+   "t": 269.62,
+   "text": "The drive frequency, instead of staying flat or growing slowly, doubles, then doubles again, then doubles again, until the entire population carries it."
+  },
+  {
+   "t": 280.68,
+   "text": "The arithmetic is dramatic."
+  },
+  {
+   "t": 282.75,
+   "text": "If you release the drive at one percent frequency in a population, after one generation it is at roughly two percent."
+  },
+  {
+   "t": 290.8,
+   "text": "After two generations, four percent."
+  },
+  {
+   "t": 293.22,
+   "text": "Then eight, sixteen, thirty-two, sixty-four."
+  },
+  {
+   "t": 297.35,
+   "text": "By generation seven, the drive is past fifty percent."
+  },
+  {
+   "t": 301.6,
+   "text": "By generation ten, it is at ninety-something percent."
+  },
+  {
+   "t": 305.07,
+   "text": "By generation fifteen, it is essentially everywhere."
+  },
+  {
+   "t": 308.9,
+   "text": "For a mosquito with ten generations a year, that is about a year and a half from release to fixation."
+  },
+  {
+   "t": 315.35,
+   "text": "For a mouse with two generations a year, it is seven or eight years."
+  },
+  {
+   "t": 319.73,
+   "text": "For an animal with one generation per year, it is fifteen years."
+  },
+  {
+   "t": 323.97,
+   "text": "Geological timescales collapse into human policy timescales."
+  },
+  {
+   "t": 329.0,
+   "text": "Esvelt's paper, as I said, was theoretical."
+  },
+  {
+   "t": 332.7,
+   "text": "It laid out the design, the math, and — crucially — also the safety implications."
+  },
+  {
+   "t": 338.76,
+   "text": "Esvelt was, from the beginning, one of the most safety-conscious voices in the field, and a significant portion of his 2014 paper is about how a CRISPR gene drive could be misused, how it could escape, and what kinds of containment strategies might be needed."
+  },
+  {
+   "t": 355.21,
+   "text": "He proposed several of the later containment ideas — split drives, daisy drives, reversal drives — in their first form in this same paper."
+  },
+  {
+   "t": 364.01,
+   "text": "We will come back to those in Segments 11 and 12."
+  },
+  {
+   "t": 367.38,
+   "text": "But the headline of the 2014 paper, the line that defined the next decade of the field, is: the homing endonuclease idea, now made universal by CRISPR."
+  }
+ ]
+}

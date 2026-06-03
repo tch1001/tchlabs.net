@@ -1,0 +1,151 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Custom gene libraries: variant libraries, directed evolution, antibody discovery",
+ "duration": 340.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Custom gene libraries: variant libraries, directed evolution, antibody discovery"
+  },
+  {
+   "t": 7.83,
+   "text": "So far we've talked mostly about single-gene synthesis — one designed sequence, one verified clone, one tube."
+  },
+  {
+   "t": 15.19,
+   "text": "But there is an enormous and growing fraction of the commercial gene synthesis market that is something quite different: variant libraries."
+  },
+  {
+   "t": 23.38,
+   "text": "The customer orders not one designed gene, but a thousand designed variants of one gene — each variant differing from a reference by a defined set of changes, all of them synthesized in parallel and delivered as either a pool or as a plate of individually verified clones."
+  },
+  {
+   "t": 40.75,
+   "text": "This product category did not exist, in any meaningful form, before chip-based synthesis."
+  },
+  {
+   "t": 47.33,
+   "text": "The reason is straightforward: making a thousand different genes one at a time on columns is prohibitively expensive."
+  },
+  {
+   "t": 54.86,
+   "text": "Making a thousand different genes from a single chip run, where each well synthesizes a different oligo set for a different variant, is essentially free per variant beyond the chip cost."
+  },
+  {
+   "t": 67.1,
+   "text": "The chip platform is a library platform, and the gene synthesis industry has spent the last decade building products around that fact."
+  },
+  {
+   "t": 75.2,
+   "text": "Let me give you three concrete examples of what variant libraries are used for in practice, because the applications are the most interesting part of this story."
+  },
+  {
+   "t": 83.9,
+   "text": "The first application is directed evolution of enzymes."
+  },
+  {
+   "t": 88.1,
+   "text": "You have an enzyme that does something useful — say, an industrial enzyme used in detergent manufacture, or a metabolic enzyme used in a fermentation process — and you want to improve its activity, its stability, its substrate specificity."
+  },
+  {
+   "t": 103.24,
+   "text": "The traditional approach is error-prone PCR: introduce random mutations across the gene, screen for improved variants, repeat."
+  },
+  {
+   "t": 111.92,
+   "text": "The newer approach is rationally designed libraries: use protein structural information, evolutionary conservation data, and machine learning models to predict which positions in the protein are most likely to yield improvements, design a library of variants that explore the chemical diversity at those positions, order the library from Twist or Genscript, transform it into your screening host, and assay each variant."
+  },
+  {
+   "t": 137.4,
+   "text": "You get vastly more informative data per round of screening than random mutagenesis would give you, because the variants you're testing have been pre-selected for plausibility."
+  },
+  {
+   "t": 147.56,
+   "text": "The second application is antibody discovery."
+  },
+  {
+   "t": 150.86,
+   "text": "You have a target protein you want to make an antibody against — say, a viral surface protein, or a cancer-associated receptor."
+  },
+  {
+   "t": 157.97,
+   "text": "The traditional approach is to immunize an animal, harvest the B cells, and isolate antibodies that bind the target."
+  },
+  {
+   "t": 165.39,
+   "text": "The newer approach uses synthetic antibody libraries: you design, in silico, a library of antibody variants — typically variants of the complementarity-determining regions (CDRs), the loops that make contact with the antigen — and you order the library as synthetic DNA, you express the antibodies in a display system like yeast or phage, and you select for binders."
+  },
+  {
+   "t": 188.43,
+   "text": "The whole pipeline can be done without animals, with full control over the diversity you're sampling, and with the ability to apply machine-learning models to design specific variants you think will work."
+  },
+  {
+   "t": 200.04,
+   "text": "The third application is synthetic regulatory element libraries."
+  },
+  {
+   "t": 204.4,
+   "text": "You want to understand how the sequence of a promoter or an enhancer determines its activity in a particular cell type."
+  },
+  {
+   "t": 211.4,
+   "text": "You design a library of, say, ten thousand variant promoter sequences, each with defined mutations in particular positions, order them as a pool, attach a reporter gene downstream of each, transform into your cell line, and use sequencing-based reporter assays to measure the activity of every variant in parallel."
+  },
+  {
+   "t": 232.82,
+   "text": "This is sometimes called a massively parallel reporter assay (MPRA), and it has revolutionized how regulatory genomics is done."
+  },
+  {
+   "t": 241.69,
+   "text": "None of this would be possible without cheap, parallel, chip-based gene synthesis."
+  },
+  {
+   "t": 246.91,
+   "text": "The product packaging for libraries varies by application."
+  },
+  {
+   "t": 250.63,
+   "text": "Sometimes you want the library as a pool — all the variants mixed together in one tube, ready to transform en masse into a screening host, with the downstream assay handling identification of each variant."
+  },
+  {
+   "t": 264.1,
+   "text": "Sometimes you want it as a plate of clones — each variant individually cloned, sequence-verified, in a separate well, ready for individual assays."
+  },
+  {
+   "t": 273.91,
+   "text": "The pool is much cheaper per variant."
+  },
+  {
+   "t": 276.25,
+   "text": "The plate is much more useful when you want to do downstream characterization on each variant separately."
+  },
+  {
+   "t": 282.13,
+   "text": "Vendors offer both, and the price differential is roughly the cost of the cloning and sequencing overhead per variant."
+  },
+  {
+   "t": 289.61,
+   "text": "We'll come back to the pool-versus-clonal distinction in more detail in Segment 15."
+  },
+  {
+   "t": 295.17,
+   "text": "The key conceptual point is that the gene synthesis industry has shifted, in the last ten years, from selling genes one at a time to selling library platforms."
+  },
+  {
+   "t": 305.4,
+   "text": "The library, not the individual gene, is increasingly the unit of commerce."
+  },
+  {
+   "t": 311.02,
+   "text": "The customer specifies the design rules for the library — what positions to vary, what changes to make at each position, how many variants to produce — and the vendor handles the parallel synthesis and the delivery format."
+  },
+  {
+   "t": 324.68,
+   "text": "This is not a minor add-on."
+  },
+  {
+   "t": 326.38,
+   "text": "For some vendors, library sales are now a substantial fraction of total revenue, and the operational sophistication required to deliver tens of thousands of correctly designed variants is itself a competitive moat."
+  }
+ ]
+}

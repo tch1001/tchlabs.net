@@ -1,0 +1,235 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — CTCF, cohesin, and the molecular basis of TADs",
+ "duration": 441.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — CTCF, cohesin, and the molecular basis of TADs"
+  },
+  {
+   "t": 5.2,
+   "text": "Let's spend a segment going deeper on the two molecular players that build TADs: cohesin and CTCF."
+  },
+  {
+   "t": 12.14,
+   "text": "Understanding these two proteins in detail is essential because every modern Hi-C paper will mention them, every perturbation experiment will target one or both of them, and the loop extrusion story we just told doesn't quite click until you have a picture of what these proteins actually look like and how they work."
+  },
+  {
+   "t": 30.65,
+   "text": "Cohesin first."
+  },
+  {
+   "t": 32.21,
+   "text": "Cohesin is a member of a family of proteins called the SMC complexes — structural maintenance of chromosomes — that have an unusual architecture."
+  },
+  {
+   "t": 41.69,
+   "text": "Each SMC subunit is a very long polypeptide that folds back on itself in the middle, creating a long coiled-coil arm with a hinge at one end and an ATPase head at the other."
+  },
+  {
+   "t": 53.39,
+   "text": "Two SMC subunits — SMC1 and SMC3 — pair up at the hinge to form a V-shaped dimer."
+  },
+  {
+   "t": 61.27,
+   "text": "The two ATPase heads at the bottom of the V are bridged by another subunit called RAD21 (also known as SCC1), which closes the ring."
+  },
+  {
+   "t": 71.4,
+   "text": "There's also a STAG subunit (STAG1 or STAG2 in vertebrates) attached to the ring, and a few regulatory subunits like NIPBL and MAU2 that load cohesin onto DNA, and Wapl and PDS5 that unload it."
+  },
+  {
+   "t": 86.54,
+   "text": "The geometry is striking: cohesin is a closed ring, roughly 35 nanometers across the long axis, with a hole in the middle large enough for a piece of double-stranded DNA — sometimes two pieces — to pass through."
+  },
+  {
+   "t": 100.66,
+   "text": "The ring is what gives cohesin its name in mitosis: it embraces two sister chromatids and keeps them together until anaphase."
+  },
+  {
+   "t": 109.33,
+   "text": "In interphase, the same ring is used differently — to extrude a loop of chromatin through its center."
+  },
+  {
+   "t": 116.29,
+   "text": "The ATP-driven extrusion is now thought to work by a kind of \"scrunching\" mechanism, where the cohesin ring repeatedly binds DNA at two positions, reels in the slack between them by ATP-powered conformational changes, then releases and re-binds."
+  },
+  {
+   "t": 133.09,
+   "text": "The biochemistry is still being worked out in detail, but the kinetics are roughly known: cohesin extrudes at a rate of about one kilobase per second, can produce loops up to about a megabase in size, and is constrained by collisions with CTCF or other cohesin complexes."
+  },
+  {
+   "t": 150.22,
+   "text": "Each cohesin spends maybe twenty minutes on chromatin before being unloaded."
+  },
+  {
+   "t": 155.19,
+   "text": "Now CTCF."
+  },
+  {
+   "t": 156.88,
+   "text": "CTCF is a much simpler-looking protein."
+  },
+  {
+   "t": 160.22,
+   "text": "It's a transcription-factor-style protein with eleven zinc finger domains arranged in a row."
+  },
+  {
+   "t": 166.29,
+   "text": "The zinc fingers each recognize a few base pairs of DNA in sequence, and together they recognize a 19-base-pair consensus motif."
+  },
+  {
+   "t": 176.38,
+   "text": "CTCF binding sites — about fifty thousand of them in the human genome — are scattered across the genome at specific locations."
+  },
+  {
+   "t": 185.53,
+   "text": "Importantly, the CTCF motif has a polarity; it's not palindromic."
+  },
+  {
+   "t": 190.79,
+   "text": "A CTCF site has a \"direction\" defined by which way the motif reads."
+  },
+  {
+   "t": 195.65,
+   "text": "This directional asymmetry is critical to its role in loop extrusion."
+  },
+  {
+   "t": 201.21,
+   "text": "The convergent rule again: a loop forms between two CTCF sites whose motifs point toward each other."
+  },
+  {
+   "t": 207.7,
+   "text": "CTCF sites in divergent orientation — pointing away from each other — don't anchor loops together; they leave a gap."
+  },
+  {
+   "t": 215.34,
+   "text": "CTCF sites in tandem orientation — pointing the same direction — can sometimes anchor weaker contacts but rarely strong loops."
+  },
+  {
+   "t": 223.71,
+   "text": "The orientation rule was discovered by Rao and colleagues in 2014 by mapping the relative orientations of CTCF sites at the bases of loops in their high-resolution Hi-C data."
+  },
+  {
+   "t": 235.72,
+   "text": "The rule is sharp: about 80 percent of loop anchors are pairs of convergent CTCF sites."
+  },
+  {
+   "t": 242.29,
+   "text": "This was strong indirect evidence for loop extrusion, because no other proposed mechanism could naturally explain the orientation requirement."
+  },
+  {
+   "t": 251.85,
+   "text": "How does CTCF actually stop cohesin?"
+  },
+  {
+   "t": 254.72,
+   "text": "The current model — supported by a paper from Anders Hansen and Geeta Narlikar's groups around 2020 — is that CTCF doesn't just sit on the DNA; it physically interacts with the cohesin complex through specific surfaces."
+  },
+  {
+   "t": 268.95,
+   "text": "The interaction is orientation-specific: cohesin approaching CTCF from one direction encounters a binding surface that holds it; cohesin approaching from the other direction sees a different surface that lets it pass."
+  },
+  {
+   "t": 283.23,
+   "text": "The geometry of the interaction explains the convergent rule."
+  },
+  {
+   "t": 287.08,
+   "text": "Here's the analogy I want to leave you with for these two proteins."
+  },
+  {
+   "t": 291.18,
+   "text": "Cohesin is a ring that crawls along chromatin, pumping loops out of itself."
+  },
+  {
+   "t": 296.58,
+   "text": "CTCF is a directional roadblock — like a one-way gate that stops the ring if it approaches from one side but lets it through if it approaches from the other."
+  },
+  {
+   "t": 305.66,
+   "text": "Loops form between pairs of one-way gates pointing toward each other, with cohesin trapped between them."
+  },
+  {
+   "t": 312.48,
+   "text": "That's how TAD boundaries are built."
+  },
+  {
+   "t": 314.68,
+   "text": "What about the chromatin inside the TAD, the dense contact region you see in the Hi-C heatmap?"
+  },
+  {
+   "t": 321.16,
+   "text": "That's the loop itself."
+  },
+  {
+   "t": 322.76,
+   "text": "When cohesin sits at the base of a loop, holding chromatin between two CTCF anchors, the chromatin within the loop is dynamically jostling against itself, occupying the same volume of nuclear space."
+  },
+  {
+   "t": 336.76,
+   "text": "Every region of the loop contacts every other region with higher probability than it would if the loop weren't there."
+  },
+  {
+   "t": 343.78,
+   "text": "That's where the dense contact block of a TAD comes from."
+  },
+  {
+   "t": 346.98,
+   "text": "The \"room\" in the house analogy is, mechanistically, the loop."
+  },
+  {
+   "t": 351.98,
+   "text": "Two important details before we move on."
+  },
+  {
+   "t": 354.62,
+   "text": "First, cohesin loops are dynamic."
+  },
+  {
+   "t": 357.41,
+   "text": "The picture I've been drawing — cohesin stably anchored between two CTCF sites — is an average over a population of cells."
+  },
+  {
+   "t": 365.5,
+   "text": "In any individual cell, the loops are in flux."
+  },
+  {
+   "t": 368.87,
+   "text": "Loops are being extruded, reach their CTCF anchors, sit for a while, get unloaded, and the process restarts."
+  },
+  {
+   "t": 376.86,
+   "text": "The TAD as a static structure is a population average; in any individual cell, the loop structure is dynamic on the time scale of minutes."
+  },
+  {
+   "t": 385.78,
+   "text": "This is why we'll see, in Segment 10, that single-cell Hi-C reveals enormous cell-to-cell variability in loop architecture."
+  },
+  {
+   "t": 395.01,
+   "text": "Second, cohesin is not the only loop-extruding machine in the cell."
+  },
+  {
+   "t": 399.91,
+   "text": "The closely related SMC complex condensin is responsible for compacting chromatin during mitosis — the dramatic 100-fold compaction that produces the X-shaped mitotic chromosomes you see in textbooks."
+  },
+  {
+   "t": 413.76,
+   "text": "Condensin also extrudes loops, but at a different scale and with different anchoring rules."
+  },
+  {
+   "t": 419.71,
+   "text": "We won't dwell on condensin today, but know that the loop-extrusion strategy is used at multiple scales by multiple machines, with cohesin handling interphase TADs and condensin handling mitotic compaction."
+  },
+  {
+   "t": 433.02,
+   "text": "Now let's see how the technology has been refined since the original Hi-C in 2009."
+  },
+  {
+   "t": 438.7,
+   "text": "The next segment is about higher-resolution variants."
+  }
+ ]
+}

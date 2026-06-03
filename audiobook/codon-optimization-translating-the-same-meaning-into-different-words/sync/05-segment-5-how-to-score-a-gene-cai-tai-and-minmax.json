@@ -1,0 +1,207 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — How to score a gene: CAI, tAI, and %MinMax",
+ "duration": 413.49,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — How to score a gene: CAI, tAI, and %MinMax"
+  },
+  {
+   "t": 5.31,
+   "text": "If you want to engineer something, you have to be able to measure it."
+  },
+  {
+   "t": 8.78,
+   "text": "And so the first job of codon optimization, before you can do any actual rewriting, is to put a number on how well-matched a given gene's codons are to a given host's preferences."
+  },
+  {
+   "t": 19.71,
+   "text": "That number is what tells you whether your gene is in the right dialect or the wrong one."
+  },
+  {
+   "t": 24.35,
+   "text": "The classic metric, going back to a 1987 paper by Paul Sharp and Wen-Hsiung Li, is the Codon Adaptation Index, or CAI."
+  },
+  {
+   "t": 33.55,
+   "text": "The CAI is a single number between zero and one that summarizes how closely a gene's codon choices match the codon usage of a reference set of highly-expressed genes from the host organism."
+  },
+  {
+   "t": 46.05,
+   "text": "A CAI of one means the gene uses, at every position, the most preferred codon of the host."
+  },
+  {
+   "t": 52.89,
+   "text": "A CAI close to zero means the gene is using mostly the rare codons."
+  },
+  {
+   "t": 58.39,
+   "text": "Most native host genes sit somewhere in between — usually around 0.6 to 0.8 for typical E. coli genes."
+  },
+  {
+   "t": 67.45,
+   "text": "A foreign gene plopped into E. coli without optimization might score 0.3 or 0.4."
+  },
+  {
+   "t": 75.47,
+   "text": "After optimization, you can push it up to 0.8 or 0.9."
+  },
+  {
+   "t": 80.03,
+   "text": "Here's how the CAI is computed, in case you ever want to do it yourself."
+  },
+  {
+   "t": 84.75,
+   "text": "For each codon in the host organism, you look at all the synonymous codons for the same amino acid in a reference set of highly-expressed host genes, and you ask: of those synonyms, which one is most frequent?"
+  },
+  {
+   "t": 97.74,
+   "text": "You assign that codon a relative adaptiveness of 1.0."
+  },
+  {
+   "t": 102.49,
+   "text": "The other synonyms get scores between zero and one, proportional to how often they're used relative to the most common one."
+  },
+  {
+   "t": 109.85,
+   "text": "So for arginine in E. coli, CGT might get a score of 1.0 because it's the most common, CGC might get 0.9 because it's almost as common, CGA might get 0.1 because it's rare, AGG might get 0.05, and so on."
+  },
+  {
+   "t": 126.65,
+   "text": "Then for your gene, you go codon by codon, look up each codon's score, take the geometric mean across the entire gene, and that's the CAI."
+  },
+  {
+   "t": 136.07,
+   "text": "A higher number means better adaptation."
+  },
+  {
+   "t": 138.95,
+   "text": "A lower number means worse adaptation."
+  },
+  {
+   "t": 141.5,
+   "text": "The CAI is the analogy in numerical form."
+  },
+  {
+   "t": 144.64,
+   "text": "CAI is a score that tells you how much your gene's word choice matches the host's preferred vocabulary."
+  },
+  {
+   "t": 150.38,
+   "text": "A CAI of 0.9 means your gene is reading like a native speaker."
+  },
+  {
+   "t": 155.54,
+   "text": "A CAI of 0.3 means your gene sounds like a tourist with a phrasebook — technically grammatical, but every other word is the wrong choice."
+  },
+  {
+   "t": 164.86,
+   "text": "The host's ribosome can still parse it, but slowly and painfully."
+  },
+  {
+   "t": 169.43,
+   "text": "Now, the CAI has well-known limitations."
+  },
+  {
+   "t": 172.9,
+   "text": "It treats every codon position equally, even though we know that codon choice matters more in some parts of a gene than others — the beginning of a gene, for instance, where translation initiation happens, has its own special constraints we'll talk about."
+  },
+  {
+   "t": 188.64,
+   "text": "The CAI also assumes that codon preferences are well-captured by the frequencies in a reference set, which depends on what reference set you choose."
+  },
+  {
+   "t": 196.57,
+   "text": "Different reference sets give somewhat different CAI values for the same gene."
+  },
+  {
+   "t": 201.01,
+   "text": "And the CAI doesn't directly account for tRNA abundance — it assumes codon frequency in highly-expressed genes is a good proxy for tRNA abundance, which is usually right but not always."
+  },
+  {
+   "t": 214.06,
+   "text": "To address some of those limitations, people developed a refined metric called the tRNA Adaptation Index, or tAI."
+  },
+  {
+   "t": 221.45,
+   "text": "The tAI does the same kind of scoring, but instead of using codon frequencies in highly-expressed genes as the weights, it uses the actual measured abundance of each tRNA in the cell."
+  },
+  {
+   "t": 232.79,
+   "text": "So if you have good data on how many copies of each tRNA the host cell makes, you can build a tAI that directly reflects the speed at which each codon will be decoded."
+  },
+  {
+   "t": 242.78,
+   "text": "The tAI tends to correlate well with the CAI for most organisms, but it can diverge in interesting cases — particularly in organisms where the tRNA pool has been recently rewired by something like a horizontally transferred gene."
+  },
+  {
+   "t": 256.74,
+   "text": "There's a third metric I want you to know about, because it captures something both CAI and tAI miss."
+  },
+  {
+   "t": 262.16,
+   "text": "It's called %MinMax, and it was developed by Lila Gierasch's group and colleagues in the 2000s."
+  },
+  {
+   "t": 268.9,
+   "text": "The %MinMax metric scans along the gene in a sliding window — typically about seventeen codons wide — and at each position, asks: of the local codons in this window, are they at the high end, the low end, or the middle of what's typical for the host?"
+  },
+  {
+   "t": 285.65,
+   "text": "The output is a profile along the length of the gene, showing where translation is locally fast versus locally slow."
+  },
+  {
+   "t": 292.86,
+   "text": "Why does the profile matter?"
+  },
+  {
+   "t": 294.46,
+   "text": "Because, as I mentioned, the cell uses local slowdowns deliberately to control the timing of protein folding."
+  },
+  {
+   "t": 301.87,
+   "text": "The shape of the %MinMax profile — where the fast regions are, where the slow regions are, how those regions are arranged with respect to protein domains — turns out to carry real biological information."
+  },
+  {
+   "t": 314.37,
+   "text": "A gene that has the right total codon usage but the wrong profile can fold incorrectly even if the total codon usage looks fine."
+  },
+  {
+   "t": 322.42,
+   "text": "So the %MinMax metric captures something that the CAI, which is a single number across the whole gene, completely misses."
+  },
+  {
+   "t": 330.21,
+   "text": "There are a few other metrics floating around — the frequency of optimal codons or FOP, the codon bias index or CBI, the effective number of codons or Nc, and a handful of others — but for our purposes, the three I've named are the ones you'll see cited most often, and they capture the three main flavors of measurement: how closely the gene matches typical codon frequencies (CAI), how well it matches the actual tRNA pool (tAI), and how the codon choices are distributed along the length of the"
+  },
+  {
+   "t": 362.34,
+   "text": "gene (%MinMax)."
+  },
+  {
+   "t": 364.34,
+   "text": "When a modern codon optimizer is designing a sequence, it usually optimizes against a weighted combination of these metrics, plus a bunch of secondary constraints we'll get to — avoiding restriction sites, balancing GC content, removing problematic secondary structures, and so on."
+  },
+  {
+   "t": 381.97,
+   "text": "The goal isn't to maximize any one metric in isolation."
+  },
+  {
+   "t": 385.61,
+   "text": "The goal is to land in a sweet spot where the codon usage is good, the local profile is sensible, the GC content is appropriate, and a handful of other constraints are satisfied."
+  },
+  {
+   "t": 396.45,
+   "text": "It's a multi-objective optimization problem, and we'll see in Segment 16 and 17 that the modern commercial tools handle it with surprising sophistication."
+  },
+  {
+   "t": 406.71,
+   "text": "But before we get to the tools, we should walk through the classic case study that started the whole field."
+  },
+  {
+   "t": 412.17,
+   "text": "That's our next segment."
+  }
+ ]
+}

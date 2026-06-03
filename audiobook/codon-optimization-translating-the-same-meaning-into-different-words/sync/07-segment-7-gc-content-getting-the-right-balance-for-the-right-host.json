@@ -1,0 +1,191 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — GC content: getting the right balance for the right host",
+ "duration": 344.18,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — GC content: getting the right balance for the right host"
+  },
+  {
+   "t": 5.16,
+   "text": "Beyond codon usage proper, there's a second layer of constraint that any optimizer has to handle: GC content."
+  },
+  {
+   "t": 12.9,
+   "text": "The fraction of your DNA that's G or C, as opposed to A or T."
+  },
+  {
+   "t": 18.36,
+   "text": "It sounds like a boring statistical property, but it matters enormously, and it interacts with codon choice in tricky ways."
+  },
+  {
+   "t": 26.15,
+   "text": "Different organisms have different characteristic genome-wide GC content."
+  },
+  {
+   "t": 31.43,
+   "text": "E. coli sits around fifty percent."
+  },
+  {
+   "t": 34.23,
+   "text": "Streptomyces, a soil bacterium used industrially, is around seventy percent."
+  },
+  {
+   "t": 40.6,
+   "text": "Mycoplasma, a tiny parasitic bacterium, is around thirty percent."
+  },
+  {
+   "t": 46.02,
+   "text": "Plasmodium, the malaria parasite, is around twenty percent."
+  },
+  {
+   "t": 50.52,
+   "text": "Humans average forty-one percent, but there's enormous variation across the genome — some regions are sixty percent or higher, others are thirty-five percent."
+  },
+  {
+   "t": 60.55,
+   "text": "CHO cells, yeast, plants, every host has its own characteristic distribution."
+  },
+  {
+   "t": 66.75,
+   "text": "When you optimize a gene for a host, you want the gene's GC content to fall somewhere in the host's normal range."
+  },
+  {
+   "t": 74.06,
+   "text": "If it's way too high or way too low compared to the host's average, you can get into trouble for several reasons."
+  },
+  {
+   "t": 80.39,
+   "text": "Very high GC content can cause the mRNA to form excessively stable secondary structures that block ribosome movement."
+  },
+  {
+   "t": 88.95,
+   "text": "It can also cause problems for the DNA polymerase trying to replicate the plasmid in the host, because GC-rich regions can stall replication."
+  },
+  {
+   "t": 97.36,
+   "text": "Very low GC content has its own problems — it tends to come with weak codon usage and can be associated with mRNA degradation pathways."
+  },
+  {
+   "t": 106.54,
+   "text": "But there's a subtlety beyond just hitting the average."
+  },
+  {
+   "t": 110.15,
+   "text": "You also care about the local GC content profile along the gene."
+  },
+  {
+   "t": 114.75,
+   "text": "A gene that averages fifty percent GC content overall but has a stretch of forty bases that's eighty-five percent GC followed by another stretch that's twenty percent GC will behave very differently from a gene that's evenly fifty percent throughout."
+  },
+  {
+   "t": 130.43,
+   "text": "The local extremes matter."
+  },
+  {
+   "t": 132.19,
+   "text": "Particularly important are what people call GC valleys — long stretches of unusually low GC content — and GC peaks — long stretches of unusually high GC content."
+  },
+  {
+   "t": 144.4,
+   "text": "GC valleys can be problematic because they tend to form weak DNA-DNA hybridization, which can affect cloning, mRNA stability, and ribosome binding."
+  },
+  {
+   "t": 153.99,
+   "text": "GC peaks can be problematic because they form strong RNA secondary structures and they can also be hard to PCR-amplify, which matters if you're going to do downstream manipulation on the gene."
+  },
+  {
+   "t": 166.28,
+   "text": "A good codon optimizer scans the optimized sequence for these local extremes and breaks them up by choosing slightly different synonymous codons in those regions."
+  },
+  {
+   "t": 176.61,
+   "text": "The goal is to have a smooth, evenly distributed GC content rather than a peaks-and-valleys profile."
+  },
+  {
+   "t": 182.91,
+   "text": "The local GC content should hover around the host's typical value, plus or minus maybe ten percentage points, all along the gene's length."
+  },
+  {
+   "t": 192.15,
+   "text": "There's an analogy I like for this."
+  },
+  {
+   "t": 194.09,
+   "text": "Imagine you're writing an article and you're told that the average word length in the article should be around five letters."
+  },
+  {
+   "t": 200.97,
+   "text": "You could achieve that average by writing every word with exactly five letters — but that would be incredibly stilted and unnatural."
+  },
+  {
+   "t": 209.03,
+   "text": "You could also achieve it by writing some one-letter words and some twenty-letter words and averaging it out — but that would be a roller coaster of difficulty for the reader."
+  },
+  {
+   "t": 218.38,
+   "text": "The goal is to land near the average everywhere, with natural variation."
+  },
+  {
+   "t": 222.88,
+   "text": "Local GC content optimization is the same — you want your gene to look statistically natural at every scale, not just on average."
+  },
+  {
+   "t": 231.72,
+   "text": "A gene that's smoothly at fifty percent GC throughout looks natural."
+  },
+  {
+   "t": 236.75,
+   "text": "A gene that averages fifty percent by alternating between eighty and twenty looks suspicious to every cellular machinery that touches it."
+  },
+  {
+   "t": 246.0,
+   "text": "For hosts at the extremes — very high or very low GC — codon optimization sometimes has to make harder choices."
+  },
+  {
+   "t": 254.88,
+   "text": "If you're trying to express a gene in Streptomyces, which is around seventy percent GC, you essentially have to pick the GC-richest synonyms at almost every position, because the host's preferred codons all happen to be GC-rich."
+  },
+  {
+   "t": 269.34,
+   "text": "Conversely, for very low-GC hosts like Plasmodium, you have to pick A-rich and T-rich synonyms."
+  },
+  {
+   "t": 276.37,
+   "text": "These extreme cases produce optimized genes that look very different from genes optimized for a moderate-GC host like E. coli."
+  },
+  {
+   "t": 284.42,
+   "text": "There's one more wrinkle worth mentioning before we move on."
+  },
+  {
+   "t": 287.89,
+   "text": "The third position of each codon, the wobble position, has a much bigger effect on GC content than the first or second positions, because the third position is where most of the synonymous variation lives."
+  },
+  {
+   "t": 300.74,
+   "text": "So codon choice is essentially a way to tune GC content within the constraint of preserving the protein sequence."
+  },
+  {
+   "t": 308.42,
+   "text": "A clever optimizer can hit a target GC content very precisely just by playing with third-position choices, without changing the amino acid sequence at all."
+  },
+  {
+   "t": 318.49,
+   "text": "GC content is one of those constraints that doesn't usually drive the optimization on its own, but if you ignore it, you can end up with a gene that has perfect codon usage and a beautiful CAI but still fails to express because the GC content is wrong."
+  },
+  {
+   "t": 334.08,
+   "text": "It's a sanity check that needs to be in every workflow."
+  },
+  {
+   "t": 337.69,
+   "text": "Speaking of sanity checks — the next thing to scan for is restriction sites."
+  },
+  {
+   "t": 342.86,
+   "text": "That's our next segment."
+  }
+ ]
+}

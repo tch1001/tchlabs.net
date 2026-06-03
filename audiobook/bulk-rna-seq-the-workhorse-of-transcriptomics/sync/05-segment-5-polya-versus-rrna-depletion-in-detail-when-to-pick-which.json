@@ -1,0 +1,203 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — PolyA versus rRNA depletion in detail — when to pick which",
+ "duration": 394.09,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — PolyA versus rRNA depletion in detail — when to pick which"
+  },
+  {
+   "t": 6.09,
+   "text": "I want to spend a full segment on the polyA-versus-rRNA-depletion choice, because it's the single most consequential decision in your experiment design, and people get it wrong all the time."
+  },
+  {
+   "t": 16.56,
+   "text": "Get it wrong, and you've spent thousands of dollars on data that can't answer the question you cared about."
+  },
+  {
+   "t": 21.76,
+   "text": "Get it right, and you've optimized your sequencing dollar for the biology you actually want to see."
+  },
+  {
+   "t": 26.88,
+   "text": "Let me set up the trade space concretely."
+  },
+  {
+   "t": 29.23,
+   "text": "In a typical eukaryotic cell, the RNA composition by mass is roughly: 80% ribosomal RNA, 10% transfer RNA, 5-10% messenger RNA, 1-2% small nuclear RNAs and other small species, and less than 1% long non-coding RNA."
+  },
+  {
+   "t": 48.55,
+   "text": "So if you just sequence total RNA without enrichment, 80% of your reads go to rRNA, 10% to tRNA, and only the remaining 10% to everything else — mRNAs, lncRNAs, the things you probably care about."
+  },
+  {
+   "t": 63.88,
+   "text": "Sequencing is paid per read."
+  },
+  {
+   "t": 66.11,
+   "text": "You're paying ninety cents of every dollar to sequence things that have nothing to do with your biological question."
+  },
+  {
+   "t": 72.79,
+   "text": "Poly-A selection solves this by pulling out only the molecules with a poly-A tail."
+  },
+  {
+   "t": 78.36,
+   "text": "In eukaryotes, mature mRNAs are poly-adenylated as part of normal processing — the cell adds the poly-A tail in the nucleus before exporting the mRNA to the cytoplasm."
+  },
+  {
+   "t": 90.42,
+   "text": "So poly-A selection pulls out, predominantly, mature processed mRNAs."
+  },
+  {
+   "t": 96.55,
+   "text": "The yield of poly-A-selected RNA is typically about 2-5% of total RNA."
+  },
+  {
+   "t": 102.65,
+   "text": "The composition of that yield is roughly 95% mRNA, 2-3% rRNA (which sneaks through despite the selection), and trace amounts of lncRNAs (because some lncRNAs are also poly-adenylated)."
+  },
+  {
+   "t": 117.0,
+   "text": "After poly-A selection, your library is overwhelmingly mRNA."
+  },
+  {
+   "t": 122.03,
+   "text": "That's exactly what you want for measuring gene expression."
+  },
+  {
+   "t": 125.11,
+   "text": "Sequencing this library at, say, 30 million reads per sample means almost all 30 million reads are informative about mRNA abundance."
+  },
+  {
+   "t": 135.05,
+   "text": "rRNA depletion takes a different approach."
+  },
+  {
+   "t": 137.91,
+   "text": "Instead of pulling out the molecules you want, you specifically remove the molecules you don't want."
+  },
+  {
+   "t": 143.81,
+   "text": "You take total RNA, hybridize it to a set of probes that are complementary to ribosomal RNA sequences — and to mitochondrial rRNA, and sometimes to globin mRNA if you're working with blood — and pull the rRNA out, either by attaching the probes to magnetic beads and pulling them with a magnet, or by degrading the rRNA enzymatically with RNase H, which specifically cleaves RNA-DNA hybrids."
+  },
+  {
+   "t": 170.91,
+   "text": "After rRNA depletion, what's left is everything except rRNA: mRNA, lncRNAs, pre-mRNAs, antisense RNAs, small nucleolar RNAs, mitochondrial mRNAs, and any non-poly-adenylated transcripts your cells happen to make."
+  },
+  {
+   "t": 187.94,
+   "text": "Here's when each is the right choice."
+  },
+  {
+   "t": 190.21,
+   "text": "Use poly-A selection if: you only care about mature mRNA, your RNA is high-quality (RIN above seven), your organism is a standard eukaryote with poly-A tails (most animals, plants, fungi), and you want the cheapest, simplest, most reproducible library prep."
+  },
+  {
+   "t": 208.38,
+   "text": "This is the default for routine differential expression experiments."
+  },
+  {
+   "t": 212.57,
+   "text": "If somebody says \"I want to know which genes are up or down between condition A and condition B,\" poly-A is almost always the right answer."
+  },
+  {
+   "t": 220.8,
+   "text": "Use rRNA depletion if: you want to see lncRNAs, which are increasingly important in disease biology and often poorly poly-adenylated; you want to see pre-mRNAs and intronic signals, which is useful for measuring transcription rates; you're working with bacteria, which don't have poly-A tails at all; you're working with FFPE samples, where the RNA is degraded and the poly-A tails are often gone, breaking poly-A selection; or you specifically want to see mitochondrial RNA, which is not always"
+  },
+  {
+   "t": 251.65,
+   "text": "efficiently poly-adenylated."
+  },
+  {
+   "t": 253.66,
+   "text": "rRNA depletion is also the right choice if you want to compare RNA-seq results to other genomic data types that capture nascent transcription, like GRO-seq or PRO-seq, where intronic signal matters."
+  },
+  {
+   "t": 266.46,
+   "text": "One more practical detail."
+  },
+  {
+   "t": 268.2,
+   "text": "Both methods leave behind some rRNA contamination — typically a few percent of total reads end up being rRNA, even after enrichment or depletion."
+  },
+  {
+   "t": 278.98,
+   "text": "You should always include an rRNA QC check in your post-alignment analysis."
+  },
+  {
+   "t": 284.58,
+   "text": "A library with thirty percent rRNA reads is broken."
+  },
+  {
+   "t": 288.67,
+   "text": "A library with three percent rRNA reads is fine."
+  },
+  {
+   "t": 292.45,
+   "text": "A note on bacteria, which I'll come back to occasionally."
+  },
+  {
+   "t": 295.95,
+   "text": "Bacterial mRNAs do not have poly-A tails."
+  },
+  {
+   "t": 299.67,
+   "text": "So poly-A selection does not work for bacterial RNA-seq."
+  },
+  {
+   "t": 303.89,
+   "text": "You must use rRNA depletion."
+  },
+  {
+   "t": 306.22,
+   "text": "Commercial kits exist for this — Illumina's Ribo-Zero Plus has bacterial probe sets, and Qiagen's QIAseq FastSelect has bacterial options."
+  },
+  {
+   "t": 315.24,
+   "text": "Bacterial RNA-seq is a smaller but important sub-field; if you're doing it, plan for rRNA depletion from the start."
+  },
+  {
+   "t": 322.93,
+   "text": "A note on FFPE — formalin-fixed paraffin-embedded — samples, which are the standard archived material in pathology."
+  },
+  {
+   "t": 331.18,
+   "text": "Pathologists embed tumor samples in paraffin wax after fixation in formalin, and they keep these blocks for years, sometimes decades."
+  },
+  {
+   "t": 340.48,
+   "text": "The RNA in FFPE samples is heavily degraded — the formalin chemistry cross-links the RNA, and time fragments it further."
+  },
+  {
+   "t": 349.43,
+   "text": "The poly-A tails are usually shortened or gone."
+  },
+  {
+   "t": 352.5,
+   "text": "So you cannot use standard poly-A selection on FFPE RNA."
+  },
+  {
+   "t": 357.39,
+   "text": "Modern FFPE-specific kits use rRNA depletion combined with specialized library preps that work with very short, fragmented input RNA."
+  },
+  {
+   "t": 366.9,
+   "text": "This is how clinical labs do RNA-seq on archived tumor samples — including the millions of samples in pathology archives that nobody knew you'd want to sequence when they were collected."
+  },
+  {
+   "t": 378.34,
+   "text": "The headline of this segment: the polyA-versus-rRNA-depletion choice is about whether you want mature mRNAs only, or everything except ribosomes."
+  },
+  {
+   "t": 387.69,
+   "text": "It's the single most important decision in your library prep."
+  },
+  {
+   "t": 391.39,
+   "text": "Get it right at the start; you can't go back."
+  }
+ ]
+}

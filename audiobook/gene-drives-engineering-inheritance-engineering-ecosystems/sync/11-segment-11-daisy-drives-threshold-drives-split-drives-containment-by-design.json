@@ -1,0 +1,283 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Daisy drives, threshold drives, split drives: containment by design",
+ "duration": 418.31,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Daisy drives, threshold drives, split drives: containment by design"
+  },
+  {
+   "t": 6.12,
+   "text": "Here is the discomfort."
+  },
+  {
+   "t": 7.85,
+   "text": "A standard CRISPR gene drive, once released, has no obvious stopping point."
+  },
+  {
+   "t": 12.86,
+   "text": "The math says it will spread until it hits a barrier — geographic, behavioral, or genetic."
+  },
+  {
+   "t": 18.45,
+   "text": "For a mosquito species like Anopheles gambiae, which is interconnected across most of sub-Saharan Africa, there is no clean barrier."
+  },
+  {
+   "t": 27.62,
+   "text": "A drive released in Burkina Faso would, in principle, spread to Mali, to Mozambique, to Sudan, and eventually to every country where Anopheles gambiae lives."
+  },
+  {
+   "t": 38.4,
+   "text": "That fact troubles a lot of people."
+  },
+  {
+   "t": 40.64,
+   "text": "It troubles regulators, it troubles ecologists, and it should trouble us."
+  },
+  {
+   "t": 45.66,
+   "text": "So the field has spent the last decade designing drives that deliberately self-limit."
+  },
+  {
+   "t": 51.19,
+   "text": "There are several architectures, each with different tradeoffs."
+  },
+  {
+   "t": 55.04,
+   "text": "Let me walk you through three: daisy drives, threshold drives, and split drives."
+  },
+  {
+   "t": 60.76,
+   "text": "The first one, the cleverest, is the daisy drive, proposed by Kevin Esvelt and colleagues in a series of papers starting in 2016."
+  },
+  {
+   "t": 69.42,
+   "text": "A daisy drive splits the standard gene drive into multiple linked elements, arranged in a chain."
+  },
+  {
+   "t": 76.16,
+   "text": "Element A is the cargo and the guide RNA targeting the natural locus."
+  },
+  {
+   "t": 82.14,
+   "text": "Element B contains the guide RNA targeting Element A."
+  },
+  {
+   "t": 86.76,
+   "text": "Element C contains the guide RNA targeting Element B."
+  },
+  {
+   "t": 91.54,
+   "text": "And so on, up the chain."
+  },
+  {
+   "t": 92.94,
+   "text": "Each element drives the one below it but is itself only inherited at Mendelian rates, because nothing is driving it."
+  },
+  {
+   "t": 100.79,
+   "text": "So picture what happens after a release."
+  },
+  {
+   "t": 103.25,
+   "text": "Element C, at the top, is inherited at fifty percent — it is not being driven."
+  },
+  {
+   "t": 109.35,
+   "text": "So it dilutes generation by generation, until it is gone."
+  },
+  {
+   "t": 113.4,
+   "text": "While it is present, it is driving Element B into one hundred percent of the offspring of its carriers."
+  },
+  {
+   "t": 120.42,
+   "text": "Element B, while supported by C, persists at high frequency."
+  },
+  {
+   "t": 125.35,
+   "text": "But once C dilutes out, B is no longer driven, and it too dilutes out."
+  },
+  {
+   "t": 130.19,
+   "text": "Once B is gone, A is no longer driven, and A also dilutes out."
+  },
+  {
+   "t": 134.8,
+   "text": "The chain falls apart from the top down."
+  },
+  {
+   "t": 137.12,
+   "text": "The drive spreads to a region for some predictable number of generations, then naturally extinguishes itself."
+  },
+  {
+   "t": 144.39,
+   "text": "Daisy drives are an elegant solution to the \"stop\" problem."
+  },
+  {
+   "t": 147.91,
+   "text": "The longer the chain — that is, the more elements you stack — the longer the drive persists before extinguishing."
+  },
+  {
+   "t": 154.99,
+   "text": "A two-element daisy fades fast."
+  },
+  {
+   "t": 157.71,
+   "text": "A four-element daisy persists for many generations."
+  },
+  {
+   "t": 161.51,
+   "text": "You can tune the persistence by tuning the chain length."
+  },
+  {
+   "t": 164.68,
+   "text": "And critically, because the top element is only inherited at Mendelian rates, it cannot spread beyond its initial release zone — it dilutes geographically as well as temporally."
+  },
+  {
+   "t": 176.45,
+   "text": "A daisy drive is, in principle, geographically and temporally bounded by its own architecture."
+  },
+  {
+   "t": 183.01,
+   "text": "The catch is that daisy drives are harder to build."
+  },
+  {
+   "t": 185.91,
+   "text": "You need multiple genomic locations, each with its own cargo, each precisely engineered."
+  },
+  {
+   "t": 192.32,
+   "text": "The fitness costs are not negligible."
+  },
+  {
+   "t": 194.93,
+   "text": "And the math gets complicated when you start asking about real population structure, migration, and stochastic loss."
+  },
+  {
+   "t": 202.19,
+   "text": "As of 2026, daisy drives have been demonstrated in fruit flies and yeast as proofs of concept, but no daisy drive has been brought to the level of a malaria-mosquito field-trial candidate."
+  },
+  {
+   "t": 214.25,
+   "text": "The architecture is promising but not yet deployable."
+  },
+  {
+   "t": 217.9,
+   "text": "The second architecture is the threshold drive, sometimes called an underdominance drive."
+  },
+  {
+   "t": 223.36,
+   "text": "The idea is to design a drive that only spreads when its initial release frequency exceeds some threshold — say, twenty or thirty percent of the local population."
+  },
+  {
+   "t": 234.64,
+   "text": "Below that threshold, the drive is selected against (because heterozygotes have reduced fitness) and dies out."
+  },
+  {
+   "t": 241.7,
+   "text": "Above the threshold, the drive is selected for (because the drive-carrying genotypes win the genetic competition) and goes to fixation."
+  },
+  {
+   "t": 250.05,
+   "text": "The behavioral consequence is intuition-friendly: the drive is locally bounded because, as it spreads to a new area via migration, the migrants arrive at low frequency in the new population."
+  },
+  {
+   "t": 262.69,
+   "text": "Low frequency means below threshold, which means selection against."
+  },
+  {
+   "t": 267.96,
+   "text": "The drive cannot establish in a new region just by a few mosquitoes flying in."
+  },
+  {
+   "t": 273.51,
+   "text": "You need a large coordinated release to push the local frequency above threshold, which means deployment is intentional and controllable."
+  },
+  {
+   "t": 282.77,
+   "text": "Threshold drives existed as a theoretical concept before CRISPR."
+  },
+  {
+   "t": 288.06,
+   "text": "They have been demonstrated in caged Drosophila populations using various molecular implementations."
+  },
+  {
+   "t": 294.69,
+   "text": "The math is well worked out."
+  },
+  {
+   "t": 296.42,
+   "text": "The main drawback is that they require massive releases — far more than a standard drive — to clear the threshold, which makes them more expensive to deploy."
+  },
+  {
+   "t": 305.5,
+   "text": "But the containment property is valuable: a threshold drive cannot accidentally spread."
+  },
+  {
+   "t": 311.91,
+   "text": "The third architecture is the split drive."
+  },
+  {
+   "t": 314.72,
+   "text": "The idea here is that the standard drive cassette contains both the Cas9 gene and the guide RNA, integrated at the target locus."
+  },
+  {
+   "t": 323.14,
+   "text": "In a split drive, you put the Cas9 gene at one genomic location and the guide RNA at a different location."
+  },
+  {
+   "t": 330.25,
+   "text": "The Cas9 element is inherited at Mendelian rates — fifty percent — because nothing is driving it."
+  },
+  {
+   "t": 337.15,
+   "text": "The guide-RNA element drives itself into homozygosity, but only in the presence of Cas9."
+  },
+  {
+   "t": 343.86,
+   "text": "So the system spreads only as long as both pieces are present."
+  },
+  {
+   "t": 347.82,
+   "text": "As soon as Cas9 dilutes out by Mendelian inheritance, the guide RNA stops being driven, and it also fades."
+  },
+  {
+   "t": 355.62,
+   "text": "Split drives are essentially a two-component daisy with a chain length of two."
+  },
+  {
+   "t": 360.09,
+   "text": "They are simpler to build than full daisy drives, but they self-limit less aggressively — they spread further before extinguishing."
+  },
+  {
+   "t": 368.07,
+   "text": "Split drives have been used as research tools for studying drive behavior in the lab, where the goal is to limit the drive's spread for safety."
+  },
+  {
+   "t": 376.64,
+   "text": "Several groups have demonstrated split-drive variants in fruit flies and mosquitoes."
+  },
+  {
+   "t": 382.84,
+   "text": "So those are three architectures for self-limiting drives: daisy, threshold, split."
+  },
+  {
+   "t": 388.92,
+   "text": "Each represents a different point on the tradeoff curve between how aggressively the drive spreads and how well it can be contained."
+  },
+  {
+   "t": 396.3,
+   "text": "The full-bore standard drive is at one extreme: maximally aggressive, minimally contained."
+  },
+  {
+   "t": 402.54,
+   "text": "A small Mendelian release is at the other extreme: not a drive at all, fully contained."
+  },
+  {
+   "t": 408.15,
+   "text": "The self-limiting drives sit somewhere in between, and the field is actively exploring where on that curve the right design lives for any given application."
+  }
+ ]
+}

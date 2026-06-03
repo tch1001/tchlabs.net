@@ -1,0 +1,95 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — High-throughput screens and PEGE: characterizing prime editing at scale",
+ "duration": 168.95,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — High-throughput screens and PEGE: characterizing prime editing at scale"
+  },
+  {
+   "t": 7.06,
+   "text": "How do you know which pegRNA designs work and which don't?"
+  },
+  {
+   "t": 10.72,
+   "text": "You test them."
+  },
+  {
+   "t": 11.74,
+   "text": "But testing one at a time is slow."
+  },
+  {
+   "t": 13.9,
+   "text": "The field has developed several high-throughput approaches for screening prime editing at scale."
+  },
+  {
+   "t": 19.62,
+   "text": "The general idea: instead of testing pegRNAs one by one, design a library of thousands of pegRNAs, deliver them all together to a population of cells, and use sequencing to read out both which pegRNA each cell received and what edit was actually installed."
+  },
+  {
+   "t": 35.41,
+   "text": "This way you can characterize thousands of pegRNA designs in a single experiment, and you can build training data for the design and prediction tools we just discussed."
+  },
+  {
+   "t": 45.5,
+   "text": "PEGE — Prime Editing Guide RNA Engineering by high-throughput screens — and various variants of this idea have been used by several groups."
+  },
+  {
+   "t": 54.67,
+   "text": "The most influential implementation came from the Liu lab and several collaborators."
+  },
+  {
+   "t": 60.05,
+   "text": "The setup: build a synthetic library of paired pegRNAs and matched target sites in a single piece of DNA — so each library member contains both the guide and the sequence it's supposed to edit."
+  },
+  {
+   "t": 71.99,
+   "text": "Integrate the library into cells."
+  },
+  {
+   "t": 74.67,
+   "text": "Express the prime editor."
+  },
+  {
+   "t": 76.42,
+   "text": "Sequence the targets afterward to see which library members got edited and at what efficiency."
+  },
+  {
+   "t": 82.34,
+   "text": "This approach has now characterized hundreds of thousands of pegRNA-target pairs, and it's the data backbone of the machine learning efficiency predictors I just mentioned."
+  },
+  {
+   "t": 92.04,
+   "text": "The principle is simple."
+  },
+  {
+   "t": 93.56,
+   "text": "The execution is sophisticated."
+  },
+  {
+   "t": 96.17,
+   "text": "The output is a quantitative map of prime editing efficiency across sequence space."
+  },
+  {
+   "t": 102.09,
+   "text": "A related approach is base-paired screens, where you can compare base editing efficiency and prime editing efficiency head-to-head at the same sites, with the same delivery, in the same cells — generating a direct comparison of which sites favor which tool."
+  },
+  {
+   "t": 118.09,
+   "text": "These comparative datasets are valuable for telling you, for any given edit you want to install, whether base editing or prime editing is the better starting point."
+  },
+  {
+   "t": 127.56,
+   "text": "The screens also illuminate which features of the pegRNA matter most."
+  },
+  {
+   "t": 132.26,
+   "text": "The findings, in broad strokes: PBS length matters, with an optimal range around 11-13 nucleotides; RT template length matters, with shorter templates generally working better than longer; spacer activity matters, just like ordinary Cas9; the local sequence context matters, particularly the bases immediately surrounding the nick site; and the secondary structure of the pegRNA matters, with structures that block the PBS or the RT template severely impairing editing."
+  },
+  {
+   "t": 163.82,
+   "text": "These design rules, distilled from screen data, are what the prediction tools have learned."
+  }
+ ]
+}

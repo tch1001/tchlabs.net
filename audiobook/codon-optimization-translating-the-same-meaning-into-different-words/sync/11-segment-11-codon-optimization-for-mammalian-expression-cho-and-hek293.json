@@ -1,0 +1,191 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Codon optimization for mammalian expression: CHO and HEK293",
+ "duration": 433.89,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Codon optimization for mammalian expression: CHO and HEK293"
+  },
+  {
+   "t": 7.69,
+   "text": "When you move from bacteria to mammalian cells as your expression host, the rules of codon optimization change."
+  },
+  {
+   "t": 15.09,
+   "text": "The principles are the same — you still want your gene's codons to match the host's preferences, you still want to manage GC content, you still want to avoid problematic sequences — but the specific preferences are different, the kinds of pitfalls are different, and the goals of optimization are often different."
+  },
+  {
+   "t": 32.64,
+   "text": "The two main mammalian expression hosts you'll encounter are CHO cells — Chinese hamster ovary cells, the workhorse of the biopharma industry for making therapeutic antibodies and recombinant proteins — and HEK293 cells, derived from human embryonic kidney, which are used heavily in research and in the production of recombinant viruses for gene therapy."
+  },
+  {
+   "t": 55.4,
+   "text": "CHO cells make most of the monoclonal antibodies on the market today."
+  },
+  {
+   "t": 60.3,
+   "text": "If you've ever taken a biologic drug — Humira, Keytruda, Rituxan, anything with a generic name ending in \"-mab\" — it was very likely made in CHO cells in a giant stainless steel bioreactor."
+  },
+  {
+   "t": 72.99,
+   "text": "The codon usage of these cells is similar to human, because Chinese hamsters are mammals and mammals have broadly similar codon preferences, but it's not identical."
+  },
+  {
+   "t": 83.54,
+   "text": "There are CHO-specific codon usage tables, derived from sequencing CHO-expressed genes, that differ subtly from human tables and that the optimization tools incorporate."
+  },
+  {
+   "t": 94.81,
+   "text": "HEK293 cells are used for things like producing adeno-associated virus vectors for gene therapy, where the AAV particle is made by transfecting HEK293 cells with several plasmids and letting them assemble virions."
+  },
+  {
+   "t": 110.51,
+   "text": "They're also used in research labs for fast, easy expression of mammalian proteins."
+  },
+  {
+   "t": 116.33,
+   "text": "The codon usage is the human pattern."
+  },
+  {
+   "t": 118.92,
+   "text": "Some specific things change when you optimize for mammalian rather than bacterial cells."
+  },
+  {
+   "t": 124.44,
+   "text": "First, GC content tends to be higher."
+  },
+  {
+   "t": 127.47,
+   "text": "Mammalian genes typically have GC content around forty to fifty percent on average, with high-expression genes often pushing toward fifty-five or sixty percent."
+  },
+  {
+   "t": 138.72,
+   "text": "So an optimized gene for CHO or HEK293 will look more GC-rich than an optimized gene for E. coli."
+  },
+  {
+   "t": 147.55,
+   "text": "Second, internal Shine-Dalgarno sequences don't matter, because mammalian ribosomes don't use that mechanism for initiation."
+  },
+  {
+   "t": 155.84,
+   "text": "Instead, eukaryotic mRNAs initiate translation by scanning from the 5' cap, which means there's a different set of constraints — particularly around the structure of the 5' untranslated region, the presence of the Kozak sequence around the start codon (the eukaryotic equivalent of Shine-Dalgarno), and the absence of upstream open reading frames that could distract the ribosome before it reaches the real start."
+  },
+  {
+   "t": 181.14,
+   "text": "Third, splicing matters."
+  },
+  {
+   "t": 183.2,
+   "text": "Mammalian genes are usually transcribed as long pre-mRNAs that have introns spliced out before they're translated."
+  },
+  {
+   "t": 190.68,
+   "text": "The splicing machinery recognizes specific sequence motifs — splice donors, splice acceptors, branch points, exonic splicing enhancers."
+  },
+  {
+   "t": 200.54,
+   "text": "If your codon-optimized gene accidentally creates a sequence that looks like a cryptic splice site, the mammalian splicing machinery might cut your mRNA in half, removing a chunk in the middle."
+  },
+  {
+   "t": 212.85,
+   "text": "The optimized protein then becomes a truncated, non-functional fragment."
+  },
+  {
+   "t": 218.01,
+   "text": "Optimizers for mammalian cells scan for cryptic splice sites and break them up, the same way they handle restriction sites."
+  },
+  {
+   "t": 226.39,
+   "text": "Fourth, mRNA stability matters more."
+  },
+  {
+   "t": 230.03,
+   "text": "Mammalian mRNAs are typically longer-lived than bacterial mRNAs — they can persist for hours rather than minutes — and stability is influenced by sequences in the mRNA."
+  },
+  {
+   "t": 240.96,
+   "text": "There are stability-determining motifs called AU-rich elements, miRNA target sites, and others, that can affect how long the mRNA persists."
+  },
+  {
+   "t": 250.72,
+   "text": "Codon optimization for mammalian expression sometimes includes scanning for and avoiding destabilizing motifs."
+  },
+  {
+   "t": 259.23,
+   "text": "Fifth, and this is a big one, post-translational modifications."
+  },
+  {
+   "t": 263.64,
+   "text": "Mammalian cells perform a huge variety of modifications on their proteins — glycosylation, phosphorylation, disulfide bond formation, proteolytic processing — and these modifications are often essential for the protein to function."
+  },
+  {
+   "t": 277.94,
+   "text": "The codon optimization doesn't directly affect the modifications, but it does affect the rate at which the protein is produced, and a too-fast production rate can overwhelm the cell's modification machinery."
+  },
+  {
+   "t": 290.62,
+   "text": "A protein that's churned out at maximum speed sometimes ends up with incomplete glycosylation or improperly formed disulfide bonds, even if the amino acid sequence is fine."
+  },
+  {
+   "t": 301.88,
+   "text": "So for mammalian expression, there's often a deliberate choice to not push codon optimization to the extreme."
+  },
+  {
+   "t": 308.54,
+   "text": "You want fast enough production to get a useful yield, but not so fast that the modification machinery can't keep up."
+  },
+  {
+   "t": 315.85,
+   "text": "This is one of those engineering trade-offs that the simple \"more is better\" view of optimization misses."
+  },
+  {
+   "t": 322.55,
+   "text": "For the production of therapeutic antibodies in CHO cells specifically, codon optimization has become very sophisticated over the last twenty years."
+  },
+  {
+   "t": 332.68,
+   "text": "The major biopharma companies have proprietary in-house tools that incorporate CHO-specific codon usage tables, CHO-specific cryptic splice site avoidance, CHO-specific mRNA stability rules, and a bunch of empirical adjustments learned from production data."
+  },
+  {
+   "t": 348.67,
+   "text": "Some of these tools take into account not just the codon usage of CHO in general, but the codon usage of the specific CHO clone used in production, which can differ from one industrial CHO line to another."
+  },
+  {
+   "t": 361.48,
+   "text": "The level of customization has gotten very fine-grained."
+  },
+  {
+   "t": 364.8,
+   "text": "The result is that, for a modern therapeutic antibody, the DNA sequence that's actually being expressed in the production cell line typically bears almost no resemblance to the original DNA sequence of the antibody gene as it existed in the B cell that produced it."
+  },
+  {
+   "t": 381.15,
+   "text": "The protein is the same."
+  },
+  {
+   "t": 383.03,
+   "text": "The DNA has been completely rewritten."
+  },
+  {
+   "t": 385.88,
+   "text": "And the rewriting is one of the reasons that modern antibody production yields are five to ten grams per liter of bioreactor culture, compared to the few hundred milligrams per liter that were typical thirty years ago."
+  },
+  {
+   "t": 398.2,
+   "text": "Codon optimization for mammalian cells is a substantial part of why biologic drugs are now economically viable in the quantities patients need."
+  },
+  {
+   "t": 407.9,
+   "text": "Now, the most dramatic recent example of mammalian codon optimization in action isn't a therapeutic antibody — it's a vaccine."
+  },
+  {
+   "t": 416.74,
+   "text": "The COVID-19 mRNA vaccines from Pfizer-BioNTech and Moderna are codon-optimized like crazy, and the optimization is one of the technical reasons they work as well as they do."
+  },
+  {
+   "t": 428.52,
+   "text": "Let's spend a segment on that, because it's both technically interesting and culturally significant."
+  }
+ ]
+}

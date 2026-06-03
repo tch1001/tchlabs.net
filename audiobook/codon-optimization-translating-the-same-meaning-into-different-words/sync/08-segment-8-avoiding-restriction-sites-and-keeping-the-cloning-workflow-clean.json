@@ -1,0 +1,179 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Avoiding restriction sites and keeping the cloning workflow clean",
+ "duration": 335.91,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Avoiding restriction sites and keeping the cloning workflow clean"
+  },
+  {
+   "t": 5.3,
+   "text": "Here's a practical problem that has nothing to do with protein expression per se, but everything to do with whether you can actually build the construct in the first place."
+  },
+  {
+   "t": 14.64,
+   "text": "When you design an optimized gene, you need to avoid creating sequences that look like cut sites for the restriction enzymes you plan to use in cloning."
+  },
+  {
+   "t": 22.91,
+   "text": "Remember from your introductory molecular biology — restriction enzymes are the molecular scissors that cut DNA at specific six-base-pair sequences."
+  },
+  {
+   "t": 32.24,
+   "text": "You use them all the time in cloning, to cut open a plasmid backbone and to insert your gene."
+  },
+  {
+   "t": 37.79,
+   "text": "If your gene happens to contain, somewhere in the middle, an internal copy of the same six-base sequence that the enzyme recognizes, then when you treat the construct with that enzyme — intending to cut just the cloning sites — the enzyme will also cut the middle of your gene, and your construct will come apart in pieces."
+  },
+  {
+   "t": 56.26,
+   "text": "This is an avoidable problem, because the codon optimization process gives you flexibility."
+  },
+  {
+   "t": 61.74,
+   "text": "For most six-base recognition sequences, there are several synonymous codon choices in the surrounding amino acids that will either create or destroy the restriction site."
+  },
+  {
+   "t": 71.89,
+   "text": "So the optimizer just scans the candidate optimized sequence for the restriction sites of every enzyme you might want to use — typically a list of fifteen or twenty common cloning enzymes — and at every site found, it picks a different synonymous codon to break the site without changing the protein."
+  },
+  {
+   "t": 89.53,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 90.8,
+   "text": "You're writing a document, and you know that your editor is going to run a script that cuts your document into pieces wherever the word \"PARAGRAPH\" appears."
+  },
+  {
+   "t": 99.29,
+   "text": "So you want to avoid accidentally typing \"PARAGRAPH\" anywhere in the middle of your prose."
+  },
+  {
+   "t": 104.67,
+   "text": "Restriction site avoidance is the same — you're checking your DNA for accidental occurrences of the \"cut here\" words."
+  },
+  {
+   "t": 112.11,
+   "text": "Codon flexibility gives you the ability to rephrase any of those words into a synonym that doesn't trigger the script."
+  },
+  {
+   "t": 119.64,
+   "text": "The set of restriction sites to avoid depends on your downstream workflow."
+  },
+  {
+   "t": 124.06,
+   "text": "For basic cloning, you typically want to avoid the recognition sites of the enzymes in your multiple cloning site — EcoRI, BamHI, HindIII, XhoI, NotI, and so on."
+  },
+  {
+   "t": 136.03,
+   "text": "For Golden Gate assembly, you want to avoid BsaI or BsmBI sites."
+  },
+  {
+   "t": 140.97,
+   "text": "For Gibson assembly, you have more flexibility, but you still want to avoid sites you'll use for downstream linearization."
+  },
+  {
+   "t": 148.22,
+   "text": "The list typically runs to fifteen or twenty enzymes that the optimizer will scan against."
+  },
+  {
+   "t": 154.32,
+   "text": "A modern optimizer also typically lets you provide a custom list of sequences to avoid — say, the recognition sites of a Cas9 guide RNA that targets a related gene, or the recognition site of a particular RNA-binding protein you don't want to interact with your mRNA."
+  },
+  {
+   "t": 171.16,
+   "text": "The optimizer will treat all of these as additional constraints to satisfy alongside the codon usage and GC content objectives."
+  },
+  {
+   "t": 179.71,
+   "text": "There's one more class of sequence to avoid that often gets bundled with restriction sites: homopolymers and low-complexity runs."
+  },
+  {
+   "t": 187.7,
+   "text": "A long run of the same base — say, six or more consecutive A's, or eight consecutive G's — causes problems at every step of the workflow."
+  },
+  {
+   "t": 198.56,
+   "text": "It causes mistakes during PCR."
+  },
+  {
+   "t": 201.04,
+   "text": "It causes mistakes during DNA synthesis."
+  },
+  {
+   "t": 204.12,
+   "text": "It causes mistakes during sequencing."
+  },
+  {
+   "t": 206.69,
+   "text": "It can also cause translational problems, because long G runs in mRNA can form structures called G-quadruplexes that block the ribosome."
+  },
+  {
+   "t": 215.66,
+   "text": "So a typical codon optimizer scans for homopolymers and breaks them up by choosing slightly different codons."
+  },
+  {
+   "t": 222.66,
+   "text": "The threshold is usually something like \"no more than four consecutive identical bases,\" though the exact number varies by tool and by host."
+  },
+  {
+   "t": 231.78,
+   "text": "A good optimized sequence has plenty of base variety throughout, with no stretches that look monotonous to a polymerase or a sequencer."
+  },
+  {
+   "t": 240.32,
+   "text": "A related constraint is avoiding direct repeats — stretches where the same six-or-eight-base sequence appears twice in close proximity."
+  },
+  {
+   "t": 249.63,
+   "text": "Direct repeats are a problem because they can cause polymerase slippage, where the polymerase reads one copy and then accidentally reads the same copy again, deleting the intervening DNA."
+  },
+  {
+   "t": 261.83,
+   "text": "They can also cause recombination in the host cell, where the cell's repair machinery sees the two copies and decides to splice them together, again deleting the intervening DNA."
+  },
+  {
+   "t": 272.96,
+   "text": "Both of these failure modes lead to mutations in your construct that you didn't put there and don't want."
+  },
+  {
+   "t": 279.08,
+   "text": "The codon optimizer scans for direct repeats and breaks them up, the same way it handles restriction sites and homopolymers."
+  },
+  {
+   "t": 287.21,
+   "text": "The result is a sequence that is, by design, free of any of the classical pitfalls in DNA workflow."
+  },
+  {
+   "t": 294.28,
+   "text": "This kind of cleanup work isn't glamorous, but it's the difference between a gene that you can actually assemble and characterize and a gene that gives you grief at every step."
+  },
+  {
+   "t": 303.73,
+   "text": "Most codon optimization projects spend more compute time on these constraint-satisfaction problems than on the codon usage itself."
+  },
+  {
+   "t": 311.99,
+   "text": "The codon usage is the headline."
+  },
+  {
+   "t": 314.25,
+   "text": "The constraint satisfaction is what makes the workflow actually work in practice."
+  },
+  {
+   "t": 319.28,
+   "text": "Now, the next thing to think about is what happens at the very start of the gene — the region around the start codon, where translation initiates."
+  },
+  {
+   "t": 328.28,
+   "text": "That region has its own special rules, and they have to do with mRNA secondary structure."
+  },
+  {
+   "t": 334.55,
+   "text": "That's our next segment."
+  }
+ ]
+}

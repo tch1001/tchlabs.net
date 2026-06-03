@@ -1,0 +1,235 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Cell-free for unnatural amino acids",
+ "duration": 459.4,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Cell-free for unnatural amino acids"
+  },
+  {
+   "t": 4.88,
+   "text": "I want to start the second half of the cell-free toolkit story with the application that, in many ways, is cell-free's killer feature for protein engineers: the routine incorporation of unnatural amino acids, sometimes called non-canonical amino acids, abbreviated ncAAs."
+  },
+  {
+   "t": 21.52,
+   "text": "Let me set up what this means."
+  },
+  {
+   "t": 23.38,
+   "text": "The standard genetic code uses twenty amino acids."
+  },
+  {
+   "t": 27.31,
+   "text": "Every protein in every living organism on Earth — with a handful of exotic exceptions — is built from those same twenty."
+  },
+  {
+   "t": 35.98,
+   "text": "Each amino acid is specified by particular codons in the mRNA, and the cell has, for each amino acid, a dedicated aminoacyl-tRNA synthetase enzyme that recognizes that amino acid and attaches it to a corresponding tRNA."
+  },
+  {
+   "t": 52.49,
+   "text": "The synthetase, the tRNA, the codon — together they form the machinery that links the genetic code to the chemistry of the protein."
+  },
+  {
+   "t": 61.01,
+   "text": "For decades, protein engineers have wanted to add new amino acids to this code."
+  },
+  {
+   "t": 66.65,
+   "text": "Why?"
+  },
+  {
+   "t": 67.36,
+   "text": "Because there are many useful chemical groups that the twenty canonical amino acids do not provide."
+  },
+  {
+   "t": 73.14,
+   "text": "A fluorescent amino acid would let you label a protein at a single specific position without disrupting its structure."
+  },
+  {
+   "t": 80.22,
+   "text": "A click-chemistry handle — an azide or an alkyne — would let you attach drugs, dyes, or polymers to a protein at a defined site, which is enormously useful for antibody-drug conjugates and for probing protein function."
+  },
+  {
+   "t": 94.03,
+   "text": "A photo-crosslinker would let you trap protein-protein interactions in living cells by shining light on them."
+  },
+  {
+   "t": 100.86,
+   "text": "A phosphomimetic amino acid would let you study phosphorylation effects without depending on a kinase."
+  },
+  {
+   "t": 107.38,
+   "text": "The list of useful chemical functionalities goes on, and none of them are accessible through the standard twenty amino acids."
+  },
+  {
+   "t": 114.81,
+   "text": "The classical way to incorporate an unnatural amino acid into a protein, pioneered by Peter Schultz and his colleagues starting in the 1990s, is to engineer an orthogonal aminoacyl-tRNA synthetase / tRNA pair."
+  },
+  {
+   "t": 130.24,
+   "text": "You take a synthetase from one organism — typically a tyrosyl-tRNA synthetase from Methanocaldococcus jannaschii, a heat-loving archaeon — that does not cross-react with any of the host cell's natural synthetases or tRNAs."
+  },
+  {
+   "t": 145.18,
+   "text": "You mutate the synthetase's active site to recognize your unnatural amino acid instead of tyrosine."
+  },
+  {
+   "t": 152.2,
+   "text": "You pair it with its corresponding tRNA, which you have engineered to recognize a previously unassigned codon — typically the amber codon, UAG, which normally signals stop."
+  },
+  {
+   "t": 163.82,
+   "text": "Now, when your protein's mRNA contains an amber codon, the engineered tRNA delivers the unnatural amino acid to that position, and the ribosome incorporates it into the growing peptide chain."
+  },
+  {
+   "t": 176.93,
+   "text": "You have, in effect, added a twenty-first amino acid to your genetic code."
+  },
+  {
+   "t": 181.3,
+   "text": "Doing this in a living cell is hard."
+  },
+  {
+   "t": 183.61,
+   "text": "You have to express the orthogonal synthetase and tRNA at the right levels."
+  },
+  {
+   "t": 188.89,
+   "text": "You have to deliver the unnatural amino acid into the cell, which often means it has to be cell-permeable."
+  },
+  {
+   "t": 195.54,
+   "text": "You have to compete with release factor 1, which normally recognizes the amber stop codon and would terminate translation rather than letting your engineered tRNA win."
+  },
+  {
+   "t": 204.9,
+   "text": "You have to deal with the cell's own metabolism potentially degrading or chemically modifying your unnatural amino acid before it ever gets incorporated."
+  },
+  {
+   "t": 214.4,
+   "text": "It works — Schultz and many others have demonstrated impressive in-cell genetic code expansion — but it is a delicate biological art."
+  },
+  {
+   "t": 223.22,
+   "text": "Doing this in cell-free is dramatically easier."
+  },
+  {
+   "t": 226.5,
+   "text": "The analogy I want you to carry: for unnatural amino acids, you just throw the ncAA into the reaction; engineered aaRS-tRNA pairs incorporate it at amber codons; no live-cell genetic code expansion needed."
+  },
+  {
+   "t": 240.22,
+   "text": "There is no cell membrane to cross."
+  },
+  {
+   "t": 242.74,
+   "text": "There is no cellular metabolism to compete with."
+  },
+  {
+   "t": 246.09,
+   "text": "There are no homeostatic mechanisms regulating the abundance of your engineered components."
+  },
+  {
+   "t": 251.56,
+   "text": "You add the synthetase, you add the tRNA, you add the unnatural amino acid, you add the DNA encoding your protein with the amber codon at the position you want modified, and the system does the rest."
+  },
+  {
+   "t": 265.01,
+   "text": "The incorporation efficiency, in well-tuned cell-free systems, can approach the efficiency of the natural twenty amino acids."
+  },
+  {
+   "t": 273.25,
+   "text": "If you are using PURE, the cleanliness of the system makes ncAA incorporation even more tractable."
+  },
+  {
+   "t": 280.45,
+   "text": "You can leave out release factor 1 entirely, eliminating the main competitor for the amber codon."
+  },
+  {
+   "t": 286.45,
+   "text": "You can leave out the natural tyrosyl-tRNA synthetase if you are worried about cross-reactivity."
+  },
+  {
+   "t": 292.29,
+   "text": "You can dial the concentrations of the engineered components precisely."
+  },
+  {
+   "t": 296.42,
+   "text": "The system becomes a clean canvas on which you can paint a non-standard genetic code."
+  },
+  {
+   "t": 301.4,
+   "text": "Some specific demonstrations to give you a feel for what is possible."
+  },
+  {
+   "t": 306.0,
+   "text": "Cell-free systems have been used to incorporate multiple different unnatural amino acids at multiple different positions in the same protein, using engineered tRNAs that recognize different quadruplet codons or different rare codons."
+  },
+  {
+   "t": 320.41,
+   "text": "They have been used to incorporate D-amino acids — the mirror images of the natural L-amino acids — which produce proteins resistant to most proteases."
+  },
+  {
+   "t": 330.33,
+   "text": "They have been used to make macrocyclic peptides with non-natural backbones, which are interesting as a class of drug candidates that combine the specificity of antibodies with the cell-permeability of small molecules."
+  },
+  {
+   "t": 342.65,
+   "text": "They have been used in industrial workflows at companies like Sutro to make antibodies with site-specifically conjugated payloads, where the unnatural amino acid serves as the attachment point for a cytotoxic drug."
+  },
+  {
+   "t": 355.94,
+   "text": "The Sutro example is worth pausing on because it shows the commercial maturity the field has reached."
+  },
+  {
+   "t": 362.56,
+   "text": "Sutro Biopharma manufactures antibody-drug conjugates — antibodies with cytotoxic small molecules covalently attached to them, designed to deliver the small molecule specifically to cancer cells."
+  },
+  {
+   "t": 375.82,
+   "text": "Traditional antibody-drug conjugates are made by chemical conjugation to lysine or cysteine residues on the antibody, which gives heterogeneous products because there are many such residues."
+  },
+  {
+   "t": 387.2,
+   "text": "Sutro uses a cell-free system to produce antibodies with a specific unnatural amino acid incorporated at a single defined position; the unnatural amino acid carries a click-chemistry handle; the drug payload is then attached, site-specifically, with high yield, to that one position."
+  },
+  {
+   "t": 405.54,
+   "text": "The product is homogeneous in a way conventional methods cannot achieve."
+  },
+  {
+   "t": 410.4,
+   "text": "The drug works, in part, because the manufacturing platform allows site-specificity."
+  },
+  {
+   "t": 416.49,
+   "text": "And the manufacturing platform is cell-free."
+  },
+  {
+   "t": 419.62,
+   "text": "The big idea to leave this segment with: cell-free is the most permissive environment we have for incorporating non-standard amino acids into proteins."
+  },
+  {
+   "t": 429.01,
+   "text": "The membrane is not in the way."
+  },
+  {
+   "t": 431.08,
+   "text": "The metabolism is not in the way."
+  },
+  {
+   "t": 433.8,
+   "text": "The regulatory homeostasis is not in the way."
+  },
+  {
+   "t": 437.3,
+   "text": "You add the parts, the reaction runs, and your protein contains residues that no natural cell would ever make."
+  },
+  {
+   "t": 445.15,
+   "text": "For a substantial and growing fraction of protein engineering applications — fluorescent labeling, click chemistry, photo-crosslinking, drug conjugation, novel chemistries — cell-free is rapidly becoming the default platform."
+  }
+ ]
+}

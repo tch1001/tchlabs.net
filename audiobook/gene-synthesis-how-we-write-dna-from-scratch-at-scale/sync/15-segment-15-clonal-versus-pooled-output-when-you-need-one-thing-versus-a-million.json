@@ -1,0 +1,167 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Clonal versus pooled output: when you need one thing versus a million",
+ "duration": 309.4,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Clonal versus pooled output: when you need one thing versus a million"
+  },
+  {
+   "t": 6.6,
+   "text": "Let me spend a segment on a distinction that, once you understand it, will shape how you think about ordering DNA for any complex experiment."
+  },
+  {
+   "t": 15.34,
+   "text": "The distinction is between clonal output and pooled output."
+  },
+  {
+   "t": 18.81,
+   "text": "A clonal product is a single defined DNA sequence, delivered as a single homogeneous preparation."
+  },
+  {
+   "t": 26.09,
+   "text": "Every molecule in the tube is, ideally, identical."
+  },
+  {
+   "t": 30.25,
+   "text": "This is what you want when you're going to do a downstream experiment that requires one specific construct: a protein expression experiment, an enzyme assay, a CRISPR knock-in with a specific repair template."
+  },
+  {
+   "t": 42.17,
+   "text": "You need to know, with confidence, that the DNA in the tube is the exact sequence you designed."
+  },
+  {
+   "t": 47.89,
+   "text": "The vendor delivers this by synthesizing the gene, cloning it into a vector, picking a single colony, sequence-verifying that colony, and shipping you DNA from a clonal expansion of that single colony."
+  },
+  {
+   "t": 60.98,
+   "text": "A pooled product is a heterogeneous mixture of many designed sequences, delivered as a single preparation that contains all of them together."
+  },
+  {
+   "t": 69.62,
+   "text": "You don't know, for any individual molecule, which variant it represents, but statistically the pool contains all your designed variants in roughly even ratios."
+  },
+  {
+   "t": 79.22,
+   "text": "This is what you want when your downstream experiment is going to apply some kind of selection or readout that distinguishes the variants from each other."
+  },
+  {
+   "t": 87.76,
+   "text": "You introduce the pool into your assay, the assay enriches or characterizes individual variants, and a sequencing readout at the end tells you which variants did what."
+  },
+  {
+   "t": 98.1,
+   "text": "The cost difference between the two is enormous, and it tracks the verification step we discussed in Segment 7."
+  },
+  {
+   "t": 105.58,
+   "text": "For a clonal product, the vendor has to pick colonies, mini-prep them, sequence each one, and ship a verified clone."
+  },
+  {
+   "t": 113.75,
+   "text": "That's expensive."
+  },
+  {
+   "t": 115.0,
+   "text": "For a pooled product, the vendor synthesizes the oligos, assembles, transforms en masse, harvests the resulting bacterial population, and ships a DNA prep of the whole pool with no per-variant verification."
+  },
+  {
+   "t": 129.25,
+   "text": "That's vastly cheaper."
+  },
+  {
+   "t": 130.9,
+   "text": "Concretely, if you want one specific gene at the highest verification level, you're paying maybe one hundred dollars at current prices."
+  },
+  {
+   "t": 138.74,
+   "text": "If you want a pool of ten thousand designed variants, you're paying maybe two thousand dollars total — so two dollars per variant, fifty times cheaper than one verified clone, even though there are ten thousand of them."
+  },
+  {
+   "t": 151.56,
+   "text": "The economics of pooled output are the economics that make modern high-throughput biology possible."
+  },
+  {
+   "t": 157.36,
+   "text": "Here is the conceptual point I want you to internalize."
+  },
+  {
+   "t": 161.36,
+   "text": "The decision of whether to order clonal or pooled is the decision of where the downstream work is going to be done."
+  },
+  {
+   "t": 167.39,
+   "text": "If you can characterize variants in parallel using a sequencing readout — phenotype them in bulk and read out the variant identities by sequencing each one — then you should order pooled."
+  },
+  {
+   "t": 178.78,
+   "text": "If you have to characterize variants individually, one at a time, in separate wells, then you have to order clonal."
+  },
+  {
+   "t": 185.79,
+   "text": "This decision shapes experimental design."
+  },
+  {
+   "t": 188.99,
+   "text": "Many fields have, in the last decade, redesigned their assays specifically to be sequencing-readable in pools, because pooled gene synthesis is so much cheaper."
+  },
+  {
+   "t": 198.82,
+   "text": "Massively parallel reporter assays I mentioned in Segment 13 are exactly this: redesigned to make a pooled assay readable."
+  },
+  {
+   "t": 207.19,
+   "text": "Deep mutational scanning of proteins, in which thousands of variants are scored for function by a pooled fitness assay, is exactly this."
+  },
+  {
+   "t": 215.95,
+   "text": "The whole field of high-throughput functional genomics — saturation mutagenesis screens, large-scale CRISPR libraries, base-editing libraries — depends on the economics of pooled synthesis."
+  },
+  {
+   "t": 227.31,
+   "text": "None of those experiments would be tractable at one-hundred-dollar-per-variant clonal pricing."
+  },
+  {
+   "t": 232.25,
+   "text": "At two-dollar-per-variant pooled pricing, they become routine."
+  },
+  {
+   "t": 235.74,
+   "text": "The flip side of this is that pooled libraries have quality control issues that clonal products don't have."
+  },
+  {
+   "t": 241.81,
+   "text": "In a pool of ten thousand designed variants, some variants may be missing entirely because their synthesis failed."
+  },
+  {
+   "t": 249.15,
+   "text": "Some may be over-represented because they assemble more efficiently."
+  },
+  {
+   "t": 253.3,
+   "text": "Some may contain unintended deletions or substitutions that you only discover when you sequence the pool."
+  },
+  {
+   "t": 259.96,
+   "text": "Most modern library vendors offer pool QC by deep sequencing, in which they sequence the pool before shipping and provide you with a coverage report showing the abundance of each designed variant."
+  },
+  {
+   "t": 271.47,
+   "text": "You expect some skew — maybe most variants are within a five-to-tenfold abundance range — but if a third of your designed variants are missing entirely, that's a problem and the vendor will usually offer to remake the library."
+  },
+  {
+   "t": 284.42,
+   "text": "The interaction between library design, pool QC, and downstream assay sensitivity is a substantial design challenge of its own, and a lot of the value-added work that modern gene synthesis vendors do is on the design and QC side, not the chemistry side."
+  },
+  {
+   "t": 300.45,
+   "text": "The chemistry is increasingly a commodity."
+  },
+  {
+   "t": 303.32,
+   "text": "The library design and verification expertise is increasingly the differentiator."
+  }
+ ]
+}

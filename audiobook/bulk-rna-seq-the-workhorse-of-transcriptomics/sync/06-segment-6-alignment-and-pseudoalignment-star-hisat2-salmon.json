@@ -1,0 +1,247 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — Alignment and pseudoalignment — STAR, HISAT2, Salmon",
+ "duration": 401.19,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — Alignment and pseudoalignment — STAR, HISAT2, Salmon"
+  },
+  {
+   "t": 5.91,
+   "text": "Your reads come off the Illumina instrument as a giant pile of short DNA sequences, each one a snippet of one of the original RNA molecules."
+  },
+  {
+   "t": 15.29,
+   "text": "To figure out which gene each read came from, you need to align the reads to a reference genome."
+  },
+  {
+   "t": 21.23,
+   "text": "This is the step that turns raw sequence data into biological measurements."
+  },
+  {
+   "t": 26.41,
+   "text": "Alignment is computationally expensive, and the tools have evolved a lot."
+  },
+  {
+   "t": 31.16,
+   "text": "Let me walk through the major approaches."
+  },
+  {
+   "t": 33.36,
+   "text": "The simplest version of the problem is this."
+  },
+  {
+   "t": 35.99,
+   "text": "You have a read — say, fifty letters of A, T, G, C — and you have a reference genome — three billion letters of A, T, G, C."
+  },
+  {
+   "t": 45.36,
+   "text": "Where in the reference does this read come from?"
+  },
+  {
+   "t": 48.01,
+   "text": "In the best case, the read matches some thirty-base stretch of the reference exactly, and the match is unique — only one place in the genome matches."
+  },
+  {
+   "t": 57.61,
+   "text": "You report that location."
+  },
+  {
+   "t": 59.33,
+   "text": "In practice, there are complications: the read may have one or two sequencing errors that don't match the reference, the read may match multiple places (because the gene has paralogs or pseudogenes), the read may span a splice junction — where the original RNA was spliced together from two exons that are far apart in the genome — and the read has to be split across that junction."
+  },
+  {
+   "t": 82.47,
+   "text": "Splice junctions are the hard part for RNA-seq alignment."
+  },
+  {
+   "t": 86.58,
+   "text": "A read of 100 base pairs might come from the boundary between two exons that are 50,000 base pairs apart in the genome."
+  },
+  {
+   "t": 94.56,
+   "text": "The first 60 letters of the read match the end of exon one; the next 40 letters match the beginning of exon two; and in between, in the genome, there's a 50,000-base intron that doesn't appear in the read at all."
+  },
+  {
+   "t": 108.6,
+   "text": "A naive aligner — one that just looks for contiguous matches — will fail to align this read, because no single 100-base stretch of the genome matches it."
+  },
+  {
+   "t": 118.46,
+   "text": "A splice-aware aligner can detect that the read is split across a splice junction and align both halves correctly."
+  },
+  {
+   "t": 125.88,
+   "text": "RNA-seq specifically requires splice-aware aligners."
+  },
+  {
+   "t": 130.16,
+   "text": "The two dominant splice-aware aligners are STAR and HISAT2."
+  },
+  {
+   "t": 134.25,
+   "text": "STAR — Spliced Transcripts Alignment to a Reference — was developed by Alex Dobin at Cold Spring Harbor, published in 2013."
+  },
+  {
+   "t": 142.89,
+   "text": "STAR is fast, accurate, and the de facto standard for most modern bulk RNA-seq work."
+  },
+  {
+   "t": 148.99,
+   "text": "It uses a clever data structure called a suffix array — basically a sorted index of all possible substrings of the genome — to find candidate match locations very quickly."
+  },
+  {
+   "t": 159.68,
+   "text": "Then it does a more careful local alignment around each candidate."
+  },
+  {
+   "t": 163.76,
+   "text": "For each read, STAR can decide whether to align it as a contiguous block, or split it across a splice junction."
+  },
+  {
+   "t": 171.15,
+   "text": "STAR is the workhorse."
+  },
+  {
+   "t": 172.61,
+   "text": "Most large-scale RNA-seq projects, including ENCODE and the GTEx project, use STAR."
+  },
+  {
+   "t": 179.93,
+   "text": "HISAT2 — Hierarchical Indexing for Spliced Alignment of Transcripts — was developed by Steven Salzberg's lab at Johns Hopkins, also around 2015."
+  },
+  {
+   "t": 190.86,
+   "text": "HISAT2 uses a different data structure — a graph-based index that incorporates known variants — and is memory-efficient compared to STAR."
+  },
+  {
+   "t": 199.5,
+   "text": "For institutions with limited compute, HISAT2 is often preferred."
+  },
+  {
+   "t": 204.32,
+   "text": "Both tools produce essentially equivalent results for standard differential expression analysis."
+  },
+  {
+   "t": 210.65,
+   "text": "The output of either STAR or HISAT2 is a file called a BAM file — Binary Alignment Map — which contains, for every read, the genomic coordinates it was aligned to, the alignment quality, the orientation, and any soft-clipped regions."
+  },
+  {
+   "t": 226.82,
+   "text": "This is the standard file format that all downstream tools consume."
+  },
+  {
+   "t": 230.88,
+   "text": "Now, in the last few years, a different approach has become popular: pseudoalignment."
+  },
+  {
+   "t": 236.2,
+   "text": "The classical alignment approach asks, for each read, where in the genome does this read match?"
+  },
+  {
+   "t": 243.05,
+   "text": "Pseudoalignment asks a slightly different and computationally much cheaper question: for each read, which transcripts is this read compatible with?"
+  },
+  {
+   "t": 252.18,
+   "text": "You don't compute the exact alignment."
+  },
+  {
+   "t": 254.39,
+   "text": "You just figure out which transcripts the read could have come from, based on which k-mers — short subsequences — it shares with each transcript."
+  },
+  {
+   "t": 263.11,
+   "text": "This is sometimes called a transcript-level approach, because it works directly against a catalog of known transcripts, not against the genome."
+  },
+  {
+   "t": 271.59,
+   "text": "The dominant pseudoalignment tool is Salmon, developed by Rob Patro and colleagues."
+  },
+  {
+   "t": 277.55,
+   "text": "There's also kallisto, from Lior Pachter's lab, which works similarly."
+  },
+  {
+   "t": 282.13,
+   "text": "Both Salmon and kallisto are dramatically faster than STAR — orders of magnitude faster — and they directly produce transcript-level abundance estimates, including estimates that account for ambiguous reads that could come from multiple isoforms."
+  },
+  {
+   "t": 297.13,
+   "text": "For applications where you want transcript-level expression — for example, when you care about alternative splicing — Salmon is often the right choice."
+  },
+  {
+   "t": 305.98,
+   "text": "For applications where you want to look at novel transcripts or unannotated regions, you still need a genome aligner like STAR."
+  },
+  {
+   "t": 313.41,
+   "text": "Here's the trade-off."
+  },
+  {
+   "t": 314.69,
+   "text": "STAR is alignment to the genome — slower, but tells you where every read maps and can detect novel things."
+  },
+  {
+   "t": 322.0,
+   "text": "Salmon is pseudoalignment to a transcript catalog — faster, more direct estimates of transcript abundance, but limited to what's in the catalog."
+  },
+  {
+   "t": 331.71,
+   "text": "Both are widely used."
+  },
+  {
+   "t": 333.36,
+   "text": "A modern RNA-seq pipeline often runs both, using STAR for QC and structural analysis and Salmon for quantitation."
+  },
+  {
+   "t": 342.15,
+   "text": "A practical note."
+  },
+  {
+   "t": 343.38,
+   "text": "Whatever aligner you use, the output is going to require a reference genome and a gene annotation file."
+  },
+  {
+   "t": 349.54,
+   "text": "The reference genome is the genome sequence in a file called a FASTA."
+  },
+  {
+   "t": 354.28,
+   "text": "The annotation file is a list of where every gene's exons and transcripts are, in a file called a GTF or GFF."
+  },
+  {
+   "t": 362.54,
+   "text": "For human, the standard annotation is GENCODE, maintained by the GENCODE consortium."
+  },
+  {
+   "t": 368.68,
+   "text": "For mouse, GENCODE also produces a mouse annotation."
+  },
+  {
+   "t": 372.73,
+   "text": "For other model organisms, Ensembl is the standard."
+  },
+  {
+   "t": 376.76,
+   "text": "Picking the right annotation matters."
+  },
+  {
+   "t": 379.26,
+   "text": "The same RNA-seq data, analyzed with two different annotations, can produce slightly different gene counts."
+  },
+  {
+   "t": 386.61,
+   "text": "The community has standardized on GENCODE for most work, but you should always document which annotation version you used."
+  },
+  {
+   "t": 393.86,
+   "text": "The output of this step is a set of reads aligned to genomic coordinates, ready for counting."
+  },
+  {
+   "t": 399.81,
+   "text": "That's the next segment."
+  }
+ ]
+}

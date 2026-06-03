@@ -1,0 +1,215 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Normalization — RPKM, FPKM, TPM, and what they fix",
+ "duration": 391.17,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Normalization — RPKM, FPKM, TPM, and what they fix"
+  },
+  {
+   "t": 7.53,
+   "text": "The count matrix is raw."
+  },
+  {
+   "t": 9.21,
+   "text": "The numbers in it depend on two things that have nothing to do with biology: how deeply each sample was sequenced (the library size), and how long each gene is."
+  },
+  {
+   "t": 19.61,
+   "text": "These are technical artifacts."
+  },
+  {
+   "t": 21.46,
+   "text": "If you sequenced sample one to 30 million reads and sample two to 60 million reads, sample two will have twice as many reads for every gene, even if the underlying biology is identical."
+  },
+  {
+   "t": 34.44,
+   "text": "If gene A is 1,000 base pairs long and gene B is 10,000 base pairs long, gene B will tend to get ten times as many reads, even if they're both expressed at the same molecular abundance, because gene B has more places for reads to land."
+  },
+  {
+   "t": 50.74,
+   "text": "You need to normalize away both of these effects before you can compare anything."
+  },
+  {
+   "t": 55.41,
+   "text": "The historical normalization metrics are RPKM, FPKM, and TPM."
+  },
+  {
+   "t": 61.19,
+   "text": "Let me walk through each."
+  },
+  {
+   "t": 62.8,
+   "text": "RPKM — Reads Per Kilobase per Million — was introduced in Mortazavi 2008."
+  },
+  {
+   "t": 70.24,
+   "text": "For each gene, you take the raw read count, divide by the gene length in kilobases, and divide by the total number of mapped reads in the sample divided by one million."
+  },
+  {
+   "t": 80.5,
+   "text": "So:"
+  },
+  {
+   "t": 81.24,
+   "text": "RPKM = (read count) / (gene length in kb × total mapped reads in millions)."
+  },
+  {
+   "t": 88.61,
+   "text": "This normalizes for both gene length (longer genes get more reads, so divide them out) and library size (deeper sequencing gives more reads, so divide that out)."
+  },
+  {
+   "t": 99.69,
+   "text": "RPKM was the first widely-used RNA-seq expression metric."
+  },
+  {
+   "t": 104.64,
+   "text": "FPKM — Fragments Per Kilobase per Million — is the same formula, but applied to read pairs (fragments) rather than individual reads in a paired-end library."
+  },
+  {
+   "t": 115.85,
+   "text": "FPKM and RPKM are essentially identical for single-end data and differ by a factor of two for paired-end data."
+  },
+  {
+   "t": 124.09,
+   "text": "The terminology is mostly historical — Cufflinks, an early RNA-seq analysis package, used FPKM."
+  },
+  {
+   "t": 132.46,
+   "text": "People say FPKM in some communities, RPKM in others."
+  },
+  {
+   "t": 137.21,
+   "text": "They are the same idea."
+  },
+  {
+   "t": 138.64,
+   "text": "TPM — Transcripts Per Million — was introduced a few years later, and it's the metric you should actually use today."
+  },
+  {
+   "t": 146.35,
+   "text": "The mathematical innovation is subtle but matters."
+  },
+  {
+   "t": 149.97,
+   "text": "RPKM divides by gene length first, then by library size."
+  },
+  {
+   "t": 154.53,
+   "text": "TPM does it in the reverse order: divide by gene length first to get a per-base abundance, then sum those per-base abundances across all genes, then normalize each gene by that sum, scaled to a million."
+  },
+  {
+   "t": 167.07,
+   "text": "The result is that the TPM values in any sample sum to exactly one million — which means TPM is a true proportion, comparable across samples."
+  },
+  {
+   "t": 177.7,
+   "text": "RPKM does not have this property; the sum of RPKM values varies across samples, which makes comparing them awkward."
+  },
+  {
+   "t": 185.49,
+   "text": "Concretely: if gene A has TPM 100 in sample one and TPM 100 in sample two, that genuinely means the same proportion of total mRNA in both samples is coming from gene A."
+  },
+  {
+   "t": 199.26,
+   "text": "If gene A has RPKM 100 in sample one and RPKM 100 in sample two, the underlying proportions might be different, depending on what other genes were doing."
+  },
+  {
+   "t": 209.65,
+   "text": "So TPM is the cleaner, more interpretable metric."
+  },
+  {
+   "t": 213.9,
+   "text": "The community has been migrating from RPKM/FPKM to TPM for the better part of a decade."
+  },
+  {
+   "t": 220.94,
+   "text": "Modern papers should report TPM."
+  },
+  {
+   "t": 223.45,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 224.72,
+   "text": "FPKM and TPM are the comparison unit — read counts normalized for both gene length and library depth, so that genes are comparable within and across samples."
+  },
+  {
+   "t": 236.0,
+   "text": "Without these normalizations, you can't compare gene A to gene B (because they're different lengths), and you can't compare sample one to sample two (because they have different depths)."
+  },
+  {
+   "t": 246.6,
+   "text": "With them, you can ask: is gene A more highly expressed than gene B?"
+  },
+  {
+   "t": 251.36,
+   "text": "Is sample one expressing more of gene A than sample two?"
+  },
+  {
+   "t": 256.18,
+   "text": "And get meaningful answers."
+  },
+  {
+   "t": 258.0,
+   "text": "That said — and this is important — TPM is not what you use for differential expression."
+  },
+  {
+   "t": 264.26,
+   "text": "TPM is a within-sample, per-gene proportion."
+  },
+  {
+   "t": 267.89,
+   "text": "It's good for visualizing expression levels, comparing one gene to another, putting numbers on a heatmap."
+  },
+  {
+   "t": 274.18,
+   "text": "But for the statistical test of \"is this gene more highly expressed in condition A than in condition B,\" modern tools — DESeq2, edgeR, limma-voom — go back to the raw counts and apply their own internal normalization, which is designed specifically for the statistical model."
+  },
+  {
+   "t": 291.29,
+   "text": "Those internal normalizations — DESeq2's median-of-ratios, edgeR's TMM (trimmed mean of M-values) — are more robust to genes that are extremely highly expressed in only one sample, which can throw off simple library-size normalization."
+  },
+  {
+   "t": 308.48,
+   "text": "The right workflow is: use raw counts as input to your differential expression tool; let the tool do its own normalization; use TPM separately for visualization and reporting."
+  },
+  {
+   "t": 320.07,
+   "text": "DESeq2's median-of-ratios works like this."
+  },
+  {
+   "t": 323.85,
+   "text": "For each gene in each sample, it computes the ratio of that gene's count to the geometric mean of that gene's count across all samples."
+  },
+  {
+   "t": 332.67,
+   "text": "Then it takes the median of those ratios across all genes in a sample, and uses that median as the size factor for the sample."
+  },
+  {
+   "t": 341.03,
+   "text": "The intuition: most genes don't change between conditions, so the median ratio across all genes is a robust estimate of the relative library size."
+  },
+  {
+   "t": 351.27,
+   "text": "edgeR's TMM is conceptually similar but trims the top and bottom of the gene distribution before computing a weighted mean."
+  },
+  {
+   "t": 359.25,
+   "text": "Both methods are more robust than naive library-size normalization and have become the standard for differential expression."
+  },
+  {
+   "t": 367.14,
+   "text": "The headline of this segment: report TPM for visualization, but feed raw counts to your differential expression tool and let it handle normalization."
+  },
+  {
+   "t": 376.53,
+   "text": "Get this right and your statistics will be sound."
+  },
+  {
+   "t": 379.34,
+   "text": "Get it wrong — for example, by computing differential expression on TPM values directly — and you'll have all kinds of subtle problems that will eventually show up as inconsistent results."
+  }
+ ]
+}

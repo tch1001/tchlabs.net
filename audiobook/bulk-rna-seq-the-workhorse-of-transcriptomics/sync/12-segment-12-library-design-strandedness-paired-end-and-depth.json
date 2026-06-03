@@ -1,0 +1,247 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Library design — strandedness, paired-end, and depth",
+ "duration": 339.03,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Library design — strandedness, paired-end, and depth"
+  },
+  {
+   "t": 5.7,
+   "text": "Before we move on, I want to spend a segment on the practical library design decisions that affect what you can do with your data."
+  },
+  {
+   "t": 12.28,
+   "text": "These are choices made at the start of the experiment, and you can't easily undo them later."
+  },
+  {
+   "t": 17.55,
+   "text": "The three big ones are strandedness, paired-end versus single-end, and sequencing depth."
+  },
+  {
+   "t": 23.41,
+   "text": "Strandedness."
+  },
+  {
+   "t": 24.6,
+   "text": "I mentioned in Segment 7 that modern libraries are typically stranded — they preserve information about which strand of the RNA the original read came from."
+  },
+  {
+   "t": 34.27,
+   "text": "Why does this matter?"
+  },
+  {
+   "t": 35.46,
+   "text": "Because in many regions of the genome, there are overlapping genes on opposite strands."
+  },
+  {
+   "t": 41.06,
+   "text": "Without stranded information, you can't tell whether a read came from the gene on the plus strand or the gene on the minus strand."
+  },
+  {
+   "t": 48.09,
+   "text": "With stranded information, you can."
+  },
+  {
+   "t": 50.59,
+   "text": "For organisms with lots of overlapping or antisense transcription — basically all eukaryotes — stranded libraries are the right choice and have been the standard since around 2012."
+  },
+  {
+   "t": 62.85,
+   "text": "There are two strand orientation conventions, and they cause endless confusion."
+  },
+  {
+   "t": 67.9,
+   "text": "Forward-stranded means the read corresponds to the same strand as the mRNA."
+  },
+  {
+   "t": 73.39,
+   "text": "Reverse-stranded means the read corresponds to the opposite strand."
+  },
+  {
+   "t": 77.76,
+   "text": "Most modern kits — Illumina TruSeq Stranded mRNA, NEB Ultra II Directional — produce reverse-stranded libraries."
+  },
+  {
+   "t": 87.4,
+   "text": "You have to tell your counting tool which convention your library uses, or you'll count the wrong strand."
+  },
+  {
+   "t": 93.03,
+   "text": "The convention is sometimes called \"first-strand\" (reverse) versus \"second-strand\" (forward)."
+  },
+  {
+   "t": 98.97,
+   "text": "The naming is confusing."
+  },
+  {
+   "t": 100.88,
+   "text": "The practical advice: check your kit's documentation carefully, and verify the strandedness empirically with a tool like RSeQC after sequencing."
+  },
+  {
+   "t": 110.59,
+   "text": "Paired-end versus single-end."
+  },
+  {
+   "t": 112.53,
+   "text": "A single-end read is just one read from one end of the fragment."
+  },
+  {
+   "t": 116.95,
+   "text": "A paired-end read is two reads, one from each end of the same fragment, with an inferred insert size between them."
+  },
+  {
+   "t": 124.6,
+   "text": "Paired-end provides more information per fragment, at roughly the same cost per fragment, so for most applications it's the right choice."
+  },
+  {
+   "t": 132.85,
+   "text": "For bulk RNA-seq specifically, paired-end matters most for splicing analysis — the second read often spans a different junction than the first, giving you twice the junction-spanning information per fragment."
+  },
+  {
+   "t": 146.05,
+   "text": "For differential expression at the gene level, single-end can be sufficient if you're trying to save money."
+  },
+  {
+   "t": 152.41,
+   "text": "For splicing, structural variant detection, or novel transcript discovery, paired-end is essentially required."
+  },
+  {
+   "t": 160.16,
+   "text": "The standard modern bulk RNA-seq protocol is paired-end 150 base pair reads — written as \"2x150\" or \"PE150."
+  },
+  {
+   "t": 170.04,
+   "text": "\" Some core facilities run 2x75 to save cost and get more samples per flow cell."
+  },
+  {
+   "t": 176.88,
+   "text": "Some run 2x100."
+  },
+  {
+   "t": 178.93,
+   "text": "The right choice depends on what you're doing."
+  },
+  {
+   "t": 180.93,
+   "text": "For most differential expression studies, 2x50 or 2x75 is plenty."
+  },
+  {
+   "t": 187.91,
+   "text": "For splicing studies, 2x150 is preferred."
+  },
+  {
+   "t": 192.15,
+   "text": "Few applications benefit from longer reads than 150 — Illumina chemistry degrades past that point, and longer reads are best done on long-read platforms (Segment 14)."
+  },
+  {
+   "t": 203.53,
+   "text": "Depth."
+  },
+  {
+   "t": 204.26,
+   "text": "How many reads per sample do you need?"
+  },
+  {
+   "t": 206.38,
+   "text": "This depends on the biology and the question."
+  },
+  {
+   "t": 208.97,
+   "text": "The rough guidelines are:"
+  },
+  {
+   "t": 210.51,
+   "text": "Bulk differential expression, focused on protein-coding genes: 20-30 million reads per sample is sufficient."
+  },
+  {
+   "t": 218.5,
+   "text": "Diminishing returns set in past 50 million."
+  },
+  {
+   "t": 222.25,
+   "text": "Splicing analysis: 50-100 million reads per sample."
+  },
+  {
+   "t": 227.5,
+   "text": "More reads spanning junctions means more reliable PSI estimates."
+  },
+  {
+   "t": 232.43,
+   "text": "Novel transcript discovery, lncRNA quantitation: 50-100 million reads, ideally with rRNA depletion rather than poly-A selection."
+  },
+  {
+   "t": 242.66,
+   "text": "Allele-specific expression (looking at expression from each parental allele in a hybrid or heterozygous sample): 100 million reads or more per sample."
+  },
+  {
+   "t": 252.93,
+   "text": "Very low-abundance transcripts, ultra-deep biology: 200 million reads or more per sample."
+  },
+  {
+   "t": 260.0,
+   "text": "Diminishing returns are real, but for some questions you need extreme depth."
+  },
+  {
+   "t": 264.82,
+   "text": "Most published bulk RNA-seq experiments are in the 20-50 million range per sample."
+  },
+  {
+   "t": 270.41,
+   "text": "That's the modern standard."
+  },
+  {
+   "t": 272.11,
+   "text": "Going much deeper rarely changes the conclusions for standard differential expression."
+  },
+  {
+   "t": 277.86,
+   "text": "A practical point about cost."
+  },
+  {
+   "t": 279.91,
+   "text": "Sequencing cost is roughly proportional to depth."
+  },
+  {
+   "t": 283.73,
+   "text": "Doubling your reads doubles your cost."
+  },
+  {
+   "t": 286.2,
+   "text": "So depth decisions have real budget consequences."
+  },
+  {
+   "t": 289.93,
+   "text": "For a typical study with, say, 24 samples at 30 million reads each — that's 720 million reads total, which fits on roughly a third of a NovaSeq lane."
+  },
+  {
+   "t": 301.16,
+   "text": "Total sequencing cost in the few-thousand-dollar range."
+  },
+  {
+   "t": 304.8,
+   "text": "Library prep cost on top, in the low thousands."
+  },
+  {
+   "t": 308.24,
+   "text": "The total cost for a 24-sample bulk RNA-seq study is in the $5,000-$15,000 range, depending on the institution."
+  },
+  {
+   "t": 317.14,
+   "text": "That's why bulk is the workhorse — at that price point, you can run hundreds or thousands of samples for the cost of one big single-cell experiment."
+  },
+  {
+   "t": 326.4,
+   "text": "That's library design."
+  },
+  {
+   "t": 327.99,
+   "text": "Strandedness yes, paired-end yes, depth at 20-30 million for most applications."
+  },
+  {
+   "t": 334.13,
+   "text": "Reasonable defaults; deviate from them only when you have a specific reason to."
+  }
+ ]
+}

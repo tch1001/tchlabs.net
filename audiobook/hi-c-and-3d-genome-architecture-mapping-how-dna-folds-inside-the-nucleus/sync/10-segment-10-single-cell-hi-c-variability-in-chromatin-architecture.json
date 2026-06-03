@@ -1,0 +1,115 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Single-cell Hi-C: variability in chromatin architecture",
+ "duration": 218.04,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Single-cell Hi-C: variability in chromatin architecture"
+  },
+  {
+   "t": 6.05,
+   "text": "Alright, welcome back."
+  },
+  {
+   "t": 7.38,
+   "text": "Now let's confront something that has been lurking under everything we've said so far."
+  },
+  {
+   "t": 12.38,
+   "text": "Every Hi-C contact matrix we've discussed is an average over a population of cells — millions of nuclei, all fixed together, all contributing ligation events to the same library."
+  },
+  {
+   "t": 24.34,
+   "text": "The beautiful TADs and compartments and loops we see in the heatmap are the average behavior of many cells."
+  },
+  {
+   "t": 31.19,
+   "text": "The natural question is: what does any single cell look like?"
+  },
+  {
+   "t": 34.85,
+   "text": "Is the population average a good description of individual cells, or are individual cells wildly different, with the average being a smoothed-out blur?"
+  },
+  {
+   "t": 44.95,
+   "text": "The answer turns out to be: individual cells are dramatically different from the average, and from each other."
+  },
+  {
+   "t": 51.76,
+   "text": "Single-cell Hi-C was pioneered by Takashi Nagano and Peter Fraser around 2013, and refined by Tim Stevens, Tom Lando, Aleksandra Pekowska, Wing Ho, and others in the following years."
+  },
+  {
+   "t": 65.28,
+   "text": "The technical challenge is significant: you have to perform the entire Hi-C protocol — crosslinking, digestion, ligation, biotin pulldown, library prep — on the chromatin of a single cell, which contains maybe a thousandth of the DNA you'd get from a typical bulk Hi-C input."
+  },
+  {
+   "t": 82.79,
+   "text": "The library complexity per cell is necessarily limited; a single-cell Hi-C library typically contains ten thousand to a few hundred thousand contacts, compared to billions in a bulk library."
+  },
+  {
+   "t": 95.51,
+   "text": "What you see in single-cell Hi-C is striking."
+  },
+  {
+   "t": 98.65,
+   "text": "The compartment structure — A versus B — is broadly preserved in single cells; you can see it in the contact pattern of an individual nucleus."
+  },
+  {
+   "t": 107.78,
+   "text": "But the TAD structure is much more variable."
+  },
+  {
+   "t": 111.05,
+   "text": "Some TADs that look stable and well-defined in bulk data appear as fuzzy, transient, weakly-bordered structures in individual cells."
+  },
+  {
+   "t": 120.25,
+   "text": "Loop contacts that look like sharp dots in bulk Hi-C appear in individual cells only occasionally — present in some cells, absent in others."
+  },
+  {
+   "t": 129.91,
+   "text": "The picture is consistent with the loop extrusion model: in any individual cell, only a fraction of cohesin complexes are anchored at any given pair of CTCF sites, so any specific loop is present only in a fraction of cells at any given moment."
+  },
+  {
+   "t": 146.82,
+   "text": "The takeaway: the 3D genome is dynamic at the single-cell level."
+  },
+  {
+   "t": 151.45,
+   "text": "The bulk Hi-C heatmap is a time-and-population average of a constantly shuffling structure."
+  },
+  {
+   "t": 157.28,
+   "text": "The TADs you see in the average are statistical features — regions where cohesin loops are likely to anchor — not stable architectures present uniformly in every cell."
+  },
+  {
+   "t": 168.21,
+   "text": "Compartments are more stable than TADs."
+  },
+  {
+   "t": 170.86,
+   "text": "Loops are the least stable."
+  },
+  {
+   "t": 172.45,
+   "text": "This is a humbling correction to the intuitive picture of TADs as static rooms in a house — they're more like rooms that constantly disassemble and reassemble in slightly different configurations."
+  },
+  {
+   "t": 184.79,
+   "text": "Single-cell Hi-C has also given us insight into how 3D structure changes through the cell cycle."
+  },
+  {
+   "t": 191.07,
+   "text": "In mitosis, the entire interphase TAD-and-loop structure dissolves and is replaced by a much more compact, uniform-looking compaction driven by condensin."
+  },
+  {
+   "t": 201.78,
+   "text": "As cells exit mitosis and re-enter interphase, the TADs reform over the course of the next several hours — first the compartments, then the TADs, then the fine loop structure."
+  },
+  {
+   "t": 213.29,
+   "text": "The cell cycle dynamics of 3D structure are themselves a rich area of study."
+  }
+ ]
+}

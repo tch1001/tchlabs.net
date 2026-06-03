@@ -1,0 +1,251 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Gene set enrichment and pathway analysis — GSEA, GO, the second-order view",
+ "duration": 406.21,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Gene set enrichment and pathway analysis — GSEA, GO, the second-order view"
+  },
+  {
+   "t": 7.35,
+   "text": "Welcome back."
+  },
+  {
+   "t": 8.38,
+   "text": "We left off with a list of differentially expressed genes — say, 247 of them, at FDR less than 5%."
+  },
+  {
+   "t": 16.88,
+   "text": "Now what?"
+  },
+  {
+   "t": 17.73,
+   "text": "Staring at a list of 247 gene symbols is not, by itself, biology."
+  },
+  {
+   "t": 23.91,
+   "text": "You want to know what those genes do."
+  },
+  {
+   "t": 25.84,
+   "text": "You want to know whether they cluster into pathways, into cellular processes, into shared functions."
+  },
+  {
+   "t": 32.76,
+   "text": "This second-order analysis — moving from individual genes to pathways and gene sets — is where bulk RNA-seq results actually become interpretable biology."
+  },
+  {
+   "t": 43.3,
+   "text": "There are two broad approaches: over-representation analysis and gene set enrichment analysis."
+  },
+  {
+   "t": 49.88,
+   "text": "Let me describe each."
+  },
+  {
+   "t": 51.34,
+   "text": "Over-representation analysis asks: among my list of differentially expressed genes, is any annotated pathway or gene set represented more often than you'd expect by chance?"
+  },
+  {
+   "t": 63.54,
+   "text": "Concretely: take my 247 DE genes."
+  },
+  {
+   "t": 67.59,
+   "text": "How many of them are in the \"cell cycle\" pathway from the KEGG database?"
+  },
+  {
+   "t": 72.01,
+   "text": "Say it's 40."
+  },
+  {
+   "t": 73.24,
+   "text": "If I'd randomly drawn 247 genes from the whole genome, how many would I expect to be in \"cell cycle\"?"
+  },
+  {
+   "t": 81.16,
+   "text": "Maybe 20."
+  },
+  {
+   "t": 82.2,
+   "text": "The chance of 40 by random draw — calculated by the hypergeometric distribution — is very small."
+  },
+  {
+   "t": 88.64,
+   "text": "So \"cell cycle\" is over-represented in my DE gene list, suggesting that cell cycle biology is changed in my experimental condition."
+  },
+  {
+   "t": 97.88,
+   "text": "This is the simplest pathway analysis and is implemented in many tools."
+  },
+  {
+   "t": 102.56,
+   "text": "The standard databases are KEGG (the Kyoto Encyclopedia of Genes and Genomes, which has curated metabolic and signaling pathways), Reactome (a more granular pathway database from EMBL-EBI), and GO (the Gene Ontology, which classifies genes into hierarchical functional categories — biological process, molecular function, cellular component)."
+  },
+  {
+   "t": 127.69,
+   "text": "Tools like DAVID, Enrichr, and clusterProfiler (an R package) run over-representation analysis against these databases and produce ranked lists of enriched pathways."
+  },
+  {
+   "t": 139.2,
+   "text": "The limitation of over-representation analysis is that it depends on your gene list cutoff."
+  },
+  {
+   "t": 144.76,
+   "text": "Genes that are biologically meaningful but just above your FDR threshold get excluded; genes just below it get included; the signal is noisy at the boundary."
+  },
+  {
+   "t": 155.0,
+   "text": "There's a better approach."
+  },
+  {
+   "t": 156.54,
+   "text": "Gene set enrichment analysis — GSEA — takes a different angle."
+  },
+  {
+   "t": 161.45,
+   "text": "Instead of cutting your gene list at a threshold, you use all your genes, ranked by their differential expression statistic."
+  },
+  {
+   "t": 169.15,
+   "text": "Then for each gene set in a database, you ask: are the members of this gene set clustered at the top of the ranked list (meaning they tend to be upregulated), at the bottom (downregulated), or scattered randomly throughout?"
+  },
+  {
+   "t": 182.31,
+   "text": "GSEA computes an enrichment score by walking down the ranked list and accumulating a running sum that goes up when you hit a gene set member and down when you hit a non-member."
+  },
+  {
+   "t": 193.41,
+   "text": "The maximum (or minimum) of this running sum is the enrichment score, and its statistical significance is computed by random permutation."
+  },
+  {
+   "t": 202.12,
+   "text": "GSEA was developed by Aravind Subramanian, Jill Mesirov, and colleagues at the Broad Institute in the mid-2000s — originally for microarray data, then adapted for RNA-seq."
+  },
+  {
+   "t": 213.84,
+   "text": "The Broad maintains a curated database called MSigDB — Molecular Signatures Database — which contains thousands of curated gene sets organized into collections: hallmark pathways (the H collection, fifty broad pathway signatures), curated gene sets (C2, including KEGG, Reactome, BioCarta), motif gene sets (C3), computational gene sets (C4), GO terms (C5), and so on."
+  },
+  {
+   "t": 242.61,
+   "text": "MSigDB is the standard input for GSEA."
+  },
+  {
+   "t": 246.32,
+   "text": "The advantage of GSEA over over-representation analysis is that it uses the full ranking, not just the top hits."
+  },
+  {
+   "t": 253.86,
+   "text": "It can detect coordinated up- or down-regulation of a pathway even when no individual gene crosses the significance threshold."
+  },
+  {
+   "t": 262.41,
+   "text": "This matters a lot when the biological signal is broadly distributed across many genes, each with a small effect."
+  },
+  {
+   "t": 269.81,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 271.07,
+   "text": "GSEA is the second-order analysis."
+  },
+  {
+   "t": 274.19,
+   "text": "Instead of asking \"is this single gene differentially expressed?"
+  },
+  {
+   "t": 279.05,
+   "text": "\" — which can miss broad patterns — you ask \"is this pathway or module up or down as a whole?"
+  },
+  {
+   "t": 285.32,
+   "text": "\" It's a different question, and it's often the more biologically meaningful one."
+  },
+  {
+   "t": 289.84,
+   "text": "A pathway might be coordinately upregulated by 1.3-fold across all its 100 member genes, with no single gene crossing the differential expression threshold — but GSEA will pick this up clearly."
+  },
+  {
+   "t": 303.29,
+   "text": "Over-representation analysis won't."
+  },
+  {
+   "t": 305.94,
+   "text": "A few practical notes."
+  },
+  {
+   "t": 307.52,
+   "text": "Use both methods."
+  },
+  {
+   "t": 309.05,
+   "text": "Over-representation analysis on your significant DE genes, GSEA on your ranked statistic."
+  },
+  {
+   "t": 316.21,
+   "text": "They give complementary views."
+  },
+  {
+   "t": 318.07,
+   "text": "Pick your gene sets carefully."
+  },
+  {
+   "t": 320.41,
+   "text": "MSigDB has too many collections to use all at once."
+  },
+  {
+   "t": 324.4,
+   "text": "The Hallmark collection (50 broad pathways) is a great place to start."
+  },
+  {
+   "t": 329.15,
+   "text": "Reactome and KEGG add metabolic and signaling resolution."
+  },
+  {
+   "t": 334.61,
+   "text": "GO Biological Process gives you functional categories."
+  },
+  {
+   "t": 338.41,
+   "text": "Don't dump everything in at once — you'll have multiple testing problems at the gene-set level too."
+  },
+  {
+   "t": 344.45,
+   "text": "Cell type signatures matter."
+  },
+  {
+   "t": 346.32,
+   "text": "Many MSigDB collections include cell-type-specific signatures derived from single-cell or sorted-cell experiments."
+  },
+  {
+   "t": 354.75,
+   "text": "Enrichment in a \"CD8 T cell\" signature, in a bulk RNA-seq sample from a tumor, might mean the tumor is more T-cell-infiltrated, not that the cancer cells have become more T-cell-like."
+  },
+  {
+   "t": 366.79,
+   "text": "This is the cellular composition confound that bulk RNA-seq has, and we'll come back to it in Segment 18 when we discuss deconvolution."
+  },
+  {
+   "t": 375.5,
+   "text": "The output of pathway analysis is the form in which bulk RNA-seq results are usually presented in a paper."
+  },
+  {
+   "t": 382.18,
+   "text": "Volcano plot of individual DE genes, then a table or barplot of enriched pathways."
+  },
+  {
+   "t": 388.88,
+   "text": "The pathway view is what makes the biology readable."
+  },
+  {
+   "t": 392.49,
+   "text": "\"Five hundred genes are differentially expressed\" is too much for any human reader."
+  },
+  {
+   "t": 398.19,
+   "text": "\"Cell cycle is upregulated and oxidative phosphorylation is downregulated\" is a finding you can think about."
+  }
+ ]
+}

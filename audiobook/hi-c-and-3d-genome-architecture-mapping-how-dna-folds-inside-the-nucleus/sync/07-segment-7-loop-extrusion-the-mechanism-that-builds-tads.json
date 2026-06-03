@@ -1,0 +1,271 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Loop extrusion: the mechanism that builds TADs",
+ "duration": 429.0,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Loop extrusion: the mechanism that builds TADs"
+  },
+  {
+   "t": 5.24,
+   "text": "I want to tell you the loop extrusion story because it is one of the cleanest examples in modern biology of theoretical prediction meeting experimental confirmation."
+  },
+  {
+   "t": 14.53,
+   "text": "The model was proposed before there was direct evidence for it, on the basis of polymer physics arguments about what could possibly produce the Hi-C contact patterns we were seeing."
+  },
+  {
+   "t": 24.86,
+   "text": "Then, over the following decade, every experimental test confirmed the model — including some heroic single-molecule experiments that visualized loop extrusion happening in real time."
+  },
+  {
+   "t": 36.71,
+   "text": "It's a beautiful piece of science."
+  },
+  {
+   "t": 38.84,
+   "text": "Here is the model."
+  },
+  {
+   "t": 40.26,
+   "text": "The cell contains a protein complex called cohesin — a ring-shaped molecular machine made of several subunits, including SMC1, SMC3, RAD21, and either STAG1 or STAG2."
+  },
+  {
+   "t": 54.6,
+   "text": "Cohesin has been known about for decades for its role in sister chromatid cohesion during mitosis, but its role in interphase chromatin organization was unclear until Hi-C and the loop extrusion model came along."
+  },
+  {
+   "t": 68.51,
+   "text": "Cohesin binds chromatin — it loads onto the DNA fiber at random locations."
+  },
+  {
+   "t": 74.28,
+   "text": "Once loaded, cohesin uses ATP hydrolysis to actively extrude a loop of chromatin through its ring."
+  },
+  {
+   "t": 81.6,
+   "text": "The DNA threads through cohesin, and cohesin reels it in from both sides simultaneously, like a ring pulling slack through itself."
+  },
+  {
+   "t": 91.9,
+   "text": "The loop grows over time, getting larger and larger as cohesin processes more chromatin."
+  },
+  {
+   "t": 98.75,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 100.03,
+   "text": "Cohesin is a ring that grabs chromatin and pumps loops out of itself."
+  },
+  {
+   "t": 105.34,
+   "text": "Imagine a ring sitting around a long rope."
+  },
+  {
+   "t": 108.72,
+   "text": "The ring uses energy to slide the rope through itself in both directions at once, gathering rope into a loop on one side."
+  },
+  {
+   "t": 117.14,
+   "text": "The loop grows and grows."
+  },
+  {
+   "t": 119.09,
+   "text": "The loop is the structure."
+  },
+  {
+   "t": 120.94,
+   "text": "It's a topological structure — a base of the loop, where the two strands of chromatin enter the cohesin ring, and the rest of the loop arcing out from the base."
+  },
+  {
+   "t": 130.78,
+   "text": "But cohesin doesn't extrude forever."
+  },
+  {
+   "t": 133.68,
+   "text": "It runs into roadblocks."
+  },
+  {
+   "t": 135.53,
+   "text": "The most important roadblock is the protein CTCF — CCCTC-binding factor — which binds specific 19-base-pair motifs scattered throughout the genome."
+  },
+  {
+   "t": 145.88,
+   "text": "When cohesin extruding along chromatin runs into a CTCF binding site, it stalls — but only in a specific orientation."
+  },
+  {
+   "t": 155.41,
+   "text": "CTCF motifs have a polarity; they point in one direction."
+  },
+  {
+   "t": 160.1,
+   "text": "Cohesin extruding from one side of a CTCF site stops if the CTCF motif is oriented away from it (specifically, pointing into the extruding chromatin), but passes through if it's oriented the other way."
+  },
+  {
+   "t": 174.06,
+   "text": "This is called the convergent CTCF rule: two CTCF sites that anchor a loop have their motifs pointing toward each other."
+  },
+  {
+   "t": 181.81,
+   "text": "The loop forms between the two convergently-oriented CTCF sites."
+  },
+  {
+   "t": 186.55,
+   "text": "So the full picture: cohesin loads onto chromatin somewhere, starts extruding a loop, and the loop grows until cohesin hits a CTCF site on one side."
+  },
+  {
+   "t": 197.11,
+   "text": "Cohesin stalls there."
+  },
+  {
+   "t": 198.74,
+   "text": "Extrusion continues from the other side until cohesin hits another CTCF site, oriented convergently."
+  },
+  {
+   "t": 206.55,
+   "text": "Now both sides are anchored."
+  },
+  {
+   "t": 208.3,
+   "text": "The loop is stable."
+  },
+  {
+   "t": 209.89,
+   "text": "It persists for some time — minutes — before cohesin is unloaded by a protein called Wapl, the loop collapses, and the process starts over somewhere else."
+  },
+  {
+   "t": 219.9,
+   "text": "The loop is the TAD."
+  },
+  {
+   "t": 221.86,
+   "text": "Each TAD is, on average, a loop that has been extruded between two convergently-oriented CTCF anchor sites."
+  },
+  {
+   "t": 230.61,
+   "text": "The boundaries of TADs are the CTCF sites."
+  },
+  {
+   "t": 234.1,
+   "text": "The dense contacts within a TAD are a consequence of all the chromatin within the loop being squished into the same small space by the topology of the loop."
+  },
+  {
+   "t": 243.85,
+   "text": "The sharp drop-off in contacts across a TAD boundary is a consequence of the CTCF anchor preventing chromatin on the other side from entering the same loop."
+  },
+  {
+   "t": 253.5,
+   "text": "Why is this model so satisfying?"
+  },
+  {
+   "t": 256.19,
+   "text": "Because it explains everything Hi-C sees in one stroke."
+  },
+  {
+   "t": 260.8,
+   "text": "The block structure of TADs along the diagonal: that's loop bases concentrating chromatin within each loop."
+  },
+  {
+   "t": 268.39,
+   "text": "The sharp boundaries: that's CTCF anchors stopping extrusion."
+  },
+  {
+   "t": 273.06,
+   "text": "The convergent CTCF rule: that's the directional behavior of cohesin stalling at CTCF."
+  },
+  {
+   "t": 280.13,
+   "text": "The focal loop dots in the corners of TADs: those are the bases of the extruded loops, where the chromatin is held by cohesin between two CTCF anchors."
+  },
+  {
+   "t": 289.73,
+   "text": "The model predicts all of these features."
+  },
+  {
+   "t": 292.2,
+   "text": "And it predicts more — features that hadn't been measured yet, like the kinetics of TAD formation and the consequences of removing cohesin or CTCF."
+  },
+  {
+   "t": 302.33,
+   "text": "Both of those predictions have since been tested experimentally and confirmed, which we'll cover in detail in Segment 15."
+  },
+  {
+   "t": 309.94,
+   "text": "The loop extrusion model was first proposed in its modern form by Leonid Mirny and colleagues — actually in two independent theoretical papers in 2015 and 2016, one from Mirny's group at MIT and one from Nasmyth's group at Oxford."
+  },
+  {
+   "t": 325.12,
+   "text": "The model was on the basis of polymer simulations that asked: what kind of activity could a chromatin-binding protein perform to produce the Hi-C patterns we see?"
+  },
+  {
+   "t": 334.67,
+   "text": "The answer that emerged was: extruding loops, with directional stalling at CTCF."
+  },
+  {
+   "t": 341.15,
+   "text": "The molecular machine that does the extruding, cohesin, was the obvious candidate because it was already known to be a ring-shaped ATP-powered chromatin-binding complex."
+  },
+  {
+   "t": 352.14,
+   "text": "The CTCF-as-roadblock idea fit the existing biology of CTCF."
+  },
+  {
+   "t": 358.37,
+   "text": "The single-molecule confirmation came in 2018 from the Yamamoto lab and the Greene lab, using a technique called DNA curtains — DNA stretched between two anchors in a microfluidic flow cell — and watching fluorescently labeled cohesin act on it."
+  },
+  {
+   "t": 374.14,
+   "text": "They could see cohesin loading onto DNA, then watch as it processively reeled DNA through itself, creating a visible loop that grew over time."
+  },
+  {
+   "t": 384.52,
+   "text": "Loop extrusion, observed directly."
+  },
+  {
+   "t": 387.61,
+   "text": "The model was no longer a model — it was an observation."
+  },
+  {
+   "t": 391.68,
+   "text": "The loop extrusion story is one of the great triumphs of integrating theory and experiment in modern biology."
+  },
+  {
+   "t": 399.14,
+   "text": "The Hi-C data revealed a pattern."
+  },
+  {
+   "t": 401.36,
+   "text": "The polymer physics predicted a mechanism."
+  },
+  {
+   "t": 404.02,
+   "text": "The molecular biology identified the candidate machines."
+  },
+  {
+   "t": 408.03,
+   "text": "The single-molecule biophysics confirmed the mechanism in vitro."
+  },
+  {
+   "t": 413.12,
+   "text": "The CRISPR-based depletion experiments confirmed the mechanism in vivo."
+  },
+  {
+   "t": 417.87,
+   "text": "All the pieces fit."
+  },
+  {
+   "t": 419.22,
+   "text": "Every level of analysis gave consistent answers."
+  },
+  {
+   "t": 422.75,
+   "text": "That kind of convergence is rare and beautiful."
+  },
+  {
+   "t": 426.06,
+   "text": "When you see it, you know you're looking at something real."
+  }
+ ]
+}

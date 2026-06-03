@@ -1,0 +1,255 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The smoothie that tells you the average — what bulk RNA-seq is and why it matters",
+ "duration": 437.69,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The smoothie that tells you the average — what bulk RNA-seq is and why it matters"
+  },
+  {
+   "t": 6.86,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 8.31,
+   "text": "Today and for the next two hours, we're going to talk about bulk RNA-seq, which is — without any exaggeration — the single most widely used genomic assay in modern biology."
+  },
+  {
+   "t": 19.51,
+   "text": "If you read a paper from a wet lab between roughly 2010 and today and that paper claims to have measured gene expression, the odds are overwhelming that what they actually did was bulk RNA-seq."
+  },
+  {
+   "t": 31.39,
+   "text": "It is the workhorse."
+  },
+  {
+   "t": 32.66,
+   "text": "It is the default."
+  },
+  {
+   "t": 33.79,
+   "text": "It is the assay that gets ordered when somebody walks into a core facility with a frozen tube of tissue and says, \"I want to know what genes are on."
+  },
+  {
+   "t": 42.84,
+   "text": "\""
+  },
+  {
+   "t": 43.04,
+   "text": "Some of you in this room have already taken the companion lecture on single-cell sequencing — the one that walks through how, starting around 2015, droplet-based platforms like 10x Chromium turned single-cell transcriptomics into a routine technique, and how that unlocked a view of cellular heterogeneity that bulk methods could never see."
+  },
+  {
+   "t": 64.16,
+   "text": "That lecture spent a lot of time on a single complaint, which I'll call the bulk problem."
+  },
+  {
+   "t": 68.96,
+   "text": "The complaint is this: if you grind up a tissue and sequence all the RNA in it together, you get an average, and averages hide biology."
+  },
+  {
+   "t": 78.12,
+   "text": "They average a rare tumor stem cell into thousands of bulk tumor cells."
+  },
+  {
+   "t": 83.05,
+   "text": "They average a single dying neuron into ten thousand healthy ones."
+  },
+  {
+   "t": 87.56,
+   "text": "They average activated T cells into resting T cells."
+  },
+  {
+   "t": 91.92,
+   "text": "The single-cell revolution exists because that averaging was, for many questions, an unacceptable loss of resolution."
+  },
+  {
+   "t": 100.21,
+   "text": "This lecture is the mirror image."
+  },
+  {
+   "t": 102.72,
+   "text": "This is the lecture that asks the other question, the one the single-cell lecture barely touched: what does bulk RNA-seq do well?"
+  },
+  {
+   "t": 110.64,
+   "text": "When is the average exactly what you want?"
+  },
+  {
+   "t": 112.86,
+   "text": "Why has bulk not been displaced by single-cell, even fifteen years after single-cell first became possible?"
+  },
+  {
+   "t": 119.86,
+   "text": "The answer, which we'll spend two hours unpacking, is that bulk RNA-seq is cheaper, more sensitive, more quantitative, easier to standardize, and sufficient for an enormous range of biological questions."
+  },
+  {
+   "t": 133.55,
+   "text": "It is the right tool when you want to know whether a tissue, as a whole, has turned on a particular pathway."
+  },
+  {
+   "t": 140.05,
+   "text": "It is the right tool when you want a biomarker that's robust across a heterogeneous sample."
+  },
+  {
+   "t": 145.43,
+   "text": "It is the right tool when you have thousands of patient samples and you can't afford to put each one through a Chromium chip."
+  },
+  {
+   "t": 152.24,
+   "text": "It is the right tool, in short, when you want the average — and the average is more often the right thing than the single-cell community sometimes admits."
+  },
+  {
+   "t": 161.06,
+   "text": "Here's the analogy I want you to carry through this whole lecture."
+  },
+  {
+   "t": 164.85,
+   "text": "Bulk RNA-seq is smoothie sequencing."
+  },
+  {
+   "t": 167.99,
+   "text": "You take a piece of tissue — a tumor biopsy, a piece of brain, a culture of stem cells, a leaf, a yeast pellet — and you grind it up."
+  },
+  {
+   "t": 176.68,
+   "text": "You blend it."
+  },
+  {
+   "t": 177.57,
+   "text": "Cells, organelles, membranes, nuclei, all the contents — everything gets pulverized into a slurry."
+  },
+  {
+   "t": 185.1,
+   "text": "From that slurry, you pull out the RNA — the messenger RNA, the ribosomal RNA, the various non-coding species — and you sequence it."
+  },
+  {
+   "t": 194.69,
+   "text": "What you get is a count for every gene in the genome: how many RNA molecules from that gene were in your smoothie."
+  },
+  {
+   "t": 201.45,
+   "text": "Multiplied by every gene, that's a gene expression profile of the entire tissue, averaged across every cell in your starting material."
+  },
+  {
+   "t": 210.71,
+   "text": "Now compare that to single-cell sequencing, which is — to extend the analogy — like sequencing every individual piece of fruit before you blend it."
+  },
+  {
+   "t": 220.36,
+   "text": "Single-cell tells you how sweet each strawberry was."
+  },
+  {
+   "t": 223.89,
+   "text": "Bulk tells you how sweet the smoothie is."
+  },
+  {
+   "t": 226.47,
+   "text": "Sometimes you want to know the heterogeneity — sometimes you want to know that there was one rotten strawberry and one extra-sweet one."
+  },
+  {
+   "t": 234.31,
+   "text": "But sometimes you just want to know whether the smoothie, on net, is more sweet or more sour than another smoothie."
+  },
+  {
+   "t": 240.71,
+   "text": "For an enormous range of biological questions — drug response, disease classification, pathway activation, splicing changes, biomarker discovery — the smoothie's average sweetness is exactly the answer."
+  },
+  {
+   "t": 254.74,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the bulk RNA-seq workflow on a whiteboard from RNA extraction through differential expression, and explain why each step exists; two, articulate clearly when bulk is the right choice and when you actually need single-cell; three, look at a published paper that says \"RNA-seq was performed\" and read its methods section with real understanding of what the data is, how it was analyzed, and what conclusions the authors"
+  },
+  {
+   "t": 284.7,
+   "text": "are entitled to draw — then we've succeeded."
+  },
+  {
+   "t": 287.78,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 290.0,
+   "text": "A few orienting numbers, before we go deeper."
+  },
+  {
+   "t": 292.98,
+   "text": "A bulk RNA-seq experiment, in a modern core facility, costs somewhere between fifty and two hundred dollars per sample, depending on depth and the institution's overhead."
+  },
+  {
+   "t": 303.5,
+   "text": "A comparable single-cell experiment on the same tissue is closer to a thousand to two thousand dollars per sample — sometimes more."
+  },
+  {
+   "t": 312.08,
+   "text": "So bulk is roughly ten to twenty times cheaper."
+  },
+  {
+   "t": 315.49,
+   "text": "A bulk RNA-seq sample requires maybe a hundred nanograms of RNA, which you can get from almost any tissue."
+  },
+  {
+   "t": 323.09,
+   "text": "A single-cell experiment requires a live, dissociated cell suspension, which is much harder to prepare, especially for archived clinical samples or tissues that don't dissociate cleanly."
+  },
+  {
+   "t": 335.71,
+   "text": "A bulk RNA-seq run sees every gene in the genome, including lowly expressed ones, because every gene's mRNAs are pooled across all the cells."
+  },
+  {
+   "t": 346.53,
+   "text": "A single-cell experiment, because it splits the same amount of sequencing across thousands of individual cells, sees only the most abundant transcripts per cell and suffers from a problem called dropout, which we'll touch on in Segment 15."
+  },
+  {
+   "t": 361.35,
+   "text": "So bulk is cheaper, more accessible, more sensitive per gene, and easier to scale."
+  },
+  {
+   "t": 368.23,
+   "text": "The trade-off, of course, is that you lose cell-type information."
+  },
+  {
+   "t": 372.36,
+   "text": "You can't tell whether a change in gene expression came from a change in the cells' state or from a change in the cells' proportions in the tissue."
+  },
+  {
+   "t": 379.83,
+   "text": "If a tumor sample looks different from a normal sample, is that because the tumor cells are expressing a different program, or because the tumor sample has more immune cells infiltrating, or both?"
+  },
+  {
+   "t": 391.96,
+   "text": "Bulk can't tell you."
+  },
+  {
+   "t": 393.23,
+   "text": "That's the deal you make."
+  },
+  {
+   "t": 394.64,
+   "text": "You get the average, cheaply, sensitively, at scale."
+  },
+  {
+   "t": 398.85,
+   "text": "You give up the ability to attribute changes to specific cell types."
+  },
+  {
+   "t": 403.04,
+   "text": "For a lot of biology, that's a deal worth making."
+  },
+  {
+   "t": 405.99,
+   "text": "So that's the contract for the next two hours."
+  },
+  {
+   "t": 408.59,
+   "text": "We're going to walk through the workhorse method — from its prehistory in microarrays, through the 2008 papers that established it as the standard, through the workflow, the analysis pipelines, the statistics, the public datasets, and the modern frontier where bulk and single-cell are starting to converge."
+  },
+  {
+   "t": 425.69,
+   "text": "We'll do it the way you'd want to understand any dominant assay: get the chemistry right, then the bioinformatics, then the statistics, then the failure modes, then the applications."
+  },
+  {
+   "t": 436.06,
+   "text": "Let's start with where it came from."
+  }
+ ]
+}

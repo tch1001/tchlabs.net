@@ -1,0 +1,203 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — PE4, PE5, PEmax: engineered RT and Cas9 variants for higher efficiency",
+ "duration": 330.89,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — PE4, PE5, PEmax: engineered RT and Cas9 variants for higher efficiency"
+  },
+  {
+   "t": 8.93,
+   "text": "The 2019 paper laid the foundation."
+  },
+  {
+   "t": 12.19,
+   "text": "The next several years of work, mostly from the Liu lab and a few collaborators, pushed efficiency much further."
+  },
+  {
+   "t": 19.41,
+   "text": "PE4 and PE5."
+  },
+  {
+   "t": 21.77,
+   "text": "In a 2021 paper, the Liu group identified another bottleneck: the cell's mismatch repair machinery itself."
+  },
+  {
+   "t": 29.88,
+   "text": "We've already noted that mismatch repair sometimes overwrites the edit."
+  },
+  {
+   "t": 34.38,
+   "text": "What if you could partially suppress mismatch repair, just temporarily, just during the editing window?"
+  },
+  {
+   "t": 40.11,
+   "text": "The solution they landed on was to co-express a dominant-negative form of MLH1, a key protein in the mismatch repair pathway."
+  },
+  {
+   "t": 49.62,
+   "text": "MLH1 dn — the dominant-negative variant — acts as a poison pill in the mismatch repair complex."
+  },
+  {
+   "t": 56.92,
+   "text": "It assembles with the rest of the complex but stops it from functioning."
+  },
+  {
+   "t": 60.95,
+   "text": "So in cells where you transiently express MLH1 dn alongside the prime editor and pegRNA, the cell's mismatch repair machinery is briefly inhibited, the edited strand is much less likely to be overwritten, and editing efficiency goes up."
+  },
+  {
+   "t": 77.26,
+   "text": "PE4 is PE2 plus MLH1 dn."
+  },
+  {
+   "t": 81.1,
+   "text": "PE5 is PE3 plus MLH1 dn — so it's the dual-nick version with mismatch repair inhibition."
+  },
+  {
+   "t": 89.54,
+   "text": "PE5 typically gives editing efficiencies twice to three times higher than PE3 at the same sites."
+  },
+  {
+   "t": 97.88,
+   "text": "In some sites, you start to see editing rates north of 70% in cultured cells."
+  },
+  {
+   "t": 104.38,
+   "text": "That's a serious tool."
+  },
+  {
+   "t": 105.96,
+   "text": "You might worry: doesn't suppressing mismatch repair cause genome-wide mutations?"
+  },
+  {
+   "t": 111.49,
+   "text": "Mismatch repair is one of the cell's main defenses against accumulating random mutations during DNA replication."
+  },
+  {
+   "t": 118.85,
+   "text": "If you suppress it, won't the cell accumulate damage?"
+  },
+  {
+   "t": 122.38,
+   "text": "This is a real concern."
+  },
+  {
+   "t": 124.11,
+   "text": "In practice, the Liu group showed that the suppression is transient — MLH1 dn is delivered alongside the prime editor and pegRNA, and once those expression vectors are diluted out, mismatch repair returns to normal."
+  },
+  {
+   "t": 138.44,
+   "text": "The window of suppression is hours to a few days."
+  },
+  {
+   "t": 141.89,
+   "text": "In that window, the cell does have a slightly elevated mutation rate at unrelated sites — measurable, but small."
+  },
+  {
+   "t": 149.44,
+   "text": "For research use, this is fine."
+  },
+  {
+   "t": 151.94,
+   "text": "For clinical use, it's a tradeoff that has to be weighed."
+  },
+  {
+   "t": 155.8,
+   "text": "PEmax."
+  },
+  {
+   "t": 156.93,
+   "text": "Also from a 2021 paper."
+  },
+  {
+   "t": 158.95,
+   "text": "PEmax is a re-engineered prime editor protein that incorporates a stack of further improvements: an improved Cas9 nickase with better expression and nuclear localization, an additional NLS for better nuclear import, codon optimization throughout the entire protein, and a redesigned linker between the Cas9 and the RT."
+  },
+  {
+   "t": 179.32,
+   "text": "The protein-level improvements add up to a roughly two-fold further efficiency boost on top of PE2/PE4 in most contexts."
+  },
+  {
+   "t": 189.47,
+   "text": "You can combine PEmax with the dual-nick strategy (giving PEmax-PE3) and with MLH1 dn co-expression (giving PEmax-PE5)."
+  },
+  {
+   "t": 199.56,
+   "text": "The current state-of-the-art prime editor in cultured cells, as of about 2024, is PEmax with PE5-style mismatch repair suppression and an optimized pegRNA — which we'll get to in a moment."
+  },
+  {
+   "t": 212.56,
+   "text": "With that whole package, you can routinely see editing efficiencies of 50-90% at well-designed sites in cultured human cells."
+  },
+  {
+   "t": 222.19,
+   "text": "There's one more piece of protein engineering I should mention: engineered pegRNAs."
+  },
+  {
+   "t": 227.22,
+   "text": "The pegRNA itself, as originally designed, is somewhat unstable in cells."
+  },
+  {
+   "t": 233.2,
+   "text": "Its 3' end — the RT template plus PBS — is exposed and is rapidly degraded by cellular exonucleases."
+  },
+  {
+   "t": 242.46,
+   "text": "So the lifetime of a pegRNA in the cell is short, and only a small fraction of pegRNAs make it to the prime editor still intact."
+  },
+  {
+   "t": 250.69,
+   "text": "The Liu lab and others have engineered the pegRNA itself to be more stable."
+  },
+  {
+   "t": 256.0,
+   "text": "The most influential design is the engineered pegRNA, or epegRNA, which adds a structured RNA element — typically a tevopreQ1 pseudoknot or an mpknot — to the 3' end of the pegRNA, downstream of the PBS."
+  },
+  {
+   "t": 271.65,
+   "text": "This pseudoknot is a small folded RNA structure that resists exonuclease attack."
+  },
+  {
+   "t": 277.27,
+   "text": "The pegRNA, with this structured 3' addition, is much more stable in cells."
+  },
+  {
+   "t": 283.32,
+   "text": "Editing efficiencies typically go up another two-fold or so with an epegRNA over an unmodified pegRNA."
+  },
+  {
+   "t": 291.4,
+   "text": "So the stack of improvements is impressive."
+  },
+  {
+   "t": 294.17,
+   "text": "From PE1 in 2019 — single-digit-percent editing — to PEmax-PE5 with epegRNAs in 2024 — sometimes 90% editing."
+  },
+  {
+   "t": 305.14,
+   "text": "Three orders of magnitude of improvement in five years, just by careful, iterative engineering of each component of the system."
+  },
+  {
+   "t": 314.26,
+   "text": "The protein got better."
+  },
+  {
+   "t": 315.83,
+   "text": "The RT got better."
+  },
+  {
+   "t": 317.36,
+   "text": "The guides got better."
+  },
+  {
+   "t": 318.68,
+   "text": "The strategy of using the cell's repair machinery got cleverer."
+  },
+  {
+   "t": 322.58,
+   "text": "None of these individual improvements were revolutionary, but stacked together, they turned a proof-of-concept into a serious tool."
+  }
+ ]
+}

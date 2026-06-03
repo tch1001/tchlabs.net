@@ -1,0 +1,183 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Bulk RNA-seq in clinical practice — biomarkers and tumor profiling",
+ "duration": 346.56,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Bulk RNA-seq in clinical practice — biomarkers and tumor profiling"
+  },
+  {
+   "t": 6.59,
+   "text": "Bulk RNA-seq has become a routine clinical tool, and I want to spend a segment on the specific ways it's used in patient care, because the clinical context shapes which methods matter and how the data is interpreted."
+  },
+  {
+   "t": 19.69,
+   "text": "Tumor profiling is the largest clinical use of RNA-seq today."
+  },
+  {
+   "t": 24.18,
+   "text": "When a patient is diagnosed with cancer, increasingly, their tumor is sequenced — both DNA (to find mutations) and RNA (to find expression patterns and fusion transcripts)."
+  },
+  {
+   "t": 37.06,
+   "text": "The RNA-seq data is used for three main purposes."
+  },
+  {
+   "t": 41.04,
+   "text": "First, identifying gene fusions."
+  },
+  {
+   "t": 44.14,
+   "text": "A gene fusion happens when two genes get joined together by a chromosomal rearrangement, producing a chimeric transcript that codes for a hybrid protein."
+  },
+  {
+   "t": 53.06,
+   "text": "Many cancers are defined by specific fusions — BCR-ABL in chronic myeloid leukemia, EML4-ALK in some lung cancers, ETV6-RUNX1 in some leukemias."
+  },
+  {
+   "t": 66.38,
+   "text": "RNA-seq detects fusions by finding read pairs where the two reads map to different genes — a signature of a chimeric transcript."
+  },
+  {
+   "t": 74.99,
+   "text": "Tools like Arriba, STAR-Fusion, and FusionCatcher automatically detect fusions from RNA-seq data."
+  },
+  {
+   "t": 82.04,
+   "text": "Fusion detection is now standard in clinical tumor profiling."
+  },
+  {
+   "t": 86.36,
+   "text": "Second, expression-based subtyping."
+  },
+  {
+   "t": 89.04,
+   "text": "Many cancers can be classified into molecular subtypes based on gene expression patterns."
+  },
+  {
+   "t": 94.76,
+   "text": "Breast cancer has the well-known PAM50 classifier — luminal A, luminal B, HER2-enriched, basal — derived from expression of 50 marker genes."
+  },
+  {
+   "t": 106.69,
+   "text": "Glioblastoma has the proneural/mesenchymal/classical subtypes."
+  },
+  {
+   "t": 112.53,
+   "text": "Colorectal cancer has CMS1-CMS4."
+  },
+  {
+   "t": 116.75,
+   "text": "Each of these classifiers takes bulk RNA-seq data as input and assigns the tumor to a subtype, which informs treatment decisions."
+  },
+  {
+   "t": 125.84,
+   "text": "The classifiers were developed from large bulk RNA-seq cohorts — typically TCGA, which we'll discuss in Segment 17."
+  },
+  {
+   "t": 134.47,
+   "text": "Third, immune contexture and treatment response prediction."
+  },
+  {
+   "t": 138.34,
+   "text": "Several immune-related signatures have been validated as predictors of response to checkpoint inhibitors like pembrolizumab."
+  },
+  {
+   "t": 146.56,
+   "text": "The \"tumor inflammation signature\" — an 18-gene signature developed by Merck and academic collaborators — predicts which tumors will respond to anti-PD-1 therapy."
+  },
+  {
+   "t": 157.46,
+   "text": "The \"interferon-gamma signature\" does similar work."
+  },
+  {
+   "t": 160.8,
+   "text": "These are bulk signatures, validated on bulk RNA-seq data, applied clinically to bulk samples."
+  },
+  {
+   "t": 167.95,
+   "text": "They illustrate how bulk RNA-seq translates into clinical decisions."
+  },
+  {
+   "t": 173.18,
+   "text": "Tumor-normal comparisons are the other major clinical use."
+  },
+  {
+   "t": 176.9,
+   "text": "Bulk RNA-seq from a tumor and adjacent normal tissue (or normal tissue from the same organ in different patients) lets you ask what's specifically different in the tumor — which pathways are upregulated, which are downregulated, which fusions are present, which alternative splicing events occur."
+  },
+  {
+   "t": 195.32,
+   "text": "This is the standard analytical workflow for translational cancer research and is increasingly used in personalized medicine workflows."
+  },
+  {
+   "t": 203.47,
+   "text": "FoundationOne RNA and similar commercial products use bulk RNA-seq on FFPE tumor samples to produce a clinical report including gene fusions, RNA expression of key markers, and splice variants of clinical interest."
+  },
+  {
+   "t": 218.68,
+   "text": "These tests are reimbursed by insurance and used routinely in oncology decision-making."
+  },
+  {
+   "t": 224.18,
+   "text": "Other clinical applications include diagnosing genetic diseases by detecting splicing defects (some Mendelian diseases are caused by mutations that disrupt splicing, detectable by RNA-seq when the underlying DNA mutation is ambiguous); characterizing transplant rejection by looking at immune infiltration signatures; monitoring response to therapy in cancer; and characterizing infectious diseases by detecting microbial RNA alongside host RNA."
+  },
+  {
+   "t": 253.74,
+   "text": "A few practical considerations for clinical RNA-seq."
+  },
+  {
+   "t": 257.26,
+   "text": "FFPE samples are the standard in pathology, and FFPE RNA is degraded."
+  },
+  {
+   "t": 263.18,
+   "text": "Clinical RNA-seq protocols specifically use rRNA depletion (because poly-A selection fails on degraded RNA) and short-fragment library preps designed for fragmented input."
+  },
+  {
+   "t": 274.73,
+   "text": "Modern clinical kits can produce useful data from FFPE blocks that are decades old."
+  },
+  {
+   "t": 280.35,
+   "text": "Turnaround time matters in the clinic."
+  },
+  {
+   "t": 282.7,
+   "text": "A research RNA-seq experiment can take weeks; a clinical RNA-seq test needs to deliver a report in a few days."
+  },
+  {
+   "t": 290.76,
+   "text": "This has driven the development of streamlined clinical pipelines — automated library prep, targeted sequencing panels (rather than whole transcriptome), rapid analysis pipelines optimized for specific clinical questions."
+  },
+  {
+   "t": 304.65,
+   "text": "Reproducibility and standardization matter more in the clinic than in research."
+  },
+  {
+   "t": 310.05,
+   "text": "Clinical RNA-seq tests have to be validated, certified (CLIA in the US, CE in Europe), and produce results that don't drift between samples or over time."
+  },
+  {
+   "t": 321.24,
+   "text": "This means strict QC, controlled reference standards, and careful inter-laboratory standardization."
+  },
+  {
+   "t": 328.14,
+   "text": "It's the kind of operational work that doesn't make for exciting biology but is essential for the technology to actually help patients."
+  },
+  {
+   "t": 336.17,
+   "text": "Bulk RNA-seq in the clinic is mature, validated, and growing."
+  },
+  {
+   "t": 340.8,
+   "text": "It's not a future thing."
+  },
+  {
+   "t": 342.19,
+   "text": "It's happening now, every day, in pathology labs around the world."
+  }
+ ]
+}

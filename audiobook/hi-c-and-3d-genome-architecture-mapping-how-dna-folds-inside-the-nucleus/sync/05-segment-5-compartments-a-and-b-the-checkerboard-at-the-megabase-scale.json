@@ -1,0 +1,195 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Compartments A and B: the checkerboard at the megabase scale",
+ "duration": 352.27,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Compartments A and B: the checkerboard at the megabase scale"
+  },
+  {
+   "t": 5.81,
+   "text": "The first major discovery from Hi-C — discovered in the very same 2009 paper that introduced the technique — was the existence of two large-scale compartments of the genome, which the authors called compartment A and compartment B."
+  },
+  {
+   "t": 20.09,
+   "text": "This is a feature you see when you look at a Hi-C contact matrix at a low-resolution, whole-chromosome view."
+  },
+  {
+   "t": 26.5,
+   "text": "You see a striking checkerboard pattern."
+  },
+  {
+   "t": 28.99,
+   "text": "Some regions of the chromosome preferentially contact other regions of the same chromosome, even across tens of megabases of linear separation."
+  },
+  {
+   "t": 38.25,
+   "text": "Other regions preferentially contact a different set."
+  },
+  {
+   "t": 42.0,
+   "text": "The two sets segregate into a checkerboard."
+  },
+  {
+   "t": 44.85,
+   "text": "How did Lieberman-Aiden and colleagues find this?"
+  },
+  {
+   "t": 47.81,
+   "text": "They applied a technique called principal component analysis, or PCA, to the Hi-C contact matrix."
+  },
+  {
+   "t": 54.98,
+   "text": "PCA, in this context, asks: what is the dominant pattern of variation in the matrix, after correcting for the trivial distance-dependent decay?"
+  },
+  {
+   "t": 64.62,
+   "text": "The first principal component of a Hi-C matrix — the strongest non-trivial pattern — turned out to be a striking bipartite structure."
+  },
+  {
+   "t": 73.56,
+   "text": "Each bin of the genome got a positive or negative value on the first principal component, and bins with the same sign preferentially contacted each other, while bins with opposite signs avoided each other."
+  },
+  {
+   "t": 85.22,
+   "text": "Two communities."
+  },
+  {
+   "t": 86.54,
+   "text": "A and B."
+  },
+  {
+   "t": 87.6,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 88.88,
+   "text": "Compartments A and B are like a checkerboard pattern at the megabase scale."
+  },
+  {
+   "t": 93.39,
+   "text": "A is gene-rich, active, open chromatin — euchromatin."
+  },
+  {
+   "t": 98.45,
+   "text": "B is gene-poor, repressed, closed chromatin — heterochromatin."
+  },
+  {
+   "t": 103.24,
+   "text": "They segregate within the nucleus, like oil and water."
+  },
+  {
+   "t": 107.04,
+   "text": "Two regions that are both in compartment A contact each other more than expected, regardless of how far apart they are on the linear genome."
+  },
+  {
+   "t": 115.97,
+   "text": "Two regions in compartment B do the same."
+  },
+  {
+   "t": 118.7,
+   "text": "But a region in A and a region in B mostly avoid each other."
+  },
+  {
+   "t": 122.75,
+   "text": "What makes a region compartment A versus compartment B?"
+  },
+  {
+   "t": 126.31,
+   "text": "When the authors of the 2009 paper compared the PCA-defined compartments to other genomic features, the correspondence was striking."
+  },
+  {
+   "t": 134.54,
+   "text": "Compartment A regions are enriched for active genes, for transcriptionally active chromatin marks like H3K4me3 and H3K36me3, for DNase hypersensitivity sites — basically, all the hallmarks of open, transcribed, regulatory-active chromatin."
+  },
+  {
+   "t": 153.69,
+   "text": "Compartment B regions are gene-poor, enriched for heterochromatic marks like H3K9me3, late-replicating, near the nuclear periphery."
+  },
+  {
+   "t": 164.11,
+   "text": "The two compartments correspond, in essence, to the two great divisions of chromatin we've known about since the days of cytological staining: euchromatin and heterochromatin."
+  },
+  {
+   "t": 175.15,
+   "text": "Hi-C made it quantitative."
+  },
+  {
+   "t": 177.32,
+   "text": "The physical interpretation is appealing."
+  },
+  {
+   "t": 179.89,
+   "text": "Inside the nucleus, active chromatin tends to cluster in the interior, often in compartments enriched for transcription factories and splicing speckles."
+  },
+  {
+   "t": 190.07,
+   "text": "Inactive chromatin tends to be peripheral, often associated with the nuclear lamina, a meshwork of intermediate filaments that lines the inner surface of the nuclear envelope."
+  },
+  {
+   "t": 200.75,
+   "text": "The compartmentalization you see in Hi-C is, at the molecular level, this separation of active and inactive chromatin into different sub-nuclear neighborhoods."
+  },
+  {
+   "t": 211.28,
+   "text": "Two A regions on opposite arms of a chromosome contact each other not because they're spatially adjacent in the linear sense, but because they're both swimming in the same active-chromatin nuclear pool, the same neighborhood, and so they bump into each other more often than they bump into B regions that are partitioned away."
+  },
+  {
+   "t": 229.19,
+   "text": "A finer point: subsequent work — particularly in Suhas Rao's 2014 paper, which we'll come back to in Segment 9 — refined compartments A and B into subcompartments."
+  },
+  {
+   "t": 241.18,
+   "text": "Using higher-resolution Hi-C data, Rao and colleagues found that A could be split into A1 and A2, and B into B1, B2, B3, and B4, with each subcompartment corresponding to a distinct set of chromatin marks and gene expression patterns."
+  },
+  {
+   "t": 258.51,
+   "text": "The hierarchy of nuclear organization, even at the largest scale, is finer than just two boxes."
+  },
+  {
+   "t": 265.92,
+   "text": "But the bipartite A-versus-B distinction is the foundational one, and it's the right place to start."
+  },
+  {
+   "t": 272.0,
+   "text": "How robust are compartments across conditions?"
+  },
+  {
+   "t": 275.12,
+   "text": "Compartments are largely stable across cell types — most regions of the genome stay in the same compartment whether you look in liver cells, neurons, or stem cells."
+  },
+  {
+   "t": 285.45,
+   "text": "But there are exceptions, and the exceptions are interesting."
+  },
+  {
+   "t": 288.81,
+   "text": "Some regions switch compartments between cell types — a region that's compartment B (inactive) in one tissue and compartment A (active) in another typically contains tissue-specific genes that are turned on in the second tissue."
+  },
+  {
+   "t": 302.9,
+   "text": "The compartment switch is correlated with the transcriptional activation."
+  },
+  {
+   "t": 306.86,
+   "text": "Whether the compartment switch causes the activation, or vice versa, is an open question in many cases — it's correlation, not necessarily causation — but the correlation itself is highly suggestive that the large-scale 3D organization of the genome and the gene expression program are deeply intertwined."
+  },
+  {
+   "t": 326.47,
+   "text": "The compartmentalization phenomenon was the first non-trivial structural feature Hi-C revealed."
+  },
+  {
+   "t": 333.06,
+   "text": "It told us that the nucleus is not a random soup — it's spatially organized at the megabase scale."
+  },
+  {
+   "t": 339.8,
+   "text": "But there's another, more local level of organization that was discovered three years later, and it turned out to be even more consequential for understanding gene regulation."
+  },
+  {
+   "t": 349.72,
+   "text": "That's TADs, and that's the next segment."
+  }
+ ]
+}

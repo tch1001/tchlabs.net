@@ -1,0 +1,323 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — The pre-history — microarrays, differential display, and the long road to RNA-seq",
+ "duration": 491.76,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — The pre-history — microarrays, differential display, and the long road to RNA-seq"
+  },
+  {
+   "t": 7.76,
+   "text": "Before there was RNA-seq, there were microarrays."
+  },
+  {
+   "t": 11.05,
+   "text": "And before microarrays, there were a handful of older techniques — differential display, SAGE, Northern blots — that biologists used to try to measure gene expression across the genome."
+  },
+  {
+   "t": 22.46,
+   "text": "Each of these methods had a brief reign, and each was displaced by the next."
+  },
+  {
+   "t": 27.48,
+   "text": "Bulk RNA-seq is the culmination of about thirty years of trying to answer one simple-sounding question: which genes are turned on in this tissue?"
+  },
+  {
+   "t": 37.01,
+   "text": "Let me set the historical baseline."
+  },
+  {
+   "t": 39.3,
+   "text": "Before 1995, if you wanted to measure expression of a specific gene in a specific tissue, you would do a Northern blot."
+  },
+  {
+   "t": 47.41,
+   "text": "You extract total RNA, you run it on a gel to separate by size, you transfer it to a membrane, and you probe with a radioactive piece of DNA that's complementary to your gene of interest."
+  },
+  {
+   "t": 59.09,
+   "text": "Wait a few days."
+  },
+  {
+   "t": 60.25,
+   "text": "Expose to film."
+  },
+  {
+   "t": 61.55,
+   "text": "See a band."
+  },
+  {
+   "t": 62.56,
+   "text": "Measure how dark the band is."
+  },
+  {
+   "t": 64.45,
+   "text": "That tells you, approximately, how much of that one specific RNA was in your sample."
+  },
+  {
+   "t": 70.45,
+   "text": "Beautiful technique."
+  },
+  {
+   "t": 72.16,
+   "text": "Slow."
+  },
+  {
+   "t": 72.96,
+   "text": "Limited to one gene at a time."
+  },
+  {
+   "t": 75.14,
+   "text": "Or maybe a few, if you stripped the membrane and reprobed."
+  },
+  {
+   "t": 79.51,
+   "text": "Not a genome-wide method."
+  },
+  {
+   "t": 81.21,
+   "text": "In the early 1990s, two methods tried to scale this up."
+  },
+  {
+   "t": 85.25,
+   "text": "Differential display, invented by Liang and Pardee in 1992, used a clever PCR scheme to amplify many random RNAs from two samples in parallel and run them side by side on a gel, looking for bands that appeared in one sample but not the other."
+  },
+  {
+   "t": 102.17,
+   "text": "Each band was a candidate differentially expressed gene."
+  },
+  {
+   "t": 106.0,
+   "text": "You could then cut the band out and sequence it."
+  },
+  {
+   "t": 108.66,
+   "text": "The technique worked, but it was finicky, low-throughput, and produced false positives by the dozen."
+  },
+  {
+   "t": 114.74,
+   "text": "SAGE — Serial Analysis of Gene Expression, invented by Vogelstein, Velculescu, and Kinzler at Johns Hopkins in 1995, was more clever."
+  },
+  {
+   "t": 125.99,
+   "text": "You take all the mRNAs in a sample, you cut a short tag — about ten base pairs — out of each one at a defined position, you concatenate the tags into long strings, you Sanger-sequence the strings, and you count how often each tag appears."
+  },
+  {
+   "t": 141.61,
+   "text": "Each tag identifies its parent gene."
+  },
+  {
+   "t": 144.26,
+   "text": "The frequency of tags is your expression level."
+  },
+  {
+   "t": 147.43,
+   "text": "SAGE was genuinely genome-wide, and it was quantitative — you were counting molecules — but it was expensive, because you needed a lot of Sanger sequencing, and it was technically demanding."
+  },
+  {
+   "t": 158.72,
+   "text": "SAGE was a forerunner of RNA-seq, in spirit."
+  },
+  {
+   "t": 162.47,
+   "text": "It was counting tags."
+  },
+  {
+   "t": 164.05,
+   "text": "RNA-seq is counting reads."
+  },
+  {
+   "t": 166.55,
+   "text": "The conceptual structure is the same; the technology was just not yet capable."
+  },
+  {
+   "t": 172.11,
+   "text": "The technique that actually broke open genome-wide expression measurement was the DNA microarray, sometimes called the gene chip."
+  },
+  {
+   "t": 180.28,
+   "text": "The basic idea was elegant."
+  },
+  {
+   "t": 182.51,
+   "text": "Take a glass slide."
+  },
+  {
+   "t": 183.96,
+   "text": "Print thousands of tiny spots on it, with each spot containing a different synthetic DNA sequence — each spot corresponding to one specific gene's mRNA."
+  },
+  {
+   "t": 194.97,
+   "text": "Now extract RNA from your sample, label it with a fluorescent dye, and wash it over the slide."
+  },
+  {
+   "t": 201.15,
+   "text": "mRNAs from each gene will hybridize to the spots that contain their complementary sequence."
+  },
+  {
+   "t": 207.8,
+   "text": "After a wash to remove unbound RNA, you scan the slide with a fluorescence scanner."
+  },
+  {
+   "t": 213.75,
+   "text": "The intensity of fluorescence at each spot is proportional to how much of that gene's RNA was in your sample."
+  },
+  {
+   "t": 220.75,
+   "text": "Two companies dominated the microarray era."
+  },
+  {
+   "t": 223.93,
+   "text": "Affymetrix, founded in 1992 in Santa Clara, used a clever photolithography process — borrowed from the semiconductor industry — to synthesize short DNA probes directly on a glass surface, in situ, by UV-light-directed chemistry."
+  },
+  {
+   "t": 240.15,
+   "text": "An Affymetrix chip — they branded it \"GeneChip\" — had hundreds of thousands of probe pairs corresponding to every known gene in a model organism."
+  },
+  {
+   "t": 249.05,
+   "text": "Agilent, the spinoff from Hewlett-Packard, took a different approach: they used ink-jet printing technology to spot longer pre-synthesized oligonucleotides onto glass."
+  },
+  {
+   "t": 259.79,
+   "text": "The Affymetrix chips were short-probe, in-situ synthesized; the Agilent chips were long-probe, printed."
+  },
+  {
+   "t": 267.46,
+   "text": "Both worked."
+  },
+  {
+   "t": 268.55,
+   "text": "Both became standard."
+  },
+  {
+   "t": 269.99,
+   "text": "By the early 2000s, microarrays were everywhere."
+  },
+  {
+   "t": 273.72,
+   "text": "I want to give you a sense of what the microarray era actually felt like."
+  },
+  {
+   "t": 277.78,
+   "text": "If you were a postdoc in 2003 and you wanted to do a genome-wide expression analysis, you would extract RNA from your samples, send it to your institution's microarray core, and wait three weeks for the data to come back."
+  },
+  {
+   "t": 290.98,
+   "text": "The data came back as a spreadsheet with one row per gene and one column per sample, with a fluorescence intensity in each cell."
+  },
+  {
+   "t": 299.21,
+   "text": "You'd analyze it in a tool called Bioconductor, or in a commercial package, looking for genes whose intensities went up or down between your conditions."
+  },
+  {
+   "t": 308.62,
+   "text": "The whole field developed an enormous bioinformatics infrastructure around this kind of data — normalization methods, batch correction techniques, differential expression statistics, multiple testing correction."
+  },
+  {
+   "t": 321.38,
+   "text": "A lot of what we now consider standard RNA-seq analysis was actually invented for microarrays first, and then ported over."
+  },
+  {
+   "t": 329.06,
+   "text": "But microarrays had real limitations, and they were the limitations that eventually killed them."
+  },
+  {
+   "t": 335.42,
+   "text": "First, you could only measure expression of genes you already knew about."
+  },
+  {
+   "t": 340.03,
+   "text": "The chip had a fixed set of probes, designed against a fixed list of transcripts in a reference catalog."
+  },
+  {
+   "t": 345.92,
+   "text": "Novel transcripts, novel splice isoforms, novel non-coding RNAs — invisible."
+  },
+  {
+   "t": 353.15,
+   "text": "The chip didn't know they existed."
+  },
+  {
+   "t": 354.98,
+   "text": "Second, microarrays had a limited dynamic range — they topped out at about three to four orders of magnitude of expression difference, because the fluorescence signal saturated at the high end and was lost in background noise at the low end."
+  },
+  {
+   "t": 369.46,
+   "text": "Real biology spans about six orders of magnitude in mRNA abundance."
+  },
+  {
+   "t": 375.06,
+   "text": "Microarrays compressed the top and bottom."
+  },
+  {
+   "t": 377.63,
+   "text": "Third, cross-hybridization was a constant problem — RNAs would stick to probes they weren't supposed to stick to, creating false signal."
+  },
+  {
+   "t": 386.11,
+   "text": "Probe design had to be careful, and even careful design couldn't eliminate the noise."
+  },
+  {
+   "t": 392.13,
+   "text": "Fourth, you couldn't measure splice isoforms reliably."
+  },
+  {
+   "t": 395.88,
+   "text": "A single gene might produce five different mRNA isoforms by alternative splicing, and the microarray probes either summed them together or, at best, distinguished a couple."
+  },
+  {
+   "t": 406.93,
+   "text": "Fifth, comparing across microarray platforms was hard — the same RNA, hybridized to an Affymetrix chip and an Agilent chip, would give different numbers, and reconciling them required careful normalization that often didn't fully work."
+  },
+  {
+   "t": 422.48,
+   "text": "So by the mid-2000s, the field was hungry for something better."
+  },
+  {
+   "t": 426.85,
+   "text": "Something genome-wide, something that could see novel transcripts, something with wide dynamic range, something that could measure isoforms, something that could be compared across labs without elaborate calibration."
+  },
+  {
+   "t": 439.53,
+   "text": "The technology that delivered all of that was next-generation sequencing — specifically Illumina sequencing, which we covered in detail in another lecture in this series."
+  },
+  {
+   "t": 449.58,
+   "text": "Once you had a machine that could read tens of millions of short DNA sequences cheaply and in parallel, the question of how to use it for gene expression became obvious."
+  },
+  {
+   "t": 460.28,
+   "text": "Instead of hybridizing RNA to fixed probes on a chip, you'd just convert the RNA to DNA and sequence all of it, and count how many reads came from each gene."
+  },
+  {
+   "t": 470.36,
+   "text": "No probes."
+  },
+  {
+   "t": 471.51,
+   "text": "No fixed catalog."
+  },
+  {
+   "t": 472.88,
+   "text": "No saturation."
+  },
+  {
+   "t": 474.23,
+   "text": "No cross-hybridization."
+  },
+  {
+   "t": 476.01,
+   "text": "Just counting molecules, with the same instrument that was sequencing genomes."
+  },
+  {
+   "t": 480.86,
+   "text": "That conceptual leap — from probe-based to sequence-based gene expression measurement — was the birth of RNA-seq."
+  },
+  {
+   "t": 488.75,
+   "text": "Let's go to 2008, which is when it actually happened."
+  }
+ ]
+}

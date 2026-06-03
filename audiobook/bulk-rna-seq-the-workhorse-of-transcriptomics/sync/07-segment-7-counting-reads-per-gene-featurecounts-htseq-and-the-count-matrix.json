@@ -1,0 +1,175 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Counting reads per gene — featureCounts, HTSeq, and the count matrix",
+ "duration": 303.22,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Counting reads per gene — featureCounts, HTSeq, and the count matrix"
+  },
+  {
+   "t": 6.79,
+   "text": "You have a BAM file full of aligned reads."
+  },
+  {
+   "t": 9.79,
+   "text": "Now you need to translate that into a per-gene count: how many reads landed on each gene in the genome."
+  },
+  {
+   "t": 16.38,
+   "text": "This sounds straightforward, and at the high level it is."
+  },
+  {
+   "t": 20.44,
+   "text": "But there are subtleties — overlapping genes, ambiguous reads, multi-mapping, strand-specific considerations — that you have to handle correctly, and the tools encode specific choices about each."
+  },
+  {
+   "t": 33.0,
+   "text": "The two standard counting tools are HTSeq-count and featureCounts."
+  },
+  {
+   "t": 37.67,
+   "text": "HTSeq-count, written by Simon Anders, was the first widely-used counting tool and is part of the broader HTSeq Python library."
+  },
+  {
+   "t": 46.75,
+   "text": "featureCounts, part of the Subread package developed by Yang Liao and colleagues, is faster and more flexible and has overtaken HTSeq in most modern pipelines."
+  },
+  {
+   "t": 57.71,
+   "text": "Both do essentially the same thing: take a BAM file of aligned reads and a GTF annotation file describing where the genes are, and produce a table — one row per gene, one column per sample — of the number of reads that overlap each gene."
+  },
+  {
+   "t": 73.74,
+   "text": "How does the counting work, mechanically?"
+  },
+  {
+   "t": 76.01,
+   "text": "For each aligned read, the tool checks which genomic features — exons, transcripts, genes — the read overlaps."
+  },
+  {
+   "t": 84.6,
+   "text": "If the read overlaps exactly one gene unambiguously, it gets counted toward that gene."
+  },
+  {
+   "t": 90.62,
+   "text": "If the read doesn't overlap any annotated gene, it gets counted as \"no feature\" and discarded."
+  },
+  {
+   "t": 97.34,
+   "text": "If the read overlaps multiple genes — which happens when genes are on opposite strands of the same region, or when a read spans two adjacent genes — the tool has to make a decision."
+  },
+  {
+   "t": 108.97,
+   "text": "The default behavior is \"ambiguous, do not count\" — the read is discarded to avoid biasing any single gene's count."
+  },
+  {
+   "t": 116.91,
+   "text": "This is conservative and is the right default for differential expression."
+  },
+  {
+   "t": 121.26,
+   "text": "A subtlety that bites people: strand-specific libraries."
+  },
+  {
+   "t": 125.85,
+   "text": "Most modern RNA-seq library preps preserve information about which strand of the RNA the read came from."
+  },
+  {
+   "t": 132.46,
+   "text": "This is called a stranded library."
+  },
+  {
+   "t": 134.44,
+   "text": "There are two flavors — forward-stranded, used by Illumina's TruSeq Stranded mRNA kit, and reverse-stranded, which is what most other kits actually produce — and you have to tell the counting tool which one your library is."
+  },
+  {
+   "t": 147.19,
+   "text": "Get it wrong, and you'll count reads against the wrong strand of every gene, and your counts will be tiny and meaningless."
+  },
+  {
+   "t": 154.38,
+   "text": "Most counting tools have a \"stranded\" flag that you set to \"yes,\" \"no,\" or \"reverse."
+  },
+  {
+   "t": 159.91,
+   "text": "\" Modern pipelines often check the strandedness empirically — looking at where reads fall relative to known genes — and warn you if the flag is mis-set."
+  },
+  {
+   "t": 169.94,
+   "text": "The output of this step is the count matrix: a table with one row per gene (typically about 20,000 protein-coding genes plus 20,000 to 50,000 non-coding loci, depending on the annotation), and one column per sample."
+  },
+  {
+   "t": 184.93,
+   "text": "Each cell is an integer: the number of reads in that sample that mapped to that gene."
+  },
+  {
+   "t": 190.21,
+   "text": "The count matrix is the canonical data structure of RNA-seq."
+  },
+  {
+   "t": 194.47,
+   "text": "Everything downstream — normalization, differential expression, clustering, visualization — operates on this matrix."
+  },
+  {
+   "t": 202.75,
+   "text": "Let me give you a sense of the numbers."
+  },
+  {
+   "t": 204.6,
+   "text": "For a typical bulk RNA-seq experiment with 30 million reads per sample and 12 samples, after alignment and counting, you'll have a matrix that's about 60,000 rows by 12 columns."
+  },
+  {
+   "t": 217.78,
+   "text": "The values in the matrix range from zero (genes with no expression) to a few hundred thousand (extremely highly expressed genes like ribosomal proteins or housekeeping genes)."
+  },
+  {
+   "t": 228.75,
+   "text": "The distribution is very right-skewed — most genes have low or zero counts, and a small number of genes have huge counts."
+  },
+  {
+   "t": 236.69,
+   "text": "This skewness shapes everything about how you analyze the data, which we'll get to in the next segment."
+  },
+  {
+   "t": 242.71,
+   "text": "One important variant I want to flag."
+  },
+  {
+   "t": 244.69,
+   "text": "For some applications — particularly single-cell, but increasingly for bulk too — you'll see a tool called STAR-Solo or alevin-fry that performs alignment and counting together, using UMIs (unique molecular identifiers) to count molecules rather than reads."
+  },
+  {
+   "t": 262.27,
+   "text": "UMIs are short random barcodes added to each cDNA molecule during library prep, so that PCR duplicates can be identified and counted only once."
+  },
+  {
+   "t": 272.15,
+   "text": "UMI-based counting eliminates PCR bias and gives you a more accurate count of original RNA molecules."
+  },
+  {
+   "t": 279.17,
+   "text": "In bulk RNA-seq, UMIs are optional and not yet standard, but you'll see them in some newer kits, especially for low-input applications."
+  },
+  {
+   "t": 288.0,
+   "text": "We'll touch on UMIs again briefly in the single-cell comparison in Segment 15."
+  },
+  {
+   "t": 293.34,
+   "text": "For now, you have a count matrix."
+  },
+  {
+   "t": 295.66,
+   "text": "Sixty thousand genes by twelve samples."
+  },
+  {
+   "t": 298.52,
+   "text": "Pure integers."
+  },
+  {
+   "t": 300.05,
+   "text": "This is the raw material for everything that follows."
+  }
+ ]
+}

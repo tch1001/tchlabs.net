@@ -1,0 +1,103 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — pegRNA design tools: PrimeDesign, PrimeVar, and friends",
+ "duration": 233.06,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — pegRNA design tools: PrimeDesign, PrimeVar, and friends"
+  },
+  {
+   "t": 6.15,
+   "text": "Given that pegRNA design is hard, and given that small design choices can make a huge difference in editing efficiency, an entire ecosystem of pegRNA design tools has appeared."
+  },
+  {
+   "t": 18.3,
+   "text": "Let me walk you through the most important ones, because if you're ever going to actually run a prime editing experiment, these are what you'll use."
+  },
+  {
+   "t": 25.15,
+   "text": "PrimeDesign, from Pinello lab and the Liu lab, was released in 2021 and remains the most widely used general-purpose pegRNA design tool."
+  },
+  {
+   "t": 34.49,
+   "text": "You give PrimeDesign two inputs: the genomic sequence around your target site, and the edit you want to install — written as a simple before-and-after, like \"change this T to this A\" or \"insert this sequence here."
+  },
+  {
+   "t": 47.36,
+   "text": "\" PrimeDesign enumerates all the possible pegRNA designs that could install your edit, given the available PAMs in the region."
+  },
+  {
+   "t": 55.05,
+   "text": "For each design, it generates the full pegRNA sequence — spacer, scaffold, RT template, PBS — and it scores each one based on several criteria: spacer specificity, PBS length, RT template length, expected efficiency from empirical models."
+  },
+  {
+   "t": 73.42,
+   "text": "PrimeDesign isn't infallible — its efficiency predictions are good but not perfect, and you typically still need to test several designs experimentally — but it dramatically reduces the search space and the design effort."
+  },
+  {
+   "t": 87.06,
+   "text": "A pegRNA design that used to take a researcher an hour of careful manual sequence work now takes ten seconds in PrimeDesign."
+  },
+  {
+   "t": 96.17,
+   "text": "PrimeVar, also from the Pinello group, takes things a step further."
+  },
+  {
+   "t": 100.54,
+   "text": "PrimeVar is a database of pegRNA designs for every known pathogenic variant in ClinVar."
+  },
+  {
+   "t": 106.95,
+   "text": "You type in a clinical disease variant — say, the F508del mutation in CFTR, or a specific BRCA1 mutation — and PrimeVar tells you, for that specific variant, what pegRNA designs exist to correct it, what their predicted efficiencies are, and whether they've been experimentally tested."
+  },
+  {
+   "t": 126.69,
+   "text": "This is, in effect, a precomputed library of how to fix every known human disease mutation with prime editing."
+  },
+  {
+   "t": 134.43,
+   "text": "Whether or not the edits would actually work in vivo is a separate question, but having the designs in hand is a huge starting point."
+  },
+  {
+   "t": 142.14,
+   "text": "PE-Designer, EnPrimer, Easy-Prime, and several other academic tools have appeared, each with its own approach to designing pegRNAs and predicting their efficiency."
+  },
+  {
+   "t": 152.93,
+   "text": "The field has not yet converged on a single tool, partly because the efficiency predictors are still being refined as more empirical data accumulates."
+  },
+  {
+   "t": 162.56,
+   "text": "But the cumulative effect is that pegRNA design is no longer a barrier to entry — anybody with internet access and a target sequence can generate a reasonable pegRNA design in minutes."
+  },
+  {
+   "t": 175.0,
+   "text": "The empirical efficiency predictors deserve a brief mention."
+  },
+  {
+   "t": 179.22,
+   "text": "They're built by training machine learning models on datasets where thousands of pegRNAs were experimentally tested at many sites, and the model learns to predict editing efficiency from the pegRNA features."
+  },
+  {
+   "t": 191.43,
+   "text": "The most influential of these models is DeepPrime, published in 2023, which uses deep learning on a dataset of about a hundred thousand experimentally measured pegRNA-target pairs."
+  },
+  {
+   "t": 203.35,
+   "text": "DeepPrime can predict prime editing efficiency at new sites with reasonable accuracy — typically explaining 50-70% of the variance in measured efficiency, which is better than any analytical model."
+  },
+  {
+   "t": 217.72,
+   "text": "These prediction tools matter because, at most sites, only a few of the dozens of possible pegRNA designs will be efficient."
+  },
+  {
+   "t": 225.9,
+   "text": "Picking the right one without empirical guidance is hard."
+  },
+  {
+   "t": 229.66,
+   "text": "Picking it with a good prediction model is much easier."
+  }
+ ]
+}

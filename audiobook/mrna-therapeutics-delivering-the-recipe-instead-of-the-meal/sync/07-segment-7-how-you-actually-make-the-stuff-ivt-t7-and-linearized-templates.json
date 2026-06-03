@@ -1,0 +1,255 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — How you actually make the stuff — IVT, T7, and linearized templates",
+ "duration": 446.68,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — How you actually make the stuff — IVT, T7, and linearized templates"
+  },
+  {
+   "t": 6.92,
+   "text": "We've talked about what the molecule looks like."
+  },
+  {
+   "t": 9.31,
+   "text": "Now let me talk about how you actually make it, because the manufacturing process for therapeutic mRNA is one of the things that makes this platform so attractive."
+  },
+  {
+   "t": 18.54,
+   "text": "It is, by the standards of biological manufacturing, breathtakingly fast."
+  },
+  {
+   "t": 23.34,
+   "text": "The core process is called in vitro transcription, or IVT."
+  },
+  {
+   "t": 27.66,
+   "text": "The principle is simple."
+  },
+  {
+   "t": 29.26,
+   "text": "You take a DNA template that encodes your mRNA — including the 5' UTR, coding sequence, 3' UTR, and the encoded polyA tail — you put the DNA in a tube with an RNA polymerase enzyme, nucleotide triphosphates, and a buffer, and you let the polymerase run."
+  },
+  {
+   "t": 47.51,
+   "text": "The polymerase reads the DNA template and synthesizes RNA from it."
+  },
+  {
+   "t": 52.41,
+   "text": "After a few hours, you have, in your tube, a vast quantity of newly synthesized mRNA."
+  },
+  {
+   "t": 59.5,
+   "text": "You purify the RNA away from the DNA template and the enzyme, you cap it (or you cap it during the reaction with CleanCap), and you have your drug substance."
+  },
+  {
+   "t": 69.0,
+   "text": "The polymerase used for IVT, in essentially every commercial mRNA manufacturing process, is T7 RNA polymerase."
+  },
+  {
+   "t": 78.78,
+   "text": "T7 is a viral polymerase, originally isolated from a bacteriophage — a virus that infects bacteria — and it has been a workhorse of molecular biology for forty years."
+  },
+  {
+   "t": 90.56,
+   "text": "T7 has several properties that make it ideal for therapeutic manufacturing."
+  },
+  {
+   "t": 95.72,
+   "text": "It is extremely processive — it can transcribe a template thousands of bases long without falling off."
+  },
+  {
+   "t": 102.47,
+   "text": "It is fast — it can produce on the order of two hundred nucleotides per second."
+  },
+  {
+   "t": 107.45,
+   "text": "It is highly specific — it only initiates transcription at a particular short DNA sequence called the T7 promoter, which means you can control exactly where transcription starts."
+  },
+  {
+   "t": 118.96,
+   "text": "And it can incorporate modified nucleotides, like pseudouridine, with reasonable efficiency, which is essential for making the immune-quiet mRNAs we discussed in Segment 3."
+  },
+  {
+   "t": 129.64,
+   "text": "The DNA template needs a few specific features."
+  },
+  {
+   "t": 133.29,
+   "text": "First, it needs a T7 promoter sequence at the start, so the polymerase knows where to begin."
+  },
+  {
+   "t": 140.06,
+   "text": "Second, it needs your encoded mRNA sequence — 5' UTR, coding sequence, 3' UTR, and the polyA tail encoded as a long stretch of A's."
+  },
+  {
+   "t": 151.39,
+   "text": "Third, and this is the subtle part, the template needs to be linearized at the end of the polyA tail."
+  },
+  {
+   "t": 157.88,
+   "text": "If the template were a circular plasmid, the polymerase would just keep running around the plasmid forever, producing endless concatameric RNA that contains the encoded sequence plus a bunch of extra plasmid-derived sequence on the back end."
+  },
+  {
+   "t": 172.24,
+   "text": "By cutting the plasmid at a specific restriction site immediately after the polyA tail, you give the polymerase a defined endpoint."
+  },
+  {
+   "t": 180.88,
+   "text": "It runs off the end of the linear template and stops."
+  },
+  {
+   "t": 183.95,
+   "text": "The DNA template is usually produced by growing the plasmid in E. coli, purifying it, and then linearizing it with a restriction enzyme."
+  },
+  {
+   "t": 192.82,
+   "text": "This is well-established, gram-scale, decades-old technology."
+  },
+  {
+   "t": 197.5,
+   "text": "The template can be produced and stored indefinitely."
+  },
+  {
+   "t": 200.82,
+   "text": "When you need to make mRNA, you thaw out template, mix it with polymerase and nucleotides, and start the reaction."
+  },
+  {
+   "t": 207.59,
+   "text": "A single liter-scale IVT reaction can produce on the order of grams of mRNA."
+  },
+  {
+   "t": 213.54,
+   "text": "Industrial-scale reactors can make kilograms."
+  },
+  {
+   "t": 216.8,
+   "text": "That's enough mRNA for tens of millions of vaccine doses from a single batch."
+  },
+  {
+   "t": 222.19,
+   "text": "Here is the part that, more than anything else, made COVID-scale mRNA manufacturing possible."
+  },
+  {
+   "t": 228.96,
+   "text": "The IVT reaction is the same regardless of what protein you're encoding."
+  },
+  {
+   "t": 233.44,
+   "text": "Same polymerase."
+  },
+  {
+   "t": 234.97,
+   "text": "Same nucleotides."
+  },
+  {
+   "t": 236.55,
+   "text": "Same buffer."
+  },
+  {
+   "t": 237.78,
+   "text": "Same reaction conditions."
+  },
+  {
+   "t": 239.55,
+   "text": "Same purification process."
+  },
+  {
+   "t": 241.6,
+   "text": "Same fill-finish."
+  },
+  {
+   "t": 243.41,
+   "text": "The only thing that changes between an mRNA drug for COVID and an mRNA drug for a cancer vaccine and an mRNA drug for a rare metabolic disease is the DNA template — the specific sequence on the plasmid."
+  },
+  {
+   "t": 257.2,
+   "text": "The rest of the manufacturing pipeline is, in principle, completely interchangeable."
+  },
+  {
+   "t": 263.01,
+   "text": "Compare this to traditional biologics."
+  },
+  {
+   "t": 266.07,
+   "text": "A new monoclonal antibody requires a whole new manufacturing campaign — a new CHO cell line stably producing the new antibody, with development times of one to two years, capacity scale-up taking another year or two, and total time from molecule selection to commercial supply often four or five years."
+  },
+  {
+   "t": 285.72,
+   "text": "A new mRNA drug can, in principle, be designed on a computer on Monday, ordered as a DNA template on Tuesday, manufactured as mRNA the following week, and tested in animals the week after that."
+  },
+  {
+   "t": 299.95,
+   "text": "The manufacturing time scale collapses from years to weeks."
+  },
+  {
+   "t": 303.84,
+   "text": "This is the deepest reason mRNA is called a platform and not just a class of drugs."
+  },
+  {
+   "t": 309.55,
+   "text": "A platform, in pharmaceutical parlance, is a system where the underlying chemistry, manufacturing, and quality control are reusable across many different products."
+  },
+  {
+   "t": 319.97,
+   "text": "You build the platform once, you validate it once, and then you deploy it for many different target proteins."
+  },
+  {
+   "t": 326.57,
+   "text": "mRNA is the closest thing biologic medicine has ever had to such a platform."
+  },
+  {
+   "t": 331.92,
+   "text": "The protein you're encoding changes."
+  },
+  {
+   "t": 333.99,
+   "text": "The factory doesn't."
+  },
+  {
+   "t": 335.38,
+   "text": "There is one more piece of the manufacturing puzzle worth flagging, because it is one of the dirtier corners of the IVT reaction."
+  },
+  {
+   "t": 342.49,
+   "text": "T7 RNA polymerase, despite being the workhorse of the field, has a problematic side reaction."
+  },
+  {
+   "t": 349.19,
+   "text": "Roughly one in every few hundred transcripts produced is not the desired single-stranded RNA but a double-stranded RNA contaminant — an artifact of the polymerase template-switching or producing antisense RNA from spurious initiation."
+  },
+  {
+   "t": 364.9,
+   "text": "Double-stranded RNA is a powerful immunostimulant; it triggers TLR3 and MDA5 and produces exactly the inflammatory response that pseudouridine was supposed to eliminate."
+  },
+  {
+   "t": 377.55,
+   "text": "So a critical step in commercial mRNA manufacturing is the removal of dsRNA contaminants."
+  },
+  {
+   "t": 384.14,
+   "text": "This is done by cellulose-based purification, by HPLC, or by other chromatographic techniques that separate single-stranded from double-stranded RNA on the basis of subtle structural differences."
+  },
+  {
+   "t": 396.69,
+   "text": "Getting the dsRNA contamination below a certain threshold — usually parts-per-million levels — is essential for a clean drug product."
+  },
+  {
+   "t": 405.45,
+   "text": "Moderna and BioNTech each developed proprietary purification processes; the details of those processes are some of the most closely guarded secrets in the industry, because they are what separates a tolerable mRNA drug from one that gives every patient a high fever."
+  },
+  {
+   "t": 422.13,
+   "text": "The takeaway: IVT manufacturing is fast, flexible, and platform-friendly, but it requires careful downstream purification to get rid of immunostimulatory byproducts."
+  },
+  {
+   "t": 434.48,
+   "text": "Once that pipeline is set up, switching from one product to another is a matter of changing the DNA template."
+  },
+  {
+   "t": 441.55,
+   "text": "That fact is what made COVID-scale deployment possible in the first place."
+  }
+ ]
+}

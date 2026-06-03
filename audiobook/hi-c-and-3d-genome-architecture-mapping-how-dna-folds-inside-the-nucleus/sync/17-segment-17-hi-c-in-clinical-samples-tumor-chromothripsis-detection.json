@@ -1,0 +1,91 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Hi-C in clinical samples: tumor chromothripsis detection",
+ "duration": 180.76,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Hi-C in clinical samples: tumor chromothripsis detection"
+  },
+  {
+   "t": 5.92,
+   "text": "A more recent application is Hi-C in clinical cancer samples for detecting complex structural rearrangements."
+  },
+  {
+   "t": 13.64,
+   "text": "Cancer genomes are messy."
+  },
+  {
+   "t": 15.59,
+   "text": "They often contain dozens of structural variants — translocations, inversions, deletions, complex rearrangements where many things happen at once."
+  },
+  {
+   "t": 25.24,
+   "text": "The most extreme version is called chromothripsis — literally \"chromosome shattering\" — where a single chromosome gets fragmented into dozens of pieces and reassembled in a chaotic order, sometimes in a single catastrophic event."
+  },
+  {
+   "t": 39.45,
+   "text": "Detecting chromothripsis from short-read sequencing alone is hard."
+  },
+  {
+   "t": 44.29,
+   "text": "You can identify individual rearrangement junctions, but reconstructing the overall topology — which fragments are now adjacent, in what order, on what derivative chromosome — is genuinely difficult."
+  },
+  {
+   "t": 56.38,
+   "text": "Hi-C makes it much easier."
+  },
+  {
+   "t": 58.41,
+   "text": "The contact map of a chromothriptic chromosome shows obvious off-diagonal blocks of contact connecting fragments that came from different parts of the original chromosome."
+  },
+  {
+   "t": 69.01,
+   "text": "The structure is laid out visually in the heatmap."
+  },
+  {
+   "t": 71.9,
+   "text": "You can see chromothripsis the way you would see a constellation in the night sky."
+  },
+  {
+   "t": 76.42,
+   "text": "This has clinical applications."
+  },
+  {
+   "t": 78.42,
+   "text": "In certain cancers — particularly pediatric brain tumors like medulloblastoma, certain leukemias, and Sonic-hedgehog-pathway-driven tumors — chromothripsis is a major driver, often the initiating event of the cancer."
+  },
+  {
+   "t": 92.65,
+   "text": "Identifying it precisely matters for prognosis and for understanding which oncogenes are being activated by the rearrangement."
+  },
+  {
+   "t": 101.39,
+   "text": "Hi-C profiling of tumor samples has become a research tool for this kind of structural analysis, and clinical implementations are starting to appear."
+  },
+  {
+   "t": 110.86,
+   "text": "The same logic applies to identifying enhancer hijacking events we discussed in Segment 12."
+  },
+  {
+   "t": 117.14,
+   "text": "Cancer Hi-C can reveal that a specific oncogene has been brought into a TAD with a powerful enhancer that wasn't its normal neighbor."
+  },
+  {
+   "t": 125.72,
+   "text": "The diagnostic value of this — knowing which mis-regulated oncogene to target therapeutically — is meaningful in research settings and is beginning to inform clinical decisions for specific cancer subtypes."
+  },
+  {
+   "t": 138.41,
+   "text": "The cost and complexity of Hi-C have limited its clinical adoption so far — it's expensive, the bioinformatics is specialized, and short-read structural variant callers can detect most rearrangements without needing Hi-C."
+  },
+  {
+   "t": 153.31,
+   "text": "But for samples where the structural landscape is unusually complex, where you suspect chromothripsis or want to map regulatory consequences of rearrangements, Hi-C provides information that no other technique provides as directly."
+  },
+  {
+   "t": 167.44,
+   "text": "In the next decade, I expect Hi-C to become a standard part of the cancer genomics workflow for selected cases, particularly where 3D regulatory consequences of structural variants are clinically actionable."
+  }
+ ]
+}

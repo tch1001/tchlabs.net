@@ -1,0 +1,231 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — Chip-based oligo arrays: the silicon revolution",
+ "duration": 441.85,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — Chip-based oligo arrays: the silicon revolution"
+  },
+  {
+   "t": 5.11,
+   "text": "Here's where the whole industry changed."
+  },
+  {
+   "t": 7.29,
+   "text": "In the early 2000s, several groups — at Affymetrix, at Agilent, at academic labs in California and Massachusetts — figured out how to do phosphoramidite chemistry not in a column, but on a flat surface."
+  },
+  {
+   "t": 20.44,
+   "text": "A silicon wafer or a glass slide, an inch or two on a side, patterned into hundreds of thousands or millions of microscopic spots, each one only a few micrometers across."
+  },
+  {
+   "t": 32.75,
+   "text": "The same phosphoramidite chemistry you learned about in the oligo lecture — deprotect, couple, cap, oxidize — runs on every spot in parallel."
+  },
+  {
+   "t": 41.89,
+   "text": "But each spot can be commanded to synthesize a different sequence, because the chemistry can be directed spatially using either light or inkjet-style fluid deposition."
+  },
+  {
+   "t": 52.42,
+   "text": "I want you to internalize this analogy because it is the central technological move of the modern gene synthesis industry."
+  },
+  {
+   "t": 60.75,
+   "text": "A column synthesizer is to a chip-based synthesizer as a typewriter is to a printing press."
+  },
+  {
+   "t": 66.83,
+   "text": "The column makes one oligo at a time."
+  },
+  {
+   "t": 68.9,
+   "text": "The chip makes a hundred thousand oligos at the same time, on the same piece of silicon, in the same reaction vessel, with each oligo being a different sequence."
+  },
+  {
+   "t": 78.89,
+   "text": "That parallelism — that throughput per square inch — is what dropped the cost of an oligo by an order of magnitude in the early 2010s and made commercial gene synthesis cheap enough to be the default option."
+  },
+  {
+   "t": 91.25,
+   "text": "Let me give you a slightly more detailed picture of how this actually works, because the geometry matters."
+  },
+  {
+   "t": 97.03,
+   "text": "Imagine a small square of silicon, say one inch by one inch."
+  },
+  {
+   "t": 101.4,
+   "text": "The surface has been chemically derivatized — coated with a linker — so that phosphoramidite chemistry can be initiated on it."
+  },
+  {
+   "t": 109.64,
+   "text": "Now imagine that surface divided into a fine grid of microscopic wells, like the wells of a microtiter plate but much smaller — typically a few micrometers across, with millions of wells per chip."
+  },
+  {
+   "t": 122.44,
+   "text": "Each well is, in effect, a tiny isolated reaction vessel where one oligo will be built."
+  },
+  {
+   "t": 129.41,
+   "text": "To synthesize one base on one specific well, the machine has to do two things: deliver the right phosphoramidite to the right well, and deprotect the growing chain at the right moment so that coupling only happens where you want it."
+  },
+  {
+   "t": 143.39,
+   "text": "In the inkjet version of this technology — which is the approach Agilent pioneered, and which Twist Bioscience refined — each well is addressed by a tiny inkjet head that can spray a specific phosphoramidite into a specific well at a specific moment."
+  },
+  {
+   "t": 159.2,
+   "text": "The chip has a uniform flush of deprotection reagent, then the inkjet sprays the next base to whichever wells need an A here, then to whichever wells need a T, then G, then C, and only then does the chip get the next round of capping and oxidation."
+  },
+  {
+   "t": 176.49,
+   "text": "Over many cycles, each well builds up its own unique sequence, base by base."
+  },
+  {
+   "t": 182.7,
+   "text": "The number of distinct sequences you can make in one run is roughly the number of wells on the chip, which can be tens of thousands to over a million."
+  },
+  {
+   "t": 190.78,
+   "text": "In the light-directed version — pioneered at Affymetrix using a chemistry analogous to photolithography in semiconductors — the deprotection step is the spatially addressed one rather than the delivery step."
+  },
+  {
+   "t": 203.84,
+   "text": "The chip is bathed in one phosphoramidite at a time, and a programmable mirror array shines UV light only on the wells where you want that base to be added in this cycle."
+  },
+  {
+   "t": 213.56,
+   "text": "Wells that received light get deprotected and accept the base."
+  },
+  {
+   "t": 217.66,
+   "text": "Wells that didn't stay protected and skip this cycle."
+  },
+  {
+   "t": 220.93,
+   "text": "By patterning the light through twenty-five cycles times four bases, you can synthesize, in principle, arbitrarily many different sequences in parallel on the chip."
+  },
+  {
+   "t": 231.57,
+   "text": "Now, here's the thing that has to be appreciated."
+  },
+  {
+   "t": 234.76,
+   "text": "The chemistry on a chip is the same chemistry as in a column — phosphoramidite chemistry, the same four-step cycle, the same reagents, the same protecting groups."
+  },
+  {
+   "t": 245.36,
+   "text": "The molecular biology is identical."
+  },
+  {
+   "t": 248.07,
+   "text": "What's different is the geometry and the throughput."
+  },
+  {
+   "t": 251.43,
+   "text": "A column synthesizer might make ninety-six oligos in a run, in parallel, on ninety-six columns."
+  },
+  {
+   "t": 259.06,
+   "text": "A modern chip makes hundreds of thousands of oligos in a run, in parallel, on hundreds of thousands of wells."
+  },
+  {
+   "t": 266.15,
+   "text": "That's a thousand-fold improvement in parallelism per machine."
+  },
+  {
+   "t": 270.22,
+   "text": "But — and this is the crucial caveat — the per-oligo yield on a chip is much, much lower than on a column."
+  },
+  {
+   "t": 277.46,
+   "text": "A column synthesis run might produce tens of nanomoles of oligo, easily enough for hundreds of PCR reactions or many cloning experiments."
+  },
+  {
+   "t": 288.11,
+   "text": "A chip synthesis run might produce attomoles — that is, a factor of ten-to-the-seventh less — of each individual oligo."
+  },
+  {
+   "t": 297.07,
+   "text": "Each well on the chip is only a few square micrometers, and the amount of material that can be built in such a tiny well is correspondingly tiny."
+  },
+  {
+   "t": 306.76,
+   "text": "So the chip is incredible for applications where you need many different sequences, each in small quantity."
+  },
+  {
+   "t": 313.66,
+   "text": "Gene synthesis is exactly such an application: you need forty different oligos to assemble one gene, but you only need a few picomoles of each."
+  },
+  {
+   "t": 323.66,
+   "text": "Other applications, like custom oligo pools for hybridization capture in sequencing, are similar — many sequences, tiny per-sequence quantity."
+  },
+  {
+   "t": 333.03,
+   "text": "But if you need lots of one specific oligo — say, you need a kilo of an antisense oligonucleotide drug — the chip is the wrong tool."
+  },
+  {
+   "t": 341.55,
+   "text": "You need a column, or for very large scale, you need a bulk batch synthesizer."
+  },
+  {
+   "t": 346.83,
+   "text": "So the modern oligo industry has bifurcated."
+  },
+  {
+   "t": 349.87,
+   "text": "Column synthesis dominates for high-amount applications: individual PCR primers ordered one at a time, clinical-scale oligonucleotide drugs, manufacturing-scale runs."
+  },
+  {
+   "t": 361.43,
+   "text": "Chip synthesis dominates for high-diversity applications: gene synthesis, oligo pools, library construction, DNA data storage."
+  },
+  {
+   "t": 371.05,
+   "text": "Twist Bioscience built its company entirely on the chip side."
+  },
+  {
+   "t": 375.13,
+   "text": "IDT, the older incumbent, made its name on columns and has only recently moved into chip-based work."
+  },
+  {
+   "t": 382.62,
+   "text": "One more thing I want to flag about chip-based synthesis: the error rate per base on a chip is typically somewhat higher than on a column."
+  },
+  {
+   "t": 390.0,
+   "text": "The chemistry is fundamentally the same, but the surface effects on a flat chip, the smaller reaction volumes, the difficulty of achieving uniform reagent delivery to every well, all push the per-cycle yield down a little."
+  },
+  {
+   "t": 404.07,
+   "text": "A column synthesis might run at 99.5% coupling yield per cycle."
+  },
+  {
+   "t": 410.26,
+   "text": "A chip synthesis might run at 99% or 98% per cycle."
+  },
+  {
+   "t": 415.93,
+   "text": "That doesn't sound like much, but as we will see in two segments, it matters enormously when you're stitching forty oligos together into a gene."
+  },
+  {
+   "t": 424.73,
+   "text": "The error rate compounds."
+  },
+  {
+   "t": 426.48,
+   "text": "Chip-based gene synthesis is great economically, but it forces you to take the verification step much more seriously than column-based synthesis did."
+  },
+  {
+   "t": 435.87,
+   "text": "That's the chip."
+  },
+  {
+   "t": 436.91,
+   "text": "Now let's go meet the company that bet its whole existence on the chip getting cheap enough."
+  }
+ ]
+}

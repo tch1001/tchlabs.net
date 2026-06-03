@@ -1,0 +1,283 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The architecture: Cas9 nickase plus reverse transcriptase plus pegRNA",
+ "duration": 365.57,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The architecture: Cas9 nickase plus reverse transcriptase plus pegRNA"
+  },
+  {
+   "t": 6.92,
+   "text": "Let me sketch the prime editor itself."
+  },
+  {
+   "t": 9.54,
+   "text": "There are three components, and you need all three together."
+  },
+  {
+   "t": 13.5,
+   "text": "Component one is a Cas9 nickase."
+  },
+  {
+   "t": 16.07,
+   "text": "Specifically, the version of Cas9 carrying a mutation called H840A."
+  },
+  {
+   "t": 22.02,
+   "text": "We met this nickase briefly in the base editing lecture."
+  },
+  {
+   "t": 26.09,
+   "text": "Let me remind you what it does."
+  },
+  {
+   "t": 27.91,
+   "text": "Recall that wild-type Cas9 has two nuclease domains — HNH and RuvC — and each cuts one strand of the DNA."
+  },
+  {
+   "t": 36.86,
+   "text": "HNH cuts the target strand, the one that base-pairs with the guide RNA."
+  },
+  {
+   "t": 42.06,
+   "text": "RuvC cuts the non-target strand, the one that's displaced into the single-stranded loop."
+  },
+  {
+   "t": 48.14,
+   "text": "Together they make a double-strand break."
+  },
+  {
+   "t": 50.6,
+   "text": "If you kill HNH with the H840A mutation, you have a Cas9 that only cuts one strand — the non-target strand, via the still-active RuvC."
+  },
+  {
+   "t": 60.58,
+   "text": "This is called the H840A nickase, and the strand it cuts is the strand that's not paired with the guide RNA."
+  },
+  {
+   "t": 68.05,
+   "text": "The other strand — the one that is paired with the guide — stays intact."
+  },
+  {
+   "t": 72.61,
+   "text": "So when this nickase finds its target, it makes a single-stranded nick, not a double-strand break, and the cell's repair machinery treats that very differently."
+  },
+  {
+   "t": 82.76,
+   "text": "Single-strand nicks are common, easy to fix, and don't trigger the same emergency response as a double-strand break."
+  },
+  {
+   "t": 90.05,
+   "text": "The Liu lab used the H840A nickase, not the D10A nickase."
+  },
+  {
+   "t": 95.58,
+   "text": "The choice matters."
+  },
+  {
+   "t": 96.92,
+   "text": "We'll come back to why."
+  },
+  {
+   "t": 98.12,
+   "text": "Component two is a reverse transcriptase — usually abbreviated RT."
+  },
+  {
+   "t": 103.12,
+   "text": "A reverse transcriptase is an enzyme that does the opposite of normal transcription."
+  },
+  {
+   "t": 108.31,
+   "text": "Normal transcription reads DNA and writes RNA."
+  },
+  {
+   "t": 112.19,
+   "text": "Reverse transcription reads RNA and writes DNA."
+  },
+  {
+   "t": 116.04,
+   "text": "Reverse transcriptases are best known from retroviruses — HIV, for example, uses a reverse transcriptase to copy its RNA genome into DNA after it infects a cell."
+  },
+  {
+   "t": 129.1,
+   "text": "The reverse transcriptase that the Liu lab landed on is from a different retrovirus called Moloney Murine Leukemia Virus, or M-MLV."
+  },
+  {
+   "t": 137.93,
+   "text": "The wild-type M-MLV RT was the starting point."
+  },
+  {
+   "t": 141.15,
+   "text": "They then engineered it heavily — we'll see how — for stability, activity, and fidelity in the prime editing context."
+  },
+  {
+   "t": 149.8,
+   "text": "The RT is fused to the C-terminus of the Cas9 nickase."
+  },
+  {
+   "t": 154.21,
+   "text": "So the prime editing protein is a single polypeptide: Cas9-H840A nickase at the front, M-MLV-derived reverse transcriptase at the back, joined by a flexible linker."
+  },
+  {
+   "t": 166.31,
+   "text": "One protein."
+  },
+  {
+   "t": 167.45,
+   "text": "Two enzymatic activities."
+  },
+  {
+   "t": 169.64,
+   "text": "Both targeted to the same place by the third component, which is —"
+  },
+  {
+   "t": 173.57,
+   "text": "Component three, the pegRNA — the prime editing guide RNA."
+  },
+  {
+   "t": 178.71,
+   "text": "This is the most clever piece of the whole system."
+  },
+  {
+   "t": 181.36,
+   "text": "The pegRNA is not an ordinary sgRNA."
+  },
+  {
+   "t": 184.55,
+   "text": "It's an extended sgRNA."
+  },
+  {
+   "t": 186.86,
+   "text": "At its 5' end, it has the standard spacer sequence — the twenty letters that base-pair with the genomic target, just like in regular CRISPR."
+  },
+  {
+   "t": 195.68,
+   "text": "Then it has the standard scaffold — the part that folds up and grips the Cas9 protein."
+  },
+  {
+   "t": 201.41,
+   "text": "Then, instead of ending there the way a normal sgRNA does, it continues at the 3' end with two extra functional elements."
+  },
+  {
+   "t": 209.86,
+   "text": "The first of those extra elements, immediately after the scaffold, is the RT template."
+  },
+  {
+   "t": 215.36,
+   "text": "This is a short stretch of RNA — typically ten to twenty nucleotides — that encodes the new sequence you want to write into the genome."
+  },
+  {
+   "t": 223.69,
+   "text": "The RT will read this RNA template and synthesize DNA from it."
+  },
+  {
+   "t": 228.38,
+   "text": "So the edit is literally encoded in the guide RNA."
+  },
+  {
+   "t": 231.85,
+   "text": "You design the pegRNA, the cell makes the edit, and the new DNA sequence is whatever you wrote in the RT template region."
+  },
+  {
+   "t": 239.72,
+   "text": "The second extra element, at the very 3' end of the pegRNA, is the primer binding site, or PBS."
+  },
+  {
+   "t": 247.57,
+   "text": "The PBS is a very short stretch — usually about eight to fifteen nucleotides — whose sequence is complementary to the genomic sequence just upstream of the nick site, on the strand that gets nicked."
+  },
+  {
+   "t": 260.86,
+   "text": "When the nickase cuts that strand, the 3' end of the cut DNA is free, single-stranded, and exposed."
+  },
+  {
+   "t": 268.35,
+   "text": "The PBS region of the pegRNA then base-pairs with that exposed 3' end — like a primer annealing to a template — and the RT extends from there, copying the RT template region of the pegRNA into new DNA."
+  },
+  {
+   "t": 282.99,
+   "text": "So the pegRNA is a guide and a tape measure and a writing template, all rolled into one piece of RNA."
+  },
+  {
+   "t": 289.91,
+   "text": "The guide says: here's where to go."
+  },
+  {
+   "t": 292.16,
+   "text": "The PBS says: here's where to start writing."
+  },
+  {
+   "t": 295.12,
+   "text": "The RT template says: here's what to write."
+  },
+  {
+   "t": 298.01,
+   "text": "One piece of RNA encodes all three."
+  },
+  {
+   "t": 301.16,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 302.45,
+   "text": "The GPS finds the spot."
+  },
+  {
+   "t": 304.51,
+   "text": "The nickase makes a small cut."
+  },
+  {
+   "t": 306.47,
+   "text": "The reverse transcriptase writes the new sequence from a template embedded in the guide RNA itself."
+  },
+  {
+   "t": 312.81,
+   "text": "The pegRNA carries the GPS coordinates and the new text both."
+  },
+  {
+   "t": 317.15,
+   "text": "It's a guide and a script in one molecule."
+  },
+  {
+   "t": 320.04,
+   "text": "Or think of it like this."
+  },
+  {
+   "t": 321.52,
+   "text": "A standard sgRNA tells Cas9 where to go and what to recognize."
+  },
+  {
+   "t": 326.26,
+   "text": "A pegRNA tells the prime editor where to go, where to start writing once the nick is made, and what new letters to write."
+  },
+  {
+   "t": 333.22,
+   "text": "The recipe is in the guide."
+  },
+  {
+   "t": 335.17,
+   "text": "The guide is the program."
+  },
+  {
+   "t": 336.64,
+   "text": "That is what makes prime editing so flexible — to change the edit, you change the RNA."
+  },
+  {
+   "t": 342.32,
+   "text": "The protein stays exactly the same."
+  },
+  {
+   "t": 345.04,
+   "text": "This is the same logic that made base CRISPR programmable in the first place — encoding all the variable information in a cheap, swappable piece of RNA."
+  },
+  {
+   "t": 354.76,
+   "text": "But now the RNA carries not just an address, but also a payload."
+  },
+  {
+   "t": 358.9,
+   "text": "The pegRNA is the most information-dense engineered piece of RNA in the entire CRISPR toolkit."
+  }
+ ]
+}

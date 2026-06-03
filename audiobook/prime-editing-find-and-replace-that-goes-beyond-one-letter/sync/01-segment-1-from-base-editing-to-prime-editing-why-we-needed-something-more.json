@@ -1,0 +1,287 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — From base editing to prime editing: why we needed something more",
+ "duration": 368.81,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — From base editing to prime editing: why we needed something more"
+  },
+  {
+   "t": 5.25,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 6.69,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 8.04,
+   "text": "Today we're going to talk about prime editing — the genome editor that the David Liu lab unveiled in October of 2019, and which I think is, technically, the most beautiful piece of molecular engineering of the entire CRISPR era."
+  },
+  {
+   "t": 22.32,
+   "text": "Buckle in."
+  },
+  {
+   "t": 23.21,
+   "text": "This one is dense."
+  },
+  {
+   "t": 24.64,
+   "text": "Let me start the way I always start, with the single sentence I want you to walk out of here with."
+  },
+  {
+   "t": 30.11,
+   "text": "Then I'll spend two hours unpacking it."
+  },
+  {
+   "t": 32.52,
+   "text": "Prime editing is find-and-replace for the genome — but find-and-replace that can change a whole word at once, not just one letter, and that does it without ever breaking the double helix all the way through."
+  },
+  {
+   "t": 44.4,
+   "text": "That's it."
+  },
+  {
+   "t": 45.19,
+   "text": "That's the whole thing."
+  },
+  {
+   "t": 46.39,
+   "text": "If you walk out of here in two hours, I want you to be able to do three things."
+  },
+  {
+   "t": 51.4,
+   "text": "One — explain in plain English what prime editing can do that base editing can't, and why that matters."
+  },
+  {
+   "t": 57.52,
+   "text": "Two — sketch the prime editor on the board: a Cas9 nickase fused to a reverse transcriptase, programmed by an extended guide RNA called a pegRNA, and walk a confused friend through the editing cycle step by step."
+  },
+  {
+   "t": 71.16,
+   "text": "Three — look at any frontier of the prime editing literature — PE3, PE5, PEmax, twinPE, PASTE, the Prime Medicine clinical trials — and tell me what's been changed and why."
+  },
+  {
+   "t": 82.78,
+   "text": "Everything else we cover today is decoration on those three."
+  },
+  {
+   "t": 86.79,
+   "text": "Let me ground us first."
+  },
+  {
+   "t": 88.35,
+   "text": "In the base editing lecture, we built a tool that could chemically convert one DNA letter into another, in place, without cutting the helix."
+  },
+  {
+   "t": 97.31,
+   "text": "The cytosine base editor, CBE, can swap a C for a T."
+  },
+  {
+   "t": 102.33,
+   "text": "The adenine base editor, ABE, can swap an A for a G."
+  },
+  {
+   "t": 107.31,
+   "text": "Together they can do C-to-T and A-to-G, plus their complements on the opposite strand, which gives you G-to-A and T-to-C."
+  },
+  {
+   "t": 115.5,
+   "text": "That's four of the twelve possible base-to-base swaps."
+  },
+  {
+   "t": 118.66,
+   "text": "Four out of twelve."
+  },
+  {
+   "t": 119.75,
+   "text": "Roughly a third."
+  },
+  {
+   "t": 120.85,
+   "text": "Now ask yourself the question that David Liu and his group asked themselves around 2017, after base editing was working and they'd had a moment to look at it."
+  },
+  {
+   "t": 131.11,
+   "text": "What about the other eight swaps?"
+  },
+  {
+   "t": 132.99,
+   "text": "What about C-to-A, C-to-G, A-to-C, A-to-T, T-to-A, T-to-G, G-to-C, G-to-T?"
+  },
+  {
+   "t": 140.93,
+   "text": "Those eight swaps — the so-called transversions, where a purine becomes a pyrimidine or vice versa — are inaccessible to base editing, because no enzyme on Earth deaminates a base in a way that gives you those products."
+  },
+  {
+   "t": 154.56,
+   "text": "The chemistry doesn't exist in nature."
+  },
+  {
+   "t": 157.25,
+   "text": "And it's not just the eight missing transversions."
+  },
+  {
+   "t": 160.2,
+   "text": "Base editing also can't do insertions."
+  },
+  {
+   "t": 163.06,
+   "text": "It can't do deletions."
+  },
+  {
+   "t": 164.66,
+   "text": "It can't do multi-base substitutions where you want to change, say, three letters at once."
+  },
+  {
+   "t": 170.1,
+   "text": "It can disable a single bad letter in a disease gene."
+  },
+  {
+   "t": 173.34,
+   "text": "It cannot install a new short peptide tag."
+  },
+  {
+   "t": 176.32,
+   "text": "It cannot fix an out-of-frame deletion."
+  },
+  {
+   "t": 178.93,
+   "text": "It cannot replace a five-letter motif with a different five-letter motif."
+  },
+  {
+   "t": 183.75,
+   "text": "Here is the analogy I want you to carry."
+  },
+  {
+   "t": 186.68,
+   "text": "Base editing is four cars sitting in a parking lot."
+  },
+  {
+   "t": 190.24,
+   "text": "Prime editing is the whole motor pool."
+  },
+  {
+   "t": 192.91,
+   "text": "Base editing can do four of the twelve single-letter swaps — and that's it."
+  },
+  {
+   "t": 197.9,
+   "text": "Prime editing can do all twelve single-letter swaps, plus small insertions of up to forty or fifty nucleotides, plus small deletions, plus combinations of all of the above in a single edit at a single site."
+  },
+  {
+   "t": 211.1,
+   "text": "And crucially, like base editing, it does this without making a double-strand break in the DNA."
+  },
+  {
+   "t": 217.24,
+   "text": "The helix stays mostly intact."
+  },
+  {
+   "t": 219.64,
+   "text": "The cellular repair system doesn't see a chromosome severed in two — it sees a small lesion on one strand, which is the kind of thing the cell routinely fixes without making a mess."
+  },
+  {
+   "t": 231.22,
+   "text": "Or here's another analogy."
+  },
+  {
+   "t": 232.88,
+   "text": "Cas9 by itself is a sledgehammer."
+  },
+  {
+   "t": 235.7,
+   "text": "It makes a clean, blunt, two-strand break, and then it walks away and prays that the cell's repair machinery does something useful — which, as we discussed in the CRISPR lecture, it often doesn't."
+  },
+  {
+   "t": 247.34,
+   "text": "Indels show up."
+  },
+  {
+   "t": 248.49,
+   "text": "The reading frame shifts."
+  },
+  {
+   "t": 250.21,
+   "text": "You get knockouts more reliably than you get edits."
+  },
+  {
+   "t": 253.76,
+   "text": "Base editing is more like a hand drill."
+  },
+  {
+   "t": 256.63,
+   "text": "Precise, doesn't break the wall, can punch one small hole exactly where you want it — but only one specific kind of hole, in one specific kind of material."
+  },
+  {
+   "t": 265.98,
+   "text": "Prime editing is more like a screwdriver."
+  },
+  {
+   "t": 268.77,
+   "text": "Slower than the sledgehammer."
+  },
+  {
+   "t": 270.51,
+   "text": "Smaller scale of action."
+  },
+  {
+   "t": 272.11,
+   "text": "But it can do a much wider range of jobs, and it does them without any collateral damage to the surrounding structure."
+  },
+  {
+   "t": 278.81,
+   "text": "Here's a useful number."
+  },
+  {
+   "t": 280.1,
+   "text": "About 90% of the pathogenic mutations in the human gene catalog ClinVar are small substitutions, small insertions, or small deletions — and base editing, in principle, can address roughly thirty percent of those."
+  },
+  {
+   "t": 294.52,
+   "text": "Prime editing, in principle, can address something like ninety percent of them."
+  },
+  {
+   "t": 299.16,
+   "text": "The fraction of the human disease landscape that is theoretically addressable jumps by a factor of three when you move from base editing to prime editing."
+  },
+  {
+   "t": 308.3,
+   "text": "That is why this tool matters."
+  },
+  {
+   "t": 310.07,
+   "text": "So here's what we're going to do over the next two hours."
+  },
+  {
+   "t": 312.71,
+   "text": "We're going to start by understanding what prime editing solves — the universe of edits that base editing left on the table."
+  },
+  {
+   "t": 319.98,
+   "text": "Then we'll open up the prime editor itself: the Cas9 nickase, the reverse transcriptase, the extended guide RNA called a pegRNA."
+  },
+  {
+   "t": 329.61,
+   "text": "We'll walk through the editing cycle step by step, slowly, because it's a beautiful little molecular dance and you need to see every move."
+  },
+  {
+   "t": 338.36,
+   "text": "Then we'll go through the generations of the tool — PE1, PE2, PE3, PE3b, PE4, PE5, PEmax — and at each step we'll ask what got better and why."
+  },
+  {
+   "t": 350.77,
+   "text": "Then we'll get to the frontier — twinPE for larger payloads, PASTE for kilobase insertions using integrases, prime editing in animals and crops, and the first clinical trials."
+  },
+  {
+   "t": 362.71,
+   "text": "And we'll close with the limitations, the design tools, and the open problems."
+  },
+  {
+   "t": 367.81,
+   "text": "Let's begin."
+  }
+ ]
+}

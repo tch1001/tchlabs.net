@@ -1,0 +1,227 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Golden Gate: Type IIS enzymes and scarless assembly with hierarchy",
+ "duration": 421.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Golden Gate: Type IIS enzymes and scarless assembly with hierarchy"
+  },
+  {
+   "t": 7.26,
+   "text": "Golden Gate assembly is a different solution to the same problem of \"join multiple DNA fragments in one pot, in any order, scarlessly."
+  },
+  {
+   "t": 16.99,
+   "text": "\" It was published by a German group — Engler, Kandzia, and Marillonnet — in 2008, and it has become hugely popular in synthetic biology, particularly for applications where you need to assemble many fragments at once or where you need to do the same assembly over and over with different combinations of parts."
+  },
+  {
+   "t": 36.41,
+   "text": "The trick that makes Golden Gate work is a special class of restriction enzymes called Type IIS enzymes."
+  },
+  {
+   "t": 42.9,
+   "text": "Most of the restriction enzymes you know about — EcoRI, BamHI, HindIII, all the classics — are Type II enzymes."
+  },
+  {
+   "t": 50.84,
+   "text": "They recognize a specific palindromic sequence in the DNA and they cut inside that sequence."
+  },
+  {
+   "t": 57.48,
+   "text": "So if you cut with EcoRI, the cut leaves an EcoRI recognition site at each end of every fragment, with a four-base overhang in the middle."
+  },
+  {
+   "t": 67.64,
+   "text": "The leftover recognition sites are sometimes called scars — they're little stretches of fixed sequence that you didn't necessarily want but that you can't get rid of without an extra step."
+  },
+  {
+   "t": 78.22,
+   "text": "Type IIS enzymes are different."
+  },
+  {
+   "t": 80.65,
+   "text": "They recognize a specific sequence in the DNA, but they cut outside their recognition sequence — typically a few bases downstream of it."
+  },
+  {
+   "t": 90.03,
+   "text": "The most-used Type IIS enzyme in Golden Gate is BsaI, which recognizes the seven-base sequence GGTCTC and cuts one base downstream, leaving a four-base overhang whose sequence you specify."
+  },
+  {
+   "t": 103.95,
+   "text": "Because the cut is outside the recognition site, and the recognition site itself ends up on the discarded fragment, the cut piece carries no leftover scar."
+  },
+  {
+   "t": 113.89,
+   "text": "The four-base overhang can be any four bases you want, because BsaI doesn't care what's downstream of the recognition site — it just cuts there."
+  },
+  {
+   "t": 122.7,
+   "text": "That property — a programmable four-base overhang — is what makes Golden Gate work."
+  },
+  {
+   "t": 128.3,
+   "text": "You design each of your fragments so that, at every junction where two adjacent fragments are supposed to meet, both fragments have a BsaI site oriented so that cutting releases them with matching four-base overhangs."
+  },
+  {
+   "t": 141.7,
+   "text": "You design each junction with a unique four-base overhang — different from every other junction in the assembly."
+  },
+  {
+   "t": 148.61,
+   "text": "So fragment A's right overhang matches fragment B's left overhang and nothing else."
+  },
+  {
+   "t": 155.31,
+   "text": "Fragment B's right overhang matches fragment C's left overhang and nothing else."
+  },
+  {
+   "t": 161.75,
+   "text": "And so on."
+  },
+  {
+   "t": 162.78,
+   "text": "Now you mix all your fragments together in a tube with BsaI and T4 ligase."
+  },
+  {
+   "t": 168.25,
+   "text": "The BsaI cuts every fragment, releasing each piece with its designed overhangs."
+  },
+  {
+   "t": 174.55,
+   "text": "The ligase joins adjacent fragments wherever overhangs match."
+  },
+  {
+   "t": 179.15,
+   "text": "Because each junction has a unique four-base overhang, fragments can only join in the correct order."
+  },
+  {
+   "t": 185.4,
+   "text": "The assembly is directional and ordered without you having to do anything other than design the overhangs properly."
+  },
+  {
+   "t": 192.28,
+   "text": "And here is the killer detail: once a junction has been ligated, the BsaI site is gone — because, remember, the BsaI sites were on the discarded outer pieces, and the inner pieces, now joined, have no BsaI site left."
+  },
+  {
+   "t": 207.59,
+   "text": "So the assembled product is immune to further BsaI cutting."
+  },
+  {
+   "t": 211.43,
+   "text": "But unligated fragments — fragments that haven't yet joined — still have BsaI sites and can still be re-cut."
+  },
+  {
+   "t": 218.91,
+   "text": "So you can run the reaction at a single temperature, with BsaI and ligase active simultaneously, and the reaction drives itself to the assembled product as a thermodynamic sink."
+  },
+  {
+   "t": 230.28,
+   "text": "Anything that's correctly assembled is safe."
+  },
+  {
+   "t": 233.24,
+   "text": "Anything that isn't gets re-cut and gets another chance."
+  },
+  {
+   "t": 236.72,
+   "text": "The result is an extraordinarily efficient one-pot, one-temperature assembly that can join, in principle, ten or fifteen fragments at once in a single defined order."
+  },
+  {
+   "t": 247.66,
+   "text": "You can throw the parts into a single tube, run a single Golden Gate reaction, transform, and pick out a colony in which all the parts have come together in the right order."
+  },
+  {
+   "t": 258.0,
+   "text": "The same chemistry can be repeated hierarchically — assemble several Level 1 modules, then assemble them into Level 2 modules using a different Type IIS enzyme, then assemble Level 2 modules into Level 3, and so on, up to entire pathways and synthetic chromosomes."
+  },
+  {
+   "t": 276.16,
+   "text": "That hierarchical version is the MoClo (Modular Cloning) system, which dominates plant synthetic biology, and a closely related system called Loop assembly does similar things in different application areas."
+  },
+  {
+   "t": 289.86,
+   "text": "Where does Golden Gate fit relative to Gibson?"
+  },
+  {
+   "t": 292.59,
+   "text": "Both are scarless."
+  },
+  {
+   "t": 293.86,
+   "text": "Both are one-pot."
+  },
+  {
+   "t": 295.15,
+   "text": "Both work for any sequence at the junction."
+  },
+  {
+   "t": 298.01,
+   "text": "The tradeoffs:"
+  },
+  {
+   "t": 299.28,
+   "text": "Golden Gate requires that none of your fragments contain internal BsaI sites (or whatever Type IIS enzyme you're using)."
+  },
+  {
+   "t": 306.84,
+   "text": "If your gene has a GGTCTC in the middle of it, BsaI will cut there too, and your assembly fails."
+  },
+  {
+   "t": 313.65,
+   "text": "So you have to pre-process your design to eliminate internal recognition sites — usually by silent codon swaps if the site is in a coding region."
+  },
+  {
+   "t": 322.91,
+   "text": "This is a real annoyance for designs that happen to contain the site naturally."
+  },
+  {
+   "t": 327.75,
+   "text": "Gibson, by contrast, doesn't care about internal sequence at all."
+  },
+  {
+   "t": 332.08,
+   "text": "There are no forbidden motifs."
+  },
+  {
+   "t": 333.9,
+   "text": "The exonuclease chews everything equally."
+  },
+  {
+   "t": 337.65,
+   "text": "So Gibson is the more general tool when you're joining a small number of large pieces with no constraints on internal sequence."
+  },
+  {
+   "t": 345.0,
+   "text": "Golden Gate, by contrast, scales beautifully to many small pieces with no upper limit on the number of junctions, because the unique-overhang design means each junction is unambiguous even if you have fifteen of them in the same tube."
+  },
+  {
+   "t": 360.09,
+   "text": "So Golden Gate is the better tool when you want to do combinatorial assembly — mixing and matching parts to build a library of variants in a single reaction."
+  },
+  {
+   "t": 369.48,
+   "text": "Different tools for different jobs."
+  },
+  {
+   "t": 371.59,
+   "text": "Most modern gene synthesis vendors use both, picking the assembly chemistry based on the specifics of each order."
+  },
+  {
+   "t": 379.01,
+   "text": "When you submit a gene order, you generally don't know or care which chemistry was used — you just see the verified plasmid arrive in the mail."
+  },
+  {
+   "t": 387.78,
+   "text": "Inside the vendor's facility, though, that decision has been made by an algorithm based on your sequence's properties, and the resulting reaction was run by a liquid-handling robot."
+  },
+  {
+   "t": 399.33,
+   "text": "Now let's talk about where the oligos themselves come from — because if you want to make a thousand-base-pair gene from forty oligos, that's forty oligos per gene, and if a vendor is doing five thousand genes a day, that's two hundred thousand oligos a day, and you cannot make two hundred thousand oligos a day on the kind of column synthesizers we talked about in the oligo lecture."
+  },
+  {
+   "t": 419.09,
+   "text": "You need a fundamentally different platform."
+  }
+ ]
+}

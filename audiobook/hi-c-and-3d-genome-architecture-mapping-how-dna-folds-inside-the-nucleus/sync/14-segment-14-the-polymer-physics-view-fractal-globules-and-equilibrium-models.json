@@ -1,0 +1,111 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — The polymer physics view: fractal globules and equilibrium models",
+ "duration": 249.97,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — The polymer physics view: fractal globules and equilibrium models"
+  },
+  {
+   "t": 6.6,
+   "text": "I want to spend a segment on the polymer physics perspective, because the 3D genome is a polymer — a really long, really weird polymer — and the language of polymer physics gives us a framework for thinking about its structure that complements the molecular biology."
+  },
+  {
+   "t": 21.19,
+   "text": "The basic question polymer physics asks about Hi-C is: what is the expected contact frequency between two regions of a polymer as a function of their linear distance?"
+  },
+  {
+   "t": 32.1,
+   "text": "For an idealized polymer in three dimensions, the answer depends on the polymer's conformation."
+  },
+  {
+   "t": 37.99,
+   "text": "A polymer at thermodynamic equilibrium — fully relaxed, swimming in its own random configurations — has a contact frequency that decays as the negative three-halves power of linear distance."
+  },
+  {
+   "t": 51.24,
+   "text": "This is the \"equilibrium globule\" scaling."
+  },
+  {
+   "t": 54.08,
+   "text": "A different conformation, called the \"fractal globule,\" predicts a decay as the negative one-power of linear distance."
+  },
+  {
+   "t": 62.16,
+   "text": "When Lieberman-Aiden and colleagues measured the actual contact frequency decay in human Hi-C data, they found that it followed the negative one-power scaling — consistent with a fractal globule conformation, not an equilibrium globule."
+  },
+  {
+   "t": 76.83,
+   "text": "This was a striking result."
+  },
+  {
+   "t": 78.55,
+   "text": "The fractal globule is a specific polymer conformation, originally proposed by Alexander Grosberg in the 1980s, that is dense, non-equilibrium, and has a kind of nested self-similar structure where loops contain sub-loops contain sub-sub-loops, organized so that the polymer is highly compact but never gets tangled with itself."
+  },
+  {
+   "t": 99.74,
+   "text": "The fractal globule is an attractive model for chromatin for several reasons."
+  },
+  {
+   "t": 104.56,
+   "text": "First, it matches the observed contact frequency decay."
+  },
+  {
+   "t": 108.67,
+   "text": "Second, it's compact, packing the polymer into a small volume without overlap."
+  },
+  {
+   "t": 114.38,
+   "text": "Third, and crucially, it's unknotted — chromosomes don't get tangled, which is essential because tangled chromosomes can't separate cleanly at mitosis."
+  },
+  {
+   "t": 124.66,
+   "text": "An equilibrium globule, by contrast, would be heavily knotted."
+  },
+  {
+   "t": 129.03,
+   "text": "Real chromosomes need to be foldable and unfoldable repeatedly without tangling, and the fractal globule conformation has the right topology."
+  },
+  {
+   "t": 138.61,
+   "text": "The polymer physics interpretation has been refined over the past decade by Leonid Mirny and others, who have developed sophisticated simulation models of chromatin that incorporate the loop extrusion mechanism."
+  },
+  {
+   "t": 151.21,
+   "text": "When you simulate loop extrusion by cohesin in a polymer model — randomly loading cohesin onto a chromatin polymer, having it extrude loops, blocking it at CTCF sites — the resulting polymer conformation reproduces the Hi-C contact maps observed experimentally."
+  },
+  {
+   "t": 168.84,
+   "text": "The TADs emerge naturally from extrusion."
+  },
+  {
+   "t": 171.65,
+   "text": "The fractal-globule-like decay emerges from the population statistics of loops at all scales."
+  },
+  {
+   "t": 178.21,
+   "text": "This is one of the things that makes loop extrusion such a satisfying model — it provides a mechanism by which a dynamic process (active extrusion) produces an apparent equilibrium-like structure (the dense, unknotted, fractal-globule-like conformation) that matches the data."
+  },
+  {
+   "t": 195.96,
+   "text": "The 3D genome looks like a thermodynamic equilibrium structure, but it's actually a non-equilibrium dynamic steady state, maintained by active ATP-driven processes."
+  },
+  {
+   "t": 206.66,
+   "text": "The polymer physics view is also useful for distinguishing biology from physics in the Hi-C data."
+  },
+  {
+   "t": 213.01,
+   "text": "Some features — the distance-dependent decay, the rough magnitude of contact frequencies — are determined by polymer physics and are common to any polymer with similar properties."
+  },
+  {
+   "t": 223.9,
+   "text": "Other features — the specific positions of TAD boundaries, the identity of compartment A versus B, the specific loops between specific enhancer-promoter pairs — are biological, determined by the locations of CTCF sites, the chromatin marks, the transcription factor binding."
+  },
+  {
+   "t": 241.96,
+   "text": "Reading a Hi-C map well means separating the physics from the biology, and the polymer physics models are essential for that separation."
+  }
+ ]
+}

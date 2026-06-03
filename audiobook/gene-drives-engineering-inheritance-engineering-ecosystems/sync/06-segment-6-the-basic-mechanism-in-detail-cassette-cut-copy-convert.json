@@ -1,0 +1,243 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The basic mechanism in detail: cassette, cut, copy, convert",
+ "duration": 365.98,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The basic mechanism in detail: cassette, cut, copy, convert"
+  },
+  {
+   "t": 6.33,
+   "text": "Let me open up the gene drive mechanism one more time, in mechanistic detail, because every later design — every variant, every safety feature, every failure mode — descends from the four steps I am about to walk you through."
+  },
+  {
+   "t": 19.91,
+   "text": "Memorize these four steps: cassette, cut, copy, convert."
+  },
+  {
+   "t": 24.14,
+   "text": "They are the spine of how every CRISPR gene drive operates."
+  },
+  {
+   "t": 28.1,
+   "text": "Step one: cassette."
+  },
+  {
+   "t": 29.85,
+   "text": "You build a piece of DNA that contains everything the drive needs to propagate."
+  },
+  {
+   "t": 35.19,
+   "text": "At minimum, it contains a gene encoding the Cas9 protein, under a germline-specific promoter — meaning Cas9 will be expressed in the cells that make sperm and eggs, but not in somatic tissues."
+  },
+  {
+   "t": 47.86,
+   "text": "The germline restriction is important because we will see in a moment that having Cas9 around in non-germ cells creates resistance problems."
+  },
+  {
+   "t": 56.73,
+   "text": "Next, the cassette contains a gene encoding the guide RNA, which targets a specific sequence in some chosen gene — call it the target gene."
+  },
+  {
+   "t": 66.26,
+   "text": "Next, optionally, the cassette contains cargo — extra genes the designer wants to spread along with the drive."
+  },
+  {
+   "t": 73.72,
+   "text": "For a population modification drive aimed at malaria, the cargo might be a gene encoding an antibody that blocks the malaria parasite."
+  },
+  {
+   "t": 82.15,
+   "text": "For a population suppression drive, the cargo is essentially the disruption of the target gene itself."
+  },
+  {
+   "t": 88.59,
+   "text": "And finally, the cassette is flanked on either side by homology arms — typically a thousand base pairs of sequence on each side that exactly matches the genome surrounding the target site."
+  },
+  {
+   "t": 100.74,
+   "text": "Step two: cut."
+  },
+  {
+   "t": 102.03,
+   "text": "The cassette is initially installed in one allele of the target gene, in a small number of starting individuals — the founders."
+  },
+  {
+   "t": 110.17,
+   "text": "Those founders are released into the wild population, or mated into a lab cage population, and produce heterozygous offspring."
+  },
+  {
+   "t": 118.11,
+   "text": "In the germline of those heterozygous offspring, the cassette's promoter drives expression of Cas9 and the guide RNA."
+  },
+  {
+   "t": 125.85,
+   "text": "The Cas9-guide complex searches the genome for the guide's target sequence."
+  },
+  {
+   "t": 131.2,
+   "text": "It finds the target sequence intact only on the wild-type allele — because on the drive allele, the target has been replaced by the cassette itself, so there is nothing for the guide to bind."
+  },
+  {
+   "t": 142.0,
+   "text": "Cas9 makes a double-strand break in the wild-type allele."
+  },
+  {
+   "t": 146.36,
+   "text": "Step three: copy."
+  },
+  {
+   "t": 148.3,
+   "text": "The cell sees a double-strand break and rushes to repair it."
+  },
+  {
+   "t": 151.84,
+   "text": "The fastest, sloppiest pathway is non-homologous end joining (NHEJ), and we will come back to NHEJ in a moment because it is the central failure mode."
+  },
+  {
+   "t": 163.15,
+   "text": "But the pathway we want — the one the drive depends on — is homology-directed repair (HDR)."
+  },
+  {
+   "t": 170.06,
+   "text": "HDR looks for a homologous template, finds the drive allele (which is identical to the wild-type allele except for the cassette in the middle), aligns the homology arms, and copies the entire cassette across the gap."
+  },
+  {
+   "t": 183.06,
+   "text": "The wild-type allele is now an exact copy of the drive allele."
+  },
+  {
+   "t": 187.34,
+   "text": "The cell has converted itself, at the locus, from heterozygote to homozygote."
+  },
+  {
+   "t": 192.99,
+   "text": "Step four: convert."
+  },
+  {
+   "t": 194.57,
+   "text": "The cell, now drive-homozygous, completes meiosis and produces gametes."
+  },
+  {
+   "t": 199.99,
+   "text": "Every gamete carries the drive."
+  },
+  {
+   "t": 202.2,
+   "text": "The mosquito mates."
+  },
+  {
+   "t": 203.79,
+   "text": "Every offspring is at least heterozygous for the drive — and if the other parent was also a carrier, every offspring is homozygous."
+  },
+  {
+   "t": 212.12,
+   "text": "The frequency of the drive in the population has jumped."
+  },
+  {
+   "t": 215.66,
+   "text": "The cycle starts over in the next generation."
+  },
+  {
+   "t": 218.29,
+   "text": "That is the mechanism, end to end."
+  },
+  {
+   "t": 220.65,
+   "text": "Four steps."
+  },
+  {
+   "t": 221.74,
+   "text": "Cassette, cut, copy, convert."
+  },
+  {
+   "t": 224.28,
+   "text": "Now let me name a few things explicitly so you can see why the design choices matter."
+  },
+  {
+   "t": 229.8,
+   "text": "First, the germline-specific promoter on Cas9 is critical."
+  },
+  {
+   "t": 234.53,
+   "text": "If Cas9 were expressed in somatic cells, it would cut the wild-type allele in those cells too, but somatic cells generally do not do efficient HDR — they would repair the cut via NHEJ instead, producing indels that destroy the target site without copying in the drive."
+  },
+  {
+   "t": 251.68,
+   "text": "Worse, those NHEJ outcomes can create what are called resistance alleles — versions of the target gene where the guide RNA no longer matches."
+  },
+  {
+   "t": 260.88,
+   "text": "We will spend an entire segment on the resistance problem."
+  },
+  {
+   "t": 264.22,
+   "text": "For now, just remember: Cas9 expression has to be tightly restricted to the germline, ideally to the moment just before meiosis when HDR is at its most efficient."
+  },
+  {
+   "t": 276.13,
+   "text": "Second, the guide RNA's target sequence cannot be inside the cassette itself."
+  },
+  {
+   "t": 281.56,
+   "text": "If it were, Cas9 would chew up its own DNA."
+  },
+  {
+   "t": 284.86,
+   "text": "The cassette is designed so that the target sequence exists only in the wild-type allele, not in the drive allele."
+  },
+  {
+   "t": 291.61,
+   "text": "Third, the homology arms have to be long enough and clean enough to direct HDR efficiently."
+  },
+  {
+   "t": 297.94,
+   "text": "Short or noisy arms reduce conversion rates."
+  },
+  {
+   "t": 301.21,
+   "text": "Drive designers spend a lot of effort optimizing the arms."
+  },
+  {
+   "t": 305.04,
+   "text": "Fourth, the rate at which the drive converts heterozygotes to homozygotes — called the conversion efficiency — directly determines how fast the drive spreads."
+  },
+  {
+   "t": 315.58,
+   "text": "A drive with one hundred percent conversion goes from one percent to fifty percent in seven generations."
+  },
+  {
+   "t": 322.64,
+   "text": "A drive with ninety percent conversion still gets to fifty percent in nine or ten."
+  },
+  {
+   "t": 328.08,
+   "text": "A drive with fifty percent conversion is no drive at all — it's just Mendelian inheritance."
+  },
+  {
+   "t": 334.01,
+   "text": "So when we evaluate a particular gene drive design — and I'm going to walk you through several over the next few segments — the key numbers are: conversion efficiency in the germline, somatic leakage (how often Cas9 cuts in the wrong cells), and resistance allele formation rate."
+  },
+  {
+   "t": 350.32,
+   "text": "Those three numbers tell you whether your drive will work, how fast it will spread, and how long it will last before resistance shuts it down."
+  },
+  {
+   "t": 358.89,
+   "text": "Alright."
+  },
+  {
+   "t": 359.73,
+   "text": "We have built the platform."
+  },
+  {
+   "t": 361.23,
+   "text": "Discovery, mechanism, design."
+  },
+  {
+   "t": 363.57,
+   "text": "Now let's go look at what people have actually built."
+  }
+ ]
+}

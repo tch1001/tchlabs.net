@@ -1,0 +1,227 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Bulk versus single-cell — when each is the right choice",
+ "duration": 301.85,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Bulk versus single-cell — when each is the right choice"
+  },
+  {
+   "t": 5.29,
+   "text": "This is the segment that the single-cell lecture didn't get to honestly: when do you actually need single-cell, and when is bulk enough?"
+  },
+  {
+   "t": 13.01,
+   "text": "I want to walk through this carefully, because the answer is more nuanced than either community usually admits."
+  },
+  {
+   "t": 19.69,
+   "text": "Single-cell is the right choice when:"
+  },
+  {
+   "t": 22.23,
+   "text": "You need to know which cell types are in your sample, and how they're changing in abundance between conditions."
+  },
+  {
+   "t": 27.79,
+   "text": "Bulk averages across all cell types; if your effect is a change in cellular composition rather than a change in any cell type's state, bulk will see it but won't tell you which cell type is responsible."
+  },
+  {
+   "t": 39.84,
+   "text": "Single-cell resolves this."
+  },
+  {
+   "t": 41.75,
+   "text": "You're studying a rare cell population that's a small fraction of the tissue."
+  },
+  {
+   "t": 46.45,
+   "text": "A tumor stem cell that's 1% of the cells in a tumor will be diluted to invisibility in bulk; in single-cell, it can be identified and analyzed as a distinct cluster."
+  },
+  {
+   "t": 57.27,
+   "text": "You want to discover novel cell types or cell states that haven't been characterized."
+  },
+  {
+   "t": 62.84,
+   "text": "The Human Cell Atlas's catalog of cell types has come almost entirely from single-cell work."
+  },
+  {
+   "t": 68.86,
+   "text": "Bulk can't see these distinctions."
+  },
+  {
+   "t": 71.17,
+   "text": "You need to map cellular trajectories — pseudotime, developmental trajectories, RNA velocity."
+  },
+  {
+   "t": 77.88,
+   "text": "These require cell-level resolution."
+  },
+  {
+   "t": 80.46,
+   "text": "You're studying cells that exist in distinct, transient states that interconvert."
+  },
+  {
+   "t": 85.74,
+   "text": "Bulk gives you the equilibrium mixture; single-cell shows you the individual states."
+  },
+  {
+   "t": 90.97,
+   "text": "Bulk is the right choice when:"
+  },
+  {
+   "t": 92.91,
+   "text": "You care about a tissue-wide signature — a biomarker, a disease classification, a treatment response prediction."
+  },
+  {
+   "t": 100.71,
+   "text": "Most clinical biomarkers are bulk signals, because clinical samples are usually homogenates and the question is whether the tissue as a whole is in state A or state B."
+  },
+  {
+   "t": 112.03,
+   "text": "You have many samples — hundreds, thousands — and need to compare them at scale."
+  },
+  {
+   "t": 117.55,
+   "text": "Bulk's lower cost per sample makes large-scale studies feasible."
+  },
+  {
+   "t": 121.64,
+   "text": "GTEx has bulk RNA-seq on thousands of samples across dozens of tissues; the equivalent single-cell experiment is impractical."
+  },
+  {
+   "t": 131.11,
+   "text": "You need precise quantitation of moderately and lowly expressed genes."
+  },
+  {
+   "t": 136.15,
+   "text": "Single-cell suffers from a problem called dropout — many genes register zero reads in a given cell even though they're expressed, because the cell only contributes a few thousand reads in total."
+  },
+  {
+   "t": 148.31,
+   "text": "Bulk pools across millions of cells and gives reliable counts even for lowly expressed genes."
+  },
+  {
+   "t": 154.89,
+   "text": "You care about alternative splicing across the whole tissue."
+  },
+  {
+   "t": 158.97,
+   "text": "Single-cell sequencing has poor coverage of internal exons (most reads come from the 3-prime end of transcripts), so splicing analysis is hard."
+  },
+  {
+   "t": 169.36,
+   "text": "Bulk RNA-seq has uniform coverage and can do splicing well."
+  },
+  {
+   "t": 173.55,
+   "text": "You're working with archived or fixed samples — FFPE blocks, frozen tissue — where you can't dissociate live cells."
+  },
+  {
+   "t": 182.07,
+   "text": "Single-cell requires fresh, viable cell suspensions."
+  },
+  {
+   "t": 186.66,
+   "text": "Bulk works on basically any RNA."
+  },
+  {
+   "t": 189.28,
+   "text": "You have a limited budget."
+  },
+  {
+   "t": 190.74,
+   "text": "Bulk is 10-20x cheaper per sample."
+  },
+  {
+   "t": 194.11,
+   "text": "A small lab with $20,000 can run a bulk study with dozens of samples; a single-cell study with the same budget covers maybe a handful of samples."
+  },
+  {
+   "t": 203.56,
+   "text": "Here's the analogy that captures the trade-off."
+  },
+  {
+   "t": 206.59,
+   "text": "Single-cell tells you which cells are present in the tissue."
+  },
+  {
+   "t": 210.12,
+   "text": "Bulk tells you the average across all of them."
+  },
+  {
+   "t": 212.65,
+   "text": "If you need cellular composition, single-cell."
+  },
+  {
+   "t": 215.64,
+   "text": "If you need a tissue-wide signature, bulk."
+  },
+  {
+   "t": 218.24,
+   "text": "Most biological questions split cleanly along this axis."
+  },
+  {
+   "t": 222.4,
+   "text": "Tumor immune infiltration, where you want to know cell type proportions: single-cell."
+  },
+  {
+   "t": 228.24,
+   "text": "Pathway activation across a tumor, where you want a tumor-wide signature: bulk."
+  },
+  {
+   "t": 233.2,
+   "text": "Developmental trajectories: single-cell."
+  },
+  {
+   "t": 236.32,
+   "text": "Drug response biomarkers: bulk."
+  },
+  {
+   "t": 238.95,
+   "text": "Cell type discovery: single-cell."
+  },
+  {
+   "t": 241.55,
+   "text": "Splicing analysis: bulk."
+  },
+  {
+   "t": 243.82,
+   "text": "The future is probably both, in the same study."
+  },
+  {
+   "t": 247.5,
+   "text": "Run bulk on every sample for cheap, scalable, quantitative measurements."
+  },
+  {
+   "t": 252.88,
+   "text": "Run single-cell on a representative subset to characterize the cellular composition and identify what cell types are present."
+  },
+  {
+   "t": 260.95,
+   "text": "Then use the single-cell data to inform interpretation of the bulk data — including using single-cell signatures to deconvolve bulk samples into estimated cell-type proportions, which we'll discuss in Segment 18."
+  },
+  {
+   "t": 274.37,
+   "text": "A note on cost trajectories."
+  },
+  {
+   "t": 276.47,
+   "text": "Single-cell has been getting cheaper at about the same rate as Illumina sequencing — call it 2x cheaper every couple of years."
+  },
+  {
+   "t": 284.37,
+   "text": "At some point, the cost gap between bulk and single-cell will close enough that single-cell becomes the default for everything."
+  },
+  {
+   "t": 291.89,
+   "text": "We're not there yet — bulk is still 10-20x cheaper — but in five to ten years, it might be different."
+  },
+  {
+   "t": 299.19,
+   "text": "For now, bulk remains the workhorse."
+  }
+ ]
+}

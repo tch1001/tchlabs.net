@@ -1,0 +1,335 @@
+{
+ "n": 19,
+ "title": "APPENDIX",
+ "duration": 388.71,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX"
+  },
+  {
+   "t": 1.04,
+   "text": "Quick reference: the prime editing toolkit"
+  },
+  {
+   "t": 3.95,
+   "text": "PE1 — Cas9-H840A nickase + wild-type M-MLV RT + pegRNA."
+  },
+  {
+   "t": 11.97,
+   "text": "The prototype."
+  },
+  {
+   "t": 13.06,
+   "text": "Low efficiency (single-digit %)."
+  },
+  {
+   "t": 15.8,
+   "text": "PE2 — Cas9-H840A nickase + engineered M-MLV RT (5 mutations: D200N, T306K, W313F, T330P, L603W) + pegRNA."
+  },
+  {
+   "t": 33.76,
+   "text": "Higher efficiency than PE1."
+  },
+  {
+   "t": 36.27,
+   "text": "The standard starting point."
+  },
+  {
+   "t": 37.75,
+   "text": "PE3 — PE2 + a second sgRNA that nicks the non-edited strand at a nearby site."
+  },
+  {
+   "t": 45.52,
+   "text": "Biases mismatch repair toward keeping the edit."
+  },
+  {
+   "t": 48.98,
+   "text": "2-4× higher efficiency than PE2."
+  },
+  {
+   "t": 52.74,
+   "text": "PE3b — PE3 variant where the second nicking guide only cuts after the edit is installed, by targeting a sequence created by the edit itself."
+  },
+  {
+   "t": 63.26,
+   "text": "Fewer indels."
+  },
+  {
+   "t": 64.46,
+   "text": "PE4 — PE2 + co-expression of dominant-negative MLH1 to suppress mismatch repair."
+  },
+  {
+   "t": 72.0,
+   "text": "PE5 — PE3 + co-expression of dominant-negative MLH1."
+  },
+  {
+   "t": 78.56,
+   "text": "Currently the highest-efficiency standard configuration."
+  },
+  {
+   "t": 82.61,
+   "text": "PEmax — A re-engineered prime editor protein with improved Cas9 expression, additional NLS, codon optimization, and a redesigned linker."
+  },
+  {
+   "t": 92.88,
+   "text": "Combinable with PE3/PE5 strategies for further gains."
+  },
+  {
+   "t": 99.15,
+   "text": "epegRNA — Engineered pegRNA with a structured 3' element (tevopreQ1 pseudoknot or mpknot) that resists exonuclease degradation."
+  },
+  {
+   "t": 110.15,
+   "text": "Roughly 2× efficiency boost over unmodified pegRNAs."
+  },
+  {
+   "t": 115.3,
+   "text": "twinPE — Pair of pegRNAs targeting opposite strands."
+  },
+  {
+   "t": 120.7,
+   "text": "Enables larger edits (up to ~few hundred bp) by writing new sequence on both strands and resolving via flap annealing."
+  },
+  {
+   "t": 129.11,
+   "text": "PASTE — twinPE-installed attB landing pad + serine integrase + attP-containing donor DNA."
+  },
+  {
+   "t": 136.89,
+   "text": "Enables kilobase-scale insertions at precise genomic sites."
+  },
+  {
+   "t": 141.16,
+   "text": "Key references (recommended reading order)"
+  },
+  {
+   "t": 143.84,
+   "text": "Anzalone et al., Nature, 2019."
+  },
+  {
+   "t": 147.32,
+   "text": "\"Search-and-replace genome editing without double-strand breaks or donor DNA."
+  },
+  {
+   "t": 152.71,
+   "text": "\" The original paper."
+  },
+  {
+   "t": 154.2,
+   "text": "Chen et al., Cell, 2021."
+  },
+  {
+   "t": 157.0,
+   "text": "\"Enhanced prime editing systems by manipulating cellular determinants of editing outcomes."
+  },
+  {
+   "t": 162.84,
+   "text": "\" Introduces PE4 and PE5."
+  },
+  {
+   "t": 166.21,
+   "text": "Nelson et al., Nature Biotechnology, 2022."
+  },
+  {
+   "t": 170.22,
+   "text": "\"Engineered pegRNAs improve prime editing efficiency."
+  },
+  {
+   "t": 174.72,
+   "text": "\" Introduces the epegRNA."
+  },
+  {
+   "t": 176.91,
+   "text": "Anzalone et al., Nature Biotechnology, 2022."
+  },
+  {
+   "t": 181.07,
+   "text": "\"Programmable deletion, replacement, integration and inversion of large DNA sequences with twin prime editing."
+  },
+  {
+   "t": 188.64,
+   "text": "\" twinPE."
+  },
+  {
+   "t": 189.66,
+   "text": "Yarnall et al., Nature Biotechnology, 2023."
+  },
+  {
+   "t": 193.64,
+   "text": "\"Drag-and-drop genome insertion of large sequences without double-strand DNA cleavage using CRISPR-directed integrases."
+  },
+  {
+   "t": 202.0,
+   "text": "\" PASTE."
+  },
+  {
+   "t": 202.86,
+   "text": "Hsu et al., Nature Biomedical Engineering, 2021."
+  },
+  {
+   "t": 206.89,
+   "text": "\"PrimeDesign software for rapid and simplified design of prime editing guide RNAs."
+  },
+  {
+   "t": 213.64,
+   "text": "\" The design tool."
+  },
+  {
+   "t": 214.96,
+   "text": "Common mistakes to avoid"
+  },
+  {
+   "t": 216.76,
+   "text": "Designing a pegRNA without trying multiple PBS lengths."
+  },
+  {
+   "t": 221.16,
+   "text": "The optimal PBS length is target-dependent and varies between 8 and 17 nucleotides."
+  },
+  {
+   "t": 227.62,
+   "text": "Always test a panel."
+  },
+  {
+   "t": 229.05,
+   "text": "Using PE3 in a context where the second nick will create a long-lived double-strand break."
+  },
+  {
+   "t": 235.71,
+   "text": "Either use PE3b (with the post-edit-only second nick) or accept the indel risk."
+  },
+  {
+   "t": 242.09,
+   "text": "Co-expressing MLH1 dn (PE4/PE5) in cells that will be expanded for a long time after editing."
+  },
+  {
+   "t": 250.74,
+   "text": "The transient suppression of mismatch repair is fine for editing windows but can cause cumulative damage if cells continue to express it."
+  },
+  {
+   "t": 259.4,
+   "text": "Targeting a site too close to an essential sequence."
+  },
+  {
+   "t": 263.34,
+   "text": "Prime editing's flap resolution sometimes produces small unintended changes within a few base pairs of the nick."
+  },
+  {
+   "t": 270.86,
+   "text": "If the surrounding sequence cannot tolerate any change, choose a different target."
+  },
+  {
+   "t": 276.16,
+   "text": "Forgetting that the H840A nickase nicks the non-target strand."
+  },
+  {
+   "t": 281.04,
+   "text": "The PBS must match the freshly nicked end on the non-target strand, NOT the target strand paired with the pegRNA."
+  },
+  {
+   "t": 288.65,
+   "text": "Reversing this is the most common pegRNA design error."
+  },
+  {
+   "t": 292.77,
+   "text": "Three-question diagnostic for any prime editing experiment"
+  },
+  {
+   "t": 296.93,
+   "text": "If editing efficiency is low: Is the spacer efficient?"
+  },
+  {
+   "t": 301.31,
+   "text": "Test it with regular Cas9 first."
+  },
+  {
+   "t": 304.16,
+   "text": "Is the PBS the right length?"
+  },
+  {
+   "t": 306.3,
+   "text": "Test 9, 11, 13, 15 nt variants."
+  },
+  {
+   "t": 311.0,
+   "text": "Is the pegRNA stable?"
+  },
+  {
+   "t": 312.62,
+   "text": "Try an epegRNA design."
+  },
+  {
+   "t": 314.56,
+   "text": "If editing efficiency is okay but byproducts are high: Are you using PE3 with an aggressive second nick?"
+  },
+  {
+   "t": 322.55,
+   "text": "Try PE3b or move to a non-dual-nick strategy."
+  },
+  {
+   "t": 327.01,
+   "text": "Is the RT template too long?"
+  },
+  {
+   "t": 328.88,
+   "text": "Shorter RT templates generally give cleaner edits."
+  },
+  {
+   "t": 332.86,
+   "text": "Is the local sequence prone to flap-resolution errors?"
+  },
+  {
+   "t": 336.66,
+   "text": "Move the nick site if possible."
+  },
+  {
+   "t": 338.96,
+   "text": "If everything looks fine but the cell type won't edit: Is the prime editor protein expressed at high enough level?"
+  },
+  {
+   "t": 345.61,
+   "text": "Try mRNA delivery or codon-optimized constructs."
+  },
+  {
+   "t": 349.85,
+   "text": "Is the cell type dividing?"
+  },
+  {
+   "t": 351.48,
+   "text": "Some prime editing is cell-cycle-sensitive."
+  },
+  {
+   "t": 354.51,
+   "text": "Is mismatch repair very active in this cell type?"
+  },
+  {
+   "t": 358.08,
+   "text": "Try PE4/PE5 with MLH1 dn."
+  },
+  {
+   "t": 362.4,
+   "text": "Where to send students"
+  },
+  {
+   "t": 363.93,
+   "text": "For the keenest students, send them to: The Liu lab website at the Broad Institute for the latest tool versions."
+  },
+  {
+   "t": 370.85,
+   "text": "Prime Medicine's pipeline page for clinical-translation updates."
+  },
+  {
+   "t": 374.93,
+   "text": "The Pinello lab tools (PrimeDesign, PrimeVar) for design."
+  },
+  {
+   "t": 378.88,
+   "text": "Addgene's prime editing collection for plasmids."
+  },
+  {
+   "t": 382.2,
+   "text": "And the original Anzalone 2019 paper — every CRISPR course should require it."
+  }
+ ]
+}

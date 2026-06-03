@@ -1,0 +1,171 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — The off-target landscape: how specific is prime editing?",
+ "duration": 292.58,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — The off-target landscape: how specific is prime editing?"
+  },
+  {
+   "t": 5.46,
+   "text": "Now let's talk about specificity, because this is where prime editing genuinely shines compared to ordinary Cas9 and even compared to base editing."
+  },
+  {
+   "t": 14.66,
+   "text": "Recall the off-target problem with Cas9."
+  },
+  {
+   "t": 17.41,
+   "text": "Cas9 finds its target by matching the guide RNA's 20-letter spacer to a sequence in the genome."
+  },
+  {
+   "t": 24.6,
+   "text": "But the match isn't required to be perfect."
+  },
+  {
+   "t": 27.23,
+   "text": "Mismatches, especially outside the seed region, are tolerated."
+  },
+  {
+   "t": 31.75,
+   "text": "So Cas9 will sometimes cut at sites in the genome that are similar to the intended target but not identical."
+  },
+  {
+   "t": 38.6,
+   "text": "These off-target cuts can disrupt unintended genes, cause translocations between off-target cut sites, and generally create headaches."
+  },
+  {
+   "t": 47.09,
+   "text": "The off-target problem has been studied exhaustively for Cas9."
+  },
+  {
+   "t": 51.08,
+   "text": "Various engineered Cas9 variants — eSpCas9, SpCas9-HF1, HiFi Cas9, and others — have been developed to reduce off-target activity."
+  },
+  {
+   "t": 64.25,
+   "text": "But ordinary Cas9, even at its best, has a real off-target footprint that you have to characterize for any clinical application."
+  },
+  {
+   "t": 72.97,
+   "text": "Base editing inherited part of this problem, plus a new one."
+  },
+  {
+   "t": 77.05,
+   "text": "The targeting specificity of a base editor is the targeting specificity of its Cas9 component."
+  },
+  {
+   "t": 83.42,
+   "text": "But base editors have an additional, separate source of off-target activity: the deaminase can attack any single-stranded DNA, even if the Cas9 is just transiently parked at an unrelated site, or even when the deaminase escapes the editor and acts on its own."
+  },
+  {
+   "t": 100.1,
+   "text": "Base editors have been shown to cause measurable off-target deaminations across the transcriptome and even on RNA — this last point being a major concern, because RNA-level edits accumulate quickly and can affect cellular state in ways that are hard to predict."
+  },
+  {
+   "t": 116.49,
+   "text": "Prime editing, in contrast, has an interesting and largely favorable off-target profile."
+  },
+  {
+   "t": 122.55,
+   "text": "First, the R-loop off-targets."
+  },
+  {
+   "t": 125.05,
+   "text": "Cas9 still has to form an R-loop at any potential target site, which means the standard sgRNA-spacer match-up rules apply."
+  },
+  {
+   "t": 133.9,
+   "text": "Prime editing's R-loop specificity is comparable to Cas9 with the same spacer."
+  },
+  {
+   "t": 139.65,
+   "text": "Second, and this is the crucial point: prime editing requires two matches, not one."
+  },
+  {
+   "t": 145.86,
+   "text": "The pegRNA has to match the genomic target at the spacer level — that's the R-loop step."
+  },
+  {
+   "t": 151.29,
+   "text": "AND the pegRNA's primer binding site has to match the freshly nicked 3' end of the genomic strand — a second matching step, with its own short matching requirement."
+  },
+  {
+   "t": 161.18,
+   "text": "If the spacer matches an off-target site but the PBS doesn't, no editing happens."
+  },
+  {
+   "t": 166.89,
+   "text": "The off-target is checked twice, by two different sequence-matching events."
+  },
+  {
+   "t": 171.9,
+   "text": "This double-check substantially reduces off-target editing relative to ordinary Cas9."
+  },
+  {
+   "t": 178.0,
+   "text": "Genome-wide off-target studies of prime editors have shown that the off-target editing rate at sites that match the spacer is dramatically lower than the rate of Cas9 cleavage at those same sites — often by orders of magnitude."
+  },
+  {
+   "t": 190.86,
+   "text": "The double match is a real specificity gain."
+  },
+  {
+   "t": 193.96,
+   "text": "Third, the deaminase off-target problem is absent."
+  },
+  {
+   "t": 198.0,
+   "text": "Prime editing doesn't use a deaminase."
+  },
+  {
+   "t": 200.85,
+   "text": "It uses a reverse transcriptase, which is template-directed — the RT can only write the sequence encoded in the pegRNA template, and only at sites where the PBS has annealed."
+  },
+  {
+   "t": 211.7,
+   "text": "There's no analog of the deaminase-attacks-random-DNA problem."
+  },
+  {
+   "t": 215.49,
+   "text": "So the summary is: prime editing is generally more specific than Cas9, and substantially more specific than base editing on average."
+  },
+  {
+   "t": 224.65,
+   "text": "You still need to characterize off-targets for any clinical application — there's no genome editor that is genuinely off-target-free — but the off-target burden of prime editing is, on average, lower than the alternatives."
+  },
+  {
+   "t": 237.45,
+   "text": "This is a major reason why prime editing is being pursued so aggressively for clinical use despite its lower efficiency."
+  },
+  {
+   "t": 245.44,
+   "text": "Specificity matters more than raw efficiency when the goal is a safe therapy."
+  },
+  {
+   "t": 251.09,
+   "text": "One more thing worth knowing."
+  },
+  {
+   "t": 252.64,
+   "text": "Prime editing does have one off-target failure mode that's specific to it: incorrect flap resolution at the on-target site."
+  },
+  {
+   "t": 260.4,
+   "text": "Sometimes the new 3' flap is incorporated incorrectly, or the original 5' flap is retained but partially digested."
+  },
+  {
+   "t": 268.95,
+   "text": "These can produce small indels or partial edits at the on-target site itself."
+  },
+  {
+   "t": 274.12,
+   "text": "They're not classical off-targets, but they're on-target byproducts that you need to consider when assessing the cleanliness of a prime editing experiment."
+  },
+  {
+   "t": 282.66,
+   "text": "PE3 has slightly more of this kind of byproduct because of the second nick; PE3b reduces it; engineered pegRNAs reduce it further."
+  }
+ ]
+}

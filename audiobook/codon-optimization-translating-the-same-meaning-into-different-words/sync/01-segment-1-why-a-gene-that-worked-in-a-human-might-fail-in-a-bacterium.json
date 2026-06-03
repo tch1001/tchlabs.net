@@ -1,0 +1,223 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — Why a gene that worked in a human might fail in a bacterium",
+ "duration": 257.75,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — Why a gene that worked in a human might fail in a bacterium"
+  },
+  {
+   "t": 4.85,
+   "text": "Alright, settle in."
+  },
+  {
+   "t": 6.2,
+   "text": "Today we're going to spend two hours on something that looks, at first glance, like a footnote in molecular biology, and turns out to be one of the most consequential ideas in modern biotechnology."
+  },
+  {
+   "t": 18.07,
+   "text": "We're going to talk about codon optimization — the art of rewriting a gene's DNA sequence, without changing the protein it encodes, so that it gets expressed better in whatever cell you want to express it in."
+  },
+  {
+   "t": 30.06,
+   "text": "If you walk out of here remembering only one sentence from this lecture, I want it to be this one: the same protein can be encoded by many different DNA sequences, and which sequence you choose can change how much protein gets made by a factor of a hundred or more, depending on the host cell."
+  },
+  {
+   "t": 47.02,
+   "text": "The protein is the same."
+  },
+  {
+   "t": 48.88,
+   "text": "The amino acids are the same."
+  },
+  {
+   "t": 50.84,
+   "text": "The order of those amino acids is the same."
+  },
+  {
+   "t": 53.89,
+   "text": "The DNA looks completely different, and the cell behaves completely differently."
+  },
+  {
+   "t": 58.94,
+   "text": "That's the puzzle we're going to unpack."
+  },
+  {
+   "t": 60.89,
+   "text": "Here's the analogy I'm going to come back to throughout the lecture, so internalize it now."
+  },
+  {
+   "t": 66.17,
+   "text": "Imagine you're translating a sentence from one language into another, and the target language has many synonyms for almost every word."
+  },
+  {
+   "t": 74.05,
+   "text": "You can choose formal vocabulary or casual vocabulary."
+  },
+  {
+   "t": 77.76,
+   "text": "You can pick the words a Berkeley professor would use or the words your cousin would use in a text message."
+  },
+  {
+   "t": 83.8,
+   "text": "The meaning is the same."
+  },
+  {
+   "t": 85.65,
+   "text": "The information content is the same."
+  },
+  {
+   "t": 88.14,
+   "text": "But how easily the reader processes the sentence depends enormously on which synonyms you chose."
+  },
+  {
+   "t": 94.24,
+   "text": "Codon optimization is exactly this — translating the same protein \"meaning\" into different DNA \"words\" depending on who's going to read the message."
+  },
+  {
+   "t": 103.75,
+   "text": "Formal for an academic paper."
+  },
+  {
+   "t": 105.76,
+   "text": "Casual for a text message."
+  },
+  {
+   "t": 107.64,
+   "text": "E. coli wants its dialect."
+  },
+  {
+   "t": 109.4,
+   "text": "CHO cells want theirs."
+  },
+  {
+   "t": 111.22,
+   "text": "The protein you're encoding doesn't care which dialect you pick."
+  },
+  {
+   "t": 114.88,
+   "text": "The cell that has to read the message cares enormously."
+  },
+  {
+   "t": 118.16,
+   "text": "So let me ground this in a story, because I think the story makes the stakes vivid."
+  },
+  {
+   "t": 123.1,
+   "text": "In the late 1970s, just after recombinant DNA technology had been invented, scientists at Genentech were trying to get E. coli to make human insulin."
+  },
+  {
+   "t": 132.51,
+   "text": "They had the human insulin gene."
+  },
+  {
+   "t": 134.44,
+   "text": "They had a plasmid."
+  },
+  {
+   "t": 135.65,
+   "text": "They had restriction enzymes."
+  },
+  {
+   "t": 137.72,
+   "text": "They put the gene on the plasmid, fed it to E. coli, and waited for the bacterium to start churning out insulin."
+  },
+  {
+   "t": 144.12,
+   "text": "And it sort of did."
+  },
+  {
+   "t": 145.2,
+   "text": "A little bit."
+  },
+  {
+   "t": 146.16,
+   "text": "The yields were terrible."
+  },
+  {
+   "t": 147.71,
+   "text": "The protein was barely there."
+  },
+  {
+   "t": 149.59,
+   "text": "The bacterium was, in some sense, technically reading the gene, but it was reading it the way you might read a textbook in a language you only half-know — slowly, painfully, dropping the book occasionally, making mistakes."
+  },
+  {
+   "t": 162.93,
+   "text": "They got insulin."
+  },
+  {
+   "t": 164.05,
+   "text": "They got enough to launch a drug."
+  },
+  {
+   "t": 165.9,
+   "text": "But the yields were two orders of magnitude lower than what we now know was possible."
+  },
+  {
+   "t": 170.76,
+   "text": "Over the next decade, as more eukaryotic genes were being expressed in E. coli, this pattern showed up again and again."
+  },
+  {
+   "t": 177.96,
+   "text": "You'd take a gene from a human or a mouse or a yeast, put it in E. coli, and the expression would be feeble."
+  },
+  {
+   "t": 184.89,
+   "text": "You'd take the same protein and ask, can we redesign the DNA sequence — keeping the protein identical — so that E. coli reads it more fluently?"
+  },
+  {
+   "t": 194.31,
+   "text": "And when people started doing that, the yields jumped."
+  },
+  {
+   "t": 198.14,
+   "text": "Tenfold."
+  },
+  {
+   "t": 199.12,
+   "text": "Fiftyfold."
+  },
+  {
+   "t": 200.34,
+   "text": "Sometimes a hundredfold."
+  },
+  {
+   "t": 201.88,
+   "text": "From the same protein, encoded by different DNA."
+  },
+  {
+   "t": 205.24,
+   "text": "That's when we knew there was something deep going on in how cells translate the genetic code, something that depended on which specific synonymous codons you chose."
+  },
+  {
+   "t": 215.07,
+   "text": "The answer to that something is what we're going to spend the next two hours unpacking."
+  },
+  {
+   "t": 219.65,
+   "text": "By the end, you should be able to do three things."
+  },
+  {
+   "t": 223.18,
+   "text": "One: explain to a curious friend, using analogies, why a human gene that works fine in a human cell might fail in E. coli, and what we do about it."
+  },
+  {
+   "t": 232.66,
+   "text": "Two: walk through, in rough terms, the metrics we use to score how well a gene is \"optimized\" for a given host."
+  },
+  {
+   "t": 240.41,
+   "text": "And three: read a news story about an mRNA vaccine or a gene therapy and have real intuition for what the engineers did to make it work, because almost certainly codon optimization was part of the recipe."
+  },
+  {
+   "t": 252.61,
+   "text": "That's the contract."
+  },
+  {
+   "t": 254.0,
+   "text": "Now let me start at the beginning, with the genetic code itself."
+  }
+ ]
+}

@@ -1,0 +1,219 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — The resistance problem: why drives don't always finish the job",
+ "duration": 348.88,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — The resistance problem: why drives don't always finish the job"
+  },
+  {
+   "t": 5.31,
+   "text": "Now I have to introduce you to the single most important failure mode of CRISPR gene drives, because it threatens the whole concept and it has shaped every modern drive design."
+  },
+  {
+   "t": 15.91,
+   "text": "The failure mode is called resistance."
+  },
+  {
+   "t": 18.4,
+   "text": "Here's the issue."
+  },
+  {
+   "t": 19.54,
+   "text": "Every time Cas9 cuts a target site, the cell has to repair the break."
+  },
+  {
+   "t": 24.4,
+   "text": "The repair pathway we want is HDR — homology-directed repair — which copies the drive cassette across."
+  },
+  {
+   "t": 31.88,
+   "text": "The pathway we do not want is NHEJ — non-homologous end joining — which slaps the cut back together, often with a small insertion or deletion."
+  },
+  {
+   "t": 41.89,
+   "text": "If NHEJ wins the race in some fraction of germ cells, you get an allele that has been cut and then mis-repaired."
+  },
+  {
+   "t": 49.52,
+   "text": "The mis-repaired allele often has a small indel right at the guide RNA's target sequence."
+  },
+  {
+   "t": 55.6,
+   "text": "That indel disrupts the target sequence, so the guide RNA no longer recognizes it."
+  },
+  {
+   "t": 61.26,
+   "text": "Cas9 cannot cut it again."
+  },
+  {
+   "t": 63.54,
+   "text": "The allele is now resistant to the drive."
+  },
+  {
+   "t": 66.4,
+   "text": "Picture what happens in a population."
+  },
+  {
+   "t": 68.54,
+   "text": "The drive spreads."
+  },
+  {
+   "t": 69.88,
+   "text": "In some carriers, conversion fails and NHEJ creates resistance alleles."
+  },
+  {
+   "t": 76.21,
+   "text": "Those resistance alleles cannot be driven — they are immune to the drive's Cas9-guide combination."
+  },
+  {
+   "t": 82.6,
+   "text": "As the drive spreads, the resistance alleles also spread, because every resistance allele is a heterozygote with a drive allele, and the drive is selecting against the wild-type allele but not against the resistance allele."
+  },
+  {
+   "t": 96.84,
+   "text": "Eventually, the resistance allele becomes the only competition for the drive — and at that point, the drive's spread stalls."
+  },
+  {
+   "t": 104.97,
+   "text": "The population becomes a mix of drive carriers and resistance carriers, with the wild-type allele essentially gone, and the drive has failed to fix."
+  },
+  {
+   "t": 114.5,
+   "text": "In the 2015 Crisanti paper — the female-fertility drive — this is exactly what happened."
+  },
+  {
+   "t": 121.26,
+   "text": "The drive spread for several generations, then started to slow as resistance alleles accumulated."
+  },
+  {
+   "t": 128.38,
+   "text": "After a dozen generations, the drive frequency was stuck at a level well below fixation."
+  },
+  {
+   "t": 134.61,
+   "text": "There are several sources of resistance."
+  },
+  {
+   "t": 137.15,
+   "text": "NHEJ-induced indels at the target site are the dominant source in most drives."
+  },
+  {
+   "t": 142.36,
+   "text": "Pre-existing natural variation in the target sequence — different mosquito populations may have natural single-nucleotide polymorphisms that prevent the guide from binding — is the second source."
+  },
+  {
+   "t": 154.5,
+   "text": "Recombination at the target site during HDR can sometimes copy in only part of the cassette, creating a drive-disabled allele."
+  },
+  {
+   "t": 163.39,
+   "text": "Each of these is its own problem."
+  },
+  {
+   "t": 165.4,
+   "text": "The good news is that the 2018 doublesex result showed how to defeat resistance, or at least one form of it."
+  },
+  {
+   "t": 172.75,
+   "text": "The trick is to choose a target site where NHEJ-induced disruption is itself lethal or sterilizing."
+  },
+  {
+   "t": 179.74,
+   "text": "If a resistance allele cannot replace the function of the target gene, then resistance carriers are selected against."
+  },
+  {
+   "t": 187.05,
+   "text": "The resistance alleles do not accumulate, because every resistance carrier has reduced fitness."
+  },
+  {
+   "t": 192.96,
+   "text": "The drive can spread to fixation."
+  },
+  {
+   "t": 195.72,
+   "text": "We call target sites with this property haplosufficient — meaning a single functional copy is enough — but specifically, we want sites in genes where the function is essential, where the wild-type sequence is conserved enough that natural resistance is rare, and where NHEJ outcomes destroy gene function."
+  },
+  {
+   "t": 215.03,
+   "text": "The 2018 doublesex paper picked such a site."
+  },
+  {
+   "t": 218.78,
+   "text": "The drive worked."
+  },
+  {
+   "t": 219.99,
+   "text": "The field learned a major design principle: for population suppression, target a haplosufficient essential gene at a site where NHEJ is also a loss-of-function event."
+  },
+  {
+   "t": 231.78,
+   "text": "But there is more to the resistance story."
+  },
+  {
+   "t": 234.12,
+   "text": "Even at well-chosen target sites, resistance can emerge under selection."
+  },
+  {
+   "t": 238.96,
+   "text": "The drive's pressure is strongest at the target gene; over many generations, the population is essentially running an evolutionary search for any mutation that escapes the drive."
+  },
+  {
+   "t": 250.68,
+   "text": "In a large, structured wild population, with hundreds of millions of carriers per generation, even very rare resistance events will eventually be found."
+  },
+  {
+   "t": 261.27,
+   "text": "So the field's working assumption is: resistance is inevitable on a long enough timescale, and we have to design drives that either reach their goal before resistance arrives or have built-in mechanisms to outrun it."
+  },
+  {
+   "t": 274.64,
+   "text": "Modern drive designs use several layers of anti-resistance engineering."
+  },
+  {
+   "t": 279.34,
+   "text": "Multiplexed guides — multiple guide RNAs targeting different sites in the same gene — so that a single resistance mutation does not save the allele."
+  },
+  {
+   "t": 289.29,
+   "text": "Recoded rescue elements — drives that carry a functional, recoded copy of the target gene so the drive itself does not knock out essential function (relevant for population modification drives that need the carriers to live)."
+  },
+  {
+   "t": 302.88,
+   "text": "Highly conserved target choice — guides aimed at deeply conserved sequences where natural variation is essentially zero."
+  },
+  {
+   "t": 311.17,
+   "text": "Combine all of these, and you have a drive that, on paper, should outrun resistance long enough to reach its goal."
+  },
+  {
+   "t": 318.64,
+   "text": "So that is the resistance problem."
+  },
+  {
+   "t": 320.62,
+   "text": "It is the central technical challenge of the field, and the central reason that even well-designed drives can fail."
+  },
+  {
+   "t": 327.59,
+   "text": "Every modern drive paper, every regulatory submission, every modeling study spends pages on the resistance question."
+  },
+  {
+   "t": 335.6,
+   "text": "If you ever read a Target Malaria paper, look for the section on \"guide design and resistance mitigation\" — it is almost always the most technically careful part of the paper."
+  },
+  {
+   "t": 345.47,
+   "text": "Alright."
+  },
+  {
+   "t": 346.24,
+   "text": "We are at the one-hour mark."
+  },
+  {
+   "t": 347.74,
+   "text": "Let's take a break."
+  }
+ ]
+}

@@ -1,0 +1,307 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The wet-lab workflow — from tissue to library",
+ "duration": 527.64,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The wet-lab workflow — from tissue to library"
+  },
+  {
+   "t": 4.69,
+   "text": "The bulk RNA-seq workflow can be drawn on the back of a napkin."
+  },
+  {
+   "t": 8.91,
+   "text": "There are six main steps, and I want to walk through each one carefully, because each step has choices that affect the data you get and the questions you can answer."
+  },
+  {
+   "t": 17.65,
+   "text": "Step one: RNA extraction."
+  },
+  {
+   "t": 20.21,
+   "text": "You start with your sample — a piece of tissue, a culture of cells, a tumor biopsy, a yeast pellet, whatever."
+  },
+  {
+   "t": 27.48,
+   "text": "You need to break the cells open and pull out all the RNA, while keeping the RNA intact."
+  },
+  {
+   "t": 33.17,
+   "text": "RNA is a fragile molecule."
+  },
+  {
+   "t": 35.54,
+   "text": "It is, biochemically, the kind of molecule that breaks down in minutes if you're not careful — there are enzymes called RNases on every surface in the lab, on your hands, in dust, in tap water, and they will degrade RNA enthusiastically if given the chance."
+  },
+  {
+   "t": 51.23,
+   "text": "So step one is RNA extraction with strict RNase-free technique: gloves, dedicated tubes, an RNase inhibitor in the buffer, and a denaturing chaotropic salt — usually guanidinium thiocyanate — that simultaneously kills cells, denatures all enzymes including RNases, and releases the RNA into solution."
+  },
+  {
+   "t": 73.5,
+   "text": "The two dominant extraction methods are TRIzol, which is a phenol-chloroform-based method that separates RNA from DNA and protein by phase separation, and silica column kits like Qiagen's RNeasy, which bind RNA to a silica membrane in the presence of high salt and elute it with low-salt buffer."
+  },
+  {
+   "t": 92.81,
+   "text": "Both methods produce total RNA — all the RNA species in the sample, in proportion to their abundance."
+  },
+  {
+   "t": 100.47,
+   "text": "After extraction, you check the quality of your RNA."
+  },
+  {
+   "t": 103.88,
+   "text": "The standard tool is a fragment analyzer — a Bioanalyzer from Agilent, or a TapeStation, or a Fragment Analyzer from Advanced Analytical."
+  },
+  {
+   "t": 112.86,
+   "text": "The instrument runs your RNA on a tiny gel and reports a number called the RIN — RNA Integrity Number — on a scale of one to ten."
+  },
+  {
+   "t": 122.15,
+   "text": "RIN of ten means perfectly intact RNA, with sharp peaks for the two large ribosomal RNAs."
+  },
+  {
+   "t": 128.84,
+   "text": "RIN of one means completely degraded RNA, with a smear and no ribosomal peaks."
+  },
+  {
+   "t": 135.11,
+   "text": "For RNA-seq, you generally want RIN above seven; below five, the data quality suffers visibly and certain analyses break down."
+  },
+  {
+   "t": 145.18,
+   "text": "Quality control on the input matters."
+  },
+  {
+   "t": 147.95,
+   "text": "Garbage in, garbage out."
+  },
+  {
+   "t": 149.93,
+   "text": "Step two: rRNA depletion or polyA selection."
+  },
+  {
+   "t": 153.97,
+   "text": "Here is the first big choice you have to make, and it shapes everything downstream."
+  },
+  {
+   "t": 159.45,
+   "text": "Total RNA in a typical cell is about eighty percent ribosomal RNA."
+  },
+  {
+   "t": 164.65,
+   "text": "That's not a small fraction."
+  },
+  {
+   "t": 166.19,
+   "text": "If you just sequence total RNA directly, eighty percent of your reads will be from ribosomal RNA, and only twenty percent from the things you actually care about — mostly mRNA, plus some other non-coding species."
+  },
+  {
+   "t": 179.35,
+   "text": "You're paying for ribosomal RNA sequencing."
+  },
+  {
+   "t": 182.38,
+   "text": "That's expensive and wasteful."
+  },
+  {
+   "t": 184.55,
+   "text": "So before library prep, you do one of two things to get rid of the rRNA."
+  },
+  {
+   "t": 189.1,
+   "text": "Option one: poly-A selection."
+  },
+  {
+   "t": 191.65,
+   "text": "Mature messenger RNAs in eukaryotes have a long stretch of A nucleotides at their three-prime end — the poly-A tail."
+  },
+  {
+   "t": 199.3,
+   "text": "Ribosomal RNAs do not."
+  },
+  {
+   "t": 201.34,
+   "text": "So you take your total RNA, pass it over a column or beads coated with oligo-dT — short stretches of T nucleotides that base-pair with poly-A — and only the poly-A-tailed RNAs stick."
+  },
+  {
+   "t": 213.89,
+   "text": "You wash away everything else, then elute."
+  },
+  {
+   "t": 216.76,
+   "text": "What comes off the column is mature, processed mRNA."
+  },
+  {
+   "t": 220.36,
+   "text": "This is the default for most RNA-seq experiments, because mRNAs are what people usually care about, and poly-A selection is cheap, efficient, and well-established."
+  },
+  {
+   "t": 230.53,
+   "text": "Option two: rRNA depletion."
+  },
+  {
+   "t": 233.4,
+   "text": "You take your total RNA, hybridize it to a set of probes specific to ribosomal RNA, and pull those rRNA molecules out — either with magnetic beads or with enzymatic degradation."
+  },
+  {
+   "t": 245.8,
+   "text": "What's left is everything except rRNA — including mRNA, but also long non-coding RNAs, immature pre-mRNAs, small nucleolar RNAs, and various other non-coding species."
+  },
+  {
+   "t": 259.06,
+   "text": "The standard commercial kits are Illumina's Ribo-Zero and NEB's NEBNext rRNA depletion."
+  },
+  {
+   "t": 266.14,
+   "text": "They work well, though they're more expensive than poly-A selection."
+  },
+  {
+   "t": 270.07,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 271.26,
+   "text": "rRNA is eighty percent of your starting material, and it's basically the same in every sample — it's not telling you anything biological."
+  },
+  {
+   "t": 280.06,
+   "text": "You can either remove it by pulling out only the poly-A tails — poly-A selection, which gives you mature mRNAs only — or by specifically degrading the rRNA itself — rRNA depletion, which gives you everything except rRNA, including non-coding RNAs and unprocessed transcripts."
+  },
+  {
+   "t": 298.92,
+   "text": "Poly-A selection is simpler, cheaper, and gives you clean mRNA."
+  },
+  {
+   "t": 303.87,
+   "text": "rRNA depletion is more inclusive, more expensive, and gives you a broader view of the transcriptome."
+  },
+  {
+   "t": 310.39,
+   "text": "The choice depends on what you want to see."
+  },
+  {
+   "t": 312.26,
+   "text": "If you want mRNA only — which covers maybe ninety percent of RNA-seq experiments — go poly-A."
+  },
+  {
+   "t": 318.92,
+   "text": "If you want long non-coding RNAs, pre-mRNAs, mitochondrial transcripts, or you're working with degraded RNA from FFPE samples where the poly-A tails are gone, go rRNA depletion."
+  },
+  {
+   "t": 331.26,
+   "text": "Step three: fragmentation."
+  },
+  {
+   "t": 333.7,
+   "text": "RNA molecules are too long to sequence directly with Illumina chemistry, which reads at most a few hundred base pairs per fragment."
+  },
+  {
+   "t": 342.57,
+   "text": "So you fragment the RNA into shorter pieces — typically two to three hundred base pairs long."
+  },
+  {
+   "t": 349.01,
+   "text": "The standard method is chemical or thermal fragmentation: you incubate the RNA in a divalent cation buffer at elevated temperature, and the heat plus magnesium ions hydrolyze the RNA at random positions, producing a smear of short fragments."
+  },
+  {
+   "t": 365.55,
+   "text": "Alternative methods include enzymatic fragmentation with RNase III, or acoustic shearing."
+  },
+  {
+   "t": 372.0,
+   "text": "Step four: reverse transcription."
+  },
+  {
+   "t": 374.52,
+   "text": "RNA is hard to sequence directly."
+  },
+  {
+   "t": 376.97,
+   "text": "(There is one exception — Oxford Nanopore can sequence RNA directly, which we'll discuss in Segment 14 — but for standard Illumina-based bulk RNA-seq, you convert to DNA first.)"
+  },
+  {
+   "t": 389.16,
+   "text": "Reverse transcription uses an enzyme called reverse transcriptase — derived from retroviruses — that copies RNA into complementary DNA, called cDNA."
+  },
+  {
+   "t": 399.76,
+   "text": "You add a primer that anneals to the RNA — either an oligo-dT primer if you're working with poly-A-selected mRNA, or random hexamers if you want unbiased coverage — and the reverse transcriptase extends from that primer, synthesizing a DNA copy of the RNA."
+  },
+  {
+   "t": 416.27,
+   "text": "Then you do a second-strand synthesis step to make the cDNA double-stranded."
+  },
+  {
+   "t": 421.15,
+   "text": "Now you have a tube of double-stranded DNA fragments derived from your RNA."
+  },
+  {
+   "t": 425.9,
+   "text": "From this point on, everything is the same as a DNA sequencing library prep."
+  },
+  {
+   "t": 430.85,
+   "text": "Step five: library prep — adapters and indexes."
+  },
+  {
+   "t": 435.15,
+   "text": "You take your double-stranded cDNA, end-repair it, A-tail it, and ligate sequencing adapters onto both ends — the same adapters we discussed in the Illumina lecture, with their flow-cell binding sequences and primer binding sites."
+  },
+  {
+   "t": 449.49,
+   "text": "You add an index — a short barcode unique to this sample — so you can multiplex with other samples on the same flow cell."
+  },
+  {
+   "t": 456.99,
+   "text": "You PCR-amplify the library to bring it up to the concentration needed for the instrument."
+  },
+  {
+   "t": 462.75,
+   "text": "The output is a tube of adapter-tagged, indexed DNA fragments, ready for sequencing."
+  },
+  {
+   "t": 469.06,
+   "text": "Step six: sequencing."
+  },
+  {
+   "t": 471.07,
+   "text": "You pool many libraries together, load the pool onto an Illumina flow cell, and run the instrument."
+  },
+  {
+   "t": 477.64,
+   "text": "You get back tens of millions of short reads per sample, typically paired-end, typically 50 to 150 base pairs per end."
+  },
+  {
+   "t": 486.42,
+   "text": "Each read is a tiny snippet of one of your original RNA molecules."
+  },
+  {
+   "t": 491.1,
+   "text": "Reads are tiny snippets of the original RNA — millions of them, each 50 to 150 base pairs long."
+  },
+  {
+   "t": 499.02,
+   "text": "What you do with those reads is the rest of this lecture."
+  },
+  {
+   "t": 502.42,
+   "text": "The whole wet-lab workflow takes one to three days, depending on the kit and the level of automation."
+  },
+  {
+   "t": 508.11,
+   "text": "It's now routine at every genomics core facility on Earth."
+  },
+  {
+   "t": 512.11,
+   "text": "Most modern kits are sold as one-tube workflows where you put in total RNA at one end and get out a finished library at the other."
+  },
+  {
+   "t": 520.5,
+   "text": "Cost: somewhere between thirty and a hundred dollars per sample for the library, plus the sequencing cost on top."
+  }
+ ]
+}

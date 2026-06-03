@@ -1,0 +1,79 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Dual pegRNAs and nuclease-pe combinations",
+ "duration": 174.89,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Dual pegRNAs and nuclease-pe combinations"
+  },
+  {
+   "t": 4.94,
+   "text": "We've already met twinPE in Segment 7 — a paired-pegRNA strategy for larger edits."
+  },
+  {
+   "t": 11.8,
+   "text": "But there are several other dual-pegRNA and combination strategies worth knowing about, because each opens up a different category of edit."
+  },
+  {
+   "t": 20.34,
+   "text": "Quadruple-strand displacement designs, where four pegRNAs are used simultaneously, have been explored for installing very large gene-sized inserts without needing an integrase."
+  },
+  {
+   "t": 32.0,
+   "text": "The mechanism is geometrically complex, but the idea is that four pegRNAs together can write across a much larger window than two can, by having each pair handle a portion of the new sequence."
+  },
+  {
+   "t": 44.29,
+   "text": "Editing efficiency is lower than two-pegRNA twinPE, and the designs are intricate, but for some specific applications, four-way prime editing has shown promise."
+  },
+  {
+   "t": 55.25,
+   "text": "Prime editing plus Cas9 nuclease at a distance — sometimes called \"PE-nuclease\" or \"homology-mediated prime editing\" — uses a regular Cas9 cut at a nearby site to stimulate prime editing in cis."
+  },
+  {
+   "t": 69.11,
+   "text": "The double-strand break, made by a separate Cas9 plus an ordinary sgRNA, triggers the cell's repair machinery to look for templates, and the prime editing nick provides a 3' end that can act as a \"template\" for the broken DNA."
+  },
+  {
+   "t": 83.31,
+   "text": "This hybrid strategy can sometimes boost editing efficiency in cell types where prime editing alone is slow, at the cost of introducing the indel risk of the double-strand break."
+  },
+  {
+   "t": 94.56,
+   "text": "Prime editing plus base editing — combining the two in the same experiment — has been used to install combinations of edits at the same site."
+  },
+  {
+   "t": 102.96,
+   "text": "The use case is rare but real: when you want a specific base change AND a specific small insertion at neighboring positions, neither tool alone can do it, but a coordinated PE-plus-BE delivery can."
+  },
+  {
+   "t": 115.81,
+   "text": "Cascade designs, where a first prime editing event creates a new PAM that's then used by a second pegRNA to install a second edit, have been demonstrated as a proof of principle for multi-step edits."
+  },
+  {
+   "t": 128.18,
+   "text": "The idea is futuristic and the efficiency is currently low, but the principle works: prime editing can be programmed in sequence, with each edit setting up the next."
+  },
+  {
+   "t": 139.2,
+   "text": "The pattern across all these combination strategies is the same: each one trades simplicity for some specific extra capability."
+  },
+  {
+   "t": 148.01,
+   "text": "The base prime editor with one pegRNA is the simplest case."
+  },
+  {
+   "t": 152.36,
+   "text": "As you add more guides, more enzymes, more steps, you unlock new edit categories but lose efficiency and introduce more design complexity."
+  },
+  {
+   "t": 162.2,
+   "text": "For most applications, the simple one-pegRNA PE2 or PE3 case is the right starting point."
+  },
+  {
+   "t": 169.55,
+   "text": "The combination strategies are reserved for the cases where simpler approaches won't work."
+  }
+ ]
+}

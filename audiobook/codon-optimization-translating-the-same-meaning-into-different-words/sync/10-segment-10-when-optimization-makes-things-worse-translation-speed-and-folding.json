@@ -1,0 +1,283 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — When optimization makes things worse: translation speed and folding",
+ "duration": 415.73,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — When optimization makes things worse: translation speed and folding"
+  },
+  {
+   "t": 6.0,
+   "text": "Welcome back."
+  },
+  {
+   "t": 7.08,
+   "text": "Now we get to the stuff that I find most interesting, the place where the textbook story about codon optimization breaks down and reality turns out to be much weirder than the simple narrative suggests."
+  },
+  {
+   "t": 19.07,
+   "text": "Here's the headline."
+  },
+  {
+   "t": 20.23,
+   "text": "Sometimes, when you take a gene, codon-optimize it to perfection, and express it, you get less functional protein than you started with."
+  },
+  {
+   "t": 28.93,
+   "text": "Not just a smaller yield — you can sometimes get a similar amount of protein, but the protein is misfolded, aggregated, inactive, degraded."
+  },
+  {
+   "t": 38.01,
+   "text": "It's the right amino acid sequence but the wrong three-dimensional structure."
+  },
+  {
+   "t": 42.94,
+   "text": "And the cause turns out to be that you optimized the codons too well."
+  },
+  {
+   "t": 46.8,
+   "text": "The protein, in some sense, doesn't have time to fold properly anymore."
+  },
+  {
+   "t": 51.38,
+   "text": "This sounds strange at first, so let me build it up."
+  },
+  {
+   "t": 54.24,
+   "text": "Proteins fold as they're being made."
+  },
+  {
+   "t": 56.64,
+   "text": "A ribosome is making the protein from N-terminus to C-terminus, one amino acid at a time, over the course of typically seconds to minutes for a normal-sized protein."
+  },
+  {
+   "t": 67.15,
+   "text": "As the protein emerges from the ribosome, it starts to fold."
+  },
+  {
+   "t": 71.15,
+   "text": "The first part to emerge — the N-terminal region — has already begun folding by the time the later regions are made."
+  },
+  {
+   "t": 77.66,
+   "text": "This is called co-translational folding, and it's the dominant folding pathway for most proteins in cells."
+  },
+  {
+   "t": 84.74,
+   "text": "Now here's the key insight."
+  },
+  {
+   "t": 86.44,
+   "text": "The speed at which the ribosome translates each region affects how the protein folds."
+  },
+  {
+   "t": 91.6,
+   "text": "Fast translation means the entire protein comes out quickly, often before the early regions have had time to settle into their final structure."
+  },
+  {
+   "t": 100.3,
+   "text": "Slow translation, with deliberate pauses, gives the early regions time to fold before the later regions arrive."
+  },
+  {
+   "t": 108.08,
+   "text": "The timing of translation is part of the folding process."
+  },
+  {
+   "t": 111.83,
+   "text": "In native genes, this timing has been tuned by evolution."
+  },
+  {
+   "t": 115.54,
+   "text": "The codon usage along a gene isn't just optimized for speed everywhere — it has slow patches and fast patches arranged in patterns that match the protein's folding requirements."
+  },
+  {
+   "t": 126.46,
+   "text": "There are often slow patches at the boundaries between protein domains, slowing the ribosome down at exactly the moment when each domain needs time to fold before the next one starts being made."
+  },
+  {
+   "t": 137.96,
+   "text": "Some proteins even have specific slow codons that have been conserved across distant species, suggesting that those particular slow patches are evolutionarily important."
+  },
+  {
+   "t": 149.04,
+   "text": "When you naively codon-optimize the gene, replacing every rare codon with the most common one, you destroy these natural pauses."
+  },
+  {
+   "t": 158.16,
+   "text": "The ribosome now translates the whole gene at top speed, with no slow patches."
+  },
+  {
+   "t": 164.05,
+   "text": "The protein comes out the end of the ribosome too fast, and the later parts arrive before the earlier parts have folded."
+  },
+  {
+   "t": 170.93,
+   "text": "The protein misfolds, or aggregates, or gets recognized as defective by the cell's quality control system and degraded."
+  },
+  {
+   "t": 178.47,
+   "text": "You get a lot of polypeptide chain coming out of the ribosome, but very little functional protein."
+  },
+  {
+   "t": 184.1,
+   "text": "Here's the analogy that I think captures this best."
+  },
+  {
+   "t": 187.16,
+   "text": "If you remove all the natural pauses from a sentence — write it as one long unbroken string of words with no commas or periods — the sentence is technically the same."
+  },
+  {
+   "t": 198.35,
+   "text": "The words mean the same thing."
+  },
+  {
+   "t": 200.18,
+   "text": "The grammar is the same."
+  },
+  {
+   "t": 201.65,
+   "text": "But the reader can't process it."
+  },
+  {
+   "t": 203.6,
+   "text": "Fluent reading isn't the same as comprehension."
+  },
+  {
+   "t": 206.88,
+   "text": "The pauses are part of how the meaning gets parsed."
+  },
+  {
+   "t": 209.6,
+   "text": "Or another way to say it: a beginner pianist playing a Bach fugue at twice the normal tempo isn't playing a faster version of the same piece."
+  },
+  {
+   "t": 218.01,
+   "text": "They're playing something that, structurally, isn't Bach anymore."
+  },
+  {
+   "t": 221.82,
+   "text": "The tempo isn't just a parameter on top of the music."
+  },
+  {
+   "t": 224.96,
+   "text": "It's part of the music."
+  },
+  {
+   "t": 226.26,
+   "text": "The classic experimental demonstration of this effect came in the late 2000s, in a paper by Tessa Komar and others, working with the human MDR1 gene."
+  },
+  {
+   "t": 236.26,
+   "text": "MDR1 encodes a multidrug efflux pump that has to fold correctly to work."
+  },
+  {
+   "t": 242.23,
+   "text": "Komar and colleagues showed that synonymous mutations in MDR1 — single-base changes that didn't change the amino acid sequence but did change the codon usage — could change the activity of the resulting protein."
+  },
+  {
+   "t": 255.81,
+   "text": "The protein was the same."
+  },
+  {
+   "t": 257.42,
+   "text": "But the synonymous mutations changed the speed at which different regions were translated, and the folding pathway shifted, and the activity changed."
+  },
+  {
+   "t": 266.35,
+   "text": "The codon usage was, in a real sense, part of the protein's biology."
+  },
+  {
+   "t": 271.17,
+   "text": "You couldn't separate it out."
+  },
+  {
+   "t": 272.73,
+   "text": "This finding has rippled out into a much larger literature on silent mutations that aren't actually silent — synonymous variants in human genes that change protein function and contribute to disease, even though the protein's amino acid sequence is unchanged."
+  },
+  {
+   "t": 288.75,
+   "text": "We'll come back to this in Segment 18, because it's where the frontier of the field is now."
+  },
+  {
+   "t": 293.86,
+   "text": "For the practical purpose of codon optimization, the lesson is this: the maximally-optimized sequence is not always the best sequence."
+  },
+  {
+   "t": 302.98,
+   "text": "You sometimes want to preserve, or even introduce, deliberate slow patches at strategic positions in the gene — at domain boundaries, near disulfide-bond-forming residues, near sites where chaperone proteins need to bind, anywhere where folding needs time to happen."
+  },
+  {
+   "t": 319.18,
+   "text": "Modern codon optimizers have grown more sophisticated about this."
+  },
+  {
+   "t": 323.68,
+   "text": "Rather than just maximizing CAI, they try to maintain a reasonable codon-usage profile that mimics the natural distribution of slow and fast patches found in well-expressed host genes."
+  },
+  {
+   "t": 336.57,
+   "text": "They sometimes preserve specific rare codons from the original sequence if those rare codons appear at conserved positions."
+  },
+  {
+   "t": 344.77,
+   "text": "They use the %MinMax profile to ensure the optimized gene has a similar shape to a typical host gene."
+  },
+  {
+   "t": 351.73,
+   "text": "But this is still an active research area, and it's not a solved problem."
+  },
+  {
+   "t": 355.7,
+   "text": "There are cases where codon optimization helps."
+  },
+  {
+   "t": 358.58,
+   "text": "There are cases where it hurts."
+  },
+  {
+   "t": 360.45,
+   "text": "There are cases where it helps for yield but hurts for function."
+  },
+  {
+   "t": 363.98,
+   "text": "Predicting which case you're in, ahead of time, is hard."
+  },
+  {
+   "t": 367.61,
+   "text": "The current state of the art is often: try the codon-optimized version, try the natural version, compare them, pick the one that gives you the best protein."
+  },
+  {
+   "t": 376.03,
+   "text": "Empirical testing is still essential."
+  },
+  {
+   "t": 378.96,
+   "text": "The big idea to leave this segment with: codon choice is part of the protein's biology, not just an implementation detail of how the protein gets made."
+  },
+  {
+   "t": 388.32,
+   "text": "The synonymous codons aren't really synonymous if you care about how the protein folds."
+  },
+  {
+   "t": 393.58,
+   "text": "They produce the same amino acid sequence, but they don't produce the same protein."
+  },
+  {
+   "t": 399.08,
+   "text": "Alright."
+  },
+  {
+   "t": 399.87,
+   "text": "So far we've been talking mostly about E. coli."
+  },
+  {
+   "t": 402.58,
+   "text": "But codon optimization is just as important — maybe more important — for other expression hosts."
+  },
+  {
+   "t": 408.98,
+   "text": "Let's spend the next few segments looking at the major non-bacterial systems, starting with mammalian cells."
+  }
+ ]
+}

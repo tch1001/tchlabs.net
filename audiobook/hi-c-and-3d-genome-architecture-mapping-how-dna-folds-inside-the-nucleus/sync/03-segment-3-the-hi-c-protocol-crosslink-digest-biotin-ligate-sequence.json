@@ -1,0 +1,315 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The Hi-C protocol: crosslink, digest, biotin, ligate, sequence",
+ "duration": 519.66,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The Hi-C protocol: crosslink, digest, biotin, ligate, sequence"
+  },
+  {
+   "t": 7.2,
+   "text": "Let's walk through the Hi-C protocol the way you would actually do it at the bench."
+  },
+  {
+   "t": 11.22,
+   "text": "Six steps, each one essential, each one with its own pitfalls."
+  },
+  {
+   "t": 16.02,
+   "text": "By the end of this segment you should be able to sketch the protocol on a whiteboard and explain what each step accomplishes and why."
+  },
+  {
+   "t": 23.06,
+   "text": "Step one: crosslink."
+  },
+  {
+   "t": 25.01,
+   "text": "You take your cells — could be a culture flask of HeLa cells, could be embryonic stem cells, could be a freshly dissociated tissue sample — and you treat them with formaldehyde."
+  },
+  {
+   "t": 35.36,
+   "text": "Formaldehyde is a small, reactive aldehyde that covalently crosslinks amine groups on proteins to other amine groups on proteins, and to DNA bases."
+  },
+  {
+   "t": 45.91,
+   "text": "The crosslinks form quickly — within a minute or two — and they're short-range; the formaldehyde itself is small, and the crosslinks it makes only span a few angstroms."
+  },
+  {
+   "t": 56.56,
+   "text": "Anything that was within molecular distance of anything else at the moment of fixation is now stuck together by a covalent bridge."
+  },
+  {
+   "t": 64.84,
+   "text": "Two minutes of formaldehyde treatment, typically at one percent concentration, then you quench with glycine to soak up the unreacted formaldehyde."
+  },
+  {
+   "t": 73.75,
+   "text": "Your cells are now fixed."
+  },
+  {
+   "t": 75.49,
+   "text": "The 3D structure of the chromatin is frozen in place."
+  },
+  {
+   "t": 79.16,
+   "text": "Think of formaldehyde as a molecular Polaroid — you press the shutter and the picture freezes."
+  },
+  {
+   "t": 84.86,
+   "text": "Whatever was touching when you pressed the shutter is now glued together."
+  },
+  {
+   "t": 89.0,
+   "text": "Step two: digest."
+  },
+  {
+   "t": 90.78,
+   "text": "You lyse the cells and isolate the nuclei, which still contain the crosslinked chromatin."
+  },
+  {
+   "t": 96.51,
+   "text": "Then you add a restriction enzyme."
+  },
+  {
+   "t": 98.42,
+   "text": "The classical choice in the original Hi-C protocol was HindIII, a six-cutter that recognizes the sequence AAGCTT."
+  },
+  {
+   "t": 106.47,
+   "text": "Six-cutters cut, on average, every four thousand or so base pairs in the genome, giving you fragments of that length."
+  },
+  {
+   "t": 114.21,
+   "text": "Later variants use four-cutters like MboI or DpnII, which recognize GATC and cut every few hundred base pairs on average — much finer fragments, much higher resolution."
+  },
+  {
+   "t": 126.6,
+   "text": "The choice of restriction enzyme is, structurally, the main resolution knob of Hi-C: smaller fragments mean you can localize contacts more precisely on the genome."
+  },
+  {
+   "t": 137.78,
+   "text": "The enzyme cuts wherever it finds its recognition site, leaving sticky ends — short single-stranded overhangs — at each cut."
+  },
+  {
+   "t": 146.34,
+   "text": "Importantly, the chromatin is still crosslinked, so the fragments don't drift apart; they stay tethered together through the protein bridges, in roughly the same 3D arrangement they had inside the cell."
+  },
+  {
+   "t": 159.11,
+   "text": "Step three: biotin fill-in."
+  },
+  {
+   "t": 161.47,
+   "text": "This is the step that makes Hi-C work as a genome-wide assay."
+  },
+  {
+   "t": 165.57,
+   "text": "After digestion, every cut site has a short single-stranded overhang."
+  },
+  {
+   "t": 170.2,
+   "text": "You add a DNA polymerase — typically the Klenow fragment — along with a mixture of nucleotides that includes one biotin-labeled nucleotide."
+  },
+  {
+   "t": 179.25,
+   "text": "The polymerase fills in the overhang, incorporating the biotinylated nucleotide as it goes."
+  },
+  {
+   "t": 185.82,
+   "text": "The result: every cut end now has a biotin tag sticking out of it."
+  },
+  {
+   "t": 190.82,
+   "text": "Crucially, in the original Hi-C protocol, the biotinylated nucleotide is biotin-dCTP, because the four-base overhangs left by HindIII contain a G that pairs with C — so the fill-in incorporates biotin."
+  },
+  {
+   "t": 205.5,
+   "text": "The choice of biotinylated nucleotide depends on which restriction enzyme you used and which base shows up in the fill-in."
+  },
+  {
+   "t": 212.82,
+   "text": "The biotin tag is small and doesn't interfere with the next step."
+  },
+  {
+   "t": 216.95,
+   "text": "The biotin tag is the breadcrumb — it marks every cut end so we can find the ligation junctions later."
+  },
+  {
+   "t": 223.94,
+   "text": "Step four: proximity ligation."
+  },
+  {
+   "t": 226.66,
+   "text": "Now the critical step."
+  },
+  {
+   "t": 228.47,
+   "text": "You dilute the sample dramatically — typical Hi-C uses concentrations where individual chromatin complexes are well separated in solution — and add T4 DNA ligase."
+  },
+  {
+   "t": 240.93,
+   "text": "The ligase joins compatible blunt ends back together."
+  },
+  {
+   "t": 244.62,
+   "text": "But here's the thing: in a Hi-C library, after the biotin fill-in, the ends are now blunt (not sticky, because the overhang has been filled in), and blunt-end ligation is inefficient."
+  },
+  {
+   "t": 256.36,
+   "text": "So you give the ligase a long time — typically four hours or overnight — at low temperature, and let it work."
+  },
+  {
+   "t": 264.03,
+   "text": "Within each crosslinked complex, the fragments that are physically tethered together in 3D space are essentially captive — they have nowhere else to go."
+  },
+  {
+   "t": 273.69,
+   "text": "So they ligate to each other."
+  },
+  {
+   "t": 275.64,
+   "text": "Ligation events between fragments from different complexes are very rare because the dilution makes them improbable."
+  },
+  {
+   "t": 283.28,
+   "text": "The result: a population of chimeric DNA molecules, each one a fusion of two fragments that were physically in contact at the moment of crosslinking."
+  },
+  {
+   "t": 293.28,
+   "text": "Every ligation junction is a 3D contact, recorded in DNA."
+  },
+  {
+   "t": 297.94,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 299.23,
+   "text": "Hi-C is a molecular Polaroid combined with a chimera factory."
+  },
+  {
+   "t": 303.51,
+   "text": "The formaldehyde takes the snapshot."
+  },
+  {
+   "t": 306.01,
+   "text": "The restriction enzyme cuts the DNA into fragments while keeping the snapshot intact through protein bridges."
+  },
+  {
+   "t": 313.5,
+   "text": "The biotin fill-in marks every cut end."
+  },
+  {
+   "t": 316.39,
+   "text": "The dilution-and-ligation step glues together pairs of ends that were physically next to each other, generating chimeric DNA molecules."
+  },
+  {
+   "t": 324.6,
+   "text": "You now have a library where every chimeric junction is a record of a 3D contact."
+  },
+  {
+   "t": 330.1,
+   "text": "The conceptual trick is that ligation is a local process — it can only join ends that are within a few nanometers of each other — so by ligating under dilute conditions, you preferentially join ends that were already tethered together through the protein bridges of the crosslinked chromatin."
+  },
+  {
+   "t": 346.3,
+   "text": "Step five: pull down and sequence."
+  },
+  {
+   "t": 349.11,
+   "text": "You reverse the crosslinks by heating the sample to sixty-five degrees Celsius overnight in the presence of a protease that digests the proteins."
+  },
+  {
+   "t": 358.45,
+   "text": "The DNA is released, free of the protein bridges that held it together."
+  },
+  {
+   "t": 363.45,
+   "text": "You shear it to short fragments — typically a few hundred base pairs — using sonication or some similar method."
+  },
+  {
+   "t": 370.43,
+   "text": "Now you have a pool of short DNA fragments, most of which are ordinary fragments that don't span a ligation junction, and a minority of which span a ligation junction and therefore carry a biotin tag in the middle."
+  },
+  {
+   "t": 383.16,
+   "text": "To enrich for the junction-containing fragments, you add streptavidin-coated magnetic beads."
+  },
+  {
+   "t": 389.03,
+   "text": "Streptavidin binds biotin with one of the strongest non-covalent interactions in biology, so the biotin-tagged fragments stick to the beads, and you wash away everything else."
+  },
+  {
+   "t": 400.48,
+   "text": "The pulled-down DNA is your Hi-C library — enriched for ligation junctions."
+  },
+  {
+   "t": 406.25,
+   "text": "You prepare it for Illumina sequencing — add adapters, do PCR amplification, the usual stuff — and load it onto a sequencer for paired-end sequencing."
+  },
+  {
+   "t": 415.78,
+   "text": "Step six: analyze."
+  },
+  {
+   "t": 417.95,
+   "text": "After sequencing, you get paired-end reads where each read pair has the structure: read 1 comes from one side of a ligation junction, read 2 comes from the other side."
+  },
+  {
+   "t": 427.63,
+   "text": "Bioinformatic pipelines align the two reads to a reference genome separately and record the pair as a contact between the position where read 1 mapped and the position where read 2 mapped."
+  },
+  {
+   "t": 439.98,
+   "text": "Aggregate over millions or billions of read pairs and you have a contact map — a record of which positions in the genome were observed in contact, and how often."
+  },
+  {
+   "t": 449.91,
+   "text": "That's the raw output of Hi-C."
+  },
+  {
+   "t": 452.13,
+   "text": "A few practical numbers."
+  },
+  {
+   "t": 453.79,
+   "text": "A modern Hi-C experiment uses something like ten million cells as input — sometimes fewer with the in situ variant we'll discuss later."
+  },
+  {
+   "t": 462.58,
+   "text": "The sequencing depth required is enormous: to get a meaningful contact map at five-kilobase resolution, you need a few billion read pairs per sample."
+  },
+  {
+   "t": 472.34,
+   "text": "That's tens of NovaSeq lanes per sample."
+  },
+  {
+   "t": 475.23,
+   "text": "Hi-C is data-hungry."
+  },
+  {
+   "t": 477.11,
+   "text": "It's also one of the most expensive sequencing applications you can run, primarily because of the deep sequencing required."
+  },
+  {
+   "t": 484.44,
+   "text": "The library preparation itself, while finicky, is relatively cheap; the sequencing is what eats your budget."
+  },
+  {
+   "t": 491.76,
+   "text": "This is why many Hi-C experiments target specific regions with capture-based enrichment, or use sub-megabase resolution analyses to keep costs manageable."
+  },
+  {
+   "t": 501.84,
+   "text": "The end result, conceptually, is a list of pairs — many billions of pairs — where each pair is two genomic coordinates that were observed in contact in some cell at the moment of crosslinking."
+  },
+  {
+   "t": 513.94,
+   "text": "That list is the raw output."
+  },
+  {
+   "t": 515.89,
+   "text": "The next segment is about how we turn that list into a picture."
+  }
+ ]
+}

@@ -1,0 +1,191 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Gene synthesis economics: when to make versus clone",
+ "duration": 337.2,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Gene synthesis economics: when to make versus clone"
+  },
+  {
+   "t": 5.3,
+   "text": "Now let me spend a focused segment on the economics question that, for working scientists, is the most concrete and decision-relevant of any topic in this lecture."
+  },
+  {
+   "t": 15.44,
+   "text": "The question is: for any given DNA construct, should I synthesize it or clone it?"
+  },
+  {
+   "t": 21.0,
+   "text": "Given current prices, current timelines, and current capabilities, where is the breakeven?"
+  },
+  {
+   "t": 26.44,
+   "text": "Let me lay out the variables."
+  },
+  {
+   "t": 28.32,
+   "text": "On the synthesis side, you have the per-base cost of synthesis — call it seven cents — and the turnaround time, call it ten business days for a standard order."
+  },
+  {
+   "t": 37.79,
+   "text": "On the cloning side, you have the cost of consumables (PCR enzymes, restriction enzymes, ligase, cloning kits, sequencing) and the cost of your time."
+  },
+  {
+   "t": 47.67,
+   "text": "The breakeven depends on a few key factors."
+  },
+  {
+   "t": 50.79,
+   "text": "Factor one: gene length."
+  },
+  {
+   "t": 52.92,
+   "text": "For very short constructs — under three hundred base pairs — cloning is often faster and cheaper than synthesis, because you can knock out a single PCR and a Gibson assembly in two days for almost no consumable cost."
+  },
+  {
+   "t": 66.94,
+   "text": "Synthesis, at seven cents per base, would cost you twenty-one dollars and take ten days, which is a worse deal for short pieces."
+  },
+  {
+   "t": 75.41,
+   "text": "For medium-length constructs — five hundred to two thousand base pairs — synthesis is almost always cheaper, because cloning a thousand-base piece typically involves multi-step assembly and several rounds of verification."
+  },
+  {
+   "t": 89.24,
+   "text": "For long constructs — three thousand base pairs and up — synthesis remains feasible but expensive, and at very long lengths (over ten kilobases) you often build by assembling synthesized subfragments yourself rather than ordering the full construct."
+  },
+  {
+   "t": 105.49,
+   "text": "Factor two: source availability."
+  },
+  {
+   "t": 108.16,
+   "text": "If you have, on hand, a plasmid containing the gene you need — from a previous experiment, from a collaborator, from a public repository like Addgene — cloning is dramatically faster and cheaper."
+  },
+  {
+   "t": 120.61,
+   "text": "You do a single PCR and a single Gibson, and you're done in a day."
+  },
+  {
+   "t": 124.9,
+   "text": "If you don't have a physical source — the gene is from an organism nobody in your lab works with, or it's a designed sequence that doesn't exist in nature, or it needs codon optimization for your host — synthesis is the only option, and the cost calculation is moot."
+  },
+  {
+   "t": 140.72,
+   "text": "Factor three: design complexity."
+  },
+  {
+   "t": 143.55,
+   "text": "If the construct you want has lots of designed mutations relative to the natural sequence — point mutations, deletions, insertions, codon swaps for optimization, fusions with tags — every one of those changes is a separate molecular biology step if you're cloning."
+  },
+  {
+   "t": 159.26,
+   "text": "By the time you've done ten point mutations on a cloned construct, you've spent more on consumables and labor than you would have spent synthesizing the whole thing from scratch."
+  },
+  {
+   "t": 169.1,
+   "text": "Synthesis becomes preferred whenever the design diverges substantially from any available natural source."
+  },
+  {
+   "t": 176.7,
+   "text": "Factor four: throughput."
+  },
+  {
+   "t": 178.65,
+   "text": "If you need fifty different variants of a gene, cloning fifty separate constructs is a graduate student's entire semester."
+  },
+  {
+   "t": 186.3,
+   "text": "Ordering fifty different synthesized variants is a single email to the vendor and ten days of waiting."
+  },
+  {
+   "t": 192.54,
+   "text": "Synthesis dominates absolutely on throughput."
+  },
+  {
+   "t": 195.75,
+   "text": "The rough rule of thumb that has settled out across most academic labs by 2026 is something like this: if the construct is over a thousand base pairs, or has substantial designed differences from the natural sequence, or is needed in multiple variants, just synthesize it."
+  },
+  {
+   "t": 212.47,
+   "text": "Otherwise, default to cloning."
+  },
+  {
+   "t": 214.68,
+   "text": "The threshold continues to shift toward synthesis every year as the per-base cost drops."
+  },
+  {
+   "t": 220.51,
+   "text": "There are also non-economic factors that increasingly tilt toward synthesis."
+  },
+  {
+   "t": 225.59,
+   "text": "Cloning, even competent cloning, is a real skill that takes years to develop, and it requires hands-on training."
+  },
+  {
+   "t": 233.18,
+   "text": "Many modern molecular biology programs no longer teach traditional cloning as the default skillset — they teach synthesis-based workflows, where the bench work is restricted to the downstream assays and the gene-engineering work happens in silico."
+  },
+  {
+   "t": 248.19,
+   "text": "There is a generational shift underway in which graduate students in 2026 are far more comfortable designing in Benchling and ordering from Twist than they are running a restriction digest and a gel-extracted ligation."
+  },
+  {
+   "t": 262.15,
+   "text": "That shift is not, on balance, a loss of capability — but it is a change in what \"doing molecular biology\" feels like as a day-to-day practice."
+  },
+  {
+   "t": 271.11,
+   "text": "There is one more economic consideration worth flagging, which is risk."
+  },
+  {
+   "t": 275.96,
+   "text": "Cloning has a meaningful failure rate at every step."
+  },
+  {
+   "t": 279.69,
+   "text": "You can do a PCR that doesn't work."
+  },
+  {
+   "t": 281.81,
+   "text": "You can do a digest with the wrong star activity."
+  },
+  {
+   "t": 284.75,
+   "text": "You can do a ligation that fails."
+  },
+  {
+   "t": 286.8,
+   "text": "You can pick colonies that have the wrong insert."
+  },
+  {
+   "t": 289.27,
+   "text": "Each step has a tail risk of taking another week."
+  },
+  {
+   "t": 292.17,
+   "text": "Synthesis, by contrast, fails in a much smaller fraction of orders, and when it does fail the vendor remakes it at their cost."
+  },
+  {
+   "t": 300.07,
+   "text": "So even when synthesis is nominally more expensive per dollar, the variance of the timeline is much lower, which is itself valuable for projects on a deadline."
+  },
+  {
+   "t": 309.84,
+   "text": "A project manager budgeting time in a biotech company will often choose synthesis just for the variance reduction, even when cloning would be cheaper in expectation."
+  },
+  {
+   "t": 320.36,
+   "text": "So the economics aren't just about price per base."
+  },
+  {
+   "t": 323.55,
+   "text": "They're about price plus variance plus opportunity cost of researcher time."
+  },
+  {
+   "t": 328.66,
+   "text": "Once you include all three, synthesis wins for an even larger fraction of constructs than the per-base pricing alone would suggest."
+  }
+ ]
+}

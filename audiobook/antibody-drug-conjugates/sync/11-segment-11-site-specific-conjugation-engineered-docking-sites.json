@@ -1,0 +1,239 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Site-specific conjugation — engineered docking sites",
+ "duration": 431.5,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Site-specific conjugation — engineered docking sites"
+  },
+  {
+   "t": 5.08,
+   "text": "Let's spend a segment on conjugation chemistry, which is the chemistry of physically attaching the payload to the antibody."
+  },
+  {
+   "t": 12.5,
+   "text": "This is the step that, more than any other, determines the quality and reproducibility of the ADC."
+  },
+  {
+   "t": 19.15,
+   "text": "The historical approach to conjugation is what we call stochastic conjugation — meaning the chemistry happens at multiple possible sites on the antibody, more or less at random, producing the heterogeneous mixture I described in the last segment."
+  },
+  {
+   "t": 33.34,
+   "text": "The newer approach, called site-specific conjugation, engineers the antibody so that payloads can only attach at defined positions."
+  },
+  {
+   "t": 42.0,
+   "text": "Let me describe the two main stochastic methods first, because they're what most current ADCs use."
+  },
+  {
+   "t": 48.0,
+   "text": "The first method is lysine conjugation."
+  },
+  {
+   "t": 50.77,
+   "text": "Antibodies have a lot of lysine residues — typically eighty to ninety per molecule, scattered across the surface of the protein."
+  },
+  {
+   "t": 58.98,
+   "text": "Lysines have a primary amine in their side chain, and primary amines react with certain electrophilic chemistry — typically activated esters like NHS esters, or related electrophiles."
+  },
+  {
+   "t": 71.25,
+   "text": "So if you mix an antibody with a payload-linker construct that has an activated ester at one end, the payload will attach itself to lysines on the antibody."
+  },
+  {
+   "t": 80.16,
+   "text": "But it'll attach to many different lysines, in many different combinations, producing a mixture."
+  },
+  {
+   "t": 87.09,
+   "text": "Lysine conjugation is what Mylotarg used."
+  },
+  {
+   "t": 90.39,
+   "text": "It's chemically simple but messy."
+  },
+  {
+   "t": 92.84,
+   "text": "The second method is cysteine conjugation through interchain disulfide reduction."
+  },
+  {
+   "t": 97.96,
+   "text": "An IgG antibody has four interchain disulfide bonds — two between the heavy chains in the hinge region, and one connecting each heavy chain to a light chain."
+  },
+  {
+   "t": 108.47,
+   "text": "If you partially reduce the antibody with a mild reductant, you can break some of these disulfides and expose free cysteine residues."
+  },
+  {
+   "t": 116.86,
+   "text": "Those cysteines have a thiol group that reacts with maleimide chemistry — typically the payload-linker has a maleimide group at one end, and it reacts with the free cysteine to form a stable thioether bond."
+  },
+  {
+   "t": 128.54,
+   "text": "There are eight possible cysteine sites once you fully reduce the interchain bonds, so this gives you a DAR of up to 8, with payloads at relatively defined positions."
+  },
+  {
+   "t": 138.82,
+   "text": "This is what Adcetris and T-DXd use, more or less."
+  },
+  {
+   "t": 143.07,
+   "text": "Cysteine conjugation through hinge reduction is more controlled than lysine conjugation, but it's not fully site-specific."
+  },
+  {
+   "t": 151.0,
+   "text": "The partial reduction gives you a distribution of zero, two, four, six, or eight payloads, depending on how many disulfides got reduced and how many cysteines got loaded."
+  },
+  {
+   "t": 162.01,
+   "text": "Site-specific conjugation tries to get away from the mixture entirely."
+  },
+  {
+   "t": 166.88,
+   "text": "The goal is to put payloads at exactly defined positions, on every antibody, in defined numbers."
+  },
+  {
+   "t": 174.07,
+   "text": "There are several approaches."
+  },
+  {
+   "t": 175.72,
+   "text": "One is engineered cysteine — you take your antibody and you mutate one or two specific positions to introduce free cysteines that are accessible to conjugation chemistry."
+  },
+  {
+   "t": 187.24,
+   "text": "Genentech developed a platform called THIOMAB for this, where they identified specific positions on the antibody where a cysteine could be introduced without disrupting structure or function but would still be reactive enough for clean conjugation."
+  },
+  {
+   "t": 202.11,
+   "text": "You then conjugate to just those engineered cysteines, leaving the natural disulfide bonds intact."
+  },
+  {
+   "t": 209.2,
+   "text": "The result is a DAR-2 ADC with payload at exactly defined positions."
+  },
+  {
+   "t": 215.19,
+   "text": "A second approach is unnatural amino acids, abbreviated ncAA or uAA."
+  },
+  {
+   "t": 221.32,
+   "text": "These are amino acids that don't exist in nature — synthesized by chemists, then introduced into the protein at specific positions using an engineered translation system."
+  },
+  {
+   "t": 232.32,
+   "text": "The most common ones for ADC conjugation include para-acetylphenylalanine, which has a ketone group that can be selectively conjugated through oxime chemistry, and various azide-containing amino acids that participate in click chemistry."
+  },
+  {
+   "t": 246.39,
+   "text": "By incorporating an ncAA at a specific position, you create what is essentially a custom docking site — a chemical handle that nothing else in the antibody can react with."
+  },
+  {
+   "t": 257.74,
+   "text": "Conjugation is then exquisitely selective."
+  },
+  {
+   "t": 261.41,
+   "text": "A third approach is enzymatic conjugation — using an enzyme like transglutaminase or sortase to attach payloads at sequence-defined positions."
+  },
+  {
+   "t": 271.57,
+   "text": "Transglutaminase, for example, recognizes specific glutamine residues and can be used to attach payloads via lysine-containing linkers in a one-step reaction."
+  },
+  {
+   "t": 282.37,
+   "text": "Here's the analogy I want you to hold."
+  },
+  {
+   "t": 284.65,
+   "text": "Stochastic conjugation is like dropping payloads onto a sticky surface — they stick wherever they land."
+  },
+  {
+   "t": 291.31,
+   "text": "Site-specific conjugation is like building a docking port at a specific position on the antibody — payloads can only attach there, nowhere else."
+  },
+  {
+   "t": 300.81,
+   "text": "With the dock approach, every antibody in your batch has the dock in the same place, and after conjugation, every antibody has exactly one payload at exactly that position."
+  },
+  {
+   "t": 312.21,
+   "text": "Or if you build two docks, every antibody has exactly two payloads."
+  },
+  {
+   "t": 317.41,
+   "text": "Defined product."
+  },
+  {
+   "t": 318.71,
+   "text": "Reproducible chemistry."
+  },
+  {
+   "t": 320.45,
+   "text": "Predictable behavior."
+  },
+  {
+   "t": 321.87,
+   "text": "The clinical benefit of site-specific conjugation is still being established."
+  },
+  {
+   "t": 327.21,
+   "text": "Several site-specific ADCs are in clinical trials."
+  },
+  {
+   "t": 331.3,
+   "text": "The theoretical benefit is clear — more uniform pharmacokinetics, less risk of toxic high-DAR species, less waste from low-DAR species, easier manufacturing analytics."
+  },
+  {
+   "t": 343.35,
+   "text": "The question is whether the practical benefit, in patients, is worth the extra engineering complexity."
+  },
+  {
+   "t": 349.9,
+   "text": "There's also a click chemistry angle here."
+  },
+  {
+   "t": 352.12,
+   "text": "Click chemistry is the name for a family of reactions — most famously the copper-catalyzed azide-alkyne cycloaddition, or CuAAC, and more recently the strain-promoted azide-alkyne cycloaddition, or SPAAC — that form covalent bonds with exquisite selectivity, in water, at room temperature, without side reactions."
+  },
+  {
+   "t": 374.05,
+   "text": "Carolyn Bertozzi won the Nobel Prize in 2022 for the development of bioorthogonal click chemistry, and one of the major applications of that work is in site-specific ADC conjugation."
+  },
+  {
+   "t": 386.8,
+   "text": "You install an azide on the antibody at a defined position, install an alkyne on the payload-linker, and then click them together."
+  },
+  {
+   "t": 394.35,
+   "text": "Boom."
+  },
+  {
+   "t": 395.15,
+   "text": "Defined product, every time."
+  },
+  {
+   "t": 397.05,
+   "text": "Site-specific conjugation is, at this point, more of a frontier topic than a dominant production technology."
+  },
+  {
+   "t": 404.3,
+   "text": "But it's almost certainly the future."
+  },
+  {
+   "t": 406.54,
+   "text": "The improvement in product uniformity is so attractive, and the technologies are advancing so quickly, that within ten years most new ADCs will probably be made site-specifically."
+  },
+  {
+   "t": 419.26,
+   "text": "The current generation of stochastically conjugated ADCs — including T-DXd — work well enough that the field hasn't been forced to switch."
+  },
+  {
+   "t": 429.35,
+   "text": "But the next generation will get there."
+  }
+ ]
+}

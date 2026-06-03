@@ -1,0 +1,211 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — 2008 — the papers that launched RNA-seq",
+ "duration": 375.01,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — 2008 — the papers that launched RNA-seq"
+  },
+  {
+   "t": 5.11,
+   "text": "The conceptual idea of sequencing RNA was not new in 2008."
+  },
+  {
+   "t": 10.6,
+   "text": "People had been thinking about it since the late 1990s."
+  },
+  {
+   "t": 14.32,
+   "text": "SAGE was, in some sense, an attempt to do it with Sanger sequencing."
+  },
+  {
+   "t": 19.3,
+   "text": "The problem was always the throughput."
+  },
+  {
+   "t": 21.56,
+   "text": "You needed cheap, high-volume sequencing for the idea to actually work."
+  },
+  {
+   "t": 26.49,
+   "text": "By 2007, Illumina had acquired Solexa and was starting to sell instruments that produced tens of millions of short reads per run."
+  },
+  {
+   "t": 34.89,
+   "text": "The pieces were in place."
+  },
+  {
+   "t": 36.51,
+   "text": "What was needed was the first careful experiments showing that, yes, you could sequence cDNA from a tissue and get quantitative gene expression measurements that matched or surpassed microarrays."
+  },
+  {
+   "t": 48.06,
+   "text": "In 2008, three papers — published within a few months of each other — established RNA-seq as a method."
+  },
+  {
+   "t": 56.02,
+   "text": "I want to walk through each of them briefly, because the lineage matters and because the techniques they introduced are still essentially the techniques we use today."
+  },
+  {
+   "t": 64.84,
+   "text": "The first paper, published in May 2008, was from Barbara Wold's lab at Caltech, with Ali Mortazavi as first author."
+  },
+  {
+   "t": 73.12,
+   "text": "The title was \"Mapping and quantifying mammalian transcriptomes by RNA-seq."
+  },
+  {
+   "t": 78.94,
+   "text": "\" This was the paper that introduced the term RNA-seq, defined it, and provided the first mammalian transcriptome measurements at this scale."
+  },
+  {
+   "t": 87.26,
+   "text": "Mortazavi and colleagues took mouse tissues — brain, liver, muscle — extracted RNA, selected poly-A mRNA, fragmented it, reverse-transcribed it, and sequenced about forty million reads per sample on an Illumina Genome Analyzer."
+  },
+  {
+   "t": 102.92,
+   "text": "They aligned the reads back to the mouse genome, counted reads per gene, and showed that the resulting expression measurements correlated beautifully with prior microarray data while extending the dynamic range."
+  },
+  {
+   "t": 115.6,
+   "text": "They also introduced the RPKM metric — reads per kilobase of transcript per million mapped reads — which we'll discuss in detail in Segment 8."
+  },
+  {
+   "t": 125.1,
+   "text": "RPKM was the first attempt at a normalization that accounted for both gene length and library depth."
+  },
+  {
+   "t": 132.01,
+   "text": "It is, in essentially its current form, still in use today, in the slightly-improved form called TPM."
+  },
+  {
+   "t": 139.04,
+   "text": "Mortazavi's paper was the canonical RNA-seq paper for mammalian work for years."
+  },
+  {
+   "t": 144.56,
+   "text": "The second paper, published almost simultaneously, was from Michael Snyder's lab at Yale, with Ugrappa Nagalakshmi as first author."
+  },
+  {
+   "t": 153.35,
+   "text": "The title was \"The transcriptional landscape of the yeast genome defined by RNA sequencing."
+  },
+  {
+   "t": 159.07,
+   "text": "\" This was the yeast equivalent of Mortazavi's mouse paper — a careful sequencing of the yeast transcriptome at high depth, with detailed analysis of what RNA-seq could reveal that microarrays could not."
+  },
+  {
+   "t": 171.72,
+   "text": "Nagalakshmi and colleagues found, importantly, that the yeast transcriptome was much more complex than the existing gene catalog suggested."
+  },
+  {
+   "t": 180.74,
+   "text": "They identified many novel transcripts, novel splice events, antisense transcription — features that microarrays had been blind to."
+  },
+  {
+   "t": 189.59,
+   "text": "The paper made the case that RNA-seq wasn't just a quantitative improvement on microarrays; it was a qualitative leap, exposing biology that had been invisible."
+  },
+  {
+   "t": 200.05,
+   "text": "The third paper, also from 2008, was from Joe Ecker's lab at the Salk Institute, with Ryan Lister as first author."
+  },
+  {
+   "t": 208.09,
+   "text": "The title was something like \"Highly integrated single-base resolution maps of the epigenome in Arabidopsis."
+  },
+  {
+   "t": 215.35,
+   "text": "\" This one was about a plant — Arabidopsis thaliana — and it combined RNA-seq with DNA methylation profiling in the same study."
+  },
+  {
+   "t": 224.32,
+   "text": "Lister and colleagues demonstrated that you could do extremely high-resolution transcriptome analysis in any organism with a reference genome, and that combining transcriptome data with epigenomic data gave you a much richer view of gene regulation."
+  },
+  {
+   "t": 239.39,
+   "text": "This paper helped establish RNA-seq as a multi-organism method, not just something for mice and yeast."
+  },
+  {
+   "t": 245.91,
+   "text": "Take a moment to appreciate how quickly the field moved after 2008."
+  },
+  {
+   "t": 251.16,
+   "text": "By 2010, RNA-seq had become a routine procedure in most genomics core facilities."
+  },
+  {
+   "t": 257.62,
+   "text": "By 2012, almost every major gene expression study in a high-profile journal was using RNA-seq instead of microarrays."
+  },
+  {
+   "t": 266.88,
+   "text": "By 2015, microarrays were essentially extinct as a research method — they survived only in some clinical diagnostic contexts where regulatory inertia favored them."
+  },
+  {
+   "t": 278.12,
+   "text": "The transition took about five years."
+  },
+  {
+   "t": 280.74,
+   "text": "That's extraordinarily fast for a technology shift in biology."
+  },
+  {
+   "t": 285.23,
+   "text": "The reason it happened so fast is that RNA-seq was simply better on every axis."
+  },
+  {
+   "t": 291.22,
+   "text": "It saw novel transcripts."
+  },
+  {
+   "t": 293.12,
+   "text": "It had wider dynamic range."
+  },
+  {
+   "t": 295.26,
+   "text": "It measured isoforms."
+  },
+  {
+   "t": 297.11,
+   "text": "It compared cleanly across labs."
+  },
+  {
+   "t": 299.53,
+   "text": "And, crucially, the cost dropped fast — as Illumina instruments scaled up, the per-sample cost of RNA-seq fell below the per-sample cost of a microarray, and the disposable-chip economics of Affymetrix and Agilent collapsed."
+  },
+  {
+   "t": 315.22,
+   "text": "What I want you to take from this segment is two things."
+  },
+  {
+   "t": 318.14,
+   "text": "First, RNA-seq wasn't invented by one person or one lab."
+  },
+  {
+   "t": 322.73,
+   "text": "It was the convergence of cheap sequencing — Illumina — with the long-standing desire to measure transcripts genome-wide."
+  },
+  {
+   "t": 330.68,
+   "text": "The 2008 papers were the moment the convergence became real and the community noticed."
+  },
+  {
+   "t": 336.21,
+   "text": "Second, the basic workflow established in 2008 — RNA extraction, poly-A selection or rRNA depletion, fragmentation, reverse transcription, library prep, sequencing, alignment, counting — is essentially the workflow we still use today."
+  },
+  {
+   "t": 353.32,
+   "text": "Sixteen years later, the chemistry has been refined, the bioinformatics has been improved, but the architecture is the same."
+  },
+  {
+   "t": 361.63,
+   "text": "When you read a modern RNA-seq paper, you're reading a direct descendant of Mortazavi, Nagalakshmi, and Lister 2008."
+  },
+  {
+   "t": 370.93,
+   "text": "Let's now open the hood and walk through that workflow, step by step."
+  }
+ ]
+}

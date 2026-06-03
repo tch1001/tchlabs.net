@@ -1,0 +1,319 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The editing cycle in detail: nick, prime, extend, flap, repair",
+ "duration": 479.07,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The editing cycle in detail: nick, prime, extend, flap, repair"
+  },
+  {
+   "t": 7.29,
+   "text": "Now let me walk you through what actually happens when a prime editor docks onto its target."
+  },
+  {
+   "t": 12.15,
+   "text": "Slowly."
+  },
+  {
+   "t": 13.11,
+   "text": "Step by step."
+  },
+  {
+   "t": 14.3,
+   "text": "Because there are a lot of moving parts and the geometry matters."
+  },
+  {
+   "t": 17.95,
+   "text": "Step one."
+  },
+  {
+   "t": 18.88,
+   "text": "The prime editor — Cas9 nickase with the RT fused on, loaded with the pegRNA — scans the genome looking for a PAM next to a sequence matching the pegRNA spacer."
+  },
+  {
+   "t": 29.8,
+   "text": "Just like ordinary Cas9."
+  },
+  {
+   "t": 31.7,
+   "text": "It hops along the DNA, checking for the three-letter NGG password, and at each candidate site it tries to form an R-loop with its guide."
+  },
+  {
+   "t": 41.25,
+   "text": "If the seed matches, the R-loop locks in."
+  },
+  {
+   "t": 43.89,
+   "text": "Same biology as any Cas9."
+  },
+  {
+   "t": 46.56,
+   "text": "No surprises yet."
+  },
+  {
+   "t": 48.06,
+   "text": "Step two."
+  },
+  {
+   "t": 49.01,
+   "text": "Now the Cas9 nickase activates its RuvC domain — the one cutting domain that hasn't been killed by the H840A mutation — and it cuts the non-target strand."
+  },
+  {
+   "t": 60.06,
+   "text": "That's the strand displaced into the single-stranded loop."
+  },
+  {
+   "t": 63.6,
+   "text": "The cut happens three bases upstream of the PAM, just like a regular Cas9 cut would, but only on one strand."
+  },
+  {
+   "t": 70.5,
+   "text": "The target strand — the one paired with the pegRNA — stays intact."
+  },
+  {
+   "t": 75.2,
+   "text": "So we now have a structure where the helix is mostly intact, the guide RNA is base-paired to the target strand, and the non-target strand has a single-stranded nick."
+  },
+  {
+   "t": 85.17,
+   "text": "Step three."
+  },
+  {
+   "t": 86.29,
+   "text": "The cut creates a free 3' hydroxyl on the non-target strand — a 3'-OH, the chemical handle that DNA polymerases use to add new bases."
+  },
+  {
+   "t": 97.79,
+   "text": "This freed 3' end is the key."
+  },
+  {
+   "t": 101.06,
+   "text": "Until it's freed, none of the downstream chemistry can happen."
+  },
+  {
+   "t": 105.17,
+   "text": "The nick is what unlocks everything."
+  },
+  {
+   "t": 107.61,
+   "text": "Now here's the trick."
+  },
+  {
+   "t": 108.89,
+   "text": "The pegRNA has been waiting for exactly this moment."
+  },
+  {
+   "t": 112.49,
+   "text": "Its 3' end — the primer binding site — has a sequence complementary to the freed 3' end of the nicked DNA."
+  },
+  {
+   "t": 120.6,
+   "text": "As soon as the 3' OH is liberated, the PBS folds around and base-pairs with it."
+  },
+  {
+   "t": 127.17,
+   "text": "The genomic DNA, the part just upstream of the nick, anneals to the PBS portion of the pegRNA."
+  },
+  {
+   "t": 134.31,
+   "text": "You have just built, in place, a tiny primer-template complex — where the genomic DNA is the primer and the pegRNA is the template."
+  },
+  {
+   "t": 143.79,
+   "text": "Step four."
+  },
+  {
+   "t": 144.86,
+   "text": "The reverse transcriptase, which is right there, tethered to the Cas9 nickase by the linker, now goes to work."
+  },
+  {
+   "t": 151.9,
+   "text": "It binds the primer-template complex."
+  },
+  {
+   "t": 154.43,
+   "text": "It extends the 3' end of the genomic DNA by reading along the RT template region of the pegRNA, synthesizing new DNA one nucleotide at a time."
+  },
+  {
+   "t": 165.04,
+   "text": "It walks up the pegRNA in the 5' direction, copying the RNA template into a complementary strand of DNA."
+  },
+  {
+   "t": 172.51,
+   "text": "The DNA it synthesizes contains the edit."
+  },
+  {
+   "t": 175.3,
+   "text": "Whatever you wrote in the RT template — a single-base change, a five-base insertion, a transversion, a small deletion encoded by skipping bases — that's what gets written into the new DNA."
+  },
+  {
+   "t": 187.12,
+   "text": "Let me say that more slowly, because it's the heart of the whole mechanism."
+  },
+  {
+   "t": 191.75,
+   "text": "The new DNA strand is synthesized by the reverse transcriptase, from a template encoded in the pegRNA, primed by the 3' end of the freshly nicked genomic strand."
+  },
+  {
+   "t": 203.16,
+   "text": "The new DNA is now attached to the genome — covalently, by the original phosphodiester backbone — at its 5' end."
+  },
+  {
+   "t": 211.85,
+   "text": "It dangles out into space at its 3' end, like a flap."
+  },
+  {
+   "t": 216.45,
+   "text": "The reverse transcriptase eventually disengages."
+  },
+  {
+   "t": 220.07,
+   "text": "The pegRNA peels off."
+  },
+  {
+   "t": 221.88,
+   "text": "What's left behind is a piece of DNA where the non-target strand has been cut, and from that cut, a new flap of DNA — the freshly synthesized \"edit-containing\" DNA — sticks out."
+  },
+  {
+   "t": 233.74,
+   "text": "Step five."
+  },
+  {
+   "t": 234.78,
+   "text": "Now you have what's called a flap equilibrium."
+  },
+  {
+   "t": 237.24,
+   "text": "The 5' end of the original non-target strand — the end that was cut and is now sitting upstream of the nick — is the 5' flap, the old sequence."
+  },
+  {
+   "t": 246.2,
+   "text": "The newly synthesized DNA, dangling from the upstream end of the cut, is the 3' flap, the new sequence."
+  },
+  {
+   "t": 254.4,
+   "text": "These two flaps are competing to occupy the same position in the helix."
+  },
+  {
+   "t": 259.29,
+   "text": "Both could, in principle, base-pair with the target strand."
+  },
+  {
+   "t": 263.19,
+   "text": "Only one wins."
+  },
+  {
+   "t": 264.61,
+   "text": "Whichever flap loses gets clipped off by cellular flap endonucleases — enzymes like FEN1, which is the cell's normal flap-cleaving machinery for DNA replication and repair."
+  },
+  {
+   "t": 277.39,
+   "text": "The flap that wins gets ligated back into the backbone, and now that strand of the helix carries either the original sequence (if the old flap won) or the edited sequence (if the new flap won)."
+  },
+  {
+   "t": 289.01,
+   "text": "The equilibrium isn't fifty-fifty by accident."
+  },
+  {
+   "t": 292.38,
+   "text": "The newly synthesized 3' flap, the one carrying the edit, is designed to match the target sequence almost perfectly except for the few edited bases."
+  },
+  {
+   "t": 302.87,
+   "text": "So the new flap base-pairs with the target strand with only a small mismatch at the edit position."
+  },
+  {
+   "t": 308.22,
+   "text": "The old 5' flap base-pairs perfectly."
+  },
+  {
+   "t": 311.61,
+   "text": "So naively, the old flap wins more often, and the edit doesn't install."
+  },
+  {
+   "t": 316.57,
+   "text": "This is one reason that prime editing efficiency, even in the best designs, is much less than one hundred percent — there's a thermodynamic and kinetic competition at the flap equilibrium step, and the deck is slightly stacked against the edited strand."
+  },
+  {
+   "t": 331.78,
+   "text": "Step six."
+  },
+  {
+   "t": 332.92,
+   "text": "Assume the new flap wins — the edited sequence is now incorporated into the non-target strand."
+  },
+  {
+   "t": 339.99,
+   "text": "The cell now has a small mismatch on the helix: the target strand still has the original sequence, but the non-target strand has the edited sequence."
+  },
+  {
+   "t": 349.33,
+   "text": "The cell's mismatch repair machinery sees this mismatch, picks one of the two strands as the \"correct\" template, and copies that strand's sequence to fix the mismatch."
+  },
+  {
+   "t": 360.62,
+   "text": "If the cell picks the edited strand as the template — it copies the edit onto the target strand, and now both strands of the helix carry the new sequence."
+  },
+  {
+   "t": 370.49,
+   "text": "The edit is permanent."
+  },
+  {
+   "t": 372.19,
+   "text": "Done."
+  },
+  {
+   "t": 372.91,
+   "text": "If the cell picks the original strand as the template — it overwrites the edit, copying the original sequence back onto the non-target strand, and the edit is lost."
+  },
+  {
+   "t": 383.27,
+   "text": "So the second major hurdle is which strand the mismatch repair machinery decides to use as the template."
+  },
+  {
+   "t": 389.74,
+   "text": "By default, the cell tends to use the original, unnicked strand — because in normal mismatch repair, the unnicked strand is treated as the \"parental\" template and the nicked strand is treated as the \"daughter\" copy that needs to be corrected."
+  },
+  {
+   "t": 403.51,
+   "text": "This is biology that prime editing has to work against."
+  },
+  {
+   "t": 407.11,
+   "text": "The cell's bias is, unfortunately, exactly the wrong direction for the editor."
+  },
+  {
+   "t": 412.52,
+   "text": "So to summarize the editing cycle: scan for the target, nick the non-target strand, anneal the pegRNA's PBS to the freed 3' end, reverse-transcribe the edit-containing DNA from the pegRNA template, resolve the flap equilibrium so the new flap wins, then survive mismatch repair so the edit is propagated to both strands."
+  },
+  {
+   "t": 434.74,
+   "text": "Each of those steps is a place where the edit can fail."
+  },
+  {
+   "t": 438.27,
+   "text": "The total efficiency is the product of the efficiencies at each step."
+  },
+  {
+   "t": 443.51,
+   "text": "Prime editing is hard precisely because it's a long chain of dependent steps, each one imperfect."
+  },
+  {
+   "t": 449.67,
+   "text": "But — and this is the key — when it works, it leaves no double-strand break, no indels, no bystander edits at unrelated bases, no cargo from a separate donor template."
+  },
+  {
+   "t": 461.11,
+   "text": "The edit is precise, programmable, and limited only by what you wrote into the RT template of the pegRNA."
+  },
+  {
+   "t": 468.41,
+   "text": "That precision is what makes the inefficiency tolerable."
+  },
+  {
+   "t": 472.37,
+   "text": "We'll see how the field has spent the past several years improving each one of those efficiency-limiting steps."
+  }
+ ]
+}

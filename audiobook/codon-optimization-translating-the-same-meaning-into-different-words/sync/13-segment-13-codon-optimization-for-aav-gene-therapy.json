@@ -1,0 +1,183 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Codon optimization for AAV gene therapy",
+ "duration": 370.34,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Codon optimization for AAV gene therapy"
+  },
+  {
+   "t": 4.9,
+   "text": "Adeno-associated virus, or AAV, is the workhorse vector for in vivo gene therapy."
+  },
+  {
+   "t": 11.54,
+   "text": "When a doctor injects a gene therapy into a patient — for inherited blindness, for spinal muscular atrophy, for hemophilia, for any of a growing list of approved indications — the gene is usually packaged inside an AAV capsid that delivers it to target cells."
+  },
+  {
+   "t": 29.57,
+   "text": "Once inside the target cells, the AAV genome makes its way to the nucleus, the cellular machinery starts transcribing the gene, and the patient's own cells start producing the therapeutic protein."
+  },
+  {
+   "t": 42.49,
+   "text": "For this to work, the therapeutic gene needs to be optimized for expression in the target tissue."
+  },
+  {
+   "t": 48.42,
+   "text": "And here's where things get interesting: different tissues have different codon usage."
+  },
+  {
+   "t": 53.45,
+   "text": "Or more precisely, different tissues have different tRNA pools."
+  },
+  {
+   "t": 57.75,
+   "text": "The neurons in your brain have a different tRNA composition than the hepatocytes in your liver, which have a different composition than the photoreceptors in your retina."
+  },
+  {
+   "t": 66.86,
+   "text": "The codon preferences shift, sometimes substantially, between cell types of the same organism."
+  },
+  {
+   "t": 72.76,
+   "text": "So when you're designing an AAV-delivered gene therapy, you're not just optimizing for \"human cells\" in some generic sense."
+  },
+  {
+   "t": 81.19,
+   "text": "You're optimizing for the specific tissue your AAV will transduce — for hepatocytes if you're targeting liver, for motor neurons if you're targeting spinal cord, for retinal pigment epithelium if you're targeting eye."
+  },
+  {
+   "t": 94.42,
+   "text": "And the codon usage table you use for the optimization is the tissue-specific one, derived from sequencing data of that particular tissue."
+  },
+  {
+   "t": 102.79,
+   "text": "This tissue specificity matters because, in some tissues, the tRNA pool is genuinely shifted."
+  },
+  {
+   "t": 110.91,
+   "text": "There's evidence that proliferating cells, like cells in cancers or in stem cell compartments, have tRNA pools that favor one set of codons, while differentiated, non-dividing cells have pools that favor a different set."
+  },
+  {
+   "t": 124.53,
+   "text": "The shift correlates with the kinds of proteins each cell type tends to make."
+  },
+  {
+   "t": 129.59,
+   "text": "A liver cell, churning out albumin and clotting factors and metabolic enzymes, has a tRNA pool tuned for that set of proteins."
+  },
+  {
+   "t": 138.26,
+   "text": "A neuron, with its very different proteome, has a different tRNA pool."
+  },
+  {
+   "t": 143.2,
+   "text": "Codon optimization for the liver, then, might literally pick different codons than codon optimization for the brain."
+  },
+  {
+   "t": 149.91,
+   "text": "This is still an active research area, and not all AAV gene therapy programs do tissue-specific codon optimization — many still use a generic human codon usage table, and that works well enough for most purposes."
+  },
+  {
+   "t": 163.4,
+   "text": "But the field is moving in the direction of more tissue-specific optimization, particularly for indications where small improvements in protein production can mean the difference between a therapy that works at a reasonable dose and one that requires impractically high doses."
+  },
+  {
+   "t": 180.22,
+   "text": "There's another constraint that's particularly tight in AAV gene therapy: the cargo size limit."
+  },
+  {
+   "t": 186.24,
+   "text": "AAV capsids can package only about 4.7 kilobases of DNA."
+  },
+  {
+   "t": 191.78,
+   "text": "That's a hard ceiling."
+  },
+  {
+   "t": 193.1,
+   "text": "The therapeutic gene, plus the regulatory elements that drive its expression, plus the polyadenylation signal, plus a few other necessary bits, all have to fit inside that envelope."
+  },
+  {
+   "t": 204.93,
+   "text": "For large therapeutic genes — like dystrophin, the gene mutated in Duchenne muscular dystrophy, which is over eleven kilobases in its full coding form — you simply can't fit the full gene into an AAV."
+  },
+  {
+   "t": 218.89,
+   "text": "So the field has developed truncated versions of the protein that retain function but fit in the capsid."
+  },
+  {
+   "t": 225.5,
+   "text": "But here's the relevant point for codon optimization."
+  },
+  {
+   "t": 228.57,
+   "text": "Within the cargo limit, every base counts."
+  },
+  {
+   "t": 231.41,
+   "text": "Codon choice doesn't change the length of the coding sequence — three bases per codon either way — but the choice of regulatory elements, polyA signals, and other accessories does."
+  },
+  {
+   "t": 242.9,
+   "text": "And the codon optimization can subtly affect compatibility with other AAV-specific features, like the AAV's inverted terminal repeats and the limits of what kinds of sequences can be reliably packaged."
+  },
+  {
+   "t": 255.32,
+   "text": "There's also a subtle issue with AAV vectors that affects codon optimization: AAV genomes are single-stranded DNA."
+  },
+  {
+   "t": 263.4,
+   "text": "They get converted to double-stranded DNA inside the target cell, and only then can they be transcribed."
+  },
+  {
+   "t": 270.5,
+   "text": "The single-stranded form can have secondary structure that affects packaging efficiency — how efficiently the AAV capsid loads the genome — and that secondary structure depends on codon choice."
+  },
+  {
+   "t": 282.86,
+   "text": "So in AAV gene therapy specifically, you sometimes care about secondary structure not just of the mRNA but of the genome DNA itself."
+  },
+  {
+   "t": 291.84,
+   "text": "For the major AAV therapies on the market — Luxturna for Leber congenital amaurosis, Zolgensma for spinal muscular atrophy, Hemgenix for hemophilia B — the therapeutic gene is codon-optimized."
+  },
+  {
+   "t": 305.81,
+   "text": "The optimization is one of the design decisions baked into the regulatory submissions, and it has been refined over years of development."
+  },
+  {
+   "t": 314.59,
+   "text": "For each subsequent AAV therapy, the optimization is informed by the previous generation, and the field is gradually accumulating know-how about what works for what tissue."
+  },
+  {
+   "t": 325.3,
+   "text": "The big picture is that AAV gene therapy is a place where codon optimization meets a lot of other constraints — tissue specificity, cargo limits, single-stranded packaging, regulatory element compatibility — and the optimizer has to satisfy all of them simultaneously."
+  },
+  {
+   "t": 342.96,
+   "text": "It's a constraint-satisfaction problem in many dimensions, and it's part of why building a successful gene therapy is genuinely hard engineering work."
+  },
+  {
+   "t": 352.19,
+   "text": "Now, let's pivot."
+  },
+  {
+   "t": 353.4,
+   "text": "So far we've been thinking about how we use codon optimization."
+  },
+  {
+   "t": 357.26,
+   "text": "But viruses, the actual things AAV is derived from, have been doing their own version of codon optimization for billions of years."
+  },
+  {
+   "t": 366.21,
+   "text": "And we can use that fact to learn things about them."
+  },
+  {
+   "t": 369.04,
+   "text": "That's our next segment."
+  }
+ ]
+}

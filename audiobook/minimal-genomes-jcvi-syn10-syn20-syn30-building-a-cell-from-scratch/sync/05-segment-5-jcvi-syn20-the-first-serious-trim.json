@@ -1,0 +1,291 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — JCVI-syn2.0: the first serious trim",
+ "duration": 378.38,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — JCVI-syn2.0: the first serious trim"
+  },
+  {
+   "t": 5.91,
+   "text": "So now you have a platform."
+  },
+  {
+   "t": 7.45,
+   "text": "You can design a genome in a computer, synthesize it, transplant it into a cell, and watch the cell come to life."
+  },
+  {
+   "t": 14.6,
+   "text": "That's powerful."
+  },
+  {
+   "t": 15.93,
+   "text": "That means you can ask a particular question that you couldn't ask before."
+  },
+  {
+   "t": 19.89,
+   "text": "The question is: which genes can I leave out?"
+  },
+  {
+   "t": 22.8,
+   "text": "Suppose you delete a gene from your design before you synthesize."
+  },
+  {
+   "t": 26.77,
+   "text": "Then synthesize the trimmed genome."
+  },
+  {
+   "t": 29.15,
+   "text": "Then transplant it."
+  },
+  {
+   "t": 30.45,
+   "text": "If the resulting cell grows, that gene was not essential."
+  },
+  {
+   "t": 34.56,
+   "text": "If the resulting cell doesn't grow, that gene was essential."
+  },
+  {
+   "t": 39.0,
+   "text": "You have, in effect, a way to test whether a gene is essential by direct experiment."
+  },
+  {
+   "t": 45.39,
+   "text": "And not just one gene at a time — you can test combinations."
+  },
+  {
+   "t": 49.2,
+   "text": "You can delete a hundred genes at once, see if the cell still lives, and find out something about the overall budget of essential biology in a way that single-gene knockout experiments can never quite reach."
+  },
+  {
+   "t": 61.11,
+   "text": "That's the strategy the JCVI team committed to."
+  },
+  {
+   "t": 64.86,
+   "text": "The 2010 syn1.0 was not the end product."
+  },
+  {
+   "t": 68.78,
+   "text": "It was the proof of concept."
+  },
+  {
+   "t": 70.47,
+   "text": "It proved that the platform — design, synthesize, transplant — actually worked."
+  },
+  {
+   "t": 76.04,
+   "text": "From 2010 onwards, the team's real goal was to use that platform to build the smallest possible genome that could still support a self-replicating cell."
+  },
+  {
+   "t": 86.21,
+   "text": "The minimal genome."
+  },
+  {
+   "t": 87.49,
+   "text": "Their first serious attempt at the trim was a genome they called JCVI-syn2.0."
+  },
+  {
+   "t": 94.54,
+   "text": "Here is how the trim actually proceeded."
+  },
+  {
+   "t": 97.35,
+   "text": "It was not as simple as \"look at the gene list, cross off the ones that look unnecessary, and synthesize what's left."
+  },
+  {
+   "t": 104.86,
+   "text": "\" That approach was tried and it didn't work."
+  },
+  {
+   "t": 107.45,
+   "text": "Many genes that look unnecessary turn out to be essential."
+  },
+  {
+   "t": 111.62,
+   "text": "Many essential genes are essential in ways that aren't obvious from the annotation alone."
+  },
+  {
+   "t": 116.83,
+   "text": "So the team took a more iterative approach."
+  },
+  {
+   "t": 119.64,
+   "text": "They started with the syn1.0 genome — the synthetic Mycoplasma mycoides chromosome, 1.08 million base pairs, about 901 genes."
+  },
+  {
+   "t": 130.54,
+   "text": "They divided the genome into eight roughly equal chunks."
+  },
+  {
+   "t": 134.53,
+   "text": "Then, for each chunk, they did an experiment: they used transposon mutagenesis on the syn1.0 cells to find which genes in that chunk were tolerant of disruption."
+  },
+  {
+   "t": 145.41,
+   "text": "Any gene that you could insert a transposon into, and have the cell still grow, was at least a candidate for being non-essential."
+  },
+  {
+   "t": 153.56,
+   "text": "They built a tentative list of candidates for deletion in each chunk."
+  },
+  {
+   "t": 158.03,
+   "text": "Then they designed a trimmed version of that chunk, with the candidate non-essential genes removed."
+  },
+  {
+   "t": 163.68,
+   "text": "They synthesized the trimmed chunk."
+  },
+  {
+   "t": 166.11,
+   "text": "They mixed it into the synthetic genome — using the yeast assembly system — replacing the original chunk with the trimmed version."
+  },
+  {
+   "t": 174.11,
+   "text": "And they transplanted the resulting genome and asked: does it work?"
+  },
+  {
+   "t": 178.93,
+   "text": "When it worked, they kept the trim."
+  },
+  {
+   "t": 181.0,
+   "text": "When it didn't, they had to figure out which deletion they had made was the killer, restore it, and try again."
+  },
+  {
+   "t": 186.54,
+   "text": "This process took years."
+  },
+  {
+   "t": 188.4,
+   "text": "It is not glamorous work."
+  },
+  {
+   "t": 190.14,
+   "text": "It is years of failed cells, ambiguous results, transplants that didn't take, designs that needed to be retried."
+  },
+  {
+   "t": 197.45,
+   "text": "The team came up with a clever vocabulary to describe what was happening — they referred to genes as \"essential,\" \"quasi-essential\" (cells could live without them but grew poorly), and \"non-essential\" (cells didn't care)."
+  },
+  {
+   "t": 211.57,
+   "text": "Many of the difficult judgement calls were about quasi-essential genes."
+  },
+  {
+   "t": 215.81,
+   "text": "Did you really want to keep them?"
+  },
+  {
+   "t": 217.11,
+   "text": "They cost genome space."
+  },
+  {
+   "t": 219.0,
+   "text": "But removing them gave you a cell that limped along instead of growing."
+  },
+  {
+   "t": 223.4,
+   "text": "JCVI-syn2.0 was the result of about three or four years of this iterative trimming."
+  },
+  {
+   "t": 230.69,
+   "text": "It was published as part of the same 2016 paper as syn3.0, but it represents an earlier stage of the trim."
+  },
+  {
+   "t": 239.3,
+   "text": "Syn2.0 has about 576 genes — down from syn1.0's roughly 901, so a serious reduction, but still much larger than what was about to come."
+  },
+  {
+   "t": 251.89,
+   "text": "Syn2.0 is a useful intermediate because it tells you something about how the trim went."
+  },
+  {
+   "t": 257.15,
+   "text": "The first 325 or so genes were comparatively easy to remove."
+  },
+  {
+   "t": 262.42,
+   "text": "Many of them were straightforwardly non-essential — duplicated transporters, unused metabolic enzymes, genes for stress responses the cell wasn't going to encounter in the lab."
+  },
+  {
+   "t": 273.61,
+   "text": "Stripping those out brought the gene count from 901 to about 576 without any major drama."
+  },
+  {
+   "t": 280.78,
+   "text": "The cell grew slowly but it grew."
+  },
+  {
+   "t": 283.14,
+   "text": "But once you got to syn2.0, the trim got dramatically harder."
+  },
+  {
+   "t": 287.61,
+   "text": "Every additional deletion was now in a gene that was either essential or essential-in-context."
+  },
+  {
+   "t": 294.23,
+   "text": "And many of the obvious candidates — the genes that, by their annotations, looked like they should be removable — turned out to be quietly important for things the team hadn't predicted."
+  },
+  {
+   "t": 304.69,
+   "text": "The slope of \"genes removed per month\" flattened out."
+  },
+  {
+   "t": 308.03,
+   "text": "The team had hit the part of the genome where every gene mattered, or seemed to matter."
+  },
+  {
+   "t": 312.91,
+   "text": "This is, in the analogy I'm building, the point in operating system minimization where you've removed all the bloat and the only things left are the kernel and the things you don't quite understand about the kernel."
+  },
+  {
+   "t": 324.46,
+   "text": "Removing the printer drivers is easy."
+  },
+  {
+   "t": 327.18,
+   "text": "Removing parts of the scheduler is hard."
+  },
+  {
+   "t": 329.61,
+   "text": "Removing the memory manager is essentially impossible without breaking everything."
+  },
+  {
+   "t": 334.78,
+   "text": "Syn2.0 was the cell with the printer drivers removed."
+  },
+  {
+   "t": 338.86,
+   "text": "The kernel was still mostly intact."
+  },
+  {
+   "t": 341.07,
+   "text": "To go further, the team had to be more aggressive — and more clever."
+  },
+  {
+   "t": 345.37,
+   "text": "They had to design from the inside out, not just trim from the outside in."
+  },
+  {
+   "t": 349.56,
+   "text": "They had to combine transposon mutagenesis data, careful manual annotation, and a willingness to delete genes whose function they did not understand and see if the cell died."
+  },
+  {
+   "t": 360.56,
+   "text": "That last willingness — to delete the mystery genes and risk it — turned out to be both necessary and, in important ways, frustrating."
+  },
+  {
+   "t": 370.27,
+   "text": "We'll get to that in Segment 7."
+  },
+  {
+   "t": 372.48,
+   "text": "But first, let me tell you about syn3.0, which is what came out the other side of all that work."
+  }
+ ]
+}

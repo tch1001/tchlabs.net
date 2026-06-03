@@ -1,0 +1,211 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Public datasets — GTEx, TCGA, ENCODE, GEO",
+ "duration": 425.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Public datasets — GTEx, TCGA, ENCODE, GEO"
+  },
+  {
+   "t": 6.46,
+   "text": "One of the underappreciated facts about bulk RNA-seq is that an enormous fraction of all biological understanding comes from public bulk RNA-seq datasets — collections of thousands or tens of thousands of samples, freely downloadable, that any researcher anywhere can reanalyze."
+  },
+  {
+   "t": 23.96,
+   "text": "The public ecosystem is the foundation on which most modern biology is built."
+  },
+  {
+   "t": 29.19,
+   "text": "Let me walk through the major ones."
+  },
+  {
+   "t": 31.19,
+   "text": "GTEx — the Genotype-Tissue Expression project, funded by the NIH, ran from 2010 to about 2017 and continues to be updated."
+  },
+  {
+   "t": 41.79,
+   "text": "GTEx collected post-mortem tissue samples from over 1,000 donors across 54 different tissue types — brain regions, heart, liver, kidney, every major organ."
+  },
+  {
+   "t": 53.94,
+   "text": "From each tissue, they performed bulk RNA-seq, generating somewhere over 17,000 samples in total."
+  },
+  {
+   "t": 61.86,
+   "text": "The data is publicly available through dbGaP (with controlled access for protected health information) and through the GTEx portal (for summary data)."
+  },
+  {
+   "t": 71.53,
+   "text": "What GTEx enables: a normal tissue expression atlas."
+  },
+  {
+   "t": 76.1,
+   "text": "If you want to know how much of gene X is expressed in liver versus heart versus brain, GTEx has the answer with hundreds of biological replicates per tissue."
+  },
+  {
+   "t": 85.71,
+   "text": "If you want to look at expression QTLs — genetic variants that affect gene expression — GTEx has matched genotyping and expression data from the same individuals, allowing eQTL mapping across all tissues."
+  },
+  {
+   "t": 99.79,
+   "text": "GTEx is the foundational normal tissue dataset."
+  },
+  {
+   "t": 103.89,
+   "text": "Every major modern study comparing disease to normal uses GTEx, somewhere, as a normal reference."
+  },
+  {
+   "t": 111.66,
+   "text": "TCGA — The Cancer Genome Atlas, also NIH-funded, ran from about 2006 to 2014 and produced bulk RNA-seq (plus DNA sequencing, methylation, copy number, and clinical data) on roughly 11,000 tumor samples across 33 cancer types."
+  },
+  {
+   "t": 130.99,
+   "text": "Each cancer type has hundreds to over a thousand samples."
+  },
+  {
+   "t": 135.07,
+   "text": "The data is in dbGaP and also accessible through the cBioPortal and other interfaces."
+  },
+  {
+   "t": 141.72,
+   "text": "What TCGA enables: an exhaustive characterization of solid tumors."
+  },
+  {
+   "t": 147.3,
+   "text": "Most modern cancer subtype classifications — breast cancer PAM50, glioblastoma subtypes, colorectal CMS — were derived from TCGA data."
+  },
+  {
+   "t": 157.59,
+   "text": "Every new cancer biomarker is validated against TCGA."
+  },
+  {
+   "t": 162.06,
+   "text": "Every drug response prediction model is trained on TCGA."
+  },
+  {
+   "t": 166.04,
+   "text": "TCGA is the cancer reference dataset."
+  },
+  {
+   "t": 169.0,
+   "text": "ENCODE — Encyclopedia of DNA Elements, also NIH-funded, ran from about 2003 (with a pilot phase) through several phases continuing today."
+  },
+  {
+   "t": 180.25,
+   "text": "ENCODE was designed to comprehensively characterize the functional elements in the human genome — not just expression, but also chromatin accessibility, transcription factor binding, DNA methylation, and many other epigenomic features."
+  },
+  {
+   "t": 195.26,
+   "text": "The bulk RNA-seq component of ENCODE is large — thousands of samples across human and mouse cell lines, tissues, and developmental stages, with various stranded and unstranded protocols, poly-A and total RNA, and other variants."
+  },
+  {
+   "t": 211.82,
+   "text": "What ENCODE enables: a reference for cell-line and tissue-specific expression patterns, with deep epigenomic context."
+  },
+  {
+   "t": 220.4,
+   "text": "If you want to compare your data to a well-characterized reference cell line, ENCODE probably has matched RNA-seq and ChIP-seq and ATAC-seq data on it."
+  },
+  {
+   "t": 230.72,
+   "text": "ENCODE is the multi-omics reference dataset."
+  },
+  {
+   "t": 234.09,
+   "text": "GEO — the Gene Expression Omnibus, maintained by the NCBI, is the catch-all repository for gene expression data from every publication."
+  },
+  {
+   "t": 243.74,
+   "text": "As a policy of most journals, when you publish a paper that involves expression data, you must deposit the data in GEO (or its European equivalent, ArrayExpress)."
+  },
+  {
+   "t": 254.46,
+   "text": "GEO has accumulated over 200,000 individual studies and over 6 million samples."
+  },
+  {
+   "t": 261.07,
+   "text": "The vast majority is microarray data from the 2000s and early 2010s, but RNA-seq is a large and growing fraction."
+  },
+  {
+   "t": 269.56,
+   "text": "What GEO enables: meta-analysis, replication, and reanalysis."
+  },
+  {
+   "t": 275.04,
+   "text": "If somebody publishes a study on, say, glioblastoma expression, you can download their raw data from GEO, reanalyze it with modern tools, combine it with other studies, and test new hypotheses."
+  },
+  {
+   "t": 287.7,
+   "text": "The whole field of computational biology runs on GEO data."
+  },
+  {
+   "t": 292.0,
+   "text": "It's free, accessible, and indispensable."
+  },
+  {
+   "t": 295.56,
+   "text": "SRA — the Sequence Read Archive is GEO's sibling for raw sequencing reads."
+  },
+  {
+   "t": 301.5,
+   "text": "While GEO stores processed expression data and metadata, SRA stores the raw FASTQ files."
+  },
+  {
+   "t": 309.1,
+   "text": "For RNA-seq, you typically go to GEO to find studies of interest, then to SRA to download the raw reads if you want to reanalyze them yourself."
+  },
+  {
+   "t": 319.04,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 320.35,
+   "text": "GTEx and TCGA are the public bulk RNA-seq libraries that biology runs on."
+  },
+  {
+   "t": 326.62,
+   "text": "Hundreds of thousands of samples, freely downloadable, with consistent processing pipelines so they can be compared and integrated."
+  },
+  {
+   "t": 335.07,
+   "text": "If you want to do biology in 2026 and you don't know these datasets, you're working with one hand tied behind your back."
+  },
+  {
+   "t": 342.56,
+   "text": "The data is sitting there, free, ready to be combined with your own observations to answer questions that would be impossible from your own data alone."
+  },
+  {
+   "t": 351.12,
+   "text": "A few more datasets worth knowing about."
+  },
+  {
+   "t": 353.42,
+   "text": "Recount3 (and its predecessor recount2) is a project from Ben Langmead and colleagues at Hopkins that takes all of SRA's RNA-seq data — over 700,000 samples — and reprocesses it through a uniform pipeline."
+  },
+  {
+   "t": 368.0,
+   "text": "The result is a massive collection of consistently-processed expression data that you can use without worrying about pipeline differences between studies."
+  },
+  {
+   "t": 376.87,
+   "text": "ARCHS4, from the Ma'ayan lab at Mount Sinai, does something similar — uniformly processed RNA-seq across hundreds of thousands of samples, queryable through a web interface."
+  },
+  {
+   "t": 388.67,
+   "text": "The DepMap project at the Broad Institute has bulk RNA-seq on over 1,000 cancer cell lines, matched with drug sensitivity data, enabling drug response prediction modeling."
+  },
+  {
+   "t": 400.41,
+   "text": "The public ecosystem is large enough that a meaningful fraction of biological discoveries today come from people who never generated their own data — they downloaded existing public data, applied a new analysis, and found something nobody had noticed."
+  },
+  {
+   "t": 415.34,
+   "text": "That's the power of the public RNA-seq commons."
+  },
+  {
+   "t": 418.64,
+   "text": "Every dollar spent making this data available has been repaid many times over in scientific discoveries."
+  }
+ ]
+}

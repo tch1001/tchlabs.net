@@ -1,0 +1,231 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The 3D problem: two meters of DNA inside a ten-micron nucleus",
+ "duration": 330.39,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The 3D problem: two meters of DNA inside a ten-micron nucleus"
+  },
+  {
+   "t": 6.76,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 8.41,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 9.85,
+   "text": "Today and for the next two hours, we're going to talk about Hi-C and the 3D genome — the family of techniques that, over the last fifteen years or so, has completely changed how we think about what a genome actually is and how it works."
+  },
+  {
+   "t": 24.52,
+   "text": "And I want to start with a number, because the number is the whole motivation for the technique."
+  },
+  {
+   "t": 30.49,
+   "text": "The number is two meters."
+  },
+  {
+   "t": 32.26,
+   "text": "Two meters of DNA."
+  },
+  {
+   "t": 34.01,
+   "text": "That's how much DNA is in every diploid cell in your body."
+  },
+  {
+   "t": 37.75,
+   "text": "If you took the DNA out of a single one of your cells and stretched it end to end — every chromosome, lined up, double helix straightened — it would be about two meters long."
+  },
+  {
+   "t": 48.06,
+   "text": "Six feet, six inches."
+  },
+  {
+   "t": 50.17,
+   "text": "Taller than most of you in this room."
+  },
+  {
+   "t": 52.05,
+   "text": "That much polymer, packed into a nucleus that's about ten micrometers across — roughly the diameter of a speck of dust."
+  },
+  {
+   "t": 60.02,
+   "text": "Ten micrometers is one hundred-thousandth of a meter, so we are talking about cramming two hundred thousand nucleus-lengths of DNA into one nucleus."
+  },
+  {
+   "t": 69.15,
+   "text": "The packing ratio is staggering."
+  },
+  {
+   "t": 71.41,
+   "text": "And the packing is not — this is the whole point — not random."
+  },
+  {
+   "t": 75.34,
+   "text": "Here's the analogy I want you to hold in your head for the next two hours."
+  },
+  {
+   "t": 79.29,
+   "text": "Imagine two meters of yarn — a long string, about the diameter of dental floss — stuffed into a ping-pong ball."
+  },
+  {
+   "t": 87.22,
+   "text": "It's not random."
+  },
+  {
+   "t": 88.35,
+   "text": "It's folded with structure."
+  },
+  {
+   "t": 90.03,
+   "text": "And the structure matters, because parts of the yarn that look distant when you trace along its length may be touching each other in three dimensions."
+  },
+  {
+   "t": 98.2,
+   "text": "Two letters that are a million base pairs apart on the linear sequence may be sitting right next to each other inside the nucleus."
+  },
+  {
+   "t": 105.6,
+   "text": "That's the 3D genome."
+  },
+  {
+   "t": 107.33,
+   "text": "That's what this lecture is about."
+  },
+  {
+   "t": 109.1,
+   "text": "The linear sequence — the string of A's, C's, G's, and T's that you read out with Illumina or Sanger or Nanopore — is missing something."
+  },
+  {
+   "t": 118.59,
+   "text": "It's missing the folding."
+  },
+  {
+   "t": 119.92,
+   "text": "And the folding is biology."
+  },
+  {
+   "t": 122.19,
+   "text": "Why do we care about folding?"
+  },
+  {
+   "t": 123.74,
+   "text": "Because regulation depends on it."
+  },
+  {
+   "t": 125.8,
+   "text": "A gene's promoter — the stretch of DNA right at its start — is typically controlled by enhancers, regulatory sequences that bind transcription factors and crank the gene up or down."
+  },
+  {
+   "t": 137.44,
+   "text": "But here's the thing about enhancers: they don't have to be next to the gene they control."
+  },
+  {
+   "t": 142.2,
+   "text": "An enhancer can sit a hundred kilobases away, half a megabase away, sometimes more than a megabase away from its target promoter on the linear genome."
+  },
+  {
+   "t": 152.18,
+   "text": "In 3D, though, the enhancer and the promoter are kissing."
+  },
+  {
+   "t": 156.95,
+   "text": "They're touching."
+  },
+  {
+   "t": 157.89,
+   "text": "The intervening DNA forms a loop that brings them into physical proximity, and that loop is what allows the enhancer to actually deliver its activating effect to the promoter."
+  },
+  {
+   "t": 169.86,
+   "text": "If you only have the linear sequence, you have no idea which enhancers control which genes, because the linear distance tells you nothing about the 3D contact."
+  },
+  {
+   "t": 179.69,
+   "text": "The 3D folding is the regulatory wiring diagram, and without it, you don't understand the regulation."
+  },
+  {
+   "t": 186.21,
+   "text": "So here's the question Hi-C is built to answer."
+  },
+  {
+   "t": 189.41,
+   "text": "Given the genome, can we measure — in an unbiased, genome-wide way — which pairs of locations are physically in contact in three dimensions?"
+  },
+  {
+   "t": 198.85,
+   "text": "Not just one pair at a time."
+  },
+  {
+   "t": 200.44,
+   "text": "All of them."
+  },
+  {
+   "t": 201.29,
+   "text": "Every-against-every."
+  },
+  {
+   "t": 202.75,
+   "text": "The full 3D contact map of the genome, derived from a population of cells, read out as data we can analyze on a computer."
+  },
+  {
+   "t": 211.32,
+   "text": "That's the goal."
+  },
+  {
+   "t": 212.35,
+   "text": "And the technique that delivered it — Hi-C, invented in 2009 by Erez Lieberman-Aiden, Job Dekker, and colleagues — is one of the most beautiful applications of next-generation sequencing in modern biology."
+  },
+  {
+   "t": 225.72,
+   "text": "We're going to spend the next two hours unpacking it."
+  },
+  {
+   "t": 228.96,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the Hi-C protocol on a whiteboard and explain what each step does, especially the proximity ligation step that is the heart of the whole thing; two, look at a Hi-C contact heatmap and identify the major features — the diagonal, the compartments, the TADs, the loops — and explain in plain English what each one means about the underlying biology; three, look at any modern paper that says \"we performed Hi-C\" or \"we"
+  },
+  {
+   "t": 258.7,
+   "text": "found that this enhancer contacts this promoter in 3D\" and have a real intuition for how that data was generated, what its limits are, and what conclusions are or aren't supported by it — then we've succeeded."
+  },
+  {
+   "t": 271.76,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 273.96,
+   "text": "One more orienting fact."
+  },
+  {
+   "t": 275.64,
+   "text": "The 3D genome is, right now, one of the hottest areas in molecular biology."
+  },
+  {
+   "t": 281.14,
+   "text": "There are entire research institutes built around it."
+  },
+  {
+   "t": 284.66,
+   "text": "There are major textbooks being rewritten because of what Hi-C has shown us."
+  },
+  {
+   "t": 289.26,
+   "text": "The discovery of topologically associating domains, or TADs, which we'll cover in Segment 6, was a moment of conceptual reorganization comparable to the discovery of operons in bacteria — it told us that the genome is not a flat string of regulatory elements but a structured hierarchy of regulatory neighborhoods."
+  },
+  {
+   "t": 310.19,
+   "text": "The discovery of loop extrusion as the mechanism that builds those neighborhoods, which we'll cover in Segment 7, is one of the most beautiful examples in modern biology of theoretical prediction meeting experimental confirmation."
+  },
+  {
+   "t": 324.04,
+   "text": "Hi-C and its descendants are the techniques that let us see all of this."
+  },
+  {
+   "t": 328.89,
+   "text": "So let's see how they work."
+  }
+ ]
+}

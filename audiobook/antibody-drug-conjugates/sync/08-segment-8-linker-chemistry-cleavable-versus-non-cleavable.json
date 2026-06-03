@@ -1,0 +1,259 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Linker chemistry — cleavable versus non-cleavable",
+ "duration": 422.65,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Linker chemistry — cleavable versus non-cleavable"
+  },
+  {
+   "t": 4.67,
+   "text": "We've been touching on linker chemistry throughout the lecture."
+  },
+  {
+   "t": 8.24,
+   "text": "Now let's slow down and look at it properly."
+  },
+  {
+   "t": 10.78,
+   "text": "The linker is the most chemically interesting part of an ADC, because it has to do something that looks contradictory — be totally stable in one environment and totally unstable in another, and switch from one to the other on the timescale of cellular trafficking."
+  },
+  {
+   "t": 24.89,
+   "text": "Linkers fall into two big categories."
+  },
+  {
+   "t": 27.68,
+   "text": "Cleavable linkers, which break in response to some specific intracellular trigger."
+  },
+  {
+   "t": 33.17,
+   "text": "And non-cleavable linkers, which require the entire antibody to be enzymatically digested before the payload comes off."
+  },
+  {
+   "t": 41.05,
+   "text": "Let me walk through each."
+  },
+  {
+   "t": 42.73,
+   "text": "Cleavable linkers come in three sub-flavors, organized by the chemical trigger that releases the payload."
+  },
+  {
+   "t": 49.0,
+   "text": "The first sub-flavor is acid-labile linkers."
+  },
+  {
+   "t": 52.06,
+   "text": "These are designed to break under low pH conditions — specifically, the acidic environment of the late endosome and lysosome, which can drop to a pH of about 4.5 to 5."
+  },
+  {
+   "t": 63.41,
+   "text": "The classic example is the hydrazone linker used in Mylotarg."
+  },
+  {
+   "t": 67.94,
+   "text": "Hydrazones are stable at the neutral pH of plasma, about 7.4, but they hydrolyze slowly under acidic conditions."
+  },
+  {
+   "t": 76.55,
+   "text": "So when the ADC gets internalized and trafficked to the lysosome, the linker breaks, releasing the payload."
+  },
+  {
+   "t": 83.44,
+   "text": "The problem with this design, as Mylotarg taught us, is that the stability in plasma is only relative."
+  },
+  {
+   "t": 90.41,
+   "text": "Hydrazones do slowly break in circulation too, especially over long half-lives."
+  },
+  {
+   "t": 96.38,
+   "text": "So you get some payload leakage during the days that the ADC is circulating, and that leakage drives systemic toxicity."
+  },
+  {
+   "t": 104.85,
+   "text": "The second sub-flavor is reducible linkers, typically built around disulfide bonds."
+  },
+  {
+   "t": 111.11,
+   "text": "Disulfide bonds are stable in the oxidizing environment of the bloodstream but break under reducing conditions."
+  },
+  {
+   "t": 118.34,
+   "text": "The cytoplasm of a cell is a more reducing environment than plasma, with lots of glutathione and other reductants, so a disulfide linker breaks once the ADC payload reaches the cytoplasm."
+  },
+  {
+   "t": 131.39,
+   "text": "The maytansinoid family of ADCs has used disulfide linkers in some designs."
+  },
+  {
+   "t": 137.24,
+   "text": "The challenge with disulfides is that the stability gradient between plasma and cytoplasm is not as steep as you'd like."
+  },
+  {
+   "t": 145.18,
+   "text": "Some leakage happens."
+  },
+  {
+   "t": 146.78,
+   "text": "The third sub-flavor is enzymatically cleavable linkers — the design used by Adcetris, T-DXd, and most modern ADCs."
+  },
+  {
+   "t": 155.72,
+   "text": "These linkers are short peptide sequences designed to be substrates for specific enzymes that are abundant inside cells but scarce outside cells."
+  },
+  {
+   "t": 165.35,
+   "text": "The classic example is the valine-citrulline linker, which is cleaved by cathepsin B, a lysosomal cysteine protease."
+  },
+  {
+   "t": 173.57,
+   "text": "Valine-citrulline is essentially invisible to extracellular proteases — citrulline is a non-standard amino acid that most enzymes don't recognize as a substrate, so plasma proteases don't cut it."
+  },
+  {
+   "t": 187.26,
+   "text": "But cathepsin B inside the lysosome cuts it cleanly."
+  },
+  {
+   "t": 191.3,
+   "text": "The result is a linker that is exceptionally stable in plasma but cleaves promptly once inside the lysosome."
+  },
+  {
+   "t": 198.53,
+   "text": "T-DXd uses a similar concept with a different peptide sequence — a glycine-rich tetrapeptide."
+  },
+  {
+   "t": 205.51,
+   "text": "The enzymatic strategy is, broadly, the winning approach today."
+  },
+  {
+   "t": 210.44,
+   "text": "The peptide chemistry is well understood."
+  },
+  {
+   "t": 213.12,
+   "text": "The enzymes you're targeting are well characterized."
+  },
+  {
+   "t": 216.44,
+   "text": "The stability in plasma can be measured directly."
+  },
+  {
+   "t": 219.79,
+   "text": "And the engineering window — the difference between plasma stability and lysosomal cleavage rate — is much wider than for acid-labile or disulfide chemistry."
+  },
+  {
+   "t": 229.57,
+   "text": "Non-cleavable linkers, the other big category, are exemplified by the SMCC thioether linker used in T-DM1."
+  },
+  {
+   "t": 237.55,
+   "text": "The chemistry here is straightforward: there is no designed trigger for cleavage."
+  },
+  {
+   "t": 243.01,
+   "text": "The linker is just a stable chemical bond."
+  },
+  {
+   "t": 245.82,
+   "text": "The way the payload gets released is that the entire antibody portion of the ADC gets digested by lysosomal proteases."
+  },
+  {
+   "t": 254.01,
+   "text": "The proteins are chewed up amino acid by amino acid, and at the end of this process, the only thing left is the payload still attached to one of those amino acids — typically a lysine, in the case of SMCC-DM1."
+  },
+  {
+   "t": 268.54,
+   "text": "That amino-acid-payload conjugate is the active species."
+  },
+  {
+   "t": 272.64,
+   "text": "The advantage of non-cleavable linkers is stability — the linker simply cannot break in circulation, because there's no chemistry that breaks it short of proteolysis of the whole antibody."
+  },
+  {
+   "t": 284.22,
+   "text": "The disadvantages are two."
+  },
+  {
+   "t": 285.95,
+   "text": "First, the released payload is a charged amino acid conjugate, which is membrane-impermeable, which means no bystander effect."
+  },
+  {
+   "t": 294.7,
+   "text": "Second, the kinetics of release are slow — protein digestion in the lysosome takes time, so the active payload appears more gradually than with a cleavable linker."
+  },
+  {
+   "t": 305.78,
+   "text": "Which approach is better?"
+  },
+  {
+   "t": 307.23,
+   "text": "It depends on what you want."
+  },
+  {
+   "t": 308.64,
+   "text": "If your target is highly homogeneous on the tumor — every cancer cell expresses lots of the target — then a non-cleavable linker can work very well."
+  },
+  {
+   "t": 318.69,
+   "text": "The bystander effect isn't necessary because every cell is directly targeted."
+  },
+  {
+   "t": 324.24,
+   "text": "The added stability of the linker reduces systemic toxicity, which improves the therapeutic window."
+  },
+  {
+   "t": 331.24,
+   "text": "If your target is heterogeneous, or if you want the drug to work in low-antigen patients, then you almost certainly want a cleavable linker with bystander activity."
+  },
+  {
+   "t": 340.59,
+   "text": "The killing radius extension is worth the slightly worse stability."
+  },
+  {
+   "t": 344.94,
+   "text": "The history of the field has trended toward cleavable, bystander-capable linkers, largely because of T-DXd's success."
+  },
+  {
+   "t": 352.79,
+   "text": "Most new ADC programs are now designed with this approach as the default."
+  },
+  {
+   "t": 357.88,
+   "text": "But the non-cleavable design has not gone away entirely — T-DM1 is still on the market, still useful for HER2-positive disease, and the chemistry of non-cleavable linkers has its place."
+  },
+  {
+   "t": 370.13,
+   "text": "One more thing to know about linkers — they're not just chemistry, they're also pharmacology."
+  },
+  {
+   "t": 375.64,
+   "text": "The linker affects the solubility, the aggregation behavior, the plasma half-life, the off-target distribution of the entire ADC."
+  },
+  {
+   "t": 384.42,
+   "text": "A linker that is too hydrophobic — too water-fearing — makes the high-DAR ADC aggregate in solution and get cleared faster from circulation."
+  },
+  {
+   "t": 393.42,
+   "text": "A linker that is too hydrophilic — too water-loving — may not pack well against the antibody and may expose the payload to inappropriate enzymes."
+  },
+  {
+   "t": 402.83,
+   "text": "The right linker chemistry is a balance of stability, cleavability, solubility, and steric accessibility."
+  },
+  {
+   "t": 409.7,
+   "text": "T-DXd's linker has a hydrophilic spacer specifically to allow the high DAR-8 design without causing aggregation."
+  },
+  {
+   "t": 418.13,
+   "text": "The chemistry is finely tuned."
+  },
+  {
+   "t": 420.23,
+   "text": "There are no free lunches in linker design."
+  }
+ ]
+}

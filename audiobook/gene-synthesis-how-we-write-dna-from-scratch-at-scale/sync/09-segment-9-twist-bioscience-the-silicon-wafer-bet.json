@@ -1,0 +1,223 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Twist Bioscience: the silicon wafer bet",
+ "duration": 414.56,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Twist Bioscience: the silicon wafer bet"
+  },
+  {
+   "t": 4.3,
+   "text": "Twist Bioscience was founded in 2013 by Emily Leproust, a chemist who had previously led the oligo array program at Agilent, and two co-founders."
+  },
+  {
+   "t": 14.44,
+   "text": "The bet they made was simple and aggressive."
+  },
+  {
+   "t": 17.36,
+   "text": "They believed that the entire gene synthesis industry was running on inefficient hardware — column synthesizers and first-generation oligo chips — and that if you redesigned the synthesis platform from the ground up around a silicon wafer with picoliter wells, you could cut the cost of gene synthesis by an order of magnitude and capture the whole market."
+  },
+  {
+   "t": 37.76,
+   "text": "That bet, in retrospect, was correct."
+  },
+  {
+   "t": 40.41,
+   "text": "Twist went public in 2018, captured a substantial fraction of the global gene synthesis market over the following five years, and as of the mid-2020s is widely regarded as the largest pure-play DNA synthesis company in the world."
+  },
+  {
+   "t": 56.74,
+   "text": "Whether or not Twist remains the leader long-term is a separate question — we'll come back to that — but the company's early thesis was vindicated thoroughly enough that the entire industry shifted to chip-based synthesis in response."
+  },
+  {
+   "t": 70.26,
+   "text": "Let me describe the Twist platform in more detail, because the specifics are interesting."
+  },
+  {
+   "t": 75.31,
+   "text": "The Twist core technology is a silicon wafer, fabricated using semiconductor-industry equipment, on which the company etches an array of microscopic wells."
+  },
+  {
+   "t": 85.22,
+   "text": "Each well is on the order of ten micrometers across — small enough that the company can pack roughly one million wells onto a single wafer."
+  },
+  {
+   "t": 94.38,
+   "text": "Each well is sealed at the bottom and open at the top, and the wafer is functionalized so that phosphoramidite chemistry can run on the inside walls of every well."
+  },
+  {
+   "t": 104.55,
+   "text": "The synthesis is done by inkjet-style deposition."
+  },
+  {
+   "t": 107.94,
+   "text": "The wafer is positioned under an array of inkjet heads, each addressed to a specific subset of wells."
+  },
+  {
+   "t": 115.12,
+   "text": "To add a base at any given cycle, the inkjet heads spray the appropriate phosphoramidite into the wells that should receive it."
+  },
+  {
+   "t": 123.16,
+   "text": "Different bases get sprayed at different moments to different wells in the same cycle."
+  },
+  {
+   "t": 128.2,
+   "text": "Then the wafer is flushed with capping, oxidation, and deprotection reagents in sequence, all wells in parallel."
+  },
+  {
+   "t": 136.41,
+   "text": "Then the next cycle."
+  },
+  {
+   "t": 137.69,
+   "text": "Over twenty to two hundred cycles, each well builds up its own programmed oligonucleotide sequence."
+  },
+  {
+   "t": 144.4,
+   "text": "The economic magic is that the wafer is the unit of throughput, not the column."
+  },
+  {
+   "t": 149.75,
+   "text": "One wafer makes a million oligos in one run."
+  },
+  {
+   "t": 153.21,
+   "text": "A column synthesizer of comparable size and reagent consumption makes ninety-six oligos in a run."
+  },
+  {
+   "t": 160.36,
+   "text": "The ratio is a factor of ten thousand in parallelism."
+  },
+  {
+   "t": 164.14,
+   "text": "That ratio is, to first approximation, also the ratio of cost reduction Twist achieved — modulo the fact that chip oligos are smaller and noisier and need more downstream processing."
+  },
+  {
+   "t": 176.45,
+   "text": "The analogy I want you to hold for Twist is the move from typewriters to integrated circuits in computing."
+  },
+  {
+   "t": 182.6,
+   "text": "Before chips, computers were built from discrete components."
+  },
+  {
+   "t": 186.66,
+   "text": "Each component was made one at a time, by hand, and assembled into a machine."
+  },
+  {
+   "t": 192.46,
+   "text": "Then somebody figured out that if you could deposit thousands of components onto a single silicon wafer in a single fabrication process, the per-component cost dropped by orders of magnitude and the per-machine cost followed."
+  },
+  {
+   "t": 205.21,
+   "text": "That insight — integration onto a single wafer of many small parallel things that used to be made one at a time — is exactly the move Twist made for DNA synthesis."
+  },
+  {
+   "t": 216.44,
+   "text": "The phosphoramidite chemistry didn't change."
+  },
+  {
+   "t": 219.45,
+   "text": "The form factor did."
+  },
+  {
+   "t": 220.88,
+   "text": "And the form factor is where almost all the cost lives."
+  },
+  {
+   "t": 224.4,
+   "text": "A few specific competitive moves Twist has made over the years that are worth understanding."
+  },
+  {
+   "t": 230.11,
+   "text": "First, Twist invested heavily in the assembly and verification pipeline downstream of the wafer."
+  },
+  {
+   "t": 237.31,
+   "text": "The oligos come off the chip with low per-oligo yield and a real error rate, and Twist's assembly software, error correction, and NGS-based verification turn that noisy oligo soup into a verified gene."
+  },
+  {
+   "t": 250.59,
+   "text": "The chip is a necessary condition for Twist's pricing, but it's not sufficient."
+  },
+  {
+   "t": 255.38,
+   "text": "The verification pipeline is where the customer experience lives."
+  },
+  {
+   "t": 259.59,
+   "text": "Second, Twist has aggressively diversified beyond gene synthesis into oligo pools (for hybridization capture, CRISPR libraries, and similar applications), NGS target enrichment products, antibody discovery services, and DNA data storage research."
+  },
+  {
+   "t": 277.2,
+   "text": "The thesis behind that diversification is that the chip is a horizontal platform — it makes oligos, full stop, and you can apply those oligos to many different downstream products."
+  },
+  {
+   "t": 288.29,
+   "text": "The chip is more like a manufacturing capability than a specific product, and the company has tried to monetize that capability across as many product lines as possible."
+  },
+  {
+   "t": 298.87,
+   "text": "Third, Twist has invested in biosecurity screening infrastructure as a competitive moat."
+  },
+  {
+   "t": 304.9,
+   "text": "The company screens every incoming order against a database of dangerous pathogen sequences and the company has been a leading advocate for industry-wide screening standards."
+  },
+  {
+   "t": 316.0,
+   "text": "The pitch to customers — and to regulators — is that ordering from Twist is safe in a way that ordering from less-scrutinized vendors might not be."
+  },
+  {
+   "t": 325.59,
+   "text": "We'll come back to biosecurity in the final segment, but I want to flag here that, for a company in this business, biosecurity isn't just a regulatory obligation."
+  },
+  {
+   "t": 335.1,
+   "text": "It's a competitive positioning."
+  },
+  {
+   "t": 336.86,
+   "text": "Twist is not without competitors and not without challenges."
+  },
+  {
+   "t": 341.54,
+   "text": "Their margins have been pressured by the broader market, by competition, and by the considerable capital cost of running a fab-style facility."
+  },
+  {
+   "t": 349.51,
+   "text": "Whether their next decade is as dominant as their first is an open question."
+  },
+  {
+   "t": 354.61,
+   "text": "But the bet they made in 2013 — that the entire industry would shift to chip-based synthesis — was the right bet, and they were the first company to scale it."
+  },
+  {
+   "t": 364.27,
+   "text": "Now, before we break, let me set up where we're going in the second half."
+  },
+  {
+   "t": 368.12,
+   "text": "We've covered the workflow, the chemistry of assembly, the chip-based oligo platform, the error rate problem, the cost curve, and the company that bet on chips."
+  },
+  {
+   "t": 377.74,
+   "text": "In the second hour, we'll cover the competitive landscape — IDT, Genscript, Eurofins, the defunct Gen9, the rest of the gene synthesis ecosystem — and then we'll move into the more specialized topics: variant libraries, codon optimization, clonal versus pooled output, the economics of when you should synthesize versus clone, and finally the next frontier: enzymatic DNA synthesis, which threatens to do to phosphoramidite chemistry what phosphoramidite did to Khorana's chemistry fifty years ago."
+  },
+  {
+   "t": 409.84,
+   "text": "Take ten minutes."
+  },
+  {
+   "t": 411.15,
+   "text": "Stretch your legs."
+  },
+  {
+   "t": 412.47,
+   "text": "See you back here at the top of the hour."
+  }
+ ]
+}

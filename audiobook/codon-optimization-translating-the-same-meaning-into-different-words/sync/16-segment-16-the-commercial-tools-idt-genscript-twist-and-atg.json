@@ -1,0 +1,191 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — The commercial tools: IDT, GenScript, Twist, and ATG",
+ "duration": 371.64,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — The commercial tools: IDT, GenScript, Twist, and ATG"
+  },
+  {
+   "t": 7.49,
+   "text": "If you walk into a molecular biology lab today and ask someone how they're going to codon-optimize their gene, you're not going to hear them say \"I'm going to sit down with a codon usage table and a notepad."
+  },
+  {
+   "t": 18.79,
+   "text": "\" You're going to hear them say \"I'll run it through the optimizer at IDT\" or \"I'll use GenScript's GenSmart\" or \"Twist's optimizer is bundled with their gene synthesis."
+  },
+  {
+   "t": 29.95,
+   "text": "\" The actual practice of codon optimization is now done by web-based tools provided by gene synthesis companies, and the tools are integrated tightly with the synthesis workflow."
+  },
+  {
+   "t": 40.14,
+   "text": "You optimize the gene online, you click order, and a tube of DNA shows up in your lab a week later."
+  },
+  {
+   "t": 46.54,
+   "text": "Let me walk through the main players, because the differences between them are real and they tell you something about the state of the art."
+  },
+  {
+   "t": 53.74,
+   "text": "IDT — Integrated DNA Technologies — is one of the big oligo and gene synthesis companies."
+  },
+  {
+   "t": 61.15,
+   "text": "Their codon optimization tool, called the Codon Optimization Tool, is free to use online."
+  },
+  {
+   "t": 67.03,
+   "text": "It supports a wide variety of host organisms, lets you specify constraints like restriction sites to avoid and GC content targets, and produces a sequence that's ready to order for synthesis."
+  },
+  {
+   "t": 79.24,
+   "text": "The IDT tool is widely used in academic labs because it's free, integrated with their oligo and gBlocks ordering system, and produces sensible output for most use cases."
+  },
+  {
+   "t": 90.76,
+   "text": "GenScript GenSmart is another widely used tool, from the gene synthesis company GenScript."
+  },
+  {
+   "t": 96.99,
+   "text": "GenSmart is more sophisticated than the basic IDT tool — it incorporates more constraints, supports more host organisms, and has been refined based on GenScript's large internal dataset of gene synthesis outcomes."
+  },
+  {
+   "t": 110.88,
+   "text": "GenScript has been in the gene synthesis business for a long time and has seen which sequences work well in which hosts, and that feedback has informed the algorithm."
+  },
+  {
+   "t": 120.1,
+   "text": "GenSmart is also free to use."
+  },
+  {
+   "t": 122.66,
+   "text": "Twist Bioscience is the major next-generation gene synthesis company, having essentially scaled the chip-based oligo synthesis approach to industrial production volumes."
+  },
+  {
+   "t": 133.57,
+   "text": "Their codon optimizer is integrated with their synthesis ordering system and is designed to produce sequences that are both well-optimized for the host and easy to synthesize on Twist's platform."
+  },
+  {
+   "t": 144.82,
+   "text": "Twist has invested heavily in making their optimizer fast, scalable, and capable of handling large batch orders — important if you're a company designing thousands of variants of a protein at once."
+  },
+  {
+   "t": 156.84,
+   "text": "There are also more specialized tools from smaller companies."
+  },
+  {
+   "t": 160.32,
+   "text": "ATG:biosynthetics in Germany has been doing custom codon optimization since the early days, and they offer more bespoke services for difficult cases — antibody engineering, vaccines, gene therapy programs where you really need a sophisticated optimization rather than a generic one."
+  },
+  {
+   "t": 178.12,
+   "text": "OptimumGen from GenScript is a more advanced version aimed at high-throughput industrial applications."
+  },
+  {
+   "t": 184.51,
+   "text": "GeneOptimizer, originally from GeneArt and now part of Thermo Fisher, is another well-established tool with a long track record."
+  },
+  {
+   "t": 193.09,
+   "text": "There's also a growing set of open-source tools."
+  },
+  {
+   "t": 196.39,
+   "text": "DNAchisel is a Python library that can do codon optimization with extensive constraint support."
+  },
+  {
+   "t": 202.71,
+   "text": "Codon Optimization OnLine (COOL) is a free academic tool."
+  },
+  {
+   "t": 207.64,
+   "text": "The Vienna RNA package isn't an optimizer per se, but it provides the secondary structure prediction that underlies most modern optimizers."
+  },
+  {
+   "t": 216.9,
+   "text": "For users who want full control over the optimization process and don't want to use a commercial tool, these open-source options are a reasonable alternative."
+  },
+  {
+   "t": 225.75,
+   "text": "What do these tools actually do internally?"
+  },
+  {
+   "t": 228.03,
+   "text": "At a high level, they all do similar things, with various refinements."
+  },
+  {
+   "t": 233.06,
+   "text": "They take in your protein sequence — or your starting DNA sequence — and your choice of host organism."
+  },
+  {
+   "t": 239.61,
+   "text": "They look up the host's codon usage table."
+  },
+  {
+   "t": 242.1,
+   "text": "They apply a codon-replacement algorithm that picks synonymous codons for each amino acid, weighted by the host's preferences."
+  },
+  {
+   "t": 250.59,
+   "text": "Then they scan the candidate sequence for problems — rare codon clusters, GC extremes, restriction sites, splice sites, homopolymers, secondary structure at the start — and they iteratively modify codons to fix any problems."
+  },
+  {
+   "t": 265.61,
+   "text": "They iterate until they converge on a sequence that satisfies all the constraints."
+  },
+  {
+   "t": 271.14,
+   "text": "The details of the algorithm vary."
+  },
+  {
+   "t": 273.32,
+   "text": "Some tools use a greedy approach — pick the best codon at each position, then fix any problems by local edits."
+  },
+  {
+   "t": 281.24,
+   "text": "Some use a genetic algorithm — generate many candidate sequences and let them compete, selecting for low constraint violation."
+  },
+  {
+   "t": 289.84,
+   "text": "Some use more sophisticated approaches based on dynamic programming or simulated annealing."
+  },
+  {
+   "t": 295.54,
+   "text": "The choice of algorithm affects how quickly the tool runs and how good the final sequence is, but for most practical purposes the differences are small."
+  },
+  {
+   "t": 304.51,
+   "text": "One thing that has changed dramatically in the last few years is the size of genes that can be designed and synthesized."
+  },
+  {
+   "t": 311.25,
+   "text": "In the 1990s, codon-optimizing and synthesizing a thousand-base-pair gene was a noteworthy project."
+  },
+  {
+   "t": 317.92,
+   "text": "Today, you can order a five-thousand-base-pair codon-optimized gene from Twist in a week for a few hundred dollars."
+  },
+  {
+   "t": 324.85,
+   "text": "The barrier to deploying codon optimization in your workflow has dropped to essentially nothing."
+  },
+  {
+   "t": 331.12,
+   "text": "Any new protein expression project starts with codon optimization as the default, and the optimization is built into the synthesis order."
+  },
+  {
+   "t": 339.35,
+   "text": "The frontier of commercial tooling is around batch optimization — designing thousands of variants of a protein at once, each with different codon strategies, and screening empirically for which one expresses best."
+  },
+  {
+   "t": 352.5,
+   "text": "The major synthesis companies are now offering services where they design and synthesize variant libraries based on different optimization parameters, and the customer expresses them all in parallel and picks the winner."
+  },
+  {
+   "t": 365.0,
+   "text": "This kind of high-throughput approach is starting to converge with machine learning, which brings us to our next segment."
+  }
+ ]
+}

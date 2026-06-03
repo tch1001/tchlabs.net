@@ -1,0 +1,291 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — The workflow, end to end",
+ "duration": 440.73,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — The workflow, end to end"
+  },
+  {
+   "t": 3.12,
+   "text": "Let me walk you, before we go into any of the chemistry or the companies, through the actual end-to-end workflow of what happens when you order a gene today."
+  },
+  {
+   "t": 11.49,
+   "text": "This is the picture I want you to have in your head as a scaffold."
+  },
+  {
+   "t": 15.14,
+   "text": "We will fill in the details over the rest of the lecture, but I want you to see the whole arc first."
+  },
+  {
+   "t": 20.62,
+   "text": "Step one: design."
+  },
+  {
+   "t": 22.01,
+   "text": "You sit at your computer and you compose the DNA sequence you want."
+  },
+  {
+   "t": 26.24,
+   "text": "Maybe it's a gene from your favorite organism that you want to express in E. coli."
+  },
+  {
+   "t": 30.96,
+   "text": "Maybe it's a protein you designed in a structure-prediction program and you need the DNA that encodes it."
+  },
+  {
+   "t": 37.35,
+   "text": "Maybe it's a synthetic regulatory element, or a guide RNA scaffold, or a humanized version of an antibody."
+  },
+  {
+   "t": 44.85,
+   "text": "Whatever it is, the output of step one is a text string — a sequence of A's, T's, G's, and C's — that lives in a file on your computer."
+  },
+  {
+   "t": 54.79,
+   "text": "Maybe it's twelve hundred bases long."
+  },
+  {
+   "t": 57.02,
+   "text": "Maybe it's three thousand."
+  },
+  {
+   "t": 58.83,
+   "text": "You'll often also specify some flanking pieces: cloning sites, ribosome binding sites, tags."
+  },
+  {
+   "t": 66.33,
+   "text": "The whole thing, including flanking pieces, you package up into a single sequence."
+  },
+  {
+   "t": 71.95,
+   "text": "Step two: submit."
+  },
+  {
+   "t": 73.47,
+   "text": "You paste the sequence into a vendor's website — Twist, IDT, Genscript, Eurofins, whoever."
+  },
+  {
+   "t": 80.72,
+   "text": "The website immediately does several things."
+  },
+  {
+   "t": 84.29,
+   "text": "It checks the sequence for problematic features — long repeats, extreme GC content, hairpins — that might be hard to synthesize."
+  },
+  {
+   "t": 93.15,
+   "text": "It runs a biosecurity screen to make sure you're not ordering a chunk of a smallpox genome or a ricin toxin sequence."
+  },
+  {
+   "t": 100.76,
+   "text": "It often offers you, automatically, a codon-optimized version of your sequence tuned for whatever host organism you've specified."
+  },
+  {
+   "t": 108.9,
+   "text": "You confirm what you want, you choose a delivery format — usually a plasmid, sometimes a linear fragment — you put in your credit card or a purchase order number, and you click submit."
+  },
+  {
+   "t": 119.3,
+   "text": "Step three: oligo design and synthesis at the vendor."
+  },
+  {
+   "t": 123.74,
+   "text": "Now things start happening in the vendor's facility."
+  },
+  {
+   "t": 126.76,
+   "text": "Your fifteen-hundred-base gene gets fed into their assembly-design software."
+  },
+  {
+   "t": 131.28,
+   "text": "The software splits your gene into a set of overlapping oligos — typically somewhere between thirty and a hundred short oligos, each maybe fifty to two hundred bases long, with carefully designed overlaps where adjacent oligos share twenty or thirty bases of identical sequence."
+  },
+  {
+   "t": 149.94,
+   "text": "That overlap is what will let them anneal to each other during assembly."
+  },
+  {
+   "t": 153.79,
+   "text": "The vendor's synthesizers — either column synthesizers or, more commonly now, chip-based oligo arrays — manufacture all of those oligos in parallel."
+  },
+  {
+   "t": 164.34,
+   "text": "Step four: assembly."
+  },
+  {
+   "t": 166.32,
+   "text": "The vendor takes that pile of overlapping oligos, mixes them together in a tube, and runs an assembly reaction."
+  },
+  {
+   "t": 173.82,
+   "text": "The dominant chemistries here are polymerase cycling assembly (PCA), Gibson assembly, and Golden Gate."
+  },
+  {
+   "t": 181.3,
+   "text": "We'll go into all three."
+  },
+  {
+   "t": 182.75,
+   "text": "The point of any of them is to take that soup of short, overlapping pieces and zipper them up into a single long molecule that matches your designed sequence end to end."
+  },
+  {
+   "t": 192.85,
+   "text": "Step five: cloning into a vector."
+  },
+  {
+   "t": 195.5,
+   "text": "The assembled long fragment is then ligated, or recombined, into a plasmid vector — typically a generic cloning plasmid with a selectable marker and an origin of replication, the kind of thing you saw in the plasmids lecture."
+  },
+  {
+   "t": 210.04,
+   "text": "The product is transformed into E. coli, plated on selection, and bacterial colonies grow up overnight."
+  },
+  {
+   "t": 217.36,
+   "text": "Step six: verification."
+  },
+  {
+   "t": 219.62,
+   "text": "This is the step everyone forgets to think about, and it's the step that determines whether you actually got what you ordered or not."
+  },
+  {
+   "t": 226.14,
+   "text": "The vendor picks individual colonies, mini-preps them, and sequences the plasmid."
+  },
+  {
+   "t": 231.66,
+   "text": "If the sequence matches your design, that clone is shipped to you."
+  },
+  {
+   "t": 235.51,
+   "text": "If not, that clone is discarded and another one is checked."
+  },
+  {
+   "t": 239.31,
+   "text": "Usually they pick several colonies to maximize their odds of finding at least one perfect match."
+  },
+  {
+   "t": 245.34,
+   "text": "Step seven: ship."
+  },
+  {
+   "t": 247.06,
+   "text": "The verified plasmid, dried down into a tiny pellet of about a microgram of DNA, is sealed in a tube, dropped in a padded envelope, and shipped to your lab."
+  },
+  {
+   "t": 257.21,
+   "text": "You open the envelope, you resuspend the pellet in a little water, you transform a fresh batch of E. coli with it, and now you have an unlimited supply of your designed gene."
+  },
+  {
+   "t": 267.24,
+   "text": "Total time, today, for a typical gene: somewhere between four business days and three weeks, depending on the vendor and the length and the difficulty."
+  },
+  {
+   "t": 275.95,
+   "text": "Total cost: somewhere between fifty and three hundred dollars for a fifteen-hundred-base gene in a standard cloning vector."
+  },
+  {
+   "t": 283.44,
+   "text": "A grad student doing the same job by traditional cloning, finding the gene from a tissue source and PCR-cloning it, is looking at three to eight weeks of bench work and a much larger consumable budget."
+  },
+  {
+   "t": 295.76,
+   "text": "That is the reason the industry has, in fifteen years, become a billion-dollar business serving every academic and biotech lab on the planet."
+  },
+  {
+   "t": 305.13,
+   "text": "A few things I want to flag about that workflow, that we are going to come back to over and over."
+  },
+  {
+   "t": 309.95,
+   "text": "First: the oligo synthesis step — step three — is the rate limiter and the cost driver."
+  },
+  {
+   "t": 316.38,
+   "text": "Everything downstream is cheap and fast once you have the oligos."
+  },
+  {
+   "t": 320.87,
+   "text": "Most of the innovation in this industry, including the entire rise of Twist Bioscience as a company, has been about making that oligo synthesis step cheaper per base."
+  },
+  {
+   "t": 331.19,
+   "text": "We'll see how."
+  },
+  {
+   "t": 332.29,
+   "text": "Second: the assembly step — step four — is where there's interesting chemistry."
+  },
+  {
+   "t": 337.58,
+   "text": "PCA, Gibson, Golden Gate, Type IIS-based assembly, MoClo, Loop assembly — all of these are different molecular strategies for solving the same problem of \"take a soup of short pieces and zipper them together."
+  },
+  {
+   "t": 352.02,
+   "text": "\" Each has tradeoffs."
+  },
+  {
+   "t": 353.4,
+   "text": "We'll see those."
+  },
+  {
+   "t": 354.58,
+   "text": "Third: the verification step — step six — is where most of the customer's quality experience comes from."
+  },
+  {
+   "t": 361.17,
+   "text": "The error rate in raw oligos is small but nonzero."
+  },
+  {
+   "t": 365.38,
+   "text": "By the time you've assembled a fifteen-hundred-base gene from forty oligos, the probability that the assembled product has at least one wrong base somewhere is high enough that you absolutely cannot ship the first colony you pick."
+  },
+  {
+   "t": 378.61,
+   "text": "You have to sequence."
+  },
+  {
+   "t": 380.02,
+   "text": "That's why a vendor's pricing typically includes \"sequence-verified\" in the description, and that's why a verified gene costs more than a raw assembly."
+  },
+  {
+   "t": 388.62,
+   "text": "We'll spend a whole segment on the error rate and verification math, because it is fundamental."
+  },
+  {
+   "t": 394.25,
+   "text": "Fourth: the biosecurity screen in step two is, philosophically, kind of remarkable."
+  },
+  {
+   "t": 401.16,
+   "text": "The major gene synthesis companies have voluntarily — and now, in some jurisdictions, legally — agreed to screen incoming orders against databases of dangerous pathogen sequences."
+  },
+  {
+   "t": 413.4,
+   "text": "If you try to order the genome of variola major, or large stretches of the 1918 flu hemagglutinin, your order gets flagged and reviewed before it ships, or it doesn't ship at all."
+  },
+  {
+   "t": 423.82,
+   "text": "The companies have, in effect, become biosecurity infrastructure for the world."
+  },
+  {
+   "t": 428.66,
+   "text": "That is a story unto itself and we will come back to it in the final segment."
+  },
+  {
+   "t": 433.67,
+   "text": "Okay."
+  },
+  {
+   "t": 434.46,
+   "text": "That's the workflow at thirty thousand feet."
+  },
+  {
+   "t": 437.21,
+   "text": "Now let's drop down and look at how the assembly actually works."
+  }
+ ]
+}

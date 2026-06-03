@@ -1,0 +1,235 @@
+{
+ "n": 19,
+ "title": "APPENDIX",
+ "duration": 386.74,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX"
+  },
+  {
+   "t": 1.06,
+   "text": "A few additional topics that didn't fit cleanly into the main lecture but are worth knowing about."
+  },
+  {
+   "t": 6.69,
+   "text": "Bacterial and metagenomic RNA-seq."
+  },
+  {
+   "t": 9.84,
+   "text": "I mentioned briefly that bacteria don't have poly-A tails, so bacterial RNA-seq requires rRNA depletion."
+  },
+  {
+   "t": 17.19,
+   "text": "The standard kit for bacterial rRNA depletion is Illumina's Ribo-Zero Plus with bacterial probe sets."
+  },
+  {
+   "t": 24.12,
+   "text": "For metagenomic RNA-seq — sequencing the RNA from a mixed community of microbes, like a gut microbiome — you face additional complications: you don't have a reference genome for most of the organisms, you have to assemble the sequences de novo, and you have to handle the fact that the community has very different abundance distributions than a clonal sample."
+  },
+  {
+   "t": 46.04,
+   "text": "Tools like MetaTrans, SAMSA2, and HUMAnN specialize in metagenomic RNA-seq analysis."
+  },
+  {
+   "t": 52.75,
+   "text": "Small RNA sequencing."
+  },
+  {
+   "t": 54.77,
+   "text": "Bulk RNA-seq, as I described it, captures medium-sized RNAs — typically 100 to 10,000 base pairs."
+  },
+  {
+   "t": 63.16,
+   "text": "Small RNAs — microRNAs (~22 nt), piRNAs, tRNA fragments — are lost during standard library prep because the size selection step excludes them."
+  },
+  {
+   "t": 74.38,
+   "text": "Small RNA sequencing uses a different library prep that specifically captures these short species, with custom adapters that can handle very short inserts."
+  },
+  {
+   "t": 84.46,
+   "text": "Tools like miRDeep2 and mirgeFF specialize in microRNA quantitation."
+  },
+  {
+   "t": 89.8,
+   "text": "If you're interested in regulatory small RNAs, you need a dedicated small RNA-seq experiment, not standard bulk RNA-seq."
+  },
+  {
+   "t": 98.29,
+   "text": "Ribosome profiling — Ribo-seq."
+  },
+  {
+   "t": 100.89,
+   "text": "A clever variation on RNA-seq that captures only the RNA fragments that are being actively translated by ribosomes at the moment of cell lysis."
+  },
+  {
+   "t": 110.24,
+   "text": "You treat the cells with cycloheximide to freeze the ribosomes, lyse, digest the un-translated RNA with nucleases, and sequence the protected fragments."
+  },
+  {
+   "t": 121.38,
+   "text": "The result is a count, at codon resolution, of how many ribosomes were sitting on each part of each mRNA — a direct measure of translation, not just transcription."
+  },
+  {
+   "t": 132.54,
+   "text": "Ribo-seq is the gold standard for measuring translational regulation, and it's used to identify novel open reading frames, study ribosome pausing, and characterize codon-level translation efficiency."
+  },
+  {
+   "t": 145.36,
+   "text": "Allele-specific expression and RNA editing."
+  },
+  {
+   "t": 148.6,
+   "text": "Bulk RNA-seq can measure differences in expression between the two alleles in a heterozygous individual — useful for studying imprinting, cis-regulatory effects, and allele-specific splicing."
+  },
+  {
+   "t": 160.49,
+   "text": "It can also detect RNA editing events (mostly A-to-I editing by ADAR enzymes) by looking for mismatches between the RNA reads and the genomic reference."
+  },
+  {
+   "t": 170.88,
+   "text": "Both applications require careful analysis and often deeper sequencing than standard differential expression."
+  },
+  {
+   "t": 177.72,
+   "text": "Spike-in controls."
+  },
+  {
+   "t": 179.31,
+   "text": "For experiments where you suspect global expression changes — for example, drug treatments that shut down transcription — you can't rely on the standard library-size normalization, because that normalization assumes total RNA is roughly constant."
+  },
+  {
+   "t": 194.47,
+   "text": "The solution is to add a known quantity of exogenous RNA (typically ERCC spike-in controls from NIST) to each sample before extraction."
+  },
+  {
+   "t": 204.26,
+   "text": "The spike-in counts give you an external reference that doesn't depend on the biology."
+  },
+  {
+   "t": 209.35,
+   "text": "Spike-ins are essential for experiments measuring global transcription changes; they're optional for standard differential expression."
+  },
+  {
+   "t": 217.15,
+   "text": "The bulk RNA-seq vocabulary cheat sheet."
+  },
+  {
+   "t": 220.2,
+   "text": "FASTQ: raw read file from the sequencer."
+  },
+  {
+   "t": 223.72,
+   "text": "BAM: aligned read file."
+  },
+  {
+   "t": 225.86,
+   "text": "GTF: gene annotation file."
+  },
+  {
+   "t": 229.03,
+   "text": "Count matrix: gene-by-sample matrix of read counts."
+  },
+  {
+   "t": 232.9,
+   "text": "The fundamental output."
+  },
+  {
+   "t": 234.29,
+   "text": "RPKM/FPKM: legacy normalization, length-normalized then library-size-normalized."
+  },
+  {
+   "t": 241.91,
+   "text": "TPM: modern normalization, length-normalized then sample-normalized to sum to one million."
+  },
+  {
+   "t": 248.82,
+   "text": "DESeq2 / edgeR / limma-voom: differential expression tools."
+  },
+  {
+   "t": 254.72,
+   "text": "STAR / HISAT2: splice-aware aligners."
+  },
+  {
+   "t": 258.35,
+   "text": "Salmon / kallisto: pseudoalignment-based quantifiers."
+  },
+  {
+   "t": 263.1,
+   "text": "featureCounts / HTSeq: counting tools."
+  },
+  {
+   "t": 267.43,
+   "text": "PSI: percent spliced in, the metric for alternative splicing."
+  },
+  {
+   "t": 272.12,
+   "text": "rMATS / SUPPA / MAJIQ: alternative splicing analysis tools."
+  },
+  {
+   "t": 278.6,
+   "text": "GSEA: gene set enrichment analysis."
+  },
+  {
+   "t": 282.09,
+   "text": "MSigDB: the standard gene set database."
+  },
+  {
+   "t": 286.06,
+   "text": "GO / KEGG / Reactome: pathway databases."
+  },
+  {
+   "t": 291.19,
+   "text": "GTEx / TCGA / ENCODE / GEO: the major public datasets."
+  },
+  {
+   "t": 298.88,
+   "text": "CIBERSORT: deconvolution tool, estimates cell type proportions from bulk data."
+  },
+  {
+   "t": 304.99,
+   "text": "FFPE: formalin-fixed paraffin-embedded, the standard clinical sample format."
+  },
+  {
+   "t": 310.56,
+   "text": "RIN: RNA integrity number, a quality metric."
+  },
+  {
+   "t": 314.69,
+   "text": "ComBat-Seq: batch correction tool for count data."
+  },
+  {
+   "t": 318.58,
+   "text": "MultiQC: aggregates QC outputs across a project."
+  },
+  {
+   "t": 323.47,
+   "text": "Reading list."
+  },
+  {
+   "t": 324.59,
+   "text": "For deeper study, the canonical papers are: Mortazavi et al. 2008 (Nature Methods), Nagalakshmi et al. 2008 (Science), Wang et al. 2009 (Nature Reviews Genetics) — the methodological foundations; Love, Huber, Anders 2014 (Genome Biology) — DESeq2; Subramanian et al. 2005 (PNAS) — GSEA; the GTEx Consortium papers (multiple, in Nature) — the public datasets."
+  },
+  {
+   "t": 354.63,
+   "text": "For textbooks, look at Conesa et al. 2016 (Genome Biology) \"A survey of best practices for RNA-seq data analysis\" — still one of the best methodological overviews."
+  },
+  {
+   "t": 367.23,
+   "text": "Bulk RNA-seq is mature, but the literature is huge."
+  },
+  {
+   "t": 371.76,
+   "text": "The right entry point is one specific question — your question — and the willingness to read the methods sections of a dozen papers carefully."
+  },
+  {
+   "t": 380.72,
+   "text": "That's how you become competent."
+  },
+  {
+   "t": 382.48,
+   "text": "That's how every working RNA-seq biologist learned the field."
+  }
+ ]
+}

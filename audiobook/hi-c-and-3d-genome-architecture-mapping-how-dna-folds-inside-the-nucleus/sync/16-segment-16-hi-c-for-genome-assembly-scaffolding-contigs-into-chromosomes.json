@@ -1,0 +1,119 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Hi-C for genome assembly: scaffolding contigs into chromosomes",
+ "duration": 228.55,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Hi-C for genome assembly: scaffolding contigs into chromosomes"
+  },
+  {
+   "t": 6.56,
+   "text": "Now I want to tell you about a beautiful, completely unexpected application of Hi-C that has nothing to do with regulation or disease."
+  },
+  {
+   "t": 15.84,
+   "text": "It's about genome assembly — the process of taking a pile of short DNA sequencing reads and reconstructing the genome they came from."
+  },
+  {
+   "t": 25.0,
+   "text": "Hi-C, it turns out, is one of the best tools we have for this, and it has changed how we assemble genomes for almost every non-model organism on Earth."
+  },
+  {
+   "t": 34.4,
+   "text": "Here's the problem."
+  },
+  {
+   "t": 35.52,
+   "text": "When you sequence a new species' genome — say, a beetle, or a fungus, or an obscure plant — you don't start with a reference."
+  },
+  {
+   "t": 44.25,
+   "text": "You start with billions of short reads, you assemble them into contigs (contiguous sequences) using an assembler, and you end up with hundreds or thousands of contigs ranging from a few kilobases to a few megabases."
+  },
+  {
+   "t": 58.24,
+   "text": "These contigs are pieces of the genome, but you don't know which contigs belong on which chromosome, or what order they go in, or how they're oriented."
+  },
+  {
+   "t": 66.85,
+   "text": "Assembly stops at contigs because short reads can't bridge the long repetitive regions between them."
+  },
+  {
+   "t": 72.75,
+   "text": "Here's the trick."
+  },
+  {
+   "t": 73.84,
+   "text": "Run Hi-C on the same organism."
+  },
+  {
+   "t": 76.25,
+   "text": "Hi-C tells you which regions of the genome are in physical contact in 3D."
+  },
+  {
+   "t": 81.3,
+   "text": "Contigs that are on the same chromosome will have many Hi-C contacts to each other, because everything on a chromosome is in the same chromosome territory."
+  },
+  {
+   "t": 90.46,
+   "text": "Contigs on different chromosomes will have very few Hi-C contacts to each other."
+  },
+  {
+   "t": 95.6,
+   "text": "So by clustering contigs based on their Hi-C contact frequencies, you can group them into chromosomes — and even order and orient them within each chromosome, because contigs that are linearly adjacent on a chromosome have stronger Hi-C contacts than contigs that are far apart."
+  },
+  {
+   "t": 112.14,
+   "text": "This is the analogy."
+  },
+  {
+   "t": 113.51,
+   "text": "Hi-C scaffolding is the bonus."
+  },
+  {
+   "t": 116.08,
+   "text": "The technique was invented for studying 3D folding, but it turns out that the simple fact \"contigs that share Hi-C contacts must be on the same chromosome\" lets you scaffold any assembly for free."
+  },
+  {
+   "t": 128.04,
+   "text": "It's like buying a thermometer and finding out it also measures barometric pressure."
+  },
+  {
+   "t": 133.18,
+   "text": "The first major papers using this approach appeared around 2013, and by 2015 it had become the standard scaffolding tool."
+  },
+  {
+   "t": 142.01,
+   "text": "Today, almost every chromosome-scale genome assembly of a new species uses Hi-C scaffolding."
+  },
+  {
+   "t": 148.65,
+   "text": "Companies like Phase Genomics and Dovetail Genomics sell standardized Hi-C kits specifically for the genome-assembly use case."
+  },
+  {
+   "t": 157.46,
+   "text": "National-scale projects like the Earth BioGenome Project, which aims to sequence every eukaryotic species, depend heavily on Hi-C for producing chromosome-level assemblies."
+  },
+  {
+   "t": 168.36,
+   "text": "The cost is modest — one Hi-C library, sequenced to a few hundred million reads, is sufficient to scaffold a typical animal or plant genome — and the result is dramatic, turning a fragmented assembly of thousands of contigs into a chromosome-level reference with a few dozen sequences."
+  },
+  {
+   "t": 186.64,
+   "text": "The technique works because chromosome territories are real and robust: contigs from the same chromosome always have more Hi-C contacts to each other than contigs from different chromosomes, regardless of the species, as long as the cells were properly fixed."
+  },
+  {
+   "t": 202.21,
+   "text": "This is one of my favorite results in modern genomics, because it illustrates the principle that a tool invented to answer one question often turns out to answer another, unrelated question even better."
+  },
+  {
+   "t": 213.7,
+   "text": "Hi-C as a regulatory genomics tool is important."
+  },
+  {
+   "t": 217.26,
+   "text": "Hi-C as a genome assembly tool may turn out to be even more consequential in the long run, because it's how we will assemble the genomes of millions of species over the coming decades."
+  }
+ ]
+}

@@ -1,0 +1,187 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Higher-resolution variants: in situ Hi-C, Micro-C, and beyond",
+ "duration": 426.17,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Higher-resolution variants: in situ Hi-C, Micro-C, and beyond"
+  },
+  {
+   "t": 6.6,
+   "text": "The original 2009 Hi-C protocol, while groundbreaking, had limitations of resolution."
+  },
+  {
+   "t": 13.59,
+   "text": "The HindIII restriction enzyme cuts every four kilobases on average, so contacts could only be localized to within a few kilobases."
+  },
+  {
+   "t": 22.66,
+   "text": "The dilution-and-ligation step, which was done with chromatin in solution, was prone to producing some spurious ligations between unrelated complexes that happened to drift close together."
+  },
+  {
+   "t": 33.75,
+   "text": "And the sequencing depth required was enormous."
+  },
+  {
+   "t": 36.96,
+   "text": "Over the years, the field has produced several improved variants that address these issues."
+  },
+  {
+   "t": 42.7,
+   "text": "In situ Hi-C was introduced in 2014 in a landmark paper by Suhas Rao, Miriam Huntley, Neva Durand, Elena Stamenova, Ivan Bochkov, James Robinson, Adrian Sanborn, Ido Machol, Arina Omer, Eric Lander, and Erez Lieberman-Aiden in Cell."
+  },
+  {
+   "t": 62.52,
+   "text": "The key innovation: instead of doing the ligation step in solution, after the cells have been lysed and the chromatin extracted, do it in situ — inside intact nuclei."
+  },
+  {
+   "t": 73.64,
+   "text": "The nuclei serve as a natural compartment that concentrates the chromatin in a small volume and prevents unrelated complexes from coming close enough to ligate spuriously."
+  },
+  {
+   "t": 84.72,
+   "text": "The result is a much cleaner library with far fewer false ligation events."
+  },
+  {
+   "t": 89.6,
+   "text": "The in situ Hi-C protocol uses MboI or DpnII as the restriction enzyme — both four-cutters that cut GATC every few hundred base pairs — to achieve finer fragmentation."
+  },
+  {
+   "t": 102.62,
+   "text": "Combined with the deeper sequencing made possible by improvements in Illumina throughput, the 2014 paper produced Hi-C maps at one-kilobase resolution for several cell types, including the GM12878 lymphoblastoid line, which has become a standard reference for 3D genome studies."
+  },
+  {
+   "t": 122.08,
+   "text": "The paper identified about ten thousand chromatin loops with kilobase-precision anchors — the resolution at which loops as point-contacts in the heatmap could be clearly resolved."
+  },
+  {
+   "t": 132.93,
+   "text": "This is the data set that established the convergent CTCF rule and the subcompartment refinement we mentioned in Segment 5."
+  },
+  {
+   "t": 140.66,
+   "text": "Micro-C is the next major step."
+  },
+  {
+   "t": 143.34,
+   "text": "Introduced by Hsieh and colleagues in Oliver Rando's lab in 2015 (for yeast) and then extended to mammalian cells by Krietenstein, Abraham, Venev, and others in 2020, Micro-C replaces the restriction enzyme step entirely with digestion by micrococcal nuclease, or MNase."
+  },
+  {
+   "t": 163.75,
+   "text": "MNase is an enzyme that chews up DNA preferentially in the linker regions between nucleosomes, leaving the nucleosome-protected DNA intact."
+  },
+  {
+   "t": 173.81,
+   "text": "The result is that each fragment in a Micro-C library corresponds to a single nucleosome — about 147 base pairs of DNA wrapped around a histone octamer."
+  },
+  {
+   "t": 185.65,
+   "text": "This is a major resolution win."
+  },
+  {
+   "t": 187.97,
+   "text": "Because nucleosomes are spaced every 200 base pairs or so on average, Micro-C gives you contact data at near-nucleosome resolution — about ten times finer than in situ Hi-C with a four-cutter restriction enzyme."
+  },
+  {
+   "t": 202.39,
+   "text": "The contact maps from Micro-C reveal a much richer pattern of fine-scale structure, including loops at the scale of individual gene bodies, smaller sub-TAD domains called \"stripes\" that arise from one-sided extrusion events, and the contact patterns at promoters and enhancers at nucleosome resolution."
+  },
+  {
+   "t": 221.06,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 222.35,
+   "text": "If Hi-C is taking a photograph through a fogged-up window — you can see the broad strokes of the building, but the fine details are blurred — then Micro-C is wiping the window clean."
+  },
+  {
+   "t": 233.46,
+   "text": "The same building is visible, but the windowsills, the doorframes, the brick pattern, all sharpen into view."
+  },
+  {
+   "t": 240.71,
+   "text": "The same 3D genome, but at much finer resolution."
+  },
+  {
+   "t": 244.59,
+   "text": "The cost is that Micro-C requires significantly more sequencing depth than Hi-C to achieve the resolution payoff, and the MNase digestion is more sensitive to optimization than restriction digestion."
+  },
+  {
+   "t": 258.15,
+   "text": "But for high-resolution studies of specific loci or specific regulatory contacts, Micro-C is now often the technique of choice."
+  },
+  {
+   "t": 267.14,
+   "text": "Capture Hi-C is another variant worth knowing."
+  },
+  {
+   "t": 270.12,
+   "text": "The idea: after preparing a Hi-C library, you don't sequence the whole thing."
+  },
+  {
+   "t": 275.62,
+   "text": "Instead, you do a hybridization-based capture step — like the targeted capture step in exome sequencing — to enrich for fragments that contain at least one read from a region of interest."
+  },
+  {
+   "t": 286.93,
+   "text": "If you're studying the regulatory contacts of, say, ten thousand promoters, you design capture probes to all of them, do the capture, and sequence the enriched library."
+  },
+  {
+   "t": 297.19,
+   "text": "The result is much deeper coverage of contacts involving the captured regions, at much lower sequencing cost than whole-genome Hi-C at equivalent depth."
+  },
+  {
+   "t": 307.01,
+   "text": "Promoter Capture Hi-C, developed by Peter Fraser's group and others, is the variant where the capture probes are designed against all annotated promoters in the genome."
+  },
+  {
+   "t": 317.29,
+   "text": "This gives you, for every gene, a deep view of which regulatory elements contact its promoter in 3D."
+  },
+  {
+   "t": 325.29,
+   "text": "It's one of the most powerful ways to assemble enhancer-to-promoter maps at scale, and it's been used in dozens of studies linking GWAS variants — common genetic variants associated with disease — to the genes they regulate via 3D contacts."
+  },
+  {
+   "t": 341.01,
+   "text": "There are other variants we won't dwell on but you should know exist."
+  },
+  {
+   "t": 344.77,
+   "text": "HiChIP combines Hi-C with chromatin immunoprecipitation — you do a ChIP step in the middle of the Hi-C protocol to enrich for contacts mediated by a specific protein, like cohesin or a particular transcription factor."
+  },
+  {
+   "t": 359.06,
+   "text": "PLAC-seq is similar."
+  },
+  {
+   "t": 360.89,
+   "text": "GAM — genome architecture mapping — is a completely ligation-free alternative that uses cryosectioning of fixed cells to identify which regions co-localize in thin slices of the nucleus."
+  },
+  {
+   "t": 373.66,
+   "text": "SPRITE is another ligation-free method that uses split-and-pool barcoding to identify groups of co-localizing genomic regions."
+  },
+  {
+   "t": 382.37,
+   "text": "Each method has its strengths; the field is healthier for having multiple orthogonal techniques that can cross-validate each other's findings."
+  },
+  {
+   "t": 390.38,
+   "text": "The progression from Hi-C to in situ Hi-C to Micro-C to capture-based variants reflects a general pattern in genomics: an initial breakthrough technique is refined over a decade into a family of variants, each optimized for a specific question or scale."
+  },
+  {
+   "t": 407.19,
+   "text": "The same thing happened to ChIP-seq, to single-cell RNA-seq, to ATAC-seq."
+  },
+  {
+   "t": 413.94,
+   "text": "The pattern is so reliable it's worth naming: one breakthrough, then ten years of refinement, then a textbook chapter."
+  },
+  {
+   "t": 421.96,
+   "text": "Hi-C is somewhere between the breakthrough and the textbook chapter right now."
+  }
+ ]
+}

@@ -1,0 +1,227 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — mRNA secondary structure near the start codon",
+ "duration": 399.26,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — mRNA secondary structure near the start codon"
+  },
+  {
+   "t": 4.8,
+   "text": "So far we've been talking about codon usage as if it were just about the matching of codons to tRNAs."
+  },
+  {
+   "t": 11.12,
+   "text": "But there's another layer to the problem that has nothing to do with tRNAs directly, and everything to do with how the mRNA folds on itself before the ribosome ever gets to it."
+  },
+  {
+   "t": 22.57,
+   "text": "Recall that mRNA, like DNA, is a single-stranded nucleic acid, but unlike DNA, it can base-pair with itself when complementary regions on the same strand come into contact."
+  },
+  {
+   "t": 34.85,
+   "text": "A stretch of mRNA that's complementary to another stretch nearby can fold back and form a stem, like a hairpin."
+  },
+  {
+   "t": 42.48,
+   "text": "These local folded structures, called secondary structures, are everywhere in mRNA — most mRNAs have them."
+  },
+  {
+   "t": 50.5,
+   "text": "Some of these structures are functional and required for the mRNA to work properly."
+  },
+  {
+   "t": 55.94,
+   "text": "Others are just incidental, the consequence of the particular sequence the mRNA happens to have."
+  },
+  {
+   "t": 62.94,
+   "text": "Here's why this matters for codon optimization."
+  },
+  {
+   "t": 65.65,
+   "text": "Secondary structure near the start codon can block translation initiation."
+  },
+  {
+   "t": 70.61,
+   "text": "The ribosome, when it binds an mRNA to start translating, needs to be able to physically reach the start codon — typically AUG."
+  },
+  {
+   "t": 79.36,
+   "text": "If there's a tight hairpin right at or near the start codon, the ribosome can't dock properly, and translation initiation rates collapse."
+  },
+  {
+   "t": 88.53,
+   "text": "You can have the best codon usage in the world for the rest of the gene, but if your start codon is buried inside a tight stem-loop, the ribosome can't begin translation and you get no protein."
+  },
+  {
+   "t": 99.75,
+   "text": "This effect is so important that, in many expression systems, the strength of mRNA secondary structure around the start codon is the single biggest determinant of protein yield, more important than the codon usage in the body of the gene."
+  },
+  {
+   "t": 113.96,
+   "text": "There are studies, particularly in E. coli, where researchers took the same protein-coding region but varied only the first ten or twenty codons, and the expression levels varied by more than a hundred-fold."
+  },
+  {
+   "t": 126.92,
+   "text": "The protein was identical."
+  },
+  {
+   "t": 128.9,
+   "text": "The body of the gene was identical."
+  },
+  {
+   "t": 131.4,
+   "text": "The only thing that differed was the local secondary structure at the start."
+  },
+  {
+   "t": 135.62,
+   "text": "And the structure made or broke the experiment."
+  },
+  {
+   "t": 138.45,
+   "text": "So a modern codon optimizer pays special attention to the region around the start codon — typically the first ten to fifteen codons, or about the first thirty to fifty nucleotides of the coding sequence."
+  },
+  {
+   "t": 151.21,
+   "text": "In that region, the optimizer not only chooses codons based on the usual codon usage and GC content criteria, but also explicitly computes the predicted secondary structure — the minimum free energy of folding — and tries to keep it weak."
+  },
+  {
+   "t": 167.01,
+   "text": "The goal is for the start codon to be in a relatively unstructured region of the mRNA, so the ribosome can easily access it."
+  },
+  {
+   "t": 175.38,
+   "text": "The analogy I'd offer: the start codon is the front door of the protein, and the ribosome is the visitor trying to get in."
+  },
+  {
+   "t": 183.38,
+   "text": "If the door is sitting in an open lobby, the visitor walks right in."
+  },
+  {
+   "t": 187.72,
+   "text": "If the door is half-blocked by furniture — by an mRNA hairpin — the visitor has to work harder to push through."
+  },
+  {
+   "t": 195.44,
+   "text": "A heavy enough block and the visitor never enters at all."
+  },
+  {
+   "t": 199.35,
+   "text": "The body of the gene, the corridor leading to the rest of the protein, can have whatever decor it wants."
+  },
+  {
+   "t": 206.19,
+   "text": "But the front entrance needs to be clear."
+  },
+  {
+   "t": 208.61,
+   "text": "This effect is particularly strong in bacteria, but it's also present in eukaryotes."
+  },
+  {
+   "t": 214.44,
+   "text": "In bacteria, the ribosome binds the mRNA by recognizing a sequence called the Shine-Dalgarno, located just upstream of the start codon, and then sliding to the AUG."
+  },
+  {
+   "t": 226.55,
+   "text": "If the Shine-Dalgarno is masked by secondary structure, ribosomes can't bind."
+  },
+  {
+   "t": 231.84,
+   "text": "In eukaryotes, the ribosome binds at the 5' cap of the mRNA and scans toward the start codon."
+  },
+  {
+   "t": 238.56,
+   "text": "If the scanning ribosome hits a stable hairpin between the cap and the start codon, scanning fails."
+  },
+  {
+   "t": 244.88,
+   "text": "Different mechanisms, same problem: front-door obstruction."
+  },
+  {
+   "t": 248.76,
+   "text": "For codon optimization specifically, this means the optimizer can't just look at codon usage at the start of the gene — it has to look at the entire local sequence, including the untranslated region upstream and the first few codons downstream, and ensure that no strong hairpin forms in that region."
+  },
+  {
+   "t": 266.86,
+   "text": "The tools do this by computing the predicted minimum free energy of folding using thermodynamic software like the ViennaRNA package or mFold, scanning along the sequence, and picking synonymous codons that minimize local structure."
+  },
+  {
+   "t": 282.05,
+   "text": "The trade-off here is that minimizing secondary structure at the start of the gene can sometimes mean choosing slightly less-preferred codons for the first ten or fifteen positions."
+  },
+  {
+   "t": 292.29,
+   "text": "That's a worthwhile sacrifice — getting translation to initiate at all is more important than maximizing codon usage at the very start of a protein."
+  },
+  {
+   "t": 301.79,
+   "text": "A good optimizer balances these objectives smoothly."
+  },
+  {
+   "t": 305.6,
+   "text": "There's one more bacterial-specific issue lurking here, and it deserves its own brief treatment: avoiding internal Shine-Dalgarno-like sequences in the body of the gene."
+  },
+  {
+   "t": 316.5,
+   "text": "We'll touch on this in a moment, because it'll come up again in the next segment."
+  },
+  {
+   "t": 320.82,
+   "text": "For now, the message to take away is this: the start of the gene is special."
+  },
+  {
+   "t": 326.66,
+   "text": "The codon usage in the first thirty or fifty nucleotides matters less than the secondary structure those codons happen to create."
+  },
+  {
+   "t": 335.47,
+   "text": "A good optimizer treats the start region as a structure-minimization problem, and treats the rest of the gene as a codon-usage problem."
+  },
+  {
+   "t": 343.54,
+   "text": "They're different objectives, and they get weighted differently."
+  },
+  {
+   "t": 346.99,
+   "text": "Recognizing this asymmetry was one of the major advances in codon optimization in the 2000s and early 2010s, and it's why modern tools dramatically outperform the simple codon-replacement approaches of the early 1990s."
+  },
+  {
+   "t": 361.81,
+   "text": "Alright."
+  },
+  {
+   "t": 362.6,
+   "text": "We've covered a lot."
+  },
+  {
+   "t": 363.82,
+   "text": "The genetic code is degenerate."
+  },
+  {
+   "t": 366.14,
+   "text": "Each organism has codon preferences."
+  },
+  {
+   "t": 368.89,
+   "text": "Rare codons stall the ribosome."
+  },
+  {
+   "t": 371.42,
+   "text": "We have metrics to measure the match — CAI, tAI, %MinMax."
+  },
+  {
+   "t": 376.51,
+   "text": "We avoid rare codons, balance GC content, avoid restriction sites and homopolymers, and pay special attention to secondary structure at the start."
+  },
+  {
+   "t": 387.14,
+   "text": "That's the standard codon optimization workflow."
+  },
+  {
+   "t": 390.25,
+   "text": "Let's take a break, and when we come back, we'll get into the more surprising stuff — including the ways that this whole picture breaks down in interesting cases."
+  }
+ ]
+}

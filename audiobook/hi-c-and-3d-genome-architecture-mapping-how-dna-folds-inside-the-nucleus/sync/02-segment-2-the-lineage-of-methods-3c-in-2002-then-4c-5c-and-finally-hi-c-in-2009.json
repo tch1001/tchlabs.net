@@ -1,0 +1,295 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — The lineage of methods: 3C in 2002, then 4C, 5C, and finally Hi-C in 2009",
+ "duration": 472.94,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — The lineage of methods: 3C in 2002, then 4C, 5C, and finally Hi-C in 2009"
+  },
+  {
+   "t": 10.69,
+   "text": "Hi-C didn't appear from nowhere."
+  },
+  {
+   "t": 12.89,
+   "text": "It is the genome-wide endpoint of a lineage of methods that started smaller and got progressively more ambitious."
+  },
+  {
+   "t": 20.24,
+   "text": "Understanding the lineage matters, because each step in the lineage solved a specific limitation of the previous one, and the logic of those solutions is the same logic that drives all of modern chromatin biology."
+  },
+  {
+   "t": 32.76,
+   "text": "So let's trace the family tree."
+  },
+  {
+   "t": 34.51,
+   "text": "The original method, the ancestor, is called 3C — chromosome conformation capture."
+  },
+  {
+   "t": 41.12,
+   "text": "It was invented in 2002 in the lab of Job Dekker, who at the time was a postdoc working with Nancy Kleckner at Harvard."
+  },
+  {
+   "t": 48.95,
+   "text": "The paper appeared in Science in February 2002."
+  },
+  {
+   "t": 53.04,
+   "text": "The idea is simple, and it's the idea that underlies every single technique we'll discuss today, so I want you to hold it carefully."
+  },
+  {
+   "t": 62.02,
+   "text": "Here's the idea."
+  },
+  {
+   "t": 63.27,
+   "text": "Take a population of cells."
+  },
+  {
+   "t": 65.19,
+   "text": "Treat them with formaldehyde — a chemical fixative — which covalently crosslinks proteins to other proteins and to DNA at their points of contact."
+  },
+  {
+   "t": 74.71,
+   "text": "Anything that was touching in 3D is now glued together."
+  },
+  {
+   "t": 78.64,
+   "text": "Open the cells, expose the chromatin, and digest the DNA with a restriction enzyme — an enzyme that cuts the DNA at specific sequence sites, generating fragments with defined sticky ends."
+  },
+  {
+   "t": 91.75,
+   "text": "Now you have a mess of crosslinked chromatin, with DNA fragments held together by protein bridges, where the fragments stuck together are the ones that were in physical contact when you fixed the cells."
+  },
+  {
+   "t": 103.24,
+   "text": "Next — and this is the magical step — you dilute the sample enormously and add a DNA ligase."
+  },
+  {
+   "t": 110.55,
+   "text": "Ligase is the enzyme that joins compatible DNA ends together."
+  },
+  {
+   "t": 115.12,
+   "text": "Because the sample is so dilute, ligation events between fragments from different original crosslinked complexes are very rare."
+  },
+  {
+   "t": 123.66,
+   "text": "Ligations happen overwhelmingly between fragments that were stuck together by the crosslinking — fragments that were in physical contact."
+  },
+  {
+   "t": 131.74,
+   "text": "After ligation, you reverse the crosslinks by heating the sample and digesting the protein, and you're left with a pool of DNA fragments where each ligation junction represents a pair of regions that were physically touching inside the original cell."
+  },
+  {
+   "t": 146.54,
+   "text": "In 3C, the readout was PCR."
+  },
+  {
+   "t": 149.88,
+   "text": "You designed a pair of primers — one for region A, one for region B — and asked, by PCR, whether the ligation product joining A to B existed in your library."
+  },
+  {
+   "t": 160.55,
+   "text": "If it did, you got a band; A and B were in contact."
+  },
+  {
+   "t": 164.18,
+   "text": "If it didn't, no band; A and B weren't in contact."
+  },
+  {
+   "t": 168.05,
+   "text": "3C was a one-against-one assay."
+  },
+  {
+   "t": 170.35,
+   "text": "You picked two regions in advance and asked whether they touched."
+  },
+  {
+   "t": 174.69,
+   "text": "It was powerful — it gave the first quantitative measurements of long-range chromatin contacts at specific loci — but it was painfully limited."
+  },
+  {
+   "t": 184.38,
+   "text": "To map the contacts of one region against the whole genome, you'd need millions of primer pairs."
+  },
+  {
+   "t": 190.69,
+   "text": "The next step in the lineage was 4C — circular chromosome conformation capture, or sometimes \"one against all."
+  },
+  {
+   "t": 198.59,
+   "text": "\" Developed around 2006 by several groups independently, 4C extended 3C by adding a second round of digestion and ligation to produce circular DNA molecules, which could then be sequenced or PCR-amplified using primers pointing outward from a single \"bait\" region."
+  },
+  {
+   "t": 217.21,
+   "text": "The result was that, for one chosen bait sequence, you could measure its contacts with every other region in the genome in a single experiment."
+  },
+  {
+   "t": 225.94,
+   "text": "4C was a major step."
+  },
+  {
+   "t": 227.68,
+   "text": "But it was still one bait at a time."
+  },
+  {
+   "t": 229.61,
+   "text": "Want to know the contacts of a hundred different baits?"
+  },
+  {
+   "t": 232.6,
+   "text": "Run a hundred experiments."
+  },
+  {
+   "t": 234.32,
+   "text": "Then came 5C — chromosome conformation capture carbon copy."
+  },
+  {
+   "t": 239.86,
+   "text": "This was developed in Dekker's lab in 2006."
+  },
+  {
+   "t": 243.46,
+   "text": "5C used pools of primers covering many regions of interest, and a ligation-based readout, to measure contacts between many regions and many regions in a single experiment."
+  },
+  {
+   "t": 255.03,
+   "text": "It was \"many against many."
+  },
+  {
+   "t": 257.04,
+   "text": "\" 5C was the first technique that could give you a contact matrix for a whole genomic region — say, a one-megabase locus — with reasonable resolution."
+  },
+  {
+   "t": 267.0,
+   "text": "But it still required you to design and synthesize the primers up front, and it could only cover regions you'd targeted in advance."
+  },
+  {
+   "t": 275.19,
+   "text": "It scaled to maybe a few hundred kilobases of regions of interest, not to whole genomes."
+  },
+  {
+   "t": 281.33,
+   "text": "The breakthrough — the moment \"many against many\" became \"everything against everything\" — was Hi-C, published in October 2009 in Science by Erez Lieberman-Aiden, Nynke van Berkum, Louise Williams, Maxim Imakaev, Tobias Ragoczy, Agnes Telling, Ido Amit, Bryan Lajoie, Peter Sabo, Michael Dorschner, Richard Sandstrom, Bradley Bernstein, M."
+  },
+  {
+   "t": 306.86,
+   "text": "A."
+  },
+  {
+   "t": 307.55,
+   "text": "Bender, Mark Groudine, Andreas Gnirke, John Stamatoutos, Leonid Mirny, Eric Lander, and Job Dekker."
+  },
+  {
+   "t": 315.65,
+   "text": "That's a lot of authors, but the senior team — Lieberman-Aiden, Mirny, Lander, Dekker — anchored the work, and Lieberman-Aiden, then a young graduate student, was the driving force."
+  },
+  {
+   "t": 327.21,
+   "text": "The Hi-C paper showed how to make 3C work without picking any regions in advance."
+  },
+  {
+   "t": 332.88,
+   "text": "No primers, no baits, no targeting."
+  },
+  {
+   "t": 336.21,
+   "text": "Crosslink the cells, digest with a restriction enzyme, then add a clever new step — biotin labeling of the cut ends — that marks every ligation junction so it can be pulled down at the end."
+  },
+  {
+   "t": 348.21,
+   "text": "Ligate under dilute conditions."
+  },
+  {
+   "t": 350.64,
+   "text": "Reverse crosslinks."
+  },
+  {
+   "t": 352.16,
+   "text": "Shear the DNA."
+  },
+  {
+   "t": 353.49,
+   "text": "Pull down the biotin-marked fragments — those are the ones containing ligation junctions."
+  },
+  {
+   "t": 359.25,
+   "text": "Sequence them on Illumina, paired-end."
+  },
+  {
+   "t": 362.15,
+   "text": "Each read pair now tells you: this end of the fragment came from region A; the other end came from region B; A and B were physically in contact in some cell at the moment of crosslinking."
+  },
+  {
+   "t": 374.84,
+   "text": "That's Hi-C."
+  },
+  {
+   "t": 376.05,
+   "text": "It is 3C scaled up to the whole genome by adding a biotin pulldown step and a sequencing readout instead of PCR."
+  },
+  {
+   "t": 384.43,
+   "text": "Every-against-every, all in one experiment."
+  },
+  {
+   "t": 387.34,
+   "text": "The 2009 paper used Hi-C to produce the first whole-genome contact map of a human cell, and it discovered, in the same paper, two of the foundational features we'll spend much of today on: compartments (A and B) and the fractal globule polymer model."
+  },
+  {
+   "t": 404.25,
+   "text": "So the same paper that introduced the technique also introduced two of the key findings about 3D genome structure."
+  },
+  {
+   "t": 411.13,
+   "text": "That is rare and beautiful."
+  },
+  {
+   "t": 413.38,
+   "text": "The lineage in summary: 3C in 2002 — one against one."
+  },
+  {
+   "t": 418.78,
+   "text": "4C in 2006 — one against all."
+  },
+  {
+   "t": 422.14,
+   "text": "5C in 2006 — many against many."
+  },
+  {
+   "t": 426.41,
+   "text": "Hi-C in 2009 — all against all."
+  },
+  {
+   "t": 429.66,
+   "text": "Each step expanded the scope of the question you could ask."
+  },
+  {
+   "t": 433.03,
+   "text": "After Hi-C, the field exploded."
+  },
+  {
+   "t": 435.83,
+   "text": "Over the next decade, there were a half-dozen further variants — in situ Hi-C, single-cell Hi-C, Micro-C, capture Hi-C, Pore-C, and others — each refining the resolution, the cell types accessible, or the kinds of contacts visible."
+  },
+  {
+   "t": 452.99,
+   "text": "We'll meet many of them in later segments."
+  },
+  {
+   "t": 455.64,
+   "text": "But the conceptual core — crosslink, digest, ligate, sequence — is the 3C idea, faithfully carried forward."
+  },
+  {
+   "t": 464.75,
+   "text": "The proximity ligation step is the heart of the whole field."
+  },
+  {
+   "t": 468.51,
+   "text": "Now let's open up the Hi-C protocol itself and look at it step by step."
+  }
+ ]
+}

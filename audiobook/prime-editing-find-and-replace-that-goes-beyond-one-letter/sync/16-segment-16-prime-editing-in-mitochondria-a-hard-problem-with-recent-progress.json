@@ -1,0 +1,127 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Prime editing in mitochondria: a hard problem with recent progress",
+ "duration": 235.5,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Prime editing in mitochondria: a hard problem with recent progress"
+  },
+  {
+   "t": 6.44,
+   "text": "The mitochondrial genome is a special case."
+  },
+  {
+   "t": 9.64,
+   "text": "Every cell in your body has, in addition to the nuclear genome, dozens to hundreds of copies of a small circular mitochondrial DNA — about 16,500 base pairs in humans — encoding 37 essential mitochondrial genes."
+  },
+  {
+   "t": 25.27,
+   "text": "Mutations in mitochondrial DNA cause a long list of diseases, ranging from Leber's hereditary optic neuropathy to MELAS syndrome to dozens of others."
+  },
+  {
+   "t": 36.04,
+   "text": "Treating these diseases by editing the mitochondrial genome would be transformative."
+  },
+  {
+   "t": 41.3,
+   "text": "But mitochondrial DNA has historically been almost untouchable by CRISPR."
+  },
+  {
+   "t": 46.85,
+   "text": "The reason is delivery: guide RNAs cannot be imported into mitochondria."
+  },
+  {
+   "t": 51.96,
+   "text": "Mitochondria have their own internal protein import machinery, but they don't have an RNA import system."
+  },
+  {
+   "t": 58.17,
+   "text": "So you can express Cas9 in the cytoplasm all you want, and you can express guide RNAs, but you can't get the guide RNA into the mitochondrion."
+  },
+  {
+   "t": 67.34,
+   "text": "Without the guide, no editing."
+  },
+  {
+   "t": 69.7,
+   "text": "For a long time, the mitochondrial genome was a frustrating exception to the CRISPR revolution."
+  },
+  {
+   "t": 76.04,
+   "text": "Then in 2020, the Liu lab published a paper introducing a tool called DddA-derived cytosine base editor, or DdCBE — a base editor that doesn't use CRISPR at all."
+  },
+  {
+   "t": 86.06,
+   "text": "Instead it uses a TALE-based DNA-binding domain (we covered TALEs in a previous lecture) fused to a split bacterial cytidine deaminase that only reassembles into active form when the two halves are brought together at adjacent TALE sites."
+  },
+  {
+   "t": 100.83,
+   "text": "DdCBE can edit mitochondrial DNA — installing C-to-T changes — because TALEs are proteins and proteins can be imported into mitochondria."
+  },
+  {
+   "t": 110.95,
+   "text": "No guide RNA needed."
+  },
+  {
+   "t": 112.94,
+   "text": "DdCBE has been the workhorse for mitochondrial base editing since 2020."
+  },
+  {
+   "t": 117.84,
+   "text": "But it has the same limitations as nuclear base editing: only C-to-T (and now, with engineered variants, A-to-G), no transversions, no indels."
+  },
+  {
+   "t": 129.14,
+   "text": "Prime editing in mitochondria is much harder, because of the same RNA import problem."
+  },
+  {
+   "t": 134.7,
+   "text": "A pegRNA can't get into mitochondria."
+  },
+  {
+   "t": 137.54,
+   "text": "So you can't simply transplant the prime editor into the organelle."
+  },
+  {
+   "t": 141.34,
+   "text": "Recent progress has come from several directions."
+  },
+  {
+   "t": 144.57,
+   "text": "One approach has been to develop mitoPE systems that use TALE-based DNA targeting, just like DdCBE, but combined with a tethered reverse transcriptase and a small DNA template (not RNA, but DNA, which can in principle be imported under certain conditions) to enable templated edits."
+  },
+  {
+   "t": 163.74,
+   "text": "This is conceptually a TALE-RT system, not a CRISPR-RT system, and it has been demonstrated in cells in proof-of-principle experiments published in 2023 and 2024."
+  },
+  {
+   "t": 176.01,
+   "text": "Efficiencies are still low — well under 5% in many cases — but the architecture works."
+  },
+  {
+   "t": 182.19,
+   "text": "Another approach has been to engineer mitochondrial RNA import — to attach tags to guide RNAs that allow them to be transported through the mitochondrial membranes by repurposed protein-RNA carriers."
+  },
+  {
+   "t": 194.36,
+   "text": "This is much harder than it sounds, but several groups have made progress, and there are early reports of CRISPR-style prime editing succeeding in mitochondria when RNA import is solved."
+  },
+  {
+   "t": 205.95,
+   "text": "As of mid-2026, mitochondrial prime editing is still an active research area, with no clinical-grade tool yet."
+  },
+  {
+   "t": 214.14,
+   "text": "But the principle has been established, and the field is moving."
+  },
+  {
+   "t": 218.41,
+   "text": "I expect that within the next several years, we'll see a clinical-grade mitochondrial prime editor that can install arbitrary edits in the mitochondrial genome."
+  },
+  {
+   "t": 227.57,
+   "text": "The first applications will likely be Leber's hereditary optic neuropathy and other well-characterized mitochondrial diseases."
+  }
+ ]
+}

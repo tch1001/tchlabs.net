@@ -1,0 +1,275 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The error rate problem and why you must verify",
+ "duration": 482.67,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The error rate problem and why you must verify"
+  },
+  {
+   "t": 4.44,
+   "text": "Before we get to the companies, I want to spend a segment on the most important single concept in commercial gene synthesis, which is the error rate problem."
+  },
+  {
+   "t": 13.3,
+   "text": "If you understand this segment, you will understand why every gene synthesis vendor's price list distinguishes between \"gene fragment\" and \"sequence-verified gene in a vector,\" why those two products cost very different amounts, and why error correction is the single most active area of R&D in this industry."
+  },
+  {
+   "t": 32.38,
+   "text": "Here is the basic fact."
+  },
+  {
+   "t": 34.41,
+   "text": "Phosphoramidite chemistry, even at its best, makes mistakes."
+  },
+  {
+   "t": 39.17,
+   "text": "The coupling reaction at each cycle has a yield somewhere between 98% and 99.5%."
+  },
+  {
+   "t": 47.16,
+   "text": "Yield, recall, means the fraction of growing chains that successfully add the next base."
+  },
+  {
+   "t": 53.19,
+   "text": "The rest of the chains — the failures — get capped, so they don't continue and don't generate insertions, but they do represent truncation errors."
+  },
+  {
+   "t": 62.11,
+   "text": "The chain that should have been thirty bases long ends up only twenty bases long."
+  },
+  {
+   "t": 66.85,
+   "text": "There are also substitution errors, where the wrong base gets coupled because of contamination or impure phosphoramidite."
+  },
+  {
+   "t": 74.36,
+   "text": "And there are deletion errors that slip past capping for various subtle chemical reasons."
+  },
+  {
+   "t": 79.6,
+   "text": "The overall per-base error rate of a high-quality oligo synthesis run is around one error per thousand bases, sometimes a little better, sometimes worse depending on the chemistry and the platform."
+  },
+  {
+   "t": 91.66,
+   "text": "Now here is the math you need to do, in your head, every single time you think about gene synthesis."
+  },
+  {
+   "t": 98.08,
+   "text": "If the per-base error rate is one in a thousand — call that p — and your gene is L bases long, then the probability that any given full-length copy of the gene is perfect, with no errors anywhere, is approximately (1 - p) to the L power."
+  },
+  {
+   "t": 113.55,
+   "text": "For a hundred-base oligo at one-in-a-thousand error, that's about 90% perfect."
+  },
+  {
+   "t": 119.12,
+   "text": "For a five-hundred-base gene, that's about 60% perfect."
+  },
+  {
+   "t": 123.15,
+   "text": "For a fifteen-hundred-base gene, that's about 22% perfect."
+  },
+  {
+   "t": 127.62,
+   "text": "For a three-thousand-base gene, that's about 5% perfect."
+  },
+  {
+   "t": 131.72,
+   "text": "For a ten-thousand-base assembly, the perfect fraction is essentially zero — every molecule has at least one error somewhere."
+  },
+  {
+   "t": 140.31,
+   "text": "Internalize this."
+  },
+  {
+   "t": 141.75,
+   "text": "If you assemble a fifteen-hundred-base-pair gene from oligos and you pick a random colony, there is about a seventy-eight percent chance that colony has at least one wrong base in it."
+  },
+  {
+   "t": 151.8,
+   "text": "Not one in a hundred."
+  },
+  {
+   "t": 153.05,
+   "text": "Not one in ten."
+  },
+  {
+   "t": 154.21,
+   "text": "Almost four chances out of five."
+  },
+  {
+   "t": 156.14,
+   "text": "The first colony you pick is more likely than not to be wrong."
+  },
+  {
+   "t": 160.55,
+   "text": "This is the error rate problem, and it is the central truth that shapes the commercial gene synthesis industry."
+  },
+  {
+   "t": 167.24,
+   "text": "The customer wants a perfect gene."
+  },
+  {
+   "t": 169.36,
+   "text": "The synthesis chemistry produces, at best, an enriched mixture of mostly-correct genes."
+  },
+  {
+   "t": 176.18,
+   "text": "The gap between those two things has to be bridged by screening — by sequence verification of individual clones."
+  },
+  {
+   "t": 183.32,
+   "text": "That step is where most of the cost of a \"sequence-verified\" gene actually comes from."
+  },
+  {
+   "t": 188.71,
+   "text": "The vendor synthesizes the oligos, assembles them, transforms the assembly into bacteria, picks several colonies, mini-preps each one, runs each through Sanger sequencing or short-read sequencing, throws away the bad ones, and ships you a clone they have proven by sequencing to be perfect."
+  },
+  {
+   "t": 207.45,
+   "text": "The number of colonies they have to pick to find a perfect one is a direct function of the per-clone error probability."
+  },
+  {
+   "t": 214.24,
+   "text": "For a five-hundred-base gene where 60% of clones are perfect, picking three colonies gives you a 94% chance that at least one is right."
+  },
+  {
+   "t": 223.54,
+   "text": "For a fifteen-hundred-base gene where 22% are perfect, you need to pick about ten colonies to get a 90% chance of finding a good one."
+  },
+  {
+   "t": 231.95,
+   "text": "For a three-thousand-base gene where 5% are perfect, you need to pick maybe sixty colonies."
+  },
+  {
+   "t": 237.89,
+   "text": "The cost of picking, mini-prepping, and sequencing all those colonies is the dominant cost of long gene synthesis — it scales with gene length much more aggressively than the cost of the oligos themselves."
+  },
+  {
+   "t": 250.68,
+   "text": "So one of the central R&D problems in the industry is: how do we reduce the error rate before screening, so that we have to screen fewer clones?"
+  },
+  {
+   "t": 259.47,
+   "text": "Two strategies dominate."
+  },
+  {
+   "t": 261.27,
+   "text": "The first is MutS-based error correction."
+  },
+  {
+   "t": 264.54,
+   "text": "MutS is an enzyme from the bacterial mismatch repair system that recognizes and binds to mismatched base pairs in double-stranded DNA — places where a G is paired against a T, or an A against a C, instead of the proper Watson-Crick pairing."
+  },
+  {
+   "t": 280.37,
+   "text": "After assembly, you melt and re-anneal your gene preparation."
+  },
+  {
+   "t": 284.74,
+   "text": "Most molecules pair up with copies of themselves (perfect duplex), but molecules with errors sometimes pair up with copies that have the error in a different place, producing mismatches."
+  },
+  {
+   "t": 296.2,
+   "text": "You add MutS, which binds to the mismatches."
+  },
+  {
+   "t": 299.7,
+   "text": "You then filter out the MutS-bound DNA — either physically, by pulling MutS down on a bead, or by cleavage, using an enzyme that cuts at the mismatch."
+  },
+  {
+   "t": 310.79,
+   "text": "What's left is enriched for perfect duplexes."
+  },
+  {
+   "t": 313.83,
+   "text": "The error rate of the surviving DNA drops by an order of magnitude or more."
+  },
+  {
+   "t": 319.32,
+   "text": "This is called consensus shuffling in some implementations, and it was one of the first scalable error correction strategies the industry adopted."
+  },
+  {
+   "t": 327.42,
+   "text": "The second strategy is NGS-verified pooled cloning."
+  },
+  {
+   "t": 331.58,
+   "text": "Here, you don't try to reduce the error rate in solution — you let the error rate be what it is, you clone everything, and then you use next-generation sequencing to find the rare perfect clone in a haystack of imperfect ones."
+  },
+  {
+   "t": 344.79,
+   "text": "You assemble the gene, clone it into a vector, transform into bacteria, plate, and then pool a thousand colonies, prep their DNA together, and run a long-read sequencer over the whole mixture."
+  },
+  {
+   "t": 357.38,
+   "text": "The sequencer tells you which colonies were perfect."
+  },
+  {
+   "t": 360.15,
+   "text": "You go back to the plate, you re-grow just the perfect colonies, you ship one of those."
+  },
+  {
+   "t": 365.55,
+   "text": "This brute-force strategy has become economically viable as sequencing has gotten cheap."
+  },
+  {
+   "t": 371.48,
+   "text": "It's particularly powerful for clonal libraries — where you want one perfect example of each of a thousand different designed variants — because you can do all thousand assemblies in one pool, clone them all together, and let sequencing sort out which colony goes with which design."
+  },
+  {
+   "t": 387.08,
+   "text": "These two strategies — pre-cloning error reduction with MutS, and post-cloning identification with NGS — are the workhorses."
+  },
+  {
+   "t": 396.02,
+   "text": "Different vendors use different combinations."
+  },
+  {
+   "t": 398.92,
+   "text": "The whole game is to drive the per-base error rate of the delivered product down as low as the customer needs it, at the lowest possible cost."
+  },
+  {
+   "t": 407.77,
+   "text": "One more conceptual point."
+  },
+  {
+   "t": 409.35,
+   "text": "The error rate problem is the reason that the cost of synthesizing DNA does not scale linearly with length."
+  },
+  {
+   "t": 416.42,
+   "text": "If you just count the oligos, a three-thousand-base gene is about twice as many oligos as a fifteen-hundred-base gene, so you'd expect the cost to be about twice as much."
+  },
+  {
+   "t": 426.74,
+   "text": "But because the error rate compounds with length, the screening cost scales much faster than linear."
+  },
+  {
+   "t": 433.54,
+   "text": "The fraction of colonies you have to screen to find a perfect one goes up exponentially with length."
+  },
+  {
+   "t": 439.87,
+   "text": "So in practice the cost per base creeps up as the gene gets longer, and at very long lengths — five thousand bases, ten thousand bases — the cost per base can be two or three times what it is at the sweet spot around one thousand bases."
+  },
+  {
+   "t": 454.09,
+   "text": "This is why some vendors offer different pricing tiers based on length, and why above a certain length, vendors typically deliver \"gene fragments\" that you assemble further yourself, rather than a single verified clone."
+  },
+  {
+   "t": 467.27,
+   "text": "The economics of verification dominate above a few kilobases."
+  },
+  {
+   "t": 472.22,
+   "text": "Okay."
+  },
+  {
+   "t": 473.0,
+   "text": "Now let's talk about the cost trajectory, because the story of gene synthesis over the past twenty-five years is, more than anything, a story about price."
+  }
+ ]
+}

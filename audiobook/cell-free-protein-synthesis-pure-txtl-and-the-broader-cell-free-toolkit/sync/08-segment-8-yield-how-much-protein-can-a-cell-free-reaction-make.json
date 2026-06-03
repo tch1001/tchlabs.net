@@ -1,0 +1,243 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Yield: how much protein can a cell-free reaction make?",
+ "duration": 440.61,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Yield: how much protein can a cell-free reaction make?"
+  },
+  {
+   "t": 5.45,
+   "text": "For decades, the polite answer to \"how much protein does cell-free make\" was \"well, enough to confirm a band on a gel."
+  },
+  {
+   "t": 13.68,
+   "text": "\" The yields from classical reticulocyte lysate kits were a microgram or so per fifty-microliter reaction — fine for an autoradiogram, useless for almost anything industrial."
+  },
+  {
+   "t": 25.51,
+   "text": "That ceiling is what gave cell-free its reputation as a niche technique."
+  },
+  {
+   "t": 29.9,
+   "text": "People who needed real protein quantities went to fermentation."
+  },
+  {
+   "t": 33.99,
+   "text": "The modern answer is dramatically different."
+  },
+  {
+   "t": 36.5,
+   "text": "Well-tuned E. coli cell-free systems can now produce, for well-behaved proteins, in the range of one to two milligrams of protein per milliliter of reaction."
+  },
+  {
+   "t": 46.71,
+   "text": "That is not a typo."
+  },
+  {
+   "t": 48.06,
+   "text": "A milliliter of cell-free reaction can yield a couple of milligrams of finished protein, which is comparable to what you would get from a substantial E. coli fermentation per equivalent volume."
+  },
+  {
+   "t": 60.66,
+   "text": "Some specific systems and specific proteins go higher."
+  },
+  {
+   "t": 65.12,
+   "text": "The Swartz group and the industrial groups at companies like Sutro Biopharma have reported yields above five milligrams per milliliter for some constructs."
+  },
+  {
+   "t": 74.47,
+   "text": "The ceiling has, in effect, moved up by three to four orders of magnitude over the last forty years."
+  },
+  {
+   "t": 81.53,
+   "text": "How did we get there?"
+  },
+  {
+   "t": 82.64,
+   "text": "It is worth understanding the engineering trajectory, because it tells you what is actually happening when a cell-free reaction succeeds or fails."
+  },
+  {
+   "t": 91.05,
+   "text": "The first major lever, as I mentioned in Segment 4, was energy regeneration."
+  },
+  {
+   "t": 97.11,
+   "text": "Early systems ran out of ATP within minutes."
+  },
+  {
+   "t": 101.19,
+   "text": "Modern systems use multi-stage energy regeneration based on metabolic substrates that the extract's residual enzymes can process — glucose, maltose, glycolytic intermediates like phosphoenolpyruvate."
+  },
+  {
+   "t": 114.49,
+   "text": "These substrates keep regenerating ATP for hours instead of minutes, and that single improvement is responsible for a large fraction of the yield gain."
+  },
+  {
+   "t": 124.26,
+   "text": "The second lever was inorganic phosphate management."
+  },
+  {
+   "t": 127.97,
+   "text": "As ATP is hydrolyzed during translation, it releases inorganic phosphate."
+  },
+  {
+   "t": 133.91,
+   "text": "Phosphate accumulates in the reaction, and at high concentrations it inhibits translation."
+  },
+  {
+   "t": 140.3,
+   "text": "Newer systems use phosphate-scavenging or phosphate-precipitating strategies to keep that build-up under control."
+  },
+  {
+   "t": 147.36,
+   "text": "The third lever was redox state."
+  },
+  {
+   "t": 149.44,
+   "text": "The cytoplasm of E. coli is reducing — its disulfide bond formation is normally restricted."
+  },
+  {
+   "t": 157.43,
+   "text": "A cell-free reaction inherits that reducing environment from the extract."
+  },
+  {
+   "t": 162.45,
+   "text": "For proteins that need disulfide bonds — antibodies, many secreted proteins, many therapeutics — you have to add an explicit oxidizing system, typically a glutathione redox couple plus a disulfide isomerase like DsbC, to allow disulfide bonds to form correctly."
+  },
+  {
+   "t": 182.38,
+   "text": "Once that was figured out, a whole class of disulfide-containing therapeutic proteins became accessible to cell-free production."
+  },
+  {
+   "t": 190.64,
+   "text": "The fourth lever was strain engineering."
+  },
+  {
+   "t": 192.78,
+   "text": "The E. coli strain used to make the extract can itself be engineered."
+  },
+  {
+   "t": 197.53,
+   "text": "You can knock out proteases that would degrade your product."
+  },
+  {
+   "t": 200.43,
+   "text": "You can knock out competing enzymes that consume amino acids in side reactions."
+  },
+  {
+   "t": 205.49,
+   "text": "You can over-express factors that improve folding."
+  },
+  {
+   "t": 208.44,
+   "text": "The extract is, in effect, customizable at the source, by choosing the right starting strain and engineering it deliberately."
+  },
+  {
+   "t": 217.11,
+   "text": "The fifth lever was continuous-exchange formats."
+  },
+  {
+   "t": 220.04,
+   "text": "In a batch reaction, you set up a fixed volume, you let it run, and you collect what you get."
+  },
+  {
+   "t": 225.55,
+   "text": "In a continuous-exchange cell-free system — CECF — you set up the reaction inside a small chamber separated from a much larger feeding chamber by a semipermeable membrane."
+  },
+  {
+   "t": 237.39,
+   "text": "Small molecules — energy substrates, amino acids — diffuse into the reaction chamber from the feed, while waste products diffuse out."
+  },
+  {
+   "t": 246.66,
+   "text": "The reaction sustains itself for much longer, and the yields climb correspondingly."
+  },
+  {
+   "t": 252.56,
+   "text": "CECF systems can run for twenty-four hours or more with cumulative yields well into the milligram-per-milliliter range."
+  },
+  {
+   "t": 260.19,
+   "text": "Now I should be honest about the asterisks."
+  },
+  {
+   "t": 262.61,
+   "text": "The headline yields of one to two milligrams per milliliter are achievable for well-behaved proteins — soluble, single-domain, no unusual folding requirements, no toxicity."
+  },
+  {
+   "t": 274.05,
+   "text": "For difficult proteins — membrane proteins, large multidomain proteins, proteins that need eukaryotic chaperones, proteins with complex post-translational modifications — yields are often much lower, sometimes by an order of magnitude or more."
+  },
+  {
+   "t": 291.04,
+   "text": "The advertised yields are the high end of the distribution, not the average."
+  },
+  {
+   "t": 296.05,
+   "text": "Even at the high end, cell-free is not a wholesale replacement for fermentation in cost terms."
+  },
+  {
+   "t": 302.05,
+   "text": "If you need kilograms of a protein for a commercial drug, fermentation in a stirred-tank reactor at thousand-liter scale is, in most cases, still cheaper per kilogram."
+  },
+  {
+   "t": 312.35,
+   "text": "Cell-free shines at the small-batch end of the market — milligrams to grams, fast-turnaround, special applications."
+  },
+  {
+   "t": 320.02,
+   "text": "The cost per milligram of cell-free product, even with all the modern improvements, is still typically a few times higher than the cost per milligram from a well-optimized bacterial fermentation."
+  },
+  {
+   "t": 331.55,
+   "text": "The economics get more favorable for difficult proteins, for high-value low-volume products, and for applications where speed matters more than per-unit cost."
+  },
+  {
+   "t": 341.38,
+   "text": "What about scale?"
+  },
+  {
+   "t": 342.62,
+   "text": "Cell-free reactions have been demonstrated at sizes ranging from sub-microliter droplets — in microfluidic devices, for high-throughput screening — up to one hundred liters and beyond in industrial settings."
+  },
+  {
+   "t": 355.57,
+   "text": "The companies that have commercialized cell-free for drug manufacturing have built reaction vessels of impressive size."
+  },
+  {
+   "t": 362.41,
+   "text": "Sutro Biopharma, which we will discuss in more detail in Segment 14, runs cell-free reactions at large industrial scale to produce antibody-drug conjugates with site-specifically incorporated unnatural amino acids."
+  },
+  {
+   "t": 377.38,
+   "text": "Greenlight Biosciences uses cell-free to produce RNA at agricultural scale for crop applications."
+  },
+  {
+   "t": 384.96,
+   "text": "The technology has scaled out of the lab and into manufacturing in a way that would have seemed implausible twenty years ago."
+  },
+  {
+   "t": 392.76,
+   "text": "The big idea to leave this segment with: modern cell-free can hit yields of one to two milligrams per milliliter for well-behaved proteins, which is competitive with bacterial fermentation per unit volume, though still typically more expensive per milligram at very large scale."
+  },
+  {
+   "t": 408.85,
+   "text": "The yield gains have come from systematic engineering of energy regeneration, redox control, strain selection, and reaction format."
+  },
+  {
+   "t": 417.46,
+   "text": "Cell-free is no longer a kit-only technology limited to micrograms; it is a real protein production technology that can serve a real fraction of the protein production market, particularly at the small-batch, fast-turnaround, difficult-protein end."
+  },
+  {
+   "t": 432.81,
+   "text": "Now let me start showing you what cell-free can do that living cells genuinely cannot."
+  },
+  {
+   "t": 438.3,
+   "text": "This is where the field gets exciting."
+  }
+ ]
+}

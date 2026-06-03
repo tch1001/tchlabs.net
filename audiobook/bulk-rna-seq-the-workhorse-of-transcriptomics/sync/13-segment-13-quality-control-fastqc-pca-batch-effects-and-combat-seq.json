@@ -1,0 +1,283 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Quality control — FastQC, PCA, batch effects, and ComBat-Seq",
+ "duration": 414.93,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Quality control — FastQC, PCA, batch effects, and ComBat-Seq"
+  },
+  {
+   "t": 7.53,
+   "text": "Quality control is the part of RNA-seq analysis that separates careful work from sloppy work."
+  },
+  {
+   "t": 13.79,
+   "text": "There are about a dozen checks you should run on every dataset, before and after analysis."
+  },
+  {
+   "t": 19.56,
+   "text": "I want to walk through the most important ones, because skipping QC is the leading cause of papers that get retracted or quietly contradicted."
+  },
+  {
+   "t": 27.84,
+   "text": "Per-sample read quality — FastQC."
+  },
+  {
+   "t": 30.84,
+   "text": "The first thing you do, before any alignment, is run FastQC on each FASTQ file."
+  },
+  {
+   "t": 37.59,
+   "text": "FastQC produces a report with about a dozen plots: the per-base quality scores across the read, the GC content distribution, the duplication level, the adapter contamination level, the overrepresented sequences."
+  },
+  {
+   "t": 51.86,
+   "text": "You're looking for any sample that looks dramatically different from the others — a sample with very low quality scores past base 50, or a sample with bizarre GC content, or a sample where 30% of reads are PCR duplicates."
+  },
+  {
+   "t": 66.2,
+   "text": "These samples are suspect."
+  },
+  {
+   "t": 67.84,
+   "text": "Sometimes the right answer is to re-prepare the library; sometimes you have to drop the sample."
+  },
+  {
+   "t": 73.58,
+   "text": "Always look."
+  },
+  {
+   "t": 74.61,
+   "text": "Adapter trimming."
+  },
+  {
+   "t": 75.99,
+   "text": "Sometimes reads are longer than the original fragment, and the read extends past the end of the fragment into the sequencing adapter."
+  },
+  {
+   "t": 83.91,
+   "text": "These adapter-contaminated reads need to be trimmed before alignment, or they won't align properly."
+  },
+  {
+   "t": 89.85,
+   "text": "Tools like Trim Galore, Trimmomatic, and fastp do this automatically."
+  },
+  {
+   "t": 94.5,
+   "text": "Most modern pipelines trim adapters as a first step."
+  },
+  {
+   "t": 97.99,
+   "text": "Always check the trimming summary — if your kit is generating a lot of short fragments and your trimming is removing 30% of read content, that's a sign your library prep wasn't optimal."
+  },
+  {
+   "t": 109.33,
+   "text": "Alignment rate."
+  },
+  {
+   "t": 110.47,
+   "text": "After alignment, check how many of your reads aligned successfully."
+  },
+  {
+   "t": 115.01,
+   "text": "For a well-prepared bulk RNA-seq library, you expect 85-95% of reads to align uniquely to the genome."
+  },
+  {
+   "t": 124.2,
+   "text": "If you're below 75%, something is wrong — maybe contamination from another organism, maybe the wrong reference genome, maybe a degraded library."
+  },
+  {
+   "t": 134.34,
+   "text": "STAR and HISAT2 report alignment statistics in their log files."
+  },
+  {
+   "t": 139.1,
+   "text": "Check them."
+  },
+  {
+   "t": 139.95,
+   "text": "Look at the unmapped reads."
+  },
+  {
+   "t": 141.96,
+   "text": "Are they ribosomal RNA that escaped depletion?"
+  },
+  {
+   "t": 145.07,
+   "text": "Mitochondrial transcripts?"
+  },
+  {
+   "t": 147.01,
+   "text": "Foreign organism DNA?"
+  },
+  {
+   "t": 149.0,
+   "text": "Each of these has a different remediation."
+  },
+  {
+   "t": 151.94,
+   "text": "Per-sample summary metrics."
+  },
+  {
+   "t": 153.9,
+   "text": "After alignment and counting, run a sample-level QC."
+  },
+  {
+   "t": 158.28,
+   "text": "Standard metrics include: fraction of reads in protein-coding genes (should be 70-90%); fraction in rRNA (should be under 5%); fraction in mitochondrial genes (high values indicate cell death or stress); 3-prime versus 5-prime coverage bias (a uniform distribution is ideal; strong 3-prime bias suggests RNA degradation); duplication rate (high values suggest low input)."
+  },
+  {
+   "t": 186.49,
+   "text": "Tools like Picard's CollectRnaSeqMetrics, RSeQC, and MultiQC aggregate these metrics across all your samples into a single report."
+  },
+  {
+   "t": 196.26,
+   "text": "Always look."
+  },
+  {
+   "t": 197.26,
+   "text": "Sample clustering — PCA and distance heatmaps."
+  },
+  {
+   "t": 200.96,
+   "text": "Now you have your count matrix."
+  },
+  {
+   "t": 202.82,
+   "text": "The most important QC step is to ask: do my samples cluster the way I expect?"
+  },
+  {
+   "t": 208.54,
+   "text": "Run principal component analysis on the normalized counts."
+  },
+  {
+   "t": 212.5,
+   "text": "Plot the first two principal components, colored by experimental condition."
+  },
+  {
+   "t": 216.94,
+   "text": "Ideally, samples from the same condition should cluster together, and samples from different conditions should separate."
+  },
+  {
+   "t": 224.31,
+   "text": "If a tumor sample is sitting in the middle of the normal samples, something is wrong — either the sample was mislabeled, or it's a real biological outlier, or there's a batch effect."
+  },
+  {
+   "t": 234.95,
+   "text": "Batch effects are the silent killer of RNA-seq experiments."
+  },
+  {
+   "t": 239.38,
+   "text": "A batch effect is any technical variation that correlates with experimental condition by accident."
+  },
+  {
+   "t": 245.62,
+   "text": "The classic example: you process all your control samples on Monday and all your treated samples on Tuesday."
+  },
+  {
+   "t": 252.2,
+   "text": "Now any technical difference between Monday and Tuesday — slight differences in reagent lots, ambient temperature, the technician's mood, anything — gets confounded with the treatment effect."
+  },
+  {
+   "t": 264.52,
+   "text": "Your differential expression analysis can't distinguish \"the treatment did this\" from \"Tuesday's reagents were different."
+  },
+  {
+   "t": 272.55,
+   "text": "\" This is the silent killer because the data looks fine; the statistics work; but the conclusions are wrong."
+  },
+  {
+   "t": 279.1,
+   "text": "The defense against batch effects is randomization at the experimental design stage."
+  },
+  {
+   "t": 284.76,
+   "text": "When you process samples, mix the conditions across batches — don't do all controls on day one and all treated on day two."
+  },
+  {
+   "t": 292.1,
+   "text": "Make sure each batch contains a mix of conditions."
+  },
+  {
+   "t": 295.33,
+   "text": "Then, in the analysis, include the batch as a covariate in your model, so DESeq2 can adjust for it."
+  },
+  {
+   "t": 302.86,
+   "text": "When you can't fully randomize — common in clinical studies where samples come in over years — you use a batch correction tool."
+  },
+  {
+   "t": 310.43,
+   "text": "ComBat-Seq, developed by Yuqing Zhang and Jeff Leek, is the modern standard."
+  },
+  {
+   "t": 316.16,
+   "text": "It takes raw counts and batch information, and produces batch-corrected counts that you can feed into DESeq2."
+  },
+  {
+   "t": 323.26,
+   "text": "ComBat-Seq was specifically designed for count data, unlike the original ComBat which was designed for microarray data."
+  },
+  {
+   "t": 330.66,
+   "text": "There's also RUV — Remove Unwanted Variation — which estimates unknown technical factors from control genes."
+  },
+  {
+   "t": 339.16,
+   "text": "And SVA — Surrogate Variable Analysis — which finds latent factors in the data and adjusts for them."
+  },
+  {
+   "t": 346.0,
+   "text": "All of these are valid; ComBat-Seq is the most common starting point."
+  },
+  {
+   "t": 350.41,
+   "text": "Here's the rule of thumb for batch effects."
+  },
+  {
+   "t": 353.12,
+   "text": "If your principal component plot shows samples clustering by batch rather than by condition, you have a serious problem."
+  },
+  {
+   "t": 360.08,
+   "text": "Either redo the experiment with better randomization, or apply batch correction carefully and document what you did."
+  },
+  {
+   "t": 367.18,
+   "text": "Don't ignore it."
+  },
+  {
+   "t": 368.18,
+   "text": "Other QC checks that matter: sample swaps (use genotype-based concordance checks if you have genotype data from the same individuals); sex chromosome expression (XIST and Y-linked genes should agree with the reported sex); known marker gene expression (tissue-specific markers should be high in the right tissues)."
+  },
+  {
+   "t": 387.93,
+   "text": "The community has built a lot of tools for this — including MultiQC, which aggregates all the QC outputs into a single HTML report."
+  },
+  {
+   "t": 397.48,
+   "text": "Run MultiQC on every project."
+  },
+  {
+   "t": 400.63,
+   "text": "Look at the report carefully."
+  },
+  {
+   "t": 402.38,
+   "text": "QC is not optional."
+  },
+  {
+   "t": 404.12,
+   "text": "The papers that get published and then quietly contradicted are almost always the ones that skipped QC."
+  },
+  {
+   "t": 410.96,
+   "text": "Spend a day on this."
+  },
+  {
+   "t": 412.42,
+   "text": "It pays for itself many times over."
+  }
+ ]
+}

@@ -1,0 +1,327 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — PE1, PE2, PE3, PE3b: how the original paper laid out a progression of improvements",
+ "duration": 433.4,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — PE1, PE2, PE3, PE3b: how the original paper laid out a progression of improvements"
+  },
+  {
+   "t": 10.78,
+   "text": "The 2019 paper from the Liu lab is titled \"Search-and-replace genome editing without double-strand breaks or donor DNA."
+  },
+  {
+   "t": 18.88,
+   "text": "\" Lead author Andrew Anzalone."
+  },
+  {
+   "t": 21.12,
+   "text": "Senior author David Liu."
+  },
+  {
+   "t": 22.96,
+   "text": "Published in Nature in October 2019."
+  },
+  {
+   "t": 26.12,
+   "text": "It is, in my opinion, the single best CRISPR engineering paper of the post-Cas9 era, and you should read it if you have any interest at all in this field."
+  },
+  {
+   "t": 34.79,
+   "text": "Beautiful experiments, beautifully presented."
+  },
+  {
+   "t": 37.75,
+   "text": "Now what I love about this paper is that it doesn't just announce a tool."
+  },
+  {
+   "t": 41.67,
+   "text": "It announces a progression — a sequence of versions, each one solving a specific weakness of the previous one."
+  },
+  {
+   "t": 48.85,
+   "text": "Walking through that progression teaches you, in one paper, almost every principle of prime editing engineering."
+  },
+  {
+   "t": 56.46,
+   "text": "Let me take you through it."
+  },
+  {
+   "t": 57.88,
+   "text": "PE1."
+  },
+  {
+   "t": 58.77,
+   "text": "The first version of the prime editor."
+  },
+  {
+   "t": 60.89,
+   "text": "PE1 is the Cas9-H840A nickase fused to the wild-type M-MLV reverse transcriptase."
+  },
+  {
+   "t": 68.6,
+   "text": "Nothing fancy."
+  },
+  {
+   "t": 70.08,
+   "text": "Just the unmodified retroviral RT, tethered to a Cas9 nickase, driven by an ordinary mammalian expression promoter, delivered as a plasmid into human cells along with a pegRNA targeting a chosen site."
+  },
+  {
+   "t": 84.46,
+   "text": "PE1 worked."
+  },
+  {
+   "t": 85.74,
+   "text": "That's the punchline."
+  },
+  {
+   "t": 87.05,
+   "text": "In human HEK293 cells, the Liu lab showed PE1 installing all twelve possible single-base substitutions at chosen sites, plus small insertions and deletions."
+  },
+  {
+   "t": 99.89,
+   "text": "The first time anybody had demonstrated transversions or indels by a CRISPR-based system without making a double-strand break."
+  },
+  {
+   "t": 107.99,
+   "text": "The paper could have stopped there and it would have been a hit."
+  },
+  {
+   "t": 110.88,
+   "text": "But PE1 was slow."
+  },
+  {
+   "t": 112.5,
+   "text": "Editing efficiencies hovered in the very low single-digit percent range."
+  },
+  {
+   "t": 117.7,
+   "text": "One or two percent of cells, often less, actually had the desired edit."
+  },
+  {
+   "t": 122.85,
+   "text": "Not good enough for serious use."
+  },
+  {
+   "t": 125.24,
+   "text": "The Liu group started engineering."
+  },
+  {
+   "t": 127.51,
+   "text": "PE2."
+  },
+  {
+   "t": 128.53,
+   "text": "The Liu group then took the M-MLV RT and engineered it for better activity in the prime editing context."
+  },
+  {
+   "t": 136.22,
+   "text": "They introduced five mutations into the RT — changes designed to increase its thermostability, its processivity, and its fidelity."
+  },
+  {
+   "t": 145.6,
+   "text": "The mutations are D200N, T306K, W313F, T330P, and L603W, for those of you who like specifics."
+  },
+  {
+   "t": 158.24,
+   "text": "The wild-type M-MLV RT evolved to work inside a retrovirus particle, at modest temperature, on long stretches of viral RNA."
+  },
+  {
+   "t": 167.49,
+   "text": "Inside a human cell nucleus, at 37 degrees, fused to a 1400-amino-acid Cas9, working on a short template — that's a very different operating environment."
+  },
+  {
+   "t": 179.95,
+   "text": "The five mutations adapt the enzyme to this new context."
+  },
+  {
+   "t": 184.26,
+   "text": "PE2, the Cas9-H840A nickase fused to the engineered M-MLV RT, gave editing efficiencies typically two to ten times higher than PE1, depending on the site."
+  },
+  {
+   "t": 197.76,
+   "text": "Now you're seeing 5-15% editing across many sites."
+  },
+  {
+   "t": 203.16,
+   "text": "Better."
+  },
+  {
+   "t": 203.91,
+   "text": "Still not great."
+  },
+  {
+   "t": 205.01,
+   "text": "The bottleneck was no longer the RT activity — it was downstream."
+  },
+  {
+   "t": 209.54,
+   "text": "It was the mismatch repair step."
+  },
+  {
+   "t": 211.6,
+   "text": "PE3."
+  },
+  {
+   "t": 212.74,
+   "text": "This is where the design gets clever."
+  },
+  {
+   "t": 214.94,
+   "text": "Remember the mismatch repair problem?"
+  },
+  {
+   "t": 217.18,
+   "text": "The cell, after the edit is installed on the non-target strand, sees a mismatch and uses the unnicked strand as the template, often overwriting the edit."
+  },
+  {
+   "t": 226.84,
+   "text": "The unnicked strand is the original sequence."
+  },
+  {
+   "t": 230.25,
+   "text": "So the cell's natural repair bias is against the edit."
+  },
+  {
+   "t": 233.4,
+   "text": "The Liu lab's solution: also nick the other strand."
+  },
+  {
+   "t": 236.9,
+   "text": "Make a second nick, on the target strand — the one that until now had been intact — using a separate, ordinary sgRNA."
+  },
+  {
+   "t": 244.93,
+   "text": "This separate sgRNA is delivered along with the pegRNA, and it instructs the same Cas9 nickase to nick the target strand at a nearby position."
+  },
+  {
+   "t": 254.95,
+   "text": "Now both strands have a nick."
+  },
+  {
+   "t": 256.84,
+   "text": "The mismatch repair machinery has to choose a template — and it now has reasons to choose either strand."
+  },
+  {
+   "t": 263.35,
+   "text": "The bias against the edit is removed."
+  },
+  {
+   "t": 265.84,
+   "text": "In practice, with PE3, the editing efficiency jumps another two to four times relative to PE2."
+  },
+  {
+   "t": 273.49,
+   "text": "You're now seeing 20-50% editing efficiencies at many sites in cultured human cells."
+  },
+  {
+   "t": 280.7,
+   "text": "That's getting into territory where you could imagine clinical use."
+  },
+  {
+   "t": 284.71,
+   "text": "The analogy I always use: by also nicking the other strand, you bias the cell's repair toward keeping your new sequence."
+  },
+  {
+   "t": 293.04,
+   "text": "The cell, when both strands have nicks, can no longer tell which one is the \"parental\" template."
+  },
+  {
+   "t": 299.04,
+   "text": "Without that bias, the new strand has a fair shot at being kept."
+  },
+  {
+   "t": 303.3,
+   "text": "PE3b."
+  },
+  {
+   "t": 304.79,
+   "text": "A variant of PE3."
+  },
+  {
+   "t": 306.99,
+   "text": "The problem with PE3 is that the additional nick on the target strand is made at the same time as the original nick — so for a window of time, the cell has a double-stranded break."
+  },
+  {
+   "t": 318.09,
+   "text": "That's not great."
+  },
+  {
+   "t": 319.25,
+   "text": "Double-strand breaks are exactly what we were trying to avoid."
+  },
+  {
+   "t": 322.59,
+   "text": "So in PE3b, the additional nicking guide is designed so that it only nicks the target strand after the edit has been installed — specifically, the additional guide is designed to match the edited sequence, not the original sequence."
+  },
+  {
+   "t": 337.68,
+   "text": "So Cas9 can't form an R-loop and nick until the edit has been written into the new strand."
+  },
+  {
+   "t": 343.97,
+   "text": "This timing — first install the edit, then nick the other strand to bias the repair — minimizes the window of time during which the cell has nicks on both strands."
+  },
+  {
+   "t": 354.13,
+   "text": "PE3b is harder to design than PE3."
+  },
+  {
+   "t": 358.3,
+   "text": "You need a site where the edited sequence creates a new sgRNA target while leaving the original sequence un-targeted."
+  },
+  {
+   "t": 365.63,
+   "text": "Not every site allows it."
+  },
+  {
+   "t": 367.44,
+   "text": "But where it works, PE3b gives editing efficiencies comparable to PE3 with much lower indel byproducts, because the moment of double-strand break is much shorter."
+  },
+  {
+   "t": 379.67,
+   "text": "That's the progression from the original paper."
+  },
+  {
+   "t": 382.08,
+   "text": "PE1: the prototype."
+  },
+  {
+   "t": 384.04,
+   "text": "PE2: better RT."
+  },
+  {
+   "t": 386.27,
+   "text": "PE3: opposite-strand nick to break the mismatch repair bias."
+  },
+  {
+   "t": 391.42,
+   "text": "PE3b: timed opposite-strand nick to minimize the double-strand-break window."
+  },
+  {
+   "t": 398.03,
+   "text": "Each step gets you closer to a tool that's both efficient and clean."
+  },
+  {
+   "t": 401.94,
+   "text": "Notice that the protein is the same in PE1, PE2, PE3, and PE3b — except for the RT changes between PE1 and PE2."
+  },
+  {
+   "t": 412.92,
+   "text": "PE3 and PE3b differ from PE2 only by the addition of a second guide RNA."
+  },
+  {
+   "t": 420.28,
+   "text": "The protein is held constant."
+  },
+  {
+   "t": 422.47,
+   "text": "The guides do almost all the engineering work."
+  },
+  {
+   "t": 425.27,
+   "text": "This is the same principle we keep seeing in CRISPR: keep the protein simple, let the guide RNA carry the variability."
+  }
+ ]
+}

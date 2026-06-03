@@ -1,0 +1,279 @@
+{
+ "n": 18,
+ "title": "SEGMENT 18 — The frontier — deconvolution, spatial bulk, AI pipelines",
+ "duration": 474.26,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 18 — The frontier — deconvolution, spatial bulk, AI pipelines"
+  },
+  {
+   "t": 6.53,
+   "text": "Let me close with where bulk RNA-seq is going."
+  },
+  {
+   "t": 9.69,
+   "text": "The technology is mature, but the analytical methods are still evolving rapidly, and several frontiers are particularly exciting."
+  },
+  {
+   "t": 18.12,
+   "text": "Deconvolution — recovering cell-type composition from bulk RNA-seq."
+  },
+  {
+   "t": 23.2,
+   "text": "One of the most active areas of computational research is the question: given a bulk RNA-seq sample, can you estimate the proportions of each cell type in it, using cell-type-specific signatures derived from single-cell data?"
+  },
+  {
+   "t": 37.35,
+   "text": "The answer is yes, partially, and the tools are getting better."
+  },
+  {
+   "t": 41.3,
+   "text": "The standard tool is CIBERSORT, developed by Aaron Newman in the Alizadeh lab at Stanford."
+  },
+  {
+   "t": 47.4,
+   "text": "CIBERSORT takes a bulk RNA-seq expression profile, a matrix of cell-type-specific signatures (derived from purified cell populations or single-cell data), and uses support vector regression to estimate the proportion of each cell type in the bulk sample."
+  },
+  {
+   "t": 64.14,
+   "text": "CIBERSORT was originally developed for immune cell deconvolution — separating bulk tumor expression into proportions of CD8 T cells, CD4 T cells, B cells, macrophages, etc. — and is now widely used in cancer immunology."
+  },
+  {
+   "t": 80.74,
+   "text": "Newer methods like CIBERSORTx, MuSiC, BayesPrism, and SCDC improve on CIBERSORT in various ways — using single-cell references directly, handling batch effects between reference and bulk data, providing uncertainty estimates, scaling to many cell types."
+  },
+  {
+   "t": 99.22,
+   "text": "Here's why this matters."
+  },
+  {
+   "t": 100.71,
+   "text": "Deconvolution gives bulk RNA-seq some of the resolution of single-cell, without the cost."
+  },
+  {
+   "t": 106.89,
+   "text": "You can run bulk on thousands of samples — easy, cheap — and then deconvolve to estimate cell type proportions in each."
+  },
+  {
+   "t": 115.11,
+   "text": "You don't get the same resolution as single-cell, and the estimates are noisier, but for large-scale studies, deconvolution closes much of the gap."
+  },
+  {
+   "t": 124.54,
+   "text": "The clinical TCGA cohort, for example, has been deconvolved many times to estimate immune infiltration, fibroblast content, and other compositional features that the original bulk data couldn't directly show."
+  },
+  {
+   "t": 138.15,
+   "text": "Spatial bulk and spatial transcriptomics."
+  },
+  {
+   "t": 141.54,
+   "text": "I want to be careful here because the single-cell lecture covered spatial transcriptomics in detail."
+  },
+  {
+   "t": 147.5,
+   "text": "But there's a bulk-style version that's worth mentioning."
+  },
+  {
+   "t": 150.35,
+   "text": "Technologies like NanoString's GeoMx Digital Spatial Profiler allow you to select regions of interest on a tissue section — defined by histology, antibody staining, or other criteria — and perform bulk RNA-seq specifically on the RNA from each selected region."
+  },
+  {
+   "t": 167.79,
+   "text": "So you're doing bulk RNA-seq, but spatially resolved — multiple bulk samples per tissue, with spatial location preserved."
+  },
+  {
+   "t": 176.32,
+   "text": "This is increasingly used in pathology research, where the architecture of the tissue matters."
+  },
+  {
+   "t": 182.18,
+   "text": "Visium HD, from 10x Genomics, is positioned somewhere between bulk and single-cell — small spots, each containing a few cells, with whole-transcriptome RNA-seq per spot."
+  },
+  {
+   "t": 194.91,
+   "text": "It's sub-cellular spatial bulk."
+  },
+  {
+   "t": 197.0,
+   "text": "The data is bulk-like at each spot (averaging across the few cells in the spot) but spatial across the tissue."
+  },
+  {
+   "t": 205.18,
+   "text": "AI-driven analysis pipelines are the third frontier, and they're moving fast."
+  },
+  {
+   "t": 210.22,
+   "text": "Several developments are worth knowing."
+  },
+  {
+   "t": 212.61,
+   "text": "Foundation models for gene expression."
+  },
+  {
+   "t": 215.29,
+   "text": "Large transformer models — trained on tens of millions of RNA-seq samples from public databases — are now being released by various groups."
+  },
+  {
+   "t": 224.09,
+   "text": "scGPT, scFoundation, Geneformer, CellPLM, and others learn representations of gene expression that capture biological structure and can be transferred to downstream tasks."
+  },
+  {
+   "t": 236.29,
+   "text": "While these were originally developed for single-cell data, they're being adapted for bulk data too."
+  },
+  {
+   "t": 241.85,
+   "text": "The idea is that a pre-trained model captures latent biology and can be fine-tuned for specific tasks — disease classification, drug response prediction, perturbation effect prediction — with much less labeled data than training from scratch."
+  },
+  {
+   "t": 256.64,
+   "text": "Automated pipeline platforms."
+  },
+  {
+   "t": 258.88,
+   "text": "Tools like nf-core/rnaseq, DolphinNext, and various commercial platforms (DNAnexus, Terra) provide standardized, reproducible RNA-seq pipelines."
+  },
+  {
+   "t": 270.96,
+   "text": "You drop in your FASTQs, the platform runs alignment, QC, counting, and quality reports automatically, in a containerized environment that's reproducible across labs."
+  },
+  {
+   "t": 282.09,
+   "text": "The era of writing your own pipeline from scratch is ending — the community has converged on a small number of well-validated, well-tested pipelines that everybody uses."
+  },
+  {
+   "t": 293.07,
+   "text": "Multimodal integration."
+  },
+  {
+   "t": 295.01,
+   "text": "The current frontier is integrating RNA-seq with other data modalities — DNA sequencing for mutations, methylation profiles, proteomics, clinical metadata, imaging."
+  },
+  {
+   "t": 307.0,
+   "text": "The bottleneck has shifted from generating data to integrating data across modalities."
+  },
+  {
+   "t": 312.84,
+   "text": "Tools for this integration are improving rapidly, often using AI/ML approaches."
+  },
+  {
+   "t": 319.46,
+   "text": "Better deconvolution and cellular composition inference."
+  },
+  {
+   "t": 323.27,
+   "text": "As single-cell atlases get richer, deconvolution methods that use those atlases as references get more accurate."
+  },
+  {
+   "t": 330.41,
+   "text": "The combination of cheap bulk RNA-seq at scale and accurate deconvolution from rich single-cell references is the workflow that will dominate the next decade."
+  },
+  {
+   "t": 340.65,
+   "text": "The big picture for the future of bulk RNA-seq is: it's not going away."
+  },
+  {
+   "t": 345.59,
+   "text": "It's being augmented."
+  },
+  {
+   "t": 346.87,
+   "text": "The combination of bulk RNA-seq for scale and cost-efficiency, single-cell sequencing for ground-truth references, deconvolution methods to bridge them, and AI-driven analysis pipelines for interpretation — this is the modern transcriptomics workflow."
+  },
+  {
+   "t": 363.14,
+   "text": "Bulk RNA-seq sits at the center as the workhorse, with the other components feeding into it and out of it."
+  },
+  {
+   "t": 370.4,
+   "text": "Sixteen years after Mortazavi 2008, RNA-seq is still the most widely used assay in molecular biology."
+  },
+  {
+   "t": 379.12,
+   "text": "The tools are mature, the analyses are well-validated, the public datasets are vast."
+  },
+  {
+   "t": 385.16,
+   "text": "If you walked into a wet lab tomorrow and ran a bulk RNA-seq experiment, you'd be following a recipe that's been refined by half a million prior experiments."
+  },
+  {
+   "t": 395.17,
+   "text": "You'd produce data that's directly comparable to GTEx, TCGA, and ENCODE."
+  },
+  {
+   "t": 401.4,
+   "text": "You'd analyze it with DESeq2 or edgeR, two of the most carefully validated statistical tools in computational biology."
+  },
+  {
+   "t": 409.6,
+   "text": "You'd visualize the results with tools that have been polished for over a decade."
+  },
+  {
+   "t": 413.77,
+   "text": "The infrastructure is there."
+  },
+  {
+   "t": 415.77,
+   "text": "The methods are there."
+  },
+  {
+   "t": 417.04,
+   "text": "The data is comparable to data from a thousand other labs."
+  },
+  {
+   "t": 421.09,
+   "text": "That's what makes a workhorse."
+  },
+  {
+   "t": 422.72,
+   "text": "Not novelty."
+  },
+  {
+   "t": 424.02,
+   "text": "Not glamour."
+  },
+  {
+   "t": 425.2,
+   "text": "Reliability, comparability, scale, and the maturity that comes from a million prior runs."
+  },
+  {
+   "t": 431.31,
+   "text": "Bulk RNA-seq is the workhorse of transcriptomics."
+  },
+  {
+   "t": 435.09,
+   "text": "Long may it run."
+  },
+  {
+   "t": 436.25,
+   "text": "Thank you."
+  },
+  {
+   "t": 437.1,
+   "text": "That's where we'll stop."
+  },
+  {
+   "t": 438.32,
+   "text": "We've gone through the history, the workflow, the wet lab, the bioinformatics, the statistics, the QC, the clinical applications, the public datasets, the comparison to single-cell, and the frontier."
+  },
+  {
+   "t": 451.02,
+   "text": "Read a few RNA-seq papers this week."
+  },
+  {
+   "t": 453.9,
+   "text": "Look at the methods sections."
+  },
+  {
+   "t": 455.69,
+   "text": "See if you can identify what library prep they used, what aligner, what counter, what differential expression tool, what gene-set tool, what database."
+  },
+  {
+   "t": 464.62,
+   "text": "If you can read those methods sections and think \"I know what they did, and I have an opinion about whether they should have done it differently\" — then this lecture has succeeded."
+  }
+ ]
+}

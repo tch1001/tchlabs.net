@@ -1,0 +1,183 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Alternative splicing analysis — rMATS, SUPPA, and MAJIQ",
+ "duration": 318.76,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Alternative splicing analysis — rMATS, SUPPA, and MAJIQ"
+  },
+  {
+   "t": 6.39,
+   "text": "A point that's often missed in introductory RNA-seq courses: bulk RNA-seq sees splicing."
+  },
+  {
+   "t": 12.56,
+   "text": "Every read that crosses a splice junction carries information about which exons were joined together."
+  },
+  {
+   "t": 19.32,
+   "text": "By counting reads at splice junctions versus reads within exons, you can detect alternative splicing — the same gene producing different isoforms in different conditions."
+  },
+  {
+   "t": 30.09,
+   "text": "This is one of the most powerful things bulk RNA-seq does that microarrays could not, and it's underused."
+  },
+  {
+   "t": 37.12,
+   "text": "Alternative splicing is the process by which a single gene produces multiple distinct mRNA isoforms by selectively including or excluding exons during pre-mRNA processing."
+  },
+  {
+   "t": 49.05,
+   "text": "The human genome has about 20,000 protein-coding genes, but those genes produce something like 100,000 to 200,000 distinct protein isoforms through alternative splicing."
+  },
+  {
+   "t": 60.66,
+   "text": "The diversity is huge."
+  },
+  {
+   "t": 62.73,
+   "text": "Splicing changes are central to development, to cancer, to neurodegeneration."
+  },
+  {
+   "t": 68.14,
+   "text": "Drugs that target splicing — like Spinraza for spinal muscular atrophy — are showing the clinical importance."
+  },
+  {
+   "t": 75.97,
+   "text": "If you're doing RNA-seq, you should at least check whether splicing is changing."
+  },
+  {
+   "t": 80.49,
+   "text": "The categories of alternative splicing events are: exon skipping, where an exon is sometimes included and sometimes excluded; alternative 5-prime splice sites, where the start of an exon is shifted; alternative 3-prime splice sites, where the end of an exon is shifted; intron retention, where an intron sometimes fails to be spliced out and stays in the mature mRNA; and mutually exclusive exons, where one of two alternative exons is included but not both."
+  },
+  {
+   "t": 110.99,
+   "text": "Each can be detected and quantified separately."
+  },
+  {
+   "t": 113.96,
+   "text": "The standard tools for splicing analysis are rMATS, SUPPA, and MAJIQ."
+  },
+  {
+   "t": 118.84,
+   "text": "rMATS — replicate Multivariate Analysis of Transcript Splicing — was developed in Yi Xing's lab."
+  },
+  {
+   "t": 125.92,
+   "text": "It takes BAM files as input, identifies splicing events from a reference annotation, counts reads supporting included versus excluded isoforms, and computes a statistic called PSI — Percent Spliced In — for each event in each sample."
+  },
+  {
+   "t": 141.7,
+   "text": "Then it tests for significant changes in PSI between conditions."
+  },
+  {
+   "t": 146.2,
+   "text": "rMATS is fast, well-validated, and handles biological replicates correctly."
+  },
+  {
+   "t": 151.8,
+   "text": "It's the default for most differential splicing studies."
+  },
+  {
+   "t": 155.31,
+   "text": "SUPPA is a faster, transcript-quantitation-based tool."
+  },
+  {
+   "t": 159.43,
+   "text": "It uses Salmon's transcript-level abundance estimates and computes PSI from those, rather than re-counting reads."
+  },
+  {
+   "t": 167.16,
+   "text": "SUPPA is much faster than rMATS and gives comparable results for most events."
+  },
+  {
+   "t": 172.4,
+   "text": "It's well-suited for high-throughput screening of splicing changes."
+  },
+  {
+   "t": 176.6,
+   "text": "MAJIQ — Modeling Alternative Junction Inclusion Quantification — from Yoseph Barash's lab, takes a more flexible approach."
+  },
+  {
+   "t": 185.25,
+   "text": "Instead of categorizing events into fixed classes (exon skipping, intron retention, etc.), MAJIQ identifies \"local splicing variations\" — any local choice between alternative splice junctions — and quantifies them."
+  },
+  {
+   "t": 200.04,
+   "text": "MAJIQ is more flexible but more complex to interpret."
+  },
+  {
+   "t": 204.12,
+   "text": "It's particularly useful for novel or non-canonical splicing."
+  },
+  {
+   "t": 208.59,
+   "text": "Each of these tools produces a list of splicing events with their inclusion levels in each condition and a statistical test for differential splicing."
+  },
+  {
+   "t": 217.12,
+   "text": "The output looks similar to a differential expression result, but at the event level rather than the gene level."
+  },
+  {
+   "t": 223.4,
+   "text": "One important practical point: splicing analysis requires deeper sequencing than expression analysis."
+  },
+  {
+   "t": 229.86,
+   "text": "To get reliable PSI measurements, you need many reads spanning each splice junction."
+  },
+  {
+   "t": 235.96,
+   "text": "For standard differential expression, 20-30 million reads per sample is usually enough."
+  },
+  {
+   "t": 242.26,
+   "text": "For splicing, you want 50-100 million reads per sample, ideally 150 bp paired-end so that more reads span junctions."
+  },
+  {
+   "t": 252.24,
+   "text": "If you only sequenced 20 million reads, you can still attempt splicing analysis, but your power to detect events with moderate PSI changes will be limited."
+  },
+  {
+   "t": 261.73,
+   "text": "A second point: gene-level differential expression and event-level differential splicing are different questions, and you need to look at both."
+  },
+  {
+   "t": 270.34,
+   "text": "A gene can be unchanged in total expression but have its isoforms switched — say, increasing one isoform while decreasing another by the same amount."
+  },
+  {
+   "t": 280.36,
+   "text": "The gene's total RNA stays the same; differential expression analysis says nothing changed."
+  },
+  {
+   "t": 287.13,
+   "text": "But the protein products are different, and the biology has changed."
+  },
+  {
+   "t": 291.15,
+   "text": "Splicing analysis catches this; expression analysis misses it."
+  },
+  {
+   "t": 295.94,
+   "text": "The most spectacular biology in bulk RNA-seq, in my opinion, often comes from splicing."
+  },
+  {
+   "t": 302.33,
+   "text": "The neural-specific splicing program."
+  },
+  {
+   "t": 304.79,
+   "text": "The cancer-specific exon inclusion events."
+  },
+  {
+   "t": 308.14,
+   "text": "The drug-induced splice switches."
+  },
+  {
+   "t": 311.04,
+   "text": "If you have RNA-seq data and you've only looked at gene-level differential expression, you've left a lot of biology on the table."
+  }
+ ]
+}

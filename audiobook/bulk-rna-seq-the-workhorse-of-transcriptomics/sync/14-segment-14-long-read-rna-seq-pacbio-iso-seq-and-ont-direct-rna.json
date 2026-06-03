@@ -1,0 +1,191 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Long-read RNA-seq — PacBio Iso-Seq and ONT direct RNA",
+ "duration": 343.97,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Long-read RNA-seq — PacBio Iso-Seq and ONT direct RNA"
+  },
+  {
+   "t": 7.79,
+   "text": "Up to this point, I've been talking about Illumina short-read sequencing — reads of 50 to 150 base pairs from each end of a fragment, with the full transcript reconstructed bioinformatically by stitching short reads together."
+  },
+  {
+   "t": 21.88,
+   "text": "This is the dominant approach for bulk RNA-seq, but it has a fundamental limitation: with reads shorter than the transcript, you have to infer which isoforms are present, rather than directly observing them."
+  },
+  {
+   "t": 34.75,
+   "text": "Different isoforms share exons; reads from shared exons could come from any isoform; bioinformatic deconvolution is required."
+  },
+  {
+   "t": 44.3,
+   "text": "This works pretty well in practice but is imperfect."
+  },
+  {
+   "t": 47.61,
+   "text": "For complex loci with many isoforms — common in cancer, in neural tissue, in immune cells — short-read RNA-seq cannot fully disambiguate the isoforms present."
+  },
+  {
+   "t": 59.95,
+   "text": "Long-read RNA-seq solves this directly."
+  },
+  {
+   "t": 63.02,
+   "text": "Instead of fragmenting and reading short pieces, you read entire transcripts end-to-end, in one read, from poly-A tail to 5-prime cap."
+  },
+  {
+   "t": 73.11,
+   "text": "Each read is one full-length isoform."
+  },
+  {
+   "t": 76.65,
+   "text": "No inference, no deconvolution."
+  },
+  {
+   "t": 79.42,
+   "text": "The isoform is the read."
+  },
+  {
+   "t": 81.58,
+   "text": "The two major long-read RNA-seq platforms are PacBio Iso-Seq and Oxford Nanopore direct RNA sequencing."
+  },
+  {
+   "t": 90.1,
+   "text": "PacBio Iso-Seq uses PacBio's single-molecule real-time (SMRT) sequencing platform, which we covered in detail in the PacBio lecture."
+  },
+  {
+   "t": 100.6,
+   "text": "The Iso-Seq protocol takes your RNA, converts it to full-length cDNA without fragmentation, and sequences each cDNA molecule as a single long read."
+  },
+  {
+   "t": 111.84,
+   "text": "PacBio HiFi sequencing — which uses circular consensus sequencing to read the same molecule many times — gives extremely accurate long reads, with error rates below 0.1%."
+  },
+  {
+   "t": 125.28,
+   "text": "For full-length transcripts up to about 10 kilobases, Iso-Seq is the gold standard."
+  },
+  {
+   "t": 131.61,
+   "text": "It directly tells you which isoforms are present and in what abundance."
+  },
+  {
+   "t": 135.8,
+   "text": "Oxford Nanopore direct RNA sequencing is even more unusual: it sequences RNA directly, without converting to cDNA."
+  },
+  {
+   "t": 144.68,
+   "text": "The RNA molecule is threaded through a protein nanopore, and changes in ionic current as bases pass through the pore are read out as sequence."
+  },
+  {
+   "t": 153.39,
+   "text": "Direct RNA-seq has several unique advantages: no reverse transcription bias, the ability to detect RNA modifications (m6A methylation, pseudouridine, others) from the current signal, and read lengths up to the length of the original RNA."
+  },
+  {
+   "t": 170.65,
+   "text": "The accuracy is lower than PacBio HiFi — error rates of a few percent — but the unique features make it valuable for certain questions."
+  },
+  {
+   "t": 179.75,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 181.09,
+   "text": "PacBio and Nanopore give you full-length transcripts, so you can directly observe each isoform instead of inferring it."
+  },
+  {
+   "t": 189.56,
+   "text": "With short-read RNA-seq, you might read 100 base pairs from one end of an isoform and 100 from the other and infer that they came from the same molecule."
+  },
+  {
+   "t": 199.64,
+   "text": "With long-read RNA-seq, you read the whole isoform in one piece."
+  },
+  {
+   "t": 204.71,
+   "text": "No inference."
+  },
+  {
+   "t": 205.93,
+   "text": "The molecule is the read."
+  },
+  {
+   "t": 207.82,
+   "text": "Long-read RNA-seq is currently more expensive per sample than short-read — easily five to ten times more expensive — and produces less depth."
+  },
+  {
+   "t": 217.7,
+   "text": "So it's not a wholesale replacement for Illumina short-read RNA-seq."
+  },
+  {
+   "t": 222.4,
+   "text": "The current best practice for complex isoform questions is hybrid sequencing: use Illumina short-read RNA-seq to get accurate, deep quantitative measurements of gene-level expression, and use PacBio Iso-Seq on a subset of samples to discover and characterize the actual isoforms."
+  },
+  {
+   "t": 241.71,
+   "text": "Then map your short-read data against the isoform catalog you built from long reads."
+  },
+  {
+   "t": 247.22,
+   "text": "This gives you the best of both: quantitative precision from short reads, isoform clarity from long reads."
+  },
+  {
+   "t": 254.31,
+   "text": "Where long-read RNA-seq has been transformative is in isoform discovery — finding novel isoforms that don't appear in existing annotations."
+  },
+  {
+   "t": 263.66,
+   "text": "The GENCODE annotation is built largely from short-read data, plus historical EST sequencing, plus manual curation."
+  },
+  {
+   "t": 271.96,
+   "text": "It's missing a lot."
+  },
+  {
+   "t": 273.18,
+   "text": "Iso-Seq projects in cancer, neural tissue, and immune cells have shown that the real isoform catalog is much larger than what's in GENCODE — sometimes by an order of magnitude."
+  },
+  {
+   "t": 284.69,
+   "text": "The transcriptome is far more complex than we knew."
+  },
+  {
+   "t": 288.34,
+   "text": "Another frontier: single-cell long-read RNA-seq."
+  },
+  {
+   "t": 292.46,
+   "text": "Combining the cell barcoding of single-cell methods with the full-length reads of PacBio or Nanopore."
+  },
+  {
+   "t": 299.05,
+   "text": "This is technically challenging — long reads are expensive, single-cell coverage is sparse, and combining them strains both budget and analysis."
+  },
+  {
+   "t": 307.94,
+   "text": "But it's coming."
+  },
+  {
+   "t": 308.9,
+   "text": "The pilot studies in 2022-2024 have shown that you can get cell-type-resolved isoform information."
+  },
+  {
+   "t": 315.69,
+   "text": "For the next decade, expect long-read single-cell to be where a lot of the interesting new biology gets discovered."
+  },
+  {
+   "t": 322.96,
+   "text": "For most bulk RNA-seq users, long-read is not yet routine."
+  },
+  {
+   "t": 328.05,
+   "text": "But you should know it exists, when it's the right tool, and how it integrates with short-read pipelines."
+  },
+  {
+   "t": 334.04,
+   "text": "For specific applications — isoform discovery, RNA modification mapping, complex locus analysis — long-read is now essential."
+  }
+ ]
+}

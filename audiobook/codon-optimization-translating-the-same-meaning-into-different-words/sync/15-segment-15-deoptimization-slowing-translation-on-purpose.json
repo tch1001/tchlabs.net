@@ -1,0 +1,203 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Deoptimization: slowing translation on purpose",
+ "duration": 353.02,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Deoptimization: slowing translation on purpose"
+  },
+  {
+   "t": 5.28,
+   "text": "So far we've been thinking about codon optimization in the direction of making proteins faster, in higher yield, in non-native hosts."
+  },
+  {
+   "t": 13.96,
+   "text": "But there's a deliberate move in the opposite direction — codon deoptimization — that turns out to be one of the most powerful techniques in modern vaccinology."
+  },
+  {
+   "t": 23.8,
+   "text": "The idea is to deliberately rewrite a gene to use bad codons for the host, so that the protein is translated slowly and the corresponding biological process — usually virus replication — is attenuated."
+  },
+  {
+   "t": 37.31,
+   "text": "Let me explain the application that drove the development of this approach."
+  },
+  {
+   "t": 42.1,
+   "text": "When you want to make a live attenuated vaccine for a virus, you need to weaken the virus enough that it can't cause disease but not so much that it can't replicate in the body and trigger an immune response."
+  },
+  {
+   "t": 54.19,
+   "text": "Traditionally, this was done by passing the virus through many generations in some unusual host — chicken eggs, monkey cells, whatever — and letting random mutations accumulate that crippled the virus in humans while leaving it functional in the alternate host."
+  },
+  {
+   "t": 69.91,
+   "text": "The polio Sabin vaccine was made this way."
+  },
+  {
+   "t": 72.92,
+   "text": "The measles vaccine was made this way."
+  },
+  {
+   "t": 75.46,
+   "text": "The yellow fever vaccine was made this way."
+  },
+  {
+   "t": 78.15,
+   "text": "These vaccines were enormous medical successes, but the process of making them was slow, empirical, and somewhat unpredictable."
+  },
+  {
+   "t": 87.14,
+   "text": "You couldn't really design an attenuated virus from first principles."
+  },
+  {
+   "t": 91.46,
+   "text": "You stumbled into one."
+  },
+  {
+   "t": 92.83,
+   "text": "In the 2000s and 2010s, researchers — particularly Eckard Wimmer's group at Stony Brook, and others — figured out you could engineer attenuation by deliberately rewriting the virus's codons to be a worse match for human cells, without changing any amino acids in the viral proteins."
+  },
+  {
+   "t": 110.6,
+   "text": "You take the viral genome, find the parts that code for protein, and replace good codons with bad codons all along the genome."
+  },
+  {
+   "t": 118.19,
+   "text": "The viral proteins are unchanged."
+  },
+  {
+   "t": 120.72,
+   "text": "But the rate at which the virus makes those proteins drops by a factor of two, or five, or ten."
+  },
+  {
+   "t": 127.01,
+   "text": "And so the virus replicates more slowly."
+  },
+  {
+   "t": 130.09,
+   "text": "So slowly, in many cases, that the human immune system has time to mount a response before the infection takes off, and the patient never gets sick."
+  },
+  {
+   "t": 139.91,
+   "text": "The deoptimized virus is essentially a live vaccine, designed from scratch by deliberately bad codon choice."
+  },
+  {
+   "t": 147.53,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 148.78,
+   "text": "Deoptimization for vaccines is deliberately stuttering — replacing the smooth fluent codons with the awkward jargon ones — so the virus replicates slowly enough to be a vaccine instead of a disease."
+  },
+  {
+   "t": 162.24,
+   "text": "Same proteins, same overall architecture."
+  },
+  {
+   "t": 165.62,
+   "text": "Just slower."
+  },
+  {
+   "t": 166.72,
+   "text": "Slow enough that the immune system wins the race before symptoms develop."
+  },
+  {
+   "t": 171.85,
+   "text": "Slow enough that the virus self-limits, makes a few rounds of replication, gets cleared, and leaves the patient with immunity but not illness."
+  },
+  {
+   "t": 181.03,
+   "text": "This approach has produced experimental attenuated vaccines for polio, for influenza, for various respiratory viruses."
+  },
+  {
+   "t": 189.74,
+   "text": "The Wimmer group made deoptimized polio vaccines that were promising in animal models."
+  },
+  {
+   "t": 195.4,
+   "text": "Others have made deoptimized influenza vaccines that elicit strong immune responses without making animals sick."
+  },
+  {
+   "t": 203.55,
+   "text": "The technique scales beautifully, because the deoptimization is done computationally — you write a script that takes the viral genome and rewrites the codons — and the changes can be tuned."
+  },
+  {
+   "t": 214.59,
+   "text": "You can deoptimize a little, or a lot, or differentially across different parts of the genome."
+  },
+  {
+   "t": 220.31,
+   "text": "You can find the sweet spot where the virus is just attenuated enough."
+  },
+  {
+   "t": 224.55,
+   "text": "There's also a related move called codon-pair deoptimization."
+  },
+  {
+   "t": 229.15,
+   "text": "The basic insight is that, beyond individual codon frequencies, certain pairs of adjacent codons are over- or under-represented in host genes compared to what you'd expect from multiplying their individual frequencies."
+  },
+  {
+   "t": 242.39,
+   "text": "The host has favorite codon pairs."
+  },
+  {
+   "t": 244.9,
+   "text": "By deliberately using under-represented codon pairs throughout a viral genome, you can attenuate the virus even further, in a way that's hard for the virus to escape by point mutation, because almost every base change would have to recreate a favored codon pair to make any difference."
+  },
+  {
+   "t": 262.54,
+   "text": "This codon-pair deoptimization gives a more robust attenuation than single-codon deoptimization, and it's the basis of several experimental vaccines in development."
+  },
+  {
+   "t": 273.49,
+   "text": "The deoptimization story extends beyond vaccines."
+  },
+  {
+   "t": 277.27,
+   "text": "There's a research direction where people deoptimize specific genes within an organism to slow down the production of specific proteins for experimental purposes — say, to study what happens when an essential protein is at half its normal level."
+  },
+  {
+   "t": 293.17,
+   "text": "There's also work on deoptimizing genes to slow their translation enough to improve folding — the inverse of the over-optimization problem we discussed in Segment 10."
+  },
+  {
+   "t": 303.51,
+   "text": "If your protein is misfolding because it's translated too fast, deoptimizing some of the codons can slow the ribosome down to give the protein more folding time."
+  },
+  {
+   "t": 313.09,
+   "text": "This is a niche application, but it works for some proteins."
+  },
+  {
+   "t": 316.92,
+   "text": "The general principle is that codon choice is a tunable parameter, not a binary choice between optimized and unoptimized."
+  },
+  {
+   "t": 324.9,
+   "text": "You can dial it up."
+  },
+  {
+   "t": 326.09,
+   "text": "You can dial it down."
+  },
+  {
+   "t": 327.35,
+   "text": "You can dial it differently in different parts of the same gene."
+  },
+  {
+   "t": 330.79,
+   "text": "Modern codon engineering treats codon usage as a continuous design space, and the destination depends on what you're trying to achieve."
+  },
+  {
+   "t": 338.82,
+   "text": "Speaking of modern tools — let's take a look at the commercial landscape for codon optimization, because it's been transformed in the last decade by the rise of synthetic biology companies offering integrated design-and-synthesis services."
+  },
+  {
+   "t": 351.75,
+   "text": "That's our next segment."
+  }
+ ]
+}

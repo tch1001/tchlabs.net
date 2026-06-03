@@ -1,0 +1,215 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Personalized cancer vaccines — a different shot for every patient",
+ "duration": 418.77,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Personalized cancer vaccines — a different shot for every patient"
+  },
+  {
+   "t": 6.0,
+   "text": "I want to spend this segment on what may turn out to be, in the long run, the most important application of mRNA therapeutics: personalized cancer vaccines."
+  },
+  {
+   "t": 16.49,
+   "text": "This is the application BioNTech was founded to pursue, the one that nobody much believed in for the first decade of the 2010s, and the one that is now, in 2026, producing some of the most exciting late-stage clinical data in oncology."
+  },
+  {
+   "t": 32.84,
+   "text": "Let me set up the problem first."
+  },
+  {
+   "t": 34.61,
+   "text": "Cancer is, fundamentally, a disease of accumulated mutations."
+  },
+  {
+   "t": 40.06,
+   "text": "A tumor starts as a single cell that picked up a critical mutation in a gene controlling growth or differentiation, and then, as that cell and its descendants proliferate, they accumulate additional mutations — sometimes hundreds, sometimes thousands of them."
+  },
+  {
+   "t": 56.3,
+   "text": "Many of those mutations alter proteins in ways that create neoantigens — short protein fragments that did not exist in the patient's normal cells."
+  },
+  {
+   "t": 65.78,
+   "text": "Because these neoantigens are genuinely new — they are not present in the thymus, where the immune system learns what's \"self\" — they can, in principle, be recognized by the patient's T cells as foreign."
+  },
+  {
+   "t": 78.46,
+   "text": "The patient's own immune system has, theoretically, the tools to identify and kill the tumor cells."
+  },
+  {
+   "t": 85.5,
+   "text": "The reason the immune system usually fails to do this is complicated."
+  },
+  {
+   "t": 90.0,
+   "text": "Tumors actively suppress immune responses in various ways."
+  },
+  {
+   "t": 94.55,
+   "text": "T cells often fail to find the right neoantigens among the many normal proteins they're presented with."
+  },
+  {
+   "t": 101.61,
+   "text": "Most tumor neoantigens are weakly immunogenic to start with."
+  },
+  {
+   "t": 105.9,
+   "text": "So even though the immune system could, in principle, attack the tumor, in practice it often doesn't, or it does so weakly and ineffectively."
+  },
+  {
+   "t": 115.69,
+   "text": "The personalized cancer vaccine approach tries to fix this by, in effect, telling the patient's immune system exactly which neoantigens to look for."
+  },
+  {
+   "t": 125.56,
+   "text": "Here is the workflow."
+  },
+  {
+   "t": 127.33,
+   "text": "Step one: biopsy the patient's tumor."
+  },
+  {
+   "t": 130.19,
+   "text": "Take a small piece of tumor tissue."
+  },
+  {
+   "t": 132.43,
+   "text": "Sequence its DNA and RNA, comparing the tumor sequence to the patient's normal (germline) DNA from blood."
+  },
+  {
+   "t": 140.55,
+   "text": "Identify every position where the tumor has a mutation that the normal cells do not."
+  },
+  {
+   "t": 146.11,
+   "text": "Step two: for each tumor mutation, computationally predict whether the mutated protein fragment is likely to be presented on the surface of cells by the patient's own MHC molecules — the immune system's display cases — and whether that presented fragment is likely to be recognized by T cells."
+  },
+  {
+   "t": 164.91,
+   "text": "This prediction uses both classical immunology and modern machine learning models trained on enormous datasets of MHC peptide binding."
+  },
+  {
+   "t": 174.0,
+   "text": "The output is a ranked list of candidate neoantigens — typically a few hundred mutations are surveyed, of which the top thirty to fifty are selected as the most likely to be immunogenic."
+  },
+  {
+   "t": 186.35,
+   "text": "Step three: design an mRNA encoding a single polypeptide that contains all the selected neoantigen sequences, joined together by short linker sequences."
+  },
+  {
+   "t": 197.18,
+   "text": "Each neoantigen is included as a short stretch of about twenty-five amino acids, centered on the mutated residue."
+  },
+  {
+   "t": 204.74,
+   "text": "The full mRNA encodes thirty or so neoantigens in a single message."
+  },
+  {
+   "t": 210.45,
+   "text": "Step four: manufacture the mRNA, formulate it in an LNP, and inject it into the patient."
+  },
+  {
+   "t": 217.49,
+   "text": "Several doses over several months."
+  },
+  {
+   "t": 219.95,
+   "text": "Here is the analogy I want you to carry."
+  },
+  {
+   "t": 222.95,
+   "text": "Personalized cancer vaccines are: biopsy the tumor, sequence it, pick thirty to fifty likely-neoantigen mutations, make a custom mRNA encoding those peptides, inject the patient."
+  },
+  {
+   "t": 235.38,
+   "text": "Every patient gets a different shot."
+  },
+  {
+   "t": 237.53,
+   "text": "It is, almost literally, a different drug for every patient."
+  },
+  {
+   "t": 241.66,
+   "text": "The DNA template is unique to that one tumor."
+  },
+  {
+   "t": 245.14,
+   "text": "The mRNA is manufactured in small batches, often just for that one patient."
+  },
+  {
+   "t": 250.51,
+   "text": "The dose is delivered only to that one patient."
+  },
+  {
+   "t": 253.64,
+   "text": "And then for the next patient, the entire process starts over with their own tumor sequence and their own predicted neoantigens."
+  },
+  {
+   "t": 261.88,
+   "text": "The fact that this is even logistically possible is a consequence of the mRNA platform."
+  },
+  {
+   "t": 267.46,
+   "text": "You could not do this with monoclonal antibodies — developing a custom antibody for one patient would take years and cost millions of dollars."
+  },
+  {
+   "t": 276.2,
+   "text": "You can barely do it with peptide vaccines, which require synthesizing and purifying dozens of peptides for each patient."
+  },
+  {
+   "t": 284.08,
+   "text": "But with mRNA, the entire personalized manufacturing process — from biopsy to dose — can be done in about six to eight weeks for a few hundred thousand dollars per patient."
+  },
+  {
+   "t": 294.65,
+   "text": "It is fast enough and cheap enough to be clinically practical, in a way that no other personalized-medicine modality has ever been."
+  },
+  {
+   "t": 302.83,
+   "text": "The clinical data so far has been striking."
+  },
+  {
+   "t": 306.06,
+   "text": "The most-discussed program is Moderna's mRNA-4157, a personalized cancer vaccine being developed in combination with Merck's checkpoint inhibitor Keytruda (pembrolizumab)."
+  },
+  {
+   "t": 318.95,
+   "text": "The combination was tested in a Phase 2 trial in patients with high-risk melanoma who had had their tumors surgically removed and were at risk of recurrence."
+  },
+  {
+   "t": 328.48,
+   "text": "Patients who received Keytruda alone had a certain recurrence rate."
+  },
+  {
+   "t": 332.47,
+   "text": "Patients who received Keytruda plus the personalized mRNA vaccine had a substantially lower recurrence rate — the relative reduction was around forty-four percent in the published Phase 2 data, with statistical significance and clinically meaningful absolute differences."
+  },
+  {
+   "t": 348.72,
+   "text": "The combination is now in Phase 3 trials in melanoma and is being expanded into other indications including non-small-cell lung cancer."
+  },
+  {
+   "t": 357.85,
+   "text": "BioNTech has parallel programs in partnership with Genentech, focused initially on pancreatic cancer, which has historically been one of the most lethal solid tumors with the worst prognosis."
+  },
+  {
+   "t": 370.45,
+   "text": "Early data in pancreatic cancer has shown that patients who mount a T-cell response to the personalized vaccine have substantially better recurrence-free survival than those who don't."
+  },
+  {
+   "t": 381.77,
+   "text": "The trial is small and not yet definitive, but the signal is real and the data is being followed closely."
+  },
+  {
+   "t": 388.82,
+   "text": "If these programs continue to deliver in Phase 3, personalized cancer vaccines will be the second major commercial application of mRNA therapeutics, after infectious disease vaccines."
+  },
+  {
+   "t": 401.13,
+   "text": "And unlike the infectious disease application — which is an extension of a well-established product category — personalized cancer vaccines are a genuinely new modality, only possible because of the mRNA platform's unique ability to produce a different drug for every patient."
+  }
+ ]
+}

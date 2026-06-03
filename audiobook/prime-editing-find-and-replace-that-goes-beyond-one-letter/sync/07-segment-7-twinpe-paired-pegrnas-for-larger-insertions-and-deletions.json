@@ -1,0 +1,107 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — twinPE: paired pegRNAs for larger insertions and deletions",
+ "duration": 184.19,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — twinPE: paired pegRNAs for larger insertions and deletions"
+  },
+  {
+   "t": 6.51,
+   "text": "Up through PE5, the size limit of prime editing has been pretty modest."
+  },
+  {
+   "t": 11.57,
+   "text": "Insertions and deletions of up to about 50 base pairs work reasonably well."
+  },
+  {
+   "t": 17.07,
+   "text": "Beyond that, the RT can't process the longer template efficiently, the flap equilibrium gets messier, and the editing efficiency drops to nearly zero."
+  },
+  {
+   "t": 28.0,
+   "text": "For a lot of applications — installing a single point mutation, fixing a small indel disease allele, adding a short tag — 50 base pairs is plenty."
+  },
+  {
+   "t": 38.16,
+   "text": "But if you want to install a whole reporter gene, a whole therapeutic transgene, or even a moderate-sized exon, you need more."
+  },
+  {
+   "t": 46.85,
+   "text": "The first answer the field developed for this size problem is called twinPE, published by the Liu lab in 2022."
+  },
+  {
+   "t": 54.0,
+   "text": "Here's the idea."
+  },
+  {
+   "t": 55.27,
+   "text": "Instead of using one pegRNA, use two — targeting opposite strands, flanking the region you want to modify."
+  },
+  {
+   "t": 63.42,
+   "text": "The two pegRNAs each install their own edit on their own strand."
+  },
+  {
+   "t": 67.53,
+   "text": "The two newly synthesized 3' flaps are designed so that they're complementary to each other at their tips."
+  },
+  {
+   "t": 74.61,
+   "text": "After both edits are written, the two new flaps anneal to each other in the middle, displacing both of the original strands."
+  },
+  {
+   "t": 82.21,
+   "text": "The cell repairs around the new joined strands."
+  },
+  {
+   "t": 85.44,
+   "text": "The result: the region between the two cut sites is effectively replaced with the sequence encoded by the two pegRNA RT templates."
+  },
+  {
+   "t": 93.96,
+   "text": "So with twinPE you can do larger, more dramatic edits — replacing a 100-base-pair region with a different 100-base-pair sequence, deleting a 1-kilobase region cleanly, inserting a few-hundred-base-pair sequence."
+  },
+  {
+   "t": 108.35,
+   "text": "You're not limited to the 50-base-pair window of a single pegRNA, because the writing is split across two pegRNAs operating on opposite strands."
+  },
+  {
+   "t": 118.08,
+   "text": "The mechanism is a bit harder to design — you need both pegRNAs to be efficient, you need their RT templates to terminate in complementary sequences, and you need the two flap-annealing geometries to work out."
+  },
+  {
+   "t": 130.72,
+   "text": "But when it does work, twinPE opens up edit sizes that were previously inaccessible."
+  },
+  {
+   "t": 136.65,
+   "text": "Several-hundred-base-pair deletions, several-hundred-base-pair insertions, large multi-base substitutions, all in a single editing reaction."
+  },
+  {
+   "t": 145.57,
+   "text": "The key analogy: with one pegRNA, you're trying to write one short message on one strand."
+  },
+  {
+   "t": 151.86,
+   "text": "With two pegRNAs on opposite strands, you can rewrite a whole region by writing on both strands at once and letting the two new strands find each other in the middle."
+  },
+  {
+   "t": 161.82,
+   "text": "twinPE is still limited to a few hundred bases of new sequence."
+  },
+  {
+   "t": 166.46,
+   "text": "The RT can only process so much pegRNA template, and the flap-annealing geometry can only work for so far."
+  },
+  {
+   "t": 174.51,
+   "text": "For really large insertions — full-gene insertions, kilobase-scale cargo — you need something more."
+  },
+  {
+   "t": 181.3,
+   "text": "That something more is the next big advance."
+  }
+ ]
+}
