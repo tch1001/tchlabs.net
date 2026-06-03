@@ -1,0 +1,263 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The address problem — what you lose when you dissociate a tissue",
+ "duration": 395.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The address problem — what you lose when you dissociate a tissue"
+  },
+  {
+   "t": 5.56,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 6.99,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 8.28,
+   "text": "Today and for the next two hours, we're going to talk about spatial transcriptomics — a family of methods that measures gene expression in a tissue while preserving the physical location of every measurement."
+  },
+  {
+   "t": 20.73,
+   "text": "You already know single-cell sequencing."
+  },
+  {
+   "t": 23.38,
+   "text": "You know how to take a piece of tissue, dissociate it into a soup of cells, barcode each cell, sequence them, and get back a list of which cell types are present and in what proportions."
+  },
+  {
+   "t": 34.4,
+   "text": "That technology, as we discussed, was a revolution."
+  },
+  {
+   "t": 37.96,
+   "text": "It changed every question you could ask about a tissue."
+  },
+  {
+   "t": 41.11,
+   "text": "But there is one question single-cell sequencing fundamentally cannot answer."
+  },
+  {
+   "t": 46.54,
+   "text": "And it's a question biologists desperately want to answer."
+  },
+  {
+   "t": 49.56,
+   "text": "The question is: where were these cells?"
+  },
+  {
+   "t": 52.16,
+   "text": "When you dissociated the tissue, you destroyed its architecture."
+  },
+  {
+   "t": 56.61,
+   "text": "You took a beautiful three-dimensional arrangement of cells — neurons in their cortical layers, immune cells infiltrating a tumor margin, fibroblasts arranged around a blood vessel — and you turned it into a homogeneous slurry."
+  },
+  {
+   "t": 71.26,
+   "text": "Every cell came out the other side as a single dot in some abstract expression space, completely divorced from its neighbors, its tissue, its anatomical context."
+  },
+  {
+   "t": 82.59,
+   "text": "You know which cells were there."
+  },
+  {
+   "t": 84.11,
+   "text": "You have no idea where."
+  },
+  {
+   "t": 85.72,
+   "text": "Spatial transcriptomics is the technology that puts the address back on every measurement."
+  },
+  {
+   "t": 92.3,
+   "text": "It tells you not just \"this is a T cell, this is a tumor cell, this is a fibroblast,\" but \"this T cell was sitting right next to this tumor cell, and this fibroblast was three cell-diameters away, and the macrophages were clustered in this corner of the section while the B cells lined the edges."
+  },
+  {
+   "t": 109.29,
+   "text": "\" It is single-cell with the address attached."
+  },
+  {
+   "t": 112.11,
+   "text": "The cells become not just types but tenants of a place."
+  },
+  {
+   "t": 115.76,
+   "text": "And in biology, place is everything."
+  },
+  {
+   "t": 118.75,
+   "text": "Here is the analogy I want you to hold for the next two hours."
+  },
+  {
+   "t": 122.75,
+   "text": "Imagine you walk into a city — let's say Paris — and you want to understand what kinds of people live there."
+  },
+  {
+   "t": 128.88,
+   "text": "Option one: you round up every Parisian, blindfold them, drive them to a single warehouse, and conduct a survey."
+  },
+  {
+   "t": 137.03,
+   "text": "You learn that the city contains bakers, lawyers, taxi drivers, students, retirees, tourists, in roughly such-and-such proportions."
+  },
+  {
+   "t": 146.11,
+   "text": "Useful, in a limited way."
+  },
+  {
+   "t": 148.24,
+   "text": "But you have no idea where in Paris each person lives or works."
+  },
+  {
+   "t": 152.53,
+   "text": "You don't know whether the lawyers cluster in one arrondissement, whether the bakers are evenly distributed or concentrated near the markets, whether the tourists are mostly in the Marais."
+  },
+  {
+   "t": 162.61,
+   "text": "You have a list of categories but no map."
+  },
+  {
+   "t": 165.3,
+   "text": "That is single-cell sequencing."
+  },
+  {
+   "t": 167.26,
+   "text": "Option two: you walk the streets, go house by house, and record what each person does for a living and where their house sits on the map."
+  },
+  {
+   "t": 175.45,
+   "text": "Now you have not just a list but a geography."
+  },
+  {
+   "t": 178.44,
+   "text": "You can see the bakers concentrated near the boulangeries."
+  },
+  {
+   "t": 181.95,
+   "text": "You can see the lawyers clustering near the courts."
+  },
+  {
+   "t": 184.84,
+   "text": "You can see the tourists in tight rings around the monuments."
+  },
+  {
+   "t": 188.28,
+   "text": "You can see neighborhoods — coherent groups of people that occupy specific places and interact with each other."
+  },
+  {
+   "t": 195.43,
+   "text": "That second method — the door-to-door survey with addresses — is spatial transcriptomics."
+  },
+  {
+   "t": 201.47,
+   "text": "You preserve the geography."
+  },
+  {
+   "t": 203.22,
+   "text": "You get the map."
+  },
+  {
+   "t": 204.24,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the two main families of spatial methods, sequencing-based and imaging-based, and explain what each one trades off; two, look at a Visium experiment and explain what a \"spot\" is, why it's about fifty-five microns across, and what it means to put a tissue section on top of a barcoded slide; three, look at any modern paper that says \"spatial transcriptomics was performed\" and immediately understand whether they used an"
+  },
+  {
+   "t": 235.47,
+   "text": "array-based method or an imaging-based one, what the resolution is, and what they can and cannot conclude — then we've succeeded."
+  },
+  {
+   "t": 243.71,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 245.94,
+   "text": "A grounding fact before we go deeper."
+  },
+  {
+   "t": 248.71,
+   "text": "Spatial transcriptomics is built on top of single-cell sequencing the way single-cell was built on top of bulk sequencing."
+  },
+  {
+   "t": 256.15,
+   "text": "The chemistries are similar."
+  },
+  {
+   "t": 257.84,
+   "text": "The downstream computational tools are extensions of Seurat and Scanpy."
+  },
+  {
+   "t": 262.43,
+   "text": "The conceptual move, again, is partition and barcode — but this time the partition is by physical location in the tissue rather than by isolation into a droplet."
+  },
+  {
+   "t": 273.24,
+   "text": "Each spot on a spatial array has its own zip code, just like each droplet in 10x Chromium has its own zip code."
+  },
+  {
+   "t": 280.1,
+   "text": "The difference is that the spatial zip code corresponds to an X-Y coordinate on a slide, not to a cell in a tube."
+  },
+  {
+   "t": 286.98,
+   "text": "The barcode tells you where on the slide a transcript came from."
+  },
+  {
+   "t": 290.88,
+   "text": "Combine that with the H&E image of the same slide, and you know which transcripts came from which piece of tissue."
+  },
+  {
+   "t": 297.21,
+   "text": "The field has two main families, and they have almost opposite trade-offs."
+  },
+  {
+   "t": 302.14,
+   "text": "Sequencing-based methods — Visium, Slide-seq, Stereo-seq — use a barcoded grid printed onto a slide."
+  },
+  {
+   "t": 309.91,
+   "text": "You lay tissue on top, the mRNAs leak down, hybridize to nearby barcodes, get reverse-transcribed, and you sequence the whole pool."
+  },
+  {
+   "t": 319.0,
+   "text": "You get the entire transcriptome — every gene the tissue was expressing — but the resolution is coarse, on the order of microns to tens of microns, often capturing several cells per spot."
+  },
+  {
+   "t": 330.91,
+   "text": "Imaging-based methods — MERFISH, seqFISH, Xenium, CosMx — use sequential rounds of fluorescent probes."
+  },
+  {
+   "t": 339.11,
+   "text": "You design a panel of probes that target specific transcripts, hybridize them to the tissue in rounds, image after every round, and decode the combinatorial barcode at every fluorescent dot."
+  },
+  {
+   "t": 351.83,
+   "text": "You get exquisite, sub-cellular resolution — you can see individual mRNA molecules at known positions inside individual cells — but you only see the genes you put on the probe panel, typically a few hundred to a few thousand at most."
+  },
+  {
+   "t": 366.56,
+   "text": "Two families."
+  },
+  {
+   "t": 367.91,
+   "text": "Opposite trade-offs."
+  },
+  {
+   "t": 369.36,
+   "text": "Untargeted transcriptome at low resolution, or targeted panel at high resolution."
+  },
+  {
+   "t": 375.45,
+   "text": "Both went commercial between 2019 and 2023, and the field exploded."
+  },
+  {
+   "t": 381.0,
+   "text": "Today, no serious tissue biology paper — no atlas, no tumor microenvironment study, no developmental map — is published without at least one of these methods playing a role."
+  },
+  {
+   "t": 392.64,
+   "text": "Let me show you where they came from and how they work."
+  }
+ ]
+}

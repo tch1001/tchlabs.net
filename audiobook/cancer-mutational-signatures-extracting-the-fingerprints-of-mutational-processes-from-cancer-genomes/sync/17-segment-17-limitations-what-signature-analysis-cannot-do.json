@@ -1,0 +1,207 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Limitations — what signature analysis cannot do",
+ "duration": 371.76,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Limitations — what signature analysis cannot do"
+  },
+  {
+   "t": 5.33,
+   "text": "I want to be honest about the limitations of mutational signature analysis, because it would be unfair to leave you with the impression that this is a fully solved problem with clean answers in every case."
+  },
+  {
+   "t": 17.2,
+   "text": "It's not."
+  },
+  {
+   "t": 18.05,
+   "text": "Let me walk through the main caveats."
+  },
+  {
+   "t": 20.29,
+   "text": "Limitation one: small samples are noisy."
+  },
+  {
+   "t": 23.43,
+   "text": "Signature analysis works best on tumors with lots of mutations — thousands or tens of thousands."
+  },
+  {
+   "t": 30.3,
+   "text": "When a tumor has only a few hundred mutations (as in many pediatric cancers, many indolent adult cancers, and many early-stage tumors), the signal-to-noise ratio in the 96-class histogram is poor."
+  },
+  {
+   "t": 43.85,
+   "text": "Individual context counts have wide Poisson uncertainty."
+  },
+  {
+   "t": 48.11,
+   "text": "Signature exposure estimates have wide confidence intervals."
+  },
+  {
+   "t": 52.27,
+   "text": "Sometimes the signature analysis can't reliably tell you anything beyond \"this tumor has the slow aging signature and something else, maybe."
+  },
+  {
+   "t": 61.71,
+   "text": "\""
+  },
+  {
+   "t": 61.91,
+   "text": "The cure for this is more data — whole-genome sequencing instead of whole-exome (about thirty-fold more mutations); pooling tumors of the same type for cohort-level analysis when individual tumors are too sparse."
+  },
+  {
+   "t": 75.24,
+   "text": "But for a single tumor with a single biopsy and a limited budget, sometimes signature analysis just can't give you a clean answer."
+  },
+  {
+   "t": 82.97,
+   "text": "Limitation two: signature overlap."
+  },
+  {
+   "t": 85.84,
+   "text": "Some signatures are remarkably similar to each other, and distinguishing them is difficult."
+  },
+  {
+   "t": 91.08,
+   "text": "SBS1 (CpG deamination) and SBS5 (clock-like, unknown cause) both contribute roughly proportionally to age, with overlapping shape profiles, and they're often hard to separate."
+  },
+  {
+   "t": 104.67,
+   "text": "The MMR-deficient signatures (SBS6, SBS15, SBS20, SBS26) overlap with each other and with parts of POLE signatures."
+  },
+  {
+   "t": 116.04,
+   "text": "Different NMF runs with different parameters can apportion the mutations among similar signatures differently."
+  },
+  {
+   "t": 123.08,
+   "text": "The exposure estimates have real uncertainty."
+  },
+  {
+   "t": 126.54,
+   "text": "The cosine similarity between similar signatures is often above 0.8 — meaning they share more than 80% of their shape — which is uncomfortably close."
+  },
+  {
+   "t": 137.16,
+   "text": "This is one reason why mutational signature analysis is best treated as a probability distribution over possible explanations rather than a definitive assignment."
+  },
+  {
+   "t": 147.71,
+   "text": "Limitation three: novel signatures versus noise."
+  },
+  {
+   "t": 152.05,
+   "text": "When you run signature extraction on a new cohort, NMF will produce however many signatures you ask for."
+  },
+  {
+   "t": 159.14,
+   "text": "If you ask for 20 signatures, it gives you 20."
+  },
+  {
+   "t": 162.45,
+   "text": "If you ask for 30, it gives you 30."
+  },
+  {
+   "t": 165.19,
+   "text": "How do you know whether a \"novel\" signature is a real new mutational process or just a noise artifact of overfitting?"
+  },
+  {
+   "t": 173.03,
+   "text": "This is genuinely hard."
+  },
+  {
+   "t": 174.78,
+   "text": "The standard approach is to require reproducibility across multiple NMF runs with different random initializations, and to require the signature to appear in multiple independent cohorts."
+  },
+  {
+   "t": 186.68,
+   "text": "But even with these safeguards, some published \"novel\" signatures have later turned out to be artifacts — sometimes sequencing platform-specific errors, sometimes contamination patterns, sometimes batch effects."
+  },
+  {
+   "t": 199.25,
+   "text": "This is a place where the field has had to develop critical hygiene over time."
+  },
+  {
+   "t": 203.5,
+   "text": "Early signatures were extracted with looser criteria; the COSMIC team has retired or merged several signatures across versions as more data clarified what was real and what was artifact."
+  },
+  {
+   "t": 215.24,
+   "text": "The current catalog is more conservative than early ones."
+  },
+  {
+   "t": 218.78,
+   "text": "Limitation four: causal versus correlative interpretation."
+  },
+  {
+   "t": 222.97,
+   "text": "A signature is a pattern."
+  },
+  {
+   "t": 224.89,
+   "text": "The biological cause of the pattern is inferred from correlations — Signature 4 correlates with smoking history; Signature 7 correlates with sun-exposed body sites; et cetera."
+  },
+  {
+   "t": 236.68,
+   "text": "The causal interpretation is usually backed up by controlled experimental work — exposing cell lines to a candidate mutagen and reproducing the signature — but for some signatures, especially newer ones, the cause is uncertain or unknown."
+  },
+  {
+   "t": 252.15,
+   "text": "SBS5 is the most famous case of a major, prevalent signature whose etiology is still genuinely unclear."
+  },
+  {
+   "t": 260.71,
+   "text": "Limitation five: timing information is limited."
+  },
+  {
+   "t": 264.29,
+   "text": "A mutational signature tells you that a particular process operated in the cell's history, but it doesn't tell you precisely when."
+  },
+  {
+   "t": 272.16,
+   "text": "A tumor with SBS4 had some tobacco exposure at some point, but the signature alone can't tell you whether the smoking was recent or decades old."
+  },
+  {
+   "t": 281.2,
+   "text": "With careful clonal reconstruction — examining whether signature-attributed mutations are present in early-arising clonal mutations or only in late-arising subclonal ones — you can extract some temporal information, but it requires deep, multi-region sequencing and sophisticated analysis."
+  },
+  {
+   "t": 300.14,
+   "text": "Most signature analyses provide a cumulative picture without precise timing."
+  },
+  {
+   "t": 305.34,
+   "text": "Limitation six: tissue context."
+  },
+  {
+   "t": 308.36,
+   "text": "Some signatures appear differently in different tissues, with different intensities, possibly because of tissue-specific factors like transcription, chromatin state, or repair pathway expression."
+  },
+  {
+   "t": 320.3,
+   "text": "A signature extracted primarily from one tissue may not generalize perfectly to another."
+  },
+  {
+   "t": 327.1,
+   "text": "The COSMIC catalog tries to handle this by extracting signatures from diverse tissues and weighting tissue contributions appropriately, but tissue-specific effects can still confound interpretation."
+  },
+  {
+   "t": 339.36,
+   "text": "These limitations are not reasons to dismiss mutational signature analysis."
+  },
+  {
+   "t": 345.04,
+   "text": "They are reasons to use it carefully — to report exposure estimates with uncertainty, to interpret novel signatures cautiously, to require independent validation for clinical applications, to treat signature attribution as evidence rather than proof."
+  },
+  {
+   "t": 361.29,
+   "text": "With those caveats, signature analysis is still extraordinarily useful, but it is not a black box that spits out definitive answers."
+  },
+  {
+   "t": 369.61,
+   "text": "It's a tool that requires judgment."
+  }
+ ]
+}

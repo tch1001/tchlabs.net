@@ -1,0 +1,223 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The m6A renaissance — Jaffrey, He, and MeRIP-seq in 2012",
+ "duration": 437.74,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The m6A renaissance — Jaffrey, He, and MeRIP-seq in 2012"
+  },
+  {
+   "t": 8.53,
+   "text": "In May 2012, a paper appeared in the journal Cell from Samie Jaffrey's lab at Weill Cornell, titled \"Topology of the human and mouse m6A RNA methylomes revealed by m6A-seq."
+  },
+  {
+   "t": 22.39,
+   "text": "\" A few months later, a near-simultaneous paper from Gideon Rechavi's group in Israel, published in Nature, showed essentially the same thing using a different naming convention — MeRIP-seq, which stands for Methylated RNA Immunoprecipitation followed by sequencing."
+  },
+  {
+   "t": 39.98,
+   "text": "These two papers, together with a third paper from Chuan He's lab at the University of Chicago a few months earlier that had identified the first m6A demethylase (we will come back to FTO in Segment 5), opened the floodgates."
+  },
+  {
+   "t": 54.17,
+   "text": "Within a year the m6A field went from a backwater to a torrent of papers."
+  },
+  {
+   "t": 59.92,
+   "text": "Within five years it was one of the hottest areas in RNA biology."
+  },
+  {
+   "t": 64.16,
+   "text": "Within ten years it was a clinical drug target."
+  },
+  {
+   "t": 67.21,
+   "text": "Let me explain what MeRIP-seq actually did, in plain terms."
+  },
+  {
+   "t": 71.9,
+   "text": "The chemistry of m6A — a methyl group on the N6 position of adenosine — is the same in any RNA."
+  },
+  {
+   "t": 80.51,
+   "text": "And because it is a defined chemical structure, you can raise an antibody against it."
+  },
+  {
+   "t": 86.17,
+   "text": "You take a synthetic oligonucleotide containing m6A, you inject it into a rabbit, you collect the antibodies the rabbit produces, you screen for ones that specifically recognize m6A but do not recognize unmodified A."
+  },
+  {
+   "t": 102.16,
+   "text": "By the late 2000s such antibodies were commercially available."
+  },
+  {
+   "t": 106.58,
+   "text": "The trick that Jaffrey and Rechavi pulled was to use these anti-m6A antibodies as a fishing rod to pull down all the RNA fragments in a cell that contained the modification, and then sequence those fragments."
+  },
+  {
+   "t": 120.6,
+   "text": "The workflow looks like this."
+  },
+  {
+   "t": 122.35,
+   "text": "You take total RNA from your sample."
+  },
+  {
+   "t": 125.15,
+   "text": "You poly-A select, so that you are looking at mRNA rather than the much more abundant rRNA."
+  },
+  {
+   "t": 131.01,
+   "text": "You fragment the mRNA to short pieces — typically 100 to 200 nucleotides — so that an antibody pulldown produces small, sequenceable fragments rather than entire mRNAs."
+  },
+  {
+   "t": 143.95,
+   "text": "You take that fragmented RNA, you split it into two pools: one is your immunoprecipitation pool, the other is your input control."
+  },
+  {
+   "t": 152.79,
+   "text": "To the IP pool you add the anti-m6A antibody, you incubate, you capture the antibody on protein-coated beads, and you wash away anything that did not bind."
+  },
+  {
+   "t": 162.55,
+   "text": "The fragments that come off the beads are enriched for those containing m6A."
+  },
+  {
+   "t": 167.82,
+   "text": "To the input control, you do not add antibody — you just sequence the fragmented mRNA as a background reference."
+  },
+  {
+   "t": 175.1,
+   "text": "Then you make Illumina libraries from both pools, sequence them, and align the reads to the transcriptome."
+  },
+  {
+   "t": 181.72,
+   "text": "The output is, for every transcript, two coverage tracks: an IP track and an input track."
+  },
+  {
+   "t": 188.4,
+   "text": "Where the IP track shows a sharp peak that is not present in the input — a region of the transcript that is enriched in the IP relative to input — you call an m6A peak."
+  },
+  {
+   "t": 199.25,
+   "text": "That peak is your map of where m6A is on that transcript."
+  },
+  {
+   "t": 203.84,
+   "text": "Do this for every transcript in the cell, and you have a transcriptome-wide m6A map."
+  },
+  {
+   "t": 210.2,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 211.96,
+   "text": "MeRIP-seq is the bisulfite of RNA — except instead of using a chemistry that distinguishes modified from unmodified bases, you use an antibody that physically pulls down the fragments containing the modification, and then you sequence what you pulled down."
+  },
+  {
+   "t": 228.35,
+   "text": "It is conceptually closer to ChIP-seq for chromatin marks than to bisulfite for DNA methylation, but the function is the same: a genome-wide, or in this case transcriptome-wide, map of where a chemical modification is found."
+  },
+  {
+   "t": 243.19,
+   "text": "What the 2012 papers found was, in retrospect, the foundation of the entire field."
+  },
+  {
+   "t": 249.4,
+   "text": "First, m6A is everywhere."
+  },
+  {
+   "t": 252.82,
+   "text": "It is on the majority of mRNA transcripts in human and mouse cells — somewhere between a quarter and a half of all expressed mRNAs carry at least one m6A peak."
+  },
+  {
+   "t": 263.71,
+   "text": "Across the transcriptome, the total fraction of adenosines that are methylated is small — roughly 0.1 to 0.4 percent of all adenosines in mRNA — but because each mRNA has thousands of adenosines, that low percentage adds up to most mRNAs carrying multiple m6A marks."
+  },
+  {
+   "t": 284.14,
+   "text": "Second, m6A has a strong sequence preference."
+  },
+  {
+   "t": 288.23,
+   "text": "The methylated adenosines almost always sit inside a short consensus motif, originally written as DRACH — where D is A, G, or U; R is A or G; the methylated A is the underlined one; C is C; and H is A, C, or U."
+  },
+  {
+   "t": 307.89,
+   "text": "The simpler version of this motif is GAC or AAC, and you should think of it as \"m6A likes to sit in an A that is preceded by a purine and followed by a C."
+  },
+  {
+   "t": 319.13,
+   "text": "\" The writers — we will get to them in a minute — recognize this motif and only methylate adenosines in this context."
+  },
+  {
+   "t": 327.14,
+   "text": "So the m6A modification is not random; it is sequence-encoded, in the sense that the cell can predict from the mRNA sequence which adenosines are eligible for methylation."
+  },
+  {
+   "t": 338.1,
+   "text": "Third, m6A has a distinctive distribution along transcripts."
+  },
+  {
+   "t": 343.29,
+   "text": "It is not uniform across the mRNA."
+  },
+  {
+   "t": 345.83,
+   "text": "It is enriched in two specific places: near stop codons — the boundary between the coding sequence and the 3′ untranslated region — and in long internal exons."
+  },
+  {
+   "t": 357.54,
+   "text": "This is one of the most striking and reproducible features of the m6A landscape."
+  },
+  {
+   "t": 363.65,
+   "text": "If you plot the density of m6A peaks along a meta-transcript, where you have averaged across all expressed mRNAs, you see a clean enrichment right at the stop codon."
+  },
+  {
+   "t": 374.79,
+   "text": "Why there?"
+  },
+  {
+   "t": 375.66,
+   "text": "The answer is still incomplete, but it relates to splicing, polyadenylation, and the fact that the writers tend to act on the last exon before termination."
+  },
+  {
+   "t": 385.54,
+   "text": "Fourth, m6A is dynamic."
+  },
+  {
+   "t": 388.48,
+   "text": "Different cell states, different tissues, different developmental stages have different m6A profiles."
+  },
+  {
+   "t": 395.38,
+   "text": "The same gene can be unmethylated in one cell type and heavily methylated in another."
+  },
+  {
+   "t": 401.19,
+   "text": "This was the observation that turned m6A from a static curiosity into a regulatory mark."
+  },
+  {
+   "t": 408.36,
+   "text": "If the modification changes with cell state, then it must be doing something — it must be a substrate for regulation."
+  },
+  {
+   "t": 415.83,
+   "text": "So that is what MeRIP-seq told us in 2012."
+  },
+  {
+   "t": 419.69,
+   "text": "m6A is everywhere on mRNA, sits at a defined sequence motif, is enriched near stop codons, and changes across cell states."
+  },
+  {
+   "t": 430.0,
+   "text": "The field could now ask: who puts it on, who takes it off, who reads it, and what does it do?"
+  },
+  {
+   "t": 436.11,
+   "text": "Let us go meet the cast."
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Integrating ChIP-seq with RNA-seq and the question of function",
+ "duration": 175.51,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Integrating ChIP-seq with RNA-seq and the question of function"
+  },
+  {
+   "t": 6.22,
+   "text": "We've talked about where proteins bind."
+  },
+  {
+   "t": 8.51,
+   "text": "The natural next question is what their binding does."
+  },
+  {
+   "t": 11.51,
+   "text": "ChIP-seq tells you the protein was there."
+  },
+  {
+   "t": 14.44,
+   "text": "RNA-seq tells you what the cell is transcribing."
+  },
+  {
+   "t": 18.19,
+   "text": "The integration of the two is the bread and butter of modern regulatory genomics."
+  },
+  {
+   "t": 23.32,
+   "text": "The simplest integration is this."
+  },
+  {
+   "t": 25.69,
+   "text": "You ChIP-seq your transcription factor in a given cell line."
+  },
+  {
+   "t": 29.91,
+   "text": "You also RNA-seq the same cell line under two conditions: untreated, and treated with something that depletes or inactivates the TF."
+  },
+  {
+   "t": 39.23,
+   "text": "The depletion can be a knockout, a CRISPR knockdown, an auxin-inducible degron, a small molecule inhibitor — anything that turns off the TF rapidly."
+  },
+  {
+   "t": 49.2,
+   "text": "You compare gene expression between the two conditions and find the genes that change."
+  },
+  {
+   "t": 54.11,
+   "text": "Now you ask: of those changed genes, how many have ChIP-seq peaks for your TF nearby — in their promoters, or in enhancers that loop to their promoters?"
+  },
+  {
+   "t": 63.92,
+   "text": "Those are the direct targets — genes that are both bound by the TF and functionally affected by removing it."
+  },
+  {
+   "t": 70.29,
+   "text": "The non-changed genes that are bound are non-functional binding events, and the changed genes that aren't bound are indirect effects."
+  },
+  {
+   "t": 78.08,
+   "text": "This integration is the bridge between mechanism and consequence."
+  },
+  {
+   "t": 82.36,
+   "text": "The list of direct targets is what a regulatory biologist actually wants from a TF study."
+  },
+  {
+   "t": 88.05,
+   "text": "Everything else — the binding sites, the motif, the cofactor interactions — is supporting evidence."
+  },
+  {
+   "t": 95.21,
+   "text": "The complication is that \"nearby\" is not well-defined."
+  },
+  {
+   "t": 99.19,
+   "text": "Promoter binding is straightforward — within a few kilobases of the transcription start site."
+  },
+  {
+   "t": 105.01,
+   "text": "But enhancer binding can act on genes that are hundreds of kilobases away, or even on different chromosomes through three-dimensional chromatin contacts."
+  },
+  {
+   "t": 113.85,
+   "text": "To properly map TF binding to gene targets, you increasingly want Hi-C or HiChIP data — assays that map three-dimensional contacts between regulatory elements and promoters — overlaid on top of your ChIP-seq peaks."
+  },
+  {
+   "t": 128.86,
+   "text": "With those contact maps, you can ask not just \"is the TF near the gene linearly?"
+  },
+  {
+   "t": 134.35,
+   "text": "\" but \"is the TF in an enhancer that contacts the gene three-dimensionally?"
+  },
+  {
+   "t": 139.41,
+   "text": "\" That's a much better predictor of regulation."
+  },
+  {
+   "t": 142.14,
+   "text": "Modern regulatory genomics studies typically combine at least three layers: ChIP-seq or CUT&Tag for protein binding, RNA-seq for expression, and Hi-C or similar for three-dimensional organization."
+  },
+  {
+   "t": 156.32,
+   "text": "The integrated analysis is more informative than any one assay alone, and the major findings of the field — gene regulatory networks, enhancer-promoter rewiring during differentiation, cancer-driver mutations in non-coding regulatory elements — all rely on this kind of multi-omic integration."
+  }
+ ]
+}

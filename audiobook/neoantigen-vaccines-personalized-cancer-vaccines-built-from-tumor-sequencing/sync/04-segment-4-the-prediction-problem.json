@@ -1,0 +1,175 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The prediction problem",
+ "duration": 364.44,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The prediction problem"
+  },
+  {
+   "t": 2.58,
+   "text": "Alright, so the patient walks into the clinic with a tumor."
+  },
+  {
+   "t": 6.54,
+   "text": "We biopsy it, we sequence its DNA, we identify a few hundred or a few thousand somatic mutations — mutations that exist in the tumor but not in the patient's normal tissue."
+  },
+  {
+   "t": 18.51,
+   "text": "Each missense mutation, each frameshift, each fusion, potentially produces a mutated peptide."
+  },
+  {
+   "t": 25.95,
+   "text": "The question is: which of those potential peptides will actually be displayed on the tumor's HLA and recognized by T cells?"
+  },
+  {
+   "t": 33.92,
+   "text": "This is the prediction problem, and it is, computationally, one of the more interesting problems in modern bioinformatics."
+  },
+  {
+   "t": 41.74,
+   "text": "Let me lay out the steps."
+  },
+  {
+   "t": 43.33,
+   "text": "For each candidate mutation, you generate the mutated peptide sequence in silico — you take the mutated amino acid and the natural-flanking amino acids on either side, sliding a window across to generate all possible 8-mers, 9-mers, 10-mers, 11-mers that contain the mutation."
+  },
+  {
+   "t": 63.19,
+   "text": "For a single missense mutation that's a few dozen candidate peptides."
+  },
+  {
+   "t": 68.09,
+   "text": "Then you ask: which of these peptides, given the patient's specific HLA alleles, are likely to bind tightly enough to actually be loaded and displayed?"
+  },
+  {
+   "t": 77.84,
+   "text": "That binding question is what the prediction algorithms try to answer."
+  },
+  {
+   "t": 82.09,
+   "text": "They take in a peptide sequence and an HLA allele, and they output a predicted binding affinity, usually expressed as an IC50 in nanomolar units or as a percentile rank against random peptides."
+  },
+  {
+   "t": 96.66,
+   "text": "Strong binders — IC50 below about 50 nanomolar, or percentile rank below about 0.5% — are considered presentation candidates."
+  },
+  {
+   "t": 107.11,
+   "text": "The most famous of these algorithms is NetMHC and its successors, especially NetMHCpan."
+  },
+  {
+   "t": 113.97,
+   "text": "NetMHC was developed in the Copenhagen group of Søren Brunak and Morten Nielsen starting in the early 2000s, and it has been the workhorse of the field for two decades."
+  },
+  {
+   "t": 124.44,
+   "text": "It's a neural-network model trained on experimental binding data — peptide-HLA pairs measured in the lab — and it learned to generalize from those measurements."
+  },
+  {
+   "t": 134.5,
+   "text": "NetMHCpan is the version that handles arbitrary HLA alleles, not just the few that had been deeply characterized experimentally."
+  },
+  {
+   "t": 143.71,
+   "text": "The other major player is MHCflurry, developed in the lab of Jeff Hammerbacher and now maintained by a group at Mt."
+  },
+  {
+   "t": 151.5,
+   "text": "Sinai."
+  },
+  {
+   "t": 152.45,
+   "text": "MHCflurry 2.0, in particular, was trained on a combination of binding-affinity data and immunopeptidomics data — direct mass-spectrometry measurements of which peptides are actually found on HLA molecules pulled from real cells."
+  },
+  {
+   "t": 167.79,
+   "text": "The immunopeptidomics training data was a turning point, because it doesn't just measure whether a peptide can bind in a binding assay; it measures whether the cell actually did present it in vivo, after going through all the upstream processing."
+  },
+  {
+   "t": 182.01,
+   "text": "There are others — MixMHCpred from the Lausanne group, MARIA, NetMHCstabpan that includes the stability of the binding, and a growing number of transformer-based models trained on ever-larger immunopeptidomics datasets."
+  },
+  {
+   "t": 195.25,
+   "text": "The field iterates fast."
+  },
+  {
+   "t": 197.2,
+   "text": "But conceptually, all of them are doing the same thing: take a peptide and an HLA allele, predict the probability of presentation."
+  },
+  {
+   "t": 205.88,
+   "text": "Now, here is where the field's central frustration lives, and I want to make sure you understand it before we go further."
+  },
+  {
+   "t": 213.22,
+   "text": "Binding prediction is not the same as immunogenicity."
+  },
+  {
+   "t": 217.24,
+   "text": "A peptide that's predicted to bind tightly to a patient's HLA, and that is in fact presented on the cell surface, may still fail to be recognized by any T cell in the patient's repertoire."
+  },
+  {
+   "t": 229.44,
+   "text": "Or the T cells that do recognize it may not get activated."
+  },
+  {
+   "t": 233.06,
+   "text": "Or they may get activated but fail to traffic to the tumor."
+  },
+  {
+   "t": 237.0,
+   "text": "Or they may get to the tumor but get exhausted before they can kill."
+  },
+  {
+   "t": 241.26,
+   "text": "The prediction step is the first hurdle, but it is just the first; immunogenicity — the actual emergence of a functional T-cell response in the patient — is a much harder problem to predict."
+  },
+  {
+   "t": 253.11,
+   "text": "In the early days of the field, people would generate, say, 50 candidate neoantigens for a patient, vaccinate against them, and find that maybe 10 to 20 percent of them actually elicited measurable T-cell responses in the patient's blood."
+  },
+  {
+   "t": 267.7,
+   "text": "Some did, dramatically."
+  },
+  {
+   "t": 269.44,
+   "text": "Others, predicted to bind even more tightly, produced nothing."
+  },
+  {
+   "t": 274.75,
+   "text": "The reasons for this prediction-vs-immunogenicity gap are still being worked out — they involve TCR repertoire idiosyncrasies, antigen processing variability, levels of expression in the tumor, peptide stability, and a dozen other factors."
+  },
+  {
+   "t": 289.56,
+   "text": "The current best practice, in trial design, is to encode many neoantigens per vaccine — typically 20 to 40 — under the assumption that even with imperfect prediction, some fraction will hit, and that's enough to generate a productive polyclonal response."
+  },
+  {
+   "t": 305.67,
+   "text": "We'll see this in the BioNTech and Moderna trial designs in a few segments."
+  },
+  {
+   "t": 310.61,
+   "text": "The strategy is essentially: predict generously, vaccinate broadly, hope that some of the encoded peptides will turn out to be the real-deal immunogenic ones, and let the patient's own T-cell repertoire sort the wheat from the chaff."
+  },
+  {
+   "t": 325.6,
+   "text": "So when you hear someone say \"neoantigen prediction has gotten really good,\" what they mean is: binding prediction has gotten really good."
+  },
+  {
+   "t": 332.67,
+   "text": "NetMHCpan and MHCflurry, on the well-characterized common HLA alleles, can predict binding with positive predictive values north of 50%."
+  },
+  {
+   "t": 343.29,
+   "text": "What they cannot yet predict, reliably, is which of those binders will actually produce a T-cell response in this particular patient."
+  },
+  {
+   "t": 351.32,
+   "text": "That second prediction problem — the immunogenicity prediction problem — is one of the major open scientific frontiers in the field, and a great deal of money and computational effort is being poured into it right now."
+  }
+ ]
+}

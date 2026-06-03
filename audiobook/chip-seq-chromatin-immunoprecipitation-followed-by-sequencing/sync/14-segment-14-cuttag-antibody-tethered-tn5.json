@@ -1,0 +1,163 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — CUT&Tag — antibody-tethered Tn5",
+ "duration": 310.1,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — CUT&Tag — antibody-tethered Tn5"
+  },
+  {
+   "t": 5.14,
+   "text": "Two years after CUT&RUN, in 2019, Henikoff's lab published the next iteration — CUT&Tag — Cleavage Under Targets and Tagmentation."
+  },
+  {
+   "t": 15.79,
+   "text": "The idea is to take CUT&RUN's tethering approach but replace MNase with a different enzyme: the Tn5 transposase."
+  },
+  {
+   "t": 24.06,
+   "text": "Tn5 deserves a brief introduction."
+  },
+  {
+   "t": 27.36,
+   "text": "It's a bacterial enzyme that, in its native function, cuts DNA and inserts a small piece of DNA — a transposon — into the cut site."
+  },
+  {
+   "t": 36.98,
+   "text": "Genomicists have repurposed Tn5 with a clever modification: they load the enzyme with synthetic DNA adapters — the same sequencing adapters that you'd attach in an Illumina library prep — and now, when Tn5 cuts the DNA, it simultaneously inserts the adapter into the cut site."
+  },
+  {
+   "t": 55.26,
+   "text": "One enzyme, two functions: cutting and tagging."
+  },
+  {
+   "t": 59.25,
+   "text": "This is the basis of the tagmentation library prep we discussed in the Illumina lecture, used in Nextera kits and in ATAC-seq."
+  },
+  {
+   "t": 67.94,
+   "text": "In CUT&Tag, the Tn5 is fused to protein A (or protein A/G hybrid) and pre-loaded with sequencing adapters."
+  },
+  {
+   "t": 77.71,
+   "text": "The workflow proceeds exactly like CUT&RUN: permeabilize cells, add antibody, add pA-Tn5, wash."
+  },
+  {
+   "t": 86.62,
+   "text": "Now, when you activate the Tn5 — by adding magnesium — it cuts the DNA at the antibody-targeted locations and simultaneously inserts the sequencing adapters into the cut sites."
+  },
+  {
+   "t": 99.35,
+   "text": "The result is that the DNA fragments adjacent to the bound protein are released with adapters already attached."
+  },
+  {
+   "t": 106.35,
+   "text": "No separate library prep step needed."
+  },
+  {
+   "t": 108.66,
+   "text": "You just PCR-amplify the released fragments using primers complementary to the adapters, and you have a sequencing-ready library in one tube."
+  },
+  {
+   "t": 117.95,
+   "text": "The analogy: CUT&Tag is CUT&RUN's grandchild."
+  },
+  {
+   "t": 122.33,
+   "text": "The antibody brings Tn5 transposase, which both cuts AND inserts sequencing adapters in one step."
+  },
+  {
+   "t": 130.06,
+   "text": "Sequencing-ready library in a single tube."
+  },
+  {
+   "t": 132.85,
+   "text": "This is a massive simplification."
+  },
+  {
+   "t": 135.2,
+   "text": "You go from cells to sequencing library in a couple of hours, with a minimum of pipetting, with no separate ligation steps."
+  },
+  {
+   "t": 142.91,
+   "text": "The protocol is robust enough that it can be done on very small numbers of cells — hundreds to thousands — and it's compatible with single-cell workflows in a way that ChIP-seq and CUT&RUN never were."
+  },
+  {
+   "t": 155.29,
+   "text": "That single-cell compatibility is the killer feature."
+  },
+  {
+   "t": 158.54,
+   "text": "In standard ChIP-seq, you need millions of cells per sample, which means you're averaging over the entire population — you can't see cell-to-cell variation, you can't distinguish subpopulations, you can't follow developmental trajectories at the level of individual cells."
+  },
+  {
+   "t": 175.85,
+   "text": "With CUT&Tag, because the tagmentation produces sequencing-ready libraries from minimal input, you can run the reaction in single cells partitioned into droplets, microwells, or split-pool barcoding schemes."
+  },
+  {
+   "t": 189.53,
+   "text": "The result is single-cell CUT&Tag — scCUT&Tag — which gives you per-cell binding profiles for a chromatin mark or a TF across thousands or millions of cells in one experiment."
+  },
+  {
+   "t": 201.9,
+   "text": "Single-cell chromatin profiling is the frontier of regulatory genomics."
+  },
+  {
+   "t": 207.3,
+   "text": "It lets you ask questions you couldn't ask before: how does H3K27ac vary across cells in a tumor?"
+  },
+  {
+   "t": 215.36,
+   "text": "Which cells in a developing embryo have committed to a particular fate, by chromatin state?"
+  },
+  {
+   "t": 221.86,
+   "text": "How do regulatory marks change as a stem cell differentiates, in real time at the single-cell level?"
+  },
+  {
+   "t": 229.21,
+   "text": "These questions used to be unanswerable."
+  },
+  {
+   "t": 231.94,
+   "text": "CUT&Tag, combined with droplet barcoding from companies like 10x Genomics, made them tractable."
+  },
+  {
+   "t": 238.75,
+   "text": "There are now multiple variants in the CUT&Tag family."
+  },
+  {
+   "t": 242.15,
+   "text": "CUT&Tag-direct simplifies the workflow further."
+  },
+  {
+   "t": 245.91,
+   "text": "CUT&Tag2 uses two antibodies for higher specificity."
+  },
+  {
+   "t": 250.7,
+   "text": "MulTI-Tag and CoBATCH allow simultaneous profiling of multiple marks in the same cell, by using differently-barcoded Tn5 enzymes for each antibody."
+  },
+  {
+   "t": 261.93,
+   "text": "scNanoTrack combines single-cell CUT&Tag with long-read Nanopore sequencing for better repeat resolution."
+  },
+  {
+   "t": 270.24,
+   "text": "The platform is being elaborated rapidly, and what was a single elegant idea — antibody-tethered Tn5 — has become a family of techniques covering a wide range of applications."
+  },
+  {
+   "t": 282.05,
+   "text": "For most modern regulatory genomics, particularly any work involving primary cells, scarce samples, or single-cell resolution, CUT&Tag has displaced classical ChIP-seq as the default."
+  },
+  {
+   "t": 295.51,
+   "text": "ChIP-seq remains useful for some specialized applications — particularly when you need crosslinking to capture transient interactions — but in most labs, the new default for \"where is this protein bound?"
+  },
+  {
+   "t": 308.6,
+   "text": "\" is CUT&Tag."
+  }
+ ]
+}

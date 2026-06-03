@@ -1,0 +1,283 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The mechanism — HEPN domains, no PAM, and the protospacer flanking site",
+ "duration": 437.37,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The mechanism — HEPN domains, no PAM, and the protospacer flanking site"
+  },
+  {
+   "t": 7.66,
+   "text": "Before we get to the technology, I want to spend some time on how Cas13 actually works at the molecular level, because the mechanism is genuinely different from Cas9, and many of the downstream technological choices fall out of that difference."
+  },
+  {
+   "t": 21.74,
+   "text": "Let's start with the architecture."
+  },
+  {
+   "t": 23.52,
+   "text": "Cas13 is, like Cas9, a large multi-domain protein — about 1,200 amino acids for Cas13a, somewhat smaller for Cas13d."
+  },
+  {
+   "t": 34.33,
+   "text": "It has a recognition lobe that grips the guide RNA, and a nuclease region."
+  },
+  {
+   "t": 39.7,
+   "text": "But here is where it diverges from Cas9."
+  },
+  {
+   "t": 42.3,
+   "text": "The nuclease activity of Cas13 is not located in two separate domains analogous to HNH and RuvC."
+  },
+  {
+   "t": 50.65,
+   "text": "It is located in two HEPN domains that come together at a single active site."
+  },
+  {
+   "t": 55.9,
+   "text": "Both HEPN domains contribute catalytic residues — typically arginine and histidine residues — to one shared pocket."
+  },
+  {
+   "t": 64.31,
+   "text": "The pocket cuts single-stranded RNA."
+  },
+  {
+   "t": 66.97,
+   "text": "Mutate the key residues in either HEPN domain and the protein loses its cleavage activity entirely."
+  },
+  {
+   "t": 75.19,
+   "text": "The two HEPN domains together are the scissors."
+  },
+  {
+   "t": 78.28,
+   "text": "So let me give you the first key contrast."
+  },
+  {
+   "t": 80.55,
+   "text": "Cas9 has two nuclease domains, HNH and RuvC, each of which cuts one strand of a DNA double helix."
+  },
+  {
+   "t": 89.34,
+   "text": "Cas13 has two HEPN domains that come together at a single active site and cut single-stranded RNA in one place."
+  },
+  {
+   "t": 97.61,
+   "text": "The targets are different shapes — DNA is a double helix, RNA in the cytoplasm is mostly single-stranded — and the cutting machinery has evolved accordingly."
+  },
+  {
+   "t": 108.5,
+   "text": "Now, the guide RNA."
+  },
+  {
+   "t": 110.53,
+   "text": "Cas13's guide RNA is shorter than Cas9's, and it does not use a tracrRNA-crRNA pair the way Cas9 does."
+  },
+  {
+   "t": 118.54,
+   "text": "The Cas13 crRNA is a single piece of RNA, typically 50 to 70 nucleotides total, with a defined hairpin structure at one end — that's the part Cas13 grips — and a spacer region of about 28 to 30 nucleotides on the other end — that's the targeting part."
+  },
+  {
+   "t": 136.49,
+   "text": "Change the 28 to 30 letters in the spacer, change the target."
+  },
+  {
+   "t": 140.88,
+   "text": "Same programmability principle as Cas9."
+  },
+  {
+   "t": 143.97,
+   "text": "So how does Cas13 find its target?"
+  },
+  {
+   "t": 146.81,
+   "text": "Well, similar to Cas9, it scans for a matching sequence using base-pairing between the spacer in the guide and the target RNA."
+  },
+  {
+   "t": 155.12,
+   "text": "When the spacer finds a region of complementary sequence in an RNA molecule floating around in the cytoplasm, base-pairing locks in, and the HEPN active site activates and cuts."
+  },
+  {
+   "t": 166.9,
+   "text": "But here is the second key contrast."
+  },
+  {
+   "t": 169.57,
+   "text": "Cas13 does not require a PAM."
+  },
+  {
+   "t": 172.39,
+   "text": "Remember the PAM from the CRISPR lecture — the protospacer adjacent motif, the three-letter password that Cas9 has to see right next to its target before it will cut."
+  },
+  {
+   "t": 182.59,
+   "text": "The PAM was crucial for Cas9 in two ways: it was the bouncer that made the search efficient, and it was the self-versus-non-self signal that kept the bacterium from cutting its own CRISPR array."
+  },
+  {
+   "t": 194.54,
+   "text": "Cas13 does not have a PAM."
+  },
+  {
+   "t": 197.14,
+   "text": "Now, Cas13 does have something kind of similar, called a protospacer flanking site or PFS."
+  },
+  {
+   "t": 203.88,
+   "text": "Some Cas13 variants — particularly Cas13a from Leptotrichia shahii, the original one — strongly prefer their target RNA to have a non-G nucleotide immediately flanking the protospacer region."
+  },
+  {
+   "t": 218.12,
+   "text": "But this is not strictly required, the rules vary by Cas13 variant, and many Cas13s — including the therapeutically important RfxCas13d — have no PFS preference at all."
+  },
+  {
+   "t": 230.78,
+   "text": "They will target essentially any RNA sequence you point them at."
+  },
+  {
+   "t": 234.88,
+   "text": "I want you to feel why this matters."
+  },
+  {
+   "t": 237.11,
+   "text": "With Cas9, your guide design is constrained by the requirement to have an NGG PAM right next to your target."
+  },
+  {
+   "t": 244.36,
+   "text": "That means there are gaps in the genome where you cannot effectively target with SpCas9 — stretches that happen to lack NGG sequences in the right places."
+  },
+  {
+   "t": 254.2,
+   "text": "With Cas13, especially Cas13d, you have essentially complete freedom."
+  },
+  {
+   "t": 259.68,
+   "text": "Any RNA, any sequence."
+  },
+  {
+   "t": 262.15,
+   "text": "The molecule has way fewer constraints on where you can aim."
+  },
+  {
+   "t": 265.52,
+   "text": "There is a third key contrast — and this is the one that turns Cas13 from a curiosity into both a therapy platform and a diagnostic platform."
+  },
+  {
+   "t": 275.88,
+   "text": "Cas13 has collateral activity."
+  },
+  {
+   "t": 278.76,
+   "text": "When Cas13 binds and cuts its specific target RNA, the activation of the HEPN active site does not switch off afterward."
+  },
+  {
+   "t": 287.95,
+   "text": "The HEPN domains stay open, and Cas13 starts cutting other, unrelated single-stranded RNAs that bump into it nonspecifically."
+  },
+  {
+   "t": 297.24,
+   "text": "This is the famous collateral cleavage activity, sometimes called bystander activity or trans-cleavage."
+  },
+  {
+   "t": 304.16,
+   "text": "Think of it this way."
+  },
+  {
+   "t": 305.37,
+   "text": "Cas9 cuts its target and is done."
+  },
+  {
+   "t": 307.81,
+   "text": "It cuts cleanly, in one place, and then it falls off — eventually."
+  },
+  {
+   "t": 312.67,
+   "text": "Cas13, by contrast, cuts its target — and then keeps cutting things."
+  },
+  {
+   "t": 317.64,
+   "text": "It is an enzyme that, once activated, becomes a generalized RNase for a while."
+  },
+  {
+   "t": 323.65,
+   "text": "Bacteria use this for defense — when a phage infects them, Cas13 activates on the viral RNA, then degrades all the RNA in the cell, which arrests cell growth and stops the phage from completing its replication cycle."
+  },
+  {
+   "t": 337.9,
+   "text": "It is essentially a controlled cell-suicide pathway."
+  },
+  {
+   "t": 341.44,
+   "text": "The bacterium does not survive, but neither does the phage spread."
+  },
+  {
+   "t": 346.56,
+   "text": "We will come back to collateral activity in detail in Segment 4, because it is the most consequential single property of Cas13."
+  },
+  {
+   "t": 355.25,
+   "text": "It is bad for therapy, it is great for diagnostics, and it is the thing that has shaped almost everything about how this family of proteins gets deployed in humans."
+  },
+  {
+   "t": 365.45,
+   "text": "One more piece of the mechanism."
+  },
+  {
+   "t": 367.26,
+   "text": "Where does Cas13 do its work?"
+  },
+  {
+   "t": 369.5,
+   "text": "Cas9 works in the nucleus, because that is where DNA lives."
+  },
+  {
+   "t": 373.71,
+   "text": "Cas13 works in the cytoplasm, because that is where mRNA mostly lives after it has been spliced and exported from the nucleus."
+  },
+  {
+   "t": 382.66,
+   "text": "This matters for delivery."
+  },
+  {
+   "t": 384.32,
+   "text": "Getting a protein into the cytoplasm is a different problem from getting it into the nucleus."
+  },
+  {
+   "t": 389.92,
+   "text": "For an AAV-delivered Cas13, the protein gets translated in the cytoplasm and just stays there — it does not need a nuclear localization signal."
+  },
+  {
+   "t": 399.24,
+   "text": "That actually simplifies some design decisions, though delivery to specific tissues is still hard, as it is for any large protein cargo."
+  },
+  {
+   "t": 408.61,
+   "text": "Okay."
+  },
+  {
+   "t": 409.39,
+   "text": "Recap."
+  },
+  {
+   "t": 410.26,
+   "text": "Cas13 is a single-protein RNA-guided RNase."
+  },
+  {
+   "t": 414.61,
+   "text": "It cuts single-stranded RNA at sequences specified by a 28-to-30-nucleotide spacer in its crRNA."
+  },
+  {
+   "t": 422.74,
+   "text": "It uses two HEPN domains that come together at one active site."
+  },
+  {
+   "t": 427.42,
+   "text": "It generally does not require a PAM."
+  },
+  {
+   "t": 429.71,
+   "text": "And it has a property — collateral cleavage — that makes it both dangerous and useful in ways we are about to explore."
+  }
+ ]
+}

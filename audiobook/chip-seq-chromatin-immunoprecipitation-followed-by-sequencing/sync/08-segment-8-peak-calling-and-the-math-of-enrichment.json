@@ -1,0 +1,183 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Peak calling and the math of enrichment",
+ "duration": 354.74,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Peak calling and the math of enrichment"
+  },
+  {
+   "t": 3.91,
+   "text": "Once you have your aligned reads from the IP and from the input, the analytical question becomes: at which positions in the genome is the IP signal significantly higher than the input baseline?"
+  },
+  {
+   "t": 16.57,
+   "text": "Every position with a significant local enrichment is a peak — a candidate binding site for your protein."
+  },
+  {
+   "t": 23.29,
+   "text": "The dominant tool for this, for the better part of a decade, has been MACS — Model-based Analysis of ChIP-Seq — originally written in 2008 by Tao Liu and colleagues in Shirley Liu's lab at Harvard."
+  },
+  {
+   "t": 36.79,
+   "text": "The most recent version, MACS2 — and now MACS3 — is the de facto standard."
+  },
+  {
+   "t": 42.55,
+   "text": "Almost every ChIP-seq paper you read used MACS for peak calling, and the parameters of the tool have become a kind of shared vocabulary in the field."
+  },
+  {
+   "t": 52.06,
+   "text": "How does MACS work, at a conceptual level?"
+  },
+  {
+   "t": 54.88,
+   "text": "Three steps."
+  },
+  {
+   "t": 56.12,
+   "text": "First, MACS estimates the fragment size from the data."
+  },
+  {
+   "t": 59.79,
+   "text": "In a typical ChIP-seq experiment with single-end reads, you sequence one end of each fragment, but the actual fragment extends some distance further."
+  },
+  {
+   "t": 69.86,
+   "text": "MACS uses the cross-correlation pattern between forward-strand and reverse-strand reads — they should be offset by approximately the fragment length — to estimate that distance."
+  },
+  {
+   "t": 80.1,
+   "text": "With paired-end reads, you know the fragment size directly."
+  },
+  {
+   "t": 83.88,
+   "text": "Either way, this estimate is used to extend each read to its inferred fragment, so that the pileup represents the actual DNA that was present in the IP, not just the sequenced end."
+  },
+  {
+   "t": 96.38,
+   "text": "Second, MACS slides a window across the genome and counts reads in the window, both for the IP and for the input."
+  },
+  {
+   "t": 104.19,
+   "text": "At every window position, it asks: is the IP count significantly higher than what you'd expect from a local Poisson distribution fit to the input count?"
+  },
+  {
+   "t": 113.39,
+   "text": "The Poisson distribution is the natural model for read counts, since reads are essentially independent point processes scattered along the genome."
+  },
+  {
+   "t": 121.96,
+   "text": "The local background — what you'd expect at this position by chance — is modeled from the input reads in a region around the window, capturing local biases."
+  },
+  {
+   "t": 131.28,
+   "text": "Third, MACS reports, for every window where the IP-versus-input enrichment is statistically significant after multiple-testing correction, a peak call — a genomic region, with a fold enrichment value, a statistical significance, and a confidence in the peak summit position."
+  },
+  {
+   "t": 148.79,
+   "text": "The output is typically a BED file — a tab-separated list of peak coordinates — that you can then load into a genome browser, overlap with gene annotations, intersect with other ChIP-seqs, and analyze downstream."
+  },
+  {
+   "t": 163.55,
+   "text": "The analogy: peak calling is looking for sharp local enrichment in read density above the input baseline."
+  },
+  {
+   "t": 170.84,
+   "text": "Where the IP has, say, ten times more reads piling up than the input does in that same region — and where that excess is statistically improbable given the read counts and the noise — there's almost certainly a real binding event."
+  },
+  {
+   "t": 185.01,
+   "text": "Where the IP and the input look similar — same density, same spread, no enrichment — there's no binding, just background."
+  },
+  {
+   "t": 193.86,
+   "text": "Different proteins produce different peak shapes, and MACS has parameters that adjust for this."
+  },
+  {
+   "t": 199.56,
+   "text": "Transcription factors typically produce sharp peaks — narrow, intense enrichments at single binding sites, often a couple hundred base pairs wide."
+  },
+  {
+   "t": 208.91,
+   "text": "Histone modifications typically produce broader peaks — kilobases-wide regions of moderate enrichment, since the modifications spread across multiple nucleosomes around regulatory elements."
+  },
+  {
+   "t": 221.95,
+   "text": "There's a MACS option called broad peak calling, with adjusted parameters, that handles these histone-style profiles better than the default narrow-peak mode."
+  },
+  {
+   "t": 230.76,
+   "text": "Polymerases and elongation complexes spread across gene bodies, producing very broad regions that look more like rectangular plateaus than peaks."
+  },
+  {
+   "t": 241.4,
+   "text": "There are now a number of alternative peak callers — SICER for broad domains, PeakSeq, SPP, and more — but MACS2/3 remains the workhorse."
+  },
+  {
+   "t": 252.01,
+   "text": "The differences between them tend to matter at the margins; for clean experiments with strong signal, all the tools agree."
+  },
+  {
+   "t": 259.39,
+   "text": "For weak or noisy experiments, they disagree, and you should treat the peak list with caution and corroborate with replicates."
+  },
+  {
+   "t": 267.93,
+   "text": "Speaking of replicates — and this is a practical point — ChIP-seq experiments should always be done in at least biological duplicates, ideally triplicates."
+  },
+  {
+   "t": 278.59,
+   "text": "The reproducibility of peaks across replicates is the single best metric for whether your data is real."
+  },
+  {
+   "t": 285.68,
+   "text": "ENCODE introduced a measure called the irreproducible discovery rate, or IDR, which is a principled way to combine peak calls across replicates and report only those that are consistently called in both."
+  },
+  {
+   "t": 298.52,
+   "text": "Peaks that show up in only one replicate are often noise or outliers."
+  },
+  {
+   "t": 303.46,
+   "text": "Peaks that show up in both are typically reliable."
+  },
+  {
+   "t": 306.52,
+   "text": "If you can afford only one biological replicate, your peak list will be larger but less trustworthy."
+  },
+  {
+   "t": 313.08,
+   "text": "The cost of an extra sample is small compared to the cost of building a publication on irreproducible peaks."
+  },
+  {
+   "t": 320.11,
+   "text": "Finally, a note on what a peak is, semantically."
+  },
+  {
+   "t": 323.61,
+   "text": "A peak is a candidate binding site."
+  },
+  {
+   "t": 326.12,
+   "text": "It is not, on its own, proof that your protein is functionally binding that region in a way that matters for the cell."
+  },
+  {
+   "t": 333.31,
+   "text": "The peak tells you the protein was there."
+  },
+  {
+   "t": 335.44,
+   "text": "It does not tell you what the protein was doing there."
+  },
+  {
+   "t": 338.16,
+   "text": "Whether the binding event has a downstream consequence — turning on a gene, recruiting another factor, modifying chromatin — is a separate question."
+  },
+  {
+   "t": 347.82,
+   "text": "We'll come back to that when we talk about integrating ChIP-seq with RNA-seq in Segment 17."
+  }
+ ]
+}

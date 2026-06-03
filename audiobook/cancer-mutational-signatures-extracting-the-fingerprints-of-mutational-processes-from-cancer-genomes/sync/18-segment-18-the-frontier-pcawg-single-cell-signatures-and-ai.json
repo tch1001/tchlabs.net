@@ -1,0 +1,283 @@
+{
+ "n": 18,
+ "title": "SEGMENT 18 — The frontier — PCAWG, single-cell signatures, and AI",
+ "duration": 509.87,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 18 — The frontier — PCAWG, single-cell signatures, and AI"
+  },
+  {
+   "t": 5.9,
+   "text": "Let's close with the frontier — what's happening at the cutting edge of mutational signature research right now, and what's likely to mature into clinical use over the next five to ten years."
+  },
+  {
+   "t": 16.65,
+   "text": "Frontier one: pan-cancer whole-genome atlases."
+  },
+  {
+   "t": 20.49,
+   "text": "The Pan-Cancer Analysis of Whole Genomes (PCAWG) consortium, which published its main results in Nature in 2020, generated whole-genome sequencing data on about 2,700 cancer specimens across 38 tumor types."
+  },
+  {
+   "t": 35.51,
+   "text": "This is the dataset that drove much of COSMIC v3."
+  },
+  {
+   "t": 39.23,
+   "text": "The successor projects — including HMF (Hartwig Medical Foundation) in the Netherlands, with tens of thousands of whole-genome sequenced metastatic cancers; the 100,000 Genomes Project in the UK; and various others — are pushing the available data into the tens or hundreds of thousands of cancer genomes."
+  },
+  {
+   "t": 59.6,
+   "text": "With that much data, rarer signatures become detectable, smaller subclonal signature variations become resolvable, and rare combinations of mutational processes become statistically tractable."
+  },
+  {
+   "t": 71.59,
+   "text": "The catalog will keep growing."
+  },
+  {
+   "t": 73.47,
+   "text": "Frontier two: single-cell mutational signatures."
+  },
+  {
+   "t": 78.11,
+   "text": "As single-cell genome sequencing technology improves — and it is improving rapidly — it's becoming feasible to extract mutational signatures from individual cells, including individual normal cells."
+  },
+  {
+   "t": 92.67,
+   "text": "This unlocks an entirely new view of tumor heterogeneity (different subclones in a tumor may have different signature profiles, reflecting different histories) and of normal tissue (the mutational geography of a single organ at single-cell resolution)."
+  },
+  {
+   "t": 110.01,
+   "text": "The early papers in this area, from groups including the van Boxtel lab in the Netherlands, are showing that even single neurons have detectable signature profiles."
+  },
+  {
+   "t": 120.38,
+   "text": "This is a frontier that will likely transform our understanding of cellular aging and cancer initiation."
+  },
+  {
+   "t": 127.1,
+   "text": "Frontier three: AI-driven signature extraction."
+  },
+  {
+   "t": 131.25,
+   "text": "NMF is, in some sense, a relatively simple machine learning approach."
+  },
+  {
+   "t": 136.65,
+   "text": "More sophisticated methods are now being applied — deep learning models, variational autoencoders, Bayesian neural networks — that can potentially extract more nuanced signatures, handle batch effects better, incorporate contextual information beyond trinucleotides, and integrate signatures from different mutation scales (SBS, ID, DBS, SV) into joint factorizations."
+  },
+  {
+   "t": 161.46,
+   "text": "Several groups, including Alexandrov's at UCSD and others, are publishing new methods on essentially a quarterly basis."
+  },
+  {
+   "t": 169.38,
+   "text": "The signature analysis toolkit five years from now will probably look quite different from today's SigProfiler."
+  },
+  {
+   "t": 175.88,
+   "text": "Frontier four: liquid biopsy signature detection."
+  },
+  {
+   "t": 179.64,
+   "text": "Most signature analysis today is done on solid tumor biopsies."
+  },
+  {
+   "t": 184.38,
+   "text": "But circulating tumor DNA — cfDNA released by tumor cells into the bloodstream — is now sequenceable in many cancer patients, providing a less invasive way to monitor the tumor's genome."
+  },
+  {
+   "t": 196.75,
+   "text": "Initial work suggests that mutational signatures can be extracted from cfDNA, opening the door to non-invasive signature monitoring over time."
+  },
+  {
+   "t": 205.81,
+   "text": "This could be useful for tracking signature changes during therapy (does platinum chemotherapy add SBS31 to the genome over the course of treatment?), for early detection (does an emerging SBS4 signature in cfDNA indicate a developing lung lesion?), and for response monitoring."
+  },
+  {
+   "t": 224.26,
+   "text": "Frontier five: prophylactic and lifestyle implications."
+  },
+  {
+   "t": 228.57,
+   "text": "This is less a research frontier and more an applied frontier."
+  },
+  {
+   "t": 232.29,
+   "text": "Because signatures are causally linked to specific exposures, they make the consequences of lifestyle choices tangible and visible."
+  },
+  {
+   "t": 241.55,
+   "text": "The genome of a smoker's lung literally shows SBS4."
+  },
+  {
+   "t": 245.91,
+   "text": "The genome of a sun-overexposed skin lesion shows SBS7."
+  },
+  {
+   "t": 250.75,
+   "text": "As more people get their cancers sequenced — and as costs continue to drop — these signatures become visible to patients, who can see, in their own DNA, the imprint of their exposures."
+  },
+  {
+   "t": 263.38,
+   "text": "There's a powerful public health communication here."
+  },
+  {
+   "t": 266.18,
+   "text": "\"Smoking causes cancer\" is a statement based on epidemiological correlations."
+  },
+  {
+   "t": 271.63,
+   "text": "\"Your tumor's genome literally contains the SBS4 fingerprint of tobacco smoke\" is a statement that someone can see, in their own data."
+  },
+  {
+   "t": 280.96,
+   "text": "The analogy."
+  },
+  {
+   "t": 282.08,
+   "text": "Signature 4 equals smoking."
+  },
+  {
+   "t": 284.36,
+   "text": "The genome is the receipt for every cigarette."
+  },
+  {
+   "t": 287.66,
+   "text": "This is the kind of personal, vivid evidence that public health communication has lacked."
+  },
+  {
+   "t": 292.6,
+   "text": "Whether it changes behavior more than statistical evidence remains to be seen, but the visceral impact of seeing a UV signature in your own melanoma, or a tobacco signature in your own lung cancer, is real and personal in a way that abstract statistics are not."
+  },
+  {
+   "t": 309.11,
+   "text": "Frontier six: integration with other -omics layers."
+  },
+  {
+   "t": 313.5,
+   "text": "Mutational signatures are inferences from DNA alone."
+  },
+  {
+   "t": 317.03,
+   "text": "But cancer is a multi-layered phenomenon — DNA mutations, epigenetic changes, transcriptional reprogramming, protein expression, tumor microenvironment."
+  },
+  {
+   "t": 327.87,
+   "text": "The next generation of analysis is integrating mutational signatures with other -omics layers — methylation signatures (which capture epigenetic aging), transcriptional signatures of pathway activation, immune microenvironment characterization, et cetera."
+  },
+  {
+   "t": 343.92,
+   "text": "The synthesis will give a richer, more multi-dimensional portrait of each tumor than any single layer alone."
+  },
+  {
+   "t": 351.21,
+   "text": "Frontier seven: causal experimental confirmation."
+  },
+  {
+   "t": 354.98,
+   "text": "For many signatures, the biological cause is still tentative — inferred from correlations rather than directly demonstrated."
+  },
+  {
+   "t": 362.95,
+   "text": "A growing effort is using controlled experimental systems — exposing cell lines or organoids to specific putative mutagens, sequencing the resulting genomes, and verifying that the expected signature appears — to nail down causal attributions for the remaining unattributed signatures."
+  },
+  {
+   "t": 381.7,
+   "text": "Several papers in the last few years have closed the loop on signatures whose causes were uncertain."
+  },
+  {
+   "t": 387.62,
+   "text": "The catalog is becoming more biologically grounded over time."
+  },
+  {
+   "t": 391.66,
+   "text": "Let me wrap up."
+  },
+  {
+   "t": 392.77,
+   "text": "When you walked into this room two hours ago, you might have thought of cancer mutations as random — bad luck, accumulated damage, with no particular structure."
+  },
+  {
+   "t": 403.22,
+   "text": "After this lecture, I hope you see it differently."
+  },
+  {
+   "t": 406.17,
+   "text": "Every mutation is a record."
+  },
+  {
+   "t": 408.25,
+   "text": "Every cancer genome is an archive."
+  },
+  {
+   "t": 410.86,
+   "text": "Every mutagenic process — environmental, endogenous, iatrogenic — leaves a characteristic fingerprint that we can read mathematically out of the data using the 96-class framework, NMF, and the COSMIC catalog."
+  },
+  {
+   "t": 425.21,
+   "text": "We've gone from qualitative observations in the 1990s (\"smokers have a lot of G-to-T mutations\") to a fully quantitative atlas of nearly a hundred distinguishable signatures by 2024, with clear biological attributions for most of them, clinical applications for several, and an expanding set of tools and databases that make the analysis routine."
+  },
+  {
+   "t": 446.83,
+   "text": "In one human generation, we went from \"cancer mutations are random damage\" to \"cancer mutations are a structured record of the cell's history that we can decode and use to guide treatment."
+  },
+  {
+   "t": 458.73,
+   "text": "\""
+  },
+  {
+   "t": 458.93,
+   "text": "The headline applications."
+  },
+  {
+   "t": 460.61,
+   "text": "HRD signatures predict PARP-inhibitor response."
+  },
+  {
+   "t": 464.93,
+   "text": "MMR-deficiency signatures predict checkpoint inhibitor response."
+  },
+  {
+   "t": 469.4,
+   "text": "Tobacco signatures confirm smoking etiology."
+  },
+  {
+   "t": 473.02,
+   "text": "UV signatures confirm sun damage."
+  },
+  {
+   "t": 476.06,
+   "text": "Chemotherapy signatures track treatment-induced mutagenesis."
+  },
+  {
+   "t": 480.87,
+   "text": "Each one is a place where reading the signature changes what we do for the patient."
+  },
+  {
+   "t": 486.62,
+   "text": "The broader vision."
+  },
+  {
+   "t": 487.83,
+   "text": "Mutational signatures are the molecular fingerprints of carcinogens, recorded by the genome itself, decoded by mathematics, and used to guide both prevention and treatment."
+  },
+  {
+   "t": 498.68,
+   "text": "The genome remembers."
+  },
+  {
+   "t": 500.37,
+   "text": "We've learned to read what it remembers."
+  },
+  {
+   "t": 502.62,
+   "text": "And what it remembers is helping us treat cancer more precisely than ever before."
+  },
+  {
+   "t": 508.37,
+   "text": "Thank you for your attention."
+  }
+ ]
+}

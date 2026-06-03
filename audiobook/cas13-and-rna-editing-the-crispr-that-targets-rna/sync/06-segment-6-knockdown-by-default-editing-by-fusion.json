@@ -1,0 +1,251 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — Knockdown by default, editing by fusion",
+ "duration": 381.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — Knockdown by default, editing by fusion"
+  },
+  {
+   "t": 4.24,
+   "text": "So you have RfxCas13d."
+  },
+  {
+   "t": 6.75,
+   "text": "You load it with a guide RNA against your target — say, the messenger RNA for some disease-causing protein."
+  },
+  {
+   "t": 13.74,
+   "text": "You deliver Cas13d-plus-guide to the cell."
+  },
+  {
+   "t": 17.91,
+   "text": "What happens?"
+  },
+  {
+   "t": 18.99,
+   "text": "By default, what happens is the most boring thing Cas13 can do: the target RNA gets cut."
+  },
+  {
+   "t": 25.71,
+   "text": "Cas13 is still a nuclease."
+  },
+  {
+   "t": 28.56,
+   "text": "Its default behavior, in the absence of any engineering, is to find the target and chew it up."
+  },
+  {
+   "t": 34.29,
+   "text": "The cut RNA then gets degraded by the cell's normal exonucleases — XRN1, the exosome, all the standard cytoplasmic RNA-degrading machinery — and the target transcript is gone."
+  },
+  {
+   "t": 46.4,
+   "text": "The corresponding protein doesn't get made."
+  },
+  {
+   "t": 48.94,
+   "text": "The gene is knocked down at the post-transcriptional level."
+  },
+  {
+   "t": 52.23,
+   "text": "This is the parallel to what siRNA does, biologically."
+  },
+  {
+   "t": 56.17,
+   "text": "siRNAs use the RISC complex, with Argonaute-2 at its core, to find and cut a target mRNA."
+  },
+  {
+   "t": 63.01,
+   "text": "Cas13 uses its own protein machinery, with HEPN domains as the cutter, to find and cut a target RNA."
+  },
+  {
+   "t": 71.2,
+   "text": "Both produce post-transcriptional knockdown."
+  },
+  {
+   "t": 73.84,
+   "text": "Both are reversible — the genome is unchanged, so the cell can transcribe more mRNA whenever you stop applying the system."
+  },
+  {
+   "t": 82.65,
+   "text": "Both can be very potent — 80, 90 percent knockdown is achievable."
+  },
+  {
+   "t": 87.96,
+   "text": "The differences between Cas13-mediated knockdown and siRNA-mediated knockdown are worth pausing on, because they are not the same thing and the choice between them matters for any practical application."
+  },
+  {
+   "t": 100.65,
+   "text": "First, size and delivery."
+  },
+  {
+   "t": 102.66,
+   "text": "siRNAs are small chemically synthesized molecules — about 21 to 23 base pairs long — that can be conjugated to GalNAc and injected into a patient subcutaneously."
+  },
+  {
+   "t": 114.96,
+   "text": "Cas13 is a protein-plus-guide system that has to be delivered as either a protein-RNA complex, an mRNA encoding the protein plus a separate guide RNA, or a DNA cassette in an AAV."
+  },
+  {
+   "t": 128.49,
+   "text": "Cas13 delivery is therefore harder."
+  },
+  {
+   "t": 131.39,
+   "text": "siRNAs are years ahead in clinical delivery."
+  },
+  {
+   "t": 134.64,
+   "text": "As of 2026, five siRNA drugs are FDA-approved."
+  },
+  {
+   "t": 139.11,
+   "text": "No Cas13-based therapeutics are approved yet — they are all in earlier preclinical and clinical development."
+  },
+  {
+   "t": 146.57,
+   "text": "Second, the cellular machinery used."
+  },
+  {
+   "t": 149.3,
+   "text": "siRNAs hijack an existing endogenous pathway — every mammalian cell already has Dicer and RISC and Argonaute-2 running, and the siRNA drug is just another passenger."
+  },
+  {
+   "t": 161.94,
+   "text": "Cas13 imports the whole machinery — Cas13 is a foreign bacterial protein that the cell does not normally have, and you have to deliver the protein along with the guide."
+  },
+  {
+   "t": 172.45,
+   "text": "The siRNA pathway is built in."
+  },
+  {
+   "t": 174.79,
+   "text": "The Cas13 pathway is bolted on."
+  },
+  {
+   "t": 177.56,
+   "text": "Third, collateral activity."
+  },
+  {
+   "t": 179.43,
+   "text": "siRNAs don't have collateral activity."
+  },
+  {
+   "t": 182.05,
+   "text": "Once RISC cuts the target mRNA, it releases and goes looking for another target."
+  },
+  {
+   "t": 187.72,
+   "text": "Cas13, by contrast, has the collateral problem we already discussed."
+  },
+  {
+   "t": 192.95,
+   "text": "This is one of the reasons that for pure knockdown applications, where you just want to lower the expression of one gene, siRNA is generally a cleaner mechanism."
+  },
+  {
+   "t": 202.19,
+   "text": "Cas13 has potential advantages — bigger payload of edits, no PAM constraint, can be delivered as a heritable construct — but for the specific job of \"knock down one gene,\" siRNA has been winning."
+  },
+  {
+   "t": 215.06,
+   "text": "Now."
+  },
+  {
+   "t": 215.76,
+   "text": "Here is where Cas13 starts to do things siRNA cannot."
+  },
+  {
+   "t": 219.95,
+   "text": "The Cas13 protein is much bigger than RISC components, and it can be engineered."
+  },
+  {
+   "t": 225.38,
+   "text": "You can mutate the HEPN domains to kill the cleavage activity, giving you dCas13 — catalytically dead Cas13 that still binds RNA at the spot specified by the guide but does not cut it."
+  },
+  {
+   "t": 238.49,
+   "text": "And then, because dCas13 is a programmable, sequence-specific RNA-binding protein, you can fuse it to other things."
+  },
+  {
+   "t": 246.88,
+   "text": "You can hand it any enzyme you want, and the fusion protein will deliver that enzyme to whichever RNA your guide points it at."
+  },
+  {
+   "t": 254.49,
+   "text": "This is exactly the same trick we played with dCas9 in the CRISPR lecture, where dCas9 was used as a programmable DNA-binding scaffold for transcriptional activators, repressors, imaging tags, base editors, and prime editors."
+  },
+  {
+   "t": 269.35,
+   "text": "Now we are playing the same trick with dCas13, but on RNA."
+  },
+  {
+   "t": 273.4,
+   "text": "What kinds of enzymes do you fuse to dCas13?"
+  },
+  {
+   "t": 276.9,
+   "text": "Well, that depends on what you want to do to the RNA."
+  },
+  {
+   "t": 279.7,
+   "text": "If you fuse dCas13 to a translational repressor, you can block ribosome scanning at a particular mRNA."
+  },
+  {
+   "t": 286.9,
+   "text": "If you fuse it to a translational activator, you can boost translation."
+  },
+  {
+   "t": 290.97,
+   "text": "If you fuse it to a splicing factor, you can shift the alternative splicing of a particular exon."
+  },
+  {
+   "t": 297.1,
+   "text": "There is an entire menu of RNA-modulating fusions in the literature."
+  },
+  {
+   "t": 302.02,
+   "text": "But the most consequential fusions, and the ones that have driven the most therapeutic interest, are the RNA editing fusions."
+  },
+  {
+   "t": 310.41,
+   "text": "Specifically, fusions of dCas13 to ADAR — for A-to-I editing — and to APOBEC — for C-to-U editing."
+  },
+  {
+   "t": 318.91,
+   "text": "ADAR fusions give you a platform called REPAIR."
+  },
+  {
+   "t": 322.34,
+   "text": "APOBEC fusions give you a platform called RESCUE."
+  },
+  {
+   "t": 326.05,
+   "text": "These are the headline RNA-editing technologies of the Cas13 era, and they are about to take us into a different conceptual space — programmable single-base editing of RNA without any cleavage at all."
+  },
+  {
+   "t": 338.55,
+   "text": "Let me set up the contrast."
+  },
+  {
+   "t": 340.29,
+   "text": "Cas13's default behavior is destruction — find the target, chew it up."
+  },
+  {
+   "t": 345.6,
+   "text": "Cas13's engineered behavior, via fusion to a deaminase, is rewriting — find the target, change one letter, leave everything else intact."
+  },
+  {
+   "t": 356.27,
+   "text": "That is the move that takes Cas13 from \"RNA knockdown tool that overlaps with siRNA\" to \"RNA editing platform that does something siRNA fundamentally cannot."
+  },
+  {
+   "t": 366.06,
+   "text": "\" And it is the move that has gotten the most therapeutic attention, because it opens up the possibility of correcting a disease-causing mutation at the level of the message, transiently, without ever touching the genome."
+  },
+  {
+   "t": 379.69,
+   "text": "That is what the next two segments are about."
+  }
+ ]
+}

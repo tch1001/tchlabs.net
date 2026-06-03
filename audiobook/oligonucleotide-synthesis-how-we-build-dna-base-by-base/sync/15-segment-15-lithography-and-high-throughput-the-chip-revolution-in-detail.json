@@ -1,0 +1,143 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Lithography and high-throughput: the chip revolution in detail",
+ "duration": 284.37,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Lithography and high-throughput: the chip revolution in detail"
+  },
+  {
+   "t": 6.53,
+   "text": "I touched on chip-based synthesis in Segment 10, but I want to come back to it now from a slightly different angle, because it deserves a bit more depth."
+  },
+  {
+   "t": 14.8,
+   "text": "The chip-based synthesis revolution has, in a real sense, been a revolution of scale — and the scale is what's transformed which questions in biology are tractable."
+  },
+  {
+   "t": 25.77,
+   "text": "Let me give you some numbers to anchor the scale."
+  },
+  {
+   "t": 28.11,
+   "text": "A standard column-based DNA synthesizer can produce one oligo at a time, with a few hours per oligo."
+  },
+  {
+   "t": 35.02,
+   "text": "A 96-well synthesizer produces ninety-six oligos in parallel in a few hours."
+  },
+  {
+   "t": 41.62,
+   "text": "A chip-based synthesizer — the kind running at Twist or Agilent — can produce a million distinct oligos in a single chip run, in about a day."
+  },
+  {
+   "t": 51.1,
+   "text": "That's a ten-thousand-fold scale-up over the 96-well format, and a million-fold scale-up over a single-column synthesizer."
+  },
+  {
+   "t": 58.99,
+   "text": "The cost per oligo follows a similar pattern."
+  },
+  {
+   "t": 61.66,
+   "text": "A column-synthesized desalted primer costs about ten cents per base — fifteen or twenty dollars for a typical twenty-mer."
+  },
+  {
+   "t": 69.78,
+   "text": "A chip-based oligo from a pool costs a fraction of a cent per base — less than ten cents per oligo in many cases, when amortized over the millions of sequences on the chip."
+  },
+  {
+   "t": 80.5,
+   "text": "That's a hundred-fold to thousand-fold cost reduction per sequence."
+  },
+  {
+   "t": 85.17,
+   "text": "The technologies that enable chip-based synthesis are essentially borrowed from the semiconductor industry."
+  },
+  {
+   "t": 90.88,
+   "text": "Photolithography — the same set of tools that pattern silicon wafers to make computer chips — is what Affymetrix originally used."
+  },
+  {
+   "t": 99.49,
+   "text": "Maskless lithography — projecting computer-controlled patterns of light onto a chip surface without a physical photomask — was developed at NimbleGen in the 1990s and 2000s and is the basis of several modern chip-based platforms."
+  },
+  {
+   "t": 114.28,
+   "text": "The chemistry on the chip is the same Caruthers phosphoramidite chemistry, with the key adaptation being how each spot is selectively activated at each cycle."
+  },
+  {
+   "t": 124.01,
+   "text": "In photolithographic approaches like the original Affymetrix one, the activation is by UV light removing photolabile protecting groups."
+  },
+  {
+   "t": 132.89,
+   "text": "In maskless approaches, the activation is still by UV light but the pattern is generated dynamically using a digital micromirror device — millions of tiny mirrors that can be tilted on or off to direct light to specific spots."
+  },
+  {
+   "t": 147.81,
+   "text": "In electrochemical approaches like CustomArray, each spot has its own electrode that generates acid locally to remove the standard DMT group."
+  },
+  {
+   "t": 157.28,
+   "text": "In inkjet approaches like Agilent's, the activator and the phosphoramidites are physically printed onto each spot."
+  },
+  {
+   "t": 164.56,
+   "text": "All four approaches achieve the same goal: get a different sequence growing at every spot on the chip."
+  },
+  {
+   "t": 170.49,
+   "text": "The applications of chip-based synthesis go well beyond the gene synthesis and library generation I mentioned earlier."
+  },
+  {
+   "t": 178.15,
+   "text": "Microarrays for genotyping and expression analysis — Affymetrix GeneChips, Agilent SurePrints, Illumina BeadChips — were the original killer application of chip-based synthesis, dominating the field of expression profiling and genotyping through the 2000s before being largely displaced by sequencing-based approaches."
+  },
+  {
+   "t": 198.59,
+   "text": "Oligonucleotide capture probes for targeted sequencing — exome capture, panel sequencing — are still synthesized at chip scale today, because each capture experiment needs tens of thousands of distinct probe sequences."
+  },
+  {
+   "t": 213.01,
+   "text": "DNA data storage is the application that may, in the long run, be the largest."
+  },
+  {
+   "t": 218.75,
+   "text": "We'll get to that in Segment 17."
+  },
+  {
+   "t": 221.3,
+   "text": "Massively parallel reporter assays, where you test thousands or millions of regulatory DNA variants in a single experiment, depend on chip-based synthesis."
+  },
+  {
+   "t": 231.53,
+   "text": "CRISPR guide RNA libraries for genome-wide screens — Brunello, GeCKO, TKO, all of them — are chip-based products."
+  },
+  {
+   "t": 240.45,
+   "text": "Variant libraries for protein engineering — testing every single amino acid substitution at every position of a protein — are chip-based products."
+  },
+  {
+   "t": 250.46,
+   "text": "Chip-based synthesis hasn't replaced column-based synthesis."
+  },
+  {
+   "t": 254.26,
+   "text": "The two formats live in complementary ecosystems."
+  },
+  {
+   "t": 258.19,
+   "text": "Column synthesis dominates when you need high yield, high purity, modifications, and a small number of distinct sequences."
+  },
+  {
+   "t": 265.88,
+   "text": "Chip synthesis dominates when you need many sequences in parallel and the per-sequence yield can be low."
+  },
+  {
+   "t": 272.41,
+   "text": "The combination — chip-based libraries assembled into longer constructs using column-synthesized adapters and primers — is, in many ways, what defines modern synthetic biology."
+  }
+ ]
+}

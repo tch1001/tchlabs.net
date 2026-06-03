@@ -1,0 +1,291 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Random access: PCR as a retrieval index",
+ "duration": 432.48,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Random access: PCR as a retrieval index"
+  },
+  {
+   "t": 5.12,
+   "text": "So far in this lecture we have mostly been talking about writing one file into one tube and reading the whole tube back."
+  },
+  {
+   "t": 12.65,
+   "text": "That's fine for a proof of concept."
+  },
+  {
+   "t": 14.56,
+   "text": "But a real DNA archive is going to hold thousands of files in a single tube — or, more realistically, billions of files across thousands of tubes — and you need to be able to retrieve a single file from that archive without having to sequence everything."
+  },
+  {
+   "t": 29.96,
+   "text": "This is the random access problem, and the solution to it is one of the most elegant pieces of DNA storage engineering."
+  },
+  {
+   "t": 37.34,
+   "text": "The solution is: PCR."
+  },
+  {
+   "t": 39.69,
+   "text": "Recall what PCR does."
+  },
+  {
+   "t": 41.51,
+   "text": "PCR — polymerase chain reaction — takes a DNA sample, plus a pair of short DNA primers, plus a polymerase enzyme, plus nucleotides and a thermal cycler."
+  },
+  {
+   "t": 53.4,
+   "text": "It runs through cycles of denaturation, annealing, and extension."
+  },
+  {
+   "t": 58.12,
+   "text": "In each cycle, the polymerase extends the primers along whatever DNA template they happen to bind to."
+  },
+  {
+   "t": 65.36,
+   "text": "After thirty cycles, any DNA fragment that is flanked by the two primer-binding sequences has been amplified by roughly a billion-fold."
+  },
+  {
+   "t": 74.35,
+   "text": "Any DNA fragment that is not flanked by those primer-binding sequences has not been amplified at all."
+  },
+  {
+   "t": 80.99,
+   "text": "The amplification is exquisitely specific."
+  },
+  {
+   "t": 84.47,
+   "text": "PCR is the most selective amplification reaction in biology."
+  },
+  {
+   "t": 89.2,
+   "text": "Now apply this to DNA storage."
+  },
+  {
+   "t": 92.04,
+   "text": "Recall that every oligo in our archive has the structure: forward primer binding region, then index, then payload, then reverse primer binding region."
+  },
+  {
+   "t": 102.72,
+   "text": "We have been thinking of the primer regions as just fixed bookends."
+  },
+  {
+   "t": 106.66,
+   "text": "But what if we assigned different primer pairs to different files?"
+  },
+  {
+   "t": 110.11,
+   "text": "That's exactly what we do."
+  },
+  {
+   "t": 111.79,
+   "text": "Every file in your archive gets a unique primer pair — a pair of short DNA sequences, about twenty bases each, designed to be unique and not to cross-react with any other primer pair in the archive."
+  },
+  {
+   "t": 124.79,
+   "text": "When you write file A, you put primer-pair-A on every oligo of file A."
+  },
+  {
+   "t": 129.81,
+   "text": "When you write file B, you put primer-pair-B on every oligo of file B."
+  },
+  {
+   "t": 135.04,
+   "text": "You pool all the oligos from all the files into a single tube — your archive — and dry it down."
+  },
+  {
+   "t": 141.31,
+   "text": "Years later, you want to retrieve file A."
+  },
+  {
+   "t": 143.96,
+   "text": "You take a small sample of your archive tube — most of it, the original, you put back on the shelf as your master copy."
+  },
+  {
+   "t": 151.49,
+   "text": "You add primer-pair-A to your sample."
+  },
+  {
+   "t": 154.22,
+   "text": "You run PCR."
+  },
+  {
+   "t": 155.8,
+   "text": "After thirty cycles, file A's oligos have been amplified roughly a billion-fold."
+  },
+  {
+   "t": 161.8,
+   "text": "All the other files' oligos have not been amplified at all."
+  },
+  {
+   "t": 165.12,
+   "text": "The sample, which started as a balanced mixture of millions of files, is now a sample dominated by file A's oligos by a factor of about a billion to one."
+  },
+  {
+   "t": 174.53,
+   "text": "You sequence that sample."
+  },
+  {
+   "t": 176.26,
+   "text": "Almost every read you get back belongs to file A."
+  },
+  {
+   "t": 179.53,
+   "text": "You decode file A."
+  },
+  {
+   "t": 181.18,
+   "text": "That's it."
+  },
+  {
+   "t": 181.91,
+   "text": "That is the random access scheme."
+  },
+  {
+   "t": 183.76,
+   "text": "PCR primers as file handles."
+  },
+  {
+   "t": 186.54,
+   "text": "The primer sequence is essentially the address of the file in the archive."
+  },
+  {
+   "t": 191.43,
+   "text": "To retrieve a file, you specify its address — its primer pair — and PCR does the work of picking that file out of the mixture for you."
+  },
+  {
+   "t": 200.16,
+   "text": "The math here is genuinely beautiful."
+  },
+  {
+   "t": 203.06,
+   "text": "The space of possible twenty-base primer sequences is four to the twentieth, which is about a trillion."
+  },
+  {
+   "t": 209.62,
+   "text": "Not all of those are valid primers — most fail some criterion like melting temperature, secondary structure, or cross-reactivity with other primers — but the space of designably-unique primer pairs is still in the billions."
+  },
+  {
+   "t": 223.61,
+   "text": "So you can imagine an archive with billions of separately-addressable files, each one retrievable by a unique PCR primer pair."
+  },
+  {
+   "t": 231.86,
+   "text": "That's a serious file system."
+  },
+  {
+   "t": 233.66,
+   "text": "There are some practical complications."
+  },
+  {
+   "t": 235.9,
+   "text": "The first is primer cross-reactivity — you have to design your primer set so that no primer accidentally amplifies the wrong file."
+  },
+  {
+   "t": 243.99,
+   "text": "This is a real combinatorial design problem, and people have spent a lot of effort on automated primer design systems for DNA storage."
+  },
+  {
+   "t": 252.95,
+   "text": "The second is PCR bias — PCR doesn't amplify all oligos perfectly equally; some get amplified more than others."
+  },
+  {
+   "t": 261.93,
+   "text": "This is mostly a problem for the data within a file rather than across files, but it requires careful tuning."
+  },
+  {
+   "t": 268.47,
+   "text": "The third is sample depletion — every retrieval uses up some of your archive, because you take a portion of the tube to sequence."
+  },
+  {
+   "t": 276.69,
+   "text": "In practice, archives are designed so each retrieval consumes a tiny fraction, and the master copy can be re-amplified from itself as needed."
+  },
+  {
+   "t": 286.68,
+   "text": "Microsoft and UW have built and demonstrated automated random-access systems that combine all of this into an integrated workflow."
+  },
+  {
+   "t": 295.38,
+   "text": "You query their system with \"give me file X,\" and a fluidic robot draws a small aliquot from a particular tube, mixes it with the appropriate primers, runs PCR, transfers the amplified sample to a sequencer, runs the sequencing, runs the decoding software, and returns your file."
+  },
+  {
+   "t": 314.12,
+   "text": "In the published demonstrations, this whole pipeline runs in something like ten to twelve hours from query to file — slow compared to a hard drive, but entirely reasonable for cold archive retrieval, where you might be perfectly happy to wait a day for a file you haven't touched in twenty years."
+  },
+  {
+   "t": 331.88,
+   "text": "The random access scheme can also be hierarchical."
+  },
+  {
+   "t": 335.03,
+   "text": "You can have physical addressing — one tube per directory, or per project, or per customer — combined with logical addressing within a tube via primer pairs."
+  },
+  {
+   "t": 344.62,
+   "text": "A real DNA archive of the future probably looks like racks of vials, each vial holding many files, with a database that maps file paths to (vial location, primer pair) tuples."
+  },
+  {
+   "t": 356.73,
+   "text": "The retrieval system is a robot that pulls the right vial, dispenses an aliquot, runs the PCR with the right primers, and sequences the result."
+  },
+  {
+   "t": 366.14,
+   "text": "One more wrinkle on random access."
+  },
+  {
+   "t": 368.64,
+   "text": "There has been interesting research on partial random access — retrieving only a specific portion of a file, rather than the whole file."
+  },
+  {
+   "t": 376.94,
+   "text": "This requires a more elaborate addressing scheme, where each chunk of a file has its own sub-address that you can specify in your retrieval query."
+  },
+  {
+   "t": 385.58,
+   "text": "The Microsoft-UW group has published work on this."
+  },
+  {
+   "t": 388.93,
+   "text": "The use case is for files that are very large — a multi-terabyte database, say — where you want to read just a few rows without retrieving the whole thing."
+  },
+  {
+   "t": 398.69,
+   "text": "The DNA storage analog of an index lookup in a database."
+  },
+  {
+   "t": 402.77,
+   "text": "Whether this becomes practically important depends on what kinds of data people end up wanting to store in DNA."
+  },
+  {
+   "t": 409.78,
+   "text": "Alright."
+  },
+  {
+   "t": 410.55,
+   "text": "We've covered the technical foundations."
+  },
+  {
+   "t": 412.84,
+   "text": "We've covered encoding, error correction, and random access."
+  },
+  {
+   "t": 417.22,
+   "text": "We've talked about the major players and the major demonstrations."
+  },
+  {
+   "t": 421.27,
+   "text": "Now we have to talk about the elephant in the room."
+  },
+  {
+   "t": 423.63,
+   "text": "The thing that makes DNA storage, despite all its theoretical advantages, not yet a commercial reality."
+  },
+  {
+   "t": 430.85,
+   "text": "We have to talk about cost."
+  }
+ ]
+}

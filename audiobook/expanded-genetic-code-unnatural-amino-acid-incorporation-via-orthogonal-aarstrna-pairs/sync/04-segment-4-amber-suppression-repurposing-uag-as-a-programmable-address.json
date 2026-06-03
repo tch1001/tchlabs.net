@@ -1,0 +1,327 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Amber suppression: repurposing UAG as a programmable address",
+ "duration": 554.85,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Amber suppression: repurposing UAG as a programmable address"
+  },
+  {
+   "t": 6.1,
+   "text": "Now that we have the orthogonal pair concept, we need the other half of the puzzle: which codon does the new tRNA read?"
+  },
+  {
+   "t": 13.28,
+   "text": "Because the only way to install a new amino acid at a specific position in a protein is to have the ribosome encounter, in the mRNA, a codon that the engineered tRNA recognizes and no other tRNA reads."
+  },
+  {
+   "t": 27.1,
+   "text": "We need a private codon — a reserved address — that means \"install the non-canonical amino acid here."
+  },
+  {
+   "t": 33.85,
+   "text": "\" Without a private codon, the engineered system has nowhere to deliver its cargo."
+  },
+  {
+   "t": 39.52,
+   "text": "The cleanest source of private codons is the same source nature itself used for selenocysteine and pyrrolysine: the stop codons."
+  },
+  {
+   "t": 48.49,
+   "text": "Let me explain why."
+  },
+  {
+   "t": 49.81,
+   "text": "There are three stop codons in the standard genetic code: UAA, UAG, and UGA."
+  },
+  {
+   "t": 56.14,
+   "text": "These three codons normally do not encode amino acids — they tell the ribosome to release the finished protein and terminate translation."
+  },
+  {
+   "t": 65.58,
+   "text": "But unlike the sixty-one sense codons, which are all assigned to specific amino acids and read all the time, the stop codons are only used once per gene — at the very end of each open reading frame."
+  },
+  {
+   "t": 78.36,
+   "text": "They're punctuation, not vocabulary."
+  },
+  {
+   "t": 80.99,
+   "text": "And critically, in a given genome, you can usually identify which stop codon is \"rarest\" — least frequently used as the terminator — and steal that one for your own purposes."
+  },
+  {
+   "t": 92.29,
+   "text": "In E. coli, the rarest stop codon is UAG, traditionally called amber."
+  },
+  {
+   "t": 97.72,
+   "text": "Of all the genes in the E. coli genome, only about seven to nine percent of them end in UAG."
+  },
+  {
+   "t": 103.97,
+   "text": "The other ninety-something percent of genes use UAA (ochre) or UGA (opal) as their stop."
+  },
+  {
+   "t": 111.12,
+   "text": "So if you redefine UAG inside an E. coli cell — if you tell the cell, \"from now on, UAG means insert this non-canonical amino acid, don't terminate here\" — you'll affect only the small minority of genes that end in UAG, and you can engineer your way around those impacts."
+  },
+  {
+   "t": 129.88,
+   "text": "The other ninety percent of the proteome terminates normally."
+  },
+  {
+   "t": 134.18,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 135.5,
+   "text": "Amber suppression is the trick of taking the punctuation mark at the end of a sentence — the period, in this case the UAG stop — and repurposing it to mean a specific new word, in a specific context, when an engineered reader shows up."
+  },
+  {
+   "t": 149.96,
+   "text": "Imagine you're reading a book in which most sentences end with a period, but you've installed, in your own head, a new rule: \"whenever you see a period in italic font, don't end the sentence — instead, read the word 'phlogiston' and keep going."
+  },
+  {
+   "t": 164.79,
+   "text": "\" The book's original text doesn't change."
+  },
+  {
+   "t": 167.38,
+   "text": "Most periods still terminate sentences."
+  },
+  {
+   "t": 170.3,
+   "text": "But the italic ones now mean something new."
+  },
+  {
+   "t": 173.01,
+   "text": "And if you carefully italicize the periods you want to behave this way, you've turned the punctuation into vocabulary, locally and selectively."
+  },
+  {
+   "t": 181.97,
+   "text": "That's exactly what amber suppression does."
+  },
+  {
+   "t": 184.64,
+   "text": "The UAG codon, in your engineered system, no longer reliably terminates translation."
+  },
+  {
+   "t": 191.24,
+   "text": "Instead, when the ribosome reaches a UAG codon in your mRNA, the engineered tRNA — whose anticodon is CUA, complementary to UAG — pulls up to the ribosome with its non-canonical amino acid loaded."
+  },
+  {
+   "t": 206.69,
+   "text": "The amino acid gets inserted."
+  },
+  {
+   "t": 208.8,
+   "text": "Translation continues."
+  },
+  {
+   "t": 210.76,
+   "text": "The protein gets made, with your non-canonical amino acid sitting exactly where you put the UAG codon in the gene."
+  },
+  {
+   "t": 217.93,
+   "text": "The technical word for what the engineered tRNA does is suppression — it suppresses the stop signal, reads through what would have been a termination point, and inserts an amino acid instead."
+  },
+  {
+   "t": 229.03,
+   "text": "A tRNA that does this is called a suppressor tRNA."
+  },
+  {
+   "t": 233.19,
+   "text": "The whole machinery — the engineered amber suppressor tRNA, the orthogonal synthetase that charges it, and the non-canonical amino acid it delivers — is called an amber suppression system."
+  },
+  {
+   "t": 245.29,
+   "text": "And amber suppression has been the workhorse of genetic code expansion for two and a half decades."
+  },
+  {
+   "t": 251.36,
+   "text": "Let me walk you through what amber suppression looks like in practice, step by step, because this is the protocol that has been run, with variations, in thousands of papers."
+  },
+  {
+   "t": 261.45,
+   "text": "Step one."
+  },
+  {
+   "t": 262.54,
+   "text": "You take the gene for your protein of interest — say, a fluorescent protein, or an antibody, or an enzyme — and you identify the specific residue where you want the non-canonical amino acid to go."
+  },
+  {
+   "t": 274.85,
+   "text": "Let's say it's residue 47, and you currently have a tyrosine there in the wild-type sequence."
+  },
+  {
+   "t": 281.38,
+   "text": "You do site-directed mutagenesis to change the codon for residue 47 from a tyrosine codon (UAC, say) to UAG."
+  },
+  {
+   "t": 291.13,
+   "text": "The gene now has a stop codon in the middle of it."
+  },
+  {
+   "t": 294.06,
+   "text": "If you tried to express this gene in a normal cell, translation would terminate at residue 47, and you'd get only a short, truncated protein — no fluorescence, no activity, nothing useful."
+  },
+  {
+   "t": 307.49,
+   "text": "The gene is broken from a normal cell's point of view."
+  },
+  {
+   "t": 310.73,
+   "text": "Step two."
+  },
+  {
+   "t": 311.66,
+   "text": "Into the same cell, you co-express your orthogonal pair — the engineered synthetase and the engineered amber suppressor tRNA."
+  },
+  {
+   "t": 319.96,
+   "text": "Usually these are encoded on a separate plasmid, expressed constitutively, just sitting there ready to go."
+  },
+  {
+   "t": 326.81,
+   "text": "Step three."
+  },
+  {
+   "t": 327.93,
+   "text": "You add your non-canonical amino acid to the growth medium."
+  },
+  {
+   "t": 331.76,
+   "text": "The cell takes up the amino acid through its normal small-molecule transporters — non-canonical amino acids are usually designed to be small enough and similar enough to natural amino acids that the cell's importers don't reject them."
+  },
+  {
+   "t": 346.34,
+   "text": "Once inside, the non-canonical amino acid floats around the cytoplasm."
+  },
+  {
+   "t": 351.64,
+   "text": "Step four."
+  },
+  {
+   "t": 352.65,
+   "text": "The engineered synthetase finds the non-canonical amino acid, grabs it, and charges it onto the engineered tRNA."
+  },
+  {
+   "t": 360.43,
+   "text": "Now you have a tRNA with a CUA anticodon, loaded with your non-canonical amino acid, ready for delivery."
+  },
+  {
+   "t": 368.15,
+   "text": "Step five."
+  },
+  {
+   "t": 369.19,
+   "text": "The ribosome translates your gene."
+  },
+  {
+   "t": 371.65,
+   "text": "It moves along the mRNA, putting in tyrosines and leucines and so on, until it reaches the UAG codon at residue 47."
+  },
+  {
+   "t": 381.35,
+   "text": "The engineered tRNA pulls up, its CUA anticodon base-pairs with the UAG codon, the ribosome accepts the delivery, the non-canonical amino acid is inserted into the growing peptide chain, and translation continues past residue 47 all the way to the natural stop codon at the end of the gene."
+  },
+  {
+   "t": 401.71,
+   "text": "Step six."
+  },
+  {
+   "t": 402.86,
+   "text": "You get a full-length protein."
+  },
+  {
+   "t": 404.63,
+   "text": "The protein folds."
+  },
+  {
+   "t": 406.21,
+   "text": "The protein has, at position 47, your non-canonical amino acid — not a tyrosine, not a tryptophan, but the chemistry you chose."
+  },
+  {
+   "t": 415.79,
+   "text": "You purify the protein and use it."
+  },
+  {
+   "t": 418.43,
+   "text": "That's the workflow."
+  },
+  {
+   "t": 419.64,
+   "text": "Once you've internalized those six steps, every paper in the field is a variation on this recipe."
+  },
+  {
+   "t": 425.79,
+   "text": "Different non-canonical amino acids."
+  },
+  {
+   "t": 428.41,
+   "text": "Different proteins."
+  },
+  {
+   "t": 430.05,
+   "text": "Different positions."
+  },
+  {
+   "t": 431.46,
+   "text": "Different cells."
+  },
+  {
+   "t": 432.75,
+   "text": "But the underlying logic — orthogonal pair plus reassigned stop codon plus exogenous amino acid plus normal expression machinery — is the same."
+  },
+  {
+   "t": 443.45,
+   "text": "There's one practical limitation of amber suppression that's worth flagging now, because it's going to motivate later improvements."
+  },
+  {
+   "t": 451.26,
+   "text": "Even in E. coli, where UAG is the rarest stop codon, it's still used by some genes."
+  },
+  {
+   "t": 457.96,
+   "text": "When you express your amber suppression system, your engineered tRNA is going to occasionally pull up to those native UAG codons in essential genes and insert your non-canonical amino acid where the gene was supposed to terminate."
+  },
+  {
+   "t": 472.9,
+   "text": "This causes read-through of native genes — you get extended versions of native proteins, with weird C-terminal tails containing your non-canonical amino acid."
+  },
+  {
+   "t": 482.73,
+   "text": "For most of those genes, the read-through is harmless or quickly degraded."
+  },
+  {
+   "t": 487.53,
+   "text": "But for some genes, especially essential ones, the read-through is toxic, and the cell grows poorly."
+  },
+  {
+   "t": 494.5,
+   "text": "The field has handled this problem in two ways."
+  },
+  {
+   "t": 497.71,
+   "text": "First, you can simply tune the suppression efficiency down — express the suppressor tRNA at modest levels, so that most native UAG codons still terminate correctly, and only when you flood the system with the suppressor's substrate codon (by putting many UAGs in your gene of interest, or by simply having your gene present at high copy number) does the read-through compete effectively."
+  },
+  {
+   "t": 520.79,
+   "text": "Second, and this is the strategy that became famous through the work of George Church and Jason Chin, you can go and edit the host genome to remove every native UAG codon, freeing UAG entirely for your engineered use."
+  },
+  {
+   "t": 534.84,
+   "text": "We'll get to that bold move later in the lecture."
+  },
+  {
+   "t": 537.43,
+   "text": "For now, the takeaway is: amber suppression uses the UAG stop codon as a private address for non-canonical amino acid delivery, and it has been the dominant approach in the field since the early 2000s."
+  },
+  {
+   "t": 551.62,
+   "text": "Now let's go back and meet the paper that started it all."
+  }
+ ]
+}

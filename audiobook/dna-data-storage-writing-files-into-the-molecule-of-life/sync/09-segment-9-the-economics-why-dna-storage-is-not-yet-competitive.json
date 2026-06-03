@@ -1,0 +1,247 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — The economics: why DNA storage is not yet competitive",
+ "duration": 405.19,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — The economics: why DNA storage is not yet competitive"
+  },
+  {
+   "t": 5.6,
+   "text": "I want to give you the numbers, because nothing concentrates the mind like a hard number."
+  },
+  {
+   "t": 10.24,
+   "text": "The going rate for synthesizing a megabyte of data into DNA, using current commercial chip-based synthesis at current prices, is approximately three thousand five hundred dollars per megabyte."
+  },
+  {
+   "t": 22.18,
+   "text": "That's an academic-research-grade number — researchers buying chip-based oligo pools at commercial prices, applying current encoding schemes, including the error-correction overhead."
+  },
+  {
+   "t": 33.2,
+   "text": "Some commercial DNA storage outfits will quote you lower numbers, in the range of one thousand dollars per megabyte at scale, but those are projections rather than today's published-paper numbers."
+  },
+  {
+   "t": 44.95,
+   "text": "Either way: thousands of dollars per megabyte to write."
+  },
+  {
+   "t": 48.58,
+   "text": "The going rate for reading a megabyte back from DNA, using Illumina sequencing at the depth required for reliable decoding, is approximately ten dollars per megabyte."
+  },
+  {
+   "t": 58.75,
+   "text": "Reads are vastly cheaper than writes."
+  },
+  {
+   "t": 61.09,
+   "text": "The cost of reading has dropped roughly tenfold per few years for the past decade and a half, and it's now in a regime where it's not the binding constraint on DNA storage economics."
+  },
+  {
+   "t": 72.17,
+   "text": "Writing is."
+  },
+  {
+   "t": 73.3,
+   "text": "For comparison, the cost of storing a megabyte on conventional cloud storage is fractions of a cent per megabyte per month, or for cold archive on services like AWS Glacier Deep Archive, less than a hundredth of a cent per megabyte per year."
+  },
+  {
+   "t": 87.56,
+   "text": "The cost of writing a megabyte to LTO tape, amortized over the tape's lifetime, is less than a hundredth of a cent."
+  },
+  {
+   "t": 94.92,
+   "text": "So conventional storage is roughly five orders of magnitude cheaper to write than DNA storage is today."
+  },
+  {
+   "t": 102.08,
+   "text": "So why does anyone think DNA storage will ever be competitive?"
+  },
+  {
+   "t": 106.11,
+   "text": "Because the cost curve, if certain technical bets pay off, can plausibly come down by three or four orders of magnitude over the next ten to fifteen years."
+  },
+  {
+   "t": 115.6,
+   "text": "And because the value proposition of DNA — extreme density, extreme longevity, zero energy in storage — is sufficiently differentiated from conventional media that you don't necessarily need to match conventional pricing exactly."
+  },
+  {
+   "t": 130.82,
+   "text": "You need to get within an order of magnitude of conventional cold archive pricing, and then customers who specifically value the durability and density features can pay a modest premium for them."
+  },
+  {
+   "t": 141.79,
+   "text": "The often-cited target number is around one cent per megabyte for write cost."
+  },
+  {
+   "t": 146.78,
+   "text": "At one cent per megabyte, DNA storage starts being competitive with LTO tape for very long-term cold archive — the regime where you're going to store the data for fifty or one hundred years and never re-read it."
+  },
+  {
+   "t": 160.07,
+   "text": "At one cent per megabyte, the savings on energy and refresh cycles can plausibly justify the higher write cost."
+  },
+  {
+   "t": 167.71,
+   "text": "To get to that one-cent-per-megabyte number from today's roughly three-thousand-five-hundred-dollars-per-megabyte, you need to drop write cost by a factor of about three hundred and fifty thousand."
+  },
+  {
+   "t": 178.18,
+   "text": "That sounds insane, but it's not totally unprecedented."
+  },
+  {
+   "t": 181.8,
+   "text": "The cost of DNA sequencing has dropped by a factor of about a million over the past twenty years — from the three-billion-dollar Human Genome Project to a thousand-dollar genome to a hundred-dollar genome today."
+  },
+  {
+   "t": 194.1,
+   "text": "The cost of computing has dropped by similar factors over similar timescales."
+  },
+  {
+   "t": 199.35,
+   "text": "So a four-hundred-thousand-fold drop in synthesis cost over ten to twenty years is in the range of historical precedent, although it's on the aggressive end of it."
+  },
+  {
+   "t": 208.84,
+   "text": "Whether it actually happens depends on whether one or two specific technical bets — mainly enzymatic synthesis, which we'll cover next segment — pay off at scale."
+  },
+  {
+   "t": 218.95,
+   "text": "The unit economics decompose into roughly three factors."
+  },
+  {
+   "t": 223.61,
+   "text": "Cost of materials — the phosphoramidite reagents, the chips, the enzymes."
+  },
+  {
+   "t": 229.03,
+   "text": "Cost of throughput — how many bases per second per machine you can write."
+  },
+  {
+   "t": 233.44,
+   "text": "And cost of error correction overhead — how much extra DNA you have to synthesize beyond your raw data to tolerate the error rate of your process."
+  },
+  {
+   "t": 242.91,
+   "text": "Reducing any of these factors reduces total cost."
+  },
+  {
+   "t": 246.6,
+   "text": "Enzymatic synthesis attacks the first two by replacing expensive phosphoramidite reagents with cheaper enzymatic reactions and by promising higher throughput per machine."
+  },
+  {
+   "t": 257.19,
+   "text": "Better error-correction schemes attack the third by tolerating more errors per base and reducing the redundancy needed."
+  },
+  {
+   "t": 264.23,
+   "text": "Higher write density per chip — more parallel synthesis reactions in the same physical area — attacks throughput."
+  },
+  {
+   "t": 272.24,
+   "text": "One more economic dimension worth mentioning: archive cost over time."
+  },
+  {
+   "t": 276.99,
+   "text": "The cost story for DNA storage looks bad if you consider only the initial write cost."
+  },
+  {
+   "t": 282.73,
+   "text": "But if you consider the full cost of storing data for, say, fifty years, including refresh cycles, energy, and floorspace for conventional media, DNA's economics get more competitive."
+  },
+  {
+   "t": 295.18,
+   "text": "LTO tape, refreshed every thirty years, costs roughly two cents per megabyte over fifty years of storage."
+  },
+  {
+   "t": 302.9,
+   "text": "DNA, if we could get the initial write cost down to ten cents per megabyte, would beat that on a total-cost-of-ownership basis because it requires no refresh, no energy, and minimal floorspace."
+  },
+  {
+   "t": 315.68,
+   "text": "So the competitive bar for DNA is not \"match tape's write cost\" but rather \"match tape's total-cost-of-ownership for very long-term cold archive."
+  },
+  {
+   "t": 325.54,
+   "text": "\" That's a much easier bar."
+  },
+  {
+   "t": 327.29,
+   "text": "The economic regime where DNA storage first makes sense, in other words, is cold archive that needs to survive for many decades."
+  },
+  {
+   "t": 336.28,
+   "text": "Not active storage."
+  },
+  {
+   "t": 337.8,
+   "text": "Not warm storage."
+  },
+  {
+   "t": 339.31,
+   "text": "Not even hot tape."
+  },
+  {
+   "t": 340.48,
+   "text": "The deepest, coldest, most rarely accessed end of the storage hierarchy."
+  },
+  {
+   "t": 345.98,
+   "text": "The kind of data that you write once, expect never to read, but legally or strategically must keep intact for a very long time."
+  },
+  {
+   "t": 354.13,
+   "text": "Government archives."
+  },
+  {
+   "t": 355.58,
+   "text": "Scientific datasets."
+  },
+  {
+   "t": 357.4,
+   "text": "Cultural heritage."
+  },
+  {
+   "t": 358.91,
+   "text": "Insurance records."
+  },
+  {
+   "t": 360.44,
+   "text": "Pharmaceutical trial data."
+  },
+  {
+   "t": 362.34,
+   "text": "There is an enormous amount of this data in the world, and the volume is growing, and the long-term cost of keeping it on conventional media is real and growing."
+  },
+  {
+   "t": 372.51,
+   "text": "That is the market DNA storage is targeting."
+  },
+  {
+   "t": 375.6,
+   "text": "And if the technology gets there on cost, it's a market worth, plausibly, tens of billions of dollars per year."
+  },
+  {
+   "t": 382.69,
+   "text": "Worth a long bet by Microsoft, by Twist, by Western Digital, by all the players in the consortium we'll talk about later in the lecture."
+  },
+  {
+   "t": 390.16,
+   "text": "Alright."
+  },
+  {
+   "t": 390.96,
+   "text": "Take fifteen minutes."
+  },
+  {
+   "t": 392.48,
+   "text": "Stretch your legs."
+  },
+  {
+   "t": 393.79,
+   "text": "Come back and we'll dive into enzymatic synthesis — the single technology that, more than any other, has to work for DNA storage to ever become economically viable."
+  }
+ ]
+}

@@ -1,0 +1,271 @@
+{
+ "n": 19,
+ "title": "APPENDIX — Glossary and quick-reference summary of key signatures",
+ "duration": 503.07,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX — Glossary and quick-reference summary of key signatures"
+  },
+  {
+   "t": 4.91,
+   "text": "This appendix is a quick reference for the key terminology and major COSMIC signatures discussed in the lecture."
+  },
+  {
+   "t": 11.89,
+   "text": "Use it as a study aid or a quick lookup when reading cancer genomics papers."
+  },
+  {
+   "t": 16.66,
+   "text": "Key terminology."
+  },
+  {
+   "t": 17.99,
+   "text": "Mutational signature — A characteristic pattern of mutations produced by a specific mutational process, represented as a probability distribution over mutation categories (typically the 96 trinucleotide-context SBS classes)."
+  },
+  {
+   "t": 33.56,
+   "text": "96-class SBS framework — The standard categorization of single-base substitutions, with six substitution types (C-to-A, C-to-G, C-to-T, T-to-A, T-to-C, T-to-G) crossed with sixteen possible trinucleotide contexts (the bases immediately five-prime and three-prime of the mutated base)."
+  },
+  {
+   "t": 55.96,
+   "text": "Total: 96 categories."
+  },
+  {
+   "t": 58.46,
+   "text": "NMF — Non-negative matrix factorization — The mathematical technique used to extract mutational signatures from cohorts of cancer genomes."
+  },
+  {
+   "t": 68.39,
+   "text": "Decomposes a mixture matrix into a signature matrix (the basis patterns) and an exposure matrix (how active each signature is in each tumor), with the constraint that no entries can be negative."
+  },
+  {
+   "t": 81.28,
+   "text": "COSMIC — The Catalogue Of Somatic Mutations In Cancer, hosted by the Wellcome Sanger Institute."
+  },
+  {
+   "t": 87.86,
+   "text": "Maintains the canonical mutational signature reference catalog."
+  },
+  {
+   "t": 91.95,
+   "text": "Current version (as of 2024) is v3.4."
+  },
+  {
+   "t": 96.86,
+   "text": "SBS, ID, DBS, SV — Categories of mutational signatures: Single-Base Substitution, Insertion/Deletion, Doublet Base Substitution, Structural Variant."
+  },
+  {
+   "t": 110.45,
+   "text": "Each operates on its own classification framework."
+  },
+  {
+   "t": 113.95,
+   "text": "Signature extraction — The unsupervised discovery of signatures from a cohort via NMF."
+  },
+  {
+   "t": 120.38,
+   "text": "Signature fitting (signature assignment) — Decomposition of a single tumor's mutation profile into known reference signatures from COSMIC."
+  },
+  {
+   "t": 129.26,
+   "text": "SigProfiler — The dominant software toolkit for mutational signature analysis, developed by Alexandrov's group."
+  },
+  {
+   "t": 136.78,
+   "text": "HRD — Homologous recombination deficiency — Loss of the high-fidelity HR pathway for DSB repair; classic cause is biallelic BRCA1/BRCA2 loss; predicts PARP inhibitor response."
+  },
+  {
+   "t": 153.39,
+   "text": "MMR-d, dMMR — Mismatch repair deficiency — Loss of the post-replication MMR pathway; causes hypermutation; manifests as MSI-high; predicts checkpoint inhibitor response."
+  },
+  {
+   "t": 167.56,
+   "text": "MSI-high, MSI-H — Microsatellite instability detected at multiple short tandem repeat loci; clinical marker of MMR deficiency."
+  },
+  {
+   "t": 178.05,
+   "text": "Tumor mutation burden (TMB) — The total number of somatic mutations per megabase of sequenced genome; a major predictor of immunotherapy response."
+  },
+  {
+   "t": 187.97,
+   "text": "Kataegis — Spatial clusters of localized hypermutation, typically APOBEC-driven, visible on rainfall plots as bunches of mutations close together along the genome."
+  },
+  {
+   "t": 199.76,
+   "text": "Rainfall plot — A plot of intermutation distance versus genomic position; reveals spatial clustering of mutations such as kataegis."
+  },
+  {
+   "t": 208.97,
+   "text": "Quick-reference summary of major signatures."
+  },
+  {
+   "t": 212.0,
+   "text": "SBS1 — Spontaneous deamination of 5-methylcytosine at CpG sites; clock-like; accumulates with age; ubiquitous low-level signature in all tissues."
+  },
+  {
+   "t": 224.6,
+   "text": "SBS2 — APOBEC family C-to-T at TCW contexts; pan-cancer; clustered as kataegis."
+  },
+  {
+   "t": 232.75,
+   "text": "SBS3 — Homologous recombination deficiency (BRCA1/BRCA2 deficiency); flat distribution across 96 classes; breast, ovarian, pancreatic, prostate cancers; predicts PARP inhibitor response."
+  },
+  {
+   "t": 250.06,
+   "text": "SBS4 — Tobacco smoke (polycyclic aromatic hydrocarbons); C-to-A at NCN contexts; lung, head and neck, esophageal, bladder cancers in smokers."
+  },
+  {
+   "t": 262.16,
+   "text": "SBS5 — Clock-like, etiology unclear; relatively flat; accumulates with age in many tissues."
+  },
+  {
+   "t": 270.94,
+   "text": "SBS6, SBS15, SBS20, SBS26 — Mismatch repair deficiency; broad C-to-T patterns; correlated with MSI-high; predicts pembrolizumab response."
+  },
+  {
+   "t": 284.77,
+   "text": "SBS7a/b/c/d — UV light; C-to-T at TCN and CCN dipyrimidine contexts; CC-to-TT doublet substitutions; melanoma and other skin cancers; correlates with high mutation burden and good immunotherapy response."
+  },
+  {
+   "t": 304.55,
+   "text": "SBS10a/b — POLE proofreading mutation; ultra-hypermutator; endometrial and colorectal cancers; predicts checkpoint inhibitor response."
+  },
+  {
+   "t": 316.78,
+   "text": "SBS11 — Temozolomide chemotherapy; alkylation-induced C-to-T; common in recurrent glioblastomas after temozolomide treatment."
+  },
+  {
+   "t": 327.04,
+   "text": "SBS13 — APOBEC C-to-G at TCW contexts; paired with SBS2."
+  },
+  {
+   "t": 333.9,
+   "text": "SBS22 — Aristolochic acid; urothelial cancers in regions with traditional medicine exposure."
+  },
+  {
+   "t": 341.47,
+   "text": "SBS31, SBS35 — Platinum chemotherapy (cisplatin, carboplatin, oxaliplatin); appears in post-treatment metastases."
+  },
+  {
+   "t": 352.34,
+   "text": "DBS1 — UV doublet substitutions; CC-to-TT; pathognomonic for sun exposure."
+  },
+  {
+   "t": 359.84,
+   "text": "ID1, ID2 — Small indels at homopolymer tracts; MMR deficiency."
+  },
+  {
+   "t": 366.83,
+   "text": "ID3 — Tobacco-associated indels."
+  },
+  {
+   "t": 370.23,
+   "text": "ID6, ID8 — Deletions at microhomology; HR deficiency; co-occurs with SBS3."
+  },
+  {
+   "t": 378.65,
+   "text": "Clinical decision summary."
+  },
+  {
+   "t": 380.49,
+   "text": "If a tumor shows SBS3 plus ID6/ID8 plus large-scale structural variants consistent with HRD → consider PARP inhibitor therapy."
+  },
+  {
+   "t": 393.34,
+   "text": "If a tumor shows SBS6/15/20/26 plus ID1/ID2 plus high mutation burden consistent with MMR deficiency → consider pembrolizumab or other checkpoint inhibitor."
+  },
+  {
+   "t": 410.24,
+   "text": "If a tumor shows SBS10a/b plus ultra-high mutation burden consistent with POLE-mutant hypermutator → consider checkpoint inhibitor."
+  },
+  {
+   "t": 419.69,
+   "text": "If a tumor shows SBS7 with high mutation burden (typical of melanoma) → consider checkpoint inhibitor; UV etiology confirmed."
+  },
+  {
+   "t": 428.85,
+   "text": "If a tumor shows SBS4 in lung tissue → confirms tobacco etiology; informs counseling and risk stratification."
+  },
+  {
+   "t": 436.74,
+   "text": "If a recurrent tumor shows SBS11 in glioma context → confirms temozolomide-driven hypermutation; informs subsequent therapy choice."
+  },
+  {
+   "t": 447.19,
+   "text": "Recommended further reading."
+  },
+  {
+   "t": 448.97,
+   "text": "Alexandrov, L."
+  },
+  {
+   "t": 450.74,
+   "text": "B. et al."
+  },
+  {
+   "t": 451.82,
+   "text": "(2013)."
+  },
+  {
+   "t": 453.45,
+   "text": "Signatures of mutational processes in human cancer."
+  },
+  {
+   "t": 457.08,
+   "text": "Nature 500, 415-421."
+  },
+  {
+   "t": 461.33,
+   "text": "— The foundational paper."
+  },
+  {
+   "t": 462.94,
+   "text": "Alexandrov, L."
+  },
+  {
+   "t": 464.75,
+   "text": "B. et al."
+  },
+  {
+   "t": 465.93,
+   "text": "(2020)."
+  },
+  {
+   "t": 466.79,
+   "text": "The repertoire of mutational signatures in human cancer."
+  },
+  {
+   "t": 470.79,
+   "text": "Nature 578, 94-101."
+  },
+  {
+   "t": 475.3,
+   "text": "— The PCAWG-era expansion paper."
+  },
+  {
+   "t": 477.52,
+   "text": "The COSMIC website at cancer.sanger.ac.uk/signatures — Current reference catalog with interactive visualizations of all signatures."
+  },
+  {
+   "t": 488.29,
+   "text": "The SigProfiler GitHub repository — Software tools for mutational signature analysis in Python."
+  },
+  {
+   "t": 495.03,
+   "text": "That concludes the lecture and the appendix."
+  },
+  {
+   "t": 497.85,
+   "text": "Thank you again."
+  },
+  {
+   "t": 498.83,
+   "text": "The genome remembers."
+  },
+  {
+   "t": 500.77,
+   "text": "Now you can read what it remembers."
+  }
+ ]
+}

@@ -1,0 +1,263 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — The trade-offs — untargeted breadth vs targeted resolution",
+ "duration": 451.78,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — The trade-offs — untargeted breadth vs targeted resolution"
+  },
+  {
+   "t": 6.14,
+   "text": "We've now seen both families of spatial transcriptomics in some depth."
+  },
+  {
+   "t": 10.57,
+   "text": "The sequencing-based family — Visium, Visium HD, Slide-seq, Stereo-seq — uses barcoded slides and Illumina sequencing as the readout."
+  },
+  {
+   "t": 21.24,
+   "text": "The imaging-based family — MERFISH, seqFISH, Xenium, CosMx, MERSCOPE — uses sequential rounds of fluorescent probes and microscopy as the readout."
+  },
+  {
+   "t": 33.17,
+   "text": "The two families have nearly opposite trade-offs, and choosing between them is one of the most consequential decisions in a spatial experiment."
+  },
+  {
+   "t": 41.98,
+   "text": "Let me walk through the trade-offs in detail."
+  },
+  {
+   "t": 44.35,
+   "text": "Trade-off one: transcriptome coverage."
+  },
+  {
+   "t": 47.33,
+   "text": "Sequencing-based methods are untargeted — they capture every poly-A mRNA the tissue produces, regardless of whether you knew to look for it."
+  },
+  {
+   "t": 57.12,
+   "text": "You sequence everything."
+  },
+  {
+   "t": 58.86,
+   "text": "The output covers, in principle, the entire transcriptome."
+  },
+  {
+   "t": 63.1,
+   "text": "This is the foundational advantage of the sequencing-based family, and it inherits directly from bulk and single-cell RNA-seq."
+  },
+  {
+   "t": 71.74,
+   "text": "You don't need to know in advance which genes matter; you can discover new ones from the data."
+  },
+  {
+   "t": 76.84,
+   "text": "Imaging-based methods are targeted — they only see the genes you put on your probe panel."
+  },
+  {
+   "t": 81.97,
+   "text": "The panel might be 300 or 1,000 or 5,000 genes, but it is not the whole transcriptome."
+  },
+  {
+   "t": 89.54,
+   "text": "If a biologically important gene wasn't on your panel, you won't see it."
+  },
+  {
+   "t": 93.88,
+   "text": "The panel design has to happen before the experiment, based on prior biological knowledge."
+  },
+  {
+   "t": 99.49,
+   "text": "This is the foundational limitation of the imaging-based family."
+  },
+  {
+   "t": 103.55,
+   "text": "You cannot discover unexpected genes; you can only confirm patterns of genes you already chose to look for."
+  },
+  {
+   "t": 110.38,
+   "text": "Trade-off two: spatial resolution."
+  },
+  {
+   "t": 113.08,
+   "text": "Sequencing-based methods have historically been low-resolution."
+  },
+  {
+   "t": 117.06,
+   "text": "The original Visium spot was 55 microns — capturing multiple cells per measurement."
+  },
+  {
+   "t": 124.26,
+   "text": "Visium HD and Stereo-seq have improved this dramatically, down to 2 microns and 220 nanometers respectively, but the data is often binned to coarser scales for analysis."
+  },
+  {
+   "t": 136.38,
+   "text": "The capture step also has a small diffusion-based blurring effect — transcripts can drift a few microns from their cell of origin before they hit the capture surface."
+  },
+  {
+   "t": 146.2,
+   "text": "Imaging-based methods are inherently sub-cellular."
+  },
+  {
+   "t": 150.09,
+   "text": "Each detected molecule is a single-molecule fluorescent dot, localized to better than the diffraction limit — sometimes hundreds of nanometers."
+  },
+  {
+   "t": 159.16,
+   "text": "You can see exactly where in a cell each transcript sits — clustered around the nucleus, distributed in the cytoplasm, concentrated in specific organelles."
+  },
+  {
+   "t": 169.74,
+   "text": "This is the foundational advantage of the imaging-based family."
+  },
+  {
+   "t": 173.78,
+   "text": "The resolution is essentially unlimited from below; the constraint is from above, by the size of the imaged field."
+  },
+  {
+   "t": 181.59,
+   "text": "Trade-off three: detection sensitivity."
+  },
+  {
+   "t": 185.05,
+   "text": "Imaging-based methods have very high detection efficiency per targeted transcript — typically 80% to 95% of the actually-present molecules of a target gene are detected."
+  },
+  {
+   "t": 197.74,
+   "text": "Sequencing-based methods have lower per-transcript detection efficiency — often 10% to 30% of transcripts are captured by the slide."
+  },
+  {
+   "t": 206.88,
+   "text": "The difference is fundamentally about whether you're imaging molecules at the position where they sit (high efficiency) versus capturing diffusing molecules onto a surface (lower efficiency)."
+  },
+  {
+   "t": 218.26,
+   "text": "This means: for any single gene that is on both a Visium array and a MERFISH panel, the MERFISH measurement will be more sensitive and precise per cell."
+  },
+  {
+   "t": 228.43,
+   "text": "But the Visium measurement covers the entire transcriptome, while MERFISH only covers the panel genes."
+  },
+  {
+   "t": 235.12,
+   "text": "You're trading transcript-level precision for transcriptome-level coverage."
+  },
+  {
+   "t": 239.74,
+   "text": "Trade-off four: cost and throughput."
+  },
+  {
+   "t": 242.9,
+   "text": "Sequencing-based methods inherit Illumina's cost economics."
+  },
+  {
+   "t": 247.34,
+   "text": "A Visium experiment costs roughly a few hundred to a few thousand dollars per slide, including sequencing."
+  },
+  {
+   "t": 253.9,
+   "text": "The bottleneck is sequencing depth — to fill in the transcriptome at every spot, you need substantial reads, which costs proportionally."
+  },
+  {
+   "t": 262.86,
+   "text": "Imaging-based methods have different cost structures."
+  },
+  {
+   "t": 266.35,
+   "text": "A Xenium or MERSCOPE run costs roughly a few thousand dollars per sample including reagents and instrument time, with the dominant cost being the kit consumables."
+  },
+  {
+   "t": 277.25,
+   "text": "Per-sample costs are broadly comparable; the difference is that sequencing-based costs scale with sample number while imaging-based costs scale with instrument time."
+  },
+  {
+   "t": 286.68,
+   "text": "Trade-off five: data structure."
+  },
+  {
+   "t": 289.02,
+   "text": "Sequencing-based data looks like a single-cell expression matrix — genes by spots — with each spot having an X-Y position."
+  },
+  {
+   "t": 296.87,
+   "text": "The analysis pipelines are straightforward extensions of Seurat or Scanpy single-cell workflows, with added spatial-coordinate metadata."
+  },
+  {
+   "t": 305.57,
+   "text": "Imaging-based data is fundamentally a list of molecules — each molecule with X-Y-Z coordinates and a gene call — that has to be aggregated into per-cell quantifications via a cell-segmentation step."
+  },
+  {
+   "t": 318.8,
+   "text": "The cell segmentation is itself a significant analytical challenge, particularly in densely packed tissues where cell boundaries are ambiguous."
+  },
+  {
+   "t": 328.25,
+   "text": "Here is the headline analogy I want you to leave with."
+  },
+  {
+   "t": 331.58,
+   "text": "The two families have nearly opposite trade-offs."
+  },
+  {
+   "t": 334.63,
+   "text": "Sequencing-based gives you untargeted whole-transcriptome coverage at lower resolution."
+  },
+  {
+   "t": 340.29,
+   "text": "Imaging-based gives you sub-cellular resolution but only the genes you pre-selected in your probe panel."
+  },
+  {
+   "t": 346.85,
+   "text": "Pick the family that matches your biological question."
+  },
+  {
+   "t": 350.13,
+   "text": "For an exploratory study — \"what cells are in this tissue, what's the gross organization, are there interesting regions I haven't anticipated\" — Visium or Stereo-seq is usually the right choice."
+  },
+  {
+   "t": 362.1,
+   "text": "The untargeted coverage lets you discover patterns you weren't looking for."
+  },
+  {
+   "t": 366.25,
+   "text": "For a targeted study — \"I know the genes I care about, I want to see exactly where in the cell they sit, I want precise single-cell quantification\" — Xenium or MERSCOPE or CosMx is usually the right choice."
+  },
+  {
+   "t": 378.78,
+   "text": "The sub-cellular precision and high detection efficiency let you do high-confidence cell typing and spatial pattern analysis on a known gene set."
+  },
+  {
+   "t": 388.22,
+   "text": "For a comprehensive study at the highest resolution and breadth, the modern approach is often to do both — run Visium for the untargeted transcriptome, run Xenium with a panel designed to validate and refine the Visium findings, and integrate the two datasets computationally."
+  },
+  {
+   "t": 406.33,
+   "text": "This dual-platform approach is becoming standard in well-resourced labs and consortium projects."
+  },
+  {
+   "t": 412.68,
+   "text": "One more practical note."
+  },
+  {
+   "t": 414.18,
+   "text": "Both families produce data that lives in the same downstream analytical ecosystem."
+  },
+  {
+   "t": 419.7,
+   "text": "The Scanpy and Seurat single-cell tools have been extended to handle spatial data — Scanpy has a spatial module called Squidpy, Seurat has spatial-data support natively, and there are dozens of spatial-specific tools we'll discuss in the next segment."
+  },
+  {
+   "t": 434.17,
+   "text": "The data formats are converging on a small set of standards."
+  },
+  {
+   "t": 438.23,
+   "text": "Cross-platform analysis is increasingly straightforward, even when the underlying chemistries are radically different."
+  },
+  {
+   "t": 445.5,
+   "text": "Now let me show you how the analysis actually works — what you do with a spatial gene expression dataset once you have it."
+  }
+ ]
+}

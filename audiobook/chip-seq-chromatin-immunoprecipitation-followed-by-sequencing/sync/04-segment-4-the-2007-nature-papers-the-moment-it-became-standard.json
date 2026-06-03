@@ -1,0 +1,163 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The 2007 Nature papers — the moment it became standard",
+ "duration": 295.7,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The 2007 Nature papers — the moment it became standard"
+  },
+  {
+   "t": 5.04,
+   "text": "The transition from ChIP-chip to ChIP-seq did not creep in gradually."
+  },
+  {
+   "t": 10.8,
+   "text": "It happened in a roughly six-month window in 2007, marked by three papers in Nature and Nature Methods that landed almost on top of each other and that, by the standards of how field shifts usually go, essentially closed the book on microarrays for this application overnight."
+  },
+  {
+   "t": 27.99,
+   "text": "Let me name the three."
+  },
+  {
+   "t": 29.46,
+   "text": "In June 2007, Gordon Robertson and colleagues at the BC Cancer Agency, working with the Illumina platform — at that point still called Solexa — published a paper applying short-read sequencing to ChIP'd DNA from the transcription factor STAT1 in human cells stimulated with interferon-gamma."
+  },
+  {
+   "t": 48.54,
+   "text": "They mapped STAT1 binding sites genome-wide."
+  },
+  {
+   "t": 51.92,
+   "text": "Their key contribution was demonstrating that you could throw away the array entirely and let the sequencing reads pile up at binding sites with enough resolution to identify thousands of sites that hadn't been characterized before."
+  },
+  {
+   "t": 65.65,
+   "text": "The paper was a methods paper as much as a biology paper, and it set the template — ChIP your protein, sequence the DNA, map the reads, call peaks, profit."
+  },
+  {
+   "t": 76.31,
+   "text": "In July 2007, Tarjei Mikkelsen and colleagues in the lab of Eric Lander at the Broad Institute published the second landmark paper."
+  },
+  {
+   "t": 85.16,
+   "text": "Their focus was different."
+  },
+  {
+   "t": 86.71,
+   "text": "They weren't mapping a single transcription factor; they were mapping multiple histone modifications across multiple cell types — mouse embryonic stem cells, neural progenitors, and differentiated cells."
+  },
+  {
+   "t": 99.92,
+   "text": "The result was a genome-wide map of how chromatin states change as cells differentiate, with H3K4me3 marking active promoters, H3K27me3 marking developmentally silenced genes, and the now-famous concept of bivalent domains — regions carrying both marks simultaneously in stem cells, poised to commit one way or the other on differentiation."
+  },
+  {
+   "t": 126.78,
+   "text": "The biology in that paper was as important as the method; it gave the chromatin community its first real glimpse of how the epigenome reconfigures itself during cell fate decisions."
+  },
+  {
+   "t": 139.14,
+   "text": "The third paper, by Artem Barski and colleagues in Keji Zhao's lab at the NIH, published just before the others in May 2007 in Cell but in the same window, applied ChIP-seq to thirty-seven different histone modifications in human T cells."
+  },
+  {
+   "t": 155.38,
+   "text": "Thirty-seven."
+  },
+  {
+   "t": 156.53,
+   "text": "In one paper."
+  },
+  {
+   "t": 157.74,
+   "text": "Suddenly the chromatin landscape was being characterized at a scale that ChIP-chip would have needed years to approach."
+  },
+  {
+   "t": 164.97,
+   "text": "What I want you to take from this segment is not the names — though Robertson, Mikkelsen, and Barski are the ones to remember if you're going to invoke the origin story — but the suddenness."
+  },
+  {
+   "t": 174.72,
+   "text": "In the spring of 2007, ChIP-chip was the standard."
+  },
+  {
+   "t": 179.16,
+   "text": "By the end of 2007, three high-profile demonstrations had made ChIP-seq the obvious default for anyone with access to an Illumina machine."
+  },
+  {
+   "t": 188.39,
+   "text": "By 2009, hardly anyone was publishing new ChIP-chip studies."
+  },
+  {
+   "t": 193.38,
+   "text": "The shift was clean."
+  },
+  {
+   "t": 194.76,
+   "text": "The cost per binding site dropped by orders of magnitude."
+  },
+  {
+   "t": 198.55,
+   "text": "The genome coverage went from \"regions we put on the array\" to \"literally every base."
+  },
+  {
+   "t": 204.15,
+   "text": "\" And the data became compatible with all the other sequencing-based assays — RNA-seq, ATAC-seq, bisulfite sequencing — which meant the same alignment tools and quantification pipelines could process everything."
+  },
+  {
+   "t": 217.59,
+   "text": "There's a methodological lesson here that's worth pausing on."
+  },
+  {
+   "t": 221.01,
+   "text": "ChIP-chip was a complete technique."
+  },
+  {
+   "t": 223.86,
+   "text": "It worked."
+  },
+  {
+   "t": 224.75,
+   "text": "It produced good data."
+  },
+  {
+   "t": 226.36,
+   "text": "It published well."
+  },
+  {
+   "t": 227.69,
+   "text": "But it was matched to an output format — the microarray — that had a structural ceiling."
+  },
+  {
+   "t": 233.29,
+   "text": "The moment a higher-resolution, higher-throughput output format appeared, the upstream chemistry — the ChIP itself — was unchanged, but the downstream readout shifted, and the whole field rebadged itself."
+  },
+  {
+   "t": 246.45,
+   "text": "ChIP-seq is, in a real sense, just ChIP with a better tail end."
+  },
+  {
+   "t": 252.03,
+   "text": "The wet lab steps for the immunoprecipitation are mostly the same as they were in 1995."
+  },
+  {
+   "t": 258.06,
+   "text": "What changed is what you do with the DNA at the end."
+  },
+  {
+   "t": 261.05,
+   "text": "That's the story of a lot of modern molecular biology — the underlying capture chemistry stays roughly constant; the readout gets cheaper and broader, and the whole field tilts toward the new readout."
+  },
+  {
+   "t": 273.29,
+   "text": "That said, even the wet lab steps got rethought over the next decade, because once you knew you'd be reading out genome-wide, the experimental design started to matter in ways it didn't when you were just looking at one promoter at a time."
+  },
+  {
+   "t": 285.98,
+   "text": "Specificity, controls, antibody validation, background normalization — all became central."
+  },
+  {
+   "t": 292.9,
+   "text": "Let's now walk through the modern workflow in detail."
+  }
+ ]
+}

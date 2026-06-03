@@ -1,0 +1,255 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — BACs, clone-by-clone, and whole-genome shotgun: the two strategies",
+ "duration": 366.74,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — BACs, clone-by-clone, and whole-genome shotgun: the two strategies"
+  },
+  {
+   "t": 6.28,
+   "text": "This is the most technically dense segment in the lecture, so I am going to slow down and use analogies aggressively."
+  },
+  {
+   "t": 13.56,
+   "text": "Stick with me."
+  },
+  {
+   "t": 14.54,
+   "text": "Here is the problem."
+  },
+  {
+   "t": 16.18,
+   "text": "Sanger sequencing, even with the best automated ABI 3700 machines of 1998, can only read about seven hundred to nine hundred bases of contiguous DNA at a time."
+  },
+  {
+   "t": 28.68,
+   "text": "The human genome is three billion bases."
+  },
+  {
+   "t": 32.09,
+   "text": "So you cannot just take a chromosome and sequence it end-to-end — there is no machine on earth that can do that."
+  },
+  {
+   "t": 38.41,
+   "text": "You have to break the genome into pieces small enough to sequence, then sequence the pieces, then computationally stitch the pieces back together based on overlapping ends."
+  },
+  {
+   "t": 48.95,
+   "text": "The question is: how do you break it up, and how do you stitch it back together?"
+  },
+  {
+   "t": 53.1,
+   "text": "The public consortium chose what is called the clone-by-clone or hierarchical approach."
+  },
+  {
+   "t": 58.76,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 60.55,
+   "text": "Imagine you want to copy a giant book — three thousand pages — using a photocopier that only copies one page at a time."
+  },
+  {
+   "t": 68.15,
+   "text": "The careful, slow way is: first, you make a chapter outline."
+  },
+  {
+   "t": 72.83,
+   "text": "You number every chapter."
+  },
+  {
+   "t": 74.85,
+   "text": "Then you photocopy chapter one, page by page, in order, and you reassemble chapter one."
+  },
+  {
+   "t": 81.36,
+   "text": "Then chapter two."
+  },
+  {
+   "t": 82.64,
+   "text": "And so on."
+  },
+  {
+   "t": 83.65,
+   "text": "You always know where you are in the book."
+  },
+  {
+   "t": 85.69,
+   "text": "That is clone-by-clone."
+  },
+  {
+   "t": 87.16,
+   "text": "The public consortium first built a physical map of the human genome — a low-resolution map of large overlapping DNA fragments, each about 150,000 base pairs long, cloned into things called Bacterial Artificial Chromosomes, BACs."
+  },
+  {
+   "t": 103.51,
+   "text": "A BAC is a circular plasmid-like vector that can hold and faithfully replicate a chunk of human DNA up to about 200 kilobases inside a bacterial cell."
+  },
+  {
+   "t": 114.79,
+   "text": "You will remember plasmids from the previous lecture — BACs are the heavyweight industrial-scale cousins of plasmids, engineered to carry far larger inserts."
+  },
+  {
+   "t": 124.3,
+   "text": "The consortium fingerprinted tens of thousands of BACs, figured out which ones overlapped, and built a tiling path — a minimum set of overlapping BACs that covered each chromosome."
+  },
+  {
+   "t": 135.36,
+   "text": "Then, for each BAC in the tiling path, they shotgunned that one BAC — sequenced random fragments of it — and assembled the BAC's 150,000 bases as a self-contained unit."
+  },
+  {
+   "t": 148.68,
+   "text": "Then they stitched the assembled BACs together along the tiling path."
+  },
+  {
+   "t": 152.61,
+   "text": "The advantages: every assembled BAC is anchored to a known physical location on a known chromosome."
+  },
+  {
+   "t": 160.06,
+   "text": "Repetitive DNA — and remember, half the human genome is repetitive — is contained within the small space of a single BAC, so repeats from chromosome 1 cannot get confused with repeats from chromosome 14."
+  },
+  {
+   "t": 174.15,
+   "text": "The assembly is local, controlled, and verifiable."
+  },
+  {
+   "t": 178.36,
+   "text": "The disadvantages: it is slow."
+  },
+  {
+   "t": 180.74,
+   "text": "Building the BAC map alone took years."
+  },
+  {
+   "t": 184.31,
+   "text": "Every step has overhead."
+  },
+  {
+   "t": 186.31,
+   "text": "And BACs are not free to make — each one is a cloned construct in bacteria, with all the labor of plasmid prep."
+  },
+  {
+   "t": 193.88,
+   "text": "Celera chose the opposite approach: whole-genome shotgun."
+  },
+  {
+   "t": 198.16,
+   "text": "Here is the shotgun analogy."
+  },
+  {
+   "t": 200.46,
+   "text": "Take the same giant three-thousand-page book."
+  },
+  {
+   "t": 203.95,
+   "text": "Now feed it through a paper shredder — not once but multiple times, at different shred sizes."
+  },
+  {
+   "t": 210.04,
+   "text": "You now have a giant pile of confetti — millions of overlapping fragments."
+  },
+  {
+   "t": 215.32,
+   "text": "You read every confetto."
+  },
+  {
+   "t": 217.47,
+   "text": "Then you computationally figure out how the confetti pieces overlap, and you reassemble the book purely from overlap information, with no chapter outline at all."
+  },
+  {
+   "t": 227.4,
+   "text": "That is whole-genome shotgun."
+  },
+  {
+   "t": 229.21,
+   "text": "You take the whole genome, fragment it randomly, sequence millions of small fragments, and let a computer figure out how they fit together."
+  },
+  {
+   "t": 237.79,
+   "text": "No physical map, no BACs, no tiling path."
+  },
+  {
+   "t": 241.56,
+   "text": "Just sequence and assemble."
+  },
+  {
+   "t": 243.86,
+   "text": "The advantages: it is fast."
+  },
+  {
+   "t": 246.28,
+   "text": "You skip the entire map-building phase."
+  },
+  {
+   "t": 249.25,
+   "text": "The wet-lab pipeline is simpler and more parallelizable."
+  },
+  {
+   "t": 253.38,
+   "text": "The disadvantages: the assembly problem becomes nightmarish, especially for a repeat-rich genome like human."
+  },
+  {
+   "t": 260.44,
+   "text": "If you have ten thousand nearly identical copies of a transposable element scattered across the genome, how does the computer know which copy goes where?"
+  },
+  {
+   "t": 270.1,
+   "text": "The answer, for Celera, turned out to be that you needed paired-end reads — sequence both ends of a longer fragment, separated by a known distance — and you needed very deep coverage, six to ten times the genome size in total bases sequenced."
+  },
+  {
+   "t": 285.14,
+   "text": "And here is a fact that Celera was quiet about at the time but is now widely acknowledged: Celera's assembly used the public consortium's data."
+  },
+  {
+   "t": 293.8,
+   "text": "Because the public data was being deposited daily into GenBank under the Bermuda Principles — that is the next segment — Celera was able to anchor its shotgun assembly against the public BAC map."
+  },
+  {
+   "t": 305.85,
+   "text": "Some analyses suggest Celera could not have produced a usable assembly without the public data."
+  },
+  {
+   "t": 312.46,
+   "text": "The public project, working clone by clone, could have finished without Celera."
+  },
+  {
+   "t": 317.62,
+   "text": "The reverse is not clearly true."
+  },
+  {
+   "t": 320.16,
+   "text": "The point of this segment is not that one approach was right and the other was wrong."
+  },
+  {
+   "t": 324.95,
+   "text": "The point is that the two approaches were complementary, and the existence of both — the rivalry between them — pushed each side to be better."
+  },
+  {
+   "t": 333.44,
+   "text": "The clone-by-clone approach gave us a reliably anchored backbone."
+  },
+  {
+   "t": 337.86,
+   "text": "The shotgun approach proved that you could industrialize sequencing at a scale nobody had imagined."
+  },
+  {
+   "t": 343.85,
+   "text": "Modern next-generation sequencing is shotgun on steroids — every Illumina run is whole-genome shotgun, with billions of short reads, assembled or aligned by descendants of the algorithms Celera pioneered."
+  },
+  {
+   "t": 357.51,
+   "text": "The shotgun approach won the technological future."
+  },
+  {
+   "t": 360.92,
+   "text": "The clone-by-clone approach won the 2003 finished sequence."
+  },
+  {
+   "t": 365.3,
+   "text": "Both were necessary."
+  }
+ ]
+}

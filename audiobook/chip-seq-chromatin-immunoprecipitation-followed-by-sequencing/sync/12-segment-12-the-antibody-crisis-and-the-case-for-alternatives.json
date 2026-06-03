@@ -1,0 +1,147 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — The antibody crisis and the case for alternatives",
+ "duration": 268.03,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — The antibody crisis and the case for alternatives"
+  },
+  {
+   "t": 4.69,
+   "text": "We touched on the antibody problem in Segment 6."
+  },
+  {
+   "t": 7.95,
+   "text": "I want to come back to it here, because it sets up the story of the next several segments — the development of alternatives to ChIP-seq that get around the antibody problem in clever ways."
+  },
+  {
+   "t": 18.91,
+   "text": "The antibody problem, restated, is this: ChIP-seq lives or dies on antibody quality, and there's a documented \"bad antibody\" crisis in TF immunology."
+  },
+  {
+   "t": 30.86,
+   "text": "When the ENCODE consortium began systematically validating commercial antibodies for ChIP-seq, they found that a substantial fraction of them — by various estimates, anywhere from a quarter to over half — failed validation criteria."
+  },
+  {
+   "t": 45.15,
+   "text": "The antibodies didn't specifically capture their advertised target."
+  },
+  {
+   "t": 49.14,
+   "text": "They captured something else, or nothing, or a mixture."
+  },
+  {
+   "t": 52.99,
+   "text": "And these were antibodies that had been sold for years, used in published papers, cited in the literature as evidence for binding events that were, in retrospect, unreliable."
+  },
+  {
+   "t": 63.92,
+   "text": "This is not a small issue."
+  },
+  {
+   "t": 65.44,
+   "text": "It's a structural feature of the antibody market."
+  },
+  {
+   "t": 68.12,
+   "text": "Antibodies are made by injecting an antigen — typically a peptide from the target protein — into an animal and harvesting the resulting immune response."
+  },
+  {
+   "t": 78.0,
+   "text": "The polyclonal antibodies that come out of this are mixtures of many different binders, some specific, some not."
+  },
+  {
+   "t": 84.71,
+   "text": "Even monoclonal antibodies, which come from a single B cell clone and are uniform in sequence, can be miscalibrated — the clone might bind a peptide-shape that's similar to something else in the proteome."
+  },
+  {
+   "t": 96.5,
+   "text": "Validating an antibody for a specific application like ChIP-seq is expensive, and not every supplier does it rigorously."
+  },
+  {
+   "t": 104.5,
+   "text": "In addition to the specificity problem, there's an availability problem."
+  },
+  {
+   "t": 108.69,
+   "text": "For many transcription factors — particularly less-studied ones, or those from non-model organisms — there are no good antibodies available."
+  },
+  {
+   "t": 117.55,
+   "text": "You can't ChIP what you can't capture."
+  },
+  {
+   "t": 119.62,
+   "text": "This puts an entire class of biological questions out of reach."
+  },
+  {
+   "t": 123.99,
+   "text": "If you're studying the development of a non-model organism, or a recently discovered TF, or a transcription factor that's not on anyone's commercial priority list, ChIP-seq isn't an option until somebody makes you a good antibody — a process that can take a year and tens of thousands of dollars."
+  },
+  {
+   "t": 141.44,
+   "text": "The alternative path, which the field began to explore seriously around 2015, was to ask: can we design a ChIP-like method that doesn't depend on having a perfect antibody for the native protein?"
+  },
+  {
+   "t": 154.43,
+   "text": "Several approaches emerged."
+  },
+  {
+   "t": 156.35,
+   "text": "Tagged-protein ChIP."
+  },
+  {
+   "t": 157.93,
+   "text": "If you can engineer your target protein with a small, well-characterized tag — Flag, HA, V5, or a more modern tag like Halo — then you can ChIP using a high-quality anti-tag antibody, which is much easier to produce and validate than antibodies against arbitrary native proteins."
+  },
+  {
+   "t": 175.35,
+   "text": "The trade-off is that you need to put the tag into the cell genetically, which requires either a knock-in (CRISPR-engineered to place the tag at the endogenous locus) or an overexpressed construct (less reliable because the protein levels are off)."
+  },
+  {
+   "t": 189.88,
+   "text": "Knock-in tagged ChIP-seq has become a powerful approach, particularly when paired with degron systems that let you deplete the tagged protein on command."
+  },
+  {
+   "t": 198.94,
+   "text": "Synthetic recognition systems."
+  },
+  {
+   "t": 201.2,
+   "text": "Rather than relying on an antibody at all, you can use a synthetic DNA-binding domain — a dCas9 fused to a chromatin modifier, or an engineered zinc finger, or a tagged TAL effector — to recruit a recognition system to specific sequences."
+  },
+  {
+   "t": 216.99,
+   "text": "These aren't replacements for antibody-based ChIP, but they're complementary tools that don't require antibody validation."
+  },
+  {
+   "t": 223.75,
+   "text": "Bring the cutter to the antibody."
+  },
+  {
+   "t": 225.9,
+   "text": "This is the conceptual leap that gave us CUT&RUN and CUT&Tag."
+  },
+  {
+   "t": 230.78,
+   "text": "Instead of using the antibody to pull the protein out, and then sequencing whatever DNA came along, you can use the antibody as a homing device — the antibody binds the target protein, and then you bring a DNA-cutting enzyme to wherever the antibody is, cut the local DNA, and sequence the released fragments."
+  },
+  {
+   "t": 250.42,
+   "text": "The signal comes from cuts adjacent to the protein, not from immunoprecipitation."
+  },
+  {
+   "t": 255.96,
+   "text": "This turns out to have enormous advantages, and it's where the field has been moving over the past decade."
+  },
+  {
+   "t": 262.28,
+   "text": "That's the segue."
+  },
+  {
+   "t": 263.49,
+   "text": "Let's now look at CUT&RUN — the first big upgrade — in detail."
+  }
+ ]
+}

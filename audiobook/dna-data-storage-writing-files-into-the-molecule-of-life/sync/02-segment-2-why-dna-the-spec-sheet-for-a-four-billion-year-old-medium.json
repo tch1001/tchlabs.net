@@ -1,0 +1,343 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — Why DNA: the spec sheet for a four-billion-year-old medium",
+ "duration": 543.56,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — Why DNA: the spec sheet for a four-billion-year-old medium"
+  },
+  {
+   "t": 5.67,
+   "text": "So before we start writing files into DNA, we need to spend some time on the medium itself."
+  },
+  {
+   "t": 10.93,
+   "text": "Why DNA?"
+  },
+  {
+   "t": 11.94,
+   "text": "What makes it so good, in the limit, as a storage medium?"
+  },
+  {
+   "t": 15.64,
+   "text": "We've gestured at density and stability already, but I want to do this properly, because the comparison to existing media is genuinely jaw-dropping once you put the numbers side by side."
+  },
+  {
+   "t": 26.41,
+   "text": "Let's start with the four properties that matter for an archival storage medium."
+  },
+  {
+   "t": 30.51,
+   "text": "Density."
+  },
+  {
+   "t": 31.4,
+   "text": "Stability."
+  },
+  {
+   "t": 32.41,
+   "text": "Longevity."
+  },
+  {
+   "t": 33.5,
+   "text": "Energy cost of storage."
+  },
+  {
+   "t": 35.45,
+   "text": "I am going to walk through DNA's spec sheet on each of these and compare it to tape, hard disk, and solid-state drive."
+  },
+  {
+   "t": 42.59,
+   "text": "By the end of this segment you should have an intuition for why, if you could solve the cost problem, DNA wins on every single axis that matters for cold archive."
+  },
+  {
+   "t": 52.12,
+   "text": "Density first."
+  },
+  {
+   "t": 53.54,
+   "text": "I said two hundred and fifteen petabytes per gram earlier, and I want to unpack that number a little."
+  },
+  {
+   "t": 59.25,
+   "text": "A nucleotide — one base in a strand of DNA — weighs about three hundred and thirty daltons, which is roughly five times ten to the minus twenty-two grams."
+  },
+  {
+   "t": 69.34,
+   "text": "So one gram of DNA contains, very roughly, two times ten to the twenty-one nucleotides."
+  },
+  {
+   "t": 76.47,
+   "text": "Each nucleotide carries two bits of information, because there are four possible bases — A, T, G, C — and two bits gives you four states."
+  },
+  {
+   "t": 87.1,
+   "text": "So one gram of DNA carries about four times ten to the twenty-one bits, which is about five times ten to the twenty bytes, which is about five hundred exabytes, or roughly half a zettabyte."
+  },
+  {
+   "t": 99.05,
+   "text": "That's the absolute theoretical maximum if you packed your DNA with the same efficiency that biology does."
+  },
+  {
+   "t": 106.08,
+   "text": "In practice, when you store DNA in solution or in dried form on a shelf, you don't get that packing efficiency, and you have to account for the redundancy you add for error correction and the primer regions you need for random access."
+  },
+  {
+   "t": 119.66,
+   "text": "Realistic estimates from working storage systems land at somewhere between one and ten exabytes per gram of useable storage — which is, mind you, still six to seven orders of magnitude denser than the best magnetic tape, which tops out at around ten gigabytes per gram of medium."
+  },
+  {
+   "t": 136.78,
+   "text": "So even after all the practical haircuts, DNA is roughly a million times denser than tape."
+  },
+  {
+   "t": 143.3,
+   "text": "There is no plausible engineering breakthrough that gets tape anywhere near DNA's density, because tape is limited by the physics of magnetic domains, and DNA is limited by the physics of single atoms."
+  },
+  {
+   "t": 155.59,
+   "text": "Stability second."
+  },
+  {
+   "t": 157.05,
+   "text": "What I mean by stability is: how often, per unit time, does a stored bit spontaneously corrupt?"
+  },
+  {
+   "t": 163.62,
+   "text": "In magnetic media, the bit is encoded in the orientation of a magnetic domain, and that orientation drifts under thermal noise on timescales of years to decades."
+  },
+  {
+   "t": 174.54,
+   "text": "In solid-state media, the bit is encoded in the amount of charge trapped on a floating gate, and that charge leaks away over months to years if the drive is unpowered."
+  },
+  {
+   "t": 184.85,
+   "text": "In optical media, the bit is encoded in the reflectivity of a pit, and the dye that creates the pit degrades on timescales of decades."
+  },
+  {
+   "t": 193.39,
+   "text": "In DNA, the bit is encoded in the chemical identity of a base — A, T, G, or C — which is held in place by covalent bonds."
+  },
+  {
+   "t": 203.12,
+   "text": "Covalent bonds are fundamentally more stable than magnetic domains or trapped charges."
+  },
+  {
+   "t": 209.11,
+   "text": "The dominant failure modes of DNA over geological timescales are hydrolysis — water attacking the phosphodiester backbone and breaking the strand — and deamination — chemical conversion of one base into another, mostly cytosine into uracil."
+  },
+  {
+   "t": 225.46,
+   "text": "Both processes can be slowed dramatically by removing water and keeping the temperature low."
+  },
+  {
+   "t": 231.78,
+   "text": "In permafrost — about minus twenty degrees Celsius and dry — DNA survives sequencing-readable for tens of thousands of years."
+  },
+  {
+   "t": 241.36,
+   "text": "In dry storage at room temperature, encapsulated in silica glass or some other protective matrix, DNA has been shown to remain readable for hundreds to thousands of years by accelerated aging tests."
+  },
+  {
+   "t": 254.26,
+   "text": "There is a Swiss group — Robert Grass and his collaborators at ETH Zurich — who have done very careful work encapsulating DNA in silica nanoparticles and then heating it to accelerate aging, and they project survival times for properly encapsulated DNA of around two million years at standard conditions."
+  },
+  {
+   "t": 274.16,
+   "text": "Two million years."
+  },
+  {
+   "t": 275.65,
+   "text": "That is not a typo."
+  },
+  {
+   "t": 276.95,
+   "text": "Longevity third."
+  },
+  {
+   "t": 278.45,
+   "text": "This is closely related to stability but it's the practical, end-to-end question: how long can I leave my data on a shelf before I need to refresh it?"
+  },
+  {
+   "t": 287.02,
+   "text": "Tape: thirty years."
+  },
+  {
+   "t": 288.92,
+   "text": "Hard drive: five to ten years, and only if powered."
+  },
+  {
+   "t": 292.6,
+   "text": "Solid-state: two to five years unpowered."
+  },
+  {
+   "t": 295.85,
+   "text": "CD-R or DVD-R: ten to thirty years depending on the dye."
+  },
+  {
+   "t": 300.31,
+   "text": "M-DISC, an archival optical format: maybe a thousand years if the marketing is generous."
+  },
+  {
+   "t": 306.93,
+   "text": "Engraved stone: tens of thousands of years if you choose your stone wisely."
+  },
+  {
+   "t": 312.07,
+   "text": "DNA, properly encapsulated: hundreds of thousands of years, maybe millions, with zero maintenance."
+  },
+  {
+   "t": 319.6,
+   "text": "The closest competitor in physical durability is something exotic like nickel-plated holographic plates or radiation-hardened glass, both of which have storage densities about a billion times lower."
+  },
+  {
+   "t": 331.67,
+   "text": "There is, simply, no other medium that combines DNA's density with anything like its longevity."
+  },
+  {
+   "t": 338.66,
+   "text": "Energy cost of storage fourth."
+  },
+  {
+   "t": 340.97,
+   "text": "This one is the one that data center operators care about most, because energy is the largest ongoing cost of running a storage facility."
+  },
+  {
+   "t": 349.1,
+   "text": "A modern hyperscale data center uses millions of dollars worth of electricity per month, much of it dedicated to keeping spinning disks spinning, solid-state drives charged, and the whole building cooled."
+  },
+  {
+   "t": 361.17,
+   "text": "Tape libraries are better — most tapes sit in cartridges in racks, unpowered, and only get loaded into a drive when something needs to be read."
+  },
+  {
+   "t": 369.82,
+   "text": "But even tape libraries need climate control, robotic handling, and periodic refresh cycles."
+  },
+  {
+   "t": 376.5,
+   "text": "DNA, sitting in a sealed tube on a shelf, consumes literally zero energy while it is being stored."
+  },
+  {
+   "t": 383.18,
+   "text": "No power."
+  },
+  {
+   "t": 384.23,
+   "text": "No cooling needed beyond ambient if you've encapsulated it properly."
+  },
+  {
+   "t": 388.63,
+   "text": "No moving parts."
+  },
+  {
+   "t": 390.0,
+   "text": "The only energy you spend is at the moment of writing and the moment of reading, both of which are infrequent events for archival data."
+  },
+  {
+   "t": 397.68,
+   "text": "For data that gets touched once a century, the energy footprint of DNA storage rounds to zero compared to any electronic alternative."
+  },
+  {
+   "t": 406.91,
+   "text": "So that's the spec sheet."
+  },
+  {
+   "t": 408.35,
+   "text": "Density: a million times better than tape."
+  },
+  {
+   "t": 411.3,
+   "text": "Stability: covalent bonds versus magnetic domains."
+  },
+  {
+   "t": 415.7,
+   "text": "Longevity: a thousand times longer at minimum."
+  },
+  {
+   "t": 419.06,
+   "text": "Energy cost in storage: zero."
+  },
+  {
+   "t": 421.98,
+   "text": "And on top of all of that, DNA is, in a deep sense, a future-proof medium."
+  },
+  {
+   "t": 428.16,
+   "text": "Magnetic tape requires a tape drive of the right format."
+  },
+  {
+   "t": 431.93,
+   "text": "Floppy disks require a floppy drive, which essentially no longer exists."
+  },
+  {
+   "t": 436.62,
+   "text": "Optical disks require an optical drive, which is now a specialty item."
+  },
+  {
+   "t": 441.36,
+   "text": "Every storage format ever invented eventually becomes unreadable because the reader stops being manufactured."
+  },
+  {
+   "t": 448.18,
+   "text": "DNA, by contrast, is read by the same kind of sequencer that we use for every other DNA application — for medicine, for agriculture, for research, for forensics."
+  },
+  {
+   "t": 459.7,
+   "text": "Sequencers are not going to stop being manufactured."
+  },
+  {
+   "t": 462.71,
+   "text": "As long as biology exists, we will have machines that can read DNA."
+  },
+  {
+   "t": 467.38,
+   "text": "So the readers, unlike every other storage format's readers, will keep getting better forever, instead of being retired and forgotten."
+  },
+  {
+   "t": 475.85,
+   "text": "That last point matters more than people realize."
+  },
+  {
+   "t": 478.77,
+   "text": "The reason the Domesday Book project of 1986 — Britain's grand attempt to digitize national records on laserdisc for the nine-hundredth anniversary of the original Domesday Book — became unreadable within fifteen years was not that the laserdiscs themselves degraded."
+  },
+  {
+   "t": 495.46,
+   "text": "It was that the laserdisc players stopped being made, and the proprietary software stopped running, and the file formats became orphaned."
+  },
+  {
+   "t": 503.46,
+   "text": "DNA storage is immune to this failure mode in a way that no other storage format ever has been or ever will be."
+  },
+  {
+   "t": 510.86,
+   "text": "As long as there is biology, there will be sequencers."
+  },
+  {
+   "t": 514.41,
+   "text": "As long as there are sequencers, you can read DNA."
+  },
+  {
+   "t": 517.61,
+   "text": "Alright."
+  },
+  {
+   "t": 518.52,
+   "text": "So we have established that DNA is a fantastic medium in the limit."
+  },
+  {
+   "t": 523.63,
+   "text": "Now we need to talk about how you actually encode a file into it."
+  },
+  {
+   "t": 527.26,
+   "text": "Because a file is a string of zeros and ones, and DNA is a string of A's, T's, G's, and C's, and the translation between the two — while it sounds trivial — turns out to have a surprising amount of cleverness in it."
+  },
+  {
+   "t": 542.2,
+   "text": "That's where we go next."
+  }
+ ]
+}

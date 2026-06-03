@@ -1,0 +1,163 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Visium HD — the 2024 high-density upgrade",
+ "duration": 284.74,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Visium HD — the 2024 high-density upgrade"
+  },
+  {
+   "t": 5.44,
+   "text": "In 2024, 10x launched Visium HD, which addressed the resolution limitation of the original Visium head-on."
+  },
+  {
+   "t": 13.96,
+   "text": "Where the original Visium had 55-micron spots, Visium HD shrinks the capture features to a continuous grid of 2-micron squares — about thirty times smaller per dimension, and roughly seven hundred times smaller in area per feature."
+  },
+  {
+   "t": 30.06,
+   "text": "At 2-micron resolution, the capture features are smaller than most individual cells."
+  },
+  {
+   "t": 35.79,
+   "text": "You can, in principle, resolve sub-cellular spatial structure with a sequencing-based method."
+  },
+  {
+   "t": 42.06,
+   "text": "Here's how the engineering works."
+  },
+  {
+   "t": 43.86,
+   "text": "Instead of discrete circular spots separated by gaps, Visium HD uses a continuous grid of 2-by-2-micron squares tiled across the entire capture area."
+  },
+  {
+   "t": 55.64,
+   "text": "There are no gaps."
+  },
+  {
+   "t": 56.99,
+   "text": "Every position on the slide is a capture feature."
+  },
+  {
+   "t": 60.24,
+   "text": "The slide carries millions of these tiny squares per capture area — on the order of six million 2-micron squares in a 6.5-by-6.5 mm capture area, compared to about five thousand 55-micron spots in the original Visium."
+  },
+  {
+   "t": 76.45,
+   "text": "The barcode chemistry is similar in principle — each square has its own unique barcode — but the manufacturing required to print barcodes at this density required substantial engineering, using methods adapted from semiconductor lithography."
+  },
+  {
+   "t": 91.25,
+   "text": "The workflow is otherwise nearly identical to standard Visium."
+  },
+  {
+   "t": 95.5,
+   "text": "Place a tissue section on the slide."
+  },
+  {
+   "t": 97.95,
+   "text": "Image with H&E."
+  },
+  {
+   "t": 99.5,
+   "text": "Permeabilize."
+  },
+  {
+   "t": 100.71,
+   "text": "Capture transcripts with poly-T oligos."
+  },
+  {
+   "t": 103.81,
+   "text": "Reverse transcribe."
+  },
+  {
+   "t": 105.24,
+   "text": "Build a library."
+  },
+  {
+   "t": 106.5,
+   "text": "Sequence on Illumina."
+  },
+  {
+   "t": 108.0,
+   "text": "The difference is in the output: instead of a few thousand spot-level measurements per capture area, you get six million square-level measurements."
+  },
+  {
+   "t": 116.67,
+   "text": "Each square is small enough that, in many tissues, a single cell overlies multiple squares — so you can in principle attribute transcripts to individual cells, not just regions."
+  },
+  {
+   "t": 128.79,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 130.5,
+   "text": "Visium HD is the 2024 upgrade — the same printed-barcode-slide concept, but with two-micron squares instead of fifty-five-micron spots."
+  },
+  {
+   "t": 140.44,
+   "text": "A much denser grid, near-single-cell resolution, the same untargeted whole-transcriptome chemistry on top."
+  },
+  {
+   "t": 148.54,
+   "text": "You can now ask sequencing-based spatial questions at almost the resolution of imaging-based methods, without giving up the breadth of the untargeted transcriptome."
+  },
+  {
+   "t": 158.93,
+   "text": "There are catches, as always."
+  },
+  {
+   "t": 161.04,
+   "text": "At 2-micron resolution, the data per square is much sparser than at 55 microns, because each tiny square captures the RNA from a much smaller volume of tissue."
+  },
+  {
+   "t": 172.62,
+   "text": "To get reliable signal, you typically need to bin adjacent squares together computationally — most analyses use 8-micron or 16-micron bins, which approximate single-cell or small-multi-cell resolution."
+  },
+  {
+   "t": 186.2,
+   "text": "The 2-micron raw data is the substrate; the binning step is part of the analysis."
+  },
+  {
+   "t": 191.79,
+   "text": "Sequencing depth requirements are also enormous — to fill in counts across six million features, you need on the order of tens of billions of reads per capture area, which means a substantial fraction of a NovaSeq flow cell per sample, and proportional cost."
+  },
+  {
+   "t": 207.78,
+   "text": "The other catch is that capture efficiency, even with the improved chemistry, is still well below one hundred percent."
+  },
+  {
+   "t": 215.14,
+   "text": "Many transcripts are still lost in the diffusion-and-capture step."
+  },
+  {
+   "t": 219.26,
+   "text": "But for the transcripts that are captured, the spatial precision is unprecedented for a sequencing-based method."
+  },
+  {
+   "t": 225.55,
+   "text": "Visium HD effectively closes much of the gap with imaging-based methods on the resolution axis."
+  },
+  {
+   "t": 232.4,
+   "text": "It does not — and this matters — close the gap on absolute capture efficiency, which is still much higher in MERFISH or Xenium, where every targeted transcript is directly imaged."
+  },
+  {
+   "t": 244.16,
+   "text": "The trade-off shifts but doesn't disappear: sequencing-based gives you the whole transcriptome with imperfect capture; imaging-based gives you perfect capture of the transcripts you pre-selected."
+  },
+  {
+   "t": 255.91,
+   "text": "Visium HD is a compromise that pushes the sequencing-based family substantially closer to single-cell resolution, while keeping the whole-transcriptome advantage."
+  },
+  {
+   "t": 266.62,
+   "text": "For most labs starting a new spatial project today, the choice is no longer \"Visium versus imaging\" — it's \"Visium HD versus imaging,\" and the choice depends on whether breadth or precision matters more for the biological question."
+  },
+  {
+   "t": 281.17,
+   "text": "We'll come back to that trade-off in detail in Segment 12."
+  }
+ ]
+}

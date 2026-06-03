@@ -1,0 +1,179 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Analysis pipelines — Seurat, Scanpy, BayesSpace, SpaGCN",
+ "duration": 406.41,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Analysis pipelines — Seurat, Scanpy, BayesSpace, SpaGCN"
+  },
+  {
+   "t": 6.7,
+   "text": "The data that comes out of a spatial transcriptomics experiment is, structurally, an extension of single-cell data."
+  },
+  {
+   "t": 14.25,
+   "text": "You have a matrix of genes by observations — where observations are spots, beads, or segmented cells — with counts in every entry, plus a per-observation X-Y coordinate."
+  },
+  {
+   "t": 26.25,
+   "text": "The first thing you do is run the same quality-control and normalization steps you'd do for single-cell data: filter out low-count observations, normalize by total counts, log-transform, identify highly variable genes, run dimensionality reduction with PCA, embed in two dimensions with UMAP or t-SNE, and cluster."
+  },
+  {
+   "t": 47.5,
+   "text": "This is where the two big single-cell analysis ecosystems come in."
+  },
+  {
+   "t": 51.92,
+   "text": "Seurat, the R package from Rahul Satija's lab at the New York Genome Center, has had native spatial support since version 3."
+  },
+  {
+   "t": 60.38,
+   "text": "You load Visium data with one function call, get a Seurat object with the gene-by-spot matrix and the H&E image embedded, and proceed with all the standard Seurat workflows — normalization, clustering, differential expression — while preserving the spatial coordinates and the image."
+  },
+  {
+   "t": 77.7,
+   "text": "Scanpy, the Python equivalent from Fabian Theis's lab in Munich, has the same capabilities through an extension called Squidpy that handles spatial data structures, spatial graphs, and visualization."
+  },
+  {
+   "t": 90.45,
+   "text": "The choice between Seurat and Scanpy is the same R-versus-Python choice you make for single-cell work — both ecosystems do similar things, and most labs commit to one based on their existing infrastructure."
+  },
+  {
+   "t": 103.78,
+   "text": "What spatial adds on top of standard single-cell analysis is a set of methods that explicitly use spatial coordinates."
+  },
+  {
+   "t": 110.86,
+   "text": "The simplest spatial analyses are visualizations — overlay any gene's expression on the H&E image and look at the pattern."
+  },
+  {
+   "t": 119.01,
+   "text": "But the field has developed a suite of more sophisticated methods that integrate spatial structure into the statistical models."
+  },
+  {
+   "t": 126.95,
+   "text": "Spatially aware clustering is the most important of these."
+  },
+  {
+   "t": 131.01,
+   "text": "Standard single-cell clustering treats each cell as an independent observation, but spatial data has a natural structure — nearby spots are usually similar because they cover similar tissue."
+  },
+  {
+   "t": 142.82,
+   "text": "Methods like BayesSpace, from the Gottardo lab at the Fred Hutchinson Cancer Center, and SpaGCN, from the Mingyao Li lab at Penn, use this prior to improve clustering."
+  },
+  {
+   "t": 152.81,
+   "text": "They explicitly model the spatial dependence — your cluster assignment is influenced not just by your own expression but also by your neighbors' expression."
+  },
+  {
+   "t": 161.93,
+   "text": "The result is cleaner spatial maps with more coherent regions, fewer salt-and-pepper artifacts where individual spots get assigned to outlier clusters, better discovery of anatomical zones."
+  },
+  {
+   "t": 174.46,
+   "text": "SpaGCN is particularly elegant."
+  },
+  {
+   "t": 177.46,
+   "text": "It builds a graph where each spot is a node, edges connect spatial neighbors, and runs a graph convolutional neural network to learn embeddings that integrate both gene expression and spatial position."
+  },
+  {
+   "t": 189.62,
+   "text": "The output is a clustering that respects tissue anatomy without you having to tell it where the anatomy is."
+  },
+  {
+   "t": 196.74,
+   "text": "Anyone analyzing Visium data today reaches for SpaGCN or BayesSpace early in the workflow."
+  },
+  {
+   "t": 204.24,
+   "text": "Spatial deconvolution is another important class of methods."
+  },
+  {
+   "t": 208.24,
+   "text": "The problem: a Visium spot at 55-micron resolution often covers multiple cell types."
+  },
+  {
+   "t": 214.84,
+   "text": "You'd like to know, for each spot, what mixture of cell types contributed to its expression profile."
+  },
+  {
+   "t": 221.11,
+   "text": "The standard approach is to use a single-cell reference dataset — single-cell sequencing data from the same tissue type — as a reference for what each cell type's expression profile looks like, then decompose each Visium spot's profile into a weighted mixture of those reference cell types."
+  },
+  {
+   "t": 238.09,
+   "text": "Methods like cell2location, from Vitalii Kleshchevnikov and others, and RCTD, from the Macosko lab, do this deconvolution and produce per-spot cell-type proportions."
+  },
+  {
+   "t": 250.18,
+   "text": "With Visium HD or imaging-based methods, this is less necessary because the resolution is closer to single cells, but for original 55-micron Visium it's essential."
+  },
+  {
+   "t": 262.37,
+   "text": "Spatial domain detection asks: which regions of the tissue have coherent expression patterns?"
+  },
+  {
+   "t": 268.73,
+   "text": "Methods like STAGATE and GraphST identify spatial domains — contiguous areas of tissue with similar gene expression — and label them automatically."
+  },
+  {
+   "t": 278.92,
+   "text": "Useful for finding novel anatomical regions you weren't expecting."
+  },
+  {
+   "t": 283.33,
+   "text": "Spatially variable gene detection identifies which genes have non-random spatial patterns — genes that are concentrated in specific regions versus genes that are uniformly expressed."
+  },
+  {
+   "t": 294.67,
+   "text": "Methods like SpatialDE, from Oliver Stegle's group, and SPARK use spatial statistics to score every gene by how much its expression pattern depends on spatial position."
+  },
+  {
+   "t": 304.77,
+   "text": "These are the genes worth visualizing and following up on — the genes whose expression patterns are the most informative about tissue structure."
+  },
+  {
+   "t": 313.43,
+   "text": "The analytical landscape is moving very fast."
+  },
+  {
+   "t": 316.82,
+   "text": "New methods come out monthly."
+  },
+  {
+   "t": 318.52,
+   "text": "There's a healthy tension between methods that work elegantly on small datasets and methods that scale to the millions-of-spots regime that Visium HD and Stereo-seq produce."
+  },
+  {
+   "t": 329.22,
+   "text": "The benchmarking community — through papers comparing methods on standard datasets — is actively sorting out which methods are robust and which are overfit to specific use cases."
+  },
+  {
+   "t": 339.93,
+   "text": "For someone starting to learn spatial analysis today, the practical advice is: pick Seurat or Scanpy based on your language preference, run BayesSpace or SpaGCN for spatial clustering, run cell2location or RCTD for deconvolution if you have low resolution, and use SpatialDE or SPARK to find spatially variable genes."
+  },
+  {
+   "t": 362.42,
+   "text": "That four-method toolkit will cover 80% of what you need for a typical spatial analysis."
+  },
+  {
+   "t": 368.64,
+   "text": "The rest is custom analysis built on top of that foundation."
+  },
+  {
+   "t": 373.05,
+   "text": "The most important conceptual point of this segment is that spatial transcriptomics analysis is single-cell analysis plus a spatial coordinate layer."
+  },
+  {
+   "t": 382.53,
+   "text": "The single-cell concepts — clustering, marker genes, cell types, differential expression — all carry over."
+  },
+  {
+   "t": 390.08,
+   "text": "What changes is that you can now ask spatial questions: where are the cell types, what are the spatial domains, which genes have spatial patterns, and — critically, the topic of the next segment — which cells are near which other cells, and what does that say about their interactions."
+  }
+ ]
+}

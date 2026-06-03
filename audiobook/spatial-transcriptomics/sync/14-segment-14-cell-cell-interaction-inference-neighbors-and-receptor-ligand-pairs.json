@@ -1,0 +1,207 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Cell-cell interaction inference — neighbors and receptor-ligand pairs",
+ "duration": 392.51,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Cell-cell interaction inference — neighbors and receptor-ligand pairs"
+  },
+  {
+   "t": 6.46,
+   "text": "Here is the analytical question that is unique to spatial data, that you cannot ask of dissociated single-cell data, and that drives many of the most exciting biological applications of spatial transcriptomics."
+  },
+  {
+   "t": 20.45,
+   "text": "The question is: which cells in this tissue are talking to which other cells, and what signals are they exchanging?"
+  },
+  {
+   "t": 26.88,
+   "text": "Cell-cell communication in tissues happens primarily through ligand-receptor signaling."
+  },
+  {
+   "t": 32.71,
+   "text": "A cell secretes a ligand — a small protein like a cytokine, a chemokine, or a growth factor."
+  },
+  {
+   "t": 39.56,
+   "text": "A nearby cell expresses a receptor for that ligand on its surface."
+  },
+  {
+   "t": 44.48,
+   "text": "When the ligand binds the receptor, the receiving cell's intracellular signaling pathways activate, and the cell changes its behavior in response."
+  },
+  {
+   "t": 53.86,
+   "text": "Tumor cells secrete VEGF, which binds VEGFR on endothelial cells and triggers angiogenesis."
+  },
+  {
+   "t": 61.24,
+   "text": "T cells secrete IFN-gamma, which binds IFN-gamma receptors on macrophages and induces their activation."
+  },
+  {
+   "t": 69.0,
+   "text": "Hundreds of these ligand-receptor pairs operate simultaneously in every tissue, forming the molecular language by which cells coordinate."
+  },
+  {
+   "t": 78.19,
+   "text": "In dissociated single-cell data, you can see which cells express ligands and which cells express receptors."
+  },
+  {
+   "t": 85.25,
+   "text": "You can infer that, in principle, T cells producing IFN-gamma could be signaling to macrophages expressing IFN-gamma receptors."
+  },
+  {
+   "t": 94.75,
+   "text": "But you have no way to know whether those cells are actually adjacent in the tissue and therefore actually exchanging the signal."
+  },
+  {
+   "t": 102.72,
+   "text": "Single-cell cell-cell communication inference, in dissociated data, is essentially a statistical guess based on co-occurrence: if you see both partners expressed in your sample, you guess they might be talking."
+  },
+  {
+   "t": 115.24,
+   "text": "The guesses are often wrong, because spatial proximity is the necessary precondition for paracrine signaling and you've thrown away the spatial information."
+  },
+  {
+   "t": 124.94,
+   "text": "Spatial transcriptomics gives you the spatial information back."
+  },
+  {
+   "t": 128.99,
+   "text": "You can now ask: which cells are physically adjacent to which other cells?"
+  },
+  {
+   "t": 133.7,
+   "text": "And among those neighbors, which ligand-receptor pairs are co-expressed?"
+  },
+  {
+   "t": 138.32,
+   "text": "That's the foundation of spatially informed cell-cell interaction inference."
+  },
+  {
+   "t": 143.66,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 145.32,
+   "text": "Cell-cell interactions in spatial data is the bonus you get for keeping the addresses."
+  },
+  {
+   "t": 150.57,
+   "text": "Adjacent cells in space are the candidates that probably talk to each other."
+  },
+  {
+   "t": 155.46,
+   "text": "If neighbor A expresses the ligand and neighbor B expresses the receptor, you can score that pair as a likely active signaling interaction."
+  },
+  {
+   "t": 164.0,
+   "text": "Receptor-ligand pair expression in actual spatial neighbors infers the signaling networks that organize the tissue."
+  },
+  {
+   "t": 171.3,
+   "text": "That's the move."
+  },
+  {
+   "t": 172.35,
+   "text": "Mechanically, the analysis goes like this."
+  },
+  {
+   "t": 175.57,
+   "text": "From your spatial data, you construct a spatial neighbor graph — every cell or spot is a node, and edges connect cells that are spatially adjacent (within some distance threshold, often 50 to 100 microns, or to the K nearest neighbors)."
+  },
+  {
+   "t": 191.97,
+   "text": "For each edge in the graph, you look at the expression of every known ligand-receptor pair in the two connected cells."
+  },
+  {
+   "t": 199.11,
+   "text": "If cell A expresses ligand X and cell B expresses receptor X, you score that edge as a likely signaling event for pair X."
+  },
+  {
+   "t": 208.11,
+   "text": "Aggregate over the whole graph, and you get a tissue-level map of which cell types are signaling to which other cell types, through which pathways, in which regions."
+  },
+  {
+   "t": 218.16,
+   "text": "A whole family of methods has been developed for this kind of analysis."
+  },
+  {
+   "t": 222.29,
+   "text": "CellPhoneDB is the most widely used database of ligand-receptor pairs and was originally developed for dissociated single-cell data; spatial extensions like stLearn, NICHES, and CellChat in spatial mode add the spatial constraint."
+  },
+  {
+   "t": 237.45,
+   "text": "Spatial-CellChat uses a graph of spatial neighbors to score interactions."
+  },
+  {
+   "t": 242.91,
+   "text": "COMMOT and NicheNet integrate spatial proximity with downstream signaling pathway analysis."
+  },
+  {
+   "t": 249.79,
+   "text": "The output is, typically, a list of cell-type-pair-interactions with statistical evidence — for example, \"T cells and fibroblasts in the tumor margin are strongly enriched for CXCL12-CXCR4 signaling,\" or \"tumor-associated macrophages are signaling to neighboring tumor cells via WNT5A-FZD2."
+  },
+  {
+   "t": 270.89,
+   "text": "\""
+  },
+  {
+   "t": 271.09,
+   "text": "These cell-cell interaction analyses have become one of the central reasons people do spatial transcriptomics in the first place."
+  },
+  {
+   "t": 279.54,
+   "text": "In the tumor microenvironment — which we'll come to in the next segment — the question of which immune cells are signaling to which tumor cells, in which spatial regions, has enormous therapeutic relevance."
+  },
+  {
+   "t": 291.74,
+   "text": "In developmental biology, the question of which cells are signaling to their neighbors to coordinate tissue morphogenesis is foundational."
+  },
+  {
+   "t": 300.82,
+   "text": "In neuroscience, the question of which neurons are wired to which other neurons functionally is partly addressable through spatial expression of receptors and their ligands."
+  },
+  {
+   "t": 311.03,
+   "text": "A few caveats are important."
+  },
+  {
+   "t": 312.83,
+   "text": "First, spatial proximity is necessary for paracrine signaling but not sufficient — two cells can be neighbors without actually interacting."
+  },
+  {
+   "t": 321.67,
+   "text": "Second, ligand-receptor expression in two cells doesn't prove that the ligand is being secreted, the receptor is on the surface, and the binding is happening — you're inferring a likely interaction from RNA-level evidence, several layers above the actual molecular event."
+  },
+  {
+   "t": 338.34,
+   "text": "Third, the databases of ligand-receptor pairs are incomplete and biased toward well-studied pathways."
+  },
+  {
+   "t": 345.59,
+   "text": "So these analyses are best treated as hypothesis generators — they tell you where to look more carefully — rather than as definitive demonstrations of signaling activity."
+  },
+  {
+   "t": 356.37,
+   "text": "But despite these caveats, the spatial cell-cell interaction analyses have generated remarkable biological insights."
+  },
+  {
+   "t": 364.68,
+   "text": "They've identified previously unsuspected immune-tumor interactions in melanoma."
+  },
+  {
+   "t": 370.39,
+   "text": "They've mapped neural circuits in the cortex."
+  },
+  {
+   "t": 373.57,
+   "text": "They've shown how stem cell niches operate by spatially constrained ligand-receptor signaling."
+  },
+  {
+   "t": 379.52,
+   "text": "The combination of single-cell resolution and spatial proximity, applied through these analytical methods, is one of the most powerful new lenses on tissue biology that biology has acquired in the last decade."
+  }
+ ]
+}

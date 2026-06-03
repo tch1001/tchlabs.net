@@ -1,0 +1,223 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The central question of regulatory genomics",
+ "duration": 285.85,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The central question of regulatory genomics"
+  },
+  {
+   "t": 4.2,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 5.85,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 7.39,
+   "text": "Today and for the next two hours, we're going to talk about ChIP-seq — chromatin immunoprecipitation followed by sequencing."
+  },
+  {
+   "t": 15.6,
+   "text": "That's a mouthful of a name, and we're going to unpack every word of it over the next two hours, but I want to start somewhere else."
+  },
+  {
+   "t": 22.69,
+   "text": "I want to start with the question the technique is built to answer, because if you understand the question, the technique is almost inevitable."
+  },
+  {
+   "t": 31.11,
+   "text": "It's not just a clever lab trick."
+  },
+  {
+   "t": 32.94,
+   "text": "It's the obvious thing to do, once you accept the problem."
+  },
+  {
+   "t": 36.46,
+   "text": "So here is the question."
+  },
+  {
+   "t": 37.92,
+   "text": "You have a human cell."
+  },
+  {
+   "t": 39.36,
+   "text": "Inside that cell there is roughly two meters of DNA crammed into a nucleus about ten microns across — six billion base pairs of sequence, two copies of the genome, all stuffed into a space smaller than a speck of dust."
+  },
+  {
+   "t": 54.52,
+   "text": "On that DNA, at any given moment, there are thousands of different proteins sitting at thousands of different locations."
+  },
+  {
+   "t": 62.56,
+   "text": "Some of those proteins are turning genes on."
+  },
+  {
+   "t": 65.47,
+   "text": "Some are turning genes off."
+  },
+  {
+   "t": 67.12,
+   "text": "Some are marking the DNA so that other proteins know what to do with it next."
+  },
+  {
+   "t": 71.6,
+   "text": "Some are anchored to one specific binding site that's six base pairs long and appears nowhere else in the entire three-billion-base-pair genome."
+  },
+  {
+   "t": 80.99,
+   "text": "The cell's identity, its behavior, its fate — whether it's a liver cell or a neuron, whether it's healthy or cancerous, whether it's about to divide or about to die — is determined, to an enormous degree, by which proteins are sitting where on the DNA."
+  },
+  {
+   "t": 96.0,
+   "text": "The question of regulatory genomics, the central question, is this: given a specific DNA-binding protein, where on the genome is it bound?"
+  },
+  {
+   "t": 104.96,
+   "text": "Not in general."
+  },
+  {
+   "t": 106.04,
+   "text": "Specifically."
+  },
+  {
+   "t": 107.24,
+   "text": "Which positions, in which cells, in which conditions."
+  },
+  {
+   "t": 110.88,
+   "text": "That's it."
+  },
+  {
+   "t": 111.69,
+   "text": "That's the question."
+  },
+  {
+   "t": 112.89,
+   "text": "ChIP-seq is the technique that answers it."
+  },
+  {
+   "t": 116.46,
+   "text": "Here's the analogy I want you to hold in your head for the next two hours."
+  },
+  {
+   "t": 120.76,
+   "text": "Imagine you're trying to figure out where someone has been in a city."
+  },
+  {
+   "t": 123.89,
+   "text": "Not in general — exactly where."
+  },
+  {
+   "t": 126.21,
+   "text": "Every block they walked down."
+  },
+  {
+   "t": 128.25,
+   "text": "Every doorway they entered."
+  },
+  {
+   "t": 130.07,
+   "text": "The city is huge — three billion address points."
+  },
+  {
+   "t": 133.78,
+   "text": "The person — let's call them the transcription factor — is small."
+  },
+  {
+   "t": 137.84,
+   "text": "You can't just look from above, because they're invisible."
+  },
+  {
+   "t": 140.91,
+   "text": "What you can do, though, is grab them, and then ask them what they were holding when you grabbed them."
+  },
+  {
+   "t": 145.95,
+   "text": "If they were standing on a particular street corner, holding a copy of the local newspaper, then you can pull that newspaper out of their hand and read the address printed on it."
+  },
+  {
+   "t": 155.46,
+   "text": "Do this for millions of copies of the same person — millions of copies of the same protein, in millions of cells, all caught at the same moment — and you get a frequency map of which addresses they were standing at most often."
+  },
+  {
+   "t": 169.0,
+   "text": "ChIP-seq is the technique of pulling a transcription factor out of the cell and asking it, \"what DNA were you holding onto?"
+  },
+  {
+   "t": 177.79,
+   "text": "\" That's it."
+  },
+  {
+   "t": 178.57,
+   "text": "That's the whole concept."
+  },
+  {
+   "t": 180.1,
+   "text": "The rest is engineering."
+  },
+  {
+   "t": 182.0,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the ChIP-seq workflow on a whiteboard and explain what each step does and why; two, explain in plain English why the antibody is the single most important reagent in the entire experiment and what happens when it's bad; three, look at any modern paper that says \"we performed ChIP-seq for transcription factor X\" and have a real intuition for what that data looks like, what controls were needed, and what the peaks mean"
+  },
+  {
+   "t": 212.19,
+   "text": "— then we've succeeded."
+  },
+  {
+   "t": 213.54,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 215.82,
+   "text": "One more thing before we get into the molecule and the method."
+  },
+  {
+   "t": 219.25,
+   "text": "ChIP-seq is not one invention."
+  },
+  {
+   "t": 222.24,
+   "text": "It's two."
+  },
+  {
+   "t": 223.07,
+   "text": "The first half — chromatin immunoprecipitation, or ChIP — has been around since the 1980s."
+  },
+  {
+   "t": 229.79,
+   "text": "It was a per-gene assay; you'd ChIP a protein, then ask whether your favorite gene was enriched."
+  },
+  {
+   "t": 236.28,
+   "text": "It worked, but it was slow and gene-by-gene."
+  },
+  {
+   "t": 238.85,
+   "text": "The second half — sequencing the immunoprecipitated DNA on a next-generation platform — was added in 2007, in a flurry of three papers in Nature that arrived almost simultaneously."
+  },
+  {
+   "t": 251.59,
+   "text": "The moment those two ideas combined, transcription factor binding studies went from a question you asked one gene at a time to a question you asked every gene at a time."
+  },
+  {
+   "t": 262.26,
+   "text": "Genome-wide."
+  },
+  {
+   "t": 263.36,
+   "text": "In one experiment."
+  },
+  {
+   "t": 264.64,
+   "text": "That's the moment regulatory genomics became a quantitative field."
+  },
+  {
+   "t": 268.9,
+   "text": "So in this lecture we're tracing both halves of the lineage — the immunology side, where antibodies come from and how they work, and the sequencing side, which we covered in an earlier lecture but will recap as needed — and then we're going to see how the marriage of the two transformed our map of the genome."
+  }
+ ]
+}

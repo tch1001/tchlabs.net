@@ -1,0 +1,131 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The COSMIC database — version 2, version 3, version 3.4",
+ "duration": 313.43,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The COSMIC database — version 2, version 3, version 3.4"
+  },
+  {
+   "t": 7.39,
+   "text": "The Sanger Institute, which had hosted Alexandrov's work, formalized the signature catalog into a public database called COSMIC — the Catalogue Of Somatic Mutations In Cancer."
+  },
+  {
+   "t": 18.14,
+   "text": "COSMIC had existed since 2004 as a database of cancer mutations in general, but starting around 2015, it added a dedicated section for mutational signatures."
+  },
+  {
+   "t": 30.16,
+   "text": "The signature catalog now sits at cancer.sanger.ac.uk/signatures, and it has gone through multiple versions, each one expanding the catalog as more data became available and as the field's methods matured."
+  },
+  {
+   "t": 44.45,
+   "text": "COSMIC version 2, released in 2015 and consolidated by 2018, contained thirty single-base substitution signatures."
+  },
+  {
+   "t": 53.77,
+   "text": "These were extracted from a much larger dataset than Alexandrov's original — by 2018, the field had whole-genome or whole-exome data on tens of thousands of cancers from many international consortia."
+  },
+  {
+   "t": 67.0,
+   "text": "The original twenty-one signatures from 2013 were refined, several were split into more specific subcomponents, and new signatures appeared as more rare cancer types were added."
+  },
+  {
+   "t": 78.05,
+   "text": "By v2, the signatures were numbered Signature 1 through Signature 30, and most of them had at least tentative biological attributions — UV, tobacco, APOBEC, mismatch repair deficiency, BRCA1/2 deficiency, alkylating agent chemotherapy, aflatoxin, aristolochic acid, polymerase epsilon mutations, and so on."
+  },
+  {
+   "t": 101.75,
+   "text": "COSMIC version 3, released in 2020, was a major expansion."
+  },
+  {
+   "t": 107.09,
+   "text": "The team — by then led by Alexandrov, who had moved to UC San Diego as a faculty member — re-extracted signatures from a much expanded dataset, the Pan-Cancer Analysis of Whole Genomes (PCAWG) consortium data of about 2,700 whole cancer genomes."
+  },
+  {
+   "t": 124.24,
+   "text": "They expanded beyond single-base substitutions to include doublet base substitution signatures — DBS signatures — for cases where two adjacent bases mutate together, and indel signatures — ID signatures — for small insertions and deletions."
+  },
+  {
+   "t": 140.64,
+   "text": "They also introduced structural variant signatures — SV signatures — for large-scale chromosomal rearrangements."
+  },
+  {
+   "t": 148.53,
+   "text": "And they renamed the SBS signatures to use the prefix \"SBS\" — so the old Signature 7 became SBS7, the old Signature 4 became SBS4, et cetera, with subtypes added (SBS7a, SBS7b, SBS7c, SBS7d for the four UV sub-signatures)."
+  },
+  {
+   "t": 169.59,
+   "text": "COSMIC version 3.4, released in 2024, is the current state of the art."
+  },
+  {
+   "t": 175.96,
+   "text": "It contains roughly a hundred signatures total across all categories — about 60 SBS signatures, 18 indel signatures, 11 doublet substitution signatures, and several copy-number and structural variant signatures."
+  },
+  {
+   "t": 190.61,
+   "text": "Many signatures have now been confirmed in controlled experimental systems — for example, by treating cell lines with a specific mutagen and showing that the resulting mutation pattern matches the predicted signature."
+  },
+  {
+   "t": 203.25,
+   "text": "The catalog has become a true reference, and the database now also flags which signatures are considered \"well-established\" with known causes versus those that are still preliminary or have unknown etiology."
+  },
+  {
+   "t": 216.16,
+   "text": "I want to emphasize one practical thing."
+  },
+  {
+   "t": 218.61,
+   "text": "When you read modern cancer genomics papers and you see references to \"Signature 3\" or \"SBS3\" or \"SBS7a\" — those are pointers into the COSMIC catalog."
+  },
+  {
+   "t": 229.7,
+   "text": "The catalog defines the canonical reference shapes."
+  },
+  {
+   "t": 233.09,
+   "text": "Any new tumor's mutation profile can be fit to the catalog — that is, decomposed as a weighted combination of the known reference signatures — using a procedure called signature fitting, which is just constrained least-squares with the reference shapes held fixed."
+  },
+  {
+   "t": 248.1,
+   "text": "This is different from signature extraction, which is the unsupervised NMF discovery procedure."
+  },
+  {
+   "t": 254.89,
+   "text": "In modern clinical practice, you almost always do fitting — you have a tumor, you want to know which known signatures are active in it — rather than extraction, which is what you do when you're trying to find new signatures in a research cohort."
+  },
+  {
+   "t": 268.05,
+   "text": "There's a key tool here called SigProfiler, developed by Alexandrov's group."
+  },
+  {
+   "t": 273.29,
+   "text": "There's also deconstructSigs in R, and MutationalPatterns, also in R, and various others."
+  },
+  {
+   "t": 280.11,
+   "text": "We'll come back to the tools in Segment 13."
+  },
+  {
+   "t": 283.02,
+   "text": "For now, just know that there's a small ecosystem of software that handles both extraction and fitting against COSMIC, and any cancer genomics lab can run these tools on a new tumor sample in an afternoon."
+  },
+  {
+   "t": 295.31,
+   "text": "So that's the database side of the story."
+  },
+  {
+   "t": 297.68,
+   "text": "We've now built the conceptual scaffold: the 96-class framework, NMF for extraction, COSMIC as the catalog."
+  },
+  {
+   "t": 306.34,
+   "text": "Time to walk through the signatures themselves, one by one, starting with the most visually striking one."
+  },
+  {
+   "t": 312.54,
+   "text": "Sunlight."
+  }
+ ]
+}

@@ -1,0 +1,227 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Cofactor engineering: NADH, NADPH, ATP, and the redox balance",
+ "duration": 394.62,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Cofactor engineering: NADH, NADPH, ATP, and the redox balance"
+  },
+  {
+   "t": 7.4,
+   "text": "I want to spend a segment on cofactors, because they are the unglamorous, hidden constraint that breaks more metabolic engineering projects than any other single factor."
+  },
+  {
+   "t": 17.3,
+   "text": "If you do not understand cofactor balance, you will misdiagnose every yield problem you encounter."
+  },
+  {
+   "t": 23.21,
+   "text": "Here is the basic biochemistry, briefly."
+  },
+  {
+   "t": 26.77,
+   "text": "Most enzymes that catalyze redox reactions — the addition or removal of electrons — do not directly handle the electrons themselves."
+  },
+  {
+   "t": 35.8,
+   "text": "They use cofactors as electron shuttles."
+  },
+  {
+   "t": 38.75,
+   "text": "The two big shuttles in cellular metabolism are NADH and NADPH — two molecules that are chemically very similar, differing only by a phosphate group, but that are kept in two completely separate pools by the cell."
+  },
+  {
+   "t": 52.95,
+   "text": "NADH is the cofactor that participates in catabolism — the breakdown of sugars to produce energy."
+  },
+  {
+   "t": 60.02,
+   "text": "The cell typically has lots of NAD-plus available to be reduced to NADH, and the resulting NADH gets reoxidized in the electron transport chain to make ATP."
+  },
+  {
+   "t": 71.46,
+   "text": "NADPH is the cofactor that participates in biosynthesis — the building up of complex molecules from simple precursors."
+  },
+  {
+   "t": 79.88,
+   "text": "NADPH is regenerated through the pentose phosphate pathway and other specialized routes, and is used by anabolic enzymes to provide reducing power."
+  },
+  {
+   "t": 89.95,
+   "text": "The split is enforced because the cell wants to keep catabolism and anabolism independently regulated."
+  },
+  {
+   "t": 96.47,
+   "text": "You do not want your sugar breakdown rate to dictate your biosynthesis rate; you want the two to be tunable separately."
+  },
+  {
+   "t": 103.41,
+   "text": "The two cofactor pools — NADH for catabolism, NADPH for biosynthesis — are how the cell decouples them."
+  },
+  {
+   "t": 112.01,
+   "text": "The cell maintains these pools at very different ratios."
+  },
+  {
+   "t": 115.56,
+   "text": "NADH is kept relatively oxidized, with a higher proportion of NAD-plus."
+  },
+  {
+   "t": 121.51,
+   "text": "NADPH is kept relatively reduced, with a higher proportion of NADPH."
+  },
+  {
+   "t": 127.78,
+   "text": "Now here is the problem."
+  },
+  {
+   "t": 129.15,
+   "text": "When you install a heterologous pathway, you have inherited whatever cofactor preferences the original enzymes had."
+  },
+  {
+   "t": 136.7,
+   "text": "Many plant biosynthetic enzymes — the ones for terpenoids, alkaloids, polyketides — use NADPH, because in plants those pathways are anabolic and have access to plenty of NADPH from photosynthesis."
+  },
+  {
+   "t": 151.38,
+   "text": "When you transplant those enzymes into E. coli growing on glucose, the cell's natural inclination is to make NADH, not NADPH."
+  },
+  {
+   "t": 161.71,
+   "text": "Your pathway demands NADPH at every step."
+  },
+  {
+   "t": 165.65,
+   "text": "The cell's supply is mismatched."
+  },
+  {
+   "t": 167.6,
+   "text": "The pathway runs at a fraction of the rate it could."
+  },
+  {
+   "t": 170.86,
+   "text": "The cell's response, if you push too hard, is to grow slower while diverting more pentose phosphate flux to generate NADPH."
+  },
+  {
+   "t": 179.12,
+   "text": "This is metabolically expensive."
+  },
+  {
+   "t": 181.19,
+   "text": "It is also limited — there is only so much NADPH the cell can generate without sacrificing growth too much."
+  },
+  {
+   "t": 189.12,
+   "text": "You hit a ceiling."
+  },
+  {
+   "t": 190.36,
+   "text": "The engineering response is cofactor engineering."
+  },
+  {
+   "t": 193.59,
+   "text": "There are several flavors."
+  },
+  {
+   "t": 195.31,
+   "text": "The first is to swap the cofactor preference of the heterologous enzyme — to find or engineer a variant of your enzyme that uses NADH instead of NADPH."
+  },
+  {
+   "t": 206.44,
+   "text": "There are sometimes natural NADH-using homologs of your target enzyme; if not, you can use directed evolution or structure-guided mutagenesis to switch the preference."
+  },
+  {
+   "t": 217.39,
+   "text": "There are well-known residues in the cofactor binding pocket that distinguish NADH from NADPH binding, and swapping them often switches the preference, though with some loss of activity that needs to be recovered."
+  },
+  {
+   "t": 230.55,
+   "text": "The second flavor is to engineer the host to produce more of the cofactor you need."
+  },
+  {
+   "t": 235.9,
+   "text": "You can overexpress the enzymes that generate NADPH — particularly the pentose phosphate pathway enzymes."
+  },
+  {
+   "t": 243.4,
+   "text": "You can introduce a transhydrogenase, an enzyme that catalyzes the interconversion of NADH and NADPH, to let the cell shuttle reducing equivalents between the two pools as needed."
+  },
+  {
+   "t": 256.05,
+   "text": "You can knock out competing reactions that consume NADPH for biosynthesis you no longer need at high rates."
+  },
+  {
+   "t": 263.35,
+   "text": "The third flavor is to redox-balance the pathway itself."
+  },
+  {
+   "t": 267.27,
+   "text": "The cleanest engineered pathways are designed so that the total NADH produced and consumed across the pathway is roughly balanced, and likewise for NADPH."
+  },
+  {
+   "t": 278.02,
+   "text": "If your pathway as drawn requires a net input of three NADPH per molecule of product but produces no NADPH internally, you will pay an enormous cofactor cost."
+  },
+  {
+   "t": 289.59,
+   "text": "If you can redesign the pathway — perhaps by including an extra step that generates NADPH from another reaction — to be redox-neutral, the cell handles it much better."
+  },
+  {
+   "t": 300.43,
+   "text": "The art of pathway design includes this kind of cofactor accounting."
+  },
+  {
+   "t": 304.46,
+   "text": "ATP is the other big cofactor."
+  },
+  {
+   "t": 307.33,
+   "text": "ATP is the cell's energy currency — every kinase, every ligase, every active transport step consumes it."
+  },
+  {
+   "t": 315.79,
+   "text": "Heterologous pathways that require a lot of ATP — for example, pathways that go through phosphorylated intermediates that have to be made by ATP-consuming kinases — drain the cell's energy supply, slow growth, and cap yields."
+  },
+  {
+   "t": 330.82,
+   "text": "ATP-efficient pathway design is a constant theme in modern strain engineering."
+  },
+  {
+   "t": 336.26,
+   "text": "The analogy I want you to carry: cofactor engineering is the discipline of matching your pathway's cofactor demand to the cell's cofactor supply."
+  },
+  {
+   "t": 345.53,
+   "text": "You need NADPH, not NADH; the cell makes NADH preferentially."
+  },
+  {
+   "t": 352.12,
+   "text": "You swap the enzyme to use NADH, or you push the cell to make more NADPH, or you redesign the pathway to be redox-neutral."
+  },
+  {
+   "t": 361.67,
+   "text": "The pathway only runs as fast as its cofactor supply lets it."
+  },
+  {
+   "t": 366.36,
+   "text": "Every successful industrial strain has had its cofactor balance worked out."
+  },
+  {
+   "t": 371.13,
+   "text": "It is invisible in the papers, mostly, because it is unglamorous work, but it eats months of engineering effort on every serious project."
+  },
+  {
+   "t": 380.61,
+   "text": "We have now done a lot of bench-level methods."
+  },
+  {
+   "t": 383.22,
+   "text": "Let us pull up to a higher level and talk about how the modern field actually edits genomes at scale to make many changes at once."
+  },
+  {
+   "t": 391.31,
+   "text": "That is the next segment, and it sets up the second half."
+  }
+ ]
+}

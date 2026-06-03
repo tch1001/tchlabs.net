@@ -1,0 +1,315 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Chip-based synthesis: a million spots, a million sequences",
+ "duration": 537.12,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Chip-based synthesis: a million spots, a million sequences"
+  },
+  {
+   "t": 5.67,
+   "text": "Okay."
+  },
+  {
+   "t": 6.45,
+   "text": "Welcome back."
+  },
+  {
+   "t": 7.47,
+   "text": "Let's open the second half by talking about the most important shift in DNA synthesis in the last twenty years: chip-based synthesis."
+  },
+  {
+   "t": 15.41,
+   "text": "Here is the problem that chip-based synthesis exists to solve."
+  },
+  {
+   "t": 19.91,
+   "text": "Imagine you are doing a synthetic biology project, and you want to build, let's say, a custom designer protein."
+  },
+  {
+   "t": 26.85,
+   "text": "You want to test ten thousand different variants of that protein — each with a different combination of mutations — to find the one that works best."
+  },
+  {
+   "t": 35.17,
+   "text": "Each variant has its own DNA sequence."
+  },
+  {
+   "t": 38.05,
+   "text": "So you need ten thousand different DNA sequences, each maybe five hundred bases long."
+  },
+  {
+   "t": 43.74,
+   "text": "If you tried to order those from a column-based synthesizer, even at a few dollars per base, you'd be talking about something like ten million dollars and several months of synthesizer time."
+  },
+  {
+   "t": 53.44,
+   "text": "That is not economically viable."
+  },
+  {
+   "t": 55.62,
+   "text": "It's not even technically viable — there aren't enough column synthesizers in the world to do that on a reasonable timescale."
+  },
+  {
+   "t": 62.31,
+   "text": "The solution was to flip the architecture."
+  },
+  {
+   "t": 64.83,
+   "text": "Instead of one column making one sequence, a million microscopic spots each make a different sequence in parallel."
+  },
+  {
+   "t": 73.12,
+   "text": "That is the chip-based synthesis revolution, and it has transformed what's possible in synthetic biology, library generation, and DNA data storage."
+  },
+  {
+   "t": 82.99,
+   "text": "Here is how it works, at a high level."
+  },
+  {
+   "t": 85.46,
+   "text": "You take a flat surface — a glass slide, or a silicon chip — and you covalently attach an initial nucleoside to every spot on that surface, just like the first nucleoside on a CPG bead."
+  },
+  {
+   "t": 97.83,
+   "text": "So instead of millions of identical chains on one bead, you have millions of chains on a flat surface, each at its own physical location, identifiable by its X-Y coordinate on the chip."
+  },
+  {
+   "t": 109.8,
+   "text": "Then you run the phosphoramidite cycle, with one critical change: at each coupling step, only some of the spots get to react."
+  },
+  {
+   "t": 117.9,
+   "text": "The other spots are blocked."
+  },
+  {
+   "t": 119.64,
+   "text": "By controlling, spot by spot, which positions are unblocked at each cycle, you can give each spot its own custom sequence."
+  },
+  {
+   "t": 127.46,
+   "text": "Spot at coordinate (1,1) might get an A at cycle one, then a G at cycle two, then a T at cycle three."
+  },
+  {
+   "t": 136.16,
+   "text": "Spot at coordinate (1,2) might get a C, then an A, then a G."
+  },
+  {
+   "t": 142.78,
+   "text": "Each spot writes its own unique sequence in parallel, all running on the same chip, all in the same chemical bath."
+  },
+  {
+   "t": 151.12,
+   "text": "The clever part is how you control which spots react at each step."
+  },
+  {
+   "t": 155.24,
+   "text": "There are two major approaches, and they each have their own commercial champion."
+  },
+  {
+   "t": 159.82,
+   "text": "The first approach is photolithographic."
+  },
+  {
+   "t": 162.44,
+   "text": "This was the original method, developed at Affymetrix in the 1990s."
+  },
+  {
+   "t": 167.05,
+   "text": "The DMT group at the 5' position of each nucleoside is replaced with a photolabile protecting group — a chemical hat that comes off when you shine UV light on it."
+  },
+  {
+   "t": 177.39,
+   "text": "You use a photomask, like the ones used in semiconductor manufacturing, to project a pattern of light onto the chip."
+  },
+  {
+   "t": 184.61,
+   "text": "Only the spots that are illuminated have their hats removed."
+  },
+  {
+   "t": 188.12,
+   "text": "Then you flow in a single phosphoramidite — say, the A phosphoramidite — and it couples only to the illuminated spots."
+  },
+  {
+   "t": 196.25,
+   "text": "Then you wash, project a different pattern of light to expose a different set of spots, flow in the T phosphoramidite, couple."
+  },
+  {
+   "t": 204.31,
+   "text": "Wash."
+  },
+  {
+   "t": 205.38,
+   "text": "Project another pattern."
+  },
+  {
+   "t": 206.8,
+   "text": "T or G or C."
+  },
+  {
+   "t": 208.91,
+   "text": "Repeat."
+  },
+  {
+   "t": 209.72,
+   "text": "The number of photomasks you need scales as four times the length of the longest sequence — one for each base at each cycle — but the photomasks themselves are made by the same technology that makes computer chips, and they can pattern millions of spots simultaneously."
+  },
+  {
+   "t": 225.45,
+   "text": "The original Affymetrix GeneChips were made this way and densely packed with hundreds of thousands of probe sequences for genotyping and expression analysis."
+  },
+  {
+   "t": 236.03,
+   "text": "The second approach is inkjet or electrochemical."
+  },
+  {
+   "t": 239.49,
+   "text": "This is the approach pioneered by Agilent and later by Twist Bioscience."
+  },
+  {
+   "t": 244.15,
+   "text": "Instead of using light to selectively unblock spots, you use a physical printer that deposits droplets of activator solution onto specific spots, or you use electrodes underneath each spot to generate acid locally and unblock only that spot."
+  },
+  {
+   "t": 260.26,
+   "text": "Then you flow phosphoramidites across the whole chip and let them couple only where the spots were unblocked."
+  },
+  {
+   "t": 266.7,
+   "text": "The advantage is that you don't need photomasks — the printer can pattern any combination of spots on the fly."
+  },
+  {
+   "t": 273.41,
+   "text": "The disadvantage is that the spot density is somewhat lower than the photolithographic approach, although still in the hundreds of thousands to millions per chip."
+  },
+  {
+   "t": 282.92,
+   "text": "The end product of a chip-based synthesis run is a chip covered with millions of distinct oligonucleotide sequences, each at its own location."
+  },
+  {
+   "t": 291.66,
+   "text": "To use them, you cleave them off the chip — same kind of ammonia treatment as the column-based supports — and you get a complex pool of millions of different sequences in a single tube."
+  },
+  {
+   "t": 302.85,
+   "text": "That pool is the oligo library."
+  },
+  {
+   "t": 305.26,
+   "text": "It's not pure."
+  },
+  {
+   "t": 306.43,
+   "text": "Each individual sequence in the pool is present at a very low concentration — picograms or attomoles, not the milligrams you get from a column."
+  },
+  {
+   "t": 316.12,
+   "text": "The yield per sequence is much lower than from a column synthesis."
+  },
+  {
+   "t": 320.07,
+   "text": "But you have a million different sequences, all in one tube, for a few hundred or a few thousand dollars total."
+  },
+  {
+   "t": 326.87,
+   "text": "That's a price-per-sequence that no column-based synthesis could ever match."
+  },
+  {
+   "t": 331.51,
+   "text": "The big commercial players in chip-based oligo libraries are Twist Bioscience, founded in 2013, which has built its entire business around silicon-chip-based DNA synthesis at massive scale; Agilent SurePrint, which makes microarrays and oligo pools using inkjet chemistry; and CustomArray, now part of GenScript, which uses electrochemical synthesis on semiconductor chips."
+  },
+  {
+   "t": 356.08,
+   "text": "There are also several university spin-outs and academic synthesis cores producing chip-based oligo libraries for research use."
+  },
+  {
+   "t": 364.77,
+   "text": "What do you actually do with a pool of a million different oligonucleotides?"
+  },
+  {
+   "t": 369.55,
+   "text": "Several things."
+  },
+  {
+   "t": 370.86,
+   "text": "You can use them as templates for gene synthesis."
+  },
+  {
+   "t": 373.75,
+   "text": "If you want to build a long gene — say, two thousand bases — you can design overlapping shorter oligos that, when annealed and assembled, will reconstruct your full-length sequence."
+  },
+  {
+   "t": 385.25,
+   "text": "Order the oligos from a chip-based pool, amplify the pool, assemble the fragments, and you have your gene."
+  },
+  {
+   "t": 391.91,
+   "text": "Twist Bioscience's main business is gene synthesis built on this kind of pipeline — they make millions of oligos on a chip, then assemble them into longer gene fragments and ship them to customers."
+  },
+  {
+   "t": 404.66,
+   "text": "You can use them as a screening library."
+  },
+  {
+   "t": 407.08,
+   "text": "Want to test a million different promoter sequences for their activity?"
+  },
+  {
+   "t": 411.56,
+   "text": "Make a chip-based oligo pool of a million promoters, attach them all to a reporter gene, transfect them into cells, sequence the readout, and you've measured every promoter in a single experiment."
+  },
+  {
+   "t": 424.21,
+   "text": "This is the basis of massively parallel reporter assays (MPRAs), which have revolutionized the study of regulatory DNA."
+  },
+  {
+   "t": 433.45,
+   "text": "Same logic underlies CRISPR guide RNA libraries used for genome-wide screens — order a chip-based pool of a hundred thousand guide RNAs, clone them into a CRISPR vector, infect cells, see which ones drop out or accumulate."
+  },
+  {
+   "t": 448.37,
+   "text": "You can use them for DNA data storage."
+  },
+  {
+   "t": 450.8,
+   "text": "Encode digital data into DNA sequences — bits to bases via some coding scheme — and synthesize the resulting sequences on a chip."
+  },
+  {
+   "t": 460.21,
+   "text": "Microsoft, Twist, and others have demonstrated terabyte-scale DNA data storage using chip-based synthesis as the writing technology."
+  },
+  {
+   "t": 469.35,
+   "text": "We'll come back to DNA data storage in Segment 17."
+  },
+  {
+   "t": 473.48,
+   "text": "The chip-based revolution is, in many ways, the biggest change in oligo synthesis since Caruthers's original chemistry."
+  },
+  {
+   "t": 482.41,
+   "text": "It hasn't replaced column-based synthesis — for high-quality, high-yield, single-sequence work like PCR primers and ASO drugs, the column is still the right answer."
+  },
+  {
+   "t": 492.87,
+   "text": "But for any application where you need diversity — many different sequences, in a single experiment — chip-based synthesis is essentially the only economically viable option."
+  },
+  {
+   "t": 504.36,
+   "text": "The two technologies live side by side, each serving a different need, but together they have made the cost per sequence drop by something like five orders of magnitude over the last twenty years."
+  },
+  {
+   "t": 516.79,
+   "text": "We now think nothing of designing a CRISPR screen with seventy thousand guide RNAs, or an MPRA with a hundred thousand variants."
+  },
+  {
+   "t": 525.46,
+   "text": "None of that would have been remotely possible without chip-based synthesis."
+  },
+  {
+   "t": 529.92,
+   "text": "Now let's get into the weeds of why error rates matter so much, and how they show up differently in different synthesis platforms."
+  }
+ ]
+}

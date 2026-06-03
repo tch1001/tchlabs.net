@@ -1,0 +1,155 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — shRNA and RNAi as a research tool",
+ "duration": 340.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — shRNA and RNAi as a research tool"
+  },
+  {
+   "t": 4.99,
+   "text": "I want to spend a segment on the other major form of RNAi that is widely used in molecular biology research, which is short hairpin RNA, or shRNA, delivered by viral vector."
+  },
+  {
+   "t": 16.5,
+   "text": "This is not, currently, a major therapeutic modality — although there are clinical trials — but it is everywhere in research, and you need to understand it to read the modern literature."
+  },
+  {
+   "t": 27.14,
+   "text": "An shRNA is a single RNA molecule that folds back on itself to form a hairpin."
+  },
+  {
+   "t": 32.89,
+   "text": "The stem of the hairpin is double-stranded — typically 19 to 22 base pairs, the same length as an siRNA — and the loop at the top connects the two ends."
+  },
+  {
+   "t": 42.71,
+   "text": "When this hairpin is expressed inside a cell, it is recognized by Dicer, which cuts off the loop, releasing a double-stranded siRNA-like molecule that loads into RISC and silences the target gene exactly like a synthetic siRNA would."
+  },
+  {
+   "t": 58.12,
+   "text": "The advantage of an shRNA is that it can be encoded in DNA."
+  },
+  {
+   "t": 62.26,
+   "text": "You can put the shRNA-encoding sequence under a promoter — Pol III promoters like H1 or U6 are common for this — and put the whole cassette into a plasmid, or a lentivirus, or an AAV."
+  },
+  {
+   "t": 75.01,
+   "text": "When the cassette is expressed inside a cell, the shRNA is transcribed continuously, diced by Dicer continuously, and loaded into RISC continuously."
+  },
+  {
+   "t": 85.74,
+   "text": "The knockdown is sustained for as long as the cassette is expressed."
+  },
+  {
+   "t": 89.92,
+   "text": "This is very different from a synthetic siRNA, which gets used up over time as the molecules are degraded and not replaced."
+  },
+  {
+   "t": 97.44,
+   "text": "Lentiviruses are particularly common shRNA delivery vehicles in research."
+  },
+  {
+   "t": 102.97,
+   "text": "You take your shRNA cassette, package it into a lentiviral vector, infect your cells of interest, and select for cells that have integrated the cassette."
+  },
+  {
+   "t": 112.5,
+   "text": "Now those cells, and all their daughter cells, express the shRNA constitutively and have the target gene knocked down constitutively."
+  },
+  {
+   "t": 121.79,
+   "text": "You can do this in cell lines, in primary cells, in mouse hematopoietic stem cells that get transplanted into mice — anywhere you can integrate a lentiviral cassette."
+  },
+  {
+   "t": 131.93,
+   "text": "shRNA delivered by lentivirus is the workhorse method for sustained genetic knockdown in cells and tissues."
+  },
+  {
+   "t": 139.38,
+   "text": "For research, this is enormously useful."
+  },
+  {
+   "t": 142.5,
+   "text": "shRNA libraries — collections of lentivirally packaged shRNAs covering every gene in the human or mouse genome, often with multiple shRNAs per gene — became standard tools in the late 2000s for genome-wide loss-of-function screens."
+  },
+  {
+   "t": 158.8,
+   "text": "You infect a population of cells with a pooled shRNA library, apply a selection — for example, treat with a drug and ask which knockdowns confer resistance — sequence the surviving cells to identify which shRNAs they carry, and you have your hits."
+  },
+  {
+   "t": 175.06,
+   "text": "This was the dominant method for genome-wide loss-of-function screens until CRISPR-Cas9 came along around 2014 and largely replaced it for that purpose, because CRISPR knockouts are typically cleaner (full loss rather than partial knockdown) and the screens are more reproducible."
+  },
+  {
+   "t": 192.95,
+   "text": "But shRNAs are still widely used, especially for situations where you want partial knockdown rather than full knockout, or where you want to be able to titrate the knockdown level."
+  },
+  {
+   "t": 203.26,
+   "text": "I should also mention earlier RNAi research tools, in particular C. elegans and Drosophila loss-of-function screens that exploited RNAi as the native phenomenon."
+  },
+  {
+   "t": 214.71,
+   "text": "In worms, you can knock down any gene just by feeding the worms bacteria that express double-stranded RNA matching that gene — the worm intestine takes up the dsRNA, processes it, and silences the target."
+  },
+  {
+   "t": 227.95,
+   "text": "This led to genome-wide RNAi screens in worms in the early 2000s that mapped most of the worm's gene functions."
+  },
+  {
+   "t": 235.72,
+   "text": "Similar screens were done in Drosophila cells with directly added dsRNA."
+  },
+  {
+   "t": 240.82,
+   "text": "These screens are an important chapter in the history of functional genomics, and they were possible only because RNAi was a natural cellular phenomenon that could be triggered easily in those organisms."
+  },
+  {
+   "t": 252.81,
+   "text": "One more research-era detail worth mentioning."
+  },
+  {
+   "t": 255.81,
+   "text": "Tuschl and others, after the 2001 paper, worked out empirical rules for designing effective siRNAs."
+  },
+  {
+   "t": 263.28,
+   "text": "The Tuschl rules, sometimes still called by that name in older literature, gave guidelines for choosing the 21-nucleotide stretch of a target mRNA to silence — preferences for certain bases at certain positions in the guide strand, target site features that predict good knockdown, GC content windows, secondary structure considerations."
+  },
+  {
+   "t": 283.64,
+   "text": "Modern siRNA design has moved well beyond the Tuschl rules, with machine-learning models and large empirical datasets driving the design choices, but the original rules are still pedagogically useful and they shaped a decade of siRNA design."
+  },
+  {
+   "t": 298.66,
+   "text": "So that is research-mode RNAi."
+  },
+  {
+   "t": 301.24,
+   "text": "Synthetic siRNAs, transfected into cells in a dish, for short-term knockdown."
+  },
+  {
+   "t": 306.94,
+   "text": "shRNAs in lentiviruses, for sustained knockdown."
+  },
+  {
+   "t": 310.63,
+   "text": "RNAi screens in worms and flies, for functional genomics."
+  },
+  {
+   "t": 315.16,
+   "text": "The research toolkit is mature, has been mature for fifteen years, and is a routine part of the molecular biologist's repertoire."
+  },
+  {
+   "t": 323.86,
+   "text": "The therapeutic application is, as we have seen, much more recent and much harder, because of the delivery problem that research-mode RNAi doesn't have to deal with."
+  },
+  {
+   "t": 333.83,
+   "text": "Now we are going to talk about something specific to siRNAs that you need to know about, and that is the issue of off-target effects."
+  }
+ ]
+}

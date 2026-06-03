@@ -1,0 +1,167 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — CRISPR for metabolic engineering: knock out, knock down, redirect",
+ "duration": 335.69,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — CRISPR for metabolic engineering: knock out, knock down, redirect"
+  },
+  {
+   "t": 6.51,
+   "text": "CRISPR — the gene-editing technology developed from bacterial immunity systems and adapted for use in eukaryotic cells by Jennifer Doudna, Emmanuelle Charpentier, Feng Zhang, George Church, and others around 2012-2013 — has been transformative for many areas of biology, and metabolic engineering is one of them."
+  },
+  {
+   "t": 27.62,
+   "text": "We are not going to do a full primer on CRISPR mechanism here; that lives in a separate set of material."
+  },
+  {
+   "t": 33.89,
+   "text": "The metabolic engineering perspective is what specifically the CRISPR tools have changed."
+  },
+  {
+   "t": 39.12,
+   "text": "The first thing CRISPR changed was the ease of gene knockout in workhorse strains."
+  },
+  {
+   "t": 44.16,
+   "text": "Before CRISPR, knocking out a gene in E. coli involved building a knockout cassette with antibiotic markers and homology arms, transforming it in, selecting recombinants, often curing the marker afterward — a multi-week process per gene."
+  },
+  {
+   "t": 60.26,
+   "text": "With CRISPR-Cas9 plus a homologous repair template, the same operation can be done in days, often without leaving any selection marker behind."
+  },
+  {
+   "t": 70.3,
+   "text": "You design the guide RNA to target the gene you want to knock out, you co-deliver a repair template with the desired modification, and Cas9 makes the cut, the cell repairs using your template, and you have your edit."
+  },
+  {
+   "t": 82.36,
+   "text": "The cost per knockout has dropped dramatically."
+  },
+  {
+   "t": 85.03,
+   "text": "The number of genes you can routinely manipulate per project has gone up."
+  },
+  {
+   "t": 89.25,
+   "text": "In yeast, CRISPR has been even more transformative."
+  },
+  {
+   "t": 92.99,
+   "text": "Yeast has very efficient homologous recombination — it was actually the easier-to-edit organism for many years — but CRISPR has made the cuts more targeted, the editing more efficient at hard-to-reach loci, and has enabled multiplexed editing of many sites at once by simply expressing multiple guide RNAs from a single construct."
+  },
+  {
+   "t": 113.09,
+   "text": "The second thing CRISPR enabled is gene knockdown without knockout — the use of catalytically inactive Cas9 (dCas9) to block transcription at a target locus without actually cutting the DNA."
+  },
+  {
+   "t": 125.67,
+   "text": "This technique, called CRISPRi (CRISPR interference), lets you reduce the expression of a gene to a tunable level rather than eliminating it entirely."
+  },
+  {
+   "t": 134.97,
+   "text": "For metabolic engineering, this is enormously useful."
+  },
+  {
+   "t": 138.81,
+   "text": "Many essential genes that you would want to downregulate to push flux through a heterologous pathway — for example, squalene synthase in yeast, which competes with the artemisinin pathway for FPP — cannot be knocked out entirely because the cell needs them to live."
+  },
+  {
+   "t": 154.57,
+   "text": "With CRISPRi, you can dial them down to a tunable level, finding the sweet spot between cell viability and product titer."
+  },
+  {
+   "t": 163.06,
+   "text": "The flip side, CRISPRa (CRISPR activation), uses dCas9 fused to a transcriptional activator to boost expression of target genes."
+  },
+  {
+   "t": 172.74,
+   "text": "Together, CRISPRi and CRISPRa give you a tunable dial for any gene in the genome."
+  },
+  {
+   "t": 179.44,
+   "text": "The third thing CRISPR enabled is library-scale screens for metabolic phenotypes."
+  },
+  {
+   "t": 185.44,
+   "text": "You can build a CRISPR guide library targeting every gene in the genome — or a focused library targeting a particular set of pathways — and apply it to your engineered strain, then screen for cells with improved product titers."
+  },
+  {
+   "t": 198.59,
+   "text": "The cells with knockouts or knockdowns that boost product accumulate, and you sequence them to identify which gene perturbations were beneficial."
+  },
+  {
+   "t": 208.3,
+   "text": "This is a way of doing rational FBA-style strain design and exhaustive genome-wide screening in parallel, which often turns up improvements that the model did not predict."
+  },
+  {
+   "t": 219.19,
+   "text": "The analogy I want you to carry: CRISPR for metabolic engineering is the high-throughput multi-locus editing scalpel."
+  },
+  {
+   "t": 226.81,
+   "text": "Knock out competing pathways."
+  },
+  {
+   "t": 228.82,
+   "text": "Knock down essential bottlenecks to a tunable level."
+  },
+  {
+   "t": 232.44,
+   "text": "Activate underexpressed enzymes."
+  },
+  {
+   "t": 235.0,
+   "text": "Run genome-wide library screens for productivity."
+  },
+  {
+   "t": 238.61,
+   "text": "The cost and difficulty of every kind of genome manipulation has dropped, and the scale at which you can push flux into a target has gone up."
+  },
+  {
+   "t": 247.34,
+   "text": "CRISPR sits alongside MAGE and the other recombineering tools we discussed in Segment 9."
+  },
+  {
+   "t": 253.0,
+   "text": "They are complementary, not redundant."
+  },
+  {
+   "t": 255.63,
+   "text": "MAGE is particularly good for simultaneously introducing many small modifications, often single base pair changes, across many loci."
+  },
+  {
+   "t": 264.99,
+   "text": "CRISPR is better for precise, single-locus editing and for tunable transcriptional control."
+  },
+  {
+   "t": 270.68,
+   "text": "Modern strain engineering campaigns use both, choosing the tool to fit the manipulation."
+  },
+  {
+   "t": 276.91,
+   "text": "The combined effect of all these throughput-increasing tools — MAGE, REXER, CRISPR, MoClo, DNA synthesis — is that the cost of running a strain engineering campaign has dropped roughly an order of magnitude per decade for the last two decades."
+  },
+  {
+   "t": 293.09,
+   "text": "What used to take a postdoc five years now takes a small team a year."
+  },
+  {
+   "t": 297.16,
+   "text": "What used to require a dedicated lab now happens routinely at platform companies like Ginkgo."
+  },
+  {
+   "t": 303.34,
+   "text": "The discipline is, in throughput terms, where electronics was somewhere in the 1980s — past the era of one-off custom designs, into the era of design tools and platform fabrication."
+  },
+  {
+   "t": 315.29,
+   "text": "That is what enables the alt-protein wave, the plant natural product wave, the sustainable chemicals wave — all of them depend on engineering throughput that simply did not exist twenty years ago."
+  },
+  {
+   "t": 327.5,
+   "text": "Now let us look at the layer that is starting to sit on top of all of this — the AI-driven design of metabolic pathways and enzymes."
+  }
+ ]
+}

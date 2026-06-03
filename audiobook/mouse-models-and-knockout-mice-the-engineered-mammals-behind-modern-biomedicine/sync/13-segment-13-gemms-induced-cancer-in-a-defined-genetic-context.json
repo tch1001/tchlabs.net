@@ -1,0 +1,223 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — GEMMs: induced cancer in a defined genetic context",
+ "duration": 408.5,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — GEMMs: induced cancer in a defined genetic context"
+  },
+  {
+   "t": 5.5,
+   "text": "A GEMM — genetically engineered mouse model — is a mouse engineered to develop cancer in a controlled way."
+  },
+  {
+   "t": 12.97,
+   "text": "Specifically, a mouse in which one or more well-known oncogenes or tumor suppressor genes have been engineered into the genome in a form that lets the experimenter trigger tumor formation at a chosen time, in a chosen tissue."
+  },
+  {
+   "t": 27.64,
+   "text": "GEMMs are the workhorses of modern preclinical cancer research, and the design philosophy behind them is one of the most elegant applications of the Cre-Lox machinery we discussed earlier."
+  },
+  {
+   "t": 39.16,
+   "text": "Let me walk through the canonical example, because once you see one, you see all of them."
+  },
+  {
+   "t": 44.76,
+   "text": "Tyler Jacks's laboratory at MIT, in the early 2000s, built a series of GEMMs based on the K-Ras oncogene, one of the most commonly mutated genes in human cancer."
+  },
+  {
+   "t": 56.02,
+   "text": "The version of K-Ras that's oncogenic carries a specific mutation: glycine at position 12 changed to aspartate, glutamate, or some other amino acid."
+  },
+  {
+   "t": 66.17,
+   "text": "This KrasG12D allele drives uncontrolled cell proliferation when expressed."
+  },
+  {
+   "t": 72.36,
+   "text": "Inject a piece of KrasG12D DNA into any cell and you might transform it into something tumor-like."
+  },
+  {
+   "t": 80.06,
+   "text": "But you can't just constitutively turn KrasG12D on in a mouse from fertilization — the mouse would die in utero, because activated Ras during development is catastrophic."
+  },
+  {
+   "t": 91.46,
+   "text": "You need to keep the oncogene silent during development, and turn it on only when and where you want a tumor."
+  },
+  {
+   "t": 97.15,
+   "text": "The Cre-Lox trick is perfect for this."
+  },
+  {
+   "t": 99.84,
+   "text": "Here's the construct."
+  },
+  {
+   "t": 101.24,
+   "text": "The Jacks lab built a knockin allele where, sitting in front of the KrasG12D coding sequence, there's a loxP-flanked transcriptional stop cassette — a piece of DNA with a strong polyadenylation signal that aborts transcription."
+  },
+  {
+   "t": 116.08,
+   "text": "In an unmodified cell, transcription starts, runs into the stop cassette, and terminates."
+  },
+  {
+   "t": 122.39,
+   "text": "No Kras protein is made from that allele."
+  },
+  {
+   "t": 125.24,
+   "text": "The gene is functionally silent."
+  },
+  {
+   "t": 127.55,
+   "text": "Now, deliver Cre to a cell."
+  },
+  {
+   "t": 130.35,
+   "text": "Cre recognizes the loxP sites flanking the stop cassette and excises it."
+  },
+  {
+   "t": 136.34,
+   "text": "The stop signal disappears."
+  },
+  {
+   "t": 138.26,
+   "text": "Transcription now runs through the gene and produces full-length KrasG12D protein."
+  },
+  {
+   "t": 144.66,
+   "text": "The oncogene is on."
+  },
+  {
+   "t": 146.18,
+   "text": "The cell starts proliferating."
+  },
+  {
+   "t": 148.38,
+   "text": "The whole construct is sometimes written as Kras-LSL-G12D, where LSL stands for \"lox-stop-lox\" — the floxed stop cassette."
+  },
+  {
+   "t": 158.4,
+   "text": "In any cell that gets Cre, the LSL is removed and KrasG12D turns on."
+  },
+  {
+   "t": 164.86,
+   "text": "In any cell without Cre, the allele is silent."
+  },
+  {
+   "t": 168.84,
+   "text": "The application: you cross Kras-LSL-G12D mice to a Cre driver line, and you get a mouse in which KrasG12D turns on specifically in the Cre-driver tissue."
+  },
+  {
+   "t": 181.26,
+   "text": "Or — and this is the more common modern approach — you don't even use a Cre driver line."
+  },
+  {
+   "t": 186.74,
+   "text": "Instead, you take an adult mouse carrying just the Kras-LSL-G12D allele, and you deliver Cre directly to a tissue using a virus."
+  },
+  {
+   "t": 198.34,
+   "text": "For lung cancer, you intratracheally instill a Cre-expressing adenovirus into the mouse's lungs."
+  },
+  {
+   "t": 205.38,
+   "text": "The adenovirus infects a small patch of lung epithelial cells, those cells express Cre transiently, Cre excises the LSL cassette in those cells, and KrasG12D turns on."
+  },
+  {
+   "t": 219.22,
+   "text": "A few weeks later, those cells have proliferated into lung adenocarcinomas — tumors that look, histologically and molecularly, remarkably like human lung adenocarcinoma."
+  },
+  {
+   "t": 231.06,
+   "text": "You have, in effect, induced lung cancer in adult mice in a defined genetic background, at a defined time, in a defined tissue."
+  },
+  {
+   "t": 239.99,
+   "text": "You can now study how that cancer grows, what drugs slow it, what immune responses it triggers."
+  },
+  {
+   "t": 245.57,
+   "text": "The Jacks lab papers using this exact strategy from the early 2000s are foundational."
+  },
+  {
+   "t": 251.43,
+   "text": "They allowed cancer biologists to do, in mice, experiments that previously could only be done in xenograft models — implanted human tumors — which lack the natural microenvironment, the natural immune context, and the natural temporal development of cancer."
+  },
+  {
+   "t": 267.26,
+   "text": "The GEMM has the cancer arising from the mouse's own cells, in the mouse's own tissue, in the mouse's own immune environment."
+  },
+  {
+   "t": 275.56,
+   "text": "It is much closer to how cancer actually emerges in patients."
+  },
+  {
+   "t": 280.2,
+   "text": "The toolkit has expanded enormously."
+  },
+  {
+   "t": 282.96,
+   "text": "You can combine multiple LSL-controlled oncogenes and conditional tumor suppressor knockouts in the same mouse."
+  },
+  {
+   "t": 290.46,
+   "text": "The classic combo is KrasG12D-LSL plus a floxed p53 allele — Cre delivery activates Kras and deletes p53 simultaneously in the same cells, producing more aggressive tumors that recapitulate the genetics of human lung adenocarcinoma even more closely."
+  },
+  {
+   "t": 311.61,
+   "text": "Pancreatic cancer GEMMs do the same with KrasG12D plus floxed Ink4a/Arf."
+  },
+  {
+   "t": 318.59,
+   "text": "Brain tumor GEMMs use Trp53 plus various oncogenes activated by intracranial Cre virus injection."
+  },
+  {
+   "t": 326.9,
+   "text": "You can essentially write the genetic recipe of the human cancer you want to model and execute it as a series of conditional alleles in a mouse."
+  },
+  {
+   "t": 335.84,
+   "text": "These are autochthonous tumors — tumors that arose in place in the mouse, in the natural tissue, in the natural immune environment — as opposed to transplanted tumors."
+  },
+  {
+   "t": 346.75,
+   "text": "They develop with the same kinetics as human tumors."
+  },
+  {
+   "t": 350.34,
+   "text": "They invade and metastasize like human tumors."
+  },
+  {
+   "t": 353.77,
+   "text": "They respond to drugs in ways that, while not perfect, are far more predictive than xenograft data."
+  },
+  {
+   "t": 360.05,
+   "text": "Every major modern cancer drug program uses GEMMs somewhere in its preclinical pipeline."
+  },
+  {
+   "t": 366.32,
+   "text": "The big idea: a GEMM is a mouse engineered with conditional oncogenic alleles that can be turned on in a chosen tissue at a chosen time, producing autochthonous tumors in a defined genetic background."
+  },
+  {
+   "t": 379.15,
+   "text": "The Cre-Lox machinery makes this possible: LSL cassettes silence oncogenes until Cre arrives."
+  },
+  {
+   "t": 386.8,
+   "text": "The result is a mouse that doesn't just have cancer — it has the kind of cancer you specified, in the place you specified, on your schedule."
+  },
+  {
+   "t": 394.89,
+   "text": "That has been transformative for preclinical oncology."
+  },
+  {
+   "t": 398.69,
+   "text": "Now let me zoom out and talk about the largest single coordinated effort in mouse genetics: the global project to knock out every gene in the mouse genome."
+  }
+ ]
+}

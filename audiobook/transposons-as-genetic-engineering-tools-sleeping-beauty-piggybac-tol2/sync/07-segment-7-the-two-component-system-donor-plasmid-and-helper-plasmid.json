@@ -1,0 +1,175 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The two-component system: donor plasmid and helper plasmid",
+ "duration": 377.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The two-component system: donor plasmid and helper plasmid"
+  },
+  {
+   "t": 5.28,
+   "text": "Let me draw this out in detail, because the two-component design is the practical centerpiece of how you actually use these systems in a lab or a clinic."
+  },
+  {
+   "t": 14.74,
+   "text": "You have two plasmids."
+  },
+  {
+   "t": 16.41,
+   "text": "They are physically separate pieces of DNA."
+  },
+  {
+   "t": 19.3,
+   "text": "They are usually prepared by routine bacterial maxiprep — grown in E. coli, harvested, purified by column or by cesium chloride gradient if you need ultra-high purity."
+  },
+  {
+   "t": 30.79,
+   "text": "There's nothing exotic about the production; this is plasmid biology you already know from the plasmids lecture."
+  },
+  {
+   "t": 37.02,
+   "text": "The first plasmid is the donor plasmid, sometimes called the transposon plasmid."
+  },
+  {
+   "t": 41.95,
+   "text": "Its architecture, walking from one end to the other, is: bacterial backbone (origin of replication, antibiotic resistance for growing it in E. coli), then a left ITR, then your cargo (promoter + transgene + polyA signal, or a multi-cistronic cassette, or whatever you want delivered), then a right ITR, then back to the bacterial backbone."
+  },
+  {
+   "t": 63.42,
+   "text": "The two ITRs flank the cargo."
+  },
+  {
+   "t": 65.95,
+   "text": "The bacterial backbone — the origin and the resistance gene — sits outside the ITRs and never gets transposed; it stays on the donor plasmid and gets thrown away after the transposition has happened."
+  },
+  {
+   "t": 78.78,
+   "text": "The second plasmid is the helper plasmid, sometimes called the transposase plasmid."
+  },
+  {
+   "t": 84.01,
+   "text": "Its architecture is much simpler: bacterial backbone, then a strong mammalian promoter (typically CMV or CAG), then the transposase coding sequence, then a polyA signal."
+  },
+  {
+   "t": 96.46,
+   "text": "No ITRs."
+  },
+  {
+   "t": 97.62,
+   "text": "The transposase gene is just expressed transiently from this plasmid; it does not get integrated into the genome because it's not flanked by ITRs."
+  },
+  {
+   "t": 107.29,
+   "text": "Now think about what happens after you deliver both plasmids to a cell."
+  },
+  {
+   "t": 111.96,
+   "text": "The standard delivery method for primary cells is electroporation — you pulse the cells with a brief high-voltage electric field that transiently permeabilizes the membrane, and the plasmids diffuse into the cytoplasm."
+  },
+  {
+   "t": 125.22,
+   "text": "From the cytoplasm, both plasmids traffic to the nucleus, partly by passive diffusion and partly because they have sequence elements that engage cellular nuclear import machinery."
+  },
+  {
+   "t": 136.59,
+   "text": "Once inside the nucleus, the helper plasmid gets transcribed."
+  },
+  {
+   "t": 140.69,
+   "text": "The transposase mRNA travels back to the cytoplasm, gets translated into transposase protein, and the protein traffics back to the nucleus — transposase has its own nuclear localization signal built in."
+  },
+  {
+   "t": 153.72,
+   "text": "Now the transposase protein is in the same compartment as the donor plasmid."
+  },
+  {
+   "t": 158.51,
+   "text": "It scans the donor plasmid, finds the ITRs, dimerizes, brings the two ITRs together into a synaptic complex, makes the double-strand breaks at each end of the transposon, and excises the entire cargo as a free linear DNA fragment bound by transposase."
+  },
+  {
+   "t": 176.3,
+   "text": "Then the enzyme-DNA complex scans the genome for a target site — a TA dinucleotide for Sleeping Beauty, TTAA for PiggyBac, a relaxed target for Tol2 — and integrates the transposon at one such site."
+  },
+  {
+   "t": 190.95,
+   "text": "That's one round."
+  },
+  {
+   "t": 192.19,
+   "text": "In practice, in a single cell you get one or a small handful of integration events, scattered across different chromosomes — the transposase is promiscuous about which TA or TTAA site it picks, so each integration ends up in a different location."
+  },
+  {
+   "t": 208.22,
+   "text": "After a few days, the helper plasmid runs out of fuel — its mRNA gets degraded, the protein gets degraded, the plasmid itself gets diluted out as the cell divides — and transposase activity disappears."
+  },
+  {
+   "t": 221.78,
+   "text": "From that point on, the integrated cargo is stable."
+  },
+  {
+   "t": 225.31,
+   "text": "There's no enzyme around to move it again."
+  },
+  {
+   "t": 228.09,
+   "text": "There's an alternative formulation that's increasingly used clinically, particularly for CAR-T applications: instead of delivering the transposase as a plasmid, you deliver it as mRNA."
+  },
+  {
+   "t": 239.93,
+   "text": "The helper \"plasmid\" is replaced by in-vitro-transcribed messenger RNA encoding the transposase."
+  },
+  {
+   "t": 246.9,
+   "text": "The cell takes up the mRNA, translates it directly in the cytoplasm, and the protein goes to work just as it does in the plasmid-based system."
+  },
+  {
+   "t": 255.99,
+   "text": "This has two advantages: first, no risk that the helper plasmid itself integrates somewhere (it's not flanked by ITRs, so the risk is already low, but mRNA delivery eliminates it entirely); and second, the transposase pulse is more transient, because mRNA gets degraded within a few hours, while plasmid DNA can persist for days."
+  },
+  {
+   "t": 278.71,
+   "text": "A shorter transposase pulse means a tighter window of activity, which reduces the chance of late, off-target events."
+  },
+  {
+   "t": 286.31,
+   "text": "The Sleeping Beauty CAR-T platform used in the SBcellect and CARAMBA trials uses mRNA-delivered SB100X transposase, paired with the cargo on a minicircle DNA donor."
+  },
+  {
+   "t": 298.81,
+   "text": "There's one more refinement worth mentioning: the minicircle."
+  },
+  {
+   "t": 302.62,
+   "text": "A standard donor plasmid contains the bacterial backbone — origin, resistance gene, regulatory elements — alongside the transposon."
+  },
+  {
+   "t": 312.07,
+   "text": "That bacterial DNA does not get integrated, but it can provoke immune responses in target cells, particularly through unmethylated CpG motifs that look like bacterial DNA to the innate immune system."
+  },
+  {
+   "t": 325.39,
+   "text": "To reduce that immune response, you can convert the donor plasmid into a minicircle — a small circular DNA that contains only the transposon (ITRs plus cargo), with the bacterial backbone removed by an enzymatic recombination step before delivery."
+  },
+  {
+   "t": 341.71,
+   "text": "Minicircle technology has become standard for clinical Sleeping Beauty applications, and the cleaner DNA gives better expression and lower toxicity in primary T cells."
+  },
+  {
+   "t": 353.04,
+   "text": "Two plasmids, or one minicircle plus mRNA, depending on the application."
+  },
+  {
+   "t": 358.54,
+   "text": "Either way, the design pattern is the same: cargo and enzyme on separate molecules, both delivered together, the enzyme excises and pastes the cargo, the enzyme then evaporates."
+  },
+  {
+   "t": 370.86,
+   "text": "Donor and helper, glue and applicator."
+  },
+  {
+   "t": 373.81,
+   "text": "Now let's compare this entire approach to viral vectors head-on."
+  }
+ ]
+}

@@ -1,0 +1,219 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Church and Goldman 2012: the first books in DNA",
+ "duration": 431.62,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Church and Goldman 2012: the first books in DNA"
+  },
+  {
+   "t": 5.89,
+   "text": "So picture late 2012."
+  },
+  {
+   "t": 8.12,
+   "text": "Synthetic DNA has been a routine technology for about thirty years."
+  },
+  {
+   "t": 13.11,
+   "text": "Next-generation sequencing has been routine for about five."
+  },
+  {
+   "t": 17.23,
+   "text": "The cost of synthesizing DNA has dropped to roughly ten cents per base for short oligos in pooled chip-based synthesis."
+  },
+  {
+   "t": 25.09,
+   "text": "The cost of sequencing DNA has dropped to roughly ten dollars per million bases on Illumina platforms."
+  },
+  {
+   "t": 31.65,
+   "text": "Somebody, somewhere, is finally going to do the obvious experiment: encode a file into DNA, synthesize it, sequence it, decode it, and see if you get the file back."
+  },
+  {
+   "t": 42.44,
+   "text": "That somebody, in 2012, was George Church at Harvard Medical School, working with Sri Kosuri and Yuan Gao."
+  },
+  {
+   "t": 50.17,
+   "text": "They published a paper in Science in August 2012 titled \"Next-Generation Digital Information Storage in DNA."
+  },
+  {
+   "t": 58.73,
+   "text": "\" What they encoded was a book — Church's own book, Regenesis, plus a JavaScript program and eleven JPEG images, totaling about five and a half megabits, or roughly seven hundred kilobytes."
+  },
+  {
+   "t": 72.29,
+   "text": "They encoded it using a simple one-bit-per-base scheme — A and C both representing zero, G and T both representing one, with the choice between A versus C and between G versus T used to manage homopolymer constraints."
+  },
+  {
+   "t": 87.53,
+   "text": "They broke the file into about fifty-four thousand oligos of one hundred and fifteen bases each, synthesized them on a chip from Agilent Technologies, sequenced them back on an Illumina platform, and successfully decoded the file with only ten bit errors out of five point three million bits — an error rate of about two parts per million."
+  },
+  {
+   "t": 106.5,
+   "text": "That paper, in 2012, was the moment DNA storage became real."
+  },
+  {
+   "t": 111.81,
+   "text": "It was the proof of concept."
+  },
+  {
+   "t": 113.51,
+   "text": "Before that paper, you could argue that DNA storage was a beautiful theoretical idea that might or might not work in practice."
+  },
+  {
+   "t": 121.42,
+   "text": "After that paper, you could no longer argue that."
+  },
+  {
+   "t": 124.5,
+   "text": "It demonstrably worked."
+  },
+  {
+   "t": 126.01,
+   "text": "The chemistry, the encoding, the sequencing, the decoding — all of it worked end to end, on a real file, with very few errors."
+  },
+  {
+   "t": 135.11,
+   "text": "The cost was astronomical — Church estimated the total cost of his demonstration at around twelve thousand dollars to write the seven hundred kilobytes — but the principle was proven."
+  },
+  {
+   "t": 146.18,
+   "text": "Then, in January 2013, Nick Goldman and his colleagues at the European Bioinformatics Institute in Hinxton, UK, published their own paper in Nature, titled \"Towards practical, high-capacity, low-maintenance information storage in synthesized DNA."
+  },
+  {
+   "t": 162.57,
+   "text": "\" They went bigger than Church."
+  },
+  {
+   "t": 164.4,
+   "text": "They encoded about seven hundred and thirty kilobytes' worth of content — including a PDF of the original Watson and Crick double-helix paper, an MP3 of part of Martin Luther King's \"I Have a Dream\" speech, a JPEG of the EBI building, a text file of all of Shakespeare's sonnets, and a copy of the encoding algorithm itself."
+  },
+  {
+   "t": 184.85,
+   "text": "They broke it into about one hundred and fifty-three thousand oligos of one hundred and seventeen bases each, encoded using the base-3 rotation scheme I described in the last segment, with significant redundancy for error correction."
+  },
+  {
+   "t": 199.3,
+   "text": "They synthesized on an Agilent chip, sequenced on Illumina, and decoded the entire archive with zero errors after applying their error-correction scheme."
+  },
+  {
+   "t": 209.01,
+   "text": "Goldman's paper was, in many ways, more carefully engineered than Church's."
+  },
+  {
+   "t": 214.59,
+   "text": "He thought about error correction from the start."
+  },
+  {
+   "t": 216.97,
+   "text": "He used the rotation encoding to avoid homopolymers."
+  },
+  {
+   "t": 220.78,
+   "text": "He built in fourfold redundancy by writing each chunk in both forward and reverse-complement form, with offset chunking so that any given byte of original data was covered by multiple oligos."
+  },
+  {
+   "t": 232.85,
+   "text": "The result was an encoding that could tolerate quite a bit of synthesis and sequencing error and still come out clean."
+  },
+  {
+   "t": 239.28,
+   "text": "The trade-off was lower density — Goldman's effective density was about half a bit per base after all the redundancy, compared to Church's roughly one bit per base — but the reliability was much higher."
+  },
+  {
+   "t": 252.19,
+   "text": "Both papers, taken together, mark the beginning of DNA data storage as a recognizable engineering field."
+  },
+  {
+   "t": 259.46,
+   "text": "Church showed that the basic chemistry worked at scale."
+  },
+  {
+   "t": 262.87,
+   "text": "Goldman showed that you could make it reliable with the right encoding."
+  },
+  {
+   "t": 266.27,
+   "text": "After 2013, the field exploded."
+  },
+  {
+   "t": 269.67,
+   "text": "Every year since then, somebody has published a new demonstration with a larger file size, a cleverer encoding, a lower error rate, or a new feature like random access."
+  },
+  {
+   "t": 280.65,
+   "text": "The field went from \"this is a cute proof of concept\" in 2012 to \"this is a real research area with annual progress\" by 2015."
+  },
+  {
+   "t": 290.16,
+   "text": "The progress curve, in terms of file size successfully encoded and recovered, has been roughly tenfold per few years."
+  },
+  {
+   "t": 297.99,
+   "text": "I want to dwell for a moment on a particular feature of these early demonstrations, because it shapes everything that came after."
+  },
+  {
+   "t": 305.25,
+   "text": "Both Church and Goldman synthesized their DNA on commercial chip-based oligonucleotide synthesizers."
+  },
+  {
+   "t": 312.21,
+   "text": "They did not invent new chemistry."
+  },
+  {
+   "t": 314.5,
+   "text": "They did not build new machines."
+  },
+  {
+   "t": 316.56,
+   "text": "They used the same technology — the same Agilent chips, the same phosphoramidite chemistry, the same wash-and-couple cycles — that had been built and optimized over the previous two decades for the molecular biology research market."
+  },
+  {
+   "t": 331.15,
+   "text": "They were customers of existing technology, not inventors of new technology."
+  },
+  {
+   "t": 336.27,
+   "text": "This matters because it means DNA storage, as a field, inherited an enormous infrastructure."
+  },
+  {
+   "t": 343.01,
+   "text": "By 2012, billions of dollars had been spent over decades to drive down the cost of oligonucleotide synthesis from many dollars per base in the 1980s to fractions of a cent per base by 2010."
+  },
+  {
+   "t": 357.25,
+   "text": "DNA storage benefited from all of that investment without having to fund any of it."
+  },
+  {
+   "t": 362.56,
+   "text": "Similarly, the field inherited the entire next-generation sequencing infrastructure — Illumina sequencers, Oxford Nanopore sequencers, the entire bioinformatics pipeline — built for biomedical research, available off the shelf."
+  },
+  {
+   "t": 378.17,
+   "text": "The downside, however, is that the existing synthesis and sequencing infrastructure was not designed for data storage."
+  },
+  {
+   "t": 386.15,
+   "text": "It was designed for molecular biology, where the priorities are different — researchers care about sequence accuracy at the level of single bases, not about petabyte-scale throughput; they care about getting the right gene cloned, not about minimizing cost per terabyte written."
+  },
+  {
+   "t": 402.19,
+   "text": "So a lot of the engineering work in the DNA storage field over the past decade has been about taking these tools that were built for biology and figuring out how to bend them, push them, and sometimes redesign them for the very different requirements of data storage."
+  },
+  {
+   "t": 416.45,
+   "text": "We'll spend several segments on exactly that."
+  },
+  {
+   "t": 419.12,
+   "text": "Let's go talk about what happened after 2012 — about how the field moved from individual academic demos to organized industrial programs."
+  },
+  {
+   "t": 428.2,
+   "text": "Let's go meet Microsoft and the University of Washington."
+  }
+ ]
+}

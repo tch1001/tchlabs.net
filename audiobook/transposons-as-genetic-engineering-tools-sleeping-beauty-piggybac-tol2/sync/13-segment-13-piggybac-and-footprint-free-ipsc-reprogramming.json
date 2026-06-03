@@ -1,0 +1,131 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — PiggyBac and footprint-free iPSC reprogramming",
+ "duration": 288.65,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — PiggyBac and footprint-free iPSC reprogramming"
+  },
+  {
+   "t": 5.44,
+   "text": "Induced pluripotent stem cells, iPSCs, were introduced by Shinya Yamanaka in 2006."
+  },
+  {
+   "t": 13.41,
+   "text": "The basic discovery: if you take a differentiated cell — say, a fibroblast from a patient's skin — and force-express four transcription factors (Oct4, Sox2, Klf4, and c-Myc, often called the Yamanaka factors), a small fraction of those cells reprogram all the way back to a pluripotent state, indistinguishable from embryonic stem cells."
+  },
+  {
+   "t": 36.33,
+   "text": "From those iPSCs you can then re-differentiate into any cell type — neurons, cardiomyocytes, hepatocytes, whatever you need."
+  },
+  {
+   "t": 44.9,
+   "text": "This is the foundation of a vast amount of modern regenerative medicine and disease modeling research."
+  },
+  {
+   "t": 51.6,
+   "text": "In the original 2006 work and many subsequent applications, the Yamanaka factors were delivered using viral vectors — typically gammaretrovirus or lentivirus — which integrate the factor genes permanently into the genome."
+  },
+  {
+   "t": 66.01,
+   "text": "This gets the job done, but it leaves you with iPSCs that have multiple integrated copies of strong viral promoters driving Yamanaka factor expression."
+  },
+  {
+   "t": 75.09,
+   "text": "For research applications this is acceptable; for any clinical application, it's a problem."
+  },
+  {
+   "t": 81.0,
+   "text": "c-Myc is an oncogene."
+  },
+  {
+   "t": 82.89,
+   "text": "You don't want a clinical iPSC product, or anything differentiated from one, to carry permanently integrated c-Myc cassettes that could potentially reactivate."
+  },
+  {
+   "t": 92.92,
+   "text": "So there was a big push, starting around 2008 and continuing through the early 2010s, to develop footprint-free reprogramming methods — ways to get the Yamanaka factors into a cell long enough to do the reprogramming but then remove them entirely."
+  },
+  {
+   "t": 108.64,
+   "text": "Several approaches emerged: episomal plasmids that don't integrate (used by Yamanaka's group in 2008-2009), Sendai virus that's purely cytoplasmic and doesn't enter the nucleus, mRNA reprogramming, and — the approach we care about today — PiggyBac."
+  },
+  {
+   "t": 127.11,
+   "text": "The 2009 paper from Andras Nagy's group at Mount Sinai in Toronto, and parallel work from Allan Bradley and Kosuke Yusa at the Sanger Institute, demonstrated PiggyBac-based iPSC reprogramming."
+  },
+  {
+   "t": 140.59,
+   "text": "The approach: put all four Yamanaka factors on a single PiggyBac transposon, deliver it with PiggyBac transposase, get stable integration, get the cell to reprogram into an iPSC."
+  },
+  {
+   "t": 152.82,
+   "text": "Then — and here's where the footprint-free part comes in — re-express the transposase."
+  },
+  {
+   "t": 158.88,
+   "text": "The transposase finds the ITRs flanking the Yamanaka cassette, excises the entire cassette, and the TTAA target site is restored without scar."
+  },
+  {
+   "t": 168.86,
+   "text": "You select for cells that have lost the transposon (you can include a selection marker that becomes toxic when the cells are switched to certain media, so only cells that have excised the cassette survive), and you end up with iPSCs that have been reprogrammed but no longer carry the integrated reprogramming cassette."
+  },
+  {
+   "t": 186.1,
+   "text": "The end-state iPSC is, at the genomic level, indistinguishable from one that had never received any transgene — except for the TTAA site that briefly hosted the cassette, which is restored to its original sequence."
+  },
+  {
+   "t": 200.22,
+   "text": "No leftover c-Myc."
+  },
+  {
+   "t": 201.86,
+   "text": "No constitutive promoters."
+  },
+  {
+   "t": 204.04,
+   "text": "No safety risk from re-expression of the Yamanaka factors."
+  },
+  {
+   "t": 208.19,
+   "text": "For clinical-grade iPSC manufacturing, this footprint-free property is enormously valuable."
+  },
+  {
+   "t": 215.49,
+   "text": "The analogy I want you to hold: PiggyBac iPSC reprogramming is deliver the package, do the reprogramming, then take the package back."
+  },
+  {
+   "t": 224.16,
+   "text": "You use the transposon to deliver the Yamanaka factors."
+  },
+  {
+   "t": 227.95,
+   "text": "Once the cell has reprogrammed — once the endogenous pluripotency genes are switched on and self-sustaining — you don't need the transgene factors anymore."
+  },
+  {
+   "t": 237.75,
+   "text": "The cell maintains its own pluripotency."
+  },
+  {
+   "t": 240.65,
+   "text": "So you re-express the transposase, the transposon excises cleanly because the target site is restored to its pristine TTAA, and you end up with a clean iPSC that has all the reprogramming benefit and none of the genomic baggage."
+  },
+  {
+   "t": 255.05,
+   "text": "This footprint-free property is, in fact, the dominant reason researchers use PiggyBac over Sleeping Beauty for reprogramming."
+  },
+  {
+   "t": 264.29,
+   "text": "Sleeping Beauty can also do reprogramming, but the excision leaves a small footprint at the donor site, and that residual genomic damage — even if it's only a few base pairs — disqualifies the cells from being truly footprint-free."
+  },
+  {
+   "t": 278.88,
+   "text": "PiggyBac's scarless excision is what wins this application."
+  },
+  {
+   "t": 282.8,
+   "text": "Now let's look briefly at the model organism use case, which is dominated by Tol2."
+  }
+ ]
+}

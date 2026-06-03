@@ -1,0 +1,179 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — The decipherer workflow — SigProfiler and the software ecosystem",
+ "duration": 337.25,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — The decipherer workflow — SigProfiler and the software ecosystem"
+  },
+  {
+   "t": 6.01,
+   "text": "Let's get practical."
+  },
+  {
+   "t": 7.22,
+   "text": "If you have a cancer genome — or a thousand cancer genomes — and you want to do mutational signature analysis, what software do you actually use?"
+  },
+  {
+   "t": 17.11,
+   "text": "What's the workflow?"
+  },
+  {
+   "t": 18.27,
+   "text": "The dominant tool is SigProfiler, an open-source Python package developed by Alexandrov's group at UCSD."
+  },
+  {
+   "t": 26.02,
+   "text": "SigProfiler is actually a suite of tools, with a few key modules:"
+  },
+  {
+   "t": 30.98,
+   "text": "SigProfilerMatrixGenerator takes a list of mutations (typically a VCF file from variant calling on tumor whole-genome or whole-exome sequencing) and converts them into the count matrices that signature analysis needs."
+  },
+  {
+   "t": 44.74,
+   "text": "It generates the 96-class SBS matrix, the 83-class ID matrix, the 78-class DBS matrix, and various others."
+  },
+  {
+   "t": 54.91,
+   "text": "This is the data preparation step."
+  },
+  {
+   "t": 57.02,
+   "text": "SigProfilerExtractor runs NMF on a cohort of mutation matrices to extract de novo signatures."
+  },
+  {
+   "t": 64.64,
+   "text": "This is the unsupervised discovery step — useful when you have a large new dataset and want to find signatures that might be novel or different from the COSMIC reference."
+  },
+  {
+   "t": 74.47,
+   "text": "SigProfilerExtractor handles all the technical details of NMF — multiple random initializations, choosing the optimal number of signatures, computing stability metrics — that Alexandrov originally developed in 2013."
+  },
+  {
+   "t": 90.0,
+   "text": "SigProfilerAssignment (formerly known as the SigProfilerSingleSample module, or sometimes called sigprofiler decompose) takes individual tumor mutation matrices and fits them to the COSMIC reference catalog, producing per-tumor exposure estimates for each known signature."
+  },
+  {
+   "t": 107.78,
+   "text": "This is the clinical step — useful when you have one new tumor and want to know which known signatures are active in it."
+  },
+  {
+   "t": 114.79,
+   "text": "There are other tools in the ecosystem."
+  },
+  {
+   "t": 117.06,
+   "text": "deconstructSigs in R was an early and influential tool, particularly popular in clinical bioinformatics, that did per-tumor fitting against the COSMIC v2 catalog."
+  },
+  {
+   "t": 128.35,
+   "text": "MutationalPatterns in R is a flexible toolkit for both extraction and visualization."
+  },
+  {
+   "t": 134.35,
+   "text": "SignatureAnalyzer is a Broad Institute tool that uses a Bayesian variant of NMF."
+  },
+  {
+   "t": 140.62,
+   "text": "MuSiCal is a more recent tool that handles batch effects better."
+  },
+  {
+   "t": 144.81,
+   "text": "The field has converged on SigProfiler as the de facto standard, but multiple tools exist and produce broadly consistent results."
+  },
+  {
+   "t": 153.61,
+   "text": "The end-to-end workflow looks like this."
+  },
+  {
+   "t": 156.28,
+   "text": "Step one: sequence the tumor genome (usually whole-exome or whole-genome) and a matched normal sample (typically blood, to allow distinguishing germline variants from somatic mutations)."
+  },
+  {
+   "t": 169.28,
+   "text": "Step two: align the reads, call somatic variants using a tool like Mutect2 or Strelka, and produce a VCF file of high-confidence somatic SNVs, indels, and ideally SVs."
+  },
+  {
+   "t": 182.55,
+   "text": "Step three: run SigProfilerMatrixGenerator to convert the VCF into mutation count matrices in the 96-class (SBS), 83-class (ID), and other formats."
+  },
+  {
+   "t": 195.61,
+   "text": "Step four: run SigProfilerAssignment to fit the tumor's mutation profiles against the COSMIC reference catalog, producing exposure estimates per signature."
+  },
+  {
+   "t": 206.16,
+   "text": "Step five: examine the exposure estimates, identify which signatures dominate the tumor, and interpret the biology and clinical implications."
+  },
+  {
+   "t": 215.93,
+   "text": "For research cohorts where you want to look for novel signatures, you replace step four with SigProfilerExtractor on the whole cohort, then map the extracted signatures back to COSMIC for naming, and identify any that don't match anything in the catalog as potential novel signatures."
+  },
+  {
+   "t": 232.36,
+   "text": "The whole pipeline can be run on a typical cancer genome in a few minutes on a workstation."
+  },
+  {
+   "t": 238.35,
+   "text": "The bottleneck is usually the upstream sequencing and variant calling, not the signature analysis itself."
+  },
+  {
+   "t": 245.5,
+   "text": "Once you have the mutation list, the signature analysis is fast."
+  },
+  {
+   "t": 249.96,
+   "text": "A few practical issues to be aware of."
+  },
+  {
+   "t": 252.39,
+   "text": "First, signature analysis is sensitive to the variant calling."
+  },
+  {
+   "t": 257.07,
+   "text": "False positive variant calls — sequencing errors mistakenly called as mutations — can introduce spurious signatures, particularly artifact patterns at certain contexts."
+  },
+  {
+   "t": 268.34,
+   "text": "Quality control of the variant calls is essential."
+  },
+  {
+   "t": 271.93,
+   "text": "Second, low mutation counts produce unreliable signature assignments."
+  },
+  {
+   "t": 277.13,
+   "text": "If a tumor has only a few hundred mutations, signature analysis has limited statistical power and the exposure estimates have wide error bars."
+  },
+  {
+   "t": 286.78,
+   "text": "Whole-genome sequencing is preferred over whole-exome for this reason, when feasible."
+  },
+  {
+   "t": 292.5,
+   "text": "Third, the choice of reference catalog version matters."
+  },
+  {
+   "t": 295.83,
+   "text": "SBS-numbering has been stable across versions, but minor refinements have occurred, and a few signatures have been split, merged, or retired."
+  },
+  {
+   "t": 305.07,
+   "text": "Always report which COSMIC version you used."
+  },
+  {
+   "t": 308.15,
+   "text": "Modern clinical pipelines — both research and increasingly clinical — incorporate signature analysis as one of the standard outputs of tumor genome sequencing."
+  },
+  {
+   "t": 318.17,
+   "text": "A clinical report from a comprehensive genomic profiling assay will typically include not just the list of driver mutations and the tumor mutation burden, but also the signature profile, with relevant signatures highlighted for clinical decision support."
+  },
+  {
+   "t": 333.34,
+   "text": "This is becoming the new standard of care for advanced cancers."
+  }
+ ]
+}

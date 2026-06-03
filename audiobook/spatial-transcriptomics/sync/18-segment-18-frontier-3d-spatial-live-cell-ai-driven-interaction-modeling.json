@@ -1,0 +1,283 @@
+{
+ "n": 18,
+ "title": "SEGMENT 18 — Frontier — 3D spatial, live-cell, AI-driven interaction modeling",
+ "duration": 479.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 18 — Frontier — 3D spatial, live-cell, AI-driven interaction modeling"
+  },
+  {
+   "t": 7.46,
+   "text": "Let's close by looking forward."
+  },
+  {
+   "t": 9.28,
+   "text": "Spatial transcriptomics is, as of 2025, a young technology — about a decade old as a named field, about six years old as a commercial product category."
+  },
+  {
+   "t": 20.61,
+   "text": "The trajectory of improvement is steep."
+  },
+  {
+   "t": 23.24,
+   "text": "Resolution is rising."
+  },
+  {
+   "t": 25.3,
+   "text": "Throughput is rising."
+  },
+  {
+   "t": 27.16,
+   "text": "Cost is falling."
+  },
+  {
+   "t": 28.46,
+   "text": "Panel sizes are growing."
+  },
+  {
+   "t": 30.12,
+   "text": "Integration with other modalities is deepening."
+  },
+  {
+   "t": 33.14,
+   "text": "Let me sketch where the field is heading."
+  },
+  {
+   "t": 35.44,
+   "text": "Three-dimensional spatial transcriptomics is the first major frontier."
+  },
+  {
+   "t": 40.2,
+   "text": "Almost all current spatial methods work on a single 2D tissue section."
+  },
+  {
+   "t": 45.19,
+   "text": "But tissues are three-dimensional, and the 2D section is always a slice through the full 3D structure."
+  },
+  {
+   "t": 52.5,
+   "text": "To reconstruct the full 3D organization, you can do serial sectioning — cut adjacent sections, run spatial transcriptomics on each, and computationally align them into a 3D stack."
+  },
+  {
+   "t": 65.01,
+   "text": "Several labs have demonstrated this approach, generating 3D maps of mouse brains, tumors, and whole embryos from dozens or hundreds of serial sections."
+  },
+  {
+   "t": 75.75,
+   "text": "The computational alignment is non-trivial, but increasingly tractable."
+  },
+  {
+   "t": 80.86,
+   "text": "Within a few years, 3D spatial atlases of whole organs at single-cell resolution will be standard."
+  },
+  {
+   "t": 87.51,
+   "text": "The field is also exploring thick-section approaches that image multiple Z-planes within a single thicker section, using light-sheet or confocal microscopy, with imaging-based spatial methods adapted for 3D readout."
+  },
+  {
+   "t": 101.12,
+   "text": "Live-cell spatial transcriptomics is a more speculative frontier."
+  },
+  {
+   "t": 105.47,
+   "text": "All current methods are end-point measurements on fixed tissue — you sacrifice the sample to get the data."
+  },
+  {
+   "t": 112.21,
+   "text": "But many of the most important biological questions are about how gene expression changes over time, in living tissue."
+  },
+  {
+   "t": 120.26,
+   "text": "Several research groups are working on methods to image transcripts in live cells over time, using either RNA-targeting protein systems (like MS2-MCP coat protein) or RNA-detecting CRISPR variants (like Cas13-based RNA imaging)."
+  },
+  {
+   "t": 137.04,
+   "text": "The current state of the art lets you watch a handful of transcripts in live cells, in real time, but at low throughput."
+  },
+  {
+   "t": 144.28,
+   "text": "Scaling this to whole-transcriptome live imaging is a research goal that may take a decade or more to mature."
+  },
+  {
+   "t": 151.65,
+   "text": "If it does mature, live-cell spatial transcriptomics will open completely new biology — watching gene expression dynamics in tissue, in real time, with cell-resolution."
+  },
+  {
+   "t": 163.38,
+   "text": "AI-driven cell-cell interaction modeling is perhaps the most active frontier."
+  },
+  {
+   "t": 168.84,
+   "text": "The cell-cell interaction methods we discussed in Segment 14 are based on ligand-receptor pair databases and simple neighbor graphs."
+  },
+  {
+   "t": 176.78,
+   "text": "They are essentially statistical hypothesis generators."
+  },
+  {
+   "t": 180.31,
+   "text": "The next generation of methods will use deep learning — graph neural networks, transformer architectures, foundation models — to learn complex multi-cell interaction patterns directly from large spatial datasets."
+  },
+  {
+   "t": 193.74,
+   "text": "Several groups are training \"cellular foundation models\" that take spatial data as input and learn embeddings of cells, tissues, and interactions that can be applied to many downstream tasks."
+  },
+  {
+   "t": 207.06,
+   "text": "The eventual goal is models that can predict, from a spatial input, things like drug response, disease progression, or cell-fate decisions, by integrating the spatial gene expression with learned representations of cellular biology."
+  },
+  {
+   "t": 221.71,
+   "text": "Spatial multiomics at scale is another major direction."
+  },
+  {
+   "t": 225.57,
+   "text": "The early demonstrations of combined spatial RNA + protein, or spatial RNA + chromatin accessibility, are proof-of-concept."
+  },
+  {
+   "t": 234.97,
+   "text": "The next phase is making these multi-modal spatial methods routine and scalable, so that every spatial experiment can include multiple molecular layers without prohibitive cost or complexity."
+  },
+  {
+   "t": 247.28,
+   "text": "Both academic and commercial development on this is intense, and within a few years multimodal spatial assays will be standard rather than novel."
+  },
+  {
+   "t": 256.19,
+   "text": "Clinical adoption is the major translational frontier."
+  },
+  {
+   "t": 260.16,
+   "text": "Spatial transcriptomics is moving rapidly toward FDA-cleared clinical assays."
+  },
+  {
+   "t": 266.52,
+   "text": "Several Xenium and CosMx panels are in regulatory review for specific oncology indications."
+  },
+  {
+   "t": 273.75,
+   "text": "The first clinical spatial transcriptomics tests — used to inform treatment decisions for cancer patients — are likely within the next few years."
+  },
+  {
+   "t": 282.38,
+   "text": "Once that bar is crossed, spatial transcriptomics will move from a research tool to a clinical pathology tool, and the volume of data generated will increase by orders of magnitude."
+  },
+  {
+   "t": 293.53,
+   "text": "The longer-term vision, often discussed in the field, is what people sometimes call the whole-tissue, whole-transcriptome, single-cell, multi-time-point, multi-omic atlas."
+  },
+  {
+   "t": 304.4,
+   "text": "The idea is that, eventually, you will be able to sample any tissue from any patient at any moment, run a single integrated assay, and get back a complete molecular description — every cell, every gene, every protein, every metabolite, every interaction, all spatially resolved."
+  },
+  {
+   "t": 321.82,
+   "text": "This is decades away in its full form."
+  },
+  {
+   "t": 324.45,
+   "text": "But each year, the technologies move closer."
+  },
+  {
+   "t": 327.92,
+   "text": "Visium HD got us closer on resolution."
+  },
+  {
+   "t": 331.65,
+   "text": "Xenium got us closer on imaging-based throughput."
+  },
+  {
+   "t": 334.77,
+   "text": "The combination of methods, integrated computationally, is approaching the vision asymptotically."
+  },
+  {
+   "t": 341.55,
+   "text": "The pattern from the history we've discussed today suggests how this will continue to play out."
+  },
+  {
+   "t": 347.21,
+   "text": "Academic groups will invent new chemistries every two or three years."
+  },
+  {
+   "t": 352.03,
+   "text": "Commercial companies will license and engineer the most promising ones into push-button instruments on a five-to-seven-year cadence."
+  },
+  {
+   "t": 360.67,
+   "text": "Costs will fall on a Moore's-law-like curve as instrument volumes grow and chemistries mature."
+  },
+  {
+   "t": 366.66,
+   "text": "Within a decade, what's now a research tool restricted to well-funded labs will become a routine assay accessible to any hospital pathology department."
+  },
+  {
+   "t": 376.88,
+   "text": "The trajectory is the trajectory of all genomics technologies: from impossible to expensive to routine, over twenty years."
+  },
+  {
+   "t": 385.68,
+   "text": "Where will you be in this story?"
+  },
+  {
+   "t": 387.23,
+   "text": "If you're a student now, the next phase of spatial transcriptomics — clinical translation, AI-driven interpretation, 3D and live-cell extensions, integration with deep multi-omics — is the phase where the field will mature and where the careers will be made."
+  },
+  {
+   "t": 402.9,
+   "text": "The chemistry is settled enough that you don't need to be a chemist; the analysis is open enough that you don't need to be a methods developer."
+  },
+  {
+   "t": 410.7,
+   "text": "You can pick a biological problem — a disease, a developmental question, a tissue — and use the spatial toolkit to ask it, the same way molecular biologists in the 1990s could pick a question and use the (then-revolutionary) PCR toolkit to ask it."
+  },
+  {
+   "t": 426.92,
+   "text": "The technology is now mature enough to be the substrate of careers."
+  },
+  {
+   "t": 431.42,
+   "text": "The biology is still wide open."
+  },
+  {
+   "t": 433.78,
+   "text": "That's the pitch."
+  },
+  {
+   "t": 434.9,
+   "text": "Spatial transcriptomics is the where-component that single-cell sequencing was missing."
+  },
+  {
+   "t": 440.87,
+   "text": "It has two main families with opposite trade-offs — sequencing-based for breadth, imaging-based for precision."
+  },
+  {
+   "t": 447.63,
+   "text": "It went commercial in 2019 to 2023, reshaping tissue biology in just a few years."
+  },
+  {
+   "t": 454.71,
+   "text": "It's now a core technology in oncology, immunology, neuroscience, and developmental biology."
+  },
+  {
+   "t": 461.23,
+   "text": "It integrates with H&E pathology, IHC, single-cell sequencing, and increasingly other omics."
+  },
+  {
+   "t": 468.31,
+   "text": "The frontier is 3D, live, multi-omic, AI-interpreted."
+  },
+  {
+   "t": 473.47,
+   "text": "And the next decade will be the decade of its clinical maturation."
+  },
+  {
+   "t": 477.55,
+   "text": "Thank you."
+  },
+  {
+   "t": 478.41,
+   "text": "Questions."
+  }
+ ]
+}

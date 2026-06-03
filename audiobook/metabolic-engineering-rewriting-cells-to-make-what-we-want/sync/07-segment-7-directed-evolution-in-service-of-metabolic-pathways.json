@@ -1,0 +1,171 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Directed evolution in service of metabolic pathways",
+ "duration": 275.04,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Directed evolution in service of metabolic pathways"
+  },
+  {
+   "t": 5.51,
+   "text": "So you have a pathway."
+  },
+  {
+   "t": 6.89,
+   "text": "You have installed it."
+  },
+  {
+   "t": 8.11,
+   "text": "You have used FBA to predict the manipulations that should push flux into your product."
+  },
+  {
+   "t": 13.68,
+   "text": "You run the strain."
+  },
+  {
+   "t": 15.01,
+   "text": "The yield is, charitably, a tenth of what you predicted."
+  },
+  {
+   "t": 19.18,
+   "text": "Why?"
+  },
+  {
+   "t": 19.89,
+   "text": "Often because one or more of the heterologous enzymes — the plant or fungal enzymes you transplanted into your microbial host — is performing at a fraction of its native activity."
+  },
+  {
+   "t": 31.8,
+   "text": "The cell's solvent is wrong."
+  },
+  {
+   "t": 33.49,
+   "text": "The cofactor pool is wrong."
+  },
+  {
+   "t": 35.62,
+   "text": "The substrate pool is wrong."
+  },
+  {
+   "t": 37.51,
+   "text": "The enzyme is folding badly."
+  },
+  {
+   "t": 39.5,
+   "text": "Whatever the reason, the enzyme is the bottleneck, and you cannot fix it by adjusting fermentation conditions."
+  },
+  {
+   "t": 46.44,
+   "text": "You need to make the enzyme itself better."
+  },
+  {
+   "t": 48.73,
+   "text": "The dominant tool for this is directed evolution, and we owe its modern form largely to Frances Arnold, who shared the 2018 Nobel Prize in Chemistry for it."
+  },
+  {
+   "t": 59.86,
+   "text": "The idea is to do, in a few weeks at the lab bench, what natural evolution would take millions of years to do — generate variants of an enzyme, screen them for the property you want, keep the winners, repeat."
+  },
+  {
+   "t": 72.61,
+   "text": "The cycle is mutate, screen, select, repeat."
+  },
+  {
+   "t": 76.76,
+   "text": "Mutating is the easy part."
+  },
+  {
+   "t": 79.11,
+   "text": "You can do error-prone PCR, where you deliberately use a low-fidelity polymerase to introduce random errors into your gene at a controlled rate, generating a library of variants."
+  },
+  {
+   "t": 90.54,
+   "text": "You can do DNA shuffling, where you take homologous genes from related organisms, chop them up, and reassemble them, generating chimeric variants that mix and match domains."
+  },
+  {
+   "t": 102.41,
+   "text": "You can do site-saturation mutagenesis, where you target specific residues — for example, residues lining the active site — and generate every possible amino acid substitution at each one."
+  },
+  {
+   "t": 115.45,
+   "text": "The output is a library: a few thousand to a few million variants of your gene, each carried in a separate cell."
+  },
+  {
+   "t": 122.81,
+   "text": "The hard part is screening."
+  },
+  {
+   "t": 124.5,
+   "text": "You need a way to look at each variant and ask, is this one better than the parent?"
+  },
+  {
+   "t": 129.61,
+   "text": "For some properties — fluorescence, antibiotic resistance, growth on a particular substrate — screening is straightforward."
+  },
+  {
+   "t": 137.74,
+   "text": "For more exotic chemistry — does this enzyme convert substrate A to product B more efficiently — you often have to invent a custom screen, sometimes by linking the chemistry you care about to a fluorescent or growth readout."
+  },
+  {
+   "t": 151.28,
+   "text": "There is a whole subculture of clever biosensor design within directed evolution that exists exclusively to make screens feasible."
+  },
+  {
+   "t": 160.74,
+   "text": "Sometimes you can do high-throughput screening with robotics, running thousands of variants through an assay per day."
+  },
+  {
+   "t": 167.19,
+   "text": "Sometimes you can do selection, where the variants that have the property you want simply outgrow the variants that do not — fastest, most powerful, but only works when the property is tied to survival."
+  },
+  {
+   "t": 179.29,
+   "text": "The interplay of directed evolution and metabolic engineering is intimate."
+  },
+  {
+   "t": 184.39,
+   "text": "Almost every successful industrial pathway has had some of its enzymes evolved for the production context."
+  },
+  {
+   "t": 191.6,
+   "text": "The artemisinin yeast went through rounds of enzyme evolution."
+  },
+  {
+   "t": 195.78,
+   "text": "The opioid yeast we will discuss in Segment 12 required extensive enzyme engineering of borrowed plant P450s."
+  },
+  {
+   "t": 204.43,
+   "text": "The biofuels work at Amyris and at LS9 used directed evolution heavily."
+  },
+  {
+   "t": 210.6,
+   "text": "The pattern is: install the pathway in the host, run it, identify which step is the bottleneck, evolve that step, repeat."
+  },
+  {
+   "t": 218.69,
+   "text": "You essentially do strain engineering at the level of the whole cell and enzyme engineering at the level of the individual proteins, in parallel, iteratively."
+  },
+  {
+   "t": 229.69,
+   "text": "The analogy I want you to carry: directed evolution is the engineer's gift of accelerated evolution — millions of years of selection compressed into weeks of screening — applied to an enzyme that needs to work in a context evolution never prepared it for."
+  },
+  {
+   "t": 245.7,
+   "text": "You take the enzyme, mutate it, find the variants that work better in your cellular context, and the cell now has a tool that fits its new floor plan."
+  },
+  {
+   "t": 255.24,
+   "text": "Now, the next layer of complexity."
+  },
+  {
+   "t": 257.81,
+   "text": "Even if you have all your enzymes working beautifully, the pathway may still fail because the cofactors are wrong."
+  },
+  {
+   "t": 265.15,
+   "text": "Cofactors are the small molecules that enzymes use as helpers — and the balance of cofactors is one of the chronic battlefields of metabolic engineering."
+  }
+ ]
+}

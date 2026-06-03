@@ -1,0 +1,331 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Two bits per base: the basic encoding",
+ "duration": 504.27,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Two bits per base: the basic encoding"
+  },
+  {
+   "t": 4.36,
+   "text": "So let's get concrete."
+  },
+  {
+   "t": 5.75,
+   "text": "You have a file."
+  },
+  {
+   "t": 6.76,
+   "text": "Let's say it's a photograph, a JPEG, about one megabyte in size."
+  },
+  {
+   "t": 11.66,
+   "text": "That's eight million bits."
+  },
+  {
+   "t": 13.43,
+   "text": "Eight million zeros and ones, arranged in a particular order that, when fed to a JPEG decoder, produces a picture of, let's say, your dog."
+  },
+  {
+   "t": 23.57,
+   "text": "You want to write that picture into DNA."
+  },
+  {
+   "t": 25.84,
+   "text": "How do you do it?"
+  },
+  {
+   "t": 26.76,
+   "text": "The most obvious encoding is this."
+  },
+  {
+   "t": 29.52,
+   "text": "DNA has four bases — A, T, G, C."
+  },
+  {
+   "t": 34.02,
+   "text": "Four states equals two bits."
+  },
+  {
+   "t": 36.25,
+   "text": "So you assign each base to a two-bit pattern."
+  },
+  {
+   "t": 39.1,
+   "text": "The canonical scheme is: A equals zero-zero, C equals zero-one, G equals one-zero, T equals one-one."
+  },
+  {
+   "t": 48.12,
+   "text": "Now any string of bits can be broken into pairs and translated, pair by pair, into a string of bases."
+  },
+  {
+   "t": 55.08,
+   "text": "The bit string zero-zero-zero-one-one-zero-one-one becomes the base string A-C-G-T."
+  },
+  {
+   "t": 60.56,
+   "text": "Eight bits became four bases."
+  },
+  {
+   "t": 62.99,
+   "text": "Two bits per base."
+  },
+  {
+   "t": 64.22,
+   "text": "Trivial."
+  },
+  {
+   "t": 65.06,
+   "text": "For a one-megabyte file, eight million bits, you need four million bases."
+  },
+  {
+   "t": 70.03,
+   "text": "That's a single piece of DNA four million bases long."
+  },
+  {
+   "t": 74.0,
+   "text": "Now, here is where the first practical wrinkle comes in."
+  },
+  {
+   "t": 77.31,
+   "text": "We cannot, with current technology, synthesize a piece of DNA four million bases long."
+  },
+  {
+   "t": 83.79,
+   "text": "The longest oligonucleotides you can practically synthesize on a commercial chip-based synthesizer are about two hundred bases."
+  },
+  {
+   "t": 91.44,
+   "text": "Beyond that, the error rate per base accumulates exponentially and the yield drops to zero."
+  },
+  {
+   "t": 97.72,
+   "text": "So you cannot write your file as a single long DNA strand."
+  },
+  {
+   "t": 101.91,
+   "text": "You have to break it up."
+  },
+  {
+   "t": 103.15,
+   "text": "So you take your four million bases and you break them into chunks of, let's say, one hundred and fifty bases each."
+  },
+  {
+   "t": 109.83,
+   "text": "That gives you about twenty-seven thousand chunks."
+  },
+  {
+   "t": 112.65,
+   "text": "You synthesize each chunk as a separate oligonucleotide."
+  },
+  {
+   "t": 116.76,
+   "text": "You pool all twenty-seven thousand oligos together into a single tube, dry them down, and that tube is your file."
+  },
+  {
+   "t": 123.92,
+   "text": "But wait."
+  },
+  {
+   "t": 124.86,
+   "text": "If you just dump twenty-seven thousand short DNA fragments into a tube, how do you know which order they go in when you read them back?"
+  },
+  {
+   "t": 132.81,
+   "text": "In a hard drive, the bits are physically arranged in a known geometric order on the disk, so the reader knows that the bit at sector X address Y comes before the bit at sector X address Y plus one."
+  },
+  {
+   "t": 144.12,
+   "text": "In a DNA tube, the fragments are floating in solution in no particular order."
+  },
+  {
+   "t": 149.82,
+   "text": "They mix freely."
+  },
+  {
+   "t": 151.01,
+   "text": "When you sequence them, you get them back in a random order."
+  },
+  {
+   "t": 154.55,
+   "text": "So somehow each fragment needs to carry, encoded into it, an indication of where in the original file it belongs."
+  },
+  {
+   "t": 162.96,
+   "text": "The way you do that is with an index region."
+  },
+  {
+   "t": 165.69,
+   "text": "Every oligo in your pool starts with a fixed number of bases — say twenty — that encode a unique number."
+  },
+  {
+   "t": 173.03,
+   "text": "Fragment number one starts with the bases encoding the binary representation of one."
+  },
+  {
+   "t": 178.69,
+   "text": "Fragment number two starts with the bases encoding two."
+  },
+  {
+   "t": 182.94,
+   "text": "And so on, up through twenty-seven thousand."
+  },
+  {
+   "t": 185.99,
+   "text": "When you sequence the pool and get back twenty-seven thousand reads, you sort them by their index region, concatenate them in order, strip off the index regions, and reconstruct the original bit string."
+  },
+  {
+   "t": 198.19,
+   "text": "So now each of your oligos has the structure: index region of about twenty bases, then payload of about one hundred and thirty bases."
+  },
+  {
+   "t": 206.84,
+   "text": "The payload carries the actual data."
+  },
+  {
+   "t": 209.47,
+   "text": "The index region carries the address."
+  },
+  {
+   "t": 212.1,
+   "text": "Plus, on either end, you typically have fixed primer-binding sequences of about twenty bases each — we'll get to those in Segment 9 when we talk about random access — which means your useable payload is more like one hundred bases per oligo, and your effective storage efficiency is somewhere around two-thirds of the theoretical two bits per base."
+  },
+  {
+   "t": 232.68,
+   "text": "Already, the basic naive encoding is more complicated than it looks."
+  },
+  {
+   "t": 237.32,
+   "text": "And we are about to make it more complicated still, because the encoding I just described has two problems that will absolutely destroy your data if you try to use it as-is."
+  },
+  {
+   "t": 246.94,
+   "text": "Problem one: homopolymer runs."
+  },
+  {
+   "t": 249.55,
+   "text": "DNA synthesizers and DNA sequencers both have a hard time with long stretches of the same base in a row."
+  },
+  {
+   "t": 256.71,
+   "text": "If your bit string happens to encode, say, twenty consecutive A's, the synthesizer will produce that run with high error rates — it tends to slip and skip bases — and the sequencer will struggle to read it back, especially nanopore sequencers, which have particular trouble counting homopolymers accurately."
+  },
+  {
+   "t": 275.53,
+   "text": "So you need an encoding that avoids long runs of the same base."
+  },
+  {
+   "t": 279.42,
+   "text": "Problem two: GC content imbalance."
+  },
+  {
+   "t": 282.89,
+   "text": "DNA synthesis and PCR amplification both work best when the sequence has a roughly fifty-percent GC content — that is, equal proportions of A-plus-T versus G-plus-C."
+  },
+  {
+   "t": 295.59,
+   "text": "A region that is, say, eighty percent GC will form stable secondary structures, fold up on itself, and be hard to amplify or sequence."
+  },
+  {
+   "t": 305.58,
+   "text": "A region that is, say, ten percent GC will have weak base pairing in primer regions and will fail to amplify reliably."
+  },
+  {
+   "t": 313.92,
+   "text": "So your encoding needs to keep GC content roughly balanced across every oligo."
+  },
+  {
+   "t": 319.73,
+   "text": "The naive two-bit-per-base encoding does neither of these things."
+  },
+  {
+   "t": 324.07,
+   "text": "If your file happens to contain a long run of zeros, you get a long run of A's."
+  },
+  {
+   "t": 329.01,
+   "text": "If your file happens to be biased toward zeros, your DNA is biased toward A and C."
+  },
+  {
+   "t": 334.63,
+   "text": "Real files — compressed video, encrypted archives, random bytes — tend to look roughly random and balanced, but you cannot rely on that."
+  },
+  {
+   "t": 343.86,
+   "text": "You need an encoding that guarantees good homopolymer and GC properties regardless of the input."
+  },
+  {
+   "t": 350.62,
+   "text": "So in practice, real DNA storage encodings use schemes that are more clever than the trivial two-bits-per-base mapping."
+  },
+  {
+   "t": 357.88,
+   "text": "The most common approach is something called rotating encoding or rotation coding, in which the mapping from bits to bases depends on the previous base."
+  },
+  {
+   "t": 366.81,
+   "text": "For example, you might use a base-3 encoding — three bases per nucleotide position — where the three options at each position are the three bases that are not equal to the previous base."
+  },
+  {
+   "t": 378.92,
+   "text": "So if the previous base was A, your three options are C, G, T."
+  },
+  {
+   "t": 384.09,
+   "text": "If the previous base was G, your three options are A, C, T."
+  },
+  {
+   "t": 389.47,
+   "text": "This guarantees that you never have two consecutive identical bases."
+  },
+  {
+   "t": 394.09,
+   "text": "It costs you a little efficiency — you get only one point five eight bits per base instead of two — but it eliminates homopolymer runs entirely."
+  },
+  {
+   "t": 403.38,
+   "text": "Goldman and his collaborators, in their 2013 Nature paper, used exactly this trick — a base-3 encoding with a previous-base constraint, plus additional fixed-length codewords designed for balanced GC content."
+  },
+  {
+   "t": 418.34,
+   "text": "The Microsoft and University of Washington team have explored several encodings over the years, including base-2 schemes with constraint shaping and ternary schemes."
+  },
+  {
+   "t": 428.76,
+   "text": "There is also a family of encodings based on fountain codes, which we will get to in Segment 8 when we talk about error correction — fountain codes have a particularly nice property that they let you build oligos with controllable GC and homopolymer properties almost automatically."
+  },
+  {
+   "t": 444.67,
+   "text": "The point I want to leave you with for this segment is that the encoding step — the translation from bits to bases — is not the trivial mechanical step it first appears."
+  },
+  {
+   "t": 454.56,
+   "text": "It is a real piece of engineering, and the choices you make at the encoding stage propagate through the rest of the pipeline."
+  },
+  {
+   "t": 461.79,
+   "text": "A bad encoding gives you oligos that are hard to synthesize, hard to amplify, and hard to sequence."
+  },
+  {
+   "t": 468.56,
+   "text": "A good encoding gives you oligos that behave well at every stage."
+  },
+  {
+   "t": 473.22,
+   "text": "The art of DNA storage encoding is finding the sweet spot between information density — bits per base — and physical robustness — synthesis yield, amplification efficiency, sequencing accuracy."
+  },
+  {
+   "t": 486.48,
+   "text": "Alright."
+  },
+  {
+   "t": 487.24,
+   "text": "Now that we have the basic encoding picture, let's go look at the first time anybody actually did this for real."
+  },
+  {
+   "t": 493.14,
+   "text": "Let's go meet George Church and Nick Goldman, and let's look at what happened in 2012 and 2013, when this field stopped being a thought experiment and became an actual demonstration."
+  }
+ ]
+}

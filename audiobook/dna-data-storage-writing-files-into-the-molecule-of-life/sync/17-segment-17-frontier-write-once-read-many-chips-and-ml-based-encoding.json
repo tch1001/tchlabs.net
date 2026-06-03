@@ -1,0 +1,175 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Frontier: write-once-read-many chips and ML-based encoding",
+ "duration": 313.94,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Frontier: write-once-read-many chips and ML-based encoding"
+  },
+  {
+   "t": 6.41,
+   "text": "Let me close the substantive part of the lecture with a tour of some of the most interesting frontiers — the directions that, if any of them work, would dramatically change the landscape."
+  },
+  {
+   "t": 17.44,
+   "text": "Integrated write-once-read-many DNA chips."
+  },
+  {
+   "t": 20.84,
+   "text": "The natural endpoint of DNA storage hardware is a single device that combines synthesis, storage, and sequencing in one integrated chip."
+  },
+  {
+   "t": 29.86,
+   "text": "You feed in digital data, the chip writes it to DNA, holds the DNA in micro-reservoirs, and reads it back electronically on demand."
+  },
+  {
+   "t": 39.29,
+   "text": "No external sequencer."
+  },
+  {
+   "t": 40.99,
+   "text": "No external synthesizer."
+  },
+  {
+   "t": 43.0,
+   "text": "No sample handling."
+  },
+  {
+   "t": 44.42,
+   "text": "Just a chip."
+  },
+  {
+   "t": 45.4,
+   "text": "This is conceptually the DNA equivalent of a solid-state drive — a self-contained storage device with electrical interfaces."
+  },
+  {
+   "t": 53.8,
+   "text": "Several research groups are working toward this."
+  },
+  {
+   "t": 57.0,
+   "text": "None has demonstrated it end to end yet at any meaningful capacity."
+  },
+  {
+   "t": 62.34,
+   "text": "If it works, it dramatically simplifies the deployment story for DNA storage — instead of needing a whole data-center-scale facility with synthesizers and sequencers, you have a chip you can plug into anything."
+  },
+  {
+   "t": 75.71,
+   "text": "Machine-learning-based encoding."
+  },
+  {
+   "t": 77.83,
+   "text": "Modern machine learning, particularly deep learning, has been applied to the problem of designing DNA storage encodings that maximize storage density while remaining robust to the specific error patterns of real synthesizers and sequencers."
+  },
+  {
+   "t": 92.44,
+   "text": "Rather than designing the encoding by hand, you train a neural network to learn an encoding-decoding pair that performs well empirically."
+  },
+  {
+   "t": 100.66,
+   "text": "This has produced encodings that meaningfully outperform hand-designed ones in some recent studies, particularly for handling the unusual error patterns of nanopore sequencing."
+  },
+  {
+   "t": 111.21,
+   "text": "The full impact of ML-based encoding is still being worked out, but it's a real direction."
+  },
+  {
+   "t": 117.31,
+   "text": "Higher-bit-per-base encoding via modified bases."
+  },
+  {
+   "t": 121.1,
+   "text": "Why limit yourself to four bases?"
+  },
+  {
+   "t": 123.56,
+   "text": "Chemistry can produce a much larger alphabet of nucleotide-like molecules — modified bases, base analogs, synthetic alphabets."
+  },
+  {
+   "t": 132.89,
+   "text": "If you encode with eight bases instead of four, you get three bits per base instead of two."
+  },
+  {
+   "t": 138.34,
+   "text": "With sixteen bases, four bits per base."
+  },
+  {
+   "t": 141.11,
+   "text": "There are real research programs exploring this."
+  },
+  {
+   "t": 144.43,
+   "text": "The challenge is that the synthesizer and sequencer both need to be able to write and read the expanded alphabet, which requires new chemistry on both ends."
+  },
+  {
+   "t": 154.03,
+   "text": "But the potential density gains are significant."
+  },
+  {
+   "t": 157.16,
+   "text": "DNA storage as part of broader bio-cyber systems."
+  },
+  {
+   "t": 161.21,
+   "text": "Imagine integrated systems where data flows freely between biological and computational substrates — where a sensor in a cell writes its readings into DNA, where the DNA is sequenced by an on-chip sequencer, where the sequence is processed by silicon electronics, and where computational results feed back into the cell as new DNA messages."
+  },
+  {
+   "t": 183.2,
+   "text": "This is the frontier of what's sometimes called molecular computing or cyber-biological systems, and DNA storage is one piece of it."
+  },
+  {
+   "t": 192.0,
+   "text": "The vision is genuinely strange — a kind of computing-biology hybrid where the distinction between data and biology is blurred — but it's where some of the most adventurous researchers are pushing."
+  },
+  {
+   "t": 203.85,
+   "text": "In-DNA computation."
+  },
+  {
+   "t": 205.78,
+   "text": "A particularly exotic direction: doing computation on the DNA itself, while it's stored, without ever reading it back to a digital form."
+  },
+  {
+   "t": 214.78,
+   "text": "You can imagine DNA-based logic gates, DNA-based sorting algorithms, DNA-based similarity search."
+  },
+  {
+   "t": 221.76,
+   "text": "There has been beautiful theoretical work in this area, and some experimental demonstrations of simple operations."
+  },
+  {
+   "t": 229.49,
+   "text": "The dream is that a DNA archive could not just store data but compute on it directly — for example, searching a large archive for entries matching a query, without having to sequence everything."
+  },
+  {
+   "t": 242.06,
+   "text": "Whether this becomes practically useful remains to be seen."
+  },
+  {
+   "t": 245.59,
+   "text": "Hybrid sub-cellular storage."
+  },
+  {
+   "t": 247.89,
+   "text": "Bringing back the cellular-storage thread from Segment 13 — there is interesting work on engineering specific subcellular compartments to act as storage organelles, optimizing them for higher data density and longer stability than the natural chromosome."
+  },
+  {
+   "t": 263.93,
+   "text": "This blurs the line between in-vivo and in-vitro storage in interesting ways."
+  },
+  {
+   "t": 269.38,
+   "text": "If you can engineer a cell to have a dedicated \"storage organelle\" that holds much more data than the natural genome and survives much longer in dormant form, you get some of the advantages of cellular storage — self-replication, self-repair — with some of the advantages of in-vitro storage — high density, long-term dormancy."
+  },
+  {
+   "t": 288.84,
+   "text": "I list these to convey that this is an active, vibrant, scientifically rich field, with multiple frontiers being pushed simultaneously."
+  },
+  {
+   "t": 298.36,
+   "text": "The path from current academic demonstrations to commercial DNA storage is not a single well-defined road — it's a fan of possibilities, and the eventual industry will likely be shaped by which of these frontier ideas pan out over the next decade."
+  }
+ ]
+}

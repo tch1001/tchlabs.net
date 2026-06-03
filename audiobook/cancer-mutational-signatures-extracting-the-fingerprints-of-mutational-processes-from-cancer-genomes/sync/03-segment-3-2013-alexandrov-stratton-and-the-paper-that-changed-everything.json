@@ -1,0 +1,279 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — 2013 — Alexandrov, Stratton, and the paper that changed everything",
+ "duration": 452.74,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — 2013 — Alexandrov, Stratton, and the paper that changed everything"
+  },
+  {
+   "t": 7.34,
+   "text": "In August of 2013, a paper appeared in the journal Nature with the title \"Signatures of mutational processes in human cancer."
+  },
+  {
+   "t": 16.14,
+   "text": "\" The first author was Ludmil Alexandrov, then a PhD student at the Wellcome Trust Sanger Institute."
+  },
+  {
+   "t": 22.45,
+   "text": "The senior author was Michael Stratton, the Sanger's director, who had spent his career on cancer genetics — he was one of the people who originally identified BRCA2 in 1995."
+  },
+  {
+   "t": 33.77,
+   "text": "The paper analyzed somatic mutations from approximately seven thousand cancer genomes and exomes across thirty cancer types, and it extracted twenty-one distinct mutational signatures."
+  },
+  {
+   "t": 45.85,
+   "text": "I want to spend a few minutes on this paper, because it's foundational."
+  },
+  {
+   "t": 49.26,
+   "text": "Everything we do now in mutational signature analysis traces back, conceptually and often computationally, to this 2013 work."
+  },
+  {
+   "t": 58.96,
+   "text": "The challenge Alexandrov and Stratton faced was this."
+  },
+  {
+   "t": 62.76,
+   "text": "They had thousands of cancer genomes."
+  },
+  {
+   "t": 65.14,
+   "text": "Each genome had a 96-class mutation histogram."
+  },
+  {
+   "t": 68.95,
+   "text": "The histograms were obviously not all the same — a melanoma's histogram looked different from a lung cancer's, which looked different from a colon cancer's."
+  },
+  {
+   "t": 78.11,
+   "text": "But each individual histogram was also clearly a mixture."
+  },
+  {
+   "t": 82.44,
+   "text": "A melanoma histogram had a huge UV-looking spike, yes, but it also had a baseline of other patterns layered underneath."
+  },
+  {
+   "t": 90.83,
+   "text": "A smoker's lung cancer had the tobacco spike, but also baseline aging mutations and sometimes APOBEC peaks."
+  },
+  {
+   "t": 98.8,
+   "text": "Every individual cancer was a cocktail of several mutational processes, and the relative concentrations of the processes were different from cancer to cancer."
+  },
+  {
+   "t": 108.42,
+   "text": "The math problem was: given a few thousand mixture histograms, recover the small number of basis histograms — the pure signatures — and the mixing proportions for each cancer."
+  },
+  {
+   "t": 119.15,
+   "text": "This is a classic problem in unsupervised machine learning, and it has a name."
+  },
+  {
+   "t": 123.91,
+   "text": "The technique they used is called non-negative matrix factorization, or NMF."
+  },
+  {
+   "t": 129.24,
+   "text": "Let me give you NMF in plain English."
+  },
+  {
+   "t": 131.68,
+   "text": "Imagine you have ten thousand smoothies."
+  },
+  {
+   "t": 134.6,
+   "text": "Each smoothie was made from some combination of, let's say, strawberries, blueberries, bananas, and spinach — four base ingredients."
+  },
+  {
+   "t": 143.47,
+   "text": "You don't know what the recipes were."
+  },
+  {
+   "t": 145.19,
+   "text": "All you have is a chemical analysis of each finished smoothie — say, the levels of vitamin C, anthocyanins, potassium, and chlorophyll in each one."
+  },
+  {
+   "t": 155.68,
+   "text": "Your job is to figure out: (1) what were the four base ingredients, in terms of their chemical fingerprints?"
+  },
+  {
+   "t": 162.31,
+   "text": "And (2) for each smoothie, what was the recipe — what proportion of each ingredient went in?"
+  },
+  {
+   "t": 169.2,
+   "text": "NMF does exactly that, mathematically."
+  },
+  {
+   "t": 172.55,
+   "text": "You arrange the data as a matrix where each row is a category — vitamin C, anthocyanins, et cetera — and each column is a smoothie."
+  },
+  {
+   "t": 183.12,
+   "text": "NMF factorizes that matrix into two smaller matrices."
+  },
+  {
+   "t": 187.47,
+   "text": "One matrix has rows for categories and columns for ingredients — that's the \"what does each base ingredient look like\" matrix."
+  },
+  {
+   "t": 194.69,
+   "text": "The other matrix has rows for ingredients and columns for smoothies — that's the \"how much of each ingredient is in each smoothie\" matrix."
+  },
+  {
+   "t": 202.93,
+   "text": "When you multiply these two smaller matrices together, you reconstruct, approximately, the original data matrix."
+  },
+  {
+   "t": 210.6,
+   "text": "The factorization is constrained so that no entries can be negative — you can't have negative strawberries — which turns out to be the constraint that makes the answer biologically meaningful."
+  },
+  {
+   "t": 221.11,
+   "text": "For mutational signatures, the matrix is even more direct."
+  },
+  {
+   "t": 225.64,
+   "text": "Each column of the data matrix is a cancer genome."
+  },
+  {
+   "t": 228.55,
+   "text": "Each row is one of the 96 trinucleotide categories."
+  },
+  {
+   "t": 233.05,
+   "text": "Each entry is the count of mutations of that category in that genome."
+  },
+  {
+   "t": 237.65,
+   "text": "NMF factorizes this matrix into a \"signature matrix\" — 96 rows, k columns, where k is the number of signatures you're trying to extract — and an \"exposure matrix\" — k rows, one column per genome."
+  },
+  {
+   "t": 251.75,
+   "text": "The signature matrix tells you the shape of each pure signature."
+  },
+  {
+   "t": 255.9,
+   "text": "The exposure matrix tells you how active each signature was in each individual tumor."
+  },
+  {
+   "t": 261.15,
+   "text": "The basis patterns ARE the signatures."
+  },
+  {
+   "t": 263.74,
+   "text": "Read that again."
+  },
+  {
+   "t": 264.84,
+   "text": "The mutational signatures are literally the columns of the matrix that NMF spits out."
+  },
+  {
+   "t": 270.14,
+   "text": "The biological interpretation — \"oh, that one looks like UV\" or \"that one is clearly tobacco\" — is something humans do afterwards, by comparing the extracted shapes to known mutagen patterns."
+  },
+  {
+   "t": 283.53,
+   "text": "NMF itself doesn't know about UV or tobacco."
+  },
+  {
+   "t": 287.5,
+   "text": "It just finds the basis patterns that best decompose the input."
+  },
+  {
+   "t": 291.44,
+   "text": "So here's the analogy."
+  },
+  {
+   "t": 293.0,
+   "text": "Signature extraction is: given the histograms from 1,000 cancers, mathematically decompose them into a small set of basis patterns using non-negative matrix factorization; the basis patterns are the signatures."
+  },
+  {
+   "t": 307.67,
+   "text": "A few details about how Alexandrov actually did it in 2013."
+  },
+  {
+   "t": 312.5,
+   "text": "He didn't run NMF once."
+  },
+  {
+   "t": 314.78,
+   "text": "He ran it hundreds of times, with different random initializations, and selected the most stable solutions."
+  },
+  {
+   "t": 321.63,
+   "text": "He varied the number of signatures k, looking for the value of k that produced reproducible, stable signatures across runs — too few signatures and you can't fit the data; too many and you start splitting real signatures into noisy fragments or fitting random noise."
+  },
+  {
+   "t": 338.25,
+   "text": "The choice of k turned out to be about twenty-one for the dataset he had."
+  },
+  {
+   "t": 342.27,
+   "text": "With more data, more signatures could be reliably extracted — and that's exactly what happened in subsequent years."
+  },
+  {
+   "t": 349.55,
+   "text": "When the twenty-one signatures came out, the interpretation was striking."
+  },
+  {
+   "t": 353.75,
+   "text": "Some signatures had instantly recognizable shapes."
+  },
+  {
+   "t": 357.4,
+   "text": "Signature 7 had a huge C-to-T peak at TCT and CCT contexts — that's UV."
+  },
+  {
+   "t": 364.27,
+   "text": "Signature 4 had a strong C-to-A pattern at NCN contexts — that's tobacco."
+  },
+  {
+   "t": 370.02,
+   "text": "Signatures 2 and 13 had a peak at TCW contexts — that's APOBEC."
+  },
+  {
+   "t": 375.45,
+   "text": "Signature 6 had a broader C-to-T pattern at multiple contexts — that's mismatch repair deficiency."
+  },
+  {
+   "t": 382.37,
+   "text": "Some signatures matched known mutagens immediately."
+  },
+  {
+   "t": 386.27,
+   "text": "Others — like Signature 1, the slow aging signature with C-to-T at CpG sites — matched well-known biochemistry (spontaneous deamination of methylated cytosine)."
+  },
+  {
+   "t": 398.33,
+   "text": "Still others, especially in early versions, had no known cause and were just labeled with numbers, awaiting future biological characterization."
+  },
+  {
+   "t": 407.63,
+   "text": "A handful of signatures, however, turned out to be artifacts of sequencing errors or sample processing — Signature 7 in v1 was real UV, but Signatures 9 and 16 in early versions later got reinterpreted, and a few were quietly retired in subsequent COSMIC versions."
+  },
+  {
+   "t": 424.59,
+   "text": "The field had to build standards for distinguishing real mutational processes from technical artifacts."
+  },
+  {
+   "t": 431.27,
+   "text": "We'll come back to that limitation in Segment 17."
+  },
+  {
+   "t": 435.05,
+   "text": "The 2013 paper essentially defined the field."
+  },
+  {
+   "t": 438.98,
+   "text": "It established the 96-class framework, the NMF method, the practice of extracting signatures from large pan-cancer datasets, and the convention of numbering them."
+  },
+  {
+   "t": 449.22,
+   "text": "Every subsequent advance built on that foundation."
+  }
+ ]
+}

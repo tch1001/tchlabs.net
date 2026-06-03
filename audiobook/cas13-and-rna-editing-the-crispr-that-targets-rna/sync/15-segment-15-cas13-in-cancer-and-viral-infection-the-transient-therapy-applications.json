@@ -1,0 +1,135 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Cas13 in cancer and viral infection — the transient-therapy applications",
+ "duration": 306.72,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Cas13 in cancer and viral infection — the transient-therapy applications"
+  },
+  {
+   "t": 7.03,
+   "text": "I want to spend a segment specifically on therapeutic applications of plain Cas13-mediated knockdown — not RNA editing, just knockdown, the default behavior we covered in Segment 6."
+  },
+  {
+   "t": 19.31,
+   "text": "Because there are some classes of disease where transient, RNA-level knockdown is exactly the right intervention, and Cas13 has some advantages in those contexts."
+  },
+  {
+   "t": 29.62,
+   "text": "The most obvious application is viral infection."
+  },
+  {
+   "t": 32.94,
+   "text": "Many viruses store their genomes as RNA — coronaviruses, influenza, hepatitis C, dengue, Zika, polio, rabies, Ebola, HIV during certain phases — and a Cas13 system targeting the viral RNA can in principle cut up the viral genome directly, blocking replication."
+  },
+  {
+   "t": 53.61,
+   "text": "This is essentially using Cas13 as a programmable antiviral, where the guide RNA encodes which virus you are targeting."
+  },
+  {
+   "t": 61.79,
+   "text": "Several academic groups and a few biotech startups have developed Cas13-based antiviral candidates."
+  },
+  {
+   "t": 69.58,
+   "text": "The most prominent academic work came from Cameron Myhrvold's group, then in the Sabeti lab at the Broad and then at Princeton, who developed PAC-MAN, which stands for Prophylactic Antiviral CRISPR in huMAN cells."
+  },
+  {
+   "t": 81.89,
+   "text": "PAC-MAN was a Cas13d-based antiviral targeting SARS-CoV-2 RNA, demonstrated in cells and in animals during the early pandemic."
+  },
+  {
+   "t": 92.86,
+   "text": "The idea was that you could deliver Cas13d plus guides against conserved regions of the viral genome — via AAV or LNP — and create cells that were resistant to viral replication."
+  },
+  {
+   "t": 105.84,
+   "text": "PAC-MAN did not become a clinically deployed therapy during COVID."
+  },
+  {
+   "t": 110.45,
+   "text": "The delivery problem was hard, the antiviral landscape filled up rapidly with vaccines and antiviral small molecules, and PAC-MAN sits in the category of \"interesting preclinical approach that did not displace the incumbents this time."
+  },
+  {
+   "t": 124.81,
+   "text": "\" But the concept — Cas13 as a programmable antiviral against RNA viruses — remains attractive for future pandemic preparedness."
+  },
+  {
+   "t": 133.76,
+   "text": "The next time a novel RNA virus emerges, the platform is ready in a way it was not in early 2020."
+  },
+  {
+   "t": 140.6,
+   "text": "The other big therapeutic category for Cas13 knockdown is cancer."
+  },
+  {
+   "t": 145.84,
+   "text": "Cancers are caused, in many cases, by overexpression or mutation of specific oncogenes — KRAS, MYC, BCL2, and many others."
+  },
+  {
+   "t": 157.14,
+   "text": "Lowering the expression of those oncogenes can sometimes shrink the tumor."
+  },
+  {
+   "t": 162.09,
+   "text": "siRNAs against oncogenes have been tried clinically, with mixed results — the delivery problem to tumor tissue is particularly hard."
+  },
+  {
+   "t": 171.44,
+   "text": "Cas13 against oncogenes offers some potential advantages: better tissue specificity through cell-type-specific promoters in AAV delivery; better long-term knockdown through stable expression of the Cas13 system in transduced cells; potential to combine multiple guides in one construct to hit several oncogenes at once."
+  },
+  {
+   "t": 194.22,
+   "text": "Companies and academic groups working on Cas13-mediated knockdown for cancer have pursued various indications — particularly in cancers where there is a clear single dominant oncogene driving the disease."
+  },
+  {
+   "t": 207.57,
+   "text": "As of 2026, none of these have reached late-stage clinical trials, but the preclinical case is strong enough that the area continues to receive investment."
+  },
+  {
+   "t": 217.88,
+   "text": "There is a third category I want to mention, which is dominant-negative genetic diseases."
+  },
+  {
+   "t": 222.78,
+   "text": "Some genetic diseases — like certain forms of Huntington's disease, certain ALS variants, certain neurodegenerative diseases — are caused by a single mutant allele producing a toxic protein."
+  },
+  {
+   "t": 235.28,
+   "text": "The patient also has a healthy wild-type allele on their other chromosome, which produces functional protein."
+  },
+  {
+   "t": 241.76,
+   "text": "The disease is dominant-negative because the toxic mutant protein actively harms the cell, even in the presence of normal protein."
+  },
+  {
+   "t": 250.03,
+   "text": "For these diseases, the therapeutic goal can be allele-specific knockdown."
+  },
+  {
+   "t": 255.03,
+   "text": "You want to lower the expression of the mutant allele while leaving the wild-type allele alone."
+  },
+  {
+   "t": 260.28,
+   "text": "Cas13, with its ability to distinguish sequence differences of as little as a single nucleotide under the right conditions, is in principle a candidate platform for this — you design a guide RNA that matches the mutant allele specifically, with a mismatch against the wild-type allele, and Cas13 should preferentially cut the mutant transcript."
+  },
+  {
+   "t": 282.29,
+   "text": "In practice, the discrimination is hard."
+  },
+  {
+   "t": 285.39,
+   "text": "Single-nucleotide allele-specific knockdown has been demonstrated in cellular assays with Cas13, but achieving it robustly in patient tissues with adequate selectivity is an active research challenge."
+  },
+  {
+   "t": 298.11,
+   "text": "siRNAs and ASOs have been pursued for the same purpose with mixed success."
+  },
+  {
+   "t": 302.59,
+   "text": "The conceptual principle is sound; the engineering is hard."
+  }
+ ]
+}

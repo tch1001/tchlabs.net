@@ -1,0 +1,219 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Input controls and the question of background",
+ "duration": 298.45,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Input controls and the question of background"
+  },
+  {
+   "t": 4.38,
+   "text": "Let me ask you a question."
+  },
+  {
+   "t": 5.78,
+   "text": "Suppose you've done a beautiful ChIP-seq experiment."
+  },
+  {
+   "t": 9.55,
+   "text": "The antibody was validated."
+  },
+  {
+   "t": 11.75,
+   "text": "The crosslinking went well."
+  },
+  {
+   "t": 13.41,
+   "text": "The sonication produced clean 200-base-pair fragments."
+  },
+  {
+   "t": 17.55,
+   "text": "The library was sequenced to thirty million reads."
+  },
+  {
+   "t": 20.84,
+   "text": "You align them to the genome, and you see read pileups at thousands of positions."
+  },
+  {
+   "t": 26.0,
+   "text": "How do you know which pileups are real binding events and which are just background?"
+  },
+  {
+   "t": 30.27,
+   "text": "This question is more subtle than it looks."
+  },
+  {
+   "t": 33.17,
+   "text": "Because here's the thing — even in a no-antibody, no-IP control, you will get reads distributed across the genome."
+  },
+  {
+   "t": 40.74,
+   "text": "Some regions of the genome are intrinsically over-represented in any sequencing experiment, for reasons that have nothing to do with your protein."
+  },
+  {
+   "t": 49.77,
+   "text": "Open chromatin — accessible regions like active promoters and enhancers — fragments more easily under sonication, so it's over-represented in the input."
+  },
+  {
+   "t": 59.88,
+   "text": "Repetitive regions and high-copy elements like ribosomal DNA repeats give you huge read pileups just because the sequence appears many times in the genome."
+  },
+  {
+   "t": 70.2,
+   "text": "GC-biased regions get amplified preferentially during the PCR step of library prep."
+  },
+  {
+   "t": 76.8,
+   "text": "Mappability — the ease with which short reads can be uniquely placed on the reference genome — varies across the genome, and unmappable regions look like deserts even when they're real."
+  },
+  {
+   "t": 88.26,
+   "text": "If you just looked at the raw ChIP-seq read pileup and called every pile a peak, you'd call thousands of peaks that have nothing to do with your protein — they're just artifacts of the underlying fragmentation, amplification, and alignment process."
+  },
+  {
+   "t": 102.66,
+   "text": "To separate signal from background, you need a baseline."
+  },
+  {
+   "t": 106.11,
+   "text": "A reference for what the reads should look like in the absence of any specific enrichment by your antibody."
+  },
+  {
+   "t": 113.08,
+   "text": "That baseline is the input control."
+  },
+  {
+   "t": 115.85,
+   "text": "The idea is simple."
+  },
+  {
+   "t": 117.54,
+   "text": "You take a portion of your crosslinked, fragmented chromatin — the same starting material as the IP sample — but you skip the immunoprecipitation step."
+  },
+  {
+   "t": 126.79,
+   "text": "You just reverse the crosslinks, purify the DNA, make a library, and sequence it."
+  },
+  {
+   "t": 132.64,
+   "text": "The result is a genome-wide sample of \"what the chromatin fragmentation produces, before any antibody is added."
+  },
+  {
+   "t": 140.3,
+   "text": "\" Every bias of the upstream process is captured in the input: the sonication preferences, the GC bias, the mappability landscape, the repeats."
+  },
+  {
+   "t": 151.01,
+   "text": "The input is the null model."
+  },
+  {
+   "t": 152.94,
+   "text": "It's what you'd see if you had an antibody that bound nothing in particular."
+  },
+  {
+   "t": 157.44,
+   "text": "The analogy: the input control is the negative control — sequence chromatin without the IP."
+  },
+  {
+   "t": 164.0,
+   "text": "Anywhere the ChIP signal is just background-like, you ignore."
+  },
+  {
+   "t": 167.68,
+   "text": "Anywhere the ChIP signal jumps above the input baseline, you call a peak."
+  },
+  {
+   "t": 172.19,
+   "text": "That's it."
+  },
+  {
+   "t": 172.97,
+   "text": "The whole logic of peak calling reduces to a comparison between the ChIP sample and the input."
+  },
+  {
+   "t": 179.01,
+   "text": "There are variants of the control idea."
+  },
+  {
+   "t": 181.15,
+   "text": "Some people use an IgG control — they do the entire IP protocol but use a non-specific antibody (just generic IgG that doesn't target anything)."
+  },
+  {
+   "t": 191.5,
+   "text": "The advantage is that it captures any non-specific stickiness of the bead/antibody system."
+  },
+  {
+   "t": 197.46,
+   "text": "The disadvantage is that the IgG control typically yields very little DNA, and the reads are noisy because there's so little input to the library prep."
+  },
+  {
+   "t": 207.34,
+   "text": "In practice, input control is the standard, IgG is occasionally a supplement."
+  },
+  {
+   "t": 213.45,
+   "text": "For some experiments, particularly histone modification ChIP-seq, people use an H3 control — total H3 ChIP — to normalize for nucleosome occupancy, since the question isn't \"is there chromatin here?"
+  },
+  {
+   "t": 227.54,
+   "text": "\" but \"is this modified chromatin here?"
+  },
+  {
+   "t": 230.61,
+   "text": "\""
+  },
+  {
+   "t": 230.81,
+   "text": "A practical note."
+  },
+  {
+   "t": 232.05,
+   "text": "Input is not optional."
+  },
+  {
+   "t": 233.71,
+   "text": "If you ever read a ChIP-seq paper that doesn't include an input control, treat it with deep skepticism."
+  },
+  {
+   "t": 240.24,
+   "text": "The peaks they call could be entirely artifactual."
+  },
+  {
+   "t": 243.11,
+   "text": "The same applies to comparisons between samples — you need an input control for each cell type and condition, because the background biases shift with the chromatin state."
+  },
+  {
+   "t": 253.15,
+   "text": "ENCODE consortium standards require input controls."
+  },
+  {
+   "t": 257.09,
+   "text": "So do all the major peak-calling tools — they won't even run without one."
+  },
+  {
+   "t": 261.7,
+   "text": "If you're designing a ChIP-seq experiment from scratch, budget for the input library in your sequencing costs from day one."
+  },
+  {
+   "t": 269.67,
+   "text": "The deeper conceptual point here is that ChIP-seq is fundamentally a comparative assay."
+  },
+  {
+   "t": 276.06,
+   "text": "You're never asking \"is there read coverage at position X?"
+  },
+  {
+   "t": 279.96,
+   "text": "\" You're asking \"is there more read coverage at position X in the IP than in the input?"
+  },
+  {
+   "t": 285.7,
+   "text": "\" The signal you care about is enrichment, not absolute counts."
+  },
+  {
+   "t": 289.92,
+   "text": "This will shape everything we do in the next segment, where the question is: how do you actually quantify that enrichment and call peaks?"
+  }
+ ]
+}

@@ -1,0 +1,319 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The genome remembers — why mutations have fingerprints",
+ "duration": 530.08,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The genome remembers — why mutations have fingerprints"
+  },
+  {
+   "t": 4.9,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 6.35,
+   "text": "For the next two hours, we're going to talk about one of the most beautiful ideas in modern cancer genomics — an idea that took roughly thirty years of accumulating data and one extraordinary mathematical insight to bring into focus."
+  },
+  {
+   "t": 21.02,
+   "text": "The idea is this: every mutational process that has ever damaged a cell's DNA leaves a characteristic fingerprint in the genome, and if you collect enough cancer genomes, you can read those fingerprints back out."
+  },
+  {
+   "t": 34.11,
+   "text": "Let me say that again, because it's the whole lecture in one sentence."
+  },
+  {
+   "t": 38.19,
+   "text": "The genome is not a passive carrier of random damage."
+  },
+  {
+   "t": 41.77,
+   "text": "It is an archive."
+  },
+  {
+   "t": 42.95,
+   "text": "When ultraviolet light from the sun hits a skin cell and crosslinks two adjacent thymines into a pyrimidine dimer, and the cell's repair machinery botches the fix and installs a wrong base — that mutation is not random."
+  },
+  {
+   "t": 57.26,
+   "text": "It has a shape."
+  },
+  {
+   "t": 58.39,
+   "text": "It is C-to-T at a particular position, in a particular sequence context, and it occurs more often at certain neighboring bases than at others."
+  },
+  {
+   "t": 67.26,
+   "text": "When the polycyclic aromatic hydrocarbons in tobacco smoke bind covalently to guanines in a lung cell's DNA, the resulting mutations are also not random."
+  },
+  {
+   "t": 78.17,
+   "text": "They're predominantly G-to-T transversions, and they cluster preferentially in certain trinucleotide neighborhoods."
+  },
+  {
+   "t": 86.55,
+   "text": "When the APOBEC family of cytidine deaminases — which, in their day job, are part of your antiviral defense — go rogue in a tumor and start deaminating cytosines in single-stranded DNA, those mutations also have a fingerprint."
+  },
+  {
+   "t": 101.36,
+   "text": "Specifically, they hit cytosines preceded by a thymine."
+  },
+  {
+   "t": 105.81,
+   "text": "Three completely different mutagens."
+  },
+  {
+   "t": 108.45,
+   "text": "Three completely different fingerprints."
+  },
+  {
+   "t": 110.99,
+   "text": "All recorded, faithfully, in the DNA of the cells they damaged."
+  },
+  {
+   "t": 115.69,
+   "text": "This is the central claim of mutational signature analysis, and it is, when you really sit with it, an astonishing claim."
+  },
+  {
+   "t": 124.67,
+   "text": "It says: hand me a cancer genome — just a list of the mutations in it, nothing else — and I will tell you, with reasonable confidence, what mutagens that cell was exposed to over its lifetime."
+  },
+  {
+   "t": 136.56,
+   "text": "Was it sun damage?"
+  },
+  {
+   "t": 137.99,
+   "text": "Tobacco smoke?"
+  },
+  {
+   "t": 139.32,
+   "text": "A particular chemotherapy drug given to the patient three years ago?"
+  },
+  {
+   "t": 143.91,
+   "text": "A defect in a specific DNA repair pathway?"
+  },
+  {
+   "t": 147.38,
+   "text": "The genome encodes all of that, in the patterns of where mutations sit and what bases sit next to them."
+  },
+  {
+   "t": 154.49,
+   "text": "We just had to learn how to read it."
+  },
+  {
+   "t": 156.11,
+   "text": "If you walk out of here in two hours and you can do three things — one, explain to a friend without jargon what a mutational signature is and why different mutagens leave different patterns; two, list the half-dozen most clinically important COSMIC signatures and what each one tells you about the patient; three, sketch on a whiteboard the 96-class substitution framework and explain why we use trinucleotide contexts rather than just six substitution types — then we've succeeded."
+  },
+  {
+   "t": 185.74,
+   "text": "Everything else is detail hung onto that scaffold."
+  },
+  {
+   "t": 189.75,
+   "text": "Now, let me give you the analogy I want you to carry through this whole lecture."
+  },
+  {
+   "t": 194.6,
+   "text": "Mutational signatures are the molecular fingerprints of carcinogens."
+  },
+  {
+   "t": 198.99,
+   "text": "Just as a human fingerprint is a unique pattern of ridges and whorls that identifies a person, every mutagenic process — ultraviolet light, tobacco smoke, APOBEC enzymes, defective mismatch repair, defective homologous recombination, alkylating chemotherapy, aflatoxin, aristolochic acid, even the slow ticking of cellular metabolism over decades — leaves a unique pattern of mutations in the DNA it damages."
+  },
+  {
+   "t": 227.34,
+   "text": "The genome records its own history."
+  },
+  {
+   "t": 229.88,
+   "text": "Every cell in a tumor is a paleontological dig site."
+  },
+  {
+   "t": 234.14,
+   "text": "The mutations are the bones."
+  },
+  {
+   "t": 235.95,
+   "text": "And the signatures are the species the bones belonged to."
+  },
+  {
+   "t": 239.35,
+   "text": "That analogy is going to do a lot of work for us."
+  },
+  {
+   "t": 242.85,
+   "text": "Carry it."
+  },
+  {
+   "t": 243.69,
+   "text": "Here's the second thing to know up front."
+  },
+  {
+   "t": 245.95,
+   "text": "This field essentially did not exist in 2012."
+  },
+  {
+   "t": 250.1,
+   "text": "The mathematical framework that lets us extract signatures from cancer genomes was published in a single landmark paper in 2013, by Ludmil Alexandrov, Serena Nik-Zainal, Michael Stratton, and colleagues at the Wellcome Sanger Institute in Cambridge, England."
+  },
+  {
+   "t": 266.35,
+   "text": "Before that paper, people had noticed patterns in cancer mutations — they knew, qualitatively, that lung cancers from smokers had a lot of G-to-T transversions, and that melanomas had a lot of C-to-T transitions at dipyrimidines."
+  },
+  {
+   "t": 280.88,
+   "text": "The patterns were real."
+  },
+  {
+   "t": 282.38,
+   "text": "But nobody had a principled mathematical method to take a heterogeneous pile of cancer genomes, where each tumor had been shaped by multiple different mutagenic processes mixed together, and decompose the pile into its underlying basis patterns."
+  },
+  {
+   "t": 297.7,
+   "text": "That's what Alexandrov and Stratton did."
+  },
+  {
+   "t": 300.17,
+   "text": "They used a technique called non-negative matrix factorization — we'll spend a whole segment on that — and they extracted twenty-one signatures from about seven thousand cancer genomes."
+  },
+  {
+   "t": 311.09,
+   "text": "Each signature corresponded, with hindsight, to a specific mutational process."
+  },
+  {
+   "t": 317.17,
+   "text": "The field exploded."
+  },
+  {
+   "t": 318.57,
+   "text": "And it kept exploding."
+  },
+  {
+   "t": 320.2,
+   "text": "The Catalogue Of Somatic Mutations In Cancer — COSMIC, run out of the Sanger Institute — became the central repository."
+  },
+  {
+   "t": 328.57,
+   "text": "COSMIC version 2, released in 2018, contained thirty single-base substitution signatures."
+  },
+  {
+   "t": 335.84,
+   "text": "Version 3, released in 2020, added indel signatures and doublet substitution signatures, and refined the SBS list."
+  },
+  {
+   "t": 345.42,
+   "text": "Version 3.4, released in 2024, contains roughly a hundred signatures across all categories."
+  },
+  {
+   "t": 353.35,
+   "text": "The field has gone from \"we suspect cancer mutations have patterns\" to \"we have a comprehensive atlas of nearly a hundred distinguishable patterns, many of them with known causes, and we use them clinically to guide treatment."
+  },
+  {
+   "t": 366.37,
+   "text": "\""
+  },
+  {
+   "t": 366.57,
+   "text": "That's the trajectory."
+  },
+  {
+   "t": 368.04,
+   "text": "From qualitative observation in the 1990s, to mathematical extraction in 2013, to clinical application by 2020."
+  },
+  {
+   "t": 376.88,
+   "text": "In one undergrad lecture, we'll walk the whole arc."
+  },
+  {
+   "t": 379.93,
+   "text": "A few orienting facts before we go deeper."
+  },
+  {
+   "t": 382.88,
+   "text": "A typical cancer genome carries somewhere between a thousand and a hundred thousand somatic point mutations — the exact number depends enormously on the cancer type."
+  },
+  {
+   "t": 392.09,
+   "text": "A pediatric leukemia might have just a few hundred."
+  },
+  {
+   "t": 395.85,
+   "text": "A pancreatic adenocarcinoma might have ten thousand."
+  },
+  {
+   "t": 399.58,
+   "text": "A lung cancer from a long-term smoker might have fifty thousand or more."
+  },
+  {
+   "t": 404.48,
+   "text": "A melanoma from chronically sun-exposed skin can exceed a hundred thousand."
+  },
+  {
+   "t": 409.35,
+   "text": "A hypermutated colon cancer with mismatch repair deficiency can blow past a million."
+  },
+  {
+   "t": 415.08,
+   "text": "The range is enormous, and the range itself is informative — a high mutation burden tells you something about the mutational history."
+  },
+  {
+   "t": 424.6,
+   "text": "A cancer with a million mutations did not get there by random accident; some specific mutational process was operating at high intensity."
+  },
+  {
+   "t": 433.38,
+   "text": "And here's the thing."
+  },
+  {
+   "t": 434.58,
+   "text": "Most cancers are not driven by a single mutational process."
+  },
+  {
+   "t": 438.39,
+   "text": "They're driven by several, layered on top of each other, with different intensities at different times during the tumor's evolution."
+  },
+  {
+   "t": 446.2,
+   "text": "A smoker's lung cancer has tobacco signature mutations, but it also has the slow aging signature that all cells accumulate, plus maybe an APOBEC signature on top, plus, if the patient was treated with platinum chemotherapy, a platinum signature added in the late stages."
+  },
+  {
+   "t": 462.68,
+   "text": "The genome is a layered palimpsest of every mutagenic process that touched it."
+  },
+  {
+   "t": 468.38,
+   "text": "The job of signature analysis is to peel the layers apart."
+  },
+  {
+   "t": 472.05,
+   "text": "That peeling-apart is what non-negative matrix factorization does."
+  },
+  {
+   "t": 476.42,
+   "text": "It is a mathematical operation that takes a mixture and decomposes it into its components, under the constraint that none of the components can be negative — which makes biological sense, because you can't have a negative number of mutations."
+  },
+  {
+   "t": 489.83,
+   "text": "We'll go deep on NMF in Segment 4."
+  },
+  {
+   "t": 492.82,
+   "text": "For now, just hold the image: the cancer genome is a smoothie, and signature analysis is the chemical procedure that lets you reconstruct which fruits went into the blender."
+  },
+  {
+   "t": 504.24,
+   "text": "So that's the contract for the next two hours."
+  },
+  {
+   "t": 506.78,
+   "text": "We're going to build the framework — the 96-class substitution scheme, the NMF math, the COSMIC database — then walk through the half-dozen most clinically important signatures one by one, then talk about how they're being used in clinical decision-making today, and end with the frontier."
+  },
+  {
+   "t": 523.92,
+   "text": "Let's start where the field started: by realizing that the six basic substitution types are not enough."
+  }
+ ]
+}

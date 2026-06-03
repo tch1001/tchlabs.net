@@ -1,0 +1,211 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Multiple non-canonical amino acids and quadruplet codons",
+ "duration": 372.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Multiple non-canonical amino acids and quadruplet codons"
+  },
+  {
+   "t": 5.96,
+   "text": "Suppose you want to install two different non-canonical amino acids in the same protein."
+  },
+  {
+   "t": 11.61,
+   "text": "Maybe you want a click handle on residue 47 for site-specific labeling, and a photocrosslinker on residue 123 for capturing a binding partner."
+  },
+  {
+   "t": 21.48,
+   "text": "You want both in the same protein, in the same cell, at the same time."
+  },
+  {
+   "t": 25.65,
+   "text": "With only one orthogonal pair, reading only one private codon, you can't do this."
+  },
+  {
+   "t": 31.41,
+   "text": "You can only install one chemistry per protein."
+  },
+  {
+   "t": 34.6,
+   "text": "To install two non-canonical amino acids, you need two orthogonal pairs — two engineered synthetase-tRNA pairs — that are orthogonal to each other and to the host."
+  },
+  {
+   "t": 46.09,
+   "text": "Pair one charges its tRNA with non-canonical amino acid number one, and reads codon number one."
+  },
+  {
+   "t": 52.91,
+   "text": "Pair two charges its tRNA with non-canonical amino acid number two, and reads codon number two."
+  },
+  {
+   "t": 59.45,
+   "text": "The two pairs don't crosstalk, the two codons don't collide, and you can put codon one and codon two in your gene at whatever positions you want."
+  },
+  {
+   "t": 68.1,
+   "text": "The first move is easy: use MjTyrRS for one pair and PylRS for the other."
+  },
+  {
+   "t": 75.1,
+   "text": "They're orthogonal to each other (because they come from different evolutionary lineages and recognize different tRNAs) and both are orthogonal to E. coli."
+  },
+  {
+   "t": 84.74,
+   "text": "So with MjTyrRS evolved to handle non-canonical amino acid one, and PylRS evolved to handle non-canonical amino acid two, you've got the two pairs."
+  },
+  {
+   "t": 95.7,
+   "text": "Good."
+  },
+  {
+   "t": 96.31,
+   "text": "The hard part is the codons."
+  },
+  {
+   "t": 98.46,
+   "text": "You need two private codons."
+  },
+  {
+   "t": 100.42,
+   "text": "UAG is the obvious one."
+  },
+  {
+   "t": 102.39,
+   "text": "What's the second?"
+  },
+  {
+   "t": 103.45,
+   "text": "The cleanest second option is UAA, the ochre stop codon, repurposed in the same way amber is repurposed."
+  },
+  {
+   "t": 111.16,
+   "text": "But in normal E. coli, UAA is the most common stop codon — used by the majority of genes — and freeing it up would require an even more massive recoding project than Church's UAG work."
+  },
+  {
+   "t": 124.0,
+   "text": "UAA recoding is being attempted, but it hasn't reached the same maturity as UAG recoding."
+  },
+  {
+   "t": 130.68,
+   "text": "A different option, and the one that opened up a beautiful new direction, is to use a quadruplet codon."
+  },
+  {
+   "t": 137.14,
+   "text": "The standard genetic code reads in triplets — three letters at a time."
+  },
+  {
+   "t": 141.57,
+   "text": "But the ribosome, with a properly designed tRNA, can be made to read in four-letter chunks."
+  },
+  {
+   "t": 147.78,
+   "text": "If you design a tRNA whose anticodon is four bases long rather than three, and engineer that tRNA to be efficient enough that the ribosome can frame-shift around it, then you can use a four-letter codon — like AGGA, or UAGA, or any other four-letter combination — as a private address."
+  },
+  {
+   "t": 166.43,
+   "text": "The advantage of quadruplet codons is that there are huge numbers of them — 256 possible four-letter combinations — and most of them have never been used by nature."
+  },
+  {
+   "t": 177.3,
+   "text": "You can pick a quadruplet codon that doesn't appear anywhere in your host genome, and use it as a brand-new private address with essentially zero competition from native genes."
+  },
+  {
+   "t": 187.4,
+   "text": "Quadruplet codons are a way to expand the codon space rather than just the amino acid space."
+  },
+  {
+   "t": 193.47,
+   "text": "The Jason Chin lab at the MRC Laboratory of Molecular Biology in Cambridge has done much of the foundational work on quadruplet codons."
+  },
+  {
+   "t": 202.41,
+   "text": "By engineering orthogonal ribosomes that read quadruplet codons more efficiently than the host ribosome, and by combining quadruplet codons with amber suppression, Chin's lab has demonstrated incorporation of multiple distinct non-canonical amino acids into the same protein."
+  },
+  {
+   "t": 219.21,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 220.51,
+   "text": "A quadruplet codon is like adding a new digit to the alphabet itself — instead of three-letter words, the ribosome can read four-letter words, and the dictionary of possible meanings explodes."
+  },
+  {
+   "t": 232.62,
+   "text": "Triplet codons gave us sixty-four possible meanings."
+  },
+  {
+   "t": 236.34,
+   "text": "Quadruplet codons give us two hundred and fifty-six."
+  },
+  {
+   "t": 240.03,
+   "text": "Five-letter codons would give us over a thousand."
+  },
+  {
+   "t": 243.2,
+   "text": "The ribosome, in principle, doesn't care — given a tRNA with the right anticodon length and the right binding geometry, it'll read whatever framing you provide."
+  },
+  {
+   "t": 253.81,
+   "text": "The genetic code, with quadruplet codons, becomes a much richer language."
+  },
+  {
+   "t": 259.2,
+   "text": "I should be honest: quadruplet codon decoding is still less efficient than triplet decoding."
+  },
+  {
+   "t": 265.37,
+   "text": "There's a price you pay for frameshifting around the standard reading frame."
+  },
+  {
+   "t": 269.57,
+   "text": "Yields of protein with quadruplet codons tend to be lower than yields with triplet amber suppression."
+  },
+  {
+   "t": 275.37,
+   "text": "The technology is real and growing, but it's an active research area, not yet a mature workhorse like amber suppression."
+  },
+  {
+   "t": 283.0,
+   "text": "The current trend is toward combining strategies — using both freed-up triplet codons (UAG, plus eventually UAA, plus eventually some sense codon) and quadruplet codons — to build proteins with multiple distinct non-canonical amino acids."
+  },
+  {
+   "t": 299.39,
+   "text": "The endpoint of this line of research is a cell whose ribosome reads many distinct codons each assigned to a distinct non-canonical amino acid, and where you can install three, four, even five different chemistries in the same protein."
+  },
+  {
+   "t": 314.25,
+   "text": "We're not all the way there yet, but the trajectory is clear."
+  },
+  {
+   "t": 317.91,
+   "text": "Let me pause here and check in."
+  },
+  {
+   "t": 319.69,
+   "text": "We've covered: the natural exception cases (selenocysteine and pyrrolysine), the orthogonal pair concept, amber suppression, the Schultz 2001 paper, PylRS as a second platform, the catalog of installable amino acid chemistries, the Church recoded E. coli, and the move toward multiple non-canonical amino acids via quadruplet codons."
+  },
+  {
+   "t": 342.23,
+   "text": "That's the technical core of the field."
+  },
+  {
+   "t": 344.43,
+   "text": "In the second hour, we'll spend our time on what people are doing with these tools — the applications that matter, in medicine, in biology, in biosecurity."
+  },
+  {
+   "t": 353.55,
+   "text": "And we'll end with a look at the frontier, including AI-assisted design of new synthetases, multi-codon recoding, and synthetic genomes."
+  },
+  {
+   "t": 362.96,
+   "text": "Let's take a short break here."
+  },
+  {
+   "t": 364.44,
+   "text": "When we come back, we'll start with the most commercially important application of genetic code expansion: site-specific antibody-drug conjugates."
+  }
+ ]
+}

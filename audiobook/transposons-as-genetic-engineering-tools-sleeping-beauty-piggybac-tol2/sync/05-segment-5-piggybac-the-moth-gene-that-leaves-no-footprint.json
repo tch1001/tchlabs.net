@@ -1,0 +1,179 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — PiggyBac: the moth gene that leaves no footprint",
+ "duration": 326.65,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — PiggyBac: the moth gene that leaves no footprint"
+  },
+  {
+   "t": 5.25,
+   "text": "PiggyBac was discovered by Malcolm Fraser at Notre Dame in the early 1980s, but the story of how it became a vertebrate gene-delivery tool really begins in the 2000s."
+  },
+  {
+   "t": 16.11,
+   "text": "Fraser was studying baculoviruses — large DNA viruses that infect insects — and he noticed that occasionally, baculovirus genomes picked up extra DNA insertions that had clearly come from the host insect's genome."
+  },
+  {
+   "t": 29.8,
+   "text": "One of these insertions was a 2.4-kilobase element from the cabbage looper moth, Trichoplusia ni."
+  },
+  {
+   "t": 36.42,
+   "text": "The element had short inverted terminal repeats and a transposase gene in the middle."
+  },
+  {
+   "t": 41.76,
+   "text": "Fraser named it PiggyBac, because it had hitched a ride on the baculovirus genome — riding piggyback, so to speak."
+  },
+  {
+   "t": 48.6,
+   "text": "For about twenty years, PiggyBac was an obscure insect transposon."
+  },
+  {
+   "t": 53.69,
+   "text": "Then, around 2005, several labs independently tested it in vertebrate cells, and to everyone's slight surprise, it worked beautifully right out of the gate."
+  },
+  {
+   "t": 63.67,
+   "text": "Unlike Sleeping Beauty, PiggyBac had never been a vertebrate transposon, so it hadn't accumulated millions of years of vertebrate-specific suppression — there was no host machinery in mammalian cells that recognized it and silenced it."
+  },
+  {
+   "t": 78.29,
+   "text": "The natural moth transposase, expressed in human cells, was already pretty active."
+  },
+  {
+   "t": 83.69,
+   "text": "With some optimization, including a hyperactive variant called hyPB developed by Yusa, Bradley and colleagues in 2011, the system became competitive with Sleeping Beauty for most applications."
+  },
+  {
+   "t": 96.44,
+   "text": "PiggyBac has two distinctive features that make it special."
+  },
+  {
+   "t": 100.53,
+   "text": "The first is its target site: PiggyBac requires a specific four-base-pair sequence, TTAA, at the integration site."
+  },
+  {
+   "t": 108.78,
+   "text": "It will only insert where there's a TTAA."
+  },
+  {
+   "t": 111.4,
+   "text": "TTAA sites are common in the genome — they appear on average every couple hundred base pairs, scattered widely — so this isn't a severe restriction."
+  },
+  {
+   "t": 120.8,
+   "text": "But it does constrain the integration profile in interesting ways."
+  },
+  {
+   "t": 125.01,
+   "text": "TTAA sites tend to be enriched in certain genomic regions, particularly near transcription start sites and within gene bodies."
+  },
+  {
+   "t": 134.07,
+   "text": "So PiggyBac, more than Sleeping Beauty, biases toward inserting in or near active genes."
+  },
+  {
+   "t": 140.8,
+   "text": "We'll come back to whether that's a problem in Segment 9."
+  },
+  {
+   "t": 143.88,
+   "text": "The second distinctive feature, and the one that makes PiggyBac unique among all known transposons used in gene therapy, is that it leaves no footprint when it excises."
+  },
+  {
+   "t": 154.15,
+   "text": "Remember from Segment 2 that most transposons, when they jump out of a donor site, leave behind a double-strand break that gets repaired sloppily, often introducing small indels."
+  },
+  {
+   "t": 165.68,
+   "text": "PiggyBac, when it excises, restores the original TTAA target site exactly."
+  },
+  {
+   "t": 172.3,
+   "text": "The repair is perfect."
+  },
+  {
+   "t": 173.86,
+   "text": "You can excise a PiggyBac transposon from a genomic location and end up with the exact same sequence at that location as if the transposon had never been there."
+  },
+  {
+   "t": 183.62,
+   "text": "Why does this matter?"
+  },
+  {
+   "t": 184.78,
+   "text": "Because it gives you reversibility."
+  },
+  {
+   "t": 186.79,
+   "text": "If you put a transgene into a cell's genome on a PiggyBac transposon, and later you want to remove that transgene, you can — by transiently re-expressing the transposase."
+  },
+  {
+   "t": 197.49,
+   "text": "The enzyme finds the ITRs, cuts the transposon out, and the cell repairs the gap so cleanly that there's no scar."
+  },
+  {
+   "t": 205.12,
+   "text": "The cell ends up genomically identical to its starting state, except that it has, during the interim, been transformed by whatever the transgene was doing."
+  },
+  {
+   "t": 214.59,
+   "text": "This footprint-free excision is what made PiggyBac the star tool for iPSC reprogramming, which we'll cover in detail in Segment 13."
+  },
+  {
+   "t": 223.24,
+   "text": "The short version: to make induced pluripotent stem cells, you have to deliver the Yamanaka reprogramming factors — Oct4, Sox2, Klf4, c-Myc — to a somatic cell."
+  },
+  {
+   "t": 235.89,
+   "text": "If you deliver them on a lentivirus, you get permanent integration of the reprogramming cassette, which is a safety problem because c-Myc is an oncogene."
+  },
+  {
+   "t": 244.64,
+   "text": "If you deliver them on a PiggyBac, you can integrate them long enough to do the reprogramming, then excise the entire cassette cleanly and end up with iPSCs that have no leftover transgenes in their genomes."
+  },
+  {
+   "t": 257.1,
+   "text": "That's a huge advantage for making clinical-grade pluripotent stem cells."
+  },
+  {
+   "t": 262.06,
+   "text": "The PiggyBac analogy I want you to remember: the TTAA target site is the bookmark."
+  },
+  {
+   "t": 267.57,
+   "text": "Wherever there's a TTAA in the genome, the transposase can grab and insert the cargo."
+  },
+  {
+   "t": 273.28,
+   "text": "And when the cargo is later removed, the bookmark is restored — the TTAA reappears, untouched, as if the page had never been folded."
+  },
+  {
+   "t": 282.87,
+   "text": "Sleeping Beauty's TA sites are also bookmarks in a sense, but Sleeping Beauty's are smudged on the way out — the TA gets damaged by the repair after excision."
+  },
+  {
+   "t": 292.28,
+   "text": "PiggyBac's bookmarks are pristine."
+  },
+  {
+   "t": 294.58,
+   "text": "That difference is what makes PiggyBac the scarless choice."
+  },
+  {
+   "t": 298.06,
+   "text": "PiggyBac's cargo capacity is also somewhat larger than Sleeping Beauty's — it can handle inserts of up to about 14 kilobases reasonably efficiently, and somewhat larger if you're willing to accept a drop in efficiency."
+  },
+  {
+   "t": 311.76,
+   "text": "So for moderately large cargos that don't quite fit in a lentivirus but where you don't need to go all the way to Tol2's enormous capacity, PiggyBac sits in a useful middle range."
+  },
+  {
+   "t": 322.65,
+   "text": "Now let's meet the third system, which is the cargo champion."
+  }
+ ]
+}

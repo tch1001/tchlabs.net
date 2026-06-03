@@ -1,0 +1,275 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — CRISPR in the zygote: the 10x speedup",
+ "duration": 468.63,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — CRISPR in the zygote: the 10x speedup"
+  },
+  {
+   "t": 4.99,
+   "text": "If gene targeting in ES cells was the technique that turned mice into programmable mammals, then CRISPR in the zygote is the technique that turned the programming from a sixteen-month project into a three-month project."
+  },
+  {
+   "t": 17.88,
+   "text": "It is, by most measures, the single biggest practical advance in mouse model production in the past thirty years."
+  },
+  {
+   "t": 24.88,
+   "text": "Let me walk you through what changed."
+  },
+  {
+   "t": 27.11,
+   "text": "The classical workflow, as we've laid out: design a targeting vector with homology arms and selection cassettes, transfect ES cells, select for G418 resistance and against TK, pick colonies, screen for correct integration, inject correct colonies into blastocysts, foster, identify chimeras, breed for germline transmission, intercross to homozygosity."
+  },
+  {
+   "t": 51.06,
+   "text": "Sixteen months."
+  },
+  {
+   "t": 52.4,
+   "text": "Multiple cell-culture steps, multiple selection steps, multiple breeding rounds, multiple opportunities for things to go wrong."
+  },
+  {
+   "t": 60.65,
+   "text": "The CRISPR workflow, in its simplest form: design a guide RNA targeting your gene of interest."
+  },
+  {
+   "t": 67.44,
+   "text": "Mix the guide RNA with the Cas9 protein and, if you want a knockin, a piece of donor DNA carrying your desired edit."
+  },
+  {
+   "t": 75.36,
+   "text": "Inject the whole mix directly into a fertilized one-cell mouse zygote."
+  },
+  {
+   "t": 81.0,
+   "text": "Transfer the zygote into a foster mother."
+  },
+  {
+   "t": 83.89,
+   "text": "Wait three weeks."
+  },
+  {
+   "t": 85.54,
+   "text": "The pups born from that foster mother — the founders — carry edits directly in their germline, because the editing happened in the very first cell of the embryo, before any of the lineage decisions had been made."
+  },
+  {
+   "t": 98.17,
+   "text": "Skip ES cells entirely."
+  },
+  {
+   "t": 100.29,
+   "text": "Skip the chimera step entirely."
+  },
+  {
+   "t": 102.96,
+   "text": "Skip the breed-for-germline-transmission step entirely."
+  },
+  {
+   "t": 106.76,
+   "text": "You go straight from \"I have a hypothesis\" to \"I have a heritable edit in a live mouse,\" in about three weeks of work plus the gestation period."
+  },
+  {
+   "t": 116.1,
+   "text": "The compression is remarkable."
+  },
+  {
+   "t": 118.38,
+   "text": "A 16-month project becomes a 3-month project."
+  },
+  {
+   "t": 121.88,
+   "text": "Sometimes faster."
+  },
+  {
+   "t": 123.34,
+   "text": "Let me explain the molecular logic so you see why it works."
+  },
+  {
+   "t": 127.09,
+   "text": "CRISPR-Cas9, which has its own dedicated lecture in this series, is a bacterial system in which a protein — Cas9 — uses a short RNA molecule — the guide RNA — to find a specific 20-base-pair sequence in DNA and cut both strands."
+  },
+  {
+   "t": 144.26,
+   "text": "You design the guide RNA to match the sequence in the gene you want to edit."
+  },
+  {
+   "t": 148.85,
+   "text": "Cas9 makes a double-strand break at that position."
+  },
+  {
+   "t": 152.31,
+   "text": "The cell, faced with a double-strand break, repairs it using one of two pathways: non-homologous end joining, which sloppily seals the cut, usually inserting or deleting a few base pairs and thereby disrupting the gene — this gives you a knockout; or homology-directed repair, which uses an external piece of donor DNA as a template to repair the break precisely — this gives you a knockin."
+  },
+  {
+   "t": 177.16,
+   "text": "So if you inject Cas9 plus guide RNA into a zygote, the zygote's DNA gets cut at your target, and the cell's own repair machinery makes the edit."
+  },
+  {
+   "t": 186.94,
+   "text": "If you want a knockout, you don't even need to supply donor DNA — the sloppy NHEJ repair will introduce small indels that disrupt the gene."
+  },
+  {
+   "t": 195.54,
+   "text": "If you want a precise knockin, you co-inject a single-stranded or double-stranded donor with the desired sequence and flanking homology, and HDR uses it as the template."
+  },
+  {
+   "t": 206.22,
+   "text": "The key thing — the thing that makes this so much faster than the ES cell route — is that the edit happens in the zygote itself."
+  },
+  {
+   "t": 214.26,
+   "text": "The very first cell of the embryo."
+  },
+  {
+   "t": 216.4,
+   "text": "Which means that when that zygote divides and develops, every cell in the resulting mouse is derived from a single edited cell."
+  },
+  {
+   "t": 224.05,
+   "text": "The mouse is, with high probability, a clean carrier of the edit throughout its body, including the germline."
+  },
+  {
+   "t": 230.85,
+   "text": "No chimera."
+  },
+  {
+   "t": 231.94,
+   "text": "No selection for germline transmission."
+  },
+  {
+   "t": 234.61,
+   "text": "The founder mouse you get is already, in effect, a heterozygous (or sometimes homozygous, if both alleles got edited) carrier ready to breed."
+  },
+  {
+   "t": 243.93,
+   "text": "There are wrinkles, of course."
+  },
+  {
+   "t": 245.88,
+   "text": "CRISPR in zygotes is not perfectly clean."
+  },
+  {
+   "t": 249.07,
+   "text": "Sometimes the editing happens at the 2-cell or 4-cell stage rather than the 1-cell stage, producing a mosaic founder — different cells in the mouse carry different versions of the edit, like a chimera but at finer grain."
+  },
+  {
+   "t": 262.83,
+   "text": "You usually have to breed the founder to a wild-type mate and look at the offspring to confirm a clean, heritable edit."
+  },
+  {
+   "t": 270.16,
+   "text": "There are also off-target effects — the guide RNA can sometimes direct Cas9 to cut at similar sequences elsewhere in the genome, causing unintended edits."
+  },
+  {
+   "t": 280.58,
+   "text": "Modern protocols use carefully designed guides, high-fidelity Cas9 variants, and sequencing checks to minimize and detect these."
+  },
+  {
+   "t": 289.55,
+   "text": "But despite the wrinkles, the speedup is real."
+  },
+  {
+   "t": 292.84,
+   "text": "Three months instead of sixteen."
+  },
+  {
+   "t": 295.06,
+   "text": "And it's not just speed — it's also cost, and accessibility."
+  },
+  {
+   "t": 299.16,
+   "text": "Pronuclear injection facilities and ES cell facilities used to be specialized resources at major institutions; CRISPR zygote injection is now within reach of smaller labs and core facilities everywhere."
+  },
+  {
+   "t": 313.36,
+   "text": "The number of new mouse models being produced per year has gone up by roughly an order of magnitude in the past decade, and a substantial fraction of that increase is CRISPR."
+  },
+  {
+   "t": 322.93,
+   "text": "The analogy I love: CRISPR mouse making is the ten-x speedup."
+  },
+  {
+   "t": 327.33,
+   "text": "Instead of months in ES cells, you electroporate or inject Cas9 into a zygote and grow up the founder mice in three weeks instead of a year."
+  },
+  {
+   "t": 337.01,
+   "text": "The whole intermediate detour — ES cell culture, selection, chimeras, germline transmission — gets compressed into the zygote itself."
+  },
+  {
+   "t": 346.69,
+   "text": "A few things to flag."
+  },
+  {
+   "t": 348.19,
+   "text": "First, ES cell targeting is not dead."
+  },
+  {
+   "t": 351.18,
+   "text": "For very complex edits — multi-kilobase knockins, conditional alleles where you need precise loxP placement, situations where you want extensive characterization of the targeted clone before going to mice — gene targeting in ES cells remains useful."
+  },
+  {
+   "t": 367.98,
+   "text": "CRISPR works best for relatively small edits: knockouts via small indels, point mutations, modest-sized knockins."
+  },
+  {
+   "t": 375.94,
+   "text": "For the biggest, most elaborate edits, the ES cell pipeline still has advantages."
+  },
+  {
+   "t": 381.96,
+   "text": "Second, the combination of CRISPR and ES cells is its own thing."
+  },
+  {
+   "t": 386.78,
+   "text": "You can use CRISPR inside ES cells to vastly accelerate the targeting step."
+  },
+  {
+   "t": 392.05,
+   "text": "Then the cells get injected as usual."
+  },
+  {
+   "t": 394.35,
+   "text": "That hybrid approach is now common for complex alleles."
+  },
+  {
+   "t": 398.49,
+   "text": "Third — and this is conceptually important — CRISPR has made it practical to edit multiple genes simultaneously."
+  },
+  {
+   "t": 407.0,
+   "text": "With ES cells, putting three edits into one mouse meant either doing three sequential rounds of targeting or breeding three single-edit mice together over multiple generations."
+  },
+  {
+   "t": 418.64,
+   "text": "With CRISPR, you can inject guides for three different genes into a single zygote, and a substantial fraction of the resulting founders will carry edits in all three."
+  },
+  {
+   "t": 428.5,
+   "text": "Multi-gene mouse models — which used to take five or six years to construct — now take months."
+  },
+  {
+   "t": 434.89,
+   "text": "The big idea: CRISPR-in-the-zygote has compressed the mouse model production pipeline by an order of magnitude."
+  },
+  {
+   "t": 441.86,
+   "text": "It has democratized model making, expanded the scale of what's possible, and made multi-gene experiments routine."
+  },
+  {
+   "t": 449.59,
+   "text": "Combined with the floxed-allele/Cre-driver substrate, it represents the modern toolkit."
+  },
+  {
+   "t": 455.88,
+   "text": "Almost every new mouse model being made today is made with CRISPR somewhere in the workflow."
+  },
+  {
+   "t": 461.78,
+   "text": "Now let's move to a particular kind of mouse that's become especially important in modern medicine: the humanized mouse."
+  }
+ ]
+}

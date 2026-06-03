@@ -1,0 +1,259 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The targeting vector: homology arms, neo, and thymidine kinase",
+ "duration": 427.21,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The targeting vector: homology arms, neo, and thymidine kinase"
+  },
+  {
+   "t": 6.56,
+   "text": "So the central piece of equipment in classical gene targeting is the targeting vector — the piece of engineered DNA you deliver to the ES cells to make the edit happen."
+  },
+  {
+   "t": 17.24,
+   "text": "The targeting vector is, essentially, a plasmid designed with a very particular architecture, and once you understand that architecture, you understand the molecular logic of how the whole knockout process works."
+  },
+  {
+   "t": 30.75,
+   "text": "A targeting vector has, at a minimum, four components."
+  },
+  {
+   "t": 34.91,
+   "text": "Let me walk through them in order."
+  },
+  {
+   "t": 36.76,
+   "text": "Component one: the 5-prime homology arm."
+  },
+  {
+   "t": 39.91,
+   "text": "This is a piece of DNA, typically a few kilobases long, that exactly matches the sequence of the mouse genome just upstream of the gene you want to edit."
+  },
+  {
+   "t": 49.94,
+   "text": "So if you're knocking out gene X, the 5-prime arm matches the genomic sequence on the left side of gene X."
+  },
+  {
+   "t": 56.65,
+   "text": "This is one of the two \"alignment guides\" that tells the cell's recombination machinery where to make the swap."
+  },
+  {
+   "t": 63.04,
+   "text": "Component two: the modification cassette."
+  },
+  {
+   "t": 66.28,
+   "text": "This is the part in the middle — the part that's different from the wild-type genome."
+  },
+  {
+   "t": 70.99,
+   "text": "In a classical knockout, the modification cassette is a neomycin resistance gene, neo, inserted right into the middle of the gene you want to disrupt."
+  },
+  {
+   "t": 80.3,
+   "text": "The neo cassette does two jobs simultaneously."
+  },
+  {
+   "t": 83.75,
+   "text": "First, it serves as the selectable marker — cells that have integrated the construct become resistant to the antibiotic G418, which lets you select for them."
+  },
+  {
+   "t": 93.78,
+   "text": "Second, by virtue of being plopped down in the middle of the gene of interest, it physically disrupts that gene — the resulting messenger RNA is broken, no functional protein is made, and you have achieved your knockout."
+  },
+  {
+   "t": 107.51,
+   "text": "The neo cassette is both the recipe ingredient and the dish."
+  },
+  {
+   "t": 111.3,
+   "text": "Component three: the 3-prime homology arm."
+  },
+  {
+   "t": 114.67,
+   "text": "Same as the 5-prime arm but on the other side — matching the genomic sequence just downstream of the gene you're knocking out."
+  },
+  {
+   "t": 122.39,
+   "text": "The two arms together flank the modification cassette, and they're what tells the cell's recombination machinery: \"swap this whole middle region between the two arms into the genome at the position the arms specify."
+  },
+  {
+   "t": 135.16,
+   "text": "\""
+  },
+  {
+   "t": 135.36,
+   "text": "Component four — and this is the cleverest bit — the thymidine kinase counter-selection gene."
+  },
+  {
+   "t": 141.3,
+   "text": "Sitting just outside the homology arms — usually at the very end of the construct, beyond the 3-prime arm."
+  },
+  {
+   "t": 148.2,
+   "text": "This needs some explanation."
+  },
+  {
+   "t": 149.74,
+   "text": "Here's the issue the thymidine kinase gene solves."
+  },
+  {
+   "t": 153.5,
+   "text": "Homologous recombination, when it works, swaps in just the part between the two homology arms."
+  },
+  {
+   "t": 159.76,
+   "text": "The flanking pieces of the construct — including anything outside the arms — get discarded in the recombination."
+  },
+  {
+   "t": 166.88,
+   "text": "But what about cells that didn't do homologous recombination at all, and instead just stuffed the entire construct, end to end, into a random spot in the genome?"
+  },
+  {
+   "t": 176.91,
+   "text": "Those cells have the neo gene and so they survive G418 selection."
+  },
+  {
+   "t": 182.1,
+   "text": "But they're not what you want."
+  },
+  {
+   "t": 183.43,
+   "text": "You want only the cells that did the proper homologous swap."
+  },
+  {
+   "t": 186.69,
+   "text": "This is where thymidine kinase, abbreviated TK, comes in."
+  },
+  {
+   "t": 191.41,
+   "text": "TK is an enzyme that, in the presence of a drug called ganciclovir, converts ganciclovir into a toxic product that kills the cell."
+  },
+  {
+   "t": 201.07,
+   "text": "So if a cell expresses TK, and you add ganciclovir to the medium, the cell dies."
+  },
+  {
+   "t": 207.31,
+   "text": "If the cell doesn't express TK, ganciclovir is harmless."
+  },
+  {
+   "t": 212.25,
+   "text": "So now imagine: you put TK outside the homology arms in your construct."
+  },
+  {
+   "t": 217.44,
+   "text": "A cell that does proper homologous recombination swaps in only the bit between the arms, and the TK gene falls off — it's not integrated."
+  },
+  {
+   "t": 227.28,
+   "text": "That cell has neo but not TK."
+  },
+  {
+   "t": 229.91,
+   "text": "It survives G418 (yes resistance) and survives ganciclovir (no TK)."
+  },
+  {
+   "t": 236.5,
+   "text": "Both green lights."
+  },
+  {
+   "t": 237.82,
+   "text": "A cell that instead just stuffs the whole construct into a random spot keeps everything, including TK."
+  },
+  {
+   "t": 245.18,
+   "text": "That cell has neo (survives G418) but also TK (gets killed by ganciclovir)."
+  },
+  {
+   "t": 251.84,
+   "text": "Killed."
+  },
+  {
+   "t": 252.59,
+   "text": "The analogy: thymidine kinase is the dead man's switch on the construct."
+  },
+  {
+   "t": 257.69,
+   "text": "If you integrated the whole thing willy-nilly, TK comes along and kills you."
+  },
+  {
+   "t": 263.23,
+   "text": "If you integrated only the part you were supposed to integrate — the bit between the arms — TK got left behind, and you live."
+  },
+  {
+   "t": 271.42,
+   "text": "Positive selection on neo, negative selection on TK."
+  },
+  {
+   "t": 275.71,
+   "text": "Together, the two of them dramatically enrich for cells that did proper homologous recombination, from maybe one in a million up to one in a hundred or one in a thousand of the survivors."
+  },
+  {
+   "t": 287.57,
+   "text": "So a typical knockout targeting vector looks, in order along the DNA, like this."
+  },
+  {
+   "t": 293.18,
+   "text": "You have a long backbone — a plasmid frame for growing the construct up in E. coli, with the usual origin of replication and ampicillin resistance, exactly like Segment 4 of the plasmids lecture."
+  },
+  {
+   "t": 305.66,
+   "text": "Then the linear piece you actually use for targeting is excised from the backbone."
+  },
+  {
+   "t": 310.35,
+   "text": "That linear piece, reading from left to right, has the TK gene, then the 5-prime homology arm, then the neo cassette in place of the gene you're killing, then the 3-prime homology arm."
+  },
+  {
+   "t": 322.38,
+   "text": "You linearize it, you electroporate it into ES cells, you wait two days, you put on G418 and ganciclovir, and you sit on it for ten to fourteen days while colonies grow."
+  },
+  {
+   "t": 333.93,
+   "text": "Each surviving colony is a clone — every cell in it descended from a single founder cell that survived both selections."
+  },
+  {
+   "t": 341.73,
+   "text": "You pick the colonies into wells of a 96-well plate, expand them, and then screen them by PCR or Southern blot to confirm that the swap actually happened at the right genomic address rather than something weird."
+  },
+  {
+   "t": 354.02,
+   "text": "A typical Capecchi-era knockout campaign in the 1990s might involve electroporating a few tens of millions of ES cells, picking a few hundred surviving colonies, and finding maybe five to ten that genuinely carried the targeted edit."
+  },
+  {
+   "t": 368.76,
+   "text": "Those five to ten clones — each one a piece of in vitro genetic surgery, confirmed at the molecular level — were your raw material for the next step."
+  },
+  {
+   "t": 377.91,
+   "text": "The big idea to leave this segment with: the targeting vector is a piece of engineered DNA whose architecture encodes both the desired edit and the selection scheme for finding the rare cells that did the edit correctly."
+  },
+  {
+   "t": 391.88,
+   "text": "Two homology arms tell the cell where to swap."
+  },
+  {
+   "t": 394.98,
+   "text": "The neo cassette does the disruption and the positive selection."
+  },
+  {
+   "t": 399.03,
+   "text": "The TK gene outside the arms provides the counter-selection that filters out random integrations."
+  },
+  {
+   "t": 405.52,
+   "text": "Pull one of those elements out and the whole thing collapses; the rare correct event becomes invisible against the background."
+  },
+  {
+   "t": 413.82,
+   "text": "The whole design is a tribute to selection logic — exactly the same logic that makes plasmid cloning possible, scaled up to the mammalian genome."
+  },
+  {
+   "t": 423.1,
+   "text": "Now let's take the targeted ES cell and turn it into a mouse."
+  }
+ ]
+}

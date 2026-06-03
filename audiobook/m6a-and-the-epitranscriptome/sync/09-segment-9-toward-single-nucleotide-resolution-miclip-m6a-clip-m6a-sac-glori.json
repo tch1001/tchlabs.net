@@ -1,0 +1,147 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Toward single-nucleotide resolution: miCLIP, m6A-CLIP, m6A-SAC, GLORI",
+ "duration": 357.09,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Toward single-nucleotide resolution: miCLIP, m6A-CLIP, m6A-SAC, GLORI"
+  },
+  {
+   "t": 8.79,
+   "text": "The first major improvement on MeRIP-seq was an idea borrowed from a completely different field — the CLIP family of methods originally developed for mapping RNA-binding protein footprints by Robert Darnell and colleagues."
+  },
+  {
+   "t": 22.15,
+   "text": "The core trick of CLIP — for cross-linking immunoprecipitation — is to use ultraviolet light to covalently crosslink protein to RNA before pulling down with the antibody, so that when you sequence the resulting library, the position of the crosslink is preserved as a sequence signature — typically a mutation or a deletion at the crosslink site."
+  },
+  {
+   "t": 43.16,
+   "text": "In 2015, Samie Jaffrey's group adapted CLIP for m6A in a method they called miCLIP — m6A individual-nucleotide-resolution crosslinking and immunoprecipitation."
+  },
+  {
+   "t": 57.54,
+   "text": "The same year, Christopher Mason's group published a closely related method called m6A-CLIP."
+  },
+  {
+   "t": 64.01,
+   "text": "The idea in both: UV-crosslink the anti-m6A antibody to the RNA fragment it is binding, so that when you reverse transcribe the bound RNA into cDNA, the polymerase encounters the crosslinked amino acid residue and either stops or introduces a characteristic mutation at the position of the m6A."
+  },
+  {
+   "t": 85.85,
+   "text": "You sequence, you look for the characteristic mutation or truncation pattern, and you call m6A positions at single-nucleotide resolution."
+  },
+  {
+   "t": 95.09,
+   "text": "miCLIP and m6A-CLIP were a real advance."
+  },
+  {
+   "t": 99.84,
+   "text": "Instead of 100-nucleotide peaks, you got individual nucleotide positions — specific adenosines marked as m6A."
+  },
+  {
+   "t": 108.83,
+   "text": "The number of high-confidence sites identified per cell line went from tens of thousands of peaks to hundreds of thousands of individual sites."
+  },
+  {
+   "t": 117.36,
+   "text": "The map of m6A on the transcriptome became much sharper."
+  },
+  {
+   "t": 121.88,
+   "text": "But miCLIP has its own problems."
+  },
+  {
+   "t": 124.47,
+   "text": "The crosslinking is inefficient — only a small fraction of antibody-RNA pairs get UV-crosslinked, so you need even more input RNA than MeRIP-seq, which already needed a lot."
+  },
+  {
+   "t": 136.46,
+   "text": "The mutation signature is not perfectly specific to m6A; some background mutations occur at random positions."
+  },
+  {
+   "t": 145.14,
+   "text": "And, fundamentally, you are still using an antibody, so antibody-dependence and the associated cross-reactivity issues persist."
+  },
+  {
+   "t": 153.62,
+   "text": "The next generation of methods tried to escape antibodies entirely, using chemistry instead."
+  },
+  {
+   "t": 160.22,
+   "text": "The most successful of these to date is m6A-SAC — m6A-selective allyl chemical labeling and sequencing — developed by Chuan He's group in 2022."
+  },
+  {
+   "t": 172.57,
+   "text": "The trick of m6A-SAC is to use an engineered version of the bacterial methyltransferase MjDim1 that, instead of using SAM as a cofactor, uses an analog of SAM that transfers an allyl group instead of a methyl group."
+  },
+  {
+   "t": 188.04,
+   "text": "The engineered enzyme specifically allylates adenosines that already carry an m6A mark, leaving unmodified A untouched."
+  },
+  {
+   "t": 198.2,
+   "text": "The allyl group is then chemically modified into a stable adduct that causes a base mis-incorporation during reverse transcription, producing a characteristic sequence signature at the m6A position."
+  },
+  {
+   "t": 210.82,
+   "text": "The result is single-nucleotide-resolution m6A mapping without antibodies, with much better quantitative accuracy than MeRIP-seq."
+  },
+  {
+   "t": 220.62,
+   "text": "A second antibody-free chemistry, called GLORI — glyoxal and nitrite-mediated deamination of unmethylated adenosines — was published by Chengqi Yi's group, also in 2022."
+  },
+  {
+   "t": 233.38,
+   "text": "GLORI uses a chemical reaction that selectively deaminates unmethylated adenosines to inosines, which are read as G during sequencing — much like bisulfite deaminates unmethylated cytosine to uracil."
+  },
+  {
+   "t": 247.07,
+   "text": "m6A adenosines resist the deamination and continue to read as A."
+  },
+  {
+   "t": 252.5,
+   "text": "So after GLORI treatment, every adenosine that still reads as A in the sequencing output is m6A; every position that was originally A but now reads as G was unmodified."
+  },
+  {
+   "t": 265.89,
+   "text": "This is, in essence, the bisulfite of m6A — a chemical conversion that distinguishes modified from unmodified bases by reading out as a sequence difference."
+  },
+  {
+   "t": 277.66,
+   "text": "The analogy is exact."
+  },
+  {
+   "t": 279.52,
+   "text": "Bisulfite turns unmethylated C into T while leaving 5mC alone, so you read out the methylation state of every cytosine in the genome at single-base resolution."
+  },
+  {
+   "t": 291.79,
+   "text": "GLORI turns unmethylated A into G while leaving m6A alone, so you read out the methylation state of every adenosine in the transcriptome at single-base resolution."
+  },
+  {
+   "t": 304.29,
+   "text": "It is the same conceptual move, applied to a different base on a different polymer."
+  },
+  {
+   "t": 309.81,
+   "text": "And the implications are similar: a true single-base-resolution, quantitative, antibody-free epitranscriptome map."
+  },
+  {
+   "t": 317.96,
+   "text": "GLORI and m6A-SAC are recent — both from 2022 — and they have not yet fully displaced MeRIP-seq, partly because they require more specialized chemistry and partly because most labs already have MeRIP-seq pipelines in place."
+  },
+  {
+   "t": 334.77,
+   "text": "But the field is clearly moving toward antibody-free, single-nucleotide-resolution methods, and within a few years these are likely to become the standard."
+  },
+  {
+   "t": 344.16,
+   "text": "We are entering the era of true single-base epitranscriptomics, and the methodological landscape is going to look very different in five years from how it looks today."
+  },
+  {
+   "t": 355.02,
+   "text": "That is a natural place to break."
+  }
+ ]
+}

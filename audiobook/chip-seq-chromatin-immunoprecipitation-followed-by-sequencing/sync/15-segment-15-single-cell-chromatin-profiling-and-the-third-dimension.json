@@ -1,0 +1,63 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Single-cell chromatin profiling and the third dimension",
+ "duration": 157.28,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Single-cell chromatin profiling and the third dimension"
+  },
+  {
+   "t": 5.05,
+   "text": "Let me dwell on single-cell chromatin profiling for a moment, because it represents a real shift in what regulatory genomics can do, and you should understand the landscape."
+  },
+  {
+   "t": 15.28,
+   "text": "scCUT&Tag is the single-cell extension we just discussed — droplet-encapsulated CUT&Tag reactions, with cell barcodes attached during tagmentation, allowing tens of thousands of cells per experiment to be profiled for a chromatin mark or TF."
+  },
+  {
+   "t": 32.33,
+   "text": "The data resolution per cell is modest — typically a few thousand to tens of thousands of reads per cell — but with enough cells, you can cluster and identify cell types based on their chromatin state alone, and you can map regulatory differences across populations."
+  },
+  {
+   "t": 47.64,
+   "text": "scATAC-seq is the cousin technique, focused on chromatin accessibility rather than specific protein binding."
+  },
+  {
+   "t": 55.19,
+   "text": "It uses Tn5 directly — no antibody — to tag open chromatin, since Tn5 preferentially inserts into accessible DNA."
+  },
+  {
+   "t": 64.95,
+   "text": "It's not really a ChIP technique, but it's so closely related and so widely paired with single-cell CUT&Tag that you should know about it."
+  },
+  {
+   "t": 73.35,
+   "text": "scNanoTrack and related long-read variants bring the chromatin profile into the world of Nanopore and PacBio sequencing, where you can read longer fragments, resolve repeats, and combine chromatin signals with direct base-modification calling — methylation, for instance — on the same molecule."
+  },
+  {
+   "t": 91.34,
+   "text": "The frontier here, beyond just running these methods, is spatial chromatin profiling — capturing not just which chromatin state each cell has, but where each cell sits in a tissue."
+  },
+  {
+   "t": 103.0,
+   "text": "Techniques like spatial CUT&Tag are emerging, where you fix a tissue slice, perform the CUT&Tag chemistry on the slice with barcoded probes that capture spatial position, and read out chromatin state with subcellular resolution."
+  },
+  {
+   "t": 117.2,
+   "text": "The result is a tissue map where every position carries a regulatory profile."
+  },
+  {
+   "t": 122.15,
+   "text": "For developmental biology and cancer pathology, this is transformative — you can see how chromatin state varies not just by cell type but by location within a tumor, organ, or developing embryo."
+  },
+  {
+   "t": 134.54,
+   "text": "The conceptual point is that ChIP-seq, which started as a bulk assay producing one binding profile per sample, has spawned a family of techniques that resolve chromatin states with increasing precision in space and time."
+  },
+  {
+   "t": 148.38,
+   "text": "The trajectory is from bulk to single-cell to spatial, and at each step the data becomes richer and the biological questions become more pointed."
+  }
+ ]
+}

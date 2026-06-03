@@ -1,0 +1,163 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Beyond SBS — indel signatures, doublet substitutions, and structural variants",
+ "duration": 287.14,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Beyond SBS — indel signatures, doublet substitutions, and structural variants"
+  },
+  {
+   "t": 7.47,
+   "text": "So far, every signature we've talked about has been a single base substitution signature — SBS."
+  },
+  {
+   "t": 13.91,
+   "text": "One base mutated to a different base."
+  },
+  {
+   "t": 16.61,
+   "text": "But mutations come in other flavors too."
+  },
+  {
+   "t": 19.1,
+   "text": "Small insertions and deletions — indels — are common."
+  },
+  {
+   "t": 23.14,
+   "text": "Two adjacent bases mutating simultaneously — doublet base substitutions (DBS) — happen, particularly with UV-induced CC-to-TT and platinum-induced events."
+  },
+  {
+   "t": 35.08,
+   "text": "Large-scale chromosomal rearrangements — structural variants (SV) — happen, especially in cancers with HR deficiency or with mechanical chromosome problems."
+  },
+  {
+   "t": 45.58,
+   "text": "Copy number alterations — gains and losses of chromosomal regions — happen pervasively."
+  },
+  {
+   "t": 51.73,
+   "text": "The same conceptual framework applies to all of these."
+  },
+  {
+   "t": 55.45,
+   "text": "For each mutation type, you define a set of categories that captures the relevant contextual information, and you extract signatures via NMF from large datasets."
+  },
+  {
+   "t": 65.46,
+   "text": "Indel signatures were formalized in COSMIC v3 as the ID signatures."
+  },
+  {
+   "t": 71.78,
+   "text": "The classification system distinguishes single-base insertions and deletions from longer ones, distinguishes the inserted or deleted base (C/T versus A/G), and crucially captures the context — particularly whether the indel occurs in a homopolymer tract (a run of the same base), in a microsatellite, or at a microhomology boundary."
+  },
+  {
+   "t": 94.49,
+   "text": "The full classification has eighty-three indel categories."
+  },
+  {
+   "t": 98.38,
+   "text": "NMF extraction has identified about eighteen distinct ID signatures."
+  },
+  {
+   "t": 103.61,
+   "text": "Some ID signatures are familiar in their cause."
+  },
+  {
+   "t": 106.67,
+   "text": "ID1 and ID2 capture small indels at long homopolymer tracts, which are common in mismatch repair-deficient tumors (MMR catches polymerase slippage at homopolymers; when MMR is gone, slippage errors persist as indels)."
+  },
+  {
+   "t": 122.1,
+   "text": "ID6 and ID8 capture larger deletions at microhomology, characteristic of HR-deficient tumors using microhomology-mediated end joining to repair their double-strand breaks."
+  },
+  {
+   "t": 136.03,
+   "text": "ID3 is a tobacco-associated indel signature, parallel to SBS4."
+  },
+  {
+   "t": 141.81,
+   "text": "Each ID signature has its own attribution."
+  },
+  {
+   "t": 144.8,
+   "text": "Doublet base substitution signatures — the DBS family — capture cases where two adjacent bases mutate together."
+  },
+  {
+   "t": 152.97,
+   "text": "DBS1 is the UV doublet signature, capturing the CC-to-TT events we discussed earlier."
+  },
+  {
+   "t": 159.75,
+   "text": "DBS2 is a tobacco-associated doublet signature."
+  },
+  {
+   "t": 163.71,
+   "text": "DBS5 is platinum chemotherapy."
+  },
+  {
+   "t": 167.19,
+   "text": "About eleven DBS signatures are catalogued."
+  },
+  {
+   "t": 170.38,
+   "text": "Structural variant signatures are even more recent and still being formalized."
+  },
+  {
+   "t": 175.44,
+   "text": "The categories capture different kinds of large rearrangements — deletions, duplications, translocations, inversions — and their size distributions."
+  },
+  {
+   "t": 185.29,
+   "text": "SV signatures of HR deficiency, for example, are characterized by an excess of large tandem duplications (BRCA1 deficiency) or smaller deletions (BRCA2 deficiency)."
+  },
+  {
+   "t": 198.35,
+   "text": "The analogy."
+  },
+  {
+   "t": 199.46,
+   "text": "ID and SV signatures — the same logic applied to indels and structural variants; each process leaves its own fingerprint at each scale."
+  },
+  {
+   "t": 208.88,
+   "text": "UV doesn't just leave SBS7 in the 96-class substitution histogram — it also leaves DBS1 in the doublet histogram."
+  },
+  {
+   "t": 217.72,
+   "text": "BRCA deficiency doesn't just leave SBS3 — it also leaves ID6/ID8 in the indel histogram and tandem duplications or small deletions in the SV histogram."
+  },
+  {
+   "t": 231.51,
+   "text": "Every mutational process operates at multiple scales simultaneously, and signature analysis at each scale gives you a more complete picture."
+  },
+  {
+   "t": 240.71,
+   "text": "The combination is more powerful than any single scale."
+  },
+  {
+   "t": 244.53,
+   "text": "The Myriad HRD test, which we mentioned earlier, doesn't just use SBS3 — it combines an SBS-3-like measure with loss-of-heterozygosity counts, telomeric allelic imbalance, and large-scale state transitions, all of which are SV-flavor measurements."
+  },
+  {
+   "t": 261.62,
+   "text": "The composite score has higher predictive power for PARP inhibitor response than any single measure."
+  },
+  {
+   "t": 268.15,
+   "text": "So when you read about modern signature analysis, you'll see references to SBS, ID, DBS, SV, and sometimes CN (copy number) signatures."
+  },
+  {
+   "t": 279.12,
+   "text": "Each one is a parallel system."
+  },
+  {
+   "t": 281.12,
+   "text": "The 96 substitution classes were just the start."
+  },
+  {
+   "t": 284.34,
+   "text": "Now we have the full multi-scale catalog."
+  }
+ ]
+}

@@ -1,0 +1,275 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — The MeRIP-seq workflow in detail, and its strengths and weaknesses",
+ "duration": 511.14,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — The MeRIP-seq workflow in detail, and its strengths and weaknesses"
+  },
+  {
+   "t": 6.22,
+   "text": "We have talked about MeRIP-seq in passing as the technique that opened the field in 2012."
+  },
+  {
+   "t": 12.21,
+   "text": "Now let me walk through the workflow carefully, because if you are going to read papers in this area — or, eventually, do experiments — you need to understand exactly what the method does, what its outputs look like, and where its limitations lie."
+  },
+  {
+   "t": 25.31,
+   "text": "This is the section that will let you read a Methods section critically."
+  },
+  {
+   "t": 29.35,
+   "text": "Start with your sample."
+  },
+  {
+   "t": 30.71,
+   "text": "You need RNA — and you need quite a lot of it."
+  },
+  {
+   "t": 33.79,
+   "text": "MeRIP-seq is not a sensitive technique; the original protocols required tens or hundreds of micrograms of total RNA per immunoprecipitation."
+  },
+  {
+   "t": 44.54,
+   "text": "Newer optimized protocols have brought that down to a few micrograms, but the method is still incompatible with single-cell or very small clinical specimens."
+  },
+  {
+   "t": 54.2,
+   "text": "So your starting material is bulk RNA from a cell pellet or a tissue, typically 1 to 100 million cells."
+  },
+  {
+   "t": 61.85,
+   "text": "Step one: isolate total RNA and enrich for mRNA."
+  },
+  {
+   "t": 66.55,
+   "text": "You start with a TRIzol or column-based total RNA extraction."
+  },
+  {
+   "t": 71.19,
+   "text": "The majority of total RNA in a cell — usually more than 90 percent — is ribosomal RNA, and rRNA carries its own m6A and other modifications that you probably do not want contaminating your mRNA signal."
+  },
+  {
+   "t": 85.75,
+   "text": "So you either poly-A select using oligo-dT beads, which captures the polyadenylated mRNAs, or you do ribosomal depletion using probes that subtract out the rRNA."
+  },
+  {
+   "t": 97.5,
+   "text": "Most m6A studies use poly-A selection, on the assumption that you care primarily about mRNA m6A and not about modifications on rRNA or noncoding RNA."
+  },
+  {
+   "t": 109.09,
+   "text": "Step two: fragment the mRNA."
+  },
+  {
+   "t": 111.86,
+   "text": "You need short fragments — typically 100 to 200 nucleotides — for two reasons."
+  },
+  {
+   "t": 117.76,
+   "text": "First, the antibody pulldown is more specific when the fragments are short, because long fragments containing a single m6A also contain a lot of unmarked sequence that the antibody can bind nonspecifically."
+  },
+  {
+   "t": 131.49,
+   "text": "Second, Illumina sequencing reads are short, and you need fragments that are roughly comparable to the read length."
+  },
+  {
+   "t": 138.79,
+   "text": "Fragmentation is done either with heat in the presence of magnesium ions, which catalyzes phosphodiester bond hydrolysis at random positions, or with a controlled RNase treatment."
+  },
+  {
+   "t": 150.88,
+   "text": "The output is a population of short RNA fragments, randomly distributed across the original mRNA sequences."
+  },
+  {
+   "t": 158.65,
+   "text": "Step three: split into IP and input pools."
+  },
+  {
+   "t": 162.54,
+   "text": "You take your fragmented mRNA and divide it."
+  },
+  {
+   "t": 165.53,
+   "text": "A small fraction — typically 10 percent — you save as your input control, and process directly into a sequencing library."
+  },
+  {
+   "t": 174.35,
+   "text": "The rest you take forward to immunoprecipitation."
+  },
+  {
+   "t": 177.69,
+   "text": "Step four: immunoprecipitate with anti-m6A antibody."
+  },
+  {
+   "t": 183.46,
+   "text": "You add your anti-m6A antibody to the IP pool, incubate at low temperature for a few hours so that antibody binds m6A-containing fragments, then add magnetic beads coated with protein A or protein G that capture the antibody."
+  },
+  {
+   "t": 200.71,
+   "text": "You wash extensively to remove unbound RNA, then elute the bound RNA either by competition with free m6A nucleoside or by denaturing the antibody."
+  },
+  {
+   "t": 212.26,
+   "text": "The eluted RNA is enriched in m6A-containing fragments — typically by a factor of 10 to 50, though this varies by protocol and antibody."
+  },
+  {
+   "t": 223.22,
+   "text": "Step five: make Illumina libraries from both IP and input pools."
+  },
+  {
+   "t": 228.5,
+   "text": "Standard RNA-seq library prep — adapter ligation, reverse transcription, PCR amplification."
+  },
+  {
+   "t": 235.78,
+   "text": "Both pools get the same treatment, generating libraries that can be sequenced on the same flow cell."
+  },
+  {
+   "t": 241.79,
+   "text": "Step six: sequence and align."
+  },
+  {
+   "t": 244.55,
+   "text": "Standard Illumina sequencing, typically paired-end 75-base reads, with 30 to 50 million reads per library."
+  },
+  {
+   "t": 252.81,
+   "text": "Align the reads to the transcriptome or genome using a standard splice-aware aligner like STAR or HISAT2."
+  },
+  {
+   "t": 260.16,
+   "text": "The IP library reads will pile up at positions enriched in m6A; the input library reads will distribute uniformly across the transcripts."
+  },
+  {
+   "t": 270.02,
+   "text": "The difference is your m6A signal."
+  },
+  {
+   "t": 273.26,
+   "text": "Step seven: call peaks."
+  },
+  {
+   "t": 275.47,
+   "text": "You use software designed for this purpose — MACS2, originally written for ChIP-seq, can be adapted; or dedicated tools like MeTPeak, exomePeak, m6Anet — to identify regions where the IP coverage is significantly enriched over the input coverage."
+  },
+  {
+   "t": 293.89,
+   "text": "Each enriched region is called a peak."
+  },
+  {
+   "t": 296.46,
+   "text": "You output a list of peaks per gene per condition, with coordinates and significance scores."
+  },
+  {
+   "t": 302.56,
+   "text": "What does the output look like?"
+  },
+  {
+   "t": 304.29,
+   "text": "You get tens of thousands of m6A peaks across the transcriptome, distributed predominantly in coding sequences and 3′ UTRs, with characteristic enrichment around stop codons."
+  },
+  {
+   "t": 317.44,
+   "text": "You can then compare peaks between conditions — wild-type versus METTL3 knockout, for example — to identify differentially methylated transcripts."
+  },
+  {
+   "t": 327.36,
+   "text": "You can compare peaks across cell types or developmental stages."
+  },
+  {
+   "t": 331.15,
+   "text": "You can ask whether genes in particular pathways are enriched for m6A marks."
+  },
+  {
+   "t": 336.71,
+   "text": "Now the limitations."
+  },
+  {
+   "t": 338.47,
+   "text": "First, resolution is poor."
+  },
+  {
+   "t": 340.72,
+   "text": "Each peak is typically 100 to 200 nucleotides wide — about the length of the fragments — and inside that peak you do not know which specific adenosine is the methylated one."
+  },
+  {
+   "t": 352.26,
+   "text": "A peak might contain multiple DRACH motifs, and conventional MeRIP-seq cannot tell you which one carries the modification."
+  },
+  {
+   "t": 360.84,
+   "text": "You can guess based on motif analysis, but the resolution is not really single-nucleotide."
+  },
+  {
+   "t": 366.37,
+   "text": "This is the analog of the resolution problem in ChIP-seq versus single-base bisulfite sequencing — the antibody pulldown gives you regions, not positions."
+  },
+  {
+   "t": 377.52,
+   "text": "Second, the antibody is the entire experiment."
+  },
+  {
+   "t": 381.4,
+   "text": "Anti-m6A antibodies vary in specificity, sensitivity, and cross-reactivity with related modifications like m6Am, m1A, and methylated DNA."
+  },
+  {
+   "t": 394.87,
+   "text": "Different commercial antibodies give different peak calls on the same sample."
+  },
+  {
+   "t": 399.31,
+   "text": "This has been a real reproducibility problem in the field."
+  },
+  {
+   "t": 403.19,
+   "text": "Two papers using two different antibodies on the same cell line can report partially non-overlapping peak sets, and there is no easy way to determine which is correct."
+  },
+  {
+   "t": 413.7,
+   "text": "The community has tried to standardize on a few well-characterized antibodies, but the antibody dependence is a persistent limitation."
+  },
+  {
+   "t": 422.12,
+   "text": "Third, MeRIP-seq is not quantitative in a clean way."
+  },
+  {
+   "t": 426.52,
+   "text": "You get a peak height for each m6A region, which reflects some combination of how many transcripts of that gene are present, what fraction of those transcripts carry the modification, and how well the antibody pulled down that particular fragment."
+  },
+  {
+   "t": 441.35,
+   "text": "Disentangling those three contributions requires careful normalization to the input, and even then the absolute methylation fraction at a given site is poorly estimated."
+  },
+  {
+   "t": 452.6,
+   "text": "You can say a site is \"more methylated\" in condition A than in condition B with confidence; you usually cannot say that 30 percent of transcripts at site X carry m6A with any precision."
+  },
+  {
+   "t": 465.6,
+   "text": "Fourth, MeRIP-seq needs a lot of input."
+  },
+  {
+   "t": 469.27,
+   "text": "As I mentioned, typically several micrograms of mRNA, which translates to tens of millions of cells."
+  },
+  {
+   "t": 476.94,
+   "text": "This is fine for cell lines and bulk tissues but rules out small clinical samples, single-cell experiments, and many in vivo applications."
+  },
+  {
+   "t": 486.21,
+   "text": "So MeRIP-seq is the foundational method, the technique that opened the field, and still the workhorse of most m6A studies — but it is resolution-limited, antibody-dependent, semi-quantitative, and material-intensive."
+  },
+  {
+   "t": 500.64,
+   "text": "Every advance in m6A methodology over the last decade has been an attempt to solve one or more of these limitations."
+  },
+  {
+   "t": 509.04,
+   "text": "Let us meet the next generation."
+  }
+ ]
+}

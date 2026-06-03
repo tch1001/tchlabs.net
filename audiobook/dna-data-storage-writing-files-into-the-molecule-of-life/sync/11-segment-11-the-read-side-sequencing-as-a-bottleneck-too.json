@@ -1,0 +1,191 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — The read side: sequencing as a bottleneck too",
+ "duration": 294.59,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — The read side: sequencing as a bottleneck too"
+  },
+  {
+   "t": 4.97,
+   "text": "Now let's talk about the other end of the pipeline."
+  },
+  {
+   "t": 7.44,
+   "text": "Writing is the dominant cost today — reading is about three orders of magnitude cheaper — but reading has its own scaling challenges that I want you to be aware of."
+  },
+  {
+   "t": 17.26,
+   "text": "Recall that DNA storage benefits from the entire investment that biomedical sequencing has made over the past two decades."
+  },
+  {
+   "t": 25.73,
+   "text": "Illumina sequencers and Oxford Nanopore sequencers are the workhorses."
+  },
+  {
+   "t": 30.57,
+   "text": "Both technologies have driven the cost of reading a base of DNA down by a factor of a million since 2001."
+  },
+  {
+   "t": 38.24,
+   "text": "Today, Illumina can sequence a base for fractions of a microdollar at scale."
+  },
+  {
+   "t": 44.2,
+   "text": "That's already cheap enough that, for DNA storage, the per-base read cost is a manageable component of the system cost."
+  },
+  {
+   "t": 52.21,
+   "text": "But there are two problems that get worse as DNA storage scales up."
+  },
+  {
+   "t": 56.6,
+   "text": "Throughput and latency."
+  },
+  {
+   "t": 58.4,
+   "text": "Throughput first."
+  },
+  {
+   "t": 59.67,
+   "text": "A single Illumina NovaSeq, the highest-throughput Illumina instrument, can sequence about a hundred billion bases per day."
+  },
+  {
+   "t": 67.3,
+   "text": "That sounds like a lot — and it is — but for DNA storage applications, you need to read each oligo many times to get a reliable consensus."
+  },
+  {
+   "t": 77.1,
+   "text": "The effective storage-read throughput is more like ten to twenty billion bases per day of decoded data."
+  },
+  {
+   "t": 83.55,
+   "text": "That's a few terabytes per day per sequencer."
+  },
+  {
+   "t": 86.72,
+   "text": "For a DNA archive serving meaningful read traffic from a real customer base, you'd need many sequencers running in parallel."
+  },
+  {
+   "t": 94.92,
+   "text": "And the sequencers themselves cost a million dollars each."
+  },
+  {
+   "t": 98.69,
+   "text": "So the capital cost of the read infrastructure can become non-trivial at scale."
+  },
+  {
+   "t": 103.51,
+   "text": "Latency second."
+  },
+  {
+   "t": 104.86,
+   "text": "An Illumina sequencing run takes ten to twenty hours from sample loading to data output, plus several hours of sample prep before."
+  },
+  {
+   "t": 112.79,
+   "text": "So the round-trip time from \"I want to read file X\" to \"here's file X\" is on the order of a day."
+  },
+  {
+   "t": 117.94,
+   "text": "For cold archive, that's fine."
+  },
+  {
+   "t": 119.85,
+   "text": "Most cold archive retrievals are tolerable on a one-day SLA."
+  },
+  {
+   "t": 124.14,
+   "text": "But it does mean that DNA storage, by its nature, has very different latency characteristics from electronic storage."
+  },
+  {
+   "t": 132.07,
+   "text": "You cannot do interactive, low-latency reads from a DNA archive."
+  },
+  {
+   "t": 136.64,
+   "text": "You can only do batch reads with a day or so of round-trip time."
+  },
+  {
+   "t": 140.35,
+   "text": "Oxford Nanopore is interesting in this context because it has fundamentally different latency characteristics."
+  },
+  {
+   "t": 147.05,
+   "text": "Nanopore sequencers stream data in real-time — you can start getting reads within seconds or minutes of starting the run, and you can stop as soon as you have enough data."
+  },
+  {
+   "t": 156.96,
+   "text": "So a nanopore-based DNA storage system can plausibly get retrieval latencies down to single-digit minutes for small files."
+  },
+  {
+   "t": 166.18,
+   "text": "The trade-off is that nanopore has higher error rates than Illumina — about one to five percent per base, compared to Illumina's one in a thousand — which means the encoding has to tolerate more errors."
+  },
+  {
+   "t": 177.81,
+   "text": "For DNA storage specifically, where you're already running heavy error correction anyway, the trade-off might be worth it."
+  },
+  {
+   "t": 185.29,
+   "text": "There has been interesting work in the past few years on DNA-storage-specific sequencers — instruments designed not for biomedical research but for the specific demands of reading data back from DNA archives."
+  },
+  {
+   "t": 196.94,
+   "text": "The throughput requirements are different."
+  },
+  {
+   "t": 198.96,
+   "text": "The error tolerance is different."
+  },
+  {
+   "t": 201.18,
+   "text": "The fragment-length distribution is more controlled than in random biological samples."
+  },
+  {
+   "t": 206.54,
+   "text": "A purpose-built DNA storage sequencer could plausibly be much cheaper and faster than today's general-purpose biomedical sequencers."
+  },
+  {
+   "t": 215.5,
+   "text": "One particularly promising direction is integrated read chips — silicon devices that combine nanopore-style sensing with on-chip electronics for real-time decoding."
+  },
+  {
+   "t": 225.94,
+   "text": "These chips would, in principle, let you build a DNA storage drive that is read in real-time by the device itself, without ever needing an external sequencer."
+  },
+  {
+   "t": 235.81,
+   "text": "Iridia has talked about something in this vein, and there are academic groups working on integrated electronic readout of DNA."
+  },
+  {
+   "t": 243.04,
+   "text": "None of this is commercial yet."
+  },
+  {
+   "t": 245.14,
+   "text": "But it's a plausible path to making the read side of DNA storage as much of a commodity as the write side will eventually become."
+  },
+  {
+   "t": 253.39,
+   "text": "The point I want to leave you with is: don't underestimate the read side."
+  },
+  {
+   "t": 257.36,
+   "text": "Today, reading is cheap relative to writing, and the field has been justifiably obsessed with bringing down write costs."
+  },
+  {
+   "t": 265.01,
+   "text": "But as write costs come down, read costs become a larger fraction of total system cost, and the scaling characteristics of read infrastructure — throughput, latency, capital cost — start to matter."
+  },
+  {
+   "t": 277.57,
+   "text": "A complete DNA storage industry will need both sides — cheap, scalable writing and cheap, scalable reading — to come together."
+  },
+  {
+   "t": 286.12,
+   "text": "The read side is currently ahead, but it won't stay infinitely ahead, and engineering attention is going to shift there in the coming decade."
+  }
+ ]
+}

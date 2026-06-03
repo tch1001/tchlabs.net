@@ -1,0 +1,239 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Microsoft, UW, and the Catalog approach",
+ "duration": 513.03,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Microsoft, UW, and the Catalog approach"
+  },
+  {
+   "t": 4.99,
+   "text": "So around 2015, two things happened that signaled the field was moving from academic curiosity to industrial seriousness."
+  },
+  {
+   "t": 13.76,
+   "text": "Microsoft announced a research partnership with the University of Washington's Molecular Information Systems Lab, headed by Luis Ceze and Karin Strauss, to seriously investigate DNA data storage as a long-term archival technology."
+  },
+  {
+   "t": 28.19,
+   "text": "And on the other coast, Catalog Technologies was founded in Boston by Hyunjun Park and Nathaniel Roquet, with a fundamentally different approach to DNA storage that we'll spend the second half of this segment on."
+  },
+  {
+   "t": 40.3,
+   "text": "Let me start with Microsoft and UW."
+  },
+  {
+   "t": 42.89,
+   "text": "The Microsoft-UW collaboration over the past decade has produced some of the most ambitious DNA storage demonstrations in the literature."
+  },
+  {
+   "t": 51.74,
+   "text": "In 2016, they encoded about two hundred megabytes of data — a meaningful step up from the kilobyte and megabyte scales of the earlier demonstrations."
+  },
+  {
+   "t": 61.06,
+   "text": "They demonstrated random access — the ability to retrieve specific files from a pooled archive without sequencing the whole thing."
+  },
+  {
+   "t": 69.44,
+   "text": "They demonstrated end-to-end automated systems — a fluidic device that takes a digital file as input, drives the synthesis, stores the DNA, performs PCR retrieval, runs the sequencer, and outputs the decoded file, all without human intervention."
+  },
+  {
+   "t": 86.66,
+   "text": "The throughput is glacial — kilobytes per hour, in the published demonstrations — but the point is that the entire pipeline can be automated, which is the necessary precondition for any future scale-up."
+  },
+  {
+   "t": 99.15,
+   "text": "The Microsoft-UW work has also pushed hard on the encoding side."
+  },
+  {
+   "t": 103.12,
+   "text": "Lee Organick, Karin Strauss, and their collaborators have published a series of papers refining the encoding schemes — improving error correction, reducing redundancy overhead, optimizing the trade-off between density and reliability."
+  },
+  {
+   "t": 117.74,
+   "text": "They have explored both Reed-Solomon-based encodings and fountain-code-based encodings."
+  },
+  {
+   "t": 123.44,
+   "text": "They have studied how sequencing depth — the number of times each oligo is read on average — trades off against error-correction overhead."
+  },
+  {
+   "t": 131.91,
+   "text": "They have built up, over the past decade, what is probably the most mature systems-level understanding of how to actually run a DNA storage pipeline in the world."
+  },
+  {
+   "t": 141.39,
+   "text": "Microsoft's interest here is not academic."
+  },
+  {
+   "t": 144.91,
+   "text": "Microsoft runs Azure, which is one of the three biggest cloud platforms in the world."
+  },
+  {
+   "t": 150.74,
+   "text": "Azure stores exabytes of customer data."
+  },
+  {
+   "t": 153.55,
+   "text": "A meaningful fraction of that data is cold archive — backup data, regulatory-compliance data, scientific datasets — that customers want to keep for decades but rarely touch."
+  },
+  {
+   "t": 165.03,
+   "text": "The economics of storing cold archive on tape, with all the refresh costs and the physical footprint, are real."
+  },
+  {
+   "t": 172.5,
+   "text": "If you could replace a tape library that fills an entire data center with a refrigerator-sized DNA archive that holds the same data and survives a thousand years with no refresh, the savings — in floorspace, in energy, in operations — would be enormous."
+  },
+  {
+   "t": 188.31,
+   "text": "Microsoft has a real business reason to want this technology to work."
+  },
+  {
+   "t": 193.11,
+   "text": "And Microsoft has the patience and resources to invest in it on a multi-decade timescale, which is the timescale this technology probably needs."
+  },
+  {
+   "t": 202.44,
+   "text": "Their internal research budget can absorb a research program that won't ship a product for fifteen years."
+  },
+  {
+   "t": 208.57,
+   "text": "Most companies cannot."
+  },
+  {
+   "t": 210.01,
+   "text": "The willingness of a major hyperscale cloud provider to fund this research over years is, in my opinion, one of the strongest signals that the field has long-term staying power."
+  },
+  {
+   "t": 221.65,
+   "text": "Microsoft is not betting that DNA storage will be commercial tomorrow."
+  },
+  {
+   "t": 226.78,
+   "text": "They are betting that it will be inevitable by 2040, and they want to be the company that's twenty years ahead when that happens."
+  },
+  {
+   "t": 233.65,
+   "text": "Now let's talk about Catalog Technologies, because they represent a fundamentally different bet, and I want to spend some time on it because the contrast illuminates what the core problem really is."
+  },
+  {
+   "t": 245.06,
+   "text": "Catalog was founded in 2016 by Hyunjun Park, who was a postdoc at MIT, and Nathaniel Roquet."
+  },
+  {
+   "t": 252.11,
+   "text": "Their insight was the following."
+  },
+  {
+   "t": 254.26,
+   "text": "The cost bottleneck in conventional DNA storage is per-base synthesis."
+  },
+  {
+   "t": 259.18,
+   "text": "Every time you want to write a new file, you have to synthesize new, sequence-specific DNA — billions of unique bases, one base at a time, on a chip."
+  },
+  {
+   "t": 269.58,
+   "text": "That's slow and expensive."
+  },
+  {
+   "t": 271.48,
+   "text": "What if, instead of synthesizing unique DNA per file, you synthesized a small library of common DNA components once, and then used enzymatic combinations of those components to encode any file you wanted?"
+  },
+  {
+   "t": 285.26,
+   "text": "This is the Catalog approach in a nutshell."
+  },
+  {
+   "t": 287.93,
+   "text": "They synthesize, in large bulk batches, a library of a few hundred short DNA fragments — call them codeword fragments."
+  },
+  {
+   "t": 296.37,
+   "text": "Then, to encode a file, they don't synthesize new DNA at all."
+  },
+  {
+   "t": 300.92,
+   "text": "Instead, they use enzymatic ligation to combine the pre-synthesized fragments in specific orders and combinations that encode the desired data."
+  },
+  {
+   "t": 310.9,
+   "text": "The combinatorics of how you combine, say, two hundred codeword fragments into chains of ten gives you an astronomical encoding space — far more than you need for any practical file size."
+  },
+  {
+   "t": 323.12,
+   "text": "And critically, the per-byte cost of combining pre-made fragments enzymatically is much lower than the per-byte cost of synthesizing unique sequences from scratch, because you're doing the expensive synthesis step only once, in bulk, for the codeword library, and then amortizing it across every file you ever write."
+  },
+  {
+   "t": 341.61,
+   "text": "The catch is that Catalog's encoding scheme uses more DNA per bit than conventional encoding."
+  },
+  {
+   "t": 348.17,
+   "text": "Their density is lower, because each \"logical bit\" is represented by an entire combinatorial event rather than by a single base."
+  },
+  {
+   "t": 356.96,
+   "text": "You trade density for cost."
+  },
+  {
+   "t": 359.12,
+   "text": "And in 2019 and 2020, Catalog demonstrated their approach by encoding all of Wikipedia in English — about sixteen gigabytes — into DNA using their machine, called Shannon."
+  },
+  {
+   "t": 371.21,
+   "text": "The machine is the size of a kitchen, runs at about one megabit per second of write throughput in the published demos, and produces a tube of DNA that holds the encoded data."
+  },
+  {
+   "t": 382.3,
+   "text": "They have published throughput claims in the range of one terabyte per day for production-scale versions of the technology, although those are projections rather than demonstrated numbers."
+  },
+  {
+   "t": 392.88,
+   "text": "The Catalog approach is not the only alternative architecture being pursued."
+  },
+  {
+   "t": 397.51,
+   "text": "Iridia, a startup based in California, is pursuing a fundamentally different approach in which they don't synthesize DNA at all — instead, they use electronic chips that translate digital signals directly into chemical modifications of pre-existing DNA scaffolds, in a way that's intended to be much faster and cheaper than chemical synthesis."
+  },
+  {
+   "t": 420.01,
+   "text": "DNA Script and Molecular Assemblies and Ansa Biotechnologies are pursuing enzymatic synthesis — using engineered enzymes, particularly variants of terminal deoxynucleotidyl transferase, or TdT, to build DNA strands one base at a time without the toxic solvents and harsh chemistry of phosphoramidite synthesis."
+  },
+  {
+   "t": 441.7,
+   "text": "We will spend Segment 11 entirely on enzymatic synthesis because it's potentially the most important cost-reduction lever in the entire field."
+  },
+  {
+   "t": 450.82,
+   "text": "So as of 2026, the DNA storage industry has, very roughly, three architectural approaches competing for the future."
+  },
+  {
+   "t": 459.81,
+   "text": "One, conventional phosphoramidite synthesis on chips, which is what Microsoft-UW and most academic groups use, and which is mature but expensive."
+  },
+  {
+   "t": 469.68,
+   "text": "Two, alternative combinatorial schemes like Catalog's, which trade density for cost reduction."
+  },
+  {
+   "t": 476.41,
+   "text": "Three, fundamentally new chemistries — enzymatic synthesis, electrochemical writing — that promise much lower per-base costs but are not yet mature enough to compete on accuracy and length."
+  },
+  {
+   "t": 488.53,
+   "text": "We don't know yet which of these three approaches, or some hybrid of them, will win."
+  },
+  {
+   "t": 493.25,
+   "text": "It is genuinely an open competition, and the answer over the next ten years will determine what DNA storage looks like as an industry."
+  },
+  {
+   "t": 501.4,
+   "text": "Let's go now and actually walk through the full encoding pipeline, end to end, so you have a concrete picture of what happens between a file on your laptop and a tube of DNA on a shelf."
+  }
+ ]
+}

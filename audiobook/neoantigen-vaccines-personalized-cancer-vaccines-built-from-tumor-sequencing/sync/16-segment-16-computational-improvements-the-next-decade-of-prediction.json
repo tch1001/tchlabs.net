@@ -1,0 +1,159 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Computational improvements: the next decade of prediction",
+ "duration": 281.77,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Computational improvements: the next decade of prediction"
+  },
+  {
+   "t": 5.38,
+   "text": "Let me come back to the prediction problem, because the algorithms have been evolving rapidly and several of the developments will matter for the future of the field."
+  },
+  {
+   "t": 13.9,
+   "text": "First, pan-allele models."
+  },
+  {
+   "t": 16.04,
+   "text": "The first generation of HLA binding predictors — NetMHC 1.0, NetMHC 2.0 — were trained allele by allele."
+  },
+  {
+   "t": 26.24,
+   "text": "You had a separate model for HLA-A02:01, a separate model for HLA-B07:02, and so on."
+  },
+  {
+   "t": 36.36,
+   "text": "This meant that rare alleles, for which there wasn't much training data, predicted poorly."
+  },
+  {
+   "t": 41.98,
+   "text": "NetMHCpan and MHCflurry 2.0 introduced pan-allele architectures — single models trained on data from all alleles, with the allele itself represented as part of the input."
+  },
+  {
+   "t": 54.3,
+   "text": "These models generalize across alleles, including alleles that weren't well-represented in the training set."
+  },
+  {
+   "t": 61.33,
+   "text": "They make neoantigen prediction more equitable across ancestries with different HLA distributions, though substantial gaps remain."
+  },
+  {
+   "t": 70.06,
+   "text": "Second, immunopeptidomics-trained models."
+  },
+  {
+   "t": 72.97,
+   "text": "The training data for binding prediction was historically peptide-HLA binding assays — purified HLA molecules incubated with peptides, with the binding affinity measured biophysically."
+  },
+  {
+   "t": 85.31,
+   "text": "That's one thing."
+  },
+  {
+   "t": 86.47,
+   "text": "The cell, in reality, doesn't just bind peptides; it processes proteins, transports peptides, edits them, and selects which to load."
+  },
+  {
+   "t": 96.28,
+   "text": "The full process produces a different set of peptides on the surface than pure binding assays would predict."
+  },
+  {
+   "t": 102.96,
+   "text": "Immunopeptidomics — mass spectrometry of peptides eluted from HLA molecules on real cells — measures the actual surface peptide repertoire."
+  },
+  {
+   "t": 113.26,
+   "text": "Training prediction models on immunopeptidomics data, in addition to binding data, gives much better real-world prediction."
+  },
+  {
+   "t": 121.06,
+   "text": "MHCflurry 2.0 was the public-domain pioneer of this; many commercial pipelines now include it."
+  },
+  {
+   "t": 128.32,
+   "text": "Third, structure-based predictors."
+  },
+  {
+   "t": 130.91,
+   "text": "With the AlphaFold-2 revolution in protein structure prediction, it has become feasible to predict the 3D structure of a peptide-HLA complex directly."
+  },
+  {
+   "t": 141.28,
+   "text": "Several groups — Mt."
+  },
+  {
+   "t": 143.21,
+   "text": "Sinai, Lausanne, various academic and industrial — are now building structure-aware prediction models that score not just sequence-based binding likelihood but the actual 3D fit of the peptide in the HLA groove."
+  },
+  {
+   "t": 157.05,
+   "text": "These models are early."
+  },
+  {
+   "t": 158.44,
+   "text": "They are not yet clearly better than sequence-based models on benchmark datasets."
+  },
+  {
+   "t": 163.31,
+   "text": "But the long-term trajectory of the field is towards structure-aware predictors, especially for the harder problem of predicting which presented peptides will actually be recognized by T-cell receptors."
+  },
+  {
+   "t": 175.35,
+   "text": "Fourth, and most ambitious, TCR-aware predictors."
+  },
+  {
+   "t": 179.43,
+   "text": "Even if you know exactly which peptides are presented by a tumor, you still don't know which ones will be immunogenic, because immunogenicity depends on whether the patient happens to have a T-cell receptor in their repertoire that can recognize that peptide."
+  },
+  {
+   "t": 193.28,
+   "text": "Patient TCR repertoires are themselves enormous and idiosyncratic."
+  },
+  {
+   "t": 199.03,
+   "text": "Predicting which presented peptides a given patient's TCR repertoire can mount a response against — that's the holy grail."
+  },
+  {
+   "t": 206.76,
+   "text": "It's also genuinely hard."
+  },
+  {
+   "t": 208.46,
+   "text": "The TCR-peptide-HLA interaction is a three-body problem in protein chemistry, with billions of TCR sequences in each patient."
+  },
+  {
+   "t": 217.71,
+   "text": "Deep learning models trained on TCR-peptide pairs are starting to emerge — TCRdist, NetTCR, panpep — but their performance is still modest."
+  },
+  {
+   "t": 227.84,
+   "text": "This is one of the most active frontiers of computational immunology."
+  },
+  {
+   "t": 232.18,
+   "text": "The bet across the field is that computational improvements over the next five to ten years will substantially close the prediction-vs-immunogenicity gap."
+  },
+  {
+   "t": 242.12,
+   "text": "If they do, vaccines will get more effective — more of the encoded peptides will hit, T-cell responses will be stronger, fewer patients will need 34 neoantigens because 5 well-chosen ones will be enough."
+  },
+  {
+   "t": 256.0,
+   "text": "The cost of vaccine design — sequencing, computation, the analytical pipeline — will fall."
+  },
+  {
+   "t": 262.45,
+   "text": "The whole economics will improve."
+  },
+  {
+   "t": 264.75,
+   "text": "If they don't close the gap, vaccines will continue to need broad coverage — many peptides per vaccine, brute force across the immunogenicity uncertainty — and the cost will stay high."
+  },
+  {
+   "t": 276.37,
+   "text": "The computational frontier really does matter for the practical viability of the field."
+  }
+ ]
+}

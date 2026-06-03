@@ -1,0 +1,183 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Pathway discovery: how you find the enzymes in the first place",
+ "duration": 343.06,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Pathway discovery: how you find the enzymes in the first place"
+  },
+  {
+   "t": 5.75,
+   "text": "So picture yourself at the start of one of these projects."
+  },
+  {
+   "t": 9.07,
+   "text": "You have a target molecule."
+  },
+  {
+   "t": 10.61,
+   "text": "Say it is artemisinic acid, or vincristine, or thebaine, or some plant alkaloid nobody has ever made microbially."
+  },
+  {
+   "t": 18.62,
+   "text": "You know the target's chemical structure."
+  },
+  {
+   "t": 20.74,
+   "text": "You know — from natural products chemistry — that some plant or fungus or microbe in the world makes this molecule natively."
+  },
+  {
+   "t": 28.52,
+   "text": "You need to find the enzymes that organism uses to make it, get the genes for those enzymes, and install them in your workhorse."
+  },
+  {
+   "t": 35.94,
+   "text": "This step — pathway discovery — is, for many projects, the slowest and most expensive part of the whole effort."
+  },
+  {
+   "t": 43.3,
+   "text": "I want to spend a segment on it because it is invisible in most popular accounts of metabolic engineering and yet it is where a huge fraction of the actual work lives."
+  },
+  {
+   "t": 53.2,
+   "text": "The classical approach, the one that worked for artemisinin, is biochemical purification."
+  },
+  {
+   "t": 59.21,
+   "text": "You grow a lot of the source organism — say, tons of Artemisia annua leaves — extract the relevant tissues, look for fractions that contain the enzymes of interest, follow the enzymatic activity through column after column of purification, eventually get a pure protein, sequence it by Edman degradation or mass spectrometry, and use that sequence to clone the gene."
+  },
+  {
+   "t": 82.36,
+   "text": "This is brutal work."
+  },
+  {
+   "t": 83.94,
+   "text": "It can take years."
+  },
+  {
+   "t": 85.29,
+   "text": "And for many enzymes, particularly the membrane-bound cytochrome P450s that show up everywhere in plant natural product pathways, the enzyme is so unstable and so hard to purify that biochemical purification simply does not work."
+  },
+  {
+   "t": 101.6,
+   "text": "The modern approach takes advantage of cheap sequencing."
+  },
+  {
+   "t": 105.31,
+   "text": "You sequence the genome — or more often the transcriptome, the set of expressed mRNAs — of the source organism."
+  },
+  {
+   "t": 112.88,
+   "text": "For Artemisia annua, you sequence the trichomes, the little hair-like structures on the leaf surface where artemisinin biosynthesis happens, and you compare gene expression in those tissues to gene expression in tissues that do not make artemisinin."
+  },
+  {
+   "t": 128.07,
+   "text": "The genes that are highly expressed in the producing tissue and not in the non-producing tissue are your candidates."
+  },
+  {
+   "t": 135.35,
+   "text": "You then take each candidate gene, express it in yeast or E. coli, see whether it has the chemistry you predict — does it cyclize FPP, does it oxidize amorphadiene — and assemble the pathway one enzyme at a time."
+  },
+  {
+   "t": 149.53,
+   "text": "This is faster than biochemical purification but it still involves a great deal of guesswork and screening."
+  },
+  {
+   "t": 156.11,
+   "text": "The first enzymes in a pathway are usually easier — they tend to have characteristic sequence motifs — but the late-stage tailoring enzymes, the P450s and methyltransferases and acyltransferases that add the finishing touches, are notoriously hard to identify, because there are dozens of them per genome and only specific ones are involved in your target pathway."
+  },
+  {
+   "t": 178.86,
+   "text": "There is now a sub-discipline called genome mining that uses bioinformatics to predict biosynthetic gene clusters from genome sequences."
+  },
+  {
+   "t": 188.03,
+   "text": "This works particularly well for bacterial and fungal natural products, where the biosynthetic genes are often grouped together in a single chromosomal region — a biosynthetic gene cluster — that can be recognized by characteristic patterns."
+  },
+  {
+   "t": 202.28,
+   "text": "Tools like antiSMASH scan a genome and predict where the gene clusters are, what kind of molecule each cluster might make, and what the candidate enzymes are."
+  },
+  {
+   "t": 211.69,
+   "text": "For plants, where the genes are scattered across chromosomes, this is harder, but co-expression analysis on transcriptomic data plays a similar role."
+  },
+  {
+   "t": 221.26,
+   "text": "Now there is a deeper structural problem I want you to appreciate."
+  },
+  {
+   "t": 225.28,
+   "text": "When you take a plant or fungal enzyme and put it into yeast or E. coli, the enzyme is being asked to work in an environment it never evolved for."
+  },
+  {
+   "t": 234.69,
+   "text": "The cytoplasmic pH might be different."
+  },
+  {
+   "t": 237.4,
+   "text": "The redox state is different."
+  },
+  {
+   "t": 239.4,
+   "text": "The set of partner proteins it normally interacts with is missing."
+  },
+  {
+   "t": 243.68,
+   "text": "The post-translational modifications are different."
+  },
+  {
+   "t": 246.6,
+   "text": "The substrate concentrations are different."
+  },
+  {
+   "t": 249.07,
+   "text": "So even if you have the right gene, the enzyme may simply not work, or may work with one percent of its native activity, when expressed in your workhorse."
+  },
+  {
+   "t": 258.06,
+   "text": "Almost every successful metabolic engineering project has had to either evolve the heterologous enzymes for better activity in their new context — we will spend a segment on directed evolution shortly — or engineer the host to be more hospitable, for example by reconstituting the cytochrome P450 reductase partners or by buffering the cellular redox state."
+  },
+  {
+   "t": 280.45,
+   "text": "The factory analogy holds here, too."
+  },
+  {
+   "t": 282.82,
+   "text": "You can find the right machine — the right conveyor belt — in another factory and ship it to yours."
+  },
+  {
+   "t": 288.54,
+   "text": "But the machine was designed for the floor layout of the original factory."
+  },
+  {
+   "t": 292.75,
+   "text": "It expects a particular voltage on the power lines, a particular humidity, a particular set of neighboring machines."
+  },
+  {
+   "t": 300.19,
+   "text": "Drop it into your floor and it may not run at all."
+  },
+  {
+   "t": 303.17,
+   "text": "You have to either modify the machine or modify the floor, or both."
+  },
+  {
+   "t": 307.32,
+   "text": "That iterative co-engineering of the host and the heterologous enzymes is one of the chronic engineering realities of metabolic engineering, and it eats years of effort on most serious projects."
+  },
+  {
+   "t": 319.29,
+   "text": "That brings us to the question of how, once you have a pathway installed, you actually figure out how to optimize the flow of carbon through it."
+  },
+  {
+   "t": 327.22,
+   "text": "Because the cell has its own metabolism, its own pathways, its own priorities, and you are now asking it to share."
+  },
+  {
+   "t": 334.64,
+   "text": "To do that systematically, the field developed a powerful modeling framework — flux balance analysis — and that is our next topic."
+  }
+ ]
+}

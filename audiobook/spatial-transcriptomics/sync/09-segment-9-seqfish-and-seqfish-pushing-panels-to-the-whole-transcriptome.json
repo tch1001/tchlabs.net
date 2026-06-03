@@ -1,0 +1,143 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — seqFISH and seqFISH+ — pushing panels to the whole transcriptome",
+ "duration": 300.88,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — seqFISH and seqFISH+ — pushing panels to the whole transcriptome"
+  },
+  {
+   "t": 6.38,
+   "text": "The other major academic lineage in imaging-based spatial methods came out of Long Cai's lab at Caltech."
+  },
+  {
+   "t": 14.07,
+   "text": "Cai's group developed a family of methods called seqFISH (\"sequential FISH\"), starting in 2014 — actually predating MERFISH by a year — and culminating in a remarkable variant called seqFISH+ in 2019 that pushed panel sizes to ten thousand genes per experiment."
+  },
+  {
+   "t": 32.85,
+   "text": "SeqFISH+ remains, as of 2024, one of the largest panel imaging-based spatial methods ever demonstrated."
+  },
+  {
+   "t": 41.86,
+   "text": "The seqFISH concept is conceptually similar to MERFISH but uses a different combinatorial barcoding scheme."
+  },
+  {
+   "t": 48.76,
+   "text": "Instead of binary on/off codes, seqFISH uses a positional barcode: each gene is assigned a sequence of colors across multiple rounds — for example, gene X is \"red in round 1, green in round 2, blue in round 3, yellow in round 4."
+  },
+  {
+   "t": 65.8,
+   "text": "\" If you have 4 dye colors and 4 rounds, you have 4 to the 4 = 256 possible color sequences, so you can encode 256 genes."
+  },
+  {
+   "t": 76.54,
+   "text": "With more rounds, the panel grows exponentially."
+  },
+  {
+   "t": 80.44,
+   "text": "The challenge with seqFISH, as with MERFISH, is that as panels get larger, the optical density of probes in the tissue gets so high that individual mRNA dots start to overlap and become impossible to distinguish — a problem called optical crowding."
+  },
+  {
+   "t": 96.84,
+   "text": "SeqFISH+ solved this with an additional clever trick: it spreads each gene's signal across multiple \"channels\" of imaging using primary probes that don't carry the dye directly, but instead carry \"readout\" sequences that get hybridized by secondary probes in later rounds."
+  },
+  {
+   "t": 113.55,
+   "text": "By splitting the signal into more rounds and lower per-round densities, seqFISH+ can image up to 10,000 genes in a single tissue section without optical crowding."
+  },
+  {
+   "t": 124.7,
+   "text": "What this means in practice is that seqFISH+ approaches whole-transcriptome coverage with imaging-based resolution."
+  },
+  {
+   "t": 132.18,
+   "text": "Ten thousand genes covers essentially every expressed gene in most tissues — the dark matter of low-expression transcripts may be missed, but the bulk of the transcriptome is queryable."
+  },
+  {
+   "t": 144.45,
+   "text": "You get both the breadth advantage that sequencing-based methods have traditionally owned, and the single-molecule resolution advantage of imaging-based methods."
+  },
+  {
+   "t": 153.96,
+   "text": "In principle, seqFISH+ is the unified spatial transcriptomics platform — high-res, whole-transcriptome, single-cell precision."
+  },
+  {
+   "t": 163.21,
+   "text": "The catch is that the seqFISH+ workflow is extraordinarily demanding."
+  },
+  {
+   "t": 167.69,
+   "text": "Hundreds of probe-and-image cycles."
+  },
+  {
+   "t": 170.07,
+   "text": "Custom microscopy."
+  },
+  {
+   "t": 171.53,
+   "text": "Weeks of imaging per sample."
+  },
+  {
+   "t": 173.55,
+   "text": "Petabytes of image data per experiment."
+  },
+  {
+   "t": 176.29,
+   "text": "Sophisticated image processing pipelines."
+  },
+  {
+   "t": 179.69,
+   "text": "SeqFISH+ has been demonstrated in elegant proofs of principle from Cai's lab and a few collaborator labs, but it has not been commercialized at the same scale as MERFISH."
+  },
+  {
+   "t": 190.0,
+   "text": "It remains an academic capability — extraordinarily powerful when you have the technical infrastructure and patience to run it, less accessible to the average lab."
+  },
+  {
+   "t": 200.57,
+   "text": "The seqFISH lineage matters for two reasons."
+  },
+  {
+   "t": 203.75,
+   "text": "First, it set the technical ceiling — proving that imaging-based methods can scale to whole-transcriptome coverage if you're willing to invest in the engineering."
+  },
+  {
+   "t": 213.0,
+   "text": "Second, it influenced the design of subsequent commercial platforms, including some of the design choices in Xenium and CosMx, by showing what kinds of combinatorial barcoding schemes are robust at scale."
+  },
+  {
+   "t": 225.74,
+   "text": "The pattern across academic spatial methods — Cai's seqFISH+, Zhuang's MERFISH, the Stockholm Visium lineage, Macosko's Slide-seq, BGI's Stereo-seq — is one of rapid academic invention followed by selective commercial adoption."
+  },
+  {
+   "t": 242.03,
+   "text": "The commercial platforms have chosen panels in the few-hundred to few-thousand gene range, which is a sweet spot for throughput, cost, and clinical utility."
+  },
+  {
+   "t": 250.96,
+   "text": "The 10,000-gene panels remain a research-grade capability."
+  },
+  {
+   "t": 255.35,
+   "text": "But the trajectory is clear: the panels will keep growing, the throughput will keep improving, and within a few years the distinction between \"imaging-based limited panel\" and \"sequencing-based whole transcriptome\" will continue to blur."
+  },
+  {
+   "t": 270.05,
+   "text": "Let me pause here, because we're at the natural break point."
+  },
+  {
+   "t": 273.29,
+   "text": "This is the one-hour mark."
+  },
+  {
+   "t": 274.85,
+   "text": "If you're listening to this in one sitting, take ten minutes, stretch, get a coffee, look at the H&E image of any tissue section you can find online — pull up the Allen Brain Atlas, look at a slice of cortex, notice how much structure is in it that you'd want to map gene expression against."
+  },
+  {
+   "t": 291.55,
+   "text": "When you come back, we'll pick up with the commercial in situ sequencing platforms that have taken these academic methods and turned them into push-button assays."
+  }
+ ]
+}

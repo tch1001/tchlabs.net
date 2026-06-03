@@ -1,0 +1,255 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Collateral cleavage — the quirk that is bad for therapy and great for diagnostics",
+ "duration": 371.93,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Collateral cleavage — the quirk that is bad for therapy and great for diagnostics"
+  },
+  {
+   "t": 6.08,
+   "text": "I want to spend a whole segment on collateral cleavage, because it is the single most consequential feature of Cas13, and you cannot understand anything else in this lecture without understanding it."
+  },
+  {
+   "t": 17.38,
+   "text": "Let me re-state the phenomenon."
+  },
+  {
+   "t": 19.74,
+   "text": "When Cas13 finds its target RNA and cuts it, the protein does not return to a resting state."
+  },
+  {
+   "t": 26.4,
+   "text": "The HEPN nuclease active site stays open, and Cas13 begins to cut other, unrelated single-stranded RNAs that diffuse past it."
+  },
+  {
+   "t": 36.4,
+   "text": "We say the protein is activated by target binding, and it remains activated, chewing up bystander RNAs, until something — degradation, dilution, the end of the experiment — turns it off."
+  },
+  {
+   "t": 48.64,
+   "text": "The cleavage of bystanders is not sequence-specific."
+  },
+  {
+   "t": 52.54,
+   "text": "The activated Cas13 is essentially a promiscuous single-strand RNase."
+  },
+  {
+   "t": 58.09,
+   "text": "It will cut anything single-stranded that comes near."
+  },
+  {
+   "t": 61.24,
+   "text": "We call this trans-cleavage, in contrast to the cis-cleavage of the original target."
+  },
+  {
+   "t": 66.69,
+   "text": "Cis means \"on the same side as,\" trans means \"on the other side of."
+  },
+  {
+   "t": 71.61,
+   "text": "\" Cis cleavage is what the guide RNA tells Cas13 to do."
+  },
+  {
+   "t": 75.46,
+   "text": "Trans cleavage is what happens after that, indiscriminately."
+  },
+  {
+   "t": 79.85,
+   "text": "Okay."
+  },
+  {
+   "t": 80.65,
+   "text": "So why is this bad for therapy?"
+  },
+  {
+   "t": 82.67,
+   "text": "Imagine you want to knock down a single oncogenic transcript in a tumor cell."
+  },
+  {
+   "t": 87.62,
+   "text": "Say, KRAS messenger RNA."
+  },
+  {
+   "t": 90.39,
+   "text": "You design a Cas13 guide against KRAS, you deliver the system to the tumor cell, Cas13 finds KRAS mRNA and cuts it."
+  },
+  {
+   "t": 100.21,
+   "text": "Great."
+  },
+  {
+   "t": 100.97,
+   "text": "But now Cas13 is activated, and it starts chewing up other random mRNAs in the cell."
+  },
+  {
+   "t": 107.59,
+   "text": "Some housekeeping mRNAs get cut."
+  },
+  {
+   "t": 109.91,
+   "text": "Some ribosomal RNAs get cut."
+  },
+  {
+   "t": 112.25,
+   "text": "The cell's protein synthesis machinery starts to falter."
+  },
+  {
+   "t": 115.9,
+   "text": "The cell either dies — sometimes this is the goal, sometimes it is not — or it activates stress responses that confound your interpretation of what knockdown you achieved."
+  },
+  {
+   "t": 126.19,
+   "text": "For mammalian cells, the magnitude of collateral cleavage varies substantially across Cas13 variants."
+  },
+  {
+   "t": 133.78,
+   "text": "The early ones — Cas13a, Cas13b — show pronounced collateral activity in mammalian cells."
+  },
+  {
+   "t": 141.76,
+   "text": "RfxCas13d, the favored therapeutic variant we mentioned, was initially reported to have lower collateral activity in mammalian cells, which is part of why it became the workhorse."
+  },
+  {
+   "t": 154.18,
+   "text": "But there has been a fair bit of back-and-forth in the literature about exactly how much collateral activity each variant has in mammalian cells versus in vitro — some 2022 and 2023 papers have shown that even RfxCas13d, under certain conditions, exhibits measurable collateral effects that depress cell fitness."
+  },
+  {
+   "t": 175.29,
+   "text": "The field is still working out which variants, in which contexts, are clean enough for therapeutic use."
+  },
+  {
+   "t": 181.85,
+   "text": "The upshot is that for in-vivo therapy, collateral cleavage is a real concern, and active engineering — variant choice, engineering of the HEPN domain, guide design, dose control — has to be applied to minimize it."
+  },
+  {
+   "t": 195.85,
+   "text": "This is one of the central challenges facing Cas13-based therapeutics."
+  },
+  {
+   "t": 201.43,
+   "text": "It is one of the reasons Cas13 therapies have lagged Cas9 therapies, despite the in-principle advantages of RNA targeting."
+  },
+  {
+   "t": 209.97,
+   "text": "Now, why is collateral cleavage great for diagnostics?"
+  },
+  {
+   "t": 213.47,
+   "text": "Here is the conceptual flip."
+  },
+  {
+   "t": 215.61,
+   "text": "In a cell, collateral cleavage of all your other RNAs is bad."
+  },
+  {
+   "t": 220.16,
+   "text": "In a test tube, where you have no other functions to disturb, collateral cleavage is a free signal-amplification mechanism."
+  },
+  {
+   "t": 227.57,
+   "text": "If you can rig the system so that the \"other RNAs\" being cleaved are a fluorescent reporter that you added to the tube on purpose, then collateral cleavage becomes the readout."
+  },
+  {
+   "t": 237.22,
+   "text": "The presence of the target RNA is reported by the chewing up of the reporter, which lights up the tube."
+  },
+  {
+   "t": 243.03,
+   "text": "Let me make this concrete."
+  },
+  {
+   "t": 244.62,
+   "text": "You want to detect whether a patient sample contains SARS-CoV-2 RNA."
+  },
+  {
+   "t": 250.19,
+   "text": "Here is what you do."
+  },
+  {
+   "t": 251.69,
+   "text": "You take the sample."
+  },
+  {
+   "t": 253.07,
+   "text": "You add Cas13, loaded with a guide RNA matching the SARS-CoV-2 genome."
+  },
+  {
+   "t": 260.44,
+   "text": "You also add a little molecular beacon — a short RNA strand with a fluorophore on one end and a quencher on the other."
+  },
+  {
+   "t": 267.8,
+   "text": "While the molecular beacon is intact, the quencher sits next to the fluorophore and absorbs its light — the tube is dark."
+  },
+  {
+   "t": 275.88,
+   "text": "If Cas13 finds SARS-CoV-2 RNA in the sample, it cuts it — and then its collateral activity kicks in and starts cutting the molecular beacon."
+  },
+  {
+   "t": 285.36,
+   "text": "Once the beacon is cut, the fluorophore and quencher separate, the quencher floats away, and the fluorophore lights up."
+  },
+  {
+   "t": 292.53,
+   "text": "The tube goes from dark to bright."
+  },
+  {
+   "t": 294.82,
+   "text": "A positive result is a glowing tube."
+  },
+  {
+   "t": 297.44,
+   "text": "That is the entire conceptual basis of CRISPR-based diagnostics."
+  },
+  {
+   "t": 302.23,
+   "text": "The collateral activity is the signal amplification."
+  },
+  {
+   "t": 305.86,
+   "text": "One activated Cas13 enzyme can chew up thousands of reporter molecules in a few minutes — so a tiny amount of target RNA, even one or a few molecules per sample, can produce a strong fluorescent signal because the Cas13s that activate then go on to chew up enormous numbers of reporters."
+  },
+  {
+   "t": 325.59,
+   "text": "The amplification is built into the biology."
+  },
+  {
+   "t": 328.87,
+   "text": "This is what the platform called SHERLOCK is built on."
+  },
+  {
+   "t": 332.07,
+   "text": "We will come to SHERLOCK in detail in Segment 10."
+  },
+  {
+   "t": 335.34,
+   "text": "But hold the picture now."
+  },
+  {
+   "t": 336.64,
+   "text": "Cas13's collateral activity is a bug for therapy and a feature for diagnostics."
+  },
+  {
+   "t": 342.61,
+   "text": "It is the same biological behavior — cut everything single-stranded once activated — but the consequences depend on whether you are inside a cell, where everything single-stranded matters, or in a tube, where the only thing single-stranded is the reporter you added."
+  },
+  {
+   "t": 358.01,
+   "text": "This duality is going to come up repeatedly."
+  },
+  {
+   "t": 360.84,
+   "text": "Keep it in mind."
+  },
+  {
+   "t": 361.87,
+   "text": "The thing that makes Cas13 a difficult therapy is the same thing that makes it an exquisite diagnostic."
+  },
+  {
+   "t": 369.13,
+   "text": "The applications split on that axis."
+  }
+ ]
+}

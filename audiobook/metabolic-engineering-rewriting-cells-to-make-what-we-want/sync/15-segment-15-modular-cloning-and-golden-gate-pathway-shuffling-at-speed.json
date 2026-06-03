@@ -1,0 +1,195 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Modular cloning and Golden Gate: pathway shuffling at speed",
+ "duration": 378.57,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Modular cloning and Golden Gate: pathway shuffling at speed"
+  },
+  {
+   "t": 6.17,
+   "text": "I want to spend a segment on what is, on its face, a deeply unsexy topic — DNA assembly methods."
+  },
+  {
+   "t": 13.69,
+   "text": "Stay with me, because the rate at which a field moves is set by the cost and speed of its core experimental operations, and for metabolic engineering, the core operation is building large multi-gene pathways and integrating them into the chromosome."
+  },
+  {
+   "t": 28.9,
+   "text": "The methods that make this fast have been quietly but transformatively important."
+  },
+  {
+   "t": 34.27,
+   "text": "If you walked into a molecular biology lab in 2005, the dominant cloning method would be restriction-ligation cloning using restriction enzymes — the technology we covered in the plasmids lecture in some depth."
+  },
+  {
+   "t": 47.73,
+   "text": "You would cut your insert and your vector with the same restriction enzymes, gel-purify the fragments, mix them with ligase, transform into bacteria, screen colonies."
+  },
+  {
+   "t": 58.49,
+   "text": "To build a multi-gene construct, you would do this many times sequentially."
+  },
+  {
+   "t": 63.36,
+   "text": "Each round took days."
+  },
+  {
+   "t": 64.85,
+   "text": "A construct with, say, five genes would take a couple of months."
+  },
+  {
+   "t": 68.86,
+   "text": "It was hand-soldering, basically."
+  },
+  {
+   "t": 71.06,
+   "text": "The first big leap was Gibson assembly, developed by Dan Gibson at the J."
+  },
+  {
+   "t": 75.89,
+   "text": "Craig Venter Institute around 2009."
+  },
+  {
+   "t": 79.1,
+   "text": "Gibson assembly uses a mix of three enzymes — an exonuclease, a polymerase, and a ligase — to seamlessly join multiple DNA fragments with overlapping ends in a single isothermal reaction."
+  },
+  {
+   "t": 93.22,
+   "text": "You design your fragments to have 20-40 base pairs of overlap at the ends where you want them joined, mix them with the enzyme cocktail, incubate for an hour at 50 degrees, and the fragments find their overlapping partners and get seamlessly stitched together."
+  },
+  {
+   "t": 108.94,
+   "text": "There are no scar sequences left behind, the assembly can handle many fragments at once, and the whole reaction is done in an afternoon."
+  },
+  {
+   "t": 117.62,
+   "text": "Gibson assembly transformed how labs build large constructs."
+  },
+  {
+   "t": 122.17,
+   "text": "In parallel, a different approach called Golden Gate cloning was developed by Sylvestre Marillonnet and others."
+  },
+  {
+   "t": 129.45,
+   "text": "Golden Gate uses a class of restriction enzymes called Type IIs enzymes — most famously BsaI and BsmBI — that cut DNA outside their recognition sequence, leaving custom-defined overhangs."
+  },
+  {
+   "t": 143.45,
+   "text": "Because the cut sites are separated from the recognition sites, you can design any overhang you want by choosing what sequence sits next to the recognition site."
+  },
+  {
+   "t": 152.25,
+   "text": "That lets you direct many fragments to assemble in a specific order, with specific junctions, in a single reaction."
+  },
+  {
+   "t": 160.03,
+   "text": "You can build a multi-gene construct from many parts at once, and the design of the overhangs guarantees that fragments go in the correct order and orientation."
+  },
+  {
+   "t": 169.8,
+   "text": "The modular cloning standard that grew out of Golden Gate — MoClo, developed by Marillonnet's group — defines a hierarchical part library."
+  },
+  {
+   "t": 179.03,
+   "text": "Level 0 parts are individual functional pieces — promoters, coding sequences, terminators — flanked by standardized Golden Gate overhangs."
+  },
+  {
+   "t": 189.18,
+   "text": "Level 1 assemblies combine Level 0 parts into single transcriptional units."
+  },
+  {
+   "t": 195.32,
+   "text": "Level 2 assemblies combine Level 1 units into multi-gene constructs."
+  },
+  {
+   "t": 200.78,
+   "text": "The whole hierarchy is designed so that any Level 0 part can be combined with any other Level 0 part to form a Level 1 unit, and any Level 1 unit can be combined with any other Level 1 unit to form a Level 2 construct."
+  },
+  {
+   "t": 215.01,
+   "text": "The architecture is genuinely modular, in a way that the BioBrick standard we discussed in the genetic circuits lecture aspired to but did not quite achieve."
+  },
+  {
+   "t": 224.9,
+   "text": "For metabolic engineering, MoClo and related modular standards have been transformative."
+  },
+  {
+   "t": 230.79,
+   "text": "Building and testing variants of a multi-gene pathway, with different promoters and different RBSes for each gene, used to take months."
+  },
+  {
+   "t": 239.64,
+   "text": "With MoClo, you build a library of part variants — say, five different promoters and three different RBSes for each of your pathway genes — and you can combinatorially assemble dozens or hundreds of pathway variants in a single Golden Gate reaction."
+  },
+  {
+   "t": 255.35,
+   "text": "Drop the assemblies into the host, screen for product titers, and the winners point you to the best part combinations."
+  },
+  {
+   "t": 262.78,
+   "text": "The design-build-test-learn loop, which is the iterative cycle that drives metabolic engineering forward, runs an order of magnitude faster than it did fifteen years ago."
+  },
+  {
+   "t": 273.15,
+   "text": "The analogy I want you to carry: modular cloning — Golden Gate, MoClo — is what made rapid pathway shuffling possible."
+  },
+  {
+   "t": 282.34,
+   "text": "You build a library of standardized parts with defined junctions, and you can combinatorially assemble many pathway variants in a single reaction."
+  },
+  {
+   "t": 291.43,
+   "text": "The design-build-test-learn loop runs much faster."
+  },
+  {
+   "t": 295.04,
+   "text": "The genetic circuits people aspired to this with BioBricks; the metabolic engineers achieved it with Golden Gate."
+  },
+  {
+   "t": 302.08,
+   "text": "This is the engineering infrastructure that sits under projects like Keasling artemisinin, like the Smolke opioid yeast, like the alt-protein companies."
+  },
+  {
+   "t": 311.03,
+   "text": "Without modern assembly methods, those projects would have taken decades."
+  },
+  {
+   "t": 315.44,
+   "text": "With them, they took years."
+  },
+  {
+   "t": 317.28,
+   "text": "There is an emerging follow-up to all of this — DNA synthesis at scale."
+  },
+  {
+   "t": 322.75,
+   "text": "Companies like Twist Bioscience, IDT, and Ansa Biotechnologies can now synthesize DNA to spec at scales of kilobases to megabases, at prices that have been collapsing for two decades."
+  },
+  {
+   "t": 335.75,
+   "text": "For a metabolic engineering project, you increasingly just design what you want — promoters, codon-optimized genes, regulatory elements — and order it from a synthesis house."
+  },
+  {
+   "t": 346.42,
+   "text": "The synthesis houses use Gibson or Golden Gate-style assembly internally to build the pieces."
+  },
+  {
+   "t": 352.84,
+   "text": "The engineering workflow is increasingly \"design on a computer, order the DNA, transform into the host, screen for performance."
+  },
+  {
+   "t": 362.04,
+   "text": "\" The wet-lab molecular biology of building constructs is, for many projects, almost vestigial."
+  },
+  {
+   "t": 368.75,
+   "text": "That is a profound shift in how the field operates."
+  },
+  {
+   "t": 372.13,
+   "text": "Now let us look at the editing technology that has been the other big throughput driver — CRISPR."
+  }
+ ]
+}

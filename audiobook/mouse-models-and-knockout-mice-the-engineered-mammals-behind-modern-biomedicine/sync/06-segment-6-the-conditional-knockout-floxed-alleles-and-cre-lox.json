@@ -1,0 +1,271 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The conditional knockout: floxed alleles and Cre-Lox",
+ "duration": 427.24,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The conditional knockout: floxed alleles and Cre-Lox"
+  },
+  {
+   "t": 5.58,
+   "text": "Up to this point, every knockout we've described has been what we call a constitutive knockout — the gene is deleted from every cell of the mouse, from the moment of fertilization, for the entire life of the animal."
+  },
+  {
+   "t": 17.5,
+   "text": "That's a powerful experiment when you want a clean answer to \"what does this gene do, period."
+  },
+  {
+   "t": 22.6,
+   "text": "\" But constitutive knockouts have two big limitations."
+  },
+  {
+   "t": 26.52,
+   "text": "Limitation one: embryonic lethality."
+  },
+  {
+   "t": 29.85,
+   "text": "Many genes are essential for early development."
+  },
+  {
+   "t": 33.15,
+   "text": "If you knock them out from fertilization, the embryo dies in the womb, often very early, and you never get an adult mouse to study."
+  },
+  {
+   "t": 41.21,
+   "text": "You've learned only that the gene is essential — which is fine, but it's frustrating, because what you really wanted to know is what the gene does in the adult heart, or the adult brain, where you suspected it had some interesting role."
+  },
+  {
+   "t": 54.05,
+   "text": "The constitutive knockout never lets you ask that question, because the mouse is dead before it has an adult heart."
+  },
+  {
+   "t": 60.73,
+   "text": "Limitation two: tissue specificity."
+  },
+  {
+   "t": 63.92,
+   "text": "Many genes do different jobs in different tissues."
+  },
+  {
+   "t": 67.46,
+   "text": "The protein insulin-degrading enzyme, for example, may have one role in pancreatic beta cells and a completely different role in neurons."
+  },
+  {
+   "t": 76.0,
+   "text": "If you constitutively knock it out, both roles vanish at once, and you can't tell which phenotype came from which tissue."
+  },
+  {
+   "t": 83.61,
+   "text": "You need a way to say: delete this gene only in the pancreas."
+  },
+  {
+   "t": 87.96,
+   "text": "Or only in mature neurons."
+  },
+  {
+   "t": 90.05,
+   "text": "Or only in skin cells."
+  },
+  {
+   "t": 91.96,
+   "text": "Or only in T cells."
+  },
+  {
+   "t": 93.71,
+   "text": "To solve both of these problems, we built the conditional knockout — a mouse in which the gene of interest is deleted only in a specific cell type, often at a specific time, leaving the rest of the body untouched."
+  },
+  {
+   "t": 107.11,
+   "text": "And the molecular tool that made conditional knockouts possible — that turned them from an exotic curiosity into a routine technique — is the Cre-Lox system."
+  },
+  {
+   "t": 117.3,
+   "text": "I want to be brief about Cre-Lox today because there is a whole separate book in this series devoted to it; if you want the full mechanistic story, read the Cre-Lox lecture."
+  },
+  {
+   "t": 127.92,
+   "text": "But you need the basics here, because conditional alleles are now the dominant form of mouse engineering and you can't get through this lecture without understanding them."
+  },
+  {
+   "t": 137.2,
+   "text": "Here's the system, in one paragraph."
+  },
+  {
+   "t": 139.94,
+   "text": "Cre is a recombinase enzyme — a protein that, when present in a cell, recognizes a specific 34-base-pair DNA sequence called a loxP site and excises whatever DNA sits between two loxP sites pointing the same direction."
+  },
+  {
+   "t": 156.91,
+   "text": "So if a piece of DNA in your genome is flanked by loxP sites — we call this being \"floxed\" — then in any cell expressing Cre, that flanked piece will be cut out and removed."
+  },
+  {
+   "t": 168.21,
+   "text": "In any cell not expressing Cre, the floxed piece sits there indefinitely, intact and functional."
+  },
+  {
+   "t": 175.78,
+   "text": "Cre is a tissue-specific genetic scissors."
+  },
+  {
+   "t": 179.44,
+   "text": "Wherever Cre is on, the scissors snip."
+  },
+  {
+   "t": 182.46,
+   "text": "Wherever Cre is off, nothing happens."
+  },
+  {
+   "t": 185.38,
+   "text": "So the conditional knockout strategy goes like this."
+  },
+  {
+   "t": 188.72,
+   "text": "Instead of knocking the gene out for real, you engineer a mouse in which the gene is flanked by loxP sites — a floxed allele."
+  },
+  {
+   "t": 196.94,
+   "text": "The floxed allele is functionally identical to the wild-type allele, because the loxP sites are short and don't disrupt anything."
+  },
+  {
+   "t": 205.0,
+   "text": "The mouse that carries it looks completely normal."
+  },
+  {
+   "t": 207.74,
+   "text": "The gene works fine."
+  },
+  {
+   "t": 209.21,
+   "text": "Then you cross that floxed mouse to a second mouse, called a Cre driver line, that expresses Cre recombinase only in the tissue you care about."
+  },
+  {
+   "t": 219.76,
+   "text": "Maybe the Cre driver expresses Cre only in liver cells, controlled by a liver-specific promoter."
+  },
+  {
+   "t": 227.32,
+   "text": "Maybe it expresses Cre only in oligodendrocytes."
+  },
+  {
+   "t": 231.81,
+   "text": "Maybe in mature B cells."
+  },
+  {
+   "t": 233.91,
+   "text": "Whatever the tissue you want."
+  },
+  {
+   "t": 235.51,
+   "text": "There are now hundreds of well-characterized Cre driver lines, distributed by stock centers, each one targeting a different cell type."
+  },
+  {
+   "t": 244.26,
+   "text": "When you cross the floxed mouse to the Cre driver, the offspring carry both: the floxed gene and the Cre transgene."
+  },
+  {
+   "t": 252.01,
+   "text": "In every cell of those offspring, the floxed gene sits there intact — except in the specific cells where the Cre driver is active."
+  },
+  {
+   "t": 260.79,
+   "text": "In those cells, Cre gets made, finds the loxP sites, and excises the flanked region of the gene."
+  },
+  {
+   "t": 268.21,
+   "text": "The gene is now functionally knocked out in that tissue only."
+  },
+  {
+   "t": 272.34,
+   "text": "The rest of the mouse is wild-type."
+  },
+  {
+   "t": 274.67,
+   "text": "The analogy: knockout deletes the gene everywhere from birth; conditional deletes it only in a specific tissue, often only when you flip a switch."
+  },
+  {
+   "t": 285.07,
+   "text": "It's the difference between turning off the electricity to the whole house versus flipping just one light switch in one room."
+  },
+  {
+   "t": 292.1,
+   "text": "And there's a further refinement that's now standard practice: inducible Cre."
+  },
+  {
+   "t": 297.56,
+   "text": "The plain tissue-specific Cre we just described turns on whenever the tissue-specific promoter turns on, which might be early in development."
+  },
+  {
+   "t": 306.29,
+   "text": "That's not always what you want."
+  },
+  {
+   "t": 307.96,
+   "text": "Sometimes you want the gene to be present during development, and only deleted later, in the adult animal, on a day you choose."
+  },
+  {
+   "t": 315.95,
+   "text": "The trick: a version of Cre called CreER, which is a fusion protein of Cre and a mutated estrogen receptor."
+  },
+  {
+   "t": 323.82,
+   "text": "CreER, when made by the cell, sits inactive in the cytoplasm — the estrogen receptor portion holds it captive."
+  },
+  {
+   "t": 331.3,
+   "text": "The only way to activate it is to give the mouse a drug called tamoxifen."
+  },
+  {
+   "t": 335.67,
+   "text": "Tamoxifen binds the engineered estrogen receptor, releases CreER, and lets it move into the nucleus where it can act on its loxP sites."
+  },
+  {
+   "t": 344.56,
+   "text": "So in a mouse carrying a CreER driver, the floxed gene stays intact until you give the mouse tamoxifen."
+  },
+  {
+   "t": 351.45,
+   "text": "The day you inject tamoxifen — typically a few days of injections — is the day the gene gets deleted."
+  },
+  {
+   "t": 358.34,
+   "text": "Before that, the mouse is normal."
+  },
+  {
+   "t": 360.74,
+   "text": "After that, the gene is gone in whichever cells were expressing CreER."
+  },
+  {
+   "t": 365.05,
+   "text": "This gives you temporal control on top of spatial control."
+  },
+  {
+   "t": 369.21,
+   "text": "Delete the gene only in mature neurons, and only after the mouse is six months old."
+  },
+  {
+   "t": 374.94,
+   "text": "Delete it only in beta cells, and only on the day you start the diet experiment."
+  },
+  {
+   "t": 380.85,
+   "text": "The conditional knockout has gone from a coarse tool to a precision instrument."
+  },
+  {
+   "t": 385.69,
+   "text": "The big idea to leave this segment with: floxed alleles plus Cre drivers — possibly inducible Cre drivers — have transformed mouse genetics."
+  },
+  {
+   "t": 396.01,
+   "text": "The constitutive knockout is now the exception rather than the rule."
+  },
+  {
+   "t": 400.21,
+   "text": "For most genes that have been seriously studied in the past fifteen years, the relevant mouse model is a floxed allele plus a panel of Cre drivers, allowing the researcher to interrogate gene function in any tissue, at any time, in adult animals that develop normally before the perturbation begins."
+  },
+  {
+   "t": 418.65,
+   "text": "Now let's spend a little more time on the Cre driver lines themselves, because they are a community resource of staggering scale, and they're worth a segment."
+  }
+ ]
+}

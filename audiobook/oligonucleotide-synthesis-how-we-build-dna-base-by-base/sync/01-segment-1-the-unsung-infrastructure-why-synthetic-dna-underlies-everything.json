@@ -1,0 +1,279 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The unsung infrastructure: why synthetic DNA underlies everything",
+ "duration": 413.52,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The unsung infrastructure: why synthetic DNA underlies everything"
+  },
+  {
+   "t": 6.6,
+   "text": "Alright."
+  },
+  {
+   "t": 7.4,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 8.78,
+   "text": "Let's get started."
+  },
+  {
+   "t": 9.85,
+   "text": "Today, for the next two hours, we are going to talk about something that almost every other lecture in this course has quietly assumed exists, without ever explaining where it comes from."
+  },
+  {
+   "t": 19.75,
+   "text": "We are going to talk about oligonucleotide synthesis — the chemistry that lets us, sitting at a bench in 2026, type any DNA sequence we want into a website and have a real, physical, sequence-defined piece of DNA show up in a tube in our lab two days later."
+  },
+  {
+   "t": 36.74,
+   "text": "I want to make a claim right at the start, and I want you to hold onto it for the next two hours and see if I've convinced you by the end."
+  },
+  {
+   "t": 44.27,
+   "text": "Here is the claim."
+  },
+  {
+   "t": 45.75,
+   "text": "Synthetic DNA is the most quietly important piece of infrastructure in all of molecular biology."
+  },
+  {
+   "t": 52.65,
+   "text": "It is more important than PCR machines."
+  },
+  {
+   "t": 55.52,
+   "text": "It is more important than electrophoresis."
+  },
+  {
+   "t": 58.16,
+   "text": "It is, in some ways, more important than the sequencers we spent three lectures admiring earlier in this course."
+  },
+  {
+   "t": 65.38,
+   "text": "Because every single one of those things — every PCR, every Sanger run, every Illumina library, every CRISPR experiment, every Gibson assembly, every plasmid you cloned in the teaching lab last semester, every COVID test that was ever run on a swab from your nose — every single one of them depended on someone, somewhere, having first synthesized a short piece of DNA to a precise specified sequence."
+  },
+  {
+   "t": 89.46,
+   "text": "No synthetic DNA, no PCR primers."
+  },
+  {
+   "t": 92.91,
+   "text": "No PCR primers, no PCR."
+  },
+  {
+   "t": 95.76,
+   "text": "No PCR, no modern molecular biology."
+  },
+  {
+   "t": 98.99,
+   "text": "The whole edifice stands on synthetic DNA, and yet almost nobody who uses it ever stops to think about where it actually comes from."
+  },
+  {
+   "t": 107.11,
+   "text": "So that is what we are going to fix today."
+  },
+  {
+   "t": 108.84,
+   "text": "Let me give you the scope of what I mean by \"everything depends on this."
+  },
+  {
+   "t": 112.42,
+   "text": "\" Think about what you order from a website like Integrated DNA Technologies, or IDT, or from Thermo Fisher, or from Eurofins."
+  },
+  {
+   "t": 120.72,
+   "text": "You order PCR primers — short pieces of DNA, twenty bases long, that let you amplify a specific gene."
+  },
+  {
+   "t": 129.25,
+   "text": "Those are synthesized."
+  },
+  {
+   "t": 130.69,
+   "text": "You order a fluorescent probe for a qPCR experiment — a piece of DNA with a fluorophore on one end and a quencher on the other."
+  },
+  {
+   "t": 138.64,
+   "text": "Synthesized."
+  },
+  {
+   "t": 139.89,
+   "text": "You order a guide RNA for a CRISPR experiment — that's a synthesized oligonucleotide too, or it's made by an enzyme reading from a synthesized DNA template."
+  },
+  {
+   "t": 150.3,
+   "text": "You order a gene block, a so-called gBlock, which is a chunk of DNA five hundred bases long, ready to drop into a Gibson assembly."
+  },
+  {
+   "t": 159.29,
+   "text": "Synthesized."
+  },
+  {
+   "t": 160.53,
+   "text": "The mRNA in the COVID vaccine that some of you got in your arm five years ago — that mRNA was made by a process that started with a synthesized DNA template."
+  },
+  {
+   "t": 170.59,
+   "text": "The antisense oligonucleotide drug milasen, that we spent two hours on last week — that was a synthesized oligonucleotide, twenty-two bases long, with chemical modifications, made on a machine."
+  },
+  {
+   "t": 183.35,
+   "text": "Every single primer, every probe, every ASO drug, every gene block, every guide, every DNA bookend in a Gibson assembly — they all trace back to the same family of machines, running the same family of chemistries, on the same kind of solid support."
+  },
+  {
+   "t": 199.47,
+   "text": "That chemistry is called phosphoramidite chemistry."
+  },
+  {
+   "t": 202.75,
+   "text": "The machines are called DNA synthesizers, or oligonucleotide synthesizers, or just synthesizers if everyone knows what you mean."
+  },
+  {
+   "t": 211.25,
+   "text": "The technique was perfected in 1981 by a chemist named Marvin Caruthers, working at the University of Colorado Boulder."
+  },
+  {
+   "t": 218.91,
+   "text": "And in a sense, every conversation about modern molecular biology since 1981 has been a conversation conducted on top of Marvin Caruthers's chemistry, with very few people noticing."
+  },
+  {
+   "t": 230.31,
+   "text": "So that's where we are going."
+  },
+  {
+   "t": 231.62,
+   "text": "By the end of these two hours, if you walk out of here, I want you to be able to do three things."
+  },
+  {
+   "t": 237.57,
+   "text": "One: explain to a curious friend, in plain English, what it means to \"synthesize\" a piece of DNA — what the machine is actually doing, base by base, on a tiny piece of glass."
+  },
+  {
+   "t": 249.15,
+   "text": "Two: walk through the phosphoramidite cycle — the four-step dance of deprotection, coupling, capping, and oxidation — and explain why each step exists and what would happen if you skipped it."
+  },
+  {
+   "t": 261.4,
+   "text": "And three: look at a news story about a new ASO drug, or a new gene therapy, or a new mRNA vaccine, or a DNA data-storage demo, and have a real intuition for what's happening underneath, because almost certainly there's a synthesizer in there somewhere doing the heavy lifting."
+  },
+  {
+   "t": 278.56,
+   "text": "That is our contract for the next two hours."
+  },
+  {
+   "t": 281.01,
+   "text": "Let me start with the analogy I am going to come back to over and over again, because if you internalize this single picture, half of the chemistry becomes intuitive."
+  },
+  {
+   "t": 290.32,
+   "text": "Imagine you are making a beaded necklace."
+  },
+  {
+   "t": 292.65,
+   "text": "You have a string."
+  },
+  {
+   "t": 293.73,
+   "text": "You have a clasp at one end."
+  },
+  {
+   "t": 295.41,
+   "text": "And you have a pile of beads of four different colors — let's say red, green, blue, and yellow — and you want to thread them onto the string in a specific order."
+  },
+  {
+   "t": 304.88,
+   "text": "Red, green, green, blue, yellow, red, blue."
+  },
+  {
+   "t": 308.38,
+   "text": "Whatever sequence you want."
+  },
+  {
+   "t": 309.86,
+   "text": "The way you do it is one bead at a time."
+  },
+  {
+   "t": 312.6,
+   "text": "You start by tying the first bead — let's say it's a red one — to the clasp."
+  },
+  {
+   "t": 317.25,
+   "text": "Now you have one bead on the string."
+  },
+  {
+   "t": 319.41,
+   "text": "Then you add the next bead, then the next, then the next, until you have built up the whole sequence."
+  },
+  {
+   "t": 325.63,
+   "text": "At the end, you cut the string off the clasp, and you have your necklace."
+  },
+  {
+   "t": 330.15,
+   "text": "That is exactly what a DNA synthesizer does."
+  },
+  {
+   "t": 333.48,
+   "text": "The string is a chain of nucleotides."
+  },
+  {
+   "t": 335.91,
+   "text": "The beads are the four DNA bases — A, T, G, and C."
+  },
+  {
+   "t": 341.38,
+   "text": "The clasp is a tiny piece of glass called a controlled pore glass bead, sitting at the bottom of a tiny column."
+  },
+  {
+   "t": 348.3,
+   "text": "And the bead-by-bead addition is the phosphoramidite cycle."
+  },
+  {
+   "t": 352.07,
+   "text": "One base at a time, in a specific order you specified when you typed the sequence into the website."
+  },
+  {
+   "t": 358.36,
+   "text": "Build it up to the length you want."
+  },
+  {
+   "t": 360.18,
+   "text": "Then snip it off the glass and ship it to the customer."
+  },
+  {
+   "t": 363.15,
+   "text": "That's it."
+  },
+  {
+   "t": 363.92,
+   "text": "That is the whole field, in one analogy."
+  },
+  {
+   "t": 366.78,
+   "text": "Everything else we are going to do today is just adding detail and nuance to that picture."
+  },
+  {
+   "t": 372.38,
+   "text": "Now, one more thing before we move on."
+  },
+  {
+   "t": 375.01,
+   "text": "I said the chemistry was perfected in 1981."
+  },
+  {
+   "t": 378.38,
+   "text": "But the desire to make synthetic DNA goes back further — back to the 1960s, when a man named Har Gobind Khorana was, almost single-handedly and almost heroically, trying to make short pieces of DNA by hand, in glassware, one base at a time, using chemistry that was so painful and slow that an entire dissertation might be spent making a single octamer."
+  },
+  {
+   "t": 400.95,
+   "text": "We are going to start there, because to understand why phosphoramidite chemistry is so beautiful, you have to understand what came before it — and how badly the field needed something better."
+  },
+  {
+   "t": 412.07,
+   "text": "Let's go meet Khorana."
+  }
+ ]
+}

@@ -1,0 +1,315 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The orthogonal pair: what \"orthogonal\" really means",
+ "duration": 503.61,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The orthogonal pair: what \"orthogonal\" really means"
+  },
+  {
+   "t": 5.24,
+   "text": "Before we get into the historical paper that launched this field — Schultz 2001, coming up in Segment 5 — I need to spend a careful segment on the most important concept in the entire field, the concept of orthogonality."
+  },
+  {
+   "t": 19.23,
+   "text": "It's the word you'll see in every title, every abstract, every grant proposal."
+  },
+  {
+   "t": 24.84,
+   "text": "And it's a word that's worth slowing down on, because if you really understand what orthogonality means in this context, you understand seventy percent of how the field works."
+  },
+  {
+   "t": 35.0,
+   "text": "Let me start with a definition."
+  },
+  {
+   "t": 36.56,
+   "text": "In genetic code expansion, an orthogonal aaRS/tRNA pair is a pair of molecules — an aminoacyl-tRNA synthetase and its cognate tRNA — that work with each other and only with each other inside a given host cell."
+  },
+  {
+   "t": 51.3,
+   "text": "The synthetase charges the tRNA."
+  },
+  {
+   "t": 54.15,
+   "text": "The tRNA receives only that amino acid from that synthetase."
+  },
+  {
+   "t": 58.67,
+   "text": "Crucially, the engineered synthetase does not charge any of the host cell's natural tRNAs, and the host cell's natural synthetases do not charge the engineered tRNA."
+  },
+  {
+   "t": 69.67,
+   "text": "The pair is a closed loop, walled off from the rest of the translation machinery."
+  },
+  {
+   "t": 74.17,
+   "text": "That walling-off is what \"orthogonal\" means."
+  },
+  {
+   "t": 76.99,
+   "text": "Two things are orthogonal if they don't interfere with each other."
+  },
+  {
+   "t": 80.71,
+   "text": "In the genetic code expansion context, an orthogonal pair is a synthetase-tRNA duo that operates inside the cell without any crosstalk to the cell's existing twenty pairs."
+  },
+  {
+   "t": 92.58,
+   "text": "The cell's natural translation continues to work normally — its twenty standard amino acids still get loaded onto their twenty standard tRNAs by their twenty standard synthetases, and the resulting charged tRNAs decode their normal codons."
+  },
+  {
+   "t": 107.65,
+   "text": "Meanwhile, in parallel, your engineered pair sits there doing its own thing, charging its own tRNA with its own non-canonical amino acid, and that tRNA decodes its own chosen codon."
+  },
+  {
+   "t": 120.51,
+   "text": "The two systems coexist in the same cytoplasm without colliding."
+  },
+  {
+   "t": 124.96,
+   "text": "Here is why orthogonality is the whole game."
+  },
+  {
+   "t": 127.96,
+   "text": "Imagine you tried to expand the genetic code without orthogonality."
+  },
+  {
+   "t": 132.5,
+   "text": "Imagine you took an aaRS from one organism — say, the tyrosyl-tRNA synthetase from yeast — and you put it into E. coli, hoping that it would charge a tRNA you'd brought along with a non-canonical amino acid."
+  },
+  {
+   "t": 145.22,
+   "text": "The problem you'd run into immediately is that the yeast synthetase, dropped into E. coli, would not just charge your engineered tRNA."
+  },
+  {
+   "t": 153.78,
+   "text": "It would also recognize E. coli's own tyrosine tRNAs, because yeast and E. coli aaRS recognition rules are similar enough that there's crossover."
+  },
+  {
+   "t": 164.75,
+   "text": "And so your engineered synthetase would start charging the cell's normal tyrosine tRNAs with your non-canonical amino acid."
+  },
+  {
+   "t": 173.03,
+   "text": "Your non-canonical amino acid would start showing up at every tyrosine position in the proteome."
+  },
+  {
+   "t": 178.8,
+   "text": "The whole cell would be poisoned with off-target incorporation."
+  },
+  {
+   "t": 182.09,
+   "text": "The experiment would fail."
+  },
+  {
+   "t": 183.74,
+   "text": "The same thing would happen in reverse."
+  },
+  {
+   "t": 185.81,
+   "text": "If you brought along your engineered tRNA, and the E. coli host's own synthetases recognized it, they'd charge it with their native amino acid."
+  },
+  {
+   "t": 194.78,
+   "text": "Now your engineered tRNA — which was supposed to deliver a non-canonical amino acid — would instead be carrying tyrosine, or leucine, or whatever the host synthetase chose to load."
+  },
+  {
+   "t": 206.65,
+   "text": "Your chosen codon would get decoded with the wrong amino acid."
+  },
+  {
+   "t": 210.91,
+   "text": "Again, the experiment fails."
+  },
+  {
+   "t": 213.4,
+   "text": "Orthogonality is the condition that prevents both of these failure modes."
+  },
+  {
+   "t": 218.32,
+   "text": "Your engineered synthetase must be invisible to the host's tRNAs."
+  },
+  {
+   "t": 222.82,
+   "text": "Your engineered tRNA must be invisible to the host's synthetases."
+  },
+  {
+   "t": 227.62,
+   "text": "The pair must be isolated."
+  },
+  {
+   "t": 229.49,
+   "text": "And then, and only then, you can give the pair a non-canonical amino acid to handle, and trust that it will be installed only at the codon your tRNA reads."
+  },
+  {
+   "t": 239.06,
+   "text": "Here's the analogy I'm going to use, and you should hold this image."
+  },
+  {
+   "t": 243.06,
+   "text": "The cell's translation machinery is like a giant mail sorting facility, with twenty mail carriers, each one delivering only their assigned color of envelopes to their assigned ZIP codes."
+  },
+  {
+   "t": 254.64,
+   "text": "Red envelopes go to one carrier, blue envelopes go to another, green to a third, and so on."
+  },
+  {
+   "t": 260.86,
+   "text": "The sorting facility works because each carrier knows which envelopes are theirs and ignores the others, and each envelope is recognized by exactly one carrier."
+  },
+  {
+   "t": 270.93,
+   "text": "The system is twenty-way orthogonal — twenty carriers, twenty envelope types, no crossover."
+  },
+  {
+   "t": 277.05,
+   "text": "Now you want to add a twenty-first carrier delivering a twenty-first color of envelope."
+  },
+  {
+   "t": 281.22,
+   "text": "The new carrier walks into the facility carrying purple envelopes."
+  },
+  {
+   "t": 285.52,
+   "text": "For this to work, the new carrier must ignore all the existing colors of envelopes — must not pick up any red or blue or green or anything else by mistake."
+  },
+  {
+   "t": 295.37,
+   "text": "And the new purple envelopes must not be mistaken by any of the existing carriers for envelopes belonging to their routes."
+  },
+  {
+   "t": 303.4,
+   "text": "The new carrier and the new envelope type are orthogonal to all the existing pairings."
+  },
+  {
+   "t": 308.56,
+   "text": "Once that's true, the twenty-first carrier just walks in, picks up purple envelopes from the sorting bin, and delivers them to a brand-new ZIP code that none of the other carriers serve."
+  },
+  {
+   "t": 319.0,
+   "text": "The original mail keeps moving."
+  },
+  {
+   "t": 321.48,
+   "text": "The new mail moves alongside."
+  },
+  {
+   "t": 323.43,
+   "text": "Everything works."
+  },
+  {
+   "t": 324.7,
+   "text": "That's the picture."
+  },
+  {
+   "t": 325.88,
+   "text": "The engineered aaRS is the new carrier."
+  },
+  {
+   "t": 328.51,
+   "text": "The engineered tRNA is the new envelope."
+  },
+  {
+   "t": 331.72,
+   "text": "The non-canonical amino acid is the cargo inside the envelope."
+  },
+  {
+   "t": 336.36,
+   "text": "The chosen codon — usually a repurposed stop codon, as we'll see — is the new ZIP code."
+  },
+  {
+   "t": 342.78,
+   "text": "Orthogonality is the property that lets the new system slot in without breaking the existing one."
+  },
+  {
+   "t": 348.86,
+   "text": "Now, where do orthogonal pairs come from in practice?"
+  },
+  {
+   "t": 351.95,
+   "text": "You don't just sit down and design one from scratch out of nothing."
+  },
+  {
+   "t": 355.57,
+   "text": "The standard trick — and this is the trick that Peter Schultz exploited brilliantly — is to borrow a pair from one organism and import it into another organism."
+  },
+  {
+   "t": 365.26,
+   "text": "The pair, in its home organism, is just one of the normal twenty pairs, doing the normal job of charging a tRNA with a standard amino acid."
+  },
+  {
+   "t": 374.58,
+   "text": "But when you move it to a different organism, with a different set of native synthetases and tRNAs, the imported pair often turns out to be invisible to the new host."
+  },
+  {
+   "t": 384.51,
+   "text": "Why?"
+  },
+  {
+   "t": 385.22,
+   "text": "Because synthetase-tRNA recognition rules have drifted across evolutionary distance."
+  },
+  {
+   "t": 391.11,
+   "text": "The features that the imported synthetase looks for in its cognate tRNA are not the features the host's own tRNAs display."
+  },
+  {
+   "t": 398.82,
+   "text": "And the features the host's synthetases look for in their cognate tRNAs are not the features the imported tRNA displays."
+  },
+  {
+   "t": 406.6,
+   "text": "The pair, in foreign territory, has no friends among the locals."
+  },
+  {
+   "t": 411.05,
+   "text": "It only talks to itself."
+  },
+  {
+   "t": 412.8,
+   "text": "It is, by virtue of being foreign, orthogonal."
+  },
+  {
+   "t": 416.1,
+   "text": "The classic example, and the one we'll dive into in Segment 5, is the tyrosyl-tRNA synthetase and tyrosyl tRNA from the archaeon Methanocaldococcus jannaschii — usually abbreviated Mj — imported into E. coli."
+  },
+  {
+   "t": 431.7,
+   "text": "In M. jannaschii, the MjTyrRS just does the normal job of charging MjtRNA-Tyr with tyrosine."
+  },
+  {
+   "t": 439.4,
+   "text": "But M. jannaschii is an archaeon, separated from E. coli by billions of years of evolutionary divergence, and the recognition rules between archaeal and bacterial synthetases and tRNAs have drifted far enough apart that the Mj pair is essentially blind to E. coli's machinery, and vice versa."
+  },
+  {
+   "t": 459.36,
+   "text": "Drop the Mj pair into E. coli, and it sits there, charging only its own tRNA, charging that tRNA with only its own amino acid, ignoring everything else."
+  },
+  {
+   "t": 471.8,
+   "text": "It's orthogonal by phylogenetic distance."
+  },
+  {
+   "t": 475.06,
+   "text": "That's the foundational move."
+  },
+  {
+   "t": 476.91,
+   "text": "The orthogonal pair is borrowed from a distant relative."
+  },
+  {
+   "t": 480.6,
+   "text": "The rest of the engineering is then about reprogramming what amino acid the pair handles and what codon the tRNA reads."
+  },
+  {
+   "t": 488.52,
+   "text": "We'll get to that machinery in the next segments."
+  },
+  {
+   "t": 491.31,
+   "text": "For now, internalize the concept: orthogonality is the wall, the wall is built by phylogenetic distance, and once you have the wall, you can install any chemistry you like behind it."
+  }
+ ]
+}

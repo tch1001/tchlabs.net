@@ -1,0 +1,255 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — The workflow: biopsy to vaccine in four to six weeks",
+ "duration": 345.44,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — The workflow: biopsy to vaccine in four to six weeks"
+  },
+  {
+   "t": 5.36,
+   "text": "Let me now walk you through the full workflow, end to end, of how a neoantigen vaccine actually gets made for an individual patient."
+  },
+  {
+   "t": 13.76,
+   "text": "This is going to feel like a logistics segment, and it is, but I want you to internalize how many moving parts there are, because the logistics turn out to be one of the field's central challenges."
+  },
+  {
+   "t": 24.7,
+   "text": "Step one."
+  },
+  {
+   "t": 25.66,
+   "text": "Biopsy."
+  },
+  {
+   "t": 26.65,
+   "text": "The patient has a tumor — let's say a melanoma — and a surgeon takes a piece of it."
+  },
+  {
+   "t": 32.58,
+   "text": "The piece needs to be big enough to extract usable DNA and RNA, ideally both."
+  },
+  {
+   "t": 38.77,
+   "text": "Often the tumor is being surgically resected anyway for clinical reasons, so a portion of the surgical specimen gets routed to the vaccine workflow."
+  },
+  {
+   "t": 48.48,
+   "text": "Step two."
+  },
+  {
+   "t": 49.44,
+   "text": "Whole-exome sequencing of the tumor and a matched normal sample."
+  },
+  {
+   "t": 53.79,
+   "text": "Whole-exome sequencing covers every protein-coding region of the genome — roughly 1 to 2 percent of the total — at high depth."
+  },
+  {
+   "t": 61.64,
+   "text": "You sequence both the tumor and a matched normal sample, usually blood-derived, because you need the normal sample as a comparator."
+  },
+  {
+   "t": 69.8,
+   "text": "The mutations you care about are the somatic mutations — the ones present in the tumor but not in the patient's germline."
+  },
+  {
+   "t": 77.03,
+   "text": "To find them, you align both samples to the reference genome and call variants that appear only in the tumor."
+  },
+  {
+   "t": 83.71,
+   "text": "Step three."
+  },
+  {
+   "t": 84.81,
+   "text": "RNA sequencing of the tumor."
+  },
+  {
+   "t": 87.41,
+   "text": "Just because a mutation exists in tumor DNA doesn't mean the mutant protein is actually being made."
+  },
+  {
+   "t": 93.9,
+   "text": "The gene might be silenced."
+  },
+  {
+   "t": 95.72,
+   "text": "So you do RNA-seq on the tumor and check that each candidate mutation is in a gene that's actually expressed at meaningful levels."
+  },
+  {
+   "t": 104.56,
+   "text": "Filtering for expression is a critical step that removes a lot of false-positive neoantigen predictions."
+  },
+  {
+   "t": 111.58,
+   "text": "Step four."
+  },
+  {
+   "t": 112.6,
+   "text": "HLA typing."
+  },
+  {
+   "t": 113.91,
+   "text": "You determine the patient's specific HLA alleles, usually by sequencing the HLA locus or by inferring them from the exome data using tools like Optitype or HLA-HD."
+  },
+  {
+   "t": 125.34,
+   "text": "You need this for the next step."
+  },
+  {
+   "t": 126.8,
+   "text": "Step five."
+  },
+  {
+   "t": 127.9,
+   "text": "Neoantigen prediction."
+  },
+  {
+   "t": 129.68,
+   "text": "Now you bring the previous steps together."
+  },
+  {
+   "t": 132.01,
+   "text": "For each somatic mutation in an expressed gene, generate the candidate mutant peptides; run them through NetMHCpan or MHCflurry conditioned on the patient's HLA alleles; rank them by predicted binding affinity."
+  },
+  {
+   "t": 146.99,
+   "text": "Apply additional filters — clonality, allele frequency in the tumor, agretopicity (how different the mutant peptide is from the wild-type, since strongly self-similar peptides may be tolerized), and so on."
+  },
+  {
+   "t": 161.29,
+   "text": "The output is a ranked list of, typically, a few hundred candidate neoantigens, of which the top 20 to 40 are selected to actually go into the vaccine."
+  },
+  {
+   "t": 171.8,
+   "text": "Step six."
+  },
+  {
+   "t": 173.0,
+   "text": "Vaccine design and manufacturing."
+  },
+  {
+   "t": 175.49,
+   "text": "This is where the platform technology comes in."
+  },
+  {
+   "t": 178.41,
+   "text": "The selected neoantigens have to be turned into something injectable."
+  },
+  {
+   "t": 183.12,
+   "text": "There are several ways to do this — long synthetic peptides mixed with adjuvant, mRNA encoding a string of concatenated neoantigens, DNA plasmids, dendritic cell preparations loaded with the peptides, viral vectors carrying neoantigen-encoding genes."
+  },
+  {
+   "t": 200.44,
+   "text": "Different programs have picked different platforms."
+  },
+  {
+   "t": 203.43,
+   "text": "We'll discuss the two big ones, the original peptide approach used by Wu and Ott and the mRNA approach used by BioNTech and Moderna, in the next two segments."
+  },
+  {
+   "t": 213.2,
+   "text": "Step seven."
+  },
+  {
+   "t": 214.25,
+   "text": "Quality control and release."
+  },
+  {
+   "t": 216.72,
+   "text": "Each batch has to meet GMP — good manufacturing practice — standards for sterility, potency, identity, purity."
+  },
+  {
+   "t": 225.29,
+   "text": "For an mRNA vaccine that means in vitro testing of mRNA integrity, lipid nanoparticle characterization, endotoxin testing, and so on."
+  },
+  {
+   "t": 235.07,
+   "text": "For a peptide vaccine that means HPLC of each peptide, identity by mass spec, sterility testing of the final mixture."
+  },
+  {
+   "t": 243.8,
+   "text": "Step eight."
+  },
+  {
+   "t": 244.7,
+   "text": "Shipping and administration."
+  },
+  {
+   "t": 246.72,
+   "text": "The vaccine is shipped frozen to the patient's clinic and administered — usually intramuscularly or subcutaneously — typically in a series of priming doses followed by boosters over several months."
+  },
+  {
+   "t": 259.09,
+   "text": "Total turnaround time, from biopsy to first dose: typically four to six weeks."
+  },
+  {
+   "t": 265.29,
+   "text": "Some trials have pushed faster."
+  },
+  {
+   "t": 267.36,
+   "text": "Some have run longer."
+  },
+  {
+   "t": 268.87,
+   "text": "But four to six is the operating window the field has settled into."
+  },
+  {
+   "t": 273.27,
+   "text": "Now, think about what this means logistically."
+  },
+  {
+   "t": 276.55,
+   "text": "Every patient generates a unique sequencing dataset, a unique computational pipeline output, a unique manufacturing batch, a unique vial of drug."
+  },
+  {
+   "t": 286.67,
+   "text": "There is no inventory."
+  },
+  {
+   "t": 288.24,
+   "text": "There is no off-the-shelf."
+  },
+  {
+   "t": 289.91,
+   "text": "The drug for patient 47 cannot be given to patient 48 under any circumstances; it would be molecularly meaningless."
+  },
+  {
+   "t": 298.45,
+   "text": "Every step, from the wet lab to the GMP suite to the cold chain to the clinic, has to be designed around the assumption of N=1 manufacturing."
+  },
+  {
+   "t": 307.67,
+   "text": "This is something pharmaceutical companies are genuinely not used to."
+  },
+  {
+   "t": 311.72,
+   "text": "The entire economic logic of pharma is built around making one drug, validating it, scaling it up, and selling identical molecules to millions of patients."
+  },
+  {
+   "t": 322.92,
+   "text": "Personalized neoantigen vaccines invert that logic."
+  },
+  {
+   "t": 326.94,
+   "text": "Each patient gets a different molecule."
+  },
+  {
+   "t": 329.24,
+   "text": "The scale-up isn't about making more of one drug; it's about making many different drugs faster."
+  },
+  {
+   "t": 335.22,
+   "text": "It's a manufacturing paradigm that's closer to bespoke tailoring than to mass production."
+  },
+  {
+   "t": 340.85,
+   "text": "We'll come back to the economic implications of this in segment 13."
+  }
+ ]
+}

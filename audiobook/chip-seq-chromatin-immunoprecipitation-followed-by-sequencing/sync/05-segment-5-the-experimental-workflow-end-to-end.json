@@ -1,0 +1,319 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — The experimental workflow, end to end",
+ "duration": 502.43,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — The experimental workflow, end to end"
+  },
+  {
+   "t": 4.03,
+   "text": "Let me lay out the modern ChIP-seq workflow, top to bottom, the way you'd actually do it in a wet lab today."
+  },
+  {
+   "t": 10.78,
+   "text": "Five stages."
+  },
+  {
+   "t": 12.1,
+   "text": "I'll name them, then unpack each."
+  },
+  {
+   "t": 14.81,
+   "text": "Stage one: crosslinking."
+  },
+  {
+   "t": 16.95,
+   "text": "Stage two: fragmentation."
+  },
+  {
+   "t": 19.34,
+   "text": "Stage three: immunoprecipitation."
+  },
+  {
+   "t": 22.23,
+   "text": "Stage four: reverse crosslinking and DNA purification."
+  },
+  {
+   "t": 26.62,
+   "text": "Stage five: library prep and sequencing."
+  },
+  {
+   "t": 29.95,
+   "text": "Five stages."
+  },
+  {
+   "t": 31.31,
+   "text": "Each one has its own failure modes, its own optimization tricks, its own quirks."
+  },
+  {
+   "t": 36.45,
+   "text": "Let's walk through them."
+  },
+  {
+   "t": 37.61,
+   "text": "Stage one: crosslinking."
+  },
+  {
+   "t": 39.8,
+   "text": "You start with living cells — usually millions of them."
+  },
+  {
+   "t": 43.14,
+   "text": "You add formaldehyde to the culture medium, typically at one percent for ten minutes at room temperature."
+  },
+  {
+   "t": 49.64,
+   "text": "Formaldehyde diffuses into the cells, into the nuclei, and forms covalent crosslinks between amine groups on proteins and amine groups on DNA bases that are within a couple of angstroms of each other."
+  },
+  {
+   "t": 62.69,
+   "text": "The result is that any protein in close contact with DNA gets glued to that DNA."
+  },
+  {
+   "t": 68.42,
+   "text": "The reaction is then quenched with glycine, which mops up the excess formaldehyde."
+  },
+  {
+   "t": 73.62,
+   "text": "The analogy here is important."
+  },
+  {
+   "t": 76.06,
+   "text": "Formaldehyde crosslinking is freezing the protein-DNA contact in place so the protein doesn't fall off during the wash."
+  },
+  {
+   "t": 83.96,
+   "text": "Without crosslinking, the moment you lyse the cell and dump the chromatin into a tube, the high salt and the dilution would cause most transcription factors to dissociate from the DNA."
+  },
+  {
+   "t": 95.17,
+   "text": "They have residence times measured in seconds to minutes."
+  },
+  {
+   "t": 98.66,
+   "text": "By the time you've purified anything, they'd be gone."
+  },
+  {
+   "t": 102.01,
+   "text": "Crosslinking buys you time."
+  },
+  {
+   "t": 103.8,
+   "text": "It makes the assay possible at all."
+  },
+  {
+   "t": 106.04,
+   "text": "There are limits, though."
+  },
+  {
+   "t": 107.55,
+   "text": "Crosslink for too long and you over-fix the chromatin — proteins get linked to other proteins, the DNA becomes hard to fragment, the antibody loses access to its epitope because it's now buried in a tangle of crosslinked junk."
+  },
+  {
+   "t": 122.42,
+   "text": "The standard formaldehyde fixation is a balance: long enough to capture the contacts, short enough not to scramble everything."
+  },
+  {
+   "t": 130.21,
+   "text": "Ten minutes at one percent is the canonical setting."
+  },
+  {
+   "t": 133.75,
+   "text": "For some specialized cases — say, mapping proteins that touch DNA only transiently or indirectly — people use dual crosslinking, where they first add a longer-armed crosslinker like DSG, then formaldehyde, to capture protein-protein interactions before locking the whole assembly to the DNA."
+  },
+  {
+   "t": 153.51,
+   "text": "Stage two: fragmentation."
+  },
+  {
+   "t": 155.88,
+   "text": "Now that the chromatin is fixed, you need to break it up — specifically, into pieces small enough that each piece contains roughly one binding event, not five or ten."
+  },
+  {
+   "t": 167.68,
+   "text": "The classical method is sonication."
+  },
+  {
+   "t": 170.21,
+   "text": "You put the crosslinked cells (or isolated nuclei) into a tube and apply high-frequency sound waves that shear the chromatin mechanically."
+  },
+  {
+   "t": 179.45,
+   "text": "The output is a tube of chromatin fragments, ideally a couple hundred base pairs each."
+  },
+  {
+   "t": 185.28,
+   "text": "The fragmentation is, by design, random — the breaks happen wherever the sound waves happen to fracture the DNA, with some preference for accessible regions but no real sequence specificity."
+  },
+  {
+   "t": 197.78,
+   "text": "The analogy: sonication is breaking the chromatin into roughly 200-base-pair shards so you can pull out the small region the protein was sitting on."
+  },
+  {
+   "t": 207.01,
+   "text": "If your fragments were a thousand base pairs long, then when you pulled out a transcription factor bound at one specific position, you'd also be pulling out the eight hundred base pairs around it, blurring your binding site to a wide smear."
+  },
+  {
+   "t": 220.3,
+   "text": "Two hundred base pairs is short enough to localize the binding to within roughly half a nucleosome, which is good resolution for most purposes."
+  },
+  {
+   "t": 229.19,
+   "text": "Some experiments substitute an enzymatic fragmentation with micrococcal nuclease, MNase, which preferentially digests linker DNA between nucleosomes — and we'll see this come back later when we discuss CUT&RUN."
+  },
+  {
+   "t": 243.26,
+   "text": "Getting fragmentation right is finicky."
+  },
+  {
+   "t": 246.15,
+   "text": "Too little sonication and the fragments are too long and your peaks are broad and mushy."
+  },
+  {
+   "t": 252.15,
+   "text": "Too much sonication and you destroy the chromatin structure, sometimes denaturing proteins or making the epitopes inaccessible to the antibody."
+  },
+  {
+   "t": 261.79,
+   "text": "Most protocols require titrating sonication conditions for each new cell type — too many cycles for one cell type might be too few for another."
+  },
+  {
+   "t": 271.47,
+   "text": "Stage three: immunoprecipitation."
+  },
+  {
+   "t": 274.34,
+   "text": "This is the moment of truth."
+  },
+  {
+   "t": 276.18,
+   "text": "You take your fragmented, crosslinked chromatin and you add an antibody specific for the protein you want to map."
+  },
+  {
+   "t": 282.79,
+   "text": "The antibody binds your protein."
+  },
+  {
+   "t": 284.87,
+   "text": "You then add magnetic beads coated with something — typically protein A or protein G — that binds the Fc region of the antibody."
+  },
+  {
+   "t": 293.67,
+   "text": "(Recall from the antibodies lecture: protein A and protein G are bacterial proteins that grab antibody handles, originally an immune evasion trick by the bacteria, repurposed by biochemists as a handle for pulling antibodies out of solution.)"
+  },
+  {
+   "t": 308.59,
+   "text": "You incubate."
+  },
+  {
+   "t": 309.79,
+   "text": "The antibody — and via the antibody, your protein of interest — and via the protein, the DNA crosslinked to it — all end up stuck to the magnetic beads."
+  },
+  {
+   "t": 320.11,
+   "text": "You put the tube on a magnet, the beads stick to the side, and you pour everything else off."
+  },
+  {
+   "t": 325.41,
+   "text": "The analogy: the antibody is the fishing hook — it specifically grabs the protein you want; everything else washes off."
+  },
+  {
+   "t": 333.48,
+   "text": "This is the magic of ChIP."
+  },
+  {
+   "t": 335.21,
+   "text": "The antibody's specificity, multiplied by the magnetic capture, lets you pull one protein — one specific protein out of the tens of thousands in the nucleus — out of the soup, along with whatever DNA was bound to it."
+  },
+  {
+   "t": 349.12,
+   "text": "Everything that wasn't bound to your protein gets washed away."
+  },
+  {
+   "t": 352.69,
+   "text": "The wash steps — three, four, five rounds of buffer, increasing in stringency — are what give the assay its signal-to-noise."
+  },
+  {
+   "t": 361.59,
+   "text": "Stringent enough washes and the only DNA left on the beads is DNA that was genuinely associated with your protein."
+  },
+  {
+   "t": 369.39,
+   "text": "Too stringent and you wash off the antibody-protein complex itself; too gentle and you carry over background DNA that wasn't really bound to your target."
+  },
+  {
+   "t": 379.12,
+   "text": "The wash conditions, like the sonication, are an optimization."
+  },
+  {
+   "t": 383.16,
+   "text": "Stage four: reverse crosslinking and DNA purification."
+  },
+  {
+   "t": 387.34,
+   "text": "Now you have your antibody, your protein, and your DNA all stuck to the magnetic beads."
+  },
+  {
+   "t": 393.03,
+   "text": "To get the DNA out, you reverse the crosslinks — typically by heating the sample to 65 degrees overnight in a high-salt buffer, which slowly hydrolyzes the methylene bridges that formaldehyde introduced."
+  },
+  {
+   "t": 405.71,
+   "text": "You then digest the protein with proteinase K — an enzyme that chews up protein into amino acids and small peptides — and clean up the DNA with a column or beads."
+  },
+  {
+   "t": 417.22,
+   "text": "You end up with a tube of purified, free DNA fragments — typically a few nanograms to a few hundred nanograms, depending on how abundant your protein was and how good the antibody was."
+  },
+  {
+   "t": 429.34,
+   "text": "Stage five: library prep and sequencing."
+  },
+  {
+   "t": 432.71,
+   "text": "This is now identical to any other Illumina library prep, which we covered in detail in the Illumina lecture."
+  },
+  {
+   "t": 439.49,
+   "text": "End repair, A-tailing, adapter ligation, indexing, PCR amplification, size selection, and then onto the flow cell."
+  },
+  {
+   "t": 448.72,
+   "text": "The clusters generate, the reversible terminator chemistry runs, the camera takes pictures, and a couple of days later you have tens of millions of paired-end reads, each one tagged with the index of which sample it came from."
+  },
+  {
+   "t": 462.07,
+   "text": "Those reads get aligned to the reference genome using a tool like Bowtie2 or BWA, and now you have a BAM file — a positional list of where every read landed."
+  },
+  {
+   "t": 472.71,
+   "text": "That BAM file, plus the analogous BAM from your input control, is the raw material for everything downstream."
+  },
+  {
+   "t": 479.77,
+   "text": "That's the workflow."
+  },
+  {
+   "t": 480.97,
+   "text": "Crosslink, fragment, IP, reverse, sequence."
+  },
+  {
+   "t": 485.49,
+   "text": "Five stages."
+  },
+  {
+   "t": 486.83,
+   "text": "Each one has its tricks."
+  },
+  {
+   "t": 488.32,
+   "text": "But the conceptual core — antibody pulls protein, protein drags DNA, sequence the DNA — is unchanged from the original 1980s ChIP."
+  },
+  {
+   "t": 498.78,
+   "text": "The sequencing is just what you do with the DNA at the end."
+  }
+ ]
+}

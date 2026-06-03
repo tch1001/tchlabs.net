@@ -1,0 +1,199 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — CUT&RUN — antibody-tethered MNase",
+ "duration": 275.81,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — CUT&RUN — antibody-tethered MNase"
+  },
+  {
+   "t": 4.9,
+   "text": "In 2017, Steven Henikoff's lab at the Fred Hutchinson Cancer Center published a method called CUT&RUN — Cleavage Under Targets and Release Using Nuclease."
+  },
+  {
+   "t": 15.69,
+   "text": "The acronym is forced, but the technique is elegant."
+  },
+  {
+   "t": 19.38,
+   "text": "The idea is to use the antibody not as a handle for pulling the protein out, but as a guide for bringing a DNA-cutting enzyme to the protein's location."
+  },
+  {
+   "t": 28.79,
+   "text": "Here's how it works."
+  },
+  {
+   "t": 30.04,
+   "text": "You take intact, unfixed cells — no crosslinking — and you permeabilize them, letting reagents diffuse in while keeping the chromatin structure roughly intact."
+  },
+  {
+   "t": 41.15,
+   "text": "You add an antibody against your target protein."
+  },
+  {
+   "t": 44.14,
+   "text": "The antibody enters the nucleus and finds its target wherever the target is sitting on the chromatin."
+  },
+  {
+   "t": 50.39,
+   "text": "Then you add a fusion protein called pA-MNase — protein A fused to micrococcal nuclease."
+  },
+  {
+   "t": 56.95,
+   "text": "The protein A part binds the antibody's Fc region; the MNase part is a DNA-cutting enzyme that's normally inactive in the absence of calcium."
+  },
+  {
+   "t": 65.79,
+   "text": "Now you have, in the cell, a chain: target protein → antibody → pA-MNase, all assembled at the precise locations where your protein is bound."
+  },
+  {
+   "t": 74.5,
+   "text": "The key trick is that you haven't added calcium yet."
+  },
+  {
+   "t": 77.69,
+   "text": "Without calcium, the MNase sits there, inactive, tethered to the antibody, doing nothing."
+  },
+  {
+   "t": 83.75,
+   "text": "When you finally add a small amount of calcium, the MNase activates — but only locally, where it's tethered."
+  },
+  {
+   "t": 90.19,
+   "text": "It cuts the DNA in a small region right around the antibody-bound protein."
+  },
+  {
+   "t": 95.14,
+   "text": "The cuts release small DNA fragments — the fragments adjacent to the bound protein — which diffuse out of the nucleus into the supernatant."
+  },
+  {
+   "t": 105.04,
+   "text": "You collect the supernatant, purify the DNA, make a library, and sequence."
+  },
+  {
+   "t": 110.81,
+   "text": "The analogy: CUT&RUN is the upgrade."
+  },
+  {
+   "t": 114.28,
+   "text": "The antibody brings an MNase right to the protein's foot."
+  },
+  {
+   "t": 118.45,
+   "text": "The MNase cuts only the local DNA."
+  },
+  {
+   "t": 121.26,
+   "text": "Much higher signal-to-noise."
+  },
+  {
+   "t": 123.21,
+   "text": "Much less input needed."
+  },
+  {
+   "t": 124.67,
+   "text": "Compared to classical ChIP-seq, where you have to use brute-force sonication to fragment all the chromatin in the sample and then pull out the tiny fraction you want, CUT&RUN starts the cutting precisely where you want it."
+  },
+  {
+   "t": 138.15,
+   "text": "The background is enormously reduced — instead of sequencing all the chromatin and washing away most of it, you sequence only the chromatin that was specifically released by targeted cutting."
+  },
+  {
+   "t": 149.74,
+   "text": "The advantages are substantial:"
+  },
+  {
+   "t": 152.18,
+   "text": "Higher signal-to-noise."
+  },
+  {
+   "t": 153.88,
+   "text": "Because the cutting is targeted, the fraction of reads that come from real binding events is much higher than in ChIP-seq."
+  },
+  {
+   "t": 161.45,
+   "text": "For the same sequencing depth, CUT&RUN peaks are sharper and easier to call than ChIP-seq peaks."
+  },
+  {
+   "t": 168.91,
+   "text": "Lower input requirement."
+  },
+  {
+   "t": 170.69,
+   "text": "ChIP-seq typically needs millions of cells per experiment."
+  },
+  {
+   "t": 175.69,
+   "text": "CUT&RUN can work with tens of thousands of cells, or even fewer."
+  },
+  {
+   "t": 180.53,
+   "text": "This opens up applications that ChIP-seq couldn't touch — rare cell populations, primary patient samples, embryonic tissues — that you can't grow into the billions of cells classical ChIP requires."
+  },
+  {
+   "t": 194.34,
+   "text": "No crosslinking required."
+  },
+  {
+   "t": 196.29,
+   "text": "CUT&RUN works on native, unfixed chromatin."
+  },
+  {
+   "t": 199.74,
+   "text": "This means the epitopes are intact — the antibody doesn't have to recognize a formaldehyde-modified version of its target."
+  },
+  {
+   "t": 207.31,
+   "text": "Many antibodies that fail in ChIP-seq work fine in CUT&RUN because they get a clean, native epitope."
+  },
+  {
+   "t": 214.4,
+   "text": "Faster, simpler protocol."
+  },
+  {
+   "t": 216.7,
+   "text": "A ChIP-seq protocol takes two to three days, with overnight crosslink reversal."
+  },
+  {
+   "t": 222.99,
+   "text": "CUT&RUN can be done in about a day."
+  },
+  {
+   "t": 225.59,
+   "text": "The hands-on time is lower."
+  },
+  {
+   "t": 227.31,
+   "text": "There are commercial kits now from several vendors that have made the protocol very accessible."
+  },
+  {
+   "t": 233.45,
+   "text": "The disadvantages?"
+  },
+  {
+   "t": 234.86,
+   "text": "A few."
+  },
+  {
+   "t": 235.69,
+   "text": "CUT&RUN is more sensitive to MNase sequence bias — the enzyme has a slight preference for cutting at AT-rich sequences, which can produce some artifactual peaks at certain genomic regions."
+  },
+  {
+   "t": 248.03,
+   "text": "The technique works best for proteins with relatively stable binding, since the unfixed protocol gives a snapshot of native binding without crosslinking trapping."
+  },
+  {
+   "t": 258.06,
+   "text": "And the controls for CUT&RUN are different — typically an IgG control rather than an input control, since there's no \"input chromatin\" in the ChIP-seq sense."
+  },
+  {
+   "t": 268.39,
+   "text": "But these are manageable issues."
+  },
+  {
+   "t": 270.29,
+   "text": "For most applications where ChIP-seq used to be the default, CUT&RUN now is."
+  }
+ ]
+}

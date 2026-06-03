@@ -1,0 +1,327 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The pipeline: file to tube and back",
+ "duration": 504.5,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The pipeline: file to tube and back"
+  },
+  {
+   "t": 4.54,
+   "text": "Alright."
+  },
+  {
+   "t": 5.31,
+   "text": "Let's walk through the full pipeline."
+  },
+  {
+   "t": 7.15,
+   "text": "I am going to take you from the file on your laptop, through every step of writing it into DNA, storing it, and reading it back."
+  },
+  {
+   "t": 14.36,
+   "text": "I want you to come out of this segment with a clear mental picture of every stage and what can go wrong at each one."
+  },
+  {
+   "t": 21.12,
+   "text": "So you start with a file."
+  },
+  {
+   "t": 22.5,
+   "text": "Let's stay with our one-megabyte JPEG of your dog."
+  },
+  {
+   "t": 25.51,
+   "text": "Eight million bits."
+  },
+  {
+   "t": 26.95,
+   "text": "Stage one: source coding and compression."
+  },
+  {
+   "t": 29.95,
+   "text": "Most files are already compressed, but if yours isn't — say it's a raw text file — you'd typically run it through a standard compression algorithm like gzip or zstd first, because compressed data is also more uniform in its statistical properties, which makes the downstream DNA encoding easier."
+  },
+  {
+   "t": 47.91,
+   "text": "After compression, you have your eight million bits, looking statistically like random noise."
+  },
+  {
+   "t": 53.88,
+   "text": "Stage two: encoding."
+  },
+  {
+   "t": 56.09,
+   "text": "You apply your DNA encoding scheme."
+  },
+  {
+   "t": 58.83,
+   "text": "Recall from Segment 3 that this is the translation from bits to bases, with constraints to avoid homopolymer runs and balance GC content."
+  },
+  {
+   "t": 68.88,
+   "text": "Let's say you use a scheme that gives you about one point eight bits per base after constraints."
+  },
+  {
+   "t": 74.09,
+   "text": "So your eight million bits become about four point four million bases."
+  },
+  {
+   "t": 78.49,
+   "text": "Plus the encoding adds error-correction redundancy — let's say twenty percent overhead — which inflates the four point four million to about five point three million bases."
+  },
+  {
+   "t": 88.85,
+   "text": "Stage three: chunking and indexing."
+  },
+  {
+   "t": 92.03,
+   "text": "You break your five point three million bases into oligos of, let's say, one hundred and fifty bases each."
+  },
+  {
+   "t": 98.9,
+   "text": "That gives you about thirty-five thousand oligos."
+  },
+  {
+   "t": 101.89,
+   "text": "You add to each oligo a twenty-base index region encoding its sequence number — fragment one, fragment two, fragment three, and so on — and you add fixed primer-binding regions of about twenty bases on each end."
+  },
+  {
+   "t": 115.75,
+   "text": "So each oligo's total length is about one hundred and ninety bases — twenty for the forward primer binding region, twenty for the index, one hundred and ten for the payload, twenty for the reverse primer binding region."
+  },
+  {
+   "t": 128.24,
+   "text": "Stage four: oligo design and quality check."
+  },
+  {
+   "t": 131.89,
+   "text": "Before sending your sequences to a synthesizer, you run them through software that checks for forbidden patterns — secondary structure that would fold the oligos up, homopolymer runs that the encoding might have missed, melting temperatures of the primer regions that match what you'll need for PCR amplification later."
+  },
+  {
+   "t": 149.55,
+   "text": "You might iterate the encoding a bit at this stage to fix problems."
+  },
+  {
+   "t": 153.85,
+   "text": "Stage five: synthesis."
+  },
+  {
+   "t": 156.22,
+   "text": "You send your thirty-five thousand designed sequences as a digital order to a commercial synthesis provider — Twist Bioscience, IDT, Agilent, or one of the smaller chip-based houses."
+  },
+  {
+   "t": 168.06,
+   "text": "They run your sequences on a chip-based synthesizer."
+  },
+  {
+   "t": 171.36,
+   "text": "The chip is a piece of silicon with microscopic wells, each well being a separate synthesis reaction."
+  },
+  {
+   "t": 177.68,
+   "text": "Each well builds one of your oligos using the phosphoramidite cycle we covered exhaustively in the oligo synthesis lecture — detritylation, coupling, capping, oxidation, repeat — driven by a digitally-controlled mask that determines which bases get added to which wells at each cycle."
+  },
+  {
+   "t": 195.2,
+   "text": "After roughly one hundred and ninety cycles, the chip holds your thirty-five thousand oligos, each in its own well."
+  },
+  {
+   "t": 202.96,
+   "text": "They are cleaved off the chip, pooled into a single solution, and shipped to you as a single tube containing all your oligos mixed together."
+  },
+  {
+   "t": 211.47,
+   "text": "Stage six: storage."
+  },
+  {
+   "t": 213.66,
+   "text": "You receive the tube."
+  },
+  {
+   "t": 215.03,
+   "text": "You dry it down — typically by lyophilization, freeze-drying, which removes the water without damaging the DNA — and optionally encapsulate it in silica or some other protective matrix to extend its lifetime."
+  },
+  {
+   "t": 228.39,
+   "text": "You put the resulting capsule in a shelf in a dry, cool place."
+  },
+  {
+   "t": 232.95,
+   "text": "That's your archive."
+  },
+  {
+   "t": 234.14,
+   "text": "The encoded file now exists physically as a small amount of dried DNA inside a small tube."
+  },
+  {
+   "t": 241.24,
+   "text": "Several years pass."
+  },
+  {
+   "t": 242.93,
+   "text": "Stage seven: retrieval — random access."
+  },
+  {
+   "t": 246.64,
+   "text": "Some years later, you want your file back."
+  },
+  {
+   "t": 249.14,
+   "text": "You have many tubes in your archive — thousands, eventually — and each tube might hold many files."
+  },
+  {
+   "t": 256.13,
+   "text": "So first you need to find the right tube."
+  },
+  {
+   "t": 258.02,
+   "text": "You consult your index — which is itself stored somewhere, on conventional electronic media because retrieval needs to be fast — and you pull the right tube off the shelf."
+  },
+  {
+   "t": 268.89,
+   "text": "Then, within that tube, you need to find your file among all the oligos that belong to other files in the same pool."
+  },
+  {
+   "t": 275.56,
+   "text": "This is where the primer-binding regions earn their keep."
+  },
+  {
+   "t": 278.73,
+   "text": "The primer pair you assigned to your file's oligos is unique to that file."
+  },
+  {
+   "t": 283.14,
+   "text": "You add the corresponding PCR primers, run a few cycles of PCR, and you specifically amplify your file's oligos thousands of times over relative to all the other files' oligos in the pool."
+  },
+  {
+   "t": 295.72,
+   "text": "After amplification, your file's oligos dominate the mixture."
+  },
+  {
+   "t": 300.15,
+   "text": "We'll go much deeper on random access in Segment 9."
+  },
+  {
+   "t": 303.59,
+   "text": "Stage eight: sequencing."
+  },
+  {
+   "t": 305.74,
+   "text": "You take the amplified sample and run it on a sequencer."
+  },
+  {
+   "t": 309.17,
+   "text": "Either an Illumina platform — short reads of two hundred to three hundred bases, very high accuracy, several hours of run time — or an Oxford Nanopore platform — longer reads, slightly less accuracy, faster turnaround and real-time results."
+  },
+  {
+   "t": 324.99,
+   "text": "The sequencer reads each oligo many times — typically ten to fifty reads per oligo on average, depending on how much redundancy your encoding can tolerate."
+  },
+  {
+   "t": 335.57,
+   "text": "You end up with a file containing millions of sequence reads."
+  },
+  {
+   "t": 339.06,
+   "text": "Stage nine: clustering and consensus."
+  },
+  {
+   "t": 342.48,
+   "text": "Many of those reads correspond to the same original oligo, with random sequencing errors scattered through them."
+  },
+  {
+   "t": 349.36,
+   "text": "You run a clustering algorithm — software that groups reads by similarity — to bin the reads by their underlying oligo."
+  },
+  {
+   "t": 357.34,
+   "text": "Then for each cluster, you compute a consensus sequence by majority vote at each position."
+  },
+  {
+   "t": 363.56,
+   "text": "The consensus sequence is your best estimate of what that oligo's original sequence was, even though no individual read might be perfectly correct."
+  },
+  {
+   "t": 372.99,
+   "text": "Stage ten: decoding and error correction."
+  },
+  {
+   "t": 376.36,
+   "text": "You apply your encoding's error correction to the set of consensus sequences."
+  },
+  {
+   "t": 381.48,
+   "text": "This corrects residual errors, fills in any oligos that were missing entirely from your sample, and reconstructs the original bit string."
+  },
+  {
+   "t": 390.03,
+   "text": "Then you apply the inverse of your source coding — gunzip the data — and out comes your original JPEG."
+  },
+  {
+   "t": 396.57,
+   "text": "You feed it to an image viewer."
+  },
+  {
+   "t": 398.33,
+   "text": "There's your dog."
+  },
+  {
+   "t": 399.31,
+   "text": "Now, that's the pipeline, end to end."
+  },
+  {
+   "t": 402.07,
+   "text": "Notice how many stages there are, and notice how many of them can introduce errors."
+  },
+  {
+   "t": 407.22,
+   "text": "Synthesis introduces errors at roughly one part in a thousand per base — about one error per oligo of one hundred and fifty bases."
+  },
+  {
+   "t": 415.92,
+   "text": "Sequencing introduces errors at one part in a thousand for Illumina, ten parts in a thousand for Nanopore."
+  },
+  {
+   "t": 422.86,
+   "text": "Storage introduces errors at much lower rates if the DNA is properly stored — essentially zero on human timescales — but at longer timescales hydrolysis and deamination start to add up."
+  },
+  {
+   "t": 435.08,
+   "text": "Each PCR amplification step introduces a small amount of bias and a small amount of error."
+  },
+  {
+   "t": 440.73,
+   "text": "And the clustering and consensus step has its own statistical issues — if some oligos drop out completely from your sample, you have to recover them entirely from the error-correction redundancy."
+  },
+  {
+   "t": 452.68,
+   "text": "The result is that the end-to-end error rate of a DNA storage system, without any error correction, is somewhere on the order of one to ten percent of bases being wrong."
+  },
+  {
+   "t": 462.62,
+   "text": "That is, an unacceptable error rate for digital data, where we are used to error rates measured in parts per trillion or better."
+  },
+  {
+   "t": 470.36,
+   "text": "The redundancy you build in with error correction has to be sufficient to bring that one-to-ten-percent raw error rate down to essentially zero — bit-perfect recovery of your original file."
+  },
+  {
+   "t": 481.78,
+   "text": "That's a lot to ask of an error-correction scheme."
+  },
+  {
+   "t": 484.82,
+   "text": "And it's where the field has done some of its most beautiful engineering, because the schemes that work for DNA storage are different from the ones that work for, say, communication over a noisy channel or storage on a hard drive."
+  },
+  {
+   "t": 497.77,
+   "text": "DNA has its own weird error model, and the error correction has to be tuned for it."
+  },
+  {
+   "t": 503.12,
+   "text": "That's where we go next."
+  }
+ ]
+}

@@ -1,0 +1,231 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Visium — the workhorse barcoded slide",
+ "duration": 410.7,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Visium — the workhorse barcoded slide"
+  },
+  {
+   "t": 4.15,
+   "text": "Visium launched in late 2019."
+  },
+  {
+   "t": 7.16,
+   "text": "By 2021 it was the dominant spatial transcriptomics platform in academic and commercial labs alike."
+  },
+  {
+   "t": 14.07,
+   "text": "If you read a spatial paper today and the methods say \"Visium,\" this is what they used."
+  },
+  {
+   "t": 19.39,
+   "text": "Let me describe exactly what a Visium experiment looks like, because the workflow is now the de facto standard that other methods get compared to."
+  },
+  {
+   "t": 27.59,
+   "text": "A Visium slide is a glass slide about the size of a standard microscope slide, with four capture areas printed on it."
+  },
+  {
+   "t": 34.76,
+   "text": "Each capture area is a square region about 6.5 by 6.5 millimeters, into which the Visium chemistry has printed a regular grid of barcoded spots."
+  },
+  {
+   "t": 45.48,
+   "text": "In the original Visium, each spot is 55 microns in diameter, with spots arranged in a hexagonal pattern, and adjacent spots' centers are about a hundred microns apart."
+  },
+  {
+   "t": 56.64,
+   "text": "There are roughly 5,000 spots per capture area, so 20,000 spots per slide if you use all four capture areas."
+  },
+  {
+   "t": 64.55,
+   "text": "Each spot carries millions of identical oligos, each with the same spot-specific barcode, plus a poly-T capture sequence at the free end."
+  },
+  {
+   "t": 73.83,
+   "text": "The barcodes are pre-printed during manufacturing, the positions of every barcode are known to 10x, and the lookup table — barcode to X-Y position — comes with the kit."
+  },
+  {
+   "t": 84.38,
+   "text": "The experimental workflow goes like this."
+  },
+  {
+   "t": 87.26,
+   "text": "You take a fresh-frozen tissue block and cryosection it to about ten microns thick."
+  },
+  {
+   "t": 92.45,
+   "text": "You place a section onto one of the capture areas of the Visium slide."
+  },
+  {
+   "t": 96.85,
+   "text": "You stain it with H&E, the standard pathology stain, and you image it under a brightfield microscope at high magnification."
+  },
+  {
+   "t": 104.64,
+   "text": "This image — the H&E image — is critical for downstream analysis, because it provides the anatomical context that you'll later overlay with the gene expression data."
+  },
+  {
+   "t": 114.61,
+   "text": "You photograph the section while the tissue is still intact on the slide."
+  },
+  {
+   "t": 119.75,
+   "text": "Then you permeabilize the tissue."
+  },
+  {
+   "t": 121.97,
+   "text": "The standard protocol uses a mild enzyme treatment that punches holes in the cell membranes without disrupting the tissue's morphology."
+  },
+  {
+   "t": 130.31,
+   "text": "The mRNAs inside the cells, freshly liberated, begin to diffuse outward."
+  },
+  {
+   "t": 136.45,
+   "text": "Some of them — many of them, if the chemistry is working well — find their way down to the surface of the slide, where the poly-T capture sequences on the barcoded oligos grab them by their poly-A tails."
+  },
+  {
+   "t": 149.0,
+   "text": "A reverse-transcription mix is then added, and reverse transcriptase synthesizes cDNA copies of all the captured mRNAs, each cDNA now carrying the spot's barcode at its 5-prime end."
+  },
+  {
+   "t": 162.22,
+   "text": "From there, the workflow is essentially standard Illumina library prep."
+  },
+  {
+   "t": 166.9,
+   "text": "The cDNA molecules are released from the slide, amplified by PCR, ligated to sequencing adapters with sample indices, and pooled."
+  },
+  {
+   "t": 175.89,
+   "text": "You load the pooled library onto an Illumina flow cell — a NovaSeq, typically, for the read depth you need — and sequence it."
+  },
+  {
+   "t": 184.18,
+   "text": "The resulting reads carry the spot barcode at the start, followed by the gene-derived sequence."
+  },
+  {
+   "t": 189.79,
+   "text": "Software demultiplexes the reads by spot barcode, maps the gene portion against a reference transcriptome, and produces, for every spot on the slide, a list of which genes were captured and how many transcripts of each."
+  },
+  {
+   "t": 203.8,
+   "text": "The output looks just like single-cell data — a matrix of genes by spots, with counts in every cell — except that \"spots\" have known X-Y positions on the slide, so you can plot expression patterns geographically."
+  },
+  {
+   "t": 217.45,
+   "text": "You then overlay the gene expression data on the H&E image."
+  },
+  {
+   "t": 221.61,
+   "text": "The Visium analysis software (Loupe Browser, Space Ranger, and various open-source equivalents) shows you the H&E image with each spot drawn as a colored circle, with the color encoding any gene's expression you choose."
+  },
+  {
+   "t": 235.54,
+   "text": "Click on hippocampus marker genes, watch the hippocampus light up."
+  },
+  {
+   "t": 239.91,
+   "text": "Click on white matter myelin genes, watch the white matter light up."
+  },
+  {
+   "t": 244.1,
+   "text": "Click on a cancer marker, watch the tumor regions light up while the surrounding stroma stays dark."
+  },
+  {
+   "t": 249.7,
+   "text": "You can do this for any gene in the transcriptome, because Visium is untargeted — it captures every poly-A mRNA the tissue produces, not just a pre-selected panel."
+  },
+  {
+   "t": 260.95,
+   "text": "Here is the picture you should have."
+  },
+  {
+   "t": 262.97,
+   "text": "Visium is the gridded barcode slide — a microscope slide ruled with thousands of tiny spots, each spot carrying its own zip code; you place tissue on top, mRNAs hybridize to nearby spots, you sequence, and you reconstruct a gene-expression map of the original tissue."
+  },
+  {
+   "t": 281.47,
+   "text": "That's the platform."
+  },
+  {
+   "t": 282.69,
+   "text": "Let's talk about the limitations, because they're important."
+  },
+  {
+   "t": 285.98,
+   "text": "The original Visium spot is 55 microns across."
+  },
+  {
+   "t": 290.59,
+   "text": "A typical mammalian cell is about ten to twenty microns across."
+  },
+  {
+   "t": 294.93,
+   "text": "That means every Visium spot, in most tissues, captures the RNA from about one to ten cells at once."
+  },
+  {
+   "t": 302.19,
+   "text": "You don't see individual cells; you see small pools of cells."
+  },
+  {
+   "t": 306.57,
+   "text": "If a spot covers a tumor cell, a fibroblast, and a T cell all at the boundary of a tumor, the spot's expression profile is a mixture of all three."
+  },
+  {
+   "t": 316.52,
+   "text": "This is sometimes called the resolution problem, and it's the central trade-off of the sequencing-based family."
+  },
+  {
+   "t": 322.58,
+   "text": "You get the whole transcriptome — good — but you get it averaged over a small handful of cells per measurement — limiting."
+  },
+  {
+   "t": 329.8,
+   "text": "The other limitation is capture efficiency."
+  },
+  {
+   "t": 332.98,
+   "text": "Of all the mRNAs in the tissue, only a fraction make it down to the slide surface and get successfully captured by the poly-T oligos."
+  },
+  {
+   "t": 341.55,
+   "text": "The exact number depends on tissue type, fixation, permeabilization timing, and a dozen other parameters, but estimates run from a few percent to maybe twenty percent."
+  },
+  {
+   "t": 351.94,
+   "text": "This means Visium data is sparser per spot than single-cell data is per cell."
+  },
+  {
+   "t": 357.02,
+   "text": "Lowly expressed genes — transcription factors, signaling molecules — are often missed."
+  },
+  {
+   "t": 363.13,
+   "text": "You'll see strong signal for highly expressed genes — housekeeping, structural proteins, abundant lineage markers — but you'll often miss the regulators that distinguish closely related cell types."
+  },
+  {
+   "t": 375.89,
+   "text": "These two limitations — resolution and capture efficiency — define what Visium is good for and what it's not good for."
+  },
+  {
+   "t": 383.85,
+   "text": "It's excellent for mapping broad anatomical regions, comparing major cell-type proportions across tissue zones, looking at gross expression changes between tumor and stroma."
+  },
+  {
+   "t": 394.55,
+   "text": "It's not ideal if you need single-cell resolution or if you care about lowly expressed transcripts."
+  },
+  {
+   "t": 400.24,
+   "text": "That's where the imaging-based family comes in, and we'll get there in Segment 8."
+  },
+  {
+   "t": 404.8,
+   "text": "But first, let me tell you about how Visium evolved to address the resolution problem."
+  }
+ ]
+}

@@ -1,0 +1,235 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Error rates: how mistakes propagate through the cycle",
+ "duration": 378.62,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Error rates: how mistakes propagate through the cycle"
+  },
+  {
+   "t": 5.15,
+   "text": "We talked about coupling efficiency in Segment 7."
+  },
+  {
+   "t": 8.76,
+   "text": "Now I want to drill into a related but distinct concept: error rate."
+  },
+  {
+   "t": 13.16,
+   "text": "Coupling efficiency is the fraction of chains that get extended at each step."
+  },
+  {
+   "t": 18.06,
+   "text": "Error rate is the fraction of bases that are wrong in the finished product."
+  },
+  {
+   "t": 22.38,
+   "text": "The two are related but not identical, and the distinction matters a lot for downstream applications."
+  },
+  {
+   "t": 28.96,
+   "text": "In a typical column-based phosphoramidite synthesis, the per-base error rate is somewhere in the range of one error per two hundred to one per five hundred bases, depending on the synthesis conditions and the analytical method."
+  },
+  {
+   "t": 42.14,
+   "text": "That is, in a hundred-base oligonucleotide, you would expect somewhere between zero and one error, on average, in any given chain."
+  },
+  {
+   "t": 50.52,
+   "text": "Some chains have no errors."
+  },
+  {
+   "t": 52.48,
+   "text": "Some have one."
+  },
+  {
+   "t": 53.55,
+   "text": "Very few have two or more."
+  },
+  {
+   "t": 55.67,
+   "text": "The distribution is roughly Poisson around the per-base error rate."
+  },
+  {
+   "t": 59.92,
+   "text": "For chip-based synthesis, the error rate is typically higher — somewhere in the range of one error per fifty to one per two hundred bases."
+  },
+  {
+   "t": 69.01,
+   "text": "The chip-based chemistry runs faster, with less precise reagent control, and the per-spot coupling efficiencies are generally lower than what you can achieve in a well-tuned column."
+  },
+  {
+   "t": 79.6,
+   "text": "The trade-off is the parallelism — you get vastly more sequences, but each one is, on average, somewhat sloppier."
+  },
+  {
+   "t": 87.45,
+   "text": "Where do the errors come from?"
+  },
+  {
+   "t": 88.96,
+   "text": "Depurination: Acidic conditions, like the trichloroacetic acid used in the detritylation step, can occasionally cleave the bond between an adenine or guanine base and its sugar."
+  },
+  {
+   "t": 100.14,
+   "text": "The base falls off, leaving an abasic site."
+  },
+  {
+   "t": 103.08,
+   "text": "In subsequent cycles, this can lead to chain breakage or to incorrect repair."
+  },
+  {
+   "t": 108.06,
+   "text": "Depurination is the dominant error mode for adenines and guanines in long syntheses."
+  },
+  {
+   "t": 114.39,
+   "text": "Mis-coupling: Very rarely, a phosphoramidite from a contaminated reagent bottle, or a residual phosphoramidite that wasn't washed away from the previous cycle, can couple at the wrong position."
+  },
+  {
+   "t": 126.44,
+   "text": "This produces a substitution — wrong base at a known position."
+  },
+  {
+   "t": 130.88,
+   "text": "Mis-coupling rates are usually well below one per thousand, but they're not zero."
+  },
+  {
+   "t": 135.99,
+   "text": "Incomplete deprotection: When the finished oligonucleotide is cleaved off the bead and the protecting groups are removed by ammonia, some fraction of bases may end up incompletely deprotected."
+  },
+  {
+   "t": 148.16,
+   "text": "If the protecting group isn't fully removed, that base may not pair correctly with its complement, effectively functioning as an error."
+  },
+  {
+   "t": 156.32,
+   "text": "Damage during synthesis: The 3'-end of the oligo, the part attached to the bead, sits in the column the longest and gets exposed to the most cycles of reagents."
+  },
+  {
+   "t": 166.72,
+   "text": "Slow oxidative damage to the bases can accumulate, especially for guanine, which is the most easily oxidized base."
+  },
+  {
+   "t": 174.51,
+   "text": "This manifests as a kind of \"3'-end fraying\" in long syntheses."
+  },
+  {
+   "t": 180.24,
+   "text": "How do errors propagate through downstream uses of the oligo?"
+  },
+  {
+   "t": 184.09,
+   "text": "Here's the key thing to understand."
+  },
+  {
+   "t": 186.28,
+   "text": "If the population of oligos coming off the synthesizer has a per-base error rate of one in three hundred, then in any given individual chain, the probability of an error at any given base is one in three hundred."
+  },
+  {
+   "t": 199.03,
+   "text": "But across the population — across the millions of chains in your tube — every position has about one chain in three hundred that has an error at that position."
+  },
+  {
+   "t": 208.46,
+   "text": "The error is distributed, not localized."
+  },
+  {
+   "t": 211.55,
+   "text": "There isn't one \"bad\" position; there is, throughout the entire length of the oligo, a low-level background of errors at every position."
+  },
+  {
+   "t": 219.75,
+   "text": "This distinction matters because of how downstream applications use oligos."
+  },
+  {
+   "t": 224.88,
+   "text": "A PCR primer, for example, is used as a population."
+  },
+  {
+   "t": 229.3,
+   "text": "You put millions of primer molecules into a PCR tube."
+  },
+  {
+   "t": 232.99,
+   "text": "The few that have errors at critical positions don't anneal well, and they don't get extended."
+  },
+  {
+   "t": 238.5,
+   "text": "The vast majority that are correct dominate the amplification."
+  },
+  {
+   "t": 242.61,
+   "text": "So a low error rate is well-tolerated in PCR."
+  },
+  {
+   "t": 246.21,
+   "text": "But for gene synthesis — assembling a long gene from many short oligos — the error rate is a critical bottleneck."
+  },
+  {
+   "t": 253.95,
+   "text": "If your average gene fragment is a thousand bases long, and your per-base error rate from the chip is one in two hundred, then on average every fragment has five errors."
+  },
+  {
+   "t": 264.06,
+   "text": "To get a fragment that is correct over its entire length, you'd need to clone and sequence many candidates before you find one that's clean."
+  },
+  {
+   "t": 272.18,
+   "text": "This is why gene synthesis houses like Twist invest heavily in error correction — using mismatch-binding enzymes like CEL1, or DNA mismatch repair proteins like MutS, to remove or correct erroneous sequences from a synthesis pool before assembly."
+  },
+  {
+   "t": 289.21,
+   "text": "Without error correction, the practical length of synthetic genes would be much shorter than what's actually achievable today."
+  },
+  {
+   "t": 296.4,
+   "text": "For ASO drugs and other therapeutic oligonucleotides, the standard is higher still."
+  },
+  {
+   "t": 302.63,
+   "text": "The FDA wants to see that a drug is chemically pure to a stringent specification — typically ninety-eight percent or higher full-length, correct-sequence material."
+  },
+  {
+   "t": 313.38,
+   "text": "This requires HPLC purification of the synthesis product to remove truncations and error sequences, and rigorous QC by mass spectrometry to confirm the molecular weight of every batch."
+  },
+  {
+   "t": 326.66,
+   "text": "We'll talk about purification in detail in the next segment."
+  },
+  {
+   "t": 330.27,
+   "text": "The bottom line is this: errors in DNA synthesis are not zero."
+  },
+  {
+   "t": 335.42,
+   "text": "They never have been."
+  },
+  {
+   "t": 336.66,
+   "text": "They never will be."
+  },
+  {
+   "t": 337.77,
+   "text": "The whole engineering practice of the field is about driving them low enough that they don't matter for any given application, and where they do matter, providing downstream tools — purification, error correction, QC — to clean them up."
+  },
+  {
+   "t": 352.17,
+   "text": "Phosphoramidite chemistry, at its theoretical best, can probably push to one error per ten thousand bases or so."
+  },
+  {
+   "t": 360.07,
+   "text": "Enzymatic synthesis, the new frontier we'll discuss in Segment 16, might eventually do even better."
+  },
+  {
+   "t": 367.35,
+   "text": "For the moment, the field operates in a regime where errors are a real consideration in every workflow."
+  },
+  {
+   "t": 374.36,
+   "text": "Let's now talk about how we actually clean up the synthesis at the end."
+  }
+ ]
+}

@@ -1,0 +1,255 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The antibody question — quality dominates everything",
+ "duration": 341.1,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The antibody question — quality dominates everything"
+  },
+  {
+   "t": 5.03,
+   "text": "I want to spend a whole segment on antibodies, because if you take one practical lesson from this lecture, it is that ChIP-seq lives or dies on antibody quality."
+  },
+  {
+   "t": 14.85,
+   "text": "Every other variable — the sonication, the wash conditions, the sequencing depth, the peak caller — matters at the margin."
+  },
+  {
+   "t": 22.99,
+   "text": "The antibody matters at the center."
+  },
+  {
+   "t": 25.09,
+   "text": "A great experiment with a bad antibody produces garbage."
+  },
+  {
+   "t": 29.3,
+   "text": "A mediocre experiment with a great antibody produces real data."
+  },
+  {
+   "t": 33.9,
+   "text": "There is no engineering around this."
+  },
+  {
+   "t": 35.91,
+   "text": "Let me explain why."
+  },
+  {
+   "t": 37.31,
+   "text": "The antibody is the only thing in the entire workflow that knows what you're trying to capture."
+  },
+  {
+   "t": 43.11,
+   "text": "The sonication doesn't know."
+  },
+  {
+   "t": 45.04,
+   "text": "The beads don't know."
+  },
+  {
+   "t": 46.26,
+   "text": "The sequencer certainly doesn't know."
+  },
+  {
+   "t": 48.66,
+   "text": "The protocol grabs whatever the antibody grabs."
+  },
+  {
+   "t": 51.86,
+   "text": "If the antibody grabs your target — beautiful, you map the target."
+  },
+  {
+   "t": 56.4,
+   "text": "If the antibody grabs your target plus three off-target proteins that look slightly similar — you map a smeared blend of four binding profiles."
+  },
+  {
+   "t": 65.92,
+   "text": "If the antibody grabs nothing because the epitope was disrupted by the crosslinking — you get random background that looks vaguely like input."
+  },
+  {
+   "t": 74.17,
+   "text": "If the antibody grabs the wrong thing entirely — and we'll talk about how often this happens — you confidently publish a map of something that isn't your protein at all."
+  },
+  {
+   "t": 83.62,
+   "text": "The properties you want in a ChIP-grade antibody are quite specific, and not every antibody on the market — even ones that look great on a Western blot — will meet them."
+  },
+  {
+   "t": 93.75,
+   "text": "You need:"
+  },
+  {
+   "t": 94.59,
+   "text": "One: specificity."
+  },
+  {
+   "t": 96.36,
+   "text": "The antibody should bind your target and only your target."
+  },
+  {
+   "t": 100.17,
+   "text": "In a Western blot, where you've denatured everything and separated by size, you can tolerate some cross-reactivity because the sizes distinguish targets."
+  },
+  {
+   "t": 110.28,
+   "text": "In ChIP, where you're pulling things out of a soup of native-ish proteins, any cross-reactivity ends up in your final data."
+  },
+  {
+   "t": 117.97,
+   "text": "Two: native-state binding."
+  },
+  {
+   "t": 120.12,
+   "text": "The antibody has to bind your target in its formaldehyde-crosslinked, partially denatured, three-dimensional native conformation."
+  },
+  {
+   "t": 127.69,
+   "text": "Many antibodies are raised against linear peptides — short stretches of the protein's amino acid sequence — and bind beautifully when the protein is denatured in a Western blot, but the same epitope is buried inside the folded protein and inaccessible in the native state."
+  },
+  {
+   "t": 145.47,
+   "text": "Those antibodies fail in ChIP."
+  },
+  {
+   "t": 147.55,
+   "text": "Three: crosslinking tolerance."
+  },
+  {
+   "t": 149.97,
+   "text": "The epitope shouldn't be destroyed by formaldehyde fixation."
+  },
+  {
+   "t": 153.76,
+   "text": "Some epitopes — particularly those involving lysines or arginines — get chemically modified by formaldehyde and become invisible to the antibody."
+  },
+  {
+   "t": 163.79,
+   "text": "Four: enough affinity."
+  },
+  {
+   "t": 165.32,
+   "text": "The antibody has to bind tightly enough to survive the wash steps without dissociating."
+  },
+  {
+   "t": 171.32,
+   "text": "Low-affinity antibodies wash off, and your signal drops to background."
+  },
+  {
+   "t": 175.78,
+   "text": "You can imagine that finding antibodies that satisfy all four criteria for any given protein is hard."
+  },
+  {
+   "t": 182.44,
+   "text": "And here's the brutal truth, which the field has been increasingly open about over the last fifteen years: a lot of commercial antibodies marketed as ChIP-grade fail at one or more of these criteria."
+  },
+  {
+   "t": 194.64,
+   "text": "Studies that have systematically tested transcription factor antibodies — particularly the work coming out of the ENCODE consortium's antibody validation effort — have found that many TF antibodies fail validation, sometimes more than half in some categories."
+  },
+  {
+   "t": 209.86,
+   "text": "That's the antibody crisis, and we'll come back to it in Segment 12 when we talk about why CUT&RUN was invented."
+  },
+  {
+   "t": 216.46,
+   "text": "What does antibody validation look like in practice?"
+  },
+  {
+   "t": 219.69,
+   "text": "The gold-standard tests are:"
+  },
+  {
+   "t": 221.38,
+   "text": "Knockout validation."
+  },
+  {
+   "t": 222.91,
+   "text": "Run your ChIP in a cell line where the target protein has been genetically deleted."
+  },
+  {
+   "t": 228.01,
+   "text": "If the antibody is specific, you should get zero or background signal — no peaks."
+  },
+  {
+   "t": 233.57,
+   "text": "If you still see peaks, the antibody is binding something other than your target."
+  },
+  {
+   "t": 238.88,
+   "text": "Tag validation."
+  },
+  {
+   "t": 240.26,
+   "text": "Engineer a tagged version of your protein — say, with a Flag tag or an HA tag — and ChIP both with an antibody against the natural protein and with an antibody against the tag."
+  },
+  {
+   "t": 251.19,
+   "text": "If both antibodies pull out the same binding sites, your antibody is probably real."
+  },
+  {
+   "t": 257.0,
+   "text": "If they disagree, something is off."
+  },
+  {
+   "t": 259.42,
+   "text": "Peptide competition."
+  },
+  {
+   "t": 261.0,
+   "text": "Pre-incubate your antibody with the peptide it was raised against, then do the ChIP."
+  },
+  {
+   "t": 265.92,
+   "text": "The peptide should block specific binding, and your peaks should disappear or weaken substantially."
+  },
+  {
+   "t": 272.76,
+   "text": "If they don't, your antibody isn't specific."
+  },
+  {
+   "t": 275.9,
+   "text": "These validations are time-consuming and expensive, and a lot of papers don't do them."
+  },
+  {
+   "t": 281.57,
+   "text": "The result is a literature where some published ChIP-seq experiments are, frankly, mapping the binding profile of whatever the antibody happened to grab, which may or may not be the labeled protein."
+  },
+  {
+   "t": 293.47,
+   "text": "This is one of the largest sources of irreproducibility in regulatory genomics."
+  },
+  {
+   "t": 299.37,
+   "text": "The histone modification ChIP-seqs tend to be more reliable, because anti-histone antibodies are well-characterized, and the same epitopes are widely studied across hundreds of labs."
+  },
+  {
+   "t": 311.5,
+   "text": "The transcription factor ChIP-seqs are where the variance is."
+  },
+  {
+   "t": 316.07,
+   "text": "Caveat emptor."
+  },
+  {
+   "t": 317.47,
+   "text": "Now, with all that said: when the antibody is good, ChIP-seq is one of the most powerful methods in molecular biology."
+  },
+  {
+   "t": 325.11,
+   "text": "The maps it produces are genuinely informative, mechanistically interpretable, and integrable with other genomic data."
+  },
+  {
+   "t": 332.86,
+   "text": "The technique works."
+  },
+  {
+   "t": 334.37,
+   "text": "It's just demanding about its reagents."
+  },
+  {
+   "t": 336.67,
+   "text": "Hold that in mind as we get into the controls and the math in the next segment."
+  }
+ ]
+}

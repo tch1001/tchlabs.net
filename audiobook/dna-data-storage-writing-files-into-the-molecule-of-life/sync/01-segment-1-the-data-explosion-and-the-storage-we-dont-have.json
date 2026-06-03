@@ -1,0 +1,467 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The data explosion and the storage we don't have",
+ "duration": 710.2,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The data explosion and the storage we don't have"
+  },
+  {
+   "t": 4.38,
+   "text": "Alright."
+  },
+  {
+   "t": 5.16,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 6.5,
+   "text": "Let's get started."
+  },
+  {
+   "t": 7.6,
+   "text": "For the next two hours, we are going to talk about an idea that, the first time you hear it, sounds like science fiction, and the second time you hear it sounds inevitable, and by the end of this lecture I hope it will sound like something that, with enough engineering and enough patience, you could yourself help build."
+  },
+  {
+   "t": 24.39,
+   "text": "We are going to talk about DNA data storage — the project, currently being pursued in research labs and at a handful of well-funded startups around the world, of writing digital information — files, images, videos, archives — into chemically synthesized DNA, storing that DNA in a tube on a shelf, and reading the information back, years or decades or centuries later, with a sequencer."
+  },
+  {
+   "t": 50.21,
+   "text": "I want to make a claim right at the start, and I want you to hold onto it for the next two hours and see if I've convinced you by the end."
+  },
+  {
+   "t": 57.27,
+   "text": "Here it is."
+  },
+  {
+   "t": 58.21,
+   "text": "DNA is the most physically dense, most chemically stable, most energy-efficient archival storage medium that physics and chemistry will ever offer us, full stop."
+  },
+  {
+   "t": 69.64,
+   "text": "Every other storage medium humans have ever built — clay tablets, parchment, paper, magnetic tape, hard drives, solid-state drives, optical disks — is, in the limit, less dense, less stable, less durable, and more energy-hungry than a tube of dry DNA sitting in a freezer."
+  },
+  {
+   "t": 89.34,
+   "text": "That is not a marketing claim from a startup pitch deck."
+  },
+  {
+   "t": 92.47,
+   "text": "It is a consequence of the fact that DNA is the medium that biology itself selected, over four billion years of evolutionary pressure, as the way to durably store the operating instructions for life."
+  },
+  {
+   "t": 105.69,
+   "text": "Every cell in your body, right now, holds about three billion bases of DNA, in a volume measured in cubic micrometers, that has been stably maintained — copied with high fidelity, read out on demand — across millions of cell divisions."
+  },
+  {
+   "t": 121.58,
+   "text": "That is the spec sheet for biological storage."
+  },
+  {
+   "t": 124.55,
+   "text": "And we are now in a position, for the first time in human history, to use the same medium for our own digital data."
+  },
+  {
+   "t": 131.97,
+   "text": "So that is what we are going to fix today."
+  },
+  {
+   "t": 133.75,
+   "text": "Let me give you the scope of the problem this is trying to solve, because if you don't appreciate the scale of the storage problem we have created for ourselves, you won't understand why anyone is bothering with something as exotic as DNA in the first place."
+  },
+  {
+   "t": 147.61,
+   "text": "The world generates, in 2026, somewhere on the order of one hundred and twenty zettabytes of data per year."
+  },
+  {
+   "t": 154.4,
+   "text": "A zettabyte is a trillion gigabytes."
+  },
+  {
+   "t": 157.04,
+   "text": "It is the number you get when you try to add up every photo posted to every social network, every video streamed on every platform, every email, every database transaction, every sensor reading from every industrial system, every scientific measurement, every CCTV camera, every car log, every medical scan."
+  },
+  {
+   "t": 176.2,
+   "text": "One hundred and twenty zettabytes."
+  },
+  {
+   "t": 178.1,
+   "text": "And the number is growing roughly exponentially — doubling every two to three years, depending on whose forecast you read."
+  },
+  {
+   "t": 185.65,
+   "text": "By 2030, by reasonable extrapolation, we will be generating closer to four or five hundred zettabytes per year."
+  },
+  {
+   "t": 193.5,
+   "text": "Now, almost none of that gets kept forever."
+  },
+  {
+   "t": 196.09,
+   "text": "Most of it gets thrown away within hours or days — it's a video frame that nobody watched, a log entry that aged out, a backup that got overwritten."
+  },
+  {
+   "t": 205.12,
+   "text": "But a meaningful fraction of it gets archived."
+  },
+  {
+   "t": 207.76,
+   "text": "Medical records."
+  },
+  {
+   "t": 209.14,
+   "text": "Scientific datasets."
+  },
+  {
+   "t": 210.97,
+   "text": "Government records."
+  },
+  {
+   "t": 212.31,
+   "text": "Legal records."
+  },
+  {
+   "t": 213.53,
+   "text": "Bank ledgers."
+  },
+  {
+   "t": 214.81,
+   "text": "Surveillance archives."
+  },
+  {
+   "t": 216.3,
+   "text": "The Library of Congress."
+  },
+  {
+   "t": 217.9,
+   "text": "The collected works of every author who ever lived."
+  },
+  {
+   "t": 221.46,
+   "text": "And the amount we choose to archive is also growing — because storage has, until recently, been getting cheaper roughly as fast as data has been getting created, so we have not yet had to face hard choices about what to throw away."
+  },
+  {
+   "t": 234.78,
+   "text": "That last sentence is the key one."
+  },
+  {
+   "t": 237.0,
+   "text": "Storage has been getting cheaper roughly as fast as data has been getting created."
+  },
+  {
+   "t": 241.81,
+   "text": "And that trend, for the first time in fifty years, is starting to falter."
+  },
+  {
+   "t": 246.04,
+   "text": "Here is the problem."
+  },
+  {
+   "t": 247.68,
+   "text": "The dominant medium for cold archival storage today is magnetic tape — LTO tape, specifically, which is the format used by every major cloud provider and every major archive in the world."
+  },
+  {
+   "t": 260.81,
+   "text": "LTO tape costs about ten dollars per terabyte today, which is impressively cheap."
+  },
+  {
+   "t": 265.98,
+   "text": "But LTO tape has a problem."
+  },
+  {
+   "t": 268.04,
+   "text": "It lasts about thirty years under good conditions."
+  },
+  {
+   "t": 271.29,
+   "text": "After thirty years, the magnetic domains have drifted enough that you have to re-read the tape, verify the data, and write it back to a fresh tape."
+  },
+  {
+   "t": 280.42,
+   "text": "That process — called media refresh — is enormously expensive at scale, and it has to be done forever, every thirty years, as long as you want the data to survive."
+  },
+  {
+   "t": 290.99,
+   "text": "Hard drives are even worse: they fail mechanically in five to ten years, and they consume continuous power to spin or, in the case of solid-state drives, to maintain their charge."
+  },
+  {
+   "t": 303.08,
+   "text": "Solid-state drives in the absence of power leak their data away in a few years; the floating-gate transistors lose charge, and your bits flip from ones to zeros."
+  },
+  {
+   "t": 313.37,
+   "text": "There is no storage medium currently in industrial production that, if I gave you a copy today and you stuck it in a closet, would still be readable in a hundred years without active maintenance."
+  },
+  {
+   "t": 324.49,
+   "text": "None."
+  },
+  {
+   "t": 325.24,
+   "text": "Compare this to DNA."
+  },
+  {
+   "t": 326.87,
+   "text": "We routinely sequence DNA from woolly mammoth remains that have been sitting in Siberian permafrost for fifty thousand years."
+  },
+  {
+   "t": 334.89,
+   "text": "We sequence DNA from Neanderthal bones forty thousand years old."
+  },
+  {
+   "t": 339.62,
+   "text": "We sequence DNA from medieval skeletons, Roman skeletons, Egyptian mummies."
+  },
+  {
+   "t": 345.58,
+   "text": "The molecule, kept dry and cool, simply persists."
+  },
+  {
+   "t": 349.69,
+   "text": "The chemistry is that stable."
+  },
+  {
+   "t": 351.91,
+   "text": "If you encode a file into DNA today, dehydrate it, and seal it in a glass capsule, and somebody opens that capsule in the year ten thousand and twenty-six, they will, with no special equipment beyond a sequencer of the kind we already have today, be able to read your file back out."
+  },
+  {
+   "t": 368.69,
+   "text": "Eight thousand years of cold storage with zero energy input and zero maintenance."
+  },
+  {
+   "t": 373.96,
+   "text": "There is no other archival medium that comes within three orders of magnitude of that."
+  },
+  {
+   "t": 379.53,
+   "text": "And the density — let's talk about the density."
+  },
+  {
+   "t": 382.39,
+   "text": "DNA, as a four-base code, carries two bits of information per base."
+  },
+  {
+   "t": 387.38,
+   "text": "A base pair occupies roughly a cubic nanometer of space."
+  },
+  {
+   "t": 391.46,
+   "text": "If you do the math, the theoretical information density of DNA, packed at the density it sits inside a cell, is on the order of two hundred and fifteen petabytes per gram."
+  },
+  {
+   "t": 402.07,
+   "text": "Per gram."
+  },
+  {
+   "t": 403.03,
+   "text": "A petabyte is a thousand terabytes."
+  },
+  {
+   "t": 405.63,
+   "text": "Two hundred and fifteen thousand terabytes in a single gram of dried DNA powder."
+  },
+  {
+   "t": 411.08,
+   "text": "The entire contents of the internet's archived video — every YouTube video ever uploaded, every film ever streamed on every platform — would fit, in DNA form, into a volume the size of a sugar cube."
+  },
+  {
+   "t": 425.61,
+   "text": "The entire written output of the human species, every book ever published in every language, would fit into something less than the size of a grain of sand."
+  },
+  {
+   "t": 435.93,
+   "text": "Now, that is the theoretical density, and we are nowhere near it in practice today."
+  },
+  {
+   "t": 441.37,
+   "text": "Real DNA storage systems use only a fraction of that density once you account for primer regions, error-correction overhead, and the inefficiencies of synthesis and sequencing."
+  },
+  {
+   "t": 452.69,
+   "text": "But even at one percent of the theoretical limit, DNA is still hundreds of times denser than any electronic or magnetic medium we have ever built."
+  },
+  {
+   "t": 462.47,
+   "text": "The density is not the bottleneck."
+  },
+  {
+   "t": 464.96,
+   "text": "The density is, in fact, ridiculously, gratuitously abundant."
+  },
+  {
+   "t": 470.69,
+   "text": "The bottleneck, as we will see again and again in this lecture, is the cost of writing — the cost of synthesizing the DNA in the first place — and to a lesser extent the cost of reading."
+  },
+  {
+   "t": 482.48,
+   "text": "So that is where we are going."
+  },
+  {
+   "t": 483.91,
+   "text": "By the end of these two hours, if you walk out of here, I want you to be able to do four things."
+  },
+  {
+   "t": 489.24,
+   "text": "One: explain to a curious friend, in plain English, why anyone would want to store data in DNA at all — what problem it solves and what economic regime it eventually fits into."
+  },
+  {
+   "t": 501.13,
+   "text": "Two: describe the basic encoding pipeline — file to bits to bases to physical DNA and back again — and identify where errors enter and how we correct them."
+  },
+  {
+   "t": 512.45,
+   "text": "Three: name the major players and milestones in this field — Church and Goldman in 2012, Microsoft and University of Washington's collaboration, Twist Bioscience, Catalog Technologies, the Iridia approach, the DNA Data Storage Alliance — and have a sense of who is betting what on whom."
+  },
+  {
+   "t": 530.73,
+   "text": "And four: hold an informed opinion about whether DNA storage is ever going to compete with tape for cold archive, what it would take for that to happen, and what kinds of applications might get there first."
+  },
+  {
+   "t": 542.49,
+   "text": "That is our contract for the next two hours."
+  },
+  {
+   "t": 545.01,
+   "text": "Let me start with the analogy I am going to come back to over and over again, because if you internalize this single picture, half of the engineering becomes intuitive."
+  },
+  {
+   "t": 554.73,
+   "text": "Imagine you have a library."
+  },
+  {
+   "t": 556.35,
+   "text": "The library holds, let's say, a million books."
+  },
+  {
+   "t": 559.84,
+   "text": "You need to store the library somewhere."
+  },
+  {
+   "t": 561.95,
+   "text": "You could keep it as a building full of paper — that's pretty good, but it takes up a whole building, and the paper degrades over centuries, and a fire wipes the whole thing out."
+  },
+  {
+   "t": 571.52,
+   "text": "You could scan every book and store it on hard drives — that takes a few racks of servers, but the servers consume power continuously, and the drives need to be replaced every five years, and a power outage long enough loses your data."
+  },
+  {
+   "t": 585.16,
+   "text": "You could write the whole thing to LTO tape — that fits in a single climate-controlled cabinet, but it needs to be re-read and refreshed every thirty years forever."
+  },
+  {
+   "t": 594.75,
+   "text": "Or you could encode the whole library, character by character, into synthesized DNA."
+  },
+  {
+   "t": 601.35,
+   "text": "Dry the DNA."
+  },
+  {
+   "t": 602.56,
+   "text": "Seal it in a small glass vial about the size of your fingernail."
+  },
+  {
+   "t": 606.34,
+   "text": "Stick it in a drawer."
+  },
+  {
+   "t": 607.61,
+   "text": "Come back in five thousand years."
+  },
+  {
+   "t": 609.67,
+   "text": "Pull out the vial."
+  },
+  {
+   "t": 611.02,
+   "text": "Sequence it."
+  },
+  {
+   "t": 612.08,
+   "text": "Get the library back, intact, exactly as you encoded it."
+  },
+  {
+   "t": 616.08,
+   "text": "No power."
+  },
+  {
+   "t": 617.15,
+   "text": "No refresh."
+  },
+  {
+   "t": 618.35,
+   "text": "No maintenance."
+  },
+  {
+   "t": 619.67,
+   "text": "Just the molecule, sitting there, holding the bits."
+  },
+  {
+   "t": 623.44,
+   "text": "That is what we are talking about today."
+  },
+  {
+   "t": 625.23,
+   "text": "That is the promise."
+  },
+  {
+   "t": 626.52,
+   "text": "That is the destination."
+  },
+  {
+   "t": 627.98,
+   "text": "The whole rest of this lecture is about the chemistry, the engineering, the error correction, the economics, and the open problems that stand between today's lab demos and that vial of compressed civilization sitting in a drawer."
+  },
+  {
+   "t": 641.58,
+   "text": "One more framing thought before we move on."
+  },
+  {
+   "t": 644.3,
+   "text": "I want you to understand that this field is, right now, in 2026, at exactly the stage that integrated circuits were at in roughly 1955."
+  },
+  {
+   "t": 654.19,
+   "text": "The basic physics works."
+  },
+  {
+   "t": 656.04,
+   "text": "The basic chemistry works."
+  },
+  {
+   "t": 657.91,
+   "text": "There are people who have made working demos."
+  },
+  {
+   "t": 660.62,
+   "text": "The cost is, by orders of magnitude, too high for any normal commercial application."
+  },
+  {
+   "t": 666.69,
+   "text": "But the cost trajectory, if certain technical bets pay off, points down by factors of a thousand or more over the next decade."
+  },
+  {
+   "t": 674.59,
+   "text": "Whether DNA storage becomes a real industry depends on whether those bets pay off, and on whether the data-archive market grows fast enough to want it when it does."
+  },
+  {
+   "t": 683.9,
+   "text": "We are at the moment in the story where the transistor exists but Fairchild Semiconductor has not yet been founded."
+  },
+  {
+   "t": 690.73,
+   "text": "There is a real possibility that nothing comes of it — that the cost curve never bends and DNA storage stays a curiosity in academic labs."
+  },
+  {
+   "t": 700.1,
+   "text": "And there is a real possibility that, twenty years from now, every major data center on Earth has a DNA archive in the basement."
+  },
+  {
+   "t": 708.06,
+   "text": "Let's go figure out which it's going to be."
+  }
+ ]
+}

@@ -1,0 +1,235 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — SHERLOCK and SHERLOCKv2 — turning Cas13 into a diagnostic",
+ "duration": 373.19,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — SHERLOCK and SHERLOCKv2 — turning Cas13 into a diagnostic"
+  },
+  {
+   "t": 7.65,
+   "text": "Welcome back."
+  },
+  {
+   "t": 8.71,
+   "text": "Let's switch gears completely."
+  },
+  {
+   "t": 10.49,
+   "text": "We have spent the first hour on Cas13 as a therapeutic tool — knockdown, REPAIR, RESCUE, the soft-eraser framing."
+  },
+  {
+   "t": 18.99,
+   "text": "Now we shift to the diagnostic side, which arguably matters more in the short term and which has already produced one FDA-authorized product and a generation of academic and commercial activity."
+  },
+  {
+   "t": 30.9,
+   "text": "The keyword here is SHERLOCK, which stands for Specific High-sensitivity Enzymatic Reporter unLOCKing."
+  },
+  {
+   "t": 37.56,
+   "text": "The acronym is again a stretch — but the brand has stuck."
+  },
+  {
+   "t": 41.35,
+   "text": "SHERLOCK was published in Science in 2017 by Zhang's lab, with first author Jonathan Gootenberg and Omar Abudayyeh as co-first author."
+  },
+  {
+   "t": 51.19,
+   "text": "The same two trainees who were working on Cas13's basic biology and on REPAIR were simultaneously turning the collateral cleavage activity into a diagnostic platform."
+  },
+  {
+   "t": 62.9,
+   "text": "They were busy people."
+  },
+  {
+   "t": 64.33,
+   "text": "Let me describe SHERLOCK from scratch, building on what we already know about collateral cleavage."
+  },
+  {
+   "t": 69.96,
+   "text": "The conceptual move, as I sketched in Segment 4, is to put Cas13 in a tube along with three things."
+  },
+  {
+   "t": 77.14,
+   "text": "First, a guide RNA designed to match the target sequence you want to detect — say, the SARS-CoV-2 genome, or the Zika virus genome, or a specific human cancer mutation."
+  },
+  {
+   "t": 89.74,
+   "text": "Second, the sample you want to test — patient saliva, blood, swab."
+  },
+  {
+   "t": 94.15,
+   "text": "Third, a fluorescent reporter RNA — a short single-stranded RNA molecule with a fluorophore on one end and a quencher on the other."
+  },
+  {
+   "t": 103.22,
+   "text": "While the reporter is intact, the quencher absorbs the light from the fluorophore, and the tube reads dark."
+  },
+  {
+   "t": 109.51,
+   "text": "If the target sequence is in the sample, Cas13 binds and cuts its target, gets activated, and then starts trans-cleaving everything single-stranded — including the reporter."
+  },
+  {
+   "t": 120.66,
+   "text": "The reporter is cleaved, the quencher floats away, the fluorophore shines."
+  },
+  {
+   "t": 125.86,
+   "text": "Tube reads bright."
+  },
+  {
+   "t": 127.46,
+   "text": "Positive result."
+  },
+  {
+   "t": 128.66,
+   "text": "If the target sequence is not in the sample, Cas13 has nothing to activate it."
+  },
+  {
+   "t": 134.4,
+   "text": "Reporter stays intact."
+  },
+  {
+   "t": 136.04,
+   "text": "Tube reads dark."
+  },
+  {
+   "t": 137.71,
+   "text": "Negative result."
+  },
+  {
+   "t": 138.85,
+   "text": "Now, there is one more piece you need to get SHERLOCK to work at clinically useful sensitivity."
+  },
+  {
+   "t": 144.68,
+   "text": "The Cas13 reaction alone, even with the trans-cleavage amplification of the fluorescent signal, requires more target molecules than are typically present in a real clinical sample."
+  },
+  {
+   "t": 155.47,
+   "text": "To bring the sensitivity up to the level where you can detect, say, ten copies of viral RNA per microliter — which is the realm where you start competing with PCR for clinical utility — you need a pre-amplification step."
+  },
+  {
+   "t": 169.14,
+   "text": "SHERLOCK uses a technology called RPA, which stands for recombinase polymerase amplification."
+  },
+  {
+   "t": 176.28,
+   "text": "RPA is an isothermal nucleic-acid amplification method — meaning you run it at a constant temperature, no thermal cycling needed — that can amplify a target sequence about a million-fold in twenty minutes at 37 to 42 degrees Celsius."
+  },
+  {
+   "t": 192.25,
+   "text": "So the full SHERLOCK workflow is: take the sample, do an RPA amplification of the target sequence, transcribe the amplified DNA to RNA using T7 polymerase, then run the Cas13-plus-guide-plus-reporter reaction on that RNA."
+  },
+  {
+   "t": 208.95,
+   "text": "The whole thing can be done in about thirty to sixty minutes, at constant temperature, with very simple equipment."
+  },
+  {
+   "t": 215.68,
+   "text": "Compare that to standard PCR, which requires thermal cycling, more expensive equipment, and typically a dedicated lab."
+  },
+  {
+   "t": 224.22,
+   "text": "SHERLOCK can be done in a field setting with a heat block and a fluorimeter — or, in the simplest implementations, with a paper strip you can read with your eyes."
+  },
+  {
+   "t": 233.46,
+   "text": "The paper-strip version is worth pausing on, because it is what makes SHERLOCK conceptually different from PCR as a deployment platform."
+  },
+  {
+   "t": 241.8,
+   "text": "The reporter in the simplest SHERLOCK format is a lateral-flow strip — like a pregnancy test — that has been functionalized so that cleavage of a reporter RNA by activated Cas13 changes which line on the strip lights up."
+  },
+  {
+   "t": 255.56,
+   "text": "Drop a few microliters of your reaction onto the strip, wait two minutes, look at it."
+  },
+  {
+   "t": 261.44,
+   "text": "Two lines means positive."
+  },
+  {
+   "t": 263.34,
+   "text": "One line means negative."
+  },
+  {
+   "t": 265.47,
+   "text": "It is a CRISPR-based pregnancy test, but for any nucleic acid sequence in the world."
+  },
+  {
+   "t": 270.8,
+   "text": "That is the headline."
+  },
+  {
+   "t": 271.94,
+   "text": "SHERLOCK is a programmable, paper-strip diagnostic for arbitrary nucleic acid sequences, at clinically relevant sensitivity, with minimal equipment."
+  },
+  {
+   "t": 282.0,
+   "text": "Sherlock the detective."
+  },
+  {
+   "t": 283.69,
+   "text": "Hence the brand."
+  },
+  {
+   "t": 284.77,
+   "text": "In 2018, Zhang's lab published SHERLOCKv2, which improved on the original in several ways."
+  },
+  {
+   "t": 292.22,
+   "text": "SHERLOCKv2 added multiplexing — different Cas13 variants from different bacteria have slightly different RNA cleavage preferences, so you can use one Cas13 with one reporter to detect one target, and another Cas13 with a different reporter to detect a different target, all in the same tube."
+  },
+  {
+   "t": 311.54,
+   "text": "SHERLOCKv2 also improved the quantitative readout — the original SHERLOCK was essentially binary, while v2 introduced ways to quantify how much target was in the sample."
+  },
+  {
+   "t": 323.98,
+   "text": "And SHERLOCKv2 added compatibility with the paper-strip lateral-flow format from day one."
+  },
+  {
+   "t": 331.34,
+   "text": "Here is the analogy that I want you to walk away with."
+  },
+  {
+   "t": 335.0,
+   "text": "SHERLOCK is Cas13 plus a fluorescent reporter RNA."
+  },
+  {
+   "t": 339.25,
+   "text": "When Cas13 finds the virus, it chews up everything, including the reporter, and the well lights up."
+  },
+  {
+   "t": 346.14,
+   "text": "That is the entire conceptual move."
+  },
+  {
+   "t": 348.6,
+   "text": "Take a quirky, somewhat embarrassing biochemical property — collateral cleavage — and engineer a system where that property is the readout you want."
+  },
+  {
+   "t": 358.48,
+   "text": "Bug becomes feature."
+  },
+  {
+   "t": 359.92,
+   "text": "Tube goes dark to bright."
+  },
+  {
+   "t": 361.67,
+   "text": "Diagnostic platform."
+  },
+  {
+   "t": 363.35,
+   "text": "The Zhang lab spun out a company called Sherlock Biosciences to commercialize the platform."
+  },
+  {
+   "t": 368.88,
+   "text": "We will get to Sherlock and to its competitor Mammoth in a couple of segments."
+  }
+ ]
+}

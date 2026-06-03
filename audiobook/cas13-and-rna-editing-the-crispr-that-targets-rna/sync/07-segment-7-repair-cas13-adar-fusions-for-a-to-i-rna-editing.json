@@ -1,0 +1,291 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — REPAIR — Cas13-ADAR fusions for A-to-I RNA editing",
+ "duration": 455.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — REPAIR — Cas13-ADAR fusions for A-to-I RNA editing"
+  },
+  {
+   "t": 6.7,
+   "text": "Let me take you to REPAIR, which stands for RNA Editing for Programmable A to I Replacement."
+  },
+  {
+   "t": 13.07,
+   "text": "The acronym is, frankly, a stretch — the \"P\" is doing some work — but the name is memorable, which is what matters."
+  },
+  {
+   "t": 21.19,
+   "text": "REPAIR was published in Science in 2017, with first author David Cox and senior author Feng Zhang."
+  },
+  {
+   "t": 28.73,
+   "text": "The paper title was \"RNA editing with CRISPR-Cas13."
+  },
+  {
+   "t": 33.31,
+   "text": "\" That's the cleanest possible description."
+  },
+  {
+   "t": 35.77,
+   "text": "And what it described was the first system that could make a programmable, sequence-specific single-base edit in a target mRNA inside a mammalian cell, without cutting the RNA, without touching the DNA, and without permanent changes."
+  },
+  {
+   "t": 50.33,
+   "text": "To understand REPAIR you need to understand the editing enzyme it uses, which is called ADAR."
+  },
+  {
+   "t": 56.67,
+   "text": "ADAR stands for adenosine deaminase acting on RNA."
+  },
+  {
+   "t": 60.73,
+   "text": "ADARs are a family of human enzymes — ADAR1, ADAR2, and ADAR3 — that are part of normal mammalian biology."
+  },
+  {
+   "t": 69.62,
+   "text": "They edit your own RNA, naturally, all the time, every day, in essentially every cell of your body."
+  },
+  {
+   "t": 77.46,
+   "text": "The job of ADAR is to chemically convert an adenosine — the A in RNA — into inosine — denoted I."
+  },
+  {
+   "t": 85.33,
+   "text": "The conversion happens by deamination — the enzyme removes the amino group from the adenosine base — and the resulting inosine is structurally very similar to guanosine."
+  },
+  {
+   "t": 96.59,
+   "text": "The ribosome reads inosine as G."
+  },
+  {
+   "t": 99.83,
+   "text": "So functionally, ADAR converts A to G in the messenger RNA."
+  },
+  {
+   "t": 104.75,
+   "text": "This is enormously useful biology that you probably did not know was happening."
+  },
+  {
+   "t": 109.36,
+   "text": "ADAR-mediated A-to-I editing is widespread in your own transcriptome — there are tens of thousands of edited sites, many of which alter the coding sequence of the resulting protein, in ways that subtly diversify your cellular function."
+  },
+  {
+   "t": 123.76,
+   "text": "The most famous example is the editing of the glutamate receptor GluR-B mRNA in your neurons, where ADAR2 converts a single A to I, changing one amino acid in the receptor and dramatically altering its calcium permeability."
+  },
+  {
+   "t": 139.57,
+   "text": "Disrupt ADAR2 in mice, and the mice have seizures because the unedited receptor lets too much calcium into the neuron."
+  },
+  {
+   "t": 148.14,
+   "text": "This is not exotic biology."
+  },
+  {
+   "t": 150.14,
+   "text": "This is everyday RNA editing, happening in your brain right now."
+  },
+  {
+   "t": 154.76,
+   "text": "The natural substrate of ADAR is double-stranded RNA."
+  },
+  {
+   "t": 158.76,
+   "text": "ADAR specifically binds dsRNA regions in the cell, and it edits adenosines within those dsRNA regions."
+  },
+  {
+   "t": 167.05,
+   "text": "The double-stranded structure is the recognition motif."
+  },
+  {
+   "t": 170.68,
+   "text": "In nature, dsRNA forms in transcripts that have hairpins, or in regions where a sense transcript overlaps with an antisense transcript — those are the natural editing sites."
+  },
+  {
+   "t": 181.74,
+   "text": "Now here is the move."
+  },
+  {
+   "t": 183.06,
+   "text": "What if you could create a dsRNA structure at any spot on any mRNA you wanted, on demand?"
+  },
+  {
+   "t": 189.28,
+   "text": "What if you could deliver a designed guide RNA that base-pairs with a particular mRNA at a particular spot, creating a designer dsRNA region with one specific adenosine sitting at the center of it — and then bring ADAR to that spot, so it deaminates exactly that one adenosine and nothing else?"
+  },
+  {
+   "t": 208.06,
+   "text": "You would have programmable, single-base RNA editing."
+  },
+  {
+   "t": 211.4,
+   "text": "That is exactly what REPAIR does."
+  },
+  {
+   "t": 213.56,
+   "text": "The system has two components."
+  },
+  {
+   "t": 215.78,
+   "text": "First, dCas13b — catalytically dead Cas13b, the variant Cox picked for REPAIR — fused to the deaminase domain of ADAR2."
+  },
+  {
+   "t": 226.82,
+   "text": "This is the editing protein, a sequence-targeted ADAR."
+  },
+  {
+   "t": 231.04,
+   "text": "Second, a guide RNA designed to base-pair with the target mRNA across a region of about 50 nucleotides, with the specific adenosine to be edited positioned at a particular spot opposite a mismatched cytidine in the guide."
+  },
+  {
+   "t": 246.04,
+   "text": "The mismatch is important — ADAR prefers to edit adenosines that are paired across from a cytidine, because the cytidine creates a slight local distortion in the duplex that flips the adenosine into the active site."
+  },
+  {
+   "t": 259.19,
+   "text": "The guide is designed so that the C in the guide sits exactly opposite the A you want to edit."
+  },
+  {
+   "t": 264.86,
+   "text": "When you deliver this whole system to a cell, here is what happens."
+  },
+  {
+   "t": 268.94,
+   "text": "The guide RNA pairs with the target mRNA across the 50-nucleotide region, creating a designer dsRNA stretch with one specific A-C mismatch in the middle."
+  },
+  {
+   "t": 279.82,
+   "text": "The dCas13b-ADAR fusion binds the structure — dCas13b grips the guide via its normal crRNA scaffold, ADAR sees the dsRNA region and the A-C mismatch."
+  },
+  {
+   "t": 293.08,
+   "text": "ADAR deaminates the targeted adenosine to inosine."
+  },
+  {
+   "t": 296.86,
+   "text": "The ribosome eventually reads the edited mRNA and treats the inosine as guanosine."
+  },
+  {
+   "t": 302.94,
+   "text": "A single A has been changed to G in the message."
+  },
+  {
+   "t": 306.24,
+   "text": "No DNA editing."
+  },
+  {
+   "t": 307.79,
+   "text": "No cleavage."
+  },
+  {
+   "t": 308.93,
+   "text": "Just chemistry on the mRNA."
+  },
+  {
+   "t": 311.11,
+   "text": "Let me make the analogy explicit."
+  },
+  {
+   "t": 313.34,
+   "text": "Instead of letting Cas13 destroy the message, you fuse it to ADAR."
+  },
+  {
+   "t": 318.76,
+   "text": "ADAR converts A to I, which is read as G."
+  },
+  {
+   "t": 322.41,
+   "text": "Cas13 brings ADAR to the right spot on the right mRNA."
+  },
+  {
+   "t": 327.18,
+   "text": "That is REPAIR."
+  },
+  {
+   "t": 328.33,
+   "text": "Cas13 is no longer a destroyer."
+  },
+  {
+   "t": 331.44,
+   "text": "It is a transporter."
+  },
+  {
+   "t": 332.78,
+   "text": "It carries the editing enzyme to the address specified by the guide, and lets the editing enzyme do its chemistry."
+  },
+  {
+   "t": 340.24,
+   "text": "The Cox 2017 paper showed that REPAIR worked."
+  },
+  {
+   "t": 343.77,
+   "text": "Specific A-to-G edits were made in target mRNAs at efficiencies of around 20 to 40 percent in mammalian cells."
+  },
+  {
+   "t": 352.32,
+   "text": "The team demonstrated correction of pathogenic mutations — mutations that, in DNA, cause disease — by editing the corresponding mRNA so the protein came out with the right amino acid."
+  },
+  {
+   "t": 364.71,
+   "text": "Specifically they showed correction of mutations associated with Fanconi anemia and X-linked nephrogenic diabetes insipidus, two genetic diseases."
+  },
+  {
+   "t": 374.54,
+   "text": "The point was proof of principle."
+  },
+  {
+   "t": 376.58,
+   "text": "REPAIR could edit disease-causing transcripts in human cells."
+  },
+  {
+   "t": 380.81,
+   "text": "But there was a problem."
+  },
+  {
+   "t": 382.01,
+   "text": "The version of ADAR used in the original REPAIR — ADAR2's deaminase domain — turned out to have substantial off-target editing."
+  },
+  {
+   "t": 390.96,
+   "text": "ADAR's natural substrate is dsRNA, and the cell has lots of dsRNA."
+  },
+  {
+   "t": 396.73,
+   "text": "When you over-express ADAR fused to Cas13, the ADAR domain wants to edit other dsRNA regions too, even when Cas13 is busy parked somewhere else."
+  },
+  {
+   "t": 407.87,
+   "text": "The off-target editing pattern was widespread and bothersome."
+  },
+  {
+   "t": 411.77,
+   "text": "The Zhang lab addressed this in 2018 with REPAIRv2, which used an engineered, hyperactive but more substrate-specific ADAR domain."
+  },
+  {
+   "t": 421.93,
+   "text": "REPAIRv2 dramatically reduced off-target editing while preserving on-target activity."
+  },
+  {
+   "t": 428.67,
+   "text": "There have been further generations since — better-engineered ADARs, smaller fusion proteins, codon-optimized constructs, different guide formats."
+  },
+  {
+   "t": 438.17,
+   "text": "The platform has matured."
+  },
+  {
+   "t": 439.82,
+   "text": "But the core conceptual move is what was published in 2017."
+  },
+  {
+   "t": 444.52,
+   "text": "You can do programmable A-to-I — effectively A-to-G — RNA editing in mammalian cells using dCas13 fused to ADAR."
+  },
+  {
+   "t": 454.64,
+   "text": "That is REPAIR."
+  }
+ ]
+}

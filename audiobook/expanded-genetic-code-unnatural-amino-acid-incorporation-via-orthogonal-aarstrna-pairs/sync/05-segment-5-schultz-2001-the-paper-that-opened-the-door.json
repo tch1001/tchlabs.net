@@ -1,0 +1,299 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Schultz 2001: the paper that opened the door",
+ "duration": 539.49,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Schultz 2001: the paper that opened the door"
+  },
+  {
+   "t": 4.67,
+   "text": "Now we're ready for the central paper."
+  },
+  {
+   "t": 6.71,
+   "text": "In 2001, Peter Schultz's lab at Scripps published a paper in Science titled, in summary, the directed evolution of an orthogonal aminoacyl-tRNA synthetase that incorporates an unnatural amino acid into proteins in E. coli."
+  },
+  {
+   "t": 22.32,
+   "text": "The exact title is longer, but that's the spirit."
+  },
+  {
+   "t": 25.6,
+   "text": "And that paper, more than any other, founded the modern field of genetic code expansion."
+  },
+  {
+   "t": 31.35,
+   "text": "Every textbook tells the same story."
+  },
+  {
+   "t": 33.92,
+   "text": "Every review starts with this paper."
+  },
+  {
+   "t": 36.15,
+   "text": "I'm going to walk you through what they did, because the logic is gorgeous."
+  },
+  {
+   "t": 40.0,
+   "text": "The goal of the paper was simple: install a single non-canonical amino acid — they chose O-methyl tyrosine, which is just tyrosine with a methyl group on the phenol oxygen, a small modification — at a specific UAG codon in a target protein, inside E. coli, using an engineered orthogonal aaRS/tRNA pair."
+  },
+  {
+   "t": 62.02,
+   "text": "Three required components: orthogonal pair, non-canonical amino acid, UAG codon in target gene."
+  },
+  {
+   "t": 69.62,
+   "text": "Whether it could be done, in a generalizable, robust way, was the open question."
+  },
+  {
+   "t": 75.35,
+   "text": "The starting point was the choice of orthogonal pair."
+  },
+  {
+   "t": 78.28,
+   "text": "As I mentioned in Segment 3, the move Schultz made was to import the **tyrosyl-tRNA synthetase and tyrosyl tRNA from Methanocaldococcus jannaschii** — the MjTyrRS and MjtRNA-Tyr pair — into E. coli."
+  },
+  {
+   "t": 93.33,
+   "text": "M. jannaschii is a hyperthermophilic archaeon from deep-sea hydrothermal vents."
+  },
+  {
+   "t": 99.21,
+   "text": "It's phylogenetically distant from E. coli, distant enough that, when you put the Mj synthetase and tRNA into an E. coli cell, they don't crosstalk with the E. coli machinery."
+  },
+  {
+   "t": 111.21,
+   "text": "The MjTyrRS doesn't charge E. coli tRNAs."
+  },
+  {
+   "t": 115.22,
+   "text": "The E. coli synthetases don't charge MjtRNA-Tyr."
+  },
+  {
+   "t": 119.54,
+   "text": "The pair is orthogonal by virtue of evolutionary distance."
+  },
+  {
+   "t": 124.09,
+   "text": "Perfect starting material."
+  },
+  {
+   "t": 125.79,
+   "text": "But there's an obvious problem."
+  },
+  {
+   "t": 127.35,
+   "text": "The MjTyrRS, in its natural state, charges its tRNA with tyrosine — the same tyrosine that the E. coli tyrosyl-tRNA synthetase already handles."
+  },
+  {
+   "t": 138.55,
+   "text": "If you imported the Mj pair as-is, all you'd be doing is duplicating the existing tyrosine machinery."
+  },
+  {
+   "t": 146.05,
+   "text": "The amber suppressor tRNA would deliver tyrosine to UAG codons, which is mildly useful as a stop-codon read-through tool but doesn't expand the chemistry at all."
+  },
+  {
+   "t": 156.29,
+   "text": "To get a real expanded code, you need the synthetase to charge its tRNA with something other than tyrosine — specifically, with your chosen non-canonical amino acid."
+  },
+  {
+   "t": 167.3,
+   "text": "How do you reprogram the synthetase to prefer a different amino acid?"
+  },
+  {
+   "t": 171.49,
+   "text": "You can't just sit down and design the mutation by hand."
+  },
+  {
+   "t": 174.97,
+   "text": "The amino acid binding pocket of a synthetase is a complicated three-dimensional thing, with multiple residues making contacts with the substrate, and predicting which combination of mutations would shift the specificity from tyrosine to O-methyl tyrosine is, in 2001 at least, beyond rational protein design."
+  },
+  {
+   "t": 194.91,
+   "text": "So Schultz did something cleverer: he used directed evolution."
+  },
+  {
+   "t": 199.03,
+   "text": "Directed evolution, in this context, works like this."
+  },
+  {
+   "t": 202.89,
+   "text": "You take the MjTyrRS gene and you make a giant library of variants — typically by saturation mutagenesis at the residues in the amino acid binding pocket, randomizing several positions all at once, so that you generate millions or tens of millions of different versions of the synthetase, each with a different combination of mutations in the binding pocket."
+  },
+  {
+   "t": 225.05,
+   "text": "That library is your search space."
+  },
+  {
+   "t": 227.41,
+   "text": "Then you need a way to select — out of millions of variants — the rare ones that have shifted their specificity from tyrosine to your non-canonical amino acid."
+  },
+  {
+   "t": 237.07,
+   "text": "You can't screen them one at a time; there are too many."
+  },
+  {
+   "t": 240.01,
+   "text": "You need a clever selection that, on a single plate of E. coli, lets the right variants survive and the wrong variants die."
+  },
+  {
+   "t": 247.81,
+   "text": "Schultz's selection scheme was elegant."
+  },
+  {
+   "t": 250.53,
+   "text": "He used a two-step process: a positive selection to find variants that can charge the tRNA with something, followed by a negative selection to throw out the variants that charge the tRNA with tyrosine (the natural substrate, which we don't want)."
+  },
+  {
+   "t": 265.05,
+   "text": "Let me walk through each step."
+  },
+  {
+   "t": 267.19,
+   "text": "For the positive selection, he engineered E. coli to require amber suppression in order to survive an antibiotic."
+  },
+  {
+   "t": 274.48,
+   "text": "Specifically, he put an amber stop codon (UAG) into a critical residue of a chloramphenicol resistance gene."
+  },
+  {
+   "t": 283.17,
+   "text": "In E. coli, the antibiotic chloramphenicol is normally killed by an enzyme called chloramphenicol acetyltransferase, or CAT."
+  },
+  {
+   "t": 291.91,
+   "text": "If you put a UAG codon into the middle of the CAT gene, the gene only makes a truncated, non-functional CAT protein — unless something reads through the UAG, in which case full-length CAT gets made and the cell survives chloramphenicol."
+  },
+  {
+   "t": 306.41,
+   "text": "So you put the chloramphenicol-sensitive E. coli on a plate with chloramphenicol, with your library of synthetase variants expressed in the same cells, and you supply the non-canonical amino acid in the medium."
+  },
+  {
+   "t": 319.88,
+   "text": "The only cells that survive are the ones whose engineered synthetase is charging the suppressor tRNA with something — anything — that lets the suppressor deliver an amino acid to the UAG in CAT."
+  },
+  {
+   "t": 332.42,
+   "text": "But notice: the positive selection doesn't distinguish between variants that charge the tRNA with the non-canonical amino acid versus variants that still charge it with tyrosine."
+  },
+  {
+   "t": 343.13,
+   "text": "Both will suppress the UAG and rescue chloramphenicol resistance."
+  },
+  {
+   "t": 347.93,
+   "text": "So you need a follow-up negative selection."
+  },
+  {
+   "t": 350.22,
+   "text": "For the negative selection, Schultz engineered E. coli to die if the suppressor tRNA delivers tyrosine — using a different reporter gene with UAG codons that, when read through with the wrong amino acid, encodes a toxic gene product."
+  },
+  {
+   "t": 365.92,
+   "text": "Critically, the negative selection is performed in the absence of the non-canonical amino acid."
+  },
+  {
+   "t": 371.66,
+   "text": "So if a variant of the synthetase still charges the tRNA with tyrosine, it will continue to suppress UAG even without the non-canonical amino acid present, the toxic gene will be expressed, and the cell dies."
+  },
+  {
+   "t": 384.89,
+   "text": "But if a variant has truly shifted its specificity to require the non-canonical amino acid, then in its absence the variant cannot charge the tRNA, no suppression happens, the toxic gene stays silent, and the cell survives."
+  },
+  {
+   "t": 399.88,
+   "text": "You alternate positive and negative selections — positive with non-canonical amino acid present, negative without — for several rounds, and the surviving variants are the ones that satisfy both criteria simultaneously: they charge the tRNA with the non-canonical amino acid, and they don't charge it with tyrosine."
+  },
+  {
+   "t": 418.93,
+   "text": "That's a synthetase that has been evolved, in the lab, to prefer a brand-new substrate."
+  },
+  {
+   "t": 424.38,
+   "text": "Schultz's 2001 paper put this whole pipeline together for the first time, used it to evolve an MjTyrRS variant that strongly prefers O-methyl tyrosine over native tyrosine, and demonstrated that the resulting orthogonal pair would install O-methyl tyrosine at a UAG codon in a target protein inside E. coli, with high fidelity."
+  },
+  {
+   "t": 445.58,
+   "text": "The non-canonical amino acid showed up where it was supposed to, and not anywhere else, and the cell was healthy."
+  },
+  {
+   "t": 452.22,
+   "text": "The 21st amino acid had been added on demand."
+  },
+  {
+   "t": 455.19,
+   "text": "The cultural impact of that paper is hard to overstate."
+  },
+  {
+   "t": 459.01,
+   "text": "Suddenly there was a recipe — a real, working, repeatable recipe — for installing any non-canonical amino acid at any chosen position in any protein, in a living cell."
+  },
+  {
+   "t": 471.86,
+   "text": "The recipe required some engineering work for each new amino acid (you had to evolve a new synthetase variant for each new substrate), but the framework was clear."
+  },
+  {
+   "t": 482.18,
+   "text": "Within five years, dozens of new non-canonical amino acids had been incorporated using variants of the Schultz pipeline."
+  },
+  {
+   "t": 490.24,
+   "text": "Within ten years, the catalog had grown to over a hundred."
+  },
+  {
+   "t": 494.21,
+   "text": "The genetic code, for the first time, was a tunable, expandable thing."
+  },
+  {
+   "t": 498.99,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 500.31,
+   "text": "Schultz's 2001 paper was the moment we realized the orthogonal pair trick wasn't just a one-off — it was a platform."
+  },
+  {
+   "t": 508.08,
+   "text": "The Mj pair was the prototype."
+  },
+  {
+   "t": 510.64,
+   "text": "The directed evolution scheme was the manufacturing process for new variants."
+  },
+  {
+   "t": 515.77,
+   "text": "You picked an amino acid."
+  },
+  {
+   "t": 517.41,
+   "text": "You ran the selections."
+  },
+  {
+   "t": 519.07,
+   "text": "You got a new orthogonal pair tuned to your amino acid."
+  },
+  {
+   "t": 522.51,
+   "text": "You used it."
+  },
+  {
+   "t": 523.47,
+   "text": "The bottleneck went from \"is genetic code expansion even possible?"
+  },
+  {
+   "t": 528.24,
+   "text": "\" to \"which amino acid do I want to install today?"
+  },
+  {
+   "t": 530.99,
+   "text": "\" That's a phase change in what's thinkable."
+  },
+  {
+   "t": 533.75,
+   "text": "The rest of this lecture is, in many ways, about what people did with that platform once they had it."
+  }
+ ]
+}

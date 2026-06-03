@@ -1,0 +1,243 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — After the synthesis: desalting, HPLC, PAGE",
+ "duration": 412.69,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — After the synthesis: desalting, HPLC, PAGE"
+  },
+  {
+   "t": 5.36,
+   "text": "So your synthesis is done."
+  },
+  {
+   "t": 7.49,
+   "text": "Your synthesizer has run a hundred cycles of strip-couple-cap-oxidize."
+  },
+  {
+   "t": 12.57,
+   "text": "The bead has been treated with ammonia overnight to cleave the oligo off and deprotect the bases."
+  },
+  {
+   "t": 18.76,
+   "text": "You now have a tube of crude oligonucleotide in solution, mixed with various salts, byproducts, capped truncations, and a small fraction of full-length product."
+  },
+  {
+   "t": 28.93,
+   "text": "What do you do next?"
+  },
+  {
+   "t": 30.15,
+   "text": "The answer depends on what you need the oligo for."
+  },
+  {
+   "t": 32.62,
+   "text": "For a simple PCR primer — twenty to thirty bases, no modifications, no purity-critical downstream application — the standard cleanup is desalting."
+  },
+  {
+   "t": 43.49,
+   "text": "You run the crude oligo over a small size-exclusion column that lets the oligonucleotide through but holds back small-molecule salts and byproducts."
+  },
+  {
+   "t": 53.06,
+   "text": "Or you precipitate the oligonucleotide with ethanol, wash the pellet, and resuspend in clean water."
+  },
+  {
+   "t": 60.01,
+   "text": "Either way, you get a tube of oligonucleotide that is mostly the right sequence, mostly full-length, mixed with a low background of truncations and shorter byproducts."
+  },
+  {
+   "t": 71.69,
+   "text": "For PCR, that's fine."
+  },
+  {
+   "t": 73.64,
+   "text": "The full-length product dominates the amplification, and the truncations are mostly invisible in the readout."
+  },
+  {
+   "t": 80.55,
+   "text": "Desalting is fast — minutes — and cheap — pennies per oligo."
+  },
+  {
+   "t": 85.61,
+   "text": "It's the default purification level you get when you order a primer from IDT or any other supplier."
+  },
+  {
+   "t": 91.78,
+   "text": "For a higher-purity application — fluorescent probes, ASO drug intermediates, some sequencing applications where contaminating shorter products would cause artifacts — you need a more aggressive purification."
+  },
+  {
+   "t": 104.66,
+   "text": "There are two main options."
+  },
+  {
+   "t": 106.24,
+   "text": "HPLC, high-performance liquid chromatography."
+  },
+  {
+   "t": 109.97,
+   "text": "You run the crude oligo through a chromatography column — typically a reversed-phase column, sometimes an anion-exchange column — and separate the full-length product from the truncations based on their differing hydrophobicities or charge densities."
+  },
+  {
+   "t": 124.3,
+   "text": "The full-length product elutes at a characteristic time and is collected as a clean peak."
+  },
+  {
+   "t": 130.06,
+   "text": "The truncations elute earlier or later and are discarded."
+  },
+  {
+   "t": 133.85,
+   "text": "HPLC can routinely deliver oligo purity in the ninety-five to ninety-nine percent range, which is suitable for almost any application."
+  },
+  {
+   "t": 143.11,
+   "text": "The trade-off is cost and yield — HPLC takes time, uses expensive solvents, and recovers only a fraction of the original mass."
+  },
+  {
+   "t": 153.3,
+   "text": "An HPLC-purified primer might cost three to five times what a desalted one costs."
+  },
+  {
+   "t": 159.82,
+   "text": "PAGE, polyacrylamide gel electrophoresis."
+  },
+  {
+   "t": 163.57,
+   "text": "You run the crude oligo on a denaturing polyacrylamide gel, which separates molecules by size with very high resolution."
+  },
+  {
+   "t": 172.0,
+   "text": "The full-length band is excised from the gel, eluted, and purified."
+  },
+  {
+   "t": 176.61,
+   "text": "PAGE purification can deliver even higher purity than HPLC — into the ninety-nine plus percent range — but it's slow, labor-intensive, and gives very low yields."
+  },
+  {
+   "t": 188.4,
+   "text": "PAGE is reserved for the most demanding applications, like high-resolution mass spectrometry standards or therapeutic-grade material."
+  },
+  {
+   "t": 196.74,
+   "text": "For commercial ASO drugs, the purification process is much more elaborate."
+  },
+  {
+   "t": 202.22,
+   "text": "After the bulk synthesis is complete, the oligo is purified by industrial-scale HPLC — sometimes multiple orthogonal HPLC steps using different column chemistries to remove different classes of impurities."
+  },
+  {
+   "t": 216.6,
+   "text": "The final product is characterized by mass spectrometry to confirm the exact molecular weight, by UV-vis spectroscopy to confirm the concentration, by analytical HPLC to confirm purity, and sometimes by NMR to confirm the chemical structure of any modifications."
+  },
+  {
+   "t": 234.21,
+   "text": "The whole purification and QC workflow for a drug-grade ASO can take longer than the synthesis itself, and the cost per gram can run into the tens of thousands of dollars for highly modified specialty oligos."
+  },
+  {
+   "t": 248.12,
+   "text": "The trick that makes some ASO purification feasible is what's called DMT-on purification."
+  },
+  {
+   "t": 254.5,
+   "text": "Remember the DMT group, the trityl hat, that comes off at the start of every cycle?"
+  },
+  {
+   "t": 260.07,
+   "text": "Normally, the DMT group on the very last base of the synthesis — the 5'-most base — is also removed at the end, leaving a clean 5' hydroxyl."
+  },
+  {
+   "t": 270.85,
+   "text": "But you can choose to leave the final DMT on."
+  },
+  {
+   "t": 273.91,
+   "text": "The result is a full-length oligo with a bright, hydrophobic DMT group still attached at the 5' end."
+  },
+  {
+   "t": 281.24,
+   "text": "This DMT group is much more hydrophobic than any of the truncated capped products, which all lack a 5' DMT."
+  },
+  {
+   "t": 289.31,
+   "text": "On a reversed-phase HPLC column, the DMT-on full-length product elutes very late, as a distinct, well-separated peak — easy to collect cleanly."
+  },
+  {
+   "t": 300.71,
+   "text": "Once collected, a brief acid treatment removes the DMT, leaving the clean, deprotected full-length oligo."
+  },
+  {
+   "t": 309.39,
+   "text": "This DMT-on / DMT-off trick is one of the most elegant tricks in the field."
+  },
+  {
+   "t": 315.39,
+   "text": "It uses the chemistry of the synthesis itself to make the purification easier."
+  },
+  {
+   "t": 320.9,
+   "text": "So the workflow, end to end, looks like this."
+  },
+  {
+   "t": 324.45,
+   "text": "You upload a sequence to a supplier's website."
+  },
+  {
+   "t": 327.51,
+   "text": "The supplier loads your sequence into a queue."
+  },
+  {
+   "t": 330.64,
+   "text": "A synthesizer makes the oligo — column or chip, depending on the order type."
+  },
+  {
+   "t": 335.71,
+   "text": "The crude oligo is cleaved off the support and deprotected with ammonia."
+  },
+  {
+   "t": 340.51,
+   "text": "It's purified to whatever level you ordered — desalt, HPLC, or PAGE."
+  },
+  {
+   "t": 346.38,
+   "text": "It's quantified by UV absorbance at two hundred sixty nanometers, dispensed into a tube, capped, labeled, and shipped to you."
+  },
+  {
+   "t": 355.05,
+   "text": "The whole process, for a standard primer, takes maybe a day of actual machine time, plus shipping."
+  },
+  {
+   "t": 361.05,
+   "text": "The cost is fifteen or twenty dollars."
+  },
+  {
+   "t": 363.85,
+   "text": "You open the tube, dissolve the oligo in water, and use it for whatever you were going to do with it."
+  },
+  {
+   "t": 369.64,
+   "text": "That whole pipeline — synthesizer, deprotection, purification, QC, shipping — is invisible to almost everybody who uses synthetic DNA."
+  },
+  {
+   "t": 380.48,
+   "text": "You type a sequence, two days later a tube shows up, and you don't have to think about anything that happens in between."
+  },
+  {
+   "t": 386.84,
+   "text": "That invisibility is the mark of mature infrastructure."
+  },
+  {
+   "t": 391.0,
+   "text": "Caruthers's chemistry has been industrialized to the point that nobody has to think about it anymore."
+  },
+  {
+   "t": 397.3,
+   "text": "Which, in a sense, is the highest compliment you can pay to a piece of technology."
+  },
+  {
+   "t": 402.14,
+   "text": "Let's now talk about the commercial landscape itself — the companies that have built businesses out of Caruthers's chemistry, and what their relative strengths and competitive positions look like."
+  }
+ ]
+}

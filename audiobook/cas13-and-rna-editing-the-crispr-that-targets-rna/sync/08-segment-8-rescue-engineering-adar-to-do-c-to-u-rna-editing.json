@@ -1,0 +1,211 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — RESCUE — engineering ADAR to do C-to-U RNA editing",
+ "duration": 387.28,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — RESCUE — engineering ADAR to do C-to-U RNA editing"
+  },
+  {
+   "t": 6.53,
+   "text": "REPAIR gives you A-to-G editing on RNA."
+  },
+  {
+   "t": 10.19,
+   "text": "That is one out of twelve possible nucleotide conversions — A to G, A to C, A to U, C to A, C to G, C to U, G to A, G to C, G to U, U to A, U to C, U to G."
+  },
+  {
+   "t": 26.21,
+   "text": "If you want to broaden the menu of disease-causing mutations you could correct, you need more chemistry."
+  },
+  {
+   "t": 32.06,
+   "text": "The natural next question is whether you can do the other obviously useful single-base conversion: C to U."
+  },
+  {
+   "t": 38.58,
+   "text": "C-to-U editing is the parallel of A-to-G in some sense — it is a deamination, like ADAR's chemistry, but on a different base."
+  },
+  {
+   "t": 47.71,
+   "text": "There is a family of human enzymes that do C-to-U editing on DNA, called APOBECs."
+  },
+  {
+   "t": 53.74,
+   "text": "APOBEC stands for apolipoprotein B mRNA editing catalytic polypeptide, named for the first member of the family that was characterized — APOBEC1, which edits the APOB messenger RNA to produce a shorter form of the apolipoprotein B protein in the intestine."
+  },
+  {
+   "t": 70.92,
+   "text": "So APOBEC1, in nature, is actually doing C-to-U editing on RNA."
+  },
+  {
+   "t": 76.42,
+   "text": "But most of the other APOBECs in your genome act primarily on DNA — they are part of antiviral defense, deaminating cytidines in viral DNA during reverse transcription."
+  },
+  {
+   "t": 87.79,
+   "text": "You might think, then, that the obvious move for C-to-U RNA editing is to fuse dCas13 to APOBEC1, the natural RNA C-to-U editor."
+  },
+  {
+   "t": 97.74,
+   "text": "People have tried this, and it works to some extent, but APOBEC1 has its own substrate preferences and limitations."
+  },
+  {
+   "t": 104.9,
+   "text": "There is a cleverer move, which is what Zhang's lab — with first author Omar Abudayyeh — published in 2019."
+  },
+  {
+   "t": 113.1,
+   "text": "The paper described RESCUE, which stands for RNA Editing for Specific C to U Exchange."
+  },
+  {
+   "t": 119.59,
+   "text": "Same acronym style as REPAIR."
+  },
+  {
+   "t": 121.67,
+   "text": "The same naming convention."
+  },
+  {
+   "t": 123.46,
+   "text": "Here is what RESCUE does."
+  },
+  {
+   "t": 125.31,
+   "text": "Instead of bolting APOBEC onto Cas13, the team took ADAR2 — the same A-to-I deaminase used in REPAIR — and engineered its active site to deaminate cytidines instead of adenosines."
+  },
+  {
+   "t": 139.84,
+   "text": "They used directed evolution — they made libraries of ADAR2 variants with mutations in the active site, expressed them in cells along with a reporter that read out cytidine deamination activity, and selected the variants that gave the strongest C-to-U editing signal."
+  },
+  {
+   "t": 156.12,
+   "text": "After several rounds of selection, they had ADAR2 variants that had been re-engineered to act on cytidine."
+  },
+  {
+   "t": 163.26,
+   "text": "So RESCUE is dCas13 fused to an engineered ADAR variant that performs C-to-U editing on RNA."
+  },
+  {
+   "t": 171.38,
+   "text": "Same scaffold, same guide RNA design principles, same mechanism of bringing the deaminase to a target site via base pairing with a guide."
+  },
+  {
+   "t": 180.46,
+   "text": "Just a different deaminase chemistry."
+  },
+  {
+   "t": 182.99,
+   "text": "Why does this matter?"
+  },
+  {
+   "t": 184.18,
+   "text": "Because the menu of disease-causing mutations that REPAIR plus RESCUE together can address is substantially larger than what REPAIR alone covers."
+  },
+  {
+   "t": 193.79,
+   "text": "Many disease-causing mutations involve G-to-A or C-to-T transitions in the genome — those are the transitions that happen when DNA is damaged in particular ways, and they are common."
+  },
+  {
+   "t": 205.79,
+   "text": "To correct a G-to-A mutation at the mRNA level, you need A-to-G editing — that is REPAIR."
+  },
+  {
+   "t": 212.47,
+   "text": "To correct a C-to-T mutation, you need U-to-C editing — and U-to-C is the reverse of C-to-U, so RESCUE in that form doesn't directly do it; but C-to-U editing can correct certain other classes of disease mutations or modulate amino acid identity in specific ways."
+  },
+  {
+   "t": 230.88,
+   "text": "The point is that having two orthogonal editing chemistries — A-to-G and C-to-U — addresses a meaningfully broader swath of mutational space than having just one."
+  },
+  {
+   "t": 241.91,
+   "text": "The off-target picture for RESCUE was worse than REPAIR — the engineered ADAR2 variant retained some A-to-I activity in addition to its new C-to-U activity, so you got a mix of edits in some contexts."
+  },
+  {
+   "t": 254.51,
+   "text": "There has been substantial subsequent engineering to improve the specificity."
+  },
+  {
+   "t": 259.32,
+   "text": "As of the mid-2020s, the field has multiple generations of A-to-I and C-to-U Cas13-deaminase fusions, with improving specificity profiles."
+  },
+  {
+   "t": 270.79,
+   "text": "I want to step back and underscore a conceptual point."
+  },
+  {
+   "t": 273.84,
+   "text": "The REPAIR-and-RESCUE story is, in a sense, the same conceptual story as the base editing story in DNA — which we covered in the CRISPR lecture, with David Liu's work on cytidine and adenine base editors."
+  },
+  {
+   "t": 287.57,
+   "text": "In both cases, the move is the same."
+  },
+  {
+   "t": 290.73,
+   "text": "You take a catalytically dead Cas protein, you fuse it to a deaminase, you target the fusion with a guide, and you change one base without cutting both strands of the polymer."
+  },
+  {
+   "t": 301.29,
+   "text": "The difference is just which polymer you are editing."
+  },
+  {
+   "t": 303.83,
+   "text": "DNA base editors edit chromosomes — the changes are permanent."
+  },
+  {
+   "t": 308.23,
+   "text": "RNA base editors edit messenger RNA — the changes are transient."
+  },
+  {
+   "t": 313.15,
+   "text": "The same scientific group — Liu's lab on the DNA side, Zhang's lab on the RNA side — was thinking about the same idea at roughly the same time, in 2016 and 2017."
+  },
+  {
+   "t": 325.25,
+   "text": "Liu published cytidine base editing on DNA in 2016 with first author Alexis Komor; Zhang published REPAIR on RNA in 2017 with Cox."
+  },
+  {
+   "t": 336.8,
+   "text": "The two technologies are siblings."
+  },
+  {
+   "t": 339.44,
+   "text": "They share intellectual DNA."
+  },
+  {
+   "t": 341.6,
+   "text": "They are both expressions of the same insight, which is that once you have a programmable nucleic-acid-binding scaffold, you can hand it any enzyme you want, and the fusion will do that enzyme's chemistry at a programmable address."
+  },
+  {
+   "t": 355.33,
+   "text": "That insight is one of the most important conceptual moves in modern molecular biology."
+  },
+  {
+   "t": 360.74,
+   "text": "It is the reason base editors exist."
+  },
+  {
+   "t": 363.48,
+   "text": "It is the reason prime editors exist."
+  },
+  {
+   "t": 366.14,
+   "text": "It is the reason REPAIR and RESCUE exist."
+  },
+  {
+   "t": 369.18,
+   "text": "It is the reason there are now Cas13 fusions to translation factors, to splicing factors, to RNA modification enzymes — to almost anything you can imagine wanting to do at a specific RNA address."
+  },
+  {
+   "t": 382.87,
+   "text": "The scaffold is universal."
+  },
+  {
+   "t": 384.92,
+   "text": "The cargo is whatever chemistry you need."
+  }
+ ]
+}

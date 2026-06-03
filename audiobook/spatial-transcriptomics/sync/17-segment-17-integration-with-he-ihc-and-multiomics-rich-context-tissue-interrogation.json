@@ -1,0 +1,147 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Integration with H&E, IHC, and multiomics — rich-context tissue interrogation",
+ "duration": 347.72,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Integration with H&E, IHC, and multiomics — rich-context tissue interrogation"
+  },
+  {
+   "t": 8.56,
+   "text": "One of the underappreciated strengths of spatial transcriptomics is that it doesn't replace other tissue interrogation methods — it integrates with them."
+  },
+  {
+   "t": 17.51,
+   "text": "A tissue section is a finite resource: you have a slide, you can put one set of stains on it."
+  },
+  {
+   "t": 23.76,
+   "text": "But the spatial transcriptomics workflows have been carefully designed so that the same section, or adjacent sections, can carry multiple layers of information that get co-registered in space."
+  },
+  {
+   "t": 35.0,
+   "text": "The result is what people sometimes call rich-context tissue interrogation — multiple molecular and morphological readouts from the same physical region, integrated into a unified view of the tissue."
+  },
+  {
+   "t": 47.26,
+   "text": "The first and most important integration is with H&E staining."
+  },
+  {
+   "t": 51.23,
+   "text": "Every Visium and Xenium workflow includes an H&E image of the same section that gets sequenced or imaged."
+  },
+  {
+   "t": 58.64,
+   "text": "The H&E provides the morphological context — cell shapes, tissue architecture, recognizable pathology features like fibrosis, necrosis, immune infiltration zones."
+  },
+  {
+   "t": 70.71,
+   "text": "Pathologists can examine the H&E and provide expert annotations of tissue regions."
+  },
+  {
+   "t": 76.51,
+   "text": "Those annotations can then be overlaid on the gene expression data, allowing the molecular signatures of pathologist-defined regions to be extracted directly."
+  },
+  {
+   "t": 86.46,
+   "text": "This is increasingly important for clinical translation — the regulatory pathway for spatial transcriptomics in pathology depends on integrating its output with the morphological assessments that pathologists already do."
+  },
+  {
+   "t": 100.15,
+   "text": "The integration with immunohistochemistry (IHC) is similarly natural."
+  },
+  {
+   "t": 105.54,
+   "text": "IHC uses antibodies to detect specific proteins in tissue sections."
+  },
+  {
+   "t": 111.35,
+   "text": "Spatial transcriptomics measures the mRNA."
+  },
+  {
+   "t": 114.64,
+   "text": "The two are highly complementary — mRNA is the input to protein synthesis, but protein is the actual functional molecule, and the two don't always correlate."
+  },
+  {
+   "t": 125.41,
+   "text": "Spatial transcriptomics on one section combined with IHC on an adjacent section can show, for example, that a region with high CD8 mRNA also has high CD8 protein (confirming the T cells are present and presumably functional), or that an mRNA-high region has unexpectedly low protein (suggesting post-transcriptional regulation)."
+  },
+  {
+   "t": 148.06,
+   "text": "Many imaging-based spatial platforms — Xenium, CosMx, and several others — now offer integrated protein detection as a complementary readout to the RNA detection."
+  },
+  {
+   "t": 159.49,
+   "text": "CosMx, for example, can image about 70 proteins on the same section as its RNA panel, using fluorescently labeled antibodies in additional rounds of the imaging cycle."
+  },
+  {
+   "t": 171.07,
+   "text": "Xenium recently introduced a multi-modal capability that combines its RNA panel with selected protein markers."
+  },
+  {
+   "t": 178.94,
+   "text": "The result is a same-section, same-cell measurement of both RNA and protein for a curated set of targets — a degree of integration that until recently was not possible at single-cell or sub-cellular resolution."
+  },
+  {
+   "t": 193.22,
+   "text": "The integration with multiomics is even broader."
+  },
+  {
+   "t": 196.6,
+   "text": "The same tissue block can yield serial sections, with different sections used for different assays — spatial transcriptomics, spatial proteomics (using imaging mass cytometry or CODEX), spatial metabolomics (using MALDI imaging), and spatial epigenomics (using spatial ATAC-seq or spatial Hi-C, both of which exist in early forms)."
+  },
+  {
+   "t": 219.82,
+   "text": "The serial sections are co-registered to provide a multi-layer view of the same tissue region, with each layer providing a different molecular dimension."
+  },
+  {
+   "t": 228.8,
+   "text": "This is the cutting edge of tissue biology — multi-omic spatial maps that combine gene expression, protein levels, chromatin state, and metabolite distribution in a single integrated dataset."
+  },
+  {
+   "t": 241.82,
+   "text": "Cell-type-specific reference integration is another important kind of integration."
+  },
+  {
+   "t": 246.72,
+   "text": "When you have a high-quality single-cell RNA-seq atlas of a tissue — say, the Tabula Sapiens human cell atlas — you can use that reference to deconvolve spatial data (as discussed in Segment 13), to label clusters with cell-type identities, and to map spatial expression patterns onto known cell taxonomies."
+  },
+  {
+   "t": 266.16,
+   "text": "The single-cell atlas provides the cell-type identity; the spatial data provides the location."
+  },
+  {
+   "t": 272.21,
+   "text": "Combined, they tell you which cell types are where, with cell-type assignments grounded in the comprehensive single-cell taxonomies that the field has built over the last decade."
+  },
+  {
+   "t": 282.0,
+   "text": "The pattern across all of these integrations is the same."
+  },
+  {
+   "t": 285.74,
+   "text": "Spatial transcriptomics is the connective tissue of modern tissue biology."
+  },
+  {
+   "t": 290.66,
+   "text": "It sits at the intersection of gene expression, morphology, pathology, and other molecular modalities, and provides the spatial coordinate system into which all the other data layers can be projected."
+  },
+  {
+   "t": 303.14,
+   "text": "This is why labs that adopt spatial transcriptomics often end up using it as a central platform around which they organize the rest of their tissue-based work."
+  },
+  {
+   "t": 312.89,
+   "text": "For clinical applications, this multi-modal integration is particularly powerful."
+  },
+  {
+   "t": 318.49,
+   "text": "A tumor biopsy can be analyzed by spatial transcriptomics for the molecular characterization, by IHC for the protein-level confirmation, by pathologist review for the morphological assessment, and the three layers combined into a diagnostic report that's far richer than any one layer alone."
+  },
+  {
+   "t": 336.05,
+   "text": "This is the direction translational pathology is moving — toward integrated multi-modal tissue interrogation, with spatial transcriptomics as one of the foundational layers."
+  }
+ ]
+}

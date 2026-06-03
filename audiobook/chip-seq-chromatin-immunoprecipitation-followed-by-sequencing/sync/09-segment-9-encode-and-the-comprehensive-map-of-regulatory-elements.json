@@ -1,0 +1,143 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — ENCODE and the comprehensive map of regulatory elements",
+ "duration": 305.36,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — ENCODE and the comprehensive map of regulatory elements"
+  },
+  {
+   "t": 5.51,
+   "text": "If ChIP-seq made it possible to map regulatory binding genome-wide, the next obvious thing to do was to map every regulatory protein in every cell type, systematically."
+  },
+  {
+   "t": 17.94,
+   "text": "That ambition is what drove the ENCODE consortium — the Encyclopedia of DNA Elements — a multi-decade, multi-institution, multi-funder effort to produce a comprehensive functional annotation of the human genome."
+  },
+  {
+   "t": 32.2,
+   "text": "ENCODE was launched in 2003 by the NHGRI as a pilot project to identify functional elements in one percent of the genome."
+  },
+  {
+   "t": 42.19,
+   "text": "By 2007, the pilot had concluded, and the full-scale effort began."
+  },
+  {
+   "t": 47.8,
+   "text": "By 2012, the consortium published a flurry of papers — including a flagship Nature paper accompanied by thirty companion papers across various journals — claiming that some eighty percent of the genome had detectable biochemical activity of some kind, much of it in the form of transcription factor binding, histone modifications, chromatin accessibility, or RNA transcription."
+  },
+  {
+   "t": 70.53,
+   "text": "That eighty-percent claim was controversial — critics pointed out that \"biochemical activity\" doesn't equal \"function\" — but the underlying data, the maps themselves, are extraordinary, and they're freely available to anyone with an internet connection."
+  },
+  {
+   "t": 85.5,
+   "text": "What did ENCODE actually produce?"
+  },
+  {
+   "t": 87.84,
+   "text": "In its core, ENCODE was a ChIP-seq factory."
+  },
+  {
+   "t": 91.83,
+   "text": "Across hundreds of human and mouse cell lines and tissues, the consortium ran ChIP-seq for hundreds of transcription factors, dozens of histone modifications, multiple chromatin remodeling complexes, and various polymerase variants."
+  },
+  {
+   "t": 108.4,
+   "text": "They paired these with RNA-seq, ATAC-seq, bisulfite sequencing, Hi-C — every assay you'd want to characterize a cell's regulatory landscape."
+  },
+  {
+   "t": 118.69,
+   "text": "The output is a massive matrix: rows are genomic positions, columns are assays-by-cell-type, and the entries are the signal at each position in each assay."
+  },
+  {
+   "t": 129.05,
+   "text": "From this matrix, the consortium derived chromatin state annotations — labels like \"active promoter,\" \"poised enhancer,\" \"polycomb-repressed,\" \"heterochromatin\" — that summarize the combinatorial signature at each position."
+  },
+  {
+   "t": 143.07,
+   "text": "You can think of ENCODE as a kind of regulatory genome browser."
+  },
+  {
+   "t": 147.15,
+   "text": "If you want to know whether a given non-coding variant lies in a regulatory element, you can look it up in ENCODE."
+  },
+  {
+   "t": 153.49,
+   "text": "If you want to know which transcription factors might bind the upstream region of a given gene, you can query the ENCODE database."
+  },
+  {
+   "t": 160.99,
+   "text": "If you want a list of all the enhancers active in K562 cells — a chronic myelogenous leukemia line that's one of ENCODE's most-characterized cell types — you can download the list."
+  },
+  {
+   "t": 172.79,
+   "text": "The consortium standardized the methods, the controls, the validation, and the file formats, and it pushed the field toward reproducibility in a way that no individual lab could have."
+  },
+  {
+   "t": 184.74,
+   "text": "The ENCODE data portal at encodeproject.org is, even today, one of the most-visited bioinformatics resources in the world."
+  },
+  {
+   "t": 194.05,
+   "text": "There's a sequel — actually, sequels — to ENCODE."
+  },
+  {
+   "t": 197.4,
+   "text": "Roadmap Epigenomics characterized chromatin states across primary human tissues, complementing ENCODE's cell-line focus."
+  },
+  {
+   "t": 206.9,
+   "text": "PsychENCODE focused on brain regions."
+  },
+  {
+   "t": 210.09,
+   "text": "The ENCODE Phase 4 project has expanded into single-cell data, mouse developmental atlases, and longer-read assays."
+  },
+  {
+   "t": 218.59,
+   "text": "And the 4D Nucleome consortium tackled three-dimensional chromatin organization, integrating Hi-C with the ChIP-based functional maps."
+  },
+  {
+   "t": 228.01,
+   "text": "The general direction is clear: build the most complete, most quantitative, most cross-referenced map of regulatory genomics that anyone can produce, and make it free."
+  },
+  {
+   "t": 238.82,
+   "text": "The technology that made this possible is, in the overwhelming majority of cases, ChIP-seq — alone or in combination with related assays."
+  },
+  {
+   "t": 248.74,
+   "text": "What I want you to take from this segment is not the consortium specifics — you can look those up — but the cultural shift."
+  },
+  {
+   "t": 255.6,
+   "text": "Before ENCODE, regulatory genomics was lab-by-lab."
+  },
+  {
+   "t": 259.6,
+   "text": "Each group would map a few of their favorite factors in their favorite cell lines and publish individually."
+  },
+  {
+   "t": 265.95,
+   "text": "After ENCODE, it became possible — and expected — to compare your one factor against the hundreds already mapped in the same cell type, to look for co-binding patterns, to integrate across data types, to leverage the consortium's investment in quality control."
+  },
+  {
+   "t": 282.31,
+   "text": "ChIP-seq went from being a boutique assay to being part of a community resource."
+  },
+  {
+   "t": 287.61,
+   "text": "That's the transformation."
+  },
+  {
+   "t": 289.12,
+   "text": "And the technique is so central to the consortium's mission that, in many ways, ENCODE is a monument to ChIP-seq."
+  },
+  {
+   "t": 298.32,
+   "text": "If you want to see what the method can do when it's run at scale, with rigor, on every protein you can name, that's where to look."
+  }
+ ]
+}

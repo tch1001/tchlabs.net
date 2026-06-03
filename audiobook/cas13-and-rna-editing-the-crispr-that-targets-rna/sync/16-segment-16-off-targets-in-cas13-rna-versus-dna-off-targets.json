@@ -1,0 +1,167 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Off-targets in Cas13 — RNA versus DNA off-targets",
+ "duration": 348.42,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Off-targets in Cas13 — RNA versus DNA off-targets"
+  },
+  {
+   "t": 6.45,
+   "text": "Let me talk about off-targets, because the off-target story for Cas13 is genuinely different from the off-target story for Cas9, and you should understand the difference."
+  },
+  {
+   "t": 16.11,
+   "text": "For Cas9 — recall from the CRISPR lecture — the main off-target concern is unintended edits at genomic sites that are similar to but not identical to the target site."
+  },
+  {
+   "t": 26.88,
+   "text": "A 20-nucleotide guide can tolerate some number of mismatches against an off-target genomic locus and still cut, especially if the mismatches are far from the PAM and far from the seed region."
+  },
+  {
+   "t": 39.11,
+   "text": "The unintended edits are permanent, because they are DNA edits, and they accumulate in the genome of every cell that gets exposed to the editing system."
+  },
+  {
+   "t": 48.25,
+   "text": "For DNA editing, off-targets are the single most important safety concern."
+  },
+  {
+   "t": 53.17,
+   "text": "For Cas13, the off-target landscape splits into two different categories that you need to keep separate."
+  },
+  {
+   "t": 59.6,
+   "text": "The first category is on-target sequence-specificity off-targets — places where the Cas13 guide RNA, by Watson-Crick base pairing, matches an unintended transcript and cuts or edits it."
+  },
+  {
+   "t": 72.29,
+   "text": "This is the direct analog of Cas9 off-targets, but at the RNA level."
+  },
+  {
+   "t": 77.35,
+   "text": "It depends on how cleanly the guide discriminates between intended and unintended targets."
+  },
+  {
+   "t": 82.99,
+   "text": "Cas13 has, in general, somewhat better tolerance for distinguishing similar sequences than Cas9 does, because the guide is longer — 28 to 30 nucleotides versus Cas9's 20 — and because the geometry of the RNA-RNA duplex with Cas13 imposes some specificity constraints."
+  },
+  {
+   "t": 102.31,
+   "text": "Still, sequence-specific off-targets in the transcriptome do happen, and they have to be characterized for any clinical candidate."
+  },
+  {
+   "t": 110.99,
+   "text": "The good news, as we discussed in Segment 9, is that RNA off-targets self-erase."
+  },
+  {
+   "t": 116.88,
+   "text": "An unintended cut in some random mRNA molecule just removes that one molecule from the cellular pool."
+  },
+  {
+   "t": 124.16,
+   "text": "The cell makes more of that mRNA tomorrow."
+  },
+  {
+   "t": 126.95,
+   "text": "The off-target effect is transient."
+  },
+  {
+   "t": 129.54,
+   "text": "The second category is collateral-cleavage off-targets — the broader chewing-up of bystander RNAs that we discussed in Segment 4."
+  },
+  {
+   "t": 137.74,
+   "text": "This is unique to Cas13 (and to Cas12, in the diagnostic context)."
+  },
+  {
+   "t": 143.32,
+   "text": "When Cas13 activates on its target, the HEPN domains open up and the protein becomes a generalized RNase for a while, cutting random single-stranded RNA in the vicinity."
+  },
+  {
+   "t": 155.09,
+   "text": "This affects transcripts that do not match the guide sequence at all — they just happen to be near the activated enzyme."
+  },
+  {
+   "t": 161.64,
+   "text": "Collateral off-targets are particularly concerning in mammalian cells because they can significantly perturb cellular RNA homeostasis, depress cell fitness, and induce stress responses that confound the interpretation of any therapy."
+  },
+  {
+   "t": 176.62,
+   "text": "A 2022 paper from the Levin lab — Jin-Soo Kim's group, actually — showed that several commonly used Cas13 variants, including RfxCas13d, caused measurable global RNA degradation and reduced cell viability in mammalian cells."
+  },
+  {
+   "t": 192.95,
+   "text": "The implication was that even the favored therapeutic variant was not as clean as the original 2018 paper had suggested."
+  },
+  {
+   "t": 201.09,
+   "text": "The field's response to this has been to engineer Cas13 variants with reduced collateral activity."
+  },
+  {
+   "t": 207.65,
+   "text": "There are now multiple published variants — some from Zhang's lab, some from Hsu's lab, some from independent groups — that have engineered mutations in the HEPN domains or in the protein-RNA interface to dial down the trans-cleavage activity while preserving cis-cleavage."
+  },
+  {
+   "t": 225.04,
+   "text": "The engineering is ongoing and the variants are improving year over year."
+  },
+  {
+   "t": 229.46,
+   "text": "Whether the final Cas13 therapeutics will be cleaner than the current generation, by a meaningful margin, is one of the open questions for the field."
+  },
+  {
+   "t": 238.41,
+   "text": "There is a third off-target consideration that is specific to fusion proteins like REPAIR and RESCUE — the fusion-protein off-targets."
+  },
+  {
+   "t": 247.06,
+   "text": "When you fuse dCas13 to ADAR, the ADAR domain is a deaminase that has its own substrate preferences."
+  },
+  {
+   "t": 255.14,
+   "text": "It will edit adenosines wherever it can reach them."
+  },
+  {
+   "t": 258.24,
+   "text": "When the fusion is brought to a target by the guide RNA, the ADAR domain edits the intended adenosine."
+  },
+  {
+   "t": 265.18,
+   "text": "But the ADAR domain is also constantly bumping into other dsRNA structures in the cell — endogenous dsRNA, hairpins in other transcripts — and it can edit those too, even when the Cas13 part is not engaged."
+  },
+  {
+   "t": 280.39,
+   "text": "This is what is sometimes called promiscuous deamination or fusion-protein off-target editing, and it is a separate concern from the Cas13-driven off-targets."
+  },
+  {
+   "t": 289.59,
+   "text": "The Zhang lab's REPAIRv2 paper, with the engineered ADAR domain, was specifically designed to address this kind of promiscuous editing."
+  },
+  {
+   "t": 299.19,
+   "text": "By engineering ADAR for higher activity at specific sites and lower activity at general dsRNA, they reduced the global off-target editing footprint substantially."
+  },
+  {
+   "t": 311.14,
+   "text": "The engineering has continued in subsequent generations."
+  },
+  {
+   "t": 314.92,
+   "text": "So the takeaway."
+  },
+  {
+   "t": 316.07,
+   "text": "Off-targets in Cas13 are different from off-targets in Cas9 in three important ways: they self-erase because they are at the RNA level; they include collateral-cleavage events that are non-sequence-specific; and for editing fusions, they include promiscuous editing by the fused deaminase domain."
+  },
+  {
+   "t": 334.3,
+   "text": "The safety story is therefore different."
+  },
+  {
+   "t": 336.9,
+   "text": "The bar is in some ways lower — RNA off-targets are less catastrophic than permanent DNA off-targets — but the breadth of off-target concerns is wider, because there are more failure modes."
+  }
+ ]
+}

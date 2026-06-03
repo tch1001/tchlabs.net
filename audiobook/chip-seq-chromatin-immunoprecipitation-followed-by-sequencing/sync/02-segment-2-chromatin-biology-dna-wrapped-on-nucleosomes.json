@@ -1,0 +1,171 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — Chromatin biology — DNA wrapped on nucleosomes",
+ "duration": 315.27,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — Chromatin biology — DNA wrapped on nucleosomes"
+  },
+  {
+   "t": 5.16,
+   "text": "Before we can talk about pulling proteins off DNA, we have to talk about what DNA looks like inside a cell."
+  },
+  {
+   "t": 12.4,
+   "text": "Because here is something that gets glossed over in introductory textbooks, and it matters enormously for how ChIP-seq works in practice."
+  },
+  {
+   "t": 20.86,
+   "text": "The DNA in your nucleus is not a long, naked, floppy string."
+  },
+  {
+   "t": 25.94,
+   "text": "It is wrapped, tightly and systematically, around protein spools called nucleosomes."
+  },
+  {
+   "t": 32.02,
+   "text": "The whole assembly — the DNA plus the spools plus a bunch of other proteins bound to both — is called chromatin."
+  },
+  {
+   "t": 39.83,
+   "text": "And that word is doing real work; it tells you that you are not looking at DNA in isolation."
+  },
+  {
+   "t": 45.65,
+   "text": "You are looking at a packaged, regulated, three-dimensional structure, where access to any given stretch of sequence depends on what proteins are sitting on it."
+  },
+  {
+   "t": 55.0,
+   "text": "A nucleosome is a beautiful little machine."
+  },
+  {
+   "t": 58.21,
+   "text": "It is built from eight histone proteins — two copies each of four kinds, called H2A, H2B, H3, and H4 — assembled into a roughly disk-shaped octamer."
+  },
+  {
+   "t": 71.67,
+   "text": "Around that octamer, the DNA wraps about one and three-quarter turns — roughly 147 base pairs of DNA per nucleosome."
+  },
+  {
+   "t": 81.44,
+   "text": "Then there's a short stretch of linker DNA — usually 20 to 80 base pairs — and then the next nucleosome, and so on."
+  },
+  {
+   "t": 89.17,
+   "text": "If you stretched out a chromosome and zoomed in, it would look like beads on a string."
+  },
+  {
+   "t": 93.95,
+   "text": "The beads are the nucleosomes."
+  },
+  {
+   "t": 96.31,
+   "text": "The string is the DNA between them."
+  },
+  {
+   "t": 98.96,
+   "text": "Most of your genome lives in this beads-on-a-string conformation, and most of the time, the beads are packed even tighter — into higher-order structures, fibers, loops, and ultimately the dense chromatin you can see under a light microscope when a cell is about to divide."
+  },
+  {
+   "t": 115.35,
+   "text": "Here's why this matters for our story."
+  },
+  {
+   "t": 117.39,
+   "text": "Two reasons."
+  },
+  {
+   "t": 118.58,
+   "text": "First, the histones themselves are heavily decorated with chemical modifications, and those modifications carry information."
+  },
+  {
+   "t": 126.7,
+   "text": "The N-terminal tails of histones — the floppy ends that stick out from the disk — get methylated, acetylated, phosphorylated, ubiquitinated, all in patterns that are not random but instead correlate strongly with whether the underlying DNA is being actively transcribed, silenced, marked for repair, or set up for replication."
+  },
+  {
+   "t": 147.93,
+   "text": "If you can map where in the genome a specific histone modification sits — say, the trimethylation of lysine 4 on histone H3, called H3K4me3 — you have a map of which regions carry that mark."
+  },
+  {
+   "t": 162.26,
+   "text": "And as we'll see later, certain marks are essentially tags that say \"active promoter here\" or \"active enhancer here\" or \"this region is shut off."
+  },
+  {
+   "t": 171.09,
+   "text": "\" Histone modification ChIP-seq is one of the two big things we use the method for, and the entire field of epigenomics is built on it."
+  },
+  {
+   "t": 180.97,
+   "text": "Second, the packaging affects accessibility."
+  },
+  {
+   "t": 184.35,
+   "text": "If you want a transcription factor to bind a specific sequence, that sequence has to be physically accessible — not buried inside a tightly wound nucleosome, not hidden in a fold of compacted heterochromatin."
+  },
+  {
+   "t": 197.38,
+   "text": "So one of the things ChIP-seq ends up mapping, almost incidentally, is which regions of the genome are accessible enough for proteins to land on."
+  },
+  {
+   "t": 206.74,
+   "text": "The technique answers \"where is protein X bound?"
+  },
+  {
+   "t": 210.1,
+   "text": "\" — but the answer is also necessarily \"where is the DNA open enough that protein X could be bound?"
+  },
+  {
+   "t": 215.97,
+   "text": "\" That's a subtle but important point."
+  },
+  {
+   "t": 218.22,
+   "text": "We'll come back to it when we talk about complementary techniques like ATAC-seq."
+  },
+  {
+   "t": 223.26,
+   "text": "For now, the picture you should have: the genome is not naked DNA."
+  },
+  {
+   "t": 228.32,
+   "text": "It is a packaged, modified, three-dimensional polymer, with nucleosomes every couple of hundred base pairs, gaps between them, and a constellation of other proteins — transcription factors, polymerases, repair enzymes, structural proteins — sitting on top, dynamically arriving and leaving."
+  },
+  {
+   "t": 247.29,
+   "text": "ChIP-seq is the technique that takes a snapshot of one protein's footprint on this landscape, by freezing the contacts in place and then pulling the protein out with an antibody."
+  },
+  {
+   "t": 258.43,
+   "text": "The chromatin biology — the nucleosomes, the modifications, the packaging — is the substrate on which the assay operates."
+  },
+  {
+   "t": 267.1,
+   "text": "One more piece of vocabulary you'll see in any paper."
+  },
+  {
+   "t": 271.15,
+   "text": "We talk about euchromatin — loosely packed, accessible, mostly transcriptionally active — and heterochromatin — densely packed, inaccessible, mostly silenced."
+  },
+  {
+   "t": 282.22,
+   "text": "These are not crisp categories; they're a continuum, and the boundaries shift dynamically as a cell decides which genes to express."
+  },
+  {
+   "t": 290.97,
+   "text": "But when you see those words, just substitute \"open and active\" versus \"closed and silent."
+  },
+  {
+   "t": 296.86,
+   "text": "\" Most of the action — most of the regulatory binding we care about — happens in or at the edges of euchromatin."
+  },
+  {
+   "t": 303.77,
+   "text": "Heterochromatin tends to be quieter, dominated by structural marks like H3K9me3."
+  },
+  {
+   "t": 311.11,
+   "text": "We'll see both worlds when we get to the histone mark zoo in Segment 10."
+  }
+ ]
+}

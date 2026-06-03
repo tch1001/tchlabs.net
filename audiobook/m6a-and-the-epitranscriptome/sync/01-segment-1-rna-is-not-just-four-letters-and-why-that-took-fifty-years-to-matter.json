@@ -1,0 +1,211 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — RNA is not just four letters, and why that took fifty years to matter",
+ "duration": 425.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — RNA is not just four letters, and why that took fifty years to matter"
+  },
+  {
+   "t": 6.34,
+   "text": "Alright, let us get started."
+  },
+  {
+   "t": 7.81,
+   "text": "Good morning."
+  },
+  {
+   "t": 8.66,
+   "text": "For the next two hours we are going to talk about a part of molecular biology that, until about fifteen years ago, was a quiet backwater — a topic that biochemists studied as a curiosity of transfer RNA structure and that almost nobody else in genomics thought very hard about."
+  },
+  {
+   "t": 25.0,
+   "text": "And then, in 2012, two papers came out within a few months of each other, both showing the same thing — that you could map a particular chemical modification on messenger RNA, called N6-methyladenosine, abbreviated m6A, across the entire transcriptome of a cell."
+  },
+  {
+   "t": 43.52,
+   "text": "And in the years since, that quiet backwater has erupted into one of the most active fields in RNA biology."
+  },
+  {
+   "t": 50.52,
+   "text": "We now know that messenger RNA, the central currency of gene expression, is decorated with chemical modifications that profoundly affect how it gets handled, translated, and destroyed."
+  },
+  {
+   "t": 62.38,
+   "text": "We now call this layer of biology the epitranscriptome, by direct analogy with the epigenome."
+  },
+  {
+   "t": 68.46,
+   "text": "And we now know that mutating the enzymes that read, write, and erase m6A is lethal — embryos die, stem cells fail to differentiate, leukemias depend on it."
+  },
+  {
+   "t": 81.3,
+   "text": "Today is your tour of that field."
+  },
+  {
+   "t": 83.5,
+   "text": "Let me start with a fact that should reorient your thinking about RNA."
+  },
+  {
+   "t": 87.17,
+   "text": "In an introductory biochemistry class you learn that RNA is made of four bases — adenine, uracil, guanine, cytosine — A, U, G, C — and you spend most of your time thinking about the sequence of those four letters."
+  },
+  {
+   "t": 101.31,
+   "text": "The mRNA codes for protein in codons of three; the four letters are the alphabet; that is the picture."
+  },
+  {
+   "t": 107.94,
+   "text": "Now hold that picture, and let me tell you what we actually know."
+  },
+  {
+   "t": 111.3,
+   "text": "There are, at last count, more than 170 distinct chemical modifications that have been documented on natural RNA across all domains of life."
+  },
+  {
+   "t": 120.76,
+   "text": "Not four letters."
+  },
+  {
+   "t": 122.17,
+   "text": "One hundred and seventy-plus."
+  },
+  {
+   "t": 123.92,
+   "text": "Methylations, hydroxylations, deaminations, isomerizations, sugar modifications, base substitutions."
+  },
+  {
+   "t": 132.4,
+   "text": "A real RNA molecule in a real cell is not a polymer of four canonical nucleotides; it is a polymer studded with chemical decorations, some abundant, some rare, some functionally critical, most still poorly understood."
+  },
+  {
+   "t": 147.49,
+   "text": "Now, most of those 170-plus modifications are on transfer RNA and ribosomal RNA, where they have been known for decades."
+  },
+  {
+   "t": 156.07,
+   "text": "The tRNA in your cells is something like ten to twenty percent modified — small specialty bases that fine-tune codon recognition and folding."
+  },
+  {
+   "t": 165.18,
+   "text": "The ribosome itself is a heavily decorated RNA-protein machine, with pseudouridines and 2′-O-methylations clustered at the catalytic core."
+  },
+  {
+   "t": 175.2,
+   "text": "We have known this since the 1960s."
+  },
+  {
+   "t": 178.07,
+   "text": "And for a long time, the assumption was that mRNA — the messenger, the working transcript that goes to the ribosome and gets translated — was essentially unmodified beyond the 5′ cap and the poly-A tail."
+  },
+  {
+   "t": 191.9,
+   "text": "mRNA was assumed to be the clean, plain, four-letter polymer that the textbook drew."
+  },
+  {
+   "t": 197.94,
+   "text": "That assumption turned out to be wrong, and the modification that broke it open is N6-methyladenosine — m6A."
+  },
+  {
+   "t": 206.5,
+   "text": "m6A is a tiny chemical decoration: a methyl group, just CH3, attached to the nitrogen at position six of an adenine ring."
+  },
+  {
+   "t": 217.2,
+   "text": "It is about as small a chemical change as you can make to a base."
+  },
+  {
+   "t": 221.11,
+   "text": "It does not alter base pairing — m6A still pairs with U, just like ordinary A."
+  },
+  {
+   "t": 227.2,
+   "text": "It does not change the codon."
+  },
+  {
+   "t": 228.93,
+   "text": "It is invisible to standard sequencing."
+  },
+  {
+   "t": 231.46,
+   "text": "But it is read by specific proteins in the cell, and those proteins decide whether the mRNA carrying it gets translated fast, translated slow, or destroyed entirely."
+  },
+  {
+   "t": 243.06,
+   "text": "m6A is, in functional terms, RNA's punctuation mark — a small chemical tag that does not change the letters but changes how the cell reads the message."
+  },
+  {
+   "t": 254.47,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch what m6A is chemically, name the writers METTL3 and METTL14, the erasers FTO and ALKBH5, and the readers YTHDF1, 2, and 3, and explain in plain English what each set does; two, describe the MeRIP-seq workflow and explain why it was the breakthrough that opened the field in 2012, plus name the modern improvements that get you single-nucleotide resolution; three, look at a modern paper that says \"we mapped the m6A"
+  },
+  {
+   "t": 290.29,
+   "text": "epitranscriptome and identified differentially methylated transcripts\" and have a real intuition for what is being claimed, what the noise looks like, and what the biological interpretation is — then we have succeeded."
+  },
+  {
+   "t": 303.44,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 305.8,
+   "text": "One last orienting thought before we dive in."
+  },
+  {
+   "t": 308.86,
+   "text": "The story of m6A is, in many ways, a deliberate echo of the story of DNA methylation."
+  },
+  {
+   "t": 316.55,
+   "text": "If you took the bisulfite lecture, you heard about 5-methylcytosine — a single methyl group on a single base, deposited by writer enzymes, erased by other enzymes, read by binding proteins, regulating gene expression at the chromatin level."
+  },
+  {
+   "t": 332.51,
+   "text": "The m6A story is structurally identical."
+  },
+  {
+   "t": 335.64,
+   "text": "A single methyl group on a single base, on a different polymer, deposited by writer enzymes, erased by other enzymes, read by binding proteins, regulating gene expression at the post-transcriptional level."
+  },
+  {
+   "t": 349.31,
+   "text": "The architecture of the system is the same."
+  },
+  {
+   "t": 352.2,
+   "text": "The molecules are different, the consequences are different, but the conceptual frame — writers, erasers, readers, dynamic deposition, regulatory function — maps cleanly from DNA to RNA."
+  },
+  {
+   "t": 365.75,
+   "text": "Here is the slogan I want you to hold for two hours."
+  },
+  {
+   "t": 369.4,
+   "text": "DNA methylation is the chromatin-level on-off switch — it decides whether a gene is transcribed in the first place."
+  },
+  {
+   "t": 377.27,
+   "text": "RNA m6A is the post-transcriptional handling instruction — it decides whether the mRNA, once made, gets translated fast, slow, or destroyed."
+  },
+  {
+   "t": 388.19,
+   "text": "Two layers of methyl-based regulation, sitting on top of the same genetic code, working at different stages of the gene expression pipeline."
+  },
+  {
+   "t": 397.19,
+   "text": "Today we are climbing up to the second layer."
+  },
+  {
+   "t": 399.54,
+   "text": "So that is the contract."
+  },
+  {
+   "t": 401.06,
+   "text": "Two hours, one modification, and a tour through the biology, the chemistry, the methods, the diseases, and the still-dark frontier of what we are calling the epitranscriptome."
+  },
+  {
+   "t": 411.57,
+   "text": "Let us start by widening the lens to all of RNA modification, because m6A did not arrive in a vacuum — it arrived into a field that had been quietly cataloging chemical decorations on RNA for half a century."
+  }
+ ]
+}

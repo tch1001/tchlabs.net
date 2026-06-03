@@ -1,0 +1,231 @@
+{
+ "n": 19,
+ "title": "APPENDIX",
+ "duration": 370.03,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX"
+  },
+  {
+   "t": 1.05,
+   "text": "Key terms and definitions."
+  },
+  {
+   "t": 2.94,
+   "text": "Spatial transcriptomics: any method that measures gene expression while preserving the X-Y (and sometimes Z) position of each measurement within a tissue section."
+  },
+  {
+   "t": 13.97,
+   "text": "Sequencing-based spatial transcriptomics: methods that capture transcripts onto a barcoded slide and read out gene expression by next-generation sequencing of the captured molecules."
+  },
+  {
+   "t": 25.5,
+   "text": "Examples: Visium, Visium HD, Slide-seq, Stereo-seq, HDST."
+  },
+  {
+   "t": 32.09,
+   "text": "Imaging-based spatial transcriptomics: methods that detect transcripts by sequential rounds of fluorescent probe hybridization and imaging, decoding gene identities from combinatorial color barcodes."
+  },
+  {
+   "t": 44.7,
+   "text": "Examples: MERFISH, seqFISH+, Xenium, CosMx, MERSCOPE."
+  },
+  {
+   "t": 50.81,
+   "text": "Spot / capture feature: in sequencing-based methods, a discrete region on a barcoded slide that captures transcripts at a known position."
+  },
+  {
+   "t": 59.89,
+   "text": "Visium spots are 55 microns; Visium HD features are 2 microns; Stereo-seq features are ~220 nanometers."
+  },
+  {
+   "t": 69.39,
+   "text": "Capture efficiency: the fraction of transcripts in the tissue that get successfully detected by the spatial method."
+  },
+  {
+   "t": 75.76,
+   "text": "Sequencing-based: ~10-30%."
+  },
+  {
+   "t": 79.29,
+   "text": "Imaging-based, per target gene: ~80-95%."
+  },
+  {
+   "t": 84.17,
+   "text": "Panel: in imaging-based methods, the set of genes targeted by the probe set."
+  },
+  {
+   "t": 89.45,
+   "text": "Typical panels run from 300 to several thousand genes."
+  },
+  {
+   "t": 94.03,
+   "text": "Combinatorial barcoding: the strategy of assigning each gene a multi-round on/off or color pattern, decoded over sequential rounds of imaging, used in MERFISH and seqFISH."
+  },
+  {
+   "t": 106.14,
+   "text": "Cell segmentation: the computational step of assigning each detected molecule (or pixel) to a specific cell, required for converting imaging-based per-molecule data into per-cell expression matrices."
+  },
+  {
+   "t": 119.7,
+   "text": "Spatial neighbor graph: a graph where each cell/spot is a node and edges connect spatially adjacent cells, used as the basis for spatially aware analyses."
+  },
+  {
+   "t": 130.31,
+   "text": "Cell-cell interaction inference: the analysis of co-expressed ligand-receptor pairs in spatially adjacent cells to infer paracrine signaling activity."
+  },
+  {
+   "t": 141.22,
+   "text": "Deconvolution: the computational decomposition of a multi-cell spot's expression profile into a mixture of single-cell-type contributions, using a single-cell RNA-seq reference."
+  },
+  {
+   "t": 153.84,
+   "text": "Selected platforms and developers."
+  },
+  {
+   "t": 156.46,
+   "text": "Visium (10x Genomics, 2019): 55-micron spots, ~5000 spots/capture area, whole transcriptome, fresh-frozen + FFPE."
+  },
+  {
+   "t": 167.74,
+   "text": "Visium HD (10x Genomics, 2024): 2-micron continuous grid, near-single-cell resolution, whole transcriptome."
+  },
+  {
+   "t": 177.4,
+   "text": "Slide-seq / Slide-seq V2 (Macosko/Chen, 2019/2020; commercial via Curio Bioscience): 10-micron beads, randomly placed."
+  },
+  {
+   "t": 190.14,
+   "text": "Stereo-seq (BGI, 2022): DNA-nanoball arrays, sub-micron features, very high resolution."
+  },
+  {
+   "t": 197.9,
+   "text": "MERFISH (Zhuang lab, 2015; commercial via Vizgen as MERSCOPE, 2021): combinatorial fluorescent barcoding, single-molecule resolution."
+  },
+  {
+   "t": 208.41,
+   "text": "seqFISH+ (Cai lab, Caltech, 2019): up to 10,000-gene panels, sub-cellular resolution, research-grade."
+  },
+  {
+   "t": 217.31,
+   "text": "Xenium (10x Genomics, 2023): commercial in situ sequencing, 300-5000 gene panels, sub-cellular, FFPE-compatible."
+  },
+  {
+   "t": 229.31,
+   "text": "CosMx (NanoString, 2022): commercial imaging-based, 1000-6000 gene panels, RNA + protein, sub-cellular."
+  },
+  {
+   "t": 239.31,
+   "text": "Selected software tools."
+  },
+  {
+   "t": 241.22,
+   "text": "Seurat (R) — single-cell + spatial workflows."
+  },
+  {
+   "t": 245.95,
+   "text": "Scanpy (Python) — single-cell + spatial workflows."
+  },
+  {
+   "t": 250.8,
+   "text": "Squidpy (Python) — spatial extensions to Scanpy."
+  },
+  {
+   "t": 254.74,
+   "text": "BayesSpace — spatially aware clustering."
+  },
+  {
+   "t": 257.66,
+   "text": "SpaGCN — graph-neural-network-based spatial clustering."
+  },
+  {
+   "t": 261.86,
+   "text": "cell2location, RCTD — spatial deconvolution."
+  },
+  {
+   "t": 266.36,
+   "text": "SpatialDE, SPARK — spatially variable gene detection."
+  },
+  {
+   "t": 270.66,
+   "text": "CellPhoneDB, CellChat, stLearn, NICHES — cell-cell interaction inference."
+  },
+  {
+   "t": 276.98,
+   "text": "STAGATE, GraphST — spatial domain detection."
+  },
+  {
+   "t": 280.99,
+   "text": "Recommended reading."
+  },
+  {
+   "t": 282.21,
+   "text": "Ståhl et al., \"Visualization and analysis of gene expression in tissue sections by spatial transcriptomics,\" Science 2016 — the founding paper of the named field."
+  },
+  {
+   "t": 293.68,
+   "text": "Chen et al., \"Spatially resolved, highly multiplexed RNA profiling in single cells\" (the MERFISH paper), Science 2015."
+  },
+  {
+   "t": 303.15,
+   "text": "Eng et al., seqFISH+, Nature 2019."
+  },
+  {
+   "t": 307.65,
+   "text": "Rodriques et al., Slide-seq, Science 2019."
+  },
+  {
+   "t": 311.74,
+   "text": "Chen et al., Stereo-seq, Cell 2022."
+  },
+  {
+   "t": 315.86,
+   "text": "10x Genomics technical documentation for Visium, Visium HD, and Xenium — useful for understanding the exact engineering specifications of the current commercial systems."
+  },
+  {
+   "t": 327.48,
+   "text": "Three things to remember."
+  },
+  {
+   "t": 329.03,
+   "text": "Spatial transcriptomics = single-cell + address."
+  },
+  {
+   "t": 333.69,
+   "text": "Single-cell tells you which cells; spatial tells you where they sit."
+  },
+  {
+   "t": 338.13,
+   "text": "Both are required for tissue biology."
+  },
+  {
+   "t": 340.55,
+   "text": "Two families, opposite trade-offs."
+  },
+  {
+   "t": 343.06,
+   "text": "Sequencing-based: untargeted whole transcriptome, lower resolution."
+  },
+  {
+   "t": 348.34,
+   "text": "Imaging-based: sub-cellular resolution, only your pre-selected panel."
+  },
+  {
+   "t": 353.34,
+   "text": "The cell-cell interaction map is the prize."
+  },
+  {
+   "t": 356.16,
+   "text": "Spatial proximity + receptor-ligand expression gives you the signaling network."
+  },
+  {
+   "t": 361.68,
+   "text": "That's the analysis that single-cell alone cannot do, and it's why spatial transcriptomics changed tissue biology."
+  },
+  {
+   "t": 369.16,
+   "text": "Thank you."
+  }
+ ]
+}

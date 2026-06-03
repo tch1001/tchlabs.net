@@ -1,0 +1,187 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — The native UAG problem and Church's recoded E. coli",
+ "duration": 352.62,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — The native UAG problem and Church's recoded E. coli"
+  },
+  {
+   "t": 5.78,
+   "text": "Let's go back to the issue I flagged in Segment 4."
+  },
+  {
+   "t": 9.04,
+   "text": "Amber suppression repurposes the UAG codon as a private address for non-canonical amino acid delivery."
+  },
+  {
+   "t": 16.32,
+   "text": "But UAG, in normal E. coli, is still being used by some genes as their natural stop codon."
+  },
+  {
+   "t": 23.24,
+   "text": "When you run an amber suppression system, your engineered suppressor tRNA can compete with the cell's natural release factors at those native UAG codons, leading to read-through of native genes — extended versions of native proteins with weird non-canonical C-terminal tails."
+  },
+  {
+   "t": 40.51,
+   "text": "The read-through is usually a small fraction, but it's nonzero, and it contributes to fitness costs that limit how robustly you can run the suppression system."
+  },
+  {
+   "t": 49.4,
+   "text": "The classical workaround is to keep suppression efficiency modest, accept some read-through, and live with it."
+  },
+  {
+   "t": 56.56,
+   "text": "But a much cleaner solution would be to remove every native UAG codon from the host genome — so that UAG is no longer a stop codon used by any cellular gene, and the only UAG codons in the cell are the ones you intentionally place in your gene of interest."
+  },
+  {
+   "t": 72.47,
+   "text": "With UAG fully freed up, amber suppression has no competition."
+  },
+  {
+   "t": 77.22,
+   "text": "The suppressor tRNA doesn't accidentally read through anything, because there's nothing in the rest of the genome to read through."
+  },
+  {
+   "t": 85.16,
+   "text": "The system runs at maximum fidelity."
+  },
+  {
+   "t": 88.08,
+   "text": "That sounds great."
+  },
+  {
+   "t": 89.16,
+   "text": "But how do you remove every native UAG codon from a genome?"
+  },
+  {
+   "t": 93.45,
+   "text": "There are several hundred UAG-using genes in E. coli."
+  },
+  {
+   "t": 97.24,
+   "text": "You'd need to go to each one, change the UAG to a different stop codon — let's say UAA — without disturbing anything else."
+  },
+  {
+   "t": 105.51,
+   "text": "And you'd need to delete the gene for one of the release factors that recognizes UAG, so the only thing in the cell that recognizes UAG is your suppressor tRNA."
+  },
+  {
+   "t": 115.26,
+   "text": "This is a massive genome engineering project."
+  },
+  {
+   "t": 118.62,
+   "text": "This is exactly the project that George Church's lab at Harvard pulled off in 2013, in one of the most remarkable feats of synthetic biology to date."
+  },
+  {
+   "t": 128.71,
+   "text": "Using a method they had developed called MAGE — multiplex automated genome engineering — and another method called CAGE — conjugative assembly genome engineering — they systematically rewrote every UAG codon in the E. coli genome to UAA, across the entire chromosome."
+  },
+  {
+   "t": 146.28,
+   "text": "The result was a recoded E. coli strain in which UAG is no longer a natural stop codon at all.** UAG, in this strain, is freed for engineered use."
+  },
+  {
+   "t": 157.62,
+   "text": "Combined with deletion of the release factor RF1, which normally recognizes UAG, the strain is a genuine blank canvas for amber suppression."
+  },
+  {
+   "t": 167.01,
+   "text": "I want you to sit with what was accomplished here, because it was not a small piece of engineering."
+  },
+  {
+   "t": 172.11,
+   "text": "The E. coli genome is about 4.6 million base pairs."
+  },
+  {
+   "t": 176.35,
+   "text": "The Church lab made on the order of 320 codon changes — every native UAG terminating a gene was recoded to UAA — using methods that allowed dozens of edits to be made in parallel across many cells, and then combinations of edits to be brought together by successive rounds of conjugation."
+  },
+  {
+   "t": 195.25,
+   "text": "The endpoint was a strain whose genome no longer used UAG anywhere, and whose translation machinery had been stripped of UAG-recognizing release factors."
+  },
+  {
+   "t": 205.78,
+   "text": "The strain grows fine."
+  },
+  {
+   "t": 207.32,
+   "text": "It's healthy."
+  },
+  {
+   "t": 208.25,
+   "text": "And it accepts amber suppression systems with much higher fidelity than wild-type E. coli."
+  },
+  {
+   "t": 214.51,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 215.75,
+   "text": "The Church recoded E. coli is what you get when you go through an entire library of books and meticulously change every occurrence of a particular punctuation mark — every period that ends a sentence — into a different punctuation mark, freeing the original mark to mean whatever you want.** Every native UAG codon was replaced by UAA, freeing UAG for engineered use."
+  },
+  {
+   "t": 239.44,
+   "text": "The genome was rewritten so that one specific symbol in the genetic alphabet became available for redefinition."
+  },
+  {
+   "t": 246.05,
+   "text": "That kind of genome-wide rewriting was, before this paper, an aspirational thing."
+  },
+  {
+   "t": 251.84,
+   "text": "After this paper, it was a published fact."
+  },
+  {
+   "t": 254.52,
+   "text": "And there's a bonus to having a recoded E. coli, which the Church lab noticed almost immediately and which has become its own important application area."
+  },
+  {
+   "t": 264.12,
+   "text": "Recoded E. coli is resistant to viruses that use UAG codons.** Bacteriophages — viruses that infect bacteria — have their own genomes, and many of those genomes use UAG as a stop codon."
+  },
+  {
+   "t": 277.95,
+   "text": "When a phage tries to infect a recoded E. coli, the phage's mRNAs land in a cellular environment that no longer terminates at UAG properly — the host has deleted the release factor — and the phage proteins get read through their natural stop codons in ways that disrupt phage protein structure."
+  },
+  {
+   "t": 296.81,
+   "text": "The phages fail to assemble."
+  },
+  {
+   "t": 299.25,
+   "text": "The host survives."
+  },
+  {
+   "t": 300.71,
+   "text": "This phage resistance has practical implications for industrial fermentation, where phage contamination of bacterial cultures is a major cause of failed batches in biomanufacturing."
+  },
+  {
+   "t": 311.96,
+   "text": "A recoded strain that is intrinsically phage-resistant is a safer industrial chassis."
+  },
+  {
+   "t": 317.92,
+   "text": "And it pointed toward an even bigger idea, which Jason Chin would push to its logical conclusion in 2019: if recoding one codon makes the cell phage-resistant, what would recoding many codons do?"
+  },
+  {
+   "t": 331.5,
+   "text": "But before we get there, we need to look at how the field broke out of using only one extra codon at a time."
+  },
+  {
+   "t": 338.0,
+   "text": "Because as long as you only have UAG repurposed, you can only install one non-canonical amino acid in any given protein."
+  },
+  {
+   "t": 345.66,
+   "text": "To install two — and there are many applications that need two — you need a second private codon."
+  },
+  {
+   "t": 351.8,
+   "text": "Let's go."
+  }
+ ]
+}

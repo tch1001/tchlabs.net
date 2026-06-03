@@ -1,0 +1,243 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — ASO vs siRNA — when do you use which?",
+ "duration": 396.75,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — ASO vs siRNA — when do you use which?"
+  },
+  {
+   "t": 4.54,
+   "text": "Some of you may be wondering, as I have been hinting throughout this lecture, what the difference really is between an ASO and an siRNA, and when you would pick one over the other."
+  },
+  {
+   "t": 14.79,
+   "text": "Let me draw the contrast cleanly."
+  },
+  {
+   "t": 17.14,
+   "text": "Both ASOs and siRNAs are antisense in concept."
+  },
+  {
+   "t": 21.06,
+   "text": "Both work by Watson-Crick base pairing between a designed oligonucleotide and a target messenger RNA."
+  },
+  {
+   "t": 27.34,
+   "text": "Both are synthesized on phosphoramidite chemistry."
+  },
+  {
+   "t": 30.74,
+   "text": "Both use chemically modified nucleotides to survive in biological media."
+  },
+  {
+   "t": 36.38,
+   "text": "Both can be designed against any target whose mRNA sequence is known."
+  },
+  {
+   "t": 40.99,
+   "text": "In those broad strokes, they are siblings."
+  },
+  {
+   "t": 43.79,
+   "text": "The difference is in the cellular machinery they exploit."
+  },
+  {
+   "t": 47.16,
+   "text": "An ASO is a single-stranded oligonucleotide, typically 18 to 22 nucleotides long, that base-pairs with its target mRNA in the nucleus or cytoplasm and recruits a cellular enzyme — usually RNase H1 — to cleave the mRNA at the site of binding."
+  },
+  {
+   "t": 64.9,
+   "text": "The ASO itself is not catalytic."
+  },
+  {
+   "t": 67.91,
+   "text": "It is a guide and a binding partner; the cutting is done by an endogenous enzyme."
+  },
+  {
+   "t": 73.01,
+   "text": "Alternatively, an ASO can be designed not to recruit RNase H but to physically block a particular RNA element — a splice site, a 5' cap, a translation start codon — and modulate the processing or translation of the target mRNA without cleaving it."
+  },
+  {
+   "t": 90.72,
+   "text": "This is the splice-switching mode of action used by milasen."
+  },
+  {
+   "t": 94.47,
+   "text": "Either way, the ASO is a single strand."
+  },
+  {
+   "t": 97.95,
+   "text": "The machinery it recruits is RNase H or splicing machinery."
+  },
+  {
+   "t": 102.59,
+   "text": "An siRNA is a double-stranded oligonucleotide, with a guide strand and a passenger strand, that is loaded into the RISC complex."
+  },
+  {
+   "t": 110.58,
+   "text": "RISC selects the guide strand, ejects the passenger strand, and uses the guide to find target mRNA."
+  },
+  {
+   "t": 117.58,
+   "text": "Argonaute-2, the catalytic core of RISC, cleaves the target mRNA at a specific position."
+  },
+  {
+   "t": 124.33,
+   "text": "The siRNA is the guide; the cutting is done by AGO2."
+  },
+  {
+   "t": 128.6,
+   "text": "So both modalities ultimately rely on an endogenous protein to cut, but they rely on different endogenous proteins."
+  },
+  {
+   "t": 136.15,
+   "text": "RNase H1 for ASOs."
+  },
+  {
+   "t": 138.51,
+   "text": "AGO2/RISC for siRNAs."
+  },
+  {
+   "t": 141.18,
+   "text": "That mechanistic difference has practical consequences."
+  },
+  {
+   "t": 144.56,
+   "text": "Let me enumerate."
+  },
+  {
+   "t": 145.82,
+   "text": "ASOs are typically more chemically aggressive in their backbone modifications."
+  },
+  {
+   "t": 150.85,
+   "text": "Phosphorothioate throughout, often."
+  },
+  {
+   "t": 153.34,
+   "text": "They are taken up by cells, including extra-hepatic cells, through mechanisms involving cell-surface protein binding and gymnotic uptake — meaning, the ASO can be taken up by some cell types without any explicit delivery vehicle, just by virtue of the phosphorothioate backbone interacting with cell surface receptors."
+  },
+  {
+   "t": 173.41,
+   "text": "This is one of the reasons several FDA-approved ASOs target neurons after intrathecal delivery — nusinersen, tofersen, milasen — because the ASO can be dropped into the cerebrospinal fluid and get taken up by spinal motor neurons and other CNS cells directly."
+  },
+  {
+   "t": 190.76,
+   "text": "siRNAs are typically not gymnotically taken up."
+  },
+  {
+   "t": 194.15,
+   "text": "They require a delivery vehicle — historically an LNP, now a GalNAc conjugate for liver targets."
+  },
+  {
+   "t": 202.06,
+   "text": "The natural cellular receptors that would internalize a free siRNA are limited."
+  },
+  {
+   "t": 206.74,
+   "text": "This is why the siRNA drug class has been, until recently, almost exclusively for liver targets."
+  },
+  {
+   "t": 213.8,
+   "text": "Other tissues do not have ASGPR."
+  },
+  {
+   "t": 216.66,
+   "text": "Other tissues do not have a comparably high-throughput, cell-surface-recycling, sugar-recognizing receptor."
+  },
+  {
+   "t": 223.97,
+   "text": "So extending GalNAc-style conjugation to other tissues is an open problem, and we will come back to it."
+  },
+  {
+   "t": 231.18,
+   "text": "ASOs can do splice modulation."
+  },
+  {
+   "t": 233.69,
+   "text": "This is a unique capability that siRNAs do not have."
+  },
+  {
+   "t": 237.35,
+   "text": "Because an ASO can physically block a splice site without recruiting RNase H, it can be designed to make the cell include an exon it normally skips, or skip an exon it normally includes."
+  },
+  {
+   "t": 249.03,
+   "text": "This is how nusinersen — the SMA drug — works, by promoting inclusion of exon 7 of SMN2."
+  },
+  {
+   "t": 256.95,
+   "text": "siRNAs cannot do this."
+  },
+  {
+   "t": 258.7,
+   "text": "An siRNA paired with a pre-mRNA in the nucleus would not be cleaved by RISC efficiently, because RISC is mostly cytoplasmic, and even if cleavage happened it would just destroy the message rather than modulate its splicing."
+  },
+  {
+   "t": 272.15,
+   "text": "Splice modulation is an ASO-only capability."
+  },
+  {
+   "t": 275.93,
+   "text": "siRNAs typically achieve more potent knockdown per molecule at the target gene than ASOs."
+  },
+  {
+   "t": 282.39,
+   "text": "This is because the catalytic mechanism — RISC cycling, with one guide strand directing multiple mRNA cleavage events — is more efficient than the sub-stoichiometric ASO mechanism, where each ASO molecule guides typically one RNase H cleavage event."
+  },
+  {
+   "t": 299.95,
+   "text": "For deep knockdown of a single target in the liver, the siRNA is often the better tool."
+  },
+  {
+   "t": 305.74,
+   "text": "So the heuristic is something like this."
+  },
+  {
+   "t": 308.07,
+   "text": "If your target is in the liver, and you want deep, durable knockdown, with subcutaneous dosing every few months, siRNA with GalNAc is probably your best bet."
+  },
+  {
+   "t": 318.07,
+   "text": "Inclisiran for PCSK9 is the example."
+  },
+  {
+   "t": 321.56,
+   "text": "If your target requires splice modulation, or is in the CNS, or you want gymnotic uptake into tissues that don't have ASGPR, ASO is probably your best bet."
+  },
+  {
+   "t": 332.34,
+   "text": "Nusinersen for SMN2 is the example."
+  },
+  {
+   "t": 335.65,
+   "text": "The two modalities are converging in some respects — GalNAc-conjugated ASOs are now being developed by Ionis and others, blurring some of the lines — but the broad pattern still holds."
+  },
+  {
+   "t": 347.95,
+   "text": "One more thing."
+  },
+  {
+   "t": 349.02,
+   "text": "The two modalities have very different patent landscapes and very different IP holders."
+  },
+  {
+   "t": 354.79,
+   "text": "ASOs are largely the territory of Ionis Pharmaceuticals (formerly Isis Pharmaceuticals)."
+  },
+  {
+   "t": 360.86,
+   "text": "siRNAs are largely the territory of Alnylam, with significant patents also held by Silence Therapeutics, Arrowhead, and others."
+  },
+  {
+   "t": 369.7,
+   "text": "The commercial story of the antisense field — which we will not dwell on here — is partly the story of two camps that started in the same place in the late 1980s and diverged into two different drug categories, both of which now have approved products."
+  },
+  {
+   "t": 384.31,
+   "text": "Both Ionis and Alnylam have been remarkably persistent in pushing their respective platforms to commercial reality, and both deserve credit for sticking with it through the long years when nothing was working."
+  }
+ ]
+}

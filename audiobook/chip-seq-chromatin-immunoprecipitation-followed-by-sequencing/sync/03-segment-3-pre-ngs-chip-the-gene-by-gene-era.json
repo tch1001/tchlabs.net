@@ -1,0 +1,203 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Pre-NGS ChIP — the gene-by-gene era",
+ "duration": 362.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Pre-NGS ChIP — the gene-by-gene era"
+  },
+  {
+   "t": 4.53,
+   "text": "So let me take you back to the pre-2007 world, because the way ChIP was practiced for about twenty years before sequencing was added to the back end tells you a lot about what the technique fundamentally is."
+  },
+  {
+   "t": 15.78,
+   "text": "The basic idea — chromatin immunoprecipitation — was worked out in the early 1980s."
+  },
+  {
+   "t": 22.15,
+   "text": "The key insight, and it is a beautiful insight, came from a question about how proteins interact with DNA in living cells."
+  },
+  {
+   "t": 31.27,
+   "text": "People had been studying transcription factor binding in test tubes for years, mixing purified protein with purified DNA and asking what binds where."
+  },
+  {
+   "t": 41.11,
+   "text": "But test tube binding doesn't necessarily reflect what's actually happening inside a cell, where the DNA is packaged into chromatin, where dozens of other proteins are competing for the same sites, where local concentrations and modifications and three-dimensional folding all influence binding."
+  },
+  {
+   "t": 58.64,
+   "text": "The question people wanted to ask was: in the actual cell, in the actual nucleus, with all the in-vivo conditions intact — where is protein X really sitting?"
+  },
+  {
+   "t": 68.92,
+   "text": "The clever move, attributed to several groups but most cleanly to John Lis and to David Gilmour in the mid-1980s, was to chemically freeze the protein-DNA contacts in place before disrupting the cell."
+  },
+  {
+   "t": 82.65,
+   "text": "The reagent of choice was formaldehyde — a small, reactive molecule that forms covalent bonds between nearby amines, including the amine groups on proteins and on DNA bases."
+  },
+  {
+   "t": 94.79,
+   "text": "When you dump formaldehyde onto living cells for a few minutes, any protein that happens to be touching DNA at that instant gets covalently glued to it."
+  },
+  {
+   "t": 104.44,
+   "text": "The cell is now frozen."
+  },
+  {
+   "t": 106.53,
+   "text": "The protein cannot fall off the DNA, no matter what you do to it afterward — short of reversing the crosslinks chemically, which we'll do at the end."
+  },
+  {
+   "t": 115.53,
+   "text": "Once you've crosslinked, you lyse the cells, you fragment the DNA into smaller pieces — originally by sonication, breaking the chromatin into shards of about a thousand base pairs — and now you have a soup of protein-DNA complexes, each one a chunk of fragmented chromatin with whichever proteins happened to be bound at the moment of fixation, all still covalently attached."
+  },
+  {
+   "t": 138.53,
+   "text": "To pull out the one protein you care about, you add an antibody specific for that protein."
+  },
+  {
+   "t": 144.09,
+   "text": "The antibody grabs your protein and, via the covalent crosslink, drags along whatever DNA the protein was bound to."
+  },
+  {
+   "t": 152.05,
+   "text": "You capture the antibody — typically by binding it to magnetic beads — wash away everything that's not stuck to your protein of interest, reverse the crosslinks with heat and salt, purify out the DNA, and now you have a small pool of DNA fragments that came from wherever in the genome your protein was bound."
+  },
+  {
+   "t": 169.89,
+   "text": "That's the ChIP."
+  },
+  {
+   "t": 170.96,
+   "text": "That's the immunoprecipitation step."
+  },
+  {
+   "t": 173.46,
+   "text": "Now, in the 1980s and 1990s, the question of what you did with that DNA was the bottleneck."
+  },
+  {
+   "t": 179.78,
+   "text": "You couldn't sequence it — sequencing was Sanger, slow, expensive, gene by gene."
+  },
+  {
+   "t": 185.89,
+   "text": "So what you did was you'd already have a candidate region in mind — say, the promoter of a specific gene — and you'd use PCR with primers in that region to ask: in the ChIP'd DNA, am I enriched for this specific promoter sequence compared to a no-antibody control?"
+  },
+  {
+   "t": 201.54,
+   "text": "If yes, the protein was bound there."
+  },
+  {
+   "t": 203.97,
+   "text": "If no, it wasn't."
+  },
+  {
+   "t": 205.14,
+   "text": "This was called ChIP-PCR, and it was a per-region, hypothesis-driven assay."
+  },
+  {
+   "t": 210.69,
+   "text": "You had to guess where the protein might be sitting, and then test those guesses one at a time."
+  },
+  {
+   "t": 215.78,
+   "text": "There was no genome-wide view."
+  },
+  {
+   "t": 217.55,
+   "text": "There was no map."
+  },
+  {
+   "t": 218.65,
+   "text": "In the early 2000s, people got tired of that limitation, and they coupled ChIP to microarrays — the technology where you spot tens of thousands of short DNA probes on a glass slide and use hybridization to read out, in parallel, how much of each sequence is present in a sample."
+  },
+  {
+   "t": 236.26,
+   "text": "ChIP'd DNA could be labeled with a fluorescent dye and hybridized to an array carrying probes from across, say, all the known human promoters."
+  },
+  {
+   "t": 245.96,
+   "text": "The result was a genome-wide-ish map of binding, in the sense that every promoter on the array got a measurement."
+  },
+  {
+   "t": 252.99,
+   "text": "This technique was called ChIP-chip — the second \"chip\" being for the microarray."
+  },
+  {
+   "t": 258.04,
+   "text": "ChIP-chip was the dominant ChIP method from roughly 2002 to 2007, and a lot of foundational work on transcription factor biology was done with it."
+  },
+  {
+   "t": 269.45,
+   "text": "But ChIP-chip had real limitations."
+  },
+  {
+   "t": 272.65,
+   "text": "The first was that you could only ask about regions you'd put on the array — typically promoter-tiling arrays or known regulatory regions."
+  },
+  {
+   "t": 280.95,
+   "text": "Most of the genome was dark to it."
+  },
+  {
+   "t": 283.26,
+   "text": "The second was that the dynamic range of microarray hybridization is compressed — strong signals and weak signals both saturate, so you couldn't easily distinguish a really strong binding event from a moderate one."
+  },
+  {
+   "t": 296.35,
+   "text": "The third was that custom arrays were expensive, and array designs were inflexible — you had to commit to your set of probes before the experiment."
+  },
+  {
+   "t": 304.97,
+   "text": "ChIP-chip was a step forward from ChIP-PCR, but it was clearly an intermediate stop, not the destination."
+  },
+  {
+   "t": 312.22,
+   "text": "The destination was sequencing."
+  },
+  {
+   "t": 314.55,
+   "text": "By 2007, the Illumina platform — then still called Solexa, recently acquired — was just starting to come online as a way to read out millions of DNA fragments at once."
+  },
+  {
+   "t": 325.54,
+   "text": "And it was suddenly obvious to everyone in the chromatin field what to do."
+  },
+  {
+   "t": 330.3,
+   "text": "Instead of hybridizing the ChIP'd DNA to an array, just sequence it directly."
+  },
+  {
+   "t": 336.44,
+   "text": "Get reads from every fragment, map those reads to the genome, count how many reads pile up at each position, and let the pileup itself tell you where the protein was bound."
+  },
+  {
+   "t": 347.39,
+   "text": "No probe design."
+  },
+  {
+   "t": 348.62,
+   "text": "No array commitment."
+  },
+  {
+   "t": 349.97,
+   "text": "Every base of the genome, simultaneously, with quantitative read counts."
+  },
+  {
+   "t": 355.4,
+   "text": "The math worked out."
+  },
+  {
+   "t": 356.76,
+   "text": "The technology was ready."
+  },
+  {
+   "t": 358.64,
+   "text": "And in 2007, ChIP-seq was born."
+  }
+ ]
+}

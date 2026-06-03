@@ -1,0 +1,319 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — Why the mouse, and what we built on top of it",
+ "duration": 477.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — Why the mouse, and what we built on top of it"
+  },
+  {
+   "t": 3.5,
+   "text": "Alright, settle in."
+  },
+  {
+   "t": 5.19,
+   "text": "For the next two hours we are going to talk about mice."
+  },
+  {
+   "t": 7.97,
+   "text": "Not wild mice, not the field mice in your shed, not even the cute white ones in pet stores — although those are, distantly, the ancestors."
+  },
+  {
+   "t": 16.25,
+   "text": "We're going to talk about laboratory mice, and specifically about the engineered laboratory mouse: the knockout mouse, the conditional mouse, the humanized mouse, the cancer-prone mouse, the reporter mouse — the whole vast menagerie of genetically defined small mammals on which essentially all of modern biomedical research, from cancer biology to immunology to neuroscience to drug development, has been built."
+  },
+  {
+   "t": 41.16,
+   "text": "If you walk out of here remembering nothing else, I want you to walk out remembering this: the engineered mouse is the closest mammalian whole-organism testbed we have."
+  },
+  {
+   "t": 51.24,
+   "text": "Same genes, mostly."
+  },
+  {
+   "t": 53.0,
+   "text": "Same organs."
+  },
+  {
+   "t": 54.27,
+   "text": "Many of the same diseases, working in many of the same ways."
+  },
+  {
+   "t": 58.45,
+   "text": "Not a perfect model — we'll spend a whole segment on its failures — but the best one we've got, and the one we've spent fifty years learning to manipulate at the level of single base pairs."
+  },
+  {
+   "t": 68.74,
+   "text": "Let me start with the analogy I'm going to come back to, because if you internalize it, half this lecture becomes intuitive."
+  },
+  {
+   "t": 75.51,
+   "text": "A mouse model is a whole-organism testbed for mammalian biology."
+  },
+  {
+   "t": 80.03,
+   "text": "Picture an aircraft hangar full of wind tunnels — different sizes, different shapes, each designed to ask a slightly different question about how air flows over a wing."
+  },
+  {
+   "t": 91.3,
+   "text": "Cell culture is a small bench-top wind tunnel; you can run a lot of experiments fast, but you only see a sliver of the real aerodynamics."
+  },
+  {
+   "t": 100.86,
+   "text": "A mouse is a much bigger, much more expensive wind tunnel, but it has the whole airframe in it — the bones, the blood, the immune system, the brain, the gut, the liver."
+  },
+  {
+   "t": 111.54,
+   "text": "You get to ask questions you simply can't ask in a dish."
+  },
+  {
+   "t": 115.19,
+   "text": "Does this gene matter for memory?"
+  },
+  {
+   "t": 117.11,
+   "text": "Does this drug raise blood pressure?"
+  },
+  {
+   "t": 119.47,
+   "text": "Does this tumor metastasize to the lung?"
+  },
+  {
+   "t": 122.41,
+   "text": "You cannot answer those questions in a flask."
+  },
+  {
+   "t": 125.17,
+   "text": "You need a body."
+  },
+  {
+   "t": 126.25,
+   "text": "And of all the bodies we could have used — and we have, historically, used many, from fruit flies to zebrafish to rats to dogs to monkeys — the mouse won the lottery."
+  },
+  {
+   "t": 136.99,
+   "text": "Not because it's perfect."
+  },
+  {
+   "t": 138.4,
+   "text": "Because of a particular combination of properties that, taken together, no other mammal can match."
+  },
+  {
+   "t": 144.6,
+   "text": "So why mice?"
+  },
+  {
+   "t": 145.96,
+   "text": "Let me give you the list, because every one of these things is a reason the mouse became the central organism of biomedicine."
+  },
+  {
+   "t": 153.29,
+   "text": "One: their genome is similar to ours."
+  },
+  {
+   "t": 156.45,
+   "text": "Mice and humans share a common ancestor about 75 million years back, and our genomes are roughly 85% identical at the protein-coding level."
+  },
+  {
+   "t": 167.1,
+   "text": "Of the roughly 22,000 genes in the mouse genome, the vast majority — well over 90% — have a recognizable human ortholog doing roughly the same job."
+  },
+  {
+   "t": 178.71,
+   "text": "The genes that build a mouse heart, a mouse pancreas, a mouse cortex, are largely the same genes, with the same regulatory logic, that build a human heart, pancreas, and cortex."
+  },
+  {
+   "t": 190.59,
+   "text": "So when you ask a question of a mouse — what does this gene do in a developing kidney?"
+  },
+  {
+   "t": 195.4,
+   "text": "— there is a strong prior that the answer translates, at least roughly, to humans."
+  },
+  {
+   "t": 200.53,
+   "text": "Two: they breed fast and cheap."
+  },
+  {
+   "t": 203.18,
+   "text": "A mouse goes from fertilized egg to sexually mature adult in about ten weeks."
+  },
+  {
+   "t": 208.57,
+   "text": "Generation time, ten weeks."
+  },
+  {
+   "t": 210.97,
+   "text": "A litter is six to twelve pups."
+  },
+  {
+   "t": 213.18,
+   "text": "You can keep a hundred mice in the space you'd need for two rats or one dog, and you can feed them on pellets that cost almost nothing."
+  },
+  {
+   "t": 220.66,
+   "text": "So an experiment that requires 50 animals, three generations, controlled genetic crosses, two years of follow-up — that experiment is doable in a mouse."
+  },
+  {
+   "t": 231.76,
+   "text": "It would be financially and practically impossible in essentially any other mammal."
+  },
+  {
+   "t": 236.99,
+   "text": "Three: their development is forgiving."
+  },
+  {
+   "t": 239.72,
+   "text": "Mice tolerate genetic manipulation."
+  },
+  {
+   "t": 242.18,
+   "text": "You can perturb major developmental genes and often the mouse still develops to viability, at least to a stage where you can study it."
+  },
+  {
+   "t": 250.59,
+   "text": "You can take a mouse embryo at the eight-cell stage, separate the cells, recombine them — the mouse will sort it out and grow into a normal adult."
+  },
+  {
+   "t": 259.52,
+   "text": "That kind of developmental robustness made the manipulation techniques we'll get to in Segments 3 through 5 possible in the first place."
+  },
+  {
+   "t": 268.49,
+   "text": "They wouldn't have worked in a less forgiving animal."
+  },
+  {
+   "t": 271.37,
+   "text": "Four — and this one is the one people undersell — we have decades of community resources."
+  },
+  {
+   "t": 277.99,
+   "text": "A century of mouse genetics, going back to the early 1900s."
+  },
+  {
+   "t": 282.94,
+   "text": "Stock centers like the Jackson Laboratory in Bar Harbor, Maine, that maintain tens of thousands of distinct mouse strains, ship them around the world, archive their cryopreserved sperm and embryos for decades."
+  },
+  {
+   "t": 296.06,
+   "text": "Genome databases."
+  },
+  {
+   "t": 297.69,
+   "text": "Antibody catalogues."
+  },
+  {
+   "t": 299.27,
+   "text": "Behavioral assays."
+  },
+  {
+   "t": 300.76,
+   "text": "Surgical techniques."
+  },
+  {
+   "t": 302.44,
+   "text": "A worldwide community of veterinarians, technicians, and researchers who all know how to handle a mouse."
+  },
+  {
+   "t": 309.37,
+   "text": "If you want to start working with, say, the naked mole-rat tomorrow, you can — but you'll have to invent half the infrastructure yourself."
+  },
+  {
+   "t": 317.46,
+   "text": "The mouse comes with the infrastructure pre-built."
+  },
+  {
+   "t": 320.0,
+   "text": "And then, on top of all that, came the engineered mouse."
+  },
+  {
+   "t": 323.5,
+   "text": "Because here is the conceptual leap that turned the mouse from \"a small mammal we study\" into \"a programmable mammalian system."
+  },
+  {
+   "t": 331.42,
+   "text": "\" Starting in the late 1980s, a handful of laboratories — primarily Mario Capecchi at Utah, Oliver Smithies at North Carolina, and Martin Evans at Cardiff, all of whom won the 2007 Nobel Prize in Physiology or Medicine for this work — figured out how to take a specific gene in the mouse genome and deliberately delete it, replace it, or rewrite it."
+  },
+  {
+   "t": 352.71,
+   "text": "They figured out how to do in vitro genetic surgery on a mouse stem cell, swap one gene allele for an engineered version, and then put that cell back into a mouse embryo and let it grow into a mouse."
+  },
+  {
+   "t": 364.26,
+   "text": "The mouse that resulted carried, in its DNA, a deliberate edit specified by the scientist."
+  },
+  {
+   "t": 370.72,
+   "text": "That mouse could be bred."
+  },
+  {
+   "t": 372.31,
+   "text": "The edit was heritable."
+  },
+  {
+   "t": 373.92,
+   "text": "You could now ask: what happens when I take this specific gene out of a whole organism, from the very beginning?"
+  },
+  {
+   "t": 380.96,
+   "text": "You could ask causal questions about gene function in a way nobody had ever asked them before."
+  },
+  {
+   "t": 386.74,
+   "text": "That technique — gene targeting in embryonic stem cells — is the technology this whole lecture is built around."
+  },
+  {
+   "t": 393.87,
+   "text": "It changed biology."
+  },
+  {
+   "t": 395.31,
+   "text": "The 2007 Nobel for Capecchi, Smithies, and Evans marks the moment biology officially recognized it."
+  },
+  {
+   "t": 403.07,
+   "text": "And then, more recently, CRISPR has come along and made the whole workflow about ten times faster — collapsing a project that used to take a year into one that takes three months."
+  },
+  {
+   "t": 414.17,
+   "text": "We'll get there in Segment 11."
+  },
+  {
+   "t": 416.26,
+   "text": "So here is the contract for the next two hours."
+  },
+  {
+   "t": 419.06,
+   "text": "By the end, you should be able to do three things."
+  },
+  {
+   "t": 422.47,
+   "text": "One: explain, with the testbed analogy, why we use mice and what kinds of questions a mouse model can answer that a dish of cells cannot."
+  },
+  {
+   "t": 431.56,
+   "text": "Two: walk through, in rough terms, how a researcher goes from \"I have a hypothesis about gene X\" to \"I am holding a live mouse that lacks gene X\" — that whole pipeline."
+  },
+  {
+   "t": 442.17,
+   "text": "And three: look at a paper, a press release, or a news article about a new disease model, a new humanized mouse, or a new mouse-based drug discovery effort, and have real intuition for what's underneath."
+  },
+  {
+   "t": 455.01,
+   "text": "Because every one of those announcements, somewhere, rests on the foundations we're about to lay."
+  },
+  {
+   "t": 460.69,
+   "text": "Let's start where the field actually started — not with the engineering, but with the animals themselves."
+  },
+  {
+   "t": 466.51,
+   "text": "Because before you can edit a mouse, you have to understand what kind of mouse you're editing."
+  },
+  {
+   "t": 470.9,
+   "text": "And the answer to that question is one of the strangest and most beautiful pieces of 20th-century genetics."
+  }
+ ]
+}

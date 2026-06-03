@@ -1,0 +1,235 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — Flux balance analysis: doing math on the metabolic network",
+ "duration": 397.36,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — Flux balance analysis: doing math on the metabolic network"
+  },
+  {
+   "t": 5.47,
+   "text": "I want to spend a segment on the computational backbone of modern metabolic engineering, because most popular accounts of the field skip over it entirely, and you cannot really understand how decisions are actually made in industrial strain engineering without it."
+  },
+  {
+   "t": 19.55,
+   "text": "The tool is called flux balance analysis, or FBA, and it is one of the most beautiful applications of mathematical optimization in biology."
+  },
+  {
+   "t": 28.77,
+   "text": "Here is the setup."
+  },
+  {
+   "t": 30.41,
+   "text": "You have a cell."
+  },
+  {
+   "t": 31.52,
+   "text": "The cell's metabolism is a network of biochemical reactions — a few thousand reactions in E. coli, several thousand in yeast — each reaction interconverting a particular set of metabolites with specific stoichiometries."
+  },
+  {
+   "t": 46.3,
+   "text": "You can draw this as a giant graph: metabolites are nodes, reactions are edges."
+  },
+  {
+   "t": 52.0,
+   "text": "The whole thing — for a well-studied organism like E. coli — is now reconstructed and curated, and you can download it as a mathematical object."
+  },
+  {
+   "t": 61.6,
+   "text": "The current E. coli model, called iML1515, has roughly 1500 genes, 2700 reactions, and 1900 metabolites."
+  },
+  {
+   "t": 72.83,
+   "text": "Yeast has comparable models."
+  },
+  {
+   "t": 74.69,
+   "text": "These are called genome-scale metabolic models, and building them is itself a major sub-discipline."
+  },
+  {
+   "t": 81.59,
+   "text": "Now, on top of this network, you write down two simple principles."
+  },
+  {
+   "t": 85.92,
+   "text": "First, steady state: assume that the cell, while growing exponentially, is in metabolic steady state — every internal metabolite is being produced at exactly the same rate it is being consumed, so concentrations stay constant."
+  },
+  {
+   "t": 101.3,
+   "text": "Mathematically, this means that for every internal metabolite, the sum of rates producing it equals the sum of rates consuming it."
+  },
+  {
+   "t": 109.62,
+   "text": "That gives you one equation per metabolite, which is around two thousand equations for E. coli."
+  },
+  {
+   "t": 115.34,
+   "text": "Second, constraints: each reaction has a maximum rate it can run at, set by physics — substrate diffusion limits, enzyme abundance, thermodynamic reversibility."
+  },
+  {
+   "t": 126.89,
+   "text": "Some reactions are irreversible; their flux must be non-negative."
+  },
+  {
+   "t": 131.91,
+   "text": "You write down all those bounds as inequalities."
+  },
+  {
+   "t": 135.68,
+   "text": "Now you have a linear system."
+  },
+  {
+   "t": 137.41,
+   "text": "Two thousand steady-state equations."
+  },
+  {
+   "t": 139.97,
+   "text": "Several thousand inequality constraints."
+  },
+  {
+   "t": 142.96,
+   "text": "And — because there are more reactions than metabolites — you have many more variables than equations."
+  },
+  {
+   "t": 149.49,
+   "text": "The system is underdetermined."
+  },
+  {
+   "t": 151.44,
+   "text": "There are infinitely many flux distributions that satisfy the constraints."
+  },
+  {
+   "t": 156.39,
+   "text": "You need one more thing — an objective function — to pick out a single solution."
+  },
+  {
+   "t": 161.72,
+   "text": "The classical choice, the one that works astonishingly well for predicting wild-type microbial behavior, is biomass production."
+  },
+  {
+   "t": 170.25,
+   "text": "You assume the cell, evolved by natural selection, is configured to maximize its growth rate — to convert as much of its incoming carbon as possible into more cells."
+  },
+  {
+   "t": 181.24,
+   "text": "You add an equation that bundles up the necessary precursors — amino acids, nucleotides, lipids, cofactors — in the right proportions to make a new cell, and you ask: what flux distribution maximizes the rate of that bundle production, subject to all the stoichiometric and capacity constraints?"
+  },
+  {
+   "t": 200.62,
+   "text": "That is a linear programming problem."
+  },
+  {
+   "t": 202.64,
+   "text": "It is the kind of problem mathematicians can solve very fast for very large systems."
+  },
+  {
+   "t": 207.6,
+   "text": "You feed it to a solver, and out comes a flux distribution — a predicted rate for every reaction in the network."
+  },
+  {
+   "t": 215.24,
+   "text": "For wild-type E. coli growing on glucose, the predicted distribution matches measured fluxes remarkably well."
+  },
+  {
+   "t": 224.07,
+   "text": "The model is genuinely predictive."
+  },
+  {
+   "t": 226.55,
+   "text": "Now the engineering trick."
+  },
+  {
+   "t": 228.36,
+   "text": "You can change the objective."
+  },
+  {
+   "t": 230.12,
+   "text": "Instead of maximizing biomass, you can ask: what flux distribution maximizes production of my target molecule, subject to the constraint that the cell still has to grow at some minimum rate to be viable?"
+  },
+  {
+   "t": 242.88,
+   "text": "That gives you the theoretical maximum yield of your product on your feedstock, and a flux distribution that achieves it."
+  },
+  {
+   "t": 250.01,
+   "text": "You can then compare that predicted distribution to the wild-type distribution."
+  },
+  {
+   "t": 254.41,
+   "text": "The differences tell you what needs to change — which reactions need to be upregulated, which need to be knocked out, which auxiliary pathways need to be installed or removed."
+  },
+  {
+   "t": 264.65,
+   "text": "There are computational frameworks built on top of FBA — OptKnock, OptGene, GDLS — that automate the search for gene knockouts that would push the cell toward higher product yields."
+  },
+  {
+   "t": 276.24,
+   "text": "Run the optimization, get a list of candidate knockouts, go test them in the lab."
+  },
+  {
+   "t": 281.65,
+   "text": "The analogy I want you to carry: flux balance analysis is the constraint-based map of the cell's metabolism — given the network, the inputs, the steady-state assumption, what flux distribution maximizes the product?"
+  },
+  {
+   "t": 295.51,
+   "text": "Mathematical optimization picks out a single solution from infinitely many."
+  },
+  {
+   "t": 300.95,
+   "text": "It is the computational equivalent of asking a logistics company: given your roads, your trucks, and your warehouses, how do you route shipments to maximize delivery of one particular package?"
+  },
+  {
+   "t": 312.74,
+   "text": "The answer involves trade-offs you would never spot by eye, and it depends critically on the constraints you have specified."
+  },
+  {
+   "t": 319.18,
+   "text": "There are caveats, and you should be honest about them."
+  },
+  {
+   "t": 322.26,
+   "text": "FBA assumes steady state, which is only approximately true in a real fermenter where conditions change over time."
+  },
+  {
+   "t": 330.16,
+   "text": "It does not capture regulation, only stoichiometric capacity."
+  },
+  {
+   "t": 334.51,
+   "text": "It assumes you have a complete and correct genome-scale model, which is true for a handful of organisms and approximate for many more."
+  },
+  {
+   "t": 342.96,
+   "text": "It does not predict kinetics — only flux distributions."
+  },
+  {
+   "t": 346.9,
+   "text": "So FBA tells you the upper bound of what is possible and roughly which manipulations point in the right direction."
+  },
+  {
+   "t": 354.82,
+   "text": "It does not, by itself, tell you how to actually achieve those upper bounds."
+  },
+  {
+   "t": 359.26,
+   "text": "For that you need experiments, evolution, and a lot of strain construction."
+  },
+  {
+   "t": 363.96,
+   "text": "But FBA frames the problem and prioritizes the experiments."
+  },
+  {
+   "t": 368.56,
+   "text": "Modern industrial strain engineering, at companies like Genomatica or Amyris or Ginkgo, runs FBA-style analyses every day to guide which manipulations to test next."
+  },
+  {
+   "t": 380.86,
+   "text": "That brings us to the question of how, once you have identified the manipulations and the enzymes you want to use, you make those enzymes work well enough to actually hit useful yields."
+  },
+  {
+   "t": 391.98,
+   "text": "The dominant answer there is directed evolution — and that is the next segment."
+  }
+ ]
+}

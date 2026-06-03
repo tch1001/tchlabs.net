@@ -1,0 +1,127 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — HDST and the high-density academic methods",
+ "duration": 250.07,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — HDST and the high-density academic methods"
+  },
+  {
+   "t": 5.09,
+   "text": "Before we leave the sequencing-based family and move into the imaging side, I want to briefly mention a third high-resolution academic method, because it illustrates the path that led to Visium HD and Stereo-seq."
+  },
+  {
+   "t": 18.52,
+   "text": "The method is called HDST, for \"high-definition spatial transcriptomics,\" published in 2019 by a team that included some of the same Stockholm group that started spatial transcriptomics in 2016."
+  },
+  {
+   "t": 32.23,
+   "text": "HDST is the academic precursor to all the high-density methods that followed."
+  },
+  {
+   "t": 37.33,
+   "text": "HDST uses a similar concept to Slide-seq — random monolayers of barcoded beads — but with much smaller beads, about 2 microns in diameter, packed onto a slide."
+  },
+  {
+   "t": 49.51,
+   "text": "The beads are pre-barcoded combinatorially, decoded by in situ sequencing, and then used as the capture substrate for a Visium-style spatial reaction."
+  },
+  {
+   "t": 59.23,
+   "text": "The 2-micron bead diameter is comparable to Visium HD's 2-micron square pitch, and the resolution is approaching single-cell."
+  },
+  {
+   "t": 68.1,
+   "text": "The challenge with HDST and other early high-density methods was always capture efficiency."
+  },
+  {
+   "t": 74.04,
+   "text": "At 2-micron features, each capture spot covers a tiny volume of tissue, captures very few transcripts per spot, and produces sparse data."
+  },
+  {
+   "t": 83.72,
+   "text": "To get reliable signal, you had to sequence very deeply and bin spots computationally."
+  },
+  {
+   "t": 89.72,
+   "text": "The chemistry was demanding."
+  },
+  {
+   "t": 91.42,
+   "text": "The protocols were finicky."
+  },
+  {
+   "t": 93.4,
+   "text": "HDST never became a routine assay the way Visium did, partly because the data quality was hard to make reproducible at scale."
+  },
+  {
+   "t": 102.6,
+   "text": "But HDST mattered, because it proved that the high-density approach was feasible and pointed the way for both Visium HD and the Stereo-seq nanoball arrays."
+  },
+  {
+   "t": 113.28,
+   "text": "The lineage of high-resolution sequencing-based spatial transcriptomics runs roughly: Ståhl 2016 at 100 microns, Slide-seq 2019 at 10 microns, HDST 2019 at 2 microns, Visium HD and Stereo-seq in 2022-2024 at sub-cellular resolution."
+  },
+  {
+   "t": 136.04,
+   "text": "The resolution improvements have been steady, driven by both chemistry refinements and manufacturing improvements."
+  },
+  {
+   "t": 143.38,
+   "text": "There are a handful of other sequencing-based methods I want to name in passing, because you may encounter them in the literature."
+  },
+  {
+   "t": 150.3,
+   "text": "DBiT-seq (\"deterministic barcoding in tissue\"), from Rong Fan's lab at Yale, uses microfluidic channels to deliver barcoded reagents in stripes — first horizontal, then vertical — generating a combinatorial grid of barcoded squares directly on the tissue."
+  },
+  {
+   "t": 169.16,
+   "text": "The resolution is around 10 to 50 microns depending on the channel width."
+  },
+  {
+   "t": 174.19,
+   "text": "Pixel-seq uses a polymer-coated barcoded surface."
+  },
+  {
+   "t": 177.7,
+   "text": "GeoMx, from NanoString, is a region-of-interest method where you select specific regions on a tissue section and recover transcripts from those regions — it's not a uniform grid like Visium, but a targeted-region tool useful for clinical samples."
+  },
+  {
+   "t": 192.71,
+   "text": "The proliferation of methods speaks to how much demand there is for spatial gene expression data."
+  },
+  {
+   "t": 198.68,
+   "text": "Every two or three years a new sequencing-based method appears with some incremental advantage — slightly higher resolution, slightly better capture, slightly different geometry."
+  },
+  {
+   "t": 209.74,
+   "text": "The field has settled, for now, on Visium and Visium HD as the de facto standards for most academic and clinical work, with Stereo-seq carrying the high-end atlas applications."
+  },
+  {
+   "t": 222.3,
+   "text": "The basic chemistry of capture-then-sequence is shared."
+  },
+  {
+   "t": 226.25,
+   "text": "The variations are in how you arrange the barcodes on the surface and at what density."
+  },
+  {
+   "t": 231.03,
+   "text": "Now let's turn to the entirely different family — imaging-based methods, which solve the spatial problem without sequencing at all."
+  },
+  {
+   "t": 239.22,
+   "text": "The chemistry is radically different."
+  },
+  {
+   "t": 241.72,
+   "text": "The trade-offs are nearly inverted."
+  },
+  {
+   "t": 243.95,
+   "text": "And the technological lineage starts with a brilliant Harvard physicist named Xiaowei Zhuang."
+  }
+ ]
+}

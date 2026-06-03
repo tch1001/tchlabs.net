@@ -1,0 +1,271 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — The histone modification zoo",
+ "duration": 456.75,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — The histone modification zoo"
+  },
+  {
+   "t": 3.34,
+   "text": "Welcome back."
+  },
+  {
+   "t": 4.39,
+   "text": "Hopefully you took some coffee, stretched."
+  },
+  {
+   "t": 6.85,
+   "text": "We're now in the second half of the lecture."
+  },
+  {
+   "t": 9.36,
+   "text": "The first half was about the technique itself — the question, the chromatin, the workflow, the controls, the peak calling, the consortium."
+  },
+  {
+   "t": 18.05,
+   "text": "In the second half, we're going to look at what ChIP-seq is actually used for — the biology that the method enables — and then at where the field is going next."
+  },
+  {
+   "t": 27.48,
+   "text": "Let's start with histone modification ChIP-seq, because in many ways this is the most reliable, most informative use of the technique."
+  },
+  {
+   "t": 36.73,
+   "text": "The histone tails carry chemical modifications that correlate, sometimes very tightly, with the transcriptional state of the underlying DNA."
+  },
+  {
+   "t": 45.7,
+   "text": "If you ChIP for a specific modification — using one of the well-characterized antibodies against, say, trimethylated lysine 4 on histone H3 — you get a genome-wide map of where that modification sits."
+  },
+  {
+   "t": 59.01,
+   "text": "And because each modification has a known association with a particular regulatory state, the map essentially tells you the regulatory state of every region in the genome, simultaneously."
+  },
+  {
+   "t": 70.67,
+   "text": "Let me walk you through the most important marks."
+  },
+  {
+   "t": 73.54,
+   "text": "There are dozens of histone modifications that have been characterized, but four of them are the workhorses of regulatory genomics."
+  },
+  {
+   "t": 81.25,
+   "text": "Memorize these four."
+  },
+  {
+   "t": 82.8,
+   "text": "H3K4me3."
+  },
+  {
+   "t": 85.24,
+   "text": "Trimethylation of lysine 4 on histone H3."
+  },
+  {
+   "t": 90.0,
+   "text": "This mark localizes to active promoters — the few hundred base pairs surrounding the transcription start sites of genes that are being transcribed."
+  },
+  {
+   "t": 99.17,
+   "text": "If you ChIP for H3K4me3 in a cell, the peaks light up the active promoters of every actively transcribed gene in that cell."
+  },
+  {
+   "t": 109.0,
+   "text": "It's almost a one-to-one correspondence."
+  },
+  {
+   "t": 111.69,
+   "text": "Pull up the H3K4me3 track in a genome browser and you essentially have a list of which genes are on."
+  },
+  {
+   "t": 118.71,
+   "text": "The mark is deposited by the SET1/MLL complex of methyltransferases, recruited to promoters by various co-activators."
+  },
+  {
+   "t": 128.56,
+   "text": "H3K27ac."
+  },
+  {
+   "t": 131.78,
+   "text": "Acetylation of lysine 27 on histone H3."
+  },
+  {
+   "t": 136.25,
+   "text": "This mark localizes to active enhancers and is also enriched at active promoters."
+  },
+  {
+   "t": 141.7,
+   "text": "An enhancer, in case you've forgotten, is a regulatory element that can sit thousands of base pairs away from the gene it controls and loop back to enhance transcription."
+  },
+  {
+   "t": 151.91,
+   "text": "Enhancers are notoriously hard to identify by sequence alone — they don't have a consistent motif, they don't have a fixed location, they don't even have a fixed orientation."
+  },
+  {
+   "t": 162.84,
+   "text": "But they have H3K27ac."
+  },
+  {
+   "t": 166.6,
+   "text": "ChIP-seq for H3K27ac gives you a near-complete map of the active enhancers in a cell, and because enhancers are highly cell-type-specific, that map tells you a lot about the cell's identity."
+  },
+  {
+   "t": 180.86,
+   "text": "The mark is deposited by p300/CBP, a pair of acetyltransferases that show up as cofactors at virtually every active enhancer."
+  },
+  {
+   "t": 191.29,
+   "text": "H3K27me3."
+  },
+  {
+   "t": 194.18,
+   "text": "Trimethylation of lysine 27 on histone H3 — same residue as H3K27ac, different modification."
+  },
+  {
+   "t": 205.29,
+   "text": "This is the repressive mark of the polycomb system."
+  },
+  {
+   "t": 208.36,
+   "text": "It localizes to broad domains over genes that have been developmentally silenced — typically developmental regulators that need to be off in a given cell type."
+  },
+  {
+   "t": 218.88,
+   "text": "H3K27me3 ChIP-seq gives you a map of polycomb-repressed regions, which tend to be large, cell-type-specific domains."
+  },
+  {
+   "t": 229.74,
+   "text": "The mark is deposited by the PRC2 complex, with EZH2 as the catalytic subunit."
+  },
+  {
+   "t": 236.39,
+   "text": "H3K9me3."
+  },
+  {
+   "t": 239.03,
+   "text": "Trimethylation of lysine 9 on histone H3."
+  },
+  {
+   "t": 243.38,
+   "text": "This is the heterochromatin mark — the marker of constitutively silenced regions, particularly pericentromeric heterochromatin, repetitive elements, and certain silenced genes."
+  },
+  {
+   "t": 255.04,
+   "text": "H3K9me3 ChIP-seq gives you a map of heterochromatic regions, which tend to be very large and stable across cell types."
+  },
+  {
+   "t": 265.3,
+   "text": "The mark is deposited by SUV39H1 and related methyltransferases."
+  },
+  {
+   "t": 271.34,
+   "text": "The analogy: histone mark ChIP-seq is the regulatory state map."
+  },
+  {
+   "t": 276.43,
+   "text": "H3K4me3 means \"this promoter is on."
+  },
+  {
+   "t": 280.77,
+   "text": "\" H3K27ac means \"this enhancer is active."
+  },
+  {
+   "t": 286.23,
+   "text": "\" H3K27me3 means \"this region is polycomb-repressed."
+  },
+  {
+   "t": 292.79,
+   "text": "\" H3K9me3 means \"this region is constitutive heterochromatin."
+  },
+  {
+   "t": 299.45,
+   "text": "\" Four marks, four broad categories of regulatory state, mapped genome-wide with one experiment per mark."
+  },
+  {
+   "t": 306.7,
+   "text": "If you do all four in the same cell type and overlay them, you have a near-comprehensive functional annotation of every region in the genome — what's on, what's poised, what's silenced, what's heterochromatic."
+  },
+  {
+   "t": 318.66,
+   "text": "There are many more marks."
+  },
+  {
+   "t": 320.15,
+   "text": "H3K36me3 (gene bodies of actively transcribed genes)."
+  },
+  {
+   "t": 325.95,
+   "text": "H3K79me3 (similar but distinct elongation mark)."
+  },
+  {
+   "t": 331.64,
+   "text": "H4K16ac (involved in chromatin compaction)."
+  },
+  {
+   "t": 336.55,
+   "text": "H2A."
+  },
+  {
+   "t": 337.65,
+   "text": "X phosphorylation (DNA damage)."
+  },
+  {
+   "t": 340.24,
+   "text": "H3K4me1 (enhancers, distinguishing them from promoters — promoters carry H3K4me3, enhancers carry H3K4me1, both can carry H3K27ac when active)."
+  },
+  {
+   "t": 357.16,
+   "text": "The histone code, as it's sometimes called, is rich and combinatorial — the combination of marks at a given region carries more information than any one mark alone."
+  },
+  {
+   "t": 367.69,
+   "text": "Modern epigenomics treats the marks not as independent labels but as a multidimensional vector, and uses computational tools like ChromHMM to cluster regions into chromatin states based on their combinatorial signatures."
+  },
+  {
+   "t": 382.5,
+   "text": "Why are histone mark ChIP-seqs more reliable than transcription factor ChIP-seqs?"
+  },
+  {
+   "t": 389.01,
+   "text": "Two reasons."
+  },
+  {
+   "t": 390.2,
+   "text": "First, the antibodies are well-characterized."
+  },
+  {
+   "t": 393.31,
+   "text": "Anti-histone-modification antibodies have been validated by many labs across many studies, and the good ones are widely shared."
+  },
+  {
+   "t": 401.42,
+   "text": "Second, the signals are robust — modifications are abundant, present at high stoichiometry across many cells, so even with a moderate antibody you get strong enrichment."
+  },
+  {
+   "t": 413.1,
+   "text": "Transcription factors, by contrast, are often present at one or a few molecules per binding site, which makes the IP signal much weaker and more sensitive to antibody quality."
+  },
+  {
+   "t": 424.91,
+   "text": "The practical upshot is that if you're a new graduate student looking to learn ChIP-seq, you should start with H3K4me3 or H3K27ac."
+  },
+  {
+   "t": 436.35,
+   "text": "The protocols are robust, the antibodies are good, the signal is high, and the data interpretation is straightforward."
+  },
+  {
+   "t": 443.96,
+   "text": "Don't try to ChIP your favorite poorly-characterized transcription factor as your first experiment."
+  },
+  {
+   "t": 449.47,
+   "text": "You'll spend six months troubleshooting and get nothing."
+  },
+  {
+   "t": 452.65,
+   "text": "Get the workflow down on histones, then move to TFs."
+  }
+ ]
+}

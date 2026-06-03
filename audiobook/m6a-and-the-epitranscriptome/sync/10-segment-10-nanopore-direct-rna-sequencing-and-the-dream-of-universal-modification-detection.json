@@ -1,0 +1,191 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Nanopore direct RNA sequencing and the dream of universal modification detection",
+ "duration": 413.11,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Nanopore direct RNA sequencing and the dream of universal modification detection"
+  },
+  {
+   "t": 7.5,
+   "text": "Welcome back."
+  },
+  {
+   "t": 8.54,
+   "text": "We spent the first hour on the antibody-and-chemistry world of m6A detection — MeRIP-seq, miCLIP, m6A-SAC, GLORI."
+  },
+  {
+   "t": 19.02,
+   "text": "Every one of those methods works by converting the chemical modification into a sequence-readable signal somewhere in a standard Illumina pipeline."
+  },
+  {
+   "t": 27.55,
+   "text": "Now I want to introduce you to a completely different approach — one that bypasses all that conversion chemistry and reads the modification directly from the physical RNA molecule."
+  },
+  {
+   "t": 38.54,
+   "text": "The technology is Oxford Nanopore direct RNA sequencing, and it has the potential to fundamentally restructure the entire epitranscriptomics field."
+  },
+  {
+   "t": 48.39,
+   "text": "Whether it actually will is still an open question, but the promise is enormous and worth understanding deeply."
+  },
+  {
+   "t": 55.24,
+   "text": "Here is how nanopore sequencing works."
+  },
+  {
+   "t": 58.4,
+   "text": "A nanopore is a tiny protein channel embedded in a thin membrane."
+  },
+  {
+   "t": 62.73,
+   "text": "You apply a voltage across the membrane."
+  },
+  {
+   "t": 65.45,
+   "text": "Ions flow through the pore, generating a measurable ionic current."
+  },
+  {
+   "t": 70.31,
+   "text": "If you thread a single-stranded nucleic acid molecule through the pore, the molecule physically obstructs the ion flow, and the resulting drop in current depends on which nucleotide is currently inside the constriction zone of the pore."
+  },
+  {
+   "t": 84.56,
+   "text": "Different bases — A, U, G, C — produce different characteristic current signatures."
+  },
+  {
+   "t": 91.9,
+   "text": "You record the current trace over time, you feed it into a neural network basecaller, and the basecaller translates the current pattern back into a sequence of bases."
+  },
+  {
+   "t": 101.46,
+   "text": "Oxford Nanopore's direct RNA sequencing platform, released around 2017, can do this for RNA."
+  },
+  {
+   "t": 109.33,
+   "text": "You take a polyadenylated RNA molecule, you ligate an adapter to the poly-A tail, you load the library onto a flow cell, and the molecules thread through the pores, three-to-five-nucleotides at a time, generating current traces that the basecaller converts into sequences."
+  },
+  {
+   "t": 126.5,
+   "text": "No reverse transcription, no PCR amplification, no fragmentation — you are reading the native RNA molecule directly."
+  },
+  {
+   "t": 135.72,
+   "text": "Here is the part that matters for epitranscriptomics."
+  },
+  {
+   "t": 139.44,
+   "text": "A modified base produces a different current signature than the corresponding unmodified base."
+  },
+  {
+   "t": 145.38,
+   "text": "An m6A in the constriction zone obstructs ion flow slightly differently than an A does."
+  },
+  {
+   "t": 152.32,
+   "text": "The current trace at the m6A position has a measurably different shape."
+  },
+  {
+   "t": 157.57,
+   "text": "If you train a basecaller — or, more often, a separate downstream classifier — to recognize the modification-specific current signature, you can call m6A directly from the raw current trace, at single-nucleotide resolution, on the native RNA molecule, without any chemistry at all."
+  },
+  {
+   "t": 175.54,
+   "text": "Here is the analogy I want you to hold."
+  },
+  {
+   "t": 178.36,
+   "text": "Nanopore is the natural reader of RNA modifications."
+  },
+  {
+   "t": 182.56,
+   "text": "Direct RNA sequencing reads the ionic current that differs for modified bases."
+  },
+  {
+   "t": 188.49,
+   "text": "No antibody, no chemical conversion, no enrichment — just better basecallers trained to recognize the current signatures of each modification."
+  },
+  {
+   "t": 198.35,
+   "text": "That is the promise."
+  },
+  {
+   "t": 199.64,
+   "text": "In principle, with a sufficiently well-trained classifier, you could read all 170-plus RNA modifications from a single nanopore run, on every transcript in the cell, at single-nucleotide resolution."
+  },
+  {
+   "t": 213.09,
+   "text": "In practice, getting to that promise is hard."
+  },
+  {
+   "t": 215.96,
+   "text": "The current signal at any one position is influenced by the four or five neighboring bases — the constriction zone is wider than a single nucleotide — so the modification signature is convolved with the local sequence context."
+  },
+  {
+   "t": 229.47,
+   "text": "The signal-to-noise ratio for any one modification call is moderate; you need many reads through the same position to confidently call modification status."
+  },
+  {
+   "t": 239.6,
+   "text": "The basecaller training requires labeled data — RNA molecules where you know which positions are modified and which are not — and generating that training data is itself a major experimental undertaking."
+  },
+  {
+   "t": 252.18,
+   "text": "And different modifications have signal differences of different magnitudes — m6A is moderately distinguishable from A; some modifications like 2′-O-methylation are very subtle and hard to call."
+  },
+  {
+   "t": 266.14,
+   "text": "The current state of the art, as of the mid-2020s, is that nanopore direct RNA can call m6A at single-nucleotide resolution with sensitivity around 70 to 90 percent and specificity around 80 to 95 percent, depending on the tool used."
+  },
+  {
+   "t": 283.61,
+   "text": "Tools like m6Anet, EpiNano, Tombo, xPore, CHEUI — each takes a different approach to extracting modification signal from nanopore current traces."
+  },
+  {
+   "t": 295.24,
+   "text": "The performance is improving rapidly as more training data becomes available and as basecaller architectures get more sophisticated."
+  },
+  {
+   "t": 304.21,
+   "text": "For some applications — comparing m6A levels between two conditions on the same transcripts — nanopore is already competitive with or better than MeRIP-seq."
+  },
+  {
+   "t": 315.2,
+   "text": "What nanopore is particularly good at, beyond just modification calling, is connecting modifications to other features of the transcript that bulk methods cannot capture."
+  },
+  {
+   "t": 325.5,
+   "text": "Because you are reading entire intact mRNA molecules from cap to poly-A tail, you know which m6A marks co-occur on the same molecule, you know the poly-A tail length of every modified versus unmodified molecule, you know the splice isoform of every read, you know whether two distant modifications are coupled."
+  },
+  {
+   "t": 345.83,
+   "text": "This \"long-range information\" — the joint distribution of modifications, splicing, and processing on individual molecules — is essentially invisible to MeRIP-seq, which fragments everything into short pieces before sequencing."
+  },
+  {
+   "t": 361.3,
+   "text": "So nanopore is the future, probably — or at least one possible future."
+  },
+  {
+   "t": 366.69,
+   "text": "The chemistry-based methods like GLORI may dominate for a while because the technology is more mature and the analysis is more straightforward, but nanopore has structural advantages that should win out as the basecallers and training data improve."
+  },
+  {
+   "t": 381.38,
+   "text": "The dream is a single nanopore run that reads every transcript in a cell, calls every modification at every position, and reports the joint state of the epitranscriptome at single-molecule resolution."
+  },
+  {
+   "t": 394.18,
+   "text": "We are not there yet, but we are closer than we were five years ago, and the trajectory is clear."
+  },
+  {
+   "t": 400.26,
+   "text": "Now let us pivot from methods to biology."
+  },
+  {
+   "t": 403.18,
+   "text": "Let us talk about what m6A is doing in disease, starting with the disease that has driven more m6A drug development than any other: cancer."
+  }
+ ]
+}

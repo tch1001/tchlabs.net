@@ -1,0 +1,163 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — AI-driven design: machine learning enters the loop",
+ "duration": 344.74,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — AI-driven design: machine learning enters the loop"
+  },
+  {
+   "t": 5.16,
+   "text": "Let me tell you about the most recent layer to land on top of the field, because if the trajectory of the last few years continues, this will become the dominant story of the next decade."
+  },
+  {
+   "t": 15.68,
+   "text": "The layer is machine learning — specifically, the application of large neural network models to problems in pathway design, enzyme engineering, retrosynthesis, and high-throughput screening."
+  },
+  {
+   "t": 27.93,
+   "text": "There are several distinct applications."
+  },
+  {
+   "t": 30.3,
+   "text": "The first is retrosynthesis prediction."
+  },
+  {
+   "t": 32.98,
+   "text": "Retrosynthesis is the chemistry game of starting from a target molecule and working backward through possible reactions to reach available starting materials."
+  },
+  {
+   "t": 42.96,
+   "text": "Chemists have done this in their heads for a century, guided by experience and pattern recognition."
+  },
+  {
+   "t": 49.08,
+   "text": "In the 2010s, software started to automate it."
+  },
+  {
+   "t": 52.29,
+   "text": "The most prominent system is IBM RXN for Chemistry, which uses a transformer-based language model trained on millions of published chemical reactions to suggest synthetic routes from target to starting material."
+  },
+  {
+   "t": 65.5,
+   "text": "Similar systems have been built at academic labs — the Synthia software from Bartosz Grzybowski, the AiZynthFinder project from AstraZeneca, Chemputer-style systems from Lee Cronin."
+  },
+  {
+   "t": 77.49,
+   "text": "For metabolic engineering, the equivalent question is: given a target small molecule, what enzymatic pathway, from what set of starting metabolites, could plausibly produce it?"
+  },
+  {
+   "t": 88.67,
+   "text": "Several groups — most notably Linda Broadbelt's lab at Northwestern with their BNICE framework, and Vassily Hatzimanikatis at EPFL — have built tools that algorithmically enumerate candidate enzymatic pathways from arbitrary starting materials to arbitrary targets, using reaction rules learned from biochemistry databases."
+  },
+  {
+   "t": 109.39,
+   "text": "The output is a ranked list of candidate pathways, complete with predicted enzymes for each step."
+  },
+  {
+   "t": 115.96,
+   "text": "The engineer then picks the most promising pathway and tries to build it."
+  },
+  {
+   "t": 120.74,
+   "text": "This kind of computational pathway design, which would have been science fiction in 2000, is now a routine first step in many engineering campaigns."
+  },
+  {
+   "t": 129.62,
+   "text": "The second application is enzyme design and engineering."
+  },
+  {
+   "t": 133.54,
+   "text": "We talked about directed evolution in Segment 7 as the dominant tool for improving heterologous enzyme activity."
+  },
+  {
+   "t": 141.6,
+   "text": "Machine learning is now starting to augment, and in some cases replace, evolution-based approaches."
+  },
+  {
+   "t": 148.47,
+   "text": "Tools like AlphaFold and ESMFold can predict the three-dimensional structure of an enzyme from its sequence, opening up structure-guided rational design even when no crystal structure exists."
+  },
+  {
+   "t": 161.31,
+   "text": "Models trained on enzyme sequence-function relationships can predict which mutations are likely to improve activity, substrate specificity, or thermostability, narrowing the search space directed evolution has to explore."
+  },
+  {
+   "t": 176.12,
+   "text": "De novo protein design tools — particularly the RFdiffusion and related models from David Baker's lab — can now design enzymes from scratch for specific reactions, although the success rate for catalytically efficient designs is still modest."
+  },
+  {
+   "t": 191.3,
+   "text": "The trajectory, though, is unmistakably upward."
+  },
+  {
+   "t": 195.15,
+   "text": "Within a decade, \"design an enzyme that does X reaction\" may be as routine a request as \"synthesize this DNA sequence\" is today."
+  },
+  {
+   "t": 204.68,
+   "text": "The third application is strain phenotype prediction."
+  },
+  {
+   "t": 208.01,
+   "text": "Machine learning models trained on large datasets of strain genotypes and corresponding product titers can predict which combinations of genetic manipulations are likely to produce the best strains, augmenting or replacing FBA-style predictions."
+  },
+  {
+   "t": 223.8,
+   "text": "The most ambitious efforts integrate genome-scale models, kinetic data, omics measurements, and historical strain engineering results into unified predictive models."
+  },
+  {
+   "t": 234.75,
+   "text": "Companies like Zymergen (before acquisition by Ginkgo) pursued this aggressively."
+  },
+  {
+   "t": 240.22,
+   "text": "The data requirements are enormous, and to date no model has been a clear replacement for empirical screening, but the augmentation effect — making each experiment more informative for the next — is real."
+  },
+  {
+   "t": 253.15,
+   "text": "The analogy I want you to carry: AI-driven metabolic design is the layer that is starting to sit on top of the whole stack — retrosynthesis tools predict pathways, structure prediction tools guide enzyme engineering, phenotype prediction models prioritize manipulations."
+  },
+  {
+   "t": 269.95,
+   "text": "The field is moving from purely empirical strain engineering, in which you try things and see what works, toward model-guided engineering, in which the models suggest what to try and the experiments validate the suggestions."
+  },
+  {
+   "t": 283.05,
+   "text": "The combination is much faster than either approach alone."
+  },
+  {
+   "t": 286.8,
+   "text": "I want to be careful about the hype here."
+  },
+  {
+   "t": 288.83,
+   "text": "Many of these models, particularly the ones trained on specific industrial datasets, are still narrower in their predictive power than their marketing suggests."
+  },
+  {
+   "t": 298.05,
+   "text": "The field has been burned before by overconfident computational predictions — early FBA-based strain design promised more than it delivered until experimental validation became routine."
+  },
+  {
+   "t": 309.97,
+   "text": "Machine learning is now going through the same cycle."
+  },
+  {
+   "t": 313.5,
+   "text": "The hype is ahead of the steady, real progress."
+  },
+  {
+   "t": 316.64,
+   "text": "But the underlying progress is real, and the trajectory does not appear to be slowing."
+  },
+  {
+   "t": 322.73,
+   "text": "If you are a student entering the field today, the safe bet is that your career will be deeply shaped by the integration of machine learning into every part of the metabolic engineering workflow."
+  },
+  {
+   "t": 334.35,
+   "text": "The final segment takes us to the frontier — to the engineered cells that are starting to fix carbon directly from CO2, and what that means for the long-term arc of the field."
+  }
+ ]
+}

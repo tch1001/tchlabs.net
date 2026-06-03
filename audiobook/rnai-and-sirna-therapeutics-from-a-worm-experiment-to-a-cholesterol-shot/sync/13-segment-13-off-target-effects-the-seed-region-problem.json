@@ -1,0 +1,151 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Off-target effects — the seed region problem",
+ "duration": 320.64,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Off-target effects — the seed region problem"
+  },
+  {
+   "t": 4.64,
+   "text": "Here is a feature of siRNAs that is both biologically fascinating and pharmacologically inconvenient."
+  },
+  {
+   "t": 11.36,
+   "text": "The guide strand inside RISC does not actually need to pair perfectly with its target mRNA across all 21 nucleotides in order to direct cleavage or silencing."
+  },
+  {
+   "t": 21.68,
+   "text": "The most important region for target recognition is a stretch of just six to eight nucleotides near the 5' end of the guide strand, called the seed region, specifically positions 2 through 7 or 8."
+  },
+  {
+   "t": 34.58,
+   "text": "Why?"
+  },
+  {
+   "t": 35.27,
+   "text": "Because the structural geometry of the AGO2 protein presents the seed region in a particular orientation that maximizes its accessibility for pairing with target RNA."
+  },
+  {
+   "t": 46.04,
+   "text": "The seed region is, in a sense, the first contact point — the part of the guide that scans incoming mRNAs and tests them for complementarity."
+  },
+  {
+   "t": 55.54,
+   "text": "If the seed pairs well, the rest of the guide gets time to find its match."
+  },
+  {
+   "t": 60.34,
+   "text": "If the seed doesn't pair, the interaction comes apart quickly and the guide moves on."
+  },
+  {
+   "t": 65.58,
+   "text": "This is exactly how endogenous microRNAs — miRNAs — work."
+  },
+  {
+   "t": 70.6,
+   "text": "miRNAs are the cell's own short regulatory RNAs, evolutionarily related to siRNAs, that pair imperfectly with their targets, typically only across the seed region, and silence those targets primarily by inducing translational repression and mRNA destabilization rather than by direct cleavage."
+  },
+  {
+   "t": 90.91,
+   "text": "miRNAs use the same RISC machinery as siRNAs — sometimes the same AGO proteins, sometimes a different mix — but the imperfect pairing means AGO2 doesn't typically slice."
+  },
+  {
+   "t": 103.11,
+   "text": "Instead, the bound mRNA gets shuttled to P-bodies, deadenylated, and degraded slowly."
+  },
+  {
+   "t": 109.69,
+   "text": "Each miRNA has hundreds of natural targets — any mRNA whose 3' untranslated region happens to contain a sequence complementary to the miRNA's seed region."
+  },
+  {
+   "t": 121.05,
+   "text": "Now here is the problem for siRNA drug design."
+  },
+  {
+   "t": 123.8,
+   "text": "A synthetic siRNA, designed to perfectly match one specific target mRNA, will also have a seed region that will inevitably find complementary sequences in the 3' UTRs of many other, unintended mRNAs."
+  },
+  {
+   "t": 138.49,
+   "text": "Those off-target mRNAs will be silenced too, miRNA-style, by translational repression and destabilization."
+  },
+  {
+   "t": 145.96,
+   "text": "The off-target silencing is typically modest in magnitude — you don't see massive knockdown of off-targets, the way you see massive knockdown of the intended on-target — but it is real, and it is reproducible, and in some cases it can produce toxicity by knocking down genes that, in aggregate, you didn't intend to touch."
+  },
+  {
+   "t": 165.2,
+   "text": "Off-target effects mediated by the seed region are one of the major safety considerations in siRNA drug development."
+  },
+  {
+   "t": 172.14,
+   "text": "Mitigation strategies include: chemical modification of the seed region positions to weaken miRNA-like target binding while preserving on-target cleavage; selection of guide strands whose seed sequences have minimal overlap with abundant 3' UTR sequences in the target tissue; and careful preclinical screening of candidate siRNAs in cell lines or in vivo, looking for unexpected gene expression changes that suggest off-target activity."
+  },
+  {
+   "t": 200.64,
+   "text": "There are also off-target effects mediated by innate immune sensing."
+  },
+  {
+   "t": 205.38,
+   "text": "Even short siRNAs can, under some conditions, trigger interferon responses through receptors like TLR7, TLR8, and others."
+  },
+  {
+   "t": 214.28,
+   "text": "Specific sequence motifs — particularly GU-rich sequences — are more likely to trigger immune activation."
+  },
+  {
+   "t": 221.71,
+   "text": "Modern siRNA drugs are designed to avoid these motifs and incorporate modifications (especially 2'-O-methyl) that suppress immune recognition."
+  },
+  {
+   "t": 232.14,
+   "text": "This is part of the chemistry-as-survival-kit story."
+  },
+  {
+   "t": 235.06,
+   "text": "The miRNA-like off-target effect is, in many ways, an unavoidable feature of the siRNA modality."
+  },
+  {
+   "t": 242.22,
+   "text": "It is a consequence of the fact that we are hijacking a piece of cellular machinery that evolved to do exactly this kind of imperfect-pairing-based regulation."
+  },
+  {
+   "t": 251.99,
+   "text": "We are using AGO2's slicing activity, which requires near-perfect pairing across the guide; but the same molecule, in the same RISC complex, is also competent to do miRNA-style imperfect pairing, and we cannot fully prevent that."
+  },
+  {
+   "t": 267.98,
+   "text": "Good drug design minimizes it."
+  },
+  {
+   "t": 270.94,
+   "text": "Perfect drug design probably cannot eliminate it."
+  },
+  {
+   "t": 274.51,
+   "text": "Anyone designing siRNA therapies needs to take seed-mediated off-target effects seriously, and the field has gotten pretty good at managing them, but they remain a feature of the modality."
+  },
+  {
+   "t": 285.11,
+   "text": "This is, by the way, one of the conceptual reasons why some people think CRISPR-Cas9 will eventually overtake RNAi for many applications where you want clean loss of function."
+  },
+  {
+   "t": 296.73,
+   "text": "CRISPR doesn't have a seed-region problem in the same way — its specificity comes from a longer guide and a different kind of pairing."
+  },
+  {
+   "t": 305.09,
+   "text": "But CRISPR makes permanent DNA edits, which is not what you always want; sometimes you want reversible, tunable knockdown rather than permanent knockout."
+  },
+  {
+   "t": 314.25,
+   "text": "For those applications, RNAi remains the better tool."
+  },
+  {
+   "t": 318.06,
+   "text": "Different jobs, different modalities."
+  }
+ ]
+}

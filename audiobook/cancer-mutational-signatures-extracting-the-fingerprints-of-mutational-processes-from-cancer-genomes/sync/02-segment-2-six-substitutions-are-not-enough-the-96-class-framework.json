@@ -1,0 +1,319 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — Six substitutions are not enough — the 96-class framework",
+ "duration": 448.29,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — Six substitutions are not enough — the 96-class framework"
+  },
+  {
+   "t": 6.0,
+   "text": "If you take a base in the genome and you replace it with a different base, there are exactly twelve possible substitutions."
+  },
+  {
+   "t": 13.4,
+   "text": "A can become C, G, or T."
+  },
+  {
+   "t": 16.6,
+   "text": "C can become A, G, or T."
+  },
+  {
+   "t": 19.93,
+   "text": "G can become A, C, or T."
+  },
+  {
+   "t": 22.96,
+   "text": "T can become A, C, or G."
+  },
+  {
+   "t": 25.89,
+   "text": "Twelve directional substitutions."
+  },
+  {
+   "t": 28.49,
+   "text": "But the DNA is double-stranded, and we don't usually know which strand a mutation originally occurred on — when we see a C-to-T mutation on the Watson strand, that's equivalent to a G-to-A mutation on the Crick strand."
+  },
+  {
+   "t": 41.61,
+   "text": "So we collapse the twelve down to six, by convention always reporting the substitution with respect to the pyrimidine base — C or T — on one of the two strands."
+  },
+  {
+   "t": 52.61,
+   "text": "The six categories are:"
+  },
+  {
+   "t": 54.21,
+   "text": "C-to-A (which is the same as G-to-T on the opposite strand)."
+  },
+  {
+   "t": 58.52,
+   "text": "C-to-G (same as G-to-C)."
+  },
+  {
+   "t": 61.56,
+   "text": "C-to-T (same as G-to-A)."
+  },
+  {
+   "t": 64.62,
+   "text": "T-to-A (same as A-to-T)."
+  },
+  {
+   "t": 67.22,
+   "text": "T-to-C (same as A-to-G)."
+  },
+  {
+   "t": 70.46,
+   "text": "T-to-G (same as A-to-C)."
+  },
+  {
+   "t": 73.71,
+   "text": "Six categories."
+  },
+  {
+   "t": 75.14,
+   "text": "Every single nucleotide substitution in any cancer genome falls into one of these six bins."
+  },
+  {
+   "t": 81.31,
+   "text": "Now, in the 1990s and early 2000s, people would publish papers saying things like \"lung cancers have an excess of C-to-A mutations compared to other cancers."
+  },
+  {
+   "t": 91.11,
+   "text": "\" That's true."
+  },
+  {
+   "t": 92.17,
+   "text": "It's a real signal — tobacco smoke causes a lot of C-to-A mutations, equivalently G-to-T mutations on the strand where the bulky tobacco adduct sits on the guanine."
+  },
+  {
+   "t": 102.84,
+   "text": "So you'd look at the six-class histogram, and lung cancers had a tall C-to-A bar."
+  },
+  {
+   "t": 107.59,
+   "text": "But six categories is too coarse."
+  },
+  {
+   "t": 110.29,
+   "text": "The trouble is that very different mutational processes can produce mutations in the same six-class category, and the six-class histogram can't tell them apart."
+  },
+  {
+   "t": 120.4,
+   "text": "UV light produces C-to-T mutations."
+  },
+  {
+   "t": 123.71,
+   "text": "Spontaneous deamination of methylated cytosines also produces C-to-T mutations."
+  },
+  {
+   "t": 130.06,
+   "text": "Alkylating chemotherapy also produces C-to-T mutations."
+  },
+  {
+   "t": 135.07,
+   "text": "APOBEC deamination also produces C-to-T mutations."
+  },
+  {
+   "t": 139.61,
+   "text": "Five completely different mutational processes, all dumping their output into the same C-to-T bin."
+  },
+  {
+   "t": 146.34,
+   "text": "If your only resolution is six categories, you have a serious confusion problem."
+  },
+  {
+   "t": 151.55,
+   "text": "Here's the key insight that Alexandrov and Stratton built their whole framework on."
+  },
+  {
+   "t": 156.69,
+   "text": "Even when two processes produce the same substitution — say, both produce C-to-T — they tend to produce it in different sequence contexts."
+  },
+  {
+   "t": 165.9,
+   "text": "UV light prefers to make C-to-T at TCN sites and especially at CC dipyrimidines."
+  },
+  {
+   "t": 173.64,
+   "text": "Spontaneous CpG deamination produces C-to-T specifically at CpG sites — that is, where the C is followed by a G."
+  },
+  {
+   "t": 183.68,
+   "text": "APOBEC makes C-to-T at TCW sites, where W is A or T."
+  },
+  {
+   "t": 189.88,
+   "text": "Each mutational process has not just a preferred substitution but also a preferred neighborhood."
+  },
+  {
+   "t": 196.21,
+   "text": "The substitution and the neighborhood together tell you which process did it."
+  },
+  {
+   "t": 200.55,
+   "text": "So the obvious move is to expand the classification to include the neighborhood."
+  },
+  {
+   "t": 205.46,
+   "text": "The simplest way to do that is to look at the bases immediately on either side of the mutated base."
+  },
+  {
+   "t": 211.84,
+   "text": "One base to the left, one base to the right."
+  },
+  {
+   "t": 214.71,
+   "text": "That's the trinucleotide context."
+  },
+  {
+   "t": 217.19,
+   "text": "For a given mutated base, there are four possibilities for the base to the left (A, C, G, or T) and four for the base to the right."
+  },
+  {
+   "t": 226.71,
+   "text": "Four times four is sixteen possible trinucleotide contexts for any single substitution."
+  },
+  {
+   "t": 233.4,
+   "text": "Six substitution types times sixteen trinucleotide contexts equals ninety-six classes."
+  },
+  {
+   "t": 240.69,
+   "text": "Ninety-six."
+  },
+  {
+   "t": 241.99,
+   "text": "Memorize that number."
+  },
+  {
+   "t": 243.51,
+   "text": "It is the foundational unit of mutational signature analysis."
+  },
+  {
+   "t": 247.44,
+   "text": "Every single base substitution in a cancer genome gets sorted into one of ninety-six bins."
+  },
+  {
+   "t": 253.74,
+   "text": "The bins are written in a specific notation."
+  },
+  {
+   "t": 256.69,
+   "text": "You write the trinucleotide with the mutated base in the middle, in square brackets showing the substitution."
+  },
+  {
+   "t": 263.46,
+   "text": "So TC>TA means: a C-to-T substitution where the C is flanked by a T on the five-prime side and an A on the three-prime side."
+  },
+  {
+   "t": 273.52,
+   "text": "CC>TC means a C-to-T where both flanking bases are C — that's a C-to-T at a CCC trinucleotide."
+  },
+  {
+   "t": 282.02,
+   "text": "There are ninety-six such labels."
+  },
+  {
+   "t": 284.77,
+   "text": "You sort every mutation into its bin, you count the bin sizes, and you get a histogram with ninety-six bars."
+  },
+  {
+   "t": 292.01,
+   "text": "That histogram is the mutational profile of the tumor."
+  },
+  {
+   "t": 295.9,
+   "text": "Let me give you the analogy."
+  },
+  {
+   "t": 297.37,
+   "text": "The 96-class framework is just building a histogram."
+  },
+  {
+   "t": 301.11,
+   "text": "For each substitution in the cancer genome, look at the bases on either side; six substitutions times sixteen contexts equals 96 categories; build a histogram."
+  },
+  {
+   "t": 311.86,
+   "text": "That's it."
+  },
+  {
+   "t": 312.62,
+   "text": "The whole computational front end of signature analysis is just sorting mutations into 96 bins and counting them."
+  },
+  {
+   "t": 320.87,
+   "text": "Anyone who can do this in Excel can do mutational signature analysis at the data-preparation step."
+  },
+  {
+   "t": 327.14,
+   "text": "Now, why ninety-six?"
+  },
+  {
+   "t": 328.74,
+   "text": "Why not look at five-base contexts, or seven-base, or just the single base?"
+  },
+  {
+   "t": 334.02,
+   "text": "It's a tradeoff."
+  },
+  {
+   "t": 335.22,
+   "text": "Bigger contexts give you finer resolution — five-base contexts would give you 1,536 classes (six substitutions times sixteen times sixteen) — but they also fragment your data more finely, so you need more mutations per genome to see clear patterns above noise."
+  },
+  {
+   "t": 352.97,
+   "text": "Smaller contexts — say, just one base on one side — give you less resolution but more statistical power per bin."
+  },
+  {
+   "t": 359.62,
+   "text": "The trinucleotide context turns out to be a sweet spot."
+  },
+  {
+   "t": 362.95,
+   "text": "It captures the most important neighborhood preferences of essentially all known mutational processes, while leaving enough mutations in each bin to make the statistics tractable for individual tumors with a few thousand mutations."
+  },
+  {
+   "t": 377.22,
+   "text": "Ninety-six is the Goldilocks number."
+  },
+  {
+   "t": 379.82,
+   "text": "The field has converged on it, and basically all SBS — single-base substitution — signatures in COSMIC are defined as probability distributions over these ninety-six classes."
+  },
+  {
+   "t": 391.5,
+   "text": "So when you see a published \"mutational signature\" — say, COSMIC Signature 4, the tobacco signature, or Signature 7, the UV signature — what you're looking at is a histogram with ninety-six bars, with the heights summing to one."
+  },
+  {
+   "t": 405.69,
+   "text": "It's a probability distribution."
+  },
+  {
+   "t": 407.7,
+   "text": "It says: if this mutational process is the one that produced a mutation in your genome, here's the probability that the mutation falls into each of the 96 categories."
+  },
+  {
+   "t": 418.17,
+   "text": "Tobacco's distribution is heavy in the C-to-A category, with specific peaks at certain trinucleotide contexts."
+  },
+  {
+   "t": 426.11,
+   "text": "UV's distribution is heavy in the C-to-T category, with very high peaks at certain dipyrimidine contexts."
+  },
+  {
+   "t": 433.85,
+   "text": "Each signature has its own characteristic shape, and the shapes are distinguishable by eye once you've looked at a few of them."
+  },
+  {
+   "t": 440.84,
+   "text": "That's the framework."
+  },
+  {
+   "t": 442.26,
+   "text": "Now let's talk about why it took until 2013 for somebody to make it computationally tractable."
+  }
+ ]
+}

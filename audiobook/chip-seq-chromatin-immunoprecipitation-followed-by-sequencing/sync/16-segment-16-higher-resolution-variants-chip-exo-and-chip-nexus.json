@@ -1,0 +1,59 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Higher-resolution variants — ChIP-exo and ChIP-nexus",
+ "duration": 126.68,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Higher-resolution variants — ChIP-exo and ChIP-nexus"
+  },
+  {
+   "t": 6.67,
+   "text": "Let me briefly mention two other variants of ChIP-seq that target a different dimension — not throughput or input requirements, but resolution."
+  },
+  {
+   "t": 16.32,
+   "text": "The standard ChIP-seq peak is roughly 200 to 300 base pairs wide, because the fragments are about that size."
+  },
+  {
+   "t": 24.35,
+   "text": "The actual binding footprint of a transcription factor — the few base pairs of DNA the protein actually contacts — is much smaller, often 10 to 20 base pairs."
+  },
+  {
+   "t": 35.44,
+   "text": "Standard ChIP-seq gives you a blurry localization."
+  },
+  {
+   "t": 39.16,
+   "text": "For some questions, you want sharper."
+  },
+  {
+   "t": 41.69,
+   "text": "ChIP-exo, developed by Frank Pugh's lab in 2011, uses a lambda exonuclease — an enzyme that chews back double-stranded DNA from the 5' end — to trim the ChIP'd fragments down until the exonuclease bumps into the protein cross-link itself, which acts as a roadblock."
+  },
+  {
+   "t": 60.8,
+   "text": "The resulting fragments end at the precise location of the protein-DNA contact, and the peaks become sharper — single base pair resolution, in principle."
+  },
+  {
+   "t": 70.94,
+   "text": "It's a beautiful technique, but the wet lab is finicky."
+  },
+  {
+   "t": 74.91,
+   "text": "ChIP-nexus, developed by Julia Zeitlinger's lab, is a refinement of ChIP-exo with improved adapter ligation that boosts the recovery of trimmed fragments."
+  },
+  {
+   "t": 86.36,
+   "text": "The data is similarly high-resolution and is particularly useful for studying transcription factors with closely-spaced binding sites — where standard ChIP-seq's 200-base-pair smearing would merge adjacent peaks into one."
+  },
+  {
+   "t": 100.41,
+   "text": "Neither ChIP-exo nor ChIP-nexus has become as widely adopted as standard ChIP-seq or CUT&Tag, partly because the wet-lab complexity is higher and partly because for most applications, standard-resolution peaks are good enough."
+  },
+  {
+   "t": 116.15,
+   "text": "But for detailed mechanistic studies — particularly of cofactor cooperation at enhancers, where you want to know exactly which factor sits where — they're invaluable."
+  }
+ ]
+}

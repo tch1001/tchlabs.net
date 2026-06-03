@@ -1,0 +1,183 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Transcription factor ChIP-seq and motif discovery",
+ "duration": 306.23,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Transcription factor ChIP-seq and motif discovery"
+  },
+  {
+   "t": 5.55,
+   "text": "Now let's talk about the harder case — transcription factor ChIP-seq."
+  },
+  {
+   "t": 10.41,
+   "text": "This is where the method gets most exciting, mechanistically."
+  },
+  {
+   "t": 14.19,
+   "text": "A transcription factor is a protein that recognizes specific DNA sequences and binds them to control nearby gene expression."
+  },
+  {
+   "t": 23.02,
+   "text": "The set of sequences a TF binds is called its motif — a short DNA pattern, typically six to twelve base pairs, with some positions tightly conserved and others tolerant of variation."
+  },
+  {
+   "t": 36.0,
+   "text": "When you ChIP-seq a TF and look at the resulting peaks, you have a chance to do something that, before ChIP-seq, was very hard: discover the TF's binding motif from its real, in-vivo binding events."
+  },
+  {
+   "t": 49.76,
+   "text": "Here's the workflow."
+  },
+  {
+   "t": 50.98,
+   "text": "You ChIP your TF."
+  },
+  {
+   "t": 52.3,
+   "text": "You call peaks."
+  },
+  {
+   "t": 53.6,
+   "text": "You now have a list of, say, ten thousand peak regions, each a couple hundred base pairs long."
+  },
+  {
+   "t": 60.0,
+   "text": "Inside each peak, somewhere, is presumably the TF's binding site."
+  },
+  {
+   "t": 65.28,
+   "text": "You take all ten thousand peak sequences, you feed them to a motif discovery algorithm — MEME is the classical tool, originally from Tim Bailey's lab, and HOMER is the modern workhorse for ChIP-seq specifically, written by Chris Benner — and the algorithm searches for short sequence patterns that are enriched in your peak set compared to a background."
+  },
+  {
+   "t": 86.94,
+   "text": "The output is a position weight matrix — a probabilistic representation of the motif, showing which bases are preferred at each position."
+  },
+  {
+   "t": 95.55,
+   "text": "This is what people show as those colorful sequence logos, with stacks of letters of different heights at each position."
+  },
+  {
+   "t": 103.26,
+   "text": "If the motif discovery works, you get a clear, biologically interpretable motif — say, for the transcription factor CTCF, you'd discover a roughly 19-base-pair sequence that matches the published CTCF binding site."
+  },
+  {
+   "t": 117.62,
+   "text": "Sometimes you discover motifs that haven't been characterized before, and that's a real biological finding — a new sequence specificity for your TF."
+  },
+  {
+   "t": 127.64,
+   "text": "There's a quality-control aspect to this."
+  },
+  {
+   "t": 130.21,
+   "text": "If you ChIP a TF whose motif is known — say, NF-kB or MYC or CTCF — and you do motif discovery on your peaks, you should recover the known motif as the top enriched pattern."
+  },
+  {
+   "t": 143.99,
+   "text": "If you don't recover it, something is wrong."
+  },
+  {
+   "t": 146.54,
+   "text": "Either your antibody is grabbing the wrong thing, or your peak calls are off, or your TF binds indirectly (we'll get to that)."
+  },
+  {
+   "t": 154.35,
+   "text": "Motif recovery is a sanity check on the whole experiment."
+  },
+  {
+   "t": 158.35,
+   "text": "Now, the indirect binding point."
+  },
+  {
+   "t": 160.89,
+   "text": "Transcription factors don't always bind DNA directly."
+  },
+  {
+   "t": 164.9,
+   "text": "Some bind via cofactors — they associate with another TF that does the actual DNA contact, and the ChIP'd protein is just hanging onto its partner."
+  },
+  {
+   "t": 175.14,
+   "text": "In that case, the peaks correspond to the cofactor's binding sites, not the ChIP'd protein's intrinsic motif."
+  },
+  {
+   "t": 182.72,
+   "text": "The motif discovery will return the cofactor's motif, not the ChIP'd protein's."
+  },
+  {
+   "t": 188.56,
+   "text": "This is informative — it tells you who your TF is partnering with — but it can be confusing if you don't expect it."
+  },
+  {
+   "t": 195.3,
+   "text": "The other big topic in TF ChIP-seq is the relationship between binding and expression."
+  },
+  {
+   "t": 201.4,
+   "text": "The naive expectation is that if a TF binds the promoter of a gene, the TF must be regulating that gene."
+  },
+  {
+   "t": 208.8,
+   "text": "So if you map TF binding by ChIP-seq, you have a candidate target gene list."
+  },
+  {
+   "t": 214.32,
+   "text": "Reality is more complicated."
+  },
+  {
+   "t": 216.9,
+   "text": "Where binding does and doesn't predict expression turns out to be a deep question."
+  },
+  {
+   "t": 222.1,
+   "text": "Many transcription factors bind hundreds of times more sites than they functionally regulate."
+  },
+  {
+   "t": 227.9,
+   "text": "A TF might have ten thousand ChIP-seq peaks, but knock out the TF and see only a few hundred genes change expression."
+  },
+  {
+   "t": 236.55,
+   "text": "The other ninety percent of the binding events are, apparently, biologically inert — the protein is sitting there, but its presence doesn't matter for the gene's expression."
+  },
+  {
+   "t": 246.93,
+   "text": "Why?"
+  },
+  {
+   "t": 247.6,
+   "text": "Several reasons."
+  },
+  {
+   "t": 248.91,
+   "text": "Redundancy — multiple TFs converge on the same regulatory regions, so removing one doesn't change the output."
+  },
+  {
+   "t": 256.48,
+   "text": "Threshold effects — the gene's transcription is saturated or fully repressed regardless of marginal changes in TF occupancy."
+  },
+  {
+   "t": 264.63,
+   "text": "Indirect binding — as discussed, the TF is hanging onto a partner whose function is genuinely required, but the ChIP'd protein itself isn't doing the regulating."
+  },
+  {
+   "t": 275.34,
+   "text": "Local context — the TF might bind a site that's far from any gene it regulates, in an enhancer that loops to a distal target the analysis doesn't connect."
+  },
+  {
+   "t": 285.05,
+   "text": "The implication is that ChIP-seq tells you where a protein is, not what it does."
+  },
+  {
+   "t": 291.0,
+   "text": "To get from binding to function, you need additional experiments — typically perturbation experiments where you delete or deplete the TF and measure transcriptional changes via RNA-seq."
+  },
+  {
+   "t": 302.45,
+   "text": "We'll come back to this integration in Segment 17."
+  }
+ ]
+}

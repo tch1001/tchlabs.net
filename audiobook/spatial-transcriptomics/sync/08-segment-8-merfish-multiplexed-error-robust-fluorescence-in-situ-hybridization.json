@@ -1,0 +1,259 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — MERFISH — multiplexed error-robust fluorescence in situ hybridization",
+ "duration": 422.31,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — MERFISH — multiplexed error-robust fluorescence in situ hybridization"
+  },
+  {
+   "t": 6.34,
+   "text": "If the sequencing-based family is \"capture transcripts on a barcoded slide, then sequence,\" the imaging-based family is \"hybridize fluorescent probes to transcripts in the intact tissue, then image."
+  },
+  {
+   "t": 18.91,
+   "text": "\" No sequencing."
+  },
+  {
+   "t": 20.35,
+   "text": "The reading happens optically, through a microscope, in the tissue itself."
+  },
+  {
+   "t": 25.43,
+   "text": "The transcripts never leave the cells."
+  },
+  {
+   "t": 28.02,
+   "text": "You just look at where they are and what color they're glowing."
+  },
+  {
+   "t": 31.12,
+   "text": "The technique at the foundation of the modern imaging-based family is MERFISH, which stands for \"multiplexed error-robust fluorescence in situ hybridization."
+  },
+  {
+   "t": 40.56,
+   "text": "\" It was published in 2015 by the lab of Xiaowei Zhuang at Harvard."
+  },
+  {
+   "t": 45.49,
+   "text": "Zhuang is a physicist-turned-biologist who had previously developed STORM, a super-resolution microscopy method."
+  },
+  {
+   "t": 52.73,
+   "text": "MERFISH grew out of her group's expertise in single-molecule imaging and their long-standing interest in using fluorescence in situ hybridization — FISH, a method that goes back to the 1980s — to count individual mRNA molecules inside cells."
+  },
+  {
+   "t": 69.42,
+   "text": "The basic idea of FISH, classical FISH, is simple."
+  },
+  {
+   "t": 73.84,
+   "text": "You design a short DNA probe whose sequence is complementary to your transcript of interest."
+  },
+  {
+   "t": 80.41,
+   "text": "You attach a fluorescent dye to the probe."
+  },
+  {
+   "t": 83.04,
+   "text": "You apply the probe to a fixed tissue section, the probe hybridizes specifically to its target transcript, and you image the slide under a fluorescent microscope."
+  },
+  {
+   "t": 93.64,
+   "text": "Wherever the dye lights up, your transcript is present."
+  },
+  {
+   "t": 97.25,
+   "text": "By counting fluorescent dots — each dot being a single mRNA molecule, or sometimes a small cluster of them — you can quantify gene expression at the level of individual molecules in individual cells."
+  },
+  {
+   "t": 110.0,
+   "text": "Classical FISH works beautifully, but only for a handful of genes at a time."
+  },
+  {
+   "t": 114.72,
+   "text": "You're limited by the number of distinct dye colors you can put on probes — typically four, maybe five with careful spectral unmixing."
+  },
+  {
+   "t": 122.91,
+   "text": "So you can image five genes per experiment."
+  },
+  {
+   "t": 125.99,
+   "text": "If you want to look at the spatial expression of a hundred genes, you'd need twenty experiments."
+  },
+  {
+   "t": 131.34,
+   "text": "If you want a thousand genes, two hundred experiments."
+  },
+  {
+   "t": 134.61,
+   "text": "You'd never finish."
+  },
+  {
+   "t": 135.99,
+   "text": "The throughput is impossible."
+  },
+  {
+   "t": 138.3,
+   "text": "The MERFISH insight was a combinatorial barcoding scheme that uses sequential rounds of imaging to encode many more genes than the number of available colors."
+  },
+  {
+   "t": 148.31,
+   "text": "Here's the trick."
+  },
+  {
+   "t": 149.43,
+   "text": "Instead of using a single dye color per gene, MERFISH assigns each gene a binary barcode — a string of zeros and ones, like 011010100111."
+  },
+  {
+   "t": 162.44,
+   "text": "The barcode is, say, sixteen bits long."
+  },
+  {
+   "t": 165.5,
+   "text": "To read out the barcode, you do sixteen rounds of imaging."
+  },
+  {
+   "t": 169.29,
+   "text": "In each round, you hybridize a set of fluorescent probes that target a specific subset of genes — the genes whose barcode has a \"1\" in that round's position."
+  },
+  {
+   "t": 179.4,
+   "text": "After each round, you image the sample, photo-bleach the dyes, strip the probes, and apply the next round's probes."
+  },
+  {
+   "t": 186.9,
+   "text": "The result is that every mRNA dot in the tissue has, across the sixteen rounds, a pattern of fluorescing (1) and not fluorescing (0) — which spells out its sixteen-bit barcode."
+  },
+  {
+   "t": 199.24,
+   "text": "The barcode identifies which gene that dot is."
+  },
+  {
+   "t": 202.57,
+   "text": "A sixteen-bit barcode in principle encodes 65,536 distinct genes."
+  },
+  {
+   "t": 209.54,
+   "text": "In practice, MERFISH uses error-correcting codes — like Hamming codes from information theory — that build redundancy into the barcode so a missed round or a misread round doesn't lead to a wrong gene call."
+  },
+  {
+   "t": 222.36,
+   "text": "With error correction, a sixteen-round MERFISH experiment can confidently identify several hundred to a few thousand genes per panel."
+  },
+  {
+   "t": 231.32,
+   "text": "The original 2015 paper imaged 140 genes in a single human cell line."
+  },
+  {
+   "t": 238.14,
+   "text": "By 2019, the panels had grown to a thousand genes."
+  },
+  {
+   "t": 242.6,
+   "text": "By 2023, several-thousand-gene panels were achievable."
+  },
+  {
+   "t": 246.94,
+   "text": "The resolution is exquisite."
+  },
+  {
+   "t": 249.18,
+   "text": "Each fluorescent dot in a MERFISH image corresponds to a single mRNA molecule, imaged with diffraction-limited microscopy."
+  },
+  {
+   "t": 257.75,
+   "text": "You can see, in a single cell, the spatial distribution of every transcript in your panel — clustered near the nucleus, distributed along axons, concentrated in specific organelles."
+  },
+  {
+   "t": 270.89,
+   "text": "You can see, across a tissue section, exactly which cells express which genes and exactly where each cell sits, with sub-cellular precision."
+  },
+  {
+   "t": 281.08,
+   "text": "The data is a list of molecules, each with X-Y-Z coordinates and a gene identity."
+  },
+  {
+   "t": 287.08,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 288.78,
+   "text": "MERFISH is sequential FISH rounds with binary barcodes."
+  },
+  {
+   "t": 292.58,
+   "text": "Round one: this gene's barcode says \"1,\" so it lights up red — OR not."
+  },
+  {
+   "t": 297.65,
+   "text": "Round two: gene's barcode says \"1,\" lights up green — OR not."
+  },
+  {
+   "t": 302.62,
+   "text": "After sixteen rounds, the combinatorial pattern of lit-up versus dark uniquely identifies which gene each dot was."
+  },
+  {
+   "t": 310.96,
+   "text": "The barcode is read off the molecule's optical history over many rounds."
+  },
+  {
+   "t": 316.19,
+   "text": "The number of genes you can decode grows exponentially in the number of rounds."
+  },
+  {
+   "t": 321.49,
+   "text": "That's the trick."
+  },
+  {
+   "t": 322.63,
+   "text": "The trade-offs of MERFISH are mostly about throughput and target panel."
+  },
+  {
+   "t": 326.75,
+   "text": "You can image only the genes you put on the probe panel — typically a few hundred to a few thousand."
+  },
+  {
+   "t": 332.38,
+   "text": "You cannot, with MERFISH, discover new genes you didn't already know to look for."
+  },
+  {
+   "t": 337.73,
+   "text": "The targets must be pre-selected based on prior knowledge."
+  },
+  {
+   "t": 341.25,
+   "text": "The instrumentation is demanding — a custom microscope, fluidics for delivering probe rounds, image processing software for decoding the barcodes."
+  },
+  {
+   "t": 351.51,
+   "text": "The runtime per sample is long; a single MERFISH experiment may take a day or more of imaging, plus weeks of analysis."
+  },
+  {
+   "t": 360.03,
+   "text": "But what you get is unmatched in any sequencing-based method: single-molecule resolution, sub-cellular localization, precise per-cell gene counts, and a complete spatial map of every transcript in your panel across the tissue."
+  },
+  {
+   "t": 374.35,
+   "text": "For questions that require single-molecule precision — RNA localization within cells, tight spatial colocalization of specific transcripts, single-cell quantification of regulatory genes — MERFISH is the gold standard."
+  },
+  {
+   "t": 389.35,
+   "text": "Zhuang's lab built MERFISH into an open academic platform with detailed protocols."
+  },
+  {
+   "t": 395.43,
+   "text": "A company called Vizgen, founded in 2019 with Zhuang as a co-founder and scientific advisor, has commercialized the method as MERSCOPE — we'll come back to it in Segment 11."
+  },
+  {
+   "t": 407.26,
+   "text": "MERFISH and its variants now compete with other imaging-based methods in a crowded commercial space."
+  },
+  {
+   "t": 413.95,
+   "text": "Let me show you one of the most striking academic methods that pushed the gene-panel size even further, then turn to the commercial platforms."
+  }
+ ]
+}
