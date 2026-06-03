@@ -1,0 +1,267 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Logic gates from transcription factors",
+ "duration": 320.64,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Logic gates from transcription factors"
+  },
+  {
+   "t": 4.05,
+   "text": "Take a step back."
+  },
+  {
+   "t": 5.26,
+   "text": "In digital electronics, the basic building block of computation is the logic gate."
+  },
+  {
+   "t": 10.86,
+   "text": "A logic gate is a device with one or more inputs and one output, where the output is some Boolean function of the inputs."
+  },
+  {
+   "t": 18.99,
+   "text": "AND: output is high only if all inputs are high."
+  },
+  {
+   "t": 22.64,
+   "text": "OR: output is high if any input is high."
+  },
+  {
+   "t": 26.48,
+   "text": "NOT: output is high if input is low, low if input is high."
+  },
+  {
+   "t": 31.09,
+   "text": "NOR: combination of NOT and OR."
+  },
+  {
+   "t": 34.35,
+   "text": "NAND: combination of NOT and AND."
+  },
+  {
+   "t": 37.71,
+   "text": "XOR: output is high if exactly one of the inputs is high."
+  },
+  {
+   "t": 42.06,
+   "text": "With enough of these gates wired together, you can compute anything that is computable."
+  },
+  {
+   "t": 47.09,
+   "text": "Here is the synthetic biology bet, made concrete in the mid 2000s by a handful of labs: the same logic gates can be built out of transcription factors and promoters inside a living cell."
+  },
+  {
+   "t": 59.81,
+   "text": "Not by metaphor."
+  },
+  {
+   "t": 61.1,
+   "text": "By actual physical implementation."
+  },
+  {
+   "t": 63.33,
+   "text": "You build a piece of DNA whose transcription is controlled by the presence or absence of one or more regulator proteins, and the output — the amount of a reporter protein produced — implements a particular Boolean function of those inputs."
+  },
+  {
+   "t": 77.54,
+   "text": "Let me make this concrete with one of the simplest examples: a transcriptional NOT gate."
+  },
+  {
+   "t": 83.09,
+   "text": "Take an inducible promoter that is repressed by a particular repressor protein."
+  },
+  {
+   "t": 88.16,
+   "text": "When the repressor is absent — when the input is low — transcription proceeds, and the output is high."
+  },
+  {
+   "t": 95.14,
+   "text": "When the repressor is present — when the input is high — transcription is blocked, and the output is low."
+  },
+  {
+   "t": 102.05,
+   "text": "Input low, output high."
+  },
+  {
+   "t": 103.85,
+   "text": "Input high, output low."
+  },
+  {
+   "t": 105.64,
+   "text": "That is a NOT gate."
+  },
+  {
+   "t": 106.99,
+   "text": "We just built one with a single promoter and a single repressor."
+  },
+  {
+   "t": 110.49,
+   "text": "An OR gate is also relatively easy."
+  },
+  {
+   "t": 113.29,
+   "text": "Take two inducible promoters, each activated by a different input."
+  },
+  {
+   "t": 117.96,
+   "text": "Put both promoters upstream of the same reporter gene."
+  },
+  {
+   "t": 121.67,
+   "text": "Either promoter, when activated, drives transcription."
+  },
+  {
+   "t": 125.44,
+   "text": "So the reporter goes high when input A is present, or input B is present, or both."
+  },
+  {
+   "t": 131.46,
+   "text": "That is OR."
+  },
+  {
+   "t": 132.79,
+   "text": "An AND gate is harder."
+  },
+  {
+   "t": 134.51,
+   "text": "To build a transcriptional AND, you need a promoter whose activation requires both inputs to be present simultaneously."
+  },
+  {
+   "t": 142.22,
+   "text": "Several molecular implementations have been developed."
+  },
+  {
+   "t": 145.28,
+   "text": "One classic approach uses a split transcription factor — a protein in two pieces, where each piece is produced by a different input, and they have to come together to activate transcription."
+  },
+  {
+   "t": 156.7,
+   "text": "Both inputs present, both pieces present, transcription happens."
+  },
+  {
+   "t": 161.6,
+   "text": "Either input absent, no transcription."
+  },
+  {
+   "t": 164.46,
+   "text": "AND."
+  },
+  {
+   "t": 165.2,
+   "text": "A NAND is an AND followed by a NOT."
+  },
+  {
+   "t": 167.72,
+   "text": "A NOR is an OR followed by a NOT."
+  },
+  {
+   "t": 170.32,
+   "text": "And so on."
+  },
+  {
+   "t": 171.31,
+   "text": "The whole catalog of basic Boolean gates can, in principle, be built from these basic transcriptional motifs."
+  },
+  {
+   "t": 178.54,
+   "text": "XOR — output high if exactly one input is high — is the hardest to build directly, but it can be assembled from combinations of more primitive gates."
+  },
+  {
+   "t": 188.79,
+   "text": "Here is what is wild about all this."
+  },
+  {
+   "t": 191.46,
+   "text": "Once you have logic gates, you have, in principle, the building blocks for any digital computation."
+  },
+  {
+   "t": 197.85,
+   "text": "You can build adders."
+  },
+  {
+   "t": 199.26,
+   "text": "You can build counters."
+  },
+  {
+   "t": 200.74,
+   "text": "You can build state machines."
+  },
+  {
+   "t": 202.66,
+   "text": "The same Church-Turing universality that applies to silicon applies, in principle, to wet biology."
+  },
+  {
+   "t": 210.2,
+   "text": "Now, the speeds are not comparable — a bacterial logic gate operates over minutes to hours, not nanoseconds — and the noise budget is much worse."
+  },
+  {
+   "t": 220.38,
+   "text": "You are not going to be playing video games on a bacterial colony any time soon."
+  },
+  {
+   "t": 224.65,
+   "text": "But for many applications you do not need nanoseconds."
+  },
+  {
+   "t": 228.29,
+   "text": "If you want a cell that produces a drug only when the cell detects both a tumor marker and a hypoxia marker, you do not need fast computation."
+  },
+  {
+   "t": 237.07,
+   "text": "You need correct computation, in the right place, in response to the right combination of signals."
+  },
+  {
+   "t": 243.12,
+   "text": "And transcriptional logic, if you can get it to compose reliably, gives you exactly that."
+  },
+  {
+   "t": 248.35,
+   "text": "But there is a catch, and it is a deep one."
+  },
+  {
+   "t": 251.61,
+   "text": "Logic gates in electronics compose."
+  },
+  {
+   "t": 254.36,
+   "text": "You can plug a million NAND gates together in any topology and they will all work, because every gate has the same voltage levels at input and output, the same impedance, and so on."
+  },
+  {
+   "t": 265.47,
+   "text": "Logic gates in biology, in the early days, did not compose."
+  },
+  {
+   "t": 269.63,
+   "text": "Every new gate involved a new repressor, with a new operator sequence, with a new strength, with a new degradation rate."
+  },
+  {
+   "t": 277.39,
+   "text": "Connecting two gates required matching the output of one to the input of the next, and the matching was almost never perfect."
+  },
+  {
+   "t": 285.59,
+   "text": "Designers spent enormous effort tuning each connection by hand."
+  },
+  {
+   "t": 290.18,
+   "text": "Building a circuit with even four or five gates was a heroic feat, requiring months of optimization."
+  },
+  {
+   "t": 296.93,
+   "text": "The bottleneck was clear."
+  },
+  {
+   "t": 298.74,
+   "text": "The field needed two things: a library of orthogonal, well-characterized transcriptional parts that did not interfere with each other, and a software tool to take a desired logic specification and lay out the DNA."
+  },
+  {
+   "t": 312.13,
+   "text": "Both of those things arrived in the mid-2010s, and the lab that put them together was Christopher Voigt's."
+  },
+  {
+   "t": 318.48,
+   "text": "That is the story of the next segment."
+  }
+ ]
+}

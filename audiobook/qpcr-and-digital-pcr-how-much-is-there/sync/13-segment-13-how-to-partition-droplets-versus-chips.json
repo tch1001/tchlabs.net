@@ -1,0 +1,211 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — How to partition: droplets versus chips",
+ "duration": 338.59,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — How to partition: droplets versus chips"
+  },
+  {
+   "t": 4.59,
+   "text": "The conceptual idea of digital PCR is old."
+  },
+  {
+   "t": 8.53,
+   "text": "It was first proposed in the early 1990s and demonstrated in 1999 by Bert Vogelstein and Kenneth Kinzler in a paper titled, simply, \"Digital PCR."
+  },
+  {
+   "t": 19.12,
+   "text": "\" But the idea was impractical for years."
+  },
+  {
+   "t": 22.69,
+   "text": "To partition a 20-microliter sample into 20,000 reactions of 1 nanoliter each, you need either an array of 20,000 tiny chambers — which is a microfabrication problem — or you need to emulsify the sample into 20,000 tiny droplets in oil — which is a microfluidics problem."
+  },
+  {
+   "t": 41.11,
+   "text": "Both of those technologies were not commercially mature in 2000."
+  },
+  {
+   "t": 45.45,
+   "text": "By 2010, both had matured enough to enable commercial dPCR platforms."
+  },
+  {
+   "t": 51.09,
+   "text": "Today, both approaches coexist, and they each have advantages."
+  },
+  {
+   "t": 55.56,
+   "text": "The two main partitioning strategies are droplet digital PCR and chip-based digital PCR."
+  },
+  {
+   "t": 62.2,
+   "text": "Droplet digital PCR — usually abbreviated ddPCR — partitions the sample into oil-in-water emulsion droplets."
+  },
+  {
+   "t": 71.35,
+   "text": "The most widely used commercial platform is the Bio-Rad QX200, and there are newer instruments — the QX600, Stilla Naica, and others."
+  },
+  {
+   "t": 81.54,
+   "text": "Here's the workflow."
+  },
+  {
+   "t": 82.8,
+   "text": "You set up your reaction — 20 microliters of sample plus master mix plus primers plus TaqMan probes — in a single well."
+  },
+  {
+   "t": 91.45,
+   "text": "The droplet generator combines that 20 microliters with a stream of fluorinated oil at a T-junction in a microfluidic chip."
+  },
+  {
+   "t": 99.39,
+   "text": "As the aqueous phase encounters the oil at the junction, it pinches off into tiny uniform droplets — typically about 1 nanoliter each, giving about 20,000 droplets from the original 20 microliters."
+  },
+  {
+   "t": 112.91,
+   "text": "The droplets are stabilized by surfactants in the oil so they don't merge."
+  },
+  {
+   "t": 117.64,
+   "text": "The 20,000 droplets are transferred to a PCR tube and put into a thermal cycler."
+  },
+  {
+   "t": 123.24,
+   "text": "Standard PCR cycling — 40 cycles, denaturation, annealing, extension — happens in every droplet simultaneously."
+  },
+  {
+   "t": 132.7,
+   "text": "Each droplet is its own tiny independent PCR reaction."
+  },
+  {
+   "t": 136.95,
+   "text": "Droplets that started with at least one target molecule amplify to plateau, accumulating fluorescent product."
+  },
+  {
+   "t": 144.7,
+   "text": "Droplets that started with zero remain dark."
+  },
+  {
+   "t": 147.86,
+   "text": "After cycling, the droplets are pumped single-file through a fluorescence detector — essentially a flow cytometer for droplets — and each droplet is classified as positive or negative based on its fluorescence."
+  },
+  {
+   "t": 160.91,
+   "text": "The instrument counts positives and negatives, applies the Poisson formula, and reports the absolute concentration."
+  },
+  {
+   "t": 168.4,
+   "text": "Chip-based digital PCR uses physical micro-wells etched into a chip."
+  },
+  {
+   "t": 174.01,
+   "text": "The sample is dispensed across the chip surface and flows by capillary action or pressure into thousands of tiny chambers — typically 10,000 to 20,000 wells per chip, with newer designs going to a million wells."
+  },
+  {
+   "t": 188.1,
+   "text": "Each well is its own reaction."
+  },
+  {
+   "t": 190.09,
+   "text": "The chip is sealed with oil to prevent evaporation and cross-talk, then thermocycled, then imaged."
+  },
+  {
+   "t": 196.72,
+   "text": "Brand-name examples include the Fluidigm BioMark, the Thermo Fisher QuantStudio Absolute Q, and the Combinati Absolute Q (now Thermo)."
+  },
+  {
+   "t": 206.36,
+   "text": "Some of these platforms use sub-nanoliter chambers for even higher partition density."
+  },
+  {
+   "t": 211.79,
+   "text": "Chip-based dPCR tends to be more controlled — every partition is exactly the same size, no droplet polydispersity, no shedding or merging during thermocycling."
+  },
+  {
+   "t": 223.45,
+   "text": "Droplet dPCR tends to be more flexible — droplet sizes are slightly variable but the number of droplets is so high that the variability averages out, and the workflow is more straightforward to multiplex."
+  },
+  {
+   "t": 236.74,
+   "text": "In practice, the choice between droplets and chips is increasingly market-driven rather than technical."
+  },
+  {
+   "t": 243.31,
+   "text": "Both work."
+  },
+  {
+   "t": 244.32,
+   "text": "Both give absolute quantification."
+  },
+  {
+   "t": 247.07,
+   "text": "Both have similar precision in their respective sweet spots."
+  },
+  {
+   "t": 250.74,
+   "text": "Different vendors push different platforms; different labs have different installed bases; different clinical assays have been validated on different instruments."
+  },
+  {
+   "t": 259.94,
+   "text": "If you're doing dPCR in a research lab, you probably work with whatever your institution has bought."
+  },
+  {
+   "t": 265.52,
+   "text": "One technical note worth mentioning."
+  },
+  {
+   "t": 267.61,
+   "text": "Multiplexing on dPCR is more constrained than on qPCR, because each droplet — being one tiny reaction — has limited optical channels available."
+  },
+  {
+   "t": 277.78,
+   "text": "Most current dPCR instruments support two to six fluorescent channels, allowing two-color, three-color, or six-color assays."
+  },
+  {
+   "t": 287.04,
+   "text": "New developments — amplitude multiplexing, where multiple probes with the same fluorophore are present at different concentrations and the discrete intensity levels of positive droplets encode which targets are present — have pushed effective multiplexing capacity higher."
+  },
+  {
+   "t": 303.74,
+   "text": "The Naica platform and newer Bio-Rad workflows support effectively six-plex or twelve-plex assays through clever optical encoding."
+  },
+  {
+   "t": 312.32,
+   "text": "So that's how partitioning works in practice."
+  },
+  {
+   "t": 314.9,
+   "text": "You either generate droplets in oil or you spread the sample into wells on a chip."
+  },
+  {
+   "t": 320.18,
+   "text": "The PCR runs in each partition."
+  },
+  {
+   "t": 322.89,
+   "text": "The detector counts positives."
+  },
+  {
+   "t": 324.97,
+   "text": "The math gives you an absolute number."
+  },
+  {
+   "t": 327.15,
+   "text": "There's no Ct value to interpret."
+  },
+  {
+   "t": 329.47,
+   "text": "There's no standard curve to maintain."
+  },
+  {
+   "t": 331.69,
+   "text": "Just count and compute."
+  },
+  {
+   "t": 333.48,
+   "text": "Now let's talk about when this is actually better than qPCR — because it isn't always."
+  }
+ ]
+}

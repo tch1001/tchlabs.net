@@ -1,0 +1,223 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — The cell-line-specific recipe problem",
+ "duration": 350.59,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — The cell-line-specific recipe problem"
+  },
+  {
+   "t": 3.92,
+   "text": "Building on the last segment, I want to spend a little time on what I call the recipe problem."
+  },
+  {
+   "t": 8.34,
+   "text": "Here is the situation."
+  },
+  {
+   "t": 10.18,
+   "text": "You join a lab."
+  },
+  {
+   "t": 11.26,
+   "text": "The lab works on, say, B cell biology."
+  },
+  {
+   "t": 14.31,
+   "text": "The lab's primary experimental system is a particular line — maybe a primary mouse B cell from a particular mouse strain, maybe a particular human B cell lymphoma line."
+  },
+  {
+   "t": 25.02,
+   "text": "You ask your supervisor, \"How do you transfect these cells?"
+  },
+  {
+   "t": 28.82,
+   "text": "\" And the answer comes back in the form of a recipe — a specific reagent, a specific buffer, a specific cell density, a specific incubation time, a specific recovery medium, with a specific note about \"you have to do it on a Monday or Tuesday because the cells are grumpy by Thursday."
+  },
+  {
+   "t": 46.21,
+   "text": "\" The recipe is the result of years of trial and error by previous members of the lab."
+  },
+  {
+   "t": 51.45,
+   "text": "It is not in any paper."
+  },
+  {
+   "t": 53.11,
+   "text": "It is not in any commercial protocol."
+  },
+  {
+   "t": 55.56,
+   "text": "It is tribal knowledge, passed down from senior postdoc to junior grad student over a lab bench, and if the lab loses it, the lab loses the ability to do the experiment."
+  },
+  {
+   "t": 66.16,
+   "text": "This phenomenon — the cell-line-specific recipe — is one of the most underappreciated facts about molecular biology."
+  },
+  {
+   "t": 73.4,
+   "text": "Every lab has a collection of recipes for the specific cells they work on, and those recipes are not transferable to other cell types without re-optimization."
+  },
+  {
+   "t": 82.55,
+   "text": "A B cell lab cannot use its B cell recipe on hematopoietic stem cells."
+  },
+  {
+   "t": 88.35,
+   "text": "A neuron lab cannot use its neuron recipe on T cells."
+  },
+  {
+   "t": 92.92,
+   "text": "A HEK293 lab will be totally surprised when they try to use their HEK293 recipe on K562 and get nothing."
+  },
+  {
+   "t": 102.9,
+   "text": "The analogy I want you to keep."
+  },
+  {
+   "t": 104.92,
+   "text": "What works for HEK doesn't work for K562 doesn't work for primary B cells doesn't work for primary neurons."
+  },
+  {
+   "t": 112.75,
+   "text": "Each cell line is its own kitchen, with its own quirks, and the recipe that produces dinner in one kitchen produces a kitchen fire in another."
+  },
+  {
+   "t": 121.75,
+   "text": "Why is this?"
+  },
+  {
+   "t": 122.85,
+   "text": "Several reasons."
+  },
+  {
+   "t": 124.21,
+   "text": "First, membrane composition varies between cell types."
+  },
+  {
+   "t": 128.29,
+   "text": "The exact mix of phospholipids, cholesterol, and other components in the plasma membrane differs from one cell type to another, and this affects how readily different lipoplexes fuse with the membrane."
+  },
+  {
+   "t": 140.97,
+   "text": "A cationic lipid that fuses efficiently with the membrane of one cell type may not fuse efficiently with another."
+  },
+  {
+   "t": 149.46,
+   "text": "Second, endocytic activity and trafficking vary between cell types."
+  },
+  {
+   "t": 154.62,
+   "text": "Some cells, like macrophages, are professional phagocytes and gobble up everything."
+  },
+  {
+   "t": 160.51,
+   "text": "Some cells, like neurons, are highly polarized and have specialized endocytic mechanisms that don't readily take up lipoplexes."
+  },
+  {
+   "t": 169.21,
+   "text": "Some cells route endocytosed material rapidly to lysosomes for degradation; others let it linger in endosomes long enough for cargo to escape."
+  },
+  {
+   "t": 178.9,
+   "text": "Third, innate immune sensing varies dramatically between cell types."
+  },
+  {
+   "t": 184.1,
+   "text": "Immune cells — macrophages, dendritic cells, B cells — have high baseline expression of nucleic acid sensors and will mount strong inflammatory responses to foreign DNA or RNA."
+  },
+  {
+   "t": 196.12,
+   "text": "Non-immune cells like HEK293 have much weaker responses."
+  },
+  {
+   "t": 201.69,
+   "text": "This matters both because the immune response can kill the cell and because the response shuts down translation, so even if your construct gets in, it doesn't get expressed."
+  },
+  {
+   "t": 211.62,
+   "text": "Fourth, the cell cycle status matters."
+  },
+  {
+   "t": 214.7,
+   "text": "Most chemical transfection methods require cell division to get the DNA into the nucleus — the nuclear envelope dissolves during mitosis, allowing cytoplasmic DNA a chance to be included in the reforming nucleus."
+  },
+  {
+   "t": 228.65,
+   "text": "Non-dividing cells, like primary neurons or quiescent T cells, lack this opportunity and accumulate DNA in the cytoplasm where it is degraded before it can be expressed."
+  },
+  {
+   "t": 240.75,
+   "text": "Fifth, electrical properties matter for electroporation."
+  },
+  {
+   "t": 244.38,
+   "text": "Cell size, membrane capacitance, ion channel composition, and cytoplasmic conductivity all influence how a given electroporation pulse affects the cell."
+  },
+  {
+   "t": 255.14,
+   "text": "The optimal voltage for a small cell is wrong for a large cell."
+  },
+  {
+   "t": 259.23,
+   "text": "The optimal pulse duration for a fragile cell is wrong for a robust cell."
+  },
+  {
+   "t": 264.24,
+   "text": "This is why nucleofection ships dozens of pre-optimized programs, each empirically tuned for a specific cell type."
+  },
+  {
+   "t": 272.33,
+   "text": "The practical advice that follows from all this."
+  },
+  {
+   "t": 275.4,
+   "text": "When you start working on a new cell type, do not assume that any protocol will work."
+  },
+  {
+   "t": 280.42,
+   "text": "Find a published protocol for that exact cell type."
+  },
+  {
+   "t": 283.59,
+   "text": "Find a lab that works with that cell type and ask them for their recipe."
+  },
+  {
+   "t": 287.95,
+   "text": "Order a small range of reagents and run a pilot experiment with proper controls — typically a GFP construct so you can measure transfection efficiency by flow cytometry."
+  },
+  {
+   "t": 298.82,
+   "text": "Vary one parameter at a time, do not try to optimize everything simultaneously."
+  },
+  {
+   "t": 303.67,
+   "text": "Expect the first attempt to fail."
+  },
+  {
+   "t": 306.09,
+   "text": "Expect the third attempt to give you usable data."
+  },
+  {
+   "t": 309.22,
+   "text": "Plan for the optimization to take two to four weeks before you have a working protocol."
+  },
+  {
+   "t": 315.17,
+   "text": "And one more piece of advice that is wildly underappreciated: the lot-to-lot variability in commercial transfection reagents is real, and a reagent that worked beautifully for two years can suddenly stop working when a new lot arrives."
+  },
+  {
+   "t": 329.65,
+   "text": "If your transfection efficiency drops suddenly and nothing else has changed, check the lot number."
+  },
+  {
+   "t": 335.65,
+   "text": "Manufacturers occasionally change formulations or have quality issues."
+  },
+  {
+   "t": 340.56,
+   "text": "Most labs that depend on a specific transfection reagent will, when they find a lot that works particularly well, order a year's supply of that lot and store it carefully."
+  }
+ ]
+}

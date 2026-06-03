@@ -1,0 +1,155 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — The Illumina EPIC array — the cheap, scalable workhorse",
+ "duration": 351.92,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — The Illumina EPIC array — the cheap, scalable workhorse"
+  },
+  {
+   "t": 5.41,
+   "text": "Whole-genome bisulfite sequencing is the gold standard, but it's expensive and computationally heavy."
+  },
+  {
+   "t": 12.16,
+   "text": "RRBS is cheaper but still requires bisulfite chemistry, library prep, and sequencing."
+  },
+  {
+   "t": 19.0,
+   "text": "For most clinical and epidemiological studies — where you want methylation profiles on hundreds or thousands of samples, with results that are reproducible across labs and across years — there's a third option that has dominated population epigenetics for over a decade: the Illumina Infinium methylation array, particularly the EPIC version with about 850,000 probes per sample."
+  },
+  {
+   "t": 41.76,
+   "text": "Let me explain how the array works, because it's a different beast from sequencing-based methods, and the design constraints lead to different strengths and weaknesses."
+  },
+  {
+   "t": 50.79,
+   "text": "The Illumina methylation arrays are based on the same Infinium bead-array technology that Illumina uses for genotyping SNPs."
+  },
+  {
+   "t": 59.6,
+   "text": "The array is a physical chip — a piece of glass or silicon — with hundreds of thousands of microscopic silicon beads attached, each bead carrying many copies of a specific 50-base-pair oligonucleotide probe."
+  },
+  {
+   "t": 73.59,
+   "text": "Each probe is designed to interrogate methylation at one specific CpG site in the human genome."
+  },
+  {
+   "t": 80.09,
+   "text": "You take your DNA, you bisulfite-convert it — yes, you still need bisulfite for the array — and you hybridize the converted DNA to the array."
+  },
+  {
+   "t": 89.46,
+   "text": "Each probe binds the DNA fragment that contains its target CpG."
+  },
+  {
+   "t": 94.42,
+   "text": "Then a single-base extension reaction adds a fluorescently labeled nucleotide at the CpG position."
+  },
+  {
+   "t": 101.58,
+   "text": "If the CpG was methylated, the extended base is a G, lighting up the methylated-color channel."
+  },
+  {
+   "t": 109.81,
+   "text": "If the CpG was unmethylated, the bisulfite converted the C to U, the extended base is an A, lighting up the unmethylated-color channel."
+  },
+  {
+   "t": 120.06,
+   "text": "A scanner reads the fluorescence at each bead, and from the ratio of methylated to unmethylated signal, you get a methylation level — typically expressed as a beta value between 0 and 1."
+  },
+  {
+   "t": 132.74,
+   "text": "The original Infinium HumanMethylation27 array, launched in 2008, covered 27,000 CpGs."
+  },
+  {
+   "t": 142.2,
+   "text": "The HumanMethylation450 (the \"450K\") came in 2011 with 450,000 CpGs, mostly concentrated at CpG islands and promoters."
+  },
+  {
+   "t": 153.96,
+   "text": "The MethylationEPIC, launched in 2016, added another 400,000 probes focused on enhancers and distal regulatory regions, for a total of about 850,000 CpGs per sample."
+  },
+  {
+   "t": 168.2,
+   "text": "The EPIC version 2.0, released in the early 2020s, expanded again to nearly 940,000 CpGs."
+  },
+  {
+   "t": 177.19,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 178.93,
+   "text": "The methylation EPIC array is the cheap mass-market alternative to WGBS — 850,000 hand-picked CpGs measured per sample, covering the most biologically interesting regulatory regions, at a cost of around 100 to 250 dollars per sample including library prep and array processing."
+  },
+  {
+   "t": 199.15,
+   "text": "It's what most clinical, epidemiological, and population studies use, because it gives you reproducible quantitative methylation data on the regions you care about, with throughput and economics that bisulfite sequencing simply cannot match."
+  },
+  {
+   "t": 213.94,
+   "text": "The EPIC array has been the engine of population epigenetics."
+  },
+  {
+   "t": 218.25,
+   "text": "The vast majority of epigenome-wide association studies — EWAS, the methylation equivalent of GWAS — use the EPIC or its predecessors."
+  },
+  {
+   "t": 228.59,
+   "text": "Studies of smoking and methylation, of obesity and methylation, of in utero environmental exposures, of childhood adversity, of psychiatric disease — almost all of them are EPIC studies."
+  },
+  {
+   "t": 242.09,
+   "text": "The TwinsUK cohort, the ARIES cohort, the Atherosclerosis Risk in Communities study, the Framingham Heart Study — many of the most influential methylation studies in epidemiology have been done on EPIC arrays."
+  },
+  {
+   "t": 255.47,
+   "text": "The array also dominates the epigenetic clock space."
+  },
+  {
+   "t": 259.54,
+   "text": "The most famous methylation age estimators — Horvath's clock, Hannum's clock, the GrimAge clock, the PhenoAge clock — were all developed and trained on data from the Illumina methylation arrays."
+  },
+  {
+   "t": 272.0,
+   "text": "We'll come back to those in Segment 16."
+  },
+  {
+   "t": 274.65,
+   "text": "The clinical methylation tests on the market are also largely array-based or targeted-sequencing-based, because of the cost advantage relative to WGBS."
+  },
+  {
+   "t": 284.46,
+   "text": "The trade-offs are clear."
+  },
+  {
+   "t": 286.08,
+   "text": "You only see the CpGs the array designers picked — about 3 percent of all CpGs in the genome, biased toward CpG islands, promoters, and known regulatory regions."
+  },
+  {
+   "t": 298.08,
+   "text": "You can't discover methylation at sites the array doesn't cover."
+  },
+  {
+   "t": 301.96,
+   "text": "You can't see cytosines outside CpG context."
+  },
+  {
+   "t": 305.66,
+   "text": "You can't easily get strand-specific information."
+  },
+  {
+   "t": 308.77,
+   "text": "And the array technology, while reproducible, has its own quirks — batch effects, probe-specific biases, cross-reactive probes, and so on — that have generated a whole ecosystem of normalization methods (BMIQ, SWAN, noob, funnorm, and many others) that bioinformaticians spend a lot of time tuning."
+  },
+  {
+   "t": 329.29,
+   "text": "But for the central use case — quantitative methylation profiling at the regulatorily important CpGs across many samples — the EPIC array is the workhorse, and it will probably remain so for clinical applications even as sequencing-based methods get cheaper."
+  },
+  {
+   "t": 345.54,
+   "text": "It's the technology that took methylation profiling out of the research lab and into the clinic."
+  }
+ ]
+}

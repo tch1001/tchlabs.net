@@ -1,0 +1,159 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — WGBS — whole-genome bisulfite sequencing, the gold standard",
+ "duration": 361.72,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — WGBS — whole-genome bisulfite sequencing, the gold standard"
+  },
+  {
+   "t": 6.4,
+   "text": "The leap from locus-specific bisulfite Sanger sequencing to whole-genome bisulfite sequencing — WGBS — happened in 2008, riding on the back of the newly available Illumina short-read sequencers."
+  },
+  {
+   "t": 20.7,
+   "text": "Two papers, both published in 2008, did the original demonstrations: one from Steve Jacobsen's lab at UCLA, focusing on Arabidopsis thaliana (Cokus et al., Nature, 2008), and the other from Joe Ecker's lab at the Salk Institute, also on Arabidopsis (Lister et al., Cell, 2008)."
+  },
+  {
+   "t": 39.8,
+   "text": "Both papers showed that you could take a whole genome, treat it with bisulfite, sequence the resulting library on Illumina, and produce a base-resolution methylation map covering every cytosine in the genome."
+  },
+  {
+   "t": 52.61,
+   "text": "The Arabidopsis result was a proof of principle on a small genome — about 135 megabases, compared to 3,000 for human."
+  },
+  {
+   "t": 61.51,
+   "text": "The same Salk lab — Lister and Ecker, with Mattick, Edsall, and others — then scaled up to the human genome and published the first human single-base-resolution methylome in 2009."
+  },
+  {
+   "t": 73.99,
+   "text": "We'll spend a whole segment on that paper in Segment 7."
+  },
+  {
+   "t": 77.5,
+   "text": "But let me first describe WGBS as a method, because the principles apply across organisms."
+  },
+  {
+   "t": 84.65,
+   "text": "The WGBS workflow looks like this."
+  },
+  {
+   "t": 87.66,
+   "text": "Step one: fragment your genomic DNA, by sonication or enzymatic digestion, to a target size of a few hundred base pairs — similar to a standard Illumina library."
+  },
+  {
+   "t": 100.24,
+   "text": "Step two: end-repair and adapter-ligate, using methylated adapters — this is a subtle but critical detail."
+  },
+  {
+   "t": 108.55,
+   "text": "The adapters themselves contain cytosines, and you don't want those cytosines to get converted by bisulfite, because that would mess up the priming and amplification steps."
+  },
+  {
+   "t": 118.64,
+   "text": "So the adapters are synthesized with 5-methylcytosine in place of unmethylated C, making them bisulfite-resistant."
+  },
+  {
+   "t": 127.17,
+   "text": "Step three: bisulfite-treat the adapter-ligated library, applying the harsh chemistry to the entire sample."
+  },
+  {
+   "t": 134.97,
+   "text": "Step four: PCR-amplify the surviving fragments, using primers that bind the methylated, bisulfite-resistant adapters."
+  },
+  {
+   "t": 143.95,
+   "text": "Step five: sequence on Illumina, generally with paired-end short reads."
+  },
+  {
+   "t": 149.1,
+   "text": "Step six: align the reads with a bisulfite-aware aligner, like Bismark, that knows how to handle the three-base alignment problem and can map reads to either the original strand or its bisulfite-converted complement."
+  },
+  {
+   "t": 163.09,
+   "text": "Step seven: at every cytosine position in the reference genome, count the number of reads showing a C (methylated) versus the number showing a T (unmethylated), and compute a methylation level — typically a fraction between 0 and 1 — for that site."
+  },
+  {
+   "t": 181.72,
+   "text": "Done correctly, the output of WGBS is a value at every single one of the roughly 28 million CpG sites in the human genome — and, if you care, at every CHG and CHH site too, where H is A, T, or C and these contexts are mostly unmethylated in mammals but matter in plants."
+  },
+  {
+   "t": 201.29,
+   "text": "The dataset is rich."
+  },
+  {
+   "t": 203.28,
+   "text": "You have base-resolution methylation across the whole genome, with quantitative methylation levels."
+  },
+  {
+   "t": 209.69,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 211.43,
+   "text": "WGBS is the gold-standard whole-genome methylation map — comprehensive, base-resolution, every C accounted for."
+  },
+  {
+   "t": 220.35,
+   "text": "It's expensive: at typical coverage of 30x per strand, you're sequencing 30 times the genome, which is roughly 90 to 100 gigabases of bisulfite-treated reads per sample."
+  },
+  {
+   "t": 232.79,
+   "text": "It's the methylation equivalent of whole-genome sequencing: nothing missed, nothing assumed, every position observed directly."
+  },
+  {
+   "t": 241.78,
+   "text": "There are costs."
+  },
+  {
+   "t": 242.96,
+   "text": "The chemistry is harsh, as we discussed, so the libraries are biased toward shorter fragments and have lower complexity than untreated libraries."
+  },
+  {
+   "t": 253.0,
+   "text": "The three-base sequence space means about 20 to 30 percent of reads don't map uniquely and get discarded."
+  },
+  {
+   "t": 259.71,
+   "text": "The required coverage is high because you need enough reads at every position to call methylation status with confidence — and at 30x average coverage across the genome, you still have plenty of CpG sites with low or zero coverage by chance."
+  },
+  {
+   "t": 275.19,
+   "text": "The data volume is enormous: a single human WGBS dataset is a few hundred gigabytes of raw reads, takes hundreds of CPU-hours to align, and requires substantial computational infrastructure to analyze at scale."
+  },
+  {
+   "t": 289.71,
+   "text": "The cost per sample, even today in 2026, is several hundred to a couple thousand dollars depending on the platform and the depth — much more expensive than ordinary whole-genome sequencing because you're burning sequencing capacity on reads with reduced information content."
+  },
+  {
+   "t": 306.35,
+   "text": "For research projects with a handful of samples and serious funding, WGBS is the right answer."
+  },
+  {
+   "t": 313.36,
+   "text": "For population-scale studies with thousands or tens of thousands of samples, it's economically prohibitive."
+  },
+  {
+   "t": 320.72,
+   "text": "That economic constraint is what created the demand for the cheaper methods we'll meet next — RRBS, and especially the methylation arrays."
+  },
+  {
+   "t": 329.85,
+   "text": "But before we get to those cost-reduction strategies, hold the WGBS picture."
+  },
+  {
+   "t": 335.35,
+   "text": "Take your DNA, fragment it, ligate methylated adapters, bisulfite-convert, amplify, sequence at thirty-fold coverage, align with a bisulfite-aware aligner, and compute a methylation fraction at every cytosine in the genome."
+  },
+  {
+   "t": 351.8,
+   "text": "That's the canonical methylation experiment."
+  },
+  {
+   "t": 354.7,
+   "text": "Everything that follows is either a cheaper subset of WGBS, or a gentler chemical alternative to it."
+  }
+ ]
+}

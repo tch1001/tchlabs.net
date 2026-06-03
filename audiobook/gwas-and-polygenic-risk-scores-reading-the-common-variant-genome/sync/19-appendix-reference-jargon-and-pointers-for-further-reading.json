@@ -1,0 +1,419 @@
+{
+ "n": 19,
+ "title": "APPENDIX — Reference, jargon, and pointers for further reading",
+ "duration": 564.51,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX — Reference, jargon, and pointers for further reading"
+  },
+  {
+   "t": 4.35,
+   "text": "Okay."
+  },
+  {
+   "t": 5.12,
+   "text": "Coffee break is over and class is technically done, but if you are sticking around, this last section is an appendix — the kind of compact reference card I wish I had been handed in graduate school."
+  },
+  {
+   "t": 16.34,
+   "text": "We will run through key numbers and the canonical jargon, with a few pointers for where to go next."
+  },
+  {
+   "t": 21.95,
+   "text": "Numbers worth memorizing."
+  },
+  {
+   "t": 23.55,
+   "text": "Genome-wide significance threshold: 5 × 10⁻⁸."
+  },
+  {
+   "t": 28.15,
+   "text": "This is the negative-log-ten value 7.3 on a Manhattan plot's y-axis."
+  },
+  {
+   "t": 34.2,
+   "text": "Number of common SNPs in human genome: about 10 million (MAF > 1%)."
+  },
+  {
+   "t": 40.96,
+   "text": "Number of effectively independent common-variant tests: about 1 million."
+  },
+  {
+   "t": 45.95,
+   "text": "Number of SNPs on a typical Illumina or Affymetrix array: 500,000 to 2 million."
+  },
+  {
+   "t": 52.55,
+   "text": "Number of imputed SNPs per individual after using 1000 Genomes or TOPMed reference panels: 10 million to 50 million."
+  },
+  {
+   "t": 61.99,
+   "text": "Number of cataloged GWAS associations in 2026: over 250,000."
+  },
+  {
+   "t": 69.1,
+   "text": "Typical odds ratio for a GWAS hit: 1.05 to 1.30."
+  },
+  {
+   "t": 75.39,
+   "text": "Typical effect size for a height SNP: 1 to 2 millimeters per allele."
+  },
+  {
+   "t": 80.75,
+   "text": "Heritability of height: ~80%; explained by current PRS: ~40%."
+  },
+  {
+   "t": 87.21,
+   "text": "PRS performance loss in African ancestry relative to European: ~3x."
+  },
+  {
+   "t": 93.1,
+   "text": "UK Biobank participants: 500,000."
+  },
+  {
+   "t": 96.53,
+   "text": "All of Us target: 1,000,000."
+  },
+  {
+   "t": 98.79,
+   "text": "Cost of genotyping one person on a chip: $30 to $100."
+  },
+  {
+   "t": 104.85,
+   "text": "Cost of whole-genome sequencing in 2026: ~$200."
+  },
+  {
+   "t": 110.0,
+   "text": "Key jargon, in roughly the order it appears in the literature."
+  },
+  {
+   "t": 113.84,
+   "text": "SNP — single nucleotide polymorphism, a single-letter genetic variant."
+  },
+  {
+   "t": 119.66,
+   "text": "MAF — minor allele frequency, frequency of the rarer of two alleles in the population."
+  },
+  {
+   "t": 126.86,
+   "text": "GWAS — genome-wide association study."
+  },
+  {
+   "t": 130.86,
+   "text": "HapMap — the 2002–2009 catalog of common variation in reference populations."
+  },
+  {
+   "t": 137.7,
+   "text": "1000 Genomes — the 2008–2015 sequencing project that produced a more complete catalog."
+  },
+  {
+   "t": 146.35,
+   "text": "Imputation — statistical inference of un-genotyped variants from genotyped ones using a reference panel."
+  },
+  {
+   "t": 153.71,
+   "text": "LD — linkage disequilibrium, the non-random co-occurrence of nearby alleles."
+  },
+  {
+   "t": 160.0,
+   "text": "Tag SNP — a genotyped SNP chosen to capture variation at correlated nearby SNPs."
+  },
+  {
+   "t": 168.16,
+   "text": "Causal variant — the actual variant that biologically influences the trait (typically unknown after a GWAS)."
+  },
+  {
+   "t": 176.15,
+   "text": "Fine-mapping — the process of identifying which variant in an LD block is causal."
+  },
+  {
+   "t": 181.76,
+   "text": "eQTL — expression quantitative trait locus, a variant affecting gene expression."
+  },
+  {
+   "t": 188.32,
+   "text": "Colocalization — the inference that the same variant drives both a GWAS signal and an eQTL."
+  },
+  {
+   "t": 195.21,
+   "text": "Manhattan plot — chromosomes on x-axis, negative log ten p on y-axis."
+  },
+  {
+   "t": 201.66,
+   "text": "QQ plot — quantile-quantile plot comparing observed vs expected p-value distributions."
+  },
+  {
+   "t": 208.21,
+   "text": "PCA / principal components — used to correct for population structure in GWAS regression."
+  },
+  {
+   "t": 215.22,
+   "text": "Polygenic risk score (PRS) — weighted sum of risk alleles across many GWAS-identified SNPs."
+  },
+  {
+   "t": 222.72,
+   "text": "Polygenic score (PGS) — synonymous with PRS; sometimes preferred for non-disease traits."
+  },
+  {
+   "t": 229.5,
+   "text": "Heritability (h²) — proportion of phenotypic variance attributable to genetic variance."
+  },
+  {
+   "t": 236.61,
+   "text": "SNP-heritability — heritability captured by common SNPs (often estimated by GCTA / LDSC)."
+  },
+  {
+   "t": 245.41,
+   "text": "Missing heritability — the gap between twin-based heritability and SNP-explained variance."
+  },
+  {
+   "t": 251.57,
+   "text": "Mendelian randomization (MR) — using genetic variants as instruments for causal inference."
+  },
+  {
+   "t": 257.56,
+   "text": "Burden test — gene-level test aggregating rare variants for association."
+  },
+  {
+   "t": 262.95,
+   "text": "SKAT — sequence kernel association test, another gene-level rare-variant method."
+  },
+  {
+   "t": 269.29,
+   "text": "Bonferroni correction — multiple-testing correction by dividing α by number of tests."
+  },
+  {
+   "t": 275.05,
+   "text": "Power — probability of detecting a true effect at a given sample size and effect size."
+  },
+  {
+   "t": 281.29,
+   "text": "GWAS Catalog — the NHGRI-EBI database of published associations."
+  },
+  {
+   "t": 287.4,
+   "text": "UK Biobank — 500,000-person British cohort with genotype, phenotype, and EHR linkage."
+  },
+  {
+   "t": 295.27,
+   "text": "All of Us — million-person U."
+  },
+  {
+   "t": 297.56,
+   "text": "S."
+  },
+  {
+   "t": 298.39,
+   "text": "NIH program with diversity emphasis."
+  },
+  {
+   "t": 301.36,
+   "text": "Recommended further reading, organized by depth."
+  },
+  {
+   "t": 304.91,
+   "text": "For a one-paper-each overview of GWAS and PRS, read: Klein et al. 2005 — the first AMD GWAS — the origin moment."
+  },
+  {
+   "t": 315.79,
+   "text": "The Wellcome Trust Case Control Consortium 2007 paper — the seven-disease GWAS that put the design on the map."
+  },
+  {
+   "t": 323.74,
+   "text": "Visscher et al. 2017, \"10 years of GWAS discovery: biology, function, and translation,\" AJHG — the canonical decadal review."
+  },
+  {
+   "t": 335.56,
+   "text": "Khera et al. 2018, \"Genome-wide polygenic scores for five common diseases identify individuals with risk equivalent to monogenic mutations,\" Nature Genetics — the paper that established polygenic-equivalent-to-monogenic risk."
+  },
+  {
+   "t": 351.48,
+   "text": "Martin et al. 2019, \"Clinical use of current polygenic risk scores may exacerbate health disparities,\" Nature Genetics — the equity paper."
+  },
+  {
+   "t": 361.32,
+   "text": "Davey Smith and Hemani 2014, \"Mendelian randomization: genetic anchors for causal inference in epidemiological studies,\" Human Molecular Genetics — the MR primer."
+  },
+  {
+   "t": 374.23,
+   "text": "For textbook coverage: Bush and Moore's \"Genome-Wide Association Studies\" chapter in any human-genetics textbook."
+  },
+  {
+   "t": 382.32,
+   "text": "The relevant chapters in Speed's Statistical Methods in Human Genetics for the math."
+  },
+  {
+   "t": 387.39,
+   "text": "For software: PLINK (the dominant GWAS analysis package, originated by Shaun Purcell)."
+  },
+  {
+   "t": 394.38,
+   "text": "BOLT-LMM and REGENIE for large-cohort linear mixed model GWAS."
+  },
+  {
+   "t": 400.11,
+   "text": "LDpred-2 and PRS-CS for modern PRS construction."
+  },
+  {
+   "t": 404.89,
+   "text": "TwoSampleMR for Mendelian randomization in R."
+  },
+  {
+   "t": 408.56,
+   "text": "For data: The NHGRI-EBI GWAS Catalog at ebi.ac.uk/gwas."
+  },
+  {
+   "t": 416.43,
+   "text": "The PGS Catalog at pgscatalog.org for published polygenic scores."
+  },
+  {
+   "t": 422.21,
+   "text": "UK Biobank Research Analysis Platform for access to UKB data."
+  },
+  {
+   "t": 426.97,
+   "text": "gnomAD for population allele frequencies and constraint metrics."
+  },
+  {
+   "t": 432.06,
+   "text": "GTEx for tissue-specific eQTL data."
+  },
+  {
+   "t": 435.66,
+   "text": "Common misconceptions to avoid."
+  },
+  {
+   "t": 437.87,
+   "text": "One."
+  },
+  {
+   "t": 438.67,
+   "text": "GWAS hits are not causal variants."
+  },
+  {
+   "t": 441.93,
+   "text": "They are tags in LD with causal variants."
+  },
+  {
+   "t": 444.89,
+   "text": "Fine-mapping needed."
+  },
+  {
+   "t": 446.21,
+   "text": "Two."
+  },
+  {
+   "t": 446.89,
+   "text": "A high PRS does not mean you will get the disease."
+  },
+  {
+   "t": 450.19,
+   "text": "It means your risk is shifted relative to average."
+  },
+  {
+   "t": 453.71,
+   "text": "Environment, behavior, and chance still dominate for most outcomes."
+  },
+  {
+   "t": 458.11,
+   "text": "Three."
+  },
+  {
+   "t": 458.92,
+   "text": "PRS and ancestry."
+  },
+  {
+   "t": 460.96,
+   "text": "A PRS calibrated on Europeans is not a valid clinical tool in non-Europeans without recalibration."
+  },
+  {
+   "t": 468.01,
+   "text": "Do not deploy across ancestries without validation."
+  },
+  {
+   "t": 471.33,
+   "text": "Four."
+  },
+  {
+   "t": 472.16,
+   "text": "Heritability is not destiny."
+  },
+  {
+   "t": 474.73,
+   "text": "A trait being eighty percent heritable does not mean genetics determines eighty percent of an individual's value; it means that across the population, eighty percent of the variance is genetic."
+  },
+  {
+   "t": 486.43,
+   "text": "The interpretation is statistical, not individual."
+  },
+  {
+   "t": 490.39,
+   "text": "Five."
+  },
+  {
+   "t": 491.27,
+   "text": "Missing heritability is largely solved."
+  },
+  {
+   "t": 494.47,
+   "text": "The gap is mostly small-effect common variants plus some rare-variant contribution plus probable overestimation of twin-based heritability."
+  },
+  {
+   "t": 504.74,
+   "text": "It is not a fundamental crisis of method."
+  },
+  {
+   "t": 507.22,
+   "text": "Six."
+  },
+  {
+   "t": 508.14,
+   "text": "GWAS does not \"explain\" a gene; it implicates a locus."
+  },
+  {
+   "t": 513.34,
+   "text": "The biology comes from follow-up, not from the GWAS hit alone."
+  },
+  {
+   "t": 517.67,
+   "text": "One last analogy to close on, because it ties the whole lecture together."
+  },
+  {
+   "t": 522.53,
+   "text": "A GWAS is a fishing trip."
+  },
+  {
+   "t": 525.07,
+   "text": "A PRS is the catch you bring home, weighed and sorted and summed."
+  },
+  {
+   "t": 529.83,
+   "text": "The Manhattan plot is your fishing log — the towers are where the big fish were."
+  },
+  {
+   "t": 534.72,
+   "text": "The equity problem is that you have been fishing in one part of the sea for twenty years, and the catch from other parts is going to be different — the fish are different, the LD nets do not work the same way, and recalibration is required."
+  },
+  {
+   "t": 547.83,
+   "text": "The frontier is multi-ancestry boats, deep-learning sonar, and the question of whether to fish in every river in the country and give everyone their catch on a clinical report by 2035."
+  },
+  {
+   "t": 559.21,
+   "text": "That is the field."
+  },
+  {
+   "t": 560.39,
+   "text": "That is where you are walking into."
+  },
+  {
+   "t": 562.33,
+   "text": "Good luck."
+  },
+  {
+   "t": 563.14,
+   "text": "Class dismissed."
+  }
+ ]
+}

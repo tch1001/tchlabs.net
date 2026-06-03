@@ -1,0 +1,175 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Sensitivity, Poisson, and counting molecules",
+ "duration": 294.85,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Sensitivity, Poisson, and counting molecules"
+  },
+  {
+   "t": 5.72,
+   "text": "Before we get to ctDNA, I want to come back one more time to the Poisson math and make sure you have it in your bones, because the entire interpretation of dPCR results requires it."
+  },
+  {
+   "t": 15.78,
+   "text": "Suppose you run a dPCR experiment and observe 1,000 positive partitions out of 20,000 total."
+  },
+  {
+   "t": 22.71,
+   "text": "What's your concentration?"
+  },
+  {
+   "t": 24.19,
+   "text": "K/N = 1000/20000 = 0.05."
+  },
+  {
+   "t": 30.68,
+   "text": "So the fraction positive is 5%."
+  },
+  {
+   "t": 33.84,
+   "text": "The probability that any one partition is positive is 1 − e^(−λ), and if 5% are positive, then 95% are negative, so e^(−λ) = 0.95, so λ = −ln(0.95) ≈ 0.0513."
+  },
+  {
+   "t": 55.05,
+   "text": "That λ is the average number of target molecules per partition."
+  },
+  {
+   "t": 59.36,
+   "text": "There were 20,000 partitions, so the total number of target molecules in your sample is roughly 20,000 × 0.0513 = 1,026 molecules."
+  },
+  {
+   "t": 71.83,
+   "text": "If your sample was 20 microliters, that's about 51 molecules per microliter."
+  },
+  {
+   "t": 77.64,
+   "text": "Notice that for small λ, λ ≈ K/N, with a small correction."
+  },
+  {
+   "t": 84.65,
+   "text": "At λ = 0.05, the correction is about 2.5% (1,026 vs. 1,000)."
+  },
+  {
+   "t": 93.56,
+   "text": "At λ = 0.2, the correction is about 10%."
+  },
+  {
+   "t": 98.33,
+   "text": "At λ = 1, the correction is about 60% — half your data is positive, and the Poisson correction is doing real work."
+  },
+  {
+   "t": 107.62,
+   "text": "This is why the optimal partition count for a given expected concentration is the one that puts most partitions in the regime where positives and negatives both occur in usable numbers."
+  },
+  {
+   "t": 118.72,
+   "text": "The precision of dPCR is fundamentally limited by counting statistics."
+  },
+  {
+   "t": 123.8,
+   "text": "If you observe K positives out of N total, the standard deviation of K is approximately √K (for Poisson processes), so the relative precision is 1/√K."
+  },
+  {
+   "t": 136.56,
+   "text": "To get 1% precision, you need 10,000 positive partitions."
+  },
+  {
+   "t": 141.72,
+   "text": "To get 10% precision, you need 100 positives."
+  },
+  {
+   "t": 145.93,
+   "text": "With 20,000 total partitions and 5% positive, you have 1,000 positives, so your precision is roughly 1/√1000 ≈ 3%."
+  },
+  {
+   "t": 157.55,
+   "text": "That's a meaningful improvement over qPCR's 25% precision."
+  },
+  {
+   "t": 162.78,
+   "text": "And if you go to a million-partition platform — the QuantStudio Absolute Q has effective resolutions around that — and you have 50,000 positives, your precision goes to roughly 1/√50000 ≈ 0.45%."
+  },
+  {
+   "t": 178.82,
+   "text": "Sub-percent absolute quantification, simply by counting."
+  },
+  {
+   "t": 182.8,
+   "text": "This precision is why dPCR is increasingly the reference method against which other techniques are calibrated."
+  },
+  {
+   "t": 189.68,
+   "text": "NIST and the WHO are using dPCR to quantify their reference materials."
+  },
+  {
+   "t": 194.94,
+   "text": "Vendors of qPCR standards calibrate against dPCR."
+  },
+  {
+   "t": 199.66,
+   "text": "When the World Health Organization establishes a new international standard for a viral target, they typically value-assign it by dPCR."
+  },
+  {
+   "t": 208.14,
+   "text": "The whole field is converging on dPCR as the gold standard for absolute molecule counting, with qPCR positioned as the routine workhorse calibrated against the gold standard."
+  },
+  {
+   "t": 219.51,
+   "text": "A few practical caveats."
+  },
+  {
+   "t": 221.5,
+   "text": "dPCR doesn't fix bad chemistry."
+  },
+  {
+   "t": 224.16,
+   "text": "If your primers are poor and produce primer-dimers, those dimers contaminate every partition equally, and you may get partitions that score positive because of dimer amplification rather than real target."
+  },
+  {
+   "t": 236.03,
+   "text": "Probes are usually used in dPCR specifically because they suppress this artifact."
+  },
+  {
+   "t": 241.8,
+   "text": "Quality control still matters."
+  },
+  {
+   "t": 244.53,
+   "text": "Partitioning is imperfect."
+  },
+  {
+   "t": 246.53,
+   "text": "Some droplets are slightly larger or smaller than others."
+  },
+  {
+   "t": 250.38,
+   "text": "Some chip wells fail to fill or fill twice."
+  },
+  {
+   "t": 253.95,
+   "text": "Modern platforms detect and exclude these artifacts, but the workflow assumes uniform partitioning, and gross failures can bias the count."
+  },
+  {
+   "t": 262.86,
+   "text": "Carry-over and cross-talk."
+  },
+  {
+   "t": 264.86,
+   "text": "If a positive partition is adjacent to a negative one and the seal between them leaks during thermocycling, you can get false-positive signal in the neighbor."
+  },
+  {
+   "t": 273.99,
+   "text": "Modern droplet stabilizers and oil chemistries are designed to suppress this, but it's a continuing engineering challenge."
+  },
+  {
+   "t": 281.45,
+   "text": "These caveats notwithstanding, dPCR has become, in well-implemented systems, the most precise nucleic acid quantification technology available."
+  },
+  {
+   "t": 291.88,
+   "text": "Now let's see what that precision enables clinically."
+  }
+ ]
+}

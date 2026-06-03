@@ -1,0 +1,211 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Cellular memory: recombinase-based recorders",
+ "duration": 361.3,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Cellular memory: recombinase-based recorders"
+  },
+  {
+   "t": 4.7,
+   "text": "Welcome back."
+  },
+  {
+   "t": 5.71,
+   "text": "Let us pick up with memory, and I want to be careful here, because we have already met one kind of cellular memory — the toggle switch from Segment 2."
+  },
+  {
+   "t": 14.12,
+   "text": "That was memory implemented in protein concentrations."
+  },
+  {
+   "t": 17.85,
+   "text": "Two stable states, maintained by the ongoing dynamics of mutual repression."
+  },
+  {
+   "t": 23.07,
+   "text": "Real memory, but dynamic memory — it persists only as long as the cell keeps running the circuit."
+  },
+  {
+   "t": 29.57,
+   "text": "Stop the dynamics, dilute the proteins, the memory is gone."
+  },
+  {
+   "t": 34.31,
+   "text": "It is the cellular equivalent of DRAM in a computer: refreshed constantly, lost when the power goes off."
+  },
+  {
+   "t": 41.0,
+   "text": "There is another flavor of memory in cells, and it is fundamentally different."
+  },
+  {
+   "t": 46.02,
+   "text": "It is permanent memory, written into DNA itself, persisting across cell divisions."
+  },
+  {
+   "t": 52.3,
+   "text": "The molecular tool that enables this is a class of enzymes called recombinases."
+  },
+  {
+   "t": 58.21,
+   "text": "A recombinase is a protein that recognizes a particular short DNA sequence — called a recognition site — and performs a specific cut-and-paste operation on the DNA between two such sites."
+  },
+  {
+   "t": 70.62,
+   "text": "The most famous example is Cre recombinase, which acts on a pair of sites called loxP sites."
+  },
+  {
+   "t": 77.24,
+   "text": "If you have two loxP sites in the same orientation flanking a piece of DNA, Cre will recognize them, cut the DNA between them, and excise that piece as a circle."
+  },
+  {
+   "t": 88.5,
+   "text": "If you have two loxP sites in opposite orientations, Cre will recognize them and flip the piece of DNA between them."
+  },
+  {
+   "t": 96.29,
+   "text": "The flip is permanent."
+  },
+  {
+   "t": 98.03,
+   "text": "Until you bring Cre back, the DNA sits there in its new orientation."
+  },
+  {
+   "t": 104.04,
+   "text": "The flipped orientation persists through cell divisions, because once the DNA is rearranged, the new arrangement is copied along with everything else."
+  },
+  {
+   "t": 113.47,
+   "text": "That is the memory primitive."
+  },
+  {
+   "t": 115.3,
+   "text": "You take a piece of DNA, you flank it with recombinase sites, you arrange it so the gene downstream is either off (if the DNA is in orientation A) or on (if the DNA is in orientation B), and you control the recombinase."
+  },
+  {
+   "t": 130.7,
+   "text": "When you provide the recombinase — say, by turning on its expression in response to a particular input — it flips the DNA."
+  },
+  {
+   "t": 139.01,
+   "text": "The flip persists."
+  },
+  {
+   "t": 140.44,
+   "text": "The cell now remembers that it received that input, forever."
+  },
+  {
+   "t": 144.22,
+   "text": "The analogy I want you to carry: recombinase memory is writing once in DNA."
+  },
+  {
+   "t": 150.12,
+   "text": "Flip a sequence permanently with a recombinase, the cell remembers a state through generations."
+  },
+  {
+   "t": 157.07,
+   "text": "In the early 2010s, a series of papers from Drew Endy's lab and Tim Lu's lab at MIT and from Jay Keasling's lab at Berkeley showed that you could chain multiple recombinases together to build genetic state machines."
+  },
+  {
+   "t": 170.69,
+   "text": "Two recombinases give you four possible orientation states of the DNA — recombinase 1 flips one region, recombinase 2 flips another, and the combination of inputs over time leaves a unique pattern in the DNA."
+  },
+  {
+   "t": 185.75,
+   "text": "Three recombinases give you eight states, and so on."
+  },
+  {
+   "t": 189.18,
+   "text": "You can build circuits that record sequences of events — not just whether a signal occurred, but in what order signals occurred."
+  },
+  {
+   "t": 196.35,
+   "text": "A cell that has been exposed to input A first and then input B ends up in a different DNA state than a cell that has been exposed to B first and then A."
+  },
+  {
+   "t": 205.86,
+   "text": "The cell has recorded temporal information into its genome."
+  },
+  {
+   "t": 209.43,
+   "text": "This idea grew into a small subfield, with names like SCRIBE — Synthetic Cellular Recorders Integrating Biological Events — and CAMERA — CRISPR-mediated Analog Multi-Event Recording Apparatus."
+  },
+  {
+   "t": 222.82,
+   "text": "SCRIBE, from Tim Lu's group, used recombinases and reverse transcriptases to write information into the bacterial genome in response to environmental signals."
+  },
+  {
+   "t": 233.95,
+   "text": "The cell, over time, accumulated a kind of molecular ledger of what it had experienced."
+  },
+  {
+   "t": 239.85,
+   "text": "CAMERA, from David Liu's group, used CRISPR base editors to incrementally modify a DNA tag in response to inputs, with the level of modification recording the dose or duration of exposure."
+  },
+  {
+   "t": 252.6,
+   "text": "Both systems treated the genome as a kind of write-once tape — a place to store, durably, what the cell had been through."
+  },
+  {
+   "t": 260.4,
+   "text": "Why does this matter?"
+  },
+  {
+   "t": 261.55,
+   "text": "A few reasons."
+  },
+  {
+   "t": 262.84,
+   "text": "First, scientifically, it is exhilarating to be able to read off a cell's history from its DNA."
+  },
+  {
+   "t": 269.81,
+   "text": "You can take a population of engineered cells, expose them to various conditions in a complex environment — say, a mouse gut — recover them later, sequence their DNA, and reconstruct what happened to each cell during its time in the environment."
+  },
+  {
+   "t": 284.66,
+   "text": "That is a tool of immense power for studying biology in places we cannot easily look directly."
+  },
+  {
+   "t": 291.45,
+   "text": "Second, technologically, recombinase-based memory underlies a growing class of cell-based therapies and diagnostics."
+  },
+  {
+   "t": 299.76,
+   "text": "Imagine a cell that, when introduced into a tumor, samples the tumor microenvironment, flips its DNA in response to particular signals, and then expresses a therapeutic protein when the right combination of signals has occurred."
+  },
+  {
+   "t": 313.79,
+   "text": "You could recover the cell later and read out its memory to confirm what it sensed."
+  },
+  {
+   "t": 318.77,
+   "text": "Some of the early CAR-T-style cell therapies that incorporate logic gates are starting to use recombinase memory in this way."
+  },
+  {
+   "t": 327.36,
+   "text": "Third, conceptually, recombinase memory closes the loop with the toggle switch."
+  },
+  {
+   "t": 333.32,
+   "text": "The toggle switch is volatile bistable memory in protein concentrations."
+  },
+  {
+   "t": 338.37,
+   "text": "Recombinase memory is durable bistable memory in DNA itself."
+  },
+  {
+   "t": 343.81,
+   "text": "Together they give the synthetic biologist a memory hierarchy roughly analogous to a computer's: DRAM in the toggle switch, flash storage in the recombinase array."
+  },
+  {
+   "t": 354.76,
+   "text": "Different time scales, different reliabilities, different applications."
+  },
+  {
+   "t": 359.04,
+   "text": "The discipline now has both."
+  }
+ ]
+}

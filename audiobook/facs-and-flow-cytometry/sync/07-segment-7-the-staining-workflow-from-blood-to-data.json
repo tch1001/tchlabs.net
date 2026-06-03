@@ -1,0 +1,327 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The staining workflow: from blood to data",
+ "duration": 489.75,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The staining workflow: from blood to data"
+  },
+  {
+   "t": 4.6,
+   "text": "So let's walk through, end to end, what a real flow cytometry experiment looks like."
+  },
+  {
+   "t": 10.35,
+   "text": "Concrete."
+  },
+  {
+   "t": 11.31,
+   "text": "Step by step."
+  },
+  {
+   "t": 12.53,
+   "text": "The kind of thing a first-year graduate student in an immunology lab learns to do in their first month and then does, more or less, every week of their training career."
+  },
+  {
+   "t": 22.27,
+   "text": "You want to ask, let's say, the following question: in a sample of mouse spleen, what fraction of the T cells are CD4 helpers, what fraction are CD8 killers, and within the CD4 helpers, how many are regulatory T cells — also known as Tregs?"
+  },
+  {
+   "t": 38.84,
+   "text": "Here is what you do."
+  },
+  {
+   "t": 39.98,
+   "text": "Step one: get a single-cell suspension."
+  },
+  {
+   "t": 43.01,
+   "text": "Flow cytometry needs cells in fluid, not cells stuck together in tissue."
+  },
+  {
+   "t": 48.08,
+   "text": "So you start by taking the mouse spleen, gently mashing it through a fine wire mesh into buffer, lysing the red blood cells with a brief hypotonic shock, washing the cells, and ending up with a tube of free-floating splenocytes in maybe a milliliter of buffer."
+  },
+  {
+   "t": 63.34,
+   "text": "The cells need to be viable, separated, and not clumped."
+  },
+  {
+   "t": 67.11,
+   "text": "If they're clumped, you filter them through a nylon mesh strainer to break the clumps."
+  },
+  {
+   "t": 71.94,
+   "text": "Single-cell suspension is non-negotiable; clumps clog the cytometer and ruin the data."
+  },
+  {
+   "t": 77.83,
+   "text": "Step two: count and aliquot."
+  },
+  {
+   "t": 80.75,
+   "text": "Count the cells with a hemocytometer or an automated counter."
+  },
+  {
+   "t": 84.49,
+   "text": "You want, typically, about a million cells per tube, give or take."
+  },
+  {
+   "t": 88.99,
+   "text": "Pipette the right volume into a small tube — usually one of the 5 milliliter round-bottom polystyrene \"FACS tubes\" that have been standard equipment since the 1970s."
+  },
+  {
+   "t": 100.38,
+   "text": "Step three: block Fc receptors."
+  },
+  {
+   "t": 103.56,
+   "text": "Many immune cells, especially myeloid cells, have Fc receptors on their surface — proteins designed to grab the Fc end of any antibody floating around."
+  },
+  {
+   "t": 114.45,
+   "text": "If you don't block these, your fluorescent antibodies will stick non-specifically to Fc receptors and you'll get false positive signal."
+  },
+  {
+   "t": 122.6,
+   "text": "So you preincubate the cells with a blocking antibody — in mice, anti-CD16/32, called \"Fc block\" — for a few minutes before adding your real staining cocktail."
+  },
+  {
+   "t": 134.35,
+   "text": "Step four: add the antibody cocktail."
+  },
+  {
+   "t": 137.19,
+   "text": "Here is the heart of the technique."
+  },
+  {
+   "t": 139.53,
+   "text": "You take a tube of cells and add a cocktail of fluorochrome-labeled antibodies, each one targeting a different protein, each one carrying a different color."
+  },
+  {
+   "t": 149.5,
+   "text": "For our hypothetical experiment, the cocktail might be: anti-CD3 in FITC (to mark all T cells), anti-CD4 in PE (to mark helpers), anti-CD8 in APC (to mark killers), anti-CD25 in PE-Cy7 (a Treg marker), anti-CD127 in BV421 (low on Tregs, so we'll gate on CD25-high, CD127-low)."
+  },
+  {
+   "t": 177.41,
+   "text": "That's a five-color panel — a modest panel by modern standards."
+  },
+  {
+   "t": 181.68,
+   "text": "Add the cocktail."
+  },
+  {
+   "t": 182.81,
+   "text": "Mix."
+  },
+  {
+   "t": 183.68,
+   "text": "Incubate on ice in the dark for twenty to thirty minutes."
+  },
+  {
+   "t": 187.4,
+   "text": "The \"on ice\" matters because warmth makes antibody-bound surface markers internalize, throwing off your measurements."
+  },
+  {
+   "t": 195.04,
+   "text": "The \"in the dark\" matters because fluorochromes bleach under room light."
+  },
+  {
+   "t": 199.72,
+   "text": "Step five: wash."
+  },
+  {
+   "t": 201.34,
+   "text": "After incubation, you wash the cells twice with fresh buffer — centrifuge them down, dump the supernatant containing unbound antibody, resuspend in fresh buffer."
+  },
+  {
+   "t": 212.38,
+   "text": "This removes the excess antibody that didn't bind to anything."
+  },
+  {
+   "t": 216.2,
+   "text": "If you don't wash, that free antibody floats around in solution and gives you background fluorescence everywhere."
+  },
+  {
+   "t": 223.38,
+   "text": "Step six: add a viability dye."
+  },
+  {
+   "t": 225.97,
+   "text": "Dead cells stick antibodies non-specifically and give garbage signal."
+  },
+  {
+   "t": 230.78,
+   "text": "So you add a small-molecule dye like DAPI or 7-AAD or a fixable viability dye that only stains dead cells (because it can only get into cells with broken membranes)."
+  },
+  {
+   "t": 242.65,
+   "text": "When you analyze, you gate out the dye-positive dead cells."
+  },
+  {
+   "t": 246.64,
+   "text": "Step seven: run on the cytometer."
+  },
+  {
+   "t": 249.47,
+   "text": "Take your tube of stained cells to the instrument."
+  },
+  {
+   "t": 252.71,
+   "text": "Mount the tube."
+  },
+  {
+   "t": 253.71,
+   "text": "Run it."
+  },
+  {
+   "t": 254.41,
+   "text": "The cells stream through the lasers, you collect data on every event, you store the file."
+  },
+  {
+   "t": 260.15,
+   "text": "A million cells takes a few minutes."
+  },
+  {
+   "t": 262.64,
+   "text": "Step eight: analyze."
+  },
+  {
+   "t": 264.7,
+   "text": "Open the data file in a program like FlowJo or FCS Express."
+  },
+  {
+   "t": 269.89,
+   "text": "Draw your gates."
+  },
+  {
+   "t": 271.09,
+   "text": "First, FSC-vs-SSC to gate lymphocytes."
+  },
+  {
+   "t": 275.3,
+   "text": "Then FSC-H-vs-A to gate singlets."
+  },
+  {
+   "t": 278.74,
+   "text": "Then live cells by gating out the viability-dye-positive cells."
+  },
+  {
+   "t": 283.66,
+   "text": "Then CD3-positive to identify T cells."
+  },
+  {
+   "t": 288.37,
+   "text": "Then within CD3+, plot CD4 versus CD8 to identify helper and killer subsets."
+  },
+  {
+   "t": 296.26,
+   "text": "Then within CD4+ helpers, plot CD25 versus CD127 to identify the Treg population."
+  },
+  {
+   "t": 304.9,
+   "text": "Count cells in each gate."
+  },
+  {
+   "t": 306.6,
+   "text": "Compute frequencies."
+  },
+  {
+   "t": 308.31,
+   "text": "Make plots."
+  },
+  {
+   "t": 309.47,
+   "text": "Write a paper."
+  },
+  {
+   "t": 310.48,
+   "text": "That, in nine steps, is essentially every flow cytometry experiment ever done."
+  },
+  {
+   "t": 315.91,
+   "text": "Wash cells, add antibody cocktail of five to thirty antibodies, each in a different color, incubate, wash, analyze."
+  },
+  {
+   "t": 324.58,
+   "text": "The cocktail might have five colors or twenty-five colors, the cells might come from blood or tumor or culture, the markers might be classic immunology surface proteins or novel ones you discovered yesterday — but the workflow is always essentially this."
+  },
+  {
+   "t": 340.12,
+   "text": "One variant of the workflow worth calling out: intracellular staining."
+  },
+  {
+   "t": 345.01,
+   "text": "Many of the most interesting molecules are inside cells, not on the surface."
+  },
+  {
+   "t": 350.25,
+   "text": "Cytokines — small signaling proteins like interferon-gamma, IL-2, TNF-alpha — accumulate in the cytoplasm of activated T cells."
+  },
+  {
+   "t": 360.53,
+   "text": "Transcription factors like FOXP3, the master regulator of regulatory T cells, sit in the nucleus."
+  },
+  {
+   "t": 368.61,
+   "text": "To detect these, you can't just add antibody to live cells, because the antibody won't get inside the cell — antibodies are large proteins that can't cross intact cell membranes."
+  },
+  {
+   "t": 379.75,
+   "text": "The solution is a two-step process called Fix/Perm, short for fix and permeabilize."
+  },
+  {
+   "t": 386.42,
+   "text": "After surface staining, you fix the cells with formaldehyde — which crosslinks the proteins and stabilizes everything in place."
+  },
+  {
+   "t": 394.78,
+   "text": "Then you permeabilize the cells with a detergent like saponin, which punches little holes in the cell membrane just big enough for antibodies to crawl through."
+  },
+  {
+   "t": 403.41,
+   "text": "Now you add a second cocktail of antibodies targeted at your intracellular antigens — anti-IFN-gamma in BV605, anti-FOXP3 in PE — and incubate, wash, and run."
+  },
+  {
+   "t": 417.28,
+   "text": "The intracellular antibodies enter through the detergent holes, bind their targets inside the cell, and give you a measurement of intracellular protein on top of the surface measurements you already have."
+  },
+  {
+   "t": 429.16,
+   "text": "A common workflow: stimulate T cells in culture with a peptide, add a transport inhibitor called brefeldin A to trap the cytokines inside instead of letting them be secreted, then Fix/Perm and stain for the cytokines along with the surface T cell markers."
+  },
+  {
+   "t": 446.23,
+   "text": "The output: \"in this peptide-stimulated culture, four percent of CD4 T cells made interferon-gamma, two percent made IL-2, and one percent made both."
+  },
+  {
+   "t": 457.48,
+   "text": "\" That's the readout."
+  },
+  {
+   "t": 458.68,
+   "text": "That's what tells you, quantitatively, how many cells responded to the antigen — and the technique scales to thousands of conditions and millions of cells with the same workflow."
+  },
+  {
+   "t": 469.18,
+   "text": "So now we have the workflow."
+  },
+  {
+   "t": 470.91,
+   "text": "But everything we've described relies on being able to separate the signal of one fluorochrome from another, and as I hinted earlier, that's harder than it sounds."
+  },
+  {
+   "t": 481.1,
+   "text": "The fluorochromes spectrally overlap, and the math to clean up that overlap is its own subject."
+  },
+  {
+   "t": 487.3,
+   "text": "That's compensation."
+  },
+  {
+   "t": 488.7,
+   "text": "Let's get into it."
+  }
+ ]
+}

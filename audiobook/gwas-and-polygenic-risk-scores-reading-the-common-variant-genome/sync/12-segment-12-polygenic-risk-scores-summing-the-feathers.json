@@ -1,0 +1,215 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Polygenic risk scores: summing the feathers",
+ "duration": 309.41,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Polygenic risk scores: summing the feathers"
+  },
+  {
+   "t": 4.67,
+   "text": "Alright."
+  },
+  {
+   "t": 5.46,
+   "text": "Let us build a polygenic risk score from scratch."
+  },
+  {
+   "t": 8.56,
+   "text": "You have completed a GWAS."
+  },
+  {
+   "t": 10.94,
+   "text": "You have thousands of SNPs, each with a measured effect size — call it beta-i for SNP i."
+  },
+  {
+   "t": 18.15,
+   "text": "You have a new individual, person X, whose genome you have just genotyped."
+  },
+  {
+   "t": 23.32,
+   "text": "For each SNP in your GWAS list, you record how many copies of the effect allele person X carries — zero, one, or two — call that g-i."
+  },
+  {
+   "t": 34.11,
+   "text": "The polygenic risk score for person X is, in its simplest form, the sum across all SNPs of beta-i times g-i."
+  },
+  {
+   "t": 42.42,
+   "text": "PRS-X equals the sum over i of beta-i times g-i."
+  },
+  {
+   "t": 46.46,
+   "text": "That is it."
+  },
+  {
+   "t": 47.39,
+   "text": "That is the whole formula."
+  },
+  {
+   "t": 48.92,
+   "text": "You walk through every variant in your GWAS hit list."
+  },
+  {
+   "t": 52.56,
+   "text": "For each one, you multiply its effect size by the number of risk alleles person X carries."
+  },
+  {
+   "t": 58.71,
+   "text": "You sum across the genome."
+  },
+  {
+   "t": 60.29,
+   "text": "You get one number per person."
+  },
+  {
+   "t": 62.15,
+   "text": "That number is their polygenic risk score."
+  },
+  {
+   "t": 64.76,
+   "text": "Now, in practice, there are several refinements that matter."
+  },
+  {
+   "t": 68.99,
+   "text": "First, how many SNPs do you include?"
+  },
+  {
+   "t": 71.84,
+   "text": "The naive choice is to use only genome-wide-significant hits — SNPs that passed the five-times-ten-to-the-minus-eight threshold."
+  },
+  {
+   "t": 80.21,
+   "text": "But you can do better by including more SNPs at progressively relaxed thresholds — five times ten to the minus six, one times ten to the minus five, and so on."
+  },
+  {
+   "t": 91.08,
+   "text": "The reason this works is that even SNPs that did not reach significance often still carry real signal; they were just slightly underpowered."
+  },
+  {
+   "t": 100.04,
+   "text": "Including them adds noise but also adds signal, and empirically, for most traits, optimal PRS uses tens of thousands or hundreds of thousands of SNPs at much more permissive thresholds."
+  },
+  {
+   "t": 113.45,
+   "text": "Second, how do you handle LD?"
+  },
+  {
+   "t": 115.71,
+   "text": "If two SNPs are in tight LD, they are giving you the same information."
+  },
+  {
+   "t": 120.92,
+   "text": "Including both in the PRS double-counts."
+  },
+  {
+   "t": 124.03,
+   "text": "So PRS construction usually includes an LD pruning or LD clumping step — for each region of the genome, keep only the lead SNP from each LD block."
+  },
+  {
+   "t": 135.29,
+   "text": "Modern methods, like LDpred and PRS-CS, instead use sophisticated Bayesian models that adjust effect-size estimates for LD without strict pruning, often producing better-performing scores."
+  },
+  {
+   "t": 148.18,
+   "text": "Third, how do you weight each SNP?"
+  },
+  {
+   "t": 151.19,
+   "text": "The raw GWAS effect size is one option, but it is noisy."
+  },
+  {
+   "t": 155.43,
+   "text": "Bayesian shrinkage methods regularize the effect estimates — shrinking small ones toward zero, leaving large ones less perturbed — and this empirically improves PRS performance, especially when the GWAS sample is smaller."
+  },
+  {
+   "t": 170.45,
+   "text": "Fourth, how do you validate?"
+  },
+  {
+   "t": 172.28,
+   "text": "PRS performance must be measured on an independent sample — different from the one the GWAS was done on — because of overfitting concerns."
+  },
+  {
+   "t": 181.68,
+   "text": "The standard metric is the variance explained, R-squared for continuous traits, or area under the ROC curve, AUC, for disease."
+  },
+  {
+   "t": 191.04,
+   "text": "A PRS with AUC of zero-point-five is useless."
+  },
+  {
+   "t": 195.56,
+   "text": "AUC of zero-point-six is mild."
+  },
+  {
+   "t": 198.3,
+   "text": "AUC of zero-point-seven and up is starting to be clinically interesting."
+  },
+  {
+   "t": 203.31,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 205.09,
+   "text": "A polygenic risk score is the per-person risk number — the weighted sum of risk alleles across the genome."
+  },
+  {
+   "t": 211.39,
+   "text": "Each SNP is a tiny vote."
+  },
+  {
+   "t": 213.94,
+   "text": "Some votes are weighted heavily — large effect sizes — and some barely count."
+  },
+  {
+   "t": 219.54,
+   "text": "The PRS aggregates the votes into one number."
+  },
+  {
+   "t": 223.07,
+   "text": "People with a lot of risk alleles, weighted by their effects, get a high score."
+  },
+  {
+   "t": 227.96,
+   "text": "People with few get a low score."
+  },
+  {
+   "t": 230.38,
+   "text": "The distribution of PRS values across a population is approximately bell-shaped — most people in the middle, with a long tail at each end."
+  },
+  {
+   "t": 238.82,
+   "text": "The promise of PRS is that the high end of that distribution is genuinely enriched for disease."
+  },
+  {
+   "t": 245.14,
+   "text": "For coronary artery disease, individuals in the top one percent of the European PRS distribution have something like three to four times the lifetime risk of CAD compared to average."
+  },
+  {
+   "t": 256.94,
+   "text": "That is roughly the same effect as carrying a familial hypercholesterolemia mutation — a Mendelian, single-gene cause of early heart disease — except that the polygenic version is much more common."
+  },
+  {
+   "t": 269.9,
+   "text": "By PRS criteria, about ten times more people have polygenic CAD risk than have monogenic CAD risk."
+  },
+  {
+   "t": 277.24,
+   "text": "That is the case for PRS as a clinical tool."
+  },
+  {
+   "t": 280.59,
+   "text": "It identifies a substantial chunk of the population at elevated risk who would not be flagged by traditional risk factors alone."
+  },
+  {
+   "t": 288.35,
+   "text": "The case against PRS, which we will get to in Segment 16, is that it works much better in some populations than others, and that the elevated risk it identifies is often hard to act on clinically."
+  },
+  {
+   "t": 300.79,
+   "text": "But the math is clean: sum the feathers, and the top of the distribution is where most of the cardiovascular events will eventually concentrate."
+  }
+ ]
+}

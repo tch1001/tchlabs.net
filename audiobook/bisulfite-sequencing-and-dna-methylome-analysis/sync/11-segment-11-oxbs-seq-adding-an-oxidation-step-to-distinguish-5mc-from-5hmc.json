@@ -1,0 +1,143 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — oxBS-seq — adding an oxidation step to distinguish 5mC from 5hmC",
+ "duration": 305.29,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — oxBS-seq — adding an oxidation step to distinguish 5mC from 5hmC"
+  },
+  {
+   "t": 8.1,
+   "text": "The technique called oxidative bisulfite sequencing, or oxBS-seq, was published in 2012 by Shankar Balasubramanian's lab at Cambridge — yes, the same Balasubramanian who, with Klenerman, invented Illumina sequencing back in the late 1990s."
+  },
+  {
+   "t": 25.23,
+   "text": "The Balasubramanian lab in the 2010s pivoted hard into the chemistry of modified cytosine bases, and oxBS-seq was one of their most influential contributions to the methylation field."
+  },
+  {
+   "t": 37.48,
+   "text": "The chemistry is beautiful in its simplicity."
+  },
+  {
+   "t": 40.75,
+   "text": "The problem with standard bisulfite is that both 5mC and 5hmC resist conversion to U, so you can't tell them apart."
+  },
+  {
+   "t": 49.34,
+   "text": "The oxBS solution is to add a chemical pre-treatment, using potassium perruthenate (KRuO4), which selectively oxidizes 5hmC to 5-formylcytosine (5fC) without touching 5mC."
+  },
+  {
+   "t": 63.84,
+   "text": "The crucial property of 5fC is that, unlike 5hmC, it does react with bisulfite and gets converted to U."
+  },
+  {
+   "t": 71.78,
+   "text": "So after the oxidation step, the cytosines look like this: unmethylated C still converts to U; 5hmC has been oxidized to 5fC and now also converts to U; only 5mC survives intact and reads as C in the sequencing output."
+  },
+  {
+   "t": 89.44,
+   "text": "So you run two parallel experiments on aliquots of the same sample."
+  },
+  {
+   "t": 94.06,
+   "text": "Experiment A: standard bisulfite sequencing."
+  },
+  {
+   "t": 98.09,
+   "text": "Both 5mC and 5hmC survive; the readout is \"5mC plus 5hmC\" at every position."
+  },
+  {
+   "t": 106.64,
+   "text": "Experiment B: oxidative bisulfite sequencing."
+  },
+  {
+   "t": 111.09,
+   "text": "Only 5mC survives; the readout is \"5mC alone\" at every position."
+  },
+  {
+   "t": 117.17,
+   "text": "Subtract Experiment B from Experiment A at each cytosine, and you get the 5hmC signal at that position."
+  },
+  {
+   "t": 124.88,
+   "text": "Two assays, one subtraction, full discrimination between the two marks at base resolution across the entire genome."
+  },
+  {
+   "t": 132.55,
+   "text": "The oxBS workflow is otherwise identical to standard WGBS — fragment, ligate methylated adapters, oxidize, bisulfite-convert, amplify, sequence, align."
+  },
+  {
+   "t": 145.49,
+   "text": "The only addition is the oxidation step before bisulfite, and that step takes about an hour of additional bench work."
+  },
+  {
+   "t": 152.69,
+   "text": "The downstream pipeline is the same."
+  },
+  {
+   "t": 155.1,
+   "text": "oxBS-seq became, for a few years in the mid-2010s, the standard method for studying 5hmC genomically — particularly in brain tissue, where 5hmC is abundant, and in early embryonic development, where 5hmC accumulates as part of the reprogramming process."
+  },
+  {
+   "t": 173.97,
+   "text": "The Balasubramanian lab and others used oxBS to publish the first base-resolution 5hmC maps of human and mouse tissues, opening up the molecular biology of hydroxymethylation as a measurable mark."
+  },
+  {
+   "t": 188.89,
+   "text": "But oxBS inherits the underlying limitations of bisulfite."
+  },
+  {
+   "t": 193.78,
+   "text": "It still damages DNA — in fact, the additional oxidation step adds to the damage."
+  },
+  {
+   "t": 199.7,
+   "text": "It still requires high input."
+  },
+  {
+   "t": 201.69,
+   "text": "It still suffers from three-base alignment difficulties."
+  },
+  {
+   "t": 205.46,
+   "text": "And because you have to run two parallel experiments, your sequencing cost roughly doubles per sample."
+  },
+  {
+   "t": 212.34,
+   "text": "For applications where you need to discriminate 5mC and 5hmC and you have plenty of input, oxBS is a clean solution."
+  },
+  {
+   "t": 220.72,
+   "text": "For low-input or damage-sensitive applications, it doesn't help with the fundamental problem."
+  },
+  {
+   "t": 226.4,
+   "text": "There's a related technique called TAB-seq — TET-assisted bisulfite sequencing — that takes the opposite approach."
+  },
+  {
+   "t": 234.36,
+   "text": "Where oxBS oxidizes 5hmC further so it converts with bisulfite, TAB-seq uses the TET enzymes to oxidize 5mC all the way to 5-carboxylcytosine (which converts) while 5hmC is first protected by chemical glucosylation."
+  },
+  {
+   "t": 251.93,
+   "text": "After bisulfite, only 5hmC survives as a C in the readout — you get a direct 5hmC-specific map without needing a subtraction."
+  },
+  {
+   "t": 262.27,
+   "text": "TAB-seq, published by Chuan He's lab at the University of Chicago in 2012, is the complementary tool to oxBS-seq: oxBS reads 5mC alone; TAB-seq reads 5hmC alone; combine either with standard bisulfite (which reads both) and you have a complete picture."
+  },
+  {
+   "t": 281.06,
+   "text": "These oxidative and enzymatic bisulfite variants opened up the discrimination problem but didn't solve the damage problem."
+  },
+  {
+   "t": 288.62,
+   "text": "For the damage problem, you needed to escape from bisulfite chemistry entirely."
+  },
+  {
+   "t": 294.07,
+   "text": "The two techniques that did so — TAPS and EM-seq — emerged in 2019, almost simultaneously, and they are reshaping the methylation field."
+  }
+ ]
+}

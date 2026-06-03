@@ -1,0 +1,195 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Verification loops — using AlphaFold to score designs",
+ "duration": 266.21,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Verification loops — using AlphaFold to score designs"
+  },
+  {
+   "t": 5.49,
+   "text": "I want to spend a focused segment on something I've mentioned in passing — the way AlphaFold has become a verification tool for de novo design — because the loop is more important than people realize, and it tells you something deep about how the modern pipeline works."
+  },
+  {
+   "t": 20.06,
+   "text": "Here's the setup."
+  },
+  {
+   "t": 21.21,
+   "text": "Suppose you generate a candidate de novo design."
+  },
+  {
+   "t": 24.56,
+   "text": "Backbone from RFdiffusion, sequence from ProteinMPNN."
+  },
+  {
+   "t": 28.65,
+   "text": "You'd like to know, before you spend money and weeks expressing this protein in a lab, whether the design is actually going to fold."
+  },
+  {
+   "t": 35.75,
+   "text": "You could try to predict that by physics — but physics-based folding simulations are slow and not always accurate."
+  },
+  {
+   "t": 42.38,
+   "text": "What you'd really like is a fast, reliable, structure-prediction model that takes your candidate sequence and tells you what shape it folds into."
+  },
+  {
+   "t": 50.51,
+   "text": "Which is exactly what AlphaFold is."
+  },
+  {
+   "t": 52.77,
+   "text": "So you take your candidate sequence, you predict its structure with AlphaFold, and you compare AlphaFold's prediction to the backbone you originally designed."
+  },
+  {
+   "t": 61.39,
+   "text": "If they agree — meaning, AlphaFold thinks the sequence folds to the structure you wanted — then your design is plausible."
+  },
+  {
+   "t": 68.78,
+   "text": "If they disagree — AlphaFold thinks your sequence folds to something else — then your design is rejected."
+  },
+  {
+   "t": 75.3,
+   "text": "This is the AlphaFold filter, and it has become the single most important step in the de novo design pipeline, after generation itself."
+  },
+  {
+   "t": 83.94,
+   "text": "Without it, your designs go to the lab with a high failure rate."
+  },
+  {
+   "t": 87.97,
+   "text": "With it, you can reject ninety percent of bad designs at zero cost, and only the good ones make it to expression."
+  },
+  {
+   "t": 95.29,
+   "text": "There's something philosophically interesting going on here."
+  },
+  {
+   "t": 98.3,
+   "text": "AlphaFold was originally built to solve the forward problem — predict structures from sequences."
+  },
+  {
+   "t": 104.72,
+   "text": "In the de novo design pipeline, it's being used in a totally different mode: not to discover unknown structures, but to verify that designed structures match designed sequences."
+  },
+  {
+   "t": 115.88,
+   "text": "It's a confidence-checking tool, deployed against the outputs of other models."
+  },
+  {
+   "t": 120.62,
+   "text": "This is a pattern that you see more broadly in AI: you build a model for task A, and then someone realizes the same model is the perfect verifier for task B, and the model gets a second life."
+  },
+  {
+   "t": 132.49,
+   "text": "AlphaFold for verification is one of the most consequential examples of this in biology."
+  },
+  {
+   "t": 138.66,
+   "text": "Without AlphaFold as a verifier, the modern de novo design pipeline would not work nearly as well as it does."
+  },
+  {
+   "t": 145.96,
+   "text": "The success of RFdiffusion and ProteinMPNN is, in part, the success of having a free, fast, accurate filter on the outputs."
+  },
+  {
+   "t": 155.45,
+   "text": "The verification loop has another layer."
+  },
+  {
+   "t": 158.04,
+   "text": "Once you've made designs and tested them in the lab, you can use the lab results to refine the design pipeline itself."
+  },
+  {
+   "t": 165.04,
+   "text": "Designs that worked become positive training examples; designs that failed become negative examples."
+  },
+  {
+   "t": 171.12,
+   "text": "You can fine-tune the design models on your own results, making them better for your specific problem."
+  },
+  {
+   "t": 176.7,
+   "text": "This is active learning applied to protein design, and it's how design labs accumulate proprietary capability over time."
+  },
+  {
+   "t": 184.0,
+   "text": "The shared models — RFdiffusion, ProteinMPNN, AlphaFold — are open source."
+  },
+  {
+   "t": 190.53,
+   "text": "The fine-tuned versions, trained on the lab's own experimental data, are not."
+  },
+  {
+   "t": 195.66,
+   "text": "That's part of how startups in this space build moats."
+  },
+  {
+   "t": 198.96,
+   "text": "There's a deeper philosophical point too."
+  },
+  {
+   "t": 201.45,
+   "text": "Notice the symmetry of what we're doing."
+  },
+  {
+   "t": 203.9,
+   "text": "AlphaFold solves the forward problem; we use it to verify solutions to the inverse problem."
+  },
+  {
+   "t": 209.64,
+   "text": "We use forward solutions as filters for inverse solutions."
+  },
+  {
+   "t": 213.81,
+   "text": "The two problems are not separate; they're conjugate."
+  },
+  {
+   "t": 217.07,
+   "text": "Every advance in one helps the other."
+  },
+  {
+   "t": 220.01,
+   "text": "AlphaFold's improvement on the forward problem makes the filter better, which makes the inverse pipeline better, which lets us design more proteins, which can be added to AlphaFold's training data, which improves the forward model again."
+  },
+  {
+   "t": 232.93,
+   "text": "It's a virtuous cycle, and we're early in it."
+  },
+  {
+   "t": 235.78,
+   "text": "The whole field, by 2026, looks like one big design-and-verify loop, with AI models on every side."
+  },
+  {
+   "t": 242.85,
+   "text": "Each model is good enough that, used correctly, it makes the next step easier."
+  },
+  {
+   "t": 248.14,
+   "text": "The cumulative effect is that de novo protein design has, in five years, gone from \"barely possible for specialists with massive compute\" to \"a routine workflow that grad students can run on a laptop."
+  },
+  {
+   "t": 260.59,
+   "text": "\""
+  },
+  {
+   "t": 260.79,
+   "text": "Which brings us to the frontier."
+  },
+  {
+   "t": 262.76,
+   "text": "What's next?"
+  },
+  {
+   "t": 263.81,
+   "text": "Where is this going?"
+  },
+  {
+   "t": 264.98,
+   "text": "Let's finish there."
+  }
+ ]
+}

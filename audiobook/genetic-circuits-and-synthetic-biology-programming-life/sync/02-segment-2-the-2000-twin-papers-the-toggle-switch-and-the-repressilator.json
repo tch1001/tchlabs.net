@@ -1,0 +1,407 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — The 2000 twin papers: the toggle switch and the repressilator",
+ "duration": 451.48,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — The 2000 twin papers: the toggle switch and the repressilator"
+  },
+  {
+   "t": 6.25,
+   "text": "So picture the world of January 2000."
+  },
+  {
+   "t": 9.19,
+   "text": "The human genome project is close to completion."
+  },
+  {
+   "t": 12.41,
+   "text": "Molecular biology, as a field, has spent fifty years working out how cells work — how DNA is read, how proteins are made, how networks of genes regulate each other."
+  },
+  {
+   "t": 23.76,
+   "text": "We have a parts list."
+  },
+  {
+   "t": 25.15,
+   "text": "We have schematics of natural regulatory networks."
+  },
+  {
+   "t": 28.43,
+   "text": "What we have never done, as a community, is build a new one from scratch."
+  },
+  {
+   "t": 33.42,
+   "text": "Nobody has sat down and said, I am going to take a few well-characterized regulatory parts, wire them up in a configuration that does not exist in nature, put them into a cell, and see if my design behaves the way I predicted on paper."
+  },
+  {
+   "t": 47.16,
+   "text": "That changes in two papers, published in the same issue of Nature, in January 2000."
+  },
+  {
+   "t": 53.35,
+   "text": "One comes from a young assistant professor at Boston University named James Collins, with his graduate student Timothy Gardner as first author and Charles Cantor as senior co-author."
+  },
+  {
+   "t": 64.64,
+   "text": "The other comes from a postdoc named Michael Elowitz working with Stanislas Leibler at Princeton."
+  },
+  {
+   "t": 70.24,
+   "text": "The papers are not coordinated."
+  },
+  {
+   "t": 72.11,
+   "text": "They come from different labs, with different motivations, and they appear next to each other almost by coincidence."
+  },
+  {
+   "t": 79.25,
+   "text": "But together they announce a field."
+  },
+  {
+   "t": 81.29,
+   "text": "Let me take them one at a time."
+  },
+  {
+   "t": 82.86,
+   "text": "The Gardner-Cantor-Collins paper builds a toggle switch."
+  },
+  {
+   "t": 86.72,
+   "text": "A toggle switch, in electronics, is a flip-flop — a circuit with two stable states."
+  },
+  {
+   "t": 92.86,
+   "text": "You can be in state A."
+  },
+  {
+   "t": 94.3,
+   "text": "You can be in state B."
+  },
+  {
+   "t": 95.6,
+   "text": "You cannot really be in between."
+  },
+  {
+   "t": 97.55,
+   "text": "To get from A to B, you have to give it a kick — a deliberate input."
+  },
+  {
+   "t": 102.24,
+   "text": "Once you give it the kick, it lands in state B, and it stays there even after the input goes away."
+  },
+  {
+   "t": 107.74,
+   "text": "Until the next kick, when it can flip back to A."
+  },
+  {
+   "t": 110.79,
+   "text": "That ability to stay in a state without the input that put you there — that is memory."
+  },
+  {
+   "t": 116.3,
+   "text": "A toggle switch is the simplest possible bit of memory."
+  },
+  {
+   "t": 119.74,
+   "text": "The biological design is beautifully clean."
+  },
+  {
+   "t": 123.05,
+   "text": "You take two genes, each encoding a repressor — a protein that, when expressed, binds to a particular DNA sequence and blocks transcription of whatever is downstream of that sequence."
+  },
+  {
+   "t": 135.11,
+   "text": "Call the repressors R1 and R2."
+  },
+  {
+   "t": 137.72,
+   "text": "You wire them up so that R1, when present, represses the gene that makes R2."
+  },
+  {
+   "t": 143.38,
+   "text": "And R2, when present, represses the gene that makes R1."
+  },
+  {
+   "t": 148.26,
+   "text": "Each repressor inhibits the other one's production."
+  },
+  {
+   "t": 151.84,
+   "text": "Cross-inhibition."
+  },
+  {
+   "t": 153.1,
+   "text": "Now think about what happens in such a cell."
+  },
+  {
+   "t": 155.78,
+   "text": "If R1 is high and R2 is low, then R1 is busy repressing R2, so R2 stays low, so R2 cannot repress R1, so R1 stays high."
+  },
+  {
+   "t": 165.94,
+   "text": "The system has settled into state A, with R1 dominant."
+  },
+  {
+   "t": 169.57,
+   "text": "If you flip it — say, by temporarily turning on R2 with some external trigger — then R2 becomes high, R2 represses R1, R1 drops, R1 can no longer repress R2, R2 stays high."
+  },
+  {
+   "t": 181.97,
+   "text": "State B."
+  },
+  {
+   "t": 182.99,
+   "text": "R2 dominant."
+  },
+  {
+   "t": 184.46,
+   "text": "And, critically, the state persists after the input is removed."
+  },
+  {
+   "t": 188.59,
+   "text": "The cell remembers which one was last turned on."
+  },
+  {
+   "t": 191.09,
+   "text": "That is the toggle switch."
+  },
+  {
+   "t": 192.71,
+   "text": "Two genes."
+  },
+  {
+   "t": 193.88,
+   "text": "Cross-repression."
+  },
+  {
+   "t": 195.03,
+   "text": "Two stable states."
+  },
+  {
+   "t": 196.57,
+   "text": "Bistability."
+  },
+  {
+   "t": 197.69,
+   "text": "Switchable by an external trigger and persistent in the absence of the trigger."
+  },
+  {
+   "t": 202.59,
+   "text": "In the analogy I want you to carry forward: the toggle switch is a flip-flop in a cell."
+  },
+  {
+   "t": 208.21,
+   "text": "It is the bit of cellular memory."
+  },
+  {
+   "t": 210.15,
+   "text": "And the moment Gardner and Collins built it, in 2000, in E. coli, with fluorescent proteins as reporters of which state the cell was in — that was the moment you could look at a colony of bacteria and know, by the color of the cells, which of two states they had decided on."
+  },
+  {
+   "t": 226.07,
+   "text": "The cell was remembering."
+  },
+  {
+   "t": 227.61,
+   "text": "Now the second paper."
+  },
+  {
+   "t": 229.06,
+   "text": "Elowitz and Leibler build an oscillator."
+  },
+  {
+   "t": 232.34,
+   "text": "They call it the repressilator — a portmanteau of \"repressor\" and \"oscillator."
+  },
+  {
+   "t": 238.12,
+   "text": "\" If the toggle switch was about two repressors fighting each other to a draw, the repressilator is about three repressors chasing each other around a loop and never quite catching up."
+  },
+  {
+   "t": 248.56,
+   "text": "Here is the design."
+  },
+  {
+   "t": 250.16,
+   "text": "You take three repressors."
+  },
+  {
+   "t": 252.11,
+   "text": "Call them A, B, and C."
+  },
+  {
+   "t": 254.71,
+   "text": "You wire them up so that A represses B, B represses C, and C represses A."
+  },
+  {
+   "t": 260.96,
+   "text": "Each repressor represses the next one in the cycle."
+  },
+  {
+   "t": 264.4,
+   "text": "Now follow what happens."
+  },
+  {
+   "t": 266.02,
+   "text": "Suppose A is high."
+  },
+  {
+   "t": 267.43,
+   "text": "Then A is repressing B, so B is low."
+  },
+  {
+   "t": 270.82,
+   "text": "Because B is low, C is not being repressed, so C climbs."
+  },
+  {
+   "t": 275.54,
+   "text": "As C climbs, it represses A, so A starts to drop."
+  },
+  {
+   "t": 279.53,
+   "text": "As A drops, it stops repressing B, so B climbs."
+  },
+  {
+   "t": 283.83,
+   "text": "As B climbs, it represses C, so C drops."
+  },
+  {
+   "t": 288.08,
+   "text": "As C drops, it stops repressing A, so A climbs again."
+  },
+  {
+   "t": 292.11,
+   "text": "We are back where we started."
+  },
+  {
+   "t": 293.61,
+   "text": "The system has gone through a cycle."
+  },
+  {
+   "t": 295.64,
+   "text": "A, then C, then B, then A."
+  },
+  {
+   "t": 298.48,
+   "text": "Round and round."
+  },
+  {
+   "t": 299.67,
+   "text": "The cell, in other words, oscillates."
+  },
+  {
+   "t": 302.72,
+   "text": "The levels of A, B, and C rise and fall in turn, with a regular period."
+  },
+  {
+   "t": 308.39,
+   "text": "In the original paper, the period was around 150 minutes — about two and a half hours per oscillation."
+  },
+  {
+   "t": 315.46,
+   "text": "To visualize it, Elowitz hooked up a fluorescent reporter to one of the repressors so the cell would glow green when that repressor was up."
+  },
+  {
+   "t": 323.87,
+   "text": "Under a time-lapse microscope, you could watch single bacteria blinking on and off, again and again, with a regular rhythm."
+  },
+  {
+   "t": 331.56,
+   "text": "A clock."
+  },
+  {
+   "t": 332.44,
+   "text": "A designed clock."
+  },
+  {
+   "t": 333.78,
+   "text": "Inside a bacterium."
+  },
+  {
+   "t": 335.37,
+   "text": "The repressilator is the cellular oscillator."
+  },
+  {
+   "t": 338.33,
+   "text": "Three repressors, in a cycle, each repressing the next, producing periodic pulses of fluorescence."
+  },
+  {
+   "t": 345.99,
+   "text": "It was the first designed cellular rhythm — the first time anyone had sat down on paper and said, I want a cell that oscillates, drawn a circuit diagram, built it from parts, dropped it into E. coli, and watched it do exactly what they had predicted."
+  },
+  {
+   "t": 359.57,
+   "text": "Now step back and look at these two papers together."
+  },
+  {
+   "t": 362.49,
+   "text": "The toggle switch was memory."
+  },
+  {
+   "t": 364.47,
+   "text": "The repressilator was rhythm."
+  },
+  {
+   "t": 366.34,
+   "text": "Between them, in one issue of Nature, they had demonstrated that the two most fundamental dynamical behaviors in any computing system — the ability to remember a state, and the ability to keep time — could be implemented inside a living cell, from designed genetic parts, in ways that more or less matched the designer's predictions on paper."
+  },
+  {
+   "t": 387.56,
+   "text": "It was not a coincidence that both papers used repressors."
+  },
+  {
+   "t": 391.36,
+   "text": "Repressors were, in 2000, the most well-characterized class of biological switch."
+  },
+  {
+   "t": 397.46,
+   "text": "We had spent decades, going back to Jacob and Monod in the 1960s, studying the lac repressor in E. coli."
+  },
+  {
+   "t": 405.43,
+   "text": "We had a parts catalog — repressors and the DNA sequences they bound to — that was ready to be repurposed."
+  },
+  {
+   "t": 412.14,
+   "text": "The 2000 papers did not invent new biology."
+  },
+  {
+   "t": 415.59,
+   "text": "They took existing well-understood biological parts and asked a new engineering question: what happens when you compose them in configurations nature did not happen to evolve?"
+  },
+  {
+   "t": 426.76,
+   "text": "That question — what novel things can we build out of parts we already understand?"
+  },
+  {
+   "t": 431.67,
+   "text": "— is the question of synthetic biology."
+  },
+  {
+   "t": 434.06,
+   "text": "Both papers answered it in the affirmative."
+  },
+  {
+   "t": 436.72,
+   "text": "You can build things."
+  },
+  {
+   "t": 438.26,
+   "text": "You can predict, in advance, how they will behave."
+  },
+  {
+   "t": 441.58,
+   "text": "Cells will, mostly, obey."
+  },
+  {
+   "t": 443.41,
+   "text": "The field, on January 20th, 2000, had a research program."
+  },
+  {
+   "t": 448.27,
+   "text": "Now we need to spend some time on what those parts actually are."
+  }
+ ]
+}

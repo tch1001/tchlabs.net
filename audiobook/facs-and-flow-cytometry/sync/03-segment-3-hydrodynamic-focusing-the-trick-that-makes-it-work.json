@@ -1,0 +1,191 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Hydrodynamic focusing: the trick that makes it work",
+ "duration": 284.4,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Hydrodynamic focusing: the trick that makes it work"
+  },
+  {
+   "t": 4.81,
+   "text": "Okay."
+  },
+  {
+   "t": 5.6,
+   "text": "So the central problem of building a flow cytometer is this: how do you get cells, suspended in a milliliter or two of fluid in a tube, to pass through a laser beam one at a time, in single file, at a known fixed position, at a known fixed velocity, thousands of times per second, without clogging, without doubling up, and without the cells colliding with the walls of the channel?"
+  },
+  {
+   "t": 28.14,
+   "text": "Stop and think about that for a moment."
+  },
+  {
+   "t": 30.36,
+   "text": "If you just pumped a cell suspension through a tube and shone a laser at the tube, you'd get a mess."
+  },
+  {
+   "t": 36.19,
+   "text": "Cells would be all over the cross-section of the tube — near the walls, in the middle, on top of each other."
+  },
+  {
+   "t": 42.23,
+   "text": "Some would pass through the beam, some wouldn't."
+  },
+  {
+   "t": 44.79,
+   "text": "Some would pass through dim edges of the beam, some through the bright center."
+  },
+  {
+   "t": 49.84,
+   "text": "Two cells might pass at the same instant and look like one giant cell to the detectors."
+  },
+  {
+   "t": 55.8,
+   "text": "You'd have no idea what you were measuring."
+  },
+  {
+   "t": 57.94,
+   "text": "Garbage in, garbage out."
+  },
+  {
+   "t": 59.88,
+   "text": "The trick that solves this problem — and it is a beautiful piece of fluid mechanics — is called hydrodynamic focusing."
+  },
+  {
+   "t": 67.36,
+   "text": "Here is how it works."
+  },
+  {
+   "t": 68.65,
+   "text": "You have two fluids."
+  },
+  {
+   "t": 70.25,
+   "text": "The first is the sheath fluid, usually just buffered saline, a clean, particle-free, isotonic solution."
+  },
+  {
+   "t": 77.79,
+   "text": "The sheath fluid is pumped at high volume — large flow rate — through a wider outer channel of the instrument."
+  },
+  {
+   "t": 84.92,
+   "text": "The second is your sample fluid, which is your suspension of cells."
+  },
+  {
+   "t": 89.42,
+   "text": "The sample is pumped, very slowly, through a much narrower inner tube that sticks out into the center of the sheath stream — like a tiny straw protruding into the middle of a much bigger river."
+  },
+  {
+   "t": 101.54,
+   "text": "When the sample fluid emerges from the tip of the inner tube into the surrounding fast-flowing sheath, something elegant happens."
+  },
+  {
+   "t": 109.85,
+   "text": "The sample fluid does not mix with the sheath — at the scales and flow rates involved, the flow is what's called laminar, which means the two streams flow alongside each other without turbulent mixing."
+  },
+  {
+   "t": 121.62,
+   "text": "But because the sheath is moving much faster and the channel narrows as both fluids head toward the interrogation point, the slow sample stream gets stretched — accelerated and pulled thin — into a tiny, narrow filament running right down the center of the much bigger sheath stream."
+  },
+  {
+   "t": 138.96,
+   "text": "The sample filament can be as thin as ten or twenty micrometers across — basically one cell wide."
+  },
+  {
+   "t": 145.82,
+   "text": "Any cells suspended in that sample fluid are now forced into that narrow filament."
+  },
+  {
+   "t": 151.0,
+   "text": "They have nowhere else to go."
+  },
+  {
+   "t": 152.74,
+   "text": "They line up like beads on a string, one at a time, dead center in the channel, all moving at the same velocity, all crossing the laser beam at the exact same position."
+  },
+  {
+   "t": 162.86,
+   "text": "That is hydrodynamic focusing, and it is the trick that makes single-cell analysis work."
+  },
+  {
+   "t": 168.28,
+   "text": "Without it, you cannot do flow cytometry."
+  },
+  {
+   "t": 171.26,
+   "text": "With it, you can do millions of cells in minutes."
+  },
+  {
+   "t": 174.36,
+   "text": "Let me give you another way of picturing it."
+  },
+  {
+   "t": 176.34,
+   "text": "Imagine a busy highway with eight lanes of fast-moving sheath traffic."
+  },
+  {
+   "t": 181.15,
+   "text": "In the middle lane, you very slowly merge a single-file column of cars from an on-ramp."
+  },
+  {
+   "t": 186.76,
+   "text": "The fast outer lanes basically herd your slow merging cars into the exact center lane and accelerate them all to the same speed."
+  },
+  {
+   "t": 194.69,
+   "text": "By the time the cars reach the inspection station downstream, they're all going the same speed, single file, dead center, evenly spaced."
+  },
+  {
+   "t": 202.79,
+   "text": "That's what the sheath does to the cells."
+  },
+  {
+   "t": 205.26,
+   "text": "The practical consequence — and this matters when you actually run an instrument — is that you control the rate at which cells pass the laser by controlling the sample pressure relative to the sheath pressure."
+  },
+  {
+   "t": 217.25,
+   "text": "Push the sample harder, more cells per second pass the laser, but the sample core also gets a little wider and your measurements get a little less precise."
+  },
+  {
+   "t": 226.45,
+   "text": "Pull the sample back, the core narrows, the measurements get cleaner, but throughput drops."
+  },
+  {
+   "t": 232.6,
+   "text": "Every flow cytometry operator learns to balance this trade-off: low pressure for clean precise data on small populations, high pressure for fast counting when you have plenty of cells."
+  },
+  {
+   "t": 243.99,
+   "text": "There is another consequence of single-file flow worth noting."
+  },
+  {
+   "t": 247.92,
+   "text": "The cells, because they're all moving through the same point at known velocity, take the same amount of time to cross the laser beam — typically a few microseconds."
+  },
+  {
+   "t": 257.98,
+   "text": "The electronics on the other side of the detectors know how to chop time into those microsecond-wide windows and assign every photon to a particular cell."
+  },
+  {
+   "t": 268.02,
+   "text": "The detection is, in a real sense, time-multiplexed: each cell gets its own little time slot in the data stream."
+  },
+  {
+   "t": 275.83,
+   "text": "Now we have cells in single file moving through a defined point."
+  },
+  {
+   "t": 279.85,
+   "text": "The next question is: what's at that point?"
+  },
+  {
+   "t": 282.07,
+   "text": "Lasers."
+  },
+  {
+   "t": 283.08,
+   "text": "Lots of lasers."
+  }
+ ]
+}

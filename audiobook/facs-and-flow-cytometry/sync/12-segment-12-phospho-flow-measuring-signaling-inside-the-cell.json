@@ -1,0 +1,127 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Phospho-flow: measuring signaling inside the cell",
+ "duration": 287.68,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Phospho-flow: measuring signaling inside the cell"
+  },
+  {
+   "t": 5.39,
+   "text": "Let me show you one more application of the technique, because it illustrates how flexible flow cytometry can be when you push the staining workflow."
+  },
+  {
+   "t": 14.18,
+   "text": "The application is called phospho-flow, and the central idea is to measure not just which proteins a cell expresses, but which proteins are phosphorylated at any given moment."
+  },
+  {
+   "t": 25.65,
+   "text": "Why does phosphorylation matter?"
+  },
+  {
+   "t": 27.62,
+   "text": "Because phosphorylation is one of the major switches that turn proteins on and off in cell signaling."
+  },
+  {
+   "t": 34.3,
+   "text": "When a cell receives a signal — say, a cytokine binding to its receptor — that signal propagates inward through a cascade of phosphorylation events: the receptor's intracellular tail gets phosphorylated, which recruits a kinase, which phosphorylates a downstream signaling molecule like STAT or ERK or AKT, which then translocates to the nucleus and turns on genes."
+  },
+  {
+   "t": 58.35,
+   "text": "The phosphorylation state of these signaling proteins is, in a real sense, the cell's active state at that instant — what signals it's currently processing, what pathways are firing."
+  },
+  {
+   "t": 70.19,
+   "text": "Traditional ways to measure phosphorylation — Western blots, mostly — work on cell lysates, so they give you the average phosphorylation level across a population."
+  },
+  {
+   "t": 80.29,
+   "text": "That's the averaging problem we started this lecture with, all over again."
+  },
+  {
+   "t": 84.78,
+   "text": "If 10 percent of your cells have STAT1 phosphorylated and 90 percent don't, the Western blot looks the same as if all the cells have a modest amount."
+  },
+  {
+   "t": 94.51,
+   "text": "You lose the single-cell distinction."
+  },
+  {
+   "t": 96.78,
+   "text": "Phospho-flow brings flow cytometry to bear on this problem."
+  },
+  {
+   "t": 100.74,
+   "text": "The protocol: stimulate your cells briefly with the signal you want to study — say, IFN-gamma for a few minutes — then immediately fix the cells with formaldehyde or methanol to lock the phosphorylation state in place."
+  },
+  {
+   "t": 114.88,
+   "text": "(Phosphorylation is dynamic and reverses in seconds, so you have to freeze it fast.)"
+  },
+  {
+   "t": 120.19,
+   "text": "Then permeabilize the cells deeply — usually with methanol or saponin — so antibodies can get to intracellular epitopes."
+  },
+  {
+   "t": 128.79,
+   "text": "Then add antibodies that specifically recognize the phosphorylated form of the target protein — anti-phospho-STAT1, anti-phospho-ERK, anti-phospho-AKT — each one labeled with a different fluorochrome."
+  },
+  {
+   "t": 143.12,
+   "text": "Run on the cytometer."
+  },
+  {
+   "t": 144.66,
+   "text": "The output: per cell, the abundance of phosphorylated STAT1, phosphorylated ERK, phosphorylated AKT, plus all the usual surface markers identifying which cell type it is."
+  },
+  {
+   "t": 157.03,
+   "text": "Now you can ask questions like: \"in this mixed culture, after IFN-gamma stimulation, which subset of cells phosphorylated STAT1?"
+  },
+  {
+   "t": 165.49,
+   "text": "\" and the answer might be \"monocytes responded strongly, but a subset of T cells didn't respond at all\" — single-cell resolution on signaling responses."
+  },
+  {
+   "t": 175.3,
+   "text": "This approach was developed by Garry Nolan's group at Stanford in the early 2000s, and it has become a major technique in immunology and oncology."
+  },
+  {
+   "t": 184.5,
+   "text": "In a leukemia sample, for instance, you can use phospho-flow to ask which malignant cells respond to a drug that inhibits a particular kinase — and you can distinguish responders from non-responders within the same patient's tumor."
+  },
+  {
+   "t": 197.76,
+   "text": "That information, in turn, predicts who will respond clinically and who won't, which is the kind of biomarker that increasingly drives precision oncology."
+  },
+  {
+   "t": 207.07,
+   "text": "There's also a beautiful related technique, often called fluorescent reporter or FRET-based sensor flow, where you express a fluorescent protein-based sensor inside cells that changes fluorescence in response to a signal — calcium concentration, kinase activity, membrane voltage."
+  },
+  {
+   "t": 225.03,
+   "text": "The cells are not fixed, the signal is read in real time, and you can ask quantitative biophysics questions on tens of thousands of cells per second."
+  },
+  {
+   "t": 234.11,
+   "text": "It's less common than antibody-based flow but it's a useful trick for certain questions."
+  },
+  {
+   "t": 238.91,
+   "text": "The point of phospho-flow, and of all these workflow variants, is that flow cytometry is fundamentally a measurement modality — you can adapt the chemistry to measure essentially anything you can target with an antibody or a small-molecule probe."
+  },
+  {
+   "t": 255.0,
+   "text": "Surface proteins, intracellular proteins, phosphorylation states, DNA content, RNA expression (with the right probes), metabolic activity (with metabolic dyes), apoptosis state (with annexin V), membrane potential (with voltage-sensitive dyes), cell cycle stage (with DNA stains), and on and on."
+  },
+  {
+   "t": 277.14,
+   "text": "The instrument doesn't care what's being measured — it just counts photons per channel per cell."
+  },
+  {
+   "t": 282.4,
+   "text": "The flexibility of the chemistry is what makes the technique so universally useful."
+  }
+ ]
+}

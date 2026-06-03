@@ -1,0 +1,279 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Selection versus screening — survival of the fittest versus taste-test everything",
+ "duration": 346.67,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Selection versus screening — survival of the fittest versus taste-test everything"
+  },
+  {
+   "t": 6.55,
+   "text": "Now we need to talk about the most important conceptual distinction in directed evolution."
+  },
+  {
+   "t": 12.1,
+   "text": "There are two fundamentally different ways to find the variants you want in a library, and they have very different scaling properties."
+  },
+  {
+   "t": 18.86,
+   "text": "Let me draw the distinction clearly."
+  },
+  {
+   "t": 21.27,
+   "text": "The first is selection."
+  },
+  {
+   "t": 22.96,
+   "text": "In a selection, you set up a system where only the variants with the property you want survive."
+  },
+  {
+   "t": 28.66,
+   "text": "You don't have to look at each variant individually."
+  },
+  {
+   "t": 31.19,
+   "text": "You don't have to test each one."
+  },
+  {
+   "t": 32.81,
+   "text": "You just impose the selection pressure on the whole library at once, and the losers die."
+  },
+  {
+   "t": 38.12,
+   "text": "Whatever's left after the dust settles — those are your winners."
+  },
+  {
+   "t": 41.85,
+   "text": "The cost of evaluating each variant is, in principle, zero, because the variants evaluate themselves."
+  },
+  {
+   "t": 49.61,
+   "text": "They live or they don't."
+  },
+  {
+   "t": 51.38,
+   "text": "The classic example, which we covered in the antibodies lecture, is phage display panning."
+  },
+  {
+   "t": 57.06,
+   "text": "You make a library of phages, each displaying a different protein variant on its surface."
+  },
+  {
+   "t": 62.95,
+   "text": "You pour the whole library over a column with your target molecule immobilized on it."
+  },
+  {
+   "t": 68.34,
+   "text": "Variants whose displayed protein binds the target stick to the column; variants that don't bind get washed off."
+  },
+  {
+   "t": 75.41,
+   "text": "You collect the stickers, amplify them in bacteria, and pan again."
+  },
+  {
+   "t": 80.3,
+   "text": "Three rounds of panning enrich your library for binders by something like a factor of a million."
+  },
+  {
+   "t": 86.47,
+   "text": "You never looked at any individual variant."
+  },
+  {
+   "t": 89.04,
+   "text": "The selection looked for you."
+  },
+  {
+   "t": 90.62,
+   "text": "Selection scales beautifully."
+  },
+  {
+   "t": 92.95,
+   "text": "You can select on libraries of a billion variants, or ten billion, or a hundred billion."
+  },
+  {
+   "t": 98.5,
+   "text": "The throughput is limited only by how many phages you can grow in a flask, or how many cells you can sort in a day."
+  },
+  {
+   "t": 106.04,
+   "text": "The library size is essentially unbounded."
+  },
+  {
+   "t": 109.03,
+   "text": "The cost of selection is flexibility."
+  },
+  {
+   "t": 111.53,
+   "text": "To select on a property, you have to find a way to make that property survival-relevant."
+  },
+  {
+   "t": 116.99,
+   "text": "Binding is easy — you can set up panning."
+  },
+  {
+   "t": 119.97,
+   "text": "Catalysis is harder — you have to engineer a system where the cell needs the catalysis to survive."
+  },
+  {
+   "t": 126.92,
+   "text": "For example, if you're evolving an enzyme to degrade an antibiotic, you can plate cells expressing your library on antibiotic-containing media — only the cells with active enzyme survive."
+  },
+  {
+   "t": 138.7,
+   "text": "But if your reaction is something more exotic — say, an enzyme that installs a specific stereochemistry on an organic molecule — you can't easily make stereochemistry survival-relevant."
+  },
+  {
+   "t": 150.46,
+   "text": "The selection has to be cleverly designed, and for many properties, designing a selection is the hardest part of the whole experiment."
+  },
+  {
+   "t": 158.24,
+   "text": "The second method is screening."
+  },
+  {
+   "t": 160.28,
+   "text": "In a screen, you evaluate each variant individually."
+  },
+  {
+   "t": 164.12,
+   "text": "You take your library, you plate it out as individual colonies, you pick each colony into its own well of a 96-well plate, you grow it, and you assay it."
+  },
+  {
+   "t": 174.18,
+   "text": "You measure the property of each variant — catalytic activity, fluorescence, whatever — and you rank them."
+  },
+  {
+   "t": 181.5,
+   "text": "The winners are the variants with the best assay reading."
+  },
+  {
+   "t": 184.47,
+   "text": "Screening is much more flexible than selection."
+  },
+  {
+   "t": 187.31,
+   "text": "You can measure any property you can assay."
+  },
+  {
+   "t": 189.94,
+   "text": "You can use mass spectrometry to check stereochemistry."
+  },
+  {
+   "t": 193.29,
+   "text": "You can use HPLC to check enantiomeric excess."
+  },
+  {
+   "t": 197.4,
+   "text": "You can use fluorescent dyes that report on whatever you want."
+  },
+  {
+   "t": 200.88,
+   "text": "Anything you can put in a 96-well plate and measure, you can screen for."
+  },
+  {
+   "t": 205.47,
+   "text": "The cost is throughput."
+  },
+  {
+   "t": 207.54,
+   "text": "A 96-well plate holds 96 variants."
+  },
+  {
+   "t": 211.03,
+   "text": "A 1536-well plate holds 1536."
+  },
+  {
+   "t": 216.55,
+   "text": "Even with high-throughput robotic screening, you're looking at, maybe, ten thousand to a hundred thousand variants per day for a serious lab."
+  },
+  {
+   "t": 224.61,
+   "text": "That's tiny compared to selection."
+  },
+  {
+   "t": 226.84,
+   "text": "You cannot screen a billion variants."
+  },
+  {
+   "t": 229.36,
+   "text": "You can barely screen a hundred thousand."
+  },
+  {
+   "t": 231.89,
+   "text": "The analogy I want you to keep is: selection is \"only the survivors reproduce\" — you don't taste the bad food, you just let the bad chefs starve."
+  },
+  {
+   "t": 240.93,
+   "text": "Screening is \"we taste-test every dish\" — you go through the kitchen one plate at a time, assigning a score to each one."
+  },
+  {
+   "t": 248.5,
+   "text": "Selection is high-throughput but inflexible."
+  },
+  {
+   "t": 251.62,
+   "text": "Screening is low-throughput but flexible."
+  },
+  {
+   "t": 254.4,
+   "text": "The choice depends on the property you're evolving."
+  },
+  {
+   "t": 256.87,
+   "text": "In practice, most modern directed-evolution campaigns combine both."
+  },
+  {
+   "t": 261.65,
+   "text": "The early rounds use selection — phage display, yeast display, growth-coupled selection in E. coli — to enrich a huge library down to maybe ten thousand variants that have the rough property you want."
+  },
+  {
+   "t": 274.51,
+   "text": "Then the later rounds switch to screening — pick the top ten thousand into plates, assay each one for the specific property, rank them, and iterate from the top tier."
+  },
+  {
+   "t": 285.34,
+   "text": "Sometimes you can convert a screen into a selection by clever engineering."
+  },
+  {
+   "t": 290.06,
+   "text": "The most famous example is fluorescence-activated cell sorting — FACS."
+  },
+  {
+   "t": 295.71,
+   "text": "If you can make your activity readout fluorescent — for example, by linking your enzyme's reaction to the production of a fluorescent product — then you can do screening at selection-like throughputs."
+  },
+  {
+   "t": 306.61,
+   "text": "A flow cytometer can sort tens of thousands of cells per second based on fluorescence."
+  },
+  {
+   "t": 312.56,
+   "text": "Pour your library through, gate on the bright cells, recover the winners."
+  },
+  {
+   "t": 316.95,
+   "text": "That's a million-cell screen done in a couple of hours."
+  },
+  {
+   "t": 320.16,
+   "text": "We'll see this in detail in the yeast-display segment."
+  },
+  {
+   "t": 323.39,
+   "text": "The general principle is: a good directed-evolution campaign matches the breadth of the library to the breadth of the assay."
+  },
+  {
+   "t": 331.5,
+   "text": "If your assay is high-throughput, make the library big."
+  },
+  {
+   "t": 335.35,
+   "text": "If your assay is low-throughput, focus the library tighter — fewer positions mutated, smaller library, better odds per ticket."
+  },
+  {
+   "t": 344.55,
+   "text": "The art is in the balance."
+  }
+ ]
+}

@@ -1,0 +1,171 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — AlphaFold1 — the first warning shot",
+ "duration": 293.26,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — AlphaFold1 — the first warning shot"
+  },
+  {
+   "t": 3.94,
+   "text": "In December 2018, the results of CASP13 came out."
+  },
+  {
+   "t": 9.22,
+   "text": "And the structural biology community, gathered at the meeting in Cancún, watched with a mixture of curiosity and wariness as a team from DeepMind — a London AI lab famous for building systems that played video games and beat humans at Go — presented their first protein structure prediction system, called AlphaFold."
+  },
+  {
+   "t": 28.15,
+   "text": "The result was striking."
+  },
+  {
+   "t": 29.77,
+   "text": "On the hardest CASP targets, the free-modeling category — proteins where no good template existed — AlphaFold scored a median GDT_TS of around fifty-eight."
+  },
+  {
+   "t": 40.49,
+   "text": "The next-best group scored about fifty-two."
+  },
+  {
+   "t": 43.17,
+   "text": "The gap was modest in absolute terms, but in the slow-grinding world of CASP, a six-point lead from a team that had never before submitted to the competition was the kind of result that turned heads."
+  },
+  {
+   "t": 55.15,
+   "text": "Let me say something about what made AlphaFold1 work, because the architecture is important context for understanding the much larger leap AlphaFold2 represented two years later."
+  },
+  {
+   "t": 66.6,
+   "text": "AlphaFold1 was, in essence, a deep convolutional neural network applied to the coevolution problem."
+  },
+  {
+   "t": 73.86,
+   "text": "Here's the setup."
+  },
+  {
+   "t": 75.05,
+   "text": "You take your target protein sequence."
+  },
+  {
+   "t": 77.5,
+   "text": "You search the public sequence databases — UniProt, the giant repository of every known protein sequence — and pull out hundreds or thousands of homologs."
+  },
+  {
+   "t": 88.17,
+   "text": "You align all those sequences into a multiple sequence alignment — an MSA."
+  },
+  {
+   "t": 94.14,
+   "text": "The MSA is a matrix: rows are sequences, columns are positions in the protein."
+  },
+  {
+   "t": 100.29,
+   "text": "Looking down any column, you see the variation at that position across evolution."
+  },
+  {
+   "t": 105.55,
+   "text": "AlphaFold1 took that MSA, extracted statistical features from it — including coevolutionary signals between pairs of columns — and fed them into a deep convolutional neural network."
+  },
+  {
+   "t": 118.44,
+   "text": "The network's job was to output a distogram: a probability distribution, for every pair of residues in the protein, over the distance between them."
+  },
+  {
+   "t": 127.7,
+   "text": "Not just \"are residues twenty-three and eighty-eight in contact\" — that's a yes/no question — but \"what is the probability distribution over the distance between residues twenty-three and eighty-eight?"
+  },
+  {
+   "t": 139.86,
+   "text": "\" Distance binned into discrete buckets."
+  },
+  {
+   "t": 142.36,
+   "text": "Much richer than a binary contact map."
+  },
+  {
+   "t": 144.85,
+   "text": "Then, given the predicted distogram, AlphaFold1 did a second step: it used a separate optimization procedure to find a three-dimensional structure consistent with those predicted distances."
+  },
+  {
+   "t": 156.81,
+   "text": "This second step was actually fairly conventional — gradient descent on a structure under the constraint that pairwise distances should match the distogram."
+  },
+  {
+   "t": 166.64,
+   "text": "So AlphaFold1 was, architecturally, a two-stage system: predict distances with a deep net, then build a structure from the predicted distances."
+  },
+  {
+   "t": 176.8,
+   "text": "The convolutional network was big — many layers, lots of parameters, trained on the entire Protein Data Bank — but it was, at heart, a sophisticated version of what other groups had been doing."
+  },
+  {
+   "t": 188.39,
+   "text": "The novelty was scale, training data, careful engineering, and excellent execution."
+  },
+  {
+   "t": 194.2,
+   "text": "The reaction in the community, after CASP13, was mixed."
+  },
+  {
+   "t": 199.07,
+   "text": "There was admiration for the result, but also some skepticism."
+  },
+  {
+   "t": 202.89,
+   "text": "A lot of people pointed out — correctly — that AlphaFold1 wasn't a fundamentally new idea."
+  },
+  {
+   "t": 208.68,
+   "text": "It was a better-engineered version of the coevolution-plus-deep-learning approach several groups had been pursuing."
+  },
+  {
+   "t": 215.79,
+   "text": "The improvement was real but not revolutionary."
+  },
+  {
+   "t": 219.18,
+   "text": "CASP13's predictions, while better than the field, were still substantially worse than experimental structures."
+  },
+  {
+   "t": 226.62,
+   "text": "You couldn't yet plug an AlphaFold1 model into a downstream pipeline and trust it the way you'd trust a crystal structure."
+  },
+  {
+   "t": 234.03,
+   "text": "What CASP13 did do, definitively, was put DeepMind on the map."
+  },
+  {
+   "t": 239.1,
+   "text": "It signaled that this London AI lab, with its enormous compute budget and its world-class machine learning team, had decided to take protein structure seriously."
+  },
+  {
+   "t": 249.29,
+   "text": "And it caused everyone in the prediction community to start asking: what would DeepMind do if they really doubled down on this problem?"
+  },
+  {
+   "t": 257.46,
+   "text": "With another two years and a redesigned architecture?"
+  },
+  {
+   "t": 261.07,
+   "text": "The answer, when it arrived in 2020, was AlphaFold2."
+  },
+  {
+   "t": 265.22,
+   "text": "And AlphaFold2 was not an incremental improvement on AlphaFold1."
+  },
+  {
+   "t": 270.09,
+   "text": "It was an architectural rebuild, almost from scratch, around a set of ideas that turned out to be transformatively better."
+  },
+  {
+   "t": 277.64,
+   "text": "It is the architecture we need to spend the next two segments on, because understanding it — at least at the conceptual level — is the difference between treating AlphaFold as a magic black box and treating it as a comprehensible piece of engineering."
+  },
+  {
+   "t": 291.74,
+   "text": "So let's open the box."
+  }
+ ]
+}

@@ -1,0 +1,227 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The Manhattan plot: the visual hallmark of GWAS",
+ "duration": 311.21,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The Manhattan plot: the visual hallmark of GWAS"
+  },
+  {
+   "t": 5.47,
+   "text": "If you have ever seen a GWAS paper, you have seen a Manhattan plot."
+  },
+  {
+   "t": 9.66,
+   "text": "It is the visual hallmark of the field."
+  },
+  {
+   "t": 12.06,
+   "text": "Every GWAS paper has one."
+  },
+  {
+   "t": 14.65,
+   "text": "They are recognizable from across the room."
+  },
+  {
+   "t": 17.14,
+   "text": "Here is what a Manhattan plot is."
+  },
+  {
+   "t": 19.62,
+   "text": "The x-axis is the genome — twenty-three chromosomes lined up left to right, chromosome one starting at the left, chromosome twenty-two and X at the right."
+  },
+  {
+   "t": 29.68,
+   "text": "Each SNP gets a single dot."
+  },
+  {
+   "t": 32.14,
+   "text": "The horizontal position of the dot is its chromosomal location."
+  },
+  {
+   "t": 35.94,
+   "text": "The vertical position is the negative log ten of its p-value."
+  },
+  {
+   "t": 40.05,
+   "text": "Why negative log ten?"
+  },
+  {
+   "t": 41.62,
+   "text": "Because p-values span many orders of magnitude."
+  },
+  {
+   "t": 45.16,
+   "text": "A SNP with a p-value of zero-point-one is uninteresting."
+  },
+  {
+   "t": 49.58,
+   "text": "A SNP with a p-value of ten to the minus fifty is a major hit."
+  },
+  {
+   "t": 54.54,
+   "text": "Plotted linearly, those would be indistinguishable — both essentially zero on a linear axis."
+  },
+  {
+   "t": 61.05,
+   "text": "Take the negative log ten, and zero-point-one becomes one, ten to the minus fifty becomes fifty."
+  },
+  {
+   "t": 68.3,
+   "text": "Now you can see the dynamic range."
+  },
+  {
+   "t": 70.49,
+   "text": "The bigger the negative log ten, the more significant the hit."
+  },
+  {
+   "t": 74.41,
+   "text": "The hits rise."
+  },
+  {
+   "t": 75.71,
+   "text": "The non-hits sit near the bottom in a fuzzy carpet."
+  },
+  {
+   "t": 78.96,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 80.69,
+   "text": "A Manhattan plot is a city skyline."
+  },
+  {
+   "t": 83.47,
+   "text": "Chromosomes are blocks of city, spread across the bottom."
+  },
+  {
+   "t": 87.15,
+   "text": "Most SNPs are at street level — uninteresting, near zero, the noise floor of the experiment."
+  },
+  {
+   "t": 94.34,
+   "text": "Some SNPs rise off the ground."
+  },
+  {
+   "t": 96.96,
+   "text": "A few rise high."
+  },
+  {
+   "t": 98.28,
+   "text": "And occasionally, at a locus where the disease association is strong and there are many SNPs in LD with the causal variant, you get a tower of dots reaching up into the sky — a Manhattan skyscraper."
+  },
+  {
+   "t": 111.34,
+   "text": "The name of the plot is not a coincidence."
+  },
+  {
+   "t": 114.1,
+   "text": "It looks like the Manhattan skyline."
+  },
+  {
+   "t": 116.19,
+   "text": "Most of the city is low buildings, a few clusters are skyscrapers, and the iconic ones rise hundreds of stories above the rest."
+  },
+  {
+   "t": 125.01,
+   "text": "The horizontal red line you usually see across the top of a Manhattan plot is the genome-wide significance threshold — five times ten to the minus eight, which on a negative log ten scale is at y equals seven-point-three."
+  },
+  {
+   "t": 138.24,
+   "text": "Any SNP whose dot is above that line is a significant hit."
+  },
+  {
+   "t": 142.56,
+   "text": "The dots that just barely poke above the line are the borderline hits, and the towers that go all the way to the top of the plot — sometimes negative log ten p-values of one hundred or two hundred for the very strongest hits — are the unmissable, definitely-real associations."
+  },
+  {
+   "t": 157.99,
+   "text": "You will also often see a second horizontal line, lower down, at five times ten to the minus six or one times ten to the minus five."
+  },
+  {
+   "t": 166.86,
+   "text": "That is the \"suggestive\" threshold, which is used to flag loci that did not quite reach genome-wide significance but might be real and worth following up in a replication study."
+  },
+  {
+   "t": 177.36,
+   "text": "A few features of Manhattan plots that you should know how to read."
+  },
+  {
+   "t": 181.14,
+   "text": "First, the dots are often colored to alternate by chromosome — chromosome one in dark blue, chromosome two in light blue, chromosome three in dark blue again, alternating — to make the chromosomal boundaries visually clear."
+  },
+  {
+   "t": 194.96,
+   "text": "The colors are not meaningful in themselves; they are just a visual aid."
+  },
+  {
+   "t": 199.24,
+   "text": "Second, you will sometimes see \"spikes\" — vertical columns of dots above the threshold, sometimes containing dozens or hundreds of SNPs, all rising together in a tight chromosomal region."
+  },
+  {
+   "t": 212.36,
+   "text": "That is not a hundred independent hits."
+  },
+  {
+   "t": 214.51,
+   "text": "That is one signal, smeared across a region of LD."
+  },
+  {
+   "t": 218.05,
+   "text": "The actual causal variant is somewhere in that smear, and every SNP in LD with it shows up as a hit because every SNP in LD with it has a correlated allele frequency difference."
+  },
+  {
+   "t": 230.74,
+   "text": "We will deal with this in Segment 6 when we get serious about LD."
+  },
+  {
+   "t": 235.31,
+   "text": "For now, just understand: spikes are signal regions, not independent loci."
+  },
+  {
+   "t": 240.53,
+   "text": "Third, you will often see a separate plot called a QQ plot — quantile-quantile — paired with the Manhattan plot."
+  },
+  {
+   "t": 247.94,
+   "text": "The QQ plot shows the observed p-value distribution against the expected p-value distribution under the null hypothesis."
+  },
+  {
+   "t": 255.65,
+   "text": "If your GWAS is well-controlled — meaning population structure is properly corrected for — most of the QQ plot should lie on the diagonal y-equals-x line, indicating that most SNPs behave as expected under the null, with only the top tail deviating upward because of the real signals."
+  },
+  {
+   "t": 274.89,
+   "text": "If the entire QQ plot lifts off the diagonal, that is a red flag — it usually means you have residual population structure or some other confounding inflating all your p-values, and your top hits cannot be trusted."
+  },
+  {
+   "t": 288.59,
+   "text": "The QQ plot is the diagnostic; the Manhattan plot is the result."
+  },
+  {
+   "t": 293.39,
+   "text": "Memorize the Manhattan plot."
+  },
+  {
+   "t": 295.29,
+   "text": "Chromosomes on the x-axis."
+  },
+  {
+   "t": 297.35,
+   "text": "Negative log ten p on the y-axis."
+  },
+  {
+   "t": 300.56,
+   "text": "Red line at five times ten to the minus eight."
+  },
+  {
+   "t": 304.0,
+   "text": "Towers rising above the line are your hits."
+  },
+  {
+   "t": 306.95,
+   "text": "That is the language of GWAS, and every paper speaks it."
+  }
+ ]
+}

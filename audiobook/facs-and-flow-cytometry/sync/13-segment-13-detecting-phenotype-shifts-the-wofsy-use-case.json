@@ -1,0 +1,143 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Detecting phenotype shifts: the Wofsy use case",
+ "duration": 265.09,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Detecting phenotype shifts: the Wofsy use case"
+  },
+  {
+   "t": 5.09,
+   "text": "I want to spend a moment on a particular use case that pulls together a lot of what we've been discussing, because it's the kind of question that flow cytometry is uniquely positioned to answer and it shows up across immunology, oncology, and microbiology in slightly different costumes."
+  },
+  {
+   "t": 21.14,
+   "text": "The framework was given a clean mathematical formulation by Carla Wofsy, a mathematical biologist who worked extensively on the statistics of how to detect changes in cell populations from flow cytometry data."
+  },
+  {
+   "t": 33.96,
+   "text": "Here's the question."
+  },
+  {
+   "t": 35.17,
+   "text": "You have two samples — say, blood from a patient before treatment and blood from the same patient after treatment."
+  },
+  {
+   "t": 42.29,
+   "text": "You run both through flow cytometry with the same panel."
+  },
+  {
+   "t": 46.04,
+   "text": "You see, in each sample, a multi-parameter distribution of cells — a cloud of dots in high-dimensional space, where each cell is a point."
+  },
+  {
+   "t": 56.26,
+   "text": "The question is: has the population shifted?"
+  },
+  {
+   "t": 59.29,
+   "text": "And if so, how, and by how much?"
+  },
+  {
+   "t": 61.34,
+   "text": "This sounds easy."
+  },
+  {
+   "t": 62.84,
+   "text": "It is not."
+  },
+  {
+   "t": 63.79,
+   "text": "With one or two parameters, you can eyeball the difference: \"the CD4 fraction went up by 15 percent, the CD8 fraction went down by 10 percent."
+  },
+  {
+   "t": 73.06,
+   "text": "\" But with twenty parameters, the populations live in twenty-dimensional space, and your eye is useless."
+  },
+  {
+   "t": 79.99,
+   "text": "A subset of cells might have shifted in some particular high-dimensional direction — say, they've become more CD25-positive while losing CCR7, while staying constant on everything else."
+  },
+  {
+   "t": 93.12,
+   "text": "That kind of shift is a real biological event — a regulatory T cell phenotype emerging from a naive T cell population, perhaps — but it's not visible on any single two-parameter plot."
+  },
+  {
+   "t": 105.85,
+   "text": "You need methods that look at the high-dimensional structure as a whole."
+  },
+  {
+   "t": 109.6,
+   "text": "Wofsy's framework — and a lot of subsequent work that built on it — formalized the problem as one of distribution comparison in high dimensions."
+  },
+  {
+   "t": 118.74,
+   "text": "You're not comparing two means; you're comparing two empirical probability distributions over high-dimensional space."
+  },
+  {
+   "t": 126.26,
+   "text": "You want a test statistic that's sensitive to shifts in any direction, in any subpopulation, while being robust to noise and the inevitable run-to-run variation in cytometer settings."
+  },
+  {
+   "t": 138.9,
+   "text": "In practice, the modern toolkit for this includes things like:"
+  },
+  {
+   "t": 143.1,
+   "text": "Manual gating — the classical approach: draw boundaries by hand on a sequence of two-parameter plots, count cells in each region, compute frequencies."
+  },
+  {
+   "t": 153.35,
+   "text": "Works well for the populations you expected to see."
+  },
+  {
+   "t": 156.31,
+   "text": "Misses what you didn't expect."
+  },
+  {
+   "t": 157.93,
+   "text": "Automated clustering — algorithms like FlowSOM, PhenoGraph, Citrus, X-shift, that group cells into clusters based on their multi-parameter expression patterns, then ask which clusters changed in frequency between samples."
+  },
+  {
+   "t": 172.46,
+   "text": "These are unbiased and can find populations you didn't know existed."
+  },
+  {
+   "t": 176.61,
+   "text": "Dimensionality reduction — methods like tSNE, UMAP, PCA, that take the high-dimensional data and project it down to two or three dimensions for visualization."
+  },
+  {
+   "t": 188.03,
+   "text": "You see \"islands\" in the projected space, each island a different cell state, and you can watch islands appear, disappear, or shift between conditions."
+  },
+  {
+   "t": 198.06,
+   "text": "Statistical comparison — frequency-of-each-cluster comparison with proper multiple testing correction; earth-mover's distance for distribution comparison; mixed-effects models that account for sample-to-sample variability."
+  },
+  {
+   "t": 211.44,
+   "text": "The Wofsy use case is the abstraction: detect that a phenotype has shifted, in a sample of cells measured at single-cell resolution across many parameters, against a baseline of expected variation."
+  },
+  {
+   "t": 224.38,
+   "text": "That's the question that flow cytometry is the right tool for, and that's why the technique is so central to modern immune monitoring — for vaccine trials, for cancer immunotherapy trials, for autoimmune disease drug trials."
+  },
+  {
+   "t": 238.29,
+   "text": "You measure the immune state before and after intervention with a 20- or 30-color panel, you use computational methods to detect shifts, and you publish a paper that says \"this drug induced a 3-fold expansion of effector memory CD8 T cells with a particular exhaustion signature."
+  },
+  {
+   "t": 255.79,
+   "text": "\""
+  },
+  {
+   "t": 256.11,
+   "text": "That kind of question, in a world without flow cytometry, would simply be unanswerable."
+  },
+  {
+   "t": 262.19,
+   "text": "With it, it's a Tuesday afternoon analysis."
+  }
+ ]
+}

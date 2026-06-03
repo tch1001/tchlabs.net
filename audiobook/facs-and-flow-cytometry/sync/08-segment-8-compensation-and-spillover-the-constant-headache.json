@@ -1,0 +1,243 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Compensation and spillover: the constant headache",
+ "duration": 395.2,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Compensation and spillover: the constant headache"
+  },
+  {
+   "t": 4.7,
+   "text": "Okay."
+  },
+  {
+   "t": 5.49,
+   "text": "We have to talk about compensation."
+  },
+  {
+   "t": 7.35,
+   "text": "This is the topic that has caused more graduate-student tears, more discarded datasets, more arguments at lab meeting than any other single subject in flow cytometry."
+  },
+  {
+   "t": 18.45,
+   "text": "It is the central technical headache of the field, and it is worth understanding properly because if you ever sit down at a flow cytometer or analyze flow data, this will eat at least a third of your time."
+  },
+  {
+   "t": 30.11,
+   "text": "Here's the problem."
+  },
+  {
+   "t": 31.23,
+   "text": "We have a palette of fluorochromes."
+  },
+  {
+   "t": 33.65,
+   "text": "Each one is excited by a particular laser and emits at a particular wavelength range."
+  },
+  {
+   "t": 39.7,
+   "text": "We have detectors, each one watching a particular wavelength range and assigned to a particular fluorochrome."
+  },
+  {
+   "t": 46.27,
+   "text": "In theory, FITC light goes only to the FITC detector, PE light goes only to the PE detector, APC light goes only to the APC detector, and so on."
+  },
+  {
+   "t": 58.29,
+   "text": "Clean, separated, simple."
+  },
+  {
+   "t": 60.73,
+   "text": "In practice, every fluorochrome's emission spectrum is broad, not narrow."
+  },
+  {
+   "t": 66.19,
+   "text": "FITC's emission peak is at around 520 nanometers, but FITC keeps emitting, weakly, all the way out past 600 nanometers."
+  },
+  {
+   "t": 76.35,
+   "text": "The PE detector, which is centered around 575 nanometers, also picks up some FITC light."
+  },
+  {
+   "t": 83.47,
+   "text": "Not all of it — most of the photons FITC emits land in the FITC detector window — but a chunk of the FITC emission, maybe 10 or 20 percent, spills over into the PE channel and gets counted as if it were PE signal."
+  },
+  {
+   "t": 97.91,
+   "text": "This is called spillover or bleed-through."
+  },
+  {
+   "t": 100.62,
+   "text": "And it's symmetric and pervasive — PE spills into PE-Cy5, PE-Cy5 spills into PerCP, APC spills into APC-Cy7, BV421 spills into BV510, BV510 spills into BV605, every fluorochrome spills into the detectors of its neighbors."
+  },
+  {
+   "t": 122.06,
+   "text": "In a fifteen-color panel, every detector is picking up real signal from its assigned fluorochrome plus some amount of contamination from five or ten of its neighbors."
+  },
+  {
+   "t": 132.59,
+   "text": "If you don't correct for this, your data is junk."
+  },
+  {
+   "t": 135.88,
+   "text": "A cell that's positive for FITC will look weakly positive for PE, even if there's no PE on the cell at all — because of the FITC spilling into the PE channel."
+  },
+  {
+   "t": 146.49,
+   "text": "Try to read those data as \"this cell expresses both CD3 and CD4,\" and you'd be making up biology that isn't there."
+  },
+  {
+   "t": 155.59,
+   "text": "The fix is called compensation, and it is conceptually simple even if the bookkeeping is annoying."
+  },
+  {
+   "t": 162.38,
+   "text": "Step one: take a sample that's stained with FITC only."
+  },
+  {
+   "t": 166.3,
+   "text": "Run it through the cytometer."
+  },
+  {
+   "t": 168.07,
+   "text": "Look at the FITC detector — it sees signal, as expected."
+  },
+  {
+   "t": 172.51,
+   "text": "Look at the PE detector — it sees some signal too, even though there's no PE on the cells."
+  },
+  {
+   "t": 178.41,
+   "text": "That signal is pure spillover."
+  },
+  {
+   "t": 181.01,
+   "text": "Measure it."
+  },
+  {
+   "t": 181.9,
+   "text": "Now you know: for every X units of signal in the FITC detector, you get Y units of false signal in the PE detector."
+  },
+  {
+   "t": 189.9,
+   "text": "The ratio Y over X is the spillover coefficient from FITC into PE."
+  },
+  {
+   "t": 195.86,
+   "text": "Step two: do the same thing for every fluorochrome in your panel."
+  },
+  {
+   "t": 200.28,
+   "text": "Stain cells with PE only, measure how much PE bleeds into FITC, into PerCP, into PE-Cy7."
+  },
+  {
+   "t": 209.74,
+   "text": "Stain cells with APC only, measure how much APC bleeds into APC-Cy7, into PerCP."
+  },
+  {
+   "t": 218.76,
+   "text": "And so on."
+  },
+  {
+   "t": 219.76,
+   "text": "You end up with a square matrix — one row per fluorochrome, one column per detector — where each entry tells you what fraction of one fluorochrome's signal contaminates a given detector."
+  },
+  {
+   "t": 230.95,
+   "text": "This is the spillover matrix, also called the compensation matrix."
+  },
+  {
+   "t": 235.34,
+   "text": "Step three: when you analyze your real experiment, for each cell, you mathematically subtract the spillover contributions from each detector."
+  },
+  {
+   "t": 244.34,
+   "text": "If the FITC detector reads 1000 units and the FITC-into-PE spillover is 15 percent, you subtract 150 units of FITC contamination from whatever the PE detector reads."
+  },
+  {
+   "t": 258.09,
+   "text": "Now what you're left with in the PE channel is, hopefully, the true PE signal — what's actually on the cell, not what spilled over from FITC."
+  },
+  {
+   "t": 267.24,
+   "text": "So compensation is, mathematically, subtracting the contamination contributions."
+  },
+  {
+   "t": 273.31,
+   "text": "Modern software does this automatically, given the spillover matrix, but you have to acquire the single-color controls — the \"comp controls\" — every time you run an experiment with a new panel."
+  },
+  {
+   "t": 284.79,
+   "text": "And in a fifteen-color panel, that's fifteen extra tubes to run for comp before you even get to your real samples."
+  },
+  {
+   "t": 292.0,
+   "text": "Let me give you the analogy that helped me understand this properly."
+  },
+  {
+   "t": 295.34,
+   "text": "Imagine you have a row of microphones at a dinner party, each one pointed at one person."
+  },
+  {
+   "t": 300.44,
+   "text": "You want to record each person's voice in isolation."
+  },
+  {
+   "t": 304.04,
+   "text": "But of course, microphone 1, pointed at Alice, also picks up some of Bob's voice next to her."
+  },
+  {
+   "t": 310.11,
+   "text": "Bob's microphone picks up some of Carol's."
+  },
+  {
+   "t": 312.91,
+   "text": "And so on."
+  },
+  {
+   "t": 313.9,
+   "text": "If you played back microphone 1 raw, you'd hear Alice and a faint echo of Bob."
+  },
+  {
+   "t": 318.87,
+   "text": "Compensation is the audio engineer doing the math: he knows, from a quiet sound check earlier, exactly how much of Bob bleeds into Alice's mic, and he subtracts that contribution in real time from the recording."
+  },
+  {
+   "t": 332.32,
+   "text": "Now microphone 1 plays back pure Alice."
+  },
+  {
+   "t": 335.42,
+   "text": "That's all compensation is."
+  },
+  {
+   "t": 337.22,
+   "text": "The constant headache is that you have to do the sound check every time — every new panel, every change in instrument settings, every new lot of antibody."
+  },
+  {
+   "t": 346.84,
+   "text": "And it's compensation that prevents flow cytometry panels from scaling indefinitely."
+  },
+  {
+   "t": 352.49,
+   "text": "In a panel with thirty highly overlapping fluorochromes, the compensation math gets fragile — small errors in the spillover matrix amplify into big errors in the corrected data, and you lose the ability to resolve dim populations."
+  },
+  {
+   "t": 367.41,
+   "text": "This is one of the main reasons that the spectral cytometry revolution, which we'll talk about in Segment 14, has been such a big deal: it changes the math problem from \"subtract contributions\" to \"unmix the full spectrum,\" which is a more robust formulation."
+  },
+  {
+   "t": 382.75,
+   "text": "But for classical flow cytometry, compensation is just the price of admission."
+  },
+  {
+   "t": 388.1,
+   "text": "You learn it, you do it, you check it, you correct it, every single experiment, forever."
+  },
+  {
+   "t": 393.82,
+   "text": "Welcome to the field."
+  }
+ ]
+}

@@ -1,0 +1,163 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Lasers and detectors: the optics",
+ "duration": 325.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Lasers and detectors: the optics"
+  },
+  {
+   "t": 3.9,
+   "text": "So we have a stream of cells passing one at a time through a fixed spot."
+  },
+  {
+   "t": 8.15,
+   "text": "Now we have to make light interact with each cell and measure what comes back."
+  },
+  {
+   "t": 12.59,
+   "text": "This is the optics, and the design of modern flow cytometers is really about how many lasers you can pack onto the same little spot, and how many detectors you can use to catch the light that comes off."
+  },
+  {
+   "t": 23.93,
+   "text": "Let's start with what you actually shine at the cell."
+  },
+  {
+   "t": 26.51,
+   "text": "A modern instrument typically has multiple laser lines, each producing a beam at a different wavelength."
+  },
+  {
+   "t": 33.04,
+   "text": "The four most common wavelengths you'll find on a midrange instrument are:"
+  },
+  {
+   "t": 37.23,
+   "text": "A 488 nanometer blue laser — the classic; the one Mac the Cell Sorter used; still the workhorse for many fluorochromes."
+  },
+  {
+   "t": 46.23,
+   "text": "A 561 nanometer yellow-green laser — added in the 2000s for better excitation of orange and red dyes."
+  },
+  {
+   "t": 54.71,
+   "text": "A 640 nanometer red laser — for red-excited dyes like APC."
+  },
+  {
+   "t": 60.61,
+   "text": "A 405 nanometer violet laser — added in the late 2000s to open up an entirely new excitation window for the violet-excited dye family."
+  },
+  {
+   "t": 70.38,
+   "text": "High-end instruments add more lines on top of these — UV at 355 nanometers, green at 532, infrared lines for newer dyes."
+  },
+  {
+   "t": 80.46,
+   "text": "Cytek's modern spectral instruments routinely have five lasers; some have seven."
+  },
+  {
+   "t": 85.7,
+   "text": "Each laser is focused onto the same tiny interrogation point, or onto closely spaced points a few hundred micrometers apart along the flow path."
+  },
+  {
+   "t": 95.04,
+   "text": "As a cell travels down the stream, it crosses each laser beam in sequence, and the instrument knows the time of flight between beams precisely enough to associate each detector signal with the correct cell."
+  },
+  {
+   "t": 108.4,
+   "text": "Why multiple lasers?"
+  },
+  {
+   "t": 110.03,
+   "text": "Because no single laser excites every fluorescent dye well."
+  },
+  {
+   "t": 114.47,
+   "text": "Each fluorochrome has a particular excitation spectrum — it absorbs strongly in some wavelength range and not others."
+  },
+  {
+   "t": 122.66,
+   "text": "If you only have a 488 nm blue laser, you can only see dyes that absorb blue light efficiently."
+  },
+  {
+   "t": 130.45,
+   "text": "Add a red laser and you unlock the red-excited dye family."
+  },
+  {
+   "t": 134.46,
+   "text": "Add a violet laser and you unlock another whole family — the violet-excited dyes, brand-named things like BV421, BV510, BV605, BV711, BV786, an enormous palette that Becton-Dickinson introduced in the 2000s and that essentially doubled the practical color count overnight."
+  },
+  {
+   "t": 155.74,
+   "text": "Now, what comes back off the cell?"
+  },
+  {
+   "t": 157.56,
+   "text": "Two qualitatively different kinds of light, and the instrument measures both."
+  },
+  {
+   "t": 162.54,
+   "text": "The first is scattered light — laser light that the cell physically bounces or refracts as it passes through the beam."
+  },
+  {
+   "t": 169.93,
+   "text": "The cell isn't fluorescent, in this case; the laser light just bounces off it, like a flashlight beam off a marble."
+  },
+  {
+   "t": 177.68,
+   "text": "The instrument captures this scattered light at two specific angles — straight ahead and off to the side — and those two scatter measurements turn out to be enormously useful, as we'll see in the next segment."
+  },
+  {
+   "t": 190.65,
+   "text": "The second is fluorescence — light emitted by fluorescent dye molecules attached to the cell, after those dyes have absorbed laser light and re-emitted at a longer wavelength."
+  },
+  {
+   "t": 201.82,
+   "text": "This is where the antibody-staining and fluorochrome work comes in."
+  },
+  {
+   "t": 205.96,
+   "text": "Each fluorochrome emits in a particular wavelength band."
+  },
+  {
+   "t": 210.15,
+   "text": "The instrument splits that emitted light using a cascade of optical filters and dichroic mirrors — these are little partially-reflective glass plates that pass some wavelengths and reflect others — and routes each wavelength band to its own dedicated detector."
+  },
+  {
+   "t": 226.04,
+   "text": "Each detector is typically a photomultiplier tube, or PMT — a vacuum tube that converts a tiny number of photons into a measurable electrical pulse."
+  },
+  {
+   "t": 236.56,
+   "text": "PMTs are exquisitely sensitive — they can count single photons under the right conditions — and they have to be, because the amount of light coming off a single cell, even a brightly stained one, is genuinely small."
+  },
+  {
+   "t": 250.86,
+   "text": "Modern instruments have replaced many PMTs with arrays of more efficient silicon photodetectors called APDs — avalanche photodiodes — which improve sensitivity and dynamic range, but the principle is the same: catch every photon, convert it to a voltage, and feed the voltage to a digitizer."
+  },
+  {
+   "t": 270.03,
+   "text": "So the optics of a flow cytometer, in summary: multiple laser lines hitting cells at the interrogation point; a cascade of dichroic mirrors and bandpass filters splitting the emitted light into wavelength bands; one sensitive detector per band; and electronics that digitize and timestamp every detector pulse so that one cell becomes one row in a multi-dimensional data file."
+  },
+  {
+   "t": 293.8,
+   "text": "A modern instrument might have twenty, thirty, even forty separate detectors, each watching its own little slice of the spectrum, all firing in microsecond bursts as cells flash through the laser beams below."
+  },
+  {
+   "t": 307.59,
+   "text": "That's the hardware."
+  },
+  {
+   "t": 308.88,
+   "text": "Before we add antibodies and fluorochromes, though, there are two measurements you get essentially for free, with no staining at all."
+  },
+  {
+   "t": 316.74,
+   "text": "They're called forward scatter and side scatter, and they're the starting point of every flow cytometry experiment."
+  },
+  {
+   "t": 324.09,
+   "text": "Let's talk about them next."
+  }
+ ]
+}

@@ -1,0 +1,323 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — The Ct value: where the curve meets the threshold",
+ "duration": 428.97,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — The Ct value: where the curve meets the threshold"
+  },
+  {
+   "t": 4.84,
+   "text": "The single most important number in qPCR is the Ct value."
+  },
+  {
+   "t": 9.14,
+   "text": "C-T."
+  },
+  {
+   "t": 10.09,
+   "text": "Sometimes you'll see it written as Cq — \"quantification cycle\" — which is the term the MIQE guidelines recommend, and we'll talk about MIQE in Segment 8."
+  },
+  {
+   "t": 19.34,
+   "text": "But in practice, in conversations with colleagues, on machine readouts, in the published literature, you'll hear \"Ct\" much more often than \"Cq."
+  },
+  {
+   "t": 28.82,
+   "text": "\" They refer to the same thing."
+  },
+  {
+   "t": 30.8,
+   "text": "I'll use Ct throughout this lecture."
+  },
+  {
+   "t": 33.27,
+   "text": "So what is Ct?"
+  },
+  {
+   "t": 34.59,
+   "text": "Let me build it up step by step."
+  },
+  {
+   "t": 36.67,
+   "text": "After your qPCR run is finished — say, forty cycles — the machine gives you, for each well, the amplification curve."
+  },
+  {
+   "t": 44.91,
+   "text": "Fluorescence on the y-axis, cycle number on the x-axis."
+  },
+  {
+   "t": 48.92,
+   "text": "The curve is a sigmoid: flat baseline at the beginning, exponential rise in the middle, plateau at the end."
+  },
+  {
+   "t": 56.36,
+   "text": "The information about the starting amount lives in when the curve leaves the baseline — when the exponential phase begins."
+  },
+  {
+   "t": 64.0,
+   "text": "To extract a single number from that curve, the software draws a horizontal line — a threshold — across the plot, at some fluorescence value just above the background noise."
+  },
+  {
+   "t": 75.12,
+   "text": "The threshold is chosen to be in the exponential phase of all the curves on the plot, well above baseline, well below plateau."
+  },
+  {
+   "t": 83.64,
+   "text": "Then for each curve, the software asks: at what cycle number does this curve cross the threshold?"
+  },
+  {
+   "t": 90.29,
+   "text": "That cycle number is the Ct value for that sample."
+  },
+  {
+   "t": 94.03,
+   "text": "If your sample's amplification curve crosses threshold at cycle 18, your Ct is 18."
+  },
+  {
+   "t": 100.7,
+   "text": "If it crosses at cycle 32, your Ct is 32."
+  },
+  {
+   "t": 105.44,
+   "text": "If it never crosses — if the curve stays flat for all 40 cycles — your Ct is undefined, often reported as \"N/A\" or as 40 (the maximum cycle), which means \"no amplification detected."
+  },
+  {
+   "t": 120.46,
+   "text": "\""
+  },
+  {
+   "t": 120.66,
+   "text": "Now here is the key intuition, and I want you to internalize this because half the misunderstandings about qPCR come from getting it backwards."
+  },
+  {
+   "t": 130.66,
+   "text": "Earlier Ct means more starting template."
+  },
+  {
+   "t": 133.25,
+   "text": "Later Ct means less starting template."
+  },
+  {
+   "t": 135.94,
+   "text": "Ct and starting amount are inversely related."
+  },
+  {
+   "t": 138.74,
+   "text": "Why?"
+  },
+  {
+   "t": 139.41,
+   "text": "Because the more you start with, the fewer doublings you need to climb out of the noise."
+  },
+  {
+   "t": 143.94,
+   "text": "If you start with a million copies, you only need to double, say, ten times to reach detectability — Ct of 10."
+  },
+  {
+   "t": 151.46,
+   "text": "If you start with one copy, you need to double thirty times — Ct of 30."
+  },
+  {
+   "t": 156.43,
+   "text": "The amplification has to make up the difference between your starting amount and the threshold amount, and each cycle gives you a factor of two."
+  },
+  {
+   "t": 164.7,
+   "text": "So the relationship between Ct and starting amount is logarithmic, and the slope is two — every Ct value of difference corresponds to a factor of two in starting amount."
+  },
+  {
+   "t": 175.68,
+   "text": "Let me put numbers on it."
+  },
+  {
+   "t": 177.07,
+   "text": "If sample A has a Ct of 20 and sample B has a Ct of 23, then sample A had eight times more starting template than sample B."
+  },
+  {
+   "t": 186.28,
+   "text": "Why?"
+  },
+  {
+   "t": 186.97,
+   "text": "Because B is three cycles behind A."
+  },
+  {
+   "t": 189.72,
+   "text": "Each cycle is a doubling."
+  },
+  {
+   "t": 191.55,
+   "text": "Three doublings is two-cubed, which is eight."
+  },
+  {
+   "t": 194.71,
+   "text": "A Ct difference of 1 corresponds to a 2-fold difference in starting amount."
+  },
+  {
+   "t": 200.2,
+   "text": "A Ct difference of 3.3 corresponds to a 10-fold difference."
+  },
+  {
+   "t": 205.16,
+   "text": "A Ct difference of 10 corresponds to a 1024-fold difference."
+  },
+  {
+   "t": 210.88,
+   "text": "This is the mental conversion you need to do constantly when reading qPCR results."
+  },
+  {
+   "t": 216.91,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 218.74,
+   "text": "Imagine you're listening for popcorn starting to pop."
+  },
+  {
+   "t": 221.82,
+   "text": "Two bags of popcorn are in two microwaves running side by side."
+  },
+  {
+   "t": 225.62,
+   "text": "One bag has a lot of unpopped kernels; one has only a few."
+  },
+  {
+   "t": 229.96,
+   "text": "You start your stopwatch."
+  },
+  {
+   "t": 231.4,
+   "text": "You listen carefully."
+  },
+  {
+   "t": 232.85,
+   "text": "The first pop in the full bag happens at 10 seconds."
+  },
+  {
+   "t": 236.2,
+   "text": "The first pop in the nearly-empty bag happens at 30 seconds."
+  },
+  {
+   "t": 239.97,
+   "text": "From those two times, you can infer that the first bag had more kernels — because with more kernels, the first pop happens earlier."
+  },
+  {
+   "t": 247.35,
+   "text": "The Ct value is the time of the first pop."
+  },
+  {
+   "t": 250.03,
+   "text": "Earlier first pop equals more popcorn already in the bag at the start."
+  },
+  {
+   "t": 254.3,
+   "text": "This analogy isn't perfect — PCR is exponential, popcorn is more or less linear, and Ct measures a population-level threshold rather than a single first event — but the directional intuition is right."
+  },
+  {
+   "t": 268.05,
+   "text": "Earlier threshold-crossing means a higher starting amount."
+  },
+  {
+   "t": 271.95,
+   "text": "Later threshold-crossing means a lower starting amount."
+  },
+  {
+   "t": 275.33,
+   "text": "A few practical points about Ct values."
+  },
+  {
+   "t": 278.07,
+   "text": "First: the absolute Ct value depends on the threshold you set."
+  },
+  {
+   "t": 282.51,
+   "text": "If you set the threshold higher, all your Cts shift later."
+  },
+  {
+   "t": 286.66,
+   "text": "If you set it lower, all your Cts shift earlier."
+  },
+  {
+   "t": 290.31,
+   "text": "But the differences between Cts — the ΔCt values — are robust to threshold choice, as long as the threshold is in the exponential phase of all curves."
+  },
+  {
+   "t": 301.2,
+   "text": "That's why qPCR analysis is mostly about differences: ΔCt and ΔΔCt, not absolute Ct."
+  },
+  {
+   "t": 309.66,
+   "text": "Second: Ct values are not integers."
+  },
+  {
+   "t": 312.82,
+   "text": "The software interpolates between cycles to give you a fractional cycle number — Ct of 18.7, Ct of 23.4."
+  },
+  {
+   "t": 322.43,
+   "text": "The fractional Ct comes from fitting the curve and finding where it crosses threshold by interpolation, not by waiting for the discrete cycle to complete."
+  },
+  {
+   "t": 331.27,
+   "text": "Third: typical Ct values in real assays range from about 15 — for very abundant targets like a housekeeping gene in a healthy cell sample — to about 35 — for very rare targets like a single-copy gene from a tiny amount of input DNA."
+  },
+  {
+   "t": 347.37,
+   "text": "Below 15 you're usually looking at primer-dimer artifacts or really enormous starting amounts."
+  },
+  {
+   "t": 353.11,
+   "text": "Above 35 you're at the edge of detection, and you need to be careful — at very late Cts, the technique becomes unreliable, which we'll discuss in Segments 9 and 11."
+  },
+  {
+   "t": 364.61,
+   "text": "Fourth: Ct of zero or one is essentially never seen in a properly designed assay."
+  },
+  {
+   "t": 370.82,
+   "text": "If you're getting Ct of 5 or 8, something is wrong — usually contamination of the template with the amplicon from a previous experiment, which is a perpetual nightmare in any lab that runs a lot of qPCR."
+  },
+  {
+   "t": 384.36,
+   "text": "So at this point you have the conceptual core of qPCR."
+  },
+  {
+   "t": 388.81,
+   "text": "The machine watches the amplification in real time using fluorescence."
+  },
+  {
+   "t": 393.48,
+   "text": "The amplification curve crosses a threshold at some cycle number."
+  },
+  {
+   "t": 398.13,
+   "text": "That cycle number — the Ct — is inversely related to the starting amount, logarithmically."
+  },
+  {
+   "t": 404.17,
+   "text": "Differences in Ct between samples correspond to fold-differences in starting amount, with each Ct equaling a factor of two."
+  },
+  {
+   "t": 412.38,
+   "text": "Now the next question."
+  },
+  {
+   "t": 413.65,
+   "text": "The Ct gives you a relative number."
+  },
+  {
+   "t": 415.61,
+   "text": "How do you turn that into an absolute number?"
+  },
+  {
+   "t": 417.9,
+   "text": "How do you say \"this sample contains five thousand copies per microliter\" instead of just \"this sample has a Ct of 23\"?"
+  },
+  {
+   "t": 426.95,
+   "text": "That's where standard curves come in."
+  }
+ ]
+}

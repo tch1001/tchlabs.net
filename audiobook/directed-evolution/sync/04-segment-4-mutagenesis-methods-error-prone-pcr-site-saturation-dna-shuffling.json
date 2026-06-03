@@ -1,0 +1,243 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Mutagenesis methods — error-prone PCR, site-saturation, DNA shuffling",
+ "duration": 425.44,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Mutagenesis methods — error-prone PCR, site-saturation, DNA shuffling"
+  },
+  {
+   "t": 7.39,
+   "text": "So how do you actually introduce mutations into a gene?"
+  },
+  {
+   "t": 11.05,
+   "text": "The answer is that there are several methods, each with different strengths, and modern directed evolution often combines them."
+  },
+  {
+   "t": 18.3,
+   "text": "Let me walk you through the three big ones."
+  },
+  {
+   "t": 20.77,
+   "text": "The first and most fundamental is error-prone PCR, usually abbreviated epPCR."
+  },
+  {
+   "t": 27.24,
+   "text": "You remember PCR — polymerase chain reaction, the technology that lets you copy a gene a billion-fold in a few hours, using a thermostable DNA polymerase like Taq."
+  },
+  {
+   "t": 39.21,
+   "text": "Normal PCR is highly accurate, because Taq has decent fidelity and we run it under conditions that promote accuracy."
+  },
+  {
+   "t": 46.84,
+   "text": "Error-prone PCR is exactly the same reaction, but you sabotage the polymerase."
+  },
+  {
+   "t": 52.88,
+   "text": "You raise the magnesium concentration, you add manganese, you bias the dNTP pool — and the polymerase starts making mistakes."
+  },
+  {
+   "t": 61.83,
+   "text": "Random base substitutions get introduced as it copies the template."
+  },
+  {
+   "t": 66.3,
+   "text": "You can tune the conditions so that, on average, each copy of the gene picks up two or three mutations, or fifteen mutations, or whatever you want."
+  },
+  {
+   "t": 75.3,
+   "text": "The beauty of epPCR is that it's brain-dead simple."
+  },
+  {
+   "t": 78.81,
+   "text": "You set up the PCR, you let it run, you get a library out."
+  },
+  {
+   "t": 82.74,
+   "text": "The library is unbiased — every position in the gene has roughly equal probability of getting mutated."
+  },
+  {
+   "t": 89.75,
+   "text": "The mutations are point substitutions — single-letter changes — which is exactly what you want for fine-tuning."
+  },
+  {
+   "t": 96.4,
+   "text": "And you can generate libraries of essentially arbitrary size; you're limited only by how many bacteria you can transform with the resulting library."
+  },
+  {
+   "t": 105.6,
+   "text": "The cost is that epPCR is unbiased in a way that's both a strength and a weakness."
+  },
+  {
+   "t": 111.9,
+   "text": "Most positions in the gene don't matter for the property you care about."
+  },
+  {
+   "t": 116.04,
+   "text": "Mutations there are wasted lottery tickets."
+  },
+  {
+   "t": 118.81,
+   "text": "And the codon table has its own structure — single-base mutations in DNA can produce some amino-acid changes more easily than others."
+  },
+  {
+   "t": 127.21,
+   "text": "You can't, with single-base epPCR, change residue 47 from a tryptophan to a valine in one step, because that swap requires multiple base changes in the same codon."
+  },
+  {
+   "t": 138.71,
+   "text": "So epPCR explores a constrained slice of sequence space."
+  },
+  {
+   "t": 143.53,
+   "text": "The analogy I want you to keep is that mutagenesis is scrambling the recipe a little — and error-prone PCR is shaking salt all over the recipe page, randomly, without looking at which ingredients are critical."
+  },
+  {
+   "t": 156.56,
+   "text": "You'll occasionally land good additions of salt, but you waste a lot of effort salting things that didn't need it."
+  },
+  {
+   "t": 163.05,
+   "text": "The second method is site-saturation mutagenesis."
+  },
+  {
+   "t": 166.99,
+   "text": "Here, instead of scattering mutations randomly across the whole gene, you pick a small number of specific positions — say, the residues lining your active site — and you make a library that explores all twenty amino acids at each of those positions."
+  },
+  {
+   "t": 182.65,
+   "text": "The library is much smaller — a few thousand variants per position, easily covered — but it's much more focused."
+  },
+  {
+   "t": 189.97,
+   "text": "You design oligonucleotide primers with degenerate codons at the target positions — \"NNK\" codons, where N is any base and K is G or T, which together encode all twenty amino acids with reasonable bias."
+  },
+  {
+   "t": 204.69,
+   "text": "You incorporate these primers into a PCR or a cloning step, and the result is a library that, at the chosen positions, contains every possible amino acid."
+  },
+  {
+   "t": 215.36,
+   "text": "Site-saturation is the right tool when you already have some structural intuition."
+  },
+  {
+   "t": 220.45,
+   "text": "You know — or you guess — that the residues lining the substrate pocket are the ones that matter."
+  },
+  {
+   "t": 226.26,
+   "text": "You don't want to waste tickets on the rest of the protein."
+  },
+  {
+   "t": 229.03,
+   "text": "So you site-saturate the pocket, screen the library, find the winners."
+  },
+  {
+   "t": 233.41,
+   "text": "This is a more directed kind of directed evolution — you're using rational knowledge of where the relevant residues live, but you're not trying to predict which amino acid is best at each position."
+  },
+  {
+   "t": 244.84,
+   "text": "You let the screen tell you."
+  },
+  {
+   "t": 246.36,
+   "text": "Sometimes people do combinatorial site-saturation, where they saturate several positions at once — say, three positions in the active site, twenty amino acids at each, giving eight thousand combinations."
+  },
+  {
+   "t": 260.04,
+   "text": "That library is small enough to screen exhaustively but large enough to explore meaningful combinations."
+  },
+  {
+   "t": 267.55,
+   "text": "The catch is that as you saturate more positions simultaneously, the library size grows exponentially, and you start losing the ability to screen every member."
+  },
+  {
+   "t": 278.25,
+   "text": "The third method, and this one is the most beautiful, is DNA shuffling, developed by Willem \"Pim\" Stemmer at a company called Affymax in 1994."
+  },
+  {
+   "t": 287.87,
+   "text": "We'll come back to Stemmer in his own segment later — Segment 9 — because the technique is important enough to spend a whole segment on."
+  },
+  {
+   "t": 295.48,
+   "text": "But let me sketch it here."
+  },
+  {
+   "t": 296.87,
+   "text": "Imagine you've done two rounds of directed evolution."
+  },
+  {
+   "t": 300.25,
+   "text": "You have, say, ten winning variants from each round."
+  },
+  {
+   "t": 303.82,
+   "text": "These variants each carry several mutations, scattered across the gene."
+  },
+  {
+   "t": 308.64,
+   "text": "Some of the mutations help in one way — maybe stabilizing a loop."
+  },
+  {
+   "t": 313.43,
+   "text": "Others help in another way — maybe rebuilding the active site."
+  },
+  {
+   "t": 317.4,
+   "text": "What if you could combine, say, the active-site mutations of one winner with the loop-stabilizing mutations of another winner?"
+  },
+  {
+   "t": 324.63,
+   "text": "Sometimes the combination is better than either parent — synergy."
+  },
+  {
+   "t": 329.07,
+   "text": "DNA shuffling is a way to recombine winning variants."
+  },
+  {
+   "t": 333.04,
+   "text": "You take the genes of your winners, you chop them into random fragments with a DNase enzyme, you mix the fragments together, and you reassemble them by PCR."
+  },
+  {
+   "t": 342.28,
+   "text": "The PCR uses the fragments as both primers and templates, so it stitches them together into full-length genes."
+  },
+  {
+   "t": 349.73,
+   "text": "But because the fragments come from different parents, the reassembled genes are mosaics — each gene carries pieces of several parents, glued together in random combinations."
+  },
+  {
+   "t": 360.64,
+   "text": "The analogy is that DNA shuffling is two winning chefs swapping pages of their cookbooks — sometimes the combination of one chef's pasta dough and another chef's sauce is better than either chef's original dish."
+  },
+  {
+   "t": 373.95,
+   "text": "You take the recipes that were already pretty good, you mix and match the pages, and you let selection tell you which mosaic recombinations are best."
+  },
+  {
+   "t": 382.97,
+   "text": "Stemmer showed in 1994 that this dramatically accelerates directed evolution."
+  },
+  {
+   "t": 389.2,
+   "text": "We'll see why in Segment 9."
+  },
+  {
+   "t": 390.95,
+   "text": "For now, just remember the toolbox: epPCR scatters point mutations across the whole gene; site-saturation explores all twenty amino acids at specific positions; DNA shuffling recombines winners."
+  },
+  {
+   "t": 405.48,
+   "text": "Different tools for different stages of an evolution campaign."
+  },
+  {
+   "t": 409.34,
+   "text": "Often, modern protocols use them in combination — epPCR for the early rounds to explore broadly, site-saturation for the middle rounds to fine-tune specific positions, DNA shuffling to combine winners after a few rounds of accumulation."
+  }
+ ]
+}

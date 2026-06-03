@@ -1,0 +1,367 @@
+{
+ "n": 18,
+ "title": "SEGMENT 18 — Frontier — generative ML, PACE, and the continuous-evolution future",
+ "duration": 517.48,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 18 — Frontier — generative ML, PACE, and the continuous-evolution future"
+  },
+  {
+   "t": 6.69,
+   "text": "Let me close with the frontier."
+  },
+  {
+   "t": 8.54,
+   "text": "What are the most active research directions in directed evolution right now, in 2026?"
+  },
+  {
+   "t": 14.97,
+   "text": "What's likely to be in textbooks five years from now that isn't quite in them yet?"
+  },
+  {
+   "t": 19.2,
+   "text": "I'll give you three big themes."
+  },
+  {
+   "t": 21.15,
+   "text": "The first is generative ML protein design combined with directed evolution loops."
+  },
+  {
+   "t": 27.31,
+   "text": "We've talked about ML-assisted directed evolution — the loop where ML proposes libraries and evolution refines them."
+  },
+  {
+   "t": 35.31,
+   "text": "The newer move is to have ML generate protein sequences de novo — not just propose mutations on a starting protein, but design whole new proteins from scratch — and then refine those designs with directed evolution."
+  },
+  {
+   "t": 49.14,
+   "text": "Tools like ProteinMPNN, developed in the Baker lab, take a desired backbone structure and propose amino acid sequences that should fold into that structure."
+  },
+  {
+   "t": 59.27,
+   "text": "ESM-fold and other large language models for proteins predict structure from sequence and can also be inverted to generate sequences for a target."
+  },
+  {
+   "t": 68.84,
+   "text": "These tools produce starting designs that are typically pretty close to functional — folded, but maybe not quite active enough, or active but not selective enough."
+  },
+  {
+   "t": 78.7,
+   "text": "Directed evolution then refines them the rest of the way."
+  },
+  {
+   "t": 82.88,
+   "text": "The combination is powerful."
+  },
+  {
+   "t": 85.25,
+   "text": "Generative ML covers the broad design — getting close to the right shape, the right active-site geometry, the right rough function."
+  },
+  {
+   "t": 93.89,
+   "text": "Directed evolution covers the local optimization — turning a marginally functional design into a high-performance enzyme."
+  },
+  {
+   "t": 101.91,
+   "text": "The two methods cover each other's blind spots."
+  },
+  {
+   "t": 104.72,
+   "text": "Generative ML can't tell you which specific residues will catalyze fastest; directed evolution can't tell you what novel backbone might fold into a good enzyme."
+  },
+  {
+   "t": 115.3,
+   "text": "You see this in recent work from the Baker lab, from David Baker's spin-out companies, from Justas Dauparas's work on ProteinMPNN, from labs that combine RFdiffusion with directed evolution."
+  },
+  {
+   "t": 126.59,
+   "text": "The pattern is: design a protein de novo, evolve it to optimize, ship it."
+  },
+  {
+   "t": 131.85,
+   "text": "It's a different workflow than anything that existed five years ago."
+  },
+  {
+   "t": 135.94,
+   "text": "It's starting to produce real results."
+  },
+  {
+   "t": 138.25,
+   "text": "The second theme is continuous evolution — running directed evolution without manual rounds, in a chemostat or bioreactor, with selection pressure tightening automatically."
+  },
+  {
+   "t": 149.64,
+   "text": "The canonical method here is PACE — Phage-Assisted Continuous Evolution — developed by David Liu's lab around 2011."
+  },
+  {
+   "t": 158.7,
+   "text": "Here's the trick."
+  },
+  {
+   "t": 159.82,
+   "text": "You set up a flow reactor — a chemostat — with E. coli growing inside."
+  },
+  {
+   "t": 165.43,
+   "text": "The cells contain a special plasmid called the accessory plasmid, which encodes a piece of phage machinery that the phage needs to replicate."
+  },
+  {
+   "t": 173.94,
+   "text": "The cells also contain selection circuitry — say, a gene whose expression depends on the activity of the protein you're evolving."
+  },
+  {
+   "t": 181.86,
+   "text": "When the protein works well, the cells produce more of the missing phage machinery, and phages can replicate more."
+  },
+  {
+   "t": 189.3,
+   "text": "When the protein works poorly, the phages can't replicate."
+  },
+  {
+   "t": 193.31,
+   "text": "You inject a phage into the chemostat."
+  },
+  {
+   "t": 196.19,
+   "text": "The phage encodes the protein you're evolving."
+  },
+  {
+   "t": 199.11,
+   "text": "The phage tries to replicate."
+  },
+  {
+   "t": 201.41,
+   "text": "Variants of the phage carrying a functional version of your evolving protein replicate faster than variants carrying poor versions."
+  },
+  {
+   "t": 210.05,
+   "text": "The chemostat continuously dilutes — fresh media in, old media out — so variants that don't replicate fast enough get washed out."
+  },
+  {
+   "t": 219.26,
+   "text": "Variants that replicate faster persist and dominate."
+  },
+  {
+   "t": 223.18,
+   "text": "The phage genome is engineered to mutate at a higher rate than usual — you can use a mutator phage strain that introduces errors as it replicates."
+  },
+  {
+   "t": 232.81,
+   "text": "So each generation of phage carries new mutations."
+  },
+  {
+   "t": 236.62,
+   "text": "Selection acts continuously."
+  },
+  {
+   "t": 238.97,
+   "text": "Within days, the phage population shifts toward variants encoding better versions of your protein."
+  },
+  {
+   "t": 245.61,
+   "text": "The analogy I want you to keep is that PACE is running directed evolution continuously, in a chemostat, no manual rounds — phages replicate, selection pressure tightens automatically, and the experimenter just sets the flow rate and the selection design."
+  },
+  {
+   "t": 261.96,
+   "text": "The cycle time drops from a week per round to hours per round."
+  },
+  {
+   "t": 266.21,
+   "text": "The number of generations the protein passes through in a week of PACE can equal months of conventional directed evolution."
+  },
+  {
+   "t": 274.08,
+   "text": "PACE has been used to evolve aminoacyl-tRNA synthetases, RNA polymerases, Cas9 variants, base editors, and many other proteins."
+  },
+  {
+   "t": 284.1,
+   "text": "It's not appropriate for every problem — the selection has to be coupleable to phage replication, which constrains the design — but for problems where you can set it up, PACE is dramatically faster than classical directed evolution."
+  },
+  {
+   "t": 297.71,
+   "text": "The Liu lab has continued to develop continuous-evolution methods, including PANCE — a less stringent version useful for early-stage evolution — and various adaptations for specific problems."
+  },
+  {
+   "t": 310.24,
+   "text": "Other labs have built analogous continuous-evolution systems based on yeast, on mammalian cells, on cell-free extracts."
+  },
+  {
+   "t": 318.66,
+   "text": "The general trend is toward making evolution faster by removing the human-in-the-loop bottleneck."
+  },
+  {
+   "t": 324.55,
+   "text": "The third theme, briefly, is multi-property optimization."
+  },
+  {
+   "t": 329.0,
+   "text": "Classical directed evolution optimizes one property at a time — activity, or stability, or specificity, or expression."
+  },
+  {
+   "t": 338.02,
+   "text": "But real proteins, especially industrial and therapeutic proteins, need to be good at many properties simultaneously."
+  },
+  {
+   "t": 346.22,
+   "text": "They need to be active, stable, soluble, non-immunogenic, easy to manufacture, specific."
+  },
+  {
+   "t": 353.41,
+   "text": "Single-objective selection often improves one property at the cost of others."
+  },
+  {
+   "t": 358.66,
+   "text": "Modern campaigns increasingly use multi-property selection — measuring or selecting on multiple properties at once."
+  },
+  {
+   "t": 366.52,
+   "text": "ML helps a lot here, because ML models can predict multiple properties from sequence and propose variants that score well on all of them simultaneously."
+  },
+  {
+   "t": 376.13,
+   "text": "Closed-loop ML-plus-evolution campaigns can navigate multi-dimensional fitness landscapes that would be hard to navigate with classical evolution alone."
+  },
+  {
+   "t": 385.55,
+   "text": "This is where the field is heading."
+  },
+  {
+   "t": 387.52,
+   "text": "Generative ML for design."
+  },
+  {
+   "t": 389.56,
+   "text": "Continuous evolution for speed."
+  },
+  {
+   "t": 391.94,
+   "text": "Multi-property selection for real-world relevance."
+  },
+  {
+   "t": 395.5,
+   "text": "Closed-loop integration of all three."
+  },
+  {
+   "t": 398.3,
+   "text": "The protein engineer of 2030 will look much more like an experimental designer and ML practitioner than like a wet-lab cloner."
+  },
+  {
+   "t": 407.0,
+   "text": "The actual variants will be machine-proposed, machine-evolved, machine-characterized."
+  },
+  {
+   "t": 412.42,
+   "text": "The skilled human will be choosing the problem, designing the selection, interpreting the results."
+  },
+  {
+   "t": 418.46,
+   "text": "Let me end with the philosophical point I made in Segment 1."
+  },
+  {
+   "t": 422.26,
+   "text": "Directed evolution is, fundamentally, an admission of humility."
+  },
+  {
+   "t": 427.85,
+   "text": "Proteins are too complex to design from first principles."
+  },
+  {
+   "t": 432.13,
+   "text": "So we borrow Darwin's algorithm — random mutation plus selection — and we point it at problems Darwin never cared about."
+  },
+  {
+   "t": 439.25,
+   "text": "We let the protein teach us what works."
+  },
+  {
+   "t": 441.65,
+   "text": "We don't have to understand why the winning mutations are winning."
+  },
+  {
+   "t": 445.4,
+   "text": "We only have to recognize them as winners."
+  },
+  {
+   "t": 447.99,
+   "text": "That humility is, I think, the deepest lesson of the field."
+  },
+  {
+   "t": 452.31,
+   "text": "The most successful approach to protein engineering, the one that produced industrial enzymes, the one that produced therapeutic antibodies, the one that produced the deaminase in every clinical base editor — that approach is the one where we gave up on understanding and started just running experiments fast."
+  },
+  {
+   "t": 470.25,
+   "text": "We outsourced the design to evolution."
+  },
+  {
+   "t": 473.01,
+   "text": "The protein found answers we couldn't have designed."
+  },
+  {
+   "t": 475.94,
+   "text": "And we got out of the way and let it cook."
+  },
+  {
+   "t": 478.15,
+   "text": "That, in two hours, is directed evolution."
+  },
+  {
+   "t": 481.37,
+   "text": "Iterated mutation and selection."
+  },
+  {
+   "t": 483.79,
+   "text": "Darwin in a test tube."
+  },
+  {
+   "t": 485.36,
+   "text": "The Frances Arnold Nobel of 2018."
+  },
+  {
+   "t": 488.77,
+   "text": "The TadA evolution for ABE."
+  },
+  {
+   "t": 491.13,
+   "text": "The Codexis sitagliptin transaminase."
+  },
+  {
+   "t": 494.36,
+   "text": "The Novozymes detergent enzymes."
+  },
+  {
+   "t": 496.94,
+   "text": "The pathway engineering for artemisinin."
+  },
+  {
+   "t": 499.58,
+   "text": "The ML-assisted closed loops."
+  },
+  {
+   "t": 501.94,
+   "text": "The PACE chemostats."
+  },
+  {
+   "t": 503.66,
+   "text": "The deep mutational scans."
+  },
+  {
+   "t": 505.74,
+   "text": "All of it variations on the same simple, profound idea: make a library, select the winners, repeat."
+  },
+  {
+   "t": 513.02,
+   "text": "The rest is implementation."
+  },
+  {
+   "t": 515.27,
+   "text": "Thank you."
+  },
+  {
+   "t": 516.12,
+   "text": "I'll take questions."
+  }
+ ]
+}

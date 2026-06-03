@@ -1,0 +1,191 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Mendelian randomization: genetic instruments for causality",
+ "duration": 293.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Mendelian randomization: genetic instruments for causality"
+  },
+  {
+   "t": 5.9,
+   "text": "I want to take a short detour into one of the most powerful and elegant applications of GWAS results — a method called Mendelian randomization, MR."
+  },
+  {
+   "t": 15.5,
+   "text": "Here is the problem MR solves."
+  },
+  {
+   "t": 18.24,
+   "text": "Suppose you observe, in an epidemiological study, that people who drink coffee have a lower rate of Parkinson's disease."
+  },
+  {
+   "t": 25.46,
+   "text": "Is coffee protective?"
+  },
+  {
+   "t": 26.96,
+   "text": "Or is there a confounder — maybe people who can drink coffee without getting sick from it have something else going on, some metabolic profile, that is the real protection?"
+  },
+  {
+   "t": 36.66,
+   "text": "Observational epidemiology is full of correlations like this, and disentangling cause from confounding is hard."
+  },
+  {
+   "t": 44.64,
+   "text": "The gold standard is a randomized controlled trial, but you cannot randomize people to thirty years of coffee consumption."
+  },
+  {
+   "t": 51.94,
+   "text": "Mendelian randomization is a workaround."
+  },
+  {
+   "t": 54.88,
+   "text": "Your genotype is randomized at conception."
+  },
+  {
+   "t": 58.01,
+   "text": "When your parents made you, the variants you inherited at each locus were essentially a random draw from the parental alleles."
+  },
+  {
+   "t": 65.69,
+   "text": "So if a SNP affects how much coffee you drink — and several SNPs in caffeine metabolism do — then your genotype at that SNP is a randomized predictor of your coffee consumption, uncorrelated with anything else about you."
+  },
+  {
+   "t": 81.15,
+   "text": "If that SNP is also associated with Parkinson's risk, it must be because coffee, mediated by the SNP, affects Parkinson's."
+  },
+  {
+   "t": 90.26,
+   "text": "Confounding is broken by the random assignment of alleles."
+  },
+  {
+   "t": 94.45,
+   "text": "The formal logic."
+  },
+  {
+   "t": 95.74,
+   "text": "A valid genetic instrument for an exposure must satisfy three assumptions."
+  },
+  {
+   "t": 100.96,
+   "text": "One: relevance."
+  },
+  {
+   "t": 102.46,
+   "text": "The SNP must actually affect the exposure."
+  },
+  {
+   "t": 106.21,
+   "text": "Two: exchangeability."
+  },
+  {
+   "t": 108.15,
+   "text": "The SNP must be independent of confounders."
+  },
+  {
+   "t": 111.67,
+   "text": "Three: exclusion restriction."
+  },
+  {
+   "t": 114.01,
+   "text": "The SNP must affect the outcome only through the exposure, not through any other pathway."
+  },
+  {
+   "t": 120.16,
+   "text": "If those three assumptions hold, you can estimate the causal effect of exposure on outcome by dividing the SNP-outcome association by the SNP-exposure association — Wald's ratio."
+  },
+  {
+   "t": 131.57,
+   "text": "In practice, MR is done with many SNPs at once, using methods like inverse-variance weighting, MR-Egger, and weighted median estimators, which are robust to various violations of the assumptions."
+  },
+  {
+   "t": 144.59,
+   "text": "The field of MR has grown explosively over the last decade, because GWAS has provided thousands of SNPs to use as instruments for thousands of exposures."
+  },
+  {
+   "t": 155.19,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 157.06,
+   "text": "Mendelian randomization is the genetic instrument trick."
+  },
+  {
+   "t": 160.8,
+   "text": "Your genotype is the randomization."
+  },
+  {
+   "t": 163.41,
+   "text": "It happened at conception, decades before any of your behaviors, exposures, or diseases developed."
+  },
+  {
+   "t": 170.16,
+   "text": "So if a SNP affects exposure X and exposure X causes disease Y, the SNP should correlate with Y."
+  },
+  {
+   "t": 177.89,
+   "text": "Conversely, if a SNP that affects X does not correlate with Y, then X probably does not cause Y — only confounders did."
+  },
+  {
+   "t": 187.14,
+   "text": "You have, effectively, run a randomized trial where the randomization happened at meiosis."
+  },
+  {
+   "t": 192.75,
+   "text": "What has MR taught us?"
+  },
+  {
+   "t": 194.5,
+   "text": "A few highlights."
+  },
+  {
+   "t": 195.81,
+   "text": "It taught us that LDL cholesterol is causally related to coronary disease — confirmed by hundreds of variants, every one of which gives the same answer."
+  },
+  {
+   "t": 204.78,
+   "text": "That made the case for statin development as airtight as it gets."
+  },
+  {
+   "t": 209.29,
+   "text": "It taught us, conversely, that HDL cholesterol is not causally protective against coronary disease, despite decades of observational studies suggesting it was."
+  },
+  {
+   "t": 220.39,
+   "text": "The CETP variants that raise HDL do not lower CAD risk in the way the observational data predicted."
+  },
+  {
+   "t": 227.19,
+   "text": "This led to the collapse of several major HDL-raising drug programs, which were always going to fail because they were targeting a non-causal correlation."
+  },
+  {
+   "t": 237.03,
+   "text": "It taught us that body mass index is causally related to many diseases — diabetes, hypertension, several cancers — and that the effects are larger than observational studies suggested, because measurement error in BMI biases observational estimates downward."
+  },
+  {
+   "t": 253.22,
+   "text": "It taught us that vitamin D, despite enormous observational literatures linking it to everything from cancer to mortality, has minimal causal effects on most outcomes."
+  },
+  {
+   "t": 263.81,
+   "text": "Vitamin D supplements, by and large, do not do what observational studies suggested."
+  },
+  {
+   "t": 269.79,
+   "text": "MR is one of the most useful indirect applications of GWAS data."
+  },
+  {
+   "t": 274.59,
+   "text": "It uses the GWAS results not to make a clinical prediction, but to do epidemiological inference."
+  },
+  {
+   "t": 281.61,
+   "text": "It has been called \"nature's randomized trial,\" and it has reshaped how we think about which exposures are worth intervening on."
+  },
+  {
+   "t": 289.05,
+   "text": "A lot of public-health priorities have shifted on the basis of MR results."
+  }
+ ]
+}

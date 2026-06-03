@@ -1,0 +1,203 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Protein language models — the GPT-for-proteins angle",
+ "duration": 335.69,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Protein language models — the GPT-for-proteins angle"
+  },
+  {
+   "t": 5.34,
+   "text": "Up to this point I've focused on what I'd call the structural design branch of the field — the RFdiffusion + ProteinMPNN + AlphaFold pipeline, which is geometry-centric."
+  },
+  {
+   "t": 15.99,
+   "text": "But there's a parallel branch that treats proteins more like language, and it's been gaining ground fast."
+  },
+  {
+   "t": 22.82,
+   "text": "Let me spend a segment on it, because it's a different paradigm and it's where some of the most interesting recent work is happening."
+  },
+  {
+   "t": 29.11,
+   "text": "The basic idea is: a protein sequence is a string of letters from a twenty-letter alphabet."
+  },
+  {
+   "t": 35.31,
+   "text": "So is a sentence."
+  },
+  {
+   "t": 36.7,
+   "text": "The transformer architecture that powers GPT — trained on enormous amounts of text, learning to predict the next token — works just as well on protein sequences."
+  },
+  {
+   "t": 47.29,
+   "text": "You can train a transformer on the entire UniProt database — every protein sequence ever sequenced, hundreds of millions of sequences — by giving it the task of predicting masked or next-token amino acids."
+  },
+  {
+   "t": 60.64,
+   "text": "After training, the model has, in its weights, an enormous amount of implicit knowledge about what protein sequences look like, what's allowed, what isn't, what tends to go with what."
+  },
+  {
+   "t": 70.39,
+   "text": "This was pioneered, in the protein context, by several groups around 2019-2020."
+  },
+  {
+   "t": 77.06,
+   "text": "The most prominent line of work is ESM — Evolutionary Scale Modeling — from Meta AI, then spun out as EvolutionaryScale."
+  },
+  {
+   "t": 86.66,
+   "text": "ESM is a series of protein language models, with the largest, ESM-2, having around fifteen billion parameters."
+  },
+  {
+   "t": 95.42,
+   "text": "There's also ProGen from Salesforce Research and now Profluent."
+  },
+  {
+   "t": 99.46,
+   "text": "There's ProtGPT2 from academic groups."
+  },
+  {
+   "t": 102.85,
+   "text": "There's the protein language model component baked into AlphaFold3."
+  },
+  {
+   "t": 107.29,
+   "text": "What can a protein language model do?"
+  },
+  {
+   "t": 109.25,
+   "text": "Several things."
+  },
+  {
+   "t": 110.53,
+   "text": "First, it learns representations of proteins — embeddings — that capture structural and functional information without explicit structural training."
+  },
+  {
+   "t": 120.16,
+   "text": "ESM-2's embeddings, fed into downstream classifiers, can predict whether a protein is an enzyme, what fold it has, where its active site is — all from sequence alone, without ever seeing a structure."
+  },
+  {
+   "t": 135.14,
+   "text": "The embeddings encode a lot of biology, learned implicitly."
+  },
+  {
+   "t": 139.79,
+   "text": "Second, the language models can generate new sequences."
+  },
+  {
+   "t": 143.78,
+   "text": "Just as GPT can generate text, ESM and ProGen can generate protein sequences — sequences that are structurally plausible, that look like real proteins, that often fold to coherent structures when checked."
+  },
+  {
+   "t": 158.04,
+   "text": "You can prompt them with a partial sequence, or with conditioning information, and get out a full-length protein sequence."
+  },
+  {
+   "t": 164.82,
+   "text": "Third — and this is the interesting result — protein language models can do single-sequence structure prediction."
+  },
+  {
+   "t": 171.71,
+   "text": "The team behind ESM built ESMFold, a structure prediction system that uses the ESM-2 language model in place of multiple sequence alignments."
+  },
+  {
+   "t": 182.78,
+   "text": "Recall that AlphaFold's secret sauce is the MSA — the patterns of variation across homologs."
+  },
+  {
+   "t": 189.38,
+   "text": "ESMFold replaces the MSA with the language model's learned implicit knowledge of evolution."
+  },
+  {
+   "t": 196.0,
+   "text": "You give it one sequence, the model attends to its own representation, and it produces a structure."
+  },
+  {
+   "t": 202.6,
+   "text": "Accuracy is somewhat below AlphaFold2-with-MSA for well-aligned proteins, but for orphan proteins with few homologs, ESMFold can match or beat MSA-based methods."
+  },
+  {
+   "t": 215.12,
+   "text": "And it's much faster, because it doesn't have to search sequence databases."
+  },
+  {
+   "t": 219.49,
+   "text": "The protein language model approach has implications for design too."
+  },
+  {
+   "t": 223.45,
+   "text": "You can train a language model conditionally — give it a description of the function you want, get out a sequence."
+  },
+  {
+   "t": 229.11,
+   "text": "You can fine-tune it on a specific protein family, then generate new family members with desired properties."
+  },
+  {
+   "t": 235.78,
+   "text": "You can use it as a scoring function — given a candidate sequence, what does the language model think is the likelihood of this sequence being a real protein?"
+  },
+  {
+   "t": 245.26,
+   "text": "Sequences that score high are more likely to be foldable and functional."
+  },
+  {
+   "t": 249.85,
+   "text": "The pipeline that's emerging combines these."
+  },
+  {
+   "t": 252.95,
+   "text": "RFdiffusion makes a backbone; ProteinMPNN gives it a sequence; protein language model evaluates the sequence; AlphaFold checks the structure; the lab tests the result."
+  },
+  {
+   "t": 264.94,
+   "text": "Each tool contributes a different kind of signal — geometric, sequential, language-statistical, structural — and combining them all gives better designs than any single tool alone."
+  },
+  {
+   "t": 276.51,
+   "text": "There's a philosophical point I want to flag."
+  },
+  {
+   "t": 279.15,
+   "text": "The structural design approach — RFdiffusion and friends — is geometric."
+  },
+  {
+   "t": 284.76,
+   "text": "It thinks about proteins as three-dimensional objects with specific shapes."
+  },
+  {
+   "t": 289.83,
+   "text": "The language model approach is sequential."
+  },
+  {
+   "t": 292.4,
+   "text": "It thinks about proteins as strings of letters with statistical patterns."
+  },
+  {
+   "t": 297.29,
+   "text": "These are different ontologies of the same underlying biology."
+  },
+  {
+   "t": 301.2,
+   "text": "Both work."
+  },
+  {
+   "t": 302.21,
+   "text": "The fact that both work, separately and together, tells you something about how much redundant information is in the protein universe — you can approach it from many angles, and they all converge on overlapping but not identical capabilities."
+  },
+  {
+   "t": 316.24,
+   "text": "The current generation of best models — like AlphaFold3 — increasingly integrate both perspectives."
+  },
+  {
+   "t": 323.28,
+   "text": "They have both a structural understanding and a language understanding of proteins."
+  },
+  {
+   "t": 328.24,
+   "text": "The boundaries between the two paradigms are dissolving, and the field is converging toward a single integrated framework."
+  }
+ ]
+}

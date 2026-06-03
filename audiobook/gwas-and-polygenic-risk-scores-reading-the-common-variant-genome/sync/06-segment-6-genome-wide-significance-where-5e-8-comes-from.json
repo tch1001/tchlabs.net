@@ -1,0 +1,167 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — Genome-wide significance: where 5e-8 comes from",
+ "duration": 253.45,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — Genome-wide significance: where 5e-8 comes from"
+  },
+  {
+   "t": 7.69,
+   "text": "I want to dwell on the threshold."
+  },
+  {
+   "t": 9.47,
+   "text": "Because if you do not understand where five times ten to the minus eight comes from, you cannot really understand GWAS, and you certainly cannot understand why some claimed associations are real and others are not."
+  },
+  {
+   "t": 22.86,
+   "text": "The basic problem is multiple testing."
+  },
+  {
+   "t": 25.7,
+   "text": "If you run one statistical test at a p-value threshold of zero-point-zero-five, you have a five-percent chance of a false positive under the null."
+  },
+  {
+   "t": 34.45,
+   "text": "That is fine for one test."
+  },
+  {
+   "t": 36.29,
+   "text": "But if you run a million tests at threshold zero-point-zero-five, you expect fifty thousand false positives by chance alone."
+  },
+  {
+   "t": 43.69,
+   "text": "Obviously, you cannot use zero-point-zero-five as your threshold."
+  },
+  {
+   "t": 48.39,
+   "text": "You have to correct."
+  },
+  {
+   "t": 49.58,
+   "text": "The standard correction is the Bonferroni correction — divide your desired family-wise error rate by the number of independent tests."
+  },
+  {
+   "t": 57.24,
+   "text": "If you want a five-percent false-positive rate across your whole experiment, and you ran a million independent tests, you divide zero-point-zero-five by a million, getting five times ten to the minus eight."
+  },
+  {
+   "t": 69.09,
+   "text": "But here is the subtle point."
+  },
+  {
+   "t": 70.66,
+   "text": "SNPs are not independent."
+  },
+  {
+   "t": 73.47,
+   "text": "SNPs in LD with each other carry overlapping information; testing all of them is like testing the same hypothesis multiple times."
+  },
+  {
+   "t": 82.39,
+   "text": "So the question becomes — how many independent tests are there in the human genome's common-variant landscape?"
+  },
+  {
+   "t": 88.67,
+   "text": "Several groups in the mid-2000s — most notably Pardis Sabeti, Jonathan Pritchard, and the Wellcome Trust Case Control Consortium — worked through this."
+  },
+  {
+   "t": 98.65,
+   "text": "The conclusion, repeatedly arrived at by different methods, was that there are roughly one million independent common-variant loci in the genome."
+  },
+  {
+   "t": 107.7,
+   "text": "Some calculations give half a million; some give two million."
+  },
+  {
+   "t": 111.79,
+   "text": "But to a first approximation, one million is the right order of magnitude."
+  },
+  {
+   "t": 116.45,
+   "text": "Apply Bonferroni at the one-million-tests level, and you get the threshold of five times ten to the minus eight."
+  },
+  {
+   "t": 123.12,
+   "text": "This number, five times ten to the minus eight, has stuck."
+  },
+  {
+   "t": 126.44,
+   "text": "It is now the universal standard for declaring a GWAS hit."
+  },
+  {
+   "t": 130.8,
+   "text": "Whether your study tested half a million SNPs or twenty million imputed SNPs, the threshold is five times ten to the minus eight."
+  },
+  {
+   "t": 140.91,
+   "text": "The reasoning is that you are sampling from the same one-million-independent-test space, regardless of how many of the dependent SNPs you happen to genotype."
+  },
+  {
+   "t": 150.91,
+   "text": "This is a convention, not a theorem, but it is so deeply baked in that papers reporting hits at p-values of one times ten to the minus seven get called out — those are suggestive, not significant."
+  },
+  {
+   "t": 163.47,
+   "text": "There are a few things to note about this threshold."
+  },
+  {
+   "t": 166.21,
+   "text": "First, it is conservative."
+  },
+  {
+   "t": 168.4,
+   "text": "It treats every common variant as equally likely to be associated a priori."
+  },
+  {
+   "t": 173.89,
+   "text": "If you have a strong biological prior — say, you are studying autoimmune disease and you have reason to focus on HLA — you can use a less stringent threshold for that region."
+  },
+  {
+   "t": 183.66,
+   "text": "But for genome-wide claims, five times ten to the minus eight is the convention."
+  },
+  {
+   "t": 188.89,
+   "text": "Second, it does not adjust for the number of traits you are studying."
+  },
+  {
+   "t": 192.64,
+   "text": "If you run a hundred GWAS for a hundred different traits, you are doing a hundred times a million tests, and a strict Bonferroni would push your threshold to five times ten to the minus ten."
+  },
+  {
+   "t": 203.97,
+   "text": "In practice, this is ignored — each GWAS is treated as a separate experiment — but it is a source of false positives across the literature."
+  },
+  {
+   "t": 213.53,
+   "text": "Third, the threshold may need to be revised for multi-ancestry GWAS or for studies using whole-genome sequencing rather than chips."
+  },
+  {
+   "t": 223.06,
+   "text": "WGS captures rare variants that are not in the standard one-million-independent-test framework, and the effective number of tests may be much larger."
+  },
+  {
+   "t": 232.7,
+   "text": "Proposed thresholds for WGS-era GWAS run as low as one times ten to the minus nine."
+  },
+  {
+   "t": 240.0,
+   "text": "But for the next two hours, hold the number five times ten to the minus eight in your head."
+  },
+  {
+   "t": 245.59,
+   "text": "It is the line above which a dot in a Manhattan plot becomes a hit."
+  },
+  {
+   "t": 249.66,
+   "text": "Below it, you have a story."
+  },
+  {
+   "t": 251.57,
+   "text": "Above it, you have a result."
+  }
+ ]
+}

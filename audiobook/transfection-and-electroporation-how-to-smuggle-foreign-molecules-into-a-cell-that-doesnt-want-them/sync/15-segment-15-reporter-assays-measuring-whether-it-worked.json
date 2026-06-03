@@ -1,0 +1,199 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Reporter assays: measuring whether it worked",
+ "duration": 369.33,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Reporter assays: measuring whether it worked"
+  },
+  {
+   "t": 4.81,
+   "text": "So you have done your transfection."
+  },
+  {
+   "t": 6.58,
+   "text": "You waited the recommended forty-eight hours."
+  },
+  {
+   "t": 9.19,
+   "text": "Now what?"
+  },
+  {
+   "t": 10.0,
+   "text": "How do you actually know whether the transfection worked?"
+  },
+  {
+   "t": 12.51,
+   "text": "The answer is reporter assays, and there are two big ones you should know: GFP and luciferase."
+  },
+  {
+   "t": 19.25,
+   "text": "Each is the right tool for different questions."
+  },
+  {
+   "t": 22.14,
+   "text": "The GFP reporter — green fluorescent protein, the famous jellyfish-derived protein that glows green under blue light — is the gold standard for measuring transfection efficiency."
+  },
+  {
+   "t": 33.92,
+   "text": "You construct a plasmid that encodes GFP, often under a strong constitutive promoter like CMV."
+  },
+  {
+   "t": 41.42,
+   "text": "You transfect this plasmid into your cells."
+  },
+  {
+   "t": 44.29,
+   "text": "Some cells take up the plasmid and express GFP; those cells glow green."
+  },
+  {
+   "t": 49.6,
+   "text": "Other cells don't take it up and stay dark."
+  },
+  {
+   "t": 52.17,
+   "text": "You can then quantify the fraction of green cells in your population."
+  },
+  {
+   "t": 56.61,
+   "text": "The standard tool for this quantification is flow cytometry."
+  },
+  {
+   "t": 60.39,
+   "text": "You take your transfected cells, run them through a flow cytometer, and measure the fluorescence intensity of each cell as it passes through the laser."
+  },
+  {
+   "t": 69.31,
+   "text": "The output is a histogram showing the distribution of fluorescence across your cell population."
+  },
+  {
+   "t": 75.33,
+   "text": "You can readily distinguish the dark population (untransfected) from the bright population (transfected), and read off the percentage of cells in each."
+  },
+  {
+   "t": 85.08,
+   "text": "Transfection efficiency as a number is, almost always, this percentage of GFP-positive cells."
+  },
+  {
+   "t": 92.75,
+   "text": "Alternatively, you can visualize GFP-expressing cells under a fluorescence microscope, which gives you spatial information — where the cells are, what they look like, whether they cluster — at the cost of being lower-throughput and more qualitative than flow cytometry."
+  },
+  {
+   "t": 108.49,
+   "text": "For most efficiency measurements, flow is the default."
+  },
+  {
+   "t": 112.42,
+   "text": "For colocalization studies or single-cell morphology, microscopy is the default."
+  },
+  {
+   "t": 118.99,
+   "text": "GFP has become so standard that almost every experimental transfection of a new cell type or new method starts with a GFP reporter to validate the protocol before any real construct is used."
+  },
+  {
+   "t": 131.85,
+   "text": "The advantages: simple, visible, fast, quantitative."
+  },
+  {
+   "t": 136.5,
+   "text": "The disadvantages: GFP itself can be mildly toxic at high expression levels, GFP fluorescence saturates the flow cytometer if expression is too high, and very weakly expressed GFP can be hard to distinguish from autofluorescence in some cell types."
+  },
+  {
+   "t": 153.97,
+   "text": "The variants — eGFP for enhanced brightness, mCherry for red, mTurquoise for cyan, and so on — give you a whole rainbow palette for multiplexed reporting."
+  },
+  {
+   "t": 165.18,
+   "text": "The luciferase reporter is the gold standard for measuring expression level, as opposed to the fraction of cells expressing."
+  },
+  {
+   "t": 173.1,
+   "text": "Luciferase is an enzyme — usually from firefly or Renilla — that catalyzes a reaction producing visible light, with an intensity proportional to the amount of enzyme present."
+  },
+  {
+   "t": 185.26,
+   "text": "You construct a plasmid encoding luciferase, transfect it, lyse the cells after the appropriate time, mix the lysate with the luciferase substrate (luciferin and ATP for firefly luciferase), and measure the light output in a luminometer."
+  },
+  {
+   "t": 201.45,
+   "text": "The luciferase assay is enormously sensitive — you can detect a few thousand molecules of luciferase per sample — and it gives you a continuous quantitative readout."
+  },
+  {
+   "t": 212.31,
+   "text": "It is the standard for measuring promoter strength, for measuring relative expression between conditions, and for measuring drug effects on gene expression."
+  },
+  {
+   "t": 221.29,
+   "text": "You can multiplex two luciferases — firefly and Renilla, each with a different substrate — to do dual-reporter assays where one luciferase reports the experimental signal and the other normalizes for transfection efficiency."
+  },
+  {
+   "t": 236.12,
+   "text": "This dual-luciferase setup is one of the most powerful and commonly used tools in molecular biology."
+  },
+  {
+   "t": 242.41,
+   "text": "The choice between GFP and luciferase, simplified."
+  },
+  {
+   "t": 246.46,
+   "text": "Use GFP when you care about the fraction of cells expressing or about which cells are expressing."
+  },
+  {
+   "t": 252.64,
+   "text": "Use luciferase when you care about how much is being expressed and you have a multi-well plate of conditions to compare."
+  },
+  {
+   "t": 260.14,
+   "text": "Many experiments use both — GFP to confirm the transfection worked and luciferase to quantify the experimental effect."
+  },
+  {
+   "t": 269.14,
+   "text": "There are also more specialized reporters."
+  },
+  {
+   "t": 271.76,
+   "text": "Secreted alkaline phosphatase (SEAP) lets you measure expression in the medium without lysing the cells, so you can do time courses on the same sample."
+  },
+  {
+   "t": 281.71,
+   "text": "Beta-galactosidase (lacZ), with X-gal as substrate, lets you stain cells blue, which is useful for in situ visualization in fixed tissue, particularly in mouse embryos."
+  },
+  {
+   "t": 293.8,
+   "text": "Tagged proteins of your gene of interest — typically tagged with HA, FLAG, Myc, or fluorescent protein fusions — let you measure expression by Western blot or by direct visualization, without needing a separate reporter."
+  },
+  {
+   "t": 308.28,
+   "text": "For modern CRISPR experiments, the reporter strategy is slightly different."
+  },
+  {
+   "t": 313.1,
+   "text": "You typically want to confirm that your edit happened, not just that your construct was delivered."
+  },
+  {
+   "t": 318.1,
+   "text": "The standard approach is to do deep sequencing of the target locus after editing — you PCR amplify the genomic region around the cut site, sequence the amplicon on an Illumina or Nanopore platform, and count what fraction of the reads show indels at the expected position."
+  },
+  {
+   "t": 334.18,
+   "text": "This gives you a direct measurement of editing efficiency, which is much more meaningful for a CRISPR experiment than transfection efficiency per se."
+  },
+  {
+   "t": 343.05,
+   "text": "Tools like CRISPResso and TIDE automate the analysis of this data."
+  },
+  {
+   "t": 348.41,
+   "text": "The general principle: always have a reporter, always quantify."
+  },
+  {
+   "t": 353.08,
+   "text": "Transfection is a noisy, variable process, and the only way to know whether it worked is to measure."
+  },
+  {
+   "t": 359.66,
+   "text": "If your experimental construct does not have an obvious phenotype, include a separate reporter plasmid in the transfection mix so you have a positive control for delivery."
+  }
+ ]
+}

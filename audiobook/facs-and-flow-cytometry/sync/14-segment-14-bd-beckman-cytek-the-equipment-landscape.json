@@ -1,0 +1,159 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — BD, Beckman, Cytek: the equipment landscape",
+ "duration": 316.77,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — BD, Beckman, Cytek: the equipment landscape"
+  },
+  {
+   "t": 5.24,
+   "text": "Let's step back for a moment and look at who actually makes the instruments."
+  },
+  {
+   "t": 9.06,
+   "text": "Because the equipment landscape, and how it's evolved over the last decade, tells you a lot about where the field is going."
+  },
+  {
+   "t": 15.82,
+   "text": "For most of the history of flow cytometry, there were essentially two big manufacturers: BD (Becton-Dickinson), descended from the Herzenberg-Stanford partnership, and Beckman Coulter, descended from Wallace Coulter's pioneering work on impedance-based cell counting in the 1950s."
+  },
+  {
+   "t": 32.96,
+   "text": "BD's flagship analyzers — the FACSCalibur in the 1990s, the LSR series in the 2000s and 2010s, the LSRFortessa, the FACSymphony — were the workhorse instruments in academic immunology labs worldwide."
+  },
+  {
+   "t": 49.05,
+   "text": "BD's sorters — the FACSAria, the FACSAria Fusion, the FACSMelody, the FACSDiscover — defined the cell sorting market for decades."
+  },
+  {
+   "t": 60.19,
+   "text": "Beckman Coulter's CytoFLEX series and the Gallios are widely used, especially in clinical labs and certain academic markets."
+  },
+  {
+   "t": 68.83,
+   "text": "Both of these companies built classical flow cytometers in the model we've been describing: one detector per fluorochrome channel, classical compensation, panels of up to 20 or so colors on the high-end instruments."
+  },
+  {
+   "t": 81.38,
+   "text": "For thirty years, this was the architecture, and it worked well."
+  },
+  {
+   "t": 85.34,
+   "text": "Then, around 2015, a much smaller company called Cytek Biosciences, founded by former BD engineers in Fremont, California, introduced a different architecture that has been quietly reshaping the field."
+  },
+  {
+   "t": 98.66,
+   "text": "Their instrument, the Cytek Aurora, is a spectral cytometer, and it represents a real shift in how the measurement is done."
+  },
+  {
+   "t": 106.49,
+   "text": "In a classical flow cytometer, you have one detector per fluorochrome channel, each detector watching a narrow wavelength window matched to one fluorochrome's emission peak."
+  },
+  {
+   "t": 117.45,
+   "text": "You record one number per detector per cell."
+  },
+  {
+   "t": 120.06,
+   "text": "You correct for spillover with classical compensation math."
+  },
+  {
+   "t": 124.09,
+   "text": "If you want to add a new fluorochrome, you need a new dedicated detector channel with the right filter."
+  },
+  {
+   "t": 129.31,
+   "text": "In a spectral cytometer, you do something different."
+  },
+  {
+   "t": 132.53,
+   "text": "You measure the full emission spectrum of each cell across many narrow wavelength bins — typically 64 detectors per laser, covering the full visible range in narrow slices."
+  },
+  {
+   "t": 144.15,
+   "text": "You don't try to assign each detector to one fluorochrome."
+  },
+  {
+   "t": 147.74,
+   "text": "Instead, you record the full spectral fingerprint per cell, and then in software you unmix the signal mathematically — you decompose the observed spectrum at each cell into a weighted sum of pure fluorochrome reference spectra, where the weights are the abundances of each fluorochrome on that cell."
+  },
+  {
+   "t": 166.65,
+   "text": "The analogy is this."
+  },
+  {
+   "t": 168.76,
+   "text": "Classical flow cytometry is like having a chord played on a piano, and you have one microphone tuned to each key."
+  },
+  {
+   "t": 175.86,
+   "text": "You measure how loud each key is independently, but spillover means each microphone picks up some adjacent keys."
+  },
+  {
+   "t": 183.82,
+   "text": "Spectral cytometry is like having a single very high-resolution microphone that records the entire sound waveform, and then software decomposes the recording into the contributing keys, given that you know what each individual key sounds like."
+  },
+  {
+   "t": 198.65,
+   "text": "The math is more robust."
+  },
+  {
+   "t": 200.65,
+   "text": "The number of \"keys\" you can simultaneously play and resolve is larger."
+  },
+  {
+   "t": 205.76,
+   "text": "And — this is the killer feature — you can use two fluorochromes with nearly overlapping emission peaks, as long as their full spectra are distinguishable somewhere across the wavelength range."
+  },
+  {
+   "t": 217.89,
+   "text": "In classical compensation, two fluorochromes with overlapping peaks would be impossible to separate."
+  },
+  {
+   "t": 224.32,
+   "text": "In spectral unmixing, as long as their spectra differ in shape anywhere, they're resolvable."
+  },
+  {
+   "t": 230.25,
+   "text": "The practical consequence is that on a Cytek Aurora, you can routinely run 30, 40, even 50 colors in a single tube, with reliable unmixing and high resolution."
+  },
+  {
+   "t": 242.01,
+   "text": "The same number of colors on a classical BD instrument would be much harder to make work."
+  },
+  {
+   "t": 247.31,
+   "text": "Cytek's market share has grown dramatically since the Aurora launched, and BD has responded by launching its own spectral instruments — the FACSDiscover and the new FACSymphony A5 SE."
+  },
+  {
+   "t": 260.04,
+   "text": "Beckman Coulter has the CytoFLEX SRT spectral sorter."
+  },
+  {
+   "t": 264.24,
+   "text": "The field has, in a span of about five years, undergone a meaningful architectural shift from filter-based detection to spectral detection, and that shift is one of the main reasons high-parameter cytometry is exploding right now."
+  },
+  {
+   "t": 278.89,
+   "text": "So the equipment landscape today: BD remains the largest player by historical install base, especially in sorters."
+  },
+  {
+   "t": 286.74,
+   "text": "Cytek is the disruptor and the spectral leader."
+  },
+  {
+   "t": 289.93,
+   "text": "Beckman Coulter holds clinical and certain academic segments."
+  },
+  {
+   "t": 294.6,
+   "text": "There are smaller players too — Sony Biotechnology, with the SH800 sorter; Miltenyi with the MACSQuant; ThermoFisher's Attune NxT, which uses acoustic focusing instead of pure hydrodynamic focusing for higher throughput."
+  },
+  {
+   "t": 310.63,
+   "text": "The market is more diverse than it was twenty years ago, and the architectural innovation is healthy."
+  }
+ ]
+}

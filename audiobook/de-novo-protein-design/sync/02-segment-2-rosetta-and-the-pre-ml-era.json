@@ -1,0 +1,215 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — Rosetta and the pre-ML era",
+ "duration": 363.31,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — Rosetta and the pre-ML era"
+  },
+  {
+   "t": 3.91,
+   "text": "Let's go back to 1996."
+  },
+  {
+   "t": 6.17,
+   "text": "The internet exists but nobody uses it for science yet."
+  },
+  {
+   "t": 9.95,
+   "text": "AlphaGo will not exist for twenty years."
+  },
+  {
+   "t": 12.78,
+   "text": "Deep learning is a fringe field that most computer scientists think is dead."
+  },
+  {
+   "t": 17.66,
+   "text": "And at the University of Washington, a structural biologist named David Baker — a former Berkeley undergrad, a Berkeley PhD, freshly tenured, working on the protein folding problem — starts writing a piece of software called Rosetta."
+  },
+  {
+   "t": 32.58,
+   "text": "Rosetta's original purpose was the forward problem."
+  },
+  {
+   "t": 35.6,
+   "text": "Predict structure from sequence."
+  },
+  {
+   "t": 37.71,
+   "text": "This is the same problem AlphaFold would eventually solve, twenty-four years later, by completely different means."
+  },
+  {
+   "t": 44.96,
+   "text": "Baker's approach in the late nineties was what we'd now call classical biophysics, with heavy use of statistics extracted from the Protein Data Bank."
+  },
+  {
+   "t": 53.61,
+   "text": "Here's the conceptual move."
+  },
+  {
+   "t": 55.3,
+   "text": "Baker observed that, even though the full conformation space of a protein is impossibly large, short fragments — three to nine amino acids at a time — tend to adopt only a small number of local shapes."
+  },
+  {
+   "t": 68.65,
+   "text": "A given three-residue sequence, looked up across all the structures in the PDB, tends to fold into one of maybe a handful of local conformations."
+  },
+  {
+   "t": 78.34,
+   "text": "Most three-residue patches are not surprising."
+  },
+  {
+   "t": 81.36,
+   "text": "They're like the syllables of protein structure — limited in number, drawn from a finite vocabulary."
+  },
+  {
+   "t": 87.51,
+   "text": "So Rosetta's strategy was: break your target sequence into overlapping short fragments."
+  },
+  {
+   "t": 94.35,
+   "text": "For each fragment, look up in a precomputed library all the local conformations that similar fragments adopt in known structures."
+  },
+  {
+   "t": 102.75,
+   "text": "Then assemble the full structure by stitching these fragments together — using a Monte Carlo procedure that randomly substitutes one local conformation for another, scores the resulting structure with an energy function, and keeps the moves that lower the energy."
+  },
+  {
+   "t": 117.86,
+   "text": "Repeat for thousands of trajectories."
+  },
+  {
+   "t": 120.53,
+   "text": "The lowest-energy structures across all trajectories are your predictions."
+  },
+  {
+   "t": 125.3,
+   "text": "This is fragment assembly plus energy minimization, and it was, for over a decade, the state of the art for ab initio prediction."
+  },
+  {
+   "t": 133.45,
+   "text": "Rosetta routinely won the harder categories at CASP through the 2000s."
+  },
+  {
+   "t": 138.7,
+   "text": "Baker's lab grew into one of the largest computational biology groups in the world."
+  },
+  {
+   "t": 143.78,
+   "text": "Hundreds of PhDs and postdocs cycled through."
+  },
+  {
+   "t": 147.34,
+   "text": "The software became a multi-million-line code base, written largely in C++, maintained by a worldwide consortium called RosettaCommons."
+  },
+  {
+   "t": 157.57,
+   "text": "If you wanted to do serious computational protein work between 2000 and 2020 and you weren't a DeepMind employee, you were almost certainly running Rosetta."
+  },
+  {
+   "t": 166.72,
+   "text": "And here is the part that matters for our lecture."
+  },
+  {
+   "t": 169.28,
+   "text": "Around 1999, Baker realized that Rosetta could be flipped."
+  },
+  {
+   "t": 174.14,
+   "text": "The same framework that searched conformations for a fixed sequence could also search sequences for a fixed conformation."
+  },
+  {
+   "t": 181.25,
+   "text": "You hold the backbone — the chain of alpha carbons — fixed in your desired shape."
+  },
+  {
+   "t": 186.19,
+   "text": "Then you ask the algorithm: at every position along this backbone, what amino acid minimizes the energy?"
+  },
+  {
+   "t": 193.74,
+   "text": "You try every amino acid at every position, you let the side chains pack against each other, and you keep the combination that gives the lowest-energy folded structure."
+  },
+  {
+   "t": 204.0,
+   "text": "This is protein design, in the Rosetta sense."
+  },
+  {
+   "t": 207.1,
+   "text": "The energy function doesn't know whether you're predicting structure or designing sequence; it just scores structures."
+  },
+  {
+   "t": 214.19,
+   "text": "You can let either the sequence or the backbone vary, and minimize."
+  },
+  {
+   "t": 218.41,
+   "text": "Baker called this \"protein folding upside down\" — same software, same energy function, problem flipped."
+  },
+  {
+   "t": 225.59,
+   "text": "Predict the structure given the sequence, or write the sequence given the structure."
+  },
+  {
+   "t": 231.0,
+   "text": "The analogy I want for this is: Rosetta is the OG — David Baker's energy-minimization software, designing proteins since the 1990s."
+  },
+  {
+   "t": 241.15,
+   "text": "Long before machine learning, long before there was a single GPU in computational biology, Baker's lab was running Rosetta on clusters of CPUs, sampling sequences, scoring fits, and producing designed proteins that, when expressed in the lab, actually folded into the shapes the software said they would."
+  },
+  {
+   "t": 260.43,
+   "text": "There's one more piece of context that matters."
+  },
+  {
+   "t": 263.06,
+   "text": "Through the 2000s, Baker's lab developed a culture that turned out to be unusual in computational biology."
+  },
+  {
+   "t": 270.24,
+   "text": "They didn't just publish predictions."
+  },
+  {
+   "t": 272.31,
+   "text": "They expressed every designed protein in the lab."
+  },
+  {
+   "t": 275.74,
+   "text": "Every paper from Baker's group, almost without exception, ended with experimental validation — they synthesized the gene, they put it in E. coli, they purified the protein, they ran circular dichroism on it to check that it folded, and if possible they crystallized it and solved its structure."
+  },
+  {
+   "t": 292.7,
+   "text": "This experimental discipline turned out to be irreplaceable."
+  },
+  {
+   "t": 296.75,
+   "text": "Computational designs that look good on a screen are routinely terrible in real life — they don't express, they aggregate, they fold to the wrong shape, they're insoluble."
+  },
+  {
+   "t": 307.55,
+   "text": "The only way to know if your design works is to make it and test it."
+  },
+  {
+   "t": 311.28,
+   "text": "Baker's lab built that loop early and kept it running, and as a result they accumulated, over twenty years, an empirical understanding of what works and what doesn't that no other group had."
+  },
+  {
+   "t": 323.38,
+   "text": "When the deep learning revolution arrived in 2020, Baker's lab was the only one with both the computational tooling and the experimental pipeline ready to consume it."
+  },
+  {
+   "t": 333.48,
+   "text": "That accumulated practice — Rosetta plus the wet lab plus thousands of designed proteins expressed and characterized — is the substrate the modern field grew on."
+  },
+  {
+   "t": 345.1,
+   "text": "Without the twenty years of Rosetta, the diffusion-model work of 2022 would have had nothing to stand on."
+  },
+  {
+   "t": 351.93,
+   "text": "So before we get to the modern era, we have to spend a segment on the proof of concept that, in 2003, shocked the field and convinced people that the inverse problem was actually solvable."
+  }
+ ]
+}

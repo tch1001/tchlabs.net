@@ -1,0 +1,139 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — RRBS — reduced-representation bisulfite sequencing for the rest of us",
+ "duration": 339.96,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — RRBS — reduced-representation bisulfite sequencing for the rest of us"
+  },
+  {
+   "t": 7.12,
+   "text": "If WGBS is the comprehensive, expensive method, RRBS — reduced-representation bisulfite sequencing — is the budget-friendly compromise that captures most of the biologically interesting methylation at a fraction of the cost."
+  },
+  {
+   "t": 22.69,
+   "text": "RRBS was developed by Alex Meissner and colleagues, originally in the lab of Rudolf Jaenisch at the Whitehead Institute, in a 2005 paper, and it became a major workhorse of methylation profiling through the 2010s, particularly for cell-line studies and large epigenetic screens."
+  },
+  {
+   "t": 40.21,
+   "text": "The insight behind RRBS is this."
+  },
+  {
+   "t": 43.24,
+   "text": "WGBS sequences every cytosine in the genome — including the vast majority of cytosines that sit in CpG-poor, methylation-uninformative regions where nothing biologically interesting is happening."
+  },
+  {
+   "t": 56.79,
+   "text": "The most biologically interesting methylation is concentrated in CpG-rich regions — CpG islands at promoters, CpG island shores, and some CpG-rich enhancers — which together make up only a tiny percentage of the genome."
+  },
+  {
+   "t": 72.11,
+   "text": "If you could enrich your library specifically for CpG-rich regions before sequencing, you'd capture most of the regulatorily meaningful methylation while sequencing far less total DNA."
+  },
+  {
+   "t": 83.64,
+   "text": "That's RRBS."
+  },
+  {
+   "t": 85.2,
+   "text": "The mechanism is beautifully simple."
+  },
+  {
+   "t": 88.01,
+   "text": "You digest your genomic DNA with the restriction enzyme MspI, which recognizes and cuts the sequence CCGG — a sequence that, by definition, contains a CpG."
+  },
+  {
+   "t": 100.08,
+   "text": "MspI is methylation-insensitive, meaning it cuts the same whether the CpG is methylated or not, so it doesn't bias your coverage by methylation state."
+  },
+  {
+   "t": 111.08,
+   "text": "After MspI digestion, you get a population of fragments whose ends always abut a CpG site."
+  },
+  {
+   "t": 118.55,
+   "text": "The crucial property of MspI digestion is that, because CCGG sites are enriched in CpG-rich regions of the genome and depleted in the CpG-poor bulk, the fragments produced by MspI are biased in size and abundance toward CpG-rich regions."
+  },
+  {
+   "t": 135.16,
+   "text": "You then size-select — typically picking fragments in the range of 40 to 220 base pairs — and proceed with bisulfite conversion, library prep, and Illumina sequencing."
+  },
+  {
+   "t": 146.64,
+   "text": "The size selection enriches even further for CpG-rich regions, because MspI produces tightly clustered cuts in CpG-dense areas, generating fragments of the right size from those areas while producing very long, excluded fragments from CpG-poor regions."
+  },
+  {
+   "t": 164.12,
+   "text": "The result, after sequencing and analysis, is a methylation map that covers somewhere between 1 and 3 million CpGs — roughly 5 to 10 percent of all CpGs in the genome, concentrated in the regulatorily interesting CpG-rich regions, particularly CpG island promoters."
+  },
+  {
+   "t": 183.49,
+   "text": "You miss the methylation status of the vast majority of the genome's CpGs, but you capture most of the ones that anyone cared about, at a sequencing cost roughly an order of magnitude lower than WGBS."
+  },
+  {
+   "t": 196.34,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 198.09,
+   "text": "RRBS is methylation-on-a-budget."
+  },
+  {
+   "t": 200.88,
+   "text": "Instead of sequencing every cytosine in the genome, you use a restriction enzyme to pull out just the CpG-rich fragments, which are the regions where the regulatorily interesting methylation lives."
+  },
+  {
+   "t": 213.22,
+   "text": "You get most of the biologically meaningful signal at maybe a tenth of the cost of WGBS."
+  },
+  {
+   "t": 219.55,
+   "text": "It's the eighty-twenty rule applied to methylation profiling."
+  },
+  {
+   "t": 223.54,
+   "text": "RRBS dominated cell-line methylation studies through the 2010s, particularly in the ENCODE and Roadmap Epigenomics projects, which generated RRBS profiles of dozens of human cell lines and primary tissues."
+  },
+  {
+   "t": 237.8,
+   "text": "It's still in active use today, particularly in academic labs that need methylation profiles on many samples and don't have the budget for WGBS."
+  },
+  {
+   "t": 247.61,
+   "text": "The trade-offs are well-understood: you don't see methylation in CpG-poor regions, you don't see methylation in enhancers that aren't CpG-rich, and you don't see the so-called partially methylated domains — large stretches of intermediate methylation that turn out to be biologically meaningful in many contexts."
+  },
+  {
+   "t": 266.7,
+   "text": "RRBS sees what it's designed to see, and misses the rest."
+  },
+  {
+   "t": 270.96,
+   "text": "For most regulatory questions — is this promoter methylated, is this CpG island differentially methylated between conditions, what's the methylation status of this tumor suppressor — RRBS gives you the answer."
+  },
+  {
+   "t": 285.19,
+   "text": "For comprehensive epigenomic mapping, including methylation outside CpG islands, you still need WGBS or one of the newer comprehensive methods."
+  },
+  {
+   "t": 295.62,
+   "text": "The tool fits the question."
+  },
+  {
+   "t": 297.32,
+   "text": "There's also a class of intermediate methods — bisulfite-treated capture sequencing, where you use a hybridization capture step (like exome capture) to enrich for specific regions of interest before sequencing."
+  },
+  {
+   "t": 310.51,
+   "text": "This lets you design custom methylation panels — for example, a panel of all the methylation hotspots known to be relevant to cancer diagnosis — and sequence them deeply at low cost per sample."
+  },
+  {
+   "t": 322.84,
+   "text": "Capture-based methylation sequencing is common in clinical research, and it's particularly popular for liquid biopsy applications."
+  },
+  {
+   "t": 331.21,
+   "text": "It's another point on the cost-comprehensiveness trade-off, sitting between RRBS and WGBS in coverage and customizability."
+  }
+ ]
+}

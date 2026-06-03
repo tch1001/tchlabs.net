@@ -1,0 +1,255 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Shotgun metagenomics: from who is there to what they're doing",
+ "duration": 513.24,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Shotgun metagenomics: from who is there to what they're doing"
+  },
+  {
+   "t": 5.05,
+   "text": "The 16S survey has a fundamental limitation, and it's worth being precise about, because it shapes what the data can support."
+  },
+  {
+   "t": 12.64,
+   "text": "16S tells you who is there, but not what they are doing."
+  },
+  {
+   "t": 16.38,
+   "text": "The 16S gene is a phylogenetic marker."
+  },
+  {
+   "t": 19.52,
+   "text": "It's a barcode."
+  },
+  {
+   "t": 20.61,
+   "text": "It identifies the taxonomic group present in your sample, but it carries essentially no information about what metabolic functions those organisms can perform, what genes they encode, what compounds they make or degrade."
+  },
+  {
+   "t": 33.85,
+   "text": "If two organisms have nearly identical 16S sequences but one carries an antibiotic resistance gene and the other doesn't, a 16S survey can't distinguish them."
+  },
+  {
+   "t": 45.19,
+   "text": "If the same species has acquired a new gene by horizontal transfer that radically changes what it can do, 16S can't see it."
+  },
+  {
+   "t": 53.56,
+   "text": "The 16S is a name tag."
+  },
+  {
+   "t": 55.76,
+   "text": "It tells you who's in the room."
+  },
+  {
+   "t": 57.38,
+   "text": "It doesn't tell you what they're carrying in their pockets."
+  },
+  {
+   "t": 60.24,
+   "text": "To get at what the organisms are doing, you need to sequence not just the 16S gene but all the DNA in the sample."
+  },
+  {
+   "t": 67.46,
+   "text": "This is called shotgun metagenomics, and it is the dominant approach in the modern microbiome field."
+  },
+  {
+   "t": 74.19,
+   "text": "The name \"shotgun\" comes from genome sequencing, where it refers to randomly fragmenting DNA into many small pieces, sequencing them all, and then computationally reassembling the original sequence."
+  },
+  {
+   "t": 87.91,
+   "text": "In shotgun metagenomics, you do the same thing, but your starting material is not the DNA of a single organism — it's the total community DNA from an environmental sample, containing fragments from hundreds or thousands of different species simultaneously."
+  },
+  {
+   "t": 103.91,
+   "text": "The workflow looks like this."
+  },
+  {
+   "t": 105.79,
+   "text": "You extract total DNA from your sample, the same way you would for 16S."
+  },
+  {
+   "t": 111.39,
+   "text": "But instead of PCR-amplifying one specific gene, you skip the PCR entirely."
+  },
+  {
+   "t": 117.47,
+   "text": "You take the bulk DNA, you fragment it into pieces a few hundred base pairs long, you attach Illumina adapters, you load it onto a sequencer, and you sequence everything."
+  },
+  {
+   "t": 127.86,
+   "text": "You get back, depending on the instrument and the run, somewhere between a few gigabases and a few hundred gigabases of sequence — billions of short reads from all the organisms in your sample, in proportion roughly to their abundance."
+  },
+  {
+   "t": 141.36,
+   "text": "Now the analysis is harder."
+  },
+  {
+   "t": 143.5,
+   "text": "With 16S, you know exactly which gene you're looking at, and the reference databases are mature."
+  },
+  {
+   "t": 149.41,
+   "text": "With shotgun, you have raw sequence from everything — ribosomal genes, metabolic genes, mobile genetic elements, viral DNA, plasmid DNA, human host DNA if you didn't get rid of it — and you have to figure out what's there and what it's doing using only the sequences themselves."
+  },
+  {
+   "t": 166.1,
+   "text": "There are two main analytical strategies, and they answer different questions."
+  },
+  {
+   "t": 170.6,
+   "text": "The first is read-based profiling."
+  },
+  {
+   "t": 173.04,
+   "text": "You take all your raw reads and compare them against a reference database of known microbial genomes, asking, for each read, which organism's genome it best matches and which gene it's part of."
+  },
+  {
+   "t": 185.3,
+   "text": "Tools like Kraken2 and MetaPhlAn do the taxonomic side of this — they assign reads to species based on which species' genomes contain those exact sequences."
+  },
+  {
+   "t": 195.65,
+   "text": "Tools like HUMAnN do the functional side — they map reads to gene families and metabolic pathways, telling you which biological functions are encoded by the community."
+  },
+  {
+   "t": 206.06,
+   "text": "The output of read-based profiling is two tables: a species-abundance table similar to what you'd get from 16S, but at much higher taxonomic resolution; and a gene-abundance table telling you which functional gene families and pathways are present and in what abundance."
+  },
+  {
+   "t": 222.65,
+   "text": "The second strategy is assembly-based."
+  },
+  {
+   "t": 225.6,
+   "text": "You take all your raw reads and try to computationally assemble them back into longer contiguous sequences — contigs — by finding overlaps."
+  },
+  {
+   "t": 234.85,
+   "text": "This is much harder than assembling a single genome, because reads from many different organisms are jumbled together, and reads from closely related organisms can mis-assemble into chimeras."
+  },
+  {
+   "t": 246.32,
+   "text": "But when it works, assembly gives you long stretches of genomic sequence that you can search for genes, operons, and other features."
+  },
+  {
+   "t": 254.76,
+   "text": "The standard assemblers for metagenomics are MEGAHIT and metaSPAdes, both of which use modified versions of de Bruijn graph assembly tuned for the chaos of mixed communities."
+  },
+  {
+   "t": 265.15,
+   "text": "After assembly, you have a soup of contigs from many different organisms."
+  },
+  {
+   "t": 269.57,
+   "text": "The next step is binning, which is where the magic happens."
+  },
+  {
+   "t": 273.06,
+   "text": "Binning is the process of grouping contigs that came from the same original organism, even though you didn't know in advance which contigs go together."
+  },
+  {
+   "t": 281.71,
+   "text": "The principle is that contigs from the same genome share two features: they have similar nucleotide composition — the same GC content, the same tetranucleotide frequency patterns — and they have similar abundance in the sample, because they were all derived from the same population of cells."
+  },
+  {
+   "t": 299.67,
+   "text": "Modern binning algorithms — MetaBAT2, CONCOCT, MaxBin2 — use both of these signals to cluster contigs into bins, each bin representing an attempt to reconstruct one organism's genome from the community DNA."
+  },
+  {
+   "t": 314.17,
+   "text": "The output of binning is what we now call a MAG, a metagenome-assembled genome."
+  },
+  {
+   "t": 320.01,
+   "text": "A MAG is a draft genome reconstructed entirely from community sequencing — no culture required, often from an organism nobody has ever isolated."
+  },
+  {
+   "t": 330.96,
+   "text": "You can assess the quality of a MAG by checking how many universal single-copy genes it contains (completeness) and how many are duplicated (contamination), using tools like CheckM."
+  },
+  {
+   "t": 342.7,
+   "text": "A high-quality MAG might be more than 90% complete with less than 5% contamination, which is good enough to do most of the things you'd do with a cultured genome — annotate genes, infer metabolic pathways, reconstruct phylogeny."
+  },
+  {
+   "t": 357.95,
+   "text": "Here is the analogy that, in my experience, lands best."
+  },
+  {
+   "t": 362.17,
+   "text": "16S is like walking into a crowded party, asking everyone their name, and writing a guest list."
+  },
+  {
+   "t": 368.72,
+   "text": "Shotgun metagenomics is like recording everyone's entire conversation, transcribing it, and figuring out from the content what each person does for a living, where they live, what languages they speak, and what they're planning to do tomorrow."
+  },
+  {
+   "t": 382.79,
+   "text": "The 16S survey tells you who showed up."
+  },
+  {
+   "t": 385.84,
+   "text": "The shotgun tells you everything about them you could possibly infer from what they said."
+  },
+  {
+   "t": 390.57,
+   "text": "And MAGs, the metagenome-assembled genomes — those are like stitching together someone's entire life story from the fragments of their conversation, without ever asking them directly."
+  },
+  {
+   "t": 402.22,
+   "text": "You walk out with a near-complete biography of someone you've never met."
+  },
+  {
+   "t": 406.52,
+   "text": "The trade-offs between 16S and shotgun are worth knowing because they determine which approach a study should use."
+  },
+  {
+   "t": 413.84,
+   "text": "16S is cheap — a sample costs maybe $20 to $50 to sequence, and you can run hundreds in a single MiSeq run."
+  },
+  {
+   "t": 422.99,
+   "text": "Shotgun is expensive — you need typically a few gigabases per sample, which on a NovaSeq is more like $50 to $200 per sample, and that goes up if you want enough depth to assemble MAGs."
+  },
+  {
+   "t": 435.87,
+   "text": "16S has well-developed reference databases and standard analysis pipelines that anybody can run."
+  },
+  {
+   "t": 443.47,
+   "text": "Shotgun has more rapidly evolving tools, more computational overhead, and requires significant expertise to do well."
+  },
+  {
+   "t": 451.8,
+   "text": "16S, because it relies on PCR with universal primers, captures essentially all bacteria and archaea but is biased by primer preferences."
+  },
+  {
+   "t": 461.29,
+   "text": "Shotgun captures everything — bacteria, archaea, viruses, eukaryotes, free DNA — but is more sensitive to host contamination and to differences in DNA extraction efficiency between organisms."
+  },
+  {
+   "t": 475.65,
+   "text": "The rule of thumb is: if your question is \"who is here and how does community composition change between groups,\" 16S is often enough, and it's cheap."
+  },
+  {
+   "t": 485.74,
+   "text": "If your question is \"what are these organisms doing, what genes do they carry, and can I reconstruct novel genomes,\" you need shotgun."
+  },
+  {
+   "t": 494.29,
+   "text": "The most rigorous microbiome studies these days do both: 16S as a cheap survey on hundreds or thousands of samples to establish broad patterns, and shotgun on a strategically chosen subset to drill into mechanism."
+  },
+  {
+   "t": 509.32,
+   "text": "That's the methodological landscape."
+  },
+  {
+   "t": 511.54,
+   "text": "Now let me tell you what we did with it."
+  }
+ ]
+}

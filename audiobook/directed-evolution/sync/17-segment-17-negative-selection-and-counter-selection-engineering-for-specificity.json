@@ -1,0 +1,179 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Negative selection and counter-selection — engineering for specificity",
+ "duration": 280.93,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Negative selection and counter-selection — engineering for specificity"
+  },
+  {
+   "t": 6.59,
+   "text": "So far we've been talking about positive selection — selecting variants that do something better."
+  },
+  {
+   "t": 11.84,
+   "text": "But there's another kind of selection that's essential when you want to engineer for specificity, not just for activity."
+  },
+  {
+   "t": 18.73,
+   "text": "The technique is negative selection or counter-selection, and it's the second selection pressure you can apply alongside positive selection."
+  },
+  {
+   "t": 27.05,
+   "text": "Here's the problem."
+  },
+  {
+   "t": 28.18,
+   "text": "Suppose you're evolving an enzyme to act on substrate A."
+  },
+  {
+   "t": 32.8,
+   "text": "Positive selection rewards variants that act on A."
+  },
+  {
+   "t": 36.44,
+   "text": "But often, in the process, you'll evolve variants that also act on similar substrates — say, substrate B, which is structurally close to A."
+  },
+  {
+   "t": 46.17,
+   "text": "If you only select on A, you don't notice that B is also getting eaten."
+  },
+  {
+   "t": 50.34,
+   "text": "Your evolved enzyme has high activity on A, but it's not specific — it eats anything that looks roughly like A."
+  },
+  {
+   "t": 58.05,
+   "text": "This is bad."
+  },
+  {
+   "t": 59.1,
+   "text": "In therapeutic contexts especially, you want enzymes and binders that act on the right target and only on the right target."
+  },
+  {
+   "t": 66.35,
+   "text": "An antibody that binds your cancer antigen but also binds healthy tissue is going to cause autoimmune side effects."
+  },
+  {
+   "t": 73.89,
+   "text": "A base editor with high on-target activity but high off-target editing is going to cause cancer-driving mutations."
+  },
+  {
+   "t": 81.62,
+   "text": "You need specificity, not just activity."
+  },
+  {
+   "t": 84.53,
+   "text": "Negative selection adds a second filter."
+  },
+  {
+   "t": 88.12,
+   "text": "You design your selection so that variants are rewarded for acting on the target you want and punished for acting on the targets you don't want."
+  },
+  {
+   "t": 95.01,
+   "text": "The two pressures together push the protein toward specificity, not just activity."
+  },
+  {
+   "t": 100.94,
+   "text": "The mechanics depend on the system."
+  },
+  {
+   "t": 103.22,
+   "text": "In phage display, you can do negative panning — pour the library over an immobilized version of the off-target first, throw away whatever sticks (those are the non-specific binders), and then pan the remaining library on the on-target."
+  },
+  {
+   "t": 117.16,
+   "text": "The on-target binders that survive are the ones that don't also bind the off-target — true specifics."
+  },
+  {
+   "t": 123.8,
+   "text": "In growth-coupled selection, you can engineer a counter-selection that kills cells expressing variants that act on the off-target."
+  },
+  {
+   "t": 131.65,
+   "text": "For example, you couple action on the off-target to expression of a toxic gene."
+  },
+  {
+   "t": 136.75,
+   "text": "Cells with on-target-only enzymes survive; cells with promiscuous enzymes die."
+  },
+  {
+   "t": 142.34,
+   "text": "The two pressures, applied simultaneously, evolve a specificity profile, not just an activity level."
+  },
+  {
+   "t": 149.49,
+   "text": "In FACS-based screening, you can stain with both the on-target and off-target labeled with different fluorophores, and gate on cells that are bright in the on-target channel but dim in the off-target channel."
+  },
+  {
+   "t": 160.89,
+   "text": "That's negative selection by FACS gating."
+  },
+  {
+   "t": 164.06,
+   "text": "Counter-selection is particularly important for genome editing tools, where off-target editing is a clinical concern."
+  },
+  {
+   "t": 171.03,
+   "text": "The Liu lab has used counter-selection extensively in evolving Cas9 variants with higher specificity, in evolving prime editors with cleaner editing windows, in evolving deaminases with reduced bystander activity."
+  },
+  {
+   "t": 184.7,
+   "text": "Counter-selection has also been important in evolving antibodies for therapeutic use — you want the antibody to bind the tumor antigen but not the healthy tissue that shares some structural features."
+  },
+  {
+   "t": 196.24,
+   "text": "The general principle is: the protein doesn't know what you want unless you tell it."
+  },
+  {
+   "t": 201.12,
+   "text": "If you only set up positive selection, the protein evolves to satisfy that selection, often by becoming promiscuous."
+  },
+  {
+   "t": 208.9,
+   "text": "If you set up positive and negative selection together, the protein evolves to satisfy both — which usually means specificity."
+  },
+  {
+   "t": 217.1,
+   "text": "This is, in a sense, a deep point about directed evolution."
+  },
+  {
+   "t": 220.84,
+   "text": "The evolutionary outcome depends entirely on the fitness function."
+  },
+  {
+   "t": 225.03,
+   "text": "If you forget to penalize off-targets, you get off-target activity."
+  },
+  {
+   "t": 229.29,
+   "text": "If you forget to demand stability, you get unstable winners."
+  },
+  {
+   "t": 233.21,
+   "text": "The selection pressures you apply are everything."
+  },
+  {
+   "t": 236.43,
+   "text": "Designing a good selection — one that captures all the properties you care about, positive and negative — is often the hardest part of the experiment, and a bad selection can produce technically successful evolutions that fail in the actual application because they were optimized for the wrong thing."
+  },
+  {
+   "t": 253.16,
+   "text": "The principle generalizes to ML-driven evolution too."
+  },
+  {
+   "t": 257.6,
+   "text": "If you train your ML model only on positive activity data, the model will propose promiscuous variants."
+  },
+  {
+   "t": 264.33,
+   "text": "If you include off-target data and train the model to predict specificity, you get more specific proposals."
+  },
+  {
+   "t": 272.08,
+   "text": "The fitness function — whether implemented as physical selection in a tube or as a loss function in a neural network — determines what you get."
+  }
+ ]
+}

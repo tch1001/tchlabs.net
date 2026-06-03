@@ -1,0 +1,163 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Yeast display — surface-anchored proteins, FACS sorting on activity",
+ "duration": 284.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Yeast display — surface-anchored proteins, FACS sorting on activity"
+  },
+  {
+   "t": 7.54,
+   "text": "Phage display has one big weakness, and it became apparent in the 1990s as people pushed phage display to evolve more complex proteins."
+  },
+  {
+   "t": 18.26,
+   "text": "The weakness is that phage assembly happens in the bacterial periplasm, in a chemically unusual environment, and many eukaryotic proteins — particularly things with disulfide bonds, glycosylation, or complex folds — don't fold properly when displayed on phage."
+  },
+  {
+   "t": 35.94,
+   "text": "You can make the library, but most of the displayed proteins are misfolded, and your library is full of garbage that doesn't represent the protein you wanted to evolve."
+  },
+  {
+   "t": 44.96,
+   "text": "The fix, developed in the late 1990s primarily by Dane Wittrup at Caltech and then MIT, was yeast display."
+  },
+  {
+   "t": 53.14,
+   "text": "Instead of displaying your protein on a phage, you display it on the surface of a yeast cell."
+  },
+  {
+   "t": 58.71,
+   "text": "Specifically, you fuse your protein to a yeast cell-wall protein called Aga2p, which is naturally secreted and anchored to the outer surface of the yeast cell."
+  },
+  {
+   "t": 69.59,
+   "text": "The fusion gets exported through the yeast's eukaryotic secretory pathway — through the ER, through the Golgi, with chaperones and quality control all the way — and ends up displayed on the cell wall, properly folded, disulfide-bonded if relevant, glycosylated if relevant."
+  },
+  {
+   "t": 86.36,
+   "text": "The library, in yeast display, is a population of yeast cells, each displaying a different protein variant on its surface."
+  },
+  {
+   "t": 94.71,
+   "text": "Each yeast cell contains the plasmid that encodes its variant — so the link between protein and gene is maintained within the cell."
+  },
+  {
+   "t": 103.2,
+   "text": "The selection method in yeast display is where it really shines."
+  },
+  {
+   "t": 106.99,
+   "text": "You can stain the cells with two fluorescent reagents at once."
+  },
+  {
+   "t": 110.53,
+   "text": "First, you stain with an antibody against an epitope tag attached to your protein — this tells you how much of your protein is being displayed on each cell."
+  },
+  {
+   "t": 119.9,
+   "text": "Cells that don't display your protein at all light up dim in that channel."
+  },
+  {
+   "t": 124.19,
+   "text": "Cells that display lots of protein light up bright."
+  },
+  {
+   "t": 127.08,
+   "text": "Second, you stain with your target — labeled with a different fluorophore."
+  },
+  {
+   "t": 131.79,
+   "text": "Cells whose displayed protein binds the target light up bright in the target channel."
+  },
+  {
+   "t": 137.14,
+   "text": "Cells whose displayed protein doesn't bind stay dim."
+  },
+  {
+   "t": 140.31,
+   "text": "Now you put the stained cells through a flow cytometer with sorting capability — a FACS machine."
+  },
+  {
+   "t": 146.69,
+   "text": "The machine analyzes each cell, one at a time, at rates of tens of thousands per second."
+  },
+  {
+   "t": 152.91,
+   "text": "For each cell, it measures fluorescence in both channels."
+  },
+  {
+   "t": 157.19,
+   "text": "You set a gate that says \"high display, high binding\" — cells that are both expressing the protein and binding the target."
+  },
+  {
+   "t": 165.11,
+   "text": "The FACS sorter physically diverts those cells into a separate tube, while throwing away the rest."
+  },
+  {
+   "t": 172.25,
+   "text": "After a few hours, you have a tube of winners — cells whose displayed protein expressed well and bound the target well."
+  },
+  {
+   "t": 179.94,
+   "text": "This is selection with quantitative readouts."
+  },
+  {
+   "t": 182.9,
+   "text": "You can simultaneously normalize for display level and rank by binding affinity."
+  },
+  {
+   "t": 187.96,
+   "text": "Cells that don't express the protein well — which would be confounders in phage display — are explicitly gated out."
+  },
+  {
+   "t": 195.8,
+   "text": "The result is a clean library of binders, ready for the next round."
+  },
+  {
+   "t": 200.19,
+   "text": "Yeast display can also be used for enzyme evolution."
+  },
+  {
+   "t": 203.96,
+   "text": "If you can link the enzyme's activity to a fluorescent signal — for example, a fluorogenic substrate that becomes fluorescent only when the enzyme acts on it — you can sort cells by enzyme activity."
+  },
+  {
+   "t": 215.45,
+   "text": "Cells displaying high-activity enzyme glow brighter."
+  },
+  {
+   "t": 219.54,
+   "text": "FACS picks the glowing ones."
+  },
+  {
+   "t": 221.76,
+   "text": "This is activity-based screening at selection-like throughputs — millions of variants per day."
+  },
+  {
+   "t": 227.91,
+   "text": "The Wittrup lab and others have used yeast display to evolve T-cell receptors for cancer therapy, to engineer antibodies for higher affinity, to develop scaffold proteins as alternatives to antibodies, and to evolve enzymes for industrial applications."
+  },
+  {
+   "t": 243.85,
+   "text": "It's now a workhorse platform, complementary to phage display rather than replacing it."
+  },
+  {
+   "t": 249.62,
+   "text": "Phage display when your library is huge and your protein folds in bacteria; yeast display when your protein needs eukaryotic folding or when you want quantitative FACS-based readouts."
+  },
+  {
+   "t": 261.6,
+   "text": "The takeaway is that yeast display is the canonical platform for fluorescence-based selection of properly folded eukaryotic proteins."
+  },
+  {
+   "t": 270.51,
+   "text": "It combines the throughput of selection with some of the flexibility of screening — anything you can stain a fluorophore onto, you can sort on."
+  },
+  {
+   "t": 278.7,
+   "text": "And it does so in a folding environment that's much more forgiving than the bacterial periplasm."
+  }
+ ]
+}

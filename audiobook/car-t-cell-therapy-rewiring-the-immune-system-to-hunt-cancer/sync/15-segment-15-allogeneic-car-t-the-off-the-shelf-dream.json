@@ -1,0 +1,191 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Allogeneic CAR-T: the off-the-shelf dream",
+ "duration": 347.01,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Allogeneic CAR-T: the off-the-shelf dream"
+  },
+  {
+   "t": 4.67,
+   "text": "The biggest single structural problem with CAR-T as currently practiced is that every dose is custom-made for one patient from that patient's own cells."
+  },
+  {
+   "t": 14.53,
+   "text": "This is the \"autologous\" model."
+  },
+  {
+   "t": 16.55,
+   "text": "Autologous CAR-T means: leukapheresis the patient, ship the cells, manufacture for 3-4 weeks, ship them back, infuse."
+  },
+  {
+   "t": 26.39,
+   "text": "It works, but it's expensive (~$500K), slow (3-4 weeks during which the patient may deteriorate), and capacity-limited (the number of patients you can treat is bounded by manufacturing slots, not by demand)."
+  },
+  {
+   "t": 40.36,
+   "text": "It's also high-risk operationally — every step is a single-source pipeline, and a failure at any stage means a delayed or impossible treatment."
+  },
+  {
+   "t": 49.56,
+   "text": "The alternative everyone in the field is chasing is allogeneic CAR-T: cells from a healthy donor, manufactured at scale in big batches, frozen, stockpiled, and shipped to hospitals as needed."
+  },
+  {
+   "t": 62.3,
+   "text": "Off-the-shelf."
+  },
+  {
+   "t": 63.4,
+   "text": "Ready to ship."
+  },
+  {
+   "t": 64.49,
+   "text": "Here's the analogy you should hold."
+  },
+  {
+   "t": 66.67,
+   "text": "Autologous CAR-T is bespoke tailoring — one suit, one customer, custom measurements, four weeks of work, expensive."
+  },
+  {
+   "t": 75.4,
+   "text": "Allogeneic CAR-T is the rack at a department store — pre-made in standard sizes from common materials, ship it in the morning, wear it in the afternoon."
+  },
+  {
+   "t": 84.15,
+   "text": "Same fundamental product, totally different cost and accessibility."
+  },
+  {
+   "t": 88.66,
+   "text": "But there's a problem with allogeneic that doesn't exist with autologous: rejection in both directions."
+  },
+  {
+   "t": 95.11,
+   "text": "Direction one: the patient rejects the donor cells."
+  },
+  {
+   "t": 98.71,
+   "text": "This is the classical transplant problem."
+  },
+  {
+   "t": 101.3,
+   "text": "The donor T cells carry the donor's HLA — the molecular ID badges that distinguish self from non-self — and the patient's residual immune system recognizes those HLAs as foreign and attacks the donor cells, eliminating them before they can do their job."
+  },
+  {
+   "t": 117.97,
+   "text": "Direction two: the donor cells attack the patient."
+  },
+  {
+   "t": 121.92,
+   "text": "This is graft-versus-host disease — GVHD — and it's the major cause of mortality in bone marrow transplants."
+  },
+  {
+   "t": 130.1,
+   "text": "T cells from the donor see the patient's tissues as foreign and attack them systemically."
+  },
+  {
+   "t": 135.4,
+   "text": "In a normal bone marrow transplant, GVHD is managed by HLA matching and immunosuppressive drugs."
+  },
+  {
+   "t": 142.88,
+   "text": "In an allogeneic CAR-T context, you can't HLA-match every patient to a specific donor (that would defeat the purpose of off-the-shelf), and immunosuppression would defeat the CAR-T as well."
+  },
+  {
+   "t": 155.28,
+   "text": "So to make allogeneic CAR-T work, you have to engineer the donor cells to eliminate both rejection directions."
+  },
+  {
+   "t": 162.38,
+   "text": "Modern allogeneic CAR-T platforms typically use gene editing — usually CRISPR, sometimes TALENs — to knock out specific genes in the donor T cells before manufacturing:"
+  },
+  {
+   "t": 174.32,
+   "text": "Knock out the TCR."
+  },
+  {
+   "t": 175.89,
+   "text": "Eliminate the donor T cell's native T-cell receptor, so the donor cells can't recognize and attack the patient's tissues."
+  },
+  {
+   "t": 184.0,
+   "text": "No TCR, no GVHD risk."
+  },
+  {
+   "t": 187.44,
+   "text": "(The CAR is still there and still recognizes the cancer target — that doesn't go through the TCR.)"
+  },
+  {
+   "t": 193.9,
+   "text": "Knock out HLA class I."
+  },
+  {
+   "t": 195.76,
+   "text": "Eliminate the donor T cell's HLA molecules, so the patient's immune system can't see the cells as foreign and can't reject them."
+  },
+  {
+   "t": 204.8,
+   "text": "(This isn't quite enough — cells without HLA class I get attacked by natural killer cells, which use HLA expression as a \"don't kill me\" signal."
+  },
+  {
+   "t": 214.25,
+   "text": "So in practice, allogeneic platforms also engineer some form of NK protection — usually retaining HLA-E or expressing CD47 — to balance this.)"
+  },
+  {
+   "t": 226.71,
+   "text": "Companies pursuing allogeneic CAR-T include Allogene Therapeutics, Caribou Biosciences, Cellectis (which actually treated the first allogeneic CAR-T patient, a baby named Layla, with TALEN-edited cells in 2015 in London), Fate Therapeutics (using iPSC-derived NK cells with CAR — a related concept), Precision BioSciences, CRISPR Therapeutics."
+  },
+  {
+   "t": 251.03,
+   "text": "The pipeline is rich."
+  },
+  {
+   "t": 252.68,
+   "text": "The early clinical results have been encouraging in some indications but generally have shown shorter persistence of allogeneic cells than autologous — the patient's residual immune system, even with the HLA knockouts, tends to clear donor cells faster than autologous cells."
+  },
+  {
+   "t": 269.18,
+   "text": "As of this lecture, no allogeneic CAR-T product has yet been FDA-approved."
+  },
+  {
+   "t": 274.34,
+   "text": "Several are in late-stage trials."
+  },
+  {
+   "t": 276.82,
+   "text": "The dream is to have an allogeneic CAR-T that can match autologous in efficacy while being available in days instead of weeks and priced at maybe a tenth of autologous."
+  },
+  {
+   "t": 286.62,
+   "text": "If that happens — and it's a real \"if\" — it would fundamentally change the economics and accessibility of the field."
+  },
+  {
+   "t": 294.11,
+   "text": "There are also more exotic donor sources being explored."
+  },
+  {
+   "t": 297.34,
+   "text": "iPSC-derived T cells — making engineered T cells from induced pluripotent stem cells, which can be expanded essentially indefinitely from a single starting line."
+  },
+  {
+   "t": 308.29,
+   "text": "Umbilical cord blood-derived cells."
+  },
+  {
+   "t": 311.28,
+   "text": "NK cells as the engineered effector (CAR-NK) instead of T cells, with the advantage that NK cells don't cause GVHD and don't need TCR knockout."
+  },
+  {
+   "t": 322.78,
+   "text": "The allogeneic question matters enormously because it determines whether CAR-T stays a niche therapy for a few thousand patients a year or becomes a mainstream tool that could potentially be deployed against the much larger populations of patients with common cancers."
+  },
+  {
+   "t": 338.54,
+   "text": "Autologous is the proof of concept; allogeneic is the path to scale."
+  },
+  {
+   "t": 343.81,
+   "text": "The field is mid-way through that transition right now."
+  }
+ ]
+}

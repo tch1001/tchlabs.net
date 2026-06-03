@@ -1,0 +1,175 @@
+{
+ "n": 18,
+ "title": "SEGMENT 18 — Single-cell, spatial, and in vivo methylation — the frontier",
+ "duration": 378.99,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 18 — Single-cell, spatial, and in vivo methylation — the frontier"
+  },
+  {
+   "t": 6.3,
+   "text": "We've spent most of this lecture on bulk methylation analysis — methods that average methylation across the millions of cells in a tissue sample or the billions of cell-free DNA molecules in a plasma draw."
+  },
+  {
+   "t": 19.93,
+   "text": "The frontier of the methylation field is moving beyond bulk, into spatially resolved, single-cell, and in vivo dynamic methylation measurement."
+  },
+  {
+   "t": 29.49,
+   "text": "Let me sketch the three main frontier directions before we close."
+  },
+  {
+   "t": 33.76,
+   "text": "Frontier one: single-cell methylation."
+  },
+  {
+   "t": 37.11,
+   "text": "The first single-cell bisulfite sequencing was published in 2014 by the Reik lab at the Babraham Institute, demonstrating that you could in principle get a methylation profile from a single cell."
+  },
+  {
+   "t": 49.75,
+   "text": "The technique was lossy and noisy — bisulfite damage at single-cell scale is brutal, and each single cell only contributes coverage at a small fraction of the genome's CpGs — but it worked."
+  },
+  {
+   "t": 62.59,
+   "text": "Subsequent improvements (snmC-seq, snmC-seq2, scNMT-seq, scBS-seq) have refined the chemistry, and the introduction of EM-seq-based single-cell protocols has dramatically improved data quality."
+  },
+  {
+   "t": 77.89,
+   "text": "By 2026, single-cell methylation profiling is a real, if expensive, technique, with datasets of tens of thousands to hundreds of thousands of cells being generated for tissue methylation atlas projects."
+  },
+  {
+   "t": 91.8,
+   "text": "The biological yield is substantial."
+  },
+  {
+   "t": 94.58,
+   "text": "Single-cell methylation has revealed methylation heterogeneity within tissues that bulk methods can't see — different cell types within a tumor, different cells in different states within a developmental compartment, rare cell populations with distinctive methylation programs."
+  },
+  {
+   "t": 111.55,
+   "text": "The brain methylation atlases produced by Joe Ecker's lab and others using single-nucleus methylation sequencing have revealed the methylation diversity of neuronal subtypes at unprecedented resolution."
+  },
+  {
+   "t": 124.9,
+   "text": "Combined with single-cell ATAC-seq and single-cell RNA-seq, single-cell methylation gives a multi-modal view of cell state that the bulk era couldn't approach."
+  },
+  {
+   "t": 135.26,
+   "text": "Frontier two: spatial methylation."
+  },
+  {
+   "t": 138.16,
+   "text": "Just as spatial transcriptomics has revolutionized how we measure gene expression in tissue context, spatial methylation aims to map methylation patterns across the physical landscape of a tissue section."
+  },
+  {
+   "t": 150.94,
+   "text": "The early techniques here are still relatively primitive — most rely on capturing DNA from spatial barcoded slides similar to the Visium platform, with all the resolution and sensitivity limitations that implies — but progress is rapid."
+  },
+  {
+   "t": 166.26,
+   "text": "Spatial methylation methods like spatial-CUT&Tag for histone modifications, and the methylation analogs being developed by Rong Fan's lab at Yale and others, are pushing toward a future where you can see methylation patterns across a tissue section at near-cellular resolution."
+  },
+  {
+   "t": 183.04,
+   "text": "This will matter enormously for tumor biology, where methylation heterogeneity within a tumor maps onto spatial structure, and for development, where methylation gradients across embryonic tissues encode positional information."
+  },
+  {
+   "t": 197.82,
+   "text": "Frontier three: in vivo dynamic methylation."
+  },
+  {
+   "t": 201.8,
+   "text": "All the methods we've discussed measure methylation at a single time point — you take a sample, you process it, you read out a snapshot."
+  },
+  {
+   "t": 209.45,
+   "text": "But methylation is dynamic."
+  },
+  {
+   "t": 211.64,
+   "text": "It changes during development, during cell-state transitions, in response to environmental signals."
+  },
+  {
+   "t": 218.0,
+   "text": "Measuring those dynamics in living cells, without disturbing them, is technically very hard, but it's the frontier."
+  },
+  {
+   "t": 225.75,
+   "text": "Methods like CRISPR-based methylation imaging — fluorescent tagging of methylation readers to localize methylated regions in live cells — are early-stage but exciting."
+  },
+  {
+   "t": 237.3,
+   "text": "Methods that use metabolic labeling of newly synthesized DNA, combined with methylation profiling, can distinguish \"old\" methylation patterns from \"new\" ones and reveal methylation dynamics during cell proliferation."
+  },
+  {
+   "t": 251.6,
+   "text": "The full vision — watching methylation change in real time at single-locus resolution in living cells — is not yet realized, but the pieces are starting to come together."
+  },
+  {
+   "t": 262.11,
+   "text": "There's also a fourth direction worth flagging — direct in vivo writing of methylation."
+  },
+  {
+   "t": 268.01,
+   "text": "Engineered DNA methyltransferases fused to CRISPR Cas9 nickase or dead Cas9 can be targeted to specific genomic sites, where they deposit methylation marks."
+  },
+  {
+   "t": 280.49,
+   "text": "The same can be done with TET enzymes to deposit demethylation."
+  },
+  {
+   "t": 285.14,
+   "text": "This is the methylation-editing toolkit, and it's being used both as a research tool to test causal hypotheses about methylation function and as a potential therapeutic modality."
+  },
+  {
+   "t": 296.62,
+   "text": "If aberrant methylation drives a disease — silencing of a tumor suppressor, for example — targeted demethylation might rescue it."
+  },
+  {
+   "t": 305.98,
+   "text": "Clinical applications are very early, but the technology is real and improving."
+  },
+  {
+   "t": 311.81,
+   "text": "Methylation, then, is no longer a static, hard-to-measure mark."
+  },
+  {
+   "t": 316.11,
+   "text": "It's a dynamic, increasingly measurable, increasingly manipulable layer of biological information that overlaps with development, with disease, with aging, with environmental response, with cellular identity."
+  },
+  {
+   "t": 330.08,
+   "text": "The methods we've been building up through this lecture — from Frommer's 1992 bisulfite conversion to nanopore current-based calling and CRISPR methylation editing — are the toolkit that has made all of this possible."
+  },
+  {
+   "t": 343.54,
+   "text": "If you walk out of here with one thing, let it be this: methylation is the most measurable, most studied, most clinically actionable layer of the epigenome, and the measurement methods are still evolving rapidly."
+  },
+  {
+   "t": 356.19,
+   "text": "The bisulfite era is winding down."
+  },
+  {
+   "t": 359.06,
+   "text": "The enzymatic and nanopore era is just beginning."
+  },
+  {
+   "t": 362.68,
+   "text": "The single-cell, spatial, and in vivo era is the frontier."
+  },
+  {
+   "t": 367.59,
+   "text": "And whatever comes next will continue to enrich how we read this small chemical tag that does so much biological work."
+  },
+  {
+   "t": 374.69,
+   "text": "Thank you."
+  },
+  {
+   "t": 375.51,
+   "text": "Take a few minutes to stretch, and then we can take questions."
+  }
+ ]
+}

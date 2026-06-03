@@ -1,0 +1,195 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — What's still hard",
+ "duration": 294.59,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — What's still hard"
+  },
+  {
+   "t": 2.5,
+   "text": "Let me be honest about the limitations, because if you only listen to the press releases you'd think de novo protein design was a solved problem."
+  },
+  {
+   "t": 10.43,
+   "text": "It isn't."
+  },
+  {
+   "t": 11.28,
+   "text": "There are several classes of problems where the current methods still struggle, and understanding the failure modes is important for understanding where the field is headed."
+  },
+  {
+   "t": 20.41,
+   "text": "Multi-state proteins."
+  },
+  {
+   "t": 22.41,
+   "text": "Many proteins have to function in more than one conformation."
+  },
+  {
+   "t": 26.65,
+   "text": "A motor protein cycles between bound and unbound states as it walks along a track."
+  },
+  {
+   "t": 32.44,
+   "text": "A receptor has an inactive conformation and an active conformation; ligand binding switches between them."
+  },
+  {
+   "t": 39.0,
+   "text": "A transporter has an outward-open state and an inward-open state."
+  },
+  {
+   "t": 43.2,
+   "text": "Designing a protein that adopts one stable conformation is hard but tractable."
+  },
+  {
+   "t": 49.1,
+   "text": "Designing a protein that switches between two specific conformations on a specific trigger is much harder, and current methods are weak at this."
+  },
+  {
+   "t": 58.46,
+   "text": "RFdiffusion and ProteinMPNN are trained on single-state crystal structures."
+  },
+  {
+   "t": 63.76,
+   "text": "They learn to generate single-state proteins."
+  },
+  {
+   "t": 66.86,
+   "text": "Multi-state design is an active research frontier."
+  },
+  {
+   "t": 70.54,
+   "text": "Catalysis at industrial rates."
+  },
+  {
+   "t": 73.06,
+   "text": "I mentioned this in the enzyme segment."
+  },
+  {
+   "t": 75.41,
+   "text": "Designing a protein that catalyzes a specific reaction with rate enhancements approaching natural enzymes — ten to the ninth or higher — is still beyond the state of the art."
+  },
+  {
+   "t": 86.6,
+   "text": "Designed enzymes typically have rate enhancements of ten to the fourth or fifth out of the box, and even with directed evolution refinement, they often don't reach natural-enzyme levels."
+  },
+  {
+   "t": 98.91,
+   "text": "The geometry of the active site is necessary but not sufficient; you also need the right dynamics, the right substrate channels, the right product release, and these are dynamic properties that the current models don't capture."
+  },
+  {
+   "t": 112.22,
+   "text": "Large complexes."
+  },
+  {
+   "t": 113.67,
+   "text": "Designing two-protein interactions is now reliable."
+  },
+  {
+   "t": 117.51,
+   "text": "Three is harder."
+  },
+  {
+   "t": 118.94,
+   "text": "By the time you get to five or ten components that need to assemble into a specific structure, the current pipelines struggle."
+  },
+  {
+   "t": 127.04,
+   "text": "There's promising work on symmetric assemblies — protein cages, fibers — where the symmetry constrains the design problem."
+  },
+  {
+   "t": 135.19,
+   "text": "But arbitrary large complexes, with specific stoichiometry and asymmetric arrangement, are still difficult."
+  },
+  {
+   "t": 142.66,
+   "text": "Intrinsically disordered proteins."
+  },
+  {
+   "t": 145.12,
+   "text": "A significant fraction of the human proteome — maybe a third — is intrinsically disordered: proteins that don't have a single defined three-dimensional structure but instead flop around in many configurations, sometimes folding only when they bind a partner."
+  },
+  {
+   "t": 161.14,
+   "text": "Many of these are functionally important — they mediate signaling, they organize phase-separated cellular compartments, they regulate transcription."
+  },
+  {
+   "t": 170.28,
+   "text": "The current design methods are explicitly built around the assumption that proteins have a single defined structure."
+  },
+  {
+   "t": 177.2,
+   "text": "They have no good way to design disordered proteins or proteins with disordered regions."
+  },
+  {
+   "t": 183.26,
+   "text": "This is a wide-open frontier."
+  },
+  {
+   "t": 185.41,
+   "text": "Membrane proteins."
+  },
+  {
+   "t": 187.18,
+   "text": "Roughly thirty percent of proteins live in membranes — they cross the lipid bilayer, with hydrophobic regions embedded in the membrane and hydrophilic regions sticking out into the aqueous environment."
+  },
+  {
+   "t": 199.97,
+   "text": "Drug targets are disproportionately membrane proteins — GPCRs, ion channels, transporters."
+  },
+  {
+   "t": 207.53,
+   "text": "The structural and chemical environment of a membrane protein is fundamentally different from a soluble protein, and the current design methods, which are trained mostly on soluble protein structures, do not handle membrane proteins well."
+  },
+  {
+   "t": 221.26,
+   "text": "There's recent work — much of it from Baker's lab — designing transmembrane proteins for specific functions, but it's an order of magnitude harder than soluble protein design."
+  },
+  {
+   "t": 231.55,
+   "text": "Designing for binding to specific small molecules."
+  },
+  {
+   "t": 235.26,
+   "text": "Designing protein-protein binding interfaces, especially against well-characterized targets like viral spike proteins or cell-surface receptors, has become reliable."
+  },
+  {
+   "t": 246.41,
+   "text": "Designing a protein that binds a specific small molecule with high affinity and selectivity is still hard."
+  },
+  {
+   "t": 254.09,
+   "text": "The challenge is that small molecules don't have the rich evolutionary signal that protein-protein interactions have."
+  },
+  {
+   "t": 261.48,
+   "text": "You can't draw on coevolution."
+  },
+  {
+   "t": 263.45,
+   "text": "You have to design the pocket geometry from physical principles, and the success rate is still modest."
+  },
+  {
+   "t": 269.88,
+   "text": "These are real limitations."
+  },
+  {
+   "t": 272.01,
+   "text": "The field is acutely aware of them, and there's serious work on all of these fronts."
+  },
+  {
+   "t": 276.87,
+   "text": "But the cleared-from-the-list capabilities are still impressive: design a binder, design a scaffold, design a cage, design a moderately-sized assembly, design a peptide."
+  },
+  {
+   "t": 287.34,
+   "text": "Those are the things de novo design does well in 2026."
+  },
+  {
+   "t": 291.34,
+   "text": "The failures are the next decade's research program."
+  }
+ ]
+}

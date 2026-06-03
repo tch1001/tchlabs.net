@@ -1,0 +1,275 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The cell as a programmable computer",
+ "duration": 357.69,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The cell as a programmable computer"
+  },
+  {
+   "t": 3.66,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 5.35,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 6.62,
+   "text": "For the next two hours, we are going to talk about synthetic biology — and specifically about genetic circuits, which are the central artifact of the field."
+  },
+  {
+   "t": 15.03,
+   "text": "I'll warn you up front, this is one of those subjects where the strangeness of the idea is really the whole point, so I'm going to ask you to suspend a little of your scepticism for the first half hour and see where the analogy leads us."
+  },
+  {
+   "t": 28.84,
+   "text": "Here is the single sentence I want you to walk out of here with."
+  },
+  {
+   "t": 32.4,
+   "text": "Synthetic biology is the engineering discipline that treats living cells as programmable computers."
+  },
+  {
+   "t": 39.59,
+   "text": "That's it."
+  },
+  {
+   "t": 40.38,
+   "text": "That's the bumper sticker."
+  },
+  {
+   "t": 41.98,
+   "text": "Every other thing we discuss today — toggle switches and repressilators, BioBricks and iGEM, Cello and Voigt, quorum sensing and toehold switches, kill switches and Ginkgo Bioworks — every single one is a footnote on that one sentence."
+  },
+  {
+   "t": 57.12,
+   "text": "If you walk out of here today and a friend asks you what synthetic biology is, I want you to be able to say: people decided to treat cells the way electrical engineers treat silicon chips."
+  },
+  {
+   "t": 68.65,
+   "text": "They decided that genes could be modular parts."
+  },
+  {
+   "t": 72.17,
+   "text": "They decided promoters were a bit like resistors and ribosome binding sites were a bit like capacitors and proteins were a bit like signals on wires."
+  },
+  {
+   "t": 80.89,
+   "text": "They decided that you could wire those parts up into circuits, and that the circuits could compute — they could remember, they could oscillate, they could decide, they could count."
+  },
+  {
+   "t": 90.53,
+   "text": "And then they actually went and built those circuits, in living bacteria, in yeast, and increasingly in mammalian cells."
+  },
+  {
+   "t": 98.53,
+   "text": "That is the field."
+  },
+  {
+   "t": 99.66,
+   "text": "Everything else is detail."
+  },
+  {
+   "t": 101.76,
+   "text": "Let me make the analogy concrete, because this is the analogy I will come back to over and over again."
+  },
+  {
+   "t": 107.31,
+   "text": "Think about a laptop."
+  },
+  {
+   "t": 108.65,
+   "text": "A laptop is built out of layers of abstraction."
+  },
+  {
+   "t": 111.99,
+   "text": "At the bottom you have transistors — physical objects, little semiconductor switches with three terminals."
+  },
+  {
+   "t": 118.91,
+   "text": "You can stack those transistors into logic gates: an AND gate, an OR gate, a NOT gate."
+  },
+  {
+   "t": 124.9,
+   "text": "You can wire logic gates together into bigger things — adders, registers, flip-flops, memory cells."
+  },
+  {
+   "t": 132.59,
+   "text": "You stack those into ALUs and instruction decoders."
+  },
+  {
+   "t": 136.3,
+   "text": "On top of that you have firmware."
+  },
+  {
+   "t": 138.09,
+   "text": "On top of that an operating system."
+  },
+  {
+   "t": 140.01,
+   "text": "On top of that an application."
+  },
+  {
+   "t": 141.74,
+   "text": "On top of that a user interface."
+  },
+  {
+   "t": 143.78,
+   "text": "None of the people writing the application have to know what a transistor is."
+  },
+  {
+   "t": 148.4,
+   "text": "Abstraction layers all the way down."
+  },
+  {
+   "t": 151.25,
+   "text": "Synthetic biology says, fine, let us try to build the same kind of stack inside a cell."
+  },
+  {
+   "t": 157.2,
+   "text": "At the bottom we have molecules — DNA, RNA, proteins."
+  },
+  {
+   "t": 161.91,
+   "text": "We can compose those into genetic parts: a promoter, a ribosome binding site, a coding sequence, a terminator."
+  },
+  {
+   "t": 169.76,
+   "text": "We can compose parts into devices: a single-input gate that turns a fluorescent protein on when a particular small molecule is around."
+  },
+  {
+   "t": 178.6,
+   "text": "We can compose devices into circuits: a toggle switch, an oscillator, a multi-input logic gate."
+  },
+  {
+   "t": 185.74,
+   "text": "We can compose circuits into systems: a sensor that detects arsenic in drinking water by glowing green, or a microbe that produces a malaria drug."
+  },
+  {
+   "t": 194.54,
+   "text": "And, eventually, into programs — sequences of decisions a population of cells makes in response to its environment."
+  },
+  {
+   "t": 202.84,
+   "text": "Now, here is where I have to be honest with you."
+  },
+  {
+   "t": 205.41,
+   "text": "The analogy is gorgeous, and the analogy is also slightly a lie."
+  },
+  {
+   "t": 210.4,
+   "text": "Biology is not as cleanly modular as silicon."
+  },
+  {
+   "t": 214.01,
+   "text": "Parts interact in ways transistors do not."
+  },
+  {
+   "t": 217.34,
+   "text": "Cells evolve."
+  },
+  {
+   "t": 218.45,
+   "text": "Cells are noisy."
+  },
+  {
+   "t": 219.61,
+   "text": "What works in one cell line breaks in another."
+  },
+  {
+   "t": 222.36,
+   "text": "We will spend an entire segment — Segment 17 — on what I am going to call the chronic engineering reality, which is that biology resists abstraction."
+  },
+  {
+   "t": 231.78,
+   "text": "But the analogy is still the right starting point, because it organizes the discipline."
+  },
+  {
+   "t": 237.0,
+   "text": "The whole project of synthetic biology is, in some sense, the ongoing struggle to make the analogy true."
+  },
+  {
+   "t": 244.71,
+   "text": "Every time someone develops a better insulator, a better characterization protocol, a better software tool for predicting circuit behavior, they are pushing biology a little closer to looking like electronics."
+  },
+  {
+   "t": 258.36,
+   "text": "We are not there."
+  },
+  {
+   "t": 259.42,
+   "text": "We may never get all the way there."
+  },
+  {
+   "t": 261.22,
+   "text": "But the trajectory is clear, and the field has gone further in twenty-five years than most people would have believed possible in 2000."
+  },
+  {
+   "t": 269.32,
+   "text": "So that is our destination."
+  },
+  {
+   "t": 271.16,
+   "text": "Here is the contract for the next two hours."
+  },
+  {
+   "t": 273.97,
+   "text": "By the end of this lecture, you should be able to do three things."
+  },
+  {
+   "t": 278.11,
+   "text": "First: explain what a genetic circuit is, using the laptop analogy, and walk a friend through why anyone thought building one was possible."
+  },
+  {
+   "t": 286.82,
+   "text": "Second: tell the founding story — the two papers from the year 2000 that established the discipline, the toggle switch and the repressilator, and explain in your own words what each one did."
+  },
+  {
+   "t": 298.5,
+   "text": "Third: look at a modern synthetic biology paper, or a press release from a synthetic biology company, and have an actual intuition for what is happening underneath."
+  },
+  {
+   "t": 308.55,
+   "text": "Where the parts came from."
+  },
+  {
+   "t": 309.89,
+   "text": "Why this is hard."
+  },
+  {
+   "t": 311.01,
+   "text": "What the open problems are."
+  },
+  {
+   "t": 312.62,
+   "text": "Everything I do today will be in service of those three goals."
+  },
+  {
+   "t": 316.79,
+   "text": "One more framing note."
+  },
+  {
+   "t": 318.12,
+   "text": "Synthetic biology is a young field."
+  },
+  {
+   "t": 320.97,
+   "text": "It does not have a single founding event the way molecular biology has Watson and Crick or CRISPR has the 2012 paper."
+  },
+  {
+   "t": 329.45,
+   "text": "It crystallized out of a cluster of related ideas in the late 1990s and got its public birthday in January of 2000, when two papers appeared back to back in the journal Nature."
+  },
+  {
+   "t": 340.7,
+   "text": "We will spend a lot of time on those two papers, because they are the field's origin myth, and because the contrast between them — one a memory device, one an oscillator — laid out, on day one, the two big themes synthetic biology would pursue for the next quarter century."
+  },
+  {
+   "t": 356.49,
+   "text": "Let's go meet them."
+  }
+ ]
+}

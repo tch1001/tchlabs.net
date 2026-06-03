@@ -1,0 +1,219 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — When dPCR beats qPCR",
+ "duration": 332.66,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — When dPCR beats qPCR"
+  },
+  {
+   "t": 4.21,
+   "text": "Digital PCR is more expensive, slower, and more limited in dynamic range than qPCR."
+  },
+  {
+   "t": 10.81,
+   "text": "For most routine quantification — gene expression, viral load monitoring in well-established ranges, simple yes-or-no presence detection — qPCR remains the right tool."
+  },
+  {
+   "t": 22.4,
+   "text": "dPCR earns its place in a specific set of applications where qPCR's weaknesses become limiting."
+  },
+  {
+   "t": 29.2,
+   "text": "Let me list the four canonical situations where dPCR is the better choice."
+  },
+  {
+   "t": 34.54,
+   "text": "One: rare-variant detection."
+  },
+  {
+   "t": 36.73,
+   "text": "Detecting a 0.1% mutant allele in a background of 99.9% wild-type sequence is hard for qPCR because both alleles amplify and the wild-type signal dominates."
+  },
+  {
+   "t": 50.81,
+   "text": "With dPCR, each partition either contains a mutant or it doesn't, and you count partitions positive for the mutant allele independently from partitions positive for the wild-type allele."
+  },
+  {
+   "t": 62.64,
+   "text": "With a million partitions, you can detect mutant frequencies of 0.01% or lower with confidence."
+  },
+  {
+   "t": 70.22,
+   "text": "This is the most important application driving dPCR adoption in oncology — detecting rare cancer-associated mutations in liquid biopsy samples."
+  },
+  {
+   "t": 80.36,
+   "text": "Two: absolute quantification without standards."
+  },
+  {
+   "t": 84.05,
+   "text": "As we've discussed, qPCR requires a standard curve, which requires a quantified reference material."
+  },
+  {
+   "t": 90.58,
+   "text": "dPCR gives an absolute count without any reference."
+  },
+  {
+   "t": 94.5,
+   "text": "This matters in viral load assays where international standards have been hard to harmonize."
+  },
+  {
+   "t": 99.65,
+   "text": "It matters in cell line authentication."
+  },
+  {
+   "t": 102.34,
+   "text": "It matters in genome editing efficiency assessment, where you want to know not \"is this gene edited?"
+  },
+  {
+   "t": 108.88,
+   "text": "\" but \"what fraction of cells have a successful edit?"
+  },
+  {
+   "t": 111.94,
+   "text": "\""
+  },
+  {
+   "t": 112.14,
+   "text": "Three: copy number variation."
+  },
+  {
+   "t": 114.6,
+   "text": "Detecting a 1.5-fold change in copy number — the difference between two and three copies of a gene per cell — is right at the limit of qPCR precision but well within dPCR precision."
+  },
+  {
+   "t": 127.39,
+   "text": "Cancer cell lines, congenital copy number disorders, and structural variation in CRISPR-modified cells are all things where the question is \"exactly how many copies?"
+  },
+  {
+   "t": 138.25,
+   "text": "\" and the answer needs to be precise."
+  },
+  {
+   "t": 140.44,
+   "text": "Four: samples with PCR inhibitors."
+  },
+  {
+   "t": 143.49,
+   "text": "As mentioned in Segment 11, biological samples often contain inhibitors that suppress amplification efficiency."
+  },
+  {
+   "t": 151.49,
+   "text": "In qPCR, partial inhibition biases your Ct value, but you don't know by how much."
+  },
+  {
+   "t": 157.81,
+   "text": "In dPCR, partial inhibition might cause a few partitions to fail to amplify even when they had a starting molecule, but as long as the inhibitor is uniformly distributed, the effect on each positive partition is just to reduce signal — and as long as the signal is above background, the partition still gets counted."
+  },
+  {
+   "t": 177.3,
+   "text": "dPCR is therefore much more robust to inhibitors than qPCR."
+  },
+  {
+   "t": 182.8,
+   "text": "This is increasingly important for samples like stool, where PCR inhibitors are abundant."
+  },
+  {
+   "t": 189.03,
+   "text": "There's a fifth situation that's harder to summarize but is increasingly important: measurements you want to compare across labs, across time, across instruments."
+  },
+  {
+   "t": 198.75,
+   "text": "Because dPCR gives absolute counts based on Poisson statistics rather than relative measurements based on standard curves, the numbers from one dPCR instrument should agree with the numbers from another, with no harmonization needed beyond the basics."
+  },
+  {
+   "t": 213.56,
+   "text": "For multi-site clinical trials, where the same patient sample might be measured at multiple labs, this portability is genuinely valuable."
+  },
+  {
+   "t": 223.47,
+   "text": "Conversely, here are the situations where qPCR is still better."
+  },
+  {
+   "t": 228.11,
+   "text": "Higher throughput."
+  },
+  {
+   "t": 229.61,
+   "text": "A qPCR run is 384 wells per plate, ~40 cycles, 1-2 hours."
+  },
+  {
+   "t": 236.6,
+   "text": "A dPCR run involves droplet generation or chip loading, which adds workflow steps, and the analysis is slower."
+  },
+  {
+   "t": 244.59,
+   "text": "For a hospital lab running thousands of COVID swabs a day, qPCR's throughput is essential."
+  },
+  {
+   "t": 251.55,
+   "text": "Broad dynamic range."
+  },
+  {
+   "t": 253.3,
+   "text": "qPCR's dynamic range is six to seven orders of magnitude."
+  },
+  {
+   "t": 257.84,
+   "text": "dPCR's dynamic range in a single well is more like four — limited by the number of partitions."
+  },
+  {
+   "t": 264.81,
+   "text": "To extend dPCR dynamic range you have to run dilutions, doubling your workflow."
+  },
+  {
+   "t": 270.15,
+   "text": "Cost."
+  },
+  {
+   "t": 271.04,
+   "text": "dPCR consumables — droplet oils, chip cartridges — are typically 5-10x more expensive per sample than qPCR consumables."
+  },
+  {
+   "t": 280.81,
+   "text": "For most research applications, that cost difference matters."
+  },
+  {
+   "t": 284.83,
+   "text": "Established assays."
+  },
+  {
+   "t": 286.33,
+   "text": "qPCR has been around for thirty years."
+  },
+  {
+   "t": 289.03,
+   "text": "Every clinical lab has qPCR."
+  },
+  {
+   "t": 291.71,
+   "text": "Every commercial kit comes with qPCR protocols."
+  },
+  {
+   "t": 295.23,
+   "text": "dPCR is newer, and the assay ecosystem is still catching up."
+  },
+  {
+   "t": 300.3,
+   "text": "So the picture is: qPCR for routine, throughput, breadth, and cost; dPCR for precision, absolute counting, rare events, and difficult samples."
+  },
+  {
+   "t": 311.73,
+   "text": "They coexist."
+  },
+  {
+   "t": 313.0,
+   "text": "Most well-resourced research labs and increasingly clinical labs have both, and they choose the right tool for the question."
+  },
+  {
+   "t": 320.55,
+   "text": "The single most exciting clinical application of dPCR — the one that's most likely to change how cancer is monitored over the next decade — is circulating tumor DNA."
+  },
+  {
+   "t": 331.08,
+   "text": "Let's spend a segment on that."
+  }
+ ]
+}

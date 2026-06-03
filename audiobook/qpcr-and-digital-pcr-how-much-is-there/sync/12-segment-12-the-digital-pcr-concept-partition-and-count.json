@@ -1,0 +1,295 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — The digital PCR concept: partition and count",
+ "duration": 403.65,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — The digital PCR concept: partition and count"
+  },
+  {
+   "t": 4.88,
+   "text": "Here is the conceptual setup of digital PCR."
+  },
+  {
+   "t": 8.46,
+   "text": "You have a sample containing some unknown number of target molecules — maybe 1,000 copies in 20 microliters."
+  },
+  {
+   "t": 16.34,
+   "text": "Instead of running one big PCR reaction on the 20 microliters, you split the 20 microliters into 20,000 tiny reactions, each of about 1 nanoliter."
+  },
+  {
+   "t": 27.66,
+   "text": "Statistically, each of those tiny reactions ends up containing, on average, 0.05 copies of target."
+  },
+  {
+   "t": 35.62,
+   "text": "Some of them have 0."
+  },
+  {
+   "t": 37.15,
+   "text": "Some have 1."
+  },
+  {
+   "t": 38.19,
+   "text": "A few have 2 or more."
+  },
+  {
+   "t": 39.71,
+   "text": "The distribution is Poisson."
+  },
+  {
+   "t": 41.76,
+   "text": "You then run PCR in every one of those 20,000 tiny reactions simultaneously."
+  },
+  {
+   "t": 48.31,
+   "text": "In each reaction, the chemistry is the same as a qPCR reaction — primers, polymerase, dNTPs, TaqMan probe with FAM-quencher."
+  },
+  {
+   "t": 58.19,
+   "text": "If a reaction contains at least one starting target molecule, it amplifies and glows at the end."
+  },
+  {
+   "t": 64.99,
+   "text": "If it contains zero, it stays dark."
+  },
+  {
+   "t": 67.86,
+   "text": "Each reaction has gone from \"how much target?"
+  },
+  {
+   "t": 71.08,
+   "text": "\" (which is hard) to \"any target at all?"
+  },
+  {
+   "t": 73.59,
+   "text": "yes or no?"
+  },
+  {
+   "t": 74.54,
+   "text": "\" (which is easy)."
+  },
+  {
+   "t": 75.9,
+   "text": "The plateau effect, which destroyed quantification in endpoint PCR, is now your friend — every reaction with any target ends up glowing at full plateau brightness, so the readout is binary."
+  },
+  {
+   "t": 88.81,
+   "text": "After the PCR is done, you image all 20,000 reactions."
+  },
+  {
+   "t": 93.42,
+   "text": "You count how many glowed positive — call it K — and how many stayed dark — N − K, where N is total."
+  },
+  {
+   "t": 101.7,
+   "text": "From K and N, using Poisson statistics, you compute the average number of target molecules per partition."
+  },
+  {
+   "t": 109.09,
+   "text": "Multiply by the number of partitions, and you have the absolute number of target molecules in your original sample."
+  },
+  {
+   "t": 115.85,
+   "text": "You did not need a standard curve."
+  },
+  {
+   "t": 117.78,
+   "text": "You did not need a Ct value."
+  },
+  {
+   "t": 120.09,
+   "text": "You did not need to assume anything about amplification efficiency."
+  },
+  {
+   "t": 124.12,
+   "text": "You just counted molecules."
+  },
+  {
+   "t": 125.78,
+   "text": "That is digital PCR."
+  },
+  {
+   "t": 127.54,
+   "text": "Here is the analogy I want you to burn into your head."
+  },
+  {
+   "t": 130.82,
+   "text": "Instead of measuring the concentration of noodles in a big pot of soup — which is hard because noodles clump and the pot is dark and the volume is uncertain — you ladle the soup into 20,000 little cups, count how many cups have at least one noodle in them, and then do the math to estimate the total number of noodles."
+  },
+  {
+   "t": 148.86,
+   "text": "The cups with noodles glow."
+  },
+  {
+   "t": 150.45,
+   "text": "The cups without noodles stay dark."
+  },
+  {
+   "t": 152.55,
+   "text": "Counting is easy."
+  },
+  {
+   "t": 154.31,
+   "text": "Measuring concentration in a pot is hard."
+  },
+  {
+   "t": 157.19,
+   "text": "That's the entire conceptual move."
+  },
+  {
+   "t": 159.61,
+   "text": "Replace a continuous concentration measurement with a counting problem."
+  },
+  {
+   "t": 163.85,
+   "text": "Counting is unbiased, robust to inhibitors (each positive partition just needs to amplify at all, not at full efficiency), insensitive to standards (you don't need any external calibration), and limited only by the precision of counting itself."
+  },
+  {
+   "t": 180.66,
+   "text": "Now, the math."
+  },
+  {
+   "t": 181.81,
+   "text": "Why Poisson?"
+  },
+  {
+   "t": 182.82,
+   "text": "Because when you distribute a small number of molecules randomly across a large number of partitions, the number of molecules per partition follows a Poisson distribution."
+  },
+  {
+   "t": 193.05,
+   "text": "The Poisson distribution has one parameter — its mean, often called λ."
+  },
+  {
+   "t": 198.25,
+   "text": "If λ is the average number of molecules per partition, then:"
+  },
+  {
+   "t": 202.64,
+   "text": "The probability that a given partition has zero molecules is e^(−λ)."
+  },
+  {
+   "t": 208.54,
+   "text": "The probability that a given partition has at least one molecule is 1 − e^(−λ)."
+  },
+  {
+   "t": 215.19,
+   "text": "If you observe that K out of N partitions are positive, then your estimate of the probability of being positive is K/N."
+  },
+  {
+   "t": 223.01,
+   "text": "Set that equal to 1 − e^(−λ) and solve for λ:"
+  },
+  {
+   "t": 228.7,
+   "text": "λ = −ln(1 − K/N)"
+  },
+  {
+   "t": 231.51,
+   "text": "That's the master equation of digital PCR."
+  },
+  {
+   "t": 234.69,
+   "text": "From the count of positive partitions, you compute the average number of molecules per partition."
+  },
+  {
+   "t": 240.1,
+   "text": "Multiply by the total number of partitions to get the total number of molecules in the sample."
+  },
+  {
+   "t": 245.69,
+   "text": "Divide by sample volume to get concentration."
+  },
+  {
+   "t": 248.97,
+   "text": "Notice what happens at extremes."
+  },
+  {
+   "t": 250.99,
+   "text": "If λ is small — most partitions are negative — then 1 − e^(−λ) ≈ λ, so λ ≈ K/N."
+  },
+  {
+   "t": 263.5,
+   "text": "You just count positives and divide."
+  },
+  {
+   "t": 265.84,
+   "text": "Simple proportional counting."
+  },
+  {
+   "t": 267.8,
+   "text": "At low concentration, dPCR is essentially direct molecule counting."
+  },
+  {
+   "t": 273.06,
+   "text": "If λ is large — most partitions are positive — then 1 − K/N is small, and you're computing the negative log of a small number, which amplifies measurement noise."
+  },
+  {
+   "t": 285.91,
+   "text": "Dynamic range fails when nearly every partition is positive, because the information about λ is now hiding in the small number of remaining negatives, and your statistical precision goes to zero."
+  },
+  {
+   "t": 297.9,
+   "text": "The sweet spot is around λ between 0.5 and 5 — most partitions have a few molecules, the Poisson correction matters, and you have good counting statistics."
+  },
+  {
+   "t": 308.28,
+   "text": "The dynamic range of a single dPCR run is therefore limited at the top by saturation."
+  },
+  {
+   "t": 314.2,
+   "text": "If λ is too high, you can't resolve it."
+  },
+  {
+   "t": 317.21,
+   "text": "The fix is to dilute the sample and rerun, or to use a chip with more partitions (millions instead of twenty thousand), or to simply accept a smaller dynamic range in exchange for absolute quantification."
+  },
+  {
+   "t": 329.98,
+   "text": "Here is the second analogy worth carrying."
+  },
+  {
+   "t": 332.94,
+   "text": "With random distribution, the number of empty cups tells you how many noodles total."
+  },
+  {
+   "t": 337.91,
+   "text": "That's Poisson statistics in one sentence."
+  },
+  {
+   "t": 340.8,
+   "text": "If you scatter 100 noodles randomly into 1000 cups, you don't have to count noodles — just count empty cups."
+  },
+  {
+   "t": 348.25,
+   "text": "The fraction of empty cups is e^(−λ), where λ = 100/1000 = 0.1, so you'd expect about 90.5% empty cups."
+  },
+  {
+   "t": 361.28,
+   "text": "Conversely, if you observe 90.5% empty cups, you can infer λ = 0.1 and total noodles = λ × 1000 = 100."
+  },
+  {
+   "t": 372.83,
+   "text": "The empty cups carry as much information as the full ones, because in a Poisson process, the fraction of empties uniquely determines the rate parameter."
+  },
+  {
+   "t": 382.78,
+   "text": "This is one of those deep facts about probability that everyone learns at some point and then forgets and then re-learns."
+  },
+  {
+   "t": 390.09,
+   "text": "In a Poisson process, fraction of zeros equals e^(−rate)."
+  },
+  {
+   "t": 395.44,
+   "text": "Digital PCR uses this fact to convert a \"count positives\" experiment into an absolute molecule count."
+  },
+  {
+   "t": 402.43,
+   "text": "That's the magic."
+  }
+ ]
+}

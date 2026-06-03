@@ -1,0 +1,203 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Voigt lab's Cello: Verilog for cells",
+ "duration": 321.48,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Voigt lab's Cello: Verilog for cells"
+  },
+  {
+   "t": 4.45,
+   "text": "In 2016, Christopher Voigt's lab at MIT published a landmark paper in Science, titled \"Genetic circuit design automation."
+  },
+  {
+   "t": 13.51,
+   "text": "\" The first author was Alec Nielsen."
+  },
+  {
+   "t": 15.82,
+   "text": "The work pulled together about a decade of effort from the Voigt lab and represented, in my view, the moment synthetic biology took its biggest single step toward being a real engineering discipline."
+  },
+  {
+   "t": 28.27,
+   "text": "Here is what they did."
+  },
+  {
+   "t": 29.73,
+   "text": "They built a library of around twenty well-characterized transcriptional repressors, derived mostly from bacterial DNA-binding proteins called TetR-family repressors."
+  },
+  {
+   "t": 40.14,
+   "text": "They characterized each one."
+  },
+  {
+   "t": 42.24,
+   "text": "They tested whether the repressors interfered with each other — whether one repressor would, by accident, bind the operator of another."
+  },
+  {
+   "t": 50.23,
+   "text": "They picked the subset that was orthogonal: each one only repressed its intended target, did not cross-talk with the others."
+  },
+  {
+   "t": 57.67,
+   "text": "They measured the input-output transfer function of each one — exactly how the output protein level depended on the input — so they could predict how the gate would behave when wired into a circuit."
+  },
+  {
+   "t": 68.92,
+   "text": "They built insulator sequences to put between parts, so that one device would not perturb the next."
+  },
+  {
+   "t": 75.35,
+   "text": "Then — and this is the part that made the paper famous — they wrote a software tool that took, as input, a description of the desired logic in a language called Verilog."
+  },
+  {
+   "t": 85.74,
+   "text": "Verilog is a hardware description language, used by electrical engineers since the 1980s to describe digital circuits."
+  },
+  {
+   "t": 94.05,
+   "text": "You write Verilog, you specify the inputs, the outputs, and the logical function you want connecting them, and you feed it to a compiler."
+  },
+  {
+   "t": 102.03,
+   "text": "The compiler picks parts from a library and lays out a physical design."
+  },
+  {
+   "t": 106.12,
+   "text": "Voigt's lab built the same compiler — but instead of laying out silicon, it laid out DNA."
+  },
+  {
+   "t": 112.53,
+   "text": "They called it Cello."
+  },
+  {
+   "t": 113.7,
+   "text": "The analogy I want you to carry: Cello is Verilog for cells."
+  },
+  {
+   "t": 118.39,
+   "text": "You describe the logic you want, the software picks parts from a library and lays out the DNA."
+  },
+  {
+   "t": 123.92,
+   "text": "You type in something like \"output equals A and not B\"; Cello goes off, picks repressors from its characterized library, lays out a piece of DNA that implements that function, and gives you a sequence file you can order from a DNA synthesis company."
+  },
+  {
+   "t": 139.1,
+   "text": "You drop the synthesized DNA into E. coli and you have a cell that computes \"A AND NOT B."
+  },
+  {
+   "t": 145.89,
+   "text": "\""
+  },
+  {
+   "t": 146.09,
+   "text": "Here is the kicker."
+  },
+  {
+   "t": 147.7,
+   "text": "In the 2016 paper, Voigt's group designed, with Cello, sixty different genetic circuits implementing a range of logic functions — gates of varying complexity, up to circuits with six inputs and several internal gates."
+  },
+  {
+   "t": 162.38,
+   "text": "They built every one of them."
+  },
+  {
+   "t": 164.11,
+   "text": "The headline result: forty-five out of the sixty circuits worked correctly on the first try."
+  },
+  {
+   "t": 169.93,
+   "text": "Not after iterative tuning."
+  },
+  {
+   "t": 171.68,
+   "text": "On the first try."
+  },
+  {
+   "t": 172.84,
+   "text": "Computer-designed circuits, synthesized as DNA, dropped into E. coli, and the resulting cells computed exactly the function the design specified."
+  },
+  {
+   "t": 182.7,
+   "text": "That number — three quarters working on first attempt — does not sound impressive if you compare it to electronics, where the corresponding number is essentially one hundred percent."
+  },
+  {
+   "t": 193.22,
+   "text": "But in synthetic biology, it was a revolution."
+  },
+  {
+   "t": 196.4,
+   "text": "Before Cello, hand-built circuits at that complexity took months each and very often did not work at all."
+  },
+  {
+   "t": 203.38,
+   "text": "After Cello, you could design a logic circuit in an afternoon, have it built in a week, and expect most of your designs to function."
+  },
+  {
+   "t": 211.2,
+   "text": "The field had taken a giant step toward the engineering ideal."
+  },
+  {
+   "t": 215.07,
+   "text": "The 2016 Cello paper is, in my view, the closest thing synthetic biology has had to its \"first man on the moon\" moment."
+  },
+  {
+   "t": 223.03,
+   "text": "It demonstrated, decisively, that the engineering analogy was not just a metaphor — that you could really compile genetic circuits the way you compile silicon, with predictable results, at a scale that was useful."
+  },
+  {
+   "t": 236.46,
+   "text": "Subsequent versions of Cello have extended the library, added new chassis organisms beyond E. coli, and handled larger circuits."
+  },
+  {
+   "t": 245.29,
+   "text": "The field has continued from there."
+  },
+  {
+   "t": 247.07,
+   "text": "But the moment of \"we did this\" was 2016."
+  },
+  {
+   "t": 250.4,
+   "text": "Cello is, I should note, only one strand of a broader move in the field."
+  },
+  {
+   "t": 255.65,
+   "text": "The same period — the late 2000s through the late 2010s — saw the development of better characterization standards, better mathematical models of part behavior, better assembly methods like Golden Gate and Gibson, and better DNA synthesis economics."
+  },
+  {
+   "t": 270.91,
+   "text": "All of those moved together."
+  },
+  {
+   "t": 272.7,
+   "text": "The DNA you would have spent a year cloning by hand in 2003, by 2018 you could order from a vendor for a few hundred dollars and have it in your inbox in two weeks."
+  },
+  {
+   "t": 283.55,
+   "text": "That price collapse, more than any single intellectual breakthrough, is what made systems like Cello practical."
+  },
+  {
+   "t": 290.34,
+   "text": "The engineering economy of synthetic biology was finally starting to look like the engineering economy of silicon."
+  },
+  {
+   "t": 298.05,
+   "text": "Now, Cello and its descendants design circuits that work inside a single cell."
+  },
+  {
+   "t": 303.7,
+   "text": "But cells in nature do not, mostly, compute alone."
+  },
+  {
+   "t": 307.7,
+   "text": "They compute in populations, signaling to each other, coordinating behaviors across thousands or millions of individuals."
+  },
+  {
+   "t": 315.98,
+   "text": "The next move was to use that population-level signaling as a substrate for circuits."
+  }
+ ]
+}

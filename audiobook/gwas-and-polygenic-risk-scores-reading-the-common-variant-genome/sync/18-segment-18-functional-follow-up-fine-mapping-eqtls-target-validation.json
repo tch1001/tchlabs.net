@@ -1,0 +1,339 @@
+{
+ "n": 18,
+ "title": "SEGMENT 18 — Functional follow-up: fine-mapping, eQTLs, target validation",
+ "duration": 573.13,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 18 — Functional follow-up: fine-mapping, eQTLs, target validation"
+  },
+  {
+   "t": 6.45,
+   "text": "We have spent most of this lecture talking about how to find GWAS hits."
+  },
+  {
+   "t": 11.1,
+   "text": "Let us close by talking about what to do with them once you have them, because the GWAS hit is, in a sense, just the beginning of the biology."
+  },
+  {
+   "t": 18.85,
+   "text": "The standard workflow after a GWAS hit, as practiced in 2026, looks like this."
+  },
+  {
+   "t": 25.38,
+   "text": "Step one: fine-mapping."
+  },
+  {
+   "t": 27.38,
+   "text": "You have a GWAS hit at some locus."
+  },
+  {
+   "t": 30.07,
+   "text": "The lead SNP is the most strongly associated one, but as we discussed in Segment 7, the actual causal variant could be any SNP in the LD block."
+  },
+  {
+   "t": 40.44,
+   "text": "Fine-mapping is the statistical and experimental work to narrow down the causal variant."
+  },
+  {
+   "t": 46.38,
+   "text": "Statistically, it uses Bayesian methods that incorporate LD information, functional annotations — is the SNP in a regulatory region?"
+  },
+  {
+   "t": 55.52,
+   "text": "a coding region?"
+  },
+  {
+   "t": 56.65,
+   "text": "— and trans-ancestry data, where the same locus has been studied in populations with different LD structures, to identify the variant most likely to be causal."
+  },
+  {
+   "t": 66.59,
+   "text": "The output is a credible set — a small group of SNPs, often less than ten, that together have most of the posterior probability of being the cause."
+  },
+  {
+   "t": 77.03,
+   "text": "Step two: functional annotation."
+  },
+  {
+   "t": 79.51,
+   "text": "Once you have a credible set, you ask: what does this variant do?"
+  },
+  {
+   "t": 83.69,
+   "text": "Is it in a protein-coding gene?"
+  },
+  {
+   "t": 85.56,
+   "text": "If so, does it change the amino acid sequence?"
+  },
+  {
+   "t": 88.97,
+   "text": "Most GWAS hits are not in coding regions — about ninety percent of GWAS hits are in non-coding DNA, presumably affecting gene regulation rather than protein structure."
+  },
+  {
+   "t": 101.17,
+   "text": "So you map the variant to regulatory elements — promoters, enhancers, insulators — using ENCODE, Roadmap Epigenomics, and similar functional-genomics datasets."
+  },
+  {
+   "t": 112.55,
+   "text": "Step three: eQTL mapping."
+  },
+  {
+   "t": 115.14,
+   "text": "An expression quantitative trait locus, eQTL, is a genetic variant that affects the expression level of a nearby gene."
+  },
+  {
+   "t": 122.97,
+   "text": "GTEx — the Genotype-Tissue Expression project — has measured gene expression in dozens of human tissues from many individuals, and identified millions of eQTLs."
+  },
+  {
+   "t": 134.86,
+   "text": "If your GWAS hit colocalizes with an eQTL — meaning the same variant that is associated with disease is also associated with expression of a specific gene in a specific tissue — that gene becomes your prime suspect for the causal gene at the locus."
+  },
+  {
+   "t": 151.75,
+   "text": "eQTL colocalization has become the standard method for linking GWAS hits to genes."
+  },
+  {
+   "t": 157.82,
+   "text": "Step four: experimental validation."
+  },
+  {
+   "t": 160.57,
+   "text": "Once you have a candidate gene, you go to the bench."
+  },
+  {
+   "t": 163.36,
+   "text": "Knock the gene out in cell culture or model organisms, see if the phenotype changes."
+  },
+  {
+   "t": 169.19,
+   "text": "Use CRISPR base editing or prime editing to introduce the specific variant into a cell line, then measure functional effects."
+  },
+  {
+   "t": 178.14,
+   "text": "Generate iPS cells from carriers and non-carriers, differentiate them into the relevant cell type, profile them."
+  },
+  {
+   "t": 185.9,
+   "text": "This is the slow, expensive, definitive part of the workflow, and it can take years for a single locus."
+  },
+  {
+   "t": 193.07,
+   "text": "Step five: target validation for drug development."
+  },
+  {
+   "t": 196.57,
+   "text": "If the gene appears to be a valid causal contributor, and if the direction of effect is interpretable — say, loss of function of the gene reduces disease risk, which means the gene's product is a potential drug target — then pharmacology kicks in."
+  },
+  {
+   "t": 211.55,
+   "text": "Find a small molecule or biologic that mimics the protective effect, develop it through preclinical and clinical stages, and you have a drug whose hypothesis is rooted in human genetic causality."
+  },
+  {
+   "t": 224.41,
+   "text": "The empirical observation, now reasonably well-established, is that drugs with human-genetic support — drugs that target proteins where the gene has GWAS or rare-variant evidence — have about twice the success rate in clinical trials as drugs without such support."
+  },
+  {
+   "t": 241.25,
+   "text": "Genetic evidence improves drug development odds."
+  },
+  {
+   "t": 244.62,
+   "text": "This is the most concrete commercial argument for biobank-scale GWAS, and it is driving major pharmaceutical investment."
+  },
+  {
+   "t": 252.97,
+   "text": "Examples of this workflow paying off."
+  },
+  {
+   "t": 255.57,
+   "text": "PCSK9 inhibitors — the LDL-lowering drugs evolocumab and alirocumab — were developed because of human genetic evidence."
+  },
+  {
+   "t": 264.82,
+   "text": "PCSK9 loss-of-function variants were found in studies of African-American families with very low LDL and apparent protection against heart disease."
+  },
+  {
+   "t": 274.95,
+   "text": "The gene was validated, the protein was drugged, the drugs work, they are now standard for high-risk cardiovascular patients."
+  },
+  {
+   "t": 282.42,
+   "text": "SGLT2 inhibitors for type-two diabetes have genetic backing through SLC5A2 variants."
+  },
+  {
+   "t": 290.67,
+   "text": "Inclisiran, a small interfering RNA against PCSK9, is another genetics-driven drug."
+  },
+  {
+   "t": 297.55,
+   "text": "The pattern is now familiar."
+  },
+  {
+   "t": 299.71,
+   "text": "GWAS finds a locus."
+  },
+  {
+   "t": 302.21,
+   "text": "Fine-mapping finds the causal variant."
+  },
+  {
+   "t": 304.92,
+   "text": "eQTL or coding analysis finds the gene."
+  },
+  {
+   "t": 308.36,
+   "text": "Experimental work validates the mechanism."
+  },
+  {
+   "t": 311.4,
+   "text": "Drug development follows."
+  },
+  {
+   "t": 313.17,
+   "text": "Time from GWAS hit to approved drug is typically a decade or more, but the path is established and the early returns are encouraging."
+  },
+  {
+   "t": 321.97,
+   "text": "GWAS, in this light, is not just a method for finding statistically interesting SNPs."
+  },
+  {
+   "t": 328.21,
+   "text": "It is the first step of a long pipeline that ends in molecular medicine."
+  },
+  {
+   "t": 332.32,
+   "text": "The hits are entry points."
+  },
+  {
+   "t": 334.02,
+   "text": "The biology is what comes next."
+  },
+  {
+   "t": 336.17,
+   "text": "Before we close, let me sketch the frontier — where the field is going from here, because the pace is rapid and several of the developments I am about to describe will probably be standard practice within a few years."
+  },
+  {
+   "t": 349.01,
+   "text": "Multi-ancestry meta-analyses are becoming the default."
+  },
+  {
+   "t": 352.63,
+   "text": "New GWAS publications increasingly include cohorts from multiple ancestry groups and report ancestry-specific and trans-ancestry results."
+  },
+  {
+   "t": 362.68,
+   "text": "The methods for doing this — combining effect estimates while respecting between-population differences in LD and allele frequencies — have matured."
+  },
+  {
+   "t": 372.05,
+   "text": "Pan-UK Biobank, the Million Veteran Program, and consortia like COVID-19 Host Genetics Initiative have shown that multi-ancestry GWAS detect more loci than European-only meta-analyses and produce PRS that transfer better across populations."
+  },
+  {
+   "t": 388.82,
+   "text": "Deep-learning PRS."
+  },
+  {
+   "t": 390.65,
+   "text": "Standard PRS is a linear sum."
+  },
+  {
+   "t": 393.18,
+   "text": "The natural question is whether nonlinear models — neural networks operating on genotype data — can capture interactions, dominance, and structural patterns that linear PRS misses."
+  },
+  {
+   "t": 404.72,
+   "text": "Early results, from groups including DeepMind, Calico, and various academic labs, suggest that for some traits deep-learning approaches offer modest improvements, but the gains so far are smaller than improvements from adding more samples to a standard linear PRS."
+  },
+  {
+   "t": 420.62,
+   "text": "Whether deep learning will eventually transform PRS — the way it transformed protein structure prediction — is an open question."
+  },
+  {
+   "t": 428.37,
+   "text": "Integrated multi-omics risk scores."
+  },
+  {
+   "t": 431.07,
+   "text": "PRS uses only DNA."
+  },
+  {
+   "t": 433.33,
+   "text": "The next generation of risk prediction combines PRS with proteomics, metabolomics, transcriptomics, and clinical biomarkers, into integrated scores that aggregate across data modalities."
+  },
+  {
+   "t": 445.97,
+   "text": "UK Biobank's release of plasma proteomics data on fifty thousand participants — Olink panels measuring three thousand proteins each — has opened the door to combining protein levels with PRS for substantially improved risk prediction in cardiovascular disease, dementia, and several cancers."
+  },
+  {
+   "t": 465.11,
+   "text": "The population-screening question."
+  },
+  {
+   "t": 467.02,
+   "text": "As PRS performance improves, and as costs fall to the point where genotyping is a few dollars per person, the question becomes: should everyone be screened?"
+  },
+  {
+   "t": 477.48,
+   "text": "Should a national health service, like the NHS, genotype every newborn at birth and integrate PRS into lifelong preventive care?"
+  },
+  {
+   "t": 486.95,
+   "text": "The arguments for are about prevention — identify high-risk individuals early, target screening and lifestyle interventions, save lives."
+  },
+  {
+   "t": 496.46,
+   "text": "The arguments against are about clinical utility, consent, equity, and the danger of communicating probabilistic risk information to people who may not act on it productively or who may suffer psychological harms."
+  },
+  {
+   "t": 509.96,
+   "text": "The UK, Australia, and several other countries are running pilots."
+  },
+  {
+   "t": 514.3,
+   "text": "The first generation of population-screening PRS deployments is happening now, and the outcomes from those pilots will shape policy for the next decade."
+  },
+  {
+   "t": 523.31,
+   "text": "So that is where GWAS and PRS stand in 2026."
+  },
+  {
+   "t": 527.85,
+   "text": "A statistical design born in 2005, scaled by biobanks in the 2010s, deployed clinically in the 2020s, and now grappling with questions of equity, deep-learning augmentation, multi-omics integration, and population-level screening."
+  },
+  {
+   "t": 543.42,
+   "text": "The story is unfinished."
+  },
+  {
+   "t": 545.57,
+   "text": "Most of the interesting parts are still being written."
+  },
+  {
+   "t": 548.28,
+   "text": "Twenty years ago there were zero GWAS hits."
+  },
+  {
+   "t": 551.6,
+   "text": "Today there are two hundred and fifty thousand."
+  },
+  {
+   "t": 554.13,
+   "text": "Twenty years from now, where will we be?"
+  },
+  {
+   "t": 556.6,
+   "text": "We do not know."
+  },
+  {
+   "t": 557.64,
+   "text": "But the framework you have learned today — the case-control scan, the Manhattan plot, the LD-block interpretation, the polygenic feather-summing, the equity worry, the functional follow-up pipeline — will be how you read the literature from here forward."
+  },
+  {
+   "t": 572.02,
+   "text": "Hold onto it."
+  }
+ ]
+}

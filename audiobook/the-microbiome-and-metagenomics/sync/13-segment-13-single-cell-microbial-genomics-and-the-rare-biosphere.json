@@ -1,0 +1,163 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Single-cell microbial genomics and the rare biosphere",
+ "duration": 385.18,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Single-cell microbial genomics and the rare biosphere"
+  },
+  {
+   "t": 5.38,
+   "text": "Metagenomics, even at its best, has a fundamental limitation: it gives you the aggregate of many cells."
+  },
+  {
+   "t": 12.53,
+   "text": "The MAG you assemble is a composite of all the genomic variation in the population."
+  },
+  {
+   "t": 18.32,
+   "text": "If two strains of the same species coexist in a sample at similar abundance, their genomes can chimerize during assembly, and you can't tell which gene combinations came from which actual cell."
+  },
+  {
+   "t": 30.32,
+   "text": "For a homogeneous population this doesn't matter much; for a heterogeneous one it can be misleading."
+  },
+  {
+   "t": 36.61,
+   "text": "And for the rare biosphere — organisms present at very low abundance that constitute most of the species diversity in a sample but only a tiny fraction of the cells — bulk metagenomics may not give you enough reads from any one rare species to assemble its genome at all."
+  },
+  {
+   "t": 54.51,
+   "text": "The solution is single-cell microbial genomics: physically separating individual microbial cells from a sample and sequencing the genome of each one independently."
+  },
+  {
+   "t": 65.66,
+   "text": "This is hard, because a single bacterial cell contains only a few femtograms of DNA — millions of times less than you'd typically need for a sequencing library."
+  },
+  {
+   "t": 76.22,
+   "text": "So single-cell microbial genomics requires whole-genome amplification, typically using an enzyme system called multiple displacement amplification (MDA), based on the phi29 polymerase, which can produce micrograms of DNA from a single starting cell over several hours of isothermal amplification."
+  },
+  {
+   "t": 96.08,
+   "text": "The workflow looks like this."
+  },
+  {
+   "t": 97.8,
+   "text": "You take an environmental sample, you dilute or sort it to deposit single cells into separate wells of a microtiter plate — using fluorescence-activated cell sorting (FACS) with a DNA-binding stain, or using microfluidic droplet platforms."
+  },
+  {
+   "t": 115.2,
+   "text": "You lyse the cells in each well, you run MDA in each well to amplify the genomic DNA, and then you make a sequencing library from each well's amplified DNA."
+  },
+  {
+   "t": 126.55,
+   "text": "Each library is barcoded so you can pool many and run them on a single Illumina lane."
+  },
+  {
+   "t": 132.29,
+   "text": "After sequencing, you assemble each cell's genome independently."
+  },
+  {
+   "t": 136.95,
+   "text": "The output is a collection of single-amplified genomes, or SAGs, each derived from one physical cell."
+  },
+  {
+   "t": 144.21,
+   "text": "SAGs have their own quirks."
+  },
+  {
+   "t": 145.91,
+   "text": "MDA is biased — some regions of a genome get amplified preferentially over others — so single-cell genomes are often incomplete, with patchy coverage that can leave large fractions of the genome unrecovered."
+  },
+  {
+   "t": 159.46,
+   "text": "A SAG might be only 30 to 60% complete in many cases, though high-quality protocols can push this higher."
+  },
+  {
+   "t": 166.86,
+   "text": "SAGs are also vulnerable to contamination, because MDA will amplify any contaminating DNA at the same exponential rate as the target genome."
+  },
+  {
+   "t": 176.97,
+   "text": "So sample prep has to be obsessively clean."
+  },
+  {
+   "t": 179.94,
+   "text": "Despite these limitations, SAGs have transformed our understanding of several important parts of the microbial world."
+  },
+  {
+   "t": 187.41,
+   "text": "One of the major contributions of single-cell genomics has been to the candidate phyla — those phylogenetic groups identified only by 16S sequences in environmental samples, with no cultured representatives."
+  },
+  {
+   "t": 201.11,
+   "text": "By picking individual cells of these uncultivated lineages and sequencing their genomes, researchers have gotten our first looks at the gene content, metabolic potential, and likely lifestyle of organisms we've never grown in a lab."
+  },
+  {
+   "t": 215.93,
+   "text": "The Tanja Woyke group at the DOE Joint Genome Institute and many academic collaborators have produced thousands of SAGs covering vast swaths of microbial diversity that bulk metagenomics underrepresents."
+  },
+  {
+   "t": 229.0,
+   "text": "Findings include extremely streamlined genomes for some marine bacteria (down to less than a megabase, encoding essentially the minimum needed for life as a heterotroph in seawater), bizarre metabolic combinations in deep-subsurface organisms, and entirely new phyla — like the Candidate Phyla Radiation, a vast group of small-genome bacteria mostly identified through metagenomics and single-cell genomics, that may collectively represent more than 15% of bacterial diversity but had been mostly"
+  },
+  {
+   "t": 262.76,
+   "text": "invisible in cultured surveys."
+  },
+  {
+   "t": 265.24,
+   "text": "Single-cell microbial genomics also reveals population heterogeneity within species."
+  },
+  {
+   "t": 271.85,
+   "text": "Even what looks like a single bacterial species, by 16S sequence, can contain many distinct strains with significantly different gene content — different antibiotic resistance genes, different metabolic capabilities, different mobile genetic elements."
+  },
+  {
+   "t": 287.29,
+   "text": "The pangenome concept — the union of all genes ever found in any member of a species — captures this."
+  },
+  {
+   "t": 294.7,
+   "text": "A typical bacterial species might have a core genome of a few thousand genes present in essentially every strain, plus an accessory genome that varies from strain to strain and can be many times larger than the core."
+  },
+  {
+   "t": 308.76,
+   "text": "Single-cell genomics is one of the best tools for sampling this pangenomic diversity, because it gives you one strain at a time rather than an averaged community."
+  },
+  {
+   "t": 318.1,
+   "text": "The combination of metagenomics and single-cell microbial genomics is now standard for serious microbial ecology."
+  },
+  {
+   "t": 326.18,
+   "text": "Use the metagenome to get the dominant organisms, the community structure, and the abundant gene content."
+  },
+  {
+   "t": 333.19,
+   "text": "Use single-cell genomics to fill in the rare biosphere, to resolve strain heterogeneity, and to get clean genomes for organisms that don't bin well from bulk metagenomes."
+  },
+  {
+   "t": 344.31,
+   "text": "The two approaches are complementary; the modern field uses both."
+  },
+  {
+   "t": 348.51,
+   "text": "There's an even more recent approach worth flagging: microfluidic single-cell metagenomics, where droplet-based platforms can process tens of thousands of single cells per run, producing single-cell genomic data at scale rather than one at a time."
+  },
+  {
+   "t": 363.23,
+   "text": "This is conceptually similar to single-cell RNA sequencing in eukaryotic biology, which has revolutionized cell-type discovery in animal tissues."
+  },
+  {
+   "t": 373.48,
+   "text": "Single-cell microbial genomics is the prokaryotic analog, and it's just hitting the throughput where it becomes a survey tool rather than a per-cell craft project."
+  },
+  {
+   "t": 383.81,
+   "text": "Watch this space."
+  }
+ ]
+}

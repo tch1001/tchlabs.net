@@ -1,0 +1,263 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — Why we evolve proteins instead of designing them",
+ "duration": 411.45,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — Why we evolve proteins instead of designing them"
+  },
+  {
+   "t": 4.5,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 6.19,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 7.64,
+   "text": "Today and for the next two hours, we're going to talk about directed evolution — the technology, and really the philosophy, of engineering proteins not by sitting down at a whiteboard and designing them from first principles, but by mimicking what Darwin and four billion years of biology already worked out the slow way."
+  },
+  {
+   "t": 25.06,
+   "text": "We're going to build a protein the way nature builds a protein, except we're going to do it in a week instead of a million years, and we're going to point evolution at whatever target we want."
+  },
+  {
+   "t": 35.85,
+   "text": "Let me start with a confession."
+  },
+  {
+   "t": 37.46,
+   "text": "Biochemists, structural biologists, computational chemists — we have been trying for fifty years to design proteins from scratch."
+  },
+  {
+   "t": 45.36,
+   "text": "Look at a substrate, draw the active site we'd need around it, pick the amino acids whose side chains would line that pocket in just the right geometry, fold the polypeptide backbone to put those amino acids in just the right positions, and presto — a custom enzyme."
+  },
+  {
+   "t": 61.76,
+   "text": "That's the dream."
+  },
+  {
+   "t": 62.84,
+   "text": "And to be fair, in the last few years, with AlphaFold and ProteinMPNN and the rest, we're actually getting somewhere on that dream."
+  },
+  {
+   "t": 70.56,
+   "text": "We can now design small proteins that fold the way we predicted."
+  },
+  {
+   "t": 74.5,
+   "text": "We can design binders to some targets de novo."
+  },
+  {
+   "t": 77.28,
+   "text": "We're getting better."
+  },
+  {
+   "t": 78.4,
+   "text": "But here's the painful truth that ruled the field from the 1970s until roughly the day before yesterday."
+  },
+  {
+   "t": 85.05,
+   "text": "We were, and largely still are, terrible at designing proteins from first principles."
+  },
+  {
+   "t": 90.24,
+   "text": "Proteins are systems of mind-numbing complexity."
+  },
+  {
+   "t": 93.99,
+   "text": "A typical enzyme is three hundred amino acids long."
+  },
+  {
+   "t": 97.9,
+   "text": "Each amino acid has a side chain that can rotate, twist, hydrogen-bond, stack, displace water."
+  },
+  {
+   "t": 104.89,
+   "text": "The whole chain folds into a three-dimensional structure where atoms forty residues apart in sequence are touching each other in space."
+  },
+  {
+   "t": 113.0,
+   "text": "Change one amino acid in the active site and you might improve the enzyme — or you might break the fold entirely, because that amino acid was secretly holding two helices together, fifteen Angstroms from where you thought it was doing chemistry."
+  },
+  {
+   "t": 126.86,
+   "text": "Allostery — long-range communication through the protein — surprises us constantly."
+  },
+  {
+   "t": 132.46,
+   "text": "Side chains that look perfectly placed in a crystal structure turn out to be moving, sampling alternative rotamers, exchanging on millisecond timescales we can't see."
+  },
+  {
+   "t": 143.06,
+   "text": "The energy landscape is a fractal mountain range."
+  },
+  {
+   "t": 146.35,
+   "text": "So here's the dirty secret of protein engineering: most attempts at rational redesign — sit-down-and-think-it-through redesign — failed."
+  },
+  {
+   "t": 155.11,
+   "text": "The improvement you predicted didn't happen."
+  },
+  {
+   "t": 157.6,
+   "text": "The mutation you installed knocked out the protein."
+  },
+  {
+   "t": 160.72,
+   "text": "The active-site repaint produced something that no longer folded."
+  },
+  {
+   "t": 164.69,
+   "text": "People did this for decades, published the few successes, drawered the many failures, and slowly accumulated a sinking feeling that maybe protein engineering wasn't a science, wasn't an art, was something in between that nobody really had a handle on."
+  },
+  {
+   "t": 179.91,
+   "text": "Then, in the early 1990s, a chemical engineer at Caltech named Frances Arnold got tired of waiting for the rational-design dream to mature."
+  },
+  {
+   "t": 189.24,
+   "text": "And she did something that, at the time, sounded like cheating, or like giving up."
+  },
+  {
+   "t": 193.86,
+   "text": "She said: forget designing from first principles."
+  },
+  {
+   "t": 197.16,
+   "text": "Forget understanding why a protein does what it does."
+  },
+  {
+   "t": 200.75,
+   "text": "Let's just borrow the algorithm Darwin already debugged."
+  },
+  {
+   "t": 203.95,
+   "text": "Let's make a library of random variants of our protein."
+  },
+  {
+   "t": 207.44,
+   "text": "Let's apply a selection pressure for whatever property we want — heat tolerance, organic-solvent tolerance, a new substrate, anything."
+  },
+  {
+   "t": 215.57,
+   "text": "Let's pluck out the winners."
+  },
+  {
+   "t": 217.14,
+   "text": "Let's use those winners as the parents for the next round of mutation and selection."
+  },
+  {
+   "t": 221.69,
+   "text": "And let's just iterate, the way nature iterates, except in our hands the cycle takes a week, and the selection pressure is whatever we decide it is."
+  },
+  {
+   "t": 230.71,
+   "text": "Here is the analogy I want you to keep in your head for the next two hours."
+  },
+  {
+   "t": 235.2,
+   "text": "Directed evolution is Darwin in a test tube — random mutation plus selection, in iterated rounds, just sped up by a factor of a million."
+  },
+  {
+   "t": 245.04,
+   "text": "Nature does this with whole organisms over geologic time."
+  },
+  {
+   "t": 249.03,
+   "text": "We do it with single proteins, in single tubes, over single weekends."
+  },
+  {
+   "t": 254.09,
+   "text": "The fundamental algorithm is identical."
+  },
+  {
+   "t": 256.69,
+   "text": "Make variants."
+  },
+  {
+   "t": 257.93,
+   "text": "Cull the bad ones."
+  },
+  {
+   "t": 259.22,
+   "text": "Let the good ones reproduce."
+  },
+  {
+   "t": 261.13,
+   "text": "Repeat."
+  },
+  {
+   "t": 261.95,
+   "text": "The only thing we've changed is the scale, the speed, and the fact that we get to pick the fitness function."
+  },
+  {
+   "t": 267.99,
+   "text": "Frances Arnold and her lab spent the 1990s and 2000s showing that this approach works — and works, and works."
+  },
+  {
+   "t": 276.35,
+   "text": "They evolved enzymes to be more heat-stable."
+  },
+  {
+   "t": 279.57,
+   "text": "They evolved enzymes to function in organic solvents."
+  },
+  {
+   "t": 283.4,
+   "text": "They evolved enzymes to accept substrates they had never seen in nature."
+  },
+  {
+   "t": 287.89,
+   "text": "They evolved enzymes that, after a few rounds of directed evolution, did chemistry that no enzyme on Earth had previously done — installing carbon-silicon bonds, for instance, which is a reaction that doesn't exist in nature."
+  },
+  {
+   "t": 302.53,
+   "text": "By the time the Nobel Committee got around to her work, in 2018, directed evolution was no longer an exotic technique."
+  },
+  {
+   "t": 310.64,
+   "text": "It was the default way to engineer an industrial enzyme."
+  },
+  {
+   "t": 314.14,
+   "text": "It is responsible, today, for an enormous fraction of the laundry detergents you use, the enzymes that bleach your jeans, the catalysts that make your statin drug, the enzymes that turn corn starch into the high-fructose corn syrup in your soda."
+  },
+  {
+   "t": 328.32,
+   "text": "Frances Arnold won the 2018 Nobel Prize in Chemistry, sharing it with George Smith and Greg Winter, who developed a related technique called phage display — which we covered, briefly, in the antibodies lecture, and which we'll revisit today."
+  },
+  {
+   "t": 344.23,
+   "text": "If you walk out of here in two hours and you can do four things — first, sketch the directed-evolution cycle and tell me what happens at each stage and why; second, explain in plain English the difference between mutagenesis methods like error-prone PCR, site-saturation mutagenesis, and DNA shuffling; third, articulate the difference between selection and screening and when you'd use each; and fourth, walk me through at least one textbook directed-evolution case study, ideally the TadA"
+  },
+  {
+   "t": 375.05,
+   "text": "evolution for the adenine base editor, well enough to tell me what the starting enzyme was, what the selection pressure was, and what the endpoint enzyme does — then we have succeeded."
+  },
+  {
+   "t": 385.43,
+   "text": "Everything else hangs off those four."
+  },
+  {
+   "t": 387.79,
+   "text": "This is, in a sense, the most important lecture in protein engineering — because directed evolution is the workhorse that produced almost every engineered enzyme you'll meet in industry, in medicine, in the lab."
+  },
+  {
+   "t": 401.02,
+   "text": "And it's a beautiful philosophical idea."
+  },
+  {
+   "t": 403.82,
+   "text": "We didn't out-design nature."
+  },
+  {
+   "t": 405.47,
+   "text": "We borrowed nature's method, pointed it at problems nature never cared about, and let it cook."
+  }
+ ]
+}

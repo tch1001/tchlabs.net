@@ -1,0 +1,207 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Machine-learning-assisted directed evolution",
+ "duration": 299.73,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Machine-learning-assisted directed evolution"
+  },
+  {
+   "t": 4.41,
+   "text": "We come now to the frontier — the place where directed evolution is right now in 2026, where the methods of the last thirty years are being augmented by machine learning, and where the next decade of protein engineering is being built."
+  },
+  {
+   "t": 19.25,
+   "text": "This is the part of the lecture that will date the fastest, so take it with appropriate caution."
+  },
+  {
+   "t": 24.9,
+   "text": "But the broad strokes are clear."
+  },
+  {
+   "t": 26.8,
+   "text": "Here's the basic move."
+  },
+  {
+   "t": 28.26,
+   "text": "Directed evolution, classically, generates random libraries and screens or selects them."
+  },
+  {
+   "t": 34.81,
+   "text": "Most of the variants in a random library are useless — they fold wrong, they catalyze nothing, they bind nothing."
+  },
+  {
+   "t": 42.52,
+   "text": "Maybe one in a thousand is even mildly interesting."
+  },
+  {
+   "t": 45.75,
+   "text": "Most of your tickets are wasted."
+  },
+  {
+   "t": 47.42,
+   "text": "What if you could make a better starting library?"
+  },
+  {
+   "t": 49.65,
+   "text": "What if, instead of generating random variants, you generated variants that an ML model predicts are likely to be functional — variants in the \"good\" part of sequence space, before you even start screening?"
+  },
+  {
+   "t": 61.98,
+   "text": "Then your library would have a much higher hit rate."
+  },
+  {
+   "t": 64.75,
+   "text": "The screen would find winners more easily."
+  },
+  {
+   "t": 67.55,
+   "text": "The whole campaign would compress from dozens of rounds to a handful."
+  },
+  {
+   "t": 71.6,
+   "text": "The Arnold lab itself has been pushing in this direction."
+  },
+  {
+   "t": 75.22,
+   "text": "The general approach is called machine-learning-assisted directed evolution."
+  },
+  {
+   "t": 79.64,
+   "text": "You generate an initial small library and screen it carefully, getting high-quality activity measurements for each variant."
+  },
+  {
+   "t": 87.11,
+   "text": "You use that data to train an ML model that predicts activity from sequence — typically a neural network operating on the protein language."
+  },
+  {
+   "t": 95.71,
+   "text": "The model has now learned, from your data, what makes a good variant."
+  },
+  {
+   "t": 100.09,
+   "text": "Now you use the model to generate the next library."
+  },
+  {
+   "t": 103.21,
+   "text": "Instead of random mutations, you ask the model: which mutations does it predict will be functional?"
+  },
+  {
+   "t": 109.81,
+   "text": "You generate a library biased toward the model's predictions."
+  },
+  {
+   "t": 113.86,
+   "text": "You screen the new library — and because the model has shifted the library toward good variants, the hit rate is much higher."
+  },
+  {
+   "t": 121.8,
+   "text": "You add the new screen data to the training set, retrain the model, generate a better library, screen again."
+  },
+  {
+   "t": 128.86,
+   "text": "Each round, the model gets smarter, the library gets better, the screen finds better winners."
+  },
+  {
+   "t": 135.22,
+   "text": "The papers by Bedbrook, Tyo, and Arnold, and by other groups like Yang and Wu, have shown this work in practice."
+  },
+  {
+   "t": 142.56,
+   "text": "ML-assisted directed evolution can reach the same endpoint enzyme in many fewer rounds than classical directed evolution, with smaller libraries, with less screening labor."
+  },
+  {
+   "t": 153.44,
+   "text": "The ML model effectively transfers learning across rounds — what we discover in round one biases what we propose in round two."
+  },
+  {
+   "t": 161.34,
+   "text": "The analogy I want you to keep is that ML-assisted directed evolution is the ML proposing a good starting library, and the lab evolving it the rest of the way — the two compound."
+  },
+  {
+   "t": 173.12,
+   "text": "The ML doesn't replace evolution; it accelerates it."
+  },
+  {
+   "t": 177.25,
+   "text": "The ML proposes; evolution disposes."
+  },
+  {
+   "t": 180.49,
+   "text": "Each method covers a weakness of the other."
+  },
+  {
+   "t": 183.44,
+   "text": "The ML's weakness is that it can only predict what it's been trained on."
+  },
+  {
+   "t": 187.31,
+   "text": "If you're trying to evolve a brand-new function — a chemistry no enzyme has ever done — the ML model has nothing to go on."
+  },
+  {
+   "t": 195.82,
+   "text": "Evolution can blunder into novel function through random exploration; ML can only interpolate within what it knows."
+  },
+  {
+   "t": 203.74,
+   "text": "Evolution's weakness is that it's slow and expensive."
+  },
+  {
+   "t": 207.35,
+   "text": "Each round of mutation, expression, and screening takes a week or two."
+  },
+  {
+   "t": 212.19,
+   "text": "If you can compress ten rounds into three rounds by using ML to focus the libraries, the savings are huge."
+  },
+  {
+   "t": 218.95,
+   "text": "So the combination is greater than the parts."
+  },
+  {
+   "t": 221.76,
+   "text": "ML for the structured parts of sequence space where you already have data; evolution for the unstructured frontier where ML can't predict."
+  },
+  {
+   "t": 230.18,
+   "text": "Modern protein-engineering campaigns at the cutting edge use both, and the trend is clearly toward tighter integration — ML proposing libraries, automated platforms generating and screening them, ML retraining on the new data, generating the next library, and so on."
+  },
+  {
+   "t": 247.36,
+   "text": "Some groups have started calling this closed-loop protein engineering."
+  },
+  {
+   "t": 251.55,
+   "text": "The lab is a feedback loop: ML proposes, the wet lab tests, the data feeds back into the ML, the ML proposes better, the wet lab tests better."
+  },
+  {
+   "t": 261.98,
+   "text": "The loop tightens."
+  },
+  {
+   "t": 263.4,
+   "text": "The cycle time drops from weeks to days."
+  },
+  {
+   "t": 265.9,
+   "text": "The number of variants needed drops from millions to thousands."
+  },
+  {
+   "t": 269.63,
+   "text": "The skilled human work shifts from designing variants to designing experiments — what to measure, how to measure it, what selection pressure to apply."
+  },
+  {
+   "t": 278.8,
+   "text": "The variants themselves are increasingly machine-proposed."
+  },
+  {
+   "t": 282.71,
+   "text": "This is where protein engineering is going."
+  },
+  {
+   "t": 285.38,
+   "text": "The exact form is still being worked out — different labs use different ML architectures, different library-generation strategies, different screening platforms — but the meta-pattern of closed-loop ML-plus-evolution is clearly the future."
+  }
+ ]
+}

@@ -1,0 +1,147 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Nanopore direct methylation calling — methylation as a bonus output",
+ "duration": 324.29,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Nanopore direct methylation calling — methylation as a bonus output"
+  },
+  {
+   "t": 6.55,
+   "text": "There is a completely different way to read methylation that doesn't involve chemistry at all."
+  },
+  {
+   "t": 11.78,
+   "text": "Oxford Nanopore Technologies' platform — which sequences DNA by threading individual molecules through tiny protein pores embedded in a membrane, while measuring the ionic current that flows through the pore as each base passes — turns out to be directly sensitive to base modifications."
+  },
+  {
+   "t": 30.4,
+   "text": "A methylated cytosine perturbs the ionic current differently from an unmethylated cytosine; a 5hmC perturbs it differently again."
+  },
+  {
+   "t": 39.25,
+   "text": "The current signal carries the methylation information, embedded in the same data stream that carries the sequence information."
+  },
+  {
+   "t": 46.29,
+   "text": "For the first several years of nanopore sequencing, this signal was a curiosity."
+  },
+  {
+   "t": 51.59,
+   "text": "The basecaller — the software that converts raw current data into sequence reads — was tuned to call A, C, G, and T, and it ignored modifications."
+  },
+  {
+   "t": 62.7,
+   "text": "But as the basecallers got more sophisticated, particularly with the introduction of neural-network-based basecalling around 2018, it became possible to train the same models to recognize and call modifications directly from the current signal."
+  },
+  {
+   "t": 77.56,
+   "text": "The modern Oxford Nanopore basecaller — the Dorado software — outputs methylation calls alongside base calls, with no additional sample preparation, no chemistry, no separate experiment."
+  },
+  {
+   "t": 90.56,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 92.22,
+   "text": "Nanopore methylation calling is the bonus output."
+  },
+  {
+   "t": 95.6,
+   "text": "The same long-read nanopore sequencing that gives you sequence also reports methylation status from the raw current signal, no extra chemistry needed."
+  },
+  {
+   "t": 104.29,
+   "text": "You do one library prep, one sequencing run, and the basecaller gives you sequence plus methylation in the same file."
+  },
+  {
+   "t": 112.22,
+   "text": "It's the methylation method that bundles with every nanopore experiment for free."
+  },
+  {
+   "t": 117.58,
+   "text": "The implications are substantial."
+  },
+  {
+   "t": 119.88,
+   "text": "First, you avoid all the bisulfite/EM-seq/TAPS chemistry entirely."
+  },
+  {
+   "t": 127.05,
+   "text": "No conversion, no damage, no library doubling for 5mC versus 5hmC discrimination."
+  },
+  {
+   "t": 134.35,
+   "text": "Second, you get long reads."
+  },
+  {
+   "t": 136.59,
+   "text": "Standard nanopore reads are tens of thousands of base pairs; ultra-long reads can hit a million base pairs."
+  },
+  {
+   "t": 143.95,
+   "text": "This means you can phase methylation across long genomic distances — for example, telling you whether two methylated CpGs 50 kilobases apart are on the same DNA molecule or on different molecules, which matters for imprinting analysis, allele-specific methylation, and tumor clonality."
+  },
+  {
+   "t": 162.4,
+   "text": "Third, you can call multiple modifications."
+  },
+  {
+   "t": 165.43,
+   "text": "Nanopore basecallers can now distinguish 5mC from 5hmC from 6mA (a different modification, important in some bacteria and in some unusual human contexts) — all from the same sequencing run."
+  },
+  {
+   "t": 179.97,
+   "text": "The trade-offs are real too."
+  },
+  {
+   "t": 181.68,
+   "text": "Per-base accuracy of nanopore methylation calls, even in the best modern implementations, is somewhat lower than the accuracy of bisulfite or EM-seq calls at high coverage."
+  },
+  {
+   "t": 193.24,
+   "text": "To get reliable methylation calls at a given CpG, you typically need higher coverage from nanopore than from short-read converted sequencing — maybe 20x to 30x nanopore versus 5x to 10x bisulfite."
+  },
+  {
+   "t": 207.78,
+   "text": "The cost per base for nanopore is still higher than for Illumina-based methods, though it's dropping fast."
+  },
+  {
+   "t": 214.05,
+   "text": "And the basecaller's modification-calling accuracy is sensitive to the sequence context, the basecaller version, and the chemistry of the flow cell, so reproducibility across versions and labs requires careful version control."
+  },
+  {
+   "t": 227.64,
+   "text": "PacBio HiFi sequencing, the other long-read platform, also has methylation calling capabilities, derived from polymerase kinetics rather than ionic current."
+  },
+  {
+   "t": 237.95,
+   "text": "The signal is subtler — PacBio infers methylation from how the polymerase pauses or accelerates at modified bases — and the current implementations primarily call 5mC at CpG sites with somewhat narrower scope than nanopore, but they're improving."
+  },
+  {
+   "t": 254.46,
+   "text": "By the late 2020s, both long-read platforms will have full methylation-calling capability built into the standard data pipeline."
+  },
+  {
+   "t": 262.8,
+   "text": "For applications that need long reads and methylation together — particularly anything involving repetitive regions of the genome, structural variants, imprinted loci, or haplotype-phased methylation — nanopore methylation calling is increasingly the method of choice."
+  },
+  {
+   "t": 280.44,
+   "text": "For high-throughput, low-cost, large-cohort methylation studies, the EPIC array and EM-seq will probably dominate for some years yet, because the per-sample cost of nanopore is still too high for studies of thousands of samples."
+  },
+  {
+   "t": 295.36,
+   "text": "But the trajectory is clear: methylation will increasingly be a free side effect of doing long-read genome sequencing, rather than a separate experiment requiring its own chemistry."
+  },
+  {
+   "t": 307.35,
+   "text": "The long-term implication is that the entire bisulfite-based methylation industry may eventually shrink as long-read sequencing becomes cheap enough to be the default."
+  },
+  {
+   "t": 318.58,
+   "text": "That transition is happening now, slowly, and we'll see it play out over the next decade."
+  }
+ ]
+}

@@ -1,0 +1,311 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The barrier problem: why naked DNA doesn't enter cells",
+ "duration": 513.0,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The barrier problem: why naked DNA doesn't enter cells"
+  },
+  {
+   "t": 5.1,
+   "text": "Alright, let's begin."
+  },
+  {
+   "t": 6.45,
+   "text": "For the next two hours, we're going to talk about one of the most underrated, most workhorse-y, most quietly-foundational problems in all of molecular biology: how do you get a piece of DNA, or RNA, or protein, from a tube in your hand into the inside of a living cell?"
+  },
+  {
+   "t": 22.4,
+   "text": "It sounds simple."
+  },
+  {
+   "t": 23.56,
+   "text": "It is not."
+  },
+  {
+   "t": 24.55,
+   "text": "Almost every experiment you will read about in a modern biology paper — every gene therapy, every CRISPR edit, every recombinant protein, every CAR-T cell, every mRNA vaccine — depends, at some step, on a person in a lab successfully shoving a foreign molecule across a cell membrane that has spent three and a half billion years evolving to keep foreign molecules out."
+  },
+  {
+   "t": 47.58,
+   "text": "The whole field of molecular biology, in some sense, is the field of figuring out how to violate that boundary in a controlled, reproducible, non-lethal way."
+  },
+  {
+   "t": 57.95,
+   "text": "And we have invented, over the last fifty years, a small zoo of different ways to do it."
+  },
+  {
+   "t": 63.95,
+   "text": "I want to start with the central problem, because if you carry one sentence out of this lecture, I want it to be this one."
+  },
+  {
+   "t": 70.11,
+   "text": "A cell is a fortress, and its membrane is the wall, and naked nucleic acid is exactly the kind of thing that wall was built to reject."
+  },
+  {
+   "t": 79.46,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch on a napkin the five families of transfection methods and have a feel for which one you'd reach for in which situation; two, explain to a curious friend why electroporating a primary T cell looks completely different from lipofecting a HEK293 cell, and why both are completely different from injecting an LNP into a patient's deltoid; and three, look at the methods section of a paper that says \"we transfected our cells"
+  },
+  {
+   "t": 111.29,
+   "text": "with construct X\" and immediately know what questions to ask about efficiency, toxicity, and what could go wrong — then we have done our job."
+  },
+  {
+   "t": 120.09,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 122.3,
+   "text": "So."
+  },
+  {
+   "t": 123.05,
+   "text": "The wall."
+  },
+  {
+   "t": 123.89,
+   "text": "Let's actually look at it for a moment, because if you don't have a feel for why it's hard, every clever solution we're going to discuss is going to sound like overkill."
+  },
+  {
+   "t": 132.26,
+   "text": "A mammalian cell membrane — your cell, my cell, a HeLa cell, a primary T cell, any of them — is a lipid bilayer."
+  },
+  {
+   "t": 141.41,
+   "text": "Two sheets of fatty molecules, tails pointed inward, heads pointed outward, forming a continuous oily film around the cell about four nanometers thick."
+  },
+  {
+   "t": 152.28,
+   "text": "That bilayer is permeable to small, uncharged, hydrophobic things — oxygen, carbon dioxide, steroid hormones, alcohol — because those molecules can dissolve into the oily interior and slip through."
+  },
+  {
+   "t": 166.38,
+   "text": "But it is essentially impermeable to large, charged, hydrophilic things."
+  },
+  {
+   "t": 171.53,
+   "text": "And DNA and RNA, conveniently for the cell, are about as large, charged, and hydrophilic as molecules get."
+  },
+  {
+   "t": 180.0,
+   "text": "A typical plasmid is several thousand base pairs of double-stranded DNA, each base pair carrying two negative charges on the phosphate backbone, the whole thing wrapped into a floppy coil of negative charge that wants to be in water and absolutely does not want to be in oil."
+  },
+  {
+   "t": 196.18,
+   "text": "It cannot cross the membrane."
+  },
+  {
+   "t": 198.01,
+   "text": "Period."
+  },
+  {
+   "t": 198.84,
+   "text": "No more than a watermelon can cross a brick wall."
+  },
+  {
+   "t": 201.64,
+   "text": "If that were the only barrier, we'd at least have a clean problem."
+  },
+  {
+   "t": 204.99,
+   "text": "But it gets worse, because evolution has not only built the wall, it has also stationed guards."
+  },
+  {
+   "t": 210.94,
+   "text": "Cells have evolved an entire innate immune machinery dedicated to noticing when foreign nucleic acid has somehow appeared inside the cytoplasm and responding by destroying it and, in many cases, killing the cell or alerting the neighbors."
+  },
+  {
+   "t": 227.01,
+   "text": "There are cytoplasmic DNA sensors — cGAS-STING is the big one you should know — that detect double-stranded DNA in the wrong compartment and trigger an interferon response."
+  },
+  {
+   "t": 238.81,
+   "text": "There are RNA sensors — RIG-I, MDA5, the toll-like receptors — that do the same for foreign RNA."
+  },
+  {
+   "t": 246.65,
+   "text": "There are nucleases — DNases and RNases — circulating in the serum, sitting in endosomes, lurking on the cell surface, whose only job is to chew up unprotected nucleic acid into harmless little fragments."
+  },
+  {
+   "t": 261.27,
+   "text": "The wall is high."
+  },
+  {
+   "t": 262.56,
+   "text": "The guards are vigilant."
+  },
+  {
+   "t": 263.97,
+   "text": "The dogs have teeth."
+  },
+  {
+   "t": 265.26,
+   "text": "You need a smuggler."
+  },
+  {
+   "t": 266.46,
+   "text": "That word — smuggler — is the framing I want you to carry."
+  },
+  {
+   "t": 270.36,
+   "text": "Every transfection method we're going to discuss is, in some sense, a smuggling operation."
+  },
+  {
+   "t": 276.59,
+   "text": "The DNA is the contraband."
+  },
+  {
+   "t": 278.89,
+   "text": "The membrane is the border."
+  },
+  {
+   "t": 280.89,
+   "text": "And the method — the lipid, the polymer, the electrical pulse, the gold particle, the needle, the virus — is the smuggler that gets the contraband across."
+  },
+  {
+   "t": 290.51,
+   "text": "Different smugglers have different skills."
+  },
+  {
+   "t": 292.85,
+   "text": "Some are subtle; some are brutal."
+  },
+  {
+   "t": 295.06,
+   "text": "Some work everywhere; some only work in one specific city."
+  },
+  {
+   "t": 299.26,
+   "text": "Some leave the cargo intact; some damage the goods in transit."
+  },
+  {
+   "t": 303.22,
+   "text": "And — this is the part of the analogy I want you to really sit with — no smuggler is perfect, and every smuggling operation has casualties."
+  },
+  {
+   "t": 312.35,
+   "text": "Some cells die."
+  },
+  {
+   "t": 313.54,
+   "text": "Some get the cargo but die anyway."
+  },
+  {
+   "t": 315.92,
+   "text": "Some take it up but never use it."
+  },
+  {
+   "t": 318.05,
+   "text": "Some use it briefly and then forget."
+  },
+  {
+   "t": 320.64,
+   "text": "Choosing the right smuggler for the right job is the actual craft of molecular biology, and it is mostly invisible in papers, because by the time the paper is written, the seven failed methods have been deleted from the methods section and only the one that worked is described in three lines."
+  },
+  {
+   "t": 337.46,
+   "text": "Now, before we go any further, let me give you the vocabulary distinction that trips up every undergrad, every time."
+  },
+  {
+   "t": 344.24,
+   "text": "Transfection is the word for getting nucleic acid into a eukaryotic cell — yeast, mammalian, plant, insect."
+  },
+  {
+   "t": 352.2,
+   "text": "Transformation is the word for getting nucleic acid into a bacterium."
+  },
+  {
+   "t": 356.72,
+   "text": "Transduction is the word for getting nucleic acid into any cell via a virus."
+  },
+  {
+   "t": 362.32,
+   "text": "Same conceptual operation, three different words, and people will judge you very quickly if you mix them up."
+  },
+  {
+   "t": 368.49,
+   "text": "If you say \"I transformed my HeLa cells with my plasmid,\" every molecular biologist in the room will silently note that you do not know what you are doing."
+  },
+  {
+   "t": 377.31,
+   "text": "Transfection."
+  },
+  {
+   "t": 378.44,
+   "text": "Mammalian cells."
+  },
+  {
+   "t": 379.94,
+   "text": "Use it."
+  },
+  {
+   "t": 380.72,
+   "text": "There are, broadly, five families of transfection methods, and the rest of this lecture is structured around them."
+  },
+  {
+   "t": 387.81,
+   "text": "Physical methods — electroporation, microinjection, biolistics — use raw mechanical or electrical force to drive nucleic acid across the membrane."
+  },
+  {
+   "t": 398.47,
+   "text": "Chemical methods — calcium phosphate, lipofection, polymer-based reagents — use chemistry to package the nucleic acid into something the cell will accept."
+  },
+  {
+   "t": 408.51,
+   "text": "Viral methods — lentiviruses, AAV, retroviruses, adenoviruses — hijack the evolved machinery of viruses, which after all are professionals at exactly this problem."
+  },
+  {
+   "t": 419.64,
+   "text": "Peptide-based methods — cell-penetrating peptides, the TAT trick — bolt a short peptide onto the cargo and let the peptide drag it across."
+  },
+  {
+   "t": 428.86,
+   "text": "And biological methods — engineered ribonucleoprotein complexes, exosomes, virus-like particles — use natural or semi-natural carriers that the cell either ignores or actively imports."
+  },
+  {
+   "t": 442.22,
+   "text": "Each of those five families has a sweet spot."
+  },
+  {
+   "t": 445.01,
+   "text": "Each has a failure mode."
+  },
+  {
+   "t": 446.4,
+   "text": "And the entire art of being a good experimentalist is knowing which method is going to work for the cell type you have in front of you."
+  },
+  {
+   "t": 454.84,
+   "text": "Because here's the thing nobody tells you in the textbook: what works for one cell line will completely fail for another, and the only way to know is to try it."
+  },
+  {
+   "t": 463.87,
+   "text": "HEK293 cells — the workhorse human cell line — are so easy to transfect that you can practically transfect them by sneezing on them."
+  },
+  {
+   "t": 473.62,
+   "text": "Primary human T cells from a donor's blood are so hard to transfect that for thirty years people thought it was impossible, and even now it requires a specific kind of electroporation with a specific recipe and a specific machine."
+  },
+  {
+   "t": 488.36,
+   "text": "Primary neurons are so hard to transfect that an entire generation of neuroscientists either gave up or built their careers on viral vectors."
+  },
+  {
+   "t": 497.6,
+   "text": "The cell line determines the method."
+  },
+  {
+   "t": 499.9,
+   "text": "The method determines what you can ask."
+  },
+  {
+   "t": 502.05,
+   "text": "That's our contract."
+  },
+  {
+   "t": 503.41,
+   "text": "Now let's go meet the methods, in roughly the order they were invented, starting with the oldest, cheapest, most stubbornly-still-used method on the bench."
+  }
+ ]
+}

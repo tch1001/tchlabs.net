@@ -1,0 +1,263 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The pre-AlphaFold landscape — what we had",
+ "duration": 398.64,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The pre-AlphaFold landscape — what we had"
+  },
+  {
+   "t": 3.99,
+   "text": "So you're a biologist in 2017."
+  },
+  {
+   "t": 7.21,
+   "text": "You've got a protein sequence."
+  },
+  {
+   "t": 9.09,
+   "text": "You want a structure."
+  },
+  {
+   "t": 10.22,
+   "text": "You haven't won the lottery, so you don't have your own crystallography facility."
+  },
+  {
+   "t": 14.81,
+   "text": "What do you do?"
+  },
+  {
+   "t": 15.7,
+   "text": "You go to one of three families of computational methods."
+  },
+  {
+   "t": 19.15,
+   "text": "Let me walk you through each one, because each one represents a strategy that gave us, at the time, our best non-experimental shot at getting a structure."
+  },
+  {
+   "t": 28.8,
+   "text": "Family one: homology modeling."
+  },
+  {
+   "t": 31.36,
+   "text": "The idea is simple and powerful."
+  },
+  {
+   "t": 34.42,
+   "text": "Maybe your protein doesn't have a known structure, but maybe a similar protein does."
+  },
+  {
+   "t": 39.58,
+   "text": "Maybe your protein is a kinase from some obscure organism, and there's already a structure for a kinase from yeast that has, say, forty percent sequence identity to yours."
+  },
+  {
+   "t": 50.45,
+   "text": "If two proteins have similar sequences — and especially if they have similar amino acids at the positions that matter — they almost always have similar three-dimensional structures."
+  },
+  {
+   "t": 61.46,
+   "text": "This is one of the deep regularities of biology: structure is far more conserved than sequence."
+  },
+  {
+   "t": 67.96,
+   "text": "So if you can find a \"template\" — a known-structure protein similar enough to yours — you can build a model by essentially threading your sequence onto the template's backbone, and then adjusting locally to accommodate the differences."
+  },
+  {
+   "t": 81.15,
+   "text": "The dominant homology modeling tool, used by thousands of biologists worldwide, was a program called Modeller, developed by Andrej Sali."
+  },
+  {
+   "t": 89.95,
+   "text": "You give it your sequence, you give it a template, and it builds you a model."
+  },
+  {
+   "t": 94.04,
+   "text": "For closely related proteins, Modeller works beautifully."
+  },
+  {
+   "t": 98.29,
+   "text": "For more distant relationships, it works less well."
+  },
+  {
+   "t": 101.62,
+   "text": "And if your protein has no close-enough template — if it's a really novel fold — Modeller can't help you at all."
+  },
+  {
+   "t": 108.15,
+   "text": "By the late 2010s, maybe forty percent of human proteins had a usefully-close template in the database."
+  },
+  {
+   "t": 115.36,
+   "text": "So homology modeling could get you something for that forty percent."
+  },
+  {
+   "t": 119.4,
+   "text": "The other sixty percent — including many of the proteins biologists most cared about — were essentially out of reach."
+  },
+  {
+   "t": 127.11,
+   "text": "Family two: template-based modeling without a clear template."
+  },
+  {
+   "t": 131.57,
+   "text": "This is the same idea as homology modeling, but stretched."
+  },
+  {
+   "t": 135.38,
+   "text": "What if there's no obviously related protein in the database, but there are scraps — short fragments that look like pieces of known structures?"
+  },
+  {
+   "t": 143.32,
+   "text": "In that case, you can try to identify weak similarities through more sophisticated sequence comparisons — hidden Markov models, sequence profiles, deep evolutionary databases — and patch together a model from multiple weak templates."
+  },
+  {
+   "t": 157.86,
+   "text": "The methods in this category were creative but unreliable."
+  },
+  {
+   "t": 161.45,
+   "text": "Sometimes they worked."
+  },
+  {
+   "t": 162.8,
+   "text": "Often they didn't."
+  },
+  {
+   "t": 163.9,
+   "text": "Family three: ab initio, or \"from first principles."
+  },
+  {
+   "t": 168.64,
+   "text": "\" This is the dream that Anfinsen's hypothesis pointed toward — predict structure directly from sequence, without any template, using physics."
+  },
+  {
+   "t": 178.09,
+   "text": "Or quasi-physics."
+  },
+  {
+   "t": 179.74,
+   "text": "The most successful tool in this family was called Rosetta, developed by David Baker's lab at the University of Washington."
+  },
+  {
+   "t": 187.16,
+   "text": "Rosetta took a hybrid approach: it didn't try to fold the protein from pure physics, which would be hopeless."
+  },
+  {
+   "t": 194.09,
+   "text": "Instead, it broke the target sequence into short fragments — three to nine residues at a time — and, for each fragment, searched the database for short pieces of known structures with similar local sequence."
+  },
+  {
+   "t": 207.59,
+   "text": "Then it assembled the fragments into candidate structures using a Monte Carlo procedure, scoring each assembly with a knowledge-based energy function and keeping the lowest-energy candidates."
+  },
+  {
+   "t": 219.1,
+   "text": "Rosetta worked, surprisingly well, for small proteins — under, say, a hundred amino acids — and it was the dominant ab initio method for over a decade."
+  },
+  {
+   "t": 228.96,
+   "text": "It launched a whole subfield, including the citizen science game Foldit, where players around the world fold proteins manually in a graphical interface and sometimes beat the algorithm."
+  },
+  {
+   "t": 240.8,
+   "text": "David Baker's lab also extended Rosetta toward design — using the same framework not just to predict structure from sequence, but to design sequences that would fold into a chosen structure."
+  },
+  {
+   "t": 253.3,
+   "text": "That'll be relevant when we get to David Baker and the 2024 Nobel."
+  },
+  {
+   "t": 257.55,
+   "text": "So that was the landscape, in 2017."
+  },
+  {
+   "t": 260.87,
+   "text": "You had homology modeling for the lucky cases."
+  },
+  {
+   "t": 263.9,
+   "text": "You had stretched template methods for the in-between cases."
+  },
+  {
+   "t": 267.3,
+   "text": "You had Rosetta and friends for small proteins from scratch."
+  },
+  {
+   "t": 271.55,
+   "text": "And for everything else — large proteins with novel folds, multi-domain proteins, anything really tricky — you had nothing, basically."
+  },
+  {
+   "t": 281.22,
+   "text": "Your sequence sat on the page, unfolded, untreated."
+  },
+  {
+   "t": 285.55,
+   "text": "There's one more idea I want to plant now, because it'll come back in a big way."
+  },
+  {
+   "t": 289.31,
+   "text": "Through the 2010s, a slow-building line of research was suggesting that evolutionary information — patterns of mutation across many related sequences — might contain information about protein structure that pure single-sequence methods couldn't access."
+  },
+  {
+   "t": 304.6,
+   "text": "The idea, which we'll spend a whole segment on, was this: if you take your protein and find hundreds or thousands of homologs of it across species, and you line them all up, you can sometimes see that certain pairs of positions in the alignment mutate together."
+  },
+  {
+   "t": 320.19,
+   "text": "When position twenty-three changes, position eighty-eight tends to change too."
+  },
+  {
+   "t": 325.12,
+   "text": "That co-mutation, that coevolution, is a hint that positions twenty-three and eighty-eight are physically near each other in the folded structure — that one is compensating for the other."
+  },
+  {
+   "t": 336.22,
+   "text": "Methods that extracted these coevolutionary signals — methods with names like direct coupling analysis, EVfold, PSICOV, RaptorX — were getting better through the 2010s and were beginning to predict contact maps with useful accuracy."
+  },
+  {
+   "t": 351.42,
+   "text": "But contact maps are not structures."
+  },
+  {
+   "t": 354.25,
+   "text": "Knowing that residue twenty-three is near residue eighty-eight is a useful constraint, but you still have to turn many such constraints into an actual three-dimensional model."
+  },
+  {
+   "t": 364.36,
+   "text": "That last step, the conversion from contact information into a coherent structure, was a hard combinatorial problem that nobody had quite cracked."
+  },
+  {
+   "t": 373.42,
+   "text": "That's where things stood."
+  },
+  {
+   "t": 374.71,
+   "text": "Homology modeling for the lucky."
+  },
+  {
+   "t": 377.55,
+   "text": "Rosetta for the small."
+  },
+  {
+   "t": 378.9,
+   "text": "Coevolution-based contact prediction for the brave."
+  },
+  {
+   "t": 382.49,
+   "text": "And a slowly-growing sense, in the literature, that maybe — maybe — a sufficiently good machine learning method that could integrate all these signals would crack the whole problem."
+  },
+  {
+   "t": 392.31,
+   "text": "Several groups were trying."
+  },
+  {
+   "t": 393.96,
+   "text": "Nobody had succeeded."
+  },
+  {
+   "t": 395.5,
+   "text": "Then DeepMind showed up at CASP13."
+  }
+ ]
+}

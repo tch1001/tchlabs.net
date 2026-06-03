@@ -1,0 +1,219 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The breakthrough: reading fluorescence during amplification",
+ "duration": 316.66,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The breakthrough: reading fluorescence during amplification"
+  },
+  {
+   "t": 5.44,
+   "text": "Here is the conceptual leap."
+  },
+  {
+   "t": 7.59,
+   "text": "Take a normal PCR reaction."
+  },
+  {
+   "t": 9.66,
+   "text": "Add to it something that glows when DNA is being made."
+  },
+  {
+   "t": 13.31,
+   "text": "Run the cycles."
+  },
+  {
+   "t": 14.56,
+   "text": "After each cycle, before going on to the next, briefly pause and measure how much the tube is glowing."
+  },
+  {
+   "t": 21.4,
+   "text": "Plot the glow versus the cycle number."
+  },
+  {
+   "t": 24.25,
+   "text": "You get an amplification curve in real time."
+  },
+  {
+   "t": 27.01,
+   "text": "You don't have to open the tube — fluorescence travels through plastic — and you don't have to wait for the endpoint, because you're recording the whole journey."
+  },
+  {
+   "t": 35.59,
+   "text": "That's qPCR."
+  },
+  {
+   "t": 37.06,
+   "text": "The \"q\" stands for quantitative, but you can also think of it as \"real-time\" PCR, which is in fact the other name the technique goes by."
+  },
+  {
+   "t": 45.91,
+   "text": "Some textbooks call it RT-PCR, but that abbreviation collides badly with reverse-transcription PCR — which we'll meet in Segment 10 — so the community has mostly settled on qPCR for the quantitative version and RT-qPCR for the combined reverse-transcription-plus-quantitative version that you use on RNA."
+  },
+  {
+   "t": 64.91,
+   "text": "We will use those terms consistently."
+  },
+  {
+   "t": 67.34,
+   "text": "The instrument that does this is called a real-time thermal cycler, or more commonly a qPCR machine."
+  },
+  {
+   "t": 73.54,
+   "text": "Brand names you'll hear: the Applied Biosystems 7500 and QuantStudio series, the Roche LightCycler, the Bio-Rad CFX, the Qiagen Rotor-Gene."
+  },
+  {
+   "t": 83.66,
+   "text": "They all do the same essential thing — they're thermal cyclers, just like the ones in the PCR lecture, but with an optical system bolted on."
+  },
+  {
+   "t": 91.51,
+   "text": "Inside the machine, after each extension step, the heating block briefly pauses."
+  },
+  {
+   "t": 97.58,
+   "text": "A light source — typically a halogen lamp, an LED, or in older machines a laser — illuminates the bottom of each tube or well."
+  },
+  {
+   "t": 107.14,
+   "text": "The fluorescent molecules in the tube absorb that excitation light and re-emit at a longer wavelength."
+  },
+  {
+   "t": 113.25,
+   "text": "A detector — usually a CCD camera, increasingly a CMOS sensor — captures the emitted light."
+  },
+  {
+   "t": 120.31,
+   "text": "The machine records a number for each well at each cycle: how much fluorescence did this well emit during this cycle's readout?"
+  },
+  {
+   "t": 128.29,
+   "text": "That number is the data."
+  },
+  {
+   "t": 130.18,
+   "text": "Now run the reaction for forty cycles, recording fluorescence at each cycle."
+  },
+  {
+   "t": 136.1,
+   "text": "For each well, you've got forty data points — a curve of fluorescence versus cycle number."
+  },
+  {
+   "t": 142.14,
+   "text": "That curve is the amplification curve."
+  },
+  {
+   "t": 144.93,
+   "text": "It's the same sigmoid we discussed in Segment 2, but now you've got it in real time, in numbers, in a spreadsheet, instead of having to extract it by opening tubes and running gels."
+  },
+  {
+   "t": 155.94,
+   "text": "This is the breakthrough."
+  },
+  {
+   "t": 157.4,
+   "text": "Let me say it again, because it really is that simple and that profound."
+  },
+  {
+   "t": 162.04,
+   "text": "Endpoint PCR gives you one number per sample: the final amount."
+  },
+  {
+   "t": 166.36,
+   "text": "qPCR gives you forty numbers per sample: the amount at each cycle, throughout the amplification."
+  },
+  {
+   "t": 173.51,
+   "text": "That extra data — that whole curve instead of a single point — is what enables quantification."
+  },
+  {
+   "t": 179.68,
+   "text": "Because somewhere in that curve, before the plateau crushes everything, there's a region where each sample's starting amount uniquely determines the trajectory."
+  },
+  {
+   "t": 189.34,
+   "text": "We just need to find that region."
+  },
+  {
+   "t": 190.89,
+   "text": "The region that matters is the early exponential phase."
+  },
+  {
+   "t": 194.7,
+   "text": "Imagine the amplification curve."
+  },
+  {
+   "t": 197.06,
+   "text": "At first it's flat — the baseline, before the signal has risen above the background noise."
+  },
+  {
+   "t": 202.85,
+   "text": "Then somewhere, depending on how much template you started with, the curve lifts off the baseline."
+  },
+  {
+   "t": 208.2,
+   "text": "The lift-off happens earlier in samples that started with more template, because they have a head start — fewer cycles needed to reach detectable amounts."
+  },
+  {
+   "t": 217.18,
+   "text": "The lift-off happens later in samples with less template, because they have to climb further from a smaller starting pile."
+  },
+  {
+   "t": 224.12,
+   "text": "If you imagine two amplification curves on the same plot — a high-template sample and a low-template sample — they have the same shape, the same slope during exponential phase, the same final plateau."
+  },
+  {
+   "t": 237.29,
+   "text": "The only difference is that the high-template curve is shifted to the left along the cycle axis, and the low-template curve is shifted to the right."
+  },
+  {
+   "t": 245.97,
+   "text": "The shift between them — the difference in the cycle at which they cross some chosen threshold — is the quantitative information."
+  },
+  {
+   "t": 254.16,
+   "text": "That shift, measured in cycles, is what qPCR turns into copy number estimates."
+  },
+  {
+   "t": 260.17,
+   "text": "So conceptually, qPCR is doing two things simultaneously."
+  },
+  {
+   "t": 265.19,
+   "text": "It's running a perfectly ordinary PCR reaction in every respect — same primers, same Taq, same buffer, same temperatures — and it's silently watching the product accumulate via fluorescence."
+  },
+  {
+   "t": 278.25,
+   "text": "The chemistry of amplification is unchanged."
+  },
+  {
+   "t": 281.41,
+   "text": "We've just added a sensor."
+  },
+  {
+   "t": 283.02,
+   "text": "That sensor — that fluorescent reporter — is the next question."
+  },
+  {
+   "t": 287.19,
+   "text": "What molecule do we put in the tube that will glow more brightly as more DNA is made?"
+  },
+  {
+   "t": 292.82,
+   "text": "It turns out there are two distinct strategies, and the entire history of qPCR is, in many ways, the history of the trade-off between them."
+  },
+  {
+   "t": 301.9,
+   "text": "One is cheap, sensitive, and indiscriminate."
+  },
+  {
+   "t": 305.41,
+   "text": "The other is expensive, more specific, and lets you do multiplexed assays."
+  },
+  {
+   "t": 310.9,
+   "text": "They are called intercalating dyes and probes, respectively, and we'll meet them right now."
+  }
+ ]
+}

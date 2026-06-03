@@ -1,0 +1,227 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Frommer 1992 — bisulfite chemistry as detective work",
+ "duration": 412.61,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Frommer 1992 — bisulfite chemistry as detective work"
+  },
+  {
+   "t": 6.66,
+   "text": "The chemistry that opened up methylation measurement was published in a 1992 paper from a small Australian lab — Marianne Frommer, Susan Clark, and colleagues at the CSIRO and the University of Sydney."
+  },
+  {
+   "t": 18.79,
+   "text": "The paper, \"A genomic sequencing protocol that yields a positive display of 5-methylcytosine residues in individual DNA strands,\" appeared in the Proceedings of the National Academy of Sciences in March 1992."
+  },
+  {
+   "t": 33.17,
+   "text": "It is, in retrospect, one of the most consequential method papers in the history of epigenetics, because it provided the chemical handle that the entire field has used for the next thirty-plus years."
+  },
+  {
+   "t": 44.23,
+   "text": "Here is the chemistry, and I want you to follow it carefully because it's the conceptual heart of bisulfite sequencing."
+  },
+  {
+   "t": 52.3,
+   "text": "Sodium bisulfite, in solution at moderate acidity and elevated temperature, reacts with cytosines in single-stranded DNA."
+  },
+  {
+   "t": 61.29,
+   "text": "The reaction proceeds through a series of intermediates, but the end result, after a follow-up alkaline treatment, is that unmethylated cytosine gets converted into uracil."
+  },
+  {
+   "t": 72.44,
+   "text": "The uracil, when you subsequently amplify the DNA by PCR, gets read as thymine, because polymerases read uracil and thymine the same way."
+  },
+  {
+   "t": 83.11,
+   "text": "So at every unmethylated cytosine position in your starting DNA, after bisulfite treatment and PCR, you read a T."
+  },
+  {
+   "t": 91.83,
+   "text": "Here is the crucial second half."
+  },
+  {
+   "t": 94.33,
+   "text": "5-methylcytosine — the methylated form — does not react efficiently with bisulfite."
+  },
+  {
+   "t": 100.42,
+   "text": "The methyl group on the five-position sterically and electronically protects the cytosine from the bisulfite addition reaction."
+  },
+  {
+   "t": 108.53,
+   "text": "So methylated cytosines survive the treatment intact, get amplified by PCR as cytosines, and read as C in the sequencing output."
+  },
+  {
+   "t": 118.26,
+   "text": "So the logic of bisulfite sequencing is this."
+  },
+  {
+   "t": 121.84,
+   "text": "You take your DNA, you treat it with bisulfite."
+  },
+  {
+   "t": 125.3,
+   "text": "Every unmethylated C in the original DNA becomes a U, then a T after PCR."
+  },
+  {
+   "t": 132.43,
+   "text": "Every methylated C in the original DNA stays as a C."
+  },
+  {
+   "t": 137.93,
+   "text": "You then sequence the treated, amplified DNA."
+  },
+  {
+   "t": 141.54,
+   "text": "Wherever you see a C in the output, you know that position was methylated."
+  },
+  {
+   "t": 146.06,
+   "text": "Wherever you see a T, it was either an unmethylated C or a genuine T in the original sequence — and you can tell those two apart by comparing to the reference genome, where the unconverted reference sequence is known."
+  },
+  {
+   "t": 159.64,
+   "text": "The reference says C, and the read says T?"
+  },
+  {
+   "t": 163.24,
+   "text": "That position was unmethylated."
+  },
+  {
+   "t": 165.31,
+   "text": "The reference says C, and the read says C?"
+  },
+  {
+   "t": 168.51,
+   "text": "That position was methylated."
+  },
+  {
+   "t": 170.54,
+   "text": "Here is the analogy I want you to hold."
+  },
+  {
+   "t": 173.38,
+   "text": "Bisulfite is harsh chemical detective work."
+  },
+  {
+   "t": 177.0,
+   "text": "You expose the entire sample to a reagent that destroys one class of suspect — every unmethylated cytosine — and leaves the other class — every methylated cytosine — untouched."
+  },
+  {
+   "t": 189.86,
+   "text": "Then you sequence, and the cytosines that survived are the ones that were methylated."
+  },
+  {
+   "t": 194.7,
+   "text": "The bodies that are missing are the ones that weren't."
+  },
+  {
+   "t": 197.3,
+   "text": "It's a destructive subtraction assay."
+  },
+  {
+   "t": 199.6,
+   "text": "You don't measure methylation directly; you measure what survives the bisulfite treatment."
+  },
+  {
+   "t": 205.25,
+   "text": "This was a beautiful and rigorous chemistry."
+  },
+  {
+   "t": 208.09,
+   "text": "In the 1992 paper and the years immediately following, it was used to map methylation at individual genes — clone a PCR product from a bisulfite-treated sample, sequence it by Sanger, and read off the methylation status of every CpG in that region of interest."
+  },
+  {
+   "t": 225.79,
+   "text": "That mode of analysis — locus-specific bisulfite sequencing — was the workhorse of methylation research throughout the 1990s and early 2000s, and it generated almost everything we knew about methylation at specific imprinted regions, tumor suppressor promoters, and developmental loci, for fifteen years."
+  },
+  {
+   "t": 245.95,
+   "text": "A few practical points about bisulfite chemistry that matter for everything that follows."
+  },
+  {
+   "t": 251.82,
+   "text": "First, the reaction is rough on DNA."
+  },
+  {
+   "t": 254.84,
+   "text": "Bisulfite is acidic, the temperatures involved are high — typically 50 to 70 degrees Celsius — and the reaction takes hours."
+  },
+  {
+   "t": 264.48,
+   "text": "Under these conditions, the DNA backbone takes a beating."
+  },
+  {
+   "t": 268.5,
+   "text": "You get strand breaks, depurination, and substantial loss of recoverable material."
+  },
+  {
+   "t": 274.25,
+   "text": "The typical recovery from a standard bisulfite reaction is somewhere between 10 and 30 percent of the input DNA, and the surviving DNA is fragmented down to a few hundred base pairs in length, regardless of where you started."
+  },
+  {
+   "t": 288.18,
+   "text": "For a few micrograms of bulk DNA, that's fine."
+  },
+  {
+   "t": 291.62,
+   "text": "For a precious clinical sample with only nanograms to work with, that loss is brutal."
+  },
+  {
+   "t": 297.18,
+   "text": "This DNA damage problem is the central limitation of bisulfite chemistry, and it's the limitation that the newer enzymatic and chemical alternatives are designed to solve."
+  },
+  {
+   "t": 307.73,
+   "text": "Second, bisulfite conversion has to be efficient."
+  },
+  {
+   "t": 311.43,
+   "text": "If even a small percentage of unmethylated Cs fail to convert, they look identical to methylated Cs in the sequencing output, and you get a false positive methylation call at every unconverted position."
+  },
+  {
+   "t": 324.14,
+   "text": "Real-world conversion efficiency is typically 99 percent or better, and quality control of methylation experiments always includes a check on conversion efficiency using spiked-in fully unmethylated controls — most often lambda phage DNA — to verify that essentially all the Cs in the control got converted to Ts."
+  },
+  {
+   "t": 345.1,
+   "text": "Any deviation from full conversion gets baked into a global correction."
+  },
+  {
+   "t": 349.64,
+   "text": "Third, bisulfite treatment turns a four-base sequencing problem into a three-base sequencing problem."
+  },
+  {
+   "t": 356.75,
+   "text": "After bisulfite, your reads contain essentially no unmethylated Cs at all — they're all Ts now."
+  },
+  {
+   "t": 363.66,
+   "text": "The information content per base goes down."
+  },
+  {
+   "t": 366.54,
+   "text": "The reads are harder to align uniquely to the reference genome, because so many positions that were originally C are now T, and the reads look much more similar to each other than untreated reads would."
+  },
+  {
+   "t": 378.25,
+   "text": "Specialized aligners — Bismark, BSMAP, methylpy — were developed specifically to handle the three-base alignment problem, and they remain standard tools in the methylation pipeline."
+  },
+  {
+   "t": 391.05,
+   "text": "These three constraints — DNA damage, conversion efficiency, three-base alignment — define the bisulfite era."
+  },
+  {
+   "t": 399.96,
+   "text": "Every method we'll discuss after the basic chemistry is, in some sense, an engineering response to one or more of them."
+  },
+  {
+   "t": 408.16,
+   "text": "Now let's see how the chemistry got scaled up from a single gene to a whole genome."
+  }
+ ]
+}

@@ -1,0 +1,299 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — CASP — the World Cup of structure prediction",
+ "duration": 386.88,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — CASP — the World Cup of structure prediction"
+  },
+  {
+   "t": 5.03,
+   "text": "Imagine, for a moment, that you are a researcher in 1994 who has just developed a new method for predicting protein structures from sequence."
+  },
+  {
+   "t": 14.5,
+   "text": "You write a paper."
+  },
+  {
+   "t": 15.57,
+   "text": "You test your method on, say, ten proteins whose structures are already in the database."
+  },
+  {
+   "t": 21.65,
+   "text": "You report that your method got, let's say, six of them roughly right."
+  },
+  {
+   "t": 25.7,
+   "text": "You publish."
+  },
+  {
+   "t": 26.75,
+   "text": "There is a problem with this."
+  },
+  {
+   "t": 28.29,
+   "text": "The problem is: how do we know you didn't, consciously or unconsciously, tune your method on those same proteins?"
+  },
+  {
+   "t": 35.92,
+   "text": "How do we know you aren't just memorizing answers and reporting them back?"
+  },
+  {
+   "t": 39.99,
+   "text": "In machine learning we call this \"training on the test set,\" and it's one of the cardinal sins."
+  },
+  {
+   "t": 45.09,
+   "text": "But even in pre-machine-learning structural biology, the issue was the same — if your benchmark proteins have known structures, there is no way to be sure you didn't peek."
+  },
+  {
+   "t": 55.1,
+   "text": "In 1994, a structural biologist named John Moult got fed up with this problem and proposed a clever solution."
+  },
+  {
+   "t": 62.99,
+   "text": "He said: let's run a competition where the answers are genuinely unknown to the predictors."
+  },
+  {
+   "t": 69.17,
+   "text": "Every two years, we'll collect a set of proteins whose structures are about to be experimentally determined — measured by X-ray crystallography or NMR or, later, cryo-EM — but whose structures have not yet been released to the public."
+  },
+  {
+   "t": 83.64,
+   "text": "We'll announce just the sequences."
+  },
+  {
+   "t": 86.06,
+   "text": "We'll give the prediction community a few months."
+  },
+  {
+   "t": 88.76,
+   "text": "They'll submit their best predicted structures, blind."
+  },
+  {
+   "t": 92.14,
+   "text": "Then, once the experimental structures are published, we'll score each prediction against the truth."
+  },
+  {
+   "t": 98.08,
+   "text": "That competition is called CASP — the Critical Assessment of Structure Prediction."
+  },
+  {
+   "t": 103.78,
+   "text": "It has run every two years since 1994."
+  },
+  {
+   "t": 107.42,
+   "text": "CASP1 was a tiny pilot."
+  },
+  {
+   "t": 110.5,
+   "text": "By the 2000s, hundreds of groups from around the world participated in each round."
+  },
+  {
+   "t": 115.56,
+   "text": "CASP became, and remains, the World Cup of protein structure prediction — the place where you go to prove, blind, that your method works on proteins nobody has seen before."
+  },
+  {
+   "t": 127.21,
+   "text": "The scoring matters, and I want to spend a minute on it."
+  },
+  {
+   "t": 130.05,
+   "text": "The main metric CASP uses is called **GDTTS** — Global Distance Test, Total Score."
+  },
+  {
+   "t": 136.65,
+   "text": "The details are a little hairy, but the intuition is simple."
+  },
+  {
+   "t": 140.81,
+   "text": "You take your predicted structure."
+  },
+  {
+   "t": 142.61,
+   "text": "You superimpose it onto the experimental structure as best you can."
+  },
+  {
+   "t": 146.86,
+   "text": "Then you ask: what fraction of the alpha carbons — the backbone of the protein — are within one ångström of the truth?"
+  },
+  {
+   "t": 154.59,
+   "text": "Within two?"
+  },
+  {
+   "t": 155.66,
+   "text": "Within four?"
+  },
+  {
+   "t": 156.78,
+   "text": "Within eight?"
+  },
+  {
+   "t": 157.76,
+   "text": "You average those fractions."
+  },
+  {
+   "t": 159.6,
+   "text": "You get a number between zero and one hundred."
+  },
+  {
+   "t": 162.41,
+   "text": "A GDTTS of one hundred means your prediction matches the experimental structure essentially perfectly."
+  },
+  {
+   "t": 169.5,
+   "text": "A GDTTS of zero means your prediction is no better than random."
+  },
+  {
+   "t": 174.26,
+   "text": "A GDTTS of around fifty is the rough threshold where people say the prediction is \"useful\" — you've got the overall fold right, even if many details are off."
+  },
+  {
+   "t": 184.94,
+   "text": "A GDT_TS above ninety is roughly considered competitive with experimental accuracy — the differences between your prediction and the experimental answer are within the noise of experimental measurement itself."
+  },
+  {
+   "t": 197.75,
+   "text": "CASP categorizes targets by difficulty."
+  },
+  {
+   "t": 201.14,
+   "text": "Easy targets — where there's a similar protein with a known structure that you can build a model off — are called template-based or TBM."
+  },
+  {
+   "t": 209.0,
+   "text": "Hard targets — where no good template exists, where you really do have to predict from sequence — are called template-free or FM, for \"free modeling."
+  },
+  {
+   "t": 219.21,
+   "text": "\" The hard targets are the real test."
+  },
+  {
+   "t": 221.57,
+   "text": "Anyone can do reasonably well on easy ones by copying from the database."
+  },
+  {
+   "t": 226.82,
+   "text": "The free-modeling category is where the field's progress has been measured for two decades."
+  },
+  {
+   "t": 232.1,
+   "text": "Here's the historical context that makes the punchline land."
+  },
+  {
+   "t": 235.79,
+   "text": "From CASP1 in 1994 through CASP12 in 2016 — that's twenty-two years, twelve rounds — the median GDT_TS on the hardest targets crept up slowly."
+  },
+  {
+   "t": 248.96,
+   "text": "From maybe twenty in the early rounds to maybe forty by 2016."
+  },
+  {
+   "t": 253.94,
+   "text": "Slow grinding progress."
+  },
+  {
+   "t": 255.9,
+   "text": "The kind of progress you write modest papers about."
+  },
+  {
+   "t": 258.75,
+   "text": "People got better at incorporating physics, at using databases of small structural fragments to build longer pieces, at picking templates cleverly."
+  },
+  {
+   "t": 268.8,
+   "text": "But no one was breaking the problem."
+  },
+  {
+   "t": 270.58,
+   "text": "No method could reliably predict a hard target's structure to high accuracy."
+  },
+  {
+   "t": 275.71,
+   "text": "In 2018, at CASP13, something changed."
+  },
+  {
+   "t": 280.01,
+   "text": "A team you'd never heard of in a structural biology context — DeepMind, the AI lab inside Google that had just famously beaten human champions at Go — showed up to CASP13 with a new method called AlphaFold."
+  },
+  {
+   "t": 293.37,
+   "text": "And they didn't just win."
+  },
+  {
+   "t": 294.7,
+   "text": "They won by a substantial margin."
+  },
+  {
+   "t": 296.7,
+   "text": "The median GDT_TS on the hard targets jumped from the high thirties to about fifty-eight."
+  },
+  {
+   "t": 302.72,
+   "text": "That's a single round, single team, double-digit improvement on a benchmark where the field had been gaining a couple of points per round for twenty years."
+  },
+  {
+   "t": 311.05,
+   "text": "The structural biology community, when this happened, didn't quite know what to make of it."
+  },
+  {
+   "t": 315.97,
+   "text": "There was excitement, there was suspicion, there was the awkward feeling of a community of grizzled veterans realizing that some kids who had never run a column or grown a crystal had just produced the year's most important result."
+  },
+  {
+   "t": 328.95,
+   "text": "CASP13's commentary, if you read the actual papers, is restrained but obviously rattled."
+  },
+  {
+   "t": 335.53,
+   "text": "Things were changing."
+  },
+  {
+   "t": 336.86,
+   "text": "But CASP13's AlphaFold — what we now call AlphaFold1 — was good, not great."
+  },
+  {
+   "t": 343.17,
+   "text": "It was a real advance but it didn't solve the problem."
+  },
+  {
+   "t": 346.36,
+   "text": "The structures were better than anything before, but still substantially worse than experimental."
+  },
+  {
+   "t": 352.3,
+   "text": "You couldn't yet treat its outputs as ground truth."
+  },
+  {
+   "t": 355.46,
+   "text": "Then came CASP14, in 2020."
+  },
+  {
+   "t": 358.95,
+   "text": "The same DeepMind team came back."
+  },
+  {
+   "t": 361.33,
+   "text": "They had spent the intervening two years rebuilding the system from scratch, with a radically different architecture."
+  },
+  {
+   "t": 368.11,
+   "text": "And what happened at CASP14 wasn't an incremental improvement."
+  },
+  {
+   "t": 372.37,
+   "text": "It was the kind of result that ends a competition."
+  },
+  {
+   "t": 375.42,
+   "text": "We'll get there in two segments."
+  },
+  {
+   "t": 377.85,
+   "text": "First, I want to lay out what the world of structure prediction looked like just before AlphaFold landed, because the contrast is what gives the story its shape."
+  }
+ ]
+}

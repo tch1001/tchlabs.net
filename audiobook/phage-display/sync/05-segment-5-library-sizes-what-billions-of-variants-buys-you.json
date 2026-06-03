@@ -1,0 +1,231 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Library sizes — what billions of variants buys you",
+ "duration": 354.12,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Library sizes — what billions of variants buys you"
+  },
+  {
+   "t": 4.94,
+   "text": "Let me dwell for a moment on library size, because the numbers here are genuinely staggering, and the size of the library is one of the things that makes phage display so powerful and so distinct from other protein-engineering methods."
+  },
+  {
+   "t": 18.41,
+   "text": "A typical modern phage display library contains somewhere between ten to the ninth and ten to the eleventh distinct variants."
+  },
+  {
+   "t": 26.11,
+   "text": "Let's say ten billion, for concreteness."
+  },
+  {
+   "t": 29.0,
+   "text": "Ten billion distinct protein sequences, each present as a few hundred to a few thousand individual phage particles, all in a single milliliter of fluid."
+  },
+  {
+   "t": 39.56,
+   "text": "You can hold the entire library in a test tube."
+  },
+  {
+   "t": 42.42,
+   "text": "You can pipette it."
+  },
+  {
+   "t": 43.5,
+   "text": "You can mix it."
+  },
+  {
+   "t": 44.45,
+   "text": "You can pan it."
+  },
+  {
+   "t": 45.49,
+   "text": "It's an absurd density of biological diversity."
+  },
+  {
+   "t": 49.17,
+   "text": "To get a feel for that number, think about how it compares to natural antibody repertoires."
+  },
+  {
+   "t": 54.42,
+   "text": "Your own body has, at any moment, maybe ten billion to a hundred billion B cells, each making a slightly different antibody."
+  },
+  {
+   "t": 63.12,
+   "text": "So a phage display library is in the same ballpark as your entire immune system's antibody diversity, in a single test tube."
+  },
+  {
+   "t": 71.34,
+   "text": "That's the scale we're talking about."
+  },
+  {
+   "t": 73.17,
+   "text": "Now, where does the library come from?"
+  },
+  {
+   "t": 75.59,
+   "text": "There are two main routes."
+  },
+  {
+   "t": 77.22,
+   "text": "Route one: natural source."
+  },
+  {
+   "t": 79.46,
+   "text": "You take B cells from a human donor — say, peripheral blood mononuclear cells — extract the messenger RNA, reverse-transcribe it to cDNA, and PCR-amplify the antibody heavy-chain and light-chain variable regions."
+  },
+  {
+   "t": 94.15,
+   "text": "The result is a library of antibody V-region sequences that reflect the actual antibody diversity of that donor's immune repertoire."
+  },
+  {
+   "t": 103.33,
+   "text": "You clone those V-regions into a phagemid display vector, transform E. coli, and there you go — a library of ten billion phages, each displaying an antibody Fab whose sequence came from a real human B cell."
+  },
+  {
+   "t": 118.11,
+   "text": "Greg Winter's early Cambridge Antibody Technology libraries were built this way, often from multiple donors pooled together, to maximize diversity."
+  },
+  {
+   "t": 127.64,
+   "text": "Route two: synthetic."
+  },
+  {
+   "t": 129.65,
+   "text": "Instead of capturing what nature made, you design the library from scratch."
+  },
+  {
+   "t": 134.57,
+   "text": "You start with a known antibody scaffold — say, the human germline V-region framework — and you randomize the CDR loops, the parts that actually contact antigen, using degenerate codons."
+  },
+  {
+   "t": 146.85,
+   "text": "You can choose which CDR positions to randomize, which amino acids to allow at each position (full twenty?"
+  },
+  {
+   "t": 154.12,
+   "text": "Reduced alphabet?"
+  },
+  {
+   "t": 155.75,
+   "text": "Bias toward residues common in natural antibodies?), and how many positions to vary."
+  },
+  {
+   "t": 161.53,
+   "text": "The library you build can be as large as ten to the eleventh distinct sequences, all carrying the same framework, all differing only in the parts that matter for binding."
+  },
+  {
+   "t": 172.09,
+   "text": "This is the strategy behind libraries like HuCAL (Human Combinatorial Antibody Library, MorphoSys) and many others."
+  },
+  {
+   "t": 180.93,
+   "text": "Why does library size matter?"
+  },
+  {
+   "t": 182.81,
+   "text": "Because the bigger your library, the better the binders you find."
+  },
+  {
+   "t": 186.47,
+   "text": "There's a rough rule of thumb in phage display: the affinity of the best binder you can pull out scales roughly with the cube root of the library size."
+  },
+  {
+   "t": 195.72,
+   "text": "So a tenfold bigger library, on average, gives you a slightly better best-binder."
+  },
+  {
+   "t": 201.36,
+   "text": "A thousandfold bigger library gives you a substantially better one."
+  },
+  {
+   "t": 205.49,
+   "text": "This is why people push library sizes to the practical limits."
+  },
+  {
+   "t": 209.91,
+   "text": "What sets the practical limits?"
+  },
+  {
+   "t": 211.75,
+   "text": "Two things, mainly."
+  },
+  {
+   "t": 213.36,
+   "text": "The first is transformation efficiency."
+  },
+  {
+   "t": 216.01,
+   "text": "To build a phage display library, you have to transform the phagemid into E. coli, and the number of independent transformants you can get is limited by how much DNA you can electroporate into how many cells."
+  },
+  {
+   "t": 229.14,
+   "text": "The state-of-the-art is around ten to the eleventh transformants per microgram of DNA, with a lot of fiddling."
+  },
+  {
+   "t": 236.41,
+   "text": "So a library bigger than about ten to the eleventh is hard to build by standard methods."
+  },
+  {
+   "t": 241.96,
+   "text": "The second is library quality."
+  },
+  {
+   "t": 244.5,
+   "text": "A library of ten billion is only useful if those ten billion are mostly correct, in-frame, full-length sequences."
+  },
+  {
+   "t": 252.71,
+   "text": "Many synthetic libraries suffer from errors during oligonucleotide synthesis or PCR, producing sequences with frameshifts, stop codons, or truncations."
+  },
+  {
+   "t": 263.86,
+   "text": "If half your library is junk, you've effectively halved your library size."
+  },
+  {
+   "t": 268.51,
+   "text": "Modern oligo synthesis, with curated codon choices, helps a lot."
+  },
+  {
+   "t": 273.18,
+   "text": "So in practice, ten billion is a typical library size, ten to the eleventh is a heroic library, and getting much bigger requires moving beyond E. coli transformation as the bottleneck."
+  },
+  {
+   "t": 286.3,
+   "text": "That's part of why ribosome display and mRNA display, which we'll cover in Segment 12, are interesting — they break the transformation bottleneck entirely, and can in principle produce libraries of ten to the thirteenth or fourteenth."
+  },
+  {
+   "t": 301.16,
+   "text": "But ten billion is enough for most things."
+  },
+  {
+   "t": 304.06,
+   "text": "Ten billion variants is enough that the probability of finding a strong binder against any reasonable target is high."
+  },
+  {
+   "t": 311.47,
+   "text": "The hits from a typical phage display library against a typical antigen are binders with affinities in the nanomolar range — already pharmaceutically interesting on the first pass, before any affinity maturation."
+  },
+  {
+   "t": 324.11,
+   "text": "With one round of affinity maturation, as we'll discuss, you can get into picomolar territory, which is essentially the limit of what biological binders achieve."
+  },
+  {
+   "t": 334.45,
+   "text": "The analogy here is just librarianship at the scale of the dictionary of life."
+  },
+  {
+   "t": 339.55,
+   "text": "A natural language has, what, a million distinct words at most."
+  },
+  {
+   "t": 343.43,
+   "text": "A phage library has ten thousand times more entries than the largest dictionary, packed into a milliliter of saltwater."
+  },
+  {
+   "t": 351.5,
+   "text": "And you can search the whole thing in an afternoon."
+  }
+ ]
+}

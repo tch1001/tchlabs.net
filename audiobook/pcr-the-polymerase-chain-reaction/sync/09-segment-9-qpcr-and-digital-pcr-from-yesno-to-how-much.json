@@ -1,0 +1,179 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — qPCR and digital PCR: from yes/no to how much",
+ "duration": 307.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — qPCR and digital PCR: from yes/no to how much"
+  },
+  {
+   "t": 6.03,
+   "text": "We touched on the limits of end-point PCR earlier."
+  },
+  {
+   "t": 9.45,
+   "text": "It tells you whether your target was present, but not how much was present."
+  },
+  {
+   "t": 13.54,
+   "text": "For many applications — measuring viral load in a patient, comparing gene expression between conditions, quantifying tumor DNA in blood — yes/no isn't enough."
+  },
+  {
+   "t": 25.25,
+   "text": "You need a number."
+  },
+  {
+   "t": 26.36,
+   "text": "Two technologies solved this: quantitative PCR (qPCR), and digital PCR (dPCR)."
+  },
+  {
+   "t": 34.19,
+   "text": "qPCR, also called real-time PCR, works by monitoring the amplification reaction during cycling rather than at the end."
+  },
+  {
+   "t": 42.62,
+   "text": "The trick is to include in the reaction a fluorescent reporter that increases in signal as product accumulates."
+  },
+  {
+   "t": 49.46,
+   "text": "There are two common designs."
+  },
+  {
+   "t": 51.31,
+   "text": "The first is SYBR Green — a dye that fluoresces only when bound to double-stranded DNA."
+  },
+  {
+   "t": 58.66,
+   "text": "As PCR products accumulate, more dye binds, more fluorescence appears, and a sensor in the qPCR machine measures the fluorescence after every cycle."
+  },
+  {
+   "t": 69.9,
+   "text": "The second is a TaqMan probe — a short oligonucleotide complementary to the middle of the amplicon, carrying a fluorescent dye and a quencher."
+  },
+  {
+   "t": 79.54,
+   "text": "While intact, the dye and quencher are close together and no signal appears."
+  },
+  {
+   "t": 84.42,
+   "text": "During each cycle, the polymerase's nuclease activity chops the probe apart as it extends through the binding site, separating the dye from the quencher, releasing fluorescence."
+  },
+  {
+   "t": 96.09,
+   "text": "TaqMan is more specific — it requires both the primers and the probe to match the target — and is the gold standard for clinical qPCR."
+  },
+  {
+   "t": 105.69,
+   "text": "The output of qPCR is an amplification curve — fluorescence versus cycle number."
+  },
+  {
+   "t": 111.55,
+   "text": "In the early cycles, signal is below detection."
+  },
+  {
+   "t": 114.79,
+   "text": "Around cycle 15 to 25, depending on starting concentration, the signal rises above background — exponentially at first, then bending toward the plateau."
+  },
+  {
+   "t": 125.71,
+   "text": "The cycle number at which fluorescence crosses a defined threshold is called the Ct value or Cq value."
+  },
+  {
+   "t": 132.45,
+   "text": "Lower Ct means more starting template; higher Ct means less."
+  },
+  {
+   "t": 137.4,
+   "text": "The Ct value is logarithmically related to starting concentration — a Ct difference of 3.3 corresponds to a 10-fold difference in starting copies."
+  },
+  {
+   "t": 147.69,
+   "text": "By comparing Ct values to a standard curve made from known concentrations, you turn the Ct into an absolute number of starting copies."
+  },
+  {
+   "t": 156.06,
+   "text": "qPCR became the workhorse quantitative assay in molecular biology in the early 2000s."
+  },
+  {
+   "t": 162.78,
+   "text": "Today it's used in every clinical viral load assay, every gene expression study that's published as RT-qPCR, every contamination test, every plasmid quantification."
+  },
+  {
+   "t": 174.74,
+   "text": "The instruments are cheap enough that most labs have one or several on a bench."
+  },
+  {
+   "t": 179.56,
+   "text": "Digital PCR takes a different approach."
+  },
+  {
+   "t": 182.44,
+   "text": "Instead of measuring the curve in one large reaction, dPCR divides the sample into thousands or millions of tiny microreactions — partitions — each containing on average less than one copy of the target."
+  },
+  {
+   "t": 196.26,
+   "text": "Each partition is PCR-cycled independently."
+  },
+  {
+   "t": 199.74,
+   "text": "After the run, each partition either has amplified product (positive) or doesn't (negative)."
+  },
+  {
+   "t": 206.01,
+   "text": "You count the positives and the negatives, apply Poisson statistics, and get an absolute count of starting molecules — no standard curve needed, no Ct values, just a direct count."
+  },
+  {
+   "t": 217.6,
+   "text": "Digital PCR turns analog amplification into a binary yes/no measurement, then aggregates the binaries into a precise number."
+  },
+  {
+   "t": 227.2,
+   "text": "The partitions can be tiny droplets in oil (droplet digital PCR, or ddPCR, which we'll revisit in Segment 16), or wells on a microfluidic chip, or arrays of micro-chambers."
+  },
+  {
+   "t": 239.96,
+   "text": "The technology takes more equipment than qPCR but gives more precise absolute quantification, particularly at low copy numbers — which matters for monitoring residual disease in cancer, for rare mutation detection in liquid biopsies, for quantifying genome-edited cell populations."
+  },
+  {
+   "t": 257.9,
+   "text": "The big idea: PCR went from qualitative to quantitative through two complementary innovations."
+  },
+  {
+   "t": 264.34,
+   "text": "qPCR measures the rate of exponential growth and infers starting amount."
+  },
+  {
+   "t": 269.94,
+   "text": "dPCR partitions the sample so finely that each partition reduces to a yes/no, and then counts."
+  },
+  {
+   "t": 278.34,
+   "text": "Both turn the chain reaction into a measurement device, not just an amplification device."
+  },
+  {
+   "t": 284.23,
+   "text": "Take ten minutes."
+  },
+  {
+   "t": 285.52,
+   "text": "Stretch."
+  },
+  {
+   "t": 286.46,
+   "text": "Get some water."
+  },
+  {
+   "t": 287.6,
+   "text": "We've covered the basic mechanics and the major variants."
+  },
+  {
+   "t": 291.1,
+   "text": "After the break, we go into the applications — clinical, forensic, ancient DNA — and then the messier topics: the patent saga, the errors, the future."
+  },
+  {
+   "t": 301.98,
+   "text": "The second half is where you'll see why this technique matters in the world, not just in the lab."
+  }
+ ]
+}

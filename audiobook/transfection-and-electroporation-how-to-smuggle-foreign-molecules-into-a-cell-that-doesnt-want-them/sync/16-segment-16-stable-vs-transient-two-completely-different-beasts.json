@@ -1,0 +1,215 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Stable vs transient: two completely different beasts",
+ "duration": 391.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Stable vs transient: two completely different beasts"
+  },
+  {
+   "t": 5.8,
+   "text": "There is a conceptual distinction in transfection that you absolutely must understand, because it determines what kind of experiment you can do and what kind of timescale you are operating on."
+  },
+  {
+   "t": 16.34,
+   "text": "The distinction is between transient and stable transfection."
+  },
+  {
+   "t": 20.2,
+   "text": "These are not minor variations on the same idea."
+  },
+  {
+   "t": 23.05,
+   "text": "They are two qualitatively different things."
+  },
+  {
+   "t": 25.56,
+   "text": "The analogy I want you to keep."
+  },
+  {
+   "t": 27.4,
+   "text": "Transient transfection is fast, peaks at forty-eight to seventy-two hours, and dies."
+  },
+  {
+   "t": 33.84,
+   "text": "Stable transfection is slow, requires antibiotic selection, but lasts forever."
+  },
+  {
+   "t": 39.95,
+   "text": "They serve completely different purposes, and the choice depends on what you are trying to do."
+  },
+  {
+   "t": 44.6,
+   "text": "Let me explain the mechanism behind each."
+  },
+  {
+   "t": 47.21,
+   "text": "When you deliver a plasmid into a cell by any of the methods we have discussed — lipofection, electroporation, calcium phosphate, whatever — the plasmid ends up in the cytoplasm and, eventually, some fraction reaches the nucleus."
+  },
+  {
+   "t": 61.27,
+   "text": "Once in the nucleus, the plasmid sits there as an episome — a free, extrachromosomal piece of DNA that is not integrated into the host's chromosomes."
+  },
+  {
+   "t": 71.62,
+   "text": "The cell's transcription machinery finds the promoter on the plasmid, transcribes the encoded gene, and the resulting mRNA is exported to the cytoplasm and translated into protein."
+  },
+  {
+   "t": 83.12,
+   "text": "This works beautifully for a few days."
+  },
+  {
+   "t": 85.58,
+   "text": "But — and this is the key — the plasmid is not being replicated along with the cell's own DNA when the cell divides."
+  },
+  {
+   "t": 93.56,
+   "text": "Most lab plasmids do not have a mammalian origin of replication."
+  },
+  {
+   "t": 98.08,
+   "text": "They have a bacterial origin, which doesn't function in mammalian cells."
+  },
+  {
+   "t": 102.49,
+   "text": "So each time the cell divides, the plasmid copies present in the parent cell get distributed (somewhat randomly) into the two daughter cells."
+  },
+  {
+   "t": 110.97,
+   "text": "Over successive divisions, the plasmid copies get diluted out."
+  },
+  {
+   "t": 115.12,
+   "text": "After a week or so, depending on the cell division rate, most cells in the population have lost the plasmid entirely."
+  },
+  {
+   "t": 122.36,
+   "text": "The expression of your gene of interest peaks at around forty-eight to seventy-two hours post-transfection, stays high for another day or two, and then declines as the plasmid is lost."
+  },
+  {
+   "t": 134.51,
+   "text": "By day seven or ten, the transient expression is essentially gone."
+  },
+  {
+   "t": 140.03,
+   "text": "That is transient transfection."
+  },
+  {
+   "t": 142.05,
+   "text": "Fast."
+  },
+  {
+   "t": 142.93,
+   "text": "Useful."
+  },
+  {
+   "t": 143.8,
+   "text": "Limited."
+  },
+  {
+   "t": 144.6,
+   "text": "Transient transfection is the right tool when you want to: ask a quick question about whether expressing a gene produces a phenotype within a few days, produce a batch of protein for purification (transient protein production in HEK293 with PEI is the gold standard for this), test a CRISPR construct, do a luciferase reporter assay, or run a high-throughput screen across many constructs."
+  },
+  {
+   "t": 169.46,
+   "text": "The strength of transient is that the experiment is fast — three to five days from transfection to result — and you do not need to maintain a stable cell line."
+  },
+  {
+   "t": 179.56,
+   "text": "If, on the other hand, you want a cell line that permanently expresses your gene of interest — that you can grow up, freeze down, thaw, and use over months or years of experiments — you need a stable transfection, also called a stably transfected cell line."
+  },
+  {
+   "t": 195.88,
+   "text": "The way you make a stable line is to select for the rare cells that have integrated the plasmid into their chromosomes."
+  },
+  {
+   "t": 202.51,
+   "text": "Even though most cells just hold the plasmid as an episome and lose it over time, a small fraction — typically one in a thousand or one in ten thousand — will, through random recombination events at DNA damage sites, integrate some or all of the plasmid into a chromosome."
+  },
+  {
+   "t": 219.46,
+   "text": "Those cells now have the gene permanently in their genome."
+  },
+  {
+   "t": 223.24,
+   "text": "The integrated copy will be replicated along with the rest of the chromosome and will be passed to every daughter cell forever."
+  },
+  {
+   "t": 230.68,
+   "text": "To find those rare cells, you use antibiotic selection."
+  },
+  {
+   "t": 234.71,
+   "text": "The plasmid carries, in addition to your gene of interest, a selection marker — typically a gene encoding resistance to a mammalian-cell antibiotic."
+  },
+  {
+   "t": 244.6,
+   "text": "The standard choices are neomycin (selected with G418, also called Geneticin), puromycin, hygromycin, blasticidin, and zeocin."
+  },
+  {
+   "t": 255.17,
+   "text": "You transfect the plasmid, you wait a couple of days for expression to start, you add the antibiotic to the medium, and you wait."
+  },
+  {
+   "t": 262.78,
+   "text": "Every cell that lacks the resistance gene dies."
+  },
+  {
+   "t": 266.28,
+   "text": "After a week or two, the only cells remaining are the rare ones that have integrated the plasmid and are stably expressing the resistance gene — and, by linkage, your gene of interest."
+  },
+  {
+   "t": 277.98,
+   "text": "You expand those survivor cells, sometimes picking individual clones to get a clonal cell line, and now you have a permanent stable line."
+  },
+  {
+   "t": 286.58,
+   "text": "The whole process takes two to four weeks, sometimes longer."
+  },
+  {
+   "t": 290.75,
+   "text": "Stable selection is slower, more labor-intensive, and produces a line that expresses your gene at moderate levels (not the high levels you get transiently in the first few days)."
+  },
+  {
+   "t": 302.05,
+   "text": "The strengths are durability and reproducibility — once you have the line, every experiment uses the same cells with the same expression level, no transfection step required, no batch-to-batch variation."
+  },
+  {
+   "t": 315.35,
+   "text": "There is a middle ground called episomal expression, where you use a plasmid that does have a mammalian origin of replication — typically derived from Epstein-Barr virus or papillomavirus — that allows the plasmid to replicate as an episome along with the cell's own DNA, so it doesn't get diluted out."
+  },
+  {
+   "t": 333.85,
+   "text": "With antibiotic selection, you can maintain such an episome indefinitely without integration."
+  },
+  {
+   "t": 340.05,
+   "text": "This is sometimes useful when you want stable expression without the random-integration position effects that can make stably transfected lines variable."
+  },
+  {
+   "t": 348.87,
+   "text": "And there is the viral alternative, which we mentioned."
+  },
+  {
+   "t": 351.68,
+   "text": "Lentiviral transduction semi-integrates the cargo into the genome with much higher efficiency than plasmid transfection followed by selection."
+  },
+  {
+   "t": 361.53,
+   "text": "If you want a stably expressing cell line in two weeks instead of two months, lentivirus is often the right answer."
+  },
+  {
+   "t": 368.73,
+   "text": "The general advice: use transient when you can, stable when you must."
+  },
+  {
+   "t": 373.64,
+   "text": "Transient is faster, cheaper, and more flexible."
+  },
+  {
+   "t": 377.5,
+   "text": "Stable is needed when you want a reproducible cell line for long-term work, when you need to study chronic effects of expression, when you need to ship the cell line to collaborators, or when you are building a production line for protein manufacturing."
+  }
+ ]
+}

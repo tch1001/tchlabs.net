@@ -1,0 +1,175 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Biocontainment: kill switches and engineered safety",
+ "duration": 314.31,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Biocontainment: kill switches and engineered safety"
+  },
+  {
+   "t": 5.55,
+   "text": "Suppose you have built an engineered microbe."
+  },
+  {
+   "t": 8.04,
+   "text": "Maybe it produces artemisinin."
+  },
+  {
+   "t": 10.11,
+   "text": "Maybe it senses arsenic."
+  },
+  {
+   "t": 11.9,
+   "text": "Maybe it lives in someone's gut and produces a drug."
+  },
+  {
+   "t": 15.49,
+   "text": "Whatever it does, it is alive."
+  },
+  {
+   "t": 17.84,
+   "text": "It can grow."
+  },
+  {
+   "t": 18.81,
+   "text": "It can divide."
+  },
+  {
+   "t": 19.82,
+   "text": "And, in principle, it could escape the controlled environment you built it for and end up somewhere you did not intend."
+  },
+  {
+   "t": 26.74,
+   "text": "How do you prevent that?"
+  },
+  {
+   "t": 27.94,
+   "text": "This question has been with synthetic biology since the start, and it has gotten more urgent as the field's products have moved from beakers to industrial fermenters to clinical trials."
+  },
+  {
+   "t": 38.33,
+   "text": "The general field that addresses it is called biocontainment, and the central engineering object is called a kill switch."
+  },
+  {
+   "t": 45.3,
+   "text": "A kill switch is a genetic circuit, built into the engineered organism, that causes the organism to die under conditions outside its intended environment."
+  },
+  {
+   "t": 55.65,
+   "text": "There are several flavors."
+  },
+  {
+   "t": 57.38,
+   "text": "The simplest is an auxotrophy — the organism is engineered so that it cannot synthesize one of its essential nutrients, and depends on that nutrient being supplied in the medium."
+  },
+  {
+   "t": 68.41,
+   "text": "Outside the medium, it starves."
+  },
+  {
+   "t": 70.79,
+   "text": "A more sophisticated version is to put a toxin gene under the control of a sensor that detects \"wrong environment\" — say, the presence of light, or the absence of a particular signaling molecule that you supply continuously in the fermenter."
+  },
+  {
+   "t": 85.35,
+   "text": "If the organism finds itself outside the fermenter, the sensor detects the change, the toxin gets expressed, and the cell dies."
+  },
+  {
+   "t": 94.11,
+   "text": "A particularly clever class of kill switch designs comes from George Church's lab at Harvard, published in a series of papers in the mid-2010s."
+  },
+  {
+   "t": 103.06,
+   "text": "The idea is to engineer the organism to depend on non-natural amino acids — amino acids that do not exist in nature."
+  },
+  {
+   "t": 111.56,
+   "text": "The organism's proteins are rewritten so that they incorporate a synthetic amino acid that you have to supply in the growth medium."
+  },
+  {
+   "t": 119.3,
+   "text": "Outside the medium, the organism cannot synthesize functional proteins, and it dies."
+  },
+  {
+   "t": 125.58,
+   "text": "The advantage is that this kind of containment is hard to circumvent by evolution, because mutating away from the non-natural amino acid dependency requires the organism to spontaneously re-evolve the entire machinery for using natural amino acids in those positions — which essentially never happens."
+  },
+  {
+   "t": 144.38,
+   "text": "The general design problem for kill switches is the escape rate — the rate at which cells in the population mutate or otherwise lose the kill switch and become free to proliferate."
+  },
+  {
+   "t": 155.74,
+   "text": "A good kill switch has an escape rate of less than one in ten to the eighth or so — meaning fewer than one cell in a hundred million breaks the safety system."
+  },
+  {
+   "t": 165.4,
+   "text": "Given that a single fermenter might contain ten to the fifteenth cells, even an escape rate of one in a billion still leaves you with a million escapers per fermenter."
+  },
+  {
+   "t": 175.2,
+   "text": "So the engineering targets here are tight."
+  },
+  {
+   "t": 177.91,
+   "text": "Modern kill switch designs use multiple independent layers of containment, on the theory that an organism would have to break all of them simultaneously to escape — and the probability of multiple simultaneous breaks is the product of the individual probabilities, which can be made arbitrarily small."
+  },
+  {
+   "t": 196.03,
+   "text": "For organisms intended for release into open environments — engineered crops, engineered probiotic bacteria meant to colonize the human gut, engineered mosquitoes for malaria suppression — biocontainment is not optional."
+  },
+  {
+   "t": 210.97,
+   "text": "It is, often, a regulatory requirement."
+  },
+  {
+   "t": 214.49,
+   "text": "The field has, over the past fifteen years, developed an increasingly sophisticated toolkit for it, and the engineering rigor of the best designs is genuinely impressive."
+  },
+  {
+   "t": 225.57,
+   "text": "There is also a broader, more philosophical version of the containment question."
+  },
+  {
+   "t": 230.65,
+   "text": "Even with perfect kill switches in individual organisms, the information in an engineered organism — the DNA sequence, the metabolic pathway, the circuit topology — can spread, by means we discussed in earlier lectures, through horizontal gene transfer."
+  },
+  {
+   "t": 246.68,
+   "text": "A kill switch in one species does not necessarily stay locked when the relevant genes get transferred to another species."
+  },
+  {
+   "t": 254.4,
+   "text": "The field is still working out what to do about this."
+  },
+  {
+   "t": 257.39,
+   "text": "It is one of the deeper open problems."
+  },
+  {
+   "t": 259.6,
+   "text": "I want to be clear about one thing."
+  },
+  {
+   "t": 261.41,
+   "text": "The risk of engineered organisms running wild and causing ecological harm is, in expert assessment, fairly low — but it is not zero, and the field takes it seriously."
+  },
+  {
+   "t": 272.75,
+   "text": "The same engineering rigor that produces a circuit needs to be applied to the safety of the circuit."
+  },
+  {
+   "t": 278.36,
+   "text": "The early synthetic biology community made this a central commitment, going back to the Asilomar conference of 1975 — which preceded synthetic biology proper but established the cultural norm — and the commitment has held."
+  },
+  {
+   "t": 293.14,
+   "text": "Most modern industrial synthetic biology work goes through extensive biosafety review, with kill switches and containment systems designed into the work from the start, not bolted on as an afterthought."
+  },
+  {
+   "t": 305.35,
+   "text": "Now let us turn to another thread of the field that has been quietly transformative: the move away from protein-based logic into RNA."
+  }
+ ]
+}

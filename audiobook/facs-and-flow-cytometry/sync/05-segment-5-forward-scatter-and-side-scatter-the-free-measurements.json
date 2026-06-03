@@ -1,0 +1,215 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Forward scatter and side scatter: the free measurements",
+ "duration": 350.96,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Forward scatter and side scatter: the free measurements"
+  },
+  {
+   "t": 5.31,
+   "text": "So."
+  },
+  {
+   "t": 6.05,
+   "text": "You have cells passing through a laser beam, with no antibody staining at all — just unlabeled cells in buffer."
+  },
+  {
+   "t": 13.05,
+   "text": "What can you learn from them?"
+  },
+  {
+   "t": 14.18,
+   "text": "It turns out, more than you'd think."
+  },
+  {
+   "t": 16.41,
+   "text": "Even unstained cells scatter the laser light in characteristic ways, and the two scatter measurements every flow cytometer makes are called forward scatter and side scatter, abbreviated FSC and SSC."
+  },
+  {
+   "t": 29.99,
+   "text": "These two parameters, on their own, are often enough to distinguish the major populations in a blood sample."
+  },
+  {
+   "t": 36.94,
+   "text": "They are the first two parameters before any antibody staining — and you get them for free, every run, on every cell."
+  },
+  {
+   "t": 45.14,
+   "text": "Let me explain what they actually measure."
+  },
+  {
+   "t": 47.51,
+   "text": "Forward scatter — FSC."
+  },
+  {
+   "t": 49.8,
+   "text": "This is light scattered by the cell in roughly the same direction the laser was going — straight ahead, give or take a few degrees."
+  },
+  {
+   "t": 57.73,
+   "text": "A small detector sits downstream of the laser, off to the side just enough to dodge the unscattered laser beam itself, and it measures how much of the laser's photons get deflected into its angular window as a cell passes."
+  },
+  {
+   "t": 71.9,
+   "text": "The amount of forward scatter from a cell is, roughly, proportional to the cell's size."
+  },
+  {
+   "t": 77.99,
+   "text": "A big cell intercepts more laser, scatters more light forward; a small cell scatters less."
+  },
+  {
+   "t": 84.59,
+   "text": "FSC is therefore a size proxy."
+  },
+  {
+   "t": 87.88,
+   "text": "Now, a careful caveat — FSC is not exactly cell volume, and it's affected by cell shape, refractive index, and orientation."
+  },
+  {
+   "t": 97.9,
+   "text": "But for the rough sorting of \"is this a big cell, a medium cell, or a small cell,\" forward scatter does the job, and that gross size distinction is enormously useful."
+  },
+  {
+   "t": 109.85,
+   "text": "In a blood sample, lymphocytes are small."
+  },
+  {
+   "t": 112.8,
+   "text": "Monocytes are medium-large."
+  },
+  {
+   "t": 115.09,
+   "text": "Neutrophils are medium-large with bumpy interiors."
+  },
+  {
+   "t": 118.75,
+   "text": "Red blood cells and platelets are tiny."
+  },
+  {
+   "t": 121.62,
+   "text": "Just by FSC, you can already separate the small lymphocyte cloud from everything else."
+  },
+  {
+   "t": 127.51,
+   "text": "Side scatter — SSC."
+  },
+  {
+   "t": 129.65,
+   "text": "This is light scattered by the cell at right angles to the laser beam — measured by a detector mounted off to the side, looking at the cell from 90 degrees."
+  },
+  {
+   "t": 139.34,
+   "text": "Light gets scattered to the side mostly when the laser bounces around inside the cell, off internal structures — granules, vesicles, the nucleus, the rough surfaces inside."
+  },
+  {
+   "t": 151.84,
+   "text": "So the amount of side scatter is, roughly, proportional to the cell's internal complexity, or granularity."
+  },
+  {
+   "t": 159.31,
+   "text": "A simple smooth cell with a clean cytoplasm scatters little to the side."
+  },
+  {
+   "t": 164.21,
+   "text": "A cell crammed with granules — like a neutrophil or an eosinophil — scatters a lot."
+  },
+  {
+   "t": 170.5,
+   "text": "Put those two parameters on a plot."
+  },
+  {
+   "t": 172.78,
+   "text": "X-axis: forward scatter."
+  },
+  {
+   "t": 175.01,
+   "text": "Y-axis: side scatter."
+  },
+  {
+   "t": 177.5,
+   "text": "Run blood through the machine."
+  },
+  {
+   "t": 179.53,
+   "text": "What do you see?"
+  },
+  {
+   "t": 180.59,
+   "text": "You see something gorgeous, and you can read it like a map."
+  },
+  {
+   "t": 184.01,
+   "text": "There will be three or four distinct clouds of dots in the plot, each one a different population."
+  },
+  {
+   "t": 190.2,
+   "text": "In the lower left corner — low FSC, low SSC — you see a cloud of small, smooth cells."
+  },
+  {
+   "t": 197.93,
+   "text": "Those are lymphocytes."
+  },
+  {
+   "t": 199.51,
+   "text": "T cells, B cells, NK cells, all jumbled together."
+  },
+  {
+   "t": 203.57,
+   "text": "Slightly above and to the right — medium FSC, medium SSC — you see monocytes: bigger than lymphocytes, somewhat more granular."
+  },
+  {
+   "t": 213.32,
+   "text": "Far to the right and up — high FSC, high SSC — you see a big cloud of granulocytes: neutrophils, eosinophils, basophils, all crammed with granules, all relatively large."
+  },
+  {
+   "t": 227.45,
+   "text": "Down to the very lower-left corner, often crowded against the axis — that's debris, dead cells, broken cell fragments, and dust."
+  },
+  {
+   "t": 236.29,
+   "text": "You'll usually exclude this stuff with a \"gate\" — a polygonal region drawn around the populations you actually care about, telling the analysis software to ignore anything outside."
+  },
+  {
+   "t": 246.76,
+   "text": "That is the gating starting point."
+  },
+  {
+   "t": 248.85,
+   "text": "Every flow cytometry analysis, essentially, begins with an FSC-vs-SSC plot, and the first thing you do is draw a gate around the population of interest — usually lymphocytes if you're doing immunology, sometimes granulocytes if you're studying neutrophil biology, and so on."
+  },
+  {
+   "t": 265.81,
+   "text": "Everything downstream — the antibody staining, the fluorescence measurements — is conditioned on having pulled the right population out of the scatter plot first."
+  },
+  {
+   "t": 275.19,
+   "text": "There's a small but important variant called FSC-H versus FSC-A, which is used to remove \"doublets\" — events where two cells passed through the laser stuck together and the instrument recorded them as a single fat cell."
+  },
+  {
+   "t": 288.31,
+   "text": "The height of the forward scatter pulse and the area under the curve don't scale the same way for singlets and doublets, so plotting height against area gives you a clean way to draw a gate that excludes the doublets."
+  },
+  {
+   "t": 300.25,
+   "text": "This is the second routine step in essentially every analysis: lymphocytes by FSC-SSC, then singlets by FSC-H vs FSC-A, then on to the fluorescence channels."
+  },
+  {
+   "t": 313.09,
+   "text": "So FSC and SSC, with no antibodies and no dyes, already let you sort blood into its major cellular compartments."
+  },
+  {
+   "t": 322.2,
+   "text": "That, on its own, was a meaningful clinical tool — modern hematology analyzers use scatter measurements as the basis for the routine complete blood count, the CBC, that your doctor orders."
+  },
+  {
+   "t": 334.82,
+   "text": "But what makes flow cytometry transformative is what you add on top of scatter: the fluorochrome-labeled antibodies, which let you ask not just \"what kind of cell is this\" but \"which specific proteins is this cell expressing."
+  },
+  {
+   "t": 347.24,
+   "text": "\" That's the next layer, and that's where the rainbow palette comes in."
+  }
+ ]
+}

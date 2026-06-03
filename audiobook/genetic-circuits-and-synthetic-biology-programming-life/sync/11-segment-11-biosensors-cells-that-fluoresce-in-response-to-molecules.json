@@ -1,0 +1,179 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Biosensors: cells that fluoresce in response to molecules",
+ "duration": 294.23,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Biosensors: cells that fluoresce in response to molecules"
+  },
+  {
+   "t": 5.84,
+   "text": "Let us turn from circuits that compute internally to circuits that sense the world."
+  },
+  {
+   "t": 11.41,
+   "text": "A biosensor, in the synthetic biology sense, is an engineered cell that detects a particular molecule in its environment and produces a measurable output in response."
+  },
+  {
+   "t": 22.15,
+   "text": "Most commonly, the output is fluorescence — the cell glows when the molecule is present."
+  },
+  {
+   "t": 28.12,
+   "text": "But the output can be any reporter: a colored pigment, a smell, an enzymatic activity that you can read out with a chemical test."
+  },
+  {
+   "t": 36.62,
+   "text": "The basic recipe is the one we developed in Segment 3."
+  },
+  {
+   "t": 40.61,
+   "text": "You take an inducible promoter that responds to the molecule of interest — that is, a promoter that is normally off, but turns on when a specific small molecule binds to its regulator."
+  },
+  {
+   "t": 51.0,
+   "text": "You put a reporter gene downstream."
+  },
+  {
+   "t": 53.01,
+   "text": "You drop the construct into a chassis organism, often E. coli."
+  },
+  {
+   "t": 57.62,
+   "text": "When the molecule shows up in the cell's environment — assuming it can get into the cell — it activates the regulator, which switches on the promoter, which turns on the reporter, and the cell glows."
+  },
+  {
+   "t": 68.39,
+   "text": "The art is in finding the right sensor part."
+  },
+  {
+   "t": 71.1,
+   "text": "Nature has produced thousands of regulators that respond to thousands of different molecules."
+  },
+  {
+   "t": 76.9,
+   "text": "Bacteria have evolved sensors for sugars, for amino acids, for metals, for pollutants, for host signals, for anything you can imagine that might be useful to detect."
+  },
+  {
+   "t": 87.3,
+   "text": "Synthetic biologists comb through the natural parts catalog, looking for regulators that respond to molecules they care about, and adapt them."
+  },
+  {
+   "t": 95.83,
+   "text": "Let me give you a few real examples."
+  },
+  {
+   "t": 97.9,
+   "text": "Arsenic biosensors are one of the most celebrated applications."
+  },
+  {
+   "t": 101.78,
+   "text": "There are natural bacterial regulators that respond specifically to arsenic — bacteria have to deal with arsenic in some soils — and engineers built E. coli strains carrying these regulators wired up to fluorescent or pigment reporters."
+  },
+  {
+   "t": 117.33,
+   "text": "The strains glow, or change color, in the presence of arsenic in drinking water."
+  },
+  {
+   "t": 122.76,
+   "text": "In Bangladesh and Vietnam, where groundwater arsenic contamination is a major public health problem, several research groups have tried to develop arsenic biosensor cells as a cheap field test, costing pennies per assay rather than the dollars per assay required for traditional chemical methods."
+  },
+  {
+   "t": 140.66,
+   "text": "The technology has not been universally adopted — regulatory and stability hurdles are real — but it works in principle, and prototypes exist."
+  },
+  {
+   "t": 150.28,
+   "text": "Glucose biosensors have been built for monitoring fermentation, food spoilage, and diabetic blood sugar."
+  },
+  {
+   "t": 156.93,
+   "text": "TNT biosensors — yes, the explosive — have been built by several groups, with the dream of seeding minefields with engineered grass or bacteria that glow when TNT leaks from buried mines, making demining safer and faster."
+  },
+  {
+   "t": 172.09,
+   "text": "Heavy metal biosensors for mercury, cadmium, lead."
+  },
+  {
+   "t": 175.84,
+   "text": "Hormone biosensors for environmental endocrine disruptors."
+  },
+  {
+   "t": 179.89,
+   "text": "Pathogen biosensors that detect specific bacterial or viral molecules in clinical samples."
+  },
+  {
+   "t": 186.11,
+   "text": "Each one of these is conceptually the same: take a regulator that responds to the molecule, wire it to a reporter, put it in a cell."
+  },
+  {
+   "t": 194.82,
+   "text": "The fact that the recipe is so portable is, again, a triumph of the modular dream of synthetic biology."
+  },
+  {
+   "t": 202.69,
+   "text": "You change one part — the regulator — and you have a sensor for an entirely different molecule."
+  },
+  {
+   "t": 208.57,
+   "text": "There are, of course, real engineering challenges."
+  },
+  {
+   "t": 211.3,
+   "text": "The molecule has to get into the cell — many molecules of interest do not cross bacterial membranes well."
+  },
+  {
+   "t": 218.01,
+   "text": "The sensor has to be sensitive enough to detect the relevant range of concentrations."
+  },
+  {
+   "t": 223.6,
+   "text": "It has to be specific enough not to be triggered by chemically similar molecules that are not what you want."
+  },
+  {
+   "t": 230.11,
+   "text": "It has to be fast enough to be useful."
+  },
+  {
+   "t": 232.55,
+   "text": "The cell has to survive long enough in the relevant environment to do its job."
+  },
+  {
+   "t": 236.9,
+   "text": "Each of these is solvable, with effort, and each has been the subject of decades of work."
+  },
+  {
+   "t": 243.29,
+   "text": "And there is the deployment problem."
+  },
+  {
+   "t": 245.09,
+   "text": "A biosensor in a lab is a cool demo."
+  },
+  {
+   "t": 248.04,
+   "text": "A biosensor in the field, used by people who are not biologists, working in real environments, has to be packaged, stabilized, made shelf-stable, made safe, made regulatory-compliant, and made cheap."
+  },
+  {
+   "t": 260.69,
+   "text": "Most academic biosensors die at this last hurdle."
+  },
+  {
+   "t": 264.58,
+   "text": "We will see in Segment 16 that one elegant escape from this hurdle has been to take the living cell out of the equation entirely."
+  },
+  {
+   "t": 273.04,
+   "text": "But the basic capability — engineered cells that detect specific molecules — is a fundamental and well-developed tool in the synthetic biologist's repertoire."
+  },
+  {
+   "t": 283.23,
+   "text": "If you can articulate what molecule you want to detect, and a natural regulator exists for it, you can usually build a biosensor for it."
+  },
+  {
+   "t": 291.69,
+   "text": "That is a remarkable thing to be able to say."
+  }
+ ]
+}

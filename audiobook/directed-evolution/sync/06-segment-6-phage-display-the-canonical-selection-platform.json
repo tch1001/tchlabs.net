@@ -1,0 +1,159 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — Phage display — the canonical selection platform",
+ "duration": 262.81,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — Phage display — the canonical selection platform"
+  },
+  {
+   "t": 4.97,
+   "text": "We covered phage display in the antibodies lecture, so I'm going to keep this segment short."
+  },
+  {
+   "t": 10.15,
+   "text": "But it's worth revisiting in the directed-evolution context, because phage display is the textbook example of a selection platform — and because George Smith won the 2018 Nobel for inventing it, alongside Frances Arnold, in the same prize."
+  },
+  {
+   "t": 24.61,
+   "text": "Quick refresher."
+  },
+  {
+   "t": 25.8,
+   "text": "A bacteriophage — usually M13, a filamentous phage that infects E. coli — has a coat made of several proteins."
+  },
+  {
+   "t": 34.92,
+   "text": "The pIII protein, in particular, sits at one end of the phage and is fairly tolerant to having a foreign protein fused to it."
+  },
+  {
+   "t": 43.51,
+   "text": "George Smith's insight, in 1985, was that if you fuse your protein of interest to pIII, you get a phage particle that displays your protein on its surface, while also carrying inside the DNA that encodes that protein."
+  },
+  {
+   "t": 57.59,
+   "text": "The phage is a one-particle linkage between the protein and the gene."
+  },
+  {
+   "t": 61.81,
+   "text": "Display the protein, sort by binding, recover the gene by amplifying the phage."
+  },
+  {
+   "t": 67.5,
+   "text": "That's the trick."
+  },
+  {
+   "t": 68.61,
+   "text": "For directed evolution, phage display is most often used to evolve binders — antibodies, single-domain antibodies, peptides, designed scaffolds."
+  },
+  {
+   "t": 79.28,
+   "text": "You make a library of pIII fusions, each carrying a different protein variant."
+  },
+  {
+   "t": 85.12,
+   "text": "The library is huge, often a billion or more distinct phages."
+  },
+  {
+   "t": 90.01,
+   "text": "You pour the library over an immobilized target."
+  },
+  {
+   "t": 93.01,
+   "text": "Phages with binding fusions stick; phages with non-binding fusions wash off."
+  },
+  {
+   "t": 98.88,
+   "text": "You elute the stickers, amplify them in E. coli, and pan again."
+  },
+  {
+   "t": 103.95,
+   "text": "After three or four rounds of panning, your library is enriched a millionfold for binders."
+  },
+  {
+   "t": 110.22,
+   "text": "You pick individual phages, sequence them, and characterize the binders."
+  },
+  {
+   "t": 115.38,
+   "text": "If the affinity isn't good enough, you mutagenize the winning binders — epPCR, site-saturation in the binding loops, whatever — and pan again."
+  },
+  {
+   "t": 124.8,
+   "text": "Affinity maturation by directed evolution."
+  },
+  {
+   "t": 128.31,
+   "text": "For enzymes, phage display is harder, because catalysis isn't as easy to select for as binding."
+  },
+  {
+   "t": 135.38,
+   "text": "But there are clever phage-display setups for enzymes too."
+  },
+  {
+   "t": 139.16,
+   "text": "The general approach is to link the enzyme's substrate to the phage particle itself, so that when the enzyme acts on the substrate, the phage particle gets modified in a way that can be captured."
+  },
+  {
+   "t": 150.34,
+   "text": "For instance, if your enzyme cleaves a peptide bond, you can attach a substrate to the phage that, when cleaved, releases a tag — and you select for phages that have lost the tag."
+  },
+  {
+   "t": 160.65,
+   "text": "Catalytic phage display."
+  },
+  {
+   "t": 162.71,
+   "text": "Niche, but it works for some reactions."
+  },
+  {
+   "t": 165.26,
+   "text": "The Nobel committee in 2018 cited Smith for inventing phage display, and Greg Winter for adapting it to antibody libraries."
+  },
+  {
+   "t": 174.3,
+   "text": "Winter's contribution was to take human antibody genes — V, D, and J segments — synthesize them into a library, fuse them to pIII, and pan against any target you wanted."
+  },
+  {
+   "t": 186.68,
+   "text": "Suddenly you could make human antibodies to any target without ever immunizing an animal."
+  },
+  {
+   "t": 192.19,
+   "text": "That technology produced the first wholly human therapeutic antibodies, including Humira, the best-selling drug in human history."
+  },
+  {
+   "t": 200.7,
+   "text": "So phage display is not just an academic curiosity; it built a multi-billion-dollar industry."
+  },
+  {
+   "t": 207.64,
+   "text": "For our purposes today, the takeaway is that phage display is the canonical selection platform — the one that made directed evolution of binders an industrial-strength technology."
+  },
+  {
+   "t": 219.43,
+   "text": "Its limitations — small fusion partners, the fact that the protein has to fold properly when expressed on phage, the dependence on E. coli compatibility — pushed people to invent other display platforms, which we'll go through in the next two segments."
+  },
+  {
+   "t": 234.66,
+   "text": "Yeast display."
+  },
+  {
+   "t": 235.81,
+   "text": "Ribosome display."
+  },
+  {
+   "t": 237.26,
+   "text": "mRNA display."
+  },
+  {
+   "t": 238.76,
+   "text": "Each one a different trade-off between library size, fold quality, and assay flexibility."
+  },
+  {
+   "t": 245.6,
+   "text": "But the philosophical move — link the protein to its gene through some kind of display, do parallel selection on the whole library, recover the winners — that move was George Smith's, in 1985, and it's the foundation of everything we'll discuss for the next three segments."
+  }
+ ]
+}

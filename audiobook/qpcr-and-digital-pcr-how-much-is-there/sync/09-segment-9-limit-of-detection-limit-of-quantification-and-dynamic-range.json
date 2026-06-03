@@ -1,0 +1,243 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Limit of detection, limit of quantification, and dynamic range",
+ "duration": 355.13,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Limit of detection, limit of quantification, and dynamic range"
+  },
+  {
+   "t": 6.0,
+   "text": "We need to talk about two related concepts that get used loosely in the field and which you have to keep separated."
+  },
+  {
+   "t": 12.88,
+   "text": "The limit of detection, or LoD, and the limit of quantification, or LoQ."
+  },
+  {
+   "t": 18.32,
+   "text": "These are not the same thing, and the difference matters clinically."
+  },
+  {
+   "t": 21.89,
+   "text": "The limit of detection is the lowest concentration of target at which you can reliably tell that the target is present, distinguishing it from a true negative."
+  },
+  {
+   "t": 30.44,
+   "text": "Operationally: at what concentration does at least 95% of your replicates produce a positive amplification, with no amplification in your negative controls?"
+  },
+  {
+   "t": 41.14,
+   "text": "That's your LoD."
+  },
+  {
+   "t": 42.14,
+   "text": "For a well-designed qPCR assay, the LoD is typically somewhere between 1 and 10 copies per reaction, depending on assay quality."
+  },
+  {
+   "t": 50.98,
+   "text": "The limit of quantification is a stricter criterion."
+  },
+  {
+   "t": 54.17,
+   "text": "It's the lowest concentration at which you can not only detect the target but also assign a reliable, reproducible number to it."
+  },
+  {
+   "t": 61.81,
+   "text": "The LoQ is typically higher than the LoD, because at the very lowest concentrations, while you can usually see amplification, the Ct values bounce around so much from replicate to replicate that the quantitative number you'd report is unreliable."
+  },
+  {
+   "t": 77.49,
+   "text": "The LoQ might be 10 or 100 copies per reaction even when the LoD is 1."
+  },
+  {
+   "t": 82.59,
+   "text": "Why the difference?"
+  },
+  {
+   "t": 83.84,
+   "text": "Statistics."
+  },
+  {
+   "t": 85.06,
+   "text": "At very low copy number, the actual number of molecules in your reaction follows a Poisson distribution."
+  },
+  {
+   "t": 92.14,
+   "text": "If your sample has a mean of 1 copy per reaction, then by Poisson statistics, about 37% of your replicates will have zero copies and won't amplify, about 37% will have exactly 1 copy, 18% will have 2, 6% will have 3, and so on."
+  },
+  {
+   "t": 110.56,
+   "text": "So even with identical samples, you'll get wildly variable Ct values, and 37% of the time you'll get no amplification at all."
+  },
+  {
+   "t": 119.54,
+   "text": "The information you can extract from such variable replicates is limited."
+  },
+  {
+   "t": 123.74,
+   "text": "You can say \"there's something here\" — you've detected — but you can't say \"there are exactly 1.2 copies per microliter\" with confidence — you can't quantify reliably."
+  },
+  {
+   "t": 134.45,
+   "text": "The Poisson noise floor — the irreducible variability at low copy number due to molecule counting — is what limits the LoQ of any single-molecule-detecting assay."
+  },
+  {
+   "t": 145.99,
+   "text": "It will come back when we talk about digital PCR, where the trick is to embrace the Poisson rather than fight it."
+  },
+  {
+   "t": 152.35,
+   "text": "Between LoD and LoQ at the bottom, and the saturation of the plateau at the top, lies the dynamic range of the assay — the range of concentrations over which the assay produces a quantitative readout proportional to the input."
+  },
+  {
+   "t": 166.57,
+   "text": "A well-designed qPCR assay has a dynamic range of about six to seven orders of magnitude — from a few copies up to about ten million copies per reaction."
+  },
+  {
+   "t": 176.6,
+   "text": "The standard curve we discussed in Segment 6 should be linear across that whole range."
+  },
+  {
+   "t": 181.72,
+   "text": "Above the top, the reaction saturates and the Ct stops responding to additional input."
+  },
+  {
+   "t": 187.96,
+   "text": "Below the bottom, Poisson noise destroys quantification."
+  },
+  {
+   "t": 192.18,
+   "text": "For clinical assays, the dynamic range is one of the key performance characteristics that gets specified on the package insert."
+  },
+  {
+   "t": 199.91,
+   "text": "An HIV viral load assay needs to be quantitative from about 20 copies per milliliter (when therapy is suppressing the virus very well) up to about 10 million copies per milliliter (in acute infection)."
+  },
+  {
+   "t": 213.36,
+   "text": "That's six orders of magnitude."
+  },
+  {
+   "t": 215.28,
+   "text": "The assay has to maintain linearity across all of that."
+  },
+  {
+   "t": 218.97,
+   "text": "And here is where the precision question gets sharper."
+  },
+  {
+   "t": 222.16,
+   "text": "A typical qPCR assay, well-designed and well-run, has a technical precision — repeated runs of the same sample — of about 0.3 cycles standard deviation."
+  },
+  {
+   "t": 234.26,
+   "text": "Three tenths of a Ct."
+  },
+  {
+   "t": 236.15,
+   "text": "That sounds small."
+  },
+  {
+   "t": 237.36,
+   "text": "What does it mean for the quantitative answer?"
+  },
+  {
+   "t": 239.56,
+   "text": "A Ct standard deviation of 0.3 corresponds to a fold-change standard deviation of 2^0.3 ≈ 1.23."
+  },
+  {
+   "t": 250.26,
+   "text": "In other words, the answer is uncertain by about 25% in either direction, just from technical variation alone."
+  },
+  {
+   "t": 257.71,
+   "text": "If you report 1000 copies, the true value could plausibly be anywhere from about 800 to 1250."
+  },
+  {
+   "t": 265.03,
+   "text": "If you're trying to detect a 2-fold difference between two samples, that 25% noise floor is your enemy."
+  },
+  {
+   "t": 272.15,
+   "text": "If you're trying to detect a 10% change, qPCR is, frankly, not the right tool."
+  },
+  {
+   "t": 278.1,
+   "text": "This 25% precision limit is one of the central reasons digital PCR has gained traction in clinical work."
+  },
+  {
+   "t": 285.58,
+   "text": "Many clinical decisions depend on detecting smaller fold changes than qPCR can reliably resolve."
+  },
+  {
+   "t": 292.55,
+   "text": "We'll return to this in Segment 15."
+  },
+  {
+   "t": 295.25,
+   "text": "So that's the precision landscape."
+  },
+  {
+   "t": 297.2,
+   "text": "qPCR has a six-or-seven log dynamic range, an LoD of a few copies, an LoQ of around 10-100 copies, and a technical precision of about 25%."
+  },
+  {
+   "t": 308.58,
+   "text": "For most biological questions, that's excellent."
+  },
+  {
+   "t": 311.67,
+   "text": "For some clinical questions — minimal residual disease in cancer, distinguishing a 1.5-fold change in copy number, very-low-viral-load monitoring — it's not enough."
+  },
+  {
+   "t": 323.25,
+   "text": "We need to do better."
+  },
+  {
+   "t": 324.43,
+   "text": "The way to do better, as we'll see, is to stop trusting any single noisy number and instead literally count molecules."
+  },
+  {
+   "t": 332.1,
+   "text": "Which is digital PCR."
+  },
+  {
+   "t": 333.82,
+   "text": "But first, let's take a break."
+  },
+  {
+   "t": 335.51,
+   "text": "We've covered a lot."
+  },
+  {
+   "t": 336.73,
+   "text": "The fluorescence trick."
+  },
+  {
+   "t": 338.31,
+   "text": "The Ct value."
+  },
+  {
+   "t": 339.53,
+   "text": "Absolute and relative quantification."
+  },
+  {
+   "t": 342.31,
+   "text": "ΔΔCt."
+  },
+  {
+   "t": 343.56,
+   "text": "MIQE."
+  },
+  {
+   "t": 344.6,
+   "text": "LoD and LoQ."
+  },
+  {
+   "t": 345.81,
+   "text": "When you come back, we'll add RNA quantification — RT-qPCR, the COVID test — and then make the conceptual jump to digital PCR."
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Imaging flow cytometry: the upgrade",
+ "duration": 227.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Imaging flow cytometry: the upgrade"
+  },
+  {
+   "t": 4.56,
+   "text": "Now let me show you another important variant of the technique, which extends flow cytometry in a different direction — not more colors, but more information per cell by adding actual imaging."
+  },
+  {
+   "t": 15.89,
+   "text": "The instrument here is the Amnis ImageStream, developed by a company called Amnis (later acquired by EMD Millipore and then by Luminex), which combined a flow cytometer with a high-speed microscope camera."
+  },
+  {
+   "t": 28.74,
+   "text": "Here's the idea."
+  },
+  {
+   "t": 29.95,
+   "text": "In a regular flow cytometer, each cell becomes a row of numbers — one number per detector channel."
+  },
+  {
+   "t": 36.29,
+   "text": "You know that the cell has, say, X amount of CD4 protein, Y amount of CD25 protein, and so on."
+  },
+  {
+   "t": 43.96,
+   "text": "But you don't know where on the cell those proteins are."
+  },
+  {
+   "t": 46.46,
+   "text": "Is CD4 distributed uniformly across the membrane, or clustered into a few patches?"
+  },
+  {
+   "t": 52.62,
+   "text": "Is the FOXP3 actually inside the nucleus, where it belongs, or stuck in the cytoplasm?"
+  },
+  {
+   "t": 59.79,
+   "text": "Is the cell making contact with another cell via the immune synapse?"
+  },
+  {
+   "t": 64.12,
+   "text": "You can't tell from a single number per channel."
+  },
+  {
+   "t": 66.61,
+   "text": "ImageStream replaces those single numbers with actual images."
+  },
+  {
+   "t": 70.62,
+   "text": "As each cell passes through the instrument, it's photographed in multiple channels simultaneously by a high-speed camera, and you get, per cell, a stack of images — brightfield, dark-field, and one image per fluorochrome channel — captured at single-cell rate."
+  },
+  {
+   "t": 86.7,
+   "text": "The images aren't full microscope-quality images — the resolution is limited by the flow speed and the imaging optics — but they're more than enough to see whether a marker is at the surface or inside the cell, whether two cells are conjugated, whether a structure is punctate or diffuse."
+  },
+  {
+   "t": 103.81,
+   "text": "The analogy: imaging flow is the upgrade — image each cell AND measure its fluorescence; tells you not just \"is this protein present\" but \"where in the cell is it."
+  },
+  {
+   "t": 115.01,
+   "text": "\" That spatial information opens up entirely new kinds of questions."
+  },
+  {
+   "t": 120.04,
+   "text": "For example: you want to study T cell-B cell conjugate formation — the moment when a T cell physically contacts a B cell during an immune response."
+  },
+  {
+   "t": 129.9,
+   "text": "In regular flow cytometry, a T-cell-B-cell doublet just looks like one weird event you'd probably gate out as a doublet."
+  },
+  {
+   "t": 137.66,
+   "text": "In ImageStream, you can identify those doublets as actual conjugates, look at where the markers cluster at the contact interface, and quantify how many conjugates form under different conditions."
+  },
+  {
+   "t": 149.54,
+   "text": "Or: you want to study nuclear translocation of a transcription factor."
+  },
+  {
+   "t": 153.95,
+   "text": "NF-kB, for example, sits in the cytoplasm at rest and moves into the nucleus when the cell is activated."
+  },
+  {
+   "t": 161.64,
+   "text": "With ImageStream, you can compute, per cell, a \"nuclear translocation score\" by comparing the NF-kB image to the DAPI nuclear image."
+  },
+  {
+   "t": 170.44,
+   "text": "Cells with NF-kB in the nucleus get a high score; cells with cytoplasmic NF-kB get a low score."
+  },
+  {
+   "t": 177.76,
+   "text": "You can then quantitatively track translocation across thousands of cells, in single-cell resolution, faster than you'd ever manage on a microscope."
+  },
+  {
+   "t": 187.39,
+   "text": "Or: you want to study autophagy — the process by which cells form internal vesicles called autophagosomes."
+  },
+  {
+   "t": 194.6,
+   "text": "With ImageStream, you can count autophagosome spots per cell across millions of cells in a few hours."
+  },
+  {
+   "t": 201.78,
+   "text": "On a microscope, you'd be counting for weeks."
+  },
+  {
+   "t": 204.69,
+   "text": "Imaging flow has carved out specific niches — DNA damage foci quantification, mitochondrial morphology, virus-cell binding, immune synapse formation — and it lives somewhere between conventional flow and conventional microscopy."
+  },
+  {
+   "t": 219.72,
+   "text": "It doesn't replace either, but where it fits, nothing else can do the same kind of quantitative imaging at flow-cytometry throughput."
+  }
+ ]
+}

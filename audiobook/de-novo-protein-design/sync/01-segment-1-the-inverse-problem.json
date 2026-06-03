@@ -1,0 +1,251 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The inverse problem",
+ "duration": 325.78,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The inverse problem"
+  },
+  {
+   "t": 2.51,
+   "text": "Alright."
+  },
+  {
+   "t": 3.29,
+   "text": "Settle in."
+  },
+  {
+   "t": 4.28,
+   "text": "If you sat through the AlphaFold lecture — and I'm going to assume most of you did, because this lecture leans hard on that one — you already know the headline."
+  },
+  {
+   "t": 12.94,
+   "text": "In late 2020 a team at DeepMind essentially solved the forward problem in structural biology."
+  },
+  {
+   "t": 20.11,
+   "text": "Sequence in, structure out."
+  },
+  {
+   "t": 22.18,
+   "text": "Type a string of amino acids into a model, get back a three-dimensional shape that, for most proteins, is indistinguishable from a crystal structure."
+  },
+  {
+   "t": 32.73,
+   "text": "Fifty years of grinding, closed in a single CASP round."
+  },
+  {
+   "t": 37.23,
+   "text": "Today we are going to talk about the other direction."
+  },
+  {
+   "t": 39.48,
+   "text": "The harder direction, in some ways, although you'll see by the end that the two directions actually feed each other, and the modern field is one tangled loop where AlphaFold and de novo design have become inseparable tools."
+  },
+  {
+   "t": 53.31,
+   "text": "Here's the setup."
+  },
+  {
+   "t": 54.42,
+   "text": "AlphaFold answers the question: given a sequence of amino acids, what shape will the protein fold into?"
+  },
+  {
+   "t": 61.33,
+   "text": "That's the forward problem."
+  },
+  {
+   "t": 62.9,
+   "text": "Nature gives you a sequence."
+  },
+  {
+   "t": 64.61,
+   "text": "You want to know the structure."
+  },
+  {
+   "t": 65.99,
+   "text": "You ask the model."
+  },
+  {
+   "t": 67.16,
+   "text": "De novo protein design asks the opposite."
+  },
+  {
+   "t": 70.22,
+   "text": "Given a desired structure — or, more usefully, a desired function — what sequence of amino acids will produce a protein that has it?"
+  },
+  {
+   "t": 79.47,
+   "text": "That's the inverse problem."
+  },
+  {
+   "t": 81.1,
+   "text": "You don't have a sequence."
+  },
+  {
+   "t": 82.58,
+   "text": "You have a job description."
+  },
+  {
+   "t": 84.04,
+   "text": "You want a protein that binds the spike protein of a coronavirus."
+  },
+  {
+   "t": 88.41,
+   "text": "You want a protein that displays an antigen in a tidy geometric pattern, like a vaccine."
+  },
+  {
+   "t": 93.94,
+   "text": "You want a protein that catalyzes a reaction nature doesn't normally catalyze."
+  },
+  {
+   "t": 99.04,
+   "text": "You want a protein that fits into a pocket on a drug target and shuts it off."
+  },
+  {
+   "t": 103.38,
+   "text": "You start from what you want the protein to do, and you ask: what sequence makes that protein?"
+  },
+  {
+   "t": 109.14,
+   "text": "Hold that asymmetry in your head, because it's the core of the whole lecture."
+  },
+  {
+   "t": 113.92,
+   "text": "AlphaFold reads."
+  },
+  {
+   "t": 115.47,
+   "text": "De novo design writes."
+  },
+  {
+   "t": 117.42,
+   "text": "AlphaFold is the literary critic, given the text and producing an interpretation."
+  },
+  {
+   "t": 123.31,
+   "text": "De novo design is the novelist, given the theme and producing the text."
+  },
+  {
+   "t": 128.59,
+   "text": "The analogy I want you to carry through the next two hours is: de novo design is the inverse of AlphaFold — instead of asking \"what shape does this sequence make?"
+  },
+  {
+   "t": 138.88,
+   "text": "\", you ask \"what sequence makes this shape, or does this job?"
+  },
+  {
+   "t": 142.76,
+   "text": "\" Both questions have the same alphabet, the same chemistry, the same physics underneath."
+  },
+  {
+   "t": 149.07,
+   "text": "But the difficulty profile is completely different."
+  },
+  {
+   "t": 152.14,
+   "text": "The forward problem has, in principle, a unique answer — one sequence folds to roughly one structure."
+  },
+  {
+   "t": 159.22,
+   "text": "The inverse problem is wildly degenerate — many different sequences can produce essentially the same fold, and even more sequences can produce different folds that all do the same job."
+  },
+  {
+   "t": 170.72,
+   "text": "The inverse problem is a search problem in a vast, mostly-empty space, and the trick is to find the rare sequences that actually work."
+  },
+  {
+   "t": 179.57,
+   "text": "If you walk out of here in two hours and you can do four things — one, explain in plain English why the inverse problem is even harder, conceptually, than the forward problem, and why it's also more useful; two, tell me what David Baker's lab and the Rosetta software have been doing since the 1990s, and how that classical work made the modern revolution possible; three, sketch the modern workflow — RFdiffusion makes a backbone, ProteinMPNN gives it a sequence, AlphaFold checks that it folds,"
+  },
+  {
+   "t": 211.19,
+   "text": "and the lab tests whether it works — and tell me why each step is there; and four, walk me through what designed proteins are currently doing in the real world, from anti-COVID minibinders to nanoparticle vaccines to designer enzymes, and what's still hard — then we've done our job."
+  },
+  {
+   "t": 227.09,
+   "text": "Everything else hangs off those four."
+  },
+  {
+   "t": 229.3,
+   "text": "Let me say one thing about tone, because this is a story that has been building for thirty years and just exploded in the last five."
+  },
+  {
+   "t": 237.12,
+   "text": "If you talk to a structural biologist who has been in the game since the nineties, the AlphaFold moment was disorienting."
+  },
+  {
+   "t": 243.82,
+   "text": "They lost the forward problem in a single CASP round."
+  },
+  {
+   "t": 247.68,
+   "text": "But the de novo design field was already there — quieter, less hyped, in one lab at the University of Washington, slowly building the tools to do the inverse problem from first principles using Rosetta."
+  },
+  {
+   "t": 259.69,
+   "text": "That lab — David Baker's lab — spent two decades designing proteins by hand, in software, and the field watched with polite interest."
+  },
+  {
+   "t": 269.56,
+   "text": "Then AlphaFold landed, and within eighteen months, design exploded too."
+  },
+  {
+   "t": 274.81,
+   "text": "Baker's lab and others trained diffusion models for backbones."
+  },
+  {
+   "t": 279.19,
+   "text": "They trained graph networks for sequence design."
+  },
+  {
+   "t": 282.28,
+   "text": "They glued these tools to AlphaFold for verification."
+  },
+  {
+   "t": 285.67,
+   "text": "By 2022 the entire pipeline was reproducible."
+  },
+  {
+   "t": 289.48,
+   "text": "By 2023 it was running on laptops."
+  },
+  {
+   "t": 292.38,
+   "text": "By 2024, David Baker shared the Nobel Prize in Chemistry with Demis Hassabis and John Jumper — half the prize for the forward problem, half for the inverse."
+  },
+  {
+   "t": 303.52,
+   "text": "That is the arc."
+  },
+  {
+   "t": 304.57,
+   "text": "Forward and inverse."
+  },
+  {
+   "t": 306.28,
+   "text": "AlphaFold and Rosetta."
+  },
+  {
+   "t": 308.46,
+   "text": "Reading the text and writing it."
+  },
+  {
+   "t": 310.53,
+   "text": "Hassabis-Jumper and Baker."
+  },
+  {
+   "t": 312.72,
+   "text": "And we are now, in 2026, in the third year of the era where this stuff is actually changing how drugs get made."
+  },
+  {
+   "t": 320.47,
+   "text": "Let me start at the beginning of the inverse story."
+  },
+  {
+   "t": 323.16,
+   "text": "Long before there was a neural network in sight."
+  }
+ ]
+}

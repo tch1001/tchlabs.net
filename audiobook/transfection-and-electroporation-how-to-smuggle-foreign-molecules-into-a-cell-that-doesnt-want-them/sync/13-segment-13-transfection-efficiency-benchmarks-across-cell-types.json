@@ -1,0 +1,275 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Transfection efficiency benchmarks across cell types",
+ "duration": 546.71,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Transfection efficiency benchmarks across cell types"
+  },
+  {
+   "t": 5.35,
+   "text": "Let me try to give you a feel for the actual numbers, because if you only know that \"transfection methods exist,\" you do not yet have an intuition for what to expect."
+  },
+  {
+   "t": 14.35,
+   "text": "The numbers vary by orders of magnitude across cell types, and the same method that gives ninety percent in one cell line gives two percent in another."
+  },
+  {
+   "t": 23.64,
+   "text": "The cell type is at least as important as the method, and often more so."
+  },
+  {
+   "t": 28.36,
+   "text": "Here is a rough field guide."
+  },
+  {
+   "t": 30.12,
+   "text": "Think of it as the standard list of cell types you will encounter in molecular biology, arranged in roughly increasing order of how hard they are to transfect."
+  },
+  {
+   "t": 39.55,
+   "text": "The analogy I want you to keep."
+  },
+  {
+   "t": 41.65,
+   "text": "Transfection efficiency is a spectrum from HEK293, where you can transfect a coffee bean if you remember to keep them warm, down to primary neurons, where you can barely transfect anything and you should probably just use a virus."
+  },
+  {
+   "t": 56.8,
+   "text": "At the easy end of the spectrum, HEK293 — human embryonic kidney 293 cells."
+  },
+  {
+   "t": 65.09,
+   "text": "You can transfect HEK293 cells with essentially any method, get above ninety percent efficiency, and the cells will keep growing happily."
+  },
+  {
+   "t": 74.91,
+   "text": "They are so transfectable that they have become the universal positive control."
+  },
+  {
+   "t": 79.45,
+   "text": "If a new transfection reagent does not work on HEK293, the reagent is broken."
+  },
+  {
+   "t": 86.47,
+   "text": "HEK293 is so dominant in biotech that an enormous fraction of all the recombinant protein produced for research and clinical use comes from this one cell line."
+  },
+  {
+   "t": 97.86,
+   "text": "There are specialized derivatives — HEK293T, HEK293F, Expi293, HEK293SG — each optimized for slightly different production or transfection workflows."
+  },
+  {
+   "t": 114.35,
+   "text": "If you walk into a protein production facility, you will see HEK293 in suspension culture, often being transfected with PEI for transient protein production."
+  },
+  {
+   "t": 125.89,
+   "text": "Next, HeLa cells — the immortalized cervical cancer cell line from Henrietta Lacks, derived in 1951 and still in use seventy-five years later."
+  },
+  {
+   "t": 135.95,
+   "text": "HeLa is transfectable but not at HEK293 levels — typical efficiencies are in the fifty to seventy percent range with lipofection."
+  },
+  {
+   "t": 146.25,
+   "text": "The cells are a workhorse for cell biology, particularly imaging, because they are large, flat, adherent, and easy to grow."
+  },
+  {
+   "t": 154.2,
+   "text": "CHO cells — Chinese hamster ovary cells — are the dominant production cell line for therapeutic antibodies."
+  },
+  {
+   "t": 161.99,
+   "text": "They are moderately transfectable, typically forty to sixty percent with lipofection, and at scale they are typically engineered for stable expression rather than transient transfection."
+  },
+  {
+   "t": 173.75,
+   "text": "Most of the monoclonal antibodies on the market — Humira, Keytruda, Avastin, dozens of others — are made by CHO cell lines that have been engineered, often years ago, to stably express the antibody at high levels."
+  },
+  {
+   "t": 188.09,
+   "text": "COS cells — derived from monkey kidney, with SV40 large T antigen — are excellent for transient transfection because they amplify plasmids that contain the SV40 origin of replication, giving you very high transient expression."
+  },
+  {
+   "t": 202.94,
+   "text": "Typical efficiency seventy to ninety percent."
+  },
+  {
+   "t": 206.51,
+   "text": "Jurkat cells — an immortalized human T cell line — are moderately hard to transfect, typically twenty to forty percent with lipofection, much better with electroporation."
+  },
+  {
+   "t": 217.78,
+   "text": "The cells are widely used as a model for T cell biology, but they are not equivalent to primary T cells, and many phenomena that work in Jurkat do not replicate in primary cells."
+  },
+  {
+   "t": 229.84,
+   "text": "K562 cells — an immortalized human leukemia line — are a notorious case."
+  },
+  {
+   "t": 236.85,
+   "text": "They are suspension cells, they grow well, they are widely used in CRISPR screens and in NK cell killing assays, and they are essentially resistant to chemical transfection."
+  },
+  {
+   "t": 247.82,
+   "text": "Lipofection gives you single-digit efficiency at best."
+  },
+  {
+   "t": 252.11,
+   "text": "Electroporation works much better, and nucleofection gets you up into the fifty to seventy percent range."
+  },
+  {
+   "t": 259.12,
+   "text": "K562 is a useful illustration of why one-size-fits-all transfection does not exist — a cell line that looks superficially like it ought to be easy can turn out to be a wall of frustration unless you use the right method."
+  },
+  {
+   "t": 273.69,
+   "text": "Then we move into primary cells, where everything gets harder."
+  },
+  {
+   "t": 277.9,
+   "text": "Primary T cells, isolated from a healthy donor's blood, are the substrate of CAR-T therapy and most modern immunology research."
+  },
+  {
+   "t": 286.92,
+   "text": "They are nearly impossible to transfect chemically."
+  },
+  {
+   "t": 290.1,
+   "text": "Lipofection gives you nothing useful."
+  },
+  {
+   "t": 292.67,
+   "text": "Calcium phosphate gives you nothing useful."
+  },
+  {
+   "t": 295.56,
+   "text": "The only methods that work reliably are nucleofection or its competitors (MaxCyte, Neon) for nucleic acid delivery, or lentiviral transduction for stable expression."
+  },
+  {
+   "t": 307.32,
+   "text": "Nucleofection on primary T cells typically gives you forty to seventy percent efficiency with good optimization, but you also lose twenty to thirty percent of the cells to the procedure itself."
+  },
+  {
+   "t": 320.26,
+   "text": "The combination of high efficiency on the survivors and significant loss of cells is the central tradeoff of primary T cell engineering."
+  },
+  {
+   "t": 329.54,
+   "text": "Every CAR-T manufacturing process is designed around managing this tradeoff."
+  },
+  {
+   "t": 335.01,
+   "text": "Primary B cells are even harder than T cells."
+  },
+  {
+   "t": 338.81,
+   "text": "They are short-lived in culture, fragile, hard to maintain in a transfectable state."
+  },
+  {
+   "t": 344.7,
+   "text": "Recent advances have made primary B cell engineering feasible, but it is still a specialized capability."
+  },
+  {
+   "t": 351.61,
+   "text": "Primary monocytes and macrophages are notoriously hard to transfect because they sense foreign nucleic acid and respond with a strong inflammatory program — they are, after all, the cells whose job is to detect and respond to foreign material."
+  },
+  {
+   "t": 366.11,
+   "text": "The very innate immune sensors that make these cells useful in immunology make them resistant to transfection."
+  },
+  {
+   "t": 373.99,
+   "text": "Primary hepatocytes, the liver cells, are moderately transfectable in culture but lose their characteristic gene expression patterns quickly after being put in a dish, which complicates their experimental use."
+  },
+  {
+   "t": 386.97,
+   "text": "In vivo delivery to hepatocytes, by LNP, is dramatically more effective than ex vivo transfection."
+  },
+  {
+   "t": 394.59,
+   "text": "Hematopoietic stem cells, the workhorse of edited stem cell therapies, are moderately transfectable by electroporation (typically forty to sixty percent for RNP, lower for plasmid DNA)."
+  },
+  {
+   "t": 407.67,
+   "text": "They are a special category because the editing has to happen without destroying the stem cell character — if you damage the stem cells too much, they lose their ability to engraft and self-renew when you put them back in the patient."
+  },
+  {
+   "t": 420.79,
+   "text": "And at the bottom of the spectrum, the cells where almost nothing works."
+  },
+  {
+   "t": 425.44,
+   "text": "Primary neurons."
+  },
+  {
+   "t": 426.85,
+   "text": "These cells are so hard to transfect by chemical methods that you should just plan to use a virus from the start."
+  },
+  {
+   "t": 433.86,
+   "text": "Adeno-associated virus, particularly AAV1, AAV5, AAV9, or AAVrh10 depending on the cell type, gives you long-term expression with minimal cell death."
+  },
+  {
+   "t": 446.05,
+   "text": "Lentivirus also works."
+  },
+  {
+   "t": 448.11,
+   "text": "Lipofection works in single-digit percent at best, often with substantial neuron death."
+  },
+  {
+   "t": 454.07,
+   "text": "Nucleofection works but typically requires the neurons to be transfected before plating, because mature differentiated neurons do not survive the procedure."
+  },
+  {
+   "t": 464.76,
+   "text": "If your experiment requires transfecting primary neurons, the standard advice is: don't fight it, use a virus, save yourself months."
+  },
+  {
+   "t": 474.24,
+   "text": "The big takeaway from this segment is that the cell type determines the strategy, and you cannot pick a transfection method without first identifying what cells you are working with and what the established protocols are for those cells."
+  },
+  {
+   "t": 486.74,
+   "text": "The literature is full of failed experiments where someone tried to use the standard HEK293 lipofection protocol on a primary cell type and concluded that \"transfection doesn't work."
+  },
+  {
+   "t": 499.44,
+   "text": "\" The transfection doesn't work because the method is wrong for that cell."
+  },
+  {
+   "t": 503.96,
+   "text": "With the right method, the cell can be done."
+  },
+  {
+   "t": 506.51,
+   "text": "Without it, no amount of optimization will get you there."
+  },
+  {
+   "t": 509.99,
+   "text": "This is also why, when you see a paper that claims to have transfected some hard-to-transfect primary cell at high efficiency, you should read the methods section very carefully."
+  },
+  {
+   "t": 521.11,
+   "text": "Are they reporting efficiency on the total cell population or on the surviving cell population (which can be a small fraction of the input)?"
+  },
+  {
+   "t": 529.6,
+   "text": "Did they sort for marker-positive cells?"
+  },
+  {
+   "t": 532.1,
+   "text": "Did they enrich?"
+  },
+  {
+   "t": 533.24,
+   "text": "Did they use a specific commercial kit that may not be available to your lab?"
+  },
+  {
+   "t": 537.6,
+   "text": "The numbers in papers are sometimes the best-case numbers in carefully optimized hands, and your reality, on your first attempt, will be worse."
+  }
+ ]
+}

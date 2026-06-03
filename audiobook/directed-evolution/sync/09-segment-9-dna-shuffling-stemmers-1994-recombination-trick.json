@@ -1,0 +1,211 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — DNA shuffling — Stemmer's 1994 recombination trick",
+ "duration": 339.92,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — DNA shuffling — Stemmer's 1994 recombination trick"
+  },
+  {
+   "t": 5.92,
+   "text": "We come now to the technique I teased in Segment 4, and the one I want to give its own segment because it changed directed evolution."
+  },
+  {
+   "t": 13.86,
+   "text": "DNA shuffling, also called sexual PCR, was published by Willem \"Pim\" Stemmer in Nature in 1994, and again in PNAS in a more detailed paper later that year."
+  },
+  {
+   "t": 25.1,
+   "text": "It is, in my view, one of the most beautiful techniques in molecular biology."
+  },
+  {
+   "t": 30.07,
+   "text": "Here's the problem Stemmer was solving."
+  },
+  {
+   "t": 32.11,
+   "text": "In a standard directed-evolution campaign — error-prone PCR, screen for winners, take the winners forward — you accumulate beneficial mutations slowly, one or two per round."
+  },
+  {
+   "t": 44.5,
+   "text": "Each round, you take a few of the best variants from the previous round and use them as the parents for the next round."
+  },
+  {
+   "t": 51.33,
+   "text": "But each parent only contributes its mutations."
+  },
+  {
+   "t": 54.67,
+   "text": "If parent A has a beneficial mutation at position 47 and parent B has a beneficial mutation at position 162, you can't easily get both mutations into one offspring, because in conventional epPCR you take one parent at a time, copy it with errors, and you don't recombine."
+  },
+  {
+   "t": 72.16,
+   "text": "Sex — biological sex, the kind eukaryotes do — solves this problem in nature."
+  },
+  {
+   "t": 78.06,
+   "text": "Two parents recombine."
+  },
+  {
+   "t": 79.69,
+   "text": "Their chromosomes cross over."
+  },
+  {
+   "t": 81.56,
+   "text": "The offspring carry mosaics of both parents' genomes."
+  },
+  {
+   "t": 85.47,
+   "text": "Beneficial mutations from one parent get combined with beneficial mutations from another."
+  },
+  {
+   "t": 90.81,
+   "text": "Sexual reproduction massively accelerates evolution exactly because it lets independent beneficial mutations combine in one lineage, instead of having to arise serially in the same lineage."
+  },
+  {
+   "t": 104.44,
+   "text": "Stemmer's insight was: do that for genes."
+  },
+  {
+   "t": 107.39,
+   "text": "In a test tube."
+  },
+  {
+   "t": 108.55,
+   "text": "Recombine your winning variants."
+  },
+  {
+   "t": 110.7,
+   "text": "Let beneficial mutations combine."
+  },
+  {
+   "t": 112.9,
+   "text": "Here's how DNA shuffling works, mechanically."
+  },
+  {
+   "t": 116.58,
+   "text": "You take the genes from your winning variants — say, ten or twenty of them, each carrying a few mutations relative to the parent."
+  },
+  {
+   "t": 124.97,
+   "text": "You mix them in a tube."
+  },
+  {
+   "t": 126.11,
+   "text": "You digest them with DNase I — a fairly nonspecific endonuclease that chops DNA into small fragments, maybe 50 to 200 base pairs each."
+  },
+  {
+   "t": 136.51,
+   "text": "Now you have a tube full of fragments, derived from all your parents, mixed together."
+  },
+  {
+   "t": 142.09,
+   "text": "Now you do a PCR — but without primers."
+  },
+  {
+   "t": 145.07,
+   "text": "You just run the thermocycler."
+  },
+  {
+   "t": 147.09,
+   "text": "In each cycle, the fragments melt apart, then reanneal."
+  },
+  {
+   "t": 151.57,
+   "text": "Because the parents are highly similar to each other — they only differ by a few point mutations — the fragments from one parent can anneal to fragments from a different parent in regions where the sequences are identical."
+  },
+  {
+   "t": 164.79,
+   "text": "The two fragments overlap, the polymerase extends, and you've stitched a piece of parent A onto a piece of parent B."
+  },
+  {
+   "t": 172.01,
+   "text": "After enough cycles, the fragments reassemble into full-length genes — but each full-length gene is now a mosaic of multiple parents, with crossover points wherever the polymerase happened to switch from one fragment to another."
+  },
+  {
+   "t": 186.49,
+   "text": "You then add real primers to the outside of the gene, do a normal PCR to amplify the full-length mosaics, and clone the resulting library."
+  },
+  {
+   "t": 195.56,
+   "text": "Your library is now a collection of recombinant genes, each carrying a combination of mutations drawn from your various parents."
+  },
+  {
+   "t": 204.15,
+   "text": "The beneficial mutations that were scattered across the parent lineage now have a chance to co-occur in single offspring."
+  },
+  {
+   "t": 211.49,
+   "text": "The analogy I keep coming back to is that DNA shuffling is two winning chefs swapping pages of their cookbooks — sometimes the combination of one chef's pasta dough and another chef's sauce is better than either chef's original dish."
+  },
+  {
+   "t": 226.25,
+   "text": "Beneficial mutations from independent lineages combine, sometimes additively, sometimes synergistically."
+  },
+  {
+   "t": 233.68,
+   "text": "The library you get out is dramatically more enriched in functional variants than what you'd get from epPCR alone."
+  },
+  {
+   "t": 240.38,
+   "text": "Stemmer demonstrated DNA shuffling in his 1994 paper using a model evolution of TEM-1 beta-lactamase — an enzyme that degrades beta-lactam antibiotics — to evolve resistance to cefotaxime, a third-generation cephalosporin."
+  },
+  {
+   "t": 258.19,
+   "text": "Wild-type TEM-1 confers low resistance."
+  },
+  {
+   "t": 262.18,
+   "text": "After several rounds of error-prone PCR with shuffling, Stemmer's lab evolved variants that conferred sixteen-thousand-fold higher resistance."
+  },
+  {
+   "t": 271.24,
+   "text": "That kind of improvement — four orders of magnitude — was not achievable with epPCR alone in the same time frame."
+  },
+  {
+   "t": 278.33,
+   "text": "Shuffling was the accelerant."
+  },
+  {
+   "t": 280.47,
+   "text": "DNA shuffling spawned a whole industry."
+  },
+  {
+   "t": 283.68,
+   "text": "Stemmer founded a company called Maxygen that built an entire pipeline around shuffling, evolving enzymes for industrial customers — herbicides, vaccines, biofuels."
+  },
+  {
+   "t": 294.67,
+   "text": "Maxygen spun off a series of subsidiaries."
+  },
+  {
+   "t": 297.9,
+   "text": "Codexis, which we'll meet in Segment 13, is one of the descendant companies that uses shuffling-derived technology."
+  },
+  {
+   "t": 305.9,
+   "text": "And shuffling concepts — recombination of mutations from independent lineages — are now baked into essentially every serious directed-evolution campaign."
+  },
+  {
+   "t": 316.29,
+   "text": "A note before we leave Stemmer."
+  },
+  {
+   "t": 318.23,
+   "text": "Pim Stemmer died young, in 2013, of leukemia."
+  },
+  {
+   "t": 322.79,
+   "text": "He was one of the great inventors in molecular biology, and his technique is one of the things you should know about him."
+  },
+  {
+   "t": 329.2,
+   "text": "When the Arnold Nobel came in 2018, many in the field felt that Stemmer would have shared it if he had lived."
+  },
+  {
+   "t": 335.72,
+   "text": "His shadow is on every directed-evolution paper published today."
+  }
+ ]
+}

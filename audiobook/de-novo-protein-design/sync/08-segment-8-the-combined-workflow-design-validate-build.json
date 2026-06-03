@@ -1,0 +1,275 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — The combined workflow — design, validate, build",
+ "duration": 381.64,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — The combined workflow — design, validate, build"
+  },
+  {
+   "t": 4.67,
+   "text": "Here is the modern de novo design pipeline."
+  },
+  {
+   "t": 7.56,
+   "text": "I am going to walk you through it in detail because it is the workflow that has become standard across the field."
+  },
+  {
+   "t": 14.09,
+   "text": "If you go into any de novo design lab today — Baker's, Generate Biomedicines, the Computational Vaccine Center, the various academic groups that have grown around this — they all do roughly this."
+  },
+  {
+   "t": 26.09,
+   "text": "Step one: specify the target."
+  },
+  {
+   "t": 28.6,
+   "text": "You decide what you want."
+  },
+  {
+   "t": 30.0,
+   "text": "Maybe you want a protein that binds the receptor-binding domain of SARS-CoV-2 spike — you've got the structure of the spike, you've identified the surface patch you want to grip."
+  },
+  {
+   "t": 40.44,
+   "text": "Maybe you want an enzyme that catalyzes a particular reaction — you specify the catalytic triad geometry, the substrate-binding pocket."
+  },
+  {
+   "t": 49.55,
+   "text": "Maybe you want a symmetric protein assembly that displays an antigen — you specify the symmetry group, the size of the cage, the position of the antigen attachment."
+  },
+  {
+   "t": 59.34,
+   "text": "The specification can be structural, functional, or both."
+  },
+  {
+   "t": 63.33,
+   "text": "The richer your specification, the more constrained the design problem."
+  },
+  {
+   "t": 67.51,
+   "text": "The looser the specification, the more diverse the designs the pipeline will produce."
+  },
+  {
+   "t": 72.74,
+   "text": "Step two: RFdiffusion makes the backbone."
+  },
+  {
+   "t": 76.15,
+   "text": "You feed your specification into RFdiffusion."
+  },
+  {
+   "t": 79.38,
+   "text": "It runs the diffusion process — denoising backbones step by step — conditioned on your constraints."
+  },
+  {
+   "t": 85.79,
+   "text": "Out comes a candidate backbone, or, more often, a batch of candidate backbones — hundreds or thousands of them, each one slightly different, all satisfying your specifications."
+  },
+  {
+   "t": 97.15,
+   "text": "You filter them on whatever criteria you like — preference for certain folds, exclusion of unusual topologies, agreement with some structural metric."
+  },
+  {
+   "t": 106.47,
+   "text": "The backbones at this stage are pure geometry."
+  },
+  {
+   "t": 109.67,
+   "text": "They have no amino acid identities."
+  },
+  {
+   "t": 112.36,
+   "text": "The alpha-carbon positions are placed, but there are no side chains."
+  },
+  {
+   "t": 116.49,
+   "text": "Step three: ProteinMPNN gives the backbone a sequence."
+  },
+  {
+   "t": 121.12,
+   "text": "For each backbone you've kept, you run ProteinMPNN."
+  },
+  {
+   "t": 124.76,
+   "text": "It assigns amino acid identities to every position — typically you generate several sequences per backbone, because ProteinMPNN samples stochastically and different runs give different sequences."
+  },
+  {
+   "t": 137.78,
+   "text": "So if you had a thousand backbones, you might generate ten thousand candidate sequences."
+  },
+  {
+   "t": 143.4,
+   "text": "Step four: AlphaFold checks that the sequence folds back to the intended backbone."
+  },
+  {
+   "t": 148.53,
+   "text": "This is the verification step, and it is the one that the whole pipeline depends on."
+  },
+  {
+   "t": 154.32,
+   "text": "You take each candidate sequence — every one of the ten thousand from the previous step — and you predict its structure using AlphaFold."
+  },
+  {
+   "t": 162.05,
+   "text": "Then you compare AlphaFold's predicted structure to the original RFdiffusion backbone."
+  },
+  {
+   "t": 167.28,
+   "text": "If they match, that sequence is plausible."
+  },
+  {
+   "t": 170.35,
+   "text": "If they don't, that sequence is rejected."
+  },
+  {
+   "t": 173.3,
+   "text": "This filter is brutal and effective."
+  },
+  {
+   "t": 176.41,
+   "text": "Most of your candidate sequences fail it."
+  },
+  {
+   "t": 179.09,
+   "text": "The ones that pass it — typically a few percent, sometimes more if your design is easy — are the ones worth taking to the lab."
+  },
+  {
+   "t": 186.21,
+   "text": "The AlphaFold filter is, in effect, a free silicon-based wet lab."
+  },
+  {
+   "t": 192.1,
+   "text": "It rejects ninety percent of your designs at zero cost, leaving you with a much smaller, much more reliable shortlist."
+  },
+  {
+   "t": 199.94,
+   "text": "The analogy I want for the whole flow is: RFdiffusion makes the shape, ProteinMPNN makes the sequence, AlphaFold checks it folds, the lab expresses it and tests."
+  },
+  {
+   "t": 211.82,
+   "text": "Four steps."
+  },
+  {
+   "t": 212.93,
+   "text": "Two AI models on the design side."
+  },
+  {
+   "t": 215.36,
+   "text": "One AI model on the verification side."
+  },
+  {
+   "t": 218.11,
+   "text": "Then a human-and-pipette step at the end."
+  },
+  {
+   "t": 220.74,
+   "text": "The whole computational portion runs on a modest GPU cluster in a day or two."
+  },
+  {
+   "t": 226.0,
+   "text": "The lab portion takes a couple of weeks per round."
+  },
+  {
+   "t": 228.74,
+   "text": "Step five: the lab expresses and tests."
+  },
+  {
+   "t": 232.18,
+   "text": "You take your shortlist — typically a few dozen to a few hundred candidates that passed the AlphaFold filter — and you synthesize the genes for them, you express them in E. coli or another expression host, you purify the proteins, you check that they're soluble and folded by circular dichroism or differential scanning fluorimetry, and you assay them for the function you wanted — binding, catalysis, assembly, whatever."
+  },
+  {
+   "t": 256.59,
+   "text": "In the modern pipeline, even with all the AI filtering upstream, you still see a lot of dropout in the wet lab."
+  },
+  {
+   "t": 263.71,
+   "text": "Some designs don't express."
+  },
+  {
+   "t": 265.75,
+   "text": "Some aggregate."
+  },
+  {
+   "t": 266.91,
+   "text": "Some fold to the wrong structure."
+  },
+  {
+   "t": 269.26,
+   "text": "Some fold correctly but don't function."
+  },
+  {
+   "t": 272.0,
+   "text": "The success rate at the wet lab stage varies enormously by the difficulty of the target — for simple binding tasks against well-behaved targets, you might see ten or twenty percent of your shortlist actually work."
+  },
+  {
+   "t": 284.46,
+   "text": "For harder tasks like de novo enzymes, the rate might be one in a hundred."
+  },
+  {
+   "t": 289.49,
+   "text": "Compared to the pre-AI era, where the rate was often one in ten thousand, this is a transformation."
+  },
+  {
+   "t": 295.97,
+   "text": "Compared to natural evolution, which has had billions of years to optimize, we're still amateurs."
+  },
+  {
+   "t": 302.46,
+   "text": "There's one more loop in this workflow that I want to mention, because it's where the whole thing gets really interesting."
+  },
+  {
+   "t": 308.26,
+   "text": "If your first batch of designs fails to give you what you want — say, the binders you made don't bind tightly enough — you can iterate."
+  },
+  {
+   "t": 315.61,
+   "text": "You take the partial successes, you re-specify the target around them, you re-run RFdiffusion and ProteinMPNN with the partial successes seeded as starting points, you run AlphaFold again, and you get a new batch."
+  },
+  {
+   "t": 328.6,
+   "text": "Or you can do rational tweaking — mutate specific positions in the best designs, re-test, refine."
+  },
+  {
+   "t": 335.84,
+   "text": "The iteration is fast because the computational part is fast."
+  },
+  {
+   "t": 340.26,
+   "text": "You can do a design-build-test cycle in a few weeks, where in the Rosetta era it took months."
+  },
+  {
+   "t": 345.56,
+   "text": "That iteration loop is what makes the modern pipeline actually useful for real engineering problems."
+  },
+  {
+   "t": 352.02,
+   "text": "The first generation of designs is often a starting point, not a finished product."
+  },
+  {
+   "t": 357.31,
+   "text": "The pipeline succeeds because it can iterate quickly, and because each iteration is cheap."
+  },
+  {
+   "t": 363.0,
+   "text": "Okay."
+  },
+  {
+   "t": 363.8,
+   "text": "We've got the pipeline."
+  },
+  {
+   "t": 365.02,
+   "text": "Now I want to spend the next four segments showing you what people have actually built with it — what kinds of designed proteins are out in the world doing real jobs."
+  },
+  {
+   "t": 374.2,
+   "text": "Let's start with the example that, more than any other, put de novo design on the map."
+  },
+  {
+   "t": 379.62,
+   "text": "Anti-COVID minibinders."
+  }
+ ]
+}

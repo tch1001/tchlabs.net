@@ -1,0 +1,179 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — RNA-based logic: riboswitches and toehold switches",
+ "duration": 283.3,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — RNA-based logic: riboswitches and toehold switches"
+  },
+  {
+   "t": 5.83,
+   "text": "For most of the field's history, the parts list has been dominated by proteins."
+  },
+  {
+   "t": 10.81,
+   "text": "Repressors, activators, recombinases, fluorescent reporters — all proteins."
+  },
+  {
+   "t": 17.4,
+   "text": "But starting in the mid-2000s, a parallel parts list grew up around RNA."
+  },
+  {
+   "t": 22.84,
+   "text": "RNA can do many of the things proteins can do, with some interesting advantages: it is faster to design, faster to synthesize, more predictable in its base-pairing behavior, and it operates at a different layer of the regulatory stack — between transcription and translation, rather than at transcription itself."
+  },
+  {
+   "t": 42.77,
+   "text": "The first major RNA-based regulatory part to enter the toolkit was the riboswitch."
+  },
+  {
+   "t": 48.33,
+   "text": "A riboswitch is a piece of structured RNA, typically in the untranslated region of a messenger RNA, that changes conformation when it binds a particular small molecule."
+  },
+  {
+   "t": 59.58,
+   "text": "The conformation change affects whether the downstream gene gets translated."
+  },
+  {
+   "t": 64.1,
+   "text": "Natural riboswitches were discovered in the early 2000s in bacteria — they regulate genes involved in synthesis of various metabolites by directly sensing those metabolites and shutting off transcription or translation when there is already enough around."
+  },
+  {
+   "t": 80.19,
+   "text": "Synthetic riboswitches have been built that respond to all sorts of designed inputs."
+  },
+  {
+   "t": 85.41,
+   "text": "The riboswitch is, in essence, an RNA-based sensor."
+  },
+  {
+   "t": 90.03,
+   "text": "It gives you a way to wire a small molecule directly to a translation event, without needing a separate sensor protein in between."
+  },
+  {
+   "t": 97.76,
+   "text": "Fewer parts."
+  },
+  {
+   "t": 98.92,
+   "text": "Faster response."
+  },
+  {
+   "t": 100.34,
+   "text": "A more dramatic move into RNA logic came in 2014, in a paper from Alexander Green, Pamela Silver, and Jim Collins — yes, the same Jim Collins who built the toggle switch — published in Cell."
+  },
+  {
+   "t": 114.08,
+   "text": "The paper introduced a new RNA-based logic device called the toehold switch."
+  },
+  {
+   "t": 119.29,
+   "text": "Here is the idea."
+  },
+  {
+   "t": 121.03,
+   "text": "A toehold switch is a piece of RNA designed so that its own structure blocks translation of a downstream coding sequence."
+  },
+  {
+   "t": 128.85,
+   "text": "The RNA folds up in a way that hides the ribosome binding site, so the ribosome cannot land, so no protein is made."
+  },
+  {
+   "t": 137.07,
+   "text": "But the structure includes a short single-stranded region — the \"toehold\" — that is exposed and available for base-pairing."
+  },
+  {
+   "t": 144.51,
+   "text": "When a separate, complementary piece of trigger RNA is present, the trigger binds to the toehold, and the binding then unzips the rest of the switch RNA's structure, exposing the ribosome binding site, and translation can proceed."
+  },
+  {
+   "t": 159.28,
+   "text": "Trigger present, switch open, protein made."
+  },
+  {
+   "t": 162.5,
+   "text": "Trigger absent, switch closed, no protein."
+  },
+  {
+   "t": 166.04,
+   "text": "The toehold switch is, in essence, an RNA-based AND gate: only when both the trigger RNA and the switch RNA are present does translation turn on."
+  },
+  {
+   "t": 176.72,
+   "text": "Both inputs required."
+  },
+  {
+   "t": 178.39,
+   "text": "The output is binary."
+  },
+  {
+   "t": 180.34,
+   "text": "The analogy I want you to carry: toehold switches are RNA-based AND gates."
+  },
+  {
+   "t": 186.0,
+   "text": "Only when both the trigger RNA and the switch RNA are present does translation turn on, all chemistry, no protein needed."
+  },
+  {
+   "t": 194.24,
+   "text": "Two features of toehold switches make them remarkable."
+  },
+  {
+   "t": 197.76,
+   "text": "First, they are programmable in a way protein circuits are not."
+  },
+  {
+   "t": 201.78,
+   "text": "The sequence of the trigger is what determines what the switch responds to, and you can pick that sequence to be anything you want, with very wide flexibility."
+  },
+  {
+   "t": 210.56,
+   "text": "If you want a switch that responds to a particular viral RNA — say, a sequence diagnostic of Zika virus or SARS-CoV-2 — you design the switch with a toehold complementary to that viral sequence."
+  },
+  {
+   "t": 223.01,
+   "text": "The switch will turn on in the presence of the virus."
+  },
+  {
+   "t": 225.94,
+   "text": "Second, toehold switches work outside cells."
+  },
+  {
+   "t": 229.64,
+   "text": "They work in cell-free reactions — buffers containing translation machinery, with the switch RNA, the trigger RNA, and a reporter gene."
+  },
+  {
+   "t": 238.99,
+   "text": "No living cell required."
+  },
+  {
+   "t": 240.69,
+   "text": "That last property is what enabled one of the most striking practical applications of synthetic biology to date, which we discuss in the next segment."
+  },
+  {
+   "t": 249.65,
+   "text": "There is now a rich RNA-based parts list, growing year by year."
+  },
+  {
+   "t": 254.07,
+   "text": "Toehold switches in various configurations."
+  },
+  {
+   "t": 257.18,
+   "text": "CRISPR-based RNA sensors that use Cas13 to detect specific RNA sequences."
+  },
+  {
+   "t": 263.09,
+   "text": "Engineered ribozymes that catalyze cleavage in response to small molecules."
+  },
+  {
+   "t": 268.97,
+   "text": "Aptamers — RNA molecules selected to bind particular targets — as biosensors."
+  },
+  {
+   "t": 275.26,
+   "text": "The RNA layer of the synthetic biology stack is, in 2026, one of the most active frontiers of the field."
+  }
+ ]
+}

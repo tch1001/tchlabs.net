@@ -1,0 +1,135 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Phage display plus NGS — the modern upgrade",
+ "duration": 222.5,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Phage display plus NGS — the modern upgrade"
+  },
+  {
+   "t": 5.5,
+   "text": "The single biggest change to phage display practice in the last fifteen years has been the marriage of panning with next-generation sequencing."
+  },
+  {
+   "t": 13.96,
+   "text": "The change is so consequential that it deserves its own segment."
+  },
+  {
+   "t": 17.85,
+   "text": "In the classical workflow, after your final round of panning, you spread the eluted phage on agar, pick a few dozen plaques, sequence them by Sanger, and call those your hits."
+  },
+  {
+   "t": 28.8,
+   "text": "You get maybe twenty to fifty sequences out of a panning campaign."
+  },
+  {
+   "t": 32.81,
+   "text": "You bias the picking toward dominant clones, you miss rare clones, you have no idea what the population structure of the whole post-panning library looks like."
+  },
+  {
+   "t": 42.65,
+   "text": "With NGS, you do the panning the same way — but at the end, instead of picking plaques, you PCR-amplify the displayed-protein-encoding region from the entire eluted population and submit it for deep sequencing."
+  },
+  {
+   "t": 55.83,
+   "text": "Illumina or NovaSeq gives you ten million to a billion reads."
+  },
+  {
+   "t": 60.35,
+   "text": "You get the entire population frequency distribution of every variant that survived panning."
+  },
+  {
+   "t": 66.58,
+   "text": "Not twenty sequences but ten million."
+  },
+  {
+   "t": 69.35,
+   "text": "This changes everything."
+  },
+  {
+   "t": 71.16,
+   "text": "You can now compute, for every variant, an enrichment ratio — how its frequency in the post-panning pool compares to its frequency in the input library."
+  },
+  {
+   "t": 81.09,
+   "text": "Variants that were rare in the input but common after panning are the real hits."
+  },
+  {
+   "t": 86.54,
+   "text": "Variants that were common in both didn't get enriched and aren't real binders."
+  },
+  {
+   "t": 91.14,
+   "text": "You can rank variants by enrichment with statistical confidence, instead of guessing from a handful of picks."
+  },
+  {
+   "t": 97.6,
+   "text": "You can also do comparative panning: pan the same library against several different targets, sequence each output, and find variants enriched in one panning but not the others — those are target-specific hits."
+  },
+  {
+   "t": 110.47,
+   "text": "Or pan against your target with and without a competitor, sequence both, and find variants whose binding is competed away — those bind at a specific site."
+  },
+  {
+   "t": 120.64,
+   "text": "The analogy I want you to keep is that phage display plus NGS is the modern upgrade — instead of picking twenty clones to sequence, sequence the whole post-panning population; enrichment ratios per variant, comprehensive mutagenesis maps."
+  },
+  {
+   "t": 136.68,
+   "text": "It turns phage display from a binary \"did we find binders\" experiment into a quantitative deep-mutational-scanning experiment that maps the binding fitness of millions of variants."
+  },
+  {
+   "t": 149.04,
+   "text": "The combination is especially powerful for affinity maturation by deep mutational scanning."
+  },
+  {
+   "t": 155.51,
+   "text": "Generate a library where every single position in your CDR loops is mutated to every possible amino acid (a single-mutant library, sometimes 50,000 variants)."
+  },
+  {
+   "t": 167.56,
+   "text": "Pan with stringent conditions."
+  },
+  {
+   "t": 169.9,
+   "text": "NGS the output."
+  },
+  {
+   "t": 171.56,
+   "text": "Compute enrichment for every single-mutant variant."
+  },
+  {
+   "t": 175.66,
+   "text": "The resulting map tells you, at every position, which mutations improve binding, which hurt, which are neutral."
+  },
+  {
+   "t": 183.2,
+   "text": "You then combine the best mutations rationally into a single multi-mutant design."
+  },
+  {
+   "t": 189.07,
+   "text": "This approach — sometimes called DMS-guided design — has become a standard tool in modern antibody engineering."
+  },
+  {
+   "t": 196.36,
+   "text": "NGS plus phage display also enables machine-learning approaches."
+  },
+  {
+   "t": 201.39,
+   "text": "The deep-sequencing data is the perfect training set for sequence-activity models."
+  },
+  {
+   "t": 207.05,
+   "text": "Train a model on the enrichment data, then use the model to predict the activity of variants you never tested."
+  },
+  {
+   "t": 213.41,
+   "text": "Iterate."
+  },
+  {
+   "t": 214.26,
+   "text": "The combination of phage display data and ML is one of the most active areas in protein engineering in 2026."
+  }
+ ]
+}

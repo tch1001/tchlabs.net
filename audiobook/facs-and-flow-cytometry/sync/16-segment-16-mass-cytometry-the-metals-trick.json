@@ -1,0 +1,159 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Mass cytometry: the metals trick",
+ "duration": 294.34,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Mass cytometry: the metals trick"
+  },
+  {
+   "t": 4.4,
+   "text": "Now let me show you a completely different approach to the same problem — measure many parameters per cell at high throughput — that doesn't use fluorescence at all."
+  },
+  {
+   "t": 13.94,
+   "text": "The technology is called mass cytometry, or CyTOF (cytometry by time of flight), and it was developed by a Canadian company called DVS Sciences (later acquired by Fluidigm, now Standard BioTools)."
+  },
+  {
+   "t": 27.95,
+   "text": "The central trick is delightful, and once you hear it, you'll see why it solves several of the problems we've been wrestling with."
+  },
+  {
+   "t": 35.08,
+   "text": "Here's the trick."
+  },
+  {
+   "t": 36.17,
+   "text": "Instead of labeling antibodies with fluorochromes, you label them with heavy metal isotopes — specifically, isotopes from the lanthanide series of the periodic table: praseodymium, neodymium, samarium, europium, terbium, holmium, and so on."
+  },
+  {
+   "t": 53.62,
+   "text": "These metals are normally rare in biological samples — your cells contain almost none of them — so there's no background."
+  },
+  {
+   "t": 61.12,
+   "text": "You take an antibody, you chemically attach a chelator — a small molecule that grips a metal ion tightly — and you load the chelator with a particular metal isotope."
+  },
+  {
+   "t": 71.89,
+   "text": "Now you have an anti-CD4 antibody loaded with, say, 145Nd (neodymium-145)."
+  },
+  {
+   "t": 80.0,
+   "text": "An anti-CD8 antibody loaded with 146Nd."
+  },
+  {
+   "t": 84.58,
+   "text": "An anti-CD3 antibody loaded with 152Sm (samarium-152)."
+  },
+  {
+   "t": 92.19,
+   "text": "Each antibody carries its own isotopic tag, with a precisely defined mass."
+  },
+  {
+   "t": 97.96,
+   "text": "You stain your cells with a cocktail of metal-tagged antibodies the same way you would with fluorochrome-tagged ones — incubate, wash, etc."
+  },
+  {
+   "t": 107.24,
+   "text": "Now your cells have antibodies bound to them, and each antibody carries a particular metal isotope at the position where the fluorochrome would have been."
+  },
+  {
+   "t": 116.35,
+   "text": "Here's where it gets wild."
+  },
+  {
+   "t": 117.71,
+   "text": "You don't put the cells in a flow cytometer with lasers and detectors."
+  },
+  {
+   "t": 121.88,
+   "text": "You put them in a mass spectrometer."
+  },
+  {
+   "t": 123.76,
+   "text": "Each cell is sprayed into a high-temperature plasma — heated to about 7,000 Kelvin — which atomizes and ionizes everything on the cell, including the metal tags."
+  },
+  {
+   "t": 135.39,
+   "text": "The resulting cloud of metal ions is then sent through a time-of-flight mass spectrometer, which separates the ions by mass and counts how many ions of each mass came from that cell."
+  },
+  {
+   "t": 146.72,
+   "text": "The output: a count of how much of each metal isotope was on that cell — which translates directly into how much of each antibody-target was on that cell."
+  },
+  {
+   "t": 156.81,
+   "text": "The metals trick: replace fluorochrome with heavy-metal isotope, replace optical detector with mass spec, 40+ parameters per cell, no compensation needed."
+  },
+  {
+   "t": 167.51,
+   "text": "That last part — \"no compensation needed\" — is the killer feature."
+  },
+  {
+   "t": 171.56,
+   "text": "Because mass spec separates ions by mass with extremely high resolution, there is essentially no spillover between channels."
+  },
+  {
+   "t": 179.55,
+   "text": "145Nd and 146Nd are completely separable; there is no equivalent of \"FITC bleeding into PE."
+  },
+  {
+   "t": 189.15,
+   "text": "\" You can use 40 or 50 metal channels simultaneously and the math is trivial — just count the ions per mass."
+  },
+  {
+   "t": 196.26,
+   "text": "No spillover matrix."
+  },
+  {
+   "t": 197.91,
+   "text": "No FMO controls."
+  },
+  {
+   "t": 199.72,
+   "text": "The compensation headache that eats your life in classical flow cytometry just doesn't exist in mass cytometry."
+  },
+  {
+   "t": 207.0,
+   "text": "The downsides?"
+  },
+  {
+   "t": 208.26,
+   "text": "First, CyTOF is slower than conventional flow — typically a few hundred cells per second instead of tens of thousands."
+  },
+  {
+   "t": 216.46,
+   "text": "Second, the cells are destroyed — they're atomized in the plasma, so you can't sort with CyTOF, only analyze."
+  },
+  {
+   "t": 223.82,
+   "text": "Third, the instruments are very expensive — a CyTOF costs roughly twice what a high-end flow cytometer costs."
+  },
+  {
+   "t": 231.89,
+   "text": "And fourth, the dynamic range per channel is lower than for bright fluorochromes like PE."
+  },
+  {
+   "t": 237.41,
+   "text": "But for high-parameter immune profiling, where you want 30 or 40 markers per cell without the panel-design headaches, CyTOF has become a major workhorse, especially in immune monitoring for clinical trials."
+  },
+  {
+   "t": 251.09,
+   "text": "Garry Nolan's group at Stanford was a major early adopter; the technology has been used to profile the immune systems of cancer patients, vaccine recipients, and infection cohorts in ways that were impossible with classical flow."
+  },
+  {
+   "t": 265.42,
+   "text": "The competition between fluorescence-based spectral cytometry (Cytek and others) and metal-based mass cytometry (Standard BioTools' CyTOF) is one of the more interesting current debates in the field."
+  },
+  {
+   "t": 278.08,
+   "text": "Spectral cytometry now reaches comparable parameter counts and is much faster and cheaper — but CyTOF still has the cleaner separation between channels and is preferred for certain kinds of unbiased high-dimensional profiling."
+  },
+  {
+   "t": 292.27,
+   "text": "Both technologies are here to stay."
+  }
+ ]
+}

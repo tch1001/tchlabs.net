@@ -1,0 +1,123 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Sorting for downstream applications: the gateway to single-cell omics",
+ "duration": 255.7,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Sorting for downstream applications: the gateway to single-cell omics"
+  },
+  {
+   "t": 6.53,
+   "text": "One more application that has become enormously important in the last fifteen years: using FACS sorting as the front end of single-cell genomics."
+  },
+  {
+   "t": 16.4,
+   "text": "Here's the picture."
+  },
+  {
+   "t": 17.55,
+   "text": "Flow cytometry, especially the sorting variant, is uniquely good at one thing: defining a pure population of cells based on multi-parameter marker expression and physically isolating them in a tube, alive, in numbers ranging from a single cell up to millions."
+  },
+  {
+   "t": 34.92,
+   "text": "That capability turns out to be the perfect input to a number of modern molecular techniques."
+  },
+  {
+   "t": 40.55,
+   "text": "Bulk RNA-seq from sorted populations."
+  },
+  {
+   "t": 43.55,
+   "text": "Before single-cell RNA-seq was practical, the standard way to get cell-type-specific gene expression data was to FACS-sort a pure population — say, Tregs — and then do bulk RNA-seq on the sorted cells."
+  },
+  {
+   "t": 57.44,
+   "text": "The transcriptome you got was the average over that pure population, but because the population was pure to begin with, the average was meaningful and interpretable."
+  },
+  {
+   "t": 66.96,
+   "text": "Studies like the ImmGen consortium generated comprehensive RNA-seq reference maps of every major immune cell type by FACS-sorting each one separately and sequencing them, and those reference datasets are still in heavy use."
+  },
+  {
+   "t": 82.6,
+   "text": "Single-cell RNA-seq from sorted populations."
+  },
+  {
+   "t": 86.22,
+   "text": "Modern droplet-based single-cell RNA-seq platforms like 10x Genomics' Chromium can sequence the transcriptome of thousands or tens of thousands of individual cells in a single run."
+  },
+  {
+   "t": 99.33,
+   "text": "But the input to the machine is still a tube of cell suspension, and what's in that suspension matters."
+  },
+  {
+   "t": 105.3,
+   "text": "If you input crude unsorted blood, you'll get mostly red cells and platelets, and your rare populations will be undersampled."
+  },
+  {
+   "t": 113.2,
+   "text": "If you input pre-sorted live cells, gated to remove debris and doublets and dead cells, you get clean usable data."
+  },
+  {
+   "t": 121.01,
+   "text": "If you input pre-sorted specific populations — say, only the CD45+ immune cells from a tumor, or only the CD34+ hematopoietic stem cells from bone marrow — you enrich for the cells you actually care about and you get vastly better signal-to-noise for your question."
+  },
+  {
+   "t": 138.41,
+   "text": "ATAC-seq from sorted populations."
+  },
+  {
+   "t": 140.96,
+   "text": "ATAC-seq measures chromatin accessibility — which regions of DNA are open and accessible to transcription factors in a particular cell."
+  },
+  {
+   "t": 150.44,
+   "text": "Like RNA-seq, ATAC-seq works on populations of cells, and pre-sorting by FACS gives you cell-type-specific accessibility maps."
+  },
+  {
+   "t": 159.93,
+   "text": "Single-cell ATAC-seq has also emerged, again typically with pre-sorted populations going into the platform."
+  },
+  {
+   "t": 166.49,
+   "text": "Index sorting."
+  },
+  {
+   "t": 167.61,
+   "text": "This is a clever technique where the sorter records, for each individual sorted cell, the full multi-parameter flow profile of that cell as it was sorted."
+  },
+  {
+   "t": 177.59,
+   "text": "Then you do single-cell sequencing (RNA-seq, or whatever) on each cell and you can later link the sequencing data for that cell back to its surface phenotype."
+  },
+  {
+   "t": 187.61,
+   "text": "So you know not just \"this single cell had this transcriptome\" but \"this single cell that had this transcriptome also had this exact combination of surface markers."
+  },
+  {
+   "t": 196.84,
+   "text": "\" The two readouts are linked at the single-cell level."
+  },
+  {
+   "t": 200.19,
+   "text": "The general pattern: flow cytometry is the front end, the sample-prep tool, the gateway to many of the most powerful single-cell molecular techniques of the last decade."
+  },
+  {
+   "t": 211.01,
+   "text": "The strengths of flow — high-throughput, well-defined gating, physical isolation of pure populations — are complementary to the strengths of sequencing — deep molecular characterization of fewer cells."
+  },
+  {
+   "t": 224.53,
+   "text": "The combination is now standard in cancer immunology, hematology, developmental biology, and any field that asks high-dimensional questions about heterogeneous tissues."
+  },
+  {
+   "t": 235.36,
+   "text": "If you go to a major immunology conference today, you'll see far more talks combining FACS sorting with downstream RNA-seq or scATAC or proteomics or CITE-seq than you will see talks using either technique alone."
+  },
+  {
+   "t": 248.93,
+   "text": "The technologies have become co-evolved partners, and the productivity gain from combining them is enormous."
+  }
+ ]
+}

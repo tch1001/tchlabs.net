@@ -1,0 +1,143 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Panning subtleties — negative selection and depletion",
+ "duration": 219.39,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Panning subtleties — negative selection and depletion"
+  },
+  {
+   "t": 5.22,
+   "text": "Let me come back to the panning workflow and talk about some of the layered tricks that turn an okay phage display campaign into a great one."
+  },
+  {
+   "t": 13.5,
+   "text": "The first is negative selection, also called depletion."
+  },
+  {
+   "t": 17.54,
+   "text": "Suppose you want a binder to receptor X, but receptor X has a close homolog Y that you absolutely don't want your binder to cross-react with."
+  },
+  {
+   "t": 25.55,
+   "text": "Naive panning against X alone will produce a population of binders, many of which will also bind Y, because the binding surfaces of X and Y are similar."
+  },
+  {
+   "t": 36.5,
+   "text": "You need to deplete the library against Y first."
+  },
+  {
+   "t": 39.69,
+   "text": "The trick is straightforward."
+  },
+  {
+   "t": 41.46,
+   "text": "Before you pan against X, you incubate the library with Y — usually coated on beads or on a separate plate."
+  },
+  {
+   "t": 49.17,
+   "text": "Any phage displaying a binder for Y gets pulled out of the library and discarded."
+  },
+  {
+   "t": 54.2,
+   "text": "You keep the supernatant — the phages that didn't bind Y — and pan that depleted library against X."
+  },
+  {
+   "t": 61.73,
+   "text": "The binders you recover are biased toward those that specifically recognize features unique to X, because the Y-binders have been removed."
+  },
+  {
+   "t": 70.28,
+   "text": "You can layer multiple depletions."
+  },
+  {
+   "t": 72.39,
+   "text": "Pan against X but deplete against Y, Z, and W — three different homologs you want to avoid cross-reactivity with."
+  },
+  {
+   "t": 80.56,
+   "text": "The library that emerges from the depletion is small but precise: phages whose binders are specific for what makes X uniquely X."
+  },
+  {
+   "t": 89.96,
+   "text": "This is essential for therapeutic antibody discovery, where you often need pinpoint specificity against a target without hitting closely related family members."
+  },
+  {
+   "t": 100.06,
+   "text": "The second subtlety is conformational selection."
+  },
+  {
+   "t": 103.62,
+   "text": "Some targets exist in multiple conformations — open and closed, active and inactive, bound and free."
+  },
+  {
+   "t": 111.4,
+   "text": "You may want a binder specific to one of those conformations."
+  },
+  {
+   "t": 115.3,
+   "text": "You can engineer the panning to favor that."
+  },
+  {
+   "t": 118.1,
+   "text": "For example, if you want an antibody that recognizes the active conformation of a kinase, you might coat the plate with the kinase trapped in its active state by a stabilizer drug, and pan only against that."
+  },
+  {
+   "t": 130.44,
+   "text": "Alternatively, you can do a depletion against the inactive state first, then pan against the active state — what you get is enriched for binders specific to active."
+  },
+  {
+   "t": 139.81,
+   "text": "The third subtlety is panning on cells."
+  },
+  {
+   "t": 143.04,
+   "text": "Sometimes your target is a membrane protein that won't fold or behave right in isolation."
+  },
+  {
+   "t": 148.9,
+   "text": "You can pan the phage library against intact cells displaying your target on their surface."
+  },
+  {
+   "t": 154.39,
+   "text": "The downside: there are millions of irrelevant antigens on the cell, so the off-target binding is huge."
+  },
+  {
+   "t": 161.21,
+   "text": "The trick is heavy depletion against an isogenic cell that doesn't express your target — same cell line, gene of interest knocked out."
+  },
+  {
+   "t": 169.81,
+   "text": "Pan against target-expressing cells, deplete against knockout cells."
+  },
+  {
+   "t": 174.72,
+   "text": "What's left is target-specific."
+  },
+  {
+   "t": 176.84,
+   "text": "The fourth subtlety is elution by target binding."
+  },
+  {
+   "t": 180.18,
+   "text": "Instead of using harsh low-pH elution, you can elute the bound phages with a specific competitor — a soluble form of your target, or a known ligand."
+  },
+  {
+   "t": 189.64,
+   "text": "This is a clever way to pre-filter for phages whose binders interact with a particular site on the target — only those phages will be eluted by the competitor, because only those have a binding surface the competitor competes with."
+  },
+  {
+   "t": 202.88,
+   "text": "These layered tricks are what separate good phage display campaigns from average ones."
+  },
+  {
+   "t": 207.9,
+   "text": "The basic cycle gives you binders."
+  },
+  {
+   "t": 210.4,
+   "text": "The careful layering of positive selection, negative depletion, conformational biasing, and competitive elution gives you the right binders."
+  }
+ ]
+}

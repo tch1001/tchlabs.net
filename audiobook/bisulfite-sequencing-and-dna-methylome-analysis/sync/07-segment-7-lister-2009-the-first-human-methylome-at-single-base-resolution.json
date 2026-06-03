@@ -1,0 +1,127 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Lister 2009 — the first human methylome at single-base resolution",
+ "duration": 287.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Lister 2009 — the first human methylome at single-base resolution"
+  },
+  {
+   "t": 6.83,
+   "text": "In 2009, Ryan Lister, Mattia Pelizzola, Joe Ecker, and colleagues at the Salk Institute published the paper that opened the human era of methylome research."
+  },
+  {
+   "t": 17.39,
+   "text": "The paper, titled \"Human DNA methylomes at base resolution show widespread epigenomic differences,\" appeared in Nature in November 2009."
+  },
+  {
+   "t": 27.98,
+   "text": "It reported the first complete, base-resolution methylation maps of two human cell types — human embryonic stem cells (the H1 line) and a fetal fibroblast cell line (IMR90) — using whole-genome bisulfite sequencing on the Illumina platform."
+  },
+  {
+   "t": 44.51,
+   "text": "The numbers from that paper give a sense of the scale."
+  },
+  {
+   "t": 47.51,
+   "text": "To get adequate coverage, the team sequenced about 87 gigabases of bisulfite-converted DNA per cell line."
+  },
+  {
+   "t": 55.33,
+   "text": "They quantified methylation at about 94 percent of the cytosines in the human genome, with at least one read of coverage."
+  },
+  {
+   "t": 63.26,
+   "text": "They reported the first comprehensive view of the human methylome at single-base resolution, with quantitative methylation levels for tens of millions of CpG sites."
+  },
+  {
+   "t": 74.14,
+   "text": "The paper made several findings that have shaped the field ever since, but two stand out."
+  },
+  {
+   "t": 79.51,
+   "text": "First, they confirmed at genome-wide scale what locus-specific studies had hinted at for years: that the human methylome is dominated by methylation at CpG dinucleotides, with the bulk of the genome heavily methylated and CpG islands largely unmethylated."
+  },
+  {
+   "t": 97.0,
+   "text": "About 80 percent of CpG sites in IMR90 were methylated, while CpG islands had average methylation below 20 percent."
+  },
+  {
+   "t": 106.6,
+   "text": "The expected promoter-methylation rule held up at genome scale."
+  },
+  {
+   "t": 111.03,
+   "text": "Second, and more surprisingly, they discovered that human embryonic stem cells carry substantial amounts of methylation at non-CpG contexts — particularly CHG and CHH contexts, where H is A, C, or T."
+  },
+  {
+   "t": 126.95,
+   "text": "In differentiated fibroblasts, non-CpG methylation was rare."
+  },
+  {
+   "t": 131.69,
+   "text": "In embryonic stem cells, it accounted for a non-trivial fraction of all 5mC and was concentrated in gene bodies."
+  },
+  {
+   "t": 139.43,
+   "text": "This was new biology that simply could not have been seen without comprehensive base-resolution methylome data — locus-specific bisulfite Sanger studies would never have stumbled across genome-wide non-CpG methylation, because they were focused on CpG islands by design."
+  },
+  {
+   "t": 156.45,
+   "text": "The whole-genome view revealed methylation biology that targeted studies had been blind to."
+  },
+  {
+   "t": 162.25,
+   "text": "The Lister 2009 paper became the template for human methylome studies for the next decade."
+  },
+  {
+   "t": 168.4,
+   "text": "The Roadmap Epigenomics Project, between 2010 and 2015, used WGBS to map the methylomes of dozens of human tissues and cell types."
+  },
+  {
+   "t": 179.93,
+   "text": "The Lister lab and others extended the technique to additional contexts — neurons, induced pluripotent stem cells, cancer cell lines."
+  },
+  {
+   "t": 189.0,
+   "text": "The IHEC — International Human Epigenome Consortium — coordinated a global effort to produce reference methylomes for every major human cell type."
+  },
+  {
+   "t": 199.95,
+   "text": "By 2020, hundreds of human cell types and tissues had publicly available WGBS profiles, all sitting on the foundation laid by the 2009 Lister paper."
+  },
+  {
+   "t": 211.06,
+   "text": "The paper also established the analytical conventions that the field still uses."
+  },
+  {
+   "t": 215.8,
+   "text": "Methylation levels are reported as fractions between 0 and 1 — or equivalently as percentages between 0 and 100 — based on the count of C reads divided by the count of C plus T reads at each cytosine position."
+  },
+  {
+   "t": 231.19,
+   "text": "Coverage thresholds are set at some minimum number of reads, often 5 to 10, below which methylation calls are considered too noisy to use."
+  },
+  {
+   "t": 240.39,
+   "text": "Methylation levels are pooled across CpGs in a region of interest, by some weighted average, to give a region-level methylation summary."
+  },
+  {
+   "t": 249.32,
+   "text": "All of these conventions appear in the 2009 paper and have been carried forward, with minor variations, in every methylation pipeline since."
+  },
+  {
+   "t": 259.24,
+   "text": "For the rest of this lecture, when I say \"WGBS data\" or \"genome-wide methylation profile,\" I mean the kind of dataset that the Lister 2009 paper invented."
+  },
+  {
+   "t": 268.99,
+   "text": "Base-resolution, quantitative, comprehensive, derived from bisulfite-converted Illumina sequencing."
+  },
+  {
+   "t": 275.93,
+   "text": "Hundreds of millions of methylation calls per sample, summarized into a few dozen gigabytes of processed data, ready for downstream analyses like DMR calling, which we'll get to in Segment 9."
+  }
+ ]
+}

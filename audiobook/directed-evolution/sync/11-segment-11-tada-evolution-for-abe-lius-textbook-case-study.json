@@ -1,0 +1,279 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — TadA evolution for ABE — Liu's textbook case study",
+ "duration": 403.95,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — TadA evolution for ABE — Liu's textbook case study"
+  },
+  {
+   "t": 5.89,
+   "text": "Now for the case study I want you to know cold."
+  },
+  {
+   "t": 8.53,
+   "text": "If you took the base-editing lecture, you'll remember that the adenine base editor — ABE — is a fusion of a Cas9 nickase with an adenine deaminase, and the deaminase converts an adenine to an inosine, which gets read as guanine."
+  },
+  {
+   "t": 22.73,
+   "text": "The result is an A-to-G edit, installed without cutting the DNA."
+  },
+  {
+   "t": 27.18,
+   "text": "ABE, with CBE, makes up the two foundational base editors of the David Liu lab."
+  },
+  {
+   "t": 32.89,
+   "text": "What I want to dwell on here is how the adenine deaminase came to be."
+  },
+  {
+   "t": 36.56,
+   "text": "Because the deaminase in ABE is not a natural protein."
+  },
+  {
+   "t": 40.62,
+   "text": "It's an evolved protein."
+  },
+  {
+   "t": 42.25,
+   "text": "It's the product of seven rounds of directed evolution, carried out in the Liu lab in 2016 and 2017, taking a bacterial tRNA-modifying enzyme and pushing it, by iterated mutation and selection, into a DNA-modifying enzyme that didn't exist anywhere in biology."
+  },
+  {
+   "t": 61.19,
+   "text": "Here's the starting point."
+  },
+  {
+   "t": 62.59,
+   "text": "The lab needed an adenine deaminase that worked on DNA."
+  },
+  {
+   "t": 66.19,
+   "text": "They surveyed nature."
+  },
+  {
+   "t": 67.76,
+   "text": "There are plenty of adenine deaminases — but they all act on RNA, or on free adenosine, or on adenine nucleotides."
+  },
+  {
+   "t": 75.75,
+   "text": "None of them act on DNA."
+  },
+  {
+   "t": 77.51,
+   "text": "The natural enzymes that come closest are the tRNA adenosine deaminases, called TadA, which deaminate a specific adenosine in the anticodon loop of certain tRNAs."
+  },
+  {
+   "t": 89.41,
+   "text": "TadA modifies tRNAs; it does not touch DNA."
+  },
+  {
+   "t": 93.08,
+   "text": "Liu's lab took E. coli TadA as the starting scaffold."
+  },
+  {
+   "t": 97.21,
+   "text": "It's small — about 170 amino acids."
+  },
+  {
+   "t": 100.81,
+   "text": "It uses a zinc-dependent deaminase mechanism, similar to APOBEC."
+  },
+  {
+   "t": 105.83,
+   "text": "It's well-characterized structurally."
+  },
+  {
+   "t": 108.3,
+   "text": "And it has the same chemistry the lab needed — deamination of an adenosine ring."
+  },
+  {
+   "t": 113.96,
+   "text": "The only problem was that TadA acts on tRNA, not on DNA, and it has very strict substrate requirements — it cares about the loop structure, the surrounding nucleotides, all of which are tRNA-specific features that DNA doesn't have."
+  },
+  {
+   "t": 129.24,
+   "text": "So the lab set up a directed-evolution campaign."
+  },
+  {
+   "t": 132.43,
+   "text": "The goal: evolve TadA to deaminate adenine in single-stranded DNA, while being delivered to its target by a Cas9 nickase."
+  },
+  {
+   "t": 141.49,
+   "text": "The selection system was clever."
+  },
+  {
+   "t": 143.69,
+   "text": "The lab built a plasmid carrying a defective antibiotic-resistance gene — specifically, a gene where a critical residue had been mutated from an active form to an inactive form by a single A-to-G change."
+  },
+  {
+   "t": 157.36,
+   "text": "The plasmid, in its starting state, did not confer resistance to chloramphenicol."
+  },
+  {
+   "t": 162.94,
+   "text": "But if TadA could deaminate the adenine in the DNA at the right position, the resulting inosine would be read as G during replication, restoring the original active codon and reactivating the resistance gene."
+  },
+  {
+   "t": 176.82,
+   "text": "Cells whose TadA variant did this efficiently would survive on chloramphenicol media."
+  },
+  {
+   "t": 182.36,
+   "text": "Cells whose TadA didn't work would die."
+  },
+  {
+   "t": 184.45,
+   "text": "That's a classic growth-coupled selection."
+  },
+  {
+   "t": 186.97,
+   "text": "The TadA library was made by error-prone PCR."
+  },
+  {
+   "t": 190.16,
+   "text": "Variants were expressed in E. coli alongside a guide RNA and a Cas9 nickase that targeted the defective resistance gene."
+  },
+  {
+   "t": 198.9,
+   "text": "The cells were plated on chloramphenicol."
+  },
+  {
+   "t": 201.41,
+   "text": "The survivors had functional DNA-deaminating TadA."
+  },
+  {
+   "t": 204.82,
+   "text": "Round one."
+  },
+  {
+   "t": 205.66,
+   "text": "The lab made a library."
+  },
+  {
+   "t": 207.26,
+   "text": "They selected on low chloramphenicol."
+  },
+  {
+   "t": 209.68,
+   "text": "A few survivors emerged, carrying mutations that gave TadA some ability to deaminate DNA — much weaker than the activity on tRNA, but nonzero."
+  },
+  {
+   "t": 220.45,
+   "text": "They sequenced the winners."
+  },
+  {
+   "t": 222.15,
+   "text": "The winners' TadA variants were called **TadA*1** — the first evolved generation."
+  },
+  {
+   "t": 228.89,
+   "text": "Round two."
+  },
+  {
+   "t": 229.84,
+   "text": "The TadA1 variants were used as parents."
+  },
+  {
+   "t": 232.65,
+   "text": "Another library was generated."
+  },
+  {
+   "t": 234.65,
+   "text": "The selection was tightened — higher chloramphenicol, demanding more active editing."
+  },
+  {
+   "t": 239.81,
+   "text": "The winners became TadA2."
+  },
+  {
+   "t": 242.01,
+   "text": "And on, and on."
+  },
+  {
+   "t": 243.44,
+   "text": "By round seven, the lab had **TadA*7.10** — a variant carrying about fourteen mutations relative to wild-type E. coli TadA."
+  },
+  {
+   "t": 254.05,
+   "text": "TadA*7.10 efficiently deaminated adenines in single-stranded DNA, at the editing window exposed by Cas9 nickase."
+  },
+  {
+   "t": 264.98,
+   "text": "It was published in 2017 as the deaminase in the canonical ABE — specifically, ABE7.10, which became the first widely used adenine base editor."
+  },
+  {
+   "t": 277.27,
+   "text": "Later work by the Liu lab — published in 2020 — pushed the evolution further with additional rounds, using more sophisticated selection schemes, and produced **TadA*8e**, an even more active and broadly competent DNA adenine deaminase."
+  },
+  {
+   "t": 294.15,
+   "text": "TadA8e is now the workhorse deaminase in modern adenine base editors."
+  },
+  {
+   "t": 299.85,
+   "text": "When you read a paper that uses ABE8e, that's TadA8e doing the chemistry, evolved through what is now closer to ten rounds of directed evolution."
+  },
+  {
+   "t": 310.0,
+   "text": "The pattern is exactly the textbook directed-evolution pattern."
+  },
+  {
+   "t": 313.69,
+   "text": "Start with a natural enzyme close to what you want."
+  },
+  {
+   "t": 317.05,
+   "text": "Set up a selection that rewards the new behavior."
+  },
+  {
+   "t": 320.19,
+   "text": "Run rounds."
+  },
+  {
+   "t": 321.37,
+   "text": "Tighten the selection."
+  },
+  {
+   "t": 322.95,
+   "text": "Run more rounds."
+  },
+  {
+   "t": 324.27,
+   "text": "Eventually you have an enzyme that does something the starting enzyme didn't do, that doesn't exist anywhere in nature, that was discovered — not designed — by iterated mutation and selection."
+  },
+  {
+   "t": 336.99,
+   "text": "The analogy I keep using is that **TadA evolution for ABE is Liu's textbook case — started with a bacterial tRNA-A deaminase, evolved seven generations until it worked on DNA, ending at TadA*8e which is the workhorse of modern adenine base editors**."
+  },
+  {
+   "t": 354.9,
+   "text": "The protein that does the chemistry inside every clinical ABE, including the trials targeting sickle cell disease, hypercholesterolemia, and rare metabolic disorders, is an evolved protein."
+  },
+  {
+   "t": 367.57,
+   "text": "Not a designed protein."
+  },
+  {
+   "t": 369.17,
+   "text": "Not a natural protein."
+  },
+  {
+   "t": 370.72,
+   "text": "A directed-evolved protein, with a lineage you can trace through seven rounds of mutation and selection in a Liu lab freezer."
+  },
+  {
+   "t": 378.75,
+   "text": "If someone asks you, after this lecture, \"give me one example of directed evolution producing a clinically important protein,\" this is the example."
+  },
+  {
+   "t": 387.56,
+   "text": "The deaminase in every modern adenine base editor."
+  },
+  {
+   "t": 391.61,
+   "text": "It's a clean story, it's well-documented, and it shows the full power of the approach — from a bacterial tRNA enzyme to a human gene-therapy tool, in less than two years of evolution."
+  }
+ ]
+}

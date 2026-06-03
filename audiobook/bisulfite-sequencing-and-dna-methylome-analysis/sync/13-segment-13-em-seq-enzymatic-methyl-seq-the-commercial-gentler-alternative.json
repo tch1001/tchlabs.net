@@ -1,0 +1,131 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — EM-seq — enzymatic methyl-seq, the commercial gentler alternative",
+ "duration": 319.04,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — EM-seq — enzymatic methyl-seq, the commercial gentler alternative"
+  },
+  {
+   "t": 6.54,
+   "text": "Around the same time TAPS was being published from the Song lab in Oxford, the molecular biology vendor New England Biolabs (NEB) released a competing bisulfite-free method called enzymatic methyl-seq, or EM-seq."
+  },
+  {
+   "t": 20.11,
+   "text": "The kit launched commercially in 2019 and has since become, in many labs, the de facto replacement for WGBS — particularly for low-input and library-quality-sensitive applications."
+  },
+  {
+   "t": 33.06,
+   "text": "The EM-seq chemistry is, like TAPS, enzymatic in its key conversion step."
+  },
+  {
+   "t": 38.66,
+   "text": "But the enzyme strategy is different."
+  },
+  {
+   "t": 41.29,
+   "text": "EM-seq uses a sequential two-enzyme reaction."
+  },
+  {
+   "t": 44.79,
+   "text": "Step one: TET2 oxidation."
+  },
+  {
+   "t": 47.95,
+   "text": "TET2 enzyme is applied to oxidize 5mC and 5hmC into their oxidized forms (5fC and 5caC); these are now chemically modified and protected from the subsequent deamination step."
+  },
+  {
+   "t": 62.74,
+   "text": "To stop TET2 from over-oxidizing, the reaction also includes an enhancer molecule and is carefully calibrated."
+  },
+  {
+   "t": 70.56,
+   "text": "Step two: APOBEC3A deamination."
+  },
+  {
+   "t": 74.41,
+   "text": "The cytidine deaminase APOBEC3A is then applied; it deaminates unmodified cytosine to uracil, but it cannot deaminate the TET-oxidized derivatives of 5mC and 5hmC."
+  },
+  {
+   "t": 88.46,
+   "text": "So at the end, unmethylated Cs read as Ts (because of deamination to U), while 5mC and 5hmC read as Cs (because they were chemically protected by TET2 oxidation)."
+  },
+  {
+   "t": 101.83,
+   "text": "Note that the readout convention is identical to bisulfite — unmethylated Cs become Ts, methylated Cs stay as Cs — so all the existing bisulfite-style alignment tools (Bismark, BSMAP, methylpy) and DMR-calling pipelines work directly on EM-seq data."
+  },
+  {
+   "t": 121.34,
+   "text": "This is a deliberate design choice by NEB; they wanted EM-seq to be a drop-in replacement for WGBS at the bioinformatics level, so that labs switching to EM-seq don't have to rebuild their analytical pipelines."
+  },
+  {
+   "t": 135.0,
+   "text": "The advantages over bisulfite are similar to TAPS: dramatically less DNA damage, much higher recovery, better library complexity, better representation of GC-rich regions which bisulfite under-samples."
+  },
+  {
+   "t": 149.16,
+   "text": "NEB's own benchmarking showed that EM-seq libraries from 10 nanograms of input were equivalent in quality to bisulfite libraries from 100 nanograms — a tenfold improvement in input sensitivity, which is exactly what clinical liquid biopsy applications need."
+  },
+  {
+   "t": 166.45,
+   "text": "EM-seq libraries also tend to have higher complexity, fewer PCR duplicates, and broader genomic coverage uniformity than bisulfite libraries from the same input."
+  },
+  {
+   "t": 177.07,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 178.85,
+   "text": "EM-seq is NEB's commercial gentler version of bisulfite — uses TET2 plus APOBEC3A enzymes instead of harsh acidic bisulfite, produces cleaner libraries with much less DNA damage, works well from very low input, and is drop-in compatible with existing bisulfite analysis pipelines."
+  },
+  {
+   "t": 200.64,
+   "text": "It's become the default WGBS alternative in many labs, especially for low-input or clinical samples."
+  },
+  {
+   "t": 207.99,
+   "text": "EM-seq, like vanilla bisulfite and TAPS, reads 5mC plus 5hmC together by default."
+  },
+  {
+   "t": 215.7,
+   "text": "NEB sells a separate kit, EM-seq-Hyd, that protects 5hmC via glucosylation before the TET2 step, so that only 5hmC is read; subtracting from standard EM-seq gives you the 5mC signal."
+  },
+  {
+   "t": 230.28,
+   "text": "The same two-experiment design as oxBS, but on the gentler enzymatic chemistry."
+  },
+  {
+   "t": 235.84,
+   "text": "There's also a single-cell variant — scEM-seq — that, combined with appropriate handling, can profile methylation in individual cells."
+  },
+  {
+   "t": 245.26,
+   "text": "The gentleness of the chemistry matters enormously here, because single-cell DNA is by definition limited to picograms, and even small losses are devastating."
+  },
+  {
+   "t": 256.1,
+   "text": "Single-cell EM-seq is now a workable, if expensive, technique for methylation studies of rare cell populations, and we'll return to it in Segment 18."
+  },
+  {
+   "t": 266.0,
+   "text": "The competitive dynamic between EM-seq and TAPS is interesting."
+  },
+  {
+   "t": 270.64,
+   "text": "EM-seq has the advantage of NEB's distribution network, brand recognition, and the drop-in bioinformatics compatibility."
+  },
+  {
+   "t": 278.46,
+   "text": "TAPS has the advantage of the inverse readout (methylated Cs as Ts), which some argue is more analytically convenient because the signal of interest is the changed base rather than the unchanged one."
+  },
+  {
+   "t": 290.71,
+   "text": "Both methods deliver on the central promise: base-resolution genome-wide methylation profiling without bisulfite damage."
+  },
+  {
+   "t": 299.68,
+   "text": "By 2026, the field is gradually shifting away from bisulfite for new work, with EM-seq and TAPS taking over for high-value applications and bisulfite remaining mostly as a legacy method for projects that need backward compatibility with the enormous existing corpus of bisulfite data."
+  }
+ ]
+}

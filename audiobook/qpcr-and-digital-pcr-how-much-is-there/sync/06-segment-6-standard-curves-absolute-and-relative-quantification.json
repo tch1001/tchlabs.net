@@ -1,0 +1,239 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — Standard curves, absolute and relative quantification",
+ "duration": 378.22,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — Standard curves, absolute and relative quantification"
+  },
+  {
+   "t": 4.99,
+   "text": "There are two kinds of qPCR quantification, and they answer two different questions."
+  },
+  {
+   "t": 10.05,
+   "text": "Absolute quantification answers: how many copies of my target are in this sample?"
+  },
+  {
+   "t": 15.36,
+   "text": "Not relative to anything else — just an absolute number, like 12,300 copies per microliter."
+  },
+  {
+   "t": 22.25,
+   "text": "You need this for viral load measurements, for copy number assays, for any time you want a real, dimensional answer."
+  },
+  {
+   "t": 29.09,
+   "text": "Relative quantification answers: how much more target is in sample A compared to sample B?"
+  },
+  {
+   "t": 35.2,
+   "text": "You don't need to know the actual number of copies — you just need to know the ratio."
+  },
+  {
+   "t": 39.51,
+   "text": "You need this for gene expression comparisons, like \"this gene is 4.7-fold upregulated in treated cells compared to control cells."
+  },
+  {
+   "t": 48.3,
+   "text": "\""
+  },
+  {
+   "t": 48.5,
+   "text": "These two flavors of quantification use the same Ct values, but they extract different things from them."
+  },
+  {
+   "t": 55.2,
+   "text": "We'll do absolute first."
+  },
+  {
+   "t": 56.92,
+   "text": "To do absolute quantification, you need a standard curve."
+  },
+  {
+   "t": 60.8,
+   "text": "A standard curve is a series of samples in which you know the exact concentration of target, spanning a wide range."
+  },
+  {
+   "t": 68.22,
+   "text": "You run qPCR on the standards alongside your unknown samples."
+  },
+  {
+   "t": 72.7,
+   "text": "You measure the Ct of each standard."
+  },
+  {
+   "t": 75.49,
+   "text": "You plot Ct on the y-axis and the log of the starting amount on the x-axis."
+  },
+  {
+   "t": 80.54,
+   "text": "The plot should be a straight line — that's the whole point — and you fit a regression line through the points."
+  },
+  {
+   "t": 86.61,
+   "text": "Then you look up your unknown sample's Ct on that line and read off the corresponding starting amount."
+  },
+  {
+   "t": 92.51,
+   "text": "How do you make the standards?"
+  },
+  {
+   "t": 94.16,
+   "text": "Two common approaches."
+  },
+  {
+   "t": 95.62,
+   "text": "The first: take a stock of known concentration of your target — a purified, quantified plasmid carrying the target sequence, or a synthesized gBlock, or a quantified PCR product — and serially dilute it."
+  },
+  {
+   "t": 109.16,
+   "text": "Maybe a ten-fold dilution series: 10⁷ copies per microliter, 10⁶, 10⁵, down to 10¹."
+  },
+  {
+   "t": 118.1,
+   "text": "You run qPCR on each dilution, you measure Ct, you make a plot."
+  },
+  {
+   "t": 123.29,
+   "text": "Your standards span six orders of magnitude."
+  },
+  {
+   "t": 126.47,
+   "text": "Your unknowns should fall somewhere in that range, and you read off their concentration by interpolation."
+  },
+  {
+   "t": 132.99,
+   "text": "The second approach: use a calibrator material that has been quantified by a more fundamental technique — digital PCR, or by mass via UV absorbance — and use that as the anchor."
+  },
+  {
+   "t": 144.88,
+   "text": "WHO international standards exist for many clinical targets (HIV, HCV, HBV) precisely so that different labs can calibrate their qPCR assays against a common reference and report numbers that agree with each other."
+  },
+  {
+   "t": 159.26,
+   "text": "We'll revisit international standards in Segment 17 when we discuss viral load monitoring."
+  },
+  {
+   "t": 165.31,
+   "text": "The standard curve also gives you two important pieces of QC information."
+  },
+  {
+   "t": 170.4,
+   "text": "First, the slope of the line tells you the amplification efficiency."
+  },
+  {
+   "t": 174.9,
+   "text": "If amplification were perfectly doubling every cycle, the slope of the log-linear standard curve would be exactly -3.32 (because log-base-10 of 2 is about 0.301, and 1/0.301 is about 3.32 — so each tenfold dilution shifts Ct by 3.32 cycles)."
+  },
+  {
+   "t": 196.91,
+   "text": "A real assay typically has a slope between -3.1 and -3.6, corresponding to amplification efficiencies between 90% and 110%."
+  },
+  {
+   "t": 208.93,
+   "text": "Outside that range, your assay is misbehaving — primer dimers, inhibitors, or a poorly designed primer pair."
+  },
+  {
+   "t": 216.79,
+   "text": "The slope is your sanity check."
+  },
+  {
+   "t": 218.94,
+   "text": "Second, the R² value of the linear fit tells you how well the dilution series falls on the line."
+  },
+  {
+   "t": 225.45,
+   "text": "An R² of 0.99 or better means your standards are clean and reproducible."
+  },
+  {
+   "t": 231.76,
+   "text": "Below 0.98, you have noise in your dilutions or pipetting, and you can't trust the interpolation."
+  },
+  {
+   "t": 239.07,
+   "text": "Standard curves work well — they're how absolute quantification has been done in qPCR for thirty years."
+  },
+  {
+   "t": 245.71,
+   "text": "But they have real practical headaches."
+  },
+  {
+   "t": 248.46,
+   "text": "You need a well-characterized, stable, accurately quantified stock to make standards from."
+  },
+  {
+   "t": 254.07,
+   "text": "Every time you change lots, you need to recalibrate."
+  },
+  {
+   "t": 257.41,
+   "text": "Different labs making their own standards get different absolute numbers for the same biological sample."
+  },
+  {
+   "t": 263.62,
+   "text": "Standards drift in concentration over time, especially at low concentrations where adsorption to tube walls becomes significant — a dilute stock left in the freezer for six months may not be at the concentration printed on the tube."
+  },
+  {
+   "t": 277.64,
+   "text": "These problems are part of why digital PCR has become attractive in clinical contexts, because as we'll see, digital PCR sidesteps the standard curve entirely."
+  },
+  {
+   "t": 287.92,
+   "text": "Now let's do relative quantification, which is much more common in research labs because most experiments compare samples to each other rather than reporting absolute numbers."
+  },
+  {
+   "t": 298.19,
+   "text": "In relative quantification, you don't care about the absolute starting amount."
+  },
+  {
+   "t": 302.96,
+   "text": "You care about ratios."
+  },
+  {
+   "t": 304.59,
+   "text": "You have a control sample and a treated sample, or a wild-type and a mutant, or a tissue A and a tissue B."
+  },
+  {
+   "t": 312.13,
+   "text": "You want to know whether your gene of interest is more abundant in one than the other, and by how much."
+  },
+  {
+   "t": 317.97,
+   "text": "The basic math is simple."
+  },
+  {
+   "t": 320.14,
+   "text": "If sample A has a Ct of 22 and sample B has a Ct of 24, then sample A had four times more starting template than sample B, because A's Ct is 2 cycles earlier, and 2 cycles is 2² = 4-fold."
+  },
+  {
+   "t": 335.07,
+   "text": "The ratio between two samples is 2 to the negative of the Ct difference."
+  },
+  {
+   "t": 340.33,
+   "text": "But there's a subtle problem."
+  },
+  {
+   "t": 341.79,
+   "text": "The amount of target Ct depends not only on how much target was in the sample, but also on how much total input was in the sample."
+  },
+  {
+   "t": 349.92,
+   "text": "If you put twice as much cDNA into reaction A as into reaction B, you'll get a Ct that's 1 lower in A even if the actual concentration of target per microliter of cell extract is identical."
+  },
+  {
+   "t": 363.46,
+   "text": "To compare meaningfully, you need to normalize for input."
+  },
+  {
+   "t": 367.49,
+   "text": "That's what the ΔΔCt method does, and it's the workhorse calculation of gene expression studies."
+  },
+  {
+   "t": 374.04,
+   "text": "We'll do it carefully in the next segment, because it deserves its own treatment."
+  }
+ ]
+}

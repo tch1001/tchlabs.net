@@ -1,0 +1,195 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — Why GWAS matters, and the fishing-trip frame",
+ "duration": 377.59,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — Why GWAS matters, and the fishing-trip frame"
+  },
+  {
+   "t": 4.25,
+   "text": "Alright."
+  },
+  {
+   "t": 5.04,
+   "text": "Let's get started."
+  },
+  {
+   "t": 6.1,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 7.46,
+   "text": "For the next two hours we are going to talk about a single experimental design — genome-wide association studies, GWAS, pronounced \"gee-wass\" — and the per-person risk numbers that come out of them, polygenic risk scores, PRS."
+  },
+  {
+   "t": 20.66,
+   "text": "These two ideas together define how human geneticists, in the year 2026, take a soup of common DNA variants and try to turn it into something useful — a discovery of disease genes, an estimate of someone's lifetime risk for coronary artery disease, a public-health screening tool, a drug target."
+  },
+  {
+   "t": 39.29,
+   "text": "Here is the first thing you need to know."
+  },
+  {
+   "t": 41.51,
+   "text": "GWAS is not a sequencing experiment."
+  },
+  {
+   "t": 44.9,
+   "text": "GWAS is a statistical experiment."
+  },
+  {
+   "t": 47.9,
+   "text": "The data come from genotyping chips — Illumina or Affymetrix arrays that read off something like one million pre-chosen SNP positions across the genome at a cost of about fifty dollars a sample."
+  },
+  {
+   "t": 60.51,
+   "text": "The chip does not read your whole genome."
+  },
+  {
+   "t": 62.9,
+   "text": "It reads a curated panel of common variants — variants that more than one in a hundred people in the population carry — and then asks a single, sharp, statistical question: do disease cases carry one allele of this SNP more often than healthy controls?"
+  },
+  {
+   "t": 79.99,
+   "text": "That is the entire experimental premise."
+  },
+  {
+   "t": 82.49,
+   "text": "Take ten thousand people with heart disease and ten thousand people without, genotype them all on the same chip, and at each of a million SNP positions, count up the alleles."
+  },
+  {
+   "t": 93.58,
+   "text": "If the A allele shows up in fifty-two percent of the cases but only forty-eight percent of the controls, you have a candidate."
+  },
+  {
+   "t": 100.65,
+   "text": "Multiply that by a million SNPs, throw out everything that does not survive a brutal statistical threshold, and you have your hits."
+  },
+  {
+   "t": 109.65,
+   "text": "Here is the analogy I want you to hold for the next two hours."
+  },
+  {
+   "t": 113.3,
+   "text": "GWAS is the genome-wide fishing trip."
+  },
+  {
+   "t": 116.76,
+   "text": "You cast a million SNPs into the case-control sea, you reel everything in, and you see which ones come back disease-associated."
+  },
+  {
+   "t": 125.19,
+   "text": "Most of the lines come back empty — random noise, no association, the SNP frequency is the same in cases and controls."
+  },
+  {
+   "t": 134.82,
+   "text": "A few lines come back with something on the hook — a SNP whose frequency is genuinely different between the two groups, beyond what chance can explain."
+  },
+  {
+   "t": 144.61,
+   "text": "Those are your hits."
+  },
+  {
+   "t": 145.82,
+   "text": "You did not have a hypothesis about which SNP would matter."
+  },
+  {
+   "t": 149.55,
+   "text": "You cast a million lines blind, and you let the data tell you which ones caught fish."
+  },
+  {
+   "t": 154.18,
+   "text": "That hypothesis-free, brute-force, scan-everything design is what makes GWAS different from candidate-gene studies that came before it."
+  },
+  {
+   "t": 162.78,
+   "text": "In the 1990s and early 2000s, geneticists studying disease would pick a gene they suspected — say, ApoE for Alzheimer's, or the dopamine receptor for schizophrenia — and they would genotype variants in that one gene, and most of the time their hypothesis would not replicate."
+  },
+  {
+   "t": 179.76,
+   "text": "The candidate-gene literature from that era is, charitably, a graveyard of false positives."
+  },
+  {
+   "t": 186.32,
+   "text": "GWAS solved that problem by refusing to have a candidate."
+  },
+  {
+   "t": 190.78,
+   "text": "It tests every common SNP, applies a savage multiple-testing correction, and only the strongest signals — the ones that survive a threshold of five times ten to the minus eight — get to claim a discovery."
+  },
+  {
+   "t": 205.04,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch a Manhattan plot on a whiteboard and explain why the x-axis is chromosomes, the y-axis is minus log ten p-value, and the line at the top is at five times ten to the minus eight; two, explain in plain English what a polygenic risk score is and why a PRS for height works pretty well but a PRS for type-two diabetes is mediocre and why a PRS calibrated on Europeans performs about three times worse in someone of African"
+  },
+  {
+   "t": 236.36,
+   "text": "ancestry; three, look at any genomics paper that says \"we performed a GWAS for trait X and identified N loci, with a polygenic risk score explaining R-squared of Y percent of variance\" and have a real intuition for what those numbers mean — then we have done our job."
+  },
+  {
+   "t": 253.38,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 255.57,
+   "text": "One more orienting fact before we go deeper."
+  },
+  {
+   "t": 258.91,
+   "text": "The NHGRI-EBI GWAS Catalog — the central database of published GWAS results, maintained jointly by the National Human Genome Research Institute and the European Bioinformatics Institute — contained as of early 2026 over two hundred and fifty thousand cataloged SNP-trait associations across more than seven thousand published studies."
+  },
+  {
+   "t": 281.33,
+   "text": "Two hundred and fifty thousand."
+  },
+  {
+   "t": 283.03,
+   "text": "In 2008, the same catalog held a few hundred."
+  },
+  {
+   "t": 287.0,
+   "text": "In twenty years, we went from a handful of GWAS hits to a quarter of a million."
+  },
+  {
+   "t": 292.46,
+   "text": "That growth curve, which we will revisit in Segment 7, is one of the steepest in the history of biology, and it tells you something about both the power and the limits of the design."
+  },
+  {
+   "t": 303.54,
+   "text": "The power: you really can find disease-associated variants by brute-force scanning."
+  },
+  {
+   "t": 308.99,
+   "text": "The limit: most of what you find are tiny effects — odds ratios of one-point-one, one-point-two, one-point-three — that individually do almost nothing but in aggregate, summed across hundreds or thousands of hits, start to add up to a useful risk prediction."
+  },
+  {
+   "t": 325.81,
+   "text": "That summation is the polygenic risk score."
+  },
+  {
+   "t": 328.76,
+   "text": "We will spend a third of this lecture on it."
+  },
+  {
+   "t": 330.96,
+   "text": "So the contract for today."
+  },
+  {
+   "t": 332.58,
+   "text": "We are going to start with the GWAS idea, then walk through the prerequisites that had to be in place before GWAS was possible — HapMap, 1000 Genomes, the biobanks — then we will dissect the Manhattan plot, walk through the 2005 origin paper, talk about the significance threshold and why it is what it is, get serious about linkage disequilibrium, look at the catalog, talk effect sizes, confront missing heritability, get into PRS construction and validation, look at clinical applications, talk"
+  },
+  {
+   "t": 363.88,
+   "text": "about the equity problem, learn what Mendelian randomization is, and finish at the frontier — multi-ancestry meta-analyses, deep-learning PRS, the population-screening question."
+  },
+  {
+   "t": 375.6,
+   "text": "That is the menu."
+  },
+  {
+   "t": 376.71,
+   "text": "Let us eat."
+  }
+ ]
+}

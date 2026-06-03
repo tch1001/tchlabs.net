@@ -1,0 +1,171 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Deep mutational scanning — mapping the whole landscape",
+ "duration": 288.9,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Deep mutational scanning — mapping the whole landscape"
+  },
+  {
+   "t": 5.08,
+   "text": "Let me describe one more method that's worth its own segment, because it's the modern face of directed evolution in many academic labs."
+  },
+  {
+   "t": 13.14,
+   "text": "The method is deep mutational scanning, or DMS, developed primarily by Doug Fowler and Stan Fields at the University of Washington starting around 2010."
+  },
+  {
+   "t": 23.46,
+   "text": "Classical directed evolution is, in a sense, evolving toward one peak."
+  },
+  {
+   "t": 29.69,
+   "text": "You start somewhere, you climb, you end at a better place."
+  },
+  {
+   "t": 33.58,
+   "text": "But you only ever sample the variants on the path you took."
+  },
+  {
+   "t": 36.85,
+   "text": "You don't know what the rest of the landscape looks like."
+  },
+  {
+   "t": 39.55,
+   "text": "There might be a better peak you didn't find, because no random library you generated happened to point toward it."
+  },
+  {
+   "t": 45.61,
+   "text": "Deep mutational scanning takes a different approach."
+  },
+  {
+   "t": 48.94,
+   "text": "Instead of evolving toward one peak, you map the entire local landscape."
+  },
+  {
+   "t": 54.29,
+   "text": "For a protein of, say, three hundred amino acids, there are nineteen possible point mutations at each position — so the total number of single-mutation variants is three hundred times nineteen, or roughly 5,700."
+  },
+  {
+   "t": 68.84,
+   "text": "You can make a library that contains all 5,700 single-mutation variants."
+  },
+  {
+   "t": 74.36,
+   "text": "You can also, with a bit more effort, make a library of every double-mutation variant — maybe 16 million combinations — though that's harder."
+  },
+  {
+   "t": 83.71,
+   "text": "You express the library, you apply a selection or screen, and you measure the abundance of each variant before and after selection."
+  },
+  {
+   "t": 92.06,
+   "text": "Using next-generation sequencing, you read out the frequency of each variant in the input library and the output library."
+  },
+  {
+   "t": 99.47,
+   "text": "The change in frequency tells you the effect of each mutation on the function."
+  },
+  {
+   "t": 104.49,
+   "text": "The output is a heat map of the protein, where each cell shows the fitness effect of substituting one amino acid for another at one position."
+  },
+  {
+   "t": 113.06,
+   "text": "You can see, at a glance, which positions are tolerant of any substitution, which positions are critical, which substitutions improve function, which destroy it."
+  },
+  {
+   "t": 123.89,
+   "text": "The whole protein, fully mapped at single-mutation resolution."
+  },
+  {
+   "t": 128.21,
+   "text": "The analogy I want you to keep is that deep mutational scanning is instead of evolving toward one peak, you map the whole landscape — every single mutation tested in parallel, all the way up to combinations."
+  },
+  {
+   "t": 141.65,
+   "text": "Where classical directed evolution finds you one path up the mountain, DMS gives you a topographic map of the whole region."
+  },
+  {
+   "t": 149.4,
+   "text": "You learn things you can't learn from evolution — which positions are dispensable, which mutations are nearly equivalent, which combinations are likely to be additive versus epistatic."
+  },
+  {
+   "t": 160.22,
+   "text": "DMS has been applied to GFP, to BRCA1, to influenza hemagglutinin, to ACE2, to literally hundreds of proteins."
+  },
+  {
+   "t": 170.39,
+   "text": "The Fowler lab has built it into a routine analysis."
+  },
+  {
+   "t": 173.8,
+   "text": "The data are valuable both as fundamental biology — telling us how proteins work — and as input for downstream engineering."
+  },
+  {
+   "t": 182.88,
+   "text": "If you want to evolve a protein and you have a DMS map of it, you know exactly which positions to target and what substitutions to make."
+  },
+  {
+   "t": 191.07,
+   "text": "Your library design is informed by the map."
+  },
+  {
+   "t": 193.96,
+   "text": "DMS is also informative for disease variant interpretation."
+  },
+  {
+   "t": 198.41,
+   "text": "When a patient has a mutation in some clinically important gene, the doctor needs to know whether that mutation is pathogenic."
+  },
+  {
+   "t": 205.7,
+   "text": "The classical answer involves family pedigrees, structural modeling, and educated guesswork."
+  },
+  {
+   "t": 211.35,
+   "text": "DMS gives you a different answer: just look up the mutation on the heat map and read off its fitness effect in a relevant assay."
+  },
+  {
+   "t": 219.07,
+   "text": "If the mutation is mild on the map, it's probably benign."
+  },
+  {
+   "t": 222.76,
+   "text": "If the mutation destroys function, it's probably pathogenic."
+  },
+  {
+   "t": 226.71,
+   "text": "The Fowler lab and Lea Starita's group have published DMS maps for clinically important genes — BRCA1, PTEN, several others — that are being integrated into variant-interpretation pipelines."
+  },
+  {
+   "t": 240.24,
+   "text": "DMS sits at the boundary between directed evolution and characterization."
+  },
+  {
+   "t": 245.25,
+   "text": "It's not exactly evolution — you're not iterating, you're not climbing — but it uses the same library-plus-selection-plus-sequencing infrastructure that directed evolution uses."
+  },
+  {
+   "t": 256.2,
+   "text": "And it produces a kind of data that ML models love — comprehensive, quantitative, and dense."
+  },
+  {
+   "t": 262.63,
+   "text": "DMS data is often the training data for the ML models that then drive ML-assisted directed evolution."
+  },
+  {
+   "t": 269.91,
+   "text": "So DMS is the modern face of directed evolution in many academic labs."
+  },
+  {
+   "t": 275.55,
+   "text": "Instead of doing six rounds of evolution to optimize a protein, you do one round of DMS to understand the protein, then a focused evolution to push it where you want."
+  },
+  {
+   "t": 285.5,
+   "text": "The map plus the journey, instead of the journey alone."
+  }
+ ]
+}

@@ -1,0 +1,227 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — The prerequisites: HapMap, 1000 Genomes, and the biobanks",
+ "duration": 455.07,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — The prerequisites: HapMap, 1000 Genomes, and the biobanks"
+  },
+  {
+   "t": 6.6,
+   "text": "GWAS did not just appear in 2005."
+  },
+  {
+   "t": 10.6,
+   "text": "It became possible because three separate scientific infrastructure projects, each one a multi-year, multi-million-dollar effort in its own right, finally lined up."
+  },
+  {
+   "t": 20.89,
+   "text": "I want to walk you through them, because the dependency chain matters — if you do not appreciate what had to exist before GWAS could exist, you will not appreciate why it is so hard to do GWAS in populations that those infrastructure projects neglected."
+  },
+  {
+   "t": 35.75,
+   "text": "The first prerequisite is the reference human genome, which we covered in the Human Genome Project lecture."
+  },
+  {
+   "t": 42.0,
+   "text": "By 2003 there is one — a single, finished, reference assembly."
+  },
+  {
+   "t": 47.11,
+   "text": "Without a reference, you have no coordinate system."
+  },
+  {
+   "t": 50.09,
+   "text": "You cannot say \"the SNP at chromosome nine, position twenty-two million\" because there is no chromosome nine, position twenty-two million."
+  },
+  {
+   "t": 58.81,
+   "text": "The reference is the map on which everything else is drawn."
+  },
+  {
+   "t": 62.83,
+   "text": "The second prerequisite is a catalog of common variation — a list of where the common SNPs are in the human genome and how they are arranged."
+  },
+  {
+   "t": 71.3,
+   "text": "This is what the International HapMap Project produced."
+  },
+  {
+   "t": 74.65,
+   "text": "HapMap ran from 2002 to 2005 in its first phase, and through 2009 in its third."
+  },
+  {
+   "t": 81.6,
+   "text": "The goal was to genotype several hundred individuals from a handful of reference populations — Yoruba from Ibadan, Nigeria; Han Chinese from Beijing; Japanese from Tokyo; northern and western Europeans living in Utah, the CEPH samples — at millions of SNP positions, and from that, work out which SNPs travel together on the same chromosomal segments."
+  },
+  {
+   "t": 104.7,
+   "text": "We are going to spend a whole segment on that \"travel together\" property — it is called linkage disequilibrium, LD, and it is the geometric trick that makes GWAS work — but for now, the headline is that HapMap was the catalog."
+  },
+  {
+   "t": 119.05,
+   "text": "It told the field: here are roughly ten million common SNPs in the human genome, here are their allele frequencies in our reference populations, and here are the LD blocks they fall into."
+  },
+  {
+   "t": 131.16,
+   "text": "HapMap is what allowed Illumina and Affymetrix to design genotyping chips — the physical microarrays that read off a curated panel of about a million SNPs per sample."
+  },
+  {
+   "t": 142.56,
+   "text": "Here is the trick."
+  },
+  {
+   "t": 144.09,
+   "text": "There are about ten million common SNPs in the human genome, but you do not need to genotype all of them."
+  },
+  {
+   "t": 150.93,
+   "text": "Because of LD, many SNPs are highly correlated with their neighbors — if you know the allele at one SNP, you can predict the allele at several nearby SNPs with high accuracy."
+  },
+  {
+   "t": 162.72,
+   "text": "So you choose a smaller set of \"tag SNPs\" — maybe five hundred thousand or a million — that capture the variation at the other nine million by virtue of being in LD with them."
+  },
+  {
+   "t": 173.29,
+   "text": "That is what a SNP chip is."
+  },
+  {
+   "t": 175.35,
+   "text": "A clever panel of tag SNPs, selected from HapMap, that lets you reconstruct a person's common-variant genotype across the whole genome by directly genotyping only ten percent of it."
+  },
+  {
+   "t": 187.74,
+   "text": "The third prerequisite is 1000 Genomes, which ran from 2008 to 2015."
+  },
+  {
+   "t": 194.5,
+   "text": "Where HapMap genotyped a few hundred people at a few million SNPs, 1000 Genomes sequenced — actually sequenced, not just genotyped — about twenty-five hundred individuals across twenty-six populations to identify essentially every variant that occurs at greater than one percent frequency anywhere in the human population."
+  },
+  {
+   "t": 216.39,
+   "text": "This produced a vastly more complete catalog of common variation, and crucially, it produced a reference panel that you could use for imputation."
+  },
+  {
+   "t": 225.66,
+   "text": "Imputation is a beautiful trick."
+  },
+  {
+   "t": 228.29,
+   "text": "Your subject was genotyped on a million-SNP chip."
+  },
+  {
+   "t": 231.85,
+   "text": "But because their haplotypes — their chromosomal segments — match haplotypes in the 1000 Genomes reference panel, you can statistically infer their alleles at tens of millions of SNPs that were never on the chip."
+  },
+  {
+   "t": 244.54,
+   "text": "You go from one million genotyped SNPs to about twenty million imputed SNPs per person."
+  },
+  {
+   "t": 251.62,
+   "text": "Same chip, twenty times the resolution."
+  },
+  {
+   "t": 254.47,
+   "text": "Imputation, powered by 1000 Genomes and its successors, is one of the quiet workhorses of the GWAS era."
+  },
+  {
+   "t": 262.97,
+   "text": "The fourth prerequisite, and arguably the one that turned GWAS from a niche tool into an industrial activity, is the biobank."
+  },
+  {
+   "t": 271.68,
+   "text": "Statistical power in GWAS scales roughly with sample size."
+  },
+  {
+   "t": 277.11,
+   "text": "To detect a SNP with an odds ratio of one-point-one — that is, a SNP that increases your disease risk by ten percent — at genome-wide significance, you need tens of thousands of cases."
+  },
+  {
+   "t": 290.16,
+   "text": "To detect an odds ratio of one-point-zero-five — a five-percent increase — you need hundreds of thousands."
+  },
+  {
+   "t": 297.63,
+   "text": "The early GWAS in 2005 and 2006 had a few thousand cases and controls and could only find the strongest signals."
+  },
+  {
+   "t": 306.38,
+   "text": "To find the small ones, the field needed populations."
+  },
+  {
+   "t": 310.21,
+   "text": "The first big one was deCODE in Iceland, founded by Kári Stefánsson in 1996, which assembled genetic data on a large fraction of the Icelandic population — a few hundred thousand individuals — linked to medical records and genealogical records going back centuries."
+  },
+  {
+   "t": 327.77,
+   "text": "Iceland's relative population homogeneity and exhaustive recordkeeping made it a uniquely powerful natural laboratory."
+  },
+  {
+   "t": 335.8,
+   "text": "deCODE published some of the foundational GWAS of the late 2000s."
+  },
+  {
+   "t": 341.22,
+   "text": "Then came UK Biobank, which is, depending on how you count, the most important single dataset in human genetics today."
+  },
+  {
+   "t": 349.17,
+   "text": "UK Biobank recruited five hundred thousand UK residents between 2006 and 2010, took blood samples, genotyped them all on custom arrays, and linked their genetic data to their NHS medical records, lifestyle questionnaires, imaging studies — MRI brain, MRI abdomen, retinal photos, echocardiograms — and now, in a rolling release, whole-exome and whole-genome sequencing data."
+  },
+  {
+   "t": 375.62,
+   "text": "UK Biobank made data available to qualified researchers at low cost, and the result was an explosion of GWAS publications."
+  },
+  {
+   "t": 385.27,
+   "text": "Half of the papers published in human genetics in the last decade rely on UK Biobank in some way."
+  },
+  {
+   "t": 392.05,
+   "text": "It is the workbench."
+  },
+  {
+   "t": 393.35,
+   "text": "Other biobanks followed."
+  },
+  {
+   "t": 394.89,
+   "text": "All of Us, the NIH program launched in 2018, is aiming for a million participants in the United States with a deliberate emphasis on recruiting from ancestry groups underrepresented in UK Biobank — Black, Hispanic, Native American, Asian American."
+  },
+  {
+   "t": 411.11,
+   "text": "FinnGen in Finland, Estonian Biobank, BioBank Japan, Million Veteran Program at the U."
+  },
+  {
+   "t": 417.53,
+   "text": "S."
+  },
+  {
+   "t": 418.41,
+   "text": "Department of Veterans Affairs — there is now a global archipelago of biobanks, each with its own population focus, and the sum of them is the raw material for modern GWAS."
+  },
+  {
+   "t": 430.08,
+   "text": "So the dependency chain."
+  },
+  {
+   "t": 431.68,
+   "text": "Reference genome, then HapMap, then SNP chips, then 1000 Genomes plus imputation, then biobanks."
+  },
+  {
+   "t": 440.3,
+   "text": "Each step took years and cost hundreds of millions of dollars."
+  },
+  {
+   "t": 444.55,
+   "text": "By about 2010 to 2012, all of those pieces were in place, and the GWAS era was off the rails."
+  },
+  {
+   "t": 452.25,
+   "text": "Now let us look at the experimental design itself."
+  }
+ ]
+}

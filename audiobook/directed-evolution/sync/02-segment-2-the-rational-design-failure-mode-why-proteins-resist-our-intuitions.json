@@ -1,0 +1,271 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — The rational-design failure mode — why proteins resist our intuitions",
+ "duration": 377.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — The rational-design failure mode — why proteins resist our intuitions"
+  },
+  {
+   "t": 6.61,
+   "text": "Before we get into the directed-evolution cycle in detail, I want to spend this segment on why rational design — the thing we wish we could do — is so hard."
+  },
+  {
+   "t": 16.81,
+   "text": "Because if you don't feel the difficulty of rational design, you won't appreciate why directed evolution was such a breakthrough."
+  },
+  {
+   "t": 24.59,
+   "text": "And you might be tempted, as a smart undergraduate, to think \"well, with AlphaFold and modern computers, can't we just design these proteins directly now?"
+  },
+  {
+   "t": 33.6,
+   "text": "\" And the answer is: getting better, but still not there for most problems."
+  },
+  {
+   "t": 38.02,
+   "text": "So let me sketch why."
+  },
+  {
+   "t": 39.35,
+   "text": "The first issue is the size of the search space."
+  },
+  {
+   "t": 42.3,
+   "text": "A typical protein is, let's say, three hundred amino acids long."
+  },
+  {
+   "t": 47.26,
+   "text": "Each position can be one of twenty different amino acids."
+  },
+  {
+   "t": 50.56,
+   "text": "So the number of possible sequences of length three hundred is twenty to the three-hundredth."
+  },
+  {
+   "t": 56.41,
+   "text": "That's a number with about three hundred and ninety zeros after it."
+  },
+  {
+   "t": 59.69,
+   "text": "The number of atoms in the observable universe has about eighty zeros after it."
+  },
+  {
+   "t": 64.58,
+   "text": "So the space of possible three-hundred-amino-acid proteins exceeds the number of atoms in the universe by something like ten to the three-hundred-tenth."
+  },
+  {
+   "t": 74.0,
+   "text": "Nature has explored a vanishingly small fraction of this space."
+  },
+  {
+   "t": 78.31,
+   "text": "We're not going to enumerate it."
+  },
+  {
+   "t": 79.97,
+   "text": "We're not going to grid-search it."
+  },
+  {
+   "t": 81.51,
+   "text": "And we can't, with any current method, simulate the fold-and-function of every variant in any meaningful subset."
+  },
+  {
+   "t": 89.64,
+   "text": "The search space is, for practical purposes, infinite."
+  },
+  {
+   "t": 93.44,
+   "text": "The second issue is the folding problem."
+  },
+  {
+   "t": 96.22,
+   "text": "Even if you could sample sequences cleverly, you still have to predict, for each one, what three-dimensional shape it folds into."
+  },
+  {
+   "t": 104.49,
+   "text": "Until very recently — about 2021, with the publication of AlphaFold 2 — protein structure prediction from sequence alone was one of the great unsolved problems in computational biology."
+  },
+  {
+   "t": 116.3,
+   "text": "We could not, reliably, tell you what shape a given amino acid sequence would adopt."
+  },
+  {
+   "t": 121.89,
+   "text": "AlphaFold changed that for most \"normal\" proteins, but it changed it for the case where the protein evolved over a long time in a real cell — where the protein has homologs in databases, where there are evolutionary constraints we can read."
+  },
+  {
+   "t": 136.1,
+   "text": "For a designed protein that doesn't look like anything natural, AlphaFold's predictions are less reliable, and even when the prediction is right, knowing the structure doesn't immediately tell you whether the protein works — whether it catalyzes the reaction you wanted, whether it binds the partner you wanted, whether it's stable enough to survive a manufacturing process."
+  },
+  {
+   "t": 156.56,
+   "text": "The third issue, and this is the one that breaks the most rational-design hearts, is side-chain motion."
+  },
+  {
+   "t": 163.62,
+   "text": "When you look at a crystal structure of a protein, you see a beautiful, clean, frozen snapshot."
+  },
+  {
+   "t": 170.14,
+   "text": "Each side chain has a specific orientation."
+  },
+  {
+   "t": 172.94,
+   "text": "The picture suggests that you could draw the active site as a static arrangement of atoms, and design changes to that static arrangement, and the protein would behave the way the picture suggests."
+  },
+  {
+   "t": 183.88,
+   "text": "But proteins are not static."
+  },
+  {
+   "t": 185.72,
+   "text": "They breathe."
+  },
+  {
+   "t": 186.7,
+   "text": "Side chains rotate on nanosecond timescales."
+  },
+  {
+   "t": 190.01,
+   "text": "Loops sample multiple conformations on microsecond timescales."
+  },
+  {
+   "t": 194.88,
+   "text": "Whole domains hinge open and closed on millisecond timescales."
+  },
+  {
+   "t": 199.15,
+   "text": "The active site you see in the crystal structure is one of many configurations the protein samples."
+  },
+  {
+   "t": 205.66,
+   "text": "The protein does its job by sampling a distribution of states, some of which catalyze the reaction, others of which don't."
+  },
+  {
+   "t": 213.3,
+   "text": "When you mutate a residue, you change that distribution — sometimes in ways that are obvious from the structure, often in ways that are completely surprising."
+  },
+  {
+   "t": 222.64,
+   "text": "A mutation thirty Angstroms from the active site changes the dynamics of a loop that closes over the substrate, which changes the catalytic rate by a factor of a hundred."
+  },
+  {
+   "t": 233.16,
+   "text": "Nobody could have predicted that from the structure."
+  },
+  {
+   "t": 236.51,
+   "text": "The fourth issue is allostery, which is related but worth naming on its own."
+  },
+  {
+   "t": 241.51,
+   "text": "Many proteins have functional sites that communicate with each other across the molecule."
+  },
+  {
+   "t": 247.44,
+   "text": "A binding event at one site changes the shape at a distant site."
+  },
+  {
+   "t": 251.68,
+   "text": "The substrate binds here; the cofactor releases over there."
+  },
+  {
+   "t": 255.69,
+   "text": "This long-range communication runs through the protein along pathways that we still, in 2026, do not really understand."
+  },
+  {
+   "t": 264.33,
+   "text": "We have models — networks of contacts, dynamical correlations, coevolutionary signals — but predicting allosteric effects of point mutations is a research problem, not a tool."
+  },
+  {
+   "t": 275.77,
+   "text": "When you change a residue in a rationally designed protein, you might inadvertently disrupt an allosteric pathway you didn't even know was there."
+  },
+  {
+   "t": 285.19,
+   "text": "So put all this together."
+  },
+  {
+   "t": 286.83,
+   "text": "The search space is enormous."
+  },
+  {
+   "t": 289.12,
+   "text": "The folding rules are subtle and only recently tractable."
+  },
+  {
+   "t": 293.34,
+   "text": "Side chains move."
+  },
+  {
+   "t": 294.63,
+   "text": "Allostery surprises us."
+  },
+  {
+   "t": 296.55,
+   "text": "The result is that, until directed evolution came along, protein engineering by rational design had a low hit rate."
+  },
+  {
+   "t": 304.63,
+   "text": "People would carefully think through an active-site redesign — picking residues based on the crystal structure, simulating the change in a computer — and then they'd actually build the mutant, and it would fold wrong, or it would fold right but catalyze nothing, or it would catalyze the original reaction but slightly worse than wild-type."
+  },
+  {
+   "t": 323.98,
+   "text": "Failure modes everywhere."
+  },
+  {
+   "t": 326.08,
+   "text": "The directed-evolution insight is, in a sense, deeply humble."
+  },
+  {
+   "t": 331.2,
+   "text": "It says: we don't understand the protein well enough to redesign it."
+  },
+  {
+   "t": 335.37,
+   "text": "But we don't have to."
+  },
+  {
+   "t": 336.69,
+   "text": "We can make a library of random variations and let selection tell us which variations work."
+  },
+  {
+   "t": 342.35,
+   "text": "The selection doesn't care why a variant is better."
+  },
+  {
+   "t": 345.4,
+   "text": "It only cares that it's better."
+  },
+  {
+   "t": 347.13,
+   "text": "And that's enough."
+  },
+  {
+   "t": 348.29,
+   "text": "The protein itself is the oracle."
+  },
+  {
+   "t": 351.0,
+   "text": "We ask it questions, and it answers — through fitness, through survival, through the rate at which it converts substrate, through the brightness with which it fluoresces."
+  },
+  {
+   "t": 360.49,
+   "text": "This is, philosophically, the same move that machine learning made when it gave up on hand-engineered features and started learning from data."
+  },
+  {
+   "t": 369.02,
+   "text": "We gave up on hand-engineered protein designs and started learning from selection."
+  },
+  {
+   "t": 373.88,
+   "text": "The protein knows more than we do."
+  },
+  {
+   "t": 376.54,
+   "text": "We let it teach us."
+  }
+ ]
+}

@@ -1,0 +1,151 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Hallucination and inpainting — using folding networks in reverse",
+ "duration": 269.26,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Hallucination and inpainting — using folding networks in reverse"
+  },
+  {
+   "t": 6.36,
+   "text": "In July 2021, two papers came out essentially the same week."
+  },
+  {
+   "t": 10.81,
+   "text": "One was DeepMind's AlphaFold2 paper in Nature."
+  },
+  {
+   "t": 14.34,
+   "text": "The other was Baker's lab's response — a system called RoseTTAFold — published in Science."
+  },
+  {
+   "t": 20.9,
+   "text": "RoseTTAFold was an AlphaFold-style network, smaller and architecturally distinct but operating on similar principles: take a multiple sequence alignment, run it through a transformer-based deep network, output a predicted structure."
+  },
+  {
+   "t": 35.84,
+   "text": "RoseTTAFold's accuracy was roughly halfway between AlphaFold2 and the older Rosetta methods — not as good as AlphaFold2 on hard targets, but far better than anything that had come before in Baker's universe, and crucially, it was open-source code that the lab fully understood and controlled."
+  },
+  {
+   "t": 53.58,
+   "text": "What happened next, in the second half of 2021, is the conceptual move that opened the door to the modern era of de novo design."
+  },
+  {
+   "t": 62.12,
+   "text": "Researchers in Baker's lab — Sergey Ovchinnikov and others — realized that you could run RoseTTAFold in reverse."
+  },
+  {
+   "t": 70.16,
+   "text": "What does that mean?"
+  },
+  {
+   "t": 71.25,
+   "text": "RoseTTAFold takes a sequence and produces a structure."
+  },
+  {
+   "t": 75.06,
+   "text": "But the network is, mathematically, just a function — sequence in, structure out."
+  },
+  {
+   "t": 81.17,
+   "text": "You can pin the output to a target structure that you want, then use gradient descent on the input — the sequence — to find a sequence the network believes will fold to that target."
+  },
+  {
+   "t": 91.44,
+   "text": "The optimization is the same optimization a network does during training, but instead of updating weights to fit a training set, you update the input to make the network's output match your target."
+  },
+  {
+   "t": 102.65,
+   "text": "The Baker lab called this approach hallucination."
+  },
+  {
+   "t": 105.94,
+   "text": "You give the network a structural target — say, an alpha-helical bundle, or a barrel, or a specific binding pocket geometry — and you ask: what sequence does this network believe would fold into that target?"
+  },
+  {
+   "t": 118.91,
+   "text": "You let backpropagation run on the sequence, you optimize, and you get out a candidate sequence."
+  },
+  {
+   "t": 125.22,
+   "text": "Then you predict that sequence's structure independently — using a separate AlphaFold pass, say, on a fresh model — and see if AlphaFold agrees."
+  },
+  {
+   "t": 134.65,
+   "text": "Often it did agree."
+  },
+  {
+   "t": 135.94,
+   "text": "The hallucinated sequences, when checked by AlphaFold, were predicted to fold to the target."
+  },
+  {
+   "t": 141.95,
+   "text": "When expressed in the lab, many of them folded for real."
+  },
+  {
+   "t": 145.35,
+   "text": "This was, in some sense, classical Rosetta design rebuilt on a deep learning substrate — same problem, same idea of optimizing sequence against a structural target, but now the energy function was a giant trained neural network instead of a physics-based score."
+  },
+  {
+   "t": 160.66,
+   "text": "The related technique was called inpainting, by analogy to image inpainting in computer vision."
+  },
+  {
+   "t": 166.96,
+   "text": "In image inpainting, you give the network an image with a missing patch, and the network fills in the patch consistent with the rest."
+  },
+  {
+   "t": 174.35,
+   "text": "In protein inpainting, you give the network a partial structure — say, you fix in place a known catalytic site, three or four residues in a specific geometric arrangement — and you ask the network to build the rest of the protein around it."
+  },
+  {
+   "t": 188.81,
+   "text": "The rest of the protein, the scaffold, is inpainted; the catalytic site is held fixed."
+  },
+  {
+   "t": 195.64,
+   "text": "This turned out to be incredibly useful for enzyme design, where you have a known active site geometry from a real enzyme and you want to graft it into a new scaffold that doesn't have the natural enzyme's other baggage."
+  },
+  {
+   "t": 208.22,
+   "text": "Hallucination and inpainting together, by late 2021 and through 2022, gave Baker's lab a working pipeline that could, in principle, design proteins for arbitrary structural targets."
+  },
+  {
+   "t": 221.69,
+   "text": "The results were better than anything Rosetta had produced."
+  },
+  {
+   "t": 225.75,
+   "text": "The success rate — meaning, fraction of designs that expressed in the lab and folded correctly — jumped from single digits to double digits to, for some classes of design, the majority."
+  },
+  {
+   "t": 238.03,
+   "text": "But there was a better approach coming."
+  },
+  {
+   "t": 240.0,
+   "text": "Hallucination, as a method, was clever but kind of indirect."
+  },
+  {
+   "t": 244.93,
+   "text": "It was using a model trained to predict structures, in reverse, to design them."
+  },
+  {
+   "t": 250.38,
+   "text": "What if you trained a model directly for design?"
+  },
+  {
+   "t": 253.25,
+   "text": "What if, instead of running a folding network backwards, you built a model that was, from the start, a generative model for protein backbones?"
+  },
+  {
+   "t": 261.81,
+   "text": "That model arrived in 2022 and 2023, and it changed the field again."
+  },
+  {
+   "t": 267.45,
+   "text": "It's called RFdiffusion."
+  }
+ ]
+}

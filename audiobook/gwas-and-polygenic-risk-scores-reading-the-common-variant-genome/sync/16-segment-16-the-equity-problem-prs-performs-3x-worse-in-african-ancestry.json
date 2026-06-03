@@ -1,0 +1,215 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — The equity problem: PRS performs 3x worse in African ancestry",
+ "duration": 348.1,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — The equity problem: PRS performs 3x worse in African ancestry"
+  },
+  {
+   "t": 7.2,
+   "text": "I want to spend a whole segment on this, because it is the field's open wound, and you cannot understand the modern state of GWAS and PRS without confronting it."
+  },
+  {
+   "t": 17.05,
+   "text": "Here is the fact."
+  },
+  {
+   "t": 18.59,
+   "text": "The vast majority of GWAS done to date have used samples of European ancestry."
+  },
+  {
+   "t": 24.44,
+   "text": "By some estimates, as of 2024, about seventy-eight percent of GWAS participants were of European ancestry, despite Europeans being only about sixteen percent of the world's population."
+  },
+  {
+   "t": 36.91,
+   "text": "Most of the remainder were East Asian — driven by BioBank Japan and Chinese cohorts."
+  },
+  {
+   "t": 42.67,
+   "text": "African ancestry, despite Africa being the population from which all modern humans descended and harboring the most genetic diversity, made up only a few percent of GWAS participants."
+  },
+  {
+   "t": 54.73,
+   "text": "The consequence is that PRS — which is constructed from those GWAS results — works dramatically better in the populations on which the GWAS was done."
+  },
+  {
+   "t": 64.78,
+   "text": "The numbers, repeatedly demonstrated across traits and studies, are something like this."
+  },
+  {
+   "t": 70.66,
+   "text": "A PRS built from European-ancestry GWAS performs at, say, R-squared of zero-point-four in Europeans."
+  },
+  {
+   "t": 78.86,
+   "text": "Apply the same PRS to East Asians and the R-squared drops to about zero-point-three."
+  },
+  {
+   "t": 84.6,
+   "text": "Apply it to South Asians, about zero-point-twenty-five."
+  },
+  {
+   "t": 88.74,
+   "text": "Apply it to African Americans or to continental African populations, and the R-squared drops to about zero-point-one or zero-point-fifteen."
+  },
+  {
+   "t": 97.76,
+   "text": "The PRS works roughly three times worse in African-ancestry individuals than in the European individuals it was trained on."
+  },
+  {
+   "t": 106.21,
+   "text": "Why is this?"
+  },
+  {
+   "t": 107.4,
+   "text": "Several reasons that compound."
+  },
+  {
+   "t": 109.41,
+   "text": "Reason one: causal variant frequencies differ."
+  },
+  {
+   "t": 112.92,
+   "text": "A variant that is common in Europeans may be rare or absent in Africans, and vice versa."
+  },
+  {
+   "t": 119.05,
+   "text": "If the causal variant for a trait is common in one population and rare in another, the PRS will pick up its signal in one but miss it in the other."
+  },
+  {
+   "t": 127.9,
+   "text": "Reason two: LD structure differs."
+  },
+  {
+   "t": 130.82,
+   "text": "African populations have shorter LD blocks."
+  },
+  {
+   "t": 134.04,
+   "text": "So a tag SNP that successfully captures the causal variant in Europeans — because they are in tight LD — may not capture the same causal variant in Africans, where the LD has been broken by additional generations of recombination."
+  },
+  {
+   "t": 148.49,
+   "text": "The tag fails."
+  },
+  {
+   "t": 149.85,
+   "text": "The signal is lost."
+  },
+  {
+   "t": 151.29,
+   "text": "Reason three: effect sizes can genuinely differ."
+  },
+  {
+   "t": 155.07,
+   "text": "Gene-environment interactions, ancestry-specific modifiers, and population-specific epistasis can all make the same variant behave differently in different populations."
+  },
+  {
+   "t": 165.78,
+   "text": "This is a smaller contributor than the first two, but it is real."
+  },
+  {
+   "t": 169.66,
+   "text": "Reason four: imputation panels are European-biased."
+  },
+  {
+   "t": 173.8,
+   "text": "The reference panels used to impute SNP-chip data to whole-genome resolution have been historically dominated by European samples."
+  },
+  {
+   "t": 182.31,
+   "text": "Imputation accuracy in African samples is lower because the reference haplotypes do not match as well, and that means the GWAS signals you can extract from imputed data are weaker."
+  },
+  {
+   "t": 193.43,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 195.22,
+   "text": "The equity problem is the field's open wound."
+  },
+  {
+   "t": 198.49,
+   "text": "You spent twenty years calibrating an instrument on one population."
+  },
+  {
+   "t": 202.76,
+   "text": "When you try to use it on another population, it does not work as well."
+  },
+  {
+   "t": 206.49,
+   "text": "The instrument is not broken — it just was not designed for that population."
+  },
+  {
+   "t": 211.3,
+   "text": "The fix is to recalibrate, but recalibration requires collecting GWAS data in the underrepresented populations, which requires biobanks, which requires funding, which requires political will."
+  },
+  {
+   "t": 224.22,
+   "text": "There are several efforts underway to fix this."
+  },
+  {
+   "t": 227.26,
+   "text": "Multi-ancestry GWAS meta-analyses combine data across populations, with sample weights that better capture trans-ancestry signals."
+  },
+  {
+   "t": 237.1,
+   "text": "Recent papers from the Pan-UK Biobank effort, the Million Veteran Program, and BioBank Japan have all done multi-ancestry analyses for multiple traits."
+  },
+  {
+   "t": 246.8,
+   "text": "African-specific biobanks — the H3Africa initiative, the African Genome Variation Project, and All of Us in the U."
+  },
+  {
+   "t": 255.0,
+   "text": "S. with its deliberate diversity recruitment — are slowly building the reference datasets needed for African-ancestry PRS."
+  },
+  {
+   "t": 263.76,
+   "text": "Trans-ancestry PRS methods — algorithms designed to combine information across populations, weighting variants by which population's GWAS shows the strongest signal — have started to close the performance gap, though not to eliminate it."
+  },
+  {
+   "t": 279.15,
+   "text": "The equity problem is not just a technical issue."
+  },
+  {
+   "t": 282.42,
+   "text": "It is an ethical one."
+  },
+  {
+   "t": 283.79,
+   "text": "If PRS becomes a standard clinical tool, and PRS works much worse in Black patients than white patients, then deploying PRS in healthcare introduces a new kind of health disparity — one where genomic medicine works better for some patients than others, depending on ancestry."
+  },
+  {
+   "t": 300.92,
+   "text": "The field is acutely aware of this and is trying hard to fix it, but the fix is slow because the underlying data has to be generated, and generating biobank-scale data takes years."
+  },
+  {
+   "t": 312.31,
+   "text": "In the meantime, the recommendation that has emerged is: do not deploy PRS clinically without ancestry-matched calibration."
+  },
+  {
+   "t": 321.05,
+   "text": "If your PRS was trained on Europeans, only use it on Europeans, and either build a separate score for other ancestries or do not offer the test."
+  },
+  {
+   "t": 330.11,
+   "text": "This is the responsible position, and it is slowly becoming standard practice in the better clinical PRS implementations."
+  },
+  {
+   "t": 338.45,
+   "text": "The equity problem is the most important social-policy question in human genetics today."
+  },
+  {
+   "t": 343.99,
+   "text": "Watch the literature on this."
+  },
+  {
+   "t": 345.77,
+   "text": "The field is rapidly evolving."
+  }
+ ]
+}

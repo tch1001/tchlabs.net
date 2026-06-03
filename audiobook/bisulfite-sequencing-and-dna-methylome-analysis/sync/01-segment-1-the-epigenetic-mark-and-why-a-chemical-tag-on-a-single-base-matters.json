@@ -1,0 +1,167 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The epigenetic mark, and why a chemical tag on a single base matters",
+ "duration": 357.96,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The epigenetic mark, and why a chemical tag on a single base matters"
+  },
+  {
+   "t": 5.28,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 6.92,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 8.31,
+   "text": "Today and for the next two hours, we are going to talk about DNA methylation — specifically, about how you measure it across an entire genome, how that measurement got started in 1992 with a single chemistry paper, how it got scaled to whole human genomes by the late 2000s, and how, in the last few years, the field has finally started to escape from the chemistry that defined it for two decades."
+  },
+  {
+   "t": 32.44,
+   "text": "We're going to spend the time on bisulfite sequencing and its successors — the family of methods that map the small chemical tag called 5-methylcytosine, and its cousin 5-hydroxymethylcytosine, base by base, across the three billion letters of the human genome."
+  },
+  {
+   "t": 48.27,
+   "text": "Let me start with a fact that should reorient how you think about the genome."
+  },
+  {
+   "t": 52.51,
+   "text": "The DNA in every cell of your body is, with vanishingly small exceptions, identical."
+  },
+  {
+   "t": 58.86,
+   "text": "A neuron in your cortex, a hepatocyte in your liver, a T cell in your blood, a melanocyte in your skin — same sequence, same three billion letters, same chromosomes."
+  },
+  {
+   "t": 70.88,
+   "text": "And yet these cells are spectacularly different from one another in shape, in function, in lifespan, in which genes are expressed and which are silent."
+  },
+  {
+   "t": 80.74,
+   "text": "The genome is the same; the cells are not."
+  },
+  {
+   "t": 83.65,
+   "text": "The thing that makes them different — the thing that tells a hepatocyte to be a hepatocyte and a neuron to be a neuron, despite having identical instruction manuals — is the epigenome."
+  },
+  {
+   "t": 94.29,
+   "text": "The chemical decorations on the DNA, and on the proteins that package the DNA, that don't change the sequence but do change what gets read out of it."
+  },
+  {
+   "t": 104.2,
+   "text": "The most studied, most stable, and historically the most measurable of all those decorations is DNA methylation."
+  },
+  {
+   "t": 112.05,
+   "text": "And here is the analogy I want you to hold for the next two hours."
+  },
+  {
+   "t": 115.8,
+   "text": "DNA methylation is the epigenetic on-off marker — a small chemical tag, a single methyl group, stuck onto certain cytosines in certain positions, that silences nearby genes without changing the underlying DNA letters."
+  },
+  {
+   "t": 131.44,
+   "text": "That's the picture."
+  },
+  {
+   "t": 132.56,
+   "text": "A methyl group is a carbon atom with three hydrogens — CH3 — about the smallest functional decoration you can attach to anything biological."
+  },
+  {
+   "t": 142.25,
+   "text": "Stuck onto the five-position of a cytosine ring, it converts cytosine into 5-methylcytosine, often abbreviated 5mC."
+  },
+  {
+   "t": 151.05,
+   "text": "The DNA still reads as the same sequence by base pairing."
+  },
+  {
+   "t": 155.46,
+   "text": "But the cell's machinery, particularly the proteins that read chromatin, knows that the methyl group is there, and treats methylated regions differently from unmethylated ones."
+  },
+  {
+   "t": 166.82,
+   "text": "In humans and most other vertebrates, methylation is almost entirely deposited at one specific dinucleotide context — CpG, meaning a cytosine immediately followed by a guanine on the same strand, with the lowercase \"p\" just denoting the phosphate that links them."
+  },
+  {
+   "t": 185.06,
+   "text": "Roughly seventy to eighty percent of all CpG dinucleotides in your genome are methylated at any given moment."
+  },
+  {
+   "t": 193.4,
+   "text": "The remaining twenty or thirty percent are unmethylated, and that unmethylated minority is concentrated in highly important regulatory regions — particularly the so-called CpG islands, which sit at the promoters of about sixty percent of all human genes."
+  },
+  {
+   "t": 210.04,
+   "text": "Where you have an unmethylated CpG island at a promoter, the gene is generally expressed."
+  },
+  {
+   "t": 216.32,
+   "text": "Where you have a methylated CpG island at a promoter, the gene is generally silenced."
+  },
+  {
+   "t": 222.55,
+   "text": "That single rule — methylation at promoters correlates with silencing — is the most reliable rule in all of epigenetics, and it's the one that drove every methylation study from the 1980s through to the modern clinical methylation tests we'll meet at the end of this lecture."
+  },
+  {
+   "t": 239.71,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the bisulfite conversion reaction and explain why it lets you read methylation as a sequence change; two, describe in plain English the difference between whole-genome bisulfite sequencing, RRBS, the Illumina EPIC array, and the gentler enzymatic and nanopore alternatives, and know which to recommend for which study; three, look at any modern paper that says \"we performed bisulfite sequencing and identified"
+  },
+  {
+   "t": 270.38,
+   "text": "differentially methylated regions\" and have a real intuition for what's being claimed, what the noise looks like, and what the biological interpretation is — then we've succeeded."
+  },
+  {
+   "t": 281.15,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 283.45,
+   "text": "One last orienting thought before we dive in."
+  },
+  {
+   "t": 286.76,
+   "text": "Methylation matters clinically."
+  },
+  {
+   "t": 288.75,
+   "text": "Not in some distant theoretical way — right now, in 2026, there are commercial blood tests on the market that try to detect dozens of cancers from a single tube of blood, and the signal they read is methylation."
+  },
+  {
+   "t": 302.16,
+   "text": "There are commercial tests that estimate your biological age from a cheek swab, and the signal they read is methylation."
+  },
+  {
+   "t": 309.14,
+   "text": "There are prenatal tests that use methylation to deconvolve placental versus maternal DNA in maternal plasma."
+  },
+  {
+   "t": 316.54,
+   "text": "Methylation has gone from a basic-science curiosity to a clinical workhorse in about fifteen years, and the measurement technology — bisulfite sequencing and its descendants — is what made that transition possible."
+  },
+  {
+   "t": 329.79,
+   "text": "So this is not just a story about a clever chemistry trick from 1992."
+  },
+  {
+   "t": 334.44,
+   "text": "It's a story about how a single chemical conversion gave the field a window into the epigenome that we are still expanding through."
+  },
+  {
+   "t": 342.71,
+   "text": "So that's the contract."
+  },
+  {
+   "t": 344.25,
+   "text": "Two hours, one chemical mark, and a tour through the methods — old and new — that let you read it."
+  },
+  {
+   "t": 350.98,
+   "text": "Let's start with the biology of methylation itself, because to understand the measurement, you have to understand what's being measured."
+  }
+ ]
+}

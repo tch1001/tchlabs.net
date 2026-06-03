@@ -1,0 +1,187 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Linkage disequilibrium: the indirect-association problem",
+ "duration": 354.44,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Linkage disequilibrium: the indirect-association problem"
+  },
+  {
+   "t": 5.59,
+   "text": "Here is something that will, the first time you grasp it, change how you read GWAS papers."
+  },
+  {
+   "t": 11.62,
+   "text": "Almost none of the SNPs that show up as GWAS hits are the actual causal variants."
+  },
+  {
+   "t": 17.44,
+   "text": "They are nearby SNPs that happen to be statistically correlated with the causal variant — riding along on the same chromosomal haplotype — and therefore show the same allele frequency difference between cases and controls."
+  },
+  {
+   "t": 30.56,
+   "text": "The GWAS hit is the SNP's neighbor, not the SNP itself."
+  },
+  {
+   "t": 35.55,
+   "text": "This phenomenon is called linkage disequilibrium, LD, and it is one of the deepest pieces of population-genetic furniture in the entire field."
+  },
+  {
+   "t": 45.39,
+   "text": "Let me build the concept from scratch."
+  },
+  {
+   "t": 47.84,
+   "text": "When chromosomes recombine during meiosis, they swap segments."
+  },
+  {
+   "t": 52.48,
+   "text": "Over many generations, this recombination breaks up associations between distant variants — alleles that were on the same chromosome a hundred generations ago are very unlikely to still be on the same chromosome today, because so many crossovers have happened in between."
+  },
+  {
+   "t": 69.06,
+   "text": "But over short distances, recombination is rare."
+  },
+  {
+   "t": 72.75,
+   "text": "Two SNPs that are physically close on a chromosome — say, ten kilobases apart — are very likely to still be on the same chromosomal segment, because the probability of a crossover in those ten thousand bases per meiosis is tiny."
+  },
+  {
+   "t": 88.05,
+   "text": "So nearby SNPs travel together."
+  },
+  {
+   "t": 90.76,
+   "text": "If a population has two ancestral haplotypes — one carrying the A allele at SNP one and the C allele at SNP two, and another carrying the G allele at SNP one and the T allele at SNP two — those associations persist across generations as long as the SNPs are close enough that crossovers do not break them up."
+  },
+  {
+   "t": 111.94,
+   "text": "When you genotype an individual at SNP one and find the A allele, you can predict with high confidence that they also carry the C allele at SNP two."
+  },
+  {
+   "t": 121.31,
+   "text": "The two SNPs are in linkage disequilibrium."
+  },
+  {
+   "t": 124.89,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 126.69,
+   "text": "LD is the GWAS catch."
+  },
+  {
+   "t": 129.24,
+   "text": "You cast a million lines into the genome-wide sea."
+  },
+  {
+   "t": 132.44,
+   "text": "You reel one in with a fish on it."
+  },
+  {
+   "t": 134.6,
+   "text": "But the fish is rarely the SNP you actually caught; the fish is the variant a few thousand base pairs away that your SNP is correlated with."
+  },
+  {
+   "t": 143.96,
+   "text": "Your SNP just happens to be holding onto the same chromosomal segment, and the actual causal variant — the one that is biologically doing the work — is somewhere on that same segment, tagged by your SNP but not necessarily the same SNP."
+  },
+  {
+   "t": 158.8,
+   "text": "This has practical consequences."
+  },
+  {
+   "t": 160.95,
+   "text": "When a GWAS reports a hit at, say, rs12345678 in some intergenic region of chromosome twelve, the message is not \"this exact SNP is the causal variant."
+  },
+  {
+   "t": 174.68,
+   "text": "\" The message is \"somewhere in the LD block containing rs12345678, there is a causal variant."
+  },
+  {
+   "t": 183.75,
+   "text": "\" That block might span ten kilobases or two hundred kilobases."
+  },
+  {
+   "t": 188.45,
+   "text": "Inside it, there may be ten or fifty or a hundred SNPs, all in tight LD with the lead hit, all showing roughly the same association statistic."
+  },
+  {
+   "t": 198.46,
+   "text": "Figuring out which one is the actual cause — the variant whose presence actually changes the biology — is a separate, much harder problem called fine-mapping, which we will come back to in Segment 17."
+  },
+  {
+   "t": 211.32,
+   "text": "The structure of LD across the genome is not uniform."
+  },
+  {
+   "t": 215.34,
+   "text": "The genome is organized into LD blocks — chunks of chromosomes a few kilobases to a few hundred kilobases long, where SNPs within a block are tightly correlated, separated by short regions called recombination hotspots where recombination is unusually frequent and LD drops off."
+  },
+  {
+   "t": 234.53,
+   "text": "The HapMap project's central output was a map of these blocks."
+  },
+  {
+   "t": 238.28,
+   "text": "SNP chips are designed to put one or two tag SNPs in each block — those tags then capture the variation of every other SNP in their block, because they are all correlated."
+  },
+  {
+   "t": 249.97,
+   "text": "LD structure differs between populations."
+  },
+  {
+   "t": 252.82,
+   "text": "African populations have shorter LD blocks, because they are older — more generations of recombination have occurred since their common ancestor — and so each haplotype has been broken up more times."
+  },
+  {
+   "t": 265.08,
+   "text": "European and East Asian populations have longer LD blocks, because they descend from smaller founder groups that went through bottlenecks, freezing in long shared haplotypes that have not yet had time to fully recombine."
+  },
+  {
+   "t": 278.63,
+   "text": "This is one of the reasons GWAS results from European samples do not transfer perfectly to African samples — even for the same true causal variant, the tag SNP that captured it in Europeans may not be in LD with it in Africans, and the GWAS hit may simply disappear when you go to an African cohort."
+  },
+  {
+   "t": 297.67,
+   "text": "We will return to this when we get to the equity problem."
+  },
+  {
+   "t": 300.67,
+   "text": "So when you read \"GWAS identified rs9999 at chromosome eleven q-twenty-two associated with trait X,\" you should hear: \"Somewhere in the LD block at chromosome eleven q-twenty-two, there is a variant affecting trait X."
+  },
+  {
+   "t": 317.41,
+   "text": "We do not yet know which one."
+  },
+  {
+   "t": 318.94,
+   "text": "The lead SNP is the most strongly associated one in our data, but in a different population, a different SNP in the same block might be the lead."
+  },
+  {
+   "t": 328.29,
+   "text": "Fine-mapping required to identify the causal variant."
+  },
+  {
+   "t": 332.03,
+   "text": "\""
+  },
+  {
+   "t": 332.23,
+   "text": "That mental translation is the second great fact about GWAS, after the existence of a multiple-testing threshold."
+  },
+  {
+   "t": 340.33,
+   "text": "GWAS finds LD blocks, not causal variants."
+  },
+  {
+   "t": 344.76,
+   "text": "Causal variants require additional work."
+  },
+  {
+   "t": 347.38,
+   "text": "Most GWAS papers tell you a locus, and that locus is the start of a research project, not the end."
+  }
+ ]
+}

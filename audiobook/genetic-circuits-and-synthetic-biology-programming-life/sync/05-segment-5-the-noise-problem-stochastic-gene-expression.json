@@ -1,0 +1,283 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — The noise problem: stochastic gene expression",
+ "duration": 357.39,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — The noise problem: stochastic gene expression"
+  },
+  {
+   "t": 4.56,
+   "text": "I want to spend a segment on what is, by some distance, the deepest engineering problem in synthetic biology."
+  },
+  {
+   "t": 11.97,
+   "text": "It is the problem of noise."
+  },
+  {
+   "t": 13.79,
+   "text": "Here is what I mean."
+  },
+  {
+   "t": 14.9,
+   "text": "Imagine you build a device — say, a simple one."
+  },
+  {
+   "t": 18.31,
+   "text": "A constitutive promoter, an RBS, a coding sequence for green fluorescent protein, a terminator."
+  },
+  {
+   "t": 25.79,
+   "text": "You put it on a plasmid."
+  },
+  {
+   "t": 27.15,
+   "text": "You transform a population of E. coli cells with that plasmid."
+  },
+  {
+   "t": 32.12,
+   "text": "You grow them up."
+  },
+  {
+   "t": 33.08,
+   "text": "You stick them under a microscope."
+  },
+  {
+   "t": 34.9,
+   "text": "Every cell has the same plasmid."
+  },
+  {
+   "t": 37.01,
+   "text": "Every cell has the same DNA."
+  },
+  {
+   "t": 39.38,
+   "text": "Every cell, in principle, is running the same program."
+  },
+  {
+   "t": 43.39,
+   "text": "How bright should each cell be?"
+  },
+  {
+   "t": 45.29,
+   "text": "If biology were like electronics, every cell should be the same brightness."
+  },
+  {
+   "t": 50.45,
+   "text": "They are running the same program with the same parts."
+  },
+  {
+   "t": 53.61,
+   "text": "Output should be deterministic."
+  },
+  {
+   "t": 55.51,
+   "text": "Output should be repeatable."
+  },
+  {
+   "t": 57.23,
+   "text": "What you actually see, when you look, is that the cells vary in brightness by — on a population basis — easily thirty percent, often much more."
+  },
+  {
+   "t": 67.5,
+   "text": "Some cells are dim."
+  },
+  {
+   "t": 68.75,
+   "text": "Some are bright."
+  },
+  {
+   "t": 69.79,
+   "text": "Some are way out on the tail."
+  },
+  {
+   "t": 71.33,
+   "text": "The same gene, on the same plasmid, in genetically identical cells, growing in the same medium, makes hugely different amounts of protein from one cell to the next."
+  },
+  {
+   "t": 82.19,
+   "text": "That variation has a name."
+  },
+  {
+   "t": 83.9,
+   "text": "It is called noise."
+  },
+  {
+   "t": 85.38,
+   "text": "And it is not noise in the engineering sense of \"small Gaussian disturbance on a clean signal."
+  },
+  {
+   "t": 91.54,
+   "text": "\" It is structural."
+  },
+  {
+   "t": 92.79,
+   "text": "It is large."
+  },
+  {
+   "t": 94.01,
+   "text": "It is everywhere."
+  },
+  {
+   "t": 95.36,
+   "text": "Why?"
+  },
+  {
+   "t": 96.08,
+   "text": "The reason is fundamental, and I want to dwell on it."
+  },
+  {
+   "t": 99.56,
+   "text": "Inside a single bacterial cell, there are not thousands of copies of every molecule."
+  },
+  {
+   "t": 105.33,
+   "text": "There are tens."
+  },
+  {
+   "t": 106.46,
+   "text": "There are sometimes ones."
+  },
+  {
+   "t": 108.1,
+   "text": "A typical gene might be transcribed into mRNA at a rate of one transcript every few minutes."
+  },
+  {
+   "t": 115.1,
+   "text": "Each mRNA might be translated into a few hundred protein molecules before it is degraded."
+  },
+  {
+   "t": 120.9,
+   "text": "The events that drive gene expression — a transcription factor binding to a promoter, RNA polymerase initiating, a ribosome landing on an mRNA — are individual, discrete molecular events."
+  },
+  {
+   "t": 135.01,
+   "text": "They happen at specific moments in time."
+  },
+  {
+   "t": 137.76,
+   "text": "They are governed by chemistry, and chemistry, at the level of single molecules, is stochastic."
+  },
+  {
+   "t": 144.24,
+   "text": "You do not get a smooth, continuous flow of transcripts."
+  },
+  {
+   "t": 148.05,
+   "text": "You get random bursts."
+  },
+  {
+   "t": 149.55,
+   "text": "Two cells, side by side, might experience very different sequences of burst events in the same window of time, and end up with very different protein concentrations as a result."
+  },
+  {
+   "t": 160.5,
+   "text": "The analogy I want you to carry: biology runs on stochastic chemistry — gene expression jitters by thirty percent or more, your circuit has to work despite that."
+  },
+  {
+   "t": 171.24,
+   "text": "It is not engineering noise on a clean platonic signal."
+  },
+  {
+   "t": 174.95,
+   "text": "It is the platonic signal that is noisy."
+  },
+  {
+   "t": 177.76,
+   "text": "The noise is the substrate."
+  },
+  {
+   "t": 179.46,
+   "text": "For synthetic biology, this creates a deep design problem."
+  },
+  {
+   "t": 183.69,
+   "text": "If you build a circuit that is supposed to flip from state A to state B when an input crosses a threshold — say, a toggle switch — then noise can flip the switch spontaneously, without any input."
+  },
+  {
+   "t": 196.38,
+   "text": "A cell, randomly experiencing a high-protein excursion, can end up in the wrong state."
+  },
+  {
+   "t": 201.95,
+   "text": "If your circuit relies on precise concentrations of two repressors balancing each other, noise can wreck the balance."
+  },
+  {
+   "t": 209.32,
+   "text": "If your circuit is supposed to oscillate with a clean period, noise scrambles the period."
+  },
+  {
+   "t": 214.47,
+   "text": "Many of the early genetic circuits, including the original 2000 repressilator, oscillated but with very wide period distributions across cells."
+  },
+  {
+   "t": 224.03,
+   "text": "The cells were keeping time, but each cell's clock ran at a slightly different speed, and they drifted out of phase from each other within a generation."
+  },
+  {
+   "t": 232.81,
+   "text": "There are roughly three ways the field has learned to deal with noise."
+  },
+  {
+   "t": 236.95,
+   "text": "First, you can design circuits to be robust to noise — to have wide enough basins of stability that small fluctuations do not flip them."
+  },
+  {
+   "t": 245.29,
+   "text": "The toggle switch, when designed with strongly cooperative repressor binding, can be remarkably robust; the more cooperative the binding, the steeper the switching threshold, the harder it is for random fluctuations to push it over."
+  },
+  {
+   "t": 259.44,
+   "text": "Second, you can build noise-averaging circuits — feedback loops that pull the output back to a setpoint, the same way a thermostat does."
+  },
+  {
+   "t": 268.27,
+   "text": "We will see this in the next segment, on feedback."
+  },
+  {
+   "t": 271.15,
+   "text": "Third, you can exploit noise — you can build circuits that use the variability to make populations diverse, the same way bacteria in nature use noise to ensure that at least some cells in a population are ready for any environment."
+  },
+  {
+   "t": 285.38,
+   "text": "This last approach — noise as feature, not bug — has become a recurring theme in biological engineering."
+  },
+  {
+   "t": 292.63,
+   "text": "One implication of noise that I want to make sure you internalize: you cannot reason about synthetic biology purely at the level of average behavior."
+  },
+  {
+   "t": 302.02,
+   "text": "A circuit that works at the population mean might fail spectacularly in individual cells."
+  },
+  {
+   "t": 308.69,
+   "text": "Conversely, a circuit that looks broken on average — flat fluorescence, say — might be working perfectly well in a fraction of cells that just happen to be in the right state."
+  },
+  {
+   "t": 318.48,
+   "text": "The standard tools for measuring circuits — flow cytometry, single-cell time-lapse microscopy — exist precisely because the field had to learn to see beyond the mean."
+  },
+  {
+   "t": 329.28,
+   "text": "This is one of the deepest cultural differences between synthetic biology and electrical engineering."
+  },
+  {
+   "t": 335.1,
+   "text": "In electronics, you can usually take the mean and move on; the noise is genuinely small."
+  },
+  {
+   "t": 341.22,
+   "text": "In biology, the noise is part of the design surface."
+  },
+  {
+   "t": 344.75,
+   "text": "A good synthetic biologist designs in the presence of noise, not in spite of it."
+  },
+  {
+   "t": 350.17,
+   "text": "Now, with noise framed, let us talk about the most important conceptual tool the field has for taming it: feedback."
+  }
+ ]
+}

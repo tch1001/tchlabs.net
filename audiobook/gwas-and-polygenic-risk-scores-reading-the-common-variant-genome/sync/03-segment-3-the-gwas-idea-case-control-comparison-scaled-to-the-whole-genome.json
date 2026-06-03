@@ -1,0 +1,235 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The GWAS idea: case-control comparison, scaled to the whole genome",
+ "duration": 346.22,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The GWAS idea: case-control comparison, scaled to the whole genome"
+  },
+  {
+   "t": 6.51,
+   "text": "Here is the GWAS experimental design in its simplest form."
+  },
+  {
+   "t": 10.95,
+   "text": "You have two groups of people."
+  },
+  {
+   "t": 12.78,
+   "text": "Group A is cases — people with the disease or trait of interest."
+  },
+  {
+   "t": 17.49,
+   "text": "Group B is controls — people without it."
+  },
+  {
+   "t": 20.4,
+   "text": "You genotype everyone in both groups at the same set of SNPs across the genome."
+  },
+  {
+   "t": 26.49,
+   "text": "At each SNP, you count alleles in the two groups, and you ask: is the allele frequency in cases significantly different from the allele frequency in controls?"
+  },
+  {
+   "t": 37.29,
+   "text": "If the disease has a genetic basis, some SNPs near disease genes should show a frequency difference."
+  },
+  {
+   "t": 44.02,
+   "text": "If the disease is purely environmental, no SNP should show a difference greater than chance."
+  },
+  {
+   "t": 50.75,
+   "text": "The whole logic is a simple two-by-two comparison — disease allele present or absent, case or control — multiplied by millions of independent tests."
+  },
+  {
+   "t": 61.59,
+   "text": "Let me make this concrete."
+  },
+  {
+   "t": 63.23,
+   "text": "Suppose you are studying type-two diabetes."
+  },
+  {
+   "t": 66.0,
+   "text": "You have twenty thousand diabetics — cases — and twenty thousand non-diabetics — controls."
+  },
+  {
+   "t": 72.01,
+   "text": "At a particular SNP, call it rs7903146, in the gene TCF7L2, the T allele has a frequency of about thirty-three percent in the European population."
+  },
+  {
+   "t": 85.4,
+   "text": "In your case group, you observe the T allele at thirty-seven percent."
+  },
+  {
+   "t": 89.99,
+   "text": "In your controls, you observe it at twenty-nine percent."
+  },
+  {
+   "t": 93.35,
+   "text": "That difference — thirty-seven versus twenty-nine — is bigger than what you would expect by chance with samples this large."
+  },
+  {
+   "t": 100.14,
+   "text": "Run a chi-square test, get a p-value of, let us say, ten to the minus fifty."
+  },
+  {
+   "t": 106.06,
+   "text": "That SNP just hit genome-wide significance."
+  },
+  {
+   "t": 109.96,
+   "text": "The T allele of rs7903146 is associated with type-two diabetes."
+  },
+  {
+   "t": 117.34,
+   "text": "The odds ratio is about one-point-four — meaning each copy of the T allele increases your odds of being diabetic by forty percent."
+  },
+  {
+   "t": 125.89,
+   "text": "That, by the way, is a real result."
+  },
+  {
+   "t": 128.05,
+   "text": "TCF7L2 is one of the strongest type-two diabetes hits in the literature."
+  },
+  {
+   "t": 134.04,
+   "text": "Now, multiply that procedure by every SNP on your chip."
+  },
+  {
+   "t": 138.35,
+   "text": "About a million SNPs."
+  },
+  {
+   "t": 140.59,
+   "text": "For each SNP you run the same chi-square test — or the equivalent logistic regression, which lets you adjust for covariates like age, sex, and principal components of ancestry — and you get a p-value."
+  },
+  {
+   "t": 153.79,
+   "text": "You end up with a million p-values, one per SNP."
+  },
+  {
+   "t": 157.19,
+   "text": "If none of the SNPs were truly associated with the disease, you would expect, just by chance, about fifty thousand SNPs to have p-values below zero-point-zero-five, and about ten to have p-values below ten to the minus seven."
+  },
+  {
+   "t": 171.4,
+   "text": "So you cannot use the standard zero-point-zero-five threshold."
+  },
+  {
+   "t": 175.51,
+   "text": "You will be flooded with false positives."
+  },
+  {
+   "t": 177.99,
+   "text": "You need a much stricter threshold, and we will discuss exactly what it is and where it comes from in Segment 5."
+  },
+  {
+   "t": 185.03,
+   "text": "Spoiler: it is five times ten to the minus eight."
+  },
+  {
+   "t": 188.31,
+   "text": "The other thing you have to control for is population structure."
+  },
+  {
+   "t": 192.45,
+   "text": "Suppose your cases happen to be sampled from one geographic region and your controls from another."
+  },
+  {
+   "t": 198.07,
+   "text": "The two regions have slightly different allele frequencies at thousands of SNPs simply because of ancient population history — not because of disease."
+  },
+  {
+   "t": 207.76,
+   "text": "If you naively run the comparison, every one of those frequency differences will look like a disease association."
+  },
+  {
+   "t": 214.32,
+   "text": "This is called population stratification, and it can completely poison a GWAS."
+  },
+  {
+   "t": 220.28,
+   "text": "The fix, worked out in the mid-2000s by people like Alkes Price and Mark Daly, is to compute principal components of the genotype matrix — basically, the top axes of genetic variation across your samples — and include those as covariates in the regression."
+  },
+  {
+   "t": 235.7,
+   "text": "The first few PCs capture continental ancestry, the next few capture finer geographic structure, and adjusting for them strips out the spurious signal."
+  },
+  {
+   "t": 245.78,
+   "text": "PCA correction is standard in every GWAS now."
+  },
+  {
+   "t": 249.95,
+   "text": "The basic statistical machinery is, in spirit, simple."
+  },
+  {
+   "t": 254.36,
+   "text": "For each SNP, you fit a model where disease status is the outcome and genotype, plus age, sex, PCs, is the predictor."
+  },
+  {
+   "t": 264.36,
+   "text": "You read off the regression coefficient — that is your effect size, usually reported as a log odds ratio for binary traits or a beta for continuous traits — and you read off the p-value."
+  },
+  {
+   "t": 276.43,
+   "text": "Then you plot the negative log ten of the p-value for every SNP against its chromosomal position, and that plot is the Manhattan plot."
+  },
+  {
+   "t": 285.45,
+   "text": "Segment 4."
+  },
+  {
+   "t": 286.55,
+   "text": "Let us go."
+  },
+  {
+   "t": 287.43,
+   "text": "But before we plot, let me dwell on what is conceptually radical about this design."
+  },
+  {
+   "t": 292.87,
+   "text": "The GWAS approach throws away every prior assumption about which gene or pathway is involved."
+  },
+  {
+   "t": 299.57,
+   "text": "It does not ask \"is this an autoimmune disease, so we should test HLA?"
+  },
+  {
+   "t": 304.38,
+   "text": "\" or \"this affects metabolism, so we should test the insulin receptor."
+  },
+  {
+   "t": 308.75,
+   "text": "\" It tests everything."
+  },
+  {
+   "t": 310.38,
+   "text": "And one of the great empirical findings of the GWAS era is that disease genes are often not the ones you would have guessed."
+  },
+  {
+   "t": 318.36,
+   "text": "The strongest GWAS hits for schizophrenia are in complement genes that immunologists have studied for years for other reasons."
+  },
+  {
+   "t": 326.2,
+   "text": "The strongest hits for inflammatory bowel disease are in autophagy genes that nobody thought were involved in gut inflammation."
+  },
+  {
+   "t": 333.53,
+   "text": "Hypothesis-free works precisely because human intuition about which genes matter for which diseases has, historically, been poor."
+  },
+  {
+   "t": 342.03,
+   "text": "You let the genome speak."
+  },
+  {
+   "t": 343.82,
+   "text": "The genome says things you did not expect."
+  }
+ ]
+}

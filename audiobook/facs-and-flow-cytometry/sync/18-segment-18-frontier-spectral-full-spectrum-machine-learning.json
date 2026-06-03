@@ -1,0 +1,163 @@
+{
+ "n": 18,
+ "title": "SEGMENT 18 — Frontier: spectral, full-spectrum, machine learning",
+ "duration": 378.47,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 18 — Frontier: spectral, full-spectrum, machine learning"
+  },
+  {
+   "t": 5.31,
+   "text": "Let me close with where the field is heading."
+  },
+  {
+   "t": 7.53,
+   "text": "There are several active directions, and they're all converging on a common future."
+  },
+  {
+   "t": 12.35,
+   "text": "Direction one: more colors, more parameters."
+  },
+  {
+   "t": 16.21,
+   "text": "Spectral cytometry pushed practical panel sizes from 20 colors to 40 colors to, increasingly, 50 colors per cell."
+  },
+  {
+   "t": 24.51,
+   "text": "The fluorochrome chemistry community is producing new dyes at a steady pace — Brilliant dyes from BD, Spark dyes from BioLegend, cFluor dyes from Cytek, custom polymer-based dyes from various groups — each one carving out a slightly different niche in the spectrum."
+  },
+  {
+   "t": 41.59,
+   "text": "There is no clear ceiling on panel size, and 60 or 70 color panels are already being demonstrated in research settings."
+  },
+  {
+   "t": 49.74,
+   "text": "The limit becomes panel design complexity and biological interpretability rather than technical capability."
+  },
+  {
+   "t": 57.16,
+   "text": "Direction two: full-spectrum approaches."
+  },
+  {
+   "t": 60.33,
+   "text": "Beyond just running spectral cytometers with discrete fluorochromes, there is interest in even more general schemes — for instance, barcoded antibody panels where each antibody carries a unique combinatorial code that's decoded computationally, or DNA-barcoded antibodies that can be read out by sequencing instead of fluorescence (techniques like CITE-seq go partway here)."
+  },
+  {
+   "t": 82.76,
+   "text": "These approaches push the dimensionality even higher than fluorescence alone allows."
+  },
+  {
+   "t": 88.41,
+   "text": "Direction three: machine learning for population identification."
+  },
+  {
+   "t": 93.0,
+   "text": "Manual gating — drawing polygons by hand on two-parameter plots — was the original way to define populations in flow data, and it's still the dominant approach in clinical labs."
+  },
+  {
+   "t": 104.61,
+   "text": "But in research, unsupervised clustering algorithms like FlowSOM, PhenoGraph, and UMAP-based clustering have largely taken over for high-parameter data."
+  },
+  {
+   "t": 115.12,
+   "text": "These algorithms cluster cells into groups based on their multi-parameter expression patterns, without you having to specify gates in advance."
+  },
+  {
+   "t": 123.62,
+   "text": "They can find populations you didn't know existed."
+  },
+  {
+   "t": 126.45,
+   "text": "They can quantify shifts between samples without bias toward your prior expectations."
+  },
+  {
+   "t": 131.86,
+   "text": "The frontier is now machine-learning-driven population identification — neural networks trained on large reference datasets to recognize specific cell types from their multi-parameter signatures, even with noisy or partial panels."
+  },
+  {
+   "t": 146.39,
+   "text": "Companies like Cellarity and various academic groups are building tools that, given a new flow dataset, can automatically annotate the major populations, flag novel populations, and even predict functional states."
+  },
+  {
+   "t": 160.59,
+   "text": "The vision is a future where flow cytometry data analysis is essentially automated — you load the file, the software annotates the populations, the report writes itself, and the operator's job becomes quality control and biological interpretation rather than manual gating."
+  },
+  {
+   "t": 178.07,
+   "text": "Direction four: imaging and spatial cytometry."
+  },
+  {
+   "t": 182.3,
+   "text": "Imaging flow cytometry on the Amnis platform was one early step in this direction."
+  },
+  {
+   "t": 188.19,
+   "text": "But there's also a broader movement toward tissue-level multi-parameter imaging — techniques like CODEX, MIBI, IMC (imaging mass cytometry), and CosMx that bring flow-cytometry-style multi-parameter measurement to intact tissue sections."
+  },
+  {
+   "t": 203.93,
+   "text": "The technique is fundamentally different — it's microscopy rather than flow — but the spirit is the same: many parameters per cell, computational identification of populations, high-dimensional analysis of cellular heterogeneity."
+  },
+  {
+   "t": 218.5,
+   "text": "The single-cell field is converging across modalities, and tools that started as flow cytometry analysis (FlowSOM, UMAP, PhenoGraph) are now standard for spatial and imaging data too."
+  },
+  {
+   "t": 231.9,
+   "text": "Direction five: real-time intelligent sorting."
+  },
+  {
+   "t": 235.26,
+   "text": "Modern sorters can already make gating decisions in microseconds and route cells into different tubes based on those decisions."
+  },
+  {
+   "t": 243.76,
+   "text": "The frontier is making those decisions smarter — using on-line machine learning models to recognize complex cellular states from the multi-parameter signal in real time."
+  },
+  {
+   "t": 254.43,
+   "text": "Cellular Research's MACSQuant Tyto uses microfluidic valves rather than droplet deflection for sorting, opening up gentler sorting for sensitive cells."
+  },
+  {
+   "t": 265.42,
+   "text": "BD's FACSDiscover S8 integrates real-time imaging with sorting, so you can sort based on cell morphology, not just fluorescence."
+  },
+  {
+   "t": 274.97,
+   "text": "These hybrid systems are pushing what \"sorting based on phenotype\" can mean."
+  },
+  {
+   "t": 279.31,
+   "text": "The trajectory across all five directions is the same: more information per cell, more cells per experiment, more automation in analysis, more integration with other technologies."
+  },
+  {
+   "t": 291.39,
+   "text": "Flow cytometry started in 1972 with one color, one laser, scatter detectors, and a primitive sorter."
+  },
+  {
+   "t": 299.83,
+   "text": "In 2026, the same fundamental architecture — single-file cells, laser interrogation, multi-parameter measurement, optional sorting — supports 50-color spectral panels, real-time machine learning, and integration with single-cell genomics."
+  },
+  {
+   "t": 316.14,
+   "text": "The basic idea has scaled across five decades and remains the foundational single-cell quantification technique in immunology, oncology, cell biology, hematology, and microbiology."
+  },
+  {
+   "t": 329.41,
+   "text": "If you walk out of here remembering only three things — one, that flow cytometry is an assembly line for cells that measures each one individually at multiple wavelengths; two, that FACS adds physical sorting on top of the measurement so you can isolate any population you can define with antibodies; three, that the whole field traces back to Len Herzenberg in his Stanford basement with Mac the Cell Sorter — you'll have the conceptual scaffolding to understand essentially any flow cytometry"
+  },
+  {
+   "t": 360.93,
+   "text": "result you ever read in a paper, and you'll be set up to learn the operational details when you sit down at the instrument yourself."
+  },
+  {
+   "t": 368.48,
+   "text": "Thank you for your attention over the last two hours."
+  },
+  {
+   "t": 371.58,
+   "text": "Hold on for the appendix — I want to give you a few practical pointers and a short historical timeline as a reference card."
+  }
+ ]
+}

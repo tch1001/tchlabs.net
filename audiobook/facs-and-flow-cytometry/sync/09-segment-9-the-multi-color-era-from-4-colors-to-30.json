@@ -1,0 +1,155 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — The multi-color era: from 4 colors to 30",
+ "duration": 296.69,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — The multi-color era: from 4 colors to 30"
+  },
+  {
+   "t": 5.19,
+   "text": "Let's now zoom out and look at how the field has evolved in terms of how many colors you can use in a single tube — because the trajectory is pretty staggering."
+  },
+  {
+   "t": 14.39,
+   "text": "In the late 1970s, when Mac the Cell Sorter was new, you had one color."
+  },
+  {
+   "t": 19.71,
+   "text": "FITC, basically."
+  },
+  {
+   "t": 21.49,
+   "text": "You could ask, of a cell, \"is FITC bright on this cell, yes or no?"
+  },
+  {
+   "t": 26.88,
+   "text": "\" That was one question per cell, on top of the FSC and SSC scatter measurements."
+  },
+  {
+   "t": 32.71,
+   "text": "Even that was revolutionary, because nobody else could ask any question per cell at all."
+  },
+  {
+   "t": 37.98,
+   "text": "Through the 1980s, the field went to two colors — FITC plus PE, with a single 488 nm laser exciting both — then to three colors with the addition of PerCP and Texas Red."
+  },
+  {
+   "t": 51.98,
+   "text": "By the early 1990s, four-color analysis was state of the art."
+  },
+  {
+   "t": 56.16,
+   "text": "You could simultaneously measure four surface markers per cell, plus FSC and SSC."
+  },
+  {
+   "t": 63.04,
+   "text": "A typical four-color panel might be CD3, CD4, CD8, and a viability marker — enough to ask \"how many T cells, how many helpers, how many killers, alive\" — and that was a serious experiment in 1992."
+  },
+  {
+   "t": 78.41,
+   "text": "Through the late 1990s and into the 2000s, the field jumped to six, eight, ten colors as more lasers were added — second laser, third laser — and more fluorochromes were developed."
+  },
+  {
+   "t": 91.05,
+   "text": "The tandem dye chemistry I mentioned in Segment 6 — PE-Cy5, PE-Cy7, APC-Cy7 — was a huge enabler, because it let one excitation laser drive emission across many wavelength bands."
+  },
+  {
+   "t": 105.5,
+   "text": "By the mid-2000s, with violet lasers and the Brilliant Violet dye family from BD, panels routinely hit fifteen to twenty colors."
+  },
+  {
+   "t": 114.15,
+   "text": "The technique called OMIP, optimized multi-color immunofluorescence panel, was published in a series of papers showing reference panels — fifteen colors, twenty colors, then twenty-eight colors — that could be reproduced by any lab with the right instrument and reagents."
+  },
+  {
+   "t": 131.41,
+   "text": "By the late 2010s and into the 2020s, with spectral cytometry — which we'll talk about in detail later — you could realistically run thirty colors, forty colors in a single tube, with proper unmixing instead of classical compensation."
+  },
+  {
+   "t": 146.16,
+   "text": "The current frontier, on a Cytek Aurora or BD FACSDiscover, is genuinely forty to fifty colors per cell, all simultaneously, all on living cells, at thousands of events per second."
+  },
+  {
+   "t": 159.41,
+   "text": "Why does this matter?"
+  },
+  {
+   "t": 160.61,
+   "text": "Because biology is high-dimensional."
+  },
+  {
+   "t": 163.21,
+   "text": "A T cell isn't just CD3+CD4+ — it's CD3+CD4+CD25+CD127-CCR7-CD45RA-CD27-PD1+TIGIT+ICOS+CXCR5+, with each of those proteins telling you something about lineage, activation state, exhaustion, migration pattern, and effector potential."
+  },
+  {
+   "t": 191.62,
+   "text": "The more proteins you can measure simultaneously on the same cell, the finer-grained your characterization of cell state."
+  },
+  {
+   "t": 198.24,
+   "text": "Four colors gives you T cells."
+  },
+  {
+   "t": 200.43,
+   "text": "Twenty colors gives you exhausted antigen-specific tissue-resident memory T cells with effector function."
+  },
+  {
+   "t": 207.94,
+   "text": "Forty colors lets you do unbiased high-dimensional clustering that finds populations nobody had a name for."
+  },
+  {
+   "t": 214.89,
+   "text": "The price, of course, is complexity."
+  },
+  {
+   "t": 217.49,
+   "text": "A forty-color panel takes weeks to design properly."
+  },
+  {
+   "t": 220.64,
+   "text": "You have to balance fluorochrome brightness against antigen abundance — bright fluorochromes for dim antigens, dim fluorochromes for bright antigens."
+  },
+  {
+   "t": 229.85,
+   "text": "You have to worry about spillover from every channel into every other channel."
+  },
+  {
+   "t": 234.4,
+   "text": "You have to titrate every antibody to find the right concentration."
+  },
+  {
+   "t": 238.99,
+   "text": "You have to do single-color compensation controls and fluorescence-minus-one — FMO — controls to identify where each gate boundary should sit."
+  },
+  {
+   "t": 248.84,
+   "text": "Building a 30-color panel is a real engineering project."
+  },
+  {
+   "t": 252.94,
+   "text": "Once it's built, though, it gives you data that, fifteen years ago, would have required a dozen separate experiments and twice as many cells."
+  },
+  {
+   "t": 261.49,
+   "text": "The trajectory is clear."
+  },
+  {
+   "t": 263.65,
+   "text": "One color in the 1970s, four colors in the early 1990s, ten colors in the 2000s, twenty colors in the 2010s, thirty-plus in the 2020s."
+  },
+  {
+   "t": 273.98,
+   "text": "The doubling time is roughly five to seven years."
+  },
+  {
+   "t": 278.14,
+   "text": "And there's no clear ceiling — the limit isn't the optics or the math, it's the rate at which the dye chemistry community can produce new fluorochromes with sufficiently distinct spectra."
+  },
+  {
+   "t": 289.9,
+   "text": "We'll talk about how spectral cytometry has shifted the math problem in a way that may let us go much further."
+  }
+ ]
+}

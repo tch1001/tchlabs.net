@@ -1,0 +1,291 @@
+{
+ "n": 19,
+ "title": "APPENDIX — Key terms, formulas, and further reading",
+ "duration": 379.72,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX — Key terms, formulas, and further reading"
+  },
+  {
+   "t": 4.1,
+   "text": "This appendix is a reference list, not a continuation of the lecture."
+  },
+  {
+   "t": 8.7,
+   "text": "Use it as a study aid."
+  },
+  {
+   "t": 10.2,
+   "text": "Key terms."
+  },
+  {
+   "t": 11.29,
+   "text": "qPCR (quantitative PCR / real-time PCR): PCR in which the accumulation of product is measured by fluorescence during each cycle."
+  },
+  {
+   "t": 21.23,
+   "text": "Output is the Ct value, related logarithmically to starting amount."
+  },
+  {
+   "t": 26.29,
+   "text": "dPCR (digital PCR): PCR run in thousands or millions of partitions; positive partitions are counted and Poisson statistics convert the count to absolute molecule number."
+  },
+  {
+   "t": 38.26,
+   "text": "Ct (Cq): the cycle at which fluorescence crosses a threshold above background."
+  },
+  {
+   "t": 43.74,
+   "text": "Earlier Ct corresponds to more starting template."
+  },
+  {
+   "t": 47.08,
+   "text": "The MIQE-preferred term is Cq."
+  },
+  {
+   "t": 49.48,
+   "text": "SYBR Green: an intercalating dye that fluoresces when bound to double-stranded DNA."
+  },
+  {
+   "t": 56.51,
+   "text": "Cheap, sensitive, but indiscriminate."
+  },
+  {
+   "t": 59.11,
+   "text": "TaqMan probe: a sequence-specific probe with a fluorophore and quencher; cleavage by Taq's 5′→3′ exonuclease during extension releases the fluorophore and produces a target-specific signal."
+  },
+  {
+   "t": 72.19,
+   "text": "Standard curve: a dilution series of known concentrations used to convert Ct values to absolute concentrations."
+  },
+  {
+   "t": 80.2,
+   "text": "ΔΔCt method: relative quantification by subtracting the reference-gene Ct from the target-gene Ct in each sample, then comparing samples; fold change = 2^(−ΔΔCt)."
+  },
+  {
+   "t": 94.62,
+   "text": "Reference gene: a gene whose expression is assumed stable across conditions; used for normalization."
+  },
+  {
+   "t": 101.61,
+   "text": "Best practice is to use multiple validated reference genes."
+  },
+  {
+   "t": 105.83,
+   "text": "MIQE: Minimum Information for Publication of Quantitative Real-Time PCR Experiments."
+  },
+  {
+   "t": 111.79,
+   "text": "The 2009 reporting standards, refined in 2013, 2020, and continually after."
+  },
+  {
+   "t": 118.49,
+   "text": "LoD / LoQ: Limit of Detection (lowest detectable concentration) and Limit of Quantification (lowest reliably quantifiable concentration)."
+  },
+  {
+   "t": 129.24,
+   "text": "LoD ≤ LoQ."
+  },
+  {
+   "t": 131.3,
+   "text": "RT-qPCR: Reverse Transcription qPCR — RNA is reverse-transcribed to cDNA, then amplified by qPCR."
+  },
+  {
+   "t": 141.38,
+   "text": "The COVID test format."
+  },
+  {
+   "t": 143.01,
+   "text": "ctDNA: circulating tumor DNA — fragments of tumor-derived DNA in plasma."
+  },
+  {
+   "t": 149.71,
+   "text": "cfDNA: cell-free DNA — all DNA fragments in plasma, including ctDNA."
+  },
+  {
+   "t": 156.66,
+   "text": "Poisson distribution: the probability distribution describing rare independent events."
+  },
+  {
+   "t": 162.44,
+   "text": "In dPCR, the distribution of molecules across partitions when λ is the mean per partition."
+  },
+  {
+   "t": 169.05,
+   "text": "Key formulas."
+  },
+  {
+   "t": 170.39,
+   "text": "Fold change between two samples by ΔΔCt: 2^(−ΔΔCt), where ΔΔCt = ΔCt(treated) − ΔCt(control), and ΔCt = Ct(target) − Ct(reference)."
+  },
+  {
+   "t": 188.35,
+   "text": "A 1 Ct difference corresponds to a 2-fold difference in starting amount."
+  },
+  {
+   "t": 193.61,
+   "text": "A 3.32 Ct difference corresponds to a 10-fold difference in starting amount."
+  },
+  {
+   "t": 200.74,
+   "text": "For a standard curve, slope = −1 / log₁₀(efficiency + 1)."
+  },
+  {
+   "t": 207.14,
+   "text": "A slope of −3.32 = 100% efficiency."
+  },
+  {
+   "t": 212.44,
+   "text": "Poisson concentration in dPCR: λ = −ln(1 − K/N), where K is positive partitions and N is total partitions."
+  },
+  {
+   "t": 223.68,
+   "text": "Total target molecules: λ × N."
+  },
+  {
+   "t": 226.62,
+   "text": "Concentration: λ × N / sample volume."
+  },
+  {
+   "t": 229.86,
+   "text": "dPCR counting precision: relative standard deviation ≈ 1/√K, where K is positive count."
+  },
+  {
+   "t": 239.38,
+   "text": "qPCR technical precision: typically 0.3 Cts → ~25% in concentration."
+  },
+  {
+   "t": 246.96,
+   "text": "Foundational references."
+  },
+  {
+   "t": 248.75,
+   "text": "Higuchi et al."
+  },
+  {
+   "t": 250.11,
+   "text": "(1992, 1993) — Real-time PCR concept and first instrument."
+  },
+  {
+   "t": 256.04,
+   "text": "Vogelstein and Kinzler (1999) — \"Digital PCR."
+  },
+  {
+   "t": 261.12,
+   "text": "\" PNAS."
+  },
+  {
+   "t": 262.26,
+   "text": "The original dPCR paper."
+  },
+  {
+   "t": 264.68,
+   "text": "Bustin et al."
+  },
+  {
+   "t": 265.94,
+   "text": "(2009) — \"The MIQE Guidelines."
+  },
+  {
+   "t": 269.02,
+   "text": "\" Clinical Chemistry."
+  },
+  {
+   "t": 270.57,
+   "text": "The qPCR reporting standard."
+  },
+  {
+   "t": 272.86,
+   "text": "Hindson et al."
+  },
+  {
+   "t": 274.15,
+   "text": "(2011) — The Bio-Rad QX100/QX200 droplet digital PCR paper."
+  },
+  {
+   "t": 281.44,
+   "text": "Pinheiro et al."
+  },
+  {
+   "t": 282.79,
+   "text": "(2012) — Evaluation of ddPCR for absolute quantification."
+  },
+  {
+   "t": 288.36,
+   "text": "Huggett et al."
+  },
+  {
+   "t": 289.46,
+   "text": "(2013) — dMIQE Guidelines for digital PCR reporting."
+  },
+  {
+   "t": 294.51,
+   "text": "Clinical and applied references."
+  },
+  {
+   "t": 296.91,
+   "text": "Diehl et al."
+  },
+  {
+   "t": 298.06,
+   "text": "(2008) — Circulating tumor DNA detection by BEAMing (an early predecessor to ddPCR for ctDNA)."
+  },
+  {
+   "t": 305.76,
+   "text": "Bettegowda et al."
+  },
+  {
+   "t": 307.41,
+   "text": "(2014) — ctDNA across solid tumors."
+  },
+  {
+   "t": 312.24,
+   "text": "Sci Transl Med."
+  },
+  {
+   "t": 313.98,
+   "text": "Tie et al."
+  },
+  {
+   "t": 315.23,
+   "text": "(2016, 2022) — ctDNA-guided adjuvant therapy in colon cancer."
+  },
+  {
+   "t": 321.27,
+   "text": "WHO International Standard for HIV-1 RNA — first established in 1999, multiple revisions since."
+  },
+  {
+   "t": 330.25,
+   "text": "CDC SARS-CoV-2 N1/N2 assay — the canonical COVID RT-qPCR."
+  },
+  {
+   "t": 338.88,
+   "text": "Further reading suggestions."
+  },
+  {
+   "t": 340.87,
+   "text": "For a deep but readable text on qPCR theory and practice, Stephen Bustin's \"A-Z of Quantitative PCR\" remains a standard."
+  },
+  {
+   "t": 350.05,
+   "text": "For dPCR practice, the manufacturer manuals from Bio-Rad and Thermo are surprisingly useful and well-written."
+  },
+  {
+   "t": 357.67,
+   "text": "For ctDNA in clinical practice, the ESMO and ASCO ctDNA guidelines are current and authoritative."
+  },
+  {
+   "t": 365.1,
+   "text": "For the COVID era's deployment of RT-qPCR at population scale, the literature is enormous; start with reviews from the CDC, the WHO, and the various national reference laboratories."
+  },
+  {
+   "t": 377.69,
+   "text": "End of lecture."
+  },
+  {
+   "t": 378.75,
+   "text": "Go count."
+  }
+ ]
+}

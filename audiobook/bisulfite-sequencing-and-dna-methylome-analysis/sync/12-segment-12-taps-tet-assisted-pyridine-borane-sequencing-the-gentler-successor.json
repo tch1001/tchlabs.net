@@ -1,0 +1,163 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — TAPS — TET-assisted pyridine borane sequencing, the gentler successor",
+ "duration": 326.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — TAPS — TET-assisted pyridine borane sequencing, the gentler successor"
+  },
+  {
+   "t": 6.96,
+   "text": "The first of the bisulfite-free, base-resolution methylation methods to make a serious commercial impact was TAPS — TET-Assisted Pyridine borane Sequencing, published in 2019 in Nature Biotechnology by Yibin Liu and Chunxiao Song at the University of Oxford."
+  },
+  {
+   "t": 24.32,
+   "text": "The paper, titled \"Bisulfite-free direct detection of 5-methylcytosine and 5-hydroxymethylcytosine at base resolution,\" made a clean break with bisulfite while preserving everything that made bisulfite scientifically attractive — base resolution, genome-wide coverage, quantitative methylation levels."
+  },
+  {
+   "t": 45.05,
+   "text": "The chemistry of TAPS is conceptually inverse to bisulfite."
+  },
+  {
+   "t": 49.26,
+   "text": "Bisulfite converts unmethylated C to T and leaves methylated C intact, so methylated Cs are read as Cs."
+  },
+  {
+   "t": 58.06,
+   "text": "TAPS, by contrast, converts methylated C to T and leaves unmethylated C intact, so the methylated Cs are the ones that show up as a sequence change in the reads."
+  },
+  {
+   "t": 69.14,
+   "text": "Here's the mechanism in three steps."
+  },
+  {
+   "t": 72.12,
+   "text": "Step one: TET enzymatic oxidation."
+  },
+  {
+   "t": 75.44,
+   "text": "A TET enzyme — the same TET that does demethylation in the cell — is applied in vitro to oxidize 5mC and 5hmC all the way to 5-carboxylcytosine (5caC)."
+  },
+  {
+   "t": 89.44,
+   "text": "Both 5mC and 5hmC end up as 5caC after this step; unmethylated C is not touched."
+  },
+  {
+   "t": 97.67,
+   "text": "Step two: pyridine borane reduction."
+  },
+  {
+   "t": 100.66,
+   "text": "A mild chemical reducing agent, pyridine borane, reduces 5caC to dihydrouracil (DHU)."
+  },
+  {
+   "t": 107.95,
+   "text": "The intermediate 5caC, with its carboxyl group, is uniquely susceptible to this reduction; unmodified C is not."
+  },
+  {
+   "t": 116.2,
+   "text": "Step three: standard PCR."
+  },
+  {
+   "t": 118.79,
+   "text": "The polymerase reads DHU as T."
+  },
+  {
+   "t": 121.53,
+   "text": "So at every position that started as 5mC or 5hmC, you now read T; at every position that started as unmethylated C, you still read C."
+  },
+  {
+   "t": 132.82,
+   "text": "The advantages over bisulfite are substantial."
+  },
+  {
+   "t": 136.19,
+   "text": "First, the chemistry is gentle."
+  },
+  {
+   "t": 139.06,
+   "text": "Pyridine borane reduction happens at neutral pH and modest temperature."
+  },
+  {
+   "t": 143.93,
+   "text": "There's no extreme acidity, no extended high-temperature incubation, no extensive depurination."
+  },
+  {
+   "t": 150.75,
+   "text": "DNA recovery is dramatically better — typically over 90 percent of starting DNA survives, compared to bisulfite's 10 to 30 percent."
+  },
+  {
+   "t": 160.82,
+   "text": "Second, longer reads are possible."
+  },
+  {
+   "t": 163.3,
+   "text": "Because the DNA is intact, you can do long-fragment libraries — Pacific Biosciences, Oxford Nanopore, or long-fragment Illumina — that you simply cannot do well with bisulfite-damaged DNA."
+  },
+  {
+   "t": 176.36,
+   "text": "Third, the alphabet is preserved."
+  },
+  {
+   "t": 179.25,
+   "text": "Most Cs in the genome are unmethylated, and TAPS leaves those unmethylated Cs as Cs."
+  },
+  {
+   "t": 186.72,
+   "text": "The reads still have a four-letter alphabet, alignment is much easier, mapping rates approach those of untreated Illumina sequencing."
+  },
+  {
+   "t": 195.06,
+   "text": "There's one trade-off."
+  },
+  {
+   "t": 196.4,
+   "text": "TAPS reads 5mC plus 5hmC together — the TET step oxidizes both — so to discriminate the two marks you need a variant called TAPSβ or chemical-assisted TAPS that protects 5hmC by chemical β-glucosylation before the TET step."
+  },
+  {
+   "t": 213.21,
+   "text": "So discrimination is possible but requires the extra step, much as it does for oxBS or TAB-seq."
+  },
+  {
+   "t": 220.25,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 221.96,
+   "text": "TAPS is the gentler replacement for bisulfite."
+  },
+  {
+   "t": 225.39,
+   "text": "Same single-base resolution, same genome-wide coverage, same quantitative methylation, but the chemistry uses an enzyme and a mild reducing agent instead of harsh acid at high temperature."
+  },
+  {
+   "t": 238.31,
+   "text": "DNA stays largely intact, libraries are higher-quality, you can do long reads, and the read alphabet is preserved."
+  },
+  {
+   "t": 246.44,
+   "text": "It's bisulfite's better-engineered successor."
+  },
+  {
+   "t": 249.8,
+   "text": "TAPS has been adopted relatively slowly, partly because the chemistry was patented and the kits were initially expensive, and partly because the bisulfite-based analytical infrastructure was so entrenched that switching cost was non-trivial."
+  },
+  {
+   "t": 264.68,
+   "text": "But for high-value applications where input is precious or read length matters — particularly liquid biopsy and ancient DNA — TAPS and TAPS-like chemistry have started to displace bisulfite."
+  },
+  {
+   "t": 277.56,
+   "text": "The company Cambridge Epigenetix, founded around the Balasubramanian lab's earlier work and later acquired by biomodal, commercialized TAPS-related technology, including a method called duet evoC that produces methylation, hydroxymethylation, and genetic variant calls simultaneously from a single library prep."
+  },
+  {
+   "t": 297.07,
+   "text": "The TAPS story is an example of how, once a foundational technology has been around long enough, the field's accumulated knowledge of its limitations sets up the demand for a better alternative, and someone — often a chemist who specifically thinks about base modifications — figures out the better chemistry."
+  },
+  {
+   "t": 315.8,
+   "text": "The 5mC discrimination, the input requirement, the read length — all of these were known problems with bisulfite, and TAPS attacks all of them in one chemical move."
+  }
+ ]
+}

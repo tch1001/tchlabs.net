@@ -1,0 +1,183 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — The limitations of bisulfite — DNA damage, 5mC versus 5hmC, and the hidden trouble",
+ "duration": 382.52,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — The limitations of bisulfite — DNA damage, 5mC versus 5hmC, and the hidden trouble"
+  },
+  {
+   "t": 9.3,
+   "text": "Welcome back."
+  },
+  {
+   "t": 10.34,
+   "text": "I hope you stretched your legs and got some coffee."
+  },
+  {
+   "t": 13.1,
+   "text": "We've spent the first nine segments building up the bisulfite-sequencing universe — the chemistry, the genomic-scale assays, the analytical conventions — and now I want to spend the next several segments dismantling some of the assumptions and meeting the next generation of methods that are slowly displacing the bisulfite era."
+  },
+  {
+   "t": 32.5,
+   "text": "Let me lay out, in detail, the three big limitations of bisulfite sequencing."
+  },
+  {
+   "t": 38.49,
+   "text": "Understanding these limitations is essential, because every modern alternative — oxBS, TAPS, EM-seq, nanopore methylation calling — is designed to solve one or more of them."
+  },
+  {
+   "t": 50.23,
+   "text": "If you don't see why bisulfite is limited, you won't appreciate why anyone bothered to replace it."
+  },
+  {
+   "t": 56.56,
+   "text": "Limitation one: DNA damage."
+  },
+  {
+   "t": 59.21,
+   "text": "I mentioned this in Segment 4, but let me put hard numbers on it."
+  },
+  {
+   "t": 62.79,
+   "text": "A typical sodium-bisulfite reaction proceeds at pH 5 and 50 to 70 degrees Celsius for several hours."
+  },
+  {
+   "t": 71.05,
+   "text": "Under these conditions, DNA suffers extensive damage."
+  },
+  {
+   "t": 75.41,
+   "text": "The phosphodiester backbone hydrolyzes, generating single-strand and eventually double-strand breaks."
+  },
+  {
+   "t": 82.47,
+   "text": "Purines depurinate at elevated rates, leaving abasic sites that further destabilize the strand."
+  },
+  {
+   "t": 89.26,
+   "text": "The cumulative effect is that something like 70 to 90 percent of the starting DNA mass is destroyed during bisulfite conversion."
+  },
+  {
+   "t": 97.81,
+   "text": "The DNA that survives is fragmented down to a few hundred base pairs in length and is enriched for shorter fragments."
+  },
+  {
+   "t": 104.79,
+   "text": "For a research project with milligrams of DNA from a tissue culture flask, that loss is annoying but manageable."
+  },
+  {
+   "t": 112.5,
+   "text": "For a precious clinical sample — say, a 20-microliter plasma draw from a cancer patient, containing maybe a few nanograms of cell-free DNA — that loss is catastrophic."
+  },
+  {
+   "t": 124.17,
+   "text": "You start with a tiny amount of input; you lose 80 percent of it to bisulfite damage; you end up with a marginal library, low complexity, full of PCR duplicates because the unique molecule count is so low."
+  },
+  {
+   "t": 137.53,
+   "text": "For applications where input is precious — clinical liquid biopsy, single-cell methylation, formalin-fixed paraffin-embedded tumor samples, ancient DNA — bisulfite damage is the single biggest barrier to getting good data."
+  },
+  {
+   "t": 152.68,
+   "text": "Limitation two: bisulfite cannot distinguish 5mC from 5hmC."
+  },
+  {
+   "t": 158.97,
+   "text": "Remember from Segment 2 that 5-hydroxymethylcytosine is a distinct epigenetic mark, with its own biology, accumulating to several percent of total cytosines in some tissues."
+  },
+  {
+   "t": 171.18,
+   "text": "When you bisulfite-treat DNA, both 5mC and 5hmC fail to convert."
+  },
+  {
+   "t": 177.97,
+   "text": "They both read as C in the sequencing output."
+  },
+  {
+   "t": 181.41,
+   "text": "There is no way, from a standard bisulfite experiment, to tell them apart."
+  },
+  {
+   "t": 186.35,
+   "text": "Every methylation call you make is actually a \"5mC plus 5hmC\" call, with the contribution of 5hmC silently mixed in."
+  },
+  {
+   "t": 196.47,
+   "text": "For most tissues, where 5hmC is rare, this conflation barely matters — the 5mC signal dominates, and treating bisulfite data as a 5mC readout is approximately correct."
+  },
+  {
+   "t": 210.28,
+   "text": "But for tissues where 5hmC is abundant — particularly the brain, where 5hmC can make up 1 to 2 percent of all cytosines and is concentrated in active gene bodies — the conflation can produce systematically misleading results."
+  },
+  {
+   "t": 225.54,
+   "text": "A region that looks \"methylated\" in bisulfite data might actually be hydroxymethylated, with completely different biological implications."
+  },
+  {
+   "t": 235.19,
+   "text": "The Lister and Ecker groups and others demonstrated this clearly in early-2010s papers comparing bisulfite data to specialized 5hmC assays in brain tissue."
+  },
+  {
+   "t": 247.04,
+   "text": "The bisulfite map of brain methylation is, in important regions, actually a map of bisulfite-resistant marks of both flavors, and you can't tell which is which."
+  },
+  {
+   "t": 257.6,
+   "text": "Limitation three: three-base alignment, low information content, and PCR bias."
+  },
+  {
+   "t": 264.19,
+   "text": "The post-bisulfite sequence has essentially no unmethylated Cs — they've all been converted to Ts."
+  },
+  {
+   "t": 271.56,
+   "text": "The effective alphabet of the read drops from four letters to three."
+  },
+  {
+   "t": 275.48,
+   "text": "Reads become harder to align uniquely."
+  },
+  {
+   "t": 278.16,
+   "text": "About 20 to 30 percent of reads in a typical WGBS experiment fail to map uniquely and are discarded."
+  },
+  {
+   "t": 286.39,
+   "text": "The library prep also requires extensive PCR amplification after bisulfite conversion, both because the input is low and because the bisulfite-damaged DNA needs to be expanded to a sequenceable mass."
+  },
+  {
+   "t": 300.49,
+   "text": "PCR amplification introduces sequence-context biases and produces duplicate reads that have to be filtered out, further reducing the effective coverage."
+  },
+  {
+   "t": 311.11,
+   "text": "The three-base problem also affects the design of methylation arrays, where probes have to be designed around the bisulfite-converted sequence and where probe specificity is harder to ensure."
+  },
+  {
+   "t": 322.96,
+   "text": "Some array probes are cross-reactive, binding multiple genomic locations because the three-base converted sequences happen to match in more than one place."
+  },
+  {
+   "t": 333.69,
+   "text": "Lists of cross-reactive probes are maintained for the Illumina arrays, and standard quality control involves dropping those probes from the analysis."
+  },
+  {
+   "t": 342.98,
+   "text": "So bisulfite, the workhorse chemistry of the methylation field for nearly thirty years, has three serious limitations: it damages DNA, it conflates 5mC and 5hmC, and it compresses the sequencing alphabet in ways that hurt alignment and library quality."
+  },
+  {
+   "t": 361.51,
+   "text": "Each of these limitations has motivated a separate methodological response, and the next several segments are about those responses."
+  },
+  {
+   "t": 369.34,
+   "text": "The first response, historically, was a clever chemical addition to bisulfite that resolves the 5mC versus 5hmC ambiguity without abandoning bisulfite itself."
+  },
+  {
+   "t": 381.57,
+   "text": "Let's meet it."
+  }
+ ]
+}

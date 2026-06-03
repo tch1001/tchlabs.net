@@ -1,0 +1,287 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — RT-qPCR: quantifying RNA, the COVID test",
+ "duration": 492.99,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — RT-qPCR: quantifying RNA, the COVID test"
+  },
+  {
+   "t": 5.71,
+   "text": "Welcome back."
+  },
+  {
+   "t": 6.79,
+   "text": "Hopefully you stretched, got some water, maybe replayed the last segment because we covered a lot."
+  },
+  {
+   "t": 12.89,
+   "text": "Now we're going to extend qPCR to RNA — which is, biologically, often what you actually want to measure."
+  },
+  {
+   "t": 19.55,
+   "text": "mRNA expression."
+  },
+  {
+   "t": 21.2,
+   "text": "Viral genomes of RNA viruses."
+  },
+  {
+   "t": 24.11,
+   "text": "Non-coding RNAs."
+  },
+  {
+   "t": 26.55,
+   "text": "Almost all clinical viral load assays in modern medicine measure RNA, not DNA."
+  },
+  {
+   "t": 32.92,
+   "text": "And the trick to extending PCR to RNA is reverse transcription."
+  },
+  {
+   "t": 37.23,
+   "text": "PCR, recall, requires a double-stranded DNA template — Taq polymerase reads DNA, not RNA."
+  },
+  {
+   "t": 45.2,
+   "text": "So if your starting material is RNA, you first need to convert it to DNA."
+  },
+  {
+   "t": 49.89,
+   "text": "That conversion is done by an enzyme called reverse transcriptase, which was originally discovered in retroviruses — HIV, gamma-retroviruses, others — where its job is to copy the viral RNA genome into a DNA form that gets integrated into the host chromosome."
+  },
+  {
+   "t": 67.53,
+   "text": "The lab versions of reverse transcriptase you use today are derived from those viral enzymes, especially MMLV (Moloney Murine Leukemia Virus) reverse transcriptase, often with engineering modifications to improve thermostability and processivity."
+  },
+  {
+   "t": 84.16,
+   "text": "SuperScript III, SuperScript IV, RevertAid, and similar branded reagents are all engineered RTs."
+  },
+  {
+   "t": 91.56,
+   "text": "The combined workflow is: extract RNA from your sample, reverse-transcribe it to complementary DNA, or cDNA, then run qPCR on the cDNA."
+  },
+  {
+   "t": 102.46,
+   "text": "The combined technique is called RT-qPCR — reverse transcription qPCR."
+  },
+  {
+   "t": 107.95,
+   "text": "Note the abbreviation carefully: RT-PCR, without the \"q,\" historically just meant \"reverse transcription PCR\" before quantitative versions existed."
+  },
+  {
+   "t": 117.89,
+   "text": "Now RT-qPCR specifically means the quantitative version."
+  },
+  {
+   "t": 122.53,
+   "text": "Older papers will use RT-PCR ambiguously; modern papers are stricter."
+  },
+  {
+   "t": 128.09,
+   "text": "Here is how a COVID nasal swab gets tested."
+  },
+  {
+   "t": 131.57,
+   "text": "I'm going to walk through this in real-world detail because it's the most globally important application of RT-qPCR in human history."
+  },
+  {
+   "t": 139.86,
+   "text": "Step one: the patient gets swabbed."
+  },
+  {
+   "t": 142.53,
+   "text": "A long swab — initially the deep nasopharyngeal kind, increasingly the shorter mid-turbinate kind — goes up the nose, picks up some mucus and cells from the epithelium, and gets dropped into a tube of viral transport medium."
+  },
+  {
+   "t": 156.61,
+   "text": "The transport medium contains buffer salts, often guanidinium or another denaturant to inactivate the virus and preserve RNA, and the tube is sealed for transport to the lab."
+  },
+  {
+   "t": 168.39,
+   "text": "Step two: the lab extracts RNA."
+  },
+  {
+   "t": 171.3,
+   "text": "Mucus is bound to a silica column, contaminants are washed away, and the purified RNA is eluted in a small volume of water."
+  },
+  {
+   "t": 180.8,
+   "text": "Modern labs do this on robotic platforms — the KingFisher, the QIAsymphony — that can extract RNA from hundreds of samples in parallel."
+  },
+  {
+   "t": 190.45,
+   "text": "Step three: the RNA is reverse-transcribed and amplified in a single tube."
+  },
+  {
+   "t": 196.15,
+   "text": "The master mix contains reverse transcriptase, Taq polymerase, the primers, the TaqMan probe, dNTPs, and buffer."
+  },
+  {
+   "t": 204.68,
+   "text": "The thermal cycler first holds at around 50 degrees for a few minutes — the optimal temperature for the RT enzyme — during which reverse transcription synthesizes cDNA from the viral RNA."
+  },
+  {
+   "t": 216.38,
+   "text": "Then the temperature jumps to 95, denaturing both the RNA-cDNA hybrid and inactivating the RT enzyme."
+  },
+  {
+   "t": 224.32,
+   "text": "Then the PCR cycling begins."
+  },
+  {
+   "t": 226.86,
+   "text": "Forty cycles later, the machine reports a Ct value for each well."
+  },
+  {
+   "t": 232.19,
+   "text": "Step four: the Ct is interpreted."
+  },
+  {
+   "t": 235.36,
+   "text": "Most COVID tests report a positive result when the Ct is below some cutoff, typically 35 or 40."
+  },
+  {
+   "t": 243.28,
+   "text": "The Ct value is generally not reported directly to the patient, but it's available to the lab and to clinicians."
+  },
+  {
+   "t": 250.29,
+   "text": "A patient with a Ct of 16 is highly infectious and likely early in disease."
+  },
+  {
+   "t": 255.78,
+   "text": "A patient with a Ct of 36 might be recovering, or might have just been exposed and not yet shedding much virus."
+  },
+  {
+   "t": 263.48,
+   "text": "The Ct, in the COVID context, became one of the most clinically useful quantitative numbers in modern medicine."
+  },
+  {
+   "t": 269.95,
+   "text": "The dominant CDC-recommended SARS-CoV-2 assay during the pandemic used probes against two regions of the viral nucleocapsid (N) gene — called N1 and N2 — plus a primer-probe set against human RNase P as a sample-adequacy control."
+  },
+  {
+   "t": 287.5,
+   "text": "If RNase P amplified well but N1 and N2 did not, the sample was negative."
+  },
+  {
+   "t": 293.75,
+   "text": "If all three amplified well, the patient was positive."
+  },
+  {
+   "t": 297.49,
+   "text": "If RNase P failed too, the sample was rejected as inadequate."
+  },
+  {
+   "t": 302.47,
+   "text": "That third control — the RNase P — was crucial for distinguishing \"no virus\" from \"no sample."
+  },
+  {
+   "t": 309.32,
+   "text": "\" Without it, you couldn't tell whether a negative test meant the patient was uninfected or whether the swab had simply missed the nose."
+  },
+  {
+   "t": 317.4,
+   "text": "The same template is used in essentially every clinical viral RNA assay."
+  },
+  {
+   "t": 322.46,
+   "text": "HIV, HCV, RSV, influenza, Zika, dengue — all measured by RT-qPCR."
+  },
+  {
+   "t": 330.77,
+   "text": "The targets differ, the primer sets are customized for each virus, and the assays are validated to clinical specifications — but the underlying chemistry is the same."
+  },
+  {
+   "t": 341.95,
+   "text": "Extract RNA, reverse transcribe, qPCR-amplify with a TaqMan probe, interpret the Ct."
+  },
+  {
+   "t": 349.15,
+   "text": "A practical note about RT-qPCR that bites people."
+  },
+  {
+   "t": 353.37,
+   "text": "Reverse transcriptase is the noisy step, not the PCR."
+  },
+  {
+   "t": 357.64,
+   "text": "Reverse transcription efficiency depends on input RNA quality, on RNA secondary structure, on the priming strategy (random hexamers vs. oligo-dT vs. gene-specific), on the enzyme batch."
+  },
+  {
+   "t": 371.02,
+   "text": "Two RT reactions of the same sample can give different cDNA yields."
+  },
+  {
+   "t": 375.81,
+   "text": "If your downstream qPCR is precise to 0.3 Cts but your RT step is variable by 0.5 Cts, your overall precision is limited by the RT step."
+  },
+  {
+   "t": 388.37,
+   "text": "The way to control this is to do the RT step on enough RNA, with high-quality reagents, in technical replicates if precision matters."
+  },
+  {
+   "t": 397.65,
+   "text": "If you're running clinical assays, the RT step is validated and locked down."
+  },
+  {
+   "t": 402.74,
+   "text": "In research, sloppiness here is common, and it's a frequent source of irreproducibility."
+  },
+  {
+   "t": 408.61,
+   "text": "For gene expression studies specifically, the choice of priming strategy in the RT step matters."
+  },
+  {
+   "t": 415.21,
+   "text": "Oligo-dT priming — using a short primer that binds the poly-A tail of mRNAs — captures only polyadenylated transcripts, which is fine for most eukaryotic mRNA work but misses bacterial RNA, viral RNA without a polyA, and many noncoding RNAs."
+  },
+  {
+   "t": 433.24,
+   "text": "Random hexamer priming — using a pool of random 6-base primers — captures everything but at lower efficiency for any individual transcript."
+  },
+  {
+   "t": 443.44,
+   "text": "Gene-specific priming — using the qPCR reverse primer itself as the RT primer — gives maximum specificity but only captures the one target."
+  },
+  {
+   "t": 453.94,
+   "text": "Different applications call for different strategies, and the choice should appear in the methods of any qPCR paper that mentions RT."
+  },
+  {
+   "t": 462.42,
+   "text": "So that's RT-qPCR."
+  },
+  {
+   "t": 464.54,
+   "text": "RNA in, Ct out."
+  },
+  {
+   "t": 466.66,
+   "text": "The most important clinical assay format of the last decade."
+  },
+  {
+   "t": 470.64,
+   "text": "Now we're going to make the conceptual jump that takes the rest of the lecture."
+  },
+  {
+   "t": 474.71,
+   "text": "We've pushed qPCR about as far as it can go on the analog amplification curve."
+  },
+  {
+   "t": 479.29,
+   "text": "To do better — to push precision, to push absolute quantification, to count rare molecules without standards — we need a different paradigm."
+  },
+  {
+   "t": 488.55,
+   "text": "We need to count molecules digitally."
+  },
+  {
+   "t": 491.01,
+   "text": "That's where dPCR comes in."
+  }
+ ]
+}

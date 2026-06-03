@@ -1,0 +1,379 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The ΔΔCt method: normalizing gene expression",
+ "duration": 501.4,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The ΔΔCt method: normalizing gene expression"
+  },
+  {
+   "t": 5.42,
+   "text": "Here is the situation."
+  },
+  {
+   "t": 7.19,
+   "text": "You have two samples — control cells and treated cells."
+  },
+  {
+   "t": 10.93,
+   "text": "You want to know whether the treatment changed the expression of a gene called, say, BDNF."
+  },
+  {
+   "t": 16.55,
+   "text": "The biology you're after is: \"did the treatment make the cells produce more BDNF mRNA?"
+  },
+  {
+   "t": 23.34,
+   "text": "\""
+  },
+  {
+   "t": 23.54,
+   "text": "You extract RNA from both samples."
+  },
+  {
+   "t": 26.54,
+   "text": "You reverse-transcribe the RNA to cDNA — we'll come to RT-qPCR mechanics in Segment 10 — and you run qPCR on the cDNA using primers for BDNF."
+  },
+  {
+   "t": 37.06,
+   "text": "You get a Ct of 26 for control and a Ct of 24 for treated."
+  },
+  {
+   "t": 42.0,
+   "text": "Treated is 2 Cts earlier."
+  },
+  {
+   "t": 44.84,
+   "text": "That looks like a 4-fold upregulation of BDNF in the treated cells."
+  },
+  {
+   "t": 49.46,
+   "text": "But wait."
+  },
+  {
+   "t": 50.36,
+   "text": "Did you put exactly the same amount of cDNA into both reactions?"
+  },
+  {
+   "t": 55.11,
+   "text": "Probably not, even though you tried."
+  },
+  {
+   "t": 57.36,
+   "text": "Pipetting is imperfect."
+  },
+  {
+   "t": 59.1,
+   "text": "RNA extraction yields differ between samples."
+  },
+  {
+   "t": 62.55,
+   "text": "Reverse transcription efficiency varies."
+  },
+  {
+   "t": 65.72,
+   "text": "Even if you measured your RNA concentration before reverse transcription and put in nominally equal amounts, the actual amount of usable cDNA in each tube could differ by 20% or more."
+  },
+  {
+   "t": 78.28,
+   "text": "That alone could move the Ct by a third of a cycle, which is a 25% difference in apparent expression."
+  },
+  {
+   "t": 85.86,
+   "text": "You need to normalize."
+  },
+  {
+   "t": 87.3,
+   "text": "You need to ask: how much BDNF is there relative to how much of some control gene there is — a gene whose expression you have good reason to believe is unchanged by your treatment."
+  },
+  {
+   "t": 98.16,
+   "text": "If you measure both BDNF and a control gene in both samples, you can correct the BDNF Ct by the control Ct, and what remains is the actual biological change in BDNF expression."
+  },
+  {
+   "t": 110.1,
+   "text": "The control gene is called a reference gene or, in older literature, a housekeeping gene."
+  },
+  {
+   "t": 115.64,
+   "text": "The classic reference genes — GAPDH, ACTB (beta-actin), 18S rRNA — are genes assumed to be expressed at constant levels across most cells and conditions."
+  },
+  {
+   "t": 127.95,
+   "text": "They're the housekeepers — the genes everyone needs all the time just to be a cell."
+  },
+  {
+   "t": 133.24,
+   "text": "Their expression is assumed to be invariant."
+  },
+  {
+   "t": 136.07,
+   "text": "We'll critique that assumption hard in the next segment, but for now, let's run with the standard ΔΔCt method."
+  },
+  {
+   "t": 142.71,
+   "text": "Here is the math, step by step."
+  },
+  {
+   "t": 144.95,
+   "text": "Step 1."
+  },
+  {
+   "t": 145.9,
+   "text": "For each sample, measure Ct of your target gene (BDNF) and Ct of your reference gene (say, GAPDH)."
+  },
+  {
+   "t": 154.34,
+   "text": "You now have four Ct values: BDNF in control, GAPDH in control, BDNF in treated, GAPDH in treated."
+  },
+  {
+   "t": 163.84,
+   "text": "Step 2."
+  },
+  {
+   "t": 164.8,
+   "text": "For each sample, compute ΔCt = Ct(target) − Ct(reference)."
+  },
+  {
+   "t": 172.2,
+   "text": "This normalizes for input."
+  },
+  {
+   "t": 174.28,
+   "text": "It's the Ct of your target, expressed as cycles behind the reference."
+  },
+  {
+   "t": 178.8,
+   "text": "If both target and reference have similar starting amounts, ΔCt is small."
+  },
+  {
+   "t": 183.95,
+   "text": "If target is much less abundant than reference, ΔCt is large and positive."
+  },
+  {
+   "t": 189.76,
+   "text": "The ΔCt value is independent of how much total cDNA you put in, because any pipetting error in total input affects both target and reference equally and cancels out in the subtraction."
+  },
+  {
+   "t": 201.51,
+   "text": "Step 3."
+  },
+  {
+   "t": 202.61,
+   "text": "Compute ΔΔCt = ΔCt(treated) − ΔCt(control)."
+  },
+  {
+   "t": 207.3,
+   "text": "This is the change in ΔCt between your two samples."
+  },
+  {
+   "t": 211.09,
+   "text": "It tells you how much the relative abundance of target-to-reference has shifted between conditions."
+  },
+  {
+   "t": 217.07,
+   "text": "Step 4."
+  },
+  {
+   "t": 218.16,
+   "text": "Convert to fold change: fold change = 2^(−ΔΔCt)."
+  },
+  {
+   "t": 224.62,
+   "text": "Why negative?"
+  },
+  {
+   "t": 225.74,
+   "text": "Because earlier Ct is more, not less, and ΔΔCt is a Ct difference, so we have to flip the sign to get a fold change that reads in the intuitive direction — positive ΔΔCt means downregulation, negative ΔΔCt means upregulation."
+  },
+  {
+   "t": 243.85,
+   "text": "If your ΔΔCt comes out to −2, your treated sample has 2² = 4-fold more BDNF expression than control."
+  },
+  {
+   "t": 253.51,
+   "text": "If your ΔΔCt comes out to +1, your treated sample has half as much."
+  },
+  {
+   "t": 259.51,
+   "text": "If your ΔΔCt is zero, no change."
+  },
+  {
+   "t": 263.3,
+   "text": "Let me work the example through."
+  },
+  {
+   "t": 265.32,
+   "text": "Control sample: BDNF Ct = 26, GAPDH Ct = 18."
+  },
+  {
+   "t": 271.54,
+   "text": "ΔCt(control) = 26 − 18 = 8."
+  },
+  {
+   "t": 275.94,
+   "text": "Treated sample: BDNF Ct = 24, GAPDH Ct = 18."
+  },
+  {
+   "t": 282.15,
+   "text": "ΔCt(treated) = 24 − 18 = 6."
+  },
+  {
+   "t": 286.35,
+   "text": "ΔΔCt = 6 − 8 = −2."
+  },
+  {
+   "t": 289.3,
+   "text": "Fold change = 2^(−(−2)) = 2² = 4."
+  },
+  {
+   "t": 296.27,
+   "text": "The treatment caused a 4-fold upregulation of BDNF, normalized to GAPDH."
+  },
+  {
+   "t": 302.45,
+   "text": "Notice that the answer came out the same as the naive uncorrected estimate, because GAPDH was unchanged."
+  },
+  {
+   "t": 310.14,
+   "text": "But suppose GAPDH had drifted."
+  },
+  {
+   "t": 312.7,
+   "text": "Suppose treated GAPDH was 17 (slightly more cDNA input) instead of 18."
+  },
+  {
+   "t": 319.34,
+   "text": "Then ΔCt(treated) = 24 − 17 = 7, ΔΔCt = 7 − 8 = −1, fold change = 2¹ = 2."
+  },
+  {
+   "t": 327.94,
+   "text": "Now the BDNF upregulation is only 2-fold."
+  },
+  {
+   "t": 331.74,
+   "text": "The reference gene caught the input imbalance and corrected for it."
+  },
+  {
+   "t": 335.9,
+   "text": "That's what normalization does."
+  },
+  {
+   "t": 337.76,
+   "text": "ΔΔCt is the workhorse method for relative gene expression."
+  },
+  {
+   "t": 342.62,
+   "text": "It's beautifully simple."
+  },
+  {
+   "t": 344.19,
+   "text": "It requires no standard curve."
+  },
+  {
+   "t": 346.42,
+   "text": "It cancels out pipetting errors."
+  },
+  {
+   "t": 348.69,
+   "text": "Done well, it gives you reliable fold-change estimates for biological comparisons."
+  },
+  {
+   "t": 354.55,
+   "text": "It's used in tens of thousands of papers every year."
+  },
+  {
+   "t": 358.11,
+   "text": "But it has two big assumptions that, if violated, make the answer meaningless."
+  },
+  {
+   "t": 363.67,
+   "text": "Assumption one: the reference gene is truly unchanged between conditions."
+  },
+  {
+   "t": 369.07,
+   "text": "GAPDH is not actually a constant."
+  },
+  {
+   "t": 371.76,
+   "text": "It changes with hypoxia, with cell density, with metabolic state, with disease."
+  },
+  {
+   "t": 377.46,
+   "text": "ACTB changes during cytoskeletal remodeling."
+  },
+  {
+   "t": 381.1,
+   "text": "18S rRNA is at such enormous abundance — 80% of total cellular RNA — that it's hard to measure accurately on the same dilution as a moderate-abundance mRNA."
+  },
+  {
+   "t": 392.91,
+   "text": "In every gene expression experiment, choosing the reference gene matters, and a bad choice will give you false answers with confidence."
+  },
+  {
+   "t": 401.15,
+   "text": "The modern best practice is to use multiple reference genes — typically three — and average them."
+  },
+  {
+   "t": 407.4,
+   "text": "The geometric mean of three reference genes is much more stable than any single one."
+  },
+  {
+   "t": 413.29,
+   "text": "Tools like geNorm, NormFinder, and BestKeeper let you screen candidate reference genes in your specific experimental system and pick the most stable ones."
+  },
+  {
+   "t": 423.55,
+   "text": "Increasingly, papers in good journals are required to report which reference genes they used and to justify why."
+  },
+  {
+   "t": 431.05,
+   "text": "Assumption two: the amplification efficiency of your target and reference primers are equal, and both are close to 100%."
+  },
+  {
+   "t": 439.7,
+   "text": "Remember from Segment 6 that we said a slope of −3.32 on a standard curve corresponds to 100% efficiency."
+  },
+  {
+   "t": 448.4,
+   "text": "If your target primers are 100% efficient and your reference primers are 85% efficient, then the math of ΔΔCt — which assumes both double every cycle — will give you a biased answer."
+  },
+  {
+   "t": 460.96,
+   "text": "You can correct for this with the so-called Pfaffl method, which incorporates per-primer-pair efficiency, but most people don't bother, and most papers don't report it."
+  },
+  {
+   "t": 470.31,
+   "text": "If you're publishing, you should validate primer efficiencies once for each pair you use regularly."
+  },
+  {
+   "t": 476.12,
+   "text": "So that's ΔΔCt."
+  },
+  {
+   "t": 478.26,
+   "text": "The most-used calculation in qPCR."
+  },
+  {
+   "t": 481.36,
+   "text": "Conceptually simple."
+  },
+  {
+   "t": 482.89,
+   "text": "Practically subtle."
+  },
+  {
+   "t": 484.31,
+   "text": "Get the reference gene right and the efficiencies near 100%, and the answer is meaningful."
+  },
+  {
+   "t": 490.67,
+   "text": "Get either wrong, and you may be reporting noise as signal."
+  },
+  {
+   "t": 494.72,
+   "text": "Which is exactly the kind of issue the MIQE guidelines were created to address — and we're going to talk about MIQE right now."
+  }
+ ]
+}

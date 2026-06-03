@@ -1,0 +1,403 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Primers: the bookmarks that tell the polymerase where to start",
+ "duration": 602.02,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Primers: the bookmarks that tell the polymerase where to start"
+  },
+  {
+   "t": 4.95,
+   "text": "Now we get to one of the most important practical topics in all of PCR: primer design."
+  },
+  {
+   "t": 10.65,
+   "text": "Because if there's one thing that makes or breaks a PCR experiment, it's the primers."
+  },
+  {
+   "t": 16.29,
+   "text": "A well-designed pair of primers will give you a beautiful, specific, abundant product."
+  },
+  {
+   "t": 22.05,
+   "text": "A badly designed pair of primers will give you a smear, a faint band, multiple bands, no band at all, or — worst of all — a confident product that turns out to be amplification of the wrong gene."
+  },
+  {
+   "t": 34.65,
+   "text": "The polymerase doesn't care."
+  },
+  {
+   "t": 36.77,
+   "text": "The polymerase just copies what the primers tell it to copy."
+  },
+  {
+   "t": 40.33,
+   "text": "The intelligence in the targeting is entirely in the primer design."
+  },
+  {
+   "t": 44.74,
+   "text": "So let me first re-explain what a primer actually is, and then we'll talk about how to design good ones."
+  },
+  {
+   "t": 50.41,
+   "text": "A primer is a short, single-stranded piece of synthetic DNA — typically between 18 and 25 bases long — that has a sequence complementary to a specific region of your template."
+  },
+  {
+   "t": 62.4,
+   "text": "Primers are made by a chemical process called solid-phase synthesis, in big DNA synthesizer machines that build DNA one base at a time."
+  },
+  {
+   "t": 71.04,
+   "text": "You can order custom primers online, type in any sequence you want, get them delivered in a few days for a couple of dollars per primer."
+  },
+  {
+   "t": 78.31,
+   "text": "The synthesis is so routine and so cheap that primer ordering is part of the standard workflow of any molecular biology lab."
+  },
+  {
+   "t": 86.58,
+   "text": "A typical lab might order hundreds of different primer pairs per year."
+  },
+  {
+   "t": 91.06,
+   "text": "When you design a PCR, you're designing two primers, the forward and the reverse, that together define the boundaries of the region you want to amplify."
+  },
+  {
+   "t": 100.39,
+   "text": "They are the bookmarks."
+  },
+  {
+   "t": 101.71,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 103.0,
+   "text": "Primers are DNA bookmarks."
+  },
+  {
+   "t": 105.05,
+   "text": "You have a giant book — the genome — that contains the chapter you care about somewhere in its three billion pages."
+  },
+  {
+   "t": 112.31,
+   "text": "You don't want to read the whole book; you just want a clean copy of that one chapter."
+  },
+  {
+   "t": 116.51,
+   "text": "So you put a bookmark at the start of the chapter, and another bookmark at the end."
+  },
+  {
+   "t": 120.86,
+   "text": "The bookmarks tell the photocopier — the polymerase — exactly where to start and where to stop."
+  },
+  {
+   "t": 126.64,
+   "text": "Without the bookmarks, the polymerase has no idea where to begin."
+  },
+  {
+   "t": 130.94,
+   "text": "With them, it slots in, starts copying, and gives you exactly the segment between the bookmarks."
+  },
+  {
+   "t": 137.03,
+   "text": "The forward primer binds to one strand of the template at the upstream end of your region of interest, with its three-prime end pointing into the region."
+  },
+  {
+   "t": 146.26,
+   "text": "The reverse primer binds to the other strand at the downstream end, also with its three-prime end pointing into the region."
+  },
+  {
+   "t": 153.84,
+   "text": "They face each other, like a pair of arrows pointing inward, marking the boundaries of what will be amplified."
+  },
+  {
+   "t": 161.1,
+   "text": "Polymerase extends from each primer's three-prime end, walks toward the center, and the two extension reactions together generate a complete copy of the region between the primers."
+  },
+  {
+   "t": 172.1,
+   "text": "Anything outside the primers is not copied."
+  },
+  {
+   "t": 175.15,
+   "text": "The primers are the targeting system."
+  },
+  {
+   "t": 177.35,
+   "text": "Now let's talk about how to design good primers, because there's an art to it."
+  },
+  {
+   "t": 181.35,
+   "text": "Length."
+  },
+  {
+   "t": 182.12,
+   "text": "Primers are typically between 18 and 25 nucleotides long."
+  },
+  {
+   "t": 186.7,
+   "text": "Why this range?"
+  },
+  {
+   "t": 187.97,
+   "text": "It's the goldilocks problem."
+  },
+  {
+   "t": 189.65,
+   "text": "Too short and the primer doesn't have enough sequence to uniquely identify a target — a 10-base primer will, by chance, find perfect matches all over a three-billion-base genome, leading to dozens of mispriming events and a useless smear of products."
+  },
+  {
+   "t": 205.51,
+   "text": "Too long, on the other hand, and the primer is slow to anneal, expensive to synthesize, and prone to forming hairpins or self-binding artifacts."
+  },
+  {
+   "t": 215.86,
+   "text": "Eighteen to twenty-five bases is the sweet spot — long enough to be uniquely specific in most genomes, short enough to anneal quickly and behave well in solution."
+  },
+  {
+   "t": 226.26,
+   "text": "Too short binds nothing specific."
+  },
+  {
+   "t": 228.69,
+   "text": "Too long is slow."
+  },
+  {
+   "t": 230.12,
+   "text": "Goldilocks lives at 18 to 25."
+  },
+  {
+   "t": 232.82,
+   "text": "Melting temperature."
+  },
+  {
+   "t": 234.18,
+   "text": "Every primer has a melting temperature, or Tm — the temperature at which half of the primer molecules are bound to their complement and half are floating free."
+  },
+  {
+   "t": 243.94,
+   "text": "The Tm depends on the primer's length and its GC content, because G-C base pairs have three hydrogen bonds compared to A-T's two, and are therefore harder to melt apart."
+  },
+  {
+   "t": 254.39,
+   "text": "A rough approximation: a primer's Tm in degrees Celsius is about 2 times the number of A's and T's plus 4 times the number of G's and C's."
+  },
+  {
+   "t": 264.11,
+   "text": "For a 20-base primer with balanced composition, Tm typically lands around 55 to 65 degrees Celsius."
+  },
+  {
+   "t": 272.33,
+   "text": "That sets the annealing temperature for your PCR — you usually run the annealing step at about 3 to 5 degrees below the Tm."
+  },
+  {
+   "t": 280.51,
+   "text": "Choose primers with mismatched Tms — one at 60, the other at 50 — and the lower one will anneal poorly while the higher one anneals fine, producing imbalanced amplification."
+  },
+  {
+   "t": 292.26,
+   "text": "You want both primers to have Tms within a degree or two of each other."
+  },
+  {
+   "t": 297.09,
+   "text": "GC content."
+  },
+  {
+   "t": 298.54,
+   "text": "Aim for roughly 40 to 60 percent G plus C across the primer."
+  },
+  {
+   "t": 303.9,
+   "text": "Higher than 60 makes the primer too prone to forming stable secondary structures and may have a Tm too high to be practical."
+  },
+  {
+   "t": 312.24,
+   "text": "Lower than 40 makes the primer weakly bound and prone to slippage."
+  },
+  {
+   "t": 317.11,
+   "text": "Aim for the middle."
+  },
+  {
+   "t": 318.35,
+   "text": "Avoid runs and repeats."
+  },
+  {
+   "t": 320.55,
+   "text": "A primer with a long run of the same base — say, AAAAA in the middle — is more likely to slip on the template, binding off by one or two positions, which can cause errors."
+  },
+  {
+   "t": 330.94,
+   "text": "Avoid runs of more than 3 or 4 identical bases."
+  },
+  {
+   "t": 335.06,
+   "text": "Similarly, avoid simple repeats like CGCGCGCG, which can fold back on themselves."
+  },
+  {
+   "t": 341.56,
+   "text": "Avoid primer-dimer formation."
+  },
+  {
+   "t": 343.66,
+   "text": "This is a big one."
+  },
+  {
+   "t": 344.78,
+   "text": "If the forward primer and the reverse primer have any significant complementarity to each other, especially at their three-prime ends, they can anneal to each other instead of to the template, and the polymerase will happily extend that primer-on-primer hybrid into a short useless product called a primer-dimer."
+  },
+  {
+   "t": 362.8,
+   "text": "Primer-dimers waste reagents, consume polymerase, and produce a confusing band on your gel."
+  },
+  {
+   "t": 369.74,
+   "text": "Modern primer design software checks for this automatically, but you can also check by inspection: does the last 5 or 6 bases of one primer match, reverse-complement, the last 5 or 6 of the other?"
+  },
+  {
+   "t": 382.35,
+   "text": "If yes, redesign."
+  },
+  {
+   "t": 383.83,
+   "text": "Three-prime end matters more than five-prime end."
+  },
+  {
+   "t": 387.15,
+   "text": "The polymerase grabs the three-prime end of the primer to start extending."
+  },
+  {
+   "t": 391.78,
+   "text": "So a mismatch at the three-prime end is fatal — the polymerase won't extend."
+  },
+  {
+   "t": 397.15,
+   "text": "A mismatch at the five-prime end is mostly forgiven — extension still works."
+  },
+  {
+   "t": 402.51,
+   "text": "This means primer design tools weight the three-prime end heavily."
+  },
+  {
+   "t": 406.89,
+   "text": "You want the last 3 to 5 bases of your primer to match the template perfectly."
+  },
+  {
+   "t": 412.06,
+   "text": "The five-prime end can even have added sequences that don't match the template at all — restriction sites for cloning, tagging sequences for downstream analysis — and those will be incorporated into the product without preventing the reaction."
+  },
+  {
+   "t": 426.2,
+   "text": "That five-prime flexibility is actually a beautiful trick."
+  },
+  {
+   "t": 429.99,
+   "text": "Because the polymerase only cares about the three-prime end matching, you can attach all kinds of extra sequence to the five-prime end of a primer, and that extra sequence becomes part of the final product."
+  },
+  {
+   "t": 442.03,
+   "text": "Want to add an EcoRI restriction site to your amplicon for cloning?"
+  },
+  {
+   "t": 446.69,
+   "text": "Just stick GAATTC onto the five-prime end of your primer."
+  },
+  {
+   "t": 451.15,
+   "text": "The polymerase doesn't care that the first six bases don't match — it'll extend from the three-prime end normally, and after a few cycles you have a product with EcoRI sites engineered onto both ends, ready to cut and ligate into a plasmid."
+  },
+  {
+   "t": 466.0,
+   "text": "Want to add a fluorescent tag, a barcode, a sample index, a special motif for some downstream assay?"
+  },
+  {
+   "t": 473.08,
+   "text": "Stick it on the five-prime end of the primer."
+  },
+  {
+   "t": 475.98,
+   "text": "PCR will incorporate it into every copy of your product."
+  },
+  {
+   "t": 479.91,
+   "text": "This is how every Illumina library, every barcoded sample in a multiplex assay, every cloning construct with custom ends gets built."
+  },
+  {
+   "t": 489.1,
+   "text": "The primer is a magic wand: you can attach any sequence you want to the front, and PCR will faithfully copy it into your product."
+  },
+  {
+   "t": 497.19,
+   "text": "In modern practice, primer design is done with software."
+  },
+  {
+   "t": 501.43,
+   "text": "You paste in your target sequence, you specify the size of the product you want and the desired Tm range, and the software — Primer3 is the classical workhorse, free and open source — searches your sequence for candidate primer pairs that meet all the design criteria."
+  },
+  {
+   "t": 517.73,
+   "text": "It scores them, ranks them, flags primer-dimer risks, checks for off-target binding by BLAST against the genome, and hands you back a list of recommended pairs."
+  },
+  {
+   "t": 527.51,
+   "text": "You pick one, you order the primers from a synthesis company, and three days later you're running PCR."
+  },
+  {
+   "t": 533.28,
+   "text": "The whole pipeline from target sequence to PCR product is maybe a week of elapsed time, almost all of it waiting for shipping."
+  },
+  {
+   "t": 540.77,
+   "text": "Primer design is, however, where new students burn the most time when they're starting out."
+  },
+  {
+   "t": 546.3,
+   "text": "A bad primer pair can ruin a project."
+  },
+  {
+   "t": 548.9,
+   "text": "The temptation is to skip the careful checks, order the first pair the software spits out, and move on."
+  },
+  {
+   "t": 555.06,
+   "text": "The smart move is to look at the primer pair, sanity-check the Tms, check for primer-dimer risk, do a BLAST search to make sure your primers don't hit anywhere else in the genome, and only then place the order."
+  },
+  {
+   "t": 567.75,
+   "text": "Five minutes of checking saves days of debugging."
+  },
+  {
+   "t": 571.16,
+   "text": "The headline to leave this segment with is that primers are the targeting system of PCR."
+  },
+  {
+   "t": 576.95,
+   "text": "They are how you tell the reaction what to amplify."
+  },
+  {
+   "t": 580.16,
+   "text": "They are how you tell it where to start and where to stop."
+  },
+  {
+   "t": 583.25,
+   "text": "They are how you add custom sequence to the ends of your product."
+  },
+  {
+   "t": 586.97,
+   "text": "They are, by a wide margin, the most important design decision in any PCR experiment."
+  },
+  {
+   "t": 592.93,
+   "text": "Good primers, good reaction."
+  },
+  {
+   "t": 595.11,
+   "text": "Bad primers, no reaction."
+  },
+  {
+   "t": 597.4,
+   "text": "Or worse, a reaction that gives you the wrong product and you don't notice."
+  }
+ ]
+}

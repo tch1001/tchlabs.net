@@ -1,0 +1,319 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — Why endpoint PCR cannot quantify: the plateau problem",
+ "duration": 403.39,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — Why endpoint PCR cannot quantify: the plateau problem"
+  },
+  {
+   "t": 6.0,
+   "text": "Here is the question I want you to wrestle with before we proceed."
+  },
+  {
+   "t": 10.06,
+   "text": "We already know, from the PCR lecture, that each cycle of PCR roughly doubles the amount of target DNA."
+  },
+  {
+   "t": 17.59,
+   "text": "If you start with N copies, after one cycle you have 2N, after two cycles 4N, after three cycles 8N, and so on."
+  },
+  {
+   "t": 26.38,
+   "text": "After thirty cycles you have, in principle, N times two-to-the-thirtieth — about a billion times your starting amount."
+  },
+  {
+   "t": 34.02,
+   "text": "So here is the seemingly reasonable proposal: take two samples, one with a lot of starting template, one with a little."
+  },
+  {
+   "t": 41.71,
+   "text": "Run thirty cycles of PCR on both."
+  },
+  {
+   "t": 44.56,
+   "text": "Measure how much DNA is in each tube at the end."
+  },
+  {
+   "t": 47.91,
+   "text": "The sample with more starting template should have more DNA at the end."
+  },
+  {
+   "t": 51.98,
+   "text": "Therefore, you can quantify the starting amount by measuring the ending amount."
+  },
+  {
+   "t": 56.56,
+   "text": "It sounds airtight."
+  },
+  {
+   "t": 58.15,
+   "text": "It is wrong."
+  },
+  {
+   "t": 59.19,
+   "text": "And the reason it is wrong is one of the most important practical observations in molecular biology, the observation that motivated the entire invention of qPCR."
+  },
+  {
+   "t": 69.25,
+   "text": "Here is what actually happens."
+  },
+  {
+   "t": 71.28,
+   "text": "If you run a PCR reaction and you measure the amount of product after each cycle — which is exactly what qPCR machines do — you get a curve that looks like an S, or what mathematicians call a sigmoid."
+  },
+  {
+   "t": 83.04,
+   "text": "For the first several cycles, you can barely see anything; the amplification is real but the absolute amounts are too small to detect."
+  },
+  {
+   "t": 91.9,
+   "text": "Then somewhere around cycle 15 to 25, depending on how much template you started with, the signal climbs out of the background and you enter the exponential phase."
+  },
+  {
+   "t": 101.7,
+   "text": "During the exponential phase, every cycle does roughly double the product, and the curve climbs steeply on a log plot."
+  },
+  {
+   "t": 109.61,
+   "text": "But then — and here is the punchline — somewhere around cycle 30 or 35, the curve flattens out."
+  },
+  {
+   "t": 117.0,
+   "text": "It stops doubling."
+  },
+  {
+   "t": 118.25,
+   "text": "The amount of product stops increasing."
+  },
+  {
+   "t": 120.89,
+   "text": "The reaction has reached the plateau."
+  },
+  {
+   "t": 123.15,
+   "text": "Why does it plateau?"
+  },
+  {
+   "t": 124.36,
+   "text": "Several reasons, working together."
+  },
+  {
+   "t": 126.94,
+   "text": "First, the polymerase has been chewed through 35 cycles of 95-degree heat shock and is starting to lose activity."
+  },
+  {
+   "t": 135.21,
+   "text": "Second, the dNTPs — the raw building blocks — are being consumed; you started with tens of nanomoles of each, and after a billionfold amplification you've used most of them."
+  },
+  {
+   "t": 147.86,
+   "text": "Third, the primers themselves are being depleted, especially if your amplification is highly efficient."
+  },
+  {
+   "t": 154.57,
+   "text": "Fourth, and most subtly, the product strands are now present at such high concentration that they reanneal to each other during the annealing step, competing with the primers for binding."
+  },
+  {
+   "t": 165.76,
+   "text": "The polymerase can't extend a primer that hasn't successfully bound, because the template was busy finding its own complementary strand."
+  },
+  {
+   "t": 174.53,
+   "text": "All of these effects compound."
+  },
+  {
+   "t": 176.29,
+   "text": "Together, they put a ceiling on the reaction."
+  },
+  {
+   "t": 179.18,
+   "text": "Whether you started with one molecule or one million molecules, after 35 or 40 cycles, both reactions converge to roughly the same final amount of product — typically somewhere in the range of ten to the eleventh to ten to the twelfth copies per tube."
+  },
+  {
+   "t": 194.91,
+   "text": "The reaction saturates."
+  },
+  {
+   "t": 196.99,
+   "text": "Everyone ends up at the same finish line."
+  },
+  {
+   "t": 200.0,
+   "text": "Now you can see the problem with endpoint quantification."
+  },
+  {
+   "t": 203.22,
+   "text": "If you measure the product after 35 cycles, both samples look the same."
+  },
+  {
+   "t": 208.16,
+   "text": "Whether you started with one BRCA1 molecule or one million, by the time you read out, the difference has been crushed flat by the plateau."
+  },
+  {
+   "t": 217.32,
+   "text": "The plateau erases information."
+  },
+  {
+   "t": 219.68,
+   "text": "The plateau is the reason classical PCR can tell you \"yes, BRCA1 is in this sample\" but cannot tell you \"you have six copies of BRCA1 amplified from twelve cells worth of starting material."
+  },
+  {
+   "t": 232.82,
+   "text": "\""
+  },
+  {
+   "t": 233.03,
+   "text": "Here is the analogy I want you to internalize."
+  },
+  {
+   "t": 236.51,
+   "text": "Endpoint PCR is like asking \"did the popcorn finish popping?"
+  },
+  {
+   "t": 241.2,
+   "text": "\" If you wait long enough, the answer is always yes."
+  },
+  {
+   "t": 244.69,
+   "text": "Every bag of popcorn, regardless of how full it started, eventually finishes popping."
+  },
+  {
+   "t": 250.34,
+   "text": "You learn nothing about the starting amount from the fact that it finished."
+  },
+  {
+   "t": 253.94,
+   "text": "You needed to be there during the popping."
+  },
+  {
+   "t": 255.99,
+   "text": "That observation — that the act of popping carries the quantitative information, but the finished state doesn't — is exactly the observation that drives qPCR."
+  },
+  {
+   "t": 265.46,
+   "text": "There is one more way to see why endpoint quantification is doomed."
+  },
+  {
+   "t": 269.82,
+   "text": "Imagine you have two samples, sample A with one thousand starting copies and sample B with ten copies — a hundredfold difference."
+  },
+  {
+   "t": 278.72,
+   "text": "After one cycle, sample A has two thousand, sample B has twenty."
+  },
+  {
+   "t": 283.72,
+   "text": "After ten cycles, A has about a million, B has about ten thousand."
+  },
+  {
+   "t": 288.41,
+   "text": "The ratio is still 100."
+  },
+  {
+   "t": 290.41,
+   "text": "After twenty cycles, A has about a billion, B has about ten million."
+  },
+  {
+   "t": 294.91,
+   "text": "The ratio is still 100."
+  },
+  {
+   "t": 296.77,
+   "text": "So far so good."
+  },
+  {
+   "t": 298.1,
+   "text": "But somewhere around cycle 25, A is hitting the plateau and slowing down."
+  },
+  {
+   "t": 303.47,
+   "text": "By cycle 30, A has barely moved while B is still amplifying nicely."
+  },
+  {
+   "t": 308.67,
+   "text": "By cycle 35, B has caught up to A."
+  },
+  {
+   "t": 311.81,
+   "text": "By cycle 40, both tubes contain about ten-to-the-eleventh copies of the product."
+  },
+  {
+   "t": 316.75,
+   "text": "The information about the hundredfold difference is gone."
+  },
+  {
+   "t": 320.21,
+   "text": "Erased."
+  },
+  {
+   "t": 321.16,
+   "text": "Smeared out by the plateau."
+  },
+  {
+   "t": 323.07,
+   "text": "You might say: well, can't I just run fewer cycles and measure during the exponential phase?"
+  },
+  {
+   "t": 329.39,
+   "text": "Yes — that is exactly what people did in the 1990s, in a technique called competitive PCR or quantitative endpoint PCR."
+  },
+  {
+   "t": 337.92,
+   "text": "You run, say, only 20 cycles, then run the products on a gel, and measure the band intensity."
+  },
+  {
+   "t": 344.7,
+   "text": "It works, sort of."
+  },
+  {
+   "t": 345.82,
+   "text": "But it's painful."
+  },
+  {
+   "t": 347.01,
+   "text": "Different samples plateau at slightly different points."
+  },
+  {
+   "t": 350.51,
+   "text": "The exponential window is narrow."
+  },
+  {
+   "t": 353.12,
+   "text": "The dynamic range is bad."
+  },
+  {
+   "t": 355.32,
+   "text": "The measurement is fiddly."
+  },
+  {
+   "t": 357.21,
+   "text": "And most damningly: you have to open the tube to look at the product, and any time you open a tube of post-PCR product, you risk spraying a billion copies of your amplicon all over the lab and contaminating every future experiment."
+  },
+  {
+   "t": 372.04,
+   "text": "You really do not want to be doing intermediate-cycle gel checks."
+  },
+  {
+   "t": 375.86,
+   "text": "So the field needed a way to watch the amplification happen, in real time, without opening the tube."
+  },
+  {
+   "t": 382.16,
+   "text": "A way to read out the product as it accumulated, cycle by cycle, while the reaction was still inside the sealed machine."
+  },
+  {
+   "t": 389.89,
+   "text": "A way to catch the exponential phase as it crossed some threshold, and use that crossing-point to quantify the starting amount."
+  },
+  {
+   "t": 398.06,
+   "text": "That is what qPCR is."
+  },
+  {
+   "t": 399.92,
+   "text": "And the trick that made it possible is fluorescence."
+  }
+ ]
+}

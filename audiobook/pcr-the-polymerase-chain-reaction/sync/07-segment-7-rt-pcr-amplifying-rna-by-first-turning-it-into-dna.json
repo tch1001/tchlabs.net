@@ -1,0 +1,179 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — RT-PCR: amplifying RNA by first turning it into DNA",
+ "duration": 269.29,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — RT-PCR: amplifying RNA by first turning it into DNA"
+  },
+  {
+   "t": 6.72,
+   "text": "So far we've talked exclusively about DNA."
+  },
+  {
+   "t": 9.55,
+   "text": "But an enormous fraction of biology is about RNA — gene expression, viral genomes, regulatory non-coding RNAs, the messenger RNAs whose levels change in disease."
+  },
+  {
+   "t": 22.21,
+   "text": "We want to be able to amplify RNA, too."
+  },
+  {
+   "t": 24.86,
+   "text": "The problem is that DNA polymerases — including our friend Taq — copy DNA from DNA templates."
+  },
+  {
+   "t": 32.0,
+   "text": "They cannot copy RNA."
+  },
+  {
+   "t": 33.89,
+   "text": "RNA is the wrong substrate."
+  },
+  {
+   "t": 36.27,
+   "text": "So how do we apply PCR to RNA?"
+  },
+  {
+   "t": 38.64,
+   "text": "The answer is RT-PCR — reverse transcription PCR."
+  },
+  {
+   "t": 42.67,
+   "text": "The \"RT\" stands for reverse transcriptase, an enzyme that does the unusual chemistry of reading an RNA template and synthesizing a complementary DNA strand."
+  },
+  {
+   "t": 54.16,
+   "text": "Reverse transcriptase comes from retroviruses — viruses like HIV — that encode their genomes in RNA but need to integrate into the host's DNA genome to replicate."
+  },
+  {
+   "t": 65.96,
+   "text": "The viruses evolved reverse transcriptase to do that RNA-to-DNA conversion."
+  },
+  {
+   "t": 71.97,
+   "text": "Molecular biologists borrowed it."
+  },
+  {
+   "t": 74.34,
+   "text": "The workflow is straightforward."
+  },
+  {
+   "t": 76.21,
+   "text": "First, reverse transcribe the RNA into a complementary DNA copy, called cDNA."
+  },
+  {
+   "t": 82.8,
+   "text": "Then run standard PCR on the cDNA as if it were any other DNA template."
+  },
+  {
+   "t": 87.96,
+   "text": "Two enzymatic steps, one tube, one workflow."
+  },
+  {
+   "t": 91.55,
+   "text": "The reverse transcription step uses a short DNA primer — often a string of T's (oligo-dT) that binds the poly-A tail of messenger RNAs, or random hexamers, or a target-specific primer — to prime the reverse transcriptase."
+  },
+  {
+   "t": 108.09,
+   "text": "The RT runs along the RNA template, synthesizing cDNA."
+  },
+  {
+   "t": 112.84,
+   "text": "Then you switch to PCR conditions, the standard primer pair anneals to the cDNA, Taq amplifies, and you get a DNA product whose sequence reflects the original RNA."
+  },
+  {
+   "t": 124.22,
+   "text": "The analogy is clean."
+  },
+  {
+   "t": 125.88,
+   "text": "RT-PCR is: first transcribe the RNA back to DNA, then PCR as usual."
+  },
+  {
+   "t": 132.9,
+   "text": "The RNA is in a foreign script; the reverse transcriptase translates it into the script PCR can read; then standard PCR amplifies the translation."
+  },
+  {
+   "t": 143.1,
+   "text": "Two steps."
+  },
+  {
+   "t": 144.21,
+   "text": "The first step is the transliteration."
+  },
+  {
+   "t": 146.64,
+   "text": "The second step is the amplification."
+  },
+  {
+   "t": 149.18,
+   "text": "RT-PCR is the basis of pretty much every COVID test you ever took."
+  },
+  {
+   "t": 154.25,
+   "text": "SARS-CoV-2 is an RNA virus."
+  },
+  {
+   "t": 158.22,
+   "text": "To detect it, you swab a patient, extract the RNA, reverse-transcribe it into cDNA, and run PCR with primers specific to the viral genome."
+  },
+  {
+   "t": 168.11,
+   "text": "Positive amplification means viral RNA was present."
+  },
+  {
+   "t": 172.24,
+   "text": "The whole thing takes a couple of hours."
+  },
+  {
+   "t": 174.55,
+   "text": "During the pandemic, RT-PCR was the gold standard diagnostic, and the world ran tens of billions of these reactions."
+  },
+  {
+   "t": 183.03,
+   "text": "RT-PCR is also the basis of gene expression measurement."
+  },
+  {
+   "t": 187.19,
+   "text": "If you want to know how much of a particular mRNA a cell is making, you extract total RNA, reverse-transcribe everything, and do qPCR with primers specific to your gene of interest."
+  },
+  {
+   "t": 198.88,
+   "text": "The amount of product you get reflects the abundance of the original mRNA."
+  },
+  {
+   "t": 203.65,
+   "text": "This is how thousands of papers per year measure gene expression — qRT-PCR, quantitative reverse transcription PCR, the workhorse assay of molecular biology labs."
+  },
+  {
+   "t": 215.56,
+   "text": "One practical note: there's a one-step and a two-step version of RT-PCR."
+  },
+  {
+   "t": 220.69,
+   "text": "In one-step, both the reverse transcriptase and Taq are in the same tube from the start, and the cycler runs the RT step at moderate temperature followed by standard PCR cycling."
+  },
+  {
+   "t": 231.54,
+   "text": "In two-step, you do the RT in one tube, then take an aliquot of the cDNA and use it as input to a separate PCR reaction."
+  },
+  {
+   "t": 241.01,
+   "text": "One-step is convenient and reduces contamination risk; two-step is more flexible because the same cDNA pool can be used for many different PCRs."
+  },
+  {
+   "t": 251.19,
+   "text": "The big idea: RNA gets a workaround."
+  },
+  {
+   "t": 254.64,
+   "text": "Reverse transcription bridges the gap between RNA and DNA, and once you're in DNA-land, PCR amplifies normally."
+  },
+  {
+   "t": 262.95,
+   "text": "This conversion trick is why PCR can be used on any nucleic acid, regardless of its native form."
+  }
+ ]
+}

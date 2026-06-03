@@ -1,0 +1,223 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Quorum sensing: bacteria as networks",
+ "duration": 354.41,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Quorum sensing: bacteria as networks"
+  },
+  {
+   "t": 4.39,
+   "text": "Imagine you are a bacterium."
+  },
+  {
+   "t": 6.1,
+   "text": "You are a single cell, swimming around in a pond or a gut or a wound."
+  },
+  {
+   "t": 10.61,
+   "text": "You want to do something that requires teamwork — say, you want to produce a toxin to invade a host, or form a biofilm, or bioluminesce."
+  },
+  {
+   "t": 18.81,
+   "text": "But if you do it alone, you do not have enough mass to matter, and you waste your resources."
+  },
+  {
+   "t": 24.34,
+   "text": "You want to wait until there are enough of you around that the collective action will succeed."
+  },
+  {
+   "t": 29.09,
+   "text": "How do you know when there are enough of you?"
+  },
+  {
+   "t": 30.98,
+   "text": "Bacteria solved this problem, evolutionarily, with a mechanism called quorum sensing."
+  },
+  {
+   "t": 37.29,
+   "text": "Each bacterium continuously produces a small signaling molecule — typically a thing called an autoinducer, or AI — and secretes it into the environment."
+  },
+  {
+   "t": 47.64,
+   "text": "The molecule diffuses away."
+  },
+  {
+   "t": 49.83,
+   "text": "When few bacteria are around, the concentration of the molecule stays low."
+  },
+  {
+   "t": 54.69,
+   "text": "As more bacteria accumulate in the same space, each producing autoinducer, the concentration in the local environment climbs."
+  },
+  {
+   "t": 63.39,
+   "text": "Inside each bacterium, there is a receptor protein that binds the autoinducer."
+  },
+  {
+   "t": 68.72,
+   "text": "When enough autoinducer accumulates outside, enough of it enters each cell and binds enough receptor, the receptor activates a transcription factor, and the cell switches on a coordinated genetic program."
+  },
+  {
+   "t": 82.3,
+   "text": "The whole population, almost simultaneously, decides \"there are enough of us, it is time to act."
+  },
+  {
+   "t": 88.05,
+   "text": "\""
+  },
+  {
+   "t": 88.25,
+   "text": "In effect, the cells have counted themselves."
+  },
+  {
+   "t": 91.15,
+   "text": "Or, more precisely, they have estimated their local density."
+  },
+  {
+   "t": 95.46,
+   "text": "Above a threshold density, behavior A."
+  },
+  {
+   "t": 98.44,
+   "text": "Below, behavior B."
+  },
+  {
+   "t": 99.84,
+   "text": "The autoinducer is the medium of the count."
+  },
+  {
+   "t": 102.99,
+   "text": "The analogy I want you to carry: quorum sensing is the bacterial radio."
+  },
+  {
+   "t": 108.51,
+   "text": "Cells use small molecules to count themselves and act collectively."
+  },
+  {
+   "t": 113.15,
+   "text": "The most famous quorum sensing system, and the one most heavily used in synthetic biology, comes from a bioluminescent marine bacterium called Vibrio fischeri, which lives in symbiosis with the Hawaiian bobtail squid."
+  },
+  {
+   "t": 127.28,
+   "text": "The squid keeps a population of V. fischeri in a light organ on its belly."
+  },
+  {
+   "t": 132.97,
+   "text": "When the bacteria reach quorum, they all glow at once, and the squid uses the glow to break up its silhouette against the moonlight as it hunts."
+  },
+  {
+   "t": 141.96,
+   "text": "The molecular system that controls this — based on a small molecule called an acyl-homoserine lactone, abbreviated AHL — was worked out in the 1990s, and the two key genes from it, luxI and luxR, became the parts list for an entire generation of population-scale synthetic biology experiments."
+  },
+  {
+   "t": 160.61,
+   "text": "For the synthetic biologist, quorum sensing is an extraordinary gift."
+  },
+  {
+   "t": 165.47,
+   "text": "It gives you a wire that runs not just between genes inside a cell, but between cells across a population."
+  },
+  {
+   "t": 172.25,
+   "text": "You can wire one cell's output to another cell's input — by having the sender cell express LuxI to produce AHL, having the AHL diffuse, and having the receiver cell express LuxR to detect it."
+  },
+  {
+   "t": 185.1,
+   "text": "Suddenly cells are talking to each other."
+  },
+  {
+   "t": 187.39,
+   "text": "You can build circuits that span populations."
+  },
+  {
+   "t": 190.55,
+   "text": "You can build distributed computations, where different cells perform different parts of the calculation and pass the results to each other in molecular form."
+  },
+  {
+   "t": 199.43,
+   "text": "In the late 2000s and 2010s, a wave of papers used quorum sensing to build remarkable multicellular synthetic circuits."
+  },
+  {
+   "t": 208.1,
+   "text": "There were papers in which two strains of bacteria, mixed together in a culture, performed Boolean operations together — one strain producing the AND function, another the OR — by exchanging AHL signals."
+  },
+  {
+   "t": 221.26,
+   "text": "There were papers in which engineered bacteria formed patterns on a plate, with the pattern emerging from the interaction of quorum-sensing signals and the diffusion of those signals across space."
+  },
+  {
+   "t": 232.44,
+   "text": "There was even a paper by Tal Danino and others in 2010 — back in Jeff Hasty's lab at UC San Diego — in which thousands of bacterial cells, all engineered with a quorum-sensing oscillator, synchronized their oscillations across an entire colony, blinking in unison."
+  },
+  {
+   "t": 249.66,
+   "text": "A colony-scale clock, built out of coupled cellular clocks."
+  },
+  {
+   "t": 253.55,
+   "text": "It was glorious."
+  },
+  {
+   "t": 255.05,
+   "text": "The deeper conceptual point is that quorum sensing makes synthetic biology a population-scale discipline."
+  },
+  {
+   "t": 261.88,
+   "text": "Once you accept that the unit of computation is not the cell but the colony — that the cells communicate, coordinate, divide labor — a whole new set of circuit topologies opens up."
+  },
+  {
+   "t": 273.38,
+   "text": "Some computations that are very hard to perform in a single cell become easy when you split them across cell types."
+  },
+  {
+   "t": 280.77,
+   "text": "The cell as a single processor becomes the colony as a parallel computer."
+  },
+  {
+   "t": 285.59,
+   "text": "This is also where the engineering reality starts to bite harder, because populations evolve."
+  },
+  {
+   "t": 292.05,
+   "text": "If you build a population-scale circuit, and one strain has a slight growth advantage over another, the population composition will drift over time and the circuit will stop working."
+  },
+  {
+   "t": 302.66,
+   "text": "Distributed circuits are powerful but fragile."
+  },
+  {
+   "t": 306.3,
+   "text": "We will return to this in Segment 17."
+  },
+  {
+   "t": 309.15,
+   "text": "For now, hold the picture: quorum sensing is the network protocol of bacterial life, and synthetic biologists have learned to use it as the network protocol of their distributed cellular computations."
+  },
+  {
+   "t": 321.65,
+   "text": "That is the first half of our material."
+  },
+  {
+   "t": 323.91,
+   "text": "We have established the core analogy — cells as programmable computers — and we have walked the genealogy: the founding papers, the parts hierarchy, the registry and iGEM, the noise problem, feedback, logic gates, Cello, and quorum sensing as multicellular communication."
+  },
+  {
+   "t": 341.98,
+   "text": "Take ten minutes."
+  },
+  {
+   "t": 343.27,
+   "text": "Stretch."
+  },
+  {
+   "t": 344.21,
+   "text": "Get water."
+  },
+  {
+   "t": 345.24,
+   "text": "When we come back, we will turn from how circuits compute to how they remember, how they sense the world, and what people have built with them in the wild."
+  }
+ ]
+}

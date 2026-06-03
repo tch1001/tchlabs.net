@@ -1,0 +1,155 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Designer enzymes — installing catalytic triads",
+ "duration": 287.26,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Designer enzymes — installing catalytic triads"
+  },
+  {
+   "t": 5.46,
+   "text": "An enzyme is a protein that accelerates a chemical reaction."
+  },
+  {
+   "t": 9.86,
+   "text": "The acceleration is often staggering — factors of ten to the tenth or more — compared to the same reaction in the absence of the enzyme."
+  },
+  {
+   "t": 18.93,
+   "text": "How does an enzyme do this?"
+  },
+  {
+   "t": 20.71,
+   "text": "By providing a precisely shaped active site, where a small set of catalytic residues — typically three or four amino acids — are held in exactly the right geometry to bind the substrate, distort it toward the transition state of the reaction, and stabilize that transition state long enough for the chemistry to happen."
+  },
+  {
+   "t": 40.4,
+   "text": "The geometric precision required is extraordinary."
+  },
+  {
+   "t": 43.67,
+   "text": "The catalytic residues have to be positioned to within fractions of an ångström."
+  },
+  {
+   "t": 49.11,
+   "text": "The substrate-binding pocket has to be the right size and the right shape."
+  },
+  {
+   "t": 53.44,
+   "text": "The electrostatics have to be tuned."
+  },
+  {
+   "t": 55.86,
+   "text": "Get any of these wrong by even small amounts, and the catalytic rate drops by orders of magnitude."
+  },
+  {
+   "t": 62.5,
+   "text": "Designing an enzyme de novo means specifying all of that, computationally, and getting a protein that, when expressed, actually does the chemistry."
+  },
+  {
+   "t": 72.7,
+   "text": "This is one of the hardest things you can ask a design pipeline to do."
+  },
+  {
+   "t": 76.24,
+   "text": "And it has been the white whale of Baker's lab for two decades."
+  },
+  {
+   "t": 80.22,
+   "text": "The early work, in the late 2000s and 2010s, used a strategy called active site grafting combined with scaffold design."
+  },
+  {
+   "t": 88.25,
+   "text": "You'd start with a known catalytic motif from a natural enzyme — say, the catalytic triad of a serine protease, which is a serine, a histidine, and an aspartate arranged in a particular geometric relationship."
+  },
+  {
+   "t": 102.29,
+   "text": "You'd specify that geometry as a fixed constraint."
+  },
+  {
+   "t": 105.8,
+   "text": "Then Rosetta would search for a protein scaffold — any backbone, ideally one without other functional baggage — that could host this triad in approximately the right geometry."
+  },
+  {
+   "t": 117.01,
+   "text": "Then you'd optimize the scaffold sequence around the constraint, and you'd express the result."
+  },
+  {
+   "t": 122.47,
+   "text": "The most famous early result was the Kemp eliminase — a designed enzyme that catalyzes the Kemp elimination, a particular proton-abstraction reaction that has no natural enzyme catalyzing it but is a useful benchmark because the chemistry is well-understood."
+  },
+  {
+   "t": 139.12,
+   "text": "Baker's lab and collaborators published, in 2008, designed Kemp eliminases that had real catalytic activity — accelerations of several orders of magnitude over the uncatalyzed reaction."
+  },
+  {
+   "t": 152.07,
+   "text": "The activity was nowhere near what natural enzymes achieve — natural enzymes have rate enhancements of ten to the ninth or higher; the designed Kemp eliminases were closer to ten to the fourth or fifth — but the proof was made."
+  },
+  {
+   "t": 166.16,
+   "text": "You could design an active site into a scaffold and get measurable enzymatic activity from a protein nature had never built."
+  },
+  {
+   "t": 174.0,
+   "text": "The Kemp eliminase work then sparked a long collaboration with directed evolution."
+  },
+  {
+   "t": 179.16,
+   "text": "Once you have a starting point with some activity — even crappy activity — you can let directed evolution take over: random mutagenesis, screening for improved variants, iterative refinement, exactly analogous to how somatic hypermutation refines antibody affinity."
+  },
+  {
+   "t": 197.04,
+   "text": "After many rounds of directed evolution on the designed Kemp eliminases, the rate enhancements climbed to nearly natural-enzyme levels."
+  },
+  {
+   "t": 206.26,
+   "text": "The designs provided the starting point that evolution could optimize from; evolution couldn't have found these scaffolds on its own."
+  },
+  {
+   "t": 213.85,
+   "text": "The modern era — post-RFdiffusion — has improved enzyme design substantially."
+  },
+  {
+   "t": 219.65,
+   "text": "With diffusion-based backbone generation conditioned on catalytic constraints, you can generate scaffolds that fit catalytic motifs much more cleanly than the older grafting approach."
+  },
+  {
+   "t": 231.25,
+   "text": "With ProteinMPNN, you can populate those scaffolds with sequences that fold correctly."
+  },
+  {
+   "t": 236.45,
+   "text": "With AlphaFold checking, you filter out the designs that don't fold."
+  },
+  {
+   "t": 240.32,
+   "text": "Recent work from Baker's lab has produced de novo enzymes — for various reactions — with rate enhancements that begin to approach natural enzymes after directed evolution refinement."
+  },
+  {
+   "t": 252.1,
+   "text": "But enzymes remain the hardest single test of de novo design."
+  },
+  {
+   "t": 255.76,
+   "text": "Geometry is necessary but not sufficient."
+  },
+  {
+   "t": 259.71,
+   "text": "The dynamics matter — how the protein moves during catalysis, how it accommodates the substrate and releases the product."
+  },
+  {
+   "t": 267.69,
+   "text": "The current models don't capture dynamics well; they're trained on static crystal structures, and they design static scaffolds."
+  },
+  {
+   "t": 275.39,
+   "text": "Designing proteins that catalyze chemistry, at industrial enzyme rates, from scratch, without the helping hand of directed evolution, is still beyond the field."
+  },
+  {
+   "t": 285.94,
+   "text": "It's the next frontier."
+  }
+ ]
+}

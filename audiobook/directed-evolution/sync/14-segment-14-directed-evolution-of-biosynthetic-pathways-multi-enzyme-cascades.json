@@ -1,0 +1,179 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Directed evolution of biosynthetic pathways — multi-enzyme cascades",
+ "duration": 305.25,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Directed evolution of biosynthetic pathways — multi-enzyme cascades"
+  },
+  {
+   "t": 6.92,
+   "text": "So far we've been talking about directed evolution of single enzymes."
+  },
+  {
+   "t": 11.26,
+   "text": "One protein, one selection, one cycle."
+  },
+  {
+   "t": 14.51,
+   "text": "But many of the most interesting things you'd want to make are not made by a single enzyme."
+  },
+  {
+   "t": 19.71,
+   "text": "They're made by pathways — chains of enzymes, each one taking the product of the previous one and converting it to the next intermediate, building up a complex natural product step by step."
+  },
+  {
+   "t": 31.19,
+   "text": "Think about an antibiotic like erythromycin."
+  },
+  {
+   "t": 34.55,
+   "text": "It's not made by one enzyme."
+  },
+  {
+   "t": 36.59,
+   "text": "It's made by a chain of about a dozen enzymes — a polyketide synthase — that builds the molecule one carbon at a time, adding small chemical groups, reducing certain positions, oxidizing others, methylating, glycosylating."
+  },
+  {
+   "t": 52.16,
+   "text": "The natural pathway in Saccharopolyspora erythraea took millions of years to evolve."
+  },
+  {
+   "t": 58.11,
+   "text": "The product is exquisitely tuned for its biological function."
+  },
+  {
+   "t": 62.65,
+   "text": "But if you wanted to make a slight variant of erythromycin — say, one with a different sugar attached, or with a hydroxyl group in a different position — you'd need to alter multiple enzymes in the pathway, in coordinated ways, while keeping all the intermediate steps functional."
+  },
+  {
+   "t": 78.86,
+   "text": "This is the problem of pathway-level directed evolution."
+  },
+  {
+   "t": 82.91,
+   "text": "And it's substantially harder than single-enzyme evolution, because the search space is bigger and the selection has to act at the pathway level."
+  },
+  {
+   "t": 91.45,
+   "text": "The general approach is to express the entire pathway in a host organism — usually E. coli or Saccharomyces cerevisiae — and to evolve the pathway as a whole."
+  },
+  {
+   "t": 102.4,
+   "text": "You can do this several ways."
+  },
+  {
+   "t": 104.38,
+   "text": "One approach is to evolve each enzyme separately, optimizing it for the specific substrate the previous enzyme produces."
+  },
+  {
+   "t": 112.89,
+   "text": "This is \"modular\" pathway evolution."
+  },
+  {
+   "t": 115.79,
+   "text": "You take the first enzyme, evolve it for whatever you want — better activity, modified product."
+  },
+  {
+   "t": 122.1,
+   "text": "Then you take the second enzyme, give it the new substrate the modified first enzyme produces, and evolve it to accept the new substrate."
+  },
+  {
+   "t": 131.15,
+   "text": "And so on down the pathway."
+  },
+  {
+   "t": 132.74,
+   "text": "This is conceptually clean but operationally slow — each enzyme evolution is its own multi-round campaign."
+  },
+  {
+   "t": 140.05,
+   "text": "Another approach is to evolve the whole pathway at once."
+  },
+  {
+   "t": 143.88,
+   "text": "You make libraries that vary multiple enzymes simultaneously."
+  },
+  {
+   "t": 148.45,
+   "text": "You couple production of the final product to a fluorescent or selectable readout — for example, the final product binds a sensor protein that activates a fluorescent reporter."
+  },
+  {
+   "t": 159.05,
+   "text": "Then you select or screen on the final product."
+  },
+  {
+   "t": 162.36,
+   "text": "The libraries are vast, because every enzyme can be varied, but the selection acts on the entire pathway as a unit."
+  },
+  {
+   "t": 170.38,
+   "text": "The Christopher Voigt lab at MIT, the Jay Keasling lab at Berkeley, the John Dueber lab also at Berkeley, the Hal Alper lab at UT Austin — these are some of the groups that have pushed pathway-level directed evolution."
+  },
+  {
+   "t": 183.89,
+   "text": "Keasling's lab famously engineered yeast to produce artemisinic acid, the precursor to the antimalarial drug artemisinin, by reconstructing a plant pathway in yeast and then evolving the whole thing for high titer."
+  },
+  {
+   "t": 197.6,
+   "text": "The result, after multiple campaigns, was a microbial source of artemisinin precursor that competes with plant agriculture for cost — and it was deployed at scale by Sanofi."
+  },
+  {
+   "t": 208.35,
+   "text": "Other targets include opioids — the Smolke lab evolved a yeast pathway to make hydrocodone — and a wide variety of natural products that are hard to source from plants or fungi."
+  },
+  {
+   "t": 219.88,
+   "text": "The general approach is the same: assemble the pathway, couple the product to a selection or screen, run directed evolution on multiple enzymes at once, harvest the variants that produce the most product."
+  },
+  {
+   "t": 232.41,
+   "text": "The most ambitious work in this area combines directed evolution with modular DNA assembly methods — like Golden Gate, like MoClo, like the various synthetic-biology toolkits — that let you mix and match variants of multiple genes quickly."
+  },
+  {
+   "t": 248.53,
+   "text": "You build a library that varies, say, three different enzymes in the pathway, with ten variants of each."
+  },
+  {
+   "t": 255.99,
+   "text": "That gives you a thousand combinations."
+  },
+  {
+   "t": 258.29,
+   "text": "You assemble all thousand combinations in parallel using one-pot assembly."
+  },
+  {
+   "t": 263.25,
+   "text": "You transform them into yeast."
+  },
+  {
+   "t": 265.46,
+   "text": "You screen for product."
+  },
+  {
+   "t": 266.88,
+   "text": "You take the top combinations forward."
+  },
+  {
+   "t": 268.96,
+   "text": "You can iterate this in a few weeks per round."
+  },
+  {
+   "t": 271.35,
+   "text": "Pathway-level directed evolution is still maturing."
+  },
+  {
+   "t": 274.76,
+   "text": "It's harder than single-enzyme evolution, but the payoff — making complex natural products in fermenters instead of from rare biological sources — is enormous."
+  },
+  {
+   "t": 285.01,
+   "text": "The recent successes with cannabinoids, with rare terpenes, with novel-to-nature small molecules, all rest on directed evolution at the pathway level."
+  },
+  {
+   "t": 295.51,
+   "text": "As selection methods and assembly methods continue to improve, this is probably where directed evolution will have its biggest commercial impact over the next decade."
+  }
+ ]
+}

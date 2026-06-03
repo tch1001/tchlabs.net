@@ -1,0 +1,179 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — The hook effect: when more drug is worse",
+ "duration": 230.0,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — The hook effect: when more drug is worse"
+  },
+  {
+   "t": 4.12,
+   "text": "Now I want to spend a few minutes on a curious feature of PROTACs that you should understand, because it's pedagogically interesting and because it'll come up if you ever read a paper on PROTAC pharmacology."
+  },
+  {
+   "t": 14.66,
+   "text": "It's called the hook effect."
+  },
+  {
+   "t": 16.07,
+   "text": "For a normal inhibitor drug, the dose-response curve is monotonic."
+  },
+  {
+   "t": 20.57,
+   "text": "More drug means more inhibition, up to the point where every target molecule is bound, and then the curve flattens."
+  },
+  {
+   "t": 28.06,
+   "text": "You can't get more inhibition than 100%, and giving more drug doesn't undo what you've already accomplished."
+  },
+  {
+   "t": 35.11,
+   "text": "The curve is well-behaved."
+  },
+  {
+   "t": 37.01,
+   "text": "For PROTACs, the dose-response curve is different."
+  },
+  {
+   "t": 40.61,
+   "text": "It's bell-shaped."
+  },
+  {
+   "t": 41.84,
+   "text": "Low doses give little effect, because there isn't enough drug to engage many targets."
+  },
+  {
+   "t": 48.06,
+   "text": "Medium doses give maximum degradation."
+  },
+  {
+   "t": 51.3,
+   "text": "But high doses — concentrations above the optimum — actually give less degradation."
+  },
+  {
+   "t": 57.51,
+   "text": "The drug starts to fail when you give too much of it."
+  },
+  {
+   "t": 60.45,
+   "text": "This phenomenon is called the hook effect, named for the way the dose-response curve hooks back down at high concentrations."
+  },
+  {
+   "t": 68.12,
+   "text": "Why does this happen?"
+  },
+  {
+   "t": 69.29,
+   "text": "Think about the ternary complex again."
+  },
+  {
+   "t": 71.59,
+   "text": "To get degradation, you need three things in the same place at the same time: target, PROTAC, E3 ligase."
+  },
+  {
+   "t": 79.22,
+   "text": "The PROTAC molecule has two ends."
+  },
+  {
+   "t": 81.97,
+   "text": "One end is bound to the target; the other end is bound to the E3."
+  },
+  {
+   "t": 86.72,
+   "text": "Both bindings have to happen on the same PROTAC molecule, simultaneously."
+  },
+  {
+   "t": 91.71,
+   "text": "Now imagine you flood the cell with PROTAC."
+  },
+  {
+   "t": 94.76,
+   "text": "There are millions and millions of PROTAC molecules."
+  },
+  {
+   "t": 98.59,
+   "text": "Every target protein in the cell quickly gets a PROTAC molecule docked onto it via the warhead."
+  },
+  {
+   "t": 105.29,
+   "text": "Every E3 ligase in the cell quickly gets a PROTAC molecule docked onto it via the E3 ligand."
+  },
+  {
+   "t": 113.29,
+   "text": "But — here's the key — these are mostly different PROTAC molecules."
+  },
+  {
+   "t": 117.88,
+   "text": "The target has a PROTAC sticking out of it, with the E3 ligand end exposed, but no E3 is going to come bind that end because there are no free E3s left — they all have their own PROTAC molecules docked."
+  },
+  {
+   "t": 130.28,
+   "text": "Similarly, the E3s have PROTACs sticking out with the warhead end exposed, but no targets to bind, because the targets are already occupied."
+  },
+  {
+   "t": 139.89,
+   "text": "The ternary complex can't form."
+  },
+  {
+   "t": 142.04,
+   "text": "Degradation drops."
+  },
+  {
+   "t": 143.56,
+   "text": "It's a problem of statistics."
+  },
+  {
+   "t": 145.43,
+   "text": "At low PROTAC concentrations, both ends of any given PROTAC molecule are likely to find empty partners."
+  },
+  {
+   "t": 152.66,
+   "text": "At medium concentrations, the system reaches an optimum."
+  },
+  {
+   "t": 156.56,
+   "text": "At excessive concentrations, both ends of any given PROTAC are more likely to find already-occupied partners, and the productive ternary complexes get rarer."
+  },
+  {
+   "t": 167.21,
+   "text": "You've drowned the matchmaking service in single people — but everyone's already on a date with somebody else."
+  },
+  {
+   "t": 173.19,
+   "text": "The hook effect has real clinical implications."
+  },
+  {
+   "t": 176.21,
+   "text": "It means PROTAC dosing has to be tuned carefully."
+  },
+  {
+   "t": 179.36,
+   "text": "You can't just give more drug to get more effect; at some point you'll be giving less effect."
+  },
+  {
+   "t": 184.39,
+   "text": "It means PROTAC trials sometimes show counterintuitive dose-response results, where lower doses work better than higher ones."
+  },
+  {
+   "t": 192.75,
+   "text": "It means combination dosing and pharmacokinetics matter in unusual ways."
+  },
+  {
+   "t": 198.05,
+   "text": "And it's one of the reasons PROTAC drug development has its own peculiar dynamics — clinicians and chemists have to relearn intuitions they built up over decades of working with inhibitors."
+  },
+  {
+   "t": 209.66,
+   "text": "Molecular glues, by the way, don't have a hook effect, because they're not bridging two pre-existing binders."
+  },
+  {
+   "t": 216.55,
+   "text": "The glue binds one protein and reshapes its surface; there's no second binding event to compete with."
+  },
+  {
+   "t": 223.8,
+   "text": "This is another reason molecular glues, when you can find them, are often preferable to PROTACs."
+  }
+ ]
+}

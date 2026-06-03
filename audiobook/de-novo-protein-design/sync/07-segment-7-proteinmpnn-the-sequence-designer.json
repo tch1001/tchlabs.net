@@ -1,0 +1,171 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — ProteinMPNN — the sequence designer",
+ "duration": 282.55,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — ProteinMPNN — the sequence designer"
+  },
+  {
+   "t": 4.22,
+   "text": "ProteinMPNN was released by Baker's lab in 2022, in a paper led by Justas Dauparas."
+  },
+  {
+   "t": 11.34,
+   "text": "It's a deep neural network that does, in one inference pass, what Rosetta used to spend hours doing on a compute cluster."
+  },
+  {
+   "t": 18.49,
+   "text": "Given a fixed backbone — a three-dimensional arrangement of alpha-carbon positions — ProteinMPNN proposes an amino acid sequence that, when expressed, will fold into that backbone."
+  },
+  {
+   "t": 30.96,
+   "text": "Let me give you the analogy."
+  },
+  {
+   "t": 32.49,
+   "text": "ProteinMPNN is the sequence designer — given a backbone shape, propose a sequence that will fold into it."
+  },
+  {
+   "t": 39.6,
+   "text": "RFdiffusion makes the shape."
+  },
+  {
+   "t": 41.8,
+   "text": "ProteinMPNN gives it a name in the protein alphabet."
+  },
+  {
+   "t": 45.41,
+   "text": "Together they are the modern de novo design pipeline."
+  },
+  {
+   "t": 48.74,
+   "text": "How does ProteinMPNN work, mechanically?"
+  },
+  {
+   "t": 51.66,
+   "text": "It's a graph neural network."
+  },
+  {
+   "t": 53.5,
+   "text": "The protein backbone is represented as a graph — each residue is a node, with features describing its local geometry, and edges connect nearby residues."
+  },
+  {
+   "t": 64.11,
+   "text": "The network processes this graph through several layers of message passing, building up a representation at every position that captures the local structural context — what kind of secondary structure this residue is in, what neighbors it has, what the local geometry looks like."
+  },
+  {
+   "t": 80.85,
+   "text": "Then, for each position, the network predicts the probability distribution over the twenty amino acids — what residue should sit at that position to be compatible with the local structure."
+  },
+  {
+   "t": 92.85,
+   "text": "The prediction is done autoregressively, like a language model."
+  },
+  {
+   "t": 97.12,
+   "text": "The network places residues one by one — though not strictly left to right; it can choose any order — and each new residue is conditioned on the residues it has already placed."
+  },
+  {
+   "t": 108.31,
+   "text": "This lets the model handle constraints like \"two cysteines need to be placed in compatible positions to form a disulfide bond\" or \"two charged residues at this distance should have opposite charges\" — constraints that emerge from local context."
+  },
+  {
+   "t": 122.86,
+   "text": "When ProteinMPNN was released, it immediately replaced Rosetta's sequence design protocol — which was a Monte Carlo optimization over the same problem, but slower and less accurate — for essentially every design project in the field."
+  },
+  {
+   "t": 138.11,
+   "text": "The numbers were striking."
+  },
+  {
+   "t": 139.62,
+   "text": "ProteinMPNN designs, when checked by AlphaFold, were predicted to fold to the target backbone something like fifty to seventy percent of the time, depending on the protein class."
+  },
+  {
+   "t": 150.25,
+   "text": "The old Rosetta sequence design was more like ten to twenty percent."
+  },
+  {
+   "t": 154.49,
+   "text": "And ProteinMPNN ran in seconds on a single GPU, where Rosetta needed hours on a cluster."
+  },
+  {
+   "t": 161.46,
+   "text": "The speedup matters because de novo design is, in practice, a numbers game."
+  },
+  {
+   "t": 166.76,
+   "text": "You don't make one design and trust it."
+  },
+  {
+   "t": 169.19,
+   "text": "You make hundreds or thousands of candidate designs, you filter them, you pick the best handful, and you put those handful into the lab."
+  },
+  {
+   "t": 177.25,
+   "text": "ProteinMPNN turned the sequence design step from a bottleneck into a non-issue."
+  },
+  {
+   "t": 182.61,
+   "text": "You could generate ten thousand candidate sequences for a given backbone in an afternoon, score each one with AlphaFold, and pick the ones that scored best."
+  },
+  {
+   "t": 192.0,
+   "text": "There's a technical detail worth mentioning, because it touches on why ProteinMPNN works as well as it does."
+  },
+  {
+   "t": 198.1,
+   "text": "The original protein structure prediction problem — sequence to structure — is what AlphaFold solves."
+  },
+  {
+   "t": 204.41,
+   "text": "Predicting structure from sequence requires resolving the rich, evolutionarily-encoded signals about how the sequence folds."
+  },
+  {
+   "t": 212.35,
+   "text": "The reverse problem — sequence design — is, in some ways, easier."
+  },
+  {
+   "t": 217.39,
+   "text": "The network is given the answer (the backbone) and just needs to propose an alphabet that's consistent with it."
+  },
+  {
+   "t": 224.25,
+   "text": "The mapping from structure back to sequence is, in information-theoretic terms, lossy in the right direction: many sequences map to the same structure, so you don't need to find the unique sequence; you just need to find any of the many that work."
+  },
+  {
+   "t": 239.09,
+   "text": "That redundancy — the many-sequences-to-one-structure mapping that makes design tractable — is what makes ProteinMPNN's outputs reliably useful."
+  },
+  {
+   "t": 248.75,
+   "text": "It's not finding the one true sequence; it's sampling from a large family of sequences that will all fold to roughly the same structure."
+  },
+  {
+   "t": 257.95,
+   "text": "As long as the family is dense enough and the model finds it, you've succeeded."
+  },
+  {
+   "t": 262.53,
+   "text": "Okay."
+  },
+  {
+   "t": 263.32,
+   "text": "We have RFdiffusion making backbones."
+  },
+  {
+   "t": 266.28,
+   "text": "We have ProteinMPNN giving them sequences."
+  },
+  {
+   "t": 269.27,
+   "text": "The third piece of the modern pipeline is the verification step — checking that the sequences ProteinMPNN proposes actually fold the way we want."
+  },
+  {
+   "t": 278.42,
+   "text": "And that's where AlphaFold comes back into the story, this time on our side."
+  }
+ ]
+}

@@ -1,0 +1,215 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — DMR calling and the analytics of methylation",
+ "duration": 385.88,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — DMR calling and the analytics of methylation"
+  },
+  {
+   "t": 4.36,
+   "text": "Now let's talk about what you actually do with all this methylation data."
+  },
+  {
+   "t": 8.46,
+   "text": "The headline analysis, in almost every methylation study, is differentially methylated region calling — DMR calling."
+  },
+  {
+   "t": 16.46,
+   "text": "The question is: given two or more groups of samples, which regions of the genome are differentially methylated between groups?"
+  },
+  {
+   "t": 24.5,
+   "text": "Tumor versus normal."
+  },
+  {
+   "t": 25.99,
+   "text": "Young versus old."
+  },
+  {
+   "t": 27.4,
+   "text": "Treated versus untreated."
+  },
+  {
+   "t": 29.6,
+   "text": "Healthy versus diseased."
+  },
+  {
+   "t": 31.4,
+   "text": "Cell type A versus cell type B."
+  },
+  {
+   "t": 33.91,
+   "text": "The answer comes out as a list of genomic regions with associated statistics: this CpG island is hypermethylated in cancer with p-value X, this enhancer is hypomethylated in old age with effect size Y."
+  },
+  {
+   "t": 47.39,
+   "text": "The analytics of DMR calling are not trivial, and they have their own subfield of bioinformatics."
+  },
+  {
+   "t": 54.31,
+   "text": "Let me walk through the logic, because it matters for how you read any methylation paper."
+  },
+  {
+   "t": 59.9,
+   "text": "At the level of a single CpG site, the question is straightforward in principle."
+  },
+  {
+   "t": 64.86,
+   "text": "You have, say, ten samples per group, and at each CpG you have a methylation level for each sample — a number between 0 and 1."
+  },
+  {
+   "t": 75.4,
+   "text": "You can test whether the methylation levels differ between groups using a standard statistical test — a t-test, a Mann-Whitney, a beta regression."
+  },
+  {
+   "t": 84.54,
+   "text": "You get a p-value per CpG."
+  },
+  {
+   "t": 87.06,
+   "text": "You correct for multiple testing across all the CpGs you tested — Bonferroni or Benjamini-Hochberg — and you call the CpGs that survive correction as differentially methylated."
+  },
+  {
+   "t": 98.83,
+   "text": "This is the single-CpG version of the analysis, often called differentially methylated position or DMP analysis."
+  },
+  {
+   "t": 106.99,
+   "text": "It's what you do with EPIC array data when you're looking for individual CpG-level associations."
+  },
+  {
+   "t": 113.36,
+   "text": "But methylation often varies in a coordinated way across nearby CpGs."
+  },
+  {
+   "t": 119.42,
+   "text": "A CpG island that gets methylated in cancer doesn't just have one CpG go up; it has dozens of CpGs in the same region go up together."
+  },
+  {
+   "t": 129.22,
+   "text": "So rather than testing each CpG independently, you can test whether regions — contiguous stretches of CpGs — are differentially methylated as a whole."
+  },
+  {
+   "t": 139.76,
+   "text": "This is DMR analysis proper, and it has higher statistical power than per-CpG analysis when the methylation changes are spatially coordinated, which they usually are."
+  },
+  {
+   "t": 150.61,
+   "text": "The standard pipeline for DMR calling, in WGBS or RRBS data, looks like this."
+  },
+  {
+   "t": 157.44,
+   "text": "You partition the genome into windows, or you scan with a sliding window, identifying contiguous stretches of CpGs that show coordinated methylation differences between groups."
+  },
+  {
+   "t": 168.9,
+   "text": "You apply a statistical model — there are many, including BSmooth, methylKit, DSS, dmrseq, and bsseq — that accounts for the binomial nature of methylation count data (each CpG gives you a count of methylated reads out of total reads, not a continuous value) and that smooths or borrows information across nearby CpGs to improve power."
+  },
+  {
+   "t": 192.26,
+   "text": "You output a list of DMRs, each with a genomic coordinate, an average methylation difference (often called delta-beta), a statistical significance, and some quality metrics."
+  },
+  {
+   "t": 203.68,
+   "text": "The interpretation is then biological."
+  },
+  {
+   "t": 206.79,
+   "text": "You annotate the DMRs against gene models — does this DMR overlap a promoter, an enhancer, a gene body?"
+  },
+  {
+   "t": 214.78,
+   "text": "You annotate against regulatory element atlases — does it overlap an ENCODE-defined enhancer, a CpG island, a chromHMM state?"
+  },
+  {
+   "t": 224.41,
+   "text": "You ask whether the DMRs are enriched in particular gene sets — are the genes near hypermethylated DMRs enriched for tumor suppressors, for developmental regulators, for immune pathway genes?"
+  },
+  {
+   "t": 236.71,
+   "text": "The biology comes out of the cross-referencing."
+  },
+  {
+   "t": 239.47,
+   "text": "There are several recurring analytical pitfalls that you should know about."
+  },
+  {
+   "t": 243.46,
+   "text": "First, batch effects."
+  },
+  {
+   "t": 245.21,
+   "text": "Methylation data is notoriously sensitive to batch effects — the day the sample was processed, the array chip position, the bisulfite conversion batch, the operator."
+  },
+  {
+   "t": 256.34,
+   "text": "If your cases and controls happen to have been processed on different days, you can get strong but completely artifactual methylation differences."
+  },
+  {
+   "t": 265.0,
+   "text": "Standard practice is to randomize cases and controls across batches and to include batch as a covariate in the statistical model."
+  },
+  {
+   "t": 273.24,
+   "text": "Ignore this and you'll publish nonsense."
+  },
+  {
+   "t": 275.85,
+   "text": "Second, cell-type composition."
+  },
+  {
+   "t": 278.17,
+   "text": "Methylation patterns are highly cell-type-specific."
+  },
+  {
+   "t": 282.14,
+   "text": "If your samples are mixtures of cell types — for example, whole blood, which contains lymphocytes, monocytes, granulocytes, and others in varying proportions — apparent methylation differences between groups can actually be driven by differences in cell-type composition rather than by within-cell-type methylation changes."
+  },
+  {
+   "t": 301.89,
+   "text": "Standard practice is to estimate cell-type proportions from the methylation data itself, using reference deconvolution methods, and adjust for them in the analysis."
+  },
+  {
+   "t": 312.44,
+   "text": "Again, ignore this at your peril."
+  },
+  {
+   "t": 314.8,
+   "text": "Third, single CpGs are noisy."
+  },
+  {
+   "t": 317.64,
+   "text": "Methylation calls at a single CpG, especially from low-coverage WGBS, can be very noisy."
+  },
+  {
+   "t": 325.02,
+   "text": "Averaging over regions reduces the noise dramatically and is one of the reasons DMR-based analyses tend to be more reproducible than single-CpG analyses."
+  },
+  {
+   "t": 335.07,
+   "text": "Fourth, methylation changes are often small in magnitude."
+  },
+  {
+   "t": 338.92,
+   "text": "A 10 percent shift in methylation level can be biologically real and meaningful, especially in mixed cell populations, but it requires careful statistics to distinguish from noise."
+  },
+  {
+   "t": 351.08,
+   "text": "Don't expect methylation to flip from 0 to 1; expect it to shift from 0.4 to 0.5, and design your analysis accordingly."
+  },
+  {
+   "t": 360.59,
+   "text": "The bottom line on analytics: methylation data is rich, but it has its own statistical character — bounded between 0 and 1, derived from binomial counts, spatially correlated across nearby CpGs, sensitive to batch and cell composition."
+  },
+  {
+   "t": 377.42,
+   "text": "Treat it with the right statistical tools and the biology pops out cleanly."
+  },
+  {
+   "t": 382.18,
+   "text": "Treat it like generic continuous data and you'll get fooled."
+  }
+ ]
+}

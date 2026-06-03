@@ -1,0 +1,271 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — From presence to quantity: the question that changes everything",
+ "duration": 370.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — From presence to quantity: the question that changes everything"
+  },
+  {
+   "t": 5.45,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 6.9,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 8.29,
+   "text": "Today and for the next two hours, we are going to do a deep dive into quantitative PCR — qPCR — and its younger, more disruptive sibling, digital PCR."
+  },
+  {
+   "t": 18.56,
+   "text": "And I want to begin with a single sentence that, if you internalize it, makes the whole lecture click into place."
+  },
+  {
+   "t": 25.59,
+   "text": "Classical PCR answers the question \"is this DNA present?"
+  },
+  {
+   "t": 30.21,
+   "text": "\" qPCR and digital PCR answer the question \"how much of it is there?"
+  },
+  {
+   "t": 35.77,
+   "text": "\" That is the shift."
+  },
+  {
+   "t": 36.96,
+   "text": "That is the entire conceptual move."
+  },
+  {
+   "t": 39.45,
+   "text": "Presence becomes quantity."
+  },
+  {
+   "t": 41.44,
+   "text": "Yes-or-no becomes how-many."
+  },
+  {
+   "t": 43.48,
+   "text": "And once you can count how many, an entire branch of medicine opens up that simply could not exist before."
+  },
+  {
+   "t": 50.81,
+   "text": "You have already done the PCR lecture."
+  },
+  {
+   "t": 53.14,
+   "text": "So you know the choreography."
+  },
+  {
+   "t": 54.76,
+   "text": "You know about denaturation, annealing, extension."
+  },
+  {
+   "t": 58.5,
+   "text": "You know about Taq."
+  },
+  {
+   "t": 59.77,
+   "text": "You know about primers, about exponential doubling, about the thirty-cycle billionfold amplification that turns a single molecule into a visible band on a gel."
+  },
+  {
+   "t": 70.42,
+   "text": "We are not going to redo that material."
+  },
+  {
+   "t": 72.51,
+   "text": "We are going to assume it and build on top of it."
+  },
+  {
+   "t": 74.95,
+   "text": "If anything I say in the next ten minutes feels unfamiliar, hit pause on your audiobook app and re-listen to the PCR lecture, because the rest of this only makes sense once that foundation is there."
+  },
+  {
+   "t": 86.55,
+   "text": "So why does the shift from presence to quantity matter so much?"
+  },
+  {
+   "t": 90.45,
+   "text": "Let me give you the concrete examples — the ones that touch your life — and then we'll back out to the principles."
+  },
+  {
+   "t": 96.53,
+   "text": "Example one: COVID."
+  },
+  {
+   "t": 98.35,
+   "text": "When you swabbed your nose in 2020 or 2021 and sent the swab to a lab, you got back one of two answers — positive or negative."
+  },
+  {
+   "t": 107.1,
+   "text": "But underneath that yes-or-no, the lab was running a qPCR machine."
+  },
+  {
+   "t": 111.81,
+   "text": "And inside that machine, the test wasn't just detecting the virus."
+  },
+  {
+   "t": 116.46,
+   "text": "It was measuring how much virus you had."
+  },
+  {
+   "t": 118.8,
+   "text": "Each result came with a number — the Ct value, which we'll define carefully in Segment 4 — that quantified your viral load."
+  },
+  {
+   "t": 126.94,
+   "text": "A Ct of 18 meant you had a lot of virus."
+  },
+  {
+   "t": 130.21,
+   "text": "A Ct of 38 meant you had a tiny bit."
+  },
+  {
+   "t": 133.3,
+   "text": "The same swab, run on classic endpoint PCR, would have said only \"yes, present\" or \"no, absent."
+  },
+  {
+   "t": 140.03,
+   "text": "\" qPCR turned that binary into a number, and that number determined how infectious you were, when you were probably infected, and when you could safely come out of isolation."
+  },
+  {
+   "t": 150.34,
+   "text": "Example two: gene expression."
+  },
+  {
+   "t": 152.97,
+   "text": "Every cell in your body has the same genome — same twenty-three thousand genes — but different cells express those genes at wildly different levels."
+  },
+  {
+   "t": 163.29,
+   "text": "A neuron is full of one set of proteins; a liver cell is full of a completely different set."
+  },
+  {
+   "t": 169.78,
+   "text": "The differences come from how much mRNA is being made from each gene in each cell type."
+  },
+  {
+   "t": 175.45,
+   "text": "If you want to understand what a cell is doing, you need to measure not whether a gene is present — every gene is present in every cell — but how much mRNA it is producing."
+  },
+  {
+   "t": 186.36,
+   "text": "qPCR does that."
+  },
+  {
+   "t": 187.84,
+   "text": "We'll spend a lot of time on it."
+  },
+  {
+   "t": 189.44,
+   "text": "Example three: cancer monitoring."
+  },
+  {
+   "t": 192.15,
+   "text": "After a tumor is removed surgically, fragments of the tumor's DNA — what we call circulating tumor DNA, or ctDNA — can be detected in the patient's blood."
+  },
+  {
+   "t": 202.81,
+   "text": "The amount of ctDNA in the blood scales with how much residual tumor is left."
+  },
+  {
+   "t": 208.35,
+   "text": "If you can count ctDNA molecules accurately, you can watch a patient's tumor burden go up or down in real time, weeks or months before any imaging would show progression."
+  },
+  {
+   "t": 218.65,
+   "text": "This is one of the most exciting clinical applications in oncology today, and the technology that makes it work is digital PCR."
+  },
+  {
+   "t": 226.81,
+   "text": "We'll come back to that in Segment 16."
+  },
+  {
+   "t": 229.49,
+   "text": "Example four: HIV viral load."
+  },
+  {
+   "t": 232.71,
+   "text": "A person living with HIV who is on antiretroviral therapy gets their blood tested every few months."
+  },
+  {
+   "t": 239.56,
+   "text": "The test measures the number of HIV RNA copies per milliliter of plasma."
+  },
+  {
+   "t": 244.9,
+   "text": "If the number is below detection, the therapy is working."
+  },
+  {
+   "t": 248.69,
+   "text": "If the number creeps up, the virus may be developing resistance and the regimen may need to change."
+  },
+  {
+   "t": 255.24,
+   "text": "That number — copies per milliliter — comes from a qPCR machine."
+  },
+  {
+   "t": 259.91,
+   "text": "And the patient's life depends on that number being accurate."
+  },
+  {
+   "t": 263.47,
+   "text": "In every one of these cases, the clinical or scientific value is not in the answer \"DNA is there\" — that answer is almost trivial to obtain."
+  },
+  {
+   "t": 272.82,
+   "text": "The value is in the answer \"this much DNA is there."
+  },
+  {
+   "t": 276.72,
+   "text": "\" Quantity is the whole game."
+  },
+  {
+   "t": 278.71,
+   "text": "So if you walk out of here in two hours and you can do three things — one, explain why classical endpoint PCR fundamentally cannot quantify, and why qPCR's trick of reading fluorescence during amplification solves that problem; two, describe what a Ct value is, why earlier Ct means more starting template, and how the ΔΔCt method lets you compare gene expression between samples; three, explain the conceptual leap from qPCR to digital PCR, why partitioning the reaction into thousands of tiny"
+  },
+  {
+   "t": 312.97,
+   "text": "droplets lets you literally count molecules without needing a standard curve — if you can do those three, you've got it."
+  },
+  {
+   "t": 320.05,
+   "text": "Everything else hangs off those three pegs."
+  },
+  {
+   "t": 322.89,
+   "text": "Let me say the headline image one more time, because we'll be living inside it for the rest of the lecture."
+  },
+  {
+   "t": 328.54,
+   "text": "Classical PCR is asking \"did the popcorn finish popping?"
+  },
+  {
+   "t": 332.92,
+   "text": "\" qPCR is sitting next to the popcorn maker the whole time, listening to the pops, and noticing whether the popping started early or late — because if it started early, that means there was already a lot of popcorn in the bag to begin with."
+  },
+  {
+   "t": 345.9,
+   "text": "Digital PCR is dumping the unpopped kernels into twenty thousand separate little cups, popping each cup, and counting how many cups have at least one popped kernel."
+  },
+  {
+   "t": 356.12,
+   "text": "Three different views of the same chemistry."
+  },
+  {
+   "t": 358.92,
+   "text": "Three different ways of squeezing quantitative information out of an exponential amplification."
+  },
+  {
+   "t": 365.39,
+   "text": "By the end of this lecture you will know which view to use when, and why."
+  },
+  {
+   "t": 369.34,
+   "text": "Let's open the hood."
+  }
+ ]
+}

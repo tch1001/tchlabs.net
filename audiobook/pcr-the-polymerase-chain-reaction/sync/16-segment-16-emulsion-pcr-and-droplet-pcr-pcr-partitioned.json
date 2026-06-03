@@ -1,0 +1,51 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Emulsion PCR and droplet PCR: PCR partitioned",
+ "duration": 108.27,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Emulsion PCR and droplet PCR: PCR partitioned"
+  },
+  {
+   "t": 5.8,
+   "text": "In the Illumina sequencing lecture, we encountered emulsion PCR as a way to clonally amplify individual DNA fragments separately."
+  },
+  {
+   "t": 15.68,
+   "text": "It's worth recognizing this as a direct descendant of standard PCR — same chemistry, partitioned differently."
+  },
+  {
+   "t": 23.07,
+   "text": "Emulsion PCR works by mixing the PCR reagents with oil and surfactant to create a water-in-oil emulsion, where each tiny aqueous droplet is its own isolated PCR reaction."
+  },
+  {
+   "t": 35.91,
+   "text": "If you dilute your input template so that on average each droplet contains either zero or one template molecule, then amplification within each droplet produces a clonal population."
+  },
+  {
+   "t": 48.21,
+   "text": "This was the basis of 454 sequencing and Ion Torrent sequencing, and it's the foundation of droplet digital PCR."
+  },
+  {
+   "t": 57.06,
+   "text": "Droplet digital PCR (ddPCR), which we mentioned in Segment 9, uses the same emulsion approach to partition a sample into 20,000 or more droplets, runs PCR with a fluorescent probe, and counts which droplets glow at the end."
+  },
+  {
+   "t": 72.83,
+   "text": "The Poisson statistics of how many droplets are positive give an absolute count of starting molecules, with no standard curve needed."
+  },
+  {
+   "t": 81.06,
+   "text": "ddPCR is now widely used for residual disease monitoring in cancer, for rare variant detection, and for absolute quantification of viral load."
+  },
+  {
+   "t": 90.99,
+   "text": "The big idea: the same PCR chemistry, partitioned into thousands of independent reactions, becomes a single-molecule counting tool."
+  },
+  {
+   "t": 100.1,
+   "text": "Emulsion PCR is a clever physical hack on standard PCR, and it underpins a whole branch of modern molecular measurement."
+  }
+ ]
+}

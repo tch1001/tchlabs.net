@@ -1,0 +1,143 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Why qPCR has practical limits",
+ "duration": 261.06,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Why qPCR has practical limits"
+  },
+  {
+   "t": 3.84,
+   "text": "Before we jump into digital PCR, let's be precise about what's wrong with qPCR."
+  },
+  {
+   "t": 9.55,
+   "text": "Not what's wrong in some general \"qPCR is bad\" sense — qPCR is great, it's the workhorse, it's not going anywhere."
+  },
+  {
+   "t": 17.43,
+   "text": "But there are specific problems that qPCR cannot solve, and understanding what those problems are will explain exactly why digital PCR was invented and why it's slowly taking over certain niches."
+  },
+  {
+   "t": 29.44,
+   "text": "Problem one: technical precision is limited to about 25%."
+  },
+  {
+   "t": 34.64,
+   "text": "We covered this in Segment 9."
+  },
+  {
+   "t": 36.6,
+   "text": "The standard deviation of a typical qPCR replicate is around 0.3 Cts, which means about 25% in concentration."
+  },
+  {
+   "t": 45.66,
+   "text": "For comparisons of large fold-changes — 4-fold, 10-fold — that 25% noise is irrelevant."
+  },
+  {
+   "t": 53.74,
+   "text": "For comparisons of small differences — 1.5-fold, 1.2-fold — that 25% noise can completely swamp the signal you're trying to detect."
+  },
+  {
+   "t": 64.06,
+   "text": "If you're trying to detect, say, a single extra copy of a chromosome in a cancer cell line — a 1.5-fold copy number change — qPCR is right at the edge of usefulness."
+  },
+  {
+   "t": 75.14,
+   "text": "You need biological replicates plus technical replicates plus careful normalization to even attempt it, and the answer is rarely confident."
+  },
+  {
+   "t": 84.44,
+   "text": "Problem two: absolute quantification depends on a standard curve, which depends on someone, somewhere, having an accurately quantified stock."
+  },
+  {
+   "t": 94.19,
+   "text": "This is fine in established clinical assays where international standards exist and everyone has access to them."
+  },
+  {
+   "t": 100.9,
+   "text": "It's painful in research where every lab makes its own standards and gets slightly different absolute numbers."
+  },
+  {
+   "t": 107.4,
+   "text": "It's a portability problem — qPCR numbers don't travel cleanly between labs without harmonization to a common reference."
+  },
+  {
+   "t": 115.44,
+   "text": "Problem three: PCR inhibitors in your sample can distort Ct values without warning."
+  },
+  {
+   "t": 121.59,
+   "text": "Real biological samples — blood, tissue extracts, stool — contain inhibitors that partially suppress amplification efficiency."
+  },
+  {
+   "t": 130.95,
+   "text": "The effect is to shift Ct later, making the sample look like it has less target than it really does."
+  },
+  {
+   "t": 137.94,
+   "text": "With a clean standard curve made of pure DNA in pure buffer, your standards don't have the inhibitors."
+  },
+  {
+   "t": 144.29,
+   "text": "So the standard curve says one thing, the inhibited sample says something else, and your absolute quantification is biased low."
+  },
+  {
+   "t": 152.8,
+   "text": "The inhibition can be partial — efficiency drops from 100% to 85% — and undetectable from the curve shape, so you don't even know the bias is happening."
+  },
+  {
+   "t": 162.96,
+   "text": "Problem four: rare-event detection is fundamentally hard."
+  },
+  {
+   "t": 167.16,
+   "text": "If you want to detect a rare mutant allele present at, say, 0.1% frequency in a population of wild-type sequences, qPCR struggles, because the wild-type background also amplifies and dominates the signal."
+  },
+  {
+   "t": 182.57,
+   "text": "To detect rare variants you need either special chemistry like allele-specific PCR or COLD-PCR, or a paradigm change."
+  },
+  {
+   "t": 191.03,
+   "text": "Problem five: very-low-copy quantification is dominated by Poisson noise."
+  },
+  {
+   "t": 196.65,
+   "text": "At Ct values approaching the LoD, replicate-to-replicate variation explodes."
+  },
+  {
+   "t": 202.18,
+   "text": "The reason, again, is Poisson statistics — at low copy numbers, the actual number of molecules in each reaction tube fluctuates significantly even from a uniform stock."
+  },
+  {
+   "t": 214.26,
+   "text": "The Ct value reflects the actual molecule count, which fluctuates, which makes the average Ct noisy."
+  },
+  {
+   "t": 220.81,
+   "text": "For each of these problems, there's a single conceptual move that addresses all of them at once."
+  },
+  {
+   "t": 227.0,
+   "text": "The move is: don't try to measure a concentration in a big pool; instead, partition the pool into thousands of tiny isolated reactions, run PCR in each one separately, and count how many reactions produced a signal."
+  },
+  {
+   "t": 241.75,
+   "text": "That partition-and-count strategy is digital PCR."
+  },
+  {
+   "t": 245.45,
+   "text": "It sidesteps every one of the qPCR problems we just listed."
+  },
+  {
+   "t": 249.43,
+   "text": "To see why, we need to spend a careful segment on Poisson statistics, because the entire mathematical foundation of digital PCR is the Poisson distribution."
+  },
+  {
+   "t": 259.94,
+   "text": "That's next."
+  }
+ ]
+}

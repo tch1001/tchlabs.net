@@ -1,0 +1,207 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Reference genes, MIQE, and the reproducibility crisis",
+ "duration": 335.39,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Reference genes, MIQE, and the reproducibility crisis"
+  },
+  {
+   "t": 5.29,
+   "text": "In 2009, a group of senior qPCR researchers — led by Stephen Bustin in the UK — published a paper in Clinical Chemistry called \"The MIQE Guidelines: Minimum Information for Publication of Quantitative Real-Time PCR Experiments."
+  },
+  {
+   "t": 21.02,
+   "text": "\" MIQE — pronounced \"MEEK-ee,\" sometimes \"mike\" — was a response to a growing problem in the literature: qPCR experiments were being published with so little methodological detail that they were impossible to evaluate, let alone reproduce."
+  },
+  {
+   "t": 35.48,
+   "text": "Different labs were getting wildly different answers to the same biological question, and there was no way to tell from the published methods which lab had done it right."
+  },
+  {
+   "t": 44.62,
+   "text": "The MIQE checklist is a list of about 85 pieces of information that the authors argue should be reported with any qPCR paper."
+  },
+  {
+   "t": 53.33,
+   "text": "The categories include: sample preparation (how was RNA extracted?"
+  },
+  {
+   "t": 58.24,
+   "text": "was DNase treatment done?), reverse transcription details (which enzyme, which priming strategy, what concentration of input RNA?), primer sequences (essential — without primers, no one can repeat your experiment), assay validation (what's the amplification efficiency?"
+  },
+  {
+   "t": 75.85,
+   "text": "what's the linear dynamic range?"
+  },
+  {
+   "t": 77.84,
+   "text": "what's the limit of detection?), and data analysis (which reference genes?"
+  },
+  {
+   "t": 82.55,
+   "text": "which normalization method?"
+  },
+  {
+   "t": 84.12,
+   "text": "what statistical analysis?)."
+  },
+  {
+   "t": 85.97,
+   "text": "The full list is on the MIQE website."
+  },
+  {
+   "t": 88.36,
+   "text": "If you ever publish a qPCR paper, you should treat MIQE as the floor — the minimum, not the gold standard."
+  },
+  {
+   "t": 95.3,
+   "text": "Why did MIQE need to exist?"
+  },
+  {
+   "t": 96.97,
+   "text": "Because researchers had been getting away with murder."
+  },
+  {
+   "t": 99.86,
+   "text": "Papers regularly reported gene expression changes without specifying which reference gene was used."
+  },
+  {
+   "t": 106.46,
+   "text": "Or they used GAPDH without validation, and GAPDH happened to be changing in their experimental system, and their reported fold-changes were artifacts of the reference rather than real biology."
+  },
+  {
+   "t": 118.22,
+   "text": "Or they reported a single Ct value with no replicates and no standard deviation."
+  },
+  {
+   "t": 124.26,
+   "text": "Or they didn't run melt curves with SYBR Green assays and didn't notice primer-dimers."
+  },
+  {
+   "t": 129.81,
+   "text": "The cumulative effect was a body of literature in which the same gene had been reported as upregulated by some groups and downregulated by others in identical disease models, and there was no way to tell who was right."
+  },
+  {
+   "t": 142.45,
+   "text": "MIQE made several specific recommendations that I want you to know about."
+  },
+  {
+   "t": 146.28,
+   "text": "First: validate your reference genes for every experimental system."
+  },
+  {
+   "t": 151.36,
+   "text": "Don't just pick GAPDH because it's the one you used last time."
+  },
+  {
+   "t": 155.04,
+   "text": "Run a stability analysis using software like geNorm on a set of candidate reference genes, in your specific cell type, with your specific treatment, and pick the ones that are actually stable."
+  },
+  {
+   "t": 166.12,
+   "text": "Use at least two, preferably three, and take the geometric mean."
+  },
+  {
+   "t": 170.53,
+   "text": "Second: report primer sequences."
+  },
+  {
+   "t": 173.22,
+   "text": "Without them, the work cannot be replicated."
+  },
+  {
+   "t": 176.22,
+   "text": "This sounds obvious, but you'd be amazed how many older papers don't include primer sequences."
+  },
+  {
+   "t": 182.11,
+   "text": "Modern journals usually require them in supplementary materials."
+  },
+  {
+   "t": 186.18,
+   "text": "Third: validate amplification efficiency for every primer pair you use."
+  },
+  {
+   "t": 191.68,
+   "text": "Run a standard curve."
+  },
+  {
+   "t": 193.31,
+   "text": "Report the slope, the R², the efficiency, the dynamic range."
+  },
+  {
+   "t": 198.9,
+   "text": "This data should appear in the methods or supplementary material of every qPCR paper."
+  },
+  {
+   "t": 205.05,
+   "text": "Fourth: use technical replicates — usually triplicates — for every reaction, and report variance."
+  },
+  {
+   "t": 212.41,
+   "text": "A Ct of 23.4 ± 0.1 means something."
+  },
+  {
+   "t": 217.49,
+   "text": "A Ct of 23.4 with no replicates and no error bar means very little."
+  },
+  {
+   "t": 223.49,
+   "text": "Fifth: report controls explicitly — no-template controls (water in place of cDNA, to detect contamination), no-reverse-transcriptase controls (RNA without RT, to detect genomic DNA contamination), and positive controls."
+  },
+  {
+   "t": 240.96,
+   "text": "The compliance with MIQE in the literature has been spotty."
+  },
+  {
+   "t": 244.19,
+   "text": "Multiple post-MIQE surveys have found that the majority of published qPCR papers still fail to report most MIQE-recommended items."
+  },
+  {
+   "t": 253.06,
+   "text": "There's improvement at the top journals — Nature, Cell, the better methods journals — and there's slow improvement everywhere."
+  },
+  {
+   "t": 260.98,
+   "text": "But MIQE remains, more than fifteen years after publication, an aspirational standard rather than a universal floor."
+  },
+  {
+   "t": 268.85,
+   "text": "If you read a qPCR paper and you can't figure out which reference genes the authors used, or what their amplification efficiency was, or whether they ran technical replicates, you should reduce your confidence in the result accordingly."
+  },
+  {
+   "t": 282.58,
+   "text": "Not zero."
+  },
+  {
+   "t": 283.73,
+   "text": "Just less."
+  },
+  {
+   "t": 284.82,
+   "text": "The broader lesson — and this is true throughout quantitative biology, not just qPCR — is that precise-sounding numbers can be very imprecise."
+  },
+  {
+   "t": 294.69,
+   "text": "When a paper reports \"BDNF was 4.7-fold upregulated,\" that number sounds like it has meaningful significant figures."
+  },
+  {
+   "t": 303.29,
+   "text": "It may not."
+  },
+  {
+   "t": 304.29,
+   "text": "If the reference gene was unvalidated, the primer efficiency was 78%, the technical variation was 0.5 Cts, and the biological variation between replicates was huge, then 4.7 might really mean \"somewhere between 2 and 10, possibly even no change."
+  },
+  {
+   "t": 322.95,
+   "text": "\" MIQE is the response to a generation of papers reporting 4.7 when they should have been reporting \"somewhere between 2 and 10, possibly even no change."
+  },
+  {
+   "t": 333.27,
+   "text": "\" Read with appropriate skepticism."
+  }
+ ]
+}
