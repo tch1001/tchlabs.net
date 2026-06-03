@@ -1,0 +1,147 @@
+{
+ "n": 19,
+ "title": "APPENDIX",
+ "duration": 313.34,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX"
+  },
+  {
+   "t": 1.07,
+   "text": "Key papers and milestones to remember"
+  },
+  {
+   "t": 4.03,
+   "text": "Buenrostro, Giresi, Zaba, Chang, Greenleaf, 2013, Nature Methods** — \"Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, DNA-binding proteins and nucleosome position."
+  },
+  {
+   "t": 20.5,
+   "text": "\" The foundational paper introducing ATAC-seq."
+  },
+  {
+   "t": 24.62,
+   "text": "Corces, Buenrostro, et al., 2017, Nature Methods** — \"An improved ATAC-seq protocol reduces background and enables interrogation of frozen tissues."
+  },
+  {
+   "t": 36.36,
+   "text": "\" The Omni-ATAC paper."
+  },
+  {
+   "t": 38.41,
+   "text": "Cusanovich, Daza, Adey, et al., 2015, Science** — Single-cell ATAC-seq using combinatorial indexing."
+  },
+  {
+   "t": 47.34,
+   "text": "Buenrostro et al., 2015, Nature** — Droplet-based single-cell ATAC-seq."
+  },
+  {
+   "t": 54.23,
+   "text": "Corces, Granja, et al., 2018, Science** — The TCGA ATAC-seq pan-cancer atlas across 23 cancer types."
+  },
+  {
+   "t": 63.98,
+   "text": "Kaya-Okur, Henikoff, et al., 2019, Nature Communications** — The CUT&Tag paper."
+  },
+  {
+   "t": 71.4,
+   "text": "10x Genomics Multiome, 2020 — Commercial launch of joint ATAC + RNA single-cell profiling."
+  },
+  {
+   "t": 80.44,
+   "text": "Vocabulary"
+  },
+  {
+   "t": 81.64,
+   "text": "Accessible chromatin (open chromatin) — DNA in regions not tightly wrapped on nucleosomes, accessible to DNA-binding proteins."
+  },
+  {
+   "t": 91.81,
+   "text": "Tn5 transposase — Bacterial enzyme used to insert sequencing adapters into accessible DNA in a single step."
+  },
+  {
+   "t": 100.56,
+   "text": "Tagmentation — The combined cut-and-adapter-ligation reaction performed by adapter-loaded Tn5."
+  },
+  {
+   "t": 107.21,
+   "text": "Nucleosome-free region (NFR) — A stretch of DNA from which nucleosomes have been evicted, typically at active promoters and enhancers."
+  },
+  {
+   "t": 117.0,
+   "text": "DNase hypersensitive site (DHS) — Accessible chromatin region identified by DNase I sensitivity."
+  },
+  {
+   "t": 124.75,
+   "text": "TSS enrichment — Quality metric measuring read enrichment at transcription start sites."
+  },
+  {
+   "t": 131.25,
+   "text": "FRiP — Fraction of Reads in Peaks; a quality metric for ATAC-seq libraries."
+  },
+  {
+   "t": 138.09,
+   "text": "Footprinting — Inferring transcription factor binding from local depletion of Tn5 cuts within an accessible region."
+  },
+  {
+   "t": 146.19,
+   "text": "snATAC-seq — Single-nucleus ATAC-seq, the single-cell variant."
+  },
+  {
+   "t": 151.85,
+   "text": "Multiome — Joint profiling of ATAC and RNA in the same cells."
+  },
+  {
+   "t": 157.32,
+   "text": "The five-stage protocol summary"
+  },
+  {
+   "t": 159.54,
+   "text": "Cell harvest and nuclei isolation (hypotonic lysis with mild detergent) Tn5 reaction (30 min at 37°C with adapter-loaded transposase) PCR amplification (10-13 cycles, with sample-indexing primers) Cleanup and size selection (AMPure XP beads) Sequencing (Illumina paired-end, 50-75 bp reads, 25-50M paired reads per sample)"
+  },
+  {
+   "t": 189.81,
+   "text": "The four-step pipeline summary"
+  },
+  {
+   "t": 191.95,
+   "text": "Align reads with Bowtie2 or BWA Filter duplicates, low-MAPQ, mitochondrial, and blacklist regions Call peaks with MACS2 (with --nomodel, --shift, --extsize) QC with TSS enrichment, FRiP, fragment size distribution, duplication rate"
+  },
+  {
+   "t": 211.95,
+   "text": "Quick comparison table"
+  },
+  {
+   "t": 213.6,
+   "text": "Method | Input | Time | Specificity | Output | | --- | --- | --- | --- | --- | | DNase-seq | Millions of cells | Days | Open chromatin | Accessibility peaks | | FAIRE-seq | Millions of cells | Days | Open chromatin | Accessibility peaks (noisier) | | MNase-seq | Millions of cells | Days | Nucleosomes | Nucleosome positions | | ATAC-seq | 10K-50K cells | 4 hours | Open chromatin | Accessibility + nucleosome positions + footprints | | CUT&Tag | 100K cells | 1-2 days | Specific protein | Protein"
+  },
+  {
+   "t": 244.93,
+   "text": "binding sites | | ChIP-seq | Millions of cells | Days | Specific protein | Protein binding sites | | snATAC-seq | Single cells | 1-2 days | Open chromatin per cell | Per-cell accessibility | | 10x Multiome | Single cells | 1-2 days | ATAC + RNA per cell | Per-cell accessibility + expression"
+  },
+  {
+   "t": 266.26,
+   "text": "Three things to walk out of this lecture knowing"
+  },
+  {
+   "t": 268.8,
+   "text": "The ATAC-seq workflow on a whiteboard: nuclei → Tn5 tagmentation → PCR → sequencing → peak calling."
+  },
+  {
+   "t": 277.07,
+   "text": "The whole thing in five stages, four hours."
+  },
+  {
+   "t": 279.99,
+   "text": "Why Tn5 transposase works as an accessibility sensor: the enzyme is physically too large to fit into nucleosome-wrapped DNA, so it can only cut where the chromatin is open."
+  },
+  {
+   "t": 291.55,
+   "text": "The selectivity is built into the enzyme's geometry."
+  },
+  {
+   "t": 295.23,
+   "text": "How to read an ATAC-seq paper: identify the cell type, check the QC (TSS enrichment, FRiP, fragment size periodicity), look at peak overlap with regulatory elements, scan for motif enrichment, and interpret in the context of the biology being studied."
+  }
+ ]
+}

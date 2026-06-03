@@ -1,0 +1,215 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The basic architecture — source, analyzer, detector",
+ "duration": 322.39,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The basic architecture — source, analyzer, detector"
+  },
+  {
+   "t": 5.08,
+   "text": "Now that you know how to ionize a protein, let's look at the rest of the machine."
+  },
+  {
+   "t": 9.24,
+   "text": "Every mass spectrometer ever built has the same three-part architecture, and once you have these three parts in your head, you can read the spec sheet of any instrument and know what you're looking at."
+  },
+  {
+   "t": 20.01,
+   "text": "Three parts: ion source, mass analyzer, detector."
+  },
+  {
+   "t": 24.45,
+   "text": "That's it."
+  },
+  {
+   "t": 25.25,
+   "text": "Everything else — the geometry, the optics, the vacuum — is engineering details around those three."
+  },
+  {
+   "t": 32.55,
+   "text": "The ion source, which we just covered, gets your molecule into the gas phase as a charged ion."
+  },
+  {
+   "t": 39.04,
+   "text": "ESI for liquids, MALDI for solids, plus a few other methods we don't need today."
+  },
+  {
+   "t": 44.67,
+   "text": "The mass analyzer is the heart of the instrument."
+  },
+  {
+   "t": 48.09,
+   "text": "Its job is to separate ions by their mass-to-charge ratio — abbreviated m/z, pronounced \"m over z."
+  },
+  {
+   "t": 56.99,
+   "text": "\" Different ion species, different m/z values."
+  },
+  {
+   "t": 61.67,
+   "text": "The analyzer takes the cloud of ions coming from the source and sorts them out spatially or temporally so that ions of one m/z arrive at the detector at one time, and ions of a different m/z arrive at a different time."
+  },
+  {
+   "t": 76.15,
+   "text": "There are many ways to do this, and we'll spend the whole next segment on them, because the choice of mass analyzer is the single biggest factor in what an instrument can do."
+  },
+  {
+   "t": 85.86,
+   "text": "The detector counts ions."
+  },
+  {
+   "t": 87.88,
+   "text": "Most modern detectors are electron multipliers or microchannel plates, which work by amplifying the tiny current produced when an ion hits a metal surface."
+  },
+  {
+   "t": 97.67,
+   "text": "The detector outputs a signal proportional to how many ions of each m/z are arriving at each moment."
+  },
+  {
+   "t": 105.74,
+   "text": "Stack those measurements together and you get a mass spectrum — a plot with m/z on the x-axis and ion intensity on the y-axis, with peaks at the m/z values where ions actually exist in your sample."
+  },
+  {
+   "t": 118.85,
+   "text": "That mass spectrum is your raw data."
+  },
+  {
+   "t": 121.38,
+   "text": "Every peak in it is a molecular species with a particular mass-to-charge ratio."
+  },
+  {
+   "t": 126.62,
+   "text": "If you're measuring intact proteins, each peak is a protein (or a multiply-charged ion of a protein, which you have to back-calculate)."
+  },
+  {
+   "t": 135.96,
+   "text": "If you're measuring peptides — which is what we mostly do, as you'll see in the next segment — each peak is a peptide ion."
+  },
+  {
+   "t": 143.68,
+   "text": "Now here's the conceptual move that separates a mass spectrometer from a regular scale."
+  },
+  {
+   "t": 149.14,
+   "text": "A regular scale measures the absolute weight of an object."
+  },
+  {
+   "t": 153.3,
+   "text": "A mass spectrometer measures m/z — mass divided by charge."
+  },
+  {
+   "t": 158.94,
+   "text": "If a molecule has a mass of two thousand daltons and carries two charges, its m/z is one thousand."
+  },
+  {
+   "t": 166.89,
+   "text": "If it has a mass of one thousand daltons and carries one charge, its m/z is also one thousand."
+  },
+  {
+   "t": 174.74,
+   "text": "Same peak position."
+  },
+  {
+   "t": 176.1,
+   "text": "How do you tell them apart?"
+  },
+  {
+   "t": 177.35,
+   "text": "The answer is isotope peaks."
+  },
+  {
+   "t": 179.53,
+   "text": "Every molecule has a small fraction of its carbons that are carbon-13 instead of carbon-12 — about 1.1 percent natural abundance — and so any real molecule shows up not as a single peak but as a cluster of peaks separated by the mass difference between an extra carbon-13 and a normal carbon-12."
+  },
+  {
+   "t": 199.91,
+   "text": "The spacing of those peaks tells you the charge state."
+  },
+  {
+   "t": 203.24,
+   "text": "If the spacing is one m/z unit apart, the ion is singly charged."
+  },
+  {
+   "t": 208.94,
+   "text": "If half an m/z unit, doubly charged."
+  },
+  {
+   "t": 212.7,
+   "text": "If a third, triply charged."
+  },
+  {
+   "t": 214.95,
+   "text": "So from a single isotope cluster, you read off both the m/z and the charge, and from those you compute the actual mass."
+  },
+  {
+   "t": 223.18,
+   "text": "This is how mass spectrometers get to molecular masses with stunning precision — fractions of a part per million in the best modern instruments."
+  },
+  {
+   "t": 231.88,
+   "text": "The isotope envelope, the charge deconvolution, the high-resolution analyzer that separates closely spaced peaks — these are the components that turn raw signal into accurate mass."
+  },
+  {
+   "t": 243.57,
+   "text": "A final orienting point on the architecture."
+  },
+  {
+   "t": 246.46,
+   "text": "Mass spectrometers operate under high vacuum — typically ten to the minus six or minus seven torr in the analyzer region, sometimes lower."
+  },
+  {
+   "t": 255.97,
+   "text": "Why vacuum?"
+  },
+  {
+   "t": 257.07,
+   "text": "Because if there's air around, the ions you're trying to fly through the analyzer collide with air molecules, lose energy, scatter, and never reach the detector."
+  },
+  {
+   "t": 266.65,
+   "text": "You need a clean, empty flight path."
+  },
+  {
+   "t": 269.31,
+   "text": "The vacuum pumps on a mass spectrometer are part of the engineering bulk of the instrument — they hum constantly, they're loud, they're expensive, and they're absolutely essential."
+  },
+  {
+   "t": 279.76,
+   "text": "The transition from atmospheric pressure (where ESI happens) to high vacuum (where the analyzer operates) is one of the trickiest parts of instrument design."
+  },
+  {
+   "t": 289.91,
+   "text": "There's a whole intricate region of differential pumping — chambers stepping the pressure down from one atmosphere to one billionth of an atmosphere over a few centimeters — just to get the ions safely into the analyzer."
+  },
+  {
+   "t": 303.43,
+   "text": "Modern instruments do this beautifully and you never have to think about it, but it's worth knowing that's where a lot of the engineering complexity lives."
+  },
+  {
+   "t": 311.54,
+   "text": "Source."
+  },
+  {
+   "t": 312.52,
+   "text": "Analyzer."
+  },
+  {
+   "t": 313.58,
+   "text": "Detector."
+  },
+  {
+   "t": 314.54,
+   "text": "Vacuum throughout."
+  },
+  {
+   "t": 316.12,
+   "text": "That's a mass spectrometer."
+  },
+  {
+   "t": 317.88,
+   "text": "Now let's talk about the analyzer, because that's where the real diversity is."
+  }
+ ]
+}

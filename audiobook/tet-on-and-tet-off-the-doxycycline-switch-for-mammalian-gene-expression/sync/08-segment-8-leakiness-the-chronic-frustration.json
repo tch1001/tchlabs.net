@@ -1,0 +1,283 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Leakiness: the chronic frustration",
+ "duration": 432.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Leakiness: the chronic frustration"
+  },
+  {
+   "t": 3.99,
+   "text": "I've used the word \"leaky\" or \"leakiness\" several times now, and it's worth slowing down and really explaining what leakiness means in the Tet system, because it is the single most common frustration that people experience with these systems in practice, and a lot of experimental design decisions are driven by how to manage it."
+  },
+  {
+   "t": 23.29,
+   "text": "Here's what leakiness means."
+  },
+  {
+   "t": 25.14,
+   "text": "When you build a Tet system — let's say a Tet-On with rtTA driving a TRE-controlled transgene — the ideal behavior would be: with no doxycycline, zero expression of the transgene; with doxycycline, maximum expression of the transgene."
+  },
+  {
+   "t": 40.59,
+   "text": "A perfect on-off switch."
+  },
+  {
+   "t": 42.35,
+   "text": "Real systems are not perfect."
+  },
+  {
+   "t": 44.29,
+   "text": "With no doxycycline, you don't get zero expression — you get some low background level of expression."
+  },
+  {
+   "t": 50.69,
+   "text": "Maybe one percent of the maximum induced level."
+  },
+  {
+   "t": 54.14,
+   "text": "Maybe one tenth of a percent."
+  },
+  {
+   "t": 56.3,
+   "text": "Maybe ten percent if the system is really leaky."
+  },
+  {
+   "t": 59.69,
+   "text": "For most genes, that background is tolerable — one percent expression of a fluorescent reporter isn't going to confuse your experiment much, because the difference between one percent and a hundred percent is huge and easily distinguishable."
+  },
+  {
+   "t": 74.89,
+   "text": "But for some genes, even one percent expression is a problem."
+  },
+  {
+   "t": 78.97,
+   "text": "Highly toxic proteins — proteins that kill cells at any concentration above a certain threshold — can be killed by basal leak even when you want them off."
+  },
+  {
+   "t": 88.92,
+   "text": "CRISPR Cas9 itself is one example — even low basal expression can drive enough genome editing over weeks to confound a clean inducible experiment."
+  },
+  {
+   "t": 99.78,
+   "text": "Apoptosis-inducing proteins like BAX or BID — basal expression can pre-sensitize cells to death even without induction."
+  },
+  {
+   "t": 108.59,
+   "text": "Some transcription factors — basal expression can drive cellular adaptation that obscures the effect of induction."
+  },
+  {
+   "t": 116.1,
+   "text": "What causes leakiness?"
+  },
+  {
+   "t": 117.7,
+   "text": "Several things contribute."
+  },
+  {
+   "t": 119.38,
+   "text": "First, the minimal CMV (or other minimal promoter) in the TRE is not actually silent."
+  },
+  {
+   "t": 126.62,
+   "text": "It has some baseline activity."
+  },
+  {
+   "t": 128.68,
+   "text": "RNA polymerase II occasionally finds its way to the TATA box even without any transactivator bound, and produces some transcripts."
+  },
+  {
+   "t": 137.49,
+   "text": "Engineering tighter minimal promoters helps — that's what TRE-tight and TRE3G do — but you can never get to actual zero."
+  },
+  {
+   "t": 145.56,
+   "text": "There's always some thermal noise in the system."
+  },
+  {
+   "t": 148.39,
+   "text": "Second, the transactivator — tTA or rtTA — is not perfectly responsive to the drug."
+  },
+  {
+   "t": 155.64,
+   "text": "In Tet-On, rtTA has some residual operator-binding activity even without doxycycline."
+  },
+  {
+   "t": 162.26,
+   "text": "The mutations that make rtTA require drug to bind aren't perfectly effective; some fraction of the protein binds the TRE even in the absence of drug, leading to some basal activation."
+  },
+  {
+   "t": 173.93,
+   "text": "Modern variants like rtTA3 have improved this, but it's not zero."
+  },
+  {
+   "t": 178.62,
+   "text": "Third, overexpression of the transactivator can paradoxically increase leakiness."
+  },
+  {
+   "t": 184.61,
+   "text": "If you flood the cell with too much rtTA, the mass-action equilibrium pushes some of it onto the TRE even without drug."
+  },
+  {
+   "t": 192.86,
+   "text": "Counterintuitively, less transactivator can give tighter off behavior."
+  },
+  {
+   "t": 198.05,
+   "text": "This is why people sometimes use weaker promoters to drive rtTA expression — you want enough to give good induction, but not so much that the off state suffers."
+  },
+  {
+   "t": 208.03,
+   "text": "Fourth, integration site effects."
+  },
+  {
+   "t": 210.54,
+   "text": "When the transgenes are integrated into the genome — by lentivirus, by transposon, by traditional pronuclear injection — the local chromatin environment affects expression."
+  },
+  {
+   "t": 221.43,
+   "text": "A TRE that's integrated next to a strong endogenous enhancer can be leaky even when off."
+  },
+  {
+   "t": 227.93,
+   "text": "A TRE that's integrated in a repressive heterochromatic region might be reluctant to fully activate even with drug."
+  },
+  {
+   "t": 235.55,
+   "text": "These integration effects are unpredictable, and they're a major reason why different clones of the \"same\" cell line often behave differently."
+  },
+  {
+   "t": 244.88,
+   "text": "How do experimenters manage leakiness?"
+  },
+  {
+   "t": 247.56,
+   "text": "Several strategies."
+  },
+  {
+   "t": 249.09,
+   "text": "Strategy one: use the tightest modern variants."
+  },
+  {
+   "t": 252.81,
+   "text": "rtTA3 plus TRE3G is dramatically less leaky than rtTA plus original TRE."
+  },
+  {
+   "t": 261.04,
+   "text": "Just upgrading the variants you use can solve a lot of problems."
+  },
+  {
+   "t": 264.51,
+   "text": "Strategy two: clone-screening."
+  },
+  {
+   "t": 267.07,
+   "text": "After making a Tet stable cell line, screen many individual clones — twenty, fifty, sometimes more — and pick the one with the best on-off characteristics."
+  },
+  {
+   "t": 277.55,
+   "text": "Most clones will be too leaky or too poorly inducible."
+  },
+  {
+   "t": 282.15,
+   "text": "A few will be excellent."
+  },
+  {
+   "t": 283.59,
+   "text": "The variation from clone to clone is large, and the only way to find the good ones is to actually look."
+  },
+  {
+   "t": 290.35,
+   "text": "This is tedious but essential for high-quality work."
+  },
+  {
+   "t": 294.06,
+   "text": "Strategy three: use safe harbor integration sites."
+  },
+  {
+   "t": 298.11,
+   "text": "Recent CRISPR-based approaches integrate the Tet components into defined genomic locations — the AAVS1 locus, the ROSA26 locus in mouse — that are known to be transcriptionally permissive but not strongly enhancer-bombarded."
+  },
+  {
+   "t": 313.04,
+   "text": "This reduces integration-site variability and tends to give more reproducible behavior."
+  },
+  {
+   "t": 318.96,
+   "text": "Strategy four: budget for leakiness in your experiment."
+  },
+  {
+   "t": 322.84,
+   "text": "Sometimes you can't eliminate leakage entirely, but you can design the experiment to tolerate it."
+  },
+  {
+   "t": 328.71,
+   "text": "If you know your basal expression is one percent of induced, you can choose readouts that aren't sensitive to one percent — for example, only measure proteins at induced levels and ignore basal noise."
+  },
+  {
+   "t": 341.3,
+   "text": "Or use induction levels that are high enough that the signal-to-background is acceptable."
+  },
+  {
+   "t": 345.92,
+   "text": "Strategy five: layer with additional control systems."
+  },
+  {
+   "t": 349.85,
+   "text": "For really critical cases, people combine Tet with other inducible systems — Cre-Lox, FLP-FRT, destabilization domains, degrons — to add additional levels of control that can compensate for basal leak."
+  },
+  {
+   "t": 363.37,
+   "text": "We'll talk about some of these combinations in later segments."
+  },
+  {
+   "t": 366.85,
+   "text": "The honest summary is that leakiness is the chronic frustration of the Tet system."
+  },
+  {
+   "t": 371.86,
+   "text": "Even with all the engineering improvements, \"off\" is rarely zero off."
+  },
+  {
+   "t": 376.74,
+   "text": "It's usually low-level on."
+  },
+  {
+   "t": 378.41,
+   "text": "For most experiments, that's fine."
+  },
+  {
+   "t": 380.82,
+   "text": "For some experiments, it's a constant battle."
+  },
+  {
+   "t": 383.65,
+   "text": "Good labs that use Tet systems heavily have learned to characterize the leak carefully, to budget for it in experimental design, and to use multiple controls to distinguish real induced effects from drug-independent background."
+  },
+  {
+   "t": 397.07,
+   "text": "I want you to leave this segment with one message: when you read a Tet paper, the off state is almost certainly not perfectly off."
+  },
+  {
+   "t": 404.36,
+   "text": "The authors are reporting an induction ratio — how much the gene goes up when you add drug — but the baseline is rarely zero."
+  },
+  {
+   "t": 412.27,
+   "text": "Healthy skepticism about basal expression is part of how to read these experiments carefully."
+  },
+  {
+   "t": 418.45,
+   "text": "Right."
+  },
+  {
+   "t": 419.15,
+   "text": "Now let me start showing you what the system can actually do — what experiments are made possible by having this kind of controllable expression."
+  },
+  {
+   "t": 426.69,
+   "text": "The first big application is combining Tet with Cre to get both temporal and spatial control."
+  }
+ ]
+}

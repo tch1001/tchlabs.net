@@ -1,0 +1,175 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Naming, cataloging, and the LINC0000 pipeline",
+ "duration": 313.18,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Naming, cataloging, and the LINC0000 pipeline"
+  },
+  {
+   "t": 6.05,
+   "text": "The bureaucracy of lncRNA cataloging is worth understanding because it shapes which transcripts you encounter in your data and how much you should trust them."
+  },
+  {
+   "t": 15.74,
+   "text": "There are several major catalogs, each with their own inclusion criteria and naming conventions, and they disagree with each other in instructive ways."
+  },
+  {
+   "t": 24.86,
+   "text": "RefSeq, maintained by NCBI, is the most stringent of the major catalogs."
+  },
+  {
+   "t": 30.84,
+   "text": "RefSeq entries are manually curated, require evidence of consistent expression across multiple datasets, and are slow to add new lncRNAs."
+  },
+  {
+   "t": 40.98,
+   "text": "RefSeq lncRNAs are the safest bet — if a transcript is in RefSeq, it almost certainly exists as a real RNA molecule, even if its function is unknown."
+  },
+  {
+   "t": 52.21,
+   "text": "The total number of human lncRNAs in RefSeq is in the low ten thousands."
+  },
+  {
+   "t": 57.25,
+   "text": "GENCODE, maintained jointly by Sanger, UCSC, and other centers, is the consensus catalog used by ENCODE and by most computational analyses."
+  },
+  {
+   "t": 68.06,
+   "text": "GENCODE is more inclusive than RefSeq — it adds new transcripts more readily based on RNA-seq evidence — but it still requires meaningful supporting data."
+  },
+  {
+   "t": 78.72,
+   "text": "GENCODE annotates around seventeen to twenty thousand human lncRNAs, depending on the release."
+  },
+  {
+   "t": 85.75,
+   "text": "NONCODE, maintained by a Chinese consortium, is more permissive than GENCODE."
+  },
+  {
+   "t": 91.16,
+   "text": "NONCODE will include transcripts based on lower thresholds of evidence and aims to be a comprehensive catalog of all reported lncRNAs across species."
+  },
+  {
+   "t": 100.62,
+   "text": "The trade-off is that NONCODE includes many transcripts that may not be well-supported, and you need to apply your own filtering when working with NONCODE data."
+  },
+  {
+   "t": 109.66,
+   "text": "LNCipedia is another widely used catalog that aggregates lncRNAs from multiple sources and provides additional annotation."
+  },
+  {
+   "t": 118.09,
+   "text": "MiTranscriptome, FANTOM CAT, and BIGTranscriptome are other catalogs with different inclusion philosophies."
+  },
+  {
+   "t": 125.49,
+   "text": "The plurality of catalogs reflects the genuine uncertainty in the field about which transcripts deserve catalog status."
+  },
+  {
+   "t": 133.47,
+   "text": "The naming convention for newly cataloged intergenic lncRNAs is the LINC0000X scheme — Long Intergenic Non-Coding RNA, with a sequential number."
+  },
+  {
+   "t": 144.91,
+   "text": "The HUGO Gene Nomenclature Committee assigns these names and maintains the official human gene name registry."
+  },
+  {
+   "t": 152.29,
+   "text": "Older lncRNAs, named before this scheme was established, retain their historical names — XIST, HOTAIR, MALAT1, NEAT1, H19, GAS5, ANRIL, PVT1, KCNQ1OT1, AIRN, and the like."
+  },
+  {
+   "t": 170.4,
+   "text": "The historical names are quirky and often reflect what the discoverers thought the molecule did."
+  },
+  {
+   "t": 176.51,
+   "text": "HOTAIR is \"HOX Antisense Intergenic RNA,\" reflecting its discovery in the HOX cluster."
+  },
+  {
+   "t": 184.57,
+   "text": "HOTAIRM1 is a related transcript at the HOXA cluster."
+  },
+  {
+   "t": 188.36,
+   "text": "GAS5 is \"Growth Arrest Specific 5,\" named for its upregulation when cells stop dividing."
+  },
+  {
+   "t": 195.38,
+   "text": "PVT1 is \"Plasmacytoma Variant Translocation 1,\" named for its location at a chromosomal breakpoint in cancer."
+  },
+  {
+   "t": 203.85,
+   "text": "Each historical name is a little window into the discovery story."
+  },
+  {
+   "t": 208.38,
+   "text": "A practical point."
+  },
+  {
+   "t": 209.7,
+   "text": "When you see a lncRNA name in a paper, the source catalog matters."
+  },
+  {
+   "t": 214.21,
+   "text": "A LINC0000X name from GENCODE is a transcript that someone in the GENCODE process considered well-supported."
+  },
+  {
+   "t": 222.24,
+   "text": "A name in NONCODE alone may not have the same level of evidence behind it."
+  },
+  {
+   "t": 227.31,
+   "text": "When you cite a lncRNA, you should ideally cite the catalog and version you are using, just as you would cite a particular Ensembl release or a particular reference genome build."
+  },
+  {
+   "t": 237.32,
+   "text": "The cataloging process itself is worth a moment's reflection."
+  },
+  {
+   "t": 241.28,
+   "text": "The lncRNA catalog is built by sequencing RNA from many cell types, assembling reads into transcripts, and applying inclusion filters."
+  },
+  {
+   "t": 251.22,
+   "text": "The depth and diversity of the input RNA-seq matters — early catalogs missed transcripts that were only expressed in rare cell types or in specific developmental stages."
+  },
+  {
+   "t": 262.27,
+   "text": "As single-cell RNA-seq has revealed more cell-type-specific lncRNAs, the catalogs have grown."
+  },
+  {
+   "t": 269.4,
+   "text": "The catalog is a living document."
+  },
+  {
+   "t": 271.81,
+   "text": "The version you used yesterday may not be the version you use tomorrow."
+  },
+  {
+   "t": 275.85,
+   "text": "Here is the slogan."
+  },
+  {
+   "t": 277.52,
+   "text": "The lncRNA catalogs are field guides built from RNA-seq evidence, with different stringency from RefSeq through GENCODE to NONCODE."
+  },
+  {
+   "t": 286.83,
+   "text": "Modern intergenic lncRNAs get LINC0000X names from HGNC."
+  },
+  {
+   "t": 294.25,
+   "text": "Older lncRNAs keep their historical names."
+  },
+  {
+   "t": 297.78,
+   "text": "The catalog is large, growing, and partly inflated — caveat lector."
+  },
+  {
+   "t": 303.11,
+   "text": "With that practical orientation, let us look at how lncRNAs behave in the single-cell era, where their cell-type specificity becomes especially apparent."
+  }
+ ]
+}

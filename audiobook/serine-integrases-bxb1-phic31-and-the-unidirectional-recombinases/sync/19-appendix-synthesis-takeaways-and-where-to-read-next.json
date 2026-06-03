@@ -1,0 +1,239 @@
+{
+ "n": 19,
+ "title": "APPENDIX — Synthesis, takeaways, and where to read next",
+ "duration": 331.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX — Synthesis, takeaways, and where to read next"
+  },
+  {
+   "t": 4.41,
+   "text": "Let me close with the synthesis I want you to carry out of this lecture."
+  },
+  {
+   "t": 8.39,
+   "text": "The two families."
+  },
+  {
+   "t": 9.86,
+   "text": "Site-specific recombinases come in two great clans."
+  },
+  {
+   "t": 13.96,
+   "text": "The tyrosine recombinases — Cre, Flp, lambda integrase — use a tyrosine residue in the active site, recombine between identical sites (loxP, FRT), and run reversibly."
+  },
+  {
+   "t": 27.94,
+   "text": "The serine recombinases — Bxb1, phiC31, R4, TP901-1, and family — use a serine residue, recombine between two different sites (attB and attP), and run unidirectionally without an accessory factor."
+  },
+  {
+   "t": 45.65,
+   "text": "The unidirectionality of the serine integrases is the central architectural difference and the central engineering advantage for landing-pad applications."
+  },
+  {
+   "t": 55.49,
+   "text": "The asymmetry-makes-irreversibility insight."
+  },
+  {
+   "t": 58.81,
+   "text": "Cre-Lox is symmetric: loxP plus loxP gives loxP plus loxP."
+  },
+  {
+   "t": 64.78,
+   "text": "The chemistry runs both ways."
+  },
+  {
+   "t": 67.44,
+   "text": "Serine integrases are asymmetric: attB plus attP gives attL plus attR, which are different sites that the enzyme can't productively re-engage."
+  },
+  {
+   "t": 79.69,
+   "text": "The asymmetry is what makes the reaction unidirectional."
+  },
+  {
+   "t": 83.66,
+   "text": "Hold this."
+  },
+  {
+   "t": 84.76,
+   "text": "It's the deep architectural point."
+  },
+  {
+   "t": 86.79,
+   "text": "The landing pad as industrial workflow."
+  },
+  {
+   "t": 89.56,
+   "text": "Install an attB once in a chromosomal safe-harbor site (with CRISPR + HDR, or with prime editing via PASTE)."
+  },
+  {
+   "t": 98.1,
+   "text": "Then dock attP-flanked cargo in over and over again, reproducibly, with Bxb1."
+  },
+  {
+   "t": 104.53,
+   "text": "This workflow is the dominant approach for industrial CHO cell engineering for monoclonal antibody production, and it's increasingly the approach for plant trait engineering and for emerging gene therapy applications."
+  },
+  {
+   "t": 117.49,
+   "text": "It amortizes the cost of finding a good integration site across every product you'll ever make."
+  },
+  {
+   "t": 123.29,
+   "text": "PASTE as the design pattern of the moment."
+  },
+  {
+   "t": 125.96,
+   "text": "Prime editing installs the landing pad with single-nucleotide precision."
+  },
+  {
+   "t": 130.96,
+   "text": "Bxb1 docks the cargo."
+  },
+  {
+   "t": 132.99,
+   "text": "Together, they enable kilobase-scale precision insertion in differentiated cells in vivo, breaking the AAV size barrier."
+  },
+  {
+   "t": 141.39,
+   "text": "Watch for clinical translation in the next five years."
+  },
+  {
+   "t": 144.61,
+   "text": "Bxb1 as the workhorse."
+  },
+  {
+   "t": 146.97,
+   "text": "Of all the serine integrases, Bxb1 — from a mycobacteriophage isolated by an undergraduate-driven discovery program at Pittsburgh — happens to have the lowest off-target rate in mammalian genomes, and is consequently the dominant integrase in modern landing-pad and PASTE applications."
+  },
+  {
+   "t": 164.74,
+   "text": "phiC31 was the trailblazer but is mostly displaced for clinical use because of its pseudo-attP problem."
+  },
+  {
+   "t": 172.15,
+   "text": "Synthetic biology beyond integration."
+  },
+  {
+   "t": 175.3,
+   "text": "Beyond their use as integration tools, serine integrases are increasingly used as DNA-encoded memory and logic components in synthetic-biology circuits."
+  },
+  {
+   "t": 185.95,
+   "text": "Each integrase reaction is a flip-once memory bit."
+  },
+  {
+   "t": 189.38,
+   "text": "Orthogonal integrases let you build multi-bit circuits."
+  },
+  {
+   "t": 193.34,
+   "text": "The state is recorded in DNA and persists indefinitely."
+  },
+  {
+   "t": 197.44,
+   "text": "This is the basis of \"biological permanent memory\" and various lineage-tracing and biosensing applications."
+  },
+  {
+   "t": 204.9,
+   "text": "Where to read next."
+  },
+  {
+   "t": 206.29,
+   "text": "If you want to go deeper, the foundational papers worth knowing:"
+  },
+  {
+   "t": 209.95,
+   "text": "Groth, Olivares, Thyagarajan & Calos (2000-2001) — the first phiC31-in-mammalian-cells papers."
+  },
+  {
+   "t": 219.46,
+   "text": "Brown, Mehbiri, Hatfull et al."
+  },
+  {
+   "t": 222.26,
+   "text": "(2011) — Bxb1 in mammalian cells, establishing its specificity advantage."
+  },
+  {
+   "t": 229.18,
+   "text": "Bonnet, Yin, Subsoontorn & Endy (2013) — Bxb1 as a single-bit DNA memory device in E. coli."
+  },
+  {
+   "t": 238.35,
+   "text": "Anzalone et al."
+  },
+  {
+   "t": 239.61,
+   "text": "(2019) — the original prime editing paper, the prerequisite for PASTE."
+  },
+  {
+   "t": 245.74,
+   "text": "Anzalone, Yarnall et al."
+  },
+  {
+   "t": 247.89,
+   "text": "(2022) — the PASTE paper introducing Prime-editing Assisted Site-specific Integration with Exchange."
+  },
+  {
+   "t": 255.26,
+   "text": "Yarnall et al."
+  },
+  {
+   "t": 256.46,
+   "text": "(2023) — large-scale survey of new serine integrase orthologs for mammalian use."
+  },
+  {
+   "t": 263.16,
+   "text": "And of course the companion lectures in this course — Cre-Lox for the tyrosine recombinases, prime editing for the targeting tool used in PASTE, AAV and lentivirus for the delivery context, CRISPR for the broader genome-editing landscape."
+  },
+  {
+   "t": 277.68,
+   "text": "One final image to walk out with."
+  },
+  {
+   "t": 279.76,
+   "text": "CRISPR taught us to cut DNA at any sequence we want."
+  },
+  {
+   "t": 284.12,
+   "text": "Base editing and prime editing taught us to make small edits without cutting all the way through."
+  },
+  {
+   "t": 290.28,
+   "text": "Serine integrases — and especially Bxb1 in the PASTE configuration — teach us to install kilobase-scale cargo at any sequence we want, with confidence that it will stay there."
+  },
+  {
+   "t": 302.29,
+   "text": "That is a different capability from cutting, from base-swapping, from small-edit-installing."
+  },
+  {
+   "t": 307.67,
+   "text": "It is the capability of building."
+  },
+  {
+   "t": 309.69,
+   "text": "Of permanent, defined, large-scale construction in a chromosome."
+  },
+  {
+   "t": 314.37,
+   "text": "If CRISPR is the scalpel and base editing is the pen and prime editing is the typewriter, then serine integrases are the bricklayer."
+  },
+  {
+   "t": 323.17,
+   "text": "They lay heavy load at a known address, and once laid, the brick stays put."
+  },
+  {
+   "t": 328.71,
+   "text": "That's the lecture."
+  },
+  {
+   "t": 329.91,
+   "text": "Thank you."
+  },
+  {
+   "t": 330.72,
+   "text": "Questions?"
+  }
+ ]
+}

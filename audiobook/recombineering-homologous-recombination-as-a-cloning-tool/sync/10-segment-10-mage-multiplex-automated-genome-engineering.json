@@ -1,0 +1,263 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — MAGE: Multiplex Automated Genome Engineering",
+ "duration": 387.73,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — MAGE: Multiplex Automated Genome Engineering"
+  },
+  {
+   "t": 5.38,
+   "text": "Alright, welcome back."
+  },
+  {
+   "t": 6.75,
+   "text": "For the second half of the lecture we are going to leave the world of single-clone experiments and go into the world of high-throughput, multi-site, automated recombineering."
+  },
+  {
+   "t": 16.55,
+   "text": "The first stop on that tour is MAGE — Multiplex Automated Genome Engineering — which is one of the most ambitious applications of recombineering ever built, and the one that arguably brought the technique into modern synthetic biology."
+  },
+  {
+   "t": 31.25,
+   "text": "MAGE was developed in George Church's lab at Harvard around 2009, with the lead author being a graduate student named Harris Wang."
+  },
+  {
+   "t": 39.76,
+   "text": "The paper, published in Nature in 2009, has a delicious title — something like \"Programming cells by multiplex genome engineering and accelerated evolution\" — and it described a machine and a protocol that let you do what would otherwise have been preposterous."
+  },
+  {
+   "t": 56.12,
+   "text": "It let you edit dozens of sites in the E. coli chromosome, simultaneously, in parallel, in a matter of days."
+  },
+  {
+   "t": 64.41,
+   "text": "Here is the core idea."
+  },
+  {
+   "t": 66.36,
+   "text": "Recombineering with single-stranded oligos is the basic move."
+  },
+  {
+   "t": 70.84,
+   "text": "We covered that before the break."
+  },
+  {
+   "t": 72.84,
+   "text": "Each oligo can introduce one edit at one site."
+  },
+  {
+   "t": 76.19,
+   "text": "In a single round of electroporation, a cell can pick up multiple oligos simultaneously, and some cells will integrate edits at multiple sites at once."
+  },
+  {
+   "t": 85.88,
+   "text": "The probability of any one cell getting all the edits you want, in one round, is low."
+  },
+  {
+   "t": 92.05,
+   "text": "But if you do many rounds — twenty, thirty, fifty rounds of electroporation, each with all your oligos in the mix — then you can drive the cell population toward higher and higher numbers of integrated edits."
+  },
+  {
+   "t": 104.15,
+   "text": "Each round, more cells acquire more edits."
+  },
+  {
+   "t": 107.2,
+   "text": "Eventually, with enough rounds, you can get a substantial fraction of the population to carry all of your desired edits."
+  },
+  {
+   "t": 114.14,
+   "text": "The catch is that doing fifty rounds of electroporation by hand would be insane."
+  },
+  {
+   "t": 118.85,
+   "text": "Each round requires growing cells, inducing Red expression, washing the cells, electroporating them, letting them recover."
+  },
+  {
+   "t": 127.62,
+   "text": "That is most of a day of bench work per round."
+  },
+  {
+   "t": 130.43,
+   "text": "Fifty rounds is fifty days."
+  },
+  {
+   "t": 133.14,
+   "text": "That is a year of effort, full-time, just doing the same protocol over and over."
+  },
+  {
+   "t": 138.39,
+   "text": "So Harris Wang built a machine."
+  },
+  {
+   "t": 140.34,
+   "text": "A liquid-handling robot with a built-in electroporator, an incubator, and an automated washing system."
+  },
+  {
+   "t": 146.95,
+   "text": "You load your strain, your oligos, and your reagents."
+  },
+  {
+   "t": 150.81,
+   "text": "The machine runs the recombineering cycle, automatically, on a timer."
+  },
+  {
+   "t": 155.69,
+   "text": "Grow, induce, wash, electroporate, recover, grow, induce, wash, electroporate, recover."
+  },
+  {
+   "t": 165.46,
+   "text": "Around the clock."
+  },
+  {
+   "t": 166.62,
+   "text": "The machine could do a round every two and a half hours."
+  },
+  {
+   "t": 170.21,
+   "text": "You could do thirty rounds in three days."
+  },
+  {
+   "t": 172.72,
+   "text": "This is the recombineering robot."
+  },
+  {
+   "t": 174.91,
+   "text": "MAGE is, mechanically, just automated recombineering, scaled up."
+  },
+  {
+   "t": 179.6,
+   "text": "But the consequences of that scale-up are profound."
+  },
+  {
+   "t": 182.57,
+   "text": "Suddenly you can do edits that would have been hopeless by hand."
+  },
+  {
+   "t": 185.95,
+   "text": "You can take a strain of E. coli and try, simultaneously, to make changes at dozens of sites across the genome."
+  },
+  {
+   "t": 193.5,
+   "text": "Each oligo in your mix targets a different site."
+  },
+  {
+   "t": 196.74,
+   "text": "Each round of MAGE rolls the dice at all those sites."
+  },
+  {
+   "t": 200.04,
+   "text": "After enough rounds, you have driven the population to homozygosity — every chromosome, in every cell, carries every edit — at many sites at once."
+  },
+  {
+   "t": 210.8,
+   "text": "What can you do with that?"
+  },
+  {
+   "t": 211.99,
+   "text": "An enormous range of things."
+  },
+  {
+   "t": 213.96,
+   "text": "The first MAGE paper demonstrated the technique by optimizing E. coli for production of a small molecule called lycopene — the pigment that makes tomatoes red."
+  },
+  {
+   "t": 224.41,
+   "text": "Lycopene production in E. coli depends on a whole metabolic pathway with many genes."
+  },
+  {
+   "t": 230.15,
+   "text": "You can imagine that, for each gene in the pathway, there is some optimal expression level."
+  },
+  {
+   "t": 236.2,
+   "text": "Too little of the gene, the pathway is bottlenecked."
+  },
+  {
+   "t": 239.79,
+   "text": "Too much, the cell wastes resources."
+  },
+  {
+   "t": 242.59,
+   "text": "The Church lab designed MAGE oligos that targeted the ribosome binding sites of each pathway gene, introducing variations that would tune each gene's expression up or down."
+  },
+  {
+   "t": 253.76,
+   "text": "They ran MAGE for many rounds, generating a library of strains with different combinations of expression-tuning edits, and then they selected for strains that made the most lycopene."
+  },
+  {
+   "t": 265.2,
+   "text": "In a few days, MAGE generated billions of unique strain variants and found ones that produced five-fold more lycopene than the starting strain."
+  },
+  {
+   "t": 274.28,
+   "text": "That is what MAGE bought you — a way to explore an enormous combinatorial space of edits, far faster than you could otherwise."
+  },
+  {
+   "t": 282.93,
+   "text": "Compared to picking one strain, evaluating it, and iterating, MAGE lets you do the iteration at the scale of the cell population, in days instead of months."
+  },
+  {
+   "t": 293.46,
+   "text": "The mental model I want you to have for MAGE is this: MAGE is the recombineering robot."
+  },
+  {
+   "t": 299.36,
+   "text": "It does in a day what would take a grad student a year, running the same edit cycle thirty times to drive a multi-site change to homozygosity."
+  },
+  {
+   "t": 308.18,
+   "text": "That is the punchline."
+  },
+  {
+   "t": 309.59,
+   "text": "It is automated recombineering, multiplexed across many sites, repeated many cycles, used either to make a specific designed strain — many edits, all defined — or to make a library of variants — many edits, randomly combined, ready for selection."
+  },
+  {
+   "t": 326.83,
+   "text": "The applications of MAGE have included not just metabolic engineering for chemical production, but also fundamental studies of how the genetic code works, optimization of strains for protein production, and — most ambitiously — the recoding of entire bacterial genomes, which we will come to in a few segments."
+  },
+  {
+   "t": 346.78,
+   "text": "Whenever a synthetic biologist needs to make many edits across an E. coli chromosome, MAGE is one of the first tools they reach for."
+  },
+  {
+   "t": 355.43,
+   "text": "And here is the thing about MAGE that I want to emphasize."
+  },
+  {
+   "t": 358.59,
+   "text": "Underneath, it is still recombineering."
+  },
+  {
+   "t": 361.44,
+   "text": "Still Beta."
+  },
+  {
+   "t": 362.56,
+   "text": "Still oligos."
+  },
+  {
+   "t": 364.03,
+   "text": "Still annealing at replication forks."
+  },
+  {
+   "t": 366.78,
+   "text": "The molecular biology is the same as what Don Court was characterizing at NCI Frederick."
+  },
+  {
+   "t": 372.6,
+   "text": "MAGE just industrialized it."
+  },
+  {
+   "t": 374.54,
+   "text": "Took the basic reaction, automated the cycle, and multiplexed across sites."
+  },
+  {
+   "t": 379.64,
+   "text": "That kind of layering — basic biology, then engineering automation — is how genome editing scales up in the modern era."
+  }
+ ]
+}

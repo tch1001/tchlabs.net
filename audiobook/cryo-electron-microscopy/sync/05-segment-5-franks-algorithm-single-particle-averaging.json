@@ -1,0 +1,183 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Frank's algorithm — single-particle averaging",
+ "duration": 304.12,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Frank's algorithm — single-particle averaging"
+  },
+  {
+   "t": 4.39,
+   "text": "Joachim Frank is a German-born structural biologist who spent most of his career at the Wadsworth Center in Albany, New York, and now at Columbia."
+  },
+  {
+   "t": 12.99,
+   "text": "Through the 1970s and 80s, while Dubochet was working on freezing, Frank was working on a different problem: how do you extract signal from a lot of noisy images?"
+  },
+  {
+   "t": 23.1,
+   "text": "Here's the situation."
+  },
+  {
+   "t": 24.52,
+   "text": "You have a vitreous ice grid containing thousands of copies of the same protein, frozen in place, in many different random orientations."
+  },
+  {
+   "t": 33.75,
+   "text": "You take an electron micrograph."
+  },
+  {
+   "t": 35.66,
+   "text": "The image shows a field of fuzzy spots, each spot being one protein, each protein in a different rotational orientation than the next, and each spot extremely noisy because you used very low electron dose."
+  },
+  {
+   "t": 49.17,
+   "text": "Frank's insight — and this took years of careful work to make precise — was that all those noisy spots are, in principle, projections of the same three-dimensional object, just seen from different angles."
+  },
+  {
+   "t": 62.17,
+   "text": "If you could computationally figure out the orientation of each spot, you could combine them."
+  },
+  {
+   "t": 67.34,
+   "text": "You could group together spots that happened to be in similar orientations, average them to reduce noise, and then use the set of averages from different orientations to reconstruct, mathematically, the three-dimensional structure of the original molecule."
+  },
+  {
+   "t": 82.97,
+   "text": "That technique is called single-particle analysis, and it's the conceptual core of modern cryo-EM."
+  },
+  {
+   "t": 89.39,
+   "text": "Let me try the analogy."
+  },
+  {
+   "t": 90.86,
+   "text": "Imagine you have a sculpture — a small, intricate statue — and you have a million photographs of it, all taken in dim light so each photo is very grainy."
+  },
+  {
+   "t": 101.26,
+   "text": "Each photo is taken from a different angle, but you don't know what angle."
+  },
+  {
+   "t": 105.1,
+   "text": "The photos are unlabeled."
+  },
+  {
+   "t": 106.71,
+   "text": "Your task: from these million noisy, unlabeled photographs, reconstruct the three-dimensional shape of the sculpture, in fine detail."
+  },
+  {
+   "t": 116.01,
+   "text": "The way you do it is iterative."
+  },
+  {
+   "t": 118.58,
+   "text": "First, you make a guess at the orientation of each photo."
+  },
+  {
+   "t": 122.35,
+   "text": "Maybe you start with a rough 3D model — a sphere, or an existing low-resolution structure of something similar — and you ask, for each photo, \"what orientation of this rough model would produce a 2D projection that looks most like this photo?"
+  },
+  {
+   "t": 137.5,
+   "text": "\" You assign that orientation to the photo."
+  },
+  {
+   "t": 140.55,
+   "text": "Then you take all the photos you've now labeled with orientations, and you back-project them — you smear each one out into 3D space at the angle you assigned — and the smears reinforce each other where the true structure is."
+  },
+  {
+   "t": 153.6,
+   "text": "That gives you a better 3D model."
+  },
+  {
+   "t": 155.93,
+   "text": "Then you re-orient all the photos against the better model."
+  },
+  {
+   "t": 159.41,
+   "text": "Then you back-project again."
+  },
+  {
+   "t": 161.12,
+   "text": "Iterate."
+  },
+  {
+   "t": 161.95,
+   "text": "The model gets sharper, the orientations get more accurate, the noise washes out, and eventually you converge on a high-resolution 3D structure."
+  },
+  {
+   "t": 171.75,
+   "text": "That, in algorithmic essence, is single-particle reconstruction."
+  },
+  {
+   "t": 176.01,
+   "text": "You image millions of randomly-oriented copies of the same molecule; the software figures out each one's orientation; you average them into 3D."
+  },
+  {
+   "t": 186.28,
+   "text": "Each individual image is garbage."
+  },
+  {
+   "t": 188.8,
+   "text": "The million-image ensemble is exquisite."
+  },
+  {
+   "t": 191.74,
+   "text": "Frank developed the mathematical framework and the computer algorithms for this through the 1970s and 80s, mostly on ribosomes — large, asymmetric protein-RNA complexes that were exactly the kind of thing crystallography couldn't yet touch."
+  },
+  {
+   "t": 208.18,
+   "text": "His software package, called SPIDER, was one of the first widely used cryo-EM image-processing programs."
+  },
+  {
+   "t": 215.3,
+   "text": "By the 1990s, Frank's methods could produce 3D reconstructions of ribosomes at around 25 ångström resolution — still blobby by atomic standards, but enough to see the overall shape, identify the major subunits, watch the ribosome go through different functional states."
+  },
+  {
+   "t": 232.21,
+   "text": "It was the most detailed view of the translation machinery anyone had ever produced, and it was being done on samples in something close to their native state."
+  },
+  {
+   "t": 241.55,
+   "text": "The Frank algorithms have evolved enormously since then, and modern cryo-EM software — RELION, cryoSPARC, EMAN, which we'll discuss later — implements much fancier versions of the same fundamental idea."
+  },
+  {
+   "t": 255.36,
+   "text": "Maximum-likelihood estimation, Bayesian frameworks, sophisticated classification methods that can separate out different conformations of the same molecule."
+  },
+  {
+   "t": 264.94,
+   "text": "But the core insight — that you can computationally combine many noisy images of randomly oriented molecules into a high-resolution 3D structure — that's Frank."
+  },
+  {
+   "t": 275.62,
+   "text": "So now we've got two of the three pillars."
+  },
+  {
+   "t": 278.39,
+   "text": "Dubochet showed us how to put a biological sample into the microscope without destroying it."
+  },
+  {
+   "t": 284.29,
+   "text": "Frank showed us how to extract signal from the noisy images."
+  },
+  {
+   "t": 287.86,
+   "text": "But did this actually work at atomic resolution?"
+  },
+  {
+   "t": 290.27,
+   "text": "On a real biological target?"
+  },
+  {
+   "t": 292.4,
+   "text": "That was the question hanging over the field through the 1980s and into the 1990s."
+  },
+  {
+   "t": 297.87,
+   "text": "And the demonstration came from Richard Henderson and a small membrane protein called bacteriorhodopsin."
+  }
+ ]
+}

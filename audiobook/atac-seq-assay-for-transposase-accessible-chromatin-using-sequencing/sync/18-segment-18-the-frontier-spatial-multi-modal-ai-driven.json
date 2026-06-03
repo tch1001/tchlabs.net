@@ -1,0 +1,179 @@
+{
+ "n": 18,
+ "title": "SEGMENT 18 — The frontier — spatial, multi-modal, AI-driven",
+ "duration": 341.42,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 18 — The frontier — spatial, multi-modal, AI-driven"
+  },
+  {
+   "t": 5.7,
+   "text": "We end with a look at where ATAC-seq is going."
+  },
+  {
+   "t": 9.05,
+   "text": "The technique is now more than a decade old, but it's still evolving rapidly, in three main directions: spatial extensions, multi-modal integration, and AI-driven analysis."
+  },
+  {
+   "t": 21.11,
+   "text": "Let me touch on each."
+  },
+  {
+   "t": 22.62,
+   "text": "Spatial ATAC-seq."
+  },
+  {
+   "t": 24.31,
+   "text": "The newest extensions of ATAC-seq are spatial — measuring accessibility while preserving information about where each cell was in a tissue."
+  },
+  {
+   "t": 33.75,
+   "text": "The leading methods include spatial ATAC-seq from Rong Fan's lab at Yale (using a deterministic barcoding approach on a tissue slide) and various microdissection-based approaches."
+  },
+  {
+   "t": 45.42,
+   "text": "The idea is to take a tissue section, do ATAC-seq in situ with barcodes that encode physical position, and produce a map of accessibility that you can overlay on the tissue's morphology."
+  },
+  {
+   "t": 57.35,
+   "text": "This is enormously powerful for understanding regulatory landscapes in spatial context — for example, mapping the regulatory states of cells across a tumor's invasive front, or across the layers of the cerebral cortex, or in spatially organized embryonic structures."
+  },
+  {
+   "t": 74.56,
+   "text": "Spatial ATAC is still expensive and technically demanding, but it's likely to become a standard tool over the next few years."
+  },
+  {
+   "t": 82.76,
+   "text": "Multi-modal single-cell methods."
+  },
+  {
+   "t": 85.44,
+   "text": "We touched on these in Segment 12."
+  },
+  {
+   "t": 87.81,
+   "text": "The trend is to measure more modalities in the same cells."
+  },
+  {
+   "t": 92.2,
+   "text": "10x Multiome (ATAC + RNA) is now standard."
+  },
+  {
+   "t": 97.15,
+   "text": "Newer methods like TEA-seq add antibody-derived tags (protein measurements) on top."
+  },
+  {
+   "t": 103.06,
+   "text": "SHARE-seq variants combine ATAC with various other modalities."
+  },
+  {
+   "t": 108.41,
+   "text": "The frontier is going toward \"everything from the same cell\" — DNA methylation, histone modifications, chromatin conformation, RNA, protein, and accessibility, all measured simultaneously at single-cell resolution."
+  },
+  {
+   "t": 123.67,
+   "text": "We're not there yet for every combination, but each year brings new combinations to the routine toolkit."
+  },
+  {
+   "t": 130.14,
+   "text": "AI and deep learning."
+  },
+  {
+   "t": 131.7,
+   "text": "Machine learning has become an integral part of ATAC-seq analysis."
+  },
+  {
+   "t": 136.44,
+   "text": "Convolutional neural networks like BPNet and DeepLIFT can predict ATAC-seq signal from DNA sequence alone, revealing which sequence features drive accessibility."
+  },
+  {
+   "t": 147.22,
+   "text": "Enformer and DragoNN apply transformer architectures to the same problem."
+  },
+  {
+   "t": 153.01,
+   "text": "These models, once trained, can predict the regulatory consequences of mutations, identify the contributions of individual sequence motifs to accessibility, and even infer which transcription factors are likely binding without explicit motif scanning."
+  },
+  {
+   "t": 168.38,
+   "text": "The combination of accessible chromatin data and deep learning is one of the most active areas of methods development in regulatory genomics."
+  },
+  {
+   "t": 177.28,
+   "text": "A few other frontiers worth mentioning."
+  },
+  {
+   "t": 179.44,
+   "text": "Long-read ATAC-seq, using nanopore or PacBio for the readout, is being explored — it would let you connect accessibility to local sequence variation in haplotype-resolved fashion."
+  },
+  {
+   "t": 191.8,
+   "text": "Chronic ATAC-seq profiling — tracking accessibility in the same cells over time using metabolic labeling or other tricks — is starting to emerge."
+  },
+  {
+   "t": 202.44,
+   "text": "Cross-species ATAC-seq atlases are building up comparative regulatory landscapes that let us infer how regulatory elements evolve and diverge between species."
+  },
+  {
+   "t": 212.75,
+   "text": "Disease-associated variant prioritization using ATAC data is becoming standard in GWAS follow-up work — many disease-associated variants in non-coding regions fall within accessible chromatin, and ATAC maps in the relevant cell types help interpret which variants are likely functional."
+  },
+  {
+   "t": 232.24,
+   "text": "The big picture: ATAC-seq has gone from a clever bench trick in 2013 to a foundational technique of modern regulatory genomics in 2026."
+  },
+  {
+   "t": 242.59,
+   "text": "Its strengths — low input, fast turnaround, simple protocol, multi-modal output, easy adaptation to single cells — have made it the default accessibility assay across nearly every application."
+  },
+  {
+   "t": 255.89,
+   "text": "Its extensions — spatial, multi-omic, AI-integrated — are pushing the frontier of what we can learn about regulatory biology."
+  },
+  {
+   "t": 264.11,
+   "text": "And its tooling — open pipelines, public datasets, mature analytical packages — has made it accessible to a wide range of labs that don't specialize in genomics."
+  },
+  {
+   "t": 275.38,
+   "text": "If I asked you, ten years from now, what we will know about regulatory genomics that we don't know today, my guess is that a substantial fraction of the new knowledge will come from ATAC-seq and its derivatives."
+  },
+  {
+   "t": 287.2,
+   "text": "We will have accessibility maps of essentially every cell type in the body, in many disease states, at many developmental time points, at single-cell and spatial resolution."
+  },
+  {
+   "t": 298.35,
+   "text": "We will have AI models that predict accessibility from sequence and infer regulatory consequences of variants."
+  },
+  {
+   "t": 305.97,
+   "text": "We will have integrated multi-modal atlases that connect accessibility to expression, protein, methylation, and conformation."
+  },
+  {
+   "t": 314.22,
+   "text": "Whether the field gets there in ten years or fifteen depends on the pace of methods development, but the trajectory is clear."
+  },
+  {
+   "t": 321.83,
+   "text": "That's where ATAC-seq is going."
+  },
+  {
+   "t": 324.37,
+   "text": "From one paper in 2013 to a foundational layer of regulatory genomics today, to a comprehensive multi-modal atlas tomorrow."
+  },
+  {
+   "t": 333.82,
+   "text": "The molecular ninja, with its calling card, has done quite well for itself."
+  },
+  {
+   "t": 338.79,
+   "text": "Thank you."
+  },
+  {
+   "t": 339.64,
+   "text": "Let's open it up for questions."
+  }
+ ]
+}

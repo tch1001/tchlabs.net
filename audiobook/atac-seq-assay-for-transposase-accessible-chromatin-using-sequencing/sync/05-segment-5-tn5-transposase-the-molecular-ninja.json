@@ -1,0 +1,275 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Tn5 transposase — the molecular ninja",
+ "duration": 487.93,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Tn5 transposase — the molecular ninja"
+  },
+  {
+   "t": 5.17,
+   "text": "Let me spend a whole segment on Tn5, because if you understand what this enzyme is doing chemically, you understand why ATAC-seq works the way it does, including all its strengths and all its idiosyncrasies."
+  },
+  {
+   "t": 17.66,
+   "text": "The enzyme is the heart of the assay."
+  },
+  {
+   "t": 20.57,
+   "text": "Get the biochemistry right and everything else falls into place."
+  },
+  {
+   "t": 24.86,
+   "text": "Tn5 transposase is a bacterial protein, about 53 kilodaltons in size, originally found in the transposon Tn5 in E. coli."
+  },
+  {
+   "t": 35.65,
+   "text": "The transposon itself encodes resistance to several antibiotics — kanamycin, neomycin, bleomycin — and uses Tn5 transposase to jump between locations in the bacterial chromosome and between chromosomes and plasmids."
+  },
+  {
+   "t": 51.71,
+   "text": "The natural reaction is what's called a \"cut-and-paste\" transposition: the enzyme recognizes specific 19-base-pair sequences at the ends of its own transposon, called inverted repeats or \"mosaic ends,\" cuts the transposon out as a single piece, and inserts it into a new location, leaving a small target-site duplication around the insertion site."
+  },
+  {
+   "t": 73.75,
+   "text": "The chemistry of the insertion is precise and beautiful, and it's the chemistry we exploit in ATAC-seq."
+  },
+  {
+   "t": 81.99,
+   "text": "Tn5 functions as a dimer — two copies of the protein form a complex, each one holding onto one end of the transposon."
+  },
+  {
+   "t": 90.79,
+   "text": "When the dimer attacks a target DNA molecule, it inserts the transposon into the target in a specific geometry: the two ends of the transposon insert at positions exactly nine base pairs apart on the two strands of the target DNA."
+  },
+  {
+   "t": 106.14,
+   "text": "The result is what's called a staggered cut — both strands of the target are cleaved, but at sites offset by nine base pairs, leaving short single-stranded overhangs."
+  },
+  {
+   "t": 116.34,
+   "text": "Now here's the key."
+  },
+  {
+   "t": 117.61,
+   "text": "When the transposase has finished, the inserted DNA is covalently joined to the target DNA on both sides — but only on one strand at each junction."
+  },
+  {
+   "t": 127.99,
+   "text": "The other strand has a nine-base-pair gap."
+  },
+  {
+   "t": 130.62,
+   "text": "In a natural transposition, the bacterial repair machinery fills in this gap and ligates it shut, producing the characteristic nine-base-pair target-site duplication around the insertion."
+  },
+  {
+   "t": 143.39,
+   "text": "For ATAC-seq, we don't care about the gap repair."
+  },
+  {
+   "t": 147.09,
+   "text": "We care about the fact that the transposase, in a single coordinated reaction, has done two things at once: it has cut the target DNA, and it has ligated a new piece of DNA to the cut ends."
+  },
+  {
+   "t": 159.9,
+   "text": "In our adapter-loaded version, the new piece of DNA isn't a transposon — it's a short synthetic adapter carrying the sequences Illumina needs at the ends of a sequencing library."
+  },
+  {
+   "t": 170.64,
+   "text": "So in a single enzymatic step, on a single molecule of target DNA, the transposase cuts and adapter-ligates."
+  },
+  {
+   "t": 178.54,
+   "text": "One reaction, one step, two operations."
+  },
+  {
+   "t": 181.89,
+   "text": "Compare this to a conventional sequencing library prep."
+  },
+  {
+   "t": 185.69,
+   "text": "In a conventional prep, you have to fragment the DNA (typically by sonication or enzymatic shearing), then end-repair the fragments (filling in or chewing back the ragged ends with a polymerase or exonuclease), then add A-overhangs, then ligate adapters, then size-select, then PCR-amplify."
+  },
+  {
+   "t": 205.93,
+   "text": "That's six or seven steps over several hours."
+  },
+  {
+   "t": 209.22,
+   "text": "Tn5 collapses the first four or five steps into a single tube, taking thirty minutes."
+  },
+  {
+   "t": 215.64,
+   "text": "The remaining steps are size-selection and PCR."
+  },
+  {
+   "t": 219.29,
+   "text": "The efficiency gain is enormous."
+  },
+  {
+   "t": 221.84,
+   "text": "For ATAC-seq, the relevant point is not just that Tn5 is a fast library-prep enzyme."
+  },
+  {
+   "t": 229.07,
+   "text": "It's that Tn5 is a sensor of chromatin structure."
+  },
+  {
+   "t": 232.75,
+   "text": "Here's why."
+  },
+  {
+   "t": 233.7,
+   "text": "The transposase complex — the dimer with its bound adapter cargo — is a bulky object."
+  },
+  {
+   "t": 240.26,
+   "text": "It's a protein about a hundred kilodaltons in mass, with two prongs of DNA sticking out of it (the adapter ends), and it has to physically slide along a DNA strand looking for a place to insert."
+  },
+  {
+   "t": 252.64,
+   "text": "Nucleosome-wrapped DNA is physically inaccessible to this complex."
+  },
+  {
+   "t": 258.04,
+   "text": "The DNA is tightly bound to the histone octamer, the path along the DNA helix is blocked, and the transposase simply can't get in."
+  },
+  {
+   "t": 266.84,
+   "text": "It tries, it bounces off, and it moves on."
+  },
+  {
+   "t": 269.75,
+   "text": "But in the gaps between nucleosomes — the linker DNA, the nucleosome-free regions at active promoters and enhancers — the DNA is exposed."
+  },
+  {
+   "t": 279.84,
+   "text": "The transposase can slide along it, find an insertion site, and complete its reaction."
+  },
+  {
+   "t": 285.42,
+   "text": "So the enzyme, by its sheer physical size and shape, is selective for accessible DNA."
+  },
+  {
+   "t": 291.55,
+   "text": "It can only cut where it can fit."
+  },
+  {
+   "t": 293.45,
+   "text": "And that's the magic of ATAC-seq."
+  },
+  {
+   "t": 296.77,
+   "text": "The selectivity comes from the geometry of the enzyme, not from any complicated experimental procedure."
+  },
+  {
+   "t": 303.49,
+   "text": "You don't have to engineer the selectivity."
+  },
+  {
+   "t": 305.99,
+   "text": "It's already built into the enzyme by virtue of how big it is and where it can physically go."
+  },
+  {
+   "t": 311.45,
+   "text": "The analogy I want you to hold: Tn5 is a molecular ninja with a calling card."
+  },
+  {
+   "t": 317.44,
+   "text": "It can only slip into rooms that are unlocked."
+  },
+  {
+   "t": 319.94,
+   "text": "The locked rooms — the nucleosome-wrapped DNA — it can't enter."
+  },
+  {
+   "t": 324.57,
+   "text": "The unlocked rooms — the open chromatin — it can enter, and when it does, it leaves a calling card."
+  },
+  {
+   "t": 331.84,
+   "text": "The calling card is the sequencing adapter, with all the information you need to identify where the ninja was and what part of the DNA it touched."
+  },
+  {
+   "t": 340.64,
+   "text": "At the end of the night, you collect every calling card in the genome, read off the addresses, and you have a map of every unlocked room in the building."
+  },
+  {
+   "t": 349.22,
+   "text": "Two more details about Tn5 you should know, because they matter for interpretation and for some of the biases we'll discuss in Segment 16."
+  },
+  {
+   "t": 357.8,
+   "text": "First, the staggered cut."
+  },
+  {
+   "t": 359.53,
+   "text": "Because Tn5 cuts the two strands of the target DNA at positions exactly nine base pairs apart, the resulting reads from an ATAC-seq library carry a built-in nine-base-pair offset between the forward and reverse strand cuts."
+  },
+  {
+   "t": 374.85,
+   "text": "Modern peak callers correct for this offset by shifting the read positions appropriately — forward strand reads get shifted plus four base pairs, reverse strand reads get shifted minus five base pairs, to align them to the actual center of the cut site."
+  },
+  {
+   "t": 390.23,
+   "text": "If you don't apply this correction, your peak summits will be slightly off-center."
+  },
+  {
+   "t": 394.73,
+   "text": "ATAC-seq analysis pipelines handle this automatically, but it's worth knowing the chemistry behind it."
+  },
+  {
+   "t": 400.72,
+   "text": "Second, the sequence preferences."
+  },
+  {
+   "t": 403.28,
+   "text": "Tn5 is not perfectly sequence-agnostic."
+  },
+  {
+   "t": 407.03,
+   "text": "It has a mild preference for certain dinucleotide combinations at its insertion sites — favoring some sequences slightly over others."
+  },
+  {
+   "t": 416.07,
+   "text": "This means that the raw insertion frequencies aren't a pure measure of accessibility; they're accessibility convolved with a small sequence bias."
+  },
+  {
+   "t": 424.29,
+   "text": "For high-resolution work, particularly transcription factor footprinting from ATAC-seq data, you need to model and correct for this Tn5 sequence bias."
+  },
+  {
+   "t": 434.52,
+   "text": "We'll come back to this in Segment 16."
+  },
+  {
+   "t": 437.28,
+   "text": "For most purposes — calling peaks, comparing samples, integrating with other data — the bias is small enough to ignore."
+  },
+  {
+   "t": 445.54,
+   "text": "But it's there."
+  },
+  {
+   "t": 446.48,
+   "text": "So that's Tn5."
+  },
+  {
+   "t": 447.95,
+   "text": "A bacterial enzyme, engineered into a hyperactive variant, loaded with sequencing adapters, and applied to permeabilized nuclei where it preferentially inserts into accessible chromatin, simultaneously cutting and tagging the DNA in a single step."
+  },
+  {
+   "t": 464.6,
+   "text": "The enzyme's selectivity for open chromatin is a consequence of its physical size — it can only fit into the nucleosome-free gaps."
+  },
+  {
+   "t": 473.18,
+   "text": "Its output is a population of DNA fragments, each flanked by sequencing adapters, that report on where in the genome the chromatin was open at the moment the reaction happened."
+  },
+  {
+   "t": 484.32,
+   "text": "That output is the raw material of ATAC-seq."
+  }
+ ]
+}

@@ -1,0 +1,323 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Why Cas9 fails in the mitochondrion — the guide RNA can't get in",
+ "duration": 430.18,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Why Cas9 fails in the mitochondrion — the guide RNA can't get in"
+  },
+  {
+   "t": 6.2,
+   "text": "Recall how CRISPR-Cas9 works."
+  },
+  {
+   "t": 9.22,
+   "text": "You have a protein — Cas9 — and a single guide RNA."
+  },
+  {
+   "t": 13.01,
+   "text": "The protein and the RNA assemble in the cytoplasm or nucleus."
+  },
+  {
+   "t": 17.93,
+   "text": "The assembled ribonucleoprotein complex scans DNA, finds a PAM, forms an R-loop, and cuts."
+  },
+  {
+   "t": 25.73,
+   "text": "Two pieces are required for the system to function: the Cas9 protein, and the guide RNA."
+  },
+  {
+   "t": 31.6,
+   "text": "Both have to be present at the target."
+  },
+  {
+   "t": 33.65,
+   "text": "Both have to be in the same compartment as the DNA you want to edit."
+  },
+  {
+   "t": 37.77,
+   "text": "Both have to be there at the same time."
+  },
+  {
+   "t": 39.7,
+   "text": "In the nucleus, this works because the cell has standard mechanisms for getting both proteins and RNAs into the nucleus."
+  },
+  {
+   "t": 47.71,
+   "text": "Cas9 has a nuclear localization signal — a short peptide tag — that the nuclear import machinery recognizes and uses to drag the protein through the nuclear pore."
+  },
+  {
+   "t": 58.25,
+   "text": "The guide RNA, transcribed in the nucleus from a Pol III promoter, simply stays where it was made."
+  },
+  {
+   "t": 64.72,
+   "text": "Both components are in the nucleus, both can find each other, both can find the DNA."
+  },
+  {
+   "t": 69.95,
+   "text": "The system works."
+  },
+  {
+   "t": 71.25,
+   "text": "In the mitochondrion, you immediately hit a problem."
+  },
+  {
+   "t": 74.55,
+   "text": "The mitochondrion is enclosed by two membranes — the outer membrane and the inner membrane."
+  },
+  {
+   "t": 80.56,
+   "text": "Between them sits the intermembrane space."
+  },
+  {
+   "t": 83.74,
+   "text": "Crossing both membranes requires going through specific protein channels."
+  },
+  {
+   "t": 89.1,
+   "text": "There are two major import complexes: TOM, the translocase of the outer membrane, and TIM, the translocase of the inner membrane."
+  },
+  {
+   "t": 98.34,
+   "text": "Together they form a sort of conveyor belt that pulls proteins through both membranes into the mitochondrial matrix, where mtDNA lives."
+  },
+  {
+   "t": 108.16,
+   "text": "The substrate for TOM/TIM is protein."
+  },
+  {
+   "t": 111.99,
+   "text": "Specifically, proteins that carry a mitochondrial targeting sequence — a short, positively charged, amphipathic alpha-helical peptide at their N-terminus."
+  },
+  {
+   "t": 122.19,
+   "text": "That sequence is the postal address."
+  },
+  {
+   "t": 124.72,
+   "text": "If a protein has it, the TOM/TIM machinery grabs the protein, threads it through both membranes, and dumps it into the matrix."
+  },
+  {
+   "t": 133.56,
+   "text": "The targeting sequence is then cleaved off by a matrix-resident protease."
+  },
+  {
+   "t": 138.57,
+   "text": "The mature protein is now inside."
+  },
+  {
+   "t": 141.0,
+   "text": "This works beautifully for proteins."
+  },
+  {
+   "t": 143.51,
+   "text": "Hundreds of mitochondrial proteins are imported this way every minute in every cell of your body."
+  },
+  {
+   "t": 150.25,
+   "text": "The system is highly efficient and well-characterized."
+  },
+  {
+   "t": 153.62,
+   "text": "You can take an arbitrary protein, slap a mitochondrial targeting sequence onto its N-terminus, and it will go to the mitochondrion."
+  },
+  {
+   "t": 162.64,
+   "text": "That part is solved."
+  },
+  {
+   "t": 163.94,
+   "text": "The problem is RNA."
+  },
+  {
+   "t": 165.64,
+   "text": "The TOM/TIM machinery does not import RNA."
+  },
+  {
+   "t": 169.74,
+   "text": "There is no general mechanism for getting RNA molecules into the mitochondrial matrix."
+  },
+  {
+   "t": 175.47,
+   "text": "There are a few exceptions — some small RNAs in some organisms have been reported to enter mitochondria via specialized pathways, but for a synthetic guide RNA, particularly the roughly 100-nucleotide single guide RNA that Cas9 uses, there is no established import pathway."
+  },
+  {
+   "t": 193.94,
+   "text": "Even with extensive engineering — sticking various RNA tags on the guide, attaching it to import-competent proteins, fusing it to known RNA-binding domains — getting useful amounts of intact, functional guide RNA into the mitochondrial matrix has proven extraordinarily difficult."
+  },
+  {
+   "t": 212.09,
+   "text": "So picture the disaster."
+  },
+  {
+   "t": 213.8,
+   "text": "You take Cas9, you fuse a mitochondrial targeting sequence to its N-terminus, you express it in a cell, and the cell dutifully imports the Cas9 protein into the mitochondrion."
+  },
+  {
+   "t": 225.69,
+   "text": "Cas9 is now in the matrix, next to the mtDNA, ready to work."
+  },
+  {
+   "t": 230.95,
+   "text": "But it has no guide RNA."
+  },
+  {
+   "t": 232.94,
+   "text": "Without a guide, Cas9 is inert."
+  },
+  {
+   "t": 235.5,
+   "text": "It can't find a target."
+  },
+  {
+   "t": 236.88,
+   "text": "It can't cut."
+  },
+  {
+   "t": 238.01,
+   "text": "The protein sits there uselessly, an unloaded gun in the right room."
+  },
+  {
+   "t": 242.47,
+   "text": "You try, separately, to express the guide RNA."
+  },
+  {
+   "t": 246.6,
+   "text": "The guide RNA is transcribed in the nucleus."
+  },
+  {
+   "t": 249.86,
+   "text": "It exits the nucleus through the nuclear pore."
+  },
+  {
+   "t": 252.84,
+   "text": "It floats around the cytoplasm."
+  },
+  {
+   "t": 255.14,
+   "text": "It does not enter the mitochondrion."
+  },
+  {
+   "t": 257.36,
+   "text": "It cannot find its way through TOM/TIM."
+  },
+  {
+   "t": 261.05,
+   "text": "The guide and the protein are in different compartments."
+  },
+  {
+   "t": 264.34,
+   "text": "The system is broken."
+  },
+  {
+   "t": 265.82,
+   "text": "People have tried hard to solve this."
+  },
+  {
+   "t": 268.03,
+   "text": "There are papers from the mid-2010s reporting various tricks — RNA aptamers fused to import-competent proteins, alternative guide-RNA architectures, even claims of small amounts of guide RNA reaching the matrix."
+  },
+  {
+   "t": 283.08,
+   "text": "Some of these reports show low levels of mitochondrial editing in tightly controlled experiments."
+  },
+  {
+   "t": 289.62,
+   "text": "But none of them produced a robust, reliable, broadly useful CRISPR-based mitochondrial editing platform."
+  },
+  {
+   "t": 296.55,
+   "text": "The field tried for years and ended up with, essentially, nothing."
+  },
+  {
+   "t": 300.67,
+   "text": "This is a beautiful illustration of a general principle in biology."
+  },
+  {
+   "t": 304.95,
+   "text": "A tool isn't just the catalytic part."
+  },
+  {
+   "t": 307.33,
+   "text": "It's the delivery, the targeting, the cofactors, and the geometry of the place it needs to work."
+  },
+  {
+   "t": 313.26,
+   "text": "Cas9 the protein is brilliant."
+  },
+  {
+   "t": 315.98,
+   "text": "Cas9 the system — protein plus guide RNA — depends on both components being able to assemble at the target."
+  },
+  {
+   "t": 323.57,
+   "text": "Change the target compartment to one that won't let the guide in, and the whole system collapses, regardless of how powerful the protein is."
+  },
+  {
+   "t": 332.22,
+   "text": "The mitochondrion, by virtue of its double membrane and its protein-only import machinery, is exactly that kind of compartment for CRISPR."
+  },
+  {
+   "t": 340.9,
+   "text": "So the field had to ask a different question."
+  },
+  {
+   "t": 343.36,
+   "text": "Not \"how do we get CRISPR into the mitochondrion\" — that road was blocked."
+  },
+  {
+   "t": 347.58,
+   "text": "The question became: what targeting modality already works in mitochondria, and can we attach the chemistry we want to that?"
+  },
+  {
+   "t": 355.22,
+   "text": "The answer, when it came, was the TALE protein."
+  },
+  {
+   "t": 358.7,
+   "text": "Because a TALE is a protein."
+  },
+  {
+   "t": 360.8,
+   "text": "It targets DNA using protein-DNA contacts alone, with no RNA cofactor."
+  },
+  {
+   "t": 366.63,
+   "text": "It doesn't need to drag an RNA across a membrane."
+  },
+  {
+   "t": 369.93,
+   "text": "You can fuse a mitochondrial targeting sequence to a TALE's N-terminus, the cell imports the whole protein into the matrix, and the TALE binds its DNA target inside the mitochondrion."
+  },
+  {
+   "t": 382.12,
+   "text": "People had actually shown this years earlier, with constructs called mitoTALENs — TALE-FokI fusions targeted to mitochondria that introduced double-strand breaks in mutant mtDNA."
+  },
+  {
+   "t": 394.3,
+   "text": "We'll talk about mitoTALENs in Segment 16, because they're the older approach that DdCBE replaced."
+  },
+  {
+   "t": 401.12,
+   "text": "But the key insight for now is: the TALE was the targeting modality that already worked in mitochondria."
+  },
+  {
+   "t": 408.37,
+   "text": "What we needed was a chemistry to attach to it that didn't require single-stranded DNA, because nothing inside the mitochondrion was going to provide an R-loop or a Cas9 nickase."
+  },
+  {
+   "t": 419.2,
+   "text": "We needed a deaminase that worked on intact double-stranded DNA."
+  },
+  {
+   "t": 423.32,
+   "text": "That deaminase didn't exist."
+  },
+  {
+   "t": 425.58,
+   "text": "Until Joseph Mougous's lab found one in a bacterial toxin."
+  }
+ ]
+}

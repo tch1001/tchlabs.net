@@ -1,0 +1,115 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Tet plus CRISPR: inducible Cas9 and dCas9 systems",
+ "duration": 184.58,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Tet plus CRISPR: inducible Cas9 and dCas9 systems"
+  },
+  {
+   "t": 6.44,
+   "text": "The most important modern use of Tet is probably its combination with CRISPR."
+  },
+  {
+   "t": 11.15,
+   "text": "Standard CRISPR experiments use constitutively expressed Cas9."
+  },
+  {
+   "t": 15.66,
+   "text": "Plasmid into cell, Cas9 expressed all the time, edits happen whenever the guide RNA encounters its target."
+  },
+  {
+   "t": 23.76,
+   "text": "This works fine for many applications but has limitations."
+  },
+  {
+   "t": 27.8,
+   "text": "Cas9 expressed constitutively can lead to off-target editing accumulating over time."
+  },
+  {
+   "t": 33.67,
+   "text": "For studying gene function, you might want editing to happen only during a defined window."
+  },
+  {
+   "t": 39.21,
+   "text": "For screening applications, you might want to turn editing on synchronously across a population."
+  },
+  {
+   "t": 45.06,
+   "text": "The solution: TRE-Cas9 systems."
+  },
+  {
+   "t": 48.26,
+   "text": "Place the Cas9 coding sequence downstream of a TRE promoter, pair with rtTA, and now Cas9 expression is doxycycline-controlled."
+  },
+  {
+   "t": 57.65,
+   "text": "Add dox, Cas9 comes on, editing happens."
+  },
+  {
+   "t": 61.14,
+   "text": "Withdraw dox, Cas9 expression stops."
+  },
+  {
+   "t": 64.17,
+   "text": "Edits made during the on window persist (the genome change is permanent), but no new edits accumulate during the off period."
+  },
+  {
+   "t": 71.9,
+   "text": "This is particularly useful for inducible knockouts in vivo."
+  },
+  {
+   "t": 75.89,
+   "text": "A mouse with a tissue-specific rtTA and a TRE-Cas9, plus expressed guide RNAs targeting a gene of interest, gives you doxycycline-controlled gene editing in the chosen tissue."
+  },
+  {
+   "t": 89.17,
+   "text": "Compared to the conventional approach of breeding a floxed mouse and a Cre line, this can be much faster — you don't need a pre-made floxed allele; the editing creates the loss-of-function de novo."
+  },
+  {
+   "t": 101.45,
+   "text": "Inducible dCas9 systems are even more powerful for some applications."
+  },
+  {
+   "t": 106.56,
+   "text": "dCas9 is catalytically inactive Cas9 — it binds target DNA but doesn't cut."
+  },
+  {
+   "t": 113.16,
+   "text": "Fuse dCas9 to a transcriptional activator (like VP64 or VPR) or repressor (like KRAB), and you have CRISPR-based transcriptional control — CRISPRa or CRISPRi."
+  },
+  {
+   "t": 126.14,
+   "text": "Put the dCas9 fusion under TRE control, and now you have doxycycline-controlled transcriptional modulation of any gene you can target with a guide RNA."
+  },
+  {
+   "t": 136.03,
+   "text": "Add dox, the gene gets activated or repressed; withdraw dox, the modulation stops and the gene returns to its normal expression level."
+  },
+  {
+   "t": 145.6,
+   "text": "This combines two layers of control beautifully."
+  },
+  {
+   "t": 148.89,
+   "text": "The guide RNA defines which gene gets affected (target specificity)."
+  },
+  {
+   "t": 153.94,
+   "text": "The Tet system defines when the effect happens (temporal control)."
+  },
+  {
+   "t": 158.11,
+   "text": "For studying gene function dynamics — what happens to a cell when this gene is acutely turned up or down — this is a really powerful platform."
+  },
+  {
+   "t": 166.75,
+   "text": "You'll see this approach used a lot in modern functional genomics."
+  },
+  {
+   "t": 170.8,
+   "text": "Inducible CRISPRi screens, in particular, have become a standard way to identify genes essential for specific cellular states, with the inducible control allowing time-resolved measurement of essentiality."
+  }
+ ]
+}

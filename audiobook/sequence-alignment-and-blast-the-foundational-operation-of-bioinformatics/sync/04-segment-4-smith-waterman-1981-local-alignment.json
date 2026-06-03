@@ -1,0 +1,291 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Smith-Waterman (1981): local alignment",
+ "duration": 382.86,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Smith-Waterman (1981): local alignment"
+  },
+  {
+   "t": 4.75,
+   "text": "Eleven years after Needleman and Wunsch, in 1981, Temple Smith and Michael Waterman published a paper titled \"Identification of common molecular subsequences."
+  },
+  {
+   "t": 15.95,
+   "text": "\" It was two pages long."
+  },
+  {
+   "t": 17.66,
+   "text": "It made one tweak to the Needleman-Wunsch algorithm, and that one tweak turned global alignment into local alignment."
+  },
+  {
+   "t": 25.16,
+   "text": "The new algorithm, now universally called Smith-Waterman, is the standard for finding the best matching substring between two sequences."
+  },
+  {
+   "t": 33.75,
+   "text": "Every protein-protein homology search you've ever heard of — every BLASTP hit, every domain match in Pfam — is, somewhere underneath, a Smith-Waterman calculation."
+  },
+  {
+   "t": 45.73,
+   "text": "The tweak is so simple I can tell you in one sentence."
+  },
+  {
+   "t": 49.31,
+   "text": "At every cell of the dynamic programming matrix, in addition to the three options Needleman-Wunsch considered — diagonal, left, top — you add a fourth option: zero."
+  },
+  {
+   "t": 60.46,
+   "text": "The new recurrence says: the value at cell (i, j) is the maximum of (diagonal plus match-or-mismatch), (left plus gap), (top plus gap), and zero."
+  },
+  {
+   "t": 71.83,
+   "text": "That's it."
+  },
+  {
+   "t": 72.58,
+   "text": "That's the entire modification."
+  },
+  {
+   "t": 74.81,
+   "text": "What does adding zero do?"
+  },
+  {
+   "t": 76.42,
+   "text": "It means that no cell is ever allowed to go negative."
+  },
+  {
+   "t": 80.11,
+   "text": "The moment the alignment score would drop below zero, the algorithm just resets to zero and starts over from that cell."
+  },
+  {
+   "t": 87.95,
+   "text": "The effect of this is that the alignment is no longer forced to include all of both sequences."
+  },
+  {
+   "t": 94.25,
+   "text": "Instead, the algorithm naturally finds the best-scoring contiguous diagonal block in the grid — the region of the two sequences where the matches dominate and the score stays positive."
+  },
+  {
+   "t": 105.05,
+   "text": "Outside of that region, the score gets reset to zero, and that part of the sequences is effectively ignored."
+  },
+  {
+   "t": 112.15,
+   "text": "Two more changes accompany the zero."
+  },
+  {
+   "t": 114.36,
+   "text": "First, the boundary conditions are different."
+  },
+  {
+   "t": 117.08,
+   "text": "In Needleman-Wunsch, the first row and first column are initialized to multiples of the gap penalty — because we're forcing the alignment to start at the corner."
+  },
+  {
+   "t": 126.51,
+   "text": "In Smith-Waterman, the first row and first column are all zeros — because the alignment can start anywhere."
+  },
+  {
+   "t": 133.72,
+   "text": "Second, the traceback starts not from the bottom-right corner, but from the highest-scoring cell anywhere in the grid."
+  },
+  {
+   "t": 140.32,
+   "text": "You scan the whole matrix, find the cell with the maximum value, and start the traceback there."
+  },
+  {
+   "t": 145.82,
+   "text": "You walk back through predecessors as in Needleman-Wunsch, but you stop the moment you reach a cell with value zero."
+  },
+  {
+   "t": 152.61,
+   "text": "That zero marks the start of the local alignment."
+  },
+  {
+   "t": 155.62,
+   "text": "The path from the zero cell to the maximum cell is the best local alignment."
+  },
+  {
+   "t": 160.68,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 161.97,
+   "text": "Needleman-Wunsch is the global aligner."
+  },
+  {
+   "t": 164.7,
+   "text": "It forces the entire two sequences to be aligned end to end."
+  },
+  {
+   "t": 169.12,
+   "text": "It's the right tool when you're comparing two orthologs of similar length and you want to know the correspondence across the whole molecule."
+  },
+  {
+   "t": 176.59,
+   "text": "Smith-Waterman is the local aligner."
+  },
+  {
+   "t": 179.22,
+   "text": "It finds the best matching subsequences anywhere within the two sequences."
+  },
+  {
+   "t": 184.09,
+   "text": "It's the right tool when you're searching a short query against a long database, or looking for a conserved domain inside two otherwise dissimilar proteins, or trying to identify a transposable element embedded in two different genomic contexts."
+  },
+  {
+   "t": 198.95,
+   "text": "Global versus local."
+  },
+  {
+   "t": 200.7,
+   "text": "Two algorithms, one tweak apart, with very different use cases."
+  },
+  {
+   "t": 205.43,
+   "text": "Most of the time, in practice, what you want is local."
+  },
+  {
+   "t": 208.79,
+   "text": "The time and space complexity of Smith-Waterman are the same as Needleman-Wunsch — O(mn) for both."
+  },
+  {
+   "t": 215.68,
+   "text": "The constant factor is essentially identical."
+  },
+  {
+   "t": 218.76,
+   "text": "It's the same fill-the-grid procedure with one extra max-with-zero operation per cell."
+  },
+  {
+   "t": 224.3,
+   "text": "If you can compute Needleman-Wunsch, you can compute Smith-Waterman with a tiny modification."
+  },
+  {
+   "t": 229.41,
+   "text": "Let me make one more point about Smith-Waterman that matters in practice."
+  },
+  {
+   "t": 233.47,
+   "text": "Because the algorithm allows alignments to start and end anywhere in the grid, you can also find multiple non-overlapping local alignments between the same pair of sequences."
+  },
+  {
+   "t": 244.15,
+   "text": "You find the best one."
+  },
+  {
+   "t": 245.41,
+   "text": "Then you mask it out — zero out the cells along its path — and re-run traceback to find the second-best."
+  },
+  {
+   "t": 252.44,
+   "text": "And so on."
+  },
+  {
+   "t": 253.51,
+   "text": "This is useful when, for example, a protein contains multiple repeated domains, and a single search reveals all of them."
+  },
+  {
+   "t": 261.85,
+   "text": "There is one practical limitation of Smith-Waterman, and we'll see how the field worked around it."
+  },
+  {
+   "t": 267.46,
+   "text": "The algorithm is exact — it is guaranteed to find the optimal local alignment, given the scoring function."
+  },
+  {
+   "t": 274.18,
+   "text": "But it is O(mn)."
+  },
+  {
+   "t": 275.81,
+   "text": "If your query is a thousand-letter protein and your database is, say, the entire UniProt database — which has hundreds of millions of letters of total sequence — then m times n is on the order of 10^11."
+  },
+  {
+   "t": 290.94,
+   "text": "That's a hundred billion cells."
+  },
+  {
+   "t": 292.93,
+   "text": "A modern computer can fill a few billion cells per second on a single core, so a full Smith-Waterman scan of UniProt with a single protein query would take tens of seconds to a minute."
+  },
+  {
+   "t": 303.78,
+   "text": "Doable, but expensive."
+  },
+  {
+   "t": 305.53,
+   "text": "Now imagine you have a thousand queries."
+  },
+  {
+   "t": 308.09,
+   "text": "Or imagine the database is the full NCBI nr database, which is ten times bigger."
+  },
+  {
+   "t": 314.5,
+   "text": "Or imagine you want to compare two whole genomes — a billion letters by a billion letters."
+  },
+  {
+   "t": 320.66,
+   "text": "That's 10^18 cells."
+  },
+  {
+   "t": 323.59,
+   "text": "A trillion seconds."
+  },
+  {
+   "t": 325.25,
+   "text": "Thirty thousand years."
+  },
+  {
+   "t": 326.9,
+   "text": "Not happening."
+  },
+  {
+   "t": 327.93,
+   "text": "So Smith-Waterman is exact, but it's slow."
+  },
+  {
+   "t": 331.01,
+   "text": "The field needed a way to be approximate but fast."
+  },
+  {
+   "t": 334.26,
+   "text": "That's BLAST."
+  },
+  {
+   "t": 335.53,
+   "text": "We'll get there."
+  },
+  {
+   "t": 336.5,
+   "text": "One last thing before we move on."
+  },
+  {
+   "t": 338.36,
+   "text": "There's an interesting tradition in this field of naming algorithms after people, and Smith-Waterman is one of the great examples."
+  },
+  {
+   "t": 346.0,
+   "text": "Mike Waterman went on to write the textbook — literally called Introduction to Computational Biology — that taught a generation of bioinformaticians the basics of the field."
+  },
+  {
+   "t": 356.96,
+   "text": "He founded one of the first computational biology departments, at USC, in the 1990s."
+  },
+  {
+   "t": 363.1,
+   "text": "Temple Smith continued working on sequence analysis at Boston University."
+  },
+  {
+   "t": 368.14,
+   "text": "Both of them are alive, both of them are still active, and the algorithm that bears their names runs, in some form or another, billions of times a day across the world's biology labs."
+  },
+  {
+   "t": 379.44,
+   "text": "That's an unusual legacy for a two-page paper."
+  }
+ ]
+}

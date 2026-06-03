@@ -1,0 +1,303 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Peak calling and the bioinformatics pipeline",
+ "duration": 502.47,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Peak calling and the bioinformatics pipeline"
+  },
+  {
+   "t": 4.03,
+   "text": "Now let's talk about what you do with the data once it comes off the sequencer."
+  },
+  {
+   "t": 8.11,
+   "text": "The wet lab gives you a tube of library."
+  },
+  {
+   "t": 11.3,
+   "text": "The sequencer gives you a FASTQ file of paired reads."
+  },
+  {
+   "t": 15.34,
+   "text": "The remaining question is: how do you turn those reads into a map of accessibility — into a list of peaks, with positions, intensities, and identities — that you can interpret biologically?"
+  },
+  {
+   "t": 27.61,
+   "text": "This is the bioinformatics half of ATAC-seq, and it has converged, over the past decade, on a standard pipeline that you'll see in most papers and that is now formalized in the ENCODE ATAC-seq pipeline."
+  },
+  {
+   "t": 40.8,
+   "text": "Let me walk through the major steps."
+  },
+  {
+   "t": 43.11,
+   "text": "Step one: alignment."
+  },
+  {
+   "t": 45.04,
+   "text": "You take your FASTQ reads — typically paired-end, 50 to 75 bp each — and align them to the reference genome with a standard short-read aligner."
+  },
+  {
+   "t": 55.64,
+   "text": "Bowtie2 is the most common choice for ATAC-seq, though BWA-MEM also works well."
+  },
+  {
+   "t": 62.02,
+   "text": "The output is a BAM file: a sorted, indexed list of every read and where it landed on the genome."
+  },
+  {
+   "t": 68.65,
+   "text": "Alignment is fast and unsurprising."
+  },
+  {
+   "t": 71.85,
+   "text": "The choices here are similar to ChIP-seq and RNA-seq."
+  },
+  {
+   "t": 76.28,
+   "text": "Step two: filtering."
+  },
+  {
+   "t": 78.3,
+   "text": "You filter out reads you don't trust."
+  },
+  {
+   "t": 80.62,
+   "text": "PCR duplicates, identified by reads with identical mapping positions, are flagged and removed — typically with Picard MarkDuplicates or samtools markdup."
+  },
+  {
+   "t": 91.31,
+   "text": "Reads that map to multiple genomic locations (low mapping quality) are removed."
+  },
+  {
+   "t": 97.26,
+   "text": "Reads from the mitochondrial genome are removed — this is a big deal in ATAC-seq, and we'll talk about why in Segment 11."
+  },
+  {
+   "t": 105.05,
+   "text": "Reads from blacklist regions — known artifact-prone parts of the genome cataloged by ENCODE — are removed."
+  },
+  {
+   "t": 112.2,
+   "text": "After this filtering, you have a clean BAM file with reads you can trust."
+  },
+  {
+   "t": 116.69,
+   "text": "Step three: shifting for Tn5 offset."
+  },
+  {
+   "t": 120.16,
+   "text": "Because Tn5 cuts the two strands of the target DNA at offset positions (the staggered cut we discussed in Segment 5), the actual center of the Tn5 insertion is not exactly where the read starts."
+  },
+  {
+   "t": 133.8,
+   "text": "You apply the standard correction: forward strand reads are shifted +4 bp, reverse strand reads are shifted -5 bp, to align the read positions to the actual Tn5 insertion centers."
+  },
+  {
+   "t": 147.19,
+   "text": "This step is small but important for high-resolution analysis, particularly for footprinting."
+  },
+  {
+   "t": 153.29,
+   "text": "Most pipelines do this automatically."
+  },
+  {
+   "t": 155.75,
+   "text": "Step four: peak calling."
+  },
+  {
+   "t": 157.68,
+   "text": "This is the heart of the analysis."
+  },
+  {
+   "t": 159.96,
+   "text": "You take your aligned reads and ask: where in the genome are reads piling up significantly above background?"
+  },
+  {
+   "t": 167.39,
+   "text": "The piles of reads — the peaks — correspond to accessible regions."
+  },
+  {
+   "t": 171.85,
+   "text": "The tool of choice is MACS2 — the same Model-based Analysis of ChIP-Seq software used in ChIP-seq analysis."
+  },
+  {
+   "t": 180.9,
+   "text": "MACS2 was originally written for ChIP-seq peak calling, but it works very well for ATAC-seq with a few parameter adjustments."
+  },
+  {
+   "t": 189.69,
+   "text": "The key flags for ATAC-seq are --nomodel (because there's no fragment-size model needed; the size is determined by the Tn5 cuts directly), --shift and --extsize (to define the cut-site extension), and --call-summits (to identify multiple peak summits within broad accessible regions)."
+  },
+  {
+   "t": 208.38,
+   "text": "MACS2 calls peaks by modeling the expected background of reads across the genome (typically a Poisson distribution at each position) and asking where the observed read counts significantly exceed the expected background."
+  },
+  {
+   "t": 222.68,
+   "text": "It assigns each peak a p-value and a fold-enrichment over background."
+  },
+  {
+   "t": 227.55,
+   "text": "A typical ATAC-seq sample yields somewhere between 30,000 and 200,000 peaks, depending on the cell type, the sequencing depth, and the stringency thresholds."
+  },
+  {
+   "t": 238.18,
+   "text": "The output of peak calling is a BED file: a tabular list of peaks, with chromosome, start, end, peak name, score, and various metadata."
+  },
+  {
+   "t": 248.65,
+   "text": "This BED file is the primary data product of the ATAC-seq experiment."
+  },
+  {
+   "t": 254.03,
+   "text": "Everything downstream — motif analysis, integration with other data, differential accessibility — operates on the peak list."
+  },
+  {
+   "t": 262.5,
+   "text": "Step five: quality control metrics."
+  },
+  {
+   "t": 265.48,
+   "text": "Before you trust your peaks, you compute a battery of QC metrics."
+  },
+  {
+   "t": 270.46,
+   "text": "The TSS (transcription start site) enrichment is a standard one — you measure how much your reads pile up at known transcription start sites compared to the genome average."
+  },
+  {
+   "t": 280.86,
+   "text": "A good ATAC-seq library has a TSS enrichment of at least 6, often much higher (15 to 30)."
+  },
+  {
+   "t": 288.0,
+   "text": "Low TSS enrichment indicates that your accessibility signal is weak relative to background."
+  },
+  {
+   "t": 294.68,
+   "text": "The fraction of reads in peaks (FRiP) is another standard metric — you want at least 20 percent, ideally 30 or more."
+  },
+  {
+   "t": 303.75,
+   "text": "Low FRiP means your reads are scattered diffusely rather than concentrated at real peaks, suggesting library quality issues."
+  },
+  {
+   "t": 312.5,
+   "text": "You also look at the fragment size distribution (which we discussed in Segment 7 — the nucleosomal periodicity should be visible), the duplication rate (should be low, ideally under 20 percent), and the mitochondrial read fraction (should be low, ideally under 10 percent, which we'll talk about in Segment 11)."
+  },
+  {
+   "t": 331.71,
+   "text": "If all these metrics check out, your library is good."
+  },
+  {
+   "t": 334.8,
+   "text": "If not, you might need to re-prep, increase sequencing depth, or apply additional filtering."
+  },
+  {
+   "t": 340.97,
+   "text": "Step six: peak annotation and downstream analysis."
+  },
+  {
+   "t": 344.93,
+   "text": "With a peak list in hand, you can ask all sorts of questions."
+  },
+  {
+   "t": 348.65,
+   "text": "Which peaks overlap promoters of known genes (within, say, 2 kb of a transcription start site)?"
+  },
+  {
+   "t": 356.16,
+   "text": "Which peaks are at putative enhancers (distal, but in the same genomic neighborhood as active genes)?"
+  },
+  {
+   "t": 362.7,
+   "text": "Which peaks are differentially accessible between two samples (using tools like DESeq2 or edgeR adapted for ATAC-seq)?"
+  },
+  {
+   "t": 371.08,
+   "text": "Which transcription factor motifs are enriched in your peaks (the topic of Segment 10)?"
+  },
+  {
+   "t": 376.93,
+   "text": "Which peaks correlate with which gene expression patterns (the topic of Segment 11, when we discuss RNA-seq integration)?"
+  },
+  {
+   "t": 384.81,
+   "text": "The bioinformatics ecosystem around ATAC-seq is now mature."
+  },
+  {
+   "t": 390.03,
+   "text": "The ENCODE ATAC-seq pipeline, available on GitHub and runnable on a cloud platform, will take your raw FASTQ files and produce a full set of standard outputs — aligned BAM, filtered BAM, peaks in BED format, QC metrics, bigWig signal tracks for visualization."
+  },
+  {
+   "t": 408.76,
+   "text": "R packages like ATACseqQC, ChrAccR, and chromVAR provide additional analytical capabilities."
+  },
+  {
+   "t": 416.67,
+   "text": "Python packages like SnapATAC and SnapTools handle single-cell ATAC analyses."
+  },
+  {
+   "t": 422.91,
+   "text": "The tooling is good."
+  },
+  {
+   "t": 424.27,
+   "text": "The pipeline is fast."
+  },
+  {
+   "t": 426.0,
+   "text": "The data is interpretable."
+  },
+  {
+   "t": 428.15,
+   "text": "We'll come back to the ecosystem in Segment 17, but for now: the bioinformatics side of ATAC-seq is solidly built out."
+  },
+  {
+   "t": 436.9,
+   "text": "One important point about peak calling that's worth emphasizing."
+  },
+  {
+   "t": 440.16,
+   "text": "The peaks called by MACS2 (or any peak caller) are statistical inferences, not absolute truths."
+  },
+  {
+   "t": 447.35,
+   "text": "The boundaries of a peak are slightly fuzzy."
+  },
+  {
+   "t": 450.27,
+   "text": "The score reflects a confidence in there being a peak there, not the magnitude of accessibility per se."
+  },
+  {
+   "t": 456.75,
+   "text": "When you compare samples, you have to be careful — you typically merge peak sets across samples to create a common peak universe, then quantify reads in each peak in each sample, and ask which peaks are differentially accessible using a count-based statistical model."
+  },
+  {
+   "t": 472.58,
+   "text": "This is standard practice, but it requires care."
+  },
+  {
+   "t": 475.76,
+   "text": "The accessibility signal is quantitative, and the analytical tools have to be quantitative to match."
+  },
+  {
+   "t": 482.21,
+   "text": "That's the pipeline."
+  },
+  {
+   "t": 483.42,
+   "text": "Align, filter, shift, call peaks, QC, annotate."
+  },
+  {
+   "t": 488.3,
+   "text": "Each step is well-understood, well-implemented, and well-documented."
+  },
+  {
+   "t": 493.13,
+   "text": "The end product is a list of accessible regions in your sample, scored and annotated, ready for the biological interpretation that comes in the next segments."
+  }
+ ]
+}

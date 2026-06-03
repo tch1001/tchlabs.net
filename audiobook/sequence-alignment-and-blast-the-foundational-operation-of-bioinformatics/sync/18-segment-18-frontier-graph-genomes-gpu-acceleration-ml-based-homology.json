@@ -1,0 +1,247 @@
+{
+ "n": 18,
+ "title": "SEGMENT 18 — Frontier: graph genomes, GPU acceleration, ML-based homology",
+ "duration": 480.99,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 18 — Frontier: graph genomes, GPU acceleration, ML-based homology"
+  },
+  {
+   "t": 7.58,
+   "text": "In the last segment, I want to gesture at the frontier — what's happening in sequence alignment research right now, in 2026, and where the field is likely to be in five or ten years."
+  },
+  {
+   "t": 19.07,
+   "text": "There are three threads worth tracking."
+  },
+  {
+   "t": 21.31,
+   "text": "Thread one: graph genome alignment maturing."
+  },
+  {
+   "t": 25.05,
+   "text": "We touched on this in Segment 17."
+  },
+  {
+   "t": 27.85,
+   "text": "The first generation of pangenome aligners — vg, GraphAligner — are working but slow and brittle."
+  },
+  {
+   "t": 35.02,
+   "text": "The next generation is starting to appear, with much better engineering and more sophisticated indexing."
+  },
+  {
+   "t": 41.65,
+   "text": "Tools like giraffe (the production pangenome aligner from the vg team) and moni (a compact pangenome index) are pushing pangenome alignment toward production-grade speed."
+  },
+  {
+   "t": 52.77,
+   "text": "The expectation in the field is that within a few years, the default human variant-calling pipeline will switch from BWA-against-GRCh38 to a pangenome alignment workflow, with all the population-genetic benefits that implies."
+  },
+  {
+   "t": 67.6,
+   "text": "Thread two: GPU and SIMD acceleration of alignment."
+  },
+  {
+   "t": 73.1,
+   "text": "All the alignment algorithms we've discussed are computationally intensive — they involve filling large grids of numbers in patterns that are very regular and embarrassingly parallel."
+  },
+  {
+   "t": 84.29,
+   "text": "This makes them perfect targets for GPU acceleration."
+  },
+  {
+   "t": 88.08,
+   "text": "Tools like GASAL2, WFA2, and NVIDIA's Parabricks suite have ported the core alignment kernels to GPUs, achieving speedups of 10- to 100-fold over CPU implementations."
+  },
+  {
+   "t": 101.42,
+   "text": "For very high-throughput applications — clinical sequencing pipelines processing thousands of genomes per day — GPU alignment is becoming standard."
+  },
+  {
+   "t": 111.34,
+   "text": "The newest dynamic programming algorithm, the WFA (Wavefront Alignment Algorithm) by Santiago Marco-Sola, achieves linear-time alignment when sequences are similar (instead of quadratic), and is well-suited to GPU implementation."
+  },
+  {
+   "t": 127.62,
+   "text": "WFA is starting to replace banded dynamic programming in many tools, including minimap2 and BWA-MEM2."
+  },
+  {
+   "t": 136.22,
+   "text": "Thread three: machine learning for homology detection."
+  },
+  {
+   "t": 139.88,
+   "text": "This is the most exciting development, and the most transformative."
+  },
+  {
+   "t": 143.88,
+   "text": "The classical sequence alignment problem assumes that the only signal of homology is letter identity — matches and mismatches in the sequence."
+  },
+  {
+   "t": 154.0,
+   "text": "But proteins have structure, and the structure carries enormous additional information about homology."
+  },
+  {
+   "t": 160.88,
+   "text": "Two proteins might be only 15% identical in sequence yet have nearly identical 3D folds — which means they're homologous, even though sequence alignment alone might miss it."
+  },
+  {
+   "t": 173.03,
+   "text": "The new wave of tools uses learned representations of protein sequences and structures to detect homology in a way that goes beyond sequence identity."
+  },
+  {
+   "t": 182.81,
+   "text": "ESM (Evolutionary Scale Modeling) from Meta AI is a protein language model — a transformer neural network trained on hundreds of millions of protein sequences — that learns a vector representation of each amino acid in its context."
+  },
+  {
+   "t": 198.3,
+   "text": "Two homologous proteins, even at distant evolutionary distances, have similar ESM embeddings, and you can detect homology by comparing embedding similarity rather than sequence identity."
+  },
+  {
+   "t": 210.54,
+   "text": "Foldseek, by the Söding group, takes a similar approach for protein structures — it encodes 3D structures as sequences in a learned structural alphabet, then aligns those structural sequences using standard Smith-Waterman."
+  },
+  {
+   "t": 224.5,
+   "text": "Foldseek can detect distant homology that no sequence-based method can find, by exploiting the fact that structure is more conserved than sequence."
+  },
+  {
+   "t": 234.84,
+   "text": "These ML-based methods are not replacing classical alignment — they complement it."
+  },
+  {
+   "t": 240.41,
+   "text": "For close homologs, BLAST and BWA are still the right tools — fast, exact, well-understood."
+  },
+  {
+   "t": 247.6,
+   "text": "For distant homologs, where sequence identity has decayed below the detection threshold, ML-based methods extend the reach into the twilight zone."
+  },
+  {
+   "t": 256.8,
+   "text": "The combination of classical alignment for close homologs and ML-based detection for distant ones is becoming standard practice in protein family analysis."
+  },
+  {
+   "t": 266.98,
+   "text": "Let me step back and try to give you a sense of where the field is, conceptually, in 2026."
+  },
+  {
+   "t": 273.27,
+   "text": "Sequence alignment is fifty-five years old as a formal field (Needleman-Wunsch was 1970)."
+  },
+  {
+   "t": 280.27,
+   "text": "The exact algorithms are mature and not changing."
+  },
+  {
+   "t": 283.54,
+   "text": "The fast heuristic algorithms have gone through three major waves — BLAST in 1990, BWA/Bowtie in 2009, minimap2 in 2018 — each driven by a new wave of sequencing technology that demanded new algorithmic ideas."
+  },
+  {
+   "t": 300.58,
+   "text": "The current generation of tools is good enough for almost all routine work."
+  },
+  {
+   "t": 305.1,
+   "text": "The active frontiers are at the edges."
+  },
+  {
+   "t": 307.3,
+   "text": "For very distant homology, ML-based methods are extending the reach beyond what alignment alone can do."
+  },
+  {
+   "t": 314.78,
+   "text": "For very long reads, the algorithms are still being refined to handle the increasing throughput and decreasing error rates of nanopore."
+  },
+  {
+   "t": 323.87,
+   "text": "For population-scale data, graph genomes are replacing linear references."
+  },
+  {
+   "t": 328.82,
+   "text": "For very large databases — billions of sequences from metagenomics — sketching and approximate methods like Mash and sourmash are providing fast similarity estimates without full alignment."
+  },
+  {
+   "t": 340.99,
+   "text": "For real-time clinical applications — sequencing in the ICU, sequencing in the field with portable nanopore devices — the algorithms are being pushed toward streaming, online, GPU-accelerated versions."
+  },
+  {
+   "t": 354.49,
+   "text": "But the core operation — given two sequences, find the best alignment — is the same operation it was in 1970."
+  },
+  {
+   "t": 362.15,
+   "text": "The same dynamic programming recurrence Needleman and Wunsch wrote down, in different incarnations, sits at the heart of every alignment tool today."
+  },
+  {
+   "t": 371.25,
+   "text": "The algorithm is so fundamental that it has become invisible — it's the air, the foundation, the assumed substrate on which everything else is built."
+  },
+  {
+   "t": 381.73,
+   "text": "When you use BWA, you're using a fast index on top of dynamic programming."
+  },
+  {
+   "t": 386.74,
+   "text": "When you use BLAST, you're using a clever heuristic that wraps dynamic programming."
+  },
+  {
+   "t": 391.93,
+   "text": "When you use minimap2, you're using chaining and minimizers on top of dynamic programming."
+  },
+  {
+   "t": 397.74,
+   "text": "The dynamic programming is always there."
+  },
+  {
+   "t": 400.62,
+   "text": "It is the most important algorithm in biology."
+  },
+  {
+   "t": 403.58,
+   "text": "Let me close with one observation."
+  },
+  {
+   "t": 405.74,
+   "text": "Sequence alignment is the rare piece of computer science whose impact on a different field — biology — has been at least as large as its impact on its home discipline."
+  },
+  {
+   "t": 416.65,
+   "text": "The Needleman-Wunsch algorithm is taught in every algorithms textbook as an example of dynamic programming, but its real significance is not as a teaching example — it's as the operation that made it possible to read the tree of life, to do molecular evolution, to identify human genes by homology to fly genes, to find pathogens by their DNA, to track variants of SARS-CoV-2 as they spread around the world."
+  },
+  {
+   "t": 442.59,
+   "text": "Without sequence alignment, modern biology does not exist."
+  },
+  {
+   "t": 447.1,
+   "text": "With it, modern biology is what it is."
+  },
+  {
+   "t": 449.97,
+   "text": "That's a remarkable legacy for a four-page paper from 1970 and a two-page paper from 1981."
+  },
+  {
+   "t": 457.15,
+   "text": "Hold that in your head as you leave today."
+  },
+  {
+   "t": 459.79,
+   "text": "The most important algorithm in biology is also one of the most elegant, and it took two of them to do it — global and local, Needleman-Wunsch and Smith-Waterman — and everything else is built on top."
+  },
+  {
+   "t": 472.33,
+   "text": "Thank you for staying with me through these two hours."
+  },
+  {
+   "t": 475.34,
+   "text": "Sequence alignment is the foundational operation, and now you know it."
+  },
+  {
+   "t": 479.98,
+   "text": "Use it well."
+  }
+ ]
+}

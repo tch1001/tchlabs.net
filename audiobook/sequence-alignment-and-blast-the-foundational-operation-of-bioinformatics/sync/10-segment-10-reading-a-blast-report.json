@@ -1,0 +1,247 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Reading a BLAST report",
+ "duration": 359.16,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Reading a BLAST report"
+  },
+  {
+   "t": 3.25,
+   "text": "Now we need to spend a segment on reading a BLAST report, because the output of BLAST is rich and you need to know how to interpret it."
+  },
+  {
+   "t": 10.51,
+   "text": "A BLAST report has three main sections — a header with metadata, a list of one-line summaries of all the hits, and a detailed alignment view for each significant hit."
+  },
+  {
+   "t": 21.71,
+   "text": "Let me walk through the parts you need to look at, in order."
+  },
+  {
+   "t": 24.68,
+   "text": "The header tells you the basics: query name and length, database name and total length, program version, scoring matrix used."
+  },
+  {
+   "t": 33.2,
+   "text": "These are usually fine on autopilot, but check that the database is what you expected — if you wanted to search against human proteins but accidentally pointed at all of nr, you'll get a lot of noise."
+  },
+  {
+   "t": 44.33,
+   "text": "The summary list is the first place to look for hits."
+  },
+  {
+   "t": 47.66,
+   "text": "Each row shows: the target sequence's accession ID, a brief description, the bit score of the best alignment, the E-value of that alignment, and the percent identity."
+  },
+  {
+   "t": 58.38,
+   "text": "The hits are sorted by E-value, smallest first — that is, best hits at the top."
+  },
+  {
+   "t": 63.6,
+   "text": "Let me unpack each of those numbers, because this is the language of BLAST reading."
+  },
+  {
+   "t": 68.92,
+   "text": "Bit score."
+  },
+  {
+   "t": 69.95,
+   "text": "Discussed in Segment 8 — it's a normalized score that's independent of database size."
+  },
+  {
+   "t": 75.58,
+   "text": "A bit score of 50 is moderate; 100 is good; 200 or more is excellent."
+  },
+  {
+   "t": 81.86,
+   "text": "Higher is better."
+  },
+  {
+   "t": 83.22,
+   "text": "Bit scores can be compared across searches."
+  },
+  {
+   "t": 85.83,
+   "text": "E-value."
+  },
+  {
+   "t": 86.79,
+   "text": "Also discussed in Segment 8 — the expected number of alignments this good by chance, given the database size."
+  },
+  {
+   "t": 93.81,
+   "text": "Smaller is better."
+  },
+  {
+   "t": 95.2,
+   "text": "Conventional thresholds: E 1 is \"essentially noise, ignore."
+  },
+  {
+   "t": 100.12,
+   "text": "\""
+  },
+  {
+   "t": 100.33,
+   "text": "Percent identity."
+  },
+  {
+   "t": 101.65,
+   "text": "The fraction of aligned positions where the query and target letters are identical."
+  },
+  {
+   "t": 106.71,
+   "text": "High identity is good — 90% identity in DNA, or 50% in protein, is a strong sign of homology."
+  },
+  {
+   "t": 115.33,
+   "text": "But percent identity alone is not enough — a short, perfect alignment can be by chance, while a long, weakly-identical alignment can be a real homolog."
+  },
+  {
+   "t": 126.15,
+   "text": "You always combine percent identity with alignment length and E-value to judge a hit."
+  },
+  {
+   "t": 132.24,
+   "text": "Alignment length."
+  },
+  {
+   "t": 133.55,
+   "text": "How many positions are in the alignment."
+  },
+  {
+   "t": 135.55,
+   "text": "A 1000-letter alignment at 30% identity is very significant — that's enough information to be sure the proteins are homologous."
+  },
+  {
+   "t": 144.71,
+   "text": "A 20-letter alignment at 80% identity is barely above noise — it could easily be by chance."
+  },
+  {
+   "t": 152.15,
+   "text": "The combination of length and identity is what matters, and the E-value combines them into a single number."
+  },
+  {
+   "t": 159.25,
+   "text": "Query coverage."
+  },
+  {
+   "t": 160.56,
+   "text": "What fraction of your query is covered by the alignment."
+  },
+  {
+   "t": 163.62,
+   "text": "A hit covering 90% of your query is a substantial match; a hit covering only 10% might be a single conserved domain in an otherwise dissimilar protein."
+  },
+  {
+   "t": 174.79,
+   "text": "Below the summary, BLAST shows the detailed alignment view for each significant hit."
+  },
+  {
+   "t": 180.53,
+   "text": "This view shows the query and target sequences lined up, with vertical bars (or letters) indicating matches, spaces or dots indicating mismatches, and dashes indicating gaps."
+  },
+  {
+   "t": 193.07,
+   "text": "You can read off, position by position, exactly how the alignment looks."
+  },
+  {
+   "t": 198.06,
+   "text": "This is invaluable when you want to assess what kind of homology it is — is it a clean alignment across the whole protein (full-length ortholog), or just one conserved domain embedded in two otherwise dissimilar proteins (shared domain), or a few scattered short matches (likely spurious)?"
+  },
+  {
+   "t": 215.65,
+   "text": "Reading the alignment view also lets you spot biology."
+  },
+  {
+   "t": 219.34,
+   "text": "If your query has a known active site at a specific position, and the BLAST hit aligns that active site to the same position in the target — match for match — that's strong evidence the hit is a functional homolog."
+  },
+  {
+   "t": 231.31,
+   "text": "If the active site aligns to a different amino acid, that's evidence the function might have changed in the target."
+  },
+  {
+   "t": 238.18,
+   "text": "One more thing to watch for in BLAST reports: low-complexity regions."
+  },
+  {
+   "t": 242.54,
+   "text": "These are stretches of sequence dominated by one or two letters — like a poly-glutamine tract in a protein, or a microsatellite repeat in DNA."
+  },
+  {
+   "t": 252.85,
+   "text": "Low-complexity regions can produce false positive alignments because they match each other promiscuously without any real homology."
+  },
+  {
+   "t": 261.48,
+   "text": "BLAST has a built-in low-complexity filter (called SEG for protein, DUST for DNA) that masks these regions during seeding, so they don't generate spurious hits."
+  },
+  {
+   "t": 273.11,
+   "text": "You can turn this on or off in the BLAST options."
+  },
+  {
+   "t": 276.28,
+   "text": "For most users, leave it on."
+  },
+  {
+   "t": 278.43,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 279.74,
+   "text": "Reading a BLAST report is like skimming a stack of paper match reports."
+  },
+  {
+   "t": 284.13,
+   "text": "The summary list is your front-page scan — sort by E-value, look at the top hits."
+  },
+  {
+   "t": 289.78,
+   "text": "For each top hit, check the four numbers: bit score, E-value, percent identity, alignment length."
+  },
+  {
+   "t": 296.86,
+   "text": "Then drop into the detail view for the alignment itself, and look at how the alignment is laid out — is it full-length, or just a domain, or just a fragment?"
+  },
+  {
+   "t": 306.87,
+   "text": "Are conserved positions hitting conserved positions?"
+  },
+  {
+   "t": 310.74,
+   "text": "Is the hit biologically plausible given what you know about your query?"
+  },
+  {
+   "t": 315.18,
+   "text": "That's the BLAST-reading workflow."
+  },
+  {
+   "t": 317.24,
+   "text": "With practice it takes thirty seconds per hit; without practice it takes an afternoon."
+  },
+  {
+   "t": 322.06,
+   "text": "The numbers are the same, but the interpretive vocabulary takes time to build."
+  },
+  {
+   "t": 326.87,
+   "text": "A common beginner mistake is to focus only on percent identity."
+  },
+  {
+   "t": 331.13,
+   "text": "Two 30% identical proteins, aligned over 500 residues, are almost certainly homologous — the E-value is tiny, the alignment is long, the statistics are unambiguous."
+  },
+  {
+   "t": 344.48,
+   "text": "Two 90% identical sequences aligned over 15 nucleotides might be by chance — short matches with high identity are easy to find at random."
+  },
+  {
+   "t": 354.88,
+   "text": "Always look at the E-value and the alignment length, not just identity."
+  }
+ ]
+}

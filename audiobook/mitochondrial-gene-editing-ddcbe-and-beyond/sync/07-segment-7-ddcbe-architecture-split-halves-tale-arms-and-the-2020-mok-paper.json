@@ -1,0 +1,275 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — DdCBE architecture — split halves, TALE arms, and the 2020 Mok paper",
+ "duration": 451.56,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — DdCBE architecture — split halves, TALE arms, and the 2020 Mok paper"
+  },
+  {
+   "t": 6.96,
+   "text": "The 2020 paper that launched mitochondrial base editing was published in Nature in July of that year."
+  },
+  {
+   "t": 13.51,
+   "text": "The title is \"A bacterial cytidine deaminase toxin enables CRISPR-free mitochondrial base editing."
+  },
+  {
+   "t": 20.91,
+   "text": "\" The first author is Beverly Mok, a postdoctoral fellow in David Liu's lab."
+  },
+  {
+   "t": 26.23,
+   "text": "The senior authors are Liu and Mougous."
+  },
+  {
+   "t": 28.98,
+   "text": "Read the title carefully — it tells you the whole story."
+  },
+  {
+   "t": 32.71,
+   "text": "A bacterial cytidine deaminase toxin (that's DddA, from Mougous)."
+  },
+  {
+   "t": 37.8,
+   "text": "Enables (it makes possible) CRISPR-free (notice the word \"free\" — they're explicitly stepping outside CRISPR) mitochondrial base editing."
+  },
+  {
+   "t": 46.9,
+   "text": "Let me walk you through the architecture they built, piece by piece."
+  },
+  {
+   "t": 51.1,
+   "text": "The first design problem was the toxicity."
+  },
+  {
+   "t": 54.01,
+   "text": "DddA, as we just said, is a wild deaminase that attacks double-stranded DNA promiscuously."
+  },
+  {
+   "t": 61.12,
+   "text": "If you express full DddA inside a human cell — even targeted to mitochondria — it'll start deaminating cytosines randomly across the mtDNA and potentially the nuclear DNA too."
+  },
+  {
+   "t": 74.21,
+   "text": "That's the opposite of a targeted editor."
+  },
+  {
+   "t": 76.69,
+   "text": "The Liu lab needed a way to keep DddA inert until it was localized to a specific site."
+  },
+  {
+   "t": 83.14,
+   "text": "Their solution was elegant: split DddA into two halves."
+  },
+  {
+   "t": 87.69,
+   "text": "They identified the protein's catalytic core and found a position where you could cut the polypeptide chain into two non-overlapping fragments."
+  },
+  {
+   "t": 96.2,
+   "text": "Neither fragment, on its own, has any deaminase activity — the active site requires both halves to come together."
+  },
+  {
+   "t": 103.91,
+   "text": "But when the two halves are brought into close proximity, they reassemble and catalysis resumes."
+  },
+  {
+   "t": 110.53,
+   "text": "They split it at two different positions, and called the resulting halves the N-terminal fragment and the C-terminal fragment."
+  },
+  {
+   "t": 117.85,
+   "text": "Now the question is: how do you get the two halves to come together at one specific spot in mtDNA and nowhere else?"
+  },
+  {
+   "t": 125.81,
+   "text": "The answer is to tether each half to its own programmable DNA-binding domain, positioned on opposite sides of the target."
+  },
+  {
+   "t": 133.62,
+   "text": "If each half has its own targeting arm, and the arms bind sequences flanking the cytosine you want to edit, then the two halves get brought into proximity only when both arms are bound to their flanking sites."
+  },
+  {
+   "t": 145.72,
+   "text": "Anywhere else in the genome, the halves don't meet, and no deaminase activity occurs."
+  },
+  {
+   "t": 151.5,
+   "text": "For the targeting arms, they used TALEs."
+  },
+  {
+   "t": 154.32,
+   "text": "Not Cas9 — Cas9 needs a guide RNA, which can't get into mitochondria."
+  },
+  {
+   "t": 159.81,
+   "text": "TALEs are pure protein, and as we established, proteins can be imported across the double membrane via the TOM/TIM machinery."
+  },
+  {
+   "t": 169.14,
+   "text": "Each TALE arm gets a mitochondrial targeting sequence at its N-terminus, the cell imports the whole construct, and inside the matrix the TALE arm finds its DNA target via the modular Boch-Moscou code we worked through in the TALEN lecture — one repeat per base, HD-NG-NI-NN reading C-T-A-G."
+  },
+  {
+   "t": 188.5,
+   "text": "So the construct looks like this."
+  },
+  {
+   "t": 190.84,
+   "text": "Two separate polypeptides."
+  },
+  {
+   "t": 192.88,
+   "text": "Each polypeptide is, from N-terminus to C-terminus: a mitochondrial targeting sequence, then a TALE array (the targeting arm), then one half of split DddA, then a uracil glycosylase inhibitor — UGI — to block the cell's uracil DNA glycosylase from undoing the edit."
+  },
+  {
+   "t": 212.3,
+   "text": "(Same UGI trick from nuclear base editing, same logic — when DddA deaminates a C to a U, the cell's UDG would normally recognize the U as foreign DNA and excise it; UGI blocks that, locking the edit in.)"
+  },
+  {
+   "t": 227.84,
+   "text": "The two TALE arms are designed to bind sequences on opposite sides of the target cytosine — typically one binds the top strand to the left of the target, the other binds the bottom strand to the right of the target, with a spacer of about 14 to 18 base pairs between them where the cytosines that get edited live."
+  },
+  {
+   "t": 245.82,
+   "text": "Picture this on the board."
+  },
+  {
+   "t": 247.19,
+   "text": "DNA running horizontally, double-stranded."
+  },
+  {
+   "t": 250.53,
+   "text": "Left TALE arm bound to a 16-base-pair stretch on the top strand."
+  },
+  {
+   "t": 255.4,
+   "text": "Right TALE arm bound to a 16-base-pair stretch on the bottom strand, downstream of the left arm."
+  },
+  {
+   "t": 262.24,
+   "text": "Between them, a gap of 14 to 18 base pairs."
+  },
+  {
+   "t": 266.18,
+   "text": "Each TALE arm carries one half of DddA on its inward-facing end — the N-terminal half on one arm, the C-terminal half on the other."
+  },
+  {
+   "t": 276.15,
+   "text": "When both arms are bound, the two DddA halves are held in proximity over the gap, reassemble into a functional deaminase, and start deaminating Cs in the spacer region."
+  },
+  {
+   "t": 287.18,
+   "text": "The chemistry happens on the intact double-stranded DNA — no R-loop, no nick, no opening of the helix required, because DddA can attack dsDNA on its own."
+  },
+  {
+   "t": 298.26,
+   "text": "After deamination, you have a U in place of a C."
+  },
+  {
+   "t": 302.31,
+   "text": "The cell's mismatch repair machinery, after several rounds of mtDNA replication, propagates the U as if it were a T."
+  },
+  {
+   "t": 310.63,
+   "text": "The end result is a C-to-T conversion on one strand, with the complementary G on the other strand becoming an A."
+  },
+  {
+   "t": 318.12,
+   "text": "Single-letter edit, no double-strand break, locked in by UGI."
+  },
+  {
+   "t": 322.37,
+   "text": "The paper showed editing efficiencies of about 5% to 50% at multiple target sites in the mitochondrial genome of human cells."
+  },
+  {
+   "t": 332.63,
+   "text": "They edited cytosines in the MT-ATP6 gene, in the MT-ND4 gene, in MT-ND5, in the displacement loop region — multiple positions across the mitochondrial genome, each with its own pair of TALE arms designed to flank the target."
+  },
+  {
+   "t": 349.45,
+   "text": "The platform was modular: design a new TALE pair, get a new mtDNA edit."
+  },
+  {
+   "t": 355.02,
+   "text": "Just like TALENs in the nuclear genome, but for mitochondria, and base-editing rather than cutting."
+  },
+  {
+   "t": 361.0,
+   "text": "Let me restate the design choices, because there's a clean logic running through them and I want it in your head."
+  },
+  {
+   "t": 366.66,
+   "text": "Why TALEs and not Cas9?"
+  },
+  {
+   "t": 368.45,
+   "text": "Because Cas9 needs a guide RNA that can't cross the mitochondrial double membrane."
+  },
+  {
+   "t": 374.37,
+   "text": "TALEs are pure protein and can be imported."
+  },
+  {
+   "t": 377.3,
+   "text": "Why DddA and not APOBEC1?"
+  },
+  {
+   "t": 379.98,
+   "text": "Because APOBEC1 needs single-stranded DNA, which there's no way to expose at a specific site inside the mitochondrion without Cas9."
+  },
+  {
+   "t": 389.61,
+   "text": "DddA works on double-stranded DNA directly."
+  },
+  {
+   "t": 392.97,
+   "text": "Why split DddA?"
+  },
+  {
+   "t": 394.28,
+   "text": "Because full DddA is a toxin that would shred the genome."
+  },
+  {
+   "t": 398.0,
+   "text": "Splitting it into halves that only reassemble when both TALE arms are bound is the leash that makes it specific."
+  },
+  {
+   "t": 405.63,
+   "text": "Why UGI?"
+  },
+  {
+   "t": 406.77,
+   "text": "Same as in nuclear cytosine base editing — to block uracil DNA glycosylase from excising the U and resetting the edit."
+  },
+  {
+   "t": 415.36,
+   "text": "Why two separate polypeptides, not one?"
+  },
+  {
+   "t": 418.02,
+   "text": "Because the geometry of binding two flanking sites requires two independently positioned arms."
+  },
+  {
+   "t": 424.7,
+   "text": "A single chain wrapping around the DNA would be much harder to engineer."
+  },
+  {
+   "t": 429.37,
+   "text": "The whole construct is a beautiful piece of molecular plumbing."
+  },
+  {
+   "t": 433.4,
+   "text": "Every design choice solves a specific problem."
+  },
+  {
+   "t": 436.37,
+   "text": "The combined system gives you, for the first time, targeted C-to-T editing inside the mitochondrion."
+  },
+  {
+   "t": 443.32,
+   "text": "After thirty years of knowing the sequences of the disease-causing mutations and being unable to touch them, we had a tool that could touch them."
+  }
+ ]
+}

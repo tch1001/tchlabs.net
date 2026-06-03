@@ -1,0 +1,159 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Tools, pipelines, and the open ecosystem",
+ "duration": 270.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Tools, pipelines, and the open ecosystem"
+  },
+  {
+   "t": 4.45,
+   "text": "One of the underappreciated strengths of ATAC-seq is that the analytical ecosystem around it is open, mature, and well-integrated with the rest of genomics."
+  },
+  {
+   "t": 14.69,
+   "text": "If you decide to run ATAC-seq today, you can use freely available pipelines and packages to handle everything from raw reads to downstream interpretation."
+  },
+  {
+   "t": 25.14,
+   "text": "Let me give you a tour of the landscape."
+  },
+  {
+   "t": 27.14,
+   "text": "The flagship pipeline is the ENCODE ATAC-seq pipeline, developed by the ENCODE consortium and now hosted on GitHub."
+  },
+  {
+   "t": 35.16,
+   "text": "It takes FASTQ files as input and produces a standard output: aligned BAM files, filtered BAM files, peak calls in BED format, bigWig signal tracks for visualization, and a full set of QC metrics."
+  },
+  {
+   "t": 50.0,
+   "text": "The pipeline is implemented in Workflow Description Language (WDL) and can be run on any platform that supports WDL — including Cromwell on local servers, DNAnexus, Terra, and AWS."
+  },
+  {
+   "t": 63.74,
+   "text": "The pipeline is the de facto standard, and most published ATAC-seq datasets in major journals have been processed through it or something equivalent."
+  },
+  {
+   "t": 72.59,
+   "text": "For peak calling, MACS2 is the workhorse, as discussed in Segment 9."
+  },
+  {
+   "t": 78.09,
+   "text": "Genrich is an alternative peak caller designed specifically for ATAC-seq, with built-in handling of paired-end fragments and replicate consensus."
+  },
+  {
+   "t": 87.95,
+   "text": "Both are widely used."
+  },
+  {
+   "t": 89.54,
+   "text": "For downstream analysis in R, the ATACseqQC package provides QC tools."
+  },
+  {
+   "t": 95.7,
+   "text": "ChrAccR offers a comprehensive accessibility analysis framework."
+  },
+  {
+   "t": 101.21,
+   "text": "chromVAR is excellent for motif analysis, especially at single-cell resolution."
+  },
+  {
+   "t": 107.35,
+   "text": "DiffBind handles differential accessibility analysis."
+  },
+  {
+   "t": 111.39,
+   "text": "ArchR is a comprehensive single-cell ATAC-seq analysis suite, increasingly the standard for snATAC analysis."
+  },
+  {
+   "t": 120.28,
+   "text": "Signac is a Seurat-compatible single-cell ATAC analysis package, useful when you're integrating with single-cell RNA-seq."
+  },
+  {
+   "t": 129.14,
+   "text": "In Python, SnapATAC2 is the modern reference implementation for single-cell ATAC analysis, with efficient handling of large datasets."
+  },
+  {
+   "t": 138.62,
+   "text": "MACS3 is the next-generation peak caller."
+  },
+  {
+   "t": 141.86,
+   "text": "pyATAC provides various ATAC-specific analyses."
+  },
+  {
+   "t": 146.11,
+   "text": "For visualization, IGV (Integrative Genomics Viewer) is the standard for inspecting individual loci."
+  },
+  {
+   "t": 153.74,
+   "text": "WashU Epigenome Browser is excellent for sharing tracks and comparing across many samples."
+  },
+  {
+   "t": 160.2,
+   "text": "deepTools generates publication-quality plots of signal around features."
+  },
+  {
+   "t": 165.53,
+   "text": "For motif analysis, HOMER is a classic with comprehensive motif databases."
+  },
+  {
+   "t": 171.07,
+   "text": "MEME-suite offers more flexible motif discovery and enrichment."
+  },
+  {
+   "t": 175.7,
+   "text": "chromVAR and TOBIAS specialize in ATAC-specific motif activity inference."
+  },
+  {
+   "t": 182.15,
+   "text": "For trajectory analysis (relevant for differentiation studies), scVelo, PAGA, Monocle, and Cicero all handle ATAC data, often combined with RNA-seq data for joint trajectory inference."
+  },
+  {
+   "t": 195.97,
+   "text": "There's also a rich ecosystem of public datasets you can compare to."
+  },
+  {
+   "t": 200.53,
+   "text": "The TCGA ATAC-seq dataset (the 23-cancer-type atlas from Segment 13)."
+  },
+  {
+   "t": 206.56,
+   "text": "The ENCODE ATAC-seq catalog (thousands of samples across cell types and conditions)."
+  },
+  {
+   "t": 212.82,
+   "text": "The Human Cell Atlas ATAC subset."
+  },
+  {
+   "t": 216.18,
+   "text": "The BICCN (Brain Initiative Cell Census Network) ATAC profiles of brain cell types."
+  },
+  {
+   "t": 222.95,
+   "text": "The Tabula Muris and Tabula Sapiens single-cell atlas including ATAC."
+  },
+  {
+   "t": 229.32,
+   "text": "These public datasets serve both as comparison points (does my ATAC profile of cell type X look like the consensus profile?) and as resources for integrative analyses."
+  },
+  {
+   "t": 240.72,
+   "text": "The take-home: the open ecosystem is one of the things that has made ATAC-seq so successful."
+  },
+  {
+   "t": 247.15,
+   "text": "You don't have to invent your analytical stack from scratch."
+  },
+  {
+   "t": 250.45,
+   "text": "The tools exist, they're well-documented, they interoperate, and a large community of users is actively maintaining and improving them."
+  },
+  {
+   "t": 259.84,
+   "text": "This is the genomics community at its best — open data, open tools, open standards, all built around an assay that turned out to be enormously enabling for biology."
+  }
+ ]
+}

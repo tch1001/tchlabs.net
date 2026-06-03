@@ -1,0 +1,143 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — The wider family — R4, TP901-1, A118, and orthogonality",
+ "duration": 302.07,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — The wider family — R4, TP901-1, A118, and orthogonality"
+  },
+  {
+   "t": 8.45,
+   "text": "Let's broaden the cast."
+  },
+  {
+   "t": 10.0,
+   "text": "Bxb1 and phiC31 are the famous two, but the serine integrase family includes dozens of members, each from a different phage, each with its own attB and attP sequences."
+  },
+  {
+   "t": 23.4,
+   "text": "Several of these have been characterized and engineered for use in mammalian and synthetic-biology contexts."
+  },
+  {
+   "t": 30.45,
+   "text": "Let me give you a quick tour of the main ones, and explain why having multiple orthogonal integrases matters."
+  },
+  {
+   "t": 37.08,
+   "text": "R4 is a serine integrase from a Streptomyces phage (different from phiC31, also from a Streptomyces phage but a different one)."
+  },
+  {
+   "t": 46.58,
+   "text": "R4 was one of the early serine integrases characterized for mammalian use, alongside phiC31."
+  },
+  {
+   "t": 53.65,
+   "text": "Its attB and attP sequences are different from phiC31's and from Bxb1's, so R4 is \"orthogonal\" to both — meaning R4 recognizes only R4 sites, Bxb1 recognizes only Bxb1 sites, etc."
+  },
+  {
+   "t": 71.66,
+   "text": "R4 has been used in landing-pad systems and in synthetic-biology circuits."
+  },
+  {
+   "t": 76.62,
+   "text": "TP901-1 is a serine integrase from a phage of Lactococcus lactis, the dairy bacterium."
+  },
+  {
+   "t": 84.14,
+   "text": "TP901-1 has been characterized for mammalian-cell use and is one of the workhorse orthogonal integrases in synthetic-biology applications."
+  },
+  {
+   "t": 94.34,
+   "text": "Its native attB-attP system is well-studied and engineered for high efficiency."
+  },
+  {
+   "t": 100.49,
+   "text": "A118 is a serine integrase from a Listeria phage."
+  },
+  {
+   "t": 104.47,
+   "text": "Less commonly used than the above, but characterized and available for orthogonal-integrase designs."
+  },
+  {
+   "t": 111.41,
+   "text": "Wβ (Wbeta) is from a Bacillus anthracis phage — yes, anthrax — and is one of the orthologs being explored more recently for its unique sequence specificity."
+  },
+  {
+   "t": 122.96,
+   "text": "SPβc2 is from a Bacillus subtilis phage and has been characterized for synthetic-biology applications."
+  },
+  {
+   "t": 130.69,
+   "text": "There are many more — TG1, BL3, MR11, KovV, and others."
+  },
+  {
+   "t": 137.26,
+   "text": "Several papers have surveyed dozens of orthologs to identify ones that work cleanly in mammalian cells and that have site sequences that don't cross-react with each other."
+  },
+  {
+   "t": 147.81,
+   "text": "Why does orthogonality matter?"
+  },
+  {
+   "t": 149.68,
+   "text": "Two main reasons."
+  },
+  {
+   "t": 151.07,
+   "text": "First, in multiplexed landing-pad designs, you can install multiple landing pads at multiple chromosomal locations in the same cell, each recognized by a different integrase."
+  },
+  {
+   "t": 162.43,
+   "text": "Then you can dock different cargo at each location independently — Bxb1 docks cargo A at landing pad 1, phiC31 docks cargo B at landing pad 2, R4 docks cargo C at landing pad 3, all in the same cell, with no cross-contamination."
+  },
+  {
+   "t": 179.62,
+   "text": "This is essential for building complex multi-component circuits and for the kind of trait stacking we discussed in the agricultural-biotech segment."
+  },
+  {
+   "t": 188.45,
+   "text": "Second, in synthetic-biology logic circuits, multiple orthogonal integrases let you implement multi-input logic with each integrase responding to a different input signal."
+  },
+  {
+   "t": 199.76,
+   "text": "Without orthogonality, you couldn't reliably build anything more complex than a single-bit memory."
+  },
+  {
+   "t": 206.1,
+   "text": "The serine-integrase community has invested significant effort in characterizing orthologs and engineering them for clean orthogonality."
+  },
+  {
+   "t": 216.0,
+   "text": "A paper from the Yarnall and others in Nature Biotechnology in 2023 — from the Liu lab — surveyed hundreds of newly-identified integrases bioinformatically and benchmarked them in mammalian cells, identifying several new high-activity, orthogonal candidates."
+  },
+  {
+   "t": 232.82,
+   "text": "This is an ongoing field."
+  },
+  {
+   "t": 234.53,
+   "text": "The expectation is that as more integrases are characterized, the \"library\" of orthogonal site-specific tools available to mammalian engineers will grow from a handful to dozens, opening up much more complex synthetic-biology designs."
+  },
+  {
+   "t": 249.46,
+   "text": "A practical note: not every newly-identified integrase works well in mammalian cells."
+  },
+  {
+   "t": 255.21,
+   "text": "Many phage integrases evolved in bacterial intracellular conditions and don't fold, localize, or function efficiently in eukaryotic cells."
+  },
+  {
+   "t": 265.41,
+   "text": "Even when an integrase works, its efficiency in mammalian cells is often much lower than its efficiency in its native bacterial host."
+  },
+  {
+   "t": 274.44,
+   "text": "Engineering an integrase for high mammalian-cell activity — codon optimization, nuclear localization signals, expression-cassette tuning, sometimes directed evolution for higher activity — is its own subfield."
+  },
+  {
+   "t": 288.27,
+   "text": "The integrases that have become widely used (Bxb1 above all, then phiC31, then TP901-1) are ones that, by luck or by engineering, function efficiently in the mammalian context."
+  }
+ ]
+}

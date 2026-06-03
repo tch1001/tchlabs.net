@@ -1,0 +1,271 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Mitochondrial base editing — the corner Cas9 can't reach",
+ "duration": 432.53,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Mitochondrial base editing — the corner Cas9 can't reach"
+  },
+  {
+   "t": 5.78,
+   "text": "I want to spend an entire segment on a development I find astonishing — the extension of base editing into a part of the genome that CRISPR cannot reach at all."
+  },
+  {
+   "t": 15.76,
+   "text": "I am talking about the mitochondrial genome, and the technology is called DdCBE, also from Liu's lab, published in 2020."
+  },
+  {
+   "t": 24.04,
+   "text": "Let me set up why this is interesting."
+  },
+  {
+   "t": 26.29,
+   "text": "Mitochondria, the organelles in your cells responsible for energy production, have their own DNA."
+  },
+  {
+   "t": 32.48,
+   "text": "It's a small circular chromosome — about 16,500 base pairs — encoding 37 genes critical for energy metabolism."
+  },
+  {
+   "t": 42.29,
+   "text": "Mutations in mitochondrial DNA cause a family of severe inherited diseases called mitochondrial disorders."
+  },
+  {
+   "t": 50.04,
+   "text": "MELAS, Leigh syndrome, mitochondrial encephalomyopathies, certain forms of inherited blindness, deafness, diabetes — many of these are caused by point mutations in the mitochondrial genome."
+  },
+  {
+   "t": 62.67,
+   "text": "They are devastating, lifelong, often fatal diseases, and they are rare but not vanishingly rare."
+  },
+  {
+   "t": 70.11,
+   "text": "Affecting roughly 1 in 5,000 people."
+  },
+  {
+   "t": 73.65,
+   "text": "If you wanted to correct one of these mutations with CRISPR, you would run into a wall."
+  },
+  {
+   "t": 78.5,
+   "text": "Guide RNAs do not get into mitochondria."
+  },
+  {
+   "t": 81.53,
+   "text": "The mitochondrial membrane has its own protein import machinery, and that machinery is not set up to ferry guide RNAs."
+  },
+  {
+   "t": 89.71,
+   "text": "Even if you could deliver Cas9 protein into mitochondria — which is itself difficult — you couldn't deliver the guide RNA."
+  },
+  {
+   "t": 97.25,
+   "text": "And without a guide RNA, Cas9 has no targeting."
+  },
+  {
+   "t": 101.11,
+   "text": "So CRISPR base editing, in its standard architecture, simply doesn't work in mitochondria."
+  },
+  {
+   "t": 107.03,
+   "text": "For a long time, this meant mitochondrial diseases were out of reach for genome editing."
+  },
+  {
+   "t": 112.54,
+   "text": "We could edit the nuclear genome of patient cells."
+  },
+  {
+   "t": 115.97,
+   "text": "We could not edit the genome inside their mitochondria."
+  },
+  {
+   "t": 119.59,
+   "text": "That entire class of disease was locked out of the gene editing revolution."
+  },
+  {
+   "t": 124.71,
+   "text": "In 2020, Liu's lab — together with Vamsi Mootha's group at Mass General — published a workaround."
+  },
+  {
+   "t": 131.54,
+   "text": "The paper, in Nature, was titled \"A bacterial cytidine deaminase toxin enables CRISPR-free mitochondrial base editing."
+  },
+  {
+   "t": 139.95,
+   "text": "\" The technology is called DdCBE, which stands for \"DddA-derived cytosine base editor."
+  },
+  {
+   "t": 146.03,
+   "text": "\""
+  },
+  {
+   "t": 146.22,
+   "text": "Here is how it works."
+  },
+  {
+   "t": 147.57,
+   "text": "The team identified a bacterial toxin called DddA, produced by the bacterium Burkholderia cenocepacia."
+  },
+  {
+   "t": 154.65,
+   "text": "DddA is a cytidine deaminase, like APOBEC1 — but unlike APOBEC1, it acts on double-stranded DNA."
+  },
+  {
+   "t": 163.0,
+   "text": "It can deaminate a cytosine in dsDNA without needing the substrate to be in a single-stranded loop."
+  },
+  {
+   "t": 170.29,
+   "text": "This is unusual; most cytidine deaminases want single-stranded substrates."
+  },
+  {
+   "t": 176.06,
+   "text": "DddA's ability to work on dsDNA is what makes the whole mitochondrial approach possible, because there is no R-loop in this system to provide single-stranded DNA."
+  },
+  {
+   "t": 186.31,
+   "text": "We are not bringing Cas9 along."
+  },
+  {
+   "t": 188.26,
+   "text": "The targeting, instead, comes from TALE proteins."
+  },
+  {
+   "t": 192.07,
+   "text": "TALEs — transcription activator-like effectors — are DNA-binding proteins from a different bacterial system, with the useful property that you can program their DNA-binding specificity by stringing together short modules, each of which recognizes a single DNA base."
+  },
+  {
+   "t": 208.8,
+   "text": "TALEs were used as genome editing scaffolds before CRISPR existed; they are bigger and harder to engineer than CRISPR, which is why CRISPR mostly replaced them."
+  },
+  {
+   "t": 218.94,
+   "text": "But TALEs have one critical feature: they are proteins."
+  },
+  {
+   "t": 222.85,
+   "text": "They can be delivered to mitochondria by attaching a mitochondrial targeting sequence, a short peptide that the mitochondrial import machinery recognizes."
+  },
+  {
+   "t": 232.07,
+   "text": "The cell's own import machinery hauls the TALE protein into the mitochondrion."
+  },
+  {
+   "t": 236.86,
+   "text": "So the DdCBE architecture is: two TALEs, designed to bind on either side of the cytosine you want to edit, each fused to half of a split DddA enzyme, plus a UGI module."
+  },
+  {
+   "t": 248.43,
+   "text": "The two TALEs land on the mitochondrial DNA at flanking sites, the two halves of DddA come together between them, reconstitute the active enzyme, and deaminate the cytosine sitting in the gap."
+  },
+  {
+   "t": 261.45,
+   "text": "UGI blocks repair undoing it."
+  },
+  {
+   "t": 264.19,
+   "text": "The result: a programmed C-to-T edit in mitochondrial DNA, made by proteins that can be imported into mitochondria — without any RNA component, without CRISPR, without Cas9."
+  },
+  {
+   "t": 276.18,
+   "text": "This is one of the most creative pieces of genome editing engineering I know of."
+  },
+  {
+   "t": 281.27,
+   "text": "Read it again."
+  },
+  {
+   "t": 282.23,
+   "text": "They had a problem — Cas9 can't get into mitochondria."
+  },
+  {
+   "t": 285.72,
+   "text": "They had a constraint — no guide RNA could ride along even if the protein could."
+  },
+  {
+   "t": 291.11,
+   "text": "They found a deaminase from a bacterial toxin that works on dsDNA, split it in half so it would only be active when the two halves came together, used TALEs as the targeting modules because TALEs are proteins that can be imported into mitochondria, and built a non-CRISPR base editor that works in the one part of the genome CRISPR can't reach."
+  },
+  {
+   "t": 310.48,
+   "text": "The analogy is: mitochondrial base editing is the corner of the genome that Cas9 can't reach, because guide RNAs don't get into mitochondria — so DdCBE uses TALE proteins instead of Cas9 to deliver the deaminase."
+  },
+  {
+   "t": 325.91,
+   "text": "Different targeting technology, different deaminase, same overall concept of a programmable base editor."
+  },
+  {
+   "t": 332.56,
+   "text": "DdCBE works."
+  },
+  {
+   "t": 334.26,
+   "text": "In the original paper, the team showed C-to-T conversion at mitochondrial targets in cultured human cells at substantial efficiency."
+  },
+  {
+   "t": 343.18,
+   "text": "Subsequent work has extended this to disease-relevant mitochondrial mutations and to animal models."
+  },
+  {
+   "t": 349.79,
+   "text": "In 2022, multiple groups reported mitochondrial base editing in zebrafish, mice, and pig embryos."
+  },
+  {
+   "t": 357.96,
+   "text": "Adenine mitochondrial base editing — converting A to G in mitochondrial DNA — has been engineered by combining DddA-like deaminases with the TadA chemistry, producing TALE-based adenine editors for mitochondria."
+  },
+  {
+   "t": 371.98,
+   "text": "The toolset is rapidly expanding."
+  },
+  {
+   "t": 374.79,
+   "text": "The therapeutic implications are still early."
+  },
+  {
+   "t": 377.94,
+   "text": "Editing mitochondrial DNA in vivo at therapeutic efficiency is hard — mitochondria are present in many copies per cell, you have to edit enough of them to dilute out the disease phenotype, and delivery into the right tissues is challenging."
+  },
+  {
+   "t": 393.43,
+   "text": "But the technology now exists."
+  },
+  {
+   "t": 395.68,
+   "text": "For the first time, the mitochondrial genome is editable."
+  },
+  {
+   "t": 399.86,
+   "text": "That entire class of inherited diseases is, in principle, addressable."
+  },
+  {
+   "t": 405.87,
+   "text": "I want you to feel the elegance of the move one more time."
+  },
+  {
+   "t": 409.22,
+   "text": "The base editing concept — fuse a deaminase to a targeting module — is so general that it can be ported across targeting technologies."
+  },
+  {
+   "t": 417.53,
+   "text": "Cas9 for nuclear DNA."
+  },
+  {
+   "t": 419.48,
+   "text": "TALE for mitochondrial DNA."
+  },
+  {
+   "t": 421.63,
+   "text": "The core architecture is the same."
+  },
+  {
+   "t": 423.97,
+   "text": "The site of action follows the targeting module."
+  },
+  {
+   "t": 426.84,
+   "text": "Liu's lab generalized the idea well past its original CRISPR scaffold."
+  }
+ ]
+}

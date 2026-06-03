@@ -1,0 +1,199 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — Why proteins were the bottleneck for fifty years",
+ "duration": 323.72,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — Why proteins were the bottleneck for fifty years"
+  },
+  {
+   "t": 4.42,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 5.83,
+   "text": "Today and for the next two hours we're going to talk about mass spectrometry for proteomics — which is the technology that finally, after about fifty years of being the embarrassing slow stepchild of molecular biology, turned protein measurement into a real high-throughput science."
+  },
+  {
+   "t": 22.14,
+   "text": "If you've taken any of the previous lectures in this series — the ones on Illumina sequencing, on bulk RNA-seq, on single-cell methods — you already have an intuition for what high-throughput omics looks like."
+  },
+  {
+   "t": 34.14,
+   "text": "You take a sample, you put it on an instrument, and a few hours later you have a number for every gene in the genome."
+  },
+  {
+   "t": 40.69,
+   "text": "Twenty thousand numbers per sample."
+  },
+  {
+   "t": 43.14,
+   "text": "You can run hundreds of samples in a week."
+  },
+  {
+   "t": 45.62,
+   "text": "That's what it feels like to work in modern genomics."
+  },
+  {
+   "t": 48.59,
+   "text": "For proteins, that capability did not exist until astonishingly recently."
+  },
+  {
+   "t": 54.49,
+   "text": "And I want you to feel how strange that is, because the strangeness is the whole motivation for the field we're about to discuss."
+  },
+  {
+   "t": 62.33,
+   "text": "Here's the strangeness: by 2003, you could read the entire human genome — three billion bases of DNA — in about a day, for a few thousand dollars."
+  },
+  {
+   "t": 73.11,
+   "text": "By 2010, you could read every messenger RNA in a cell in an afternoon."
+  },
+  {
+   "t": 78.8,
+   "text": "But in 2003, if you wanted to know the abundance of one specific protein in a tissue, you would do a Western blot, which takes two days and gives you one number for one protein."
+  },
+  {
+   "t": 90.1,
+   "text": "If you wanted a thousand proteins, you needed a thousand Western blots, or some heroic 2D gel campaign that took months and gave you maybe a few hundred identifications, half of them ambiguous."
+  },
+  {
+   "t": 102.28,
+   "text": "The genome was solved."
+  },
+  {
+   "t": 103.84,
+   "text": "The transcriptome was solved."
+  },
+  {
+   "t": 105.86,
+   "text": "The proteome — the actual proteins, the actual workers of the cell — was a swamp."
+  },
+  {
+   "t": 112.01,
+   "text": "That is the gap this lecture is about."
+  },
+  {
+   "t": 114.16,
+   "text": "Mass spectrometry for proteomics — modern LC-MS/MS, on an Orbitrap or a timsTOF, running a one-to-two-hour gradient — now identifies and quantifies somewhere between eight thousand and twelve thousand proteins per sample."
+  },
+  {
+   "t": 129.84,
+   "text": "Per sample."
+  },
+  {
+   "t": 130.86,
+   "text": "In a couple of hours."
+  },
+  {
+   "t": 132.24,
+   "text": "You can run hundreds of samples in a study."
+  },
+  {
+   "t": 135.04,
+   "text": "You can map every phosphorylation site in a cell."
+  },
+  {
+   "t": 138.53,
+   "text": "You can ask not just which genes are on, but which proteins are present, which forms, in what abundance, with what modifications."
+  },
+  {
+   "t": 145.99,
+   "text": "It took roughly twenty-five years to get from \"we can characterize one protein at a time\" to \"we can quantify the entire proteome of a tissue in an afternoon,\" and that journey — the chemistry, the ionization tricks, the mass analyzer breakthroughs, the software — is what we're going to walk through today."
+  },
+  {
+   "t": 163.6,
+   "text": "Here is the framing I want you to hold onto, and it's a comparison that runs through the whole field."
+  },
+  {
+   "t": 169.78,
+   "text": "RNA-seq, which many of you already know, measures messenger RNA — the recipe the cell has ordered from the kitchen."
+  },
+  {
+   "t": 177.28,
+   "text": "Mass spectrometry measures the actual proteins — the dishes that are sitting on the table, ready to be eaten."
+  },
+  {
+   "t": 184.09,
+   "text": "RNA-seq measures the recipes the cell ordered."
+  },
+  {
+   "t": 187.64,
+   "text": "Mass spec measures the dishes that were actually served."
+  },
+  {
+   "t": 190.86,
+   "text": "And here's the kicker that justifies the entire field of proteomics existing alongside transcriptomics: the correlation between mRNA levels and protein levels in a typical cell is only about 0.4."
+  },
+  {
+   "t": 204.74,
+   "text": "That's it."
+  },
+  {
+   "t": 205.51,
+   "text": "0.4."
+  },
+  {
+   "t": 206.93,
+   "text": "Knowing how much mRNA there is tells you less than half of what you'd want to know about the protein."
+  },
+  {
+   "t": 212.57,
+   "text": "The cell controls protein abundance with translation rate, with protein stability, with degradation, with modification — none of which RNA-seq can see."
+  },
+  {
+   "t": 222.34,
+   "text": "If you care about what the cell is actually doing, you need to measure the proteins, not just the recipes."
+  },
+  {
+   "t": 228.75,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the LC-MS/MS proteomics workflow from cell lysate to identified peptide, and explain why each step exists; two, articulate the difference between DDA and DIA acquisition and why DIA is the modern choice for large-scale quantification; three, look at a published proteomics paper and read its methods section with real understanding — what instrument, what acquisition mode, what search engine, what quantification scheme"
+  },
+  {
+   "t": 260.88,
+   "text": "— then we've succeeded."
+  },
+  {
+   "t": 262.4,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 264.62,
+   "text": "Here is the central analogy for the whole field, and I want you to internalize it now."
+  },
+  {
+   "t": 271.0,
+   "text": "A mass spectrometer is a scale that can weigh every individual molecule in a complex mixture, one at a time, with such precision that the exact weight tells you which molecule it was."
+  },
+  {
+   "t": 282.21,
+   "text": "That's it."
+  },
+  {
+   "t": 283.01,
+   "text": "That's the trick."
+  },
+  {
+   "t": 284.1,
+   "text": "If you weigh a peptide accurately enough — to four or five decimal places of atomic mass — there is essentially only one peptide it could possibly be."
+  },
+  {
+   "t": 293.55,
+   "text": "And if you then break that peptide into pieces and weigh the pieces, you can read its sequence directly off the masses."
+  },
+  {
+   "t": 300.77,
+   "text": "Every other detail of the technology — the ionization, the analyzer geometry, the detector physics, the software — is in service of that one idea: weigh the molecules, weigh them fast, weigh them accurately, and decode their identities from the masses."
+  },
+  {
+   "t": 318.23,
+   "text": "Hold the analogy: a scale that weighs every molecule."
+  },
+  {
+   "t": 322.28,
+   "text": "We'll keep coming back to it."
+  }
+ ]
+}

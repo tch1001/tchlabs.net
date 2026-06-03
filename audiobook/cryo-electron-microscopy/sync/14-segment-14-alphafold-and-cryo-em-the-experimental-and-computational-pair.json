@@ -1,0 +1,215 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — AlphaFold and cryo-EM — the experimental and computational pair",
+ "duration": 300.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — AlphaFold and cryo-EM — the experimental and computational pair"
+  },
+  {
+   "t": 6.6,
+   "text": "Now I want to talk about how cryo-EM relates to AlphaFold, because the relationship is interesting and increasingly inseparable."
+  },
+  {
+   "t": 14.74,
+   "text": "AlphaFold, as you may know — and as you definitely know if you took the previous lecture in this series — is the deep learning system from DeepMind that predicts protein structures from sequence with near-experimental accuracy."
+  },
+  {
+   "t": 27.82,
+   "text": "AlphaFold2 was released in 2021, AlphaFold3 in 2024, and the impact has been a tectonic shift in structural biology."
+  },
+  {
+   "t": 37.41,
+   "text": "Predicted structures for essentially every protein in essentially every organism, freely available, at high accuracy."
+  },
+  {
+   "t": 45.71,
+   "text": "So you might reasonably ask: in a world with AlphaFold, do we still need cryo-EM?"
+  },
+  {
+   "t": 51.51,
+   "text": "The answer, emphatically, is yes."
+  },
+  {
+   "t": 54.64,
+   "text": "And not just \"yes, for now\" — yes, fundamentally and probably permanently."
+  },
+  {
+   "t": 60.38,
+   "text": "Let me explain why."
+  },
+  {
+   "t": 61.71,
+   "text": "First, AlphaFold predicts a model."
+  },
+  {
+   "t": 64.46,
+   "text": "It is a computational guess at what the structure looks like."
+  },
+  {
+   "t": 67.86,
+   "text": "For a well-folded, single-domain, well-represented protein, that guess is extremely good — often within an ångström of experimental, indistinguishable from a real structure."
+  },
+  {
+   "t": 80.14,
+   "text": "But it is still a guess."
+  },
+  {
+   "t": 81.58,
+   "text": "It has no direct experimental data behind it."
+  },
+  {
+   "t": 84.6,
+   "text": "AlphaFold does not know what conformation a particular instance of a protein is in."
+  },
+  {
+   "t": 90.49,
+   "text": "It does not know what is bound to it."
+  },
+  {
+   "t": 92.45,
+   "text": "It does not know how a mutation has perturbed it."
+  },
+  {
+   "t": 95.25,
+   "text": "It does not know whether the protein is in complex with another protein, or with a drug."
+  },
+  {
+   "t": 100.54,
+   "text": "For all of those questions — and for most of the questions a working structural biologist actually asks — you need experimental data."
+  },
+  {
+   "t": 108.66,
+   "text": "Second, AlphaFold has well-known failure modes."
+  },
+  {
+   "t": 112.21,
+   "text": "It struggles with protein complexes (AlphaFold3 has improved on this, but it's still imperfect)."
+  },
+  {
+   "t": 118.8,
+   "text": "It struggles with conformations not represented in its training data."
+  },
+  {
+   "t": 123.1,
+   "text": "It struggles with intrinsically disordered regions."
+  },
+  {
+   "t": 126.29,
+   "text": "It struggles with proteins that have multiple stable states."
+  },
+  {
+   "t": 130.09,
+   "text": "For all of these cases, experimental structure determination remains essential."
+  },
+  {
+   "t": 135.36,
+   "text": "Third — and this is the part that's really powerful — AlphaFold and cryo-EM are spectacular when used together."
+  },
+  {
+   "t": 142.69,
+   "text": "Here's the workflow that's become standard in 2026."
+  },
+  {
+   "t": 146.36,
+   "text": "You have a target — a protein or complex you want the structure of."
+  },
+  {
+   "t": 150.64,
+   "text": "You run AlphaFold first."
+  },
+  {
+   "t": 152.59,
+   "text": "It gives you a predicted model."
+  },
+  {
+   "t": 154.3,
+   "text": "Even if the prediction isn't perfect, it gives you an extremely useful starting point — a hypothesis about the fold, the domain structure, the likely binding interfaces."
+  },
+  {
+   "t": 165.35,
+   "text": "You then do cryo-EM."
+  },
+  {
+   "t": 166.9,
+   "text": "You get an experimental density map."
+  },
+  {
+   "t": 169.01,
+   "text": "You take the AlphaFold model and fit it into the density."
+  },
+  {
+   "t": 172.76,
+   "text": "If the model is mostly right, the fitting is fast and the refinement gives you an atomic model of unprecedented accuracy — better than either alone."
+  },
+  {
+   "t": 182.36,
+   "text": "If the model is wrong in places, the density tells you where, and you correct it."
+  },
+  {
+   "t": 187.57,
+   "text": "If the density has features the model doesn't predict — a bound drug, a different conformation, a previously unknown subunit — the density forces you to update."
+  },
+  {
+   "t": 198.01,
+   "text": "The combination is AlphaFold gives you a model; cryo-EM gives you density; combine them, you get atomic-accurate structures faster than either alone."
+  },
+  {
+   "t": 208.43,
+   "text": "Modern model-building tools — ModelAngelo, DeepTracer, ISOLDE — explicitly integrate AlphaFold predictions with experimental density to produce models that are both physically reasonable and consistent with the data."
+  },
+  {
+   "t": 222.59,
+   "text": "The structure determination pipeline has been rebuilt around this hybrid approach."
+  },
+  {
+   "t": 227.85,
+   "text": "There's a deeper philosophical point here that I want to make."
+  },
+  {
+   "t": 230.81,
+   "text": "Some people, when AlphaFold was released, predicted the death of experimental structural biology — \"why would anyone do cryo-EM if AlphaFold gives you the answer for free?"
+  },
+  {
+   "t": 241.8,
+   "text": "\" That prediction was wrong."
+  },
+  {
+   "t": 243.31,
+   "text": "What actually happened is that the demand for experimental structures increased."
+  },
+  {
+   "t": 247.95,
+   "text": "Why?"
+  },
+  {
+   "t": 248.76,
+   "text": "Because suddenly, you could see what AlphaFold's predictions looked like for every protein in the genome, and that revealed a vast landscape of interesting biology — protein complexes, conformational states, ligand-bound forms — that AlphaFold's predictions alone couldn't fully characterize."
+  },
+  {
+   "t": 266.5,
+   "text": "People want experimental confirmation."
+  },
+  {
+   "t": 268.65,
+   "text": "People want to see what the protein is actually doing, in complex with the drug they care about, in the conformation they're trying to stabilize."
+  },
+  {
+   "t": 276.75,
+   "text": "Cryo-EM became more, not less, valuable in the AlphaFold era."
+  },
+  {
+   "t": 281.86,
+   "text": "The relationship is the same as the one in many fields where computation and experiment meet."
+  },
+  {
+   "t": 287.92,
+   "text": "Computation makes more experiments worth doing, not fewer."
+  },
+  {
+   "t": 292.02,
+   "text": "The two are deeply complementary, and the structural biologists who have adapted fastest are the ones who have learned to use both fluidly."
+  }
+ ]
+}

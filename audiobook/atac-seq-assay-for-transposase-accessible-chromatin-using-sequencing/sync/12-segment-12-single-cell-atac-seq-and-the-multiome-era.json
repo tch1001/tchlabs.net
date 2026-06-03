@@ -1,0 +1,207 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Single-cell ATAC-seq and the multiome era",
+ "duration": 457.15,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Single-cell ATAC-seq and the multiome era"
+  },
+  {
+   "t": 4.22,
+   "text": "If the bulk ATAC-seq story is one of taking a method designed for millions of cells and shrinking it to thousands, the single-cell ATAC-seq story is the next logical step: taking a method designed for thousands of cells and shrinking it to one."
+  },
+  {
+   "t": 19.93,
+   "text": "And remarkably, ATAC-seq adapts to single-cell resolution better than almost any other genomic assay."
+  },
+  {
+   "t": 27.62,
+   "text": "Single-cell ATAC-seq, often written snATAC-seq (for single-nucleus ATAC-seq), is now a routine technique, and combined with RNA-seq in the 10x Multiome platform, it provides one of the most informative single-cell experiments available today."
+  },
+  {
+   "t": 44.44,
+   "text": "Let me explain how it works."
+  },
+  {
+   "t": 46.16,
+   "text": "The conceptual challenge with any single-cell genomic assay is that you have to do the chemistry on one cell at a time, then label the resulting molecules with a cell-of-origin barcode, then pool everything together for sequencing."
+  },
+  {
+   "t": 59.44,
+   "text": "The barcode lets you, after the fact, demultiplex which read came from which cell."
+  },
+  {
+   "t": 65.16,
+   "text": "The standard approach in single-cell RNA-seq, popularized by 10x Genomics' droplet-based platform, is to encapsulate individual cells in microdroplets along with a barcoded bead, do the reverse transcription inside the droplet so each cell's mRNA gets the bead's barcode, and then break the droplets and sequence the pooled material."
+  },
+  {
+   "t": 86.35,
+   "text": "For single-cell ATAC-seq, the trick is that you can't quite do this directly — the Tn5 transposition step is too quick and too efficient to confine inside a droplet for very long."
+  },
+  {
+   "t": 98.55,
+   "text": "So the standard snATAC-seq workflow does something cleverer."
+  },
+  {
+   "t": 102.78,
+   "text": "It does the Tn5 reaction in bulk first — on a pool of isolated nuclei, all at once — and then encapsulates the tagmented nuclei in droplets along with barcoded beads."
+  },
+  {
+   "t": 114.51,
+   "text": "Inside the droplet, a PCR reaction amplifies the tagmented fragments and incorporates the cell-of-origin barcode into the adapters."
+  },
+  {
+   "t": 123.4,
+   "text": "After the droplet step, the libraries from all cells are pooled and sequenced, and the barcodes let you assign each fragment to its cell of origin."
+  },
+  {
+   "t": 132.21,
+   "text": "The output of a single-cell ATAC-seq experiment is, conceptually, a peaks-by-cells matrix — analogous to the genes-by-cells matrix you'd get from single-cell RNA-seq, but where the rows are accessible regions instead of genes."
+  },
+  {
+   "t": 147.53,
+   "text": "Each entry tells you whether (or how many) Tn5 insertion events occurred in that peak in that cell."
+  },
+  {
+   "t": 154.44,
+   "text": "Because each cell has only a handful of insertions in any given peak (often just zero or one), the matrix is extremely sparse — much sparser than scRNA-seq data."
+  },
+  {
+   "t": 166.54,
+   "text": "This sparsity is one of the analytical challenges of scATAC-seq, and a lot of recent methods development has focused on handling it: dimensionality reduction with LSI (latent semantic indexing), motif-based aggregation with chromVAR, cell-cell similarity with cisTopic, and so on."
+  },
+  {
+   "t": 184.97,
+   "text": "But once you've handled the sparsity, the single-cell ATAC data is extraordinarily informative."
+  },
+  {
+   "t": 190.82,
+   "text": "You can identify cell types from their accessibility profiles (different cell types have very different sets of open chromatin)."
+  },
+  {
+   "t": 198.68,
+   "text": "You can identify cell states within a type (resting vs. activated, naive vs. memory, etc.)."
+  },
+  {
+   "t": 206.78,
+   "text": "You can identify regulatory trajectories — paths through the cell-state space along which accessibility (and presumably gene expression) is changing as cells differentiate or respond to stimuli."
+  },
+  {
+   "t": 219.24,
+   "text": "You can ask which transcription factors are driving the differences between cells, by looking at motif activity per cell."
+  },
+  {
+   "t": 226.25,
+   "text": "The single-cell view of accessibility has given us a much richer picture of cellular heterogeneity than we ever had from bulk methods."
+  },
+  {
+   "t": 234.88,
+   "text": "The really powerful move is to combine ATAC-seq and RNA-seq in the same cells."
+  },
+  {
+   "t": 241.47,
+   "text": "This is the 10x Multiome assay, launched commercially by 10x Genomics in 2020."
+  },
+  {
+   "t": 248.06,
+   "text": "The chemistry is intricate, but conceptually straightforward: in each droplet, with each cell, the platform does both a tagmentation reaction (capturing accessibility) and a reverse transcription reaction (capturing mRNA expression)."
+  },
+  {
+   "t": 264.31,
+   "text": "The two libraries — one of ATAC fragments, one of cDNA — get separately processed but share the same cell-of-origin barcode."
+  },
+  {
+   "t": 273.15,
+   "text": "At the end, you have, for each cell, a paired measurement of its open chromatin and its expressed genes."
+  },
+  {
+   "t": 280.56,
+   "text": "This is, in my view, the most informative single-cell experiment currently possible."
+  },
+  {
+   "t": 286.16,
+   "text": "For each cell, you know both what genes it's expressing — its current functional state, what proteins it's making — and what regions of its genome are open — its regulatory potential, what factors are binding, what enhancers are active."
+  },
+  {
+   "t": 300.69,
+   "text": "The integration of these two layers lets you ask questions that neither alone can answer."
+  },
+  {
+   "t": 305.91,
+   "text": "Which open regions are driving expression of which genes, in which cells?"
+  },
+  {
+   "t": 311.46,
+   "text": "Which transcription factors are active in which cell states?"
+  },
+  {
+   "t": 315.25,
+   "text": "How does the regulatory landscape coordinate with the expression landscape across a heterogeneous population?"
+  },
+  {
+   "t": 322.29,
+   "text": "The 10x Multiome data has become the standard for studying cell-type-specific regulatory programs in heterogeneous tissues."
+  },
+  {
+   "t": 330.64,
+   "text": "The analogy I want you to hold: for each cell, you know what genes it's expressing AND what regions of its genome are open."
+  },
+  {
+   "t": 338.35,
+   "text": "That's the multiome promise."
+  },
+  {
+   "t": 340.16,
+   "text": "The regulatory state and the functional state, measured simultaneously, in matched cells, at single-cell resolution."
+  },
+  {
+   "t": 348.03,
+   "text": "The implications are still being worked out — the analytical methods for joint multiome data are an active area of research — but the experimental capability is now routine."
+  },
+  {
+   "t": 358.69,
+   "text": "A single Multiome run on a 10x Chromium instrument can profile 10,000 to 30,000 cells with paired ATAC and RNA, in roughly the same workflow as a standard scRNA-seq run."
+  },
+  {
+   "t": 371.44,
+   "text": "A few extensions are worth mentioning briefly."
+  },
+  {
+   "t": 373.91,
+   "text": "SHARE-seq is an academic alternative to 10x Multiome that uses combinatorial indexing rather than droplets, allowing higher throughput at lower cost."
+  },
+  {
+   "t": 384.16,
+   "text": "Paired-tag is a variant that does ATAC and histone modification ChIP-like profiling in the same cells."
+  },
+  {
+   "t": 392.85,
+   "text": "TEA-seq combines ATAC, RNA, and antibody-derived tag (ADT) protein measurements in the same cells — three modalities at once."
+  },
+  {
+   "t": 403.98,
+   "text": "The trend is clear: more modalities, in the same cells, at single-cell resolution."
+  },
+  {
+   "t": 410.23,
+   "text": "ATAC-seq is one of the most modality-friendly assays, and it's frequently the chromatin layer in these multi-omic combinations."
+  },
+  {
+   "t": 418.05,
+   "text": "The single-cell ATAC-seq frontier is changing the field of regulatory genomics in real time."
+  },
+  {
+   "t": 424.51,
+   "text": "Cell-by-cell maps of accessibility are now standard in atlas-scale studies — the Human Cell Atlas, the Brain Initiative Cell Census Network, the Encode 4 single-cell program all include single-cell ATAC as a core modality."
+  },
+  {
+   "t": 438.65,
+   "text": "The big picture: we are building, cell type by cell type, a comprehensive atlas of regulatory elements active in every cell type in the body, with per-cell resolution."
+  },
+  {
+   "t": 449.26,
+   "text": "This is the dream of regulatory genomics, and it's being realized largely on the back of ATAC-seq and its derivatives."
+  }
+ ]
+}

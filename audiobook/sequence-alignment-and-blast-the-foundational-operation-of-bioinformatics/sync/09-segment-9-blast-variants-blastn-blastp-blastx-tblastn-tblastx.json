@@ -1,0 +1,203 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — BLAST variants: BLASTN, BLASTP, BLASTX, TBLASTN, TBLASTX",
+ "duration": 417.94,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — BLAST variants: BLASTN, BLASTP, BLASTX, TBLASTN, TBLASTX"
+  },
+  {
+   "t": 8.8,
+   "text": "BLAST is not one tool but a family of tools, each optimized for a different combination of query type and database type."
+  },
+  {
+   "t": 16.91,
+   "text": "The five members of the family are called BLASTN, BLASTP, BLASTX, TBLASTN, and TBLASTX, and the naming follows a simple pattern: the first letter or letters tell you about the query, the rest of the name tells you about the database."
+  },
+  {
+   "t": 33.12,
+   "text": "Let me walk through them, because picking the right BLAST for your problem is one of the basic skills of bioinformatics."
+  },
+  {
+   "t": 39.74,
+   "text": "BLASTN: nucleotide query against nucleotide database."
+  },
+  {
+   "t": 44.17,
+   "text": "This is what you use when you have a DNA sequence and you want to find similar DNA sequences."
+  },
+  {
+   "t": 49.44,
+   "text": "You ran a sequencing experiment, you got a contig of unknown identity, you want to know what species or gene it might be from — BLASTN against the nt database."
+  },
+  {
+   "t": 59.38,
+   "text": "The scoring is simple match/mismatch — typically +1/-2 or +2/-3 — and the seeds are 11-mers by default."
+  },
+  {
+   "t": 70.45,
+   "text": "BLASTN is fast and is the right tool when you expect significant DNA-level identity, say, 70% or higher."
+  },
+  {
+   "t": 78.9,
+   "text": "If your sequences are more distantly related — say, you're comparing a mammalian gene to a fish ortholog — BLASTN may fail because synonymous codon changes have erased the DNA-level identity even while the protein remains conserved."
+  },
+  {
+   "t": 93.59,
+   "text": "In that case you want to be searching at the protein level, which leads us to..."
+  },
+  {
+   "t": 97.94,
+   "text": "BLASTP: protein query against protein database."
+  },
+  {
+   "t": 101.71,
+   "text": "This is the workhorse of comparative biology."
+  },
+  {
+   "t": 104.83,
+   "text": "You have a protein sequence — either from direct sequencing, or translated from a coding region — and you want to find its homologs across all of life."
+  },
+  {
+   "t": 113.88,
+   "text": "You BLAST against the nr database (NCBI's non-redundant protein database) or against UniProt or against the proteome of a specific organism."
+  },
+  {
+   "t": 124.0,
+   "text": "The scoring uses BLOSUM-62 by default, the seeds are 3-mers with neighborhood expansion, and the sensitivity is much higher than BLASTN — protein conservation persists at much greater evolutionary distances than DNA conservation, because proteins have to fold and function, while DNA can drift around the genetic code freely."
+  },
+  {
+   "t": 146.01,
+   "text": "BLASTX: translated nucleotide query against protein database."
+  },
+  {
+   "t": 150.78,
+   "text": "This one is clever."
+  },
+  {
+   "t": 151.94,
+   "text": "You have a DNA sequence — say, an open reading frame from a newly-assembled genome, or an EST from a transcriptomics experiment — and you don't know what protein it codes for."
+  },
+  {
+   "t": 162.22,
+   "text": "BLASTX takes your DNA query, translates it in all six reading frames (three forward, three reverse), and then BLASTs each translated frame against the protein database."
+  },
+  {
+   "t": 173.4,
+   "text": "The output tells you which reading frame contains the best protein hit, and you've simultaneously identified the gene and the correct reading frame."
+  },
+  {
+   "t": 181.8,
+   "text": "BLASTX is what you use when you have DNA but want protein-level sensitivity — for example, in genome annotation pipelines, where every predicted gene gets BLASTXed against the protein databases to find homologs."
+  },
+  {
+   "t": 194.7,
+   "text": "TBLASTN: protein query against translated nucleotide database."
+  },
+  {
+   "t": 199.44,
+   "text": "This is the reverse."
+  },
+  {
+   "t": 200.81,
+   "text": "You have a protein — say, the known protein product of a well-characterized gene in human — and you want to find the gene encoding it in a non-annotated genome, like a newly-sequenced fungus or insect."
+  },
+  {
+   "t": 213.4,
+   "text": "TBLASTN takes your protein query and BLASTs it against the genomic DNA database, but with the DNA translated on the fly in all six reading frames."
+  },
+  {
+   "t": 223.61,
+   "text": "The output tells you which region of the genome contains a homolog of your protein, even though that region might not be annotated as a gene at all."
+  },
+  {
+   "t": 232.35,
+   "text": "TBLASTN is what you use for genome annotation by homology and for finding homologs in poorly-annotated organisms."
+  },
+  {
+   "t": 239.74,
+   "text": "TBLASTX: translated nucleotide query against translated nucleotide database."
+  },
+  {
+   "t": 245.75,
+   "text": "Both query and target are DNA, but both are translated in all six frames before alignment."
+  },
+  {
+   "t": 251.8,
+   "text": "This is the most computationally expensive BLAST — it does six-frame translation on both sides, so there are 36 possible frame combinations — but it's also the most sensitive when both sequences are DNA and you want protein-level sensitivity."
+  },
+  {
+   "t": 266.4,
+   "text": "TBLASTX is mostly used in comparative genomics, where you're comparing two genomes and want to find conserved coding regions even at large evolutionary distances."
+  },
+  {
+   "t": 276.91,
+   "text": "The cost is high, so people use it sparingly."
+  },
+  {
+   "t": 280.11,
+   "text": "Here's the cheat sheet, which I want you to copy down."
+  },
+  {
+   "t": 283.0,
+   "text": "BLASTN: DNA-to-DNA, fast, low sensitivity at distance."
+  },
+  {
+   "t": 288.05,
+   "text": "BLASTP: protein-to-protein, the standard workhorse, sensitive across vast evolutionary distances."
+  },
+  {
+   "t": 295.39,
+   "text": "BLASTX: DNA query translated, hit against proteins — for unknown DNA that codes for something."
+  },
+  {
+   "t": 302.7,
+   "text": "TBLASTN: protein query against translated DNA — for finding genes in unannotated genomes."
+  },
+  {
+   "t": 309.91,
+   "text": "TBLASTX: both translated — comparative genomics, expensive but sensitive."
+  },
+  {
+   "t": 315.78,
+   "text": "There are also some specialized variants worth knowing about."
+  },
+  {
+   "t": 318.83,
+   "text": "PSI-BLAST — Position-Specific Iterated BLAST — is an iterative version of BLASTP that uses an initial BLASTP search to construct a position-specific scoring matrix (a profile) from the top hits, then re-searches with that profile, then refines the profile, then re-searches again, iterating until convergence."
+  },
+  {
+   "t": 341.89,
+   "text": "PSI-BLAST is much more sensitive than plain BLASTP at very large evolutionary distances, because it adapts the scoring matrix to the specific protein family you're searching with."
+  },
+  {
+   "t": 354.41,
+   "text": "PHI-BLAST — Pattern-Hit Initiated BLAST — lets you specify a sequence motif (like a regular expression over amino acids) that the hit must contain, restricting the search to sequences with a specific structural feature."
+  },
+  {
+   "t": 369.76,
+   "text": "DELTA-BLAST combines profile-based search with the standard BLAST infrastructure and is sometimes preferred for distant homology detection."
+  },
+  {
+   "t": 378.08,
+   "text": "The web interface at NCBI handles all of these."
+  },
+  {
+   "t": 381.64,
+   "text": "You go to blast.ncbi.nlm.nih.gov, pick your flavor, paste in your sequence, choose a database, hit go."
+  },
+  {
+   "t": 391.88,
+   "text": "Results come back in a few seconds for typical queries, in a few minutes for harder ones."
+  },
+  {
+   "t": 397.6,
+   "text": "It is one of the best-engineered scientific web services in the world — built in the early 1990s, refined continuously, used by millions of biologists a year, freely available, no login required for basic searches."
+  },
+  {
+   "t": 411.75,
+   "text": "NCBI BLAST is, in a real sense, one of the public goods of modern biology."
+  }
+ ]
+}

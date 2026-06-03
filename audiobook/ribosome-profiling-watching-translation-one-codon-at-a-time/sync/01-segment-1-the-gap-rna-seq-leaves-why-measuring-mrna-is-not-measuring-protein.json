@@ -1,0 +1,263 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The gap RNA-seq leaves — why measuring mRNA is not measuring protein",
+ "duration": 383.2,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The gap RNA-seq leaves — why measuring mRNA is not measuring protein"
+  },
+  {
+   "t": 7.0,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 8.36,
+   "text": "Today and for the next two hours, we're going to talk about ribosome profiling — usually called Ribo-seq — which is, in my opinion, one of the most clever methods in all of modern genomics."
+  },
+  {
+   "t": 19.61,
+   "text": "It's a technique that lets you look directly at translation, the act of a ribosome reading a messenger RNA and synthesizing a protein, with a resolution that nothing else comes close to."
+  },
+  {
+   "t": 31.59,
+   "text": "By the end of this lecture you should be able to look at a ribosome profiling track on a genome browser and understand exactly what those little spikes mean, where they came from, and why they are some of the most informative data in molecular biology."
+  },
+  {
+   "t": 46.51,
+   "text": "Some of you have already sat through the bulk RNA-seq lecture in this series — the one that walked through the smoothie-sequencing analogy, the Mortazavi 2008 paper, the whole story of how we count mRNAs in a tissue."
+  },
+  {
+   "t": 60.09,
+   "text": "That lecture spent two hours teaching you how to measure the abundance of every messenger RNA in a cell."
+  },
+  {
+   "t": 66.76,
+   "text": "And that's a beautiful technique."
+  },
+  {
+   "t": 68.72,
+   "text": "It's the workhorse."
+  },
+  {
+   "t": 69.94,
+   "text": "It tells you, for every gene in the genome, how many mRNA molecules are floating around at the moment you froze the sample."
+  },
+  {
+   "t": 78.19,
+   "text": "But it doesn't tell you whether any of those mRNAs are actually being read."
+  },
+  {
+   "t": 82.2,
+   "text": "Here's the central thing I want you to internalize today, and I want you to carry it through every segment of this lecture."
+  },
+  {
+   "t": 90.76,
+   "text": "RNA-seq tells you which messenger RNAs are present in a cell."
+  },
+  {
+   "t": 95.38,
+   "text": "It does not tell you which ones are being translated into protein."
+  },
+  {
+   "t": 98.96,
+   "text": "Those are different questions, and the gap between them is enormous."
+  },
+  {
+   "t": 102.91,
+   "text": "Think about it for a second."
+  },
+  {
+   "t": 104.45,
+   "text": "A cell contains an mRNA."
+  },
+  {
+   "t": 106.71,
+   "text": "The mRNA is sitting in the cytoplasm."
+  },
+  {
+   "t": 109.62,
+   "text": "RNA-seq counts it."
+  },
+  {
+   "t": 111.24,
+   "text": "One mRNA molecule, one read."
+  },
+  {
+   "t": 114.22,
+   "text": "But what is that mRNA actually doing?"
+  },
+  {
+   "t": 116.49,
+   "text": "Is it being chewed on by a ribosome right now?"
+  },
+  {
+   "t": 119.6,
+   "text": "Is it sitting idle, sequestered in a stress granule, waiting for some signal?"
+  },
+  {
+   "t": 125.3,
+   "text": "Is it in transit somewhere?"
+  },
+  {
+   "t": 126.94,
+   "text": "Has it been decorated with a repressor protein that prevents any ribosome from ever loading?"
+  },
+  {
+   "t": 132.8,
+   "text": "RNA-seq cannot distinguish any of these states."
+  },
+  {
+   "t": 136.41,
+   "text": "To RNA-seq, every mRNA is the same — present, accounted for, one count."
+  },
+  {
+   "t": 143.09,
+   "text": "The biology, of course, cares enormously about the difference."
+  },
+  {
+   "t": 147.64,
+   "text": "A cell can have lots of an mRNA and make almost no protein from it."
+  },
+  {
+   "t": 152.19,
+   "text": "And a cell can have very little of an mRNA and make lots of protein from it."
+  },
+  {
+   "t": 157.18,
+   "text": "Translation is regulated independently from transcription."
+  },
+  {
+   "t": 161.04,
+   "text": "There are entire classes of genes — particularly in stressed cells, in early development, in differentiated tissues like neurons — where the level of mRNA tells you almost nothing about the level of protein."
+  },
+  {
+   "t": 174.25,
+   "text": "If you've ever tried to correlate an RNA-seq dataset with a mass spectrometry dataset of the same sample, you've probably seen this: the correlation between mRNA abundance and protein abundance, across all the genes in a cell, is somewhere between 0.4 and 0.6."
+  },
+  {
+   "t": 191.57,
+   "text": "Disappointing."
+  },
+  {
+   "t": 192.75,
+   "text": "About half the variance in protein levels is not explained by mRNA levels."
+  },
+  {
+   "t": 197.97,
+   "text": "The other half lives at translation."
+  },
+  {
+   "t": 200.38,
+   "text": "So here's the gap."
+  },
+  {
+   "t": 201.55,
+   "text": "RNA-seq sees the recipe book — every recipe present in the kitchen."
+  },
+  {
+   "t": 206.76,
+   "text": "It does not see whether any of the recipes are being cooked, or how fast, or whether the chef stopped halfway through."
+  },
+  {
+   "t": 213.97,
+   "text": "That second view — the chef-and-the-stove view — is what ribosome profiling gives you."
+  },
+  {
+   "t": 219.26,
+   "text": "The trick that makes Ribo-seq possible is one of those beautiful experimental ideas that, once you hear it, you wonder why nobody did it sooner."
+  },
+  {
+   "t": 228.39,
+   "text": "A ribosome, when it's sitting on an mRNA in the act of translating, physically covers and protects about thirty nucleotides of that mRNA."
+  },
+  {
+   "t": 237.18,
+   "text": "It's a big molecule."
+  },
+  {
+   "t": 238.6,
+   "text": "It wraps around the messenger."
+  },
+  {
+   "t": 240.38,
+   "text": "If you come in with a nuclease — an enzyme that chews up RNA — the nuclease will degrade every part of the mRNA that's exposed, but it can't get at the bit underneath the ribosome."
+  },
+  {
+   "t": 251.18,
+   "text": "That protected fragment, about thirty nucleotides long, is called a ribosome footprint."
+  },
+  {
+   "t": 257.23,
+   "text": "It is, quite literally, the bite-mark — the small chunk of mRNA that the ribosome was sitting on, surviving the nuclease digest because the ribosome's body shielded it."
+  },
+  {
+   "t": 267.81,
+   "text": "If you isolate those footprints, purify them, and sequence them, then for every read you generate, you know two things."
+  },
+  {
+   "t": 276.31,
+   "text": "You know which mRNA the ribosome was sitting on — because the footprint sequence tells you that."
+  },
+  {
+   "t": 282.63,
+   "text": "And you know where on the mRNA the ribosome was sitting — because the footprint comes from one specific 30-nucleotide window of that mRNA."
+  },
+  {
+   "t": 291.7,
+   "text": "Aggregate millions of these reads across a transcriptome, and you have a genome-wide, single-codon-resolution map of every ribosome in the cell at the moment you froze it."
+  },
+  {
+   "t": 302.56,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the Ribo-seq workflow on a whiteboard from cell lysis through library prep through sequencing, and explain why each step exists; two, explain the difference between RNA-seq and Ribo-seq in terms of what biological question each one answers, and what translation efficiency is; three, look at a Ribo-seq paper and read its methods section with real understanding of what cycloheximide is, why 3-nucleotide periodicity"
+  },
+  {
+   "t": 333.33,
+   "text": "matters, and what a uORF is — then we've succeeded."
+  },
+  {
+   "t": 337.22,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 339.41,
+   "text": "One more orienting sentence before we go deeper."
+  },
+  {
+   "t": 342.65,
+   "text": "Ribo-seq is, to a first approximation, RNA-seq for what's actually being translated."
+  },
+  {
+   "t": 349.22,
+   "text": "That phrase is going to come up again and again, and I want you to hold it."
+  },
+  {
+   "t": 353.05,
+   "text": "Where RNA-seq counts every messenger in the cell, Ribo-seq counts every ribosome on every messenger."
+  },
+  {
+   "t": 360.81,
+   "text": "Where RNA-seq tells you the transcript is there, Ribo-seq tells you the protein is being made."
+  },
+  {
+   "t": 366.72,
+   "text": "Same instrument at the end — short reads on an Illumina flow cell."
+  },
+  {
+   "t": 371.41,
+   "text": "Same downstream alignment and counting."
+  },
+  {
+   "t": 373.9,
+   "text": "Very different upstream biochemistry, very different biological signal."
+  },
+  {
+   "t": 378.42,
+   "text": "Let's go to where this method came from."
+  },
+  {
+   "t": 380.21,
+   "text": "Ingolia and Weissman, 2009."
+  }
+ ]
+}

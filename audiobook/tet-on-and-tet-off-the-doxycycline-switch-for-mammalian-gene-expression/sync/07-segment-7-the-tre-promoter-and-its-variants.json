@@ -1,0 +1,179 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The TRE promoter and its variants",
+ "duration": 320.23,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The TRE promoter and its variants"
+  },
+  {
+   "t": 4.0,
+   "text": "Let me spend a few minutes on the TRE promoter, because the architecture of the TRE has had its own evolution arc that's been roughly as important as the rtTA evolution."
+  },
+  {
+   "t": 13.97,
+   "text": "The TRE is the bait — the piece of DNA that the transactivator binds in order to turn on the gene of interest."
+  },
+  {
+   "t": 21.14,
+   "text": "Get the bait right, and the whole system is tight, responsive, and clean."
+  },
+  {
+   "t": 25.81,
+   "text": "Get it wrong, and even a great transactivator can't save you."
+  },
+  {
+   "t": 29.84,
+   "text": "The original TRE, as we discussed, was built from two pieces."
+  },
+  {
+   "t": 34.54,
+   "text": "The first was an array of seven tet operator sites (tetO), head to tail, each one a 19-bp sequence that a tTA or rtTA dimer can bind."
+  },
+  {
+   "t": 44.59,
+   "text": "The second was a minimal CMV promoter — the cytomegalovirus immediate-early promoter with all its enhancers and upstream activators stripped off, leaving only the bare transcription initiation machinery — a TATA box, a transcription start site, the basic stuff that polymerase needs to begin RNA synthesis."
+  },
+  {
+   "t": 63.62,
+   "text": "The TRE was the seven-tetO array placed just upstream of this minimal CMV."
+  },
+  {
+   "t": 69.59,
+   "text": "The architecture works because of two properties."
+  },
+  {
+   "t": 73.0,
+   "text": "One, the minimal CMV by itself is nearly silent — it has the machinery to fire but no recruiter to activate it."
+  },
+  {
+   "t": 81.29,
+   "text": "Two, when transactivators bind the upstream tetO array, their VP16 activation domains hang right over the minimal promoter and pull in the polymerase."
+  },
+  {
+   "t": 92.17,
+   "text": "The minimal promoter is poised to fire; the upstream array decides whether to give it the signal."
+  },
+  {
+   "t": 97.96,
+   "text": "The first practical issue with the original TRE was that the minimal CMV, although weak, wasn't completely silent."
+  },
+  {
+   "t": 105.74,
+   "text": "There was a baseline transcription rate that wasn't zero — call it a faint hum from the promoter even with no transactivator bound."
+  },
+  {
+   "t": 112.97,
+   "text": "For most purposes, that hum was tolerable."
+  },
+  {
+   "t": 115.89,
+   "text": "For very stringent applications — toxic transgenes, dose-titration experiments where you wanted to measure the lowest possible basal level — the hum was a problem."
+  },
+  {
+   "t": 126.39,
+   "text": "So later variants started using different minimal promoters."
+  },
+  {
+   "t": 130.71,
+   "text": "TRE-tight uses a slightly different minimal promoter with even lower basal activity."
+  },
+  {
+   "t": 136.43,
+   "text": "The \"tight\" in the name refers to a tighter off state — less leakage, deeper baseline silence."
+  },
+  {
+   "t": 143.4,
+   "text": "TRE-tight became popular in the early 2000s for applications where leak reduction was paramount."
+  },
+  {
+   "t": 150.25,
+   "text": "Another variant is TRE2 and its derivatives, where the spacing between the tetO sites and the minimal promoter, and the spacing among the tetO sites themselves, was optimized."
+  },
+  {
+   "t": 160.99,
+   "text": "Turns out the geometry matters — if the tetO array is too far from the minimal promoter, the VP16 domains can't effectively reach the polymerase machinery."
+  },
+  {
+   "t": 171.82,
+   "text": "If the tetO sites are too crowded, transactivators bind less efficiently."
+  },
+  {
+   "t": 177.14,
+   "text": "Optimizing the spacing gave better induction."
+  },
+  {
+   "t": 180.5,
+   "text": "The current standard in many labs is TRE3G, sometimes called the \"third generation TRE."
+  },
+  {
+   "t": 186.94,
+   "text": "\" TRE3G uses a different minimal promoter — based on a sequence from the rabbit beta-globin gene, with very low basal activity — and an optimized array of tetO sites with refined spacing."
+  },
+  {
+   "t": 199.51,
+   "text": "The combination of TRE3G with rtTA3 is currently considered the gold standard for high-performance Tet-On systems."
+  },
+  {
+   "t": 208.07,
+   "text": "Off is very off; on is very on; the induction is fast; the leakiness is minimal."
+  },
+  {
+   "t": 215.56,
+   "text": "Commercial vectors from companies like Clontech (now Takara), Addgene-deposited plasmids from various labs, and standardized lentiviral systems all increasingly use TRE3G as the default."
+  },
+  {
+   "t": 228.24,
+   "text": "If you're building a new system from scratch today, TRE3G plus rtTA3 is a defensible default choice."
+  },
+  {
+   "t": 235.57,
+   "text": "One technical detail worth knowing about TRE variants."
+  },
+  {
+   "t": 239.45,
+   "text": "The number of tetO sites is sometimes varied — seven was the original, but you'll see TREs with five, six, or even nine sites in different constructs."
+  },
+  {
+   "t": 249.78,
+   "text": "More sites generally give more induction, but with diminishing returns — going from seven to nine doesn't double the response."
+  },
+  {
+   "t": 257.8,
+   "text": "Fewer sites give faster kinetics but lower amplitude."
+  },
+  {
+   "t": 261.32,
+   "text": "The optimization depends on what you're after."
+  },
+  {
+   "t": 264.03,
+   "text": "There's also a special variant called bidirectional TRE — a TRE where the tetO array sits between two minimal promoters, one firing in each direction."
+  },
+  {
+   "t": 274.25,
+   "text": "This lets you drive two different genes from a single TRE — useful for, say, expressing both a gene of interest and a reporter in coordinated fashion."
+  },
+  {
+   "t": 284.24,
+   "text": "The two genes come on and off together because they share a single regulatory element."
+  },
+  {
+   "t": 289.44,
+   "text": "The takeaway from this segment is: the TRE has been refined alongside the rtTA, and modern TRE variants (especially TRE3G) are dramatically better than the original 1992 design."
+  },
+  {
+   "t": 302.73,
+   "text": "When reading a paper, the TRE used — especially in combination with the rtTA used — gives you a good sense of how clean the on-off control is likely to be in that experiment."
+  },
+  {
+   "t": 313.59,
+   "text": "Right."
+  },
+  {
+   "t": 314.28,
+   "text": "Now let's talk about the chronic problem that drives most of this engineering: leaky expression."
+  }
+ ]
+}

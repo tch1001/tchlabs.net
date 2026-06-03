@@ -1,0 +1,103 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Bowtie and Bowtie2: the other short-read aligner",
+ "duration": 214.55,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Bowtie and Bowtie2: the other short-read aligner"
+  },
+  {
+   "t": 5.47,
+   "text": "Parallel to BWA, another short-read aligner was developed at the University of Maryland by Ben Langmead and his colleagues, starting in 2009."
+  },
+  {
+   "t": 15.06,
+   "text": "The tool was called Bowtie, and like BWA it used the Burrows-Wheeler transform and FM-index for fast read alignment."
+  },
+  {
+   "t": 23.23,
+   "text": "The two tools were near-simultaneous responses to the same problem — how do you align Illumina reads at scale — and they used closely related algorithmic ideas."
+  },
+  {
+   "t": 33.08,
+   "text": "For a few years in the early 2010s, BWA and Bowtie were direct competitors, and which one you used depended largely on which group's pipeline you were following."
+  },
+  {
+   "t": 43.08,
+   "text": "Bowtie 1 was aimed at very short reads (under 50 bp) and was extremely fast but somewhat limited in its handling of gaps."
+  },
+  {
+   "t": 51.89,
+   "text": "In 2012, Langmead and Steven Salzberg released Bowtie 2, which extended the tool to longer reads, improved gap handling, and added support for local alignment (so it could trim off non-matching ends rather than forcing the whole read to align)."
+  },
+  {
+   "t": 67.86,
+   "text": "Bowtie 2 is roughly comparable to BWA-MEM in speed and accuracy, with slightly different trade-offs."
+  },
+  {
+   "t": 75.58,
+   "text": "In practice, the two tools coexist — BWA-MEM tends to dominate in the variant-calling community (where the GATK pipeline assumes it), while Bowtie 2 has a stronger foothold in RNA-seq and ChIP-seq pipelines, partly because the TopHat and HISAT splice-aware aligners (which we'll meet in Segment 15) are built on top of Bowtie's indexing infrastructure."
+  },
+  {
+   "t": 98.44,
+   "text": "The algorithmic differences between BWA-MEM and Bowtie 2 are real but subtle."
+  },
+  {
+   "t": 104.45,
+   "text": "BWA-MEM uses a seed-and-extend strategy where the seeds are maximal exact matches found via the FM-index, then extended with banded Smith-Waterman."
+  },
+  {
+   "t": 114.81,
+   "text": "Bowtie 2 uses a similar two-phase strategy but with different default parameters for seed length, seed extension, and scoring."
+  },
+  {
+   "t": 123.09,
+   "text": "Both are based on the FM-index, both produce SAM/BAM output, both handle paired-end reads."
+  },
+  {
+   "t": 129.68,
+   "text": "For most users, the choice between them comes down to which pipeline you've inherited and which one your collaborators are using."
+  },
+  {
+   "t": 136.49,
+   "text": "There's a deeper point I want to make here, which applies to a lot of bioinformatics."
+  },
+  {
+   "t": 140.74,
+   "text": "Once an algorithmic approach is established — in this case, FM-index-based short-read alignment — the field tends to converge on two or three implementations that are roughly equivalent, and then the choice between them is driven by ecosystem effects more than by raw performance differences."
+  },
+  {
+   "t": 158.12,
+   "text": "BWA and Bowtie are within a factor of two of each other on most benchmarks."
+  },
+  {
+   "t": 163.4,
+   "text": "The ecosystem — what other tools assume as input, what pipelines have been validated end-to-end, what documentation exists — drives adoption more than the alignment quality itself."
+  },
+  {
+   "t": 175.34,
+   "text": "BWA \"won\" the variant-calling world because GATK is built around it."
+  },
+  {
+   "t": 180.9,
+   "text": "Bowtie \"won\" the splice-aware world because HISAT extends it."
+  },
+  {
+   "t": 185.04,
+   "text": "Each tool has its niche, defined more by social network than by pure algorithmic merit."
+  },
+  {
+   "t": 190.76,
+   "text": "I bring this up because students sometimes ask which tool is \"best\" for a given task, and the answer is rarely clear-cut."
+  },
+  {
+   "t": 198.54,
+   "text": "Usually the answer is \"whichever one is most commonly used in your sub-field, because that's the one whose downstream tools will integrate smoothly and whose outputs will be most easily compared with the literature."
+  },
+  {
+   "t": 210.74,
+   "text": "\" Bioinformatics, like all engineering, is path-dependent."
+  }
+ ]
+}

@@ -1,0 +1,259 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — Why Cas9 alone is not enough — the messiness of cellular repair",
+ "duration": 389.62,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — Why Cas9 alone is not enough — the messiness of cellular repair"
+  },
+  {
+   "t": 6.2,
+   "text": "I want to spend this segment on a topic the CRISPR introduction necessarily glossed over, because we have to be honest about it before we can appreciate what base editing buys us."
+  },
+  {
+   "t": 15.66,
+   "text": "We need to talk about what happens after Cas9 cuts."
+  },
+  {
+   "t": 18.86,
+   "text": "You will remember from the CRISPR lecture that once Cas9 forms an R-loop and both blades close, you have a clean blunt-ended double-strand break."
+  },
+  {
+   "t": 27.4,
+   "text": "The DNA is in two pieces."
+  },
+  {
+   "t": 29.69,
+   "text": "From the cell's point of view, this is a five-alarm fire."
+  },
+  {
+   "t": 33.05,
+   "text": "Double-strand breaks are among the most dangerous lesions a genome can suffer, because if the two ends drift apart, or if a different break elsewhere in the genome opens up at the same time and the wrong ends get joined together, you can lose an entire arm of a chromosome or end up with a fusion that drives cancer."
+  },
+  {
+   "t": 50.65,
+   "text": "Cells take double-strand breaks very, very seriously."
+  },
+  {
+   "t": 54.56,
+   "text": "There are two main repair pathways that cells throw at a double-strand break."
+  },
+  {
+   "t": 58.77,
+   "text": "The first and most common is called non-homologous end joining, or NHEJ."
+  },
+  {
+   "t": 64.24,
+   "text": "It's quick and dirty."
+  },
+  {
+   "t": 65.44,
+   "text": "Two repair proteins grab the broken ends, trim them a little, and stitch them back together."
+  },
+  {
+   "t": 71.49,
+   "text": "Most of the time, NHEJ produces a small indel — an insertion or deletion of one or a few bases at the cut site."
+  },
+  {
+   "t": 80.08,
+   "text": "That's how Cas9 is used to knock out a gene: you cut, NHEJ misrepairs, the resulting indel shifts the reading frame, and the protein that gene encoded no longer gets made correctly."
+  },
+  {
+   "t": 92.74,
+   "text": "The second pathway, homology-directed repair or HDR, is the precise one."
+  },
+  {
+   "t": 98.75,
+   "text": "If you provide the cell with a template — a piece of DNA matching the sequence around the break, but carrying whatever change you want to install — the cell can sometimes copy from that template and incorporate your change."
+  },
+  {
+   "t": 110.83,
+   "text": "That's how you replace one sequence with another."
+  },
+  {
+   "t": 113.75,
+   "text": "The catch is that HDR is rare."
+  },
+  {
+   "t": 116.1,
+   "text": "It happens efficiently only in dividing cells, and even there it loses badly to NHEJ in terms of frequency."
+  },
+  {
+   "t": 124.65,
+   "text": "In most human cell types of medical interest — neurons, hepatocytes, cardiomyocytes — HDR essentially doesn't happen."
+  },
+  {
+   "t": 133.36,
+   "text": "So if you want to make a specific, defined edit in a non-dividing cell, vanilla Cas9 plus a template is mostly useless."
+  },
+  {
+   "t": 141.44,
+   "text": "That's the textbook version."
+  },
+  {
+   "t": 143.06,
+   "text": "Here is what doesn't usually make the textbook."
+  },
+  {
+   "t": 146.06,
+   "text": "When Cas9 cuts, what NHEJ actually produces is not a single clean outcome but a distribution."
+  },
+  {
+   "t": 152.89,
+   "text": "Some cells get a one-base insertion."
+  },
+  {
+   "t": 155.68,
+   "text": "Some get a one-base deletion."
+  },
+  {
+   "t": 157.56,
+   "text": "Some get a five-base deletion."
+  },
+  {
+   "t": 159.45,
+   "text": "Some get a forty-base deletion."
+  },
+  {
+   "t": 161.45,
+   "text": "A small but real fraction get much larger deletions — kilobases of sequence missing."
+  },
+  {
+   "t": 167.66,
+   "text": "An even smaller but still real fraction get translocations — pieces of the cut chromosome stitched onto a different chromosome that happened to be broken at the same time, perhaps because Cas9 cut an off-target site too."
+  },
+  {
+   "t": 180.68,
+   "text": "In immortalized cell lines we count alleles and we report indel percentages, but the long tail of the distribution — the kilobase deletions, the translocations, the more chaotic rearrangements — is real and not nothing."
+  },
+  {
+   "t": 195.18,
+   "text": "And then there is chromothripsis, which is the most dramatic failure mode."
+  },
+  {
+   "t": 199.5,
+   "text": "Chromothripsis means \"chromosome shattering."
+  },
+  {
+   "t": 202.22,
+   "text": "\" It's a phenomenon in which an entire chromosome, or a large piece of one, gets pulverized into many fragments and then crudely reassembled, often with pieces missing, inverted, or in the wrong order."
+  },
+  {
+   "t": 215.24,
+   "text": "It was first described in cancer genomes, where pathologists noticed that some tumors had chromosomes that looked like they had been shattered and stuck back together by a child with glue."
+  },
+  {
+   "t": 224.84,
+   "text": "In 2021, a paper in Nature Genetics from the Pellman lab showed that Cas9 cutting in some contexts can trigger chromothripsis at the cut chromosome."
+  },
+  {
+   "t": 234.3,
+   "text": "Not in most cells, not most of the time, but at low frequencies that are easy to measure if you look for them."
+  },
+  {
+   "t": 240.6,
+   "text": "That was a wake-up call for the therapeutic community."
+  },
+  {
+   "t": 243.57,
+   "text": "We were no longer in a place where we could say \"Cas9 cuts cleanly and the cell tidies up."
+  },
+  {
+   "t": 249.22,
+   "text": "\" Sometimes the cell tidies up."
+  },
+  {
+   "t": 251.19,
+   "text": "Sometimes it doesn't."
+  },
+  {
+   "t": 252.58,
+   "text": "There is a third complication, and it has a name that should sound familiar from a cell biology class: p53."
+  },
+  {
+   "t": 259.52,
+   "text": "P53 is the cell's damage sensor."
+  },
+  {
+   "t": 262.59,
+   "text": "Among many other things, it watches for double-strand breaks."
+  },
+  {
+   "t": 266.43,
+   "text": "When p53 detects a break, it activates a program that pauses cell division until the damage is repaired, or, if the damage is too severe, pushes the cell to die by apoptosis."
+  },
+  {
+   "t": 278.9,
+   "text": "That program is, in healthy cells, exactly what you want."
+  },
+  {
+   "t": 283.13,
+   "text": "It keeps damaged cells from passing on broken chromosomes to their daughters."
+  },
+  {
+   "t": 287.69,
+   "text": "But for genome editing, p53 is a problem."
+  },
+  {
+   "t": 291.38,
+   "text": "If you are trying to use Cas9 to fix a genetic defect in a population of patient cells — say, hematopoietic stem cells you've taken out of the patient's bone marrow, edited in a dish, and plan to put back — the cells with the most intact, healthiest p53 response are the ones that least tolerate Cas9 editing, because their p53 stops their growth or kills them."
+  },
+  {
+   "t": 313.77,
+   "text": "The cells that grow out, that you get back in your dish to put into the patient, are enriched for cells with dysfunctional p53."
+  },
+  {
+   "t": 321.59,
+   "text": "Cells with dysfunctional p53 are, by definition, cells in which a critical tumor suppressor has been knocked down."
+  },
+  {
+   "t": 329.3,
+   "text": "That's not the population you want to be reinfusing into a patient."
+  },
+  {
+   "t": 333.15,
+   "text": "This finding — that Cas9 cutting selects against p53-competent cells — was published in 2018 from Sam Behjati's group at Sanger and from the Karolinska, and it made everyone in the cell-therapy community pause."
+  },
+  {
+   "t": 347.1,
+   "text": "It didn't kill CRISPR-based therapies, because the magnitude of the effect is debated and because there are workarounds."
+  },
+  {
+   "t": 354.24,
+   "text": "But it sharpened the question: what if you could edit without making a double-strand break in the first place?"
+  },
+  {
+   "t": 359.87,
+   "text": "P53 doesn't activate on simple single-strand nicks the way it does on double-strand breaks."
+  },
+  {
+   "t": 366.43,
+   "text": "Chromothripsis doesn't happen without breaks."
+  },
+  {
+   "t": 369.44,
+   "text": "Large deletions don't happen without breaks."
+  },
+  {
+   "t": 372.84,
+   "text": "Translocations don't happen without breaks."
+  },
+  {
+   "t": 376.09,
+   "text": "If you could change a letter without ever creating that catastrophic-looking lesion, you would dodge an entire class of problems."
+  },
+  {
+   "t": 383.52,
+   "text": "That's the motivation for base editing."
+  },
+  {
+   "t": 386.08,
+   "text": "Not a marginal improvement."
+  },
+  {
+   "t": 387.8,
+   "text": "A different category of edit."
+  }
+ ]
+}

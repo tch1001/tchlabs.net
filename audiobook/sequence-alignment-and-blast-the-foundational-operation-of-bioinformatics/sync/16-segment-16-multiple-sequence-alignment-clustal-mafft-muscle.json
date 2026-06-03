@@ -1,0 +1,183 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Multiple sequence alignment: Clustal, MAFFT, MUSCLE",
+ "duration": 369.24,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Multiple sequence alignment: Clustal, MAFFT, MUSCLE"
+  },
+  {
+   "t": 6.55,
+   "text": "So far we've talked exclusively about pairwise alignment — aligning two sequences."
+  },
+  {
+   "t": 12.22,
+   "text": "But many biological questions require aligning many sequences simultaneously — twenty, fifty, a thousand."
+  },
+  {
+   "t": 20.49,
+   "text": "The multiple sequence alignment (MSA) of a protein family lets you build a phylogenetic tree, identify conserved positions, build a profile HMM, design degenerate PCR primers, infer structural constraints, train a deep learning model — almost every comparative analysis of a protein family begins with an MSA."
+  },
+  {
+   "t": 42.12,
+   "text": "Multiple sequence alignment is, in theory, a much harder problem than pairwise alignment."
+  },
+  {
+   "t": 48.44,
+   "text": "The exact algorithm for optimal MSA is a generalization of Needleman-Wunsch to N dimensions — you fill in an N-dimensional grid where each cell represents a partial alignment of all N sequences."
+  },
+  {
+   "t": 61.19,
+   "text": "The time complexity is O(L^N) where L is the typical sequence length and N is the number of sequences."
+  },
+  {
+   "t": 71.33,
+   "text": "For N=3 and L=1000, that's already 10^9 — borderline."
+  },
+  {
+   "t": 78.9,
+   "text": "For N=10, it's 10^30 — completely impossible."
+  },
+  {
+   "t": 84.67,
+   "text": "Exact MSA is hopeless for any non-trivial number of sequences."
+  },
+  {
+   "t": 89.69,
+   "text": "The practical solutions all involve progressive alignment — build up the multiple alignment one sequence at a time."
+  },
+  {
+   "t": 97.11,
+   "text": "The basic algorithm, called progressive alignment in the abstract, was popularized by Clustal in the late 1980s by Des Higgins and his colleagues."
+  },
+  {
+   "t": 106.2,
+   "text": "The recipe is: compute pairwise alignments between all pairs of sequences."
+  },
+  {
+   "t": 111.94,
+   "text": "Build a guide tree (a rough phylogenetic tree) from the pairwise distances."
+  },
+  {
+   "t": 117.2,
+   "text": "Then traverse the tree from the leaves to the root, aligning the most similar sequences first, then aligning the resulting alignment to the next-most-similar sequence, and so on."
+  },
+  {
+   "t": 128.25,
+   "text": "Each step is a pairwise alignment of either two sequences, two alignments, or a sequence and an alignment — all of which can be done with variants of dynamic programming using profile-style scoring."
+  },
+  {
+   "t": 140.59,
+   "text": "The classical Clustal pipeline — distance matrix, guide tree, progressive alignment — was implemented in tools called ClustalW (1994) and later ClustalX (1997) and ClustalΩ (2011, the current version)."
+  },
+  {
+   "t": 156.89,
+   "text": "For years, Clustal was the default MSA tool worldwide."
+  },
+  {
+   "t": 161.38,
+   "text": "But progressive alignment has a famous problem: errors made early in the process — at the bottom of the guide tree — are propagated up and never corrected."
+  },
+  {
+   "t": 170.74,
+   "text": "If two sequences are misaligned at the leaves, that misalignment is preserved through all subsequent merging steps."
+  },
+  {
+   "t": 178.24,
+   "text": "This problem motivated a series of better tools."
+  },
+  {
+   "t": 181.55,
+   "text": "MUSCLE — Multiple Sequence Comparison by Log-Expectation — was published by Robert Edgar in 2004."
+  },
+  {
+   "t": 188.93,
+   "text": "It uses an iterative refinement strategy: do an initial progressive alignment, then refine it by repeatedly splitting the alignment into two groups and re-aligning them."
+  },
+  {
+   "t": 199.7,
+   "text": "The refinement corrects many of the errors that progressive alignment makes."
+  },
+  {
+   "t": 204.31,
+   "text": "MUSCLE is faster and more accurate than Clustal for most inputs."
+  },
+  {
+   "t": 208.7,
+   "text": "MAFFT — Multiple Alignment using Fast Fourier Transform — was published by Kazutaka Katoh starting in 2002."
+  },
+  {
+   "t": 217.45,
+   "text": "It uses a fast Fourier transform to find pairs of homologous regions quickly, then refines the alignment with iterative refinement."
+  },
+  {
+   "t": 226.53,
+   "text": "MAFFT has many modes, ranging from very fast (FFT-NS-1, suitable for thousands of sequences) to very accurate (L-INS-i, slower but better alignments)."
+  },
+  {
+   "t": 238.71,
+   "text": "It's now the most widely used MSA tool, especially for large families."
+  },
+  {
+   "t": 243.95,
+   "text": "There are other tools — T-Coffee is famous for high-accuracy MSA on small sets, PRANK is unique in that it tries to model insertions and deletions evolutionarily, HMMER's hmmalign can align sequences to an existing profile HMM."
+  },
+  {
+   "t": 259.81,
+   "text": "Each has its niche."
+  },
+  {
+   "t": 261.14,
+   "text": "But for most practical purposes, if you want a multiple sequence alignment, you use MAFFT (for speed and scale) or MUSCLE (for ease of use)."
+  },
+  {
+   "t": 271.32,
+   "text": "Both produce alignments in FASTA-aligned format, with gaps inserted as dashes, that downstream tools accept."
+  },
+  {
+   "t": 278.89,
+   "text": "The output of an MSA is then used for many downstream tasks."
+  },
+  {
+   "t": 283.23,
+   "text": "Phylogenetic tree inference uses the MSA to estimate evolutionary relationships among the sequences — tools like RAxML, IQ-TREE, and MrBayes all take MSAs as input."
+  },
+  {
+   "t": 295.86,
+   "text": "Conservation analysis identifies columns of the MSA that are highly conserved, which often correspond to functional sites."
+  },
+  {
+   "t": 303.93,
+   "text": "Profile HMM construction with HMMER's hmmbuild takes an MSA and produces a profile HMM."
+  },
+  {
+   "t": 311.2,
+   "text": "Coevolution analysis identifies pairs of columns whose residues are correlated, which can indicate physical contacts in the folded protein structure — and this is the basis of the input to AlphaFold and other structure prediction tools."
+  },
+  {
+   "t": 325.56,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 326.85,
+   "text": "Multiple sequence alignment is what you do when you have many related sequences and want to see them all lined up together."
+  },
+  {
+   "t": 334.33,
+   "text": "The exact problem is computationally intractable, so all practical tools use progressive alignment — build the alignment up one sequence at a time, guided by a rough phylogenetic tree."
+  },
+  {
+   "t": 346.05,
+   "text": "Clustal was the classic, MAFFT and MUSCLE are the modern workhorses."
+  },
+  {
+   "t": 351.24,
+   "text": "The output is a stack of aligned sequences with gaps inserted to make homologous columns line up."
+  },
+  {
+   "t": 357.54,
+   "text": "From the MSA, you can build trees, find conserved positions, train HMMs, infer protein contacts — it's the starting point for all comparative analysis of a family."
+  }
+ ]
+}

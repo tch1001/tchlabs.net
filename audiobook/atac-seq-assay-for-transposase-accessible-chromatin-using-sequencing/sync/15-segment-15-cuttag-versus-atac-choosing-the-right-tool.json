@@ -1,0 +1,175 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — CUT&Tag versus ATAC — choosing the right tool",
+ "duration": 253.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — CUT&Tag versus ATAC — choosing the right tool"
+  },
+  {
+   "t": 5.83,
+   "text": "Now let me address a question that comes up constantly in modern regulatory genomics: ATAC-seq versus CUT&Tag."
+  },
+  {
+   "t": 13.5,
+   "text": "These are two recent low-input chromatin profiling methods that, on the surface, sound similar, but actually answer different questions."
+  },
+  {
+   "t": 21.76,
+   "text": "Knowing when to use each is one of the practical skills of a working chromatin biologist."
+  },
+  {
+   "t": 27.45,
+   "text": "Let me describe CUT&Tag first."
+  },
+  {
+   "t": 29.94,
+   "text": "CUT&Tag — Cleavage Under Targets and Tagmentation — is a method developed by Steve Henikoff and colleagues in 2019."
+  },
+  {
+   "t": 38.79,
+   "text": "It builds on the same insight as ATAC-seq: load Tn5 with sequencing adapters and let it cut accessible DNA."
+  },
+  {
+   "t": 47.33,
+   "text": "But CUT&Tag adds an antibody-based targeting step."
+  },
+  {
+   "t": 51.51,
+   "text": "Instead of letting Tn5 cut wherever it can fit, you first incubate the cells with an antibody against a specific protein (a transcription factor, a histone modification, or a chromatin-associated factor)."
+  },
+  {
+   "t": 65.31,
+   "text": "Then you bring in a secondary protein — a fusion of protein A or protein G with Tn5 — that binds the antibody."
+  },
+  {
+   "t": 73.9,
+   "text": "Now Tn5 is tethered to the antibody, which is tethered to the protein you care about."
+  },
+  {
+   "t": 79.95,
+   "text": "When you activate Tn5, it cuts only the DNA near where the antibody is bound."
+  },
+  {
+   "t": 85.99,
+   "text": "The result is a map of the genome around that specific protein — essentially a low-input alternative to ChIP-seq."
+  },
+  {
+   "t": 94.33,
+   "text": "So here's the distinction."
+  },
+  {
+   "t": 95.86,
+   "text": "ATAC-seq is protein-agnostic."
+  },
+  {
+   "t": 98.33,
+   "text": "You don't need an antibody."
+  },
+  {
+   "t": 99.86,
+   "text": "You map all accessible chromatin, wherever it is, regardless of which proteins are sitting there."
+  },
+  {
+   "t": 105.53,
+   "text": "CUT&Tag is protein-specific."
+  },
+  {
+   "t": 108.46,
+   "text": "You need an antibody for the protein you want to map, and you get a map of that one protein's binding sites — analogous to ChIP-seq, but with much lower input and a simpler protocol."
+  },
+  {
+   "t": 119.08,
+   "text": "When do you use each?"
+  },
+  {
+   "t": 120.42,
+   "text": "Use ATAC-seq when you want a survey of the regulatory landscape — which regions are open, which regulatory elements are active, which TFs might be there."
+  },
+  {
+   "t": 129.93,
+   "text": "ATAC-seq is your map of the accessibility universe in a given cell type."
+  },
+  {
+   "t": 134.93,
+   "text": "Use CUT&Tag when you want to map a specific protein — a particular transcription factor, a specific histone modification, an RNA polymerase."
+  },
+  {
+   "t": 145.16,
+   "text": "CUT&Tag is your low-input ChIP alternative."
+  },
+  {
+   "t": 149.05,
+   "text": "In practice, the two are often complementary."
+  },
+  {
+   "t": 152.01,
+   "text": "ATAC-seq gives you the broad regulatory map; CUT&Tag fills in the details for specific factors."
+  },
+  {
+   "t": 158.5,
+   "text": "A modern regulatory genomics study might use ATAC-seq to identify all accessible regions, then use CUT&Tag for several master regulators to determine which TFs are actually binding at each accessible region."
+  },
+  {
+   "t": 173.34,
+   "text": "Together, they're more powerful than either alone."
+  },
+  {
+   "t": 176.49,
+   "text": "There are other relatives in the same family."
+  },
+  {
+   "t": 179.11,
+   "text": "CUT&RUN — Cleavage Under Targets and Release Using Nuclease — is an older Henikoff lab method that uses MNase instead of Tn5 for the cutting step."
+  },
+  {
+   "t": 190.01,
+   "text": "It's similar in spirit to CUT&Tag but with different chemistry and slightly different practical characteristics."
+  },
+  {
+   "t": 196.85,
+   "text": "CUT&Tag-direct is a variant for very low input."
+  },
+  {
+   "t": 200.78,
+   "text": "DiP-ATAC and other methods explore other combinations of antibody-targeted and accessibility profiling."
+  },
+  {
+   "t": 208.35,
+   "text": "The space is rich, and the right tool depends on your specific biological question."
+  },
+  {
+   "t": 213.88,
+   "text": "The analogy I want you to hold: ATAC-seq asks \"where is the genome open?"
+  },
+  {
+   "t": 218.89,
+   "text": "\" CUT&Tag asks \"where is this specific protein?"
+  },
+  {
+   "t": 222.62,
+   "text": "\" Both methods use Tn5 transposase and adapter-loaded tagmentation, both work with low input, both produce similar-looking data files."
+  },
+  {
+   "t": 232.2,
+   "text": "But the question they answer is different, and the experimental design — particularly the need for a validated antibody in CUT&Tag — differs accordingly."
+  },
+  {
+   "t": 241.61,
+   "text": "ATAC-seq is the protein-agnostic accessibility map."
+  },
+  {
+   "t": 245.34,
+   "text": "CUT&Tag is the protein-specific binding map."
+  },
+  {
+   "t": 249.12,
+   "text": "Use both where you can."
+  },
+  {
+   "t": 250.53,
+   "text": "Use the one that matches your question where you can't."
+  }
+ ]
+}

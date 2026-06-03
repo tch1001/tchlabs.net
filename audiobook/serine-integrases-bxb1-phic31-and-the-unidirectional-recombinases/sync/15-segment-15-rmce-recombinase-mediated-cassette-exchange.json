@@ -1,0 +1,135 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — RMCE — recombinase-mediated cassette exchange",
+ "duration": 269.1,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — RMCE — recombinase-mediated cassette exchange"
+  },
+  {
+   "t": 5.83,
+   "text": "Let me devote a segment to the RMCE design pattern, because it's both elegant and widely used and you'll see it referenced in many landing-pad papers."
+  },
+  {
+   "t": 14.89,
+   "text": "I introduced RMCE briefly in the landing-pad segment."
+  },
+  {
+   "t": 18.9,
+   "text": "The basic idea: instead of using a single attB-attP pair (which leads to integration of the entire cargo plasmid, backbone and all), use two different orthogonal attachment sites flanking a placeholder cassette in the chromosome, and have the cargo plasmid carry the complementary sites flanking the payload."
+  },
+  {
+   "t": 37.61,
+   "text": "The reaction then swaps the placeholder cassette for the payload cassette, depositing only the payload (without plasmid backbone) into the chromosome."
+  },
+  {
+   "t": 46.89,
+   "text": "Let me walk through the molecular geometry."
+  },
+  {
+   "t": 49.4,
+   "text": "The chromosomal landing pad looks like this:"
+  },
+  {
+   "t": 52.39,
+   "text": "...chromosomal-DNA — attB-1 — placeholder-cassette — attB-2 — chromosomal-DNA..."
+  },
+  {
+   "t": 59.6,
+   "text": "Here, attB-1 and attB-2 are two different attB sequences, recognized by two different integrases — or, in many implementations, by the same integrase but using engineered orthogonal variants of the att sites that recombine only with their cognate partners and not with each other."
+  },
+  {
+   "t": 81.26,
+   "text": "The cargo plasmid looks like this:"
+  },
+  {
+   "t": 83.69,
+   "text": "plasmid-backbone — attP-1 — payload-cassette — attP-2 — plasmid-backbone (circular)"
+  },
+  {
+   "t": 91.47,
+   "text": "The two attP sites flank the payload, on the same plasmid, with the plasmid backbone closing the circle."
+  },
+  {
+   "t": 98.9,
+   "text": "When integrase is supplied, two recombination reactions happen: attB-1 with attP-1, and attB-2 with attP-2."
+  },
+  {
+   "t": 110.38,
+   "text": "The geometry is such that the two reactions, together, exchange the chromosomal placeholder for the plasmid payload."
+  },
+  {
+   "t": 117.56,
+   "text": "After the dust settles, the chromosome contains:"
+  },
+  {
+   "t": 121.51,
+   "text": "...chromosomal-DNA — attL-1 — payload-cassette — attR-2 — chromosomal-DNA..."
+  },
+  {
+   "t": 128.91,
+   "text": "And the placeholder cassette has been released, along with the plasmid backbone, as a separate circular product that gets diluted out as the cell divides."
+  },
+  {
+   "t": 138.07,
+   "text": "Notice what RMCE achieves."
+  },
+  {
+   "t": 140.14,
+   "text": "The chromosome now carries only the payload, flanked by recombined att sites (now attL and attR)."
+  },
+  {
+   "t": 148.64,
+   "text": "The plasmid backbone — with its bacterial origin of replication, its antibiotic resistance marker, all the stuff you needed for plasmid propagation but don't want in the mammalian genome — is not integrated."
+  },
+  {
+   "t": 160.69,
+   "text": "The placeholder cassette that used to be at the landing pad is gone."
+  },
+  {
+   "t": 164.24,
+   "text": "The exchange is clean."
+  },
+  {
+   "t": 165.8,
+   "text": "This is a much more elegant outcome than the simple single-attB-plus-single-attP integration, which would leave the entire plasmid integrated as a contiguous insertion."
+  },
+  {
+   "t": 175.55,
+   "text": "RMCE gives you backbone-free, marker-free, clean payload integration at a defined location."
+  },
+  {
+   "t": 182.15,
+   "text": "It's the gold standard for cell-line engineering."
+  },
+  {
+   "t": 184.91,
+   "text": "For implementation, RMCE has been done with various pairs of orthogonal integrases and with orthogonal variants of the same integrase."
+  },
+  {
+   "t": 193.34,
+   "text": "Bxb1 has engineered \"GT\" and \"GA\" variant att sites (named by the dinucleotide identity at the central crossover position) that recombine only with their cognate partners, providing the two orthogonal channels needed for RMCE within a single Bxb1-based system."
+  },
+  {
+   "t": 210.91,
+   "text": "This is convenient because you only need one integrase rather than two."
+  },
+  {
+   "t": 216.1,
+   "text": "RMCE has been used in many published cell-line engineering platforms."
+  },
+  {
+   "t": 220.34,
+   "text": "The Flp-FRT system can also do RMCE with three different FRT variants, and many older transgenic mouse and cell-line systems use Flp-FRT-RMCE."
+  },
+  {
+   "t": 231.76,
+   "text": "The serine-integrase-based RMCE has the advantage of unidirectionality — once exchanged, the cassette stays exchanged, with no risk of reversion if integrase happens to be expressed later — which is why newer systems tend to use Bxb1-based RMCE."
+  },
+  {
+   "t": 248.06,
+   "text": "If you encounter a paper that describes a cell line as having a \"Bxb1-RMCE landing pad\" or \"phiC31-RMCE master line,\" you now know exactly what that means: two orthogonal att-site pairs at a defined chromosomal location, allowing clean payload-for-placeholder exchange via integrase action."
+  }
+ ]
+}

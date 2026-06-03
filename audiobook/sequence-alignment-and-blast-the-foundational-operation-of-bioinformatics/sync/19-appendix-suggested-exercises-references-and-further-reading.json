@@ -1,0 +1,679 @@
+{
+ "n": 19,
+ "title": "APPENDIX — Suggested exercises, references, and further reading",
+ "duration": 546.22,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX — Suggested exercises, references, and further reading"
+  },
+  {
+   "t": 5.1,
+   "text": "For the student who wants to go deeper, here are some suggested exercises and references."
+  },
+  {
+   "t": 10.24,
+   "text": "Exercises:"
+  },
+  {
+   "t": 11.57,
+   "text": "By hand, on paper, compute the Needleman-Wunsch alignment of the sequences GATTACA and GCATGCU, using a match score of +1, a mismatch score of -1, and a gap penalty of -2."
+  },
+  {
+   "t": 25.38,
+   "text": "Fill in the entire matrix."
+  },
+  {
+   "t": 27.68,
+   "text": "Then perform the traceback."
+  },
+  {
+   "t": 29.52,
+   "text": "Report the optimal alignment and its score."
+  },
+  {
+   "t": 32.35,
+   "text": "(Hint: there may be ties; pick one consistent traceback policy.)"
+  },
+  {
+   "t": 37.19,
+   "text": "Repeat exercise 1 with Smith-Waterman scoring (add the zero option, change boundary conditions to zeros, traceback from the maximum)."
+  },
+  {
+   "t": 46.19,
+   "text": "Compare the result."
+  },
+  {
+   "t": 47.41,
+   "text": "Is the Smith-Waterman alignment a sub-region of the Needleman-Wunsch one?"
+  },
+  {
+   "t": 51.85,
+   "text": "Always?"
+  },
+  {
+   "t": 52.85,
+   "text": "Visit blast.ncbi.nlm.nih.gov."
+  },
+  {
+   "t": 58.86,
+   "text": "Paste in the human protein BRCA1 (you can find the sequence by searching UniProt for \"BRCA1_HUMAN\")."
+  },
+  {
+   "t": 67.03,
+   "text": "Run BLASTP against the nr database, limiting the search to non-human organisms."
+  },
+  {
+   "t": 73.35,
+   "text": "Examine the top 20 hits."
+  },
+  {
+   "t": 75.45,
+   "text": "Report the bit score, E-value, percent identity, alignment length, and organism for each."
+  },
+  {
+   "t": 82.04,
+   "text": "What is the most distant BRCA1 homolog you can find with confidence (E < 10^-5)?"
+  },
+  {
+   "t": 90.01,
+   "text": "Comment on what this tells you about BRCA1's evolutionary conservation."
+  },
+  {
+   "t": 95.49,
+   "text": "Compute the edit distance between the strings \"kitten\" and \"sitting\" by hand using dynamic programming."
+  },
+  {
+   "t": 101.89,
+   "text": "(The answer is 3: substitute k for s, substitute e for i, insert g."
+  },
+  {
+   "t": 108.35,
+   "text": "Verify this by tracing through the DP matrix.)"
+  },
+  {
+   "t": 111.75,
+   "text": "Download a small bacterial genome from NCBI (any Escherichia coli strain)."
+  },
+  {
+   "t": 117.9,
+   "text": "Download an Illumina read set from SRA for the same strain."
+  },
+  {
+   "t": 122.11,
+   "text": "Build a BWA index of the genome."
+  },
+  {
+   "t": 125.26,
+   "text": "Align the reads."
+  },
+  {
+   "t": 126.64,
+   "text": "Open the resulting BAM file in IGV or a similar viewer."
+  },
+  {
+   "t": 131.18,
+   "text": "Look at one read in detail."
+  },
+  {
+   "t": 133.16,
+   "text": "Identify the CIGAR string."
+  },
+  {
+   "t": 135.21,
+   "text": "Identify a SNP."
+  },
+  {
+   "t": 137.28,
+   "text": "Identify a region of high coverage and a region of low coverage."
+  },
+  {
+   "t": 141.72,
+   "text": "Comment on what you see."
+  },
+  {
+   "t": 143.21,
+   "text": "Compare BWA-MEM and Bowtie2 on the same Illumina dataset."
+  },
+  {
+   "t": 148.07,
+   "text": "Are the alignments identical?"
+  },
+  {
+   "t": 149.86,
+   "text": "If not, where do they differ?"
+  },
+  {
+   "t": 151.76,
+   "text": "(Hint: look at reads in repetitive regions, where multi-mapping happens.)"
+  },
+  {
+   "t": 156.69,
+   "text": "Run a small RNA-seq dataset through STAR."
+  },
+  {
+   "t": 159.99,
+   "text": "Examine the splice junctions in the output."
+  },
+  {
+   "t": 163.04,
+   "text": "How many junctions did STAR detect?"
+  },
+  {
+   "t": 165.2,
+   "text": "How many were known (annotated in GTF) versus novel?"
+  },
+  {
+   "t": 169.74,
+   "text": "Build a profile HMM of the globin family using HMMER's hmmbuild on a Pfam globin alignment."
+  },
+  {
+   "t": 177.09,
+   "text": "Use that HMM to search a proteome for new globin candidates."
+  },
+  {
+   "t": 181.68,
+   "text": "What sensitivity does the HMM achieve compared to BLASTP?"
+  },
+  {
+   "t": 186.59,
+   "text": "Key references:"
+  },
+  {
+   "t": 187.85,
+   "text": "Needleman, S."
+  },
+  {
+   "t": 189.45,
+   "text": "B. & Wunsch, C."
+  },
+  {
+   "t": 191.44,
+   "text": "D."
+  },
+  {
+   "t": 192.14,
+   "text": "(1970)."
+  },
+  {
+   "t": 193.4,
+   "text": "A general method applicable to the search for similarities in the amino acid sequence of two proteins."
+  },
+  {
+   "t": 200.46,
+   "text": "J Mol Biol 48(3): 443-453."
+  },
+  {
+   "t": 205.11,
+   "text": "The original paper."
+  },
+  {
+   "t": 206.53,
+   "text": "Smith, T."
+  },
+  {
+   "t": 207.6,
+   "text": "F. & Waterman, M."
+  },
+  {
+   "t": 209.6,
+   "text": "S."
+  },
+  {
+   "t": 210.45,
+   "text": "(1981)."
+  },
+  {
+   "t": 211.85,
+   "text": "Identification of common molecular subsequences."
+  },
+  {
+   "t": 215.32,
+   "text": "J Mol Biol 147(1): 195-197."
+  },
+  {
+   "t": 220.22,
+   "text": "Local alignment."
+  },
+  {
+   "t": 221.4,
+   "text": "Dayhoff, M."
+  },
+  {
+   "t": 222.61,
+   "text": "O. et al."
+  },
+  {
+   "t": 223.69,
+   "text": "(1978)."
+  },
+  {
+   "t": 225.39,
+   "text": "A model of evolutionary change in proteins."
+  },
+  {
+   "t": 229.11,
+   "text": "Atlas of Protein Sequence and Structure, 5(3): 345-352."
+  },
+  {
+   "t": 236.51,
+   "text": "Original PAM matrices."
+  },
+  {
+   "t": 239.14,
+   "text": "Henikoff, S. & Henikoff, J."
+  },
+  {
+   "t": 242.47,
+   "text": "G."
+  },
+  {
+   "t": 243.18,
+   "text": "(1992)."
+  },
+  {
+   "t": 244.65,
+   "text": "Amino acid substitution matrices from protein blocks."
+  },
+  {
+   "t": 248.51,
+   "text": "PNAS 89(22): 10915-10919."
+  },
+  {
+   "t": 255.56,
+   "text": "BLOSUM matrices."
+  },
+  {
+   "t": 257.1,
+   "text": "Altschul, S."
+  },
+  {
+   "t": 258.34,
+   "text": "F. et al."
+  },
+  {
+   "t": 259.32,
+   "text": "(1990)."
+  },
+  {
+   "t": 260.65,
+   "text": "Basic local alignment search tool."
+  },
+  {
+   "t": 263.12,
+   "text": "J Mol Biol 215(3): 403-410."
+  },
+  {
+   "t": 267.57,
+   "text": "Original BLAST paper."
+  },
+  {
+   "t": 269.43,
+   "text": "Altschul, S."
+  },
+  {
+   "t": 270.59,
+   "text": "F. et al."
+  },
+  {
+   "t": 271.6,
+   "text": "(1997)."
+  },
+  {
+   "t": 273.26,
+   "text": "Gapped BLAST and PSI-BLAST."
+  },
+  {
+   "t": 276.09,
+   "text": "Nucleic Acids Res 25(17): 3389-3402."
+  },
+  {
+   "t": 284.25,
+   "text": "Gapped BLAST and profile iteration."
+  },
+  {
+   "t": 287.09,
+   "text": "Eddy, S."
+  },
+  {
+   "t": 288.11,
+   "text": "R."
+  },
+  {
+   "t": 288.88,
+   "text": "(1998)."
+  },
+  {
+   "t": 290.32,
+   "text": "Profile hidden Markov models."
+  },
+  {
+   "t": 292.55,
+   "text": "Bioinformatics 14(9): 755-763."
+  },
+  {
+   "t": 298.64,
+   "text": "HMMER and profile HMMs."
+  },
+  {
+   "t": 300.77,
+   "text": "Li, H. & Durbin, R."
+  },
+  {
+   "t": 304.04,
+   "text": "(2009)."
+  },
+  {
+   "t": 305.24,
+   "text": "Fast and accurate short read alignment with Burrows-Wheeler transform."
+  },
+  {
+   "t": 310.15,
+   "text": "Bioinformatics 25(14): 1754-1760."
+  },
+  {
+   "t": 316.18,
+   "text": "Original BWA paper."
+  },
+  {
+   "t": 318.43,
+   "text": "Langmead, B. & Salzberg, S."
+  },
+  {
+   "t": 321.74,
+   "text": "L."
+  },
+  {
+   "t": 322.41,
+   "text": "(2012)."
+  },
+  {
+   "t": 323.81,
+   "text": "Fast gapped-read alignment with Bowtie 2."
+  },
+  {
+   "t": 326.82,
+   "text": "Nat Methods 9: 357-359."
+  },
+  {
+   "t": 331.56,
+   "text": "Bowtie 2."
+  },
+  {
+   "t": 332.71,
+   "text": "Li, H."
+  },
+  {
+   "t": 334.18,
+   "text": "(2018)."
+  },
+  {
+   "t": 335.69,
+   "text": "Minimap2: pairwise alignment for nucleotide sequences."
+  },
+  {
+   "t": 340.34,
+   "text": "Bioinformatics 34(18): 3094-3100."
+  },
+  {
+   "t": 345.79,
+   "text": "Minimap2."
+  },
+  {
+   "t": 346.99,
+   "text": "Dobin, A. et al."
+  },
+  {
+   "t": 348.73,
+   "text": "(2013)."
+  },
+  {
+   "t": 350.31,
+   "text": "STAR: ultrafast universal RNA-seq aligner."
+  },
+  {
+   "t": 354.64,
+   "text": "Bioinformatics 29(1): 15-21."
+  },
+  {
+   "t": 358.57,
+   "text": "STAR."
+  },
+  {
+   "t": 359.45,
+   "text": "Kim, D. et al."
+  },
+  {
+   "t": 361.05,
+   "text": "(2019)."
+  },
+  {
+   "t": 362.98,
+   "text": "Graph-based genome alignment and genotyping with HISAT2."
+  },
+  {
+   "t": 366.9,
+   "text": "Nat Biotechnol 37: 907-915."
+  },
+  {
+   "t": 371.89,
+   "text": "HISAT2."
+  },
+  {
+   "t": 372.87,
+   "text": "Edgar, R."
+  },
+  {
+   "t": 374.58,
+   "text": "C."
+  },
+  {
+   "t": 375.3,
+   "text": "(2004)."
+  },
+  {
+   "t": 376.77,
+   "text": "MUSCLE: multiple sequence alignment with high accuracy and high throughput."
+  },
+  {
+   "t": 382.05,
+   "text": "Nucleic Acids Res 32(5): 1792-1797."
+  },
+  {
+   "t": 389.97,
+   "text": "MUSCLE."
+  },
+  {
+   "t": 390.75,
+   "text": "Katoh, K. & Standley, D."
+  },
+  {
+   "t": 393.2,
+   "text": "M."
+  },
+  {
+   "t": 393.92,
+   "text": "(2013)."
+  },
+  {
+   "t": 395.47,
+   "text": "MAFFT multiple sequence alignment software version 7."
+  },
+  {
+   "t": 399.73,
+   "text": "Mol Biol Evol 30(4): 772-780."
+  },
+  {
+   "t": 404.95,
+   "text": "MAFFT."
+  },
+  {
+   "t": 405.78,
+   "text": "Liao, W.-W."
+  },
+  {
+   "t": 407.84,
+   "text": "et al."
+  },
+  {
+   "t": 408.69,
+   "text": "(2023)."
+  },
+  {
+   "t": 409.95,
+   "text": "A draft human pangenome reference."
+  },
+  {
+   "t": 412.84,
+   "text": "Nature 617: 312-324."
+  },
+  {
+   "t": 417.6,
+   "text": "The first human pangenome."
+  },
+  {
+   "t": 419.43,
+   "text": "van Kempen, M. et al."
+  },
+  {
+   "t": 422.02,
+   "text": "(2024)."
+  },
+  {
+   "t": 423.27,
+   "text": "Fast and accurate protein structure search with Foldseek."
+  },
+  {
+   "t": 427.35,
+   "text": "Nat Biotechnol 42: 243-246."
+  },
+  {
+   "t": 432.98,
+   "text": "Foldseek."
+  },
+  {
+   "t": 434.03,
+   "text": "Rives, A. et al."
+  },
+  {
+   "t": 435.78,
+   "text": "(2021)."
+  },
+  {
+   "t": 436.95,
+   "text": "Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences."
+  },
+  {
+   "t": 445.59,
+   "text": "PNAS 118(15): e2016239118."
+  },
+  {
+   "t": 452.79,
+   "text": "ESM."
+  },
+  {
+   "t": 453.74,
+   "text": "Textbooks worth owning:"
+  },
+  {
+   "t": 455.37,
+   "text": "Durbin, R., Eddy, S., Krogh, A., & Mitchison, G."
+  },
+  {
+   "t": 460.25,
+   "text": "(1998)."
+  },
+  {
+   "t": 461.68,
+   "text": "Biological Sequence Analysis."
+  },
+  {
+   "t": 464.12,
+   "text": "Cambridge University Press."
+  },
+  {
+   "t": 466.12,
+   "text": "The classic textbook on probabilistic models of biological sequences."
+  },
+  {
+   "t": 470.97,
+   "text": "Old but still excellent."
+  },
+  {
+   "t": 472.52,
+   "text": "Waterman, M."
+  },
+  {
+   "t": 473.63,
+   "text": "S."
+  },
+  {
+   "t": 474.47,
+   "text": "(1995)."
+  },
+  {
+   "t": 476.13,
+   "text": "Introduction to Computational Biology: Maps, Sequences and Genomes."
+  },
+  {
+   "t": 481.74,
+   "text": "Chapman & Hall."
+  },
+  {
+   "t": 482.89,
+   "text": "Foundational textbook by one of the field's founders."
+  },
+  {
+   "t": 486.1,
+   "text": "Mount, D."
+  },
+  {
+   "t": 487.13,
+   "text": "W."
+  },
+  {
+   "t": 487.85,
+   "text": "(2004)."
+  },
+  {
+   "t": 489.23,
+   "text": "Bioinformatics: Sequence and Genome Analysis, 2nd ed."
+  },
+  {
+   "t": 493.65,
+   "text": "CSHL Press."
+  },
+  {
+   "t": 495.43,
+   "text": "Practical bioinformatics textbook."
+  },
+  {
+   "t": 497.84,
+   "text": "Online resources:"
+  },
+  {
+   "t": 499.38,
+   "text": "NCBI BLAST: https://blast.ncbi.nlm.nih.gov — the canonical web BLAST."
+  },
+  {
+   "t": 511.34,
+   "text": "Pfam (now part of InterPro): https://www.ebi.ac.uk/interpro — protein family database with profile HMMs."
+  },
+  {
+   "t": 524.43,
+   "text": "UCSC Genome Browser: https://genome.ucsc.edu — for visualizing alignments in genomic context."
+  },
+  {
+   "t": 536.02,
+   "text": "Heng Li's blog (lh3.github.io): often the best technical writing on alignment algorithms."
+  },
+  {
+   "t": 543.62,
+   "text": "That's everything."
+  },
+  {
+   "t": 544.8,
+   "text": "Go forth and align."
+  }
+ ]
+}

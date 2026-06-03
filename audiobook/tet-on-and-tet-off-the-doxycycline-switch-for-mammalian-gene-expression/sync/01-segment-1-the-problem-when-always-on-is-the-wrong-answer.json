@@ -1,0 +1,423 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The problem: when \"always on\" is the wrong answer",
+ "duration": 594.85,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The problem: when \"always on\" is the wrong answer"
+  },
+  {
+   "t": 5.08,
+   "text": "Alright, settle in."
+  },
+  {
+   "t": 6.61,
+   "text": "Today we're going to talk about a class of tools that, like Cre-Lox, you may not have heard of by name, but that you have absolutely seen the consequences of if you have read any mammalian cell biology paper from the last thirty years."
+  },
+  {
+   "t": 19.44,
+   "text": "The tools are called the Tet-On and Tet-Off systems — sometimes lumped together as just \"the Tet system,\" sometimes called \"doxycycline-inducible expression,\" or \"dox-controlled,\" or \"Tet-regulated."
+  },
+  {
+   "t": 31.59,
+   "text": "\" Different labs use different names."
+  },
+  {
+   "t": 34.01,
+   "text": "They all refer to the same family of molecular machinery, originally built in 1992 by a German biochemist named Hermann Bujard and his postdoc Manfred Gossen, and they all do, essentially, one beautifully simple thing."
+  },
+  {
+   "t": 49.2,
+   "text": "They let you turn a gene on, or off, in mammalian cells, by putting an antibiotic in the cell's water."
+  },
+  {
+   "t": 56.23,
+   "text": "That's the whole pitch."
+  },
+  {
+   "t": 57.49,
+   "text": "Add doxycycline to the media; your gene goes on."
+  },
+  {
+   "t": 61.38,
+   "text": "Or off."
+  },
+  {
+   "t": 62.27,
+   "text": "Take the doxycycline away; your gene goes off."
+  },
+  {
+   "t": 65.66,
+   "text": "Or on."
+  },
+  {
+   "t": 66.46,
+   "text": "Depending on which flavor of the system you're using, the antibiotic is either the \"go\" signal or the \"stop\" signal."
+  },
+  {
+   "t": 73.33,
+   "text": "Either way, you, the experimenter, get to decide — by adding or removing a small molecule — when the gene is being expressed."
+  },
+  {
+   "t": 81.1,
+   "text": "You get temporal control."
+  },
+  {
+   "t": 82.64,
+   "text": "You get the ability to turn on a deadly oncogene in a mouse for two weeks, watch tumors form, then turn it off and watch them regress."
+  },
+  {
+   "t": 91.26,
+   "text": "You get the ability to express a shRNA in human cells for forty-eight hours, then withdraw it and watch the gene come back."
+  },
+  {
+   "t": 99.54,
+   "text": "You get the ability to do timed pulses of a transcription factor during embryonic development, or to ramp expression up and down on a schedule of your choosing."
+  },
+  {
+   "t": 108.91,
+   "text": "And here is the headline I want you to leave with — the contract for this lecture."
+  },
+  {
+   "t": 113.21,
+   "text": "If you walk out of here in two hours and can do three things, we've succeeded."
+  },
+  {
+   "t": 118.19,
+   "text": "One: you can explain to a curious friend what the Tet system is, using the \"doxycycline switch\" analogy, and you can articulate the difference between Tet-Off and Tet-On in a single sentence each."
+  },
+  {
+   "t": 130.12,
+   "text": "Two: you can read a modern paper that uses the Tet system — and there are tens of thousands of them — and look at the methods section and say \"okay, they're using rtTA3 driving a TRE-tight promoter on top of this transgene, that means doxycycline puts the gene on, the leakiness should be low, and the dynamic range should be high."
+  },
+  {
+   "t": 149.54,
+   "text": "\" Three: you can sketch, on a napkin, the whole architecture of a Tet-regulated transgene — the transactivator, the promoter, the cargo, the drug — and explain how each piece does its job."
+  },
+  {
+   "t": 162.07,
+   "text": "So let me start, the way I always do, with a problem."
+  },
+  {
+   "t": 165.38,
+   "text": "Because the Tet system is the answer to a problem, and once the problem is clear, the answer becomes inevitable."
+  },
+  {
+   "t": 172.69,
+   "text": "Here's the problem."
+  },
+  {
+   "t": 173.84,
+   "text": "You're a mammalian cell biologist."
+  },
+  {
+   "t": 176.15,
+   "text": "You want to express a gene."
+  },
+  {
+   "t": 177.69,
+   "text": "Maybe it's a transcription factor you're studying."
+  },
+  {
+   "t": 180.14,
+   "text": "Maybe it's an oncogene whose effects on the cell you want to characterize."
+  },
+  {
+   "t": 184.47,
+   "text": "Maybe it's a fluorescent reporter."
+  },
+  {
+   "t": 186.43,
+   "text": "Maybe it's a CRISPR Cas9 enzyme."
+  },
+  {
+   "t": 188.89,
+   "text": "Whatever it is, you want it in the cell, doing its job, so you can observe what happens."
+  },
+  {
+   "t": 194.28,
+   "text": "The naive way to do this is to put your gene under a strong constitutive promoter — a piece of DNA that says \"always on, everywhere, all the time\" — like the CMV promoter from human cytomegalovirus, or the EF1-alpha promoter from the elongation factor gene, or the PGK promoter."
+  },
+  {
+   "t": 212.81,
+   "text": "You drop your gene of interest behind one of these promoters, electroporate the plasmid into your cells, and the gene starts being made and never stops."
+  },
+  {
+   "t": 222.55,
+   "text": "As long as the plasmid is in the cell, the gene is on."
+  },
+  {
+   "t": 226.22,
+   "text": "Simple."
+  },
+  {
+   "t": 227.05,
+   "text": "And for a lot of experiments, constitutive expression works fine."
+  },
+  {
+   "t": 231.31,
+   "text": "You want to express GFP in a cell line so you can sort it by flow cytometry?"
+  },
+  {
+   "t": 236.38,
+   "text": "Constitutive is perfect."
+  },
+  {
+   "t": 238.69,
+   "text": "You want to add a tagged version of a housekeeping protein to a cell?"
+  },
+  {
+   "t": 242.57,
+   "text": "Constitutive works."
+  },
+  {
+   "t": 244.2,
+   "text": "But there's a huge class of experiments where constitutive expression is either useless or actively destructive."
+  },
+  {
+   "t": 251.39,
+   "text": "Let me walk you through three."
+  },
+  {
+   "t": 253.39,
+   "text": "First — constitutive expression of an oncogene is often immediately lethal."
+  },
+  {
+   "t": 258.99,
+   "text": "Take a transcription factor like MYC."
+  },
+  {
+   "t": 262.13,
+   "text": "MYC is a powerful driver of cell proliferation; in the right context, it pushes cells into the cell cycle and keeps them dividing."
+  },
+  {
+   "t": 271.16,
+   "text": "Sounds great if you want to make a cancer model."
+  },
+  {
+   "t": 273.56,
+   "text": "But if you put MYC under a constitutive promoter and dump it into a normal cell, two things tend to happen."
+  },
+  {
+   "t": 280.83,
+   "text": "Either the cell senses the oncogenic stress, triggers apoptosis, and dies — so you get no surviving cell line at all — or the cell that does survive has somehow lost a tumor suppressor along the way and is now profoundly abnormal, and you can't tell what's the MYC and what's the secondary mutation."
+  },
+  {
+   "t": 299.86,
+   "text": "Constitutive oncogene expression is a recipe for \"your experiment doesn't exist."
+  },
+  {
+   "t": 306.22,
+   "text": "\""
+  },
+  {
+   "t": 306.42,
+   "text": "What you really want is to be able to turn the oncogene on after the cells are established."
+  },
+  {
+   "t": 311.18,
+   "text": "Make a cell line that has MYC sitting silent in the genome, doxycycline-controlled."
+  },
+  {
+   "t": 317.39,
+   "text": "Grow it up."
+  },
+  {
+   "t": 318.27,
+   "text": "Verify it's healthy and normal."
+  },
+  {
+   "t": 320.66,
+   "text": "Then, in the dish, add doxycycline, turn on MYC, and watch what happens in the first six hours, the first day, the first week."
+  },
+  {
+   "t": 328.72,
+   "text": "You want to study the transition from normal to transformed, not start from \"transformed or dead."
+  },
+  {
+   "t": 334.79,
+   "text": "\""
+  },
+  {
+   "t": 334.99,
+   "text": "Second — constitutive expression of a regulator obscures what the regulator does."
+  },
+  {
+   "t": 340.53,
+   "text": "If a transcription factor is always on, then by the time you look at the cell, the cell has fully adapted to that always-on state."
+  },
+  {
+   "t": 348.58,
+   "text": "It's compensated."
+  },
+  {
+   "t": 349.83,
+   "text": "It's adjusted other genes, downregulated feedback partners, equilibrated."
+  },
+  {
+   "t": 355.29,
+   "text": "Whatever you measure is the adapted steady state, not the response."
+  },
+  {
+   "t": 359.63,
+   "text": "You can't see the dynamics."
+  },
+  {
+   "t": 361.44,
+   "text": "You can't see what changes because the factor came on, because by the time you can measure anything, the change already happened and the system has settled."
+  },
+  {
+   "t": 369.72,
+   "text": "What you want is to be able to turn the regulator on at a defined moment and then watch the cellular response unfold in time — gene expression changes at one hour, two hours, four, eight, twenty-four."
+  },
+  {
+   "t": 381.93,
+   "text": "Time-resolved induction is what gives you mechanism."
+  },
+  {
+   "t": 384.94,
+   "text": "Constitutive expression doesn't."
+  },
+  {
+   "t": 387.07,
+   "text": "Third — and this one is particularly poignant for mouse work — constitutive expression of a developmental gene can kill the embryo."
+  },
+  {
+   "t": 395.94,
+   "text": "There are lots of genes that, when expressed at the wrong place or time during development, cause early embryonic lethality."
+  },
+  {
+   "t": 403.37,
+   "text": "You want to know what those genes do in the adult animal, or at a specific developmental stage."
+  },
+  {
+   "t": 408.98,
+   "text": "But if you make a constitutive transgenic mouse, the gene is on from fertilization onward, and the mouse never makes it to the experiment you wanted to do."
+  },
+  {
+   "t": 418.34,
+   "text": "You need to let development happen without the perturbation, then introduce it later."
+  },
+  {
+   "t": 423.33,
+   "text": "So across all three cases — and you'll find these cases all over molecular biology — what you actually need is not constitutive expression."
+  },
+  {
+   "t": 432.39,
+   "text": "You need conditional expression."
+  },
+  {
+   "t": 434.42,
+   "text": "You need a switch."
+  },
+  {
+   "t": 435.63,
+   "text": "A switch you can flip from outside the cell."
+  },
+  {
+   "t": 438.02,
+   "text": "A switch where you, not the cell's promoter biology, decide when the gene comes on."
+  },
+  {
+   "t": 443.54,
+   "text": "A switch that's tight when off, that responds quickly when on, and that uses a chemical signal you can deliver in the drinking water, in the cell culture media, in the bloodstream — without surgery, without infection, without doing anything traumatic to the system."
+  },
+  {
+   "t": 459.24,
+   "text": "That switch is what Gossen and Bujard built in 1992."
+  },
+  {
+   "t": 463.46,
+   "text": "And they didn't invent it from scratch."
+  },
+  {
+   "t": 465.64,
+   "text": "Like so many of the best molecular tools, they borrowed it from bacteria, where evolution had already built exactly the machinery they needed, doing exactly the analogous job, for completely different reasons."
+  },
+  {
+   "t": 478.97,
+   "text": "Bacteria, it turns out, have been making sense-and-respond circuits for antibiotics for billions of years."
+  },
+  {
+   "t": 485.81,
+   "text": "The Gossen-Bujard contribution was to take a bacterial sense-and-respond circuit, repackage it for a mammalian cell, and give us the conditional expression toolkit that has dominated the field ever since."
+  },
+  {
+   "t": 498.72,
+   "text": "Let me give you the headline analogy I want you to carry for the next two hours."
+  },
+  {
+   "t": 502.98,
+   "text": "Picture a light switch on the wall of a room."
+  },
+  {
+   "t": 505.54,
+   "text": "The room is a mammalian cell."
+  },
+  {
+   "t": 507.87,
+   "text": "The light is your gene of interest."
+  },
+  {
+   "t": 510.13,
+   "text": "You're standing outside the room."
+  },
+  {
+   "t": 511.82,
+   "text": "You want to turn the light on — or off — without going in."
+  },
+  {
+   "t": 514.94,
+   "text": "You can't reach the switch with your hand because the wall is in the way."
+  },
+  {
+   "t": 518.72,
+   "text": "But you have a long, magnetic stick, and the switch on the wall is metal."
+  },
+  {
+   "t": 522.94,
+   "text": "You poke the stick through a little hole in the wall, the magnet grabs the switch, and you can flip it from outside."
+  },
+  {
+   "t": 528.97,
+   "text": "The light switch is the TRE promoter — a piece of DNA we engineer into the cell, sitting just upstream of the gene we want to control."
+  },
+  {
+   "t": 538.29,
+   "text": "The magnetic stick is the transactivator protein — a synthetic protein we also engineer into the cell, designed to grab the TRE promoter and either turn it on or off depending on conditions."
+  },
+  {
+   "t": 551.18,
+   "text": "And the conditions — what controls whether the magnet sticks to the switch or releases from it — that's doxycycline, the antibiotic."
+  },
+  {
+   "t": 559.87,
+   "text": "Doxycycline binds the transactivator."
+  },
+  {
+   "t": 562.95,
+   "text": "Depending on which version of the transactivator you've installed, doxycycline either makes it grab the promoter and switch the gene on, or makes it release the promoter and switch the gene off."
+  },
+  {
+   "t": 573.63,
+   "text": "You — the experimenter, standing outside the cell — control the doxycycline."
+  },
+  {
+   "t": 578.78,
+   "text": "Doxycycline goes in the cell water."
+  },
+  {
+   "t": 581.58,
+   "text": "The whole apparatus answers to you."
+  },
+  {
+   "t": 583.62,
+   "text": "That's the headline."
+  },
+  {
+   "t": 584.75,
+   "text": "Now let's go look at where the parts came from, because the bacterial backstory is genuinely beautiful, and once you understand it, the whole synthetic system makes sense."
+  }
+ ]
+}

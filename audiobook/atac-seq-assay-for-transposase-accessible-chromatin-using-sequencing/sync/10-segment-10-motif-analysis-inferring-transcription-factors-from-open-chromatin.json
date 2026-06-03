@@ -1,0 +1,195 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Motif analysis — inferring transcription factors from open chromatin",
+ "duration": 395.42,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Motif analysis — inferring transcription factors from open chromatin"
+  },
+  {
+   "t": 6.51,
+   "text": "Welcome back."
+  },
+  {
+   "t": 7.5,
+   "text": "We've now covered the foundations: the question, the chromatin biology, the prior methods, the 2013 breakthrough, the enzyme, the protocol, the fragment size distribution, the low-input advantage, and the analytical pipeline."
+  },
+  {
+   "t": 21.57,
+   "text": "The remaining segments are about what you do with the data — the biological questions you ask, the extensions of the technique, and where the frontier is heading."
+  },
+  {
+   "t": 30.93,
+   "text": "We'll start with one of the most powerful inferences you can make from an ATAC-seq peak list: which transcription factors are sitting in those peaks, even though you didn't ChIP for any of them."
+  },
+  {
+   "t": 41.01,
+   "text": "Here is the logic."
+  },
+  {
+   "t": 42.56,
+   "text": "An accessible peak is, almost by definition, a region where some transcription factor is binding (or has recently bound)."
+  },
+  {
+   "t": 50.41,
+   "text": "Transcription factors don't just sit on random open DNA — they bind specific DNA sequence motifs, typically 6 to 12 base pairs long, that match the protein's preferred recognition sequence."
+  },
+  {
+   "t": 63.86,
+   "text": "So if you have a list of accessible peaks and you know the DNA sequences underneath them, you can ask: which transcription factor motifs are enriched in these sequences, compared to a background set of non-accessible sequences?"
+  },
+  {
+   "t": 77.3,
+   "text": "The motifs that are over-represented in your peaks are the motifs of transcription factors that are likely binding your open chromatin."
+  },
+  {
+   "t": 84.92,
+   "text": "This is motif enrichment analysis, and it is the standard first step in interpreting an ATAC-seq dataset."
+  },
+  {
+   "t": 92.72,
+   "text": "The tools are well-established."
+  },
+  {
+   "t": 94.83,
+   "text": "HOMER (Hypergeometric Optimization of Motif EnRichment) is a classic."
+  },
+  {
+   "t": 100.08,
+   "text": "MEME-suite, particularly the AME tool, is another standard."
+  },
+  {
+   "t": 104.41,
+   "text": "Newer tools like chromVAR work directly on single-cell ATAC-seq data."
+  },
+  {
+   "t": 110.0,
+   "text": "They all do roughly the same thing: scan your peak sequences for known transcription factor motifs (typically from the JASPAR or CIS-BP database), count how often each motif appears, and compare to a background distribution to identify the motifs that are most enriched."
+  },
+  {
+   "t": 127.34,
+   "text": "What does this tell you?"
+  },
+  {
+   "t": 128.55,
+   "text": "Quite a lot, actually."
+  },
+  {
+   "t": 129.99,
+   "text": "If you do an ATAC-seq experiment on T cells and find that the peaks are enriched for the motifs of GATA3, TCF1, RUNX, and ETS family transcription factors — well, those are the transcription factors known to drive T cell biology."
+  },
+  {
+   "t": 145.68,
+   "text": "The motif enrichment recovers known regulators of the cell type."
+  },
+  {
+   "t": 150.49,
+   "text": "If you do ATAC-seq on liver cells and find HNF4 and FOXA motifs enriched, you've recovered the canonical hepatocyte master regulators."
+  },
+  {
+   "t": 160.84,
+   "text": "The motif analysis is a sanity check: it tells you whether your peaks are biologically sensible, and it also reveals the regulators driving the accessibility landscape."
+  },
+  {
+   "t": 171.69,
+   "text": "But the analysis goes beyond sanity checks."
+  },
+  {
+   "t": 174.74,
+   "text": "If you compare ATAC-seq from two conditions — say, T cells at rest versus T cells activated by antigen — and ask which motifs are enriched in the differentially accessible peaks (peaks that gained accessibility upon activation), you can identify the transcription factors that are driving the cellular response."
+  },
+  {
+   "t": 194.07,
+   "text": "If NF-κB and AP-1 motifs jump out as enriched in the newly accessible peaks, you've identified the activation-induced regulators."
+  },
+  {
+   "t": 205.2,
+   "text": "This is causal reasoning from chromatin accessibility data."
+  },
+  {
+   "t": 209.14,
+   "text": "You're inferring what changed in the transcriptional regulatory program by looking at which regulatory elements opened up."
+  },
+  {
+   "t": 215.81,
+   "text": "There's a more sophisticated version of this called footprinting."
+  },
+  {
+   "t": 219.4,
+   "text": "The idea is that when a transcription factor is sitting on its DNA motif, it locally protects the DNA from Tn5 insertion — even within an otherwise accessible region."
+  },
+  {
+   "t": 230.78,
+   "text": "So within an ATAC-seq peak, you'll often see a sub-peak structure where Tn5 cuts are abundant in the flanking regions but depleted right over a transcription factor binding site."
+  },
+  {
+   "t": 242.64,
+   "text": "The TF is leaving a \"footprint\" in the data — a small dip in the cut frequency at the position where it's sitting."
+  },
+  {
+   "t": 249.84,
+   "text": "Computationally, you can scan ATAC-seq data for these footprints and use them to infer not just which TFs are likely binding (from motif enrichment) but which TFs are actively bound in your specific sample (from the footprint signature)."
+  },
+  {
+   "t": 264.53,
+   "text": "Tools like HINT-ATAC, TOBIAS, and others implement this analysis."
+  },
+  {
+   "t": 270.03,
+   "text": "The footprinting approach has been used to map transcription factor binding from ATAC-seq data without needing to do ChIP-seq for each factor individually — a kind of indirect, motif-based ChIP-seq surrogate."
+  },
+  {
+   "t": 283.33,
+   "text": "The caveat is that footprinting is sensitive to Tn5 sequence biases, depth of sequencing, and the exact protocol used."
+  },
+  {
+   "t": 291.65,
+   "text": "It's an active area of methodological refinement, and the inference is not as clean as a real ChIP-seq for any given factor."
+  },
+  {
+   "t": 300.62,
+   "text": "But for surveying which factors might be bound where, it's a powerful approach, and one that goes far beyond what you'd think the assay could deliver."
+  },
+  {
+   "t": 309.12,
+   "text": "The analogy I want you to hold: an ATAC-seq peak is the address of an active regulatory element, and the motifs underneath it tell you which tenants are likely living there."
+  },
+  {
+   "t": 320.18,
+   "text": "You don't need to ChIP for each tenant individually — you can infer the tenant list from the sequence content of the open windows."
+  },
+  {
+   "t": 327.19,
+   "text": "This is one of the things that makes ATAC-seq so powerful as a stand-alone assay."
+  },
+  {
+   "t": 332.82,
+   "text": "From one experiment, you get the locations of regulatory elements, the structural fingerprint of nucleosomes, and the likely identity of the transcription factors driving the accessibility — without needing specific antibodies for any of them."
+  },
+  {
+   "t": 347.53,
+   "text": "It's a deeply economical assay in terms of information yield per experiment."
+  },
+  {
+   "t": 352.93,
+   "text": "The complementarity with ChIP-seq, though, is real and worth emphasizing."
+  },
+  {
+   "t": 358.73,
+   "text": "ATAC-seq tells you which regions are open and gives you a hypothesis about which TFs might be there."
+  },
+  {
+   "t": 364.65,
+   "text": "ChIP-seq, for a specific TF, tells you with high confidence whether that TF is actually there."
+  },
+  {
+   "t": 372.04,
+   "text": "The combination — ATAC for the regulatory landscape, ChIP for the per-factor validation — is much more powerful than either alone."
+  },
+  {
+   "t": 380.04,
+   "text": "Modern regulatory genomics studies frequently combine them, using ATAC-seq for the broad map and targeted ChIP-seq (or its more recent variants like CUT&Tag, which we'll discuss in Segment 15) for the specific TFs of interest."
+  }
+ ]
+}

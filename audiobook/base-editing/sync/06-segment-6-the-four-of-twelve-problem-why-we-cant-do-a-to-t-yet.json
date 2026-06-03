@@ -1,0 +1,239 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The four-of-twelve problem — why we can't do A-to-T yet",
+ "duration": 314.52,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The four-of-twelve problem — why we can't do A-to-T yet"
+  },
+  {
+   "t": 5.38,
+   "text": "Now I want to do some elementary counting, because the counting tells you the limitations of the current base editing toolkit in a really clean way, and it helps you understand why prime editing — which we'll touch on at the very end — was needed."
+  },
+  {
+   "t": 18.27,
+   "text": "DNA has four bases: A, T, G, C."
+  },
+  {
+   "t": 22.32,
+   "text": "The number of ways to swap one base for a different one is twelve — A to T, A to G, A to C, T to A, T to G, T to C, G to A, G to T, G to C, C to A, C to G, C to T."
+  },
+  {
+   "t": 39.09,
+   "text": "Twelve possible single-letter changes."
+  },
+  {
+   "t": 41.83,
+   "text": "Twelve possible point mutations a genetic disease could be caused by, and therefore twelve possible point mutations you might want to correct with a base editor."
+  },
+  {
+   "t": 50.73,
+   "text": "How many of those twelve are within reach of CBE and ABE?"
+  },
+  {
+   "t": 55.12,
+   "text": "Let me walk through it."
+  },
+  {
+   "t": 56.5,
+   "text": "A cytosine base editor, CBE, converts C to T."
+  },
+  {
+   "t": 61.26,
+   "text": "That's one."
+  },
+  {
+   "t": 62.24,
+   "text": "But — and this is a subtle point — when CBE edits a C on one strand, the G on the other strand becomes an A through the repair process."
+  },
+  {
+   "t": 71.47,
+   "text": "So if you target a CBE to a sequence where, on the strand you care about, you want G-to-A conversion, you can use a CBE pointed at the other strand."
+  },
+  {
+   "t": 80.53,
+   "text": "In other words, CBE handles C-to-T conversion on the edited strand, which is equivalent to G-to-A on the other strand."
+  },
+  {
+   "t": 88.69,
+   "text": "Same chemistry, just read from a different angle."
+  },
+  {
+   "t": 91.5,
+   "text": "So CBE covers two of the twelve: C-to-T and G-to-A."
+  },
+  {
+   "t": 96.45,
+   "text": "An adenine base editor, ABE, converts A to G."
+  },
+  {
+   "t": 100.59,
+   "text": "By the same logic, an ABE pointing at the opposite strand of a target gives you T-to-C on the strand you care about."
+  },
+  {
+   "t": 107.89,
+   "text": "ABE covers A-to-G and T-to-C."
+  },
+  {
+   "t": 111.04,
+   "text": "Two more."
+  },
+  {
+   "t": 111.96,
+   "text": "Total reach of CBE plus ABE: four of the twelve."
+  },
+  {
+   "t": 116.2,
+   "text": "C-to-T, G-to-A, A-to-G, T-to-C."
+  },
+  {
+   "t": 120.17,
+   "text": "Notice something."
+  },
+  {
+   "t": 121.29,
+   "text": "The four reachable changes are all the same biochemical category."
+  },
+  {
+   "t": 125.81,
+   "text": "They are all transitions."
+  },
+  {
+   "t": 127.54,
+   "text": "Transitions, in genetics, are mutations between two purines (A and G) or between two pyrimidines (C and T)."
+  },
+  {
+   "t": 136.76,
+   "text": "All four reachable changes are within those categories — purine to purine, or pyrimidine to pyrimidine."
+  },
+  {
+   "t": 143.55,
+   "text": "The other eight possible swaps are called transversions."
+  },
+  {
+   "t": 147.43,
+   "text": "They are purine to pyrimidine or pyrimidine to purine."
+  },
+  {
+   "t": 150.95,
+   "text": "Going from A to T, or A to C, or G to T, or G to C — those are transversions."
+  },
+  {
+   "t": 159.16,
+   "text": "The two amine groups don't line up."
+  },
+  {
+   "t": 161.18,
+   "text": "The chemistry of removing one amine and replacing it with the right other group is much harder."
+  },
+  {
+   "t": 166.96,
+   "text": "Out of those eight unreachable transversions, the one that everyone wants most is A to T."
+  },
+  {
+   "t": 173.62,
+   "text": "A whole lot of genetic disease — including a class of mutations called nonsense mutations, where an amino acid codon gets converted into a stop codon by a single-base change — would be reversible if we could do A-to-T or its equivalents."
+  },
+  {
+   "t": 188.64,
+   "text": "We can't."
+  },
+  {
+   "t": 189.53,
+   "text": "Not with CBE."
+  },
+  {
+   "t": 190.88,
+   "text": "Not with ABE."
+  },
+  {
+   "t": 192.16,
+   "text": "Not with the natural chemistry of deamination."
+  },
+  {
+   "t": 195.32,
+   "text": "This is one of the central limitations of base editing as a category."
+  },
+  {
+   "t": 199.64,
+   "text": "CBE handles two of the twelve."
+  },
+  {
+   "t": 201.94,
+   "text": "ABE handles two of the twelve."
+  },
+  {
+   "t": 204.1,
+   "text": "The other eight are unreachable by deamination chemistry."
+  },
+  {
+   "t": 208.36,
+   "text": "For those, you need a different technology — and prime editing, which I'll mention in the last segment, is one of the answers Liu's lab has come up with."
+  },
+  {
+   "t": 216.34,
+   "text": "Now to be fair, the four reachable transitions are not equally rare in disease genetics."
+  },
+  {
+   "t": 222.18,
+   "text": "About sixty percent of known pathogenic point mutations are transitions."
+  },
+  {
+   "t": 227.24,
+   "text": "The C-to-T direction in particular is dramatically over-represented in human genetic disease, because methylated cytosines spontaneously deaminate at a non-trivial rate, producing C-to-T mutations as a chronic mutational pressure across evolution."
+  },
+  {
+   "t": 243.32,
+   "text": "So the fact that CBE plus ABE between them can address roughly half of all known pathogenic point mutations is genuinely huge."
+  },
+  {
+   "t": 252.44,
+   "text": "We are not painting from the full palette."
+  },
+  {
+   "t": 254.79,
+   "text": "We are painting from half of it."
+  },
+  {
+   "t": 256.48,
+   "text": "But the half we have is the half with the most mutations on it."
+  },
+  {
+   "t": 260.25,
+   "text": "Let me give you the rough numbers."
+  },
+  {
+   "t": 262.08,
+   "text": "Of the variants in ClinVar — that's the main public database of disease-associated genetic variants — flagged as pathogenic single-nucleotide variants, roughly thirty to forty percent could in principle be corrected by an adenine base editor and roughly fifteen to twenty percent by a cytosine base editor."
+  },
+  {
+   "t": 280.02,
+   "text": "Together they cover roughly half."
+  },
+  {
+   "t": 282.52,
+   "text": "Half of every pathogenic point mutation in a public database is, in principle, within reach of a CBE or an ABE today."
+  },
+  {
+   "t": 290.97,
+   "text": "That is the scale of what these two tools opened up."
+  },
+  {
+   "t": 294.03,
+   "text": "The other half — the transversions — will need different chemistry."
+  },
+  {
+   "t": 298.13,
+   "text": "Some progress has been made; we'll cover the newer C-to-G base editors in Segment 17."
+  },
+  {
+   "t": 304.31,
+   "text": "But the basic four-of-twelve fact is the structural limitation of base editing as it stands."
+  },
+  {
+   "t": 310.49,
+   "text": "Knowing it will save you from making promises base editing can't keep."
+  }
+ ]
+}

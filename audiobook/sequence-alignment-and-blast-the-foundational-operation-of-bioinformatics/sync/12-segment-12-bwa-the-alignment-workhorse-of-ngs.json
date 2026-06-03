@@ -1,0 +1,239 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — BWA: the alignment workhorse of NGS",
+ "duration": 464.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — BWA: the alignment workhorse of NGS"
+  },
+  {
+   "t": 5.42,
+   "text": "Now we shift gears entirely."
+  },
+  {
+   "t": 7.55,
+   "text": "BLAST and HMMER are tools for sparse database search — given a small number of queries (one, ten, a hundred), find their homologs in a large database."
+  },
+  {
+   "t": 18.46,
+   "text": "They're optimized for sensitivity over a few hundred or thousand searches."
+  },
+  {
+   "t": 23.16,
+   "text": "The advent of next-generation sequencing — Illumina, in particular — broke this model."
+  },
+  {
+   "t": 29.55,
+   "text": "NGS produces not a few queries, but billions of queries — short DNA reads, a hundred to a hundred and fifty bases long, all of which need to be aligned against a reference genome."
+  },
+  {
+   "t": 41.75,
+   "text": "BLAST cannot do this."
+  },
+  {
+   "t": 43.3,
+   "text": "BLAST is millions of times too slow."
+  },
+  {
+   "t": 46.23,
+   "text": "A new class of aligner was needed."
+  },
+  {
+   "t": 48.21,
+   "text": "The breakthrough came in 2009, when Heng Li and Richard Durbin at the Wellcome Trust Sanger Institute published a tool called BWA — the Burrows-Wheeler Aligner."
+  },
+  {
+   "t": 58.99,
+   "text": "BWA was designed from the ground up for one specific job: aligning hundreds of millions of short Illumina reads against a multi-gigabase reference genome, as fast as possible."
+  },
+  {
+   "t": 71.17,
+   "text": "It used a completely different indexing approach than BLAST, based on a transform from data compression theory called the Burrows-Wheeler transform and an associated data structure called the FM-index."
+  },
+  {
+   "t": 82.91,
+   "text": "The combination let BWA align reads against the human genome at a rate of thousands of reads per second per core — a hundred to a thousand times faster than BLAST on the same task."
+  },
+  {
+   "t": 94.83,
+   "text": "BWA, more than any other single tool, made high-throughput resequencing practical."
+  },
+  {
+   "t": 101.11,
+   "text": "Let me explain the basic idea of the Burrows-Wheeler transform, because it's one of the most beautiful ideas in computer science, and once you see it you'll never forget it."
+  },
+  {
+   "t": 110.61,
+   "text": "Consider the string \"banana."
+  },
+  {
+   "t": 112.36,
+   "text": "\" Take all rotations of the string — banana, ananab, nanaba, anaban, nabana, abanan."
+  },
+  {
+   "t": 119.41,
+   "text": "Sort them lexicographically."
+  },
+  {
+   "t": 121.21,
+   "text": "The last column of the sorted list is the Burrows-Wheeler transform of the original string: \"nnbaaa\"."
+  },
+  {
+   "t": 127.53,
+   "text": "Three properties of this transform matter."
+  },
+  {
+   "t": 130.18,
+   "text": "First, it's reversible — you can recover the original string from the transform, given an end-of-string marker."
+  },
+  {
+   "t": 136.95,
+   "text": "Second, it tends to cluster repeated characters together — long runs of the same letter, which is why BWT is used in data compression (it's at the heart of bzip2)."
+  },
+  {
+   "t": 148.28,
+   "text": "Third, and most importantly for us, the BWT supports fast substring queries when combined with the FM-index."
+  },
+  {
+   "t": 155.95,
+   "text": "The FM-index is a compact data structure built on the BWT that lets you, given a query substring, count the number of times that substring occurs in the original string, in time proportional to the length of the query — not the length of the original string."
+  },
+  {
+   "t": 171.29,
+   "text": "For a billion-letter reference and a hundred-letter query, that's a hundred operations to do an exact substring search, versus a billion operations for a naive scan."
+  },
+  {
+   "t": 181.29,
+   "text": "The speedup is enormous."
+  },
+  {
+   "t": 183.22,
+   "text": "The size of the FM-index itself is only slightly larger than the original string, so the human reference genome's FM-index fits comfortably in a few gigabytes of RAM."
+  },
+  {
+   "t": 194.06,
+   "text": "Here's how BWA uses this."
+  },
+  {
+   "t": 196.47,
+   "text": "First, build the FM-index of the reference genome — a one-time precomputation that takes a few hours and produces a couple of gigabytes of index files."
+  },
+  {
+   "t": 205.84,
+   "text": "From then on, the index is loaded into RAM at the start of each alignment job."
+  },
+  {
+   "t": 211.18,
+   "text": "Second, for each read, search for exact or near-exact occurrences of the read in the reference, using the FM-index."
+  },
+  {
+   "t": 219.15,
+   "text": "The classical BWA algorithm uses a backtracking search that allows a small number of mismatches and gaps — for each position in the read, it tries the matching base first, and if that fails, it tries the alternative bases and tracks the alternative paths."
+  },
+  {
+   "t": 235.68,
+   "text": "The search space is exponential in the number of mismatches allowed, so BWA limits itself to a few mismatches per read by default."
+  },
+  {
+   "t": 244.26,
+   "text": "Third, for each candidate position in the reference where the read matches, perform a small local alignment to refine the placement and compute the alignment quality."
+  },
+  {
+   "t": 254.45,
+   "text": "The final output is a SAM (or BAM) file listing, for each read, where it aligned in the reference, with what alignment quality, and with what specific match/mismatch/indel pattern."
+  },
+  {
+   "t": 267.38,
+   "text": "The CIGAR string, by the way — that's the compact representation of the alignment that appears in SAM files — is a sequence of operations like \"100M\" (100 matches), \"75M2I23M\" (75 matches, 2-base insertion, 23 matches), or \"50M3D50M\" (50 matches, 3-base deletion, 50 matches)."
+  },
+  {
+   "t": 292.21,
+   "text": "It encodes the path through the alignment in a compressed form."
+  },
+  {
+   "t": 295.77,
+   "text": "Every SAM file in the world has CIGAR strings."
+  },
+  {
+   "t": 298.82,
+   "text": "Memorize the format."
+  },
+  {
+   "t": 300.4,
+   "text": "BWA went through three major versions."
+  },
+  {
+   "t": 303.65,
+   "text": "The original 2009 paper described BWA-aln, designed for very short reads (under 100 bp), which used backtracking search with a strict mismatch limit."
+  },
+  {
+   "t": 314.44,
+   "text": "As reads got longer (100-300 bp by 2012), the backtracking became too slow, and Li released BWA-SW (Smith-Waterman BWA) for longer reads."
+  },
+  {
+   "t": 326.95,
+   "text": "In 2013, he released the current standard, BWA-MEM (MEM = Maximal Exact Matches), which uses a seed-and-extend strategy on top of the FM-index — find long exact matches first (the \"maximal exact matches\" or MEMs), then extend them with Smith-Waterman."
+  },
+  {
+   "t": 345.9,
+   "text": "BWA-MEM is the workhorse aligner of human resequencing as of 2026."
+  },
+  {
+   "t": 352.23,
+   "text": "It handles reads from 70 bp to a few thousand bp, including paired-end Illumina reads, and produces output compatible with the entire downstream variant-calling ecosystem (GATK, FreeBayes, DeepVariant, all of them assume BWA-MEM as input)."
+  },
+  {
+   "t": 369.65,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 370.94,
+   "text": "BWA is the alignment workhorse of NGS."
+  },
+  {
+   "t": 375.11,
+   "text": "The Burrows-Wheeler transform of the reference genome compresses the search space; the FM-index lets you do near-exact substring lookups in time proportional to the read length, not the genome length."
+  },
+  {
+   "t": 387.2,
+   "text": "You can align a hundred million reads to a human genome in hours on a modest server — the same job that would have taken months with Smith-Waterman or BLAST."
+  },
+  {
+   "t": 396.59,
+   "text": "BWA-MEM is the version everyone uses today, and it's the foundation of essentially every Illumina-based variant calling pipeline in the world."
+  },
+  {
+   "t": 406.34,
+   "text": "If you've ever processed Illumina data, you've used BWA."
+  },
+  {
+   "t": 410.05,
+   "text": "If you've ever looked at a BAM file, you've looked at BWA's output."
+  },
+  {
+   "t": 413.95,
+   "text": "It is one of the half-dozen most important pieces of software in modern biology."
+  },
+  {
+   "t": 419.24,
+   "text": "There is one more thing worth saying about BWA before we move on."
+  },
+  {
+   "t": 423.41,
+   "text": "Heng Li, the author, is a remarkable figure in computational biology."
+  },
+  {
+   "t": 428.5,
+   "text": "He wrote BWA, then he wrote samtools — the standard manipulation library for SAM/BAM files — then he wrote minimap2, the long-read aligner we'll discuss in Segment 14."
+  },
+  {
+   "t": 441.59,
+   "text": "He is, by himself, responsible for an outsized fraction of the software infrastructure of NGS."
+  },
+  {
+   "t": 448.09,
+   "text": "The fact that one person wrote three of the most important tools in the field is, in a real sense, a miracle of focused craftsmanship — and a reminder that great scientific software is sometimes the work of one obsessed individual rather than a large team."
+  }
+ ]
+}

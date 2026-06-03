@@ -1,0 +1,191 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Start and stop codon meta-profiles — the shape of translation",
+ "duration": 361.24,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Start and stop codon meta-profiles — the shape of translation"
+  },
+  {
+   "t": 5.31,
+   "text": "The 3-nucleotide periodicity is a feature of the bulk of the coding sequence."
+  },
+  {
+   "t": 10.62,
+   "text": "But the start and stop codons — the beginning and end of each translated open reading frame — have their own characteristic features in Ribo-seq data, and looking at them as a meta-profile across many genes is another standard quality control and biological readout."
+  },
+  {
+   "t": 27.38,
+   "text": "A meta-profile is exactly what it sounds like: you take all the genes in your dataset, line them up at a common reference point — say, the start codon of each — and average the Ribo-seq signal across all those genes."
+  },
+  {
+   "t": 40.04,
+   "text": "The result is a single, smoothed track that shows the average shape of translation around that reference point."
+  },
+  {
+   "t": 46.16,
+   "text": "Lining up at the start codon gives you the start-codon meta-profile."
+  },
+  {
+   "t": 50.48,
+   "text": "Lining up at the stop codon gives you the stop-codon meta-profile."
+  },
+  {
+   "t": 54.69,
+   "text": "Both are diagnostic."
+  },
+  {
+   "t": 56.23,
+   "text": "The start-codon meta-profile looks like this."
+  },
+  {
+   "t": 59.14,
+   "text": "As you move along the mRNA toward the start codon from the 5' end, the signal is low — there are not many ribosomes in the 5' UTR of most genes."
+  },
+  {
+   "t": 68.83,
+   "text": "Then, right at the start codon itself, you typically see a big peak."
+  },
+  {
+   "t": 73.29,
+   "text": "This peak is the initiation peak — it reflects ribosomes that have just initiated translation at the AUG and are sitting at the start codon, waiting to begin elongation."
+  },
+  {
+   "t": 84.12,
+   "text": "Initiation is often slower than elongation, so ribosomes accumulate there."
+  },
+  {
+   "t": 89.97,
+   "text": "Immediately after the start codon, the signal drops to a steady level — the level of elongation density along the rest of the coding sequence."
+  },
+  {
+   "t": 99.33,
+   "text": "The pattern is a sharp rising edge at the start codon, a tall initiation peak, and then a step down to a sustained elongation plateau."
+  },
+  {
+   "t": 108.53,
+   "text": "The stop-codon meta-profile is the mirror image."
+  },
+  {
+   "t": 111.83,
+   "text": "The signal is at the elongation plateau along the coding sequence, then there's typically a second peak right at the stop codon — reflecting ribosomes that have finished translating the protein and are sitting at the stop codon waiting to be released by release factors."
+  },
+  {
+   "t": 127.15,
+   "text": "Immediately past the stop codon, into the 3' UTR, the signal drops essentially to zero, because there are no ribosomes there."
+  },
+  {
+   "t": 136.2,
+   "text": "The drop is sharp and clean in good data."
+  },
+  {
+   "t": 138.89,
+   "text": "These two meta-profiles — start and stop — together give you a picture of what translation looks like, on average, across the whole transcriptome of your cells."
+  },
+  {
+   "t": 148.49,
+   "text": "They are diagnostic for Ribo-seq quality in two ways."
+  },
+  {
+   "t": 152.24,
+   "text": "First, the sharpness of the transitions tells you about your size selection and your periodicity."
+  },
+  {
+   "t": 158.21,
+   "text": "If the start peak is sharp and the elongation plateau is well-defined, you have clean footprints."
+  },
+  {
+   "t": 165.0,
+   "text": "If the transitions are blurry, you've contaminated with longer fragments or you've lost frame information."
+  },
+  {
+   "t": 171.29,
+   "text": "Second, the height of the start and stop peaks relative to the elongation plateau tells you about kinetic features of translation — how slow initiation is, how slow termination is, in your particular cells under your particular conditions."
+  },
+  {
+   "t": 187.31,
+   "text": "Beyond quality control, the meta-profiles reveal real biology."
+  },
+  {
+   "t": 192.03,
+   "text": "Consider this."
+  },
+  {
+   "t": 193.26,
+   "text": "Compare the start-codon meta-profile of cells growing in normal conditions to the same cells under nutrient starvation."
+  },
+  {
+   "t": 201.09,
+   "text": "Starvation triggers a global suppression of translation through the integrated stress response — phosphorylation of the initiation factor eIF2-alpha, which slows down 40S subunit recruitment."
+  },
+  {
+   "t": 215.31,
+   "text": "In the meta-profile, you see this directly: the initiation peak gets bigger relative to the elongation plateau, because more ribosomes are stuck at start codons, unable to proceed to elongation efficiently."
+  },
+  {
+   "t": 228.65,
+   "text": "Translation initiation has become rate-limiting."
+  },
+  {
+   "t": 231.9,
+   "text": "Conversely, treat cells with a translation elongation inhibitor at sublethal doses, and the elongation plateau goes up relative to the initiation peak, because ribosomes are now slow during elongation and pile up across the coding sequence."
+  },
+  {
+   "t": 248.7,
+   "text": "The shape of the meta-profile carries information about which step of translation is limiting under your conditions."
+  },
+  {
+   "t": 255.84,
+   "text": "The meta-profiles also let you compare initiation efficiency between transcripts."
+  },
+  {
+   "t": 261.65,
+   "text": "Some mRNAs have stronger initiation peaks than others — those are mRNAs being efficiently loaded with ribosomes."
+  },
+  {
+   "t": 269.54,
+   "text": "Some have weaker peaks — those are mRNAs that ribosomes have trouble starting on."
+  },
+  {
+   "t": 274.88,
+   "text": "The Kozak context around the start codon, the secondary structure of the 5' UTR, the presence of upstream ORFs (which we'll get to next segment) — all of these affect initiation efficiency, and all of them are visible as differences in the per-gene initiation peak."
+  },
+  {
+   "t": 291.59,
+   "text": "A more advanced version of the start-codon meta-profile uses a drug called harringtonine, which we'll discuss in detail in Segment 10."
+  },
+  {
+   "t": 299.77,
+   "text": "Harringtonine blocks the very first elongation step but allows initiation to occur."
+  },
+  {
+   "t": 305.73,
+   "text": "If you treat cells with harringtonine before doing Ribo-seq, the initiation peak at the start codon becomes enormously dominant — almost all the signal in the dataset is at start codons."
+  },
+  {
+   "t": 317.9,
+   "text": "This is a way of specifically mapping translation initiation sites genome-wide."
+  },
+  {
+   "t": 323.44,
+   "text": "It's the standard technique for finding alternative or non-canonical start codons, which turn out to be much more common in the transcriptome than the original genome annotations suggest."
+  },
+  {
+   "t": 334.77,
+   "text": "The takeaway: the meta-profiles are the second main quality control of Ribo-seq, after the 3-nucleotide periodicity."
+  },
+  {
+   "t": 343.05,
+   "text": "Together, they tell you that your data is clean, that the ribosomes you're looking at are doing real translation, and they hand you direct readouts of how initiation and termination kinetics are behaving in your cells."
+  },
+  {
+   "t": 356.31,
+   "text": "Every modern Ribo-seq paper shows these plots."
+  },
+  {
+   "t": 359.88,
+   "text": "You should know how to read them."
+  }
+ ]
+}

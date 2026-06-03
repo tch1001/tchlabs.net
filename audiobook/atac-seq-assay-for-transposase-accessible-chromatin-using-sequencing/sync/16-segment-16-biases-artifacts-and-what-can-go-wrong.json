@@ -1,0 +1,211 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Biases, artifacts, and what can go wrong",
+ "duration": 294.94,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Biases, artifacts, and what can go wrong"
+  },
+  {
+   "t": 3.91,
+   "text": "Let me spend a segment on the things that can go wrong with ATAC-seq, and the biases that even a perfect experiment will carry."
+  },
+  {
+   "t": 11.56,
+   "text": "Every assay has its dark side, and ATAC-seq is no exception."
+  },
+  {
+   "t": 16.59,
+   "text": "Knowing the failure modes is part of being a critical reader of the literature."
+  },
+  {
+   "t": 21.62,
+   "text": "First, Tn5 sequence bias."
+  },
+  {
+   "t": 24.73,
+   "text": "As I mentioned in Segment 5, Tn5 is not perfectly sequence-agnostic."
+  },
+  {
+   "t": 30.49,
+   "text": "It has mild preferences for certain dinucleotide contexts at its insertion sites — it favors some sequences slightly over others."
+  },
+  {
+   "t": 39.25,
+   "text": "This means that the raw insertion frequencies are accessibility convolved with a sequence preference."
+  },
+  {
+   "t": 45.33,
+   "text": "For most analyses (peak calling, sample comparison), the bias is small enough to ignore."
+  },
+  {
+   "t": 51.58,
+   "text": "For high-resolution analyses (transcription factor footprinting, sub-peak structure), the bias matters and you need to correct for it."
+  },
+  {
+   "t": 59.81,
+   "text": "Tools like HINT-ATAC and seqOutBias implement Tn5 bias corrections by modeling the expected insertion frequencies at each k-mer."
+  },
+  {
+   "t": 69.8,
+   "text": "Second, the mitochondrial problem."
+  },
+  {
+   "t": 72.47,
+   "text": "As discussed in Segment 11, mitochondrial DNA gets heavily tagmented by Tn5 because it's not packaged on nucleosomes."
+  },
+  {
+   "t": 81.3,
+   "text": "Standard protocols had 20 to 80 percent mitochondrial reads, which wastes sequencing."
+  },
+  {
+   "t": 87.3,
+   "text": "Omni-ATAC dropped this to under 10 percent."
+  },
+  {
+   "t": 90.21,
+   "text": "Even with Omni-ATAC, some mitochondrial reads remain, and you should filter them in your pipeline."
+  },
+  {
+   "t": 96.24,
+   "text": "Third, over-tagmentation."
+  },
+  {
+   "t": 98.36,
+   "text": "If you use too much Tn5 relative to the number of cells, the enzyme starts cutting even in regions that should be closed — overcoming the kinetic barrier from nucleosomes through sheer concentration."
+  },
+  {
+   "t": 110.04,
+   "text": "The result is loss of selectivity: your library shows accessibility signal everywhere, with no clear distinction between open and closed regions."
+  },
+  {
+   "t": 120.06,
+   "text": "The nucleosomal periodicity disappears from the fragment size distribution."
+  },
+  {
+   "t": 125.16,
+   "text": "The data is essentially garbage."
+  },
+  {
+   "t": 127.61,
+   "text": "Avoiding this requires calibrating the enzyme-to-cell ratio carefully, which is one of the most important optimization steps in setting up the assay."
+  },
+  {
+   "t": 137.05,
+   "text": "Fourth, under-tagmentation."
+  },
+  {
+   "t": 139.15,
+   "text": "The opposite problem: too little enzyme, and only a few insertions per cell, leading to sparse libraries with low peak coverage."
+  },
+  {
+   "t": 147.66,
+   "text": "This is less catastrophic than over-tagmentation but still costs you data."
+  },
+  {
+   "t": 152.22,
+   "text": "Fifth, lysis problems."
+  },
+  {
+   "t": 154.41,
+   "text": "As mentioned in Segment 6, the cell lysis step is critical."
+  },
+  {
+   "t": 158.66,
+   "text": "Over-lysis destroys chromatin structure; under-lysis prevents Tn5 from reaching the nuclei."
+  },
+  {
+   "t": 165.62,
+   "text": "Either way, signal quality suffers."
+  },
+  {
+   "t": 168.22,
+   "text": "Sixth, batch effects."
+  },
+  {
+   "t": 170.16,
+   "text": "ATAC-seq, like all sequencing assays, is sensitive to batch effects — variations between days, between operators, between reagent lots."
+  },
+  {
+   "t": 179.84,
+   "text": "When comparing samples across conditions, batch matching and randomization are essential."
+  },
+  {
+   "t": 185.62,
+   "text": "Failing to do this can lead to false positive differences that are actually just batch artifacts."
+  },
+  {
+   "t": 191.65,
+   "text": "Seventh, peak interpretation."
+  },
+  {
+   "t": 193.89,
+   "text": "A peak in ATAC-seq is a region of accessibility."
+  },
+  {
+   "t": 197.9,
+   "text": "It is not necessarily a transcription factor binding site, an enhancer, or a regulatory element — though many peaks are these things."
+  },
+  {
+   "t": 206.41,
+   "text": "Some peaks are at sites of DNA damage."
+  },
+  {
+   "t": 209.2,
+   "text": "Some are at unusual chromatin structures."
+  },
+  {
+   "t": 212.06,
+   "text": "Some are artifacts of repetitive regions or sequencing biases."
+  },
+  {
+   "t": 216.11,
+   "text": "You should always interrogate your peak list with domain knowledge and validation experiments rather than treating every peak as biologically meaningful by default."
+  },
+  {
+   "t": 225.31,
+   "text": "Eighth, signal-to-noise variation across the genome."
+  },
+  {
+   "t": 228.68,
+   "text": "ATAC-seq signal is not uniformly informative across all regions."
+  },
+  {
+   "t": 233.56,
+   "text": "Promoter regions tend to be brightly accessible and easy to call as peaks."
+  },
+  {
+   "t": 238.74,
+   "text": "Distal enhancers can be more subtle, particularly in primary tissues or rare cell types."
+  },
+  {
+   "t": 245.15,
+   "text": "The dynamic range of accessibility is wide, and statistical thresholds for peak calling may include some noise and exclude some real but weak signal."
+  },
+  {
+   "t": 255.06,
+   "text": "This is a quantitative issue that affects how you compare across regions and samples."
+  },
+  {
+   "t": 260.12,
+   "text": "The take-home: ATAC-seq is a powerful and relatively robust assay, but it is not foolproof."
+  },
+  {
+   "t": 267.12,
+   "text": "The biases are well-characterized and the failure modes are known."
+  },
+  {
+   "t": 271.13,
+   "text": "Good experimental design — calibrated enzyme-to-cell ratios, careful lysis, sequencing depth chosen for your application, attention to batch effects — and good analytical practice — proper QC, bias correction where needed, careful interpretation of peaks — will produce high-quality data."
+  },
+  {
+   "t": 288.81,
+   "text": "Sloppy work produces sloppy data."
+  },
+  {
+   "t": 291.31,
+   "text": "The technique is good but unforgiving of cut corners."
+  }
+ ]
+}

@@ -1,0 +1,287 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The cytosine base editor — APOBEC1, the eraser, and the UGI trick",
+ "duration": 425.7,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The cytosine base editor — APOBEC1, the eraser, and the UGI trick"
+  },
+  {
+   "t": 6.55,
+   "text": "Let me walk you through the cytosine base editor in some detail, because it was the first base editor published, and because the architecture of the cytosine base editor — affectionately called CBE — established the template that every subsequent base editor built on."
+  },
+  {
+   "t": 21.51,
+   "text": "The 2016 paper, in Nature, was titled \"Programmable editing of a target base in genomic DNA without double-stranded DNA cleavage."
+  },
+  {
+   "t": 31.21,
+   "text": "\" That title is doing exactly the same kind of work as the Doudna-Charpentier title did in 2012 — every word counts."
+  },
+  {
+   "t": 39.34,
+   "text": "\"Programmable\" means you can aim it."
+  },
+  {
+   "t": 41.44,
+   "text": "\"Target base\" means single-letter resolution."
+  },
+  {
+   "t": 44.8,
+   "text": "\"Without double-stranded DNA cleavage\" means the central design choice."
+  },
+  {
+   "t": 50.0,
+   "text": "The deaminase the Liu lab chose was APOBEC1 — apolipoprotein B mRNA editing enzyme, catalytic polypeptide-like 1."
+  },
+  {
+   "t": 59.46,
+   "text": "APOBEC1 normally lives in your intestine, where it edits a single C in the messenger RNA for apolipoprotein B, turning it into a U, which changes a codon, which makes a truncated version of the protein."
+  },
+  {
+   "t": 73.2,
+   "text": "The relevant detail for us is that APOBEC1 is a cytidine deaminase — it removes the amine from cytosine, converting C to U — and it prefers single-stranded substrates."
+  },
+  {
+   "t": 84.17,
+   "text": "Exactly what we need."
+  },
+  {
+   "t": 85.69,
+   "text": "The first version, BE1, was just APOBEC1 stuck to the N-terminus of dCas9 — that's the fully dead, double-mutant Cas9 that doesn't cut either strand — with a short flexible linker between the two proteins."
+  },
+  {
+   "t": 99.59,
+   "text": "The architecture, drawn on a board, looks like this: APOBEC1 box on the left, linker squiggle, dCas9 box on the right."
+  },
+  {
+   "t": 108.01,
+   "text": "The whole fusion is delivered to the cell along with a guide RNA."
+  },
+  {
+   "t": 112.11,
+   "text": "Cas9 navigates, R-loop opens, APOBEC1 reaches over from its tethered position and grabs the single-stranded loop, and any cytosine within reach gets deaminated."
+  },
+  {
+   "t": 123.86,
+   "text": "C becomes U."
+  },
+  {
+   "t": 124.99,
+   "text": "In a test tube, on naked DNA, BE1 worked beautifully."
+  },
+  {
+   "t": 129.18,
+   "text": "About 25 to 40 percent of target Cs converted to U."
+  },
+  {
+   "t": 133.94,
+   "text": "The chemistry was unmistakable."
+  },
+  {
+   "t": 136.5,
+   "text": "C in, U out."
+  },
+  {
+   "t": 137.75,
+   "text": "No backbone breaks."
+  },
+  {
+   "t": 139.24,
+   "text": "No indels."
+  },
+  {
+   "t": 140.34,
+   "text": "The first proof was clean."
+  },
+  {
+   "t": 142.2,
+   "text": "But in a living cell, BE1 was disappointing."
+  },
+  {
+   "t": 145.07,
+   "text": "Editing efficiency dropped to a few percent, sometimes less than one percent."
+  },
+  {
+   "t": 150.18,
+   "text": "The reason is something that the test tube didn't see, but that the cell does brilliantly."
+  },
+  {
+   "t": 155.7,
+   "text": "The cell has a dedicated enzyme called uracil DNA glycosylase, or UDG, whose entire job is to recognize uracil in DNA and remove it."
+  },
+  {
+   "t": 166.68,
+   "text": "From the cell's point of view, uracil in DNA is a mistake — it doesn't belong there, it's a sign of damage, get rid of it."
+  },
+  {
+   "t": 174.15,
+   "text": "UDG comes along, snips out the U, and base-excision repair restores the original C."
+  },
+  {
+   "t": 180.15,
+   "text": "The base editor edits, the cell unedits, equilibrium settles back at C, and you have done nothing."
+  },
+  {
+   "t": 186.9,
+   "text": "The solution Liu's lab came up with is one of the most elegant tricks in genome engineering."
+  },
+  {
+   "t": 192.59,
+   "text": "They went looking for an inhibitor of UDG, and they found one already pre-evolved by — of all things — a bacteriophage."
+  },
+  {
+   "t": 201.24,
+   "text": "Some phages, when they infect bacteria, need to protect their own DNA from being attacked by the bacterium's UDG."
+  },
+  {
+   "t": 208.72,
+   "text": "So phages encode a small protein called uracil glycosylase inhibitor, or UGI, that binds UDG and shuts it off."
+  },
+  {
+   "t": 218.34,
+   "text": "The phage's own little immune evasion module."
+  },
+  {
+   "t": 221.57,
+   "text": "Liu's lab took the phage UGI and fused it to the cytosine base editor."
+  },
+  {
+   "t": 226.85,
+   "text": "The architecture of the next version, BE2, became: APOBEC1 - linker - dCas9 - linker - UGI."
+  },
+  {
+   "t": 235.49,
+   "text": "Three modules."
+  },
+  {
+   "t": 236.86,
+   "text": "The APOBEC1 does the chemistry."
+  },
+  {
+   "t": 239.24,
+   "text": "The dCas9 does the targeting."
+  },
+  {
+   "t": 241.94,
+   "text": "The UGI blocks the cell from undoing the chemistry."
+  },
+  {
+   "t": 245.72,
+   "text": "With UGI in the construct, editing efficiency in human cells jumped roughly tenfold."
+  },
+  {
+   "t": 252.29,
+   "text": "There was one more move, and this is where the design choice of nickase versus dead Cas9 comes in."
+  },
+  {
+   "t": 258.68,
+   "text": "BE3, which became the canonical first-generation CBE, replaced dCas9 with an nCas9 — specifically, an nCas9 that nicks the strand opposite the one being edited."
+  },
+  {
+   "t": 271.76,
+   "text": "The strand opposite the one where APOBEC1 has just turned a C into a U."
+  },
+  {
+   "t": 276.73,
+   "text": "Why nick the opposite strand?"
+  },
+  {
+   "t": 278.56,
+   "text": "Because of how the cell repairs base mismatches."
+  },
+  {
+   "t": 282.07,
+   "text": "Once APOBEC1 turns C into U, you have a U paired with G — a U:G mismatch, which the cell recognizes as a problem."
+  },
+  {
+   "t": 291.04,
+   "text": "The cell's mismatch repair machinery will fix the mismatch, but it has to decide which strand is the right one."
+  },
+  {
+   "t": 297.56,
+   "text": "If it picks the U-bearing strand as \"wrong,\" it will excise the U and restore the C — same problem as before, you've done nothing."
+  },
+  {
+   "t": 306.44,
+   "text": "If it picks the G-bearing strand as \"wrong,\" it will excise the G and replace it with an A across from the U — and now you have U:A, which after replication becomes T:A, and the edit is locked in: C-to-T conversion, done."
+  },
+  {
+   "t": 322.5,
+   "text": "Cells use, among other signals, the presence of nicks to decide which strand to repair."
+  },
+  {
+   "t": 328.82,
+   "text": "The newly synthesized strand during DNA replication has nicks; the parental strand doesn't."
+  },
+  {
+   "t": 335.21,
+   "text": "So the cell, by default, treats the nicked strand as the one that needs fixing."
+  },
+  {
+   "t": 340.04,
+   "text": "By engineering nCas9 to nick the non-edited strand — the one with the G that should become an A — the base editor tricks the cell into rewriting the G to match the U, instead of the other way around."
+  },
+  {
+   "t": 353.36,
+   "text": "The cell does our job for us."
+  },
+  {
+   "t": 355.24,
+   "text": "Smart."
+  },
+  {
+   "t": 356.05,
+   "text": "With UGI to block UDG, with nCas9 to nick the right strand, BE3 routinely achieved 30 to 50 percent C-to-T conversion at target sites in human cells, with low indel rates (because there's no double-strand break) and clean, single-letter outcomes."
+  },
+  {
+   "t": 374.31,
+   "text": "The cytosine base editor was born."
+  },
+  {
+   "t": 376.8,
+   "text": "Let me state the analogy one more time, now with the parts named."
+  },
+  {
+   "t": 381.05,
+   "text": "CBE is a guided pencil with a C-to-T eraser."
+  },
+  {
+   "t": 385.02,
+   "text": "The GPS that finds the spot is nCas9 plus the guide RNA."
+  },
+  {
+   "t": 390.21,
+   "text": "The eraser is APOBEC1, which erases the amine off the C and leaves a U behind."
+  },
+  {
+   "t": 396.29,
+   "text": "The pencil — what actually writes the new letter — is the cell's own DNA repair machinery, redirected by the UGI block and the strand nick to put a T where the C used to be."
+  },
+  {
+   "t": 407.46,
+   "text": "C in, T out."
+  },
+  {
+   "t": 408.84,
+   "text": "G across the helix becomes A."
+  },
+  {
+   "t": 411.45,
+   "text": "The edit is permanent."
+  },
+  {
+   "t": 413.2,
+   "text": "The backbone never broke."
+  },
+  {
+   "t": 415.05,
+   "text": "That was the proof of concept for base editing as a category."
+  },
+  {
+   "t": 418.71,
+   "text": "Now the obvious question — the one that defined the next year of Liu's lab — was: can we do the same trick for adenine?"
+  }
+ ]
+}

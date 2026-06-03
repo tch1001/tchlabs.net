@@ -1,0 +1,187 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Genetic memory and logic — biological permanent storage",
+ "duration": 337.27,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Genetic memory and logic — biological permanent storage"
+  },
+  {
+   "t": 5.75,
+   "text": "Let me shift gears now and talk about a completely different use of serine integrases — one that's less about installing genes for protein production and more about using the recombination reaction itself as a bit of computational state in a synthetic-biology circuit."
+  },
+  {
+   "t": 22.05,
+   "text": "The basic insight is this."
+  },
+  {
+   "t": 24.39,
+   "text": "A serine integrase reaction takes DNA in one state — attB plus attP, separately — and converts it irreversibly to a different state — attL plus attR, fused."
+  },
+  {
+   "t": 37.95,
+   "text": "The two states are distinguishable by sequencing."
+  },
+  {
+   "t": 40.99,
+   "text": "The conversion is one-way."
+  },
+  {
+   "t": 43.02,
+   "text": "That is exactly the operational definition of a memory bit."
+  },
+  {
+   "t": 46.52,
+   "text": "The unrecombined state is, say, \"zero."
+  },
+  {
+   "t": 49.64,
+   "text": "\" The recombined state is \"one."
+  },
+  {
+   "t": 51.91,
+   "text": "\" Once you flip a bit from zero to one, it stays flipped."
+  },
+  {
+   "t": 55.48,
+   "text": "Read it out at any time later by amplifying the locus and sequencing."
+  },
+  {
+   "t": 60.46,
+   "text": "You can do more than one bit."
+  },
+  {
+   "t": 62.1,
+   "text": "Use Bxb1 at one locus and phiC31 at another and R4 at a third — each with its own orthogonal att sites — and each integrase flips its own bit independently."
+  },
+  {
+   "t": 74.56,
+   "text": "Three integrases, three bits, eight possible states."
+  },
+  {
+   "t": 78.55,
+   "text": "Sequence the cell's DNA, read out the state, know the history."
+  },
+  {
+   "t": 82.81,
+   "text": "This is the basic idea behind a body of synthetic-biology work that goes back to roughly 2013, with foundational papers from the labs of Drew Endy at Stanford, Christopher Voigt at MIT, Tim Lu at MIT, and Jérôme Bonnet at the French CNRS in Montpellier."
+  },
+  {
+   "t": 99.97,
+   "text": "These groups built up the conceptual framework: serine integrases as bits, integrase expression controlled by transcription factors, transcription factors controlled by environmental signals — so the cell's DNA literally records, in its base sequence, the history of signals it has experienced."
+  },
+  {
+   "t": 118.53,
+   "text": "The classic demonstration, from the Bonnet, Yin, Subsoontorn, and Endy paper in Science in 2013, was a one-bit DNA-based switch implemented with the Bxb1 integrase."
+  },
+  {
+   "t": 130.72,
+   "text": "They built a construct in E. coli where Bxb1 expression was placed under the control of an arabinose-inducible promoter."
+  },
+  {
+   "t": 139.29,
+   "text": "Without arabinose, no Bxb1, the substrate stays in the unrecombined state."
+  },
+  {
+   "t": 145.5,
+   "text": "With arabinose, Bxb1 is expressed, recombines the substrate, locks in the new state — and crucially, even after the arabinose is removed and Bxb1 is no longer expressed, the substrate stays in the recombined state, because the integrase reaction is unidirectional."
+  },
+  {
+   "t": 163.9,
+   "text": "The cell has remembered, in its DNA, that it once saw arabinose."
+  },
+  {
+   "t": 169.26,
+   "text": "Removing the signal doesn't erase the memory."
+  },
+  {
+   "t": 172.18,
+   "text": "You can stack these to make more sophisticated devices."
+  },
+  {
+   "t": 175.55,
+   "text": "Use two different integrases triggered by two different signals, and the cell's DNA records which combinations of signals it has experienced."
+  },
+  {
+   "t": 184.76,
+   "text": "With four orthogonal integrases, you get sixteen possible states, corresponding to the sixteen possible histories of four binary inputs."
+  },
+  {
+   "t": 193.74,
+   "text": "Bonnet's group and others have built integrase-based logic gates — devices where the DNA state encodes a logical function of which signals have been seen."
+  },
+  {
+   "t": 203.71,
+   "text": "AND gates, OR gates, NOT gates, XOR gates, more complex multi-input gates."
+  },
+  {
+   "t": 209.57,
+   "text": "All implemented with site-specific recombinases acting on engineered DNA substrates."
+  },
+  {
+   "t": 215.56,
+   "text": "The Voigt lab and collaborators pushed this further with multi-integrase circuits that perform calculations."
+  },
+  {
+   "t": 222.22,
+   "text": "A 2016 paper showed circuits with seven or more integrases simultaneously, each triggered by a different input, producing DNA-encoded readouts of the computational result."
+  },
+  {
+   "t": 233.8,
+   "text": "Synthetic-biology language calls these \"permanent memory circuits\" or \"DNA-based logic\" or \"biological state machines."
+  },
+  {
+   "t": 241.94,
+   "text": "\""
+  },
+  {
+   "t": 242.14,
+   "text": "The analogy I want you to hold is this."
+  },
+  {
+   "t": 244.76,
+   "text": "Conventional gene expression — turning a gene on and off in response to signals — is like RAM."
+  },
+  {
+   "t": 251.09,
+   "text": "The state is held in the concentration of a protein or RNA, and it's lost when the signals go away or the cell dies."
+  },
+  {
+   "t": 258.68,
+   "text": "Serine-integrase-based DNA memory is like flash memory."
+  },
+  {
+   "t": 262.84,
+   "text": "The state is encoded in the actual base sequence of DNA, and it persists indefinitely — through cell divisions, through quiescence, through environmental changes."
+  },
+  {
+   "t": 273.51,
+   "text": "You can read it back at any time by sequencing."
+  },
+  {
+   "t": 276.29,
+   "text": "This has been used for some elegant applications."
+  },
+  {
+   "t": 279.15,
+   "text": "Cell lineage tracing — tag cells with integrase circuits that flip bits over time, so that the developmental history of a cell population is recorded in the integrase pattern, recoverable by sequencing individual cells later."
+  },
+  {
+   "t": 292.96,
+   "text": "Environmental sensing — engineer bacteria that record exposure to particular chemicals in their DNA, then recover the bacteria and sequence them to determine where in an environment certain compounds existed."
+  },
+  {
+   "t": 305.88,
+   "text": "Diagnostic biosensing — cell-based sensors that detect disease biomarkers and lock in a DNA-encoded record of the detection event."
+  },
+  {
+   "t": 314.71,
+   "text": "The promise of \"biological permanent memory\" — that you can use cells as physical recording devices that persist beyond their own lifetime if you sequence the DNA — has been explored extensively in the synthetic-biology literature."
+  },
+  {
+   "t": 329.04,
+   "text": "It's not yet a mainstream technology, but the principle is established, and serine integrases are the workhorse molecular components."
+  }
+ ]
+}

@@ -1,0 +1,163 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Inducible RNAi: shRNAmir under Tet control",
+ "duration": 294.04,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Inducible RNAi: shRNAmir under Tet control"
+  },
+  {
+   "t": 6.25,
+   "text": "Now we get to the second great application of Tet-controlled expression — conditional knockdown via inducible RNA interference."
+  },
+  {
+   "t": 15.03,
+   "text": "This is one of the most widely used applications of the Tet system in cell biology, and you'll see it in countless papers."
+  },
+  {
+   "t": 22.38,
+   "text": "Quick refresher on RNAi."
+  },
+  {
+   "t": 24.18,
+   "text": "RNA interference is a natural cellular pathway that uses short double-stranded RNAs to silence gene expression."
+  },
+  {
+   "t": 31.69,
+   "text": "In the lab, we use it by introducing short hairpin RNAs — shRNAs — that get processed by the cell's Dicer enzyme into small interfering RNAs (siRNAs), which then load into the RISC complex and target a specific mRNA for destruction."
+  },
+  {
+   "t": 48.55,
+   "text": "Express an shRNA against your gene of interest, and the mRNA gets degraded, the protein levels drop, and you've effectively \"knocked down\" the gene."
+  },
+  {
+   "t": 58.48,
+   "text": "The constitutive version of this — express an shRNA from a strong U6 promoter all the time — has the same problem as constitutive overexpression."
+  },
+  {
+   "t": 68.14,
+   "text": "If the gene is essential, the cells die."
+  },
+  {
+   "t": 71.36,
+   "text": "If you want to study the dynamics of loss, you can't, because the knockdown has already happened by the time you can measure."
+  },
+  {
+   "t": 77.7,
+   "text": "If you want to do timed perturbations, you need temporal control."
+  },
+  {
+   "t": 81.92,
+   "text": "The solution, developed primarily by Greg Hannon and Scott Lowe and their collaborators in the mid-2000s, is the TRE-driven shRNAmir system."
+  },
+  {
+   "t": 91.47,
+   "text": "Two key innovations."
+  },
+  {
+   "t": 93.28,
+   "text": "First, instead of expressing a simple shRNA from a Pol III promoter (like U6), they embedded the shRNA in a microRNA backbone — specifically, the backbone of the human mir-30 microRNA."
+  },
+  {
+   "t": 107.72,
+   "text": "The shRNA-in-mir-30 design, called shRNAmir, is processed by the cell's natural microRNA processing machinery, which gives better knockdown, more reliable expression, and — crucially — works from Pol II promoters."
+  },
+  {
+   "t": 122.96,
+   "text": "That last point matters because TRE is a Pol II promoter; standard shRNA cassettes that require Pol III (U6, H1) couldn't be put under TRE control."
+  },
+  {
+   "t": 134.38,
+   "text": "Second, they put the shRNAmir cassette downstream of a TRE promoter, paired with an rtTA."
+  },
+  {
+   "t": 141.01,
+   "text": "Now you have a system where, with no doxycycline, the shRNAmir is silent and the target gene is expressed normally."
+  },
+  {
+   "t": 149.43,
+   "text": "Add doxycycline, the shRNAmir gets made, gets processed, gets loaded into RISC, and starts knocking down its target."
+  },
+  {
+   "t": 157.31,
+   "text": "Within a day or two, target protein levels drop."
+  },
+  {
+   "t": 160.65,
+   "text": "Remove doxycycline, the shRNAmir production stops, and over the next few days the target gene recovers."
+  },
+  {
+   "t": 168.24,
+   "text": "You get a clean inducible knockdown."
+  },
+  {
+   "t": 170.49,
+   "text": "This system has been deployed at massive scale."
+  },
+  {
+   "t": 173.26,
+   "text": "The Hannon/Lowe lab and collaborators built libraries of thousands of Tet-controlled shRNAmir constructs, targeting essentially every gene in the human and mouse genomes."
+  },
+  {
+   "t": 185.11,
+   "text": "You can buy these as plasmids, as lentiviral preps, as pooled libraries for genome-wide inducible screens."
+  },
+  {
+   "t": 192.12,
+   "text": "The libraries — TRMPV, LT3GEPIR, and various successor designs — are infrastructure-grade resources, used by labs worldwide."
+  },
+  {
+   "t": 202.99,
+   "text": "A few practical advantages of Tet-inducible RNAi over constitutive:"
+  },
+  {
+   "t": 208.25,
+   "text": "You can do timed knockdown — turn the shRNA on for a defined window, measure consequences, then turn it off and watch recovery."
+  },
+  {
+   "t": 216.51,
+   "text": "This separates acute from chronic effects."
+  },
+  {
+   "t": 219.19,
+   "text": "You can do knockdown-rescue experiments more cleanly."
+  },
+  {
+   "t": 222.47,
+   "text": "Express a doxycycline-rescuable cDNA against a TRE-shRNA targeting the endogenous gene's 3'UTR; when dox is on, the endogenous gene goes down but the rescue cDNA might be co-induced."
+  },
+  {
+   "t": 237.5,
+   "text": "Various clever designs let you dissociate loss-of-function from rescue."
+  },
+  {
+   "t": 242.89,
+   "text": "You can do in vivo knockdown in mice."
+  },
+  {
+   "t": 245.25,
+   "text": "Make a transgenic mouse with an rtTA driver and a TRE-shRNA cassette, put the mouse on dox water, and the gene gets knocked down throughout the animal (or in a tissue-specific way, if the rtTA is tissue-restricted)."
+  },
+  {
+   "t": 259.06,
+   "text": "Take the mouse off dox, the gene comes back."
+  },
+  {
+   "t": 262.23,
+   "text": "This gives you a reversible loss-of-function in vivo — something you can't do with a conventional knockout, where loss is permanent."
+  },
+  {
+   "t": 270.41,
+   "text": "The Tet-inducible RNAi platform is a major piece of cancer biology infrastructure."
+  },
+  {
+   "t": 276.39,
+   "text": "It's been used to identify essential genes in tumors, to study oncogene addiction, to model the effects of acute drug withdrawal in cancer cells."
+  },
+  {
+   "t": 285.91,
+   "text": "If you're doing modern cancer cell biology and you want clean, controllable, in vivo loss-of-function, this is one of the standard tools."
+  }
+ ]
+}

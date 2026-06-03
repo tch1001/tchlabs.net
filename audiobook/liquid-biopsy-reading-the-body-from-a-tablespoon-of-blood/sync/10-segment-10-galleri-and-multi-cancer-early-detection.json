@@ -1,0 +1,147 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Galleri and multi-cancer early detection",
+ "duration": 313.44,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Galleri and multi-cancer early detection"
+  },
+  {
+   "t": 4.35,
+   "text": "Welcome back."
+  },
+  {
+   "t": 5.39,
+   "text": "We left off with MRD — the post-surgery early warning that's reshaping how adjuvant therapy is given."
+  },
+  {
+   "t": 12.4,
+   "text": "Now let's turn to what is, in some ways, an even bigger ambition: using cfDNA to find cancer in apparently healthy people, before symptoms appear, before any single-cancer screening test would catch it."
+  },
+  {
+   "t": 26.26,
+   "text": "This is multi-cancer early detection, or MCED."
+  },
+  {
+   "t": 30.36,
+   "text": "The flagship product in this space is Galleri, made by GRAIL — a company founded out of Illumina in 2016 specifically to chase this application."
+  },
+  {
+   "t": 40.94,
+   "text": "The ambition is staggering."
+  },
+  {
+   "t": 42.92,
+   "text": "Galleri promises, from a single blood draw, to detect signal for more than 50 cancer types — many of which have no established screening test at all — and, when the signal is positive, to predict the tissue of origin with high accuracy, so the clinician knows where to look."
+  },
+  {
+   "t": 59.98,
+   "text": "Pancreatic cancer, ovarian cancer, esophageal cancer, liver, kidney, stomach — these have historically been diagnosed late because there's no good screening modality."
+  },
+  {
+   "t": 71.01,
+   "text": "If you could catch them at stage I or II from a routine blood test, the survival improvements would be enormous."
+  },
+  {
+   "t": 77.53,
+   "text": "How does Galleri work?"
+  },
+  {
+   "t": 79.1,
+   "text": "It does not look for mutations."
+  },
+  {
+   "t": 81.06,
+   "text": "Mutations are the wrong tool for this job, because at very low tumor burdens — the kind you'd see in early-stage occult cancer — the mutant allele fraction in plasma is below the detection limit of even the deepest sequencing."
+  },
+  {
+   "t": 95.21,
+   "text": "There's just not enough ctDNA to find a mutation reliably."
+  },
+  {
+   "t": 99.58,
+   "text": "Instead, Galleri looks at methylation patterns."
+  },
+  {
+   "t": 103.31,
+   "text": "Every tissue in your body has a characteristic DNA methylation signature — a pattern of which CpG sites are methylated and which aren't, that's stable for that cell type."
+  },
+  {
+   "t": 114.46,
+   "text": "Cancer cells acquire characteristic methylation changes — global hypomethylation, plus hypermethylation at specific promoter regions — that are recognizable as \"this DNA came from a cancer, not a healthy cell."
+  },
+  {
+   "t": 128.81,
+   "text": "\" And, crucially, the methylation pattern still retains residual signature of the original tissue type."
+  },
+  {
+   "t": 136.01,
+   "text": "So a methylation pattern in plasma cfDNA that shows cancer-like changes overlaid on a colorectal-like baseline tells you: there is a cancer signal, and it's probably colorectal."
+  },
+  {
+   "t": 148.46,
+   "text": "The Galleri workflow goes like this."
+  },
+  {
+   "t": 151.07,
+   "text": "Draw blood, extract cfDNA, perform targeted bisulfite sequencing (or one of the related chemistries that converts methylation status into sequence differences) across about a million informative methylation sites genome-wide."
+  },
+  {
+   "t": 166.46,
+   "text": "Run the resulting methylation patterns through a machine-learning classifier trained on tens of thousands of cancer and non-cancer samples."
+  },
+  {
+   "t": 174.76,
+   "text": "The classifier outputs two things: a binary cancer-signal-detected versus not-detected call, and — when positive — a top-ranked tissue of origin prediction."
+  },
+  {
+   "t": 186.15,
+   "text": "The performance numbers, from GRAIL's pivotal CCGA-3 study, are roughly: specificity above 99 percent (false positive rate under 1 percent), sensitivity around 50 percent across all stages and cancer types pooled, with sensitivity climbing to about 75 percent for stage II and above and dropping to about 17 percent for stage I."
+  },
+  {
+   "t": 209.14,
+   "text": "Tissue of origin prediction accuracy is around 90 percent when the cancer signal is detected."
+  },
+  {
+   "t": 215.57,
+   "text": "Those numbers need some interpretation."
+  },
+  {
+   "t": 218.14,
+   "text": "Fifty percent overall sensitivity sounds low — and it is, by single-cancer screening standards (mammography is ~85 percent, colonoscopy is ~95 percent for the cancers it can reach)."
+  },
+  {
+   "t": 232.31,
+   "text": "But Galleri is hunting across 50+ cancer types, including many that have no other screening test, so the comparison isn't apples to apples."
+  },
+  {
+   "t": 242.55,
+   "text": "What Galleri offers that no other test does is coverage — even with modest sensitivity per cancer, it can detect cancers that would otherwise be invisible until symptomatic."
+  },
+  {
+   "t": 253.59,
+   "text": "Galleri as the multi-cancer screen — methylation patterns in cfDNA detect 50+ cancer types and predict tissue of origin; one blood draw, half the cancers in the world."
+  },
+  {
+   "t": 266.16,
+   "text": "The UK NHS is currently running the NHS-Galleri trial, a 140,000-person randomized study to see whether Galleri screening actually reduces late-stage cancer diagnosis and improves outcomes at population scale."
+  },
+  {
+   "t": 281.05,
+   "text": "Results are expected over the next few years."
+  },
+  {
+   "t": 284.02,
+   "text": "The outcome of that trial will determine whether MCED becomes a routine screening modality or remains a high-end add-on."
+  },
+  {
+   "t": 291.4,
+   "text": "We'll come back to this in Segment 18 when we talk about the frontier."
+  },
+  {
+   "t": 295.52,
+   "text": "For now, the takeaway: Galleri exists, it works at meaningful sensitivity, it's commercially available in the US as a laboratory-developed test, and it represents a fundamentally new category of cancer screening — pan-cancer, methylation-based, ML-driven, from a blood draw."
+  }
+ ]
+}

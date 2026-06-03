@@ -1,0 +1,215 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Tet-On: rtTA and the reversed-response variant",
+ "duration": 337.99,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Tet-On: rtTA and the reversed-response variant"
+  },
+  {
+   "t": 5.35,
+   "text": "Five years after the original paper, in 1995, the same Bujard lab — with a new postdoc, Udo Baron, and collaborators — published a follow-up showing that you could engineer a mutant TetR that responded to doxycycline in exactly the opposite way as the wild-type protein."
+  },
+  {
+   "t": 22.56,
+   "text": "The new variant binds the operator only in the presence of doxycycline, not its absence."
+  },
+  {
+   "t": 28.66,
+   "text": "Fuse this mutant TetR to VP16 just like before, and you get a transactivator that requires doxycycline to land on the promoter."
+  },
+  {
+   "t": 37.83,
+   "text": "Add the drug, the protein lands, the gene goes on."
+  },
+  {
+   "t": 41.45,
+   "text": "Remove the drug, the protein falls off, the gene goes off."
+  },
+  {
+   "t": 45.56,
+   "text": "They called this variant rtTA — the reverse tet-controlled transactivator."
+  },
+  {
+   "t": 51.14,
+   "text": "The system built around it is called Tet-On."
+  },
+  {
+   "t": 53.86,
+   "text": "And once you have both — Tet-Off and Tet-On — you have, effectively, a fully controllable switch in either polarity."
+  },
+  {
+   "t": 61.64,
+   "text": "Choose Tet-Off if you want continuous expression that you can shut down by adding drug."
+  },
+  {
+   "t": 66.66,
+   "text": "Choose Tet-On if you want a silent system that you turn on by adding drug."
+  },
+  {
+   "t": 71.0,
+   "text": "Today, in most modern experiments, Tet-On is more common — it matches the way we usually think about switches — but both flavors are in heavy use, and you'll see both in the literature."
+  },
+  {
+   "t": 82.59,
+   "text": "How did they do it?"
+  },
+  {
+   "t": 83.59,
+   "text": "The trick is essentially directed evolution on the TetR ligand-binding pocket."
+  },
+  {
+   "t": 88.54,
+   "text": "The natural TetR binds tetracycline and undergoes the conformational change that releases it from DNA."
+  },
+  {
+   "t": 95.44,
+   "text": "Baron and colleagues mutagenized TetR — introduced random mutations throughout the gene — and screened for variants that bound the operator better in the presence of the drug, not worse."
+  },
+  {
+   "t": 107.21,
+   "text": "After several rounds of mutagenesis and selection, they isolated variants of TetR with four amino acid substitutions in the ligand-binding pocket."
+  },
+  {
+   "t": 117.19,
+   "text": "These mutations didn't change the gross structure of the protein, but they did invert the allosteric response."
+  },
+  {
+   "t": 123.79,
+   "text": "In the original protein, ligand binding pushed the protein toward the released conformation; in the rtTA variant, ligand binding pushes the protein toward the DNA-bound conformation."
+  },
+  {
+   "t": 135.05,
+   "text": "Same machinery, opposite logic."
+  },
+  {
+   "t": 137.49,
+   "text": "Fuse the rtTA TetR domain to VP16, install it in cells along with a TRE-driven transgene, and you get the inverse of the original system."
+  },
+  {
+   "t": 148.1,
+   "text": "With no doxycycline, rtTA can't bind the TRE, no activation happens, gene is silent."
+  },
+  {
+   "t": 154.94,
+   "text": "Add doxycycline, rtTA grabs the TRE, VP16 activates the minimal CMV, gene goes on."
+  },
+  {
+   "t": 162.86,
+   "text": "So here's the headline pair, the one I want you to remember through the rest of the lecture:"
+  },
+  {
+   "t": 167.2,
+   "text": "Tet-Off uses tTA."
+  },
+  {
+   "t": 169.15,
+   "text": "No drug means the gene is on."
+  },
+  {
+   "t": 171.4,
+   "text": "Adding doxycycline turns the gene off."
+  },
+  {
+   "t": 174.29,
+   "text": "Tet-On uses rtTA."
+  },
+  {
+   "t": 176.21,
+   "text": "No drug means the gene is off."
+  },
+  {
+   "t": 178.57,
+   "text": "Adding doxycycline turns the gene on."
+  },
+  {
+   "t": 181.39,
+   "text": "That's it."
+  },
+  {
+   "t": 182.2,
+   "text": "The architecture is the same — a transactivator binding a TRE promoter — but the ligand response is inverted."
+  },
+  {
+   "t": 190.25,
+   "text": "Two flavors."
+  },
+  {
+   "t": 191.47,
+   "text": "Choose whichever one fits your experiment."
+  },
+  {
+   "t": 194.19,
+   "text": "A small note on naming."
+  },
+  {
+   "t": 195.69,
+   "text": "Sometimes you'll see the original tTA called simply \"tTA\" and the reverse version called \"rtTA\" — those are the standard names."
+  },
+  {
+   "t": 204.66,
+   "text": "Sometimes you'll see Tet-Off described as \"tTA-based\" and Tet-On as \"rtTA-based."
+  },
+  {
+   "t": 210.97,
+   "text": "\" Sometimes the entire system is colloquially called \"the Tet system\" or \"Tet-regulated expression\" or \"doxycycline-inducible\" or \"dox-inducible,\" without further specification — and you have to read context to figure out whether the authors mean Tet-On or Tet-Off."
+  },
+  {
+   "t": 228.09,
+   "text": "Modern papers, by my rough estimate, use Tet-On about three or four times more often than Tet-Off."
+  },
+  {
+   "t": 234.46,
+   "text": "The default-off, drug-on logic is just more natural for most experimental designs."
+  },
+  {
+   "t": 240.04,
+   "text": "One more wrinkle worth knowing."
+  },
+  {
+   "t": 241.9,
+   "text": "The original 1995 rtTA had a problem: it was leaky."
+  },
+  {
+   "t": 246.79,
+   "text": "Even in the complete absence of doxycycline, a fraction of rtTA molecules would still bind the TRE and drive some level of expression."
+  },
+  {
+   "t": 255.54,
+   "text": "The dynamic range — the ratio of \"on\" to \"off\" — was decent but not great, maybe a few hundred-fold."
+  },
+  {
+   "t": 262.75,
+   "text": "For experiments where you needed the gene to be truly off in the basal state — for example, when expressing a toxic protein where any leakage would kill cells — the original rtTA wasn't quite good enough."
+  },
+  {
+   "t": 276.28,
+   "text": "So the lab kept iterating."
+  },
+  {
+   "t": 278.43,
+   "text": "Over the next decade and a half, they generated successive generations of improved rtTA variants — rtTA2, rtTA3, rtTA4, M2, and so on — each one with mutations that tightened the off state, increased the on state, or both."
+  },
+  {
+   "t": 296.09,
+   "text": "We'll cover the evolution arc in Segment 6."
+  },
+  {
+   "t": 299.22,
+   "text": "But for now, the headline is: the basic Tet-On concept worked from the start, and successive engineering refinements have made it dramatically better — modern variants like rtTA3 have dynamic ranges of tens of thousands of fold, low enough basal expression to express even very toxic proteins, and induction kinetics that bring the gene on within hours of adding the drug."
+  },
+  {
+   "t": 321.74,
+   "text": "Right."
+  },
+  {
+   "t": 322.44,
+   "text": "So we've got the two flavors of transactivator."
+  },
+  {
+   "t": 325.23,
+   "text": "Before we go further into the engineering arc, let me back up and talk about the drug itself — because the original system used tetracycline, but everyone now uses doxycycline, and the reasons for that switch are worth understanding."
+  }
+ ]
+}

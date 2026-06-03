@@ -1,0 +1,159 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — STAR and HISAT: splice-aware aligners for RNA-seq",
+ "duration": 344.38,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — STAR and HISAT: splice-aware aligners for RNA-seq"
+  },
+  {
+   "t": 5.7,
+   "text": "When you do RNA-seq with Illumina, you're sequencing mRNA molecules — which means you've reverse-transcribed RNA to cDNA, fragmented, ligated adapters, and sequenced."
+  },
+  {
+   "t": 17.73,
+   "text": "The reads represent fragments of mRNA."
+  },
+  {
+   "t": 21.21,
+   "text": "When you align them back to the genome, you hit a problem that doesn't exist for DNA sequencing: introns."
+  },
+  {
+   "t": 27.94,
+   "text": "The mRNA, by the time it's transcribed and processed, has had its introns spliced out — gone, removed."
+  },
+  {
+   "t": 34.95,
+   "text": "The mRNA sequence consists of exons stitched together."
+  },
+  {
+   "t": 39.02,
+   "text": "But the genome you're aligning to contains both exons and introns."
+  },
+  {
+   "t": 43.65,
+   "text": "So a single mRNA read might span an exon-exon junction, where the read maps to two different parts of the genome separated by an intron, which might be tens of thousands of bases long."
+  },
+  {
+   "t": 55.81,
+   "text": "A normal aligner like BWA won't handle this — it'll just report that the read doesn't align well anywhere."
+  },
+  {
+   "t": 63.21,
+   "text": "You need a splice-aware aligner — one that can split a single read into two or more pieces, each aligning to a different position in the genome, with the constraint that the pieces are co-linear and the gaps between them are likely introns."
+  },
+  {
+   "t": 77.58,
+   "text": "This is a different alignment problem from standard read alignment, and it has its own tools."
+  },
+  {
+   "t": 83.47,
+   "text": "We'll cross-reference the bulk RNA-seq book here — there's a lot more detail on RNA-seq specifically — but the two big tools you need to know are STAR and HISAT (and its successor HISAT2)."
+  },
+  {
+   "t": 94.71,
+   "text": "STAR — Spliced Transcripts Alignment to a Reference — was written by Alex Dobin at Cold Spring Harbor and released in 2013."
+  },
+  {
+   "t": 103.28,
+   "text": "STAR uses a clever indexing approach: it builds a suffix array of the reference (similar to a FM-index but with different trade-offs) and then, for each read, looks for the longest possible exact match, then iteratively extends and splits the read across introns."
+  },
+  {
+   "t": 120.53,
+   "text": "The algorithm is called sequential maximum mappable seed search — you find the longest exact match anywhere in the genome, then for the remaining unmatched parts of the read, you recursively find the next-longest match, until the whole read is mapped."
+  },
+  {
+   "t": 135.65,
+   "text": "The matches that come from the same read but different genomic locations are joined into a single split alignment, with the gaps interpreted as introns (if they're long and bordered by canonical splice sites) or as deletions (if they're short)."
+  },
+  {
+   "t": 151.19,
+   "text": "STAR is fast — one of the fastest splice-aware aligners — and it's the default in many RNA-seq pipelines, including the ENCODE pipeline."
+  },
+  {
+   "t": 160.88,
+   "text": "It needs a lot of RAM (around 30 GB to load the human genome index), but on a server with sufficient memory it can align an RNA-seq experiment in minutes per sample."
+  },
+  {
+   "t": 171.88,
+   "text": "STAR is also widely used as the alignment step in single-cell RNA-seq pipelines like Cell Ranger and STARsolo, where the same code is reused to handle the high read volumes of single-cell experiments."
+  },
+  {
+   "t": 185.18,
+   "text": "HISAT — Hierarchical Indexing for Spliced Alignment of Transcripts — was developed by Daehwan Kim and Steven Salzberg at Johns Hopkins."
+  },
+  {
+   "t": 194.51,
+   "text": "HISAT2 is the current version."
+  },
+  {
+   "t": 196.62,
+   "text": "It uses a hierarchical extension of the Burrows-Wheeler approach: a global FM-index of the whole genome, plus thousands of local FM-indices for small genomic regions."
+  },
+  {
+   "t": 207.62,
+   "text": "The hierarchy lets it find splice junctions efficiently by first locating the read globally, then refining within local regions."
+  },
+  {
+   "t": 216.81,
+   "text": "HISAT2 is much more memory-efficient than STAR — around 4 GB of RAM for the human genome, versus 30 GB for STAR — which makes it preferred for resource-constrained environments."
+  },
+  {
+   "t": 228.88,
+   "text": "It also includes built-in support for population variants via a graph genome index, which we'll touch on in Segment 17."
+  },
+  {
+   "t": 236.88,
+   "text": "Both STAR and HISAT2 produce SAM/BAM output with splice-aware CIGAR strings — that is, the alignment includes \"N\" operations representing skipped intronic regions."
+  },
+  {
+   "t": 249.06,
+   "text": "Downstream tools that count reads per gene (HTSeq, featureCounts, Subread) understand these N operations and assign reads to genes appropriately."
+  },
+  {
+   "t": 259.39,
+   "text": "The whole RNA-seq pipeline — STAR alignment, HTSeq counting, DESeq2 differential expression — is built around this splice-aware alignment format."
+  },
+  {
+   "t": 269.91,
+   "text": "Here's the analogy I want you to hold."
+  },
+  {
+   "t": 272.22,
+   "text": "Splice-aware aligners are RNA-seq's specialized variant of BWA."
+  },
+  {
+   "t": 277.54,
+   "text": "Normal aligners assume the read corresponds to a contiguous piece of the genome."
+  },
+  {
+   "t": 283.04,
+   "text": "Splice-aware aligners know that a read might span an exon-exon junction, with an intron in the middle that the read does not cover."
+  },
+  {
+   "t": 291.54,
+   "text": "STAR finds the longest exact match anywhere in the genome, then recursively maps the rest, gluing together pieces across introns."
+  },
+  {
+   "t": 300.83,
+   "text": "HISAT2 uses hierarchical indexing for the same job, more memory-efficiently."
+  },
+  {
+   "t": 306.26,
+   "text": "Both produce splice-aware SAM files that downstream RNA-seq tools understand."
+  },
+  {
+   "t": 312.11,
+   "text": "We could spend hours on RNA-seq alignment specifically — the corner cases are endless, the choice between aligners has real consequences for sensitivity at low-expression genes, and there's a whole sub-field of pseudoalignment (using tools like kallisto and salmon) that skips the explicit base-level alignment in favor of much faster transcript abundance estimation."
+  },
+  {
+   "t": 334.86,
+   "text": "But that's beyond our scope today."
+  },
+  {
+   "t": 336.79,
+   "text": "The key fact is: RNA-seq has its own aligners, they're splice-aware, and the two big ones are STAR and HISAT2."
+  }
+ ]
+}

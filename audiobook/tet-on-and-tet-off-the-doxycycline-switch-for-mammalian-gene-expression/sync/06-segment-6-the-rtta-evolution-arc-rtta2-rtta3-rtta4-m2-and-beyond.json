@@ -1,0 +1,211 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The rtTA evolution arc: rtTA2, rtTA3, rtTA4, M2 and beyond",
+ "duration": 387.18,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The rtTA evolution arc: rtTA2, rtTA3, rtTA4, M2 and beyond"
+  },
+  {
+   "t": 9.65,
+   "text": "So we've established that the original rtTA from 1995 worked, but it was leaky."
+  },
+  {
+   "t": 15.4,
+   "text": "There was non-trivial expression even without doxycycline, the on-off dynamic range was modest, and there were certain contexts — particularly highly toxic transgenes — where the basal leak was enough to ruin experiments."
+  },
+  {
+   "t": 29.55,
+   "text": "The Bujard lab and several others kept iterating, and over the following decade or so produced a series of progressively better rtTA variants."
+  },
+  {
+   "t": 38.75,
+   "text": "Today, when you read a modern paper, the rtTA being used is almost always one of these later generations."
+  },
+  {
+   "t": 46.16,
+   "text": "Let me walk you through the arc, because the names show up in methods sections and it's useful to know what you're reading."
+  },
+  {
+   "t": 52.29,
+   "text": "The first improvement came in the late 1990s with rtTA2-S2 — sometimes just called rtTA2."
+  },
+  {
+   "t": 59.83,
+   "text": "This variant had two key modifications."
+  },
+  {
+   "t": 63.12,
+   "text": "One was a re-engineered ligand-binding domain with cleaner allosteric switching — less leakage when off, better activation when on."
+  },
+  {
+   "t": 71.72,
+   "text": "The other was a codon-optimized open reading frame."
+  },
+  {
+   "t": 74.99,
+   "text": "The original rtTA had bacterial codon usage, which is suboptimal for expression in mammalian cells."
+  },
+  {
+   "t": 82.4,
+   "text": "Recoding the gene for mammalian codon usage gave higher protein levels and more reliable expression."
+  },
+  {
+   "t": 88.74,
+   "text": "Together, these changes gave rtTA2-S2 something like a tenfold improvement in dynamic range over the original."
+  },
+  {
+   "t": 97.17,
+   "text": "A particularly important variant in this generation is rtTA-M2, sometimes just called M2."
+  },
+  {
+   "t": 104.65,
+   "text": "M2 has mutations that further improve the doxycycline binding affinity and that further reduce the basal binding to the TRE in the absence of drug."
+  },
+  {
+   "t": 114.54,
+   "text": "M2 became, for a while, the standard variant in many tissue culture systems."
+  },
+  {
+   "t": 120.35,
+   "text": "Then came rtTA3, published in 2008 by the Lowe lab in collaboration with the Hannon lab — both major figures in mammalian conditional expression."
+  },
+  {
+   "t": 130.38,
+   "text": "rtTA3 is a further-mutagenized version with several substitutions in the dimerization interface of the TetR domain and in the ligand-binding pocket."
+  },
+  {
+   "t": 140.09,
+   "text": "The combined effect: dramatically reduced background, dramatically higher dynamic range."
+  },
+  {
+   "t": 146.46,
+   "text": "rtTA3 in some contexts has a dynamic range of 10,000-fold or more."
+  },
+  {
+   "t": 152.14,
+   "text": "That's a big deal."
+  },
+  {
+   "t": 153.39,
+   "text": "It means that even for very toxic transgenes — proteins where even 0.01% basal expression would kill the cell — you can use rtTA3 to get clean off-on control."
+  },
+  {
+   "t": 166.34,
+   "text": "rtTA3 also has faster induction kinetics than earlier variants."
+  },
+  {
+   "t": 171.86,
+   "text": "Add doxycycline, and within four to six hours you can see substantial induction of the target gene."
+  },
+  {
+   "t": 178.31,
+   "text": "Earlier variants took longer to fully turn on."
+  },
+  {
+   "t": 181.49,
+   "text": "For experiments where you want to do timed perturbations on the scale of hours rather than days, rtTA3 is the right choice."
+  },
+  {
+   "t": 189.5,
+   "text": "There's also an rtTA4 and various other named variants, each with incremental improvements in specific contexts — better in vivo performance, better thermal stability, better behavior in particular cell types."
+  },
+  {
+   "t": 202.96,
+   "text": "The naming convention is not perfectly standardized; you'll sometimes see rtTA-V10, rtTA-V14, rtTA-SE, and other variants in the literature."
+  },
+  {
+   "t": 214.03,
+   "text": "The basic principle is always the same — successive rounds of engineering to improve dynamic range, kinetics, and tightness."
+  },
+  {
+   "t": 222.82,
+   "text": "The trend across the whole evolution arc is what you'd expect from any directed-evolution program: each generation reduced the leakiness and increased the dynamic range."
+  },
+  {
+   "t": 233.22,
+   "text": "The original rtTA had maybe a few hundred-fold dynamic range; rtTA3 has tens of thousands."
+  },
+  {
+   "t": 240.59,
+   "text": "The original was leaky enough that you couldn't use it for highly toxic transgenes; rtTA3 is tight enough that you can do clean off-on-off-on cycles on demand."
+  },
+  {
+   "t": 251.05,
+   "text": "The improvement has been real and cumulative, and it's why a Tet experiment done today is so much more reliable than one done in 1996."
+  },
+  {
+   "t": 260.46,
+   "text": "A useful analogy here."
+  },
+  {
+   "t": 262.12,
+   "text": "Think of each generation of rtTA as a successively better version of the same magnetic stick from the headline analogy."
+  },
+  {
+   "t": 269.67,
+   "text": "The original rtTA was a magnet that sort of stuck to the switch, sometimes stuck when it shouldn't, didn't release cleanly when you wanted it to."
+  },
+  {
+   "t": 278.72,
+   "text": "rtTA3 is a precision-engineered magnet — strong and reliable when you want it to grab, completely off when you don't."
+  },
+  {
+   "t": 287.25,
+   "text": "Each generation removed defects."
+  },
+  {
+   "t": 289.94,
+   "text": "The magnet is tighter, the response is faster, the off state is darker."
+  },
+  {
+   "t": 295.15,
+   "text": "One more point."
+  },
+  {
+   "t": 296.14,
+   "text": "The evolution of the rtTA has tracked, in parallel, with improvements to the TRE promoter on the other side of the system."
+  },
+  {
+   "t": 303.57,
+   "text": "The original TRE was good but not great."
+  },
+  {
+   "t": 306.48,
+   "text": "Modern variants — TRE2, TRE-tight, TRE3G, and others — have been engineered to be even quieter in the absence of activator and even more strongly activated when activator is bound."
+  },
+  {
+   "t": 320.55,
+   "text": "The combination of a modern rtTA (rtTA3 or rtTA4) with a modern TRE (TRE3G is currently common) gives you the highest-performance Tet-On system available, with dynamic ranges that often exceed what you'd get from a true endogenous promoter switch."
+  },
+  {
+   "t": 337.99,
+   "text": "We'll talk about the TRE evolution in the next segment."
+  },
+  {
+   "t": 341.24,
+   "text": "The takeaway from this segment is: when you're designing a new Tet experiment in 2026, you should be using one of the modern rtTA variants — rtTA3 is a safe default — not the original 1995 rtTA."
+  },
+  {
+   "t": 355.95,
+   "text": "The improvements are large, real, and free."
+  },
+  {
+   "t": 359.48,
+   "text": "And when you're reading the literature, the rtTA generation tells you something about when the experiment was designed and how reliable the off state is likely to be."
+  },
+  {
+   "t": 369.49,
+   "text": "A paper using \"rtTA\" without further specification might be using the original; a paper specifying rtTA3 or rtTA-M2 is using a modern variant with much better characteristics."
+  },
+  {
+   "t": 383.83,
+   "text": "Right."
+  },
+  {
+   "t": 384.5,
+   "text": "Now over to the promoter side of the system."
+  }
+ ]
+}

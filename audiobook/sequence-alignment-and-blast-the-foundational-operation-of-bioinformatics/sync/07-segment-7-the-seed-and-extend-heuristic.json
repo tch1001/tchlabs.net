@@ -1,0 +1,215 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The seed-and-extend heuristic",
+ "duration": 424.06,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The seed-and-extend heuristic"
+  },
+  {
+   "t": 3.66,
+   "text": "The seed-and-extend heuristic is the single most important algorithmic idea in modern bioinformatics."
+  },
+  {
+   "t": 10.76,
+   "text": "Once you understand it, you understand the architecture of every fast aligner — BLAST, BLAT, BWA, Bowtie, minimap2, all of them."
+  },
+  {
+   "t": 20.21,
+   "text": "The variations across these tools are in the details — what counts as a seed, how seeds are indexed, how extension is performed, how alignments are scored and filtered — but the high-level shape is the same."
+  },
+  {
+   "t": 32.83,
+   "text": "So let's get the shape clear before we look at any specific tool."
+  },
+  {
+   "t": 36.6,
+   "text": "The heuristic has two phases."
+  },
+  {
+   "t": 39.05,
+   "text": "Phase one: find seeds."
+  },
+  {
+   "t": 41.5,
+   "text": "A seed is a short exact match between the query and the target — typically eleven to twenty-eight bases for DNA, or three to seven residues for protein."
+  },
+  {
+   "t": 51.41,
+   "text": "The idea is that any real homologous alignment will, with very high probability, contain at least one short exact match somewhere along its length."
+  },
+  {
+   "t": 61.17,
+   "text": "Because exact matches can be found by indexing the target — building a precomputed data structure that lets you look up, for any short string, all the positions where it appears — finding seeds is fast."
+  },
+  {
+   "t": 73.65,
+   "text": "The index is built once, in advance, and then any number of queries can be searched against it cheaply."
+  },
+  {
+   "t": 80.45,
+   "text": "The classical index for seeds is a hash table mapping short substrings (called k-mers, where k is the seed length) to lists of positions where they occur."
+  },
+  {
+   "t": 91.05,
+   "text": "To find all seeds of length k for a given query, you slide a window of length k along the query, extract each k-mer, look it up in the hash table, and record all the positions where each k-mer appears in the target."
+  },
+  {
+   "t": 105.36,
+   "text": "That gives you, for the whole query, a list of (query position, target position) pairs — each pair being a potential seed."
+  },
+  {
+   "t": 114.72,
+   "text": "For a thousand-letter query against a billion-letter target, the hash table lookup is essentially instantaneous, even though the underlying target is huge."
+  },
+  {
+   "t": 124.1,
+   "text": "There's a subtlety in seed selection."
+  },
+  {
+   "t": 126.81,
+   "text": "If you pick k too small — say, k=4 — then every k-mer appears many places in the target (4^4 = 256 possible 4-mers, but a billion bases of target, so each k-mer appears about four million times on average)."
+  },
+  {
+   "t": 144.68,
+   "text": "You get an enormous list of seeds, most of them spurious."
+  },
+  {
+   "t": 148.6,
+   "text": "If you pick k too large — say, k=30 — then most k-mers in the query won't match anywhere in the target unless the alignment is essentially perfect, and you miss most homologs."
+  },
+  {
+   "t": 160.18,
+   "text": "The sweet spot is in the middle: large enough that random matches are rare, small enough that real homologs reliably contain at least one exact k-mer match."
+  },
+  {
+   "t": 170.32,
+   "text": "For DNA, k=11 to k=14 is typical for BLAST; for protein, k=3 with similarity-allowed neighbors (we'll come back to this) is typical."
+  },
+  {
+   "t": 182.4,
+   "text": "Phase two: extend the seeds."
+  },
+  {
+   "t": 184.84,
+   "text": "Each seed is a candidate alignment anchor."
+  },
+  {
+   "t": 187.78,
+   "text": "For each seed, you run a local dynamic programming extension — essentially a small Smith-Waterman — that extends the alignment in both directions from the seed, base by base, until the score drops too far below the maximum seen so far."
+  },
+  {
+   "t": 203.2,
+   "text": "This is called X-drop extension, where X is the threshold below the maximum at which extension stops."
+  },
+  {
+   "t": 210.57,
+   "text": "You're allowed to extend through mismatches and gaps as long as the alignment is still scoring well."
+  },
+  {
+   "t": 217.54,
+   "text": "When the score drops too far below the running maximum, you cut off the extension at the maximum-scoring point."
+  },
+  {
+   "t": 223.88,
+   "text": "The result is a locally-maximal alignment anchored on the original seed, with extension in both directions until the score stopped improving."
+  },
+  {
+   "t": 232.64,
+   "text": "Crucially, the dynamic programming is only run locally — only over the small region near each seed, not over the entire grid."
+  },
+  {
+   "t": 241.03,
+   "text": "If your query is a thousand bases and a seed match is at position 500 of the query and position 23,847,128 of a billion-base target, you only run DP over maybe a thousand-by-thousand patch around that position — a million cells — not the full thousand-by-billion grid."
+  },
+  {
+   "t": 261.32,
+   "text": "You skip 99.9999% of the cells the exact algorithm would have computed."
+  },
+  {
+   "t": 267.54,
+   "text": "That's where the speed comes from."
+  },
+  {
+   "t": 269.19,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 270.43,
+   "text": "Seed-and-extend is the architectural pattern of every fast aligner."
+  },
+  {
+   "t": 275.59,
+   "text": "Phase one: index your target with a precomputed lookup table of all short substrings."
+  },
+  {
+   "t": 281.61,
+   "text": "For each query, find all places where the query and target share short exact matches — the seeds."
+  },
+  {
+   "t": 288.53,
+   "text": "Phase two: for each seed, run a small local dynamic programming extension to find the boundaries of the alignment around that seed."
+  },
+  {
+   "t": 297.69,
+   "text": "The huge cost of full dynamic programming is replaced by the small cost of a hash lookup plus a tiny local DP."
+  },
+  {
+   "t": 305.21,
+   "text": "You can search a billion-base database with a thousand-letter query in milliseconds instead of months."
+  },
+  {
+   "t": 311.33,
+   "text": "The trade-off is that you might miss alignments where the homology is so weak that no k-mer is exactly conserved between query and target."
+  },
+  {
+   "t": 320.01,
+   "text": "These are called twilight-zone alignments — alignments at evolutionary distances so great that no contiguous region of identity remains."
+  },
+  {
+   "t": 329.98,
+   "text": "Exact algorithms catch these; seed-based algorithms miss them."
+  },
+  {
+   "t": 334.76,
+   "text": "For most practical purposes, this loss is acceptable — if your homolog is that diverged, you probably can't trust the alignment anyway."
+  },
+  {
+   "t": 343.34,
+   "text": "But for protein searches at extreme evolutionary distances, more sophisticated approaches are needed — things like profile-based methods, which we'll meet in Segment 11."
+  },
+  {
+   "t": 354.47,
+   "text": "There are many variations on the seed-and-extend theme."
+  },
+  {
+   "t": 357.66,
+   "text": "Spaced seeds are seeds that don't require all k positions to match, but only some specified pattern — like, match at positions 1, 2, 4, 7, 10 but ignore the rest."
+  },
+  {
+   "t": 369.24,
+   "text": "Spaced seeds turn out to be more sensitive than contiguous seeds of the same length, because they're more tolerant of mismatches in the seed region."
+  },
+  {
+   "t": 377.91,
+   "text": "Minimizers are a way of picking a subset of k-mers to index, by choosing the lexicographically smallest k-mer in every window of some size — this reduces the index size dramatically while preserving sensitivity for long alignments."
+  },
+  {
+   "t": 393.28,
+   "text": "Chaining is a technique used by long-read aligners to combine multiple short seeds into one consistent diagonal — finding sets of seeds that all lie on the same or nearby diagonals of the grid, indicating a single long alignment."
+  },
+  {
+   "t": 408.67,
+   "text": "Each of these refinements made seed-and-extend faster, more sensitive, or both, over the decades."
+  },
+  {
+   "t": 415.87,
+   "text": "But the basic two-phase architecture has not changed."
+  },
+  {
+   "t": 419.36,
+   "text": "Now let's see seed-and-extend in its most famous form — BLAST."
+  }
+ ]
+}

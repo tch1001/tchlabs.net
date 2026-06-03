@@ -1,0 +1,151 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Bxb1 plus AAV for gene therapy",
+ "duration": 289.16,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Bxb1 plus AAV for gene therapy"
+  },
+  {
+   "t": 4.83,
+   "text": "Let me spend a segment on the specific design pattern of Bxb1 plus AAV for gene therapy, because it's an active area of clinical development and the engineering tradeoffs are interesting."
+  },
+  {
+   "t": 16.09,
+   "text": "The basic challenge: AAV can deliver components efficiently to many in vivo tissues — liver, eye, muscle, central nervous system — and is the dominant in vivo vector."
+  },
+  {
+   "t": 28.68,
+   "text": "But AAV's 4.7-kilobase payload limit is the bottleneck."
+  },
+  {
+   "t": 33.77,
+   "text": "Bxb1 can integrate large cargo at a defined site, but only if (a) the cargo is somehow delivered into the cell, and (b) a landing pad attB sequence is somehow installed at the chosen chromosomal location."
+  },
+  {
+   "t": 47.5,
+   "text": "The clever solution: split the work across multiple AAV particles or other vehicles."
+  },
+  {
+   "t": 53.44,
+   "text": "Use one AAV (or a lipid nanoparticle) to deliver the prime editor that installs the attB."
+  },
+  {
+   "t": 60.29,
+   "text": "Use a second AAV (or LNP) to deliver Bxb1 integrase mRNA."
+  },
+  {
+   "t": 67.36,
+   "text": "Use a third AAV (or, more commonly, a non-viral delivery) to deliver the therapeutic cargo flanked by attP sites."
+  },
+  {
+   "t": 76.24,
+   "text": "Each individual component fits in AAV; the combined system, working sequentially in the same cell, accomplishes the large-cargo integration that no single AAV could do."
+  },
+  {
+   "t": 88.34,
+   "text": "There are several flavors of this approach in development:"
+  },
+  {
+   "t": 91.71,
+   "text": "Two-AAV PASTE."
+  },
+  {
+   "t": 93.3,
+   "text": "One AAV carries the prime editor (pegRNA + nickase-RT fusion) and the Bxb1 integrase."
+  },
+  {
+   "t": 100.95,
+   "text": "The other AAV carries the cargo flanked by attP sites."
+  },
+  {
+   "t": 105.7,
+   "text": "Both are co-injected; the prime editor installs the attB; the integrase docks the cargo."
+  },
+  {
+   "t": 112.56,
+   "text": "Demonstrated in mouse models of various diseases."
+  },
+  {
+   "t": 116.03,
+   "text": "LNP-PASTE."
+  },
+  {
+   "t": 117.4,
+   "text": "Lipid nanoparticles (the COVID-vaccine technology) deliver the prime editor as mRNA plus the pegRNA."
+  },
+  {
+   "t": 125.19,
+   "text": "A separate dose, or the same dose, delivers Bxb1 mRNA."
+  },
+  {
+   "t": 130.61,
+   "text": "The cargo is delivered as a separate plasmid or DNA nanostructure."
+  },
+  {
+   "t": 134.97,
+   "text": "LNP delivery has the advantage that it doesn't trigger anti-AAV immune responses that limit re-dosing, and it allows much larger pegRNA and mRNA payloads than AAV."
+  },
+  {
+   "t": 146.3,
+   "text": "Hybrid AAV-plus-naked-DNA."
+  },
+  {
+   "t": 149.12,
+   "text": "An AAV delivers the prime editor and integrase; the cargo is delivered as naked DNA, an electroporated plasmid, or another non-viral form."
+  },
+  {
+   "t": 158.91,
+   "text": "This is more applicable to ex vivo modification of cells, where you have direct access for electroporation."
+  },
+  {
+   "t": 166.07,
+   "text": "Self-circularizing AAV cargo."
+  },
+  {
+   "t": 168.86,
+   "text": "The AAV-delivered cargo is designed to circularize after delivery, providing the topology that Bxb1 prefers as a substrate."
+  },
+  {
+   "t": 177.32,
+   "text": "There are clever molecular tricks involving intramolecular self-ligation to convert the linear AAV genome into a circle that Bxb1 can grab."
+  },
+  {
+   "t": 187.31,
+   "text": "Each of these has tradeoffs in efficiency, scalability, and regulatory complexity."
+  },
+  {
+   "t": 193.16,
+   "text": "The field is in active development and no single approach has dominated yet."
+  },
+  {
+   "t": 198.15,
+   "text": "There's a related design pattern worth flagging: \"Twin-PE\" or \"PEDAR\" approaches that use prime editing to install two att sites (an attB upstream and an attB downstream of a region you want to replace), and then use Bxb1 plus attP-flanked cargo to do a cassette exchange — replacing the region between the two attBs with the cargo."
+  },
+  {
+   "t": 220.74,
+   "text": "This is more sophisticated than single-attB-plus-integration but allows clean deletion of a problematic region (say, an exon containing a dominant-negative mutation) and replacement with a healthy version."
+  },
+  {
+   "t": 233.94,
+   "text": "The combination of prime editing's flexibility for site installation and Bxb1's clean recombination chemistry gives you a much richer set of possible edits than either tool alone."
+  },
+  {
+   "t": 245.44,
+   "text": "This whole design space — prime editing as the targeting tool, serine integrases as the integration tool, AAV and LNPs as the delivery tools — is one of the most active areas of gene therapy R&D today."
+  },
+  {
+   "t": 259.79,
+   "text": "Several companies, including Prime Medicine, Beam Therapeutics, and others, have programs in this space."
+  },
+  {
+   "t": 266.57,
+   "text": "The big remaining bottlenecks are delivery efficiency (getting all the components into enough cells), expression of all the components in the right ratio (you need the prime editor to act first, then the integrase), and the rate of complete integration (currently in the few-percent range for in vivo work, which is enough for some diseases but not for others)."
+  },
+  {
+   "t": 286.85,
+   "text": "All of these are active engineering targets."
+  }
+ ]
+}

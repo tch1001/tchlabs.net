@@ -1,0 +1,171 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — TALED — the adenine version of the story, and another impossible enzyme",
+ "duration": 348.66,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — TALED — the adenine version of the story, and another impossible enzyme"
+  },
+  {
+   "t": 6.45,
+   "text": "Now I want to tell you a story that parallels exactly what happened in the nuclear base editing world, but for mitochondria."
+  },
+  {
+   "t": 13.78,
+   "text": "Remember from the base-editing lecture how, after CBE was published, the obvious question was: can we do this for adenine?"
+  },
+  {
+   "t": 22.0,
+   "text": "And remember how the answer was almost no, because no enzyme that deaminates adenine in DNA exists in nature, and the Liu lab had to evolve one — TadA — from a tRNA-modifying enzyme through directed evolution?"
+  },
+  {
+   "t": 36.54,
+   "text": "That's the famous ABE story."
+  },
+  {
+   "t": 39.15,
+   "text": "The same exact problem reappeared for mitochondrial editing."
+  },
+  {
+   "t": 42.85,
+   "text": "After DdCBE was published in 2020, everyone immediately asked: can we do an adenine version, for A-to-G editing in mtDNA?"
+  },
+  {
+   "t": 52.88,
+   "text": "Because many disease-causing mtDNA mutations are A-to-G changes that would need to be reverted, and many other pathogenic mutations could be repaired by a different A-to-G edit elsewhere."
+  },
+  {
+   "t": 63.94,
+   "text": "Like nuclear ABE, an adenine mitochondrial base editor would massively expand the targetable disease space."
+  },
+  {
+   "t": 71.33,
+   "text": "But the same problem applied."
+  },
+  {
+   "t": 72.94,
+   "text": "No naturally occurring adenine deaminase that works on double-stranded DNA exists."
+  },
+  {
+   "t": 78.81,
+   "text": "Just like for nuclear ABE in 2016, there was no starting material from nature to fuse onto a TALE arm."
+  },
+  {
+   "t": 86.94,
+   "text": "The chemistry had to be engineered."
+  },
+  {
+   "t": 89.21,
+   "text": "The breakthrough came in 2022 from a Korean team led by Jin-Soo Kim at the Institute for Basic Science in Daejeon, with Hyunji Yoo and others as co-authors."
+  },
+  {
+   "t": 99.78,
+   "text": "They published a construct they called TALED — TALE-linked deaminase, where the D stands for adenosine deaminase."
+  },
+  {
+   "t": 107.11,
+   "text": "The architecture is essentially the same as DdCBE — two TALE arms flanking the target, mitochondrial targeting sequences for import — but with adenosine deaminase chemistry instead of cytidine deaminase chemistry."
+  },
+  {
+   "t": 121.49,
+   "text": "The deaminase they used was a variant of TadA8e — the highly evolved version of TadA that Liu's lab had developed for nuclear adenine base editing."
+  },
+  {
+   "t": 131.11,
+   "text": "TadA8e normally requires single-stranded DNA, just like APOBEC1."
+  },
+  {
+   "t": 136.72,
+   "text": "Bringing it to mitochondria, you'd think, would have the same problem we had with cytidine deaminases — no single-stranded substrate available, no editing."
+  },
+  {
+   "t": 146.31,
+   "text": "The Kim lab's trick was to combine TadA8e with a split DddA scaffold that didn't actually do the cytidine deamination."
+  },
+  {
+   "t": 154.38,
+   "text": "Specifically, they used a catalytically inactive version of DddA — a DddA that still binds and processes DNA but doesn't deaminate cytosines — and showed that this inactive DddA, when split between two TALE arms, generates enough local single-strandedness on the dsDNA to allow TadA8e to deaminate an adenine in the spacer."
+  },
+  {
+   "t": 177.74,
+   "text": "The DddA halves serve as a kind of helix-opening assistant, not as a deaminase."
+  },
+  {
+   "t": 183.54,
+   "text": "The actual catalytic chemistry is done by TadA8e on the briefly single-stranded patch that the DddA halves create."
+  },
+  {
+   "t": 192.04,
+   "text": "The result is A-to-I editing in mtDNA, where the inosine is read as G by the cell's replication machinery — so the net effect is A-to-G."
+  },
+  {
+   "t": 202.76,
+   "text": "The same chemistry as nuclear ABE, just delivered to mitochondria via the TALE/DddA-scaffold approach instead of via Cas9."
+  },
+  {
+   "t": 211.94,
+   "text": "The 2022 TALED paper, published in Cell, showed targeted A-to-G editing in mtDNA at multiple sites in human cells, with editing efficiencies in the same range as DdCBE — roughly 5% to 50%."
+  },
+  {
+   "t": 227.69,
+   "text": "Combined with DdCBE for C-to-T edits and TALED for A-to-G edits, the mitochondrial editing toolkit now covers two of the four transition mutations, which is the same coverage that ABE plus CBE provide in the nuclear genome."
+  },
+  {
+   "t": 242.99,
+   "text": "Note what TALED required that no one had appreciated at first."
+  },
+  {
+   "t": 247.05,
+   "text": "You needed not just an adenine deaminase, but a helix-opening accessory to expose the adenine for editing."
+  },
+  {
+   "t": 254.57,
+   "text": "The split inactive DddA serves exactly this role — it doesn't edit, but it opens a local single-stranded patch by virtue of how it engages the duplex."
+  },
+  {
+   "t": 264.96,
+   "text": "Without that accessory, TadA8e would have no substrate."
+  },
+  {
+   "t": 269.3,
+   "text": "The TALED design effectively uses two different enzymatic activities — DddA's helix engagement and TadA8e's adenine deamination — in a coordinated single construct."
+  },
+  {
+   "t": 281.62,
+   "text": "It's a beautiful piece of biochemical engineering, and it extends the platform from C-to-T to A-to-G coverage."
+  },
+  {
+   "t": 289.23,
+   "text": "I want to flag one thing about TALED that's still under active investigation."
+  },
+  {
+   "t": 293.72,
+   "text": "Some early reports raised concerns about TALED's off-target editing in the nuclear genome and in the mitochondrial transcriptome — specifically, that TadA8e in the TALED construct might edit RNA as well as DNA, since TadA8e's parent enzyme TadA evolved to edit tRNA."
+  },
+  {
+   "t": 311.73,
+   "text": "This kind of RNA off-targeting has been a known concern with nuclear adenine base editors as well, and it's an area where the engineering community is working on cleaner variants."
+  },
+  {
+   "t": 322.14,
+   "text": "The TALED story is genuinely promising but, as of the most recent literature, still being refined."
+  },
+  {
+   "t": 329.26,
+   "text": "So between DdCBE and TALED, we now have two complementary mitochondrial editors."
+  },
+  {
+   "t": 335.59,
+   "text": "C-to-T and A-to-G."
+  },
+  {
+   "t": 338.04,
+   "text": "The same two transitions that nuclear base editing covers."
+  },
+  {
+   "t": 342.11,
+   "text": "The mitochondrial genome, locked away for thirty years, is now editable for those two chemistries."
+  }
+ ]
+}

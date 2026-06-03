@@ -1,0 +1,219 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The editing window — Goldilocks zone, positions 4 through 8",
+ "duration": 302.56,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The editing window — Goldilocks zone, positions 4 through 8"
+  },
+  {
+   "t": 5.69,
+   "text": "Now I want to talk about precision in a different sense."
+  },
+  {
+   "t": 9.16,
+   "text": "We've talked about which letter changes a base editor can install."
+  },
+  {
+   "t": 12.82,
+   "text": "The other dimension is: where exactly does the base editor act, within the target sequence?"
+  },
+  {
+   "t": 19.76,
+   "text": "You'll remember that in standard Cas9, the protein cuts at a defined position relative to the PAM — three letters in from the PAM end."
+  },
+  {
+   "t": 28.51,
+   "text": "That's a sharp, defined cut."
+  },
+  {
+   "t": 30.57,
+   "text": "Base editing, by contrast, has a window — a region within the target sequence where the deaminase can reach."
+  },
+  {
+   "t": 37.77,
+   "text": "Not a single position."
+  },
+  {
+   "t": 39.17,
+   "text": "A small range of positions."
+  },
+  {
+   "t": 41.04,
+   "text": "The reason is geometric."
+  },
+  {
+   "t": 43.0,
+   "text": "The deaminase is tethered to one end of Cas9 — usually the N-terminus, opposite from where the PAM is."
+  },
+  {
+   "t": 50.67,
+   "text": "The R-loop, that single-stranded loop of displaced DNA, hangs out below Cas9."
+  },
+  {
+   "t": 57.02,
+   "text": "The deaminase can only reach so far."
+  },
+  {
+   "t": 59.89,
+   "text": "So it can edit bases that are close to its tether, but not bases that are too close to the PAM (which are at the other end of the R-loop) and not bases that are too far past the end of the R-loop (which are outside the loop entirely)."
+  },
+  {
+   "t": 72.6,
+   "text": "In practice, for the standard CBE and ABE architectures, the editing window sits at roughly positions 4 through 8 of the twenty-base target sequence, counting from the end opposite the PAM."
+  },
+  {
+   "t": 86.28,
+   "text": "Position 1 is the far end."
+  },
+  {
+   "t": 88.46,
+   "text": "Position 20 is the base immediately next to the PAM."
+  },
+  {
+   "t": 92.54,
+   "text": "The window — the set of positions where a base in the editable category is likely to be modified — is approximately positions 4 to 8."
+  },
+  {
+   "t": 101.36,
+   "text": "The bases right at the PAM end of the target, positions 15 to 20, are out of reach."
+  },
+  {
+   "t": 107.5,
+   "text": "The bases at the very far end, positions 1 to 3, are also poorly edited."
+  },
+  {
+   "t": 112.67,
+   "text": "This is the editing window analogy I want you to keep."
+  },
+  {
+   "t": 116.06,
+   "text": "The deaminase has only a short reach from the Cas9 nickase, so only bases 4 to 8 from the PAM get touched."
+  },
+  {
+   "t": 123.3,
+   "text": "Imagine you are holding a long string with a small magnet attached three inches from the end."
+  },
+  {
+   "t": 128.91,
+   "text": "The magnet can grab any metal object within an inch of where it dangles."
+  },
+  {
+   "t": 133.44,
+   "text": "Anything outside that inch — you can wave it around, but the magnet won't reach."
+  },
+  {
+   "t": 138.29,
+   "text": "The base editor is exactly that."
+  },
+  {
+   "t": 140.61,
+   "text": "The Cas9 is the string."
+  },
+  {
+   "t": 142.62,
+   "text": "The deaminase is the magnet."
+  },
+  {
+   "t": 144.82,
+   "text": "The editing window is the inch where it can reach."
+  },
+  {
+   "t": 148.11,
+   "text": "Now this is a constraint, but it is also a designable parameter."
+  },
+  {
+   "t": 152.11,
+   "text": "You can move the editing window."
+  },
+  {
+   "t": 153.89,
+   "text": "By engineering different deaminases with different reach geometries, by changing the linker length between deaminase and Cas9, by mutating residues in the deaminase that determine substrate preference, you can produce variants whose window is shifted toward the PAM-distal end, or toward the PAM-proximal end, or narrowed to a smaller region."
+  },
+  {
+   "t": 174.4,
+   "text": "Liu's lab and others have published dozens of variants with custom windows."
+  },
+  {
+   "t": 178.84,
+   "text": "The current toolkit lets you choose a base editor whose window aligns with the base you want to edit."
+  },
+  {
+   "t": 184.41,
+   "text": "But here is the catch — and we will see it again in Segment 12 when we get to bystander editing."
+  },
+  {
+   "t": 190.32,
+   "text": "The window is a window, not a point."
+  },
+  {
+   "t": 192.72,
+   "text": "If there is more than one editable base in the window, all of them get edited."
+  },
+  {
+   "t": 197.61,
+   "text": "If you point a CBE at a target that has two cytosines at positions 5 and 7, both will get converted to T."
+  },
+  {
+   "t": 204.62,
+   "text": "You can't pick one and skip the other."
+  },
+  {
+   "t": 206.89,
+   "text": "The deaminase is sequence-context-influenced — it has some preference — but it doesn't reach in and pick out the specific letter you wanted."
+  },
+  {
+   "t": 215.99,
+   "text": "It edits the ones it can reach."
+  },
+  {
+   "t": 217.91,
+   "text": "Plural."
+  },
+  {
+   "t": 218.69,
+   "text": "This is fundamentally different from how Cas9 cuts."
+  },
+  {
+   "t": 221.89,
+   "text": "Cas9 cuts at one position."
+  },
+  {
+   "t": 223.82,
+   "text": "Base editing edits one window, with potentially multiple bases changed inside it."
+  },
+  {
+   "t": 229.38,
+   "text": "That asymmetry is the source of the bystander problem, and it is one of the active engineering frontiers in the field."
+  },
+  {
+   "t": 236.5,
+   "text": "Let me also tell you what the editing window looks like from the design end."
+  },
+  {
+   "t": 240.39,
+   "text": "When a clinician or a research scientist wants to install a particular edit, they go to their target sequence, find the spot where the edit needs to happen, scan outward looking for a PAM, and check whether placing the target so the edit lands in positions 4 to 8 is even possible."
+  },
+  {
+   "t": 256.59,
+   "text": "Most of the time it is, because PAMs are common."
+  },
+  {
+   "t": 259.21,
+   "text": "Sometimes it isn't — sometimes there's no PAM placed correctly to put the target base in the editing window — and in those cases the editor either needs a variant of Cas9 with a different PAM (we have several), or the edit needs to be made by a different technology entirely."
+  },
+  {
+   "t": 275.31,
+   "text": "So when you read a paper saying \"we corrected mutation X with a base editor,\" what you should hear is: \"there was a Cas9 PAM positioned at the right distance from the mutation that we could land it in the editing window, and there were no other bases of the same identity in the window that would have given us bystander edits we didn't want."
+  },
+  {
+   "t": 292.41,
+   "text": "\" Every base editor application is constrained by both of those geometric requirements."
+  },
+  {
+   "t": 297.95,
+   "text": "The reach of the technology is enormous, but it is not yet universal."
+  }
+ ]
+}

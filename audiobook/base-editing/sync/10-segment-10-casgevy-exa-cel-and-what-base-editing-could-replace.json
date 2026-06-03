@@ -1,0 +1,267 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Casgevy, exa-cel, and what base editing could replace",
+ "duration": 450.12,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Casgevy, exa-cel, and what base editing could replace"
+  },
+  {
+   "t": 5.51,
+   "text": "Welcome back."
+  },
+  {
+   "t": 6.51,
+   "text": "I want to spend this segment on the most famous CRISPR therapy in the world right now — Casgevy, also known by its development name exa-cel — and on why the base editing community is racing to build a base-edited alternative to it, even though Casgevy already works."
+  },
+  {
+   "t": 23.71,
+   "text": "Casgevy is the world's first approved CRISPR-based gene therapy, approved by the FDA in December 2023 for sickle cell disease and shortly after for transfusion-dependent beta thalassemia."
+  },
+  {
+   "t": 36.3,
+   "text": "It was developed by Vertex Pharmaceuticals in partnership with CRISPR Therapeutics."
+  },
+  {
+   "t": 41.59,
+   "text": "The strategy is one of the great molecular tricks in modern hematology."
+  },
+  {
+   "t": 46.41,
+   "text": "Sickle cell disease is caused by a single point mutation in the beta-globin gene — a glutamic acid to valine change at position 6 of the beta-globin protein — which causes the hemoglobin molecule to polymerize under low-oxygen conditions, distorting red blood cells into the sickle shape that gives the disease its name."
+  },
+  {
+   "t": 65.84,
+   "text": "Sickled cells clog small blood vessels, causing pain crises, organ damage, and premature death."
+  },
+  {
+   "t": 72.53,
+   "text": "The obvious therapeutic target is the beta-globin gene itself."
+  },
+  {
+   "t": 76.76,
+   "text": "Fix the point mutation, restore normal hemoglobin, cure the disease."
+  },
+  {
+   "t": 81.8,
+   "text": "But Casgevy doesn't target the beta-globin gene."
+  },
+  {
+   "t": 85.04,
+   "text": "It targets a completely different gene, called BCL11A."
+  },
+  {
+   "t": 89.56,
+   "text": "Why?"
+  },
+  {
+   "t": 90.26,
+   "text": "Because of an old observation in hematology."
+  },
+  {
+   "t": 93.06,
+   "text": "Humans make two forms of hemoglobin."
+  },
+  {
+   "t": 95.76,
+   "text": "Adult hemoglobin uses beta-globin chains — the protein that, in sickle cell patients, carries the disease-causing mutation."
+  },
+  {
+   "t": 104.55,
+   "text": "Fetal hemoglobin, which we make in utero and for the first few months after birth, uses gamma-globin chains, encoded by a different gene that the sickle cell mutation does not affect."
+  },
+  {
+   "t": 116.14,
+   "text": "After birth, BCL11A gets turned on and represses the gamma-globin gene, switching us over to adult beta-globin."
+  },
+  {
+   "t": 124.08,
+   "text": "That's why some people with sickle cell disease who happen to have a natural genetic variant that keeps gamma-globin on into adulthood have much milder disease — their fetal hemoglobin compensates for their broken adult hemoglobin."
+  },
+  {
+   "t": 137.0,
+   "text": "Casgevy hijacks this."
+  },
+  {
+   "t": 138.81,
+   "text": "It uses Cas9 to cut a specific spot in BCL11A — an enhancer that drives BCL11A expression in red blood cell precursors — so that NHEJ creates disruptive indels, BCL11A is knocked down in those cells, and gamma-globin stays on into adulthood."
+  },
+  {
+   "t": 156.86,
+   "text": "The patient now makes fetal hemoglobin in adult red blood cells, which is unaffected by the sickle cell mutation, and the disease is functionally cured."
+  },
+  {
+   "t": 166.24,
+   "text": "Brilliant."
+  },
+  {
+   "t": 167.16,
+   "text": "Indirect, but brilliant."
+  },
+  {
+   "t": 168.9,
+   "text": "The catch is the process."
+  },
+  {
+   "t": 170.76,
+   "text": "Casgevy is what's called an ex vivo therapy."
+  },
+  {
+   "t": 173.72,
+   "text": "The patient's hematopoietic stem cells — the cells in the bone marrow that make all blood cells — are removed from the body, edited in a dish with the Cas9 reagents, then infused back into the patient."
+  },
+  {
+   "t": 186.12,
+   "text": "Before the infusion, the patient receives high-dose chemotherapy to wipe out their existing bone marrow, making room for the edited cells to engraft."
+  },
+  {
+   "t": 195.72,
+   "text": "This is the same procedure used in standard bone marrow transplants, and the conditioning chemotherapy carries serious risks — infertility, infection, organ damage, and in rare cases secondary cancers."
+  },
+  {
+   "t": 208.53,
+   "text": "The whole protocol takes months, requires a hospital stay, and at present costs around 2.2 million dollars per patient."
+  },
+  {
+   "t": 216.88,
+   "text": "Now ask yourself the question that motivates the base editing alternative."
+  },
+  {
+   "t": 222.1,
+   "text": "Casgevy works by Cas9 cutting BCL11A and letting NHEJ make a mess of the cut site."
+  },
+  {
+   "t": 229.66,
+   "text": "That's the entire point — you want to disrupt the gene."
+  },
+  {
+   "t": 232.89,
+   "text": "But cutting introduces all the risks we discussed in Segment 2: large deletions, chromosomal rearrangements, p53 activation, even chromothripsis at low rates."
+  },
+  {
+   "t": 244.93,
+   "text": "Stem cells are a particularly sensitive context because they can divide for the rest of the patient's life."
+  },
+  {
+   "t": 250.91,
+   "text": "An aberration introduced at the editing step can be carried by every blood cell the patient ever makes."
+  },
+  {
+   "t": 257.09,
+   "text": "What if you could disrupt BCL11A without cutting?"
+  },
+  {
+   "t": 260.86,
+   "text": "A base editor pointed at the BCL11A enhancer could install a single C-to-T or A-to-G change that disrupts the binding site for the transcription factor that drives BCL11A expression."
+  },
+  {
+   "t": 273.41,
+   "text": "The functional outcome is the same — BCL11A goes down, gamma-globin comes up, sickle cell is cured — but no double-strand break is ever made."
+  },
+  {
+   "t": 283.23,
+   "text": "The genome is not torn."
+  },
+  {
+   "t": 285.42,
+   "text": "The stem cells go back into the patient without any of the rare-but-real risks of cutting."
+  },
+  {
+   "t": 290.36,
+   "text": "That is exactly the strategy of Beam Therapeutics' BEAM-101, in early clinical trials."
+  },
+  {
+   "t": 297.28,
+   "text": "Same disease as Casgevy."
+  },
+  {
+   "t": 299.45,
+   "text": "Same target gene."
+  },
+  {
+   "t": 300.78,
+   "text": "Different editing chemistry."
+  },
+  {
+   "t": 302.53,
+   "text": "A cytosine base editor instead of cutting Cas9."
+  },
+  {
+   "t": 305.85,
+   "text": "The first patients have been dosed; initial results presented at the American Society of Hematology meeting in 2023 and 2024 have shown robust gamma-globin elevation and clinical benefit, with the editing event being a clean single-letter conversion rather than a NHEJ scar."
+  },
+  {
+   "t": 323.57,
+   "text": "You can see why this matters."
+  },
+  {
+   "t": 325.57,
+   "text": "Casgevy is a real therapy and it really cures sickle cell."
+  },
+  {
+   "t": 330.27,
+   "text": "But it is also a heavy, expensive, risky procedure."
+  },
+  {
+   "t": 334.67,
+   "text": "If a base-edited version can match its efficacy with lower editing-related risk, simpler manufacturing, and eventually maybe even in vivo delivery without the bone marrow conditioning, it could replace Casgevy."
+  },
+  {
+   "t": 348.38,
+   "text": "That's the bet behind BEAM-101 and similar programs."
+  },
+  {
+   "t": 352.72,
+   "text": "There is also work, at Boston Children's Hospital and at academic centers, on directly correcting the sickle cell mutation itself with a base editor — that is, using an adenine base editor to convert the A in the disease codon back toward a near-normal codon."
+  },
+  {
+   "t": 368.05,
+   "text": "The challenge there is that the available chemistry doesn't perfectly reverse the sickle cell mutation; you can only convert A to G, not G to A, and the sickle cell mutation is in the opposite direction from where ABE goes."
+  },
+  {
+   "t": 381.65,
+   "text": "So instead, researchers use base editors to convert the sickle mutation into a known anti-sickling variant called Makassar — a different naturally occurring beta-globin variant that is benign and that ABE can produce."
+  },
+  {
+   "t": 395.43,
+   "text": "The patient ends up with Makassar hemoglobin instead of sickle hemoglobin, the red blood cells don't sickle, and the disease is functionally treated."
+  },
+  {
+   "t": 404.76,
+   "text": "The sickle cell story is therefore, in the base editing era, a story about multiple competing strategies."
+  },
+  {
+   "t": 412.11,
+   "text": "Casgevy uses cutting Cas9 to disrupt BCL11A."
+  },
+  {
+   "t": 416.86,
+   "text": "BEAM-101 uses CBE to disrupt BCL11A without cutting."
+  },
+  {
+   "t": 422.96,
+   "text": "Makassar-style approaches use ABE to convert sickle hemoglobin to a benign variant directly."
+  },
+  {
+   "t": 429.81,
+   "text": "All three are running in trials."
+  },
+  {
+   "t": 431.81,
+   "text": "The next five years will tell us which approach — or which combination — wins on efficacy, safety, and cost."
+  },
+  {
+   "t": 439.16,
+   "text": "That is the second clinical chapter of base editing."
+  },
+  {
+   "t": 442.16,
+   "text": "Same disease as the first approved CRISPR therapy, different chemistry, possibly cleaner outcome."
+  },
+  {
+   "t": 448.97,
+   "text": "The race is on."
+  }
+ ]
+}

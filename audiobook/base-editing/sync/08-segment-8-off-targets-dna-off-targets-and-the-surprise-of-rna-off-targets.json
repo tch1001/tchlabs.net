@@ -1,0 +1,223 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Off-targets — DNA off-targets and the surprise of RNA off-targets",
+ "duration": 381.02,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Off-targets — DNA off-targets and the surprise of RNA off-targets"
+  },
+  {
+   "t": 6.45,
+   "text": "Time to talk about off-targets, because every editing technology has them, and you need to know what they look like for base editors."
+  },
+  {
+   "t": 14.24,
+   "text": "There are two main classes of off-target editing with base editors."
+  },
+  {
+   "t": 18.04,
+   "text": "The first is the one you'd expect, the one we already worry about with Cas9: DNA off-targets."
+  },
+  {
+   "t": 24.16,
+   "text": "The second is one that didn't come up with cutting CRISPR at all, and that took the base editing community by surprise around 2019: RNA off-targets."
+  },
+  {
+   "t": 34.38,
+   "text": "Let me take them in order."
+  },
+  {
+   "t": 35.79,
+   "text": "DNA off-targets in base editing arise the same way they do in Cas9 editing."
+  },
+  {
+   "t": 41.42,
+   "text": "The guide RNA in a base editor uses the same recognition rules as it does in Cas9 — same PAM requirement, same R-loop formation."
+  },
+  {
+   "t": 50.44,
+   "text": "If there's a site somewhere else in the genome that matches the guide RNA closely enough — same PAM, similar sequence — Cas9 may bind there too."
+  },
+  {
+   "t": 60.77,
+   "text": "And if Cas9 binds, the deaminase rides along, and editing happens at the off-target site."
+  },
+  {
+   "t": 67.17,
+   "text": "The mechanism is exactly what you'd predict."
+  },
+  {
+   "t": 69.96,
+   "text": "So everything you learned in the CRISPR lecture about reducing Cas9 off-targets applies to base editors as well."
+  },
+  {
+   "t": 77.24,
+   "text": "Use high-fidelity Cas9 variants."
+  },
+  {
+   "t": 80.04,
+   "text": "Use shorter guide RNAs that punish mismatches harder."
+  },
+  {
+   "t": 83.67,
+   "text": "Use chemically modified guides."
+  },
+  {
+   "t": 85.86,
+   "text": "Use careful guide RNA design with bioinformatic tools that avoid sequences with close matches elsewhere in the genome."
+  },
+  {
+   "t": 93.83,
+   "text": "All of that carries over."
+  },
+  {
+   "t": 95.41,
+   "text": "Multiple high-fidelity base editor variants exist that combine high-fidelity Cas9 modifications — like HiFi Cas9 or eSpCas9 — with the deaminase architecture."
+  },
+  {
+   "t": 107.22,
+   "text": "Empirically, DNA off-target editing by base editors is in the same ballpark as DNA off-target activity by Cas9 — usually low at well-designed targets, occasionally significant at problematic ones, manageable with engineering."
+  },
+  {
+   "t": 121.58,
+   "text": "Now the RNA off-targets."
+  },
+  {
+   "t": 123.59,
+   "text": "This one is, scientifically, more interesting, and it's the kind of finding that should make you appreciate why drug development takes so long even after a technology works in a dish."
+  },
+  {
+   "t": 135.32,
+   "text": "Here is the issue."
+  },
+  {
+   "t": 136.49,
+   "text": "The deaminase fused to your Cas9 is a real enzyme."
+  },
+  {
+   "t": 140.57,
+   "text": "It's not magically inert when it isn't tethered to a target."
+  },
+  {
+   "t": 144.3,
+   "text": "APOBEC1 deaminates cytosines on single-stranded substrates."
+  },
+  {
+   "t": 149.82,
+   "text": "TadA-8e deaminates adenosines on single-stranded substrates."
+  },
+  {
+   "t": 155.53,
+   "text": "As long as they are in the cell, they are doing chemistry on anything they can reach — including the cell's messenger RNAs, which are full of single-stranded regions exposed during translation and processing."
+  },
+  {
+   "t": 167.88,
+   "text": "In 2019, two papers — one from Keith Joung's lab and one from Junzhou Wu and Erwei Zuo — reported that base editors edit cellular RNA at thousands of sites genome-wide."
+  },
+  {
+   "t": 179.76,
+   "text": "Not just the target DNA."
+  },
+  {
+   "t": 181.51,
+   "text": "Cytosines in mRNAs were being converted to uracils by CBEs."
+  },
+  {
+   "t": 186.46,
+   "text": "Adenosines in mRNAs were being converted to inosines (which get read as G) by ABEs."
+  },
+  {
+   "t": 193.09,
+   "text": "The deaminase, riding along on Cas9 in the cell, was acting promiscuously on RNA whenever it ran into a single-stranded substrate it liked."
+  },
+  {
+   "t": 203.18,
+   "text": "This was a real concern."
+  },
+  {
+   "t": 204.79,
+   "text": "Editing thousands of RNA bases all over the cell's transcriptome means you are subtly changing the protein output across many genes."
+  },
+  {
+   "t": 213.29,
+   "text": "If you do this in a patient's cells, you don't know which changes might cause toxicity, immune reactions, or other unexpected effects."
+  },
+  {
+   "t": 222.11,
+   "text": "RNA off-target activity went from \"issue we didn't think about\" to \"issue we have to address\" in a single year."
+  },
+  {
+   "t": 229.71,
+   "text": "The response from the field has been mostly engineering."
+  },
+  {
+   "t": 232.76,
+   "text": "Several groups, including Liu's, have generated deaminase variants with mutations that reduce RNA activity while preserving DNA activity."
+  },
+  {
+   "t": 242.32,
+   "text": "The trick is that the geometry of how the deaminase grabs a substrate is slightly different for RNA versus DNA — RNA has a 2-prime hydroxyl on the sugar, DNA doesn't — and so it's possible to mutate residues that contact that hydroxyl to disfavor RNA binding without crippling DNA binding."
+  },
+  {
+   "t": 262.09,
+   "text": "The current generation of clinical base editors, including the ones in Verve's trials, use deaminases engineered for low RNA off-target activity."
+  },
+  {
+   "t": 271.82,
+   "text": "A few more things to put on your radar."
+  },
+  {
+   "t": 274.06,
+   "text": "There is a class of editing artifacts called sgRNA-independent off-target editing, which is the technical name for the RNA editing and, more rarely, for DNA editing at sites that aren't guided by the sgRNA but that the deaminase finds and acts on anyway."
+  },
+  {
+   "t": 289.15,
+   "text": "The defining feature is that this kind of editing doesn't go away when you change the guide RNA, because it has nothing to do with the guide."
+  },
+  {
+   "t": 296.86,
+   "text": "It's the deaminase being a deaminase."
+  },
+  {
+   "t": 300.01,
+   "text": "This is the most insidious form of off-target activity, because the standard \"control with a non-targeting guide RNA\" experiment doesn't catch it."
+  },
+  {
+   "t": 309.27,
+   "text": "There is also the question of collateral damage during editing — what happens if Cas9 lingers, the deaminase keeps working, and bases near the target outside the canonical window get nicked or edited at low rates."
+  },
+  {
+   "t": 322.17,
+   "text": "This is a chronic concern at high doses and long incubations."
+  },
+  {
+   "t": 326.43,
+   "text": "And finally there is the question of immunogenicity — your immune system recognizing the bacterial Cas9, or even the deaminase, as foreign."
+  },
+  {
+   "t": 335.97,
+   "text": "We won't dwell on this; it's mostly a delivery problem, and the field has workarounds."
+  },
+  {
+   "t": 341.3,
+   "text": "But it is on the list of things clinical trials have to monitor for."
+  },
+  {
+   "t": 345.35,
+   "text": "The summary is: base editors are dramatically cleaner than Cas9 in terms of indels and large deletions, but they have their own off-target spectrum — DNA off-targets familiar from CRISPR, RNA off-targets newly characterized — and engineering them down has been a major focus of the past five years of work."
+  },
+  {
+   "t": 364.56,
+   "text": "The current clinical-grade base editors are very, very different beasts from the first BE1 published in 2016."
+  },
+  {
+   "t": 372.38,
+   "text": "Better deaminases, tighter windows, lower RNA promiscuity, higher fidelity."
+  },
+  {
+   "t": 378.83,
+   "text": "The technology has matured."
+  }
+ ]
+}

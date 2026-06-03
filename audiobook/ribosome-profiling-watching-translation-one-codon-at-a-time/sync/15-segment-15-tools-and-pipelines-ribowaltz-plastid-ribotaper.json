@@ -1,0 +1,111 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Tools and pipelines — riboWaltz, plastid, RiboTaper",
+ "duration": 231.39,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Tools and pipelines — riboWaltz, plastid, RiboTaper"
+  },
+  {
+   "t": 6.04,
+   "text": "Let me now spend a quick segment on the computational tools you'll encounter if you actually start working with Ribo-seq data."
+  },
+  {
+   "t": 13.1,
+   "text": "This isn't an exhaustive review, but it's the toolkit you need to know."
+  },
+  {
+   "t": 17.26,
+   "text": "The starting point, like any sequencing analysis, is adapter trimming, quality filtering, and alignment."
+  },
+  {
+   "t": 24.32,
+   "text": "You typically use cutadapt or **trim_galore to remove the adapter sequences from your reads (since your inserts are only 30 nt and your reads are typically 50-75 nt, you sequence through the insert and into the adapter, which has to be trimmed off before alignment)."
+  },
+  {
+   "t": 42.08,
+   "text": "Then you align to a reference using STAR or bowtie2** — STAR is the more common choice and the splice-awareness is useful even though most ribosome footprints don't span junctions."
+  },
+  {
+   "t": 54.8,
+   "text": "For the actual alignment, many pipelines first remove rRNA contamination by aligning to an rRNA reference and discarding matches, then align the surviving reads to the transcriptome."
+  },
+  {
+   "t": 67.51,
+   "text": "Once you have aligned reads, the specialized tools take over."
+  },
+  {
+   "t": 71.47,
+   "text": "riboWaltz is an R/Bioconductor package by Lauria and colleagues that does the periodicity analysis I described in Segment 4 — computing length-specific P-site offsets, generating periodicity plots, building meta-profiles around start and stop codons."
+  },
+  {
+   "t": 87.35,
+   "text": "It's the standard first-pass QC tool for Ribo-seq data, and most modern publications report riboWaltz output."
+  },
+  {
+   "t": 95.0,
+   "text": "plastid is a Python library by Joshua Dunn for working with ribosome profiling and other genome-position data."
+  },
+  {
+   "t": 101.94,
+   "text": "It provides clean abstractions for ribosome profiling-specific analyses, including frame-aware position counts, ORF detection, and meta-profile generation."
+  },
+  {
+   "t": 112.55,
+   "text": "If you're doing custom analysis in Python, plastid is the standard library."
+  },
+  {
+   "t": 117.22,
+   "text": "RiboTaper is an R package by Calviello and colleagues for identifying actively translated ORFs from Ribo-seq data, including novel ORFs in 5' UTRs, lncRNAs, and intergenic regions."
+  },
+  {
+   "t": 130.75,
+   "text": "It uses a multitaper analysis (the source of its name) to detect 3-nucleotide periodicity in candidate ORFs and call which ones are really being translated."
+  },
+  {
+   "t": 141.69,
+   "text": "Similar tools include RibORF (by Ji and colleagues), ORF-RATER (from Weissman's lab), and PRICE (Erhard and colleagues)."
+  },
+  {
+   "t": 150.5,
+   "text": "For differential translation efficiency between conditions, Xtail and Ribodiff are the standard tools."
+  },
+  {
+   "t": 157.24,
+   "text": "Both take paired Ribo-seq plus RNA-seq counts and produce per-gene estimates of differential TE with proper statistics."
+  },
+  {
+   "t": 165.5,
+   "text": "For visualization, the standard approach is to load Ribo-seq tracks into IGV (Integrative Genomics Viewer) or UCSC Genome Browser, alongside RNA-seq tracks from the same samples."
+  },
+  {
+   "t": 178.65,
+   "text": "You can also use specialized viewers like GWIPS-viz, which is a web portal for browsing published Ribo-seq datasets — a great resource for checking whether your gene of interest has been profiled."
+  },
+  {
+   "t": 189.41,
+   "text": "For browsing public data, RPFdb is a curated database of published ribosome profiling experiments."
+  },
+  {
+   "t": 197.14,
+   "text": "GWIPS-viz is the equivalent for visualization."
+  },
+  {
+   "t": 200.53,
+   "text": "Both are useful for sanity-checking what's been done in your favorite gene or pathway."
+  },
+  {
+   "t": 205.68,
+   "text": "The headline: The Ribo-seq tool ecosystem is mature."
+  },
+  {
+   "t": 209.78,
+   "text": "The key tools you need to know are riboWaltz for QC, plastid for custom Python analysis, RiboTaper or RibORF for novel ORF discovery, and Xtail for differential translation efficiency."
+  },
+  {
+   "t": 222.66,
+   "text": "Combined with standard tools like STAR, cutadapt, and IGV, this is the working toolkit for modern ribosome profiling analysis."
+  }
+ ]
+}

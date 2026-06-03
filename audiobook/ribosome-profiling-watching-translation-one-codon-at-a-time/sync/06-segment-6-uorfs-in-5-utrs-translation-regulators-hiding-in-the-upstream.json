@@ -1,0 +1,203 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — uORFs in 5' UTRs — translation regulators hiding in the upstream",
+ "duration": 398.91,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — uORFs in 5' UTRs — translation regulators hiding in the upstream"
+  },
+  {
+   "t": 7.74,
+   "text": "We have been talking, so far, as though every mRNA has one open reading frame — the main ORF — and translation happens within that single coding region."
+  },
+  {
+   "t": 18.41,
+   "text": "That picture is, for many mRNAs, an oversimplification."
+  },
+  {
+   "t": 23.27,
+   "text": "In a substantial fraction of mammalian mRNAs — somewhere between thirty and fifty percent depending on which estimate you trust — there are upstream open reading frames, or uORFs, located in the 5' UTR, before the main coding sequence begins."
+  },
+  {
+   "t": 39.91,
+   "text": "These uORFs are short — often only a few codons long, sometimes up to a couple of hundred — and they have their own AUG start codons, their own stop codons, and they are translated."
+  },
+  {
+   "t": 51.75,
+   "text": "Ribo-seq was, more than any other technique, what made uORFs visible across the transcriptome."
+  },
+  {
+   "t": 59.1,
+   "text": "Before Ribo-seq, uORFs were known to exist — they had been characterized in individual famous examples like ATF4, GCN4, and a handful of others, where the regulatory role of the uORF was a textbook story."
+  },
+  {
+   "t": 72.66,
+   "text": "But the genome-wide picture, the realization that uORFs are everywhere and matter for the translation of a large fraction of all mRNAs, came from the first wave of Ribo-seq studies after 2009."
+  },
+  {
+   "t": 85.35,
+   "text": "Here is what uORFs do."
+  },
+  {
+   "t": 87.35,
+   "text": "uORFs are translation regulators in the 5' UTR — they often suppress translation of the main downstream ORF."
+  },
+  {
+   "t": 95.9,
+   "text": "The basic logic: a scanning ribosome, after being recruited to the cap of the mRNA, slides along the 5' UTR looking for an AUG."
+  },
+  {
+   "t": 105.39,
+   "text": "If it encounters the uORF AUG first, it initiates there."
+  },
+  {
+   "t": 109.96,
+   "text": "It translates the uORF — which is short, so this is quick — and then it terminates at the uORF stop codon."
+  },
+  {
+   "t": 117.24,
+   "text": "After termination, the ribosome typically dissociates from the mRNA."
+  },
+  {
+   "t": 122.09,
+   "text": "So if the ribosome got distracted by the uORF, it never made it to the main ORF."
+  },
+  {
+   "t": 127.8,
+   "text": "Translation of the main protein is suppressed."
+  },
+  {
+   "t": 130.85,
+   "text": "Some uORFs are even more elaborate."
+  },
+  {
+   "t": 133.7,
+   "text": "The classic case is ATF4 in mammals, which is the homolog of yeast GCN4."
+  },
+  {
+   "t": 140.31,
+   "text": "ATF4 is a transcription factor that gets translationally upregulated during the integrated stress response — when the cell is stressed, ATF4 protein goes up, even though ATF4 mRNA stays the same."
+  },
+  {
+   "t": 154.47,
+   "text": "The mechanism is uORF-based."
+  },
+  {
+   "t": 157.12,
+   "text": "In ATF4 mRNA, there are two uORFs in the 5' UTR."
+  },
+  {
+   "t": 162.57,
+   "text": "Under normal conditions, ribosomes initiate at uORF1, translate it, terminate, and then re-initiate at uORF2."
+  },
+  {
+   "t": 171.15,
+   "text": "uORF2 overlaps with the main ORF in an out-of-frame manner, so ribosomes that initiate at uORF2 cannot translate the main ORF — they hit a stop codon partway through and dissociate."
+  },
+  {
+   "t": 184.78,
+   "text": "So under normal conditions, the main ATF4 ORF is poorly translated."
+  },
+  {
+   "t": 190.38,
+   "text": "Under stress, the integrated stress response slows down ribosome re-initiation."
+  },
+  {
+   "t": 196.65,
+   "text": "Ribosomes still initiate at uORF1 and translate it, but they take longer to re-initiate downstream."
+  },
+  {
+   "t": 204.03,
+   "text": "The longer reinitiation delay means many ribosomes skip uORF2 entirely and instead reach the main ATF4 ORF, initiating there."
+  },
+  {
+   "t": 214.84,
+   "text": "Stress, paradoxically, increases ATF4 protein."
+  },
+  {
+   "t": 219.82,
+   "text": "This is one of the most beautiful regulatory mechanisms in biology, and it works because of two specifically positioned uORFs whose translation is mechanistically coupled to the main ORF."
+  },
+  {
+   "t": 231.85,
+   "text": "Ribo-seq lets you see all of this directly."
+  },
+  {
+   "t": 234.75,
+   "text": "In a normal cell, you see ribosome footprints on uORF1 and uORF2 of ATF4, but little signal on the main ORF."
+  },
+  {
+   "t": 243.99,
+   "text": "In a stressed cell, you see reduced footprints on uORF2 and increased footprints on the main ORF."
+  },
+  {
+   "t": 250.55,
+   "text": "The mechanism is right there in the data."
+  },
+  {
+   "t": 253.04,
+   "text": "The genome-wide picture from Ribo-seq is that uORFs are common, they are usually translated, and they usually suppress main ORF translation."
+  },
+  {
+   "t": 262.36,
+   "text": "Some uORFs are regulatory — like ATF4 — where the suppression is dynamically tunable by stress, by hormones, by signaling."
+  },
+  {
+   "t": 271.88,
+   "text": "Others are constitutive — they just always suppress the main ORF, and the cell uses that to keep certain proteins at low baseline levels until specific conditions activate them."
+  },
+  {
+   "t": 283.49,
+   "text": "How do you find uORFs in Ribo-seq data?"
+  },
+  {
+   "t": 286.3,
+   "text": "Conceptually, you look for genomic regions in the 5' UTR of annotated mRNAs where you see ribosome footprints with the characteristic 3-nucleotide periodicity, starting at an AUG (or near-cognate start codon like CUG or GUG) and ending at an in-frame stop codon."
+  },
+  {
+   "t": 304.9,
+   "text": "The periodicity tells you those footprints are real translating ribosomes."
+  },
+  {
+   "t": 310.24,
+   "text": "The presence of a start and stop codon defines an ORF."
+  },
+  {
+   "t": 314.29,
+   "text": "A specialized tool like RibORF, RiboTaper, or ORF-RATER scans the Ribo-seq data for these features and outputs a catalog of all the uORFs being translated in your sample."
+  },
+  {
+   "t": 326.29,
+   "text": "The numbers are striking."
+  },
+  {
+   "t": 327.74,
+   "text": "A typical Ribo-seq experiment on mammalian cells will identify thousands of translated uORFs — far more than the genome annotation had listed."
+  },
+  {
+   "t": 337.01,
+   "text": "Beyond regulation of the downstream main ORF, some uORFs encode their own functional micropeptides — small proteins of fewer than 100 amino acids that have biological activity."
+  },
+  {
+   "t": 349.5,
+   "text": "The boundary between \"uORF that suppresses translation\" and \"uORF that makes a real micropeptide\" is fuzzy and depends on whether the resulting peptide does anything."
+  },
+  {
+   "t": 361.4,
+   "text": "We'll spend the next segment on this, because the discovery of novel microproteins is one of the most exciting things Ribo-seq has opened up."
+  },
+  {
+   "t": 369.69,
+   "text": "For now, the headline: uORFs are translation regulators in 5' UTRs that often suppress main ORF translation, and Ribo-seq is how we see them genome-wide."
+  },
+  {
+   "t": 381.2,
+   "text": "Without Ribo-seq, the catalog of uORFs would still be in the dozens of well-studied cases."
+  },
+  {
+   "t": 387.72,
+   "text": "With Ribo-seq, we know they are everywhere, and we are starting to understand how much of the variability in protein abundance across the transcriptome is explained by uORF-mediated regulation."
+  }
+ ]
+}

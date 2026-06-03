@@ -1,0 +1,227 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The fragment size distribution and nucleosomal periodicity",
+ "duration": 372.29,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The fragment size distribution and nucleosomal periodicity"
+  },
+  {
+   "t": 5.17,
+   "text": "One of the most beautiful things about ATAC-seq — and one of the features that distinguishes it from every other accessibility assay — is what you see when you plot a histogram of the fragment sizes in your library."
+  },
+  {
+   "t": 17.26,
+   "text": "The plot has structure."
+  },
+  {
+   "t": 18.81,
+   "text": "It is not a single peak, not a smooth bell curve."
+  },
+  {
+   "t": 22.19,
+   "text": "It is a multi-modal distribution with a sharp peak under 100 base pairs and then a series of progressively decaying peaks at roughly 200, 400, and 600 base pairs."
+  },
+  {
+   "t": 33.58,
+   "text": "These peaks have a name."
+  },
+  {
+   "t": 34.89,
+   "text": "They are the nucleosomal periodicity, and they are diagnostic, in two different ways, of whether your experiment worked and of what the biology is doing."
+  },
+  {
+   "t": 44.3,
+   "text": "Let me explain where the peaks come from."
+  },
+  {
+   "t": 46.48,
+   "text": "Remember: Tn5 cuts the DNA in two places to release a fragment."
+  },
+  {
+   "t": 52.21,
+   "text": "The size of any given fragment is determined by the distance between two Tn5 insertion events."
+  },
+  {
+   "t": 58.66,
+   "text": "If both insertions happen in the same nucleosome-free region — say, in the open window at an active promoter — the fragment can be very short, maybe 50 to 100 base pairs."
+  },
+  {
+   "t": 70.69,
+   "text": "If one insertion happens on one side of a single nucleosome and the next insertion happens on the other side, the fragment spans the entire nucleosome and the linker regions on either side, giving a fragment of about 200 base pairs — which is roughly the 147 base pairs of the nucleosome itself plus about 50 base pairs of linker."
+  },
+  {
+   "t": 91.8,
+   "text": "If the cuts are separated by two nucleosomes, the fragment is about 400 base pairs."
+  },
+  {
+   "t": 98.08,
+   "text": "Three nucleosomes, about 600."
+  },
+  {
+   "t": 100.51,
+   "text": "And so on."
+  },
+  {
+   "t": 101.5,
+   "text": "So the histogram peaks are the structural fingerprint of the chromatin."
+  },
+  {
+   "t": 105.54,
+   "text": "The under-100 peak is fragments derived purely from nucleosome-free regions — the open windows where Tn5 had clear access and could insert multiple times within a small space."
+  },
+  {
+   "t": 118.2,
+   "text": "The 200 peak is mono-nucleosomal fragments — pieces that wrap around exactly one nucleosome."
+  },
+  {
+   "t": 125.3,
+   "text": "The 400 peak is di-nucleosomal, 600 is tri-nucleosomal."
+  },
+  {
+   "t": 130.24,
+   "text": "The peaks get progressively smaller because the probability of finding two Tn5 cuts separated by exactly N nucleosomes drops as N grows."
+  },
+  {
+   "t": 140.69,
+   "text": "The result is the characteristic comb-shaped distribution that anyone who's done ATAC-seq will recognize on sight."
+  },
+  {
+   "t": 148.43,
+   "text": "This periodicity is not a curiosity."
+  },
+  {
+   "t": 151.46,
+   "text": "It is a quality control marker."
+  },
+  {
+   "t": 153.41,
+   "text": "A well-prepared ATAC-seq library shows this clear nucleosomal pattern."
+  },
+  {
+   "t": 158.38,
+   "text": "If you don't see it — if your fragment distribution is smooth, with no nucleosomal peaks — something has gone wrong."
+  },
+  {
+   "t": 165.31,
+   "text": "Most often, the nuclei have over-lysed and the chromatin has decondensed, so Tn5 is cutting everywhere uniformly, including in regions that used to be nucleosomal."
+  },
+  {
+   "t": 176.71,
+   "text": "The structure is lost, and with it, the meaningful signal."
+  },
+  {
+   "t": 181.3,
+   "text": "Or you've used too much Tn5, and the enzyme has been able to cut even into nucleosomal DNA after overcoming the kinetic barrier."
+  },
+  {
+   "t": 189.54,
+   "text": "Either way, the absence of nucleosomal periodicity is a red flag, and you should remake the library."
+  },
+  {
+   "t": 196.18,
+   "text": "Conversely, if you see strong, sharp nucleosomal peaks, you have evidence that the chromatin structure was preserved during the assay and that Tn5 was responding to it the way you wanted."
+  },
+  {
+   "t": 207.81,
+   "text": "The periodicity itself becomes a built-in quality control."
+  },
+  {
+   "t": 212.34,
+   "text": "You can run a Bioanalyzer trace at the library stage and immediately tell whether the experiment worked, just by looking at the size distribution."
+  },
+  {
+   "t": 220.88,
+   "text": "This is one of the under-appreciated charms of ATAC-seq — the assay reports on its own success."
+  },
+  {
+   "t": 227.3,
+   "text": "There's more you can do with the fragment size distribution beyond QC."
+  },
+  {
+   "t": 231.89,
+   "text": "The sub-nucleosomal fragments — the under-100 fraction — carry information about the nucleosome-free regions."
+  },
+  {
+   "t": 239.39,
+   "text": "The mono-nucleosomal fragments — the 150 to 250 range — carry information about where the nucleosomes are positioned."
+  },
+  {
+   "t": 248.11,
+   "text": "You can computationally split an ATAC-seq library into these two fractions and analyze them separately."
+  },
+  {
+   "t": 255.47,
+   "text": "The sub-nucleosomal fraction gives you a high-resolution map of accessibility."
+  },
+  {
+   "t": 260.76,
+   "text": "The mono-nucleosomal fraction gives you a map of nucleosome positions, similar in spirit to MNase-seq, but obtained as a free side-product of the same experiment."
+  },
+  {
+   "t": 271.8,
+   "text": "This is one of the multi-modal outputs of ATAC-seq we noted earlier."
+  },
+  {
+   "t": 276.11,
+   "text": "From a single experiment, you get accessibility, nucleosome positioning, and — with some additional analysis — transcription factor footprints."
+  },
+  {
+   "t": 286.01,
+   "text": "Three readouts for the price of one."
+  },
+  {
+   "t": 288.31,
+   "text": "The nucleosomal periodicity is the feature that makes this multi-modality possible."
+  },
+  {
+   "t": 293.93,
+   "text": "The analogy I want you to hold for this segment: Tn5 cuts twice."
+  },
+  {
+   "t": 298.94,
+   "text": "The distance between the cuts tells you about the chromatin landscape between them."
+  },
+  {
+   "t": 303.56,
+   "text": "Short distances mean the cuts were both inside a single nucleosome-free region — both insertions found open windows close to each other."
+  },
+  {
+   "t": 312.41,
+   "text": "Medium distances (around 200 bp) mean the cuts straddled one nucleosome."
+  },
+  {
+   "t": 318.55,
+   "text": "Larger distances mean they straddled more nucleosomes."
+  },
+  {
+   "t": 323.04,
+   "text": "The histogram of cut-to-cut distances reads out, structurally, how the chromatin is organized."
+  },
+  {
+   "t": 329.73,
+   "text": "You can see the nucleosomes in the data, even though Tn5 was avoiding them — because the avoidance itself leaves a signature."
+  },
+  {
+   "t": 337.89,
+   "text": "The peaks come from a kind of geometric resonance with the nucleosomal beads-on-a-string structure of the genome."
+  },
+  {
+   "t": 343.91,
+   "text": "This is a property that DNase-seq does not have, at least not as cleanly."
+  },
+  {
+   "t": 349.24,
+   "text": "DNase-seq gives you only the cut positions, not the fragments."
+  },
+  {
+   "t": 353.53,
+   "text": "You don't get the nucleosomal periodicity, you don't get the built-in QC, you don't get the multi-modal output."
+  },
+  {
+   "t": 360.14,
+   "text": "ATAC-seq, by virtue of the paired-end nature of Tn5 cuts, contains structural information about chromatin that you wouldn't have thought to extract — and it's there in every library, for free."
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Lab polymerases: Taq, Pfu, Phusion, Q5, KAPA HiFi",
+ "duration": 316.38,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Lab polymerases: Taq, Pfu, Phusion, Q5, KAPA HiFi"
+  },
+  {
+   "t": 6.71,
+   "text": "Now let's pivot from the polymerases that operate inside cells to the polymerases that operate inside Eppendorf tubes — the workhorses of the molecular biology lab."
+  },
+  {
+   "t": 17.11,
+   "text": "Because once Kary Mullis invented the polymerase chain reaction in 1983, the demand for purified DNA polymerases that you could use in a test tube exploded, and a whole sub-industry grew up around finding, engineering, and selling enzymes optimized for PCR and other in-vitro applications."
+  },
+  {
+   "t": 35.73,
+   "text": "The defining problem of PCR is that the reaction cycles between high temperatures — about 95 degrees Celsius, to melt the DNA strands apart — and lower temperatures, around 50 to 72 degrees, where primers anneal and the polymerase extends."
+  },
+  {
+   "t": 52.5,
+   "text": "Any normal polymerase, taken from E. coli or yeast or human cells, would denature and die the first time the temperature hit 95."
+  },
+  {
+   "t": 62.44,
+   "text": "You'd have to add fresh enzyme after every cycle."
+  },
+  {
+   "t": 65.91,
+   "text": "The original PCR protocols did exactly this, and they were absurdly tedious — for every cycle, you opened the tube and added a new aliquot of Klenow fragment by hand."
+  },
+  {
+   "t": 77.39,
+   "text": "The breakthrough came from a polymerase isolated from a bacterium called Thermus aquaticus — a microbe that lives in hot springs in Yellowstone National Park, comfortably growing at temperatures above 70 degrees."
+  },
+  {
+   "t": 90.41,
+   "text": "Its polymerase, called Taq polymerase, is naturally thermostable."
+  },
+  {
+   "t": 95.3,
+   "text": "It survives 95 degrees."
+  },
+  {
+   "t": 97.96,
+   "text": "You can put it in a tube, cycle the temperature up and down indefinitely, and Taq keeps working."
+  },
+  {
+   "t": 104.03,
+   "text": "The discovery of Taq, in the late 1980s, made automated PCR possible — and PCR machines became boxes that just cycled temperatures, with the same enzyme working through dozens of rounds."
+  },
+  {
+   "t": 117.42,
+   "text": "The analogy: Taq is the scribe that can survive being boiled — found in a hot spring."
+  },
+  {
+   "t": 122.99,
+   "text": "Every other scribe denatures in hot water."
+  },
+  {
+   "t": 126.3,
+   "text": "Taq doesn't."
+  },
+  {
+   "t": 127.29,
+   "text": "That single feature unlocked an entire branch of molecular biology."
+  },
+  {
+   "t": 132.15,
+   "text": "Taq has its limitations."
+  },
+  {
+   "t": 133.9,
+   "text": "The biggest one is that Taq lacks proofreading."
+  },
+  {
+   "t": 136.94,
+   "text": "It has no 3'-to-5' exonuclease activity."
+  },
+  {
+   "t": 141.68,
+   "text": "So its error rate is roughly one error per 10,000 base pairs synthesized — about a hundred times worse than a high-fidelity polymerase."
+  },
+  {
+   "t": 151.11,
+   "text": "For many applications — diagnostic PCR, simple amplification, things where you only need to detect that a target is present — Taq is fine."
+  },
+  {
+   "t": 160.66,
+   "text": "But if you want to clone a gene, sequence the product, or otherwise rely on the exact sequence being preserved, you want better."
+  },
+  {
+   "t": 168.1,
+   "text": "Higher-fidelity thermostable polymerases came next."
+  },
+  {
+   "t": 171.96,
+   "text": "Pfu polymerase, from the archaeon Pyrococcus furiosus, has proofreading and is about ten times more accurate than Taq."
+  },
+  {
+   "t": 179.99,
+   "text": "Phusion and Q5 are commercial high-fidelity polymerases — Phusion from New England Biolabs, Q5 also from NEB, KAPA HiFi from another vendor — that are essentially Pfu-class polymerases engineered with extra modifications to increase processivity, fidelity, and speed."
+  },
+  {
+   "t": 199.34,
+   "text": "They typically achieve error rates around 10 to the minus 7 per base — about a hundred times more accurate than Taq."
+  },
+  {
+   "t": 206.75,
+   "text": "The analogy: Phusion and Q5 are the modern high-fidelity scribes, almost no errors per book."
+  },
+  {
+   "t": 213.95,
+   "text": "If Taq is the scribe who copies fast but makes typos, Phusion is the scribe who has been trained for accuracy and almost never errs."
+  },
+  {
+   "t": 223.35,
+   "text": "For cloning, for sequencing, for any application where the exact sequence matters, you want a high-fidelity polymerase."
+  },
+  {
+   "t": 231.11,
+   "text": "How are these enzymes engineered?"
+  },
+  {
+   "t": 233.53,
+   "text": "The starting point is usually a naturally thermostable polymerase with proofreading."
+  },
+  {
+   "t": 238.64,
+   "text": "The first improvement is often to fuse it with a DNA-binding domain — frequently a small protein called Sso7d, from another thermophile — that physically grips the DNA and increases processivity."
+  },
+  {
+   "t": 252.91,
+   "text": "This is the fusion polymerase trick."
+  },
+  {
+   "t": 255.41,
+   "text": "The polymerase with a clamp-like helper bolted on stays on the template longer, synthesizes faster, and copes better with difficult templates like GC-rich regions or long inserts."
+  },
+  {
+   "t": 266.49,
+   "text": "Phusion and Q5 are both fusion polymerases of this kind."
+  },
+  {
+   "t": 271.15,
+   "text": "Further improvements come from mutating the polymerase's active site to be more selective, mutating the proofreading site to be more efficient, and screening libraries of mutant polymerases for desired properties."
+  },
+  {
+   "t": 284.09,
+   "text": "Modern lab polymerases are the products of decades of incremental engineering — each generation a little better than the last."
+  },
+  {
+   "t": 292.59,
+   "text": "So when you order Phusion or Q5 for a cloning experiment, you're using an engineered enzyme that's distantly descended from a thermophilic archaeon's natural polymerase but has been heavily modified by humans to be the perfect lab tool."
+  },
+  {
+   "t": 307.43,
+   "text": "Fast, accurate, robust at high temperatures, processive over long stretches."
+  },
+  {
+   "t": 313.25,
+   "text": "The molecular biology workhorse of the modern lab."
+  }
+ ]
+}

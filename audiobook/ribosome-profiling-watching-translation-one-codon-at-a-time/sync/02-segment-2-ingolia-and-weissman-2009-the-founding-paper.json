@@ -1,0 +1,271 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — Ingolia and Weissman, 2009 — the founding paper",
+ "duration": 453.3,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — Ingolia and Weissman, 2009 — the founding paper"
+  },
+  {
+   "t": 5.49,
+   "text": "Ribosome profiling, like RNA-seq, was an idea that had been kicked around in pieces for years before it crystallized into a real technique."
+  },
+  {
+   "t": 13.99,
+   "text": "People had known since the 1960s that ribosomes protect a fragment of mRNA from nuclease digestion."
+  },
+  {
+   "t": 21.16,
+   "text": "The basic biochemistry — putting ribosomes on a sucrose gradient, treating with RNase, recovering protected fragments — was old."
+  },
+  {
+   "t": 29.91,
+   "text": "What did not exist, before about 2008, was the technology to sequence millions of those small fragments cheaply enough to get meaningful coverage across an entire transcriptome."
+  },
+  {
+   "t": 41.29,
+   "text": "The piece that was missing was, again, Illumina."
+  },
+  {
+   "t": 44.26,
+   "text": "Once you had a machine that could read tens of millions of short reads per run, the question of how to apply it to translation became live."
+  },
+  {
+   "t": 52.67,
+   "text": "The answer came in 2009, in a paper that I consider one of the most beautiful methods papers in modern biology."
+  },
+  {
+   "t": 60.24,
+   "text": "The first author was Nicholas Ingolia, then a postdoc at the University of California, San Francisco."
+  },
+  {
+   "t": 66.31,
+   "text": "The senior author was Jonathan Weissman, a biochemist at UCSF with a long-running interest in protein folding and translation."
+  },
+  {
+   "t": 74.61,
+   "text": "The paper appeared in Science in April 2009 with the title \"Genome-wide analysis in vivo of translation with nucleotide resolution using ribosome profiling."
+  },
+  {
+   "t": 85.8,
+   "text": "\" Read that title carefully."
+  },
+  {
+   "t": 87.64,
+   "text": "Three claims, all of which were new."
+  },
+  {
+   "t": 90.16,
+   "text": "Genome-wide."
+  },
+  {
+   "t": 91.28,
+   "text": "In vivo."
+  },
+  {
+   "t": 92.21,
+   "text": "Nucleotide resolution."
+  },
+  {
+   "t": 94.41,
+   "text": "Each of those was a big deal in 2009, and the combination was unprecedented."
+  },
+  {
+   "t": 100.25,
+   "text": "What did Ingolia and Weissman actually do?"
+  },
+  {
+   "t": 102.92,
+   "text": "They took yeast cells, growing happily in culture, and they did the following sequence of operations."
+  },
+  {
+   "t": 109.7,
+   "text": "First, they flash-froze the cells while adding a drug called cycloheximide, which arrests every ribosome in place wherever it happens to be on its mRNA."
+  },
+  {
+   "t": 120.26,
+   "text": "Second, they lysed the cells, releasing all the polysomes — the mRNAs with their bound ribosomes — into solution."
+  },
+  {
+   "t": 128.66,
+   "text": "Third, they treated the lysate with RNase I, a nuclease that chews up any RNA not protected by a ribosome."
+  },
+  {
+   "t": 136.35,
+   "text": "Fourth, they spun the digested lysate on a sucrose gradient to isolate the fraction containing 80S monosomes — single ribosomes with their protected footprint still bound."
+  },
+  {
+   "t": 147.99,
+   "text": "Fifth, they extracted the small RNA from that fraction, which was enriched for the ~30-nucleotide ribosome footprints."
+  },
+  {
+   "t": 156.21,
+   "text": "Sixth, they built a sequencing library from those tiny fragments — which is harder than it sounds, because standard library preps assume your fragments are much bigger."
+  },
+  {
+   "t": 165.78,
+   "text": "Seventh, they sequenced on an Illumina Genome Analyzer."
+  },
+  {
+   "t": 169.66,
+   "text": "When the data came back, the result was striking."
+  },
+  {
+   "t": 172.81,
+   "text": "Reads piled up along the coding sequences of every translated gene in the yeast genome."
+  },
+  {
+   "t": 178.72,
+   "text": "They started right at the start codon."
+  },
+  {
+   "t": 181.07,
+   "text": "They stopped right at the stop codon."
+  },
+  {
+   "t": 183.71,
+   "text": "They had a clean preference for in-frame positions — meaning the position of each footprint along the mRNA was biased to the first nucleotide of a codon, not the second or third."
+  },
+  {
+   "t": 195.19,
+   "text": "The single-codon resolution that the title promised was actually visible in the data."
+  },
+  {
+   "t": 200.46,
+   "text": "You could look at a single gene's translation profile and see, codon by codon, where ribosomes were preferentially located."
+  },
+  {
+   "t": 208.41,
+   "text": "Where the ribosomes were dense, translation was slow there — the ribosomes were piling up, waiting."
+  },
+  {
+   "t": 215.09,
+   "text": "Where the ribosomes were sparse, translation was fast."
+  },
+  {
+   "t": 218.75,
+   "text": "The data was, in a deep sense, a movie of translation, frozen at the moment the cells were killed."
+  },
+  {
+   "t": 225.72,
+   "text": "Beyond the technical demonstration, the paper made some immediate biological observations."
+  },
+  {
+   "t": 231.5,
+   "text": "Ribosomes were found on regions of mRNA that the yeast genome catalog said were not coding — specifically, in the 5' UTRs of many genes, at small upstream open reading frames called uORFs, which we'll spend a whole segment on later."
+  },
+  {
+   "t": 246.8,
+   "text": "Ribosomes were also found on mRNAs that nobody had previously thought were translated, including some that were classified as long non-coding RNAs."
+  },
+  {
+   "t": 256.75,
+   "text": "The paper, in passing, suggested that the existing genome annotations of which parts of the transcriptome are translated were incomplete — there was more translation going on, in more places, than the annotation said."
+  },
+  {
+   "t": 270.12,
+   "text": "That observation has been borne out enormously in the fifteen years since, and we'll come back to it in Segment 7 when we talk about small ORFs and novel microproteins."
+  },
+  {
+   "t": 280.68,
+   "text": "I want to spend a minute on what made this paper a method, and not just an observation."
+  },
+  {
+   "t": 285.99,
+   "text": "Ingolia and Weissman did three things that turned out to be the foundation of every Ribo-seq protocol that followed."
+  },
+  {
+   "t": 293.67,
+   "text": "First, they used cycloheximide to stall the ribosomes before lysis."
+  },
+  {
+   "t": 298.74,
+   "text": "Cycloheximide is an inhibitor of eukaryotic translation elongation — it binds to the ribosomal E site and prevents the ribosome from translocating to the next codon."
+  },
+  {
+   "t": 309.72,
+   "text": "Add cycloheximide to live cells, and within seconds, every ribosome stops where it was."
+  },
+  {
+   "t": 316.67,
+   "text": "This is critical, because if you didn't stall the ribosomes, they would keep moving during lysis — running off the end of their mRNAs, redistributing, smearing out the signal."
+  },
+  {
+   "t": 327.03,
+   "text": "With cycloheximide, the snapshot is sharp."
+  },
+  {
+   "t": 330.25,
+   "text": "We'll talk about the artifacts cycloheximide also introduces, in Segment 10."
+  },
+  {
+   "t": 335.58,
+   "text": "Second, they isolated the footprints by sucrose gradient."
+  },
+  {
+   "t": 340.24,
+   "text": "The reason this matters: after RNase digestion, your lysate contains lots of things — protein-RNA complexes, free RNA fragments, partially digested polysomes."
+  },
+  {
+   "t": 352.43,
+   "text": "Only the intact 80S monosomes — single ribosomes with their protected footprint — give you the clean signal you want."
+  },
+  {
+   "t": 360.53,
+   "text": "The sucrose gradient separates particles by size and density, and the 80S peak is sharp and easy to identify."
+  },
+  {
+   "t": 368.89,
+   "text": "Take the RNA from that fraction, and you've enriched for genuine ribosome footprints over background."
+  },
+  {
+   "t": 375.58,
+   "text": "Third, they built a library prep specifically for very small RNA fragments."
+  },
+  {
+   "t": 381.55,
+   "text": "Standard Illumina library prep assumes your fragments are at least a few hundred base pairs."
+  },
+  {
+   "t": 387.48,
+   "text": "A 30-nucleotide footprint is way too small for that."
+  },
+  {
+   "t": 391.17,
+   "text": "Ingolia and Weissman adapted a small-RNA cloning protocol — the kind used for microRNA sequencing — to ligate adapters onto the tiny fragments, reverse transcribe, and amplify."
+  },
+  {
+   "t": 403.69,
+   "text": "Subsequent versions of the protocol have refined this — the modern protocols use linkers with random nucleotides to reduce ligation bias, and use UMIs to count molecules accurately — but the general approach is the same as Ingolia's original."
+  },
+  {
+   "t": 419.08,
+   "text": "The paper landed in 2009."
+  },
+  {
+   "t": 421.43,
+   "text": "Within five years, Ribo-seq had been adapted to bacteria, to plants, to mammalian cells, to mouse tissues, to viral infections, to circulating tumor cells."
+  },
+  {
+   "t": 432.0,
+   "text": "By 2015, the technique was standard enough that you could buy commercial kits for it."
+  },
+  {
+   "t": 437.57,
+   "text": "By 2020, there were specialized variants — selective ribosome profiling, disome-seq, translation complex profiling — that we'll meet in later segments."
+  },
+  {
+   "t": 448.25,
+   "text": "The whole subfield exists because of this one paper."
+  },
+  {
+   "t": 451.42,
+   "text": "Read it."
+  },
+  {
+   "t": 452.17,
+   "text": "It's worth your time."
+  }
+ ]
+}

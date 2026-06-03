@@ -1,0 +1,227 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — ATAC-seq plus RNA-seq, Omni-ATAC, and the mitochondrial problem",
+ "duration": 422.3,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — ATAC-seq plus RNA-seq, Omni-ATAC, and the mitochondrial problem"
+  },
+  {
+   "t": 6.69,
+   "text": "Two important practical developments in the ATAC-seq story deserve their own segment."
+  },
+  {
+   "t": 12.18,
+   "text": "The first is the integration of ATAC-seq with RNA-seq — combining accessibility and expression data to get a more complete picture of regulation."
+  },
+  {
+   "t": 21.9,
+   "text": "The second is Omni-ATAC, a 2017 protocol refinement that dramatically improved data quality, particularly by reducing mitochondrial contamination — a problem that, if you've ever looked carefully at an ATAC-seq library, is impossible to ignore."
+  },
+  {
+   "t": 39.94,
+   "text": "Let me start with the integration."
+  },
+  {
+   "t": 41.62,
+   "text": "ATAC-seq tells you where the genome is open."
+  },
+  {
+   "t": 44.65,
+   "text": "RNA-seq tells you which genes are being expressed."
+  },
+  {
+   "t": 48.55,
+   "text": "These are deeply related — open chromatin near a gene is a necessary (though not sufficient) condition for that gene to be expressed."
+  },
+  {
+   "t": 57.16,
+   "text": "If you do both ATAC-seq and RNA-seq on the same set of cells, you can ask which open regions correspond to expressed genes, and which open regions seem to be regulatory elements whose effects are felt at distance (enhancers)."
+  },
+  {
+   "t": 70.95,
+   "text": "The standard integration analysis goes like this."
+  },
+  {
+   "t": 73.88,
+   "text": "You take your list of ATAC peaks and your list of expressed genes (with their expression levels from RNA-seq)."
+  },
+  {
+   "t": 80.83,
+   "text": "For each peak, you identify the nearest gene (or all genes within some window, say 100 kb)."
+  },
+  {
+   "t": 87.95,
+   "text": "You then ask: do peaks correlated with highly expressed genes look different from peaks correlated with silent genes?"
+  },
+  {
+   "t": 94.88,
+   "text": "The answer is yes."
+  },
+  {
+   "t": 96.29,
+   "text": "Peaks near active genes are more accessible, often broader, often more enriched for motifs of activator TFs."
+  },
+  {
+   "t": 103.83,
+   "text": "Peaks near silent genes might still exist (chromatin is often \"poised\" before activation) but are typically weaker, narrower, less enriched for activator motifs."
+  },
+  {
+   "t": 115.29,
+   "text": "When you do this integration across multiple conditions — say, comparing two cell types, or a treated versus untreated sample — you can identify peaks whose accessibility changes correlate with gene expression changes."
+  },
+  {
+   "t": 128.06,
+   "text": "These are the most likely causal regulatory elements: regions whose accessibility shifts seem to be driving (or at least correlated with) shifts in gene expression."
+  },
+  {
+   "t": 138.29,
+   "text": "This is one of the standard ways to identify cell-type-specific enhancers, treatment-responsive regulatory elements, and so on."
+  },
+  {
+   "t": 146.6,
+   "text": "More sophisticated integration includes techniques like co-accessibility analysis (Cicero, for single-cell ATAC), where you ask which peaks tend to be open together in the same cells, which is suggestive of a regulatory connection — perhaps an enhancer-promoter interaction."
+  },
+  {
+   "t": 163.15,
+   "text": "You can also link peaks to genes using chromatin conformation data (Hi-C) when available, to identify which peaks are physically close to which promoters in 3D space."
+  },
+  {
+   "t": 174.72,
+   "text": "The ATAC-RNA integration provides the regulatory edges; the conformation data provides the topology."
+  },
+  {
+   "t": 181.78,
+   "text": "The frontier here, which we'll come back to in Segment 18, is to do ATAC-seq and RNA-seq simultaneously in the same single cells — the 10x Multiome assay."
+  },
+  {
+   "t": 192.74,
+   "text": "That gives you the most fine-grained possible map of regulatory state and expression state in matched cells, and lets you make per-cell statements about which open elements are driving which transcripts."
+  },
+  {
+   "t": 204.19,
+   "text": "We'll get to that."
+  },
+  {
+   "t": 205.22,
+   "text": "Now, the second topic of this segment: the mitochondrial problem and how Omni-ATAC fixed it."
+  },
+  {
+   "t": 211.41,
+   "text": "Here is the issue."
+  },
+  {
+   "t": 212.56,
+   "text": "When you do ATAC-seq on a cell, Tn5 enters the cell and starts cutting wherever it can fit."
+  },
+  {
+   "t": 218.85,
+   "text": "The nuclear chromatin is its main target, but there's another genome in the cell — the mitochondrial genome — which is much smaller (16.5 kb in humans), present in many copies per cell (tens to thousands), and almost entirely accessible to Tn5 because it's not wrapped on nucleosomes."
+  },
+  {
+   "t": 238.3,
+   "text": "Mitochondrial DNA is a circular, mostly naked genome, and Tn5 just hammers it."
+  },
+  {
+   "t": 244.79,
+   "text": "The consequence is that in a standard ATAC-seq library, often 20 to 80 percent of the reads come from mitochondrial DNA, depending on the cell type."
+  },
+  {
+   "t": 254.18,
+   "text": "These mitochondrial reads are essentially noise — they don't carry information about nuclear chromatin accessibility, but they consume a huge fraction of your sequencing budget."
+  },
+  {
+   "t": 264.77,
+   "text": "You have to sequence five times more reads than you'd otherwise need, just to get enough nuclear reads for analysis."
+  },
+  {
+   "t": 271.76,
+   "text": "This was a significant practical problem in early ATAC-seq."
+  },
+  {
+   "t": 276.14,
+   "text": "The Omni-ATAC protocol, developed by Mahmoud Eldridge and Will Greenleaf and colleagues in 2017, addressed this directly."
+  },
+  {
+   "t": 285.51,
+   "text": "The key change is a modified lysis buffer that uses a mixture of detergents — Tween-20, NP-40, and digitonin — rather than just NP-40 alone."
+  },
+  {
+   "t": 297.16,
+   "text": "This combination, plus an additional wash step, dramatically improves the recovery of intact nuclei while also reducing carryover of mitochondria into the Tn5 reaction."
+  },
+  {
+   "t": 308.6,
+   "text": "The result is libraries with much lower mitochondrial contamination — often under 10 percent rather than 50 percent — and correspondingly higher information yield per sequencing dollar."
+  },
+  {
+   "t": 319.75,
+   "text": "Omni-ATAC also improves data quality in a few other ways."
+  },
+  {
+   "t": 323.82,
+   "text": "The nucleosomal periodicity in the fragment size distribution is sharper."
+  },
+  {
+   "t": 328.64,
+   "text": "The TSS enrichment is higher."
+  },
+  {
+   "t": 331.17,
+   "text": "The peak calls are cleaner."
+  },
+  {
+   "t": 332.71,
+   "text": "The protocol is also more robust across cell types — Omni-ATAC works well on cell types where standard ATAC-seq was finicky, including some primary tissues, frozen samples, and difficult cell lines."
+  },
+  {
+   "t": 346.26,
+   "text": "Since 2017, Omni-ATAC has been the de facto standard protocol."
+  },
+  {
+   "t": 351.64,
+   "text": "If you read a paper that says \"we performed ATAC-seq following the Omni-ATAC protocol,\" that's what's happening: a refined lysis step that gets you better nuclei and cleaner data."
+  },
+  {
+   "t": 362.6,
+   "text": "A few other protocol variations have emerged."
+  },
+  {
+   "t": 365.5,
+   "text": "Fast-ATAC simplifies some of the steps for very rapid workflows."
+  },
+  {
+   "t": 370.5,
+   "text": "ATAC-seq for frozen samples, which uses additional fixation steps to preserve nuclear integrity in samples that have been stored at -80, has expanded the range of accessible biological material."
+  },
+  {
+   "t": 383.38,
+   "text": "ATAC-see is an imaging variant where you tag the Tn5 adapters with fluorescent dyes and image accessible chromatin in situ."
+  },
+  {
+   "t": 392.26,
+   "text": "The protocol space has been extensively explored, and you can usually find a variant suited to your sample type."
+  },
+  {
+   "t": 398.66,
+   "text": "The take-home: ATAC-seq's bioinformatic and wet-lab pipeline has matured substantially since the original 2013 paper."
+  },
+  {
+   "t": 407.66,
+   "text": "Omni-ATAC is the current default."
+  },
+  {
+   "t": 409.89,
+   "text": "The mitochondrial problem is largely solved."
+  },
+  {
+   "t": 412.98,
+   "text": "Integration with RNA-seq is standard."
+  },
+  {
+   "t": 415.92,
+   "text": "The technique you'd run today is more refined, more robust, and more informative than the original."
+  }
+ ]
+}

@@ -1,0 +1,271 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — Why exact DP is too slow at scale: the O(mn) wall",
+ "duration": 377.15,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — Why exact DP is too slow at scale: the O(mn) wall"
+  },
+  {
+   "t": 6.11,
+   "text": "We've now seen Needleman-Wunsch and Smith-Waterman."
+  },
+  {
+   "t": 9.11,
+   "text": "Both are O(mn) — quadratic in sequence length."
+  },
+  {
+   "t": 13.78,
+   "text": "Both are exact — they're guaranteed to find the optimal alignment."
+  },
+  {
+   "t": 18.06,
+   "text": "For small problems — comparing two proteins, comparing two short DNA sequences — that's plenty fast."
+  },
+  {
+   "t": 25.31,
+   "text": "A pair of thousand-residue proteins gives you a million-cell grid; modern computers can fill that in milliseconds."
+  },
+  {
+   "t": 32.59,
+   "text": "For decades, this was bioinformatics — pairwise dynamic programming, done one pair at a time."
+  },
+  {
+   "t": 38.7,
+   "text": "But sequencing got cheap."
+  },
+  {
+   "t": 40.33,
+   "text": "By the late 1980s, GenBank — the public DNA sequence database run by NCBI in the United States — was doubling in size every eighteen months."
+  },
+  {
+   "t": 51.19,
+   "text": "By 1990, it had about fifty million bases."
+  },
+  {
+   "t": 54.84,
+   "text": "By 2000, ten billion."
+  },
+  {
+   "t": 56.96,
+   "text": "By 2010, hundreds of billions."
+  },
+  {
+   "t": 59.45,
+   "text": "Today, GenBank holds something like a trillion bases of sequence, and that's just the curated reference part — the raw read archives are much bigger, on the order of tens of petabases."
+  },
+  {
+   "t": 70.66,
+   "text": "And every time someone clones a new gene or sequences a new genome, the first thing they want to do is search the database — that is, take their new sequence and align it against everything else in GenBank to find homologs."
+  },
+  {
+   "t": 84.12,
+   "text": "This is where the O(mn) wall hits."
+  },
+  {
+   "t": 87.4,
+   "text": "Let me put numbers on it."
+  },
+  {
+   "t": 88.76,
+   "text": "Suppose you have a one-thousand-letter query and you want to align it against a database of one trillion letters."
+  },
+  {
+   "t": 94.9,
+   "text": "Smith-Waterman would need to fill a grid of one thousand by one trillion cells — that's 10^15 cells, a quadrillion."
+  },
+  {
+   "t": 103.84,
+   "text": "A modern CPU core can fill maybe a billion cells per second using optimized code."
+  },
+  {
+   "t": 109.51,
+   "text": "So a single Smith-Waterman scan of GenBank with one query takes about ten million seconds, or roughly four months of CPU time."
+  },
+  {
+   "t": 118.21,
+   "text": "With a hundred cores, a few days."
+  },
+  {
+   "t": 120.47,
+   "text": "With a thousand, a few hours."
+  },
+  {
+   "t": 122.79,
+   "text": "It's possible, but it's expensive."
+  },
+  {
+   "t": 124.94,
+   "text": "And every database search costs that much."
+  },
+  {
+   "t": 127.99,
+   "text": "It gets worse."
+  },
+  {
+   "t": 129.24,
+   "text": "Suppose you don't want to search a database, but to compare two whole genomes."
+  },
+  {
+   "t": 134.18,
+   "text": "The human genome is three billion bases."
+  },
+  {
+   "t": 137.64,
+   "text": "Aligning two mammalian genomes with Smith-Waterman would mean a grid of three billion by three billion — 10^19 cells."
+  },
+  {
+   "t": 146.46,
+   "text": "At a billion cells per second per core, that's 10^10 seconds per core — over three hundred years."
+  },
+  {
+   "t": 153.72,
+   "text": "With a thousand cores, still three months."
+  },
+  {
+   "t": 156.91,
+   "text": "With a million cores — assuming you have a million cores, which you don't — three days."
+  },
+  {
+   "t": 162.45,
+   "text": "The exact algorithm simply does not scale to whole-genome comparison."
+  },
+  {
+   "t": 167.43,
+   "text": "It is impossible."
+  },
+  {
+   "t": 168.78,
+   "text": "We have to find something else."
+  },
+  {
+   "t": 170.39,
+   "text": "It gets even worse when you consider read alignment."
+  },
+  {
+   "t": 173.36,
+   "text": "A single Illumina run produces a few billion short reads, each one a hundred to a hundred and fifty bases long."
+  },
+  {
+   "t": 180.62,
+   "text": "To align these reads to the human reference genome, you'd need to do, for each read, a Smith-Waterman against the three-billion-base reference."
+  },
+  {
+   "t": 189.76,
+   "text": "That's three hundred billion cells per read, times a few billion reads, equals about 10^21 cell operations."
+  },
+  {
+   "t": 197.93,
+   "text": "At a billion per second, 10^12 seconds — thirty thousand years on a single core."
+  },
+  {
+   "t": 204.4,
+   "text": "Even with massive parallelism, no exact algorithm could keep up with the data being produced by one Illumina instrument."
+  },
+  {
+   "t": 212.1,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 213.39,
+   "text": "The O(mn) wall is the cliff that exact dynamic programming runs into at genomic scale."
+  },
+  {
+   "t": 220.1,
+   "text": "For a billion-by-a-billion comparison, you'd need 10^18 cells."
+  },
+  {
+   "t": 225.14,
+   "text": "That's a number with no human meaning — it's the number of grains of sand on Earth, roughly."
+  },
+  {
+   "t": 231.1,
+   "text": "It's not a number you can compute."
+  },
+  {
+   "t": 232.91,
+   "text": "The field needed shortcuts, and the shortcuts had to give up exactness — there was no way around that."
+  },
+  {
+   "t": 238.9,
+   "text": "Approximate algorithms, willing to miss some alignments in exchange for being a thousand or a million or a billion times faster, became the only path forward."
+  },
+  {
+   "t": 249.24,
+   "text": "The intellectual move that opened up the next era was to give up on completeness — the guarantee that you find every alignment that exists — in exchange for sensitivity — finding most of them most of the time — and speed — being thousands of times faster than the exact algorithm."
+  },
+  {
+   "t": 266.45,
+   "text": "The trade-off is real."
+  },
+  {
+   "t": 268.3,
+   "text": "Approximate aligners can miss weak homologs that exact aligners would catch."
+  },
+  {
+   "t": 273.07,
+   "text": "But they can search GenBank in seconds rather than months."
+  },
+  {
+   "t": 276.52,
+   "text": "For most practical purposes, that trade is worth making."
+  },
+  {
+   "t": 280.31,
+   "text": "The key idea that drove this revolution is a heuristic called seed-and-extend, and it's the basis of every fast aligner used today."
+  },
+  {
+   "t": 289.07,
+   "text": "We'll spend the next segment on the idea, and then in Segment 8 we'll see its most famous embodiment — BLAST."
+  },
+  {
+   "t": 296.39,
+   "text": "But first let me tell you why the heuristic works at all, philosophically."
+  },
+  {
+   "t": 300.52,
+   "text": "Real biological sequences that share an evolutionary relationship usually share at least some short, perfectly-conserved regions — stretches of ten, twenty, thirty bases or residues where evolution hasn't introduced any changes."
+  },
+  {
+   "t": 316.07,
+   "text": "These short conserved regions are like landmarks."
+  },
+  {
+   "t": 319.07,
+   "text": "If you can find a landmark — a short exact match — between two sequences, you've identified a likely region of homology, and you can spend your expensive dynamic programming budget only on the area around that landmark, instead of comparing every position of one sequence to every position of the other."
+  },
+  {
+   "t": 336.75,
+   "text": "Most of the grid is wasted effort, because most cells are far from any homologous region."
+  },
+  {
+   "t": 342.45,
+   "text": "By using the landmark to focus the comparison, you can skip the wasted parts."
+  },
+  {
+   "t": 347.14,
+   "text": "That's the philosophical content of seed-and-extend."
+  },
+  {
+   "t": 350.87,
+   "text": "Find a short exact match — the seed."
+  },
+  {
+   "t": 353.64,
+   "text": "Then extend it locally with dynamic programming — find the boundaries of the homologous region, refine the alignment, score it."
+  },
+  {
+   "t": 361.51,
+   "text": "Skip the parts of the grid that aren't near any seed."
+  },
+  {
+   "t": 364.54,
+   "text": "The result is an algorithm that, on real biological data, runs orders of magnitude faster than exact dynamic programming, while finding most of the same alignments."
+  },
+  {
+   "t": 375.85,
+   "text": "Let's see how it works."
+  }
+ ]
+}

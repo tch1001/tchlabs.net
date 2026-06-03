@@ -1,0 +1,139 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Zinc finger deaminase fusions and the broader mtDNA toolkit",
+ "duration": 261.01,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Zinc finger deaminase fusions and the broader mtDNA toolkit"
+  },
+  {
+   "t": 6.41,
+   "text": "While DdCBE used TALE arms for targeting, there's no fundamental reason the targeting has to be TALE-based."
+  },
+  {
+   "t": 13.34,
+   "text": "Any protein-only sequence-specific DNA-binding domain that can be imported into mitochondria can in principle serve."
+  },
+  {
+   "t": 20.65,
+   "text": "The two main alternatives that have been explored are zinc finger arrays and engineered meganucleases."
+  },
+  {
+   "t": 26.81,
+   "text": "Zinc finger arrays, which we discussed briefly in the TALEN lecture, are small protein modules that each recognize about three bases of DNA."
+  },
+  {
+   "t": 35.98,
+   "text": "They're more compact than TALE arrays, which matters for delivery — particularly for AAV, which has a packaging limit of about 4.7 kilobases that can be a tight fit for full TALE-based constructs."
+  },
+  {
+   "t": 48.39,
+   "text": "A zinc-finger version of DdCBE — let's call it ZF-DdCBE, though different groups use different names — would be smaller and potentially more deliverable."
+  },
+  {
+   "t": 58.39,
+   "text": "The downside of zinc fingers, as we covered before, is that they're harder to design."
+  },
+  {
+   "t": 63.7,
+   "text": "Each zinc finger doesn't behave fully independently — context matters, neighboring fingers can interfere, design takes more iteration."
+  },
+  {
+   "t": 72.81,
+   "text": "But for some specific targets, zinc finger arrays have been successfully engineered and fused to split DddA, producing functional mtDNA cytosine base editors with the targeting compactness advantage."
+  },
+  {
+   "t": 85.72,
+   "text": "Several papers have reported zinc-finger-DddA fusions for mtDNA editing, with comparable editing efficiencies to TALE-based DdCBE at sites where the zinc fingers were successfully designed."
+  },
+  {
+   "t": 98.03,
+   "text": "As zinc finger design becomes more reliable with computational tools and as the AAV size constraint pushes toward more compact constructs, zinc-finger-based mtDNA editors may take over from TALE-based ones for some applications."
+  },
+  {
+   "t": 113.05,
+   "text": "Engineered meganucleases — proteins like I-CreI variants that naturally cut very long DNA sequences and have been re-engineered to cut new targets — have also been used as the targeting arm of mtDNA editing constructs in some experimental work."
+  },
+  {
+   "t": 129.94,
+   "text": "These are an interesting middle ground between zinc fingers (compact but hard to engineer) and TALEs (easy to engineer but bulky)."
+  },
+  {
+   "t": 138.96,
+   "text": "They haven't seen as much traction as the other approaches, but they're part of the broader toolkit."
+  },
+  {
+   "t": 144.38,
+   "text": "There's also been work on mitochondrial CRISPR systems despite the guide-RNA-import problem."
+  },
+  {
+   "t": 150.05,
+   "text": "Some groups have continued to try to crack the RNA import problem with engineered guide RNAs that piggyback on protein imports, with mixed results."
+  },
+  {
+   "t": 159.3,
+   "text": "The Pollack lab and a few others have published reports of mtDNA editing using CRISPR-Cas9 or Cas12 with engineered guide-RNA delivery, but the editing efficiencies remain low and the consistency between labs has been an issue."
+  },
+  {
+   "t": 174.61,
+   "text": "CRISPR-based mtDNA editing is still a much smaller and more uncertain field than TALE-DddA based mtDNA editing."
+  },
+  {
+   "t": 183.6,
+   "text": "There's a beautiful general principle here that I want you to take away."
+  },
+  {
+   "t": 187.79,
+   "text": "A molecular tool is a composition of three components: a targeting module, a chemistry module, and an delivery module."
+  },
+  {
+   "t": 196.09,
+   "text": "You can swap any one of these independently as long as the others are compatible."
+  },
+  {
+   "t": 200.84,
+   "text": "In nuclear editing, we've swapped Cas9 variants for different PAMs, Cas12 for compactness, Cas13 for RNA editing — all while keeping the deaminase chemistries (APOBEC1, TadA) constant."
+  },
+  {
+   "t": 213.38,
+   "text": "In mitochondrial editing, we're now swapping TALE for zinc finger for meganuclease, while keeping DddA (or its derivatives) constant as the chemistry."
+  },
+  {
+   "t": 223.43,
+   "text": "The modularity of these systems — recognized at the design level — is what makes the engineering tractable."
+  },
+  {
+   "t": 230.54,
+   "text": "For your mental model: the mitochondrial editing toolkit is a family, not a single tool."
+  },
+  {
+   "t": 236.7,
+   "text": "DdCBE is the founding member."
+  },
+  {
+   "t": 239.44,
+   "text": "TALED is the adenine cousin."
+  },
+  {
+   "t": 241.82,
+   "text": "Zinc-finger-DddA fusions are the compact-delivery cousin."
+  },
+  {
+   "t": 246.05,
+   "text": "mitoTALEN is the older destructive cousin."
+  },
+  {
+   "t": 249.04,
+   "text": "They share the underlying logic of protein-only targeting and DddA-based or DddA-scaffolded chemistry."
+  },
+  {
+   "t": 256.15,
+   "text": "They differ in the specific modules they use."
+  },
+  {
+   "t": 259.2,
+   "text": "The family will continue to grow."
+  }
+ ]
+}

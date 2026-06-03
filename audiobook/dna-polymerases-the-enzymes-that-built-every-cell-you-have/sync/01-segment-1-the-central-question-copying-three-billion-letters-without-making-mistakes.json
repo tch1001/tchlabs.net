@@ -1,0 +1,247 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The central question: copying three billion letters without making mistakes",
+ "duration": 404.76,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The central question: copying three billion letters without making mistakes"
+  },
+  {
+   "t": 6.05,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 7.75,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 9.32,
+   "text": "Today and for the next two hours we're going to talk about DNA polymerases — the family of enzymes that copy, repair, edit, and synthesize DNA."
+  },
+  {
+   "t": 18.84,
+   "text": "Every cell in your body, every bacterium in your gut, every virus that has ever infected anything, runs on these enzymes."
+  },
+  {
+   "t": 27.18,
+   "text": "They are, without exaggeration, the molecular workhorses of life."
+  },
+  {
+   "t": 31.8,
+   "text": "And once you start really looking at them, you discover that \"DNA polymerase\" is not one enzyme but a sprawling, ancient, beautifully diverse family — different members specialized for copying long stretches at high speed, for proofreading their own work, for repairing damaged bases, for synthesizing across lesions, for handling the ends of chromosomes, for doing things that, if you described them to a chemist before the discovery of life, the chemist would tell you were impossible."
+  },
+  {
+   "t": 60.21,
+   "text": "I want to start today with one number, because the whole rest of the lecture is, in some sense, an answer to a question this number forces you to ask."
+  },
+  {
+   "t": 70.2,
+   "text": "The human genome is roughly three billion base pairs long."
+  },
+  {
+   "t": 74.75,
+   "text": "Every time one of your cells divides — and your body does this on the order of trillions of times per day, in your bone marrow, in your gut lining, in your skin — that entire three-billion-letter manuscript has to be copied, in full, before the cell can split into two daughters."
+  },
+  {
+   "t": 90.9,
+   "text": "And the copying has to be accurate."
+  },
+  {
+   "t": 93.08,
+   "text": "If you look at the rate at which your cells actually accumulate mutations, you find that the error rate is somewhere around one mistake per ten billion bases copied."
+  },
+  {
+   "t": 102.65,
+   "text": "One in ten to the tenth."
+  },
+  {
+   "t": 104.21,
+   "text": "Read three billion letters with that fidelity, and on average your cell makes less than one error during a full genome duplication."
+  },
+  {
+   "t": 112.99,
+   "text": "Some divisions, zero errors."
+  },
+  {
+   "t": 115.47,
+   "text": "Less than one typo per book."
+  },
+  {
+   "t": 117.47,
+   "text": "Across an entire book the length of the Bible read thirty times over."
+  },
+  {
+   "t": 122.62,
+   "text": "Stop and feel how absurd that is."
+  },
+  {
+   "t": 124.92,
+   "text": "You can't write a sentence by hand without typos."
+  },
+  {
+   "t": 128.25,
+   "text": "A trained professional copyist, working on a single page of clean text, will make multiple errors per page."
+  },
+  {
+   "t": 135.05,
+   "text": "A modern computer copying a file has built-in error-correcting codes precisely because at the level of individual bits, the hardware is unreliable — magnetic domains flip, electrons leak, cosmic rays strike."
+  },
+  {
+   "t": 148.55,
+   "text": "The fundamental physical processes that store and copy information are noisy."
+  },
+  {
+   "t": 153.26,
+   "text": "And yet, somehow, a soft squishy blob of protein floating inside your cell — a protein that has to grab a nucleotide out of a soup, decide whether it's the right one, snap it into place, and move on, all in something like a thousandth of a second — that protein achieves an accuracy that the best engineers on Earth would struggle to match with billions of dollars of dedicated hardware."
+  },
+  {
+   "t": 176.2,
+   "text": "So here is the central question of today's lecture, and I want you to keep asking it of yourself every time we look at a new feature of these enzymes: how does a single enzyme copy three billion bases with near-zero errors?"
+  },
+  {
+   "t": 190.22,
+   "text": "Because the answer, when you really pull on it, turns out not to be one trick but a layered defense — three or four mechanisms stacked on top of each other, each one catching errors the previous one missed, all of them working in concert to push the final error rate down by orders of magnitude below what any single mechanism could achieve on its own."
+  },
+  {
+   "t": 210.91,
+   "text": "The polymerase is fast and accurate."
+  },
+  {
+   "t": 213.84,
+   "text": "The price of that accuracy is paid in clever engineering — and that engineering is what we're going to spend the next two hours dissecting."
+  },
+  {
+   "t": 221.65,
+   "text": "Here is the analogy I'm going to come back to over and over."
+  },
+  {
+   "t": 225.24,
+   "text": "Think of a DNA polymerase as a molecular scribe, copying a book one letter at a time."
+  },
+  {
+   "t": 230.76,
+   "text": "The template strand of DNA is the original book."
+  },
+  {
+   "t": 234.01,
+   "text": "The new strand the polymerase is building is the copy."
+  },
+  {
+   "t": 237.71,
+   "text": "The polymerase walks along the template, looking at each letter as it goes, and writes the matching letter into the copy — A pairs with T, G pairs with C, those are the rules."
+  },
+  {
+   "t": 249.32,
+   "text": "One letter, one tick of the clock, then the next."
+  },
+  {
+   "t": 252.48,
+   "text": "The scribe doesn't pause to admire its work."
+  },
+  {
+   "t": 255.48,
+   "text": "It just keeps going, base after base after base, several hundred to a thousand letters per second."
+  },
+  {
+   "t": 260.89,
+   "text": "But — and here is the part that will be a refrain — this scribe is not alone, and it is not unedited."
+  },
+  {
+   "t": 267.78,
+   "text": "The scribe is checked, supported, and replaced by other proteins working in concert."
+  },
+  {
+   "t": 273.32,
+   "text": "After it writes each letter, the scribe pauses for a fraction of a millisecond and re-reads its own last word."
+  },
+  {
+   "t": 280.42,
+   "text": "If it sees the wrong letter, it erases and rewrites."
+  },
+  {
+   "t": 284.38,
+   "text": "That's proofreading."
+  },
+  {
+   "t": 285.71,
+   "text": "The scribe is held against the page by a ring of helpers that grip it to the manuscript so it doesn't slip off."
+  },
+  {
+   "t": 291.83,
+   "text": "That's the sliding clamp."
+  },
+  {
+   "t": 293.46,
+   "text": "Other specialty scribes take over when the page is damaged or unusual."
+  },
+  {
+   "t": 298.24,
+   "text": "That's translesion synthesis."
+  },
+  {
+   "t": 300.53,
+   "text": "And the whole operation, at the ends of chromosomes, needs a special scribe that brings its own template with it."
+  },
+  {
+   "t": 307.33,
+   "text": "That's telomerase."
+  },
+  {
+   "t": 308.84,
+   "text": "We're going to meet all of these characters."
+  },
+  {
+   "t": 311.13,
+   "text": "So here is the contract for the next two hours."
+  },
+  {
+   "t": 314.07,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the three universal activities every classical DNA polymerase has and explain what each one is for; two, tell the difference between a high-fidelity replicative polymerase and a translesion polymerase, and explain why the cell needs both; three, look at any modern molecular biology paper that mentions \"Phusion\" or \"Q5\" or \"Pol delta\" or \"TdT\" or \"reverse transcriptase\" and have a real intuition for what enzyme is"
+  },
+  {
+   "t": 348.23,
+   "text": "doing what — then we've succeeded."
+  },
+  {
+   "t": 350.62,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 352.87,
+   "text": "A word on scope."
+  },
+  {
+   "t": 354.07,
+   "text": "This is a family that has been studied for nearly seventy years."
+  },
+  {
+   "t": 358.26,
+   "text": "We could spend two hours on just the bacterial replisome, or just the eukaryotic origin firing problem, or just the structure of a single polymerase active site."
+  },
+  {
+   "t": 368.22,
+   "text": "We're not going to."
+  },
+  {
+   "t": 369.38,
+   "text": "We're going to do a survey — a tour through the family, hitting the headline members and the headline mechanisms, with enough mechanistic detail that the next paper you read about any of this makes sense."
+  },
+  {
+   "t": 381.13,
+   "text": "Some segments will go deep on one enzyme; others will skim across a whole subfamily."
+  },
+  {
+   "t": 387.67,
+   "text": "The goal is intuitions and vocabulary, not memorization."
+  },
+  {
+   "t": 392.31,
+   "text": "Let's start where the field started: a young biochemist in St."
+  },
+  {
+   "t": 396.47,
+   "text": "Louis in the 1950s, looking for the enzyme that copies DNA, in a world that didn't yet know whether such an enzyme existed."
+  }
+ ]
+}

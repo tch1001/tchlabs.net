@@ -1,0 +1,283 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The protocol, end to end",
+ "duration": 500.27,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The protocol, end to end"
+  },
+  {
+   "t": 3.39,
+   "text": "Let me walk you through the modern ATAC-seq protocol, top to bottom, the way you'd actually do it in a lab today."
+  },
+  {
+   "t": 10.59,
+   "text": "The reason to do this carefully is that even though the protocol is short — four hours, give or take, from cells to sequencing-ready library — every step has its own pitfalls and optimization tricks."
+  },
+  {
+   "t": 22.88,
+   "text": "Let me name the five stages, then unpack each."
+  },
+  {
+   "t": 26.48,
+   "text": "Stage one: cell harvest and nuclei isolation."
+  },
+  {
+   "t": 30.44,
+   "text": "Stage two: the Tn5 reaction itself."
+  },
+  {
+   "t": 33.89,
+   "text": "Stage three: PCR amplification."
+  },
+  {
+   "t": 37.01,
+   "text": "Stage four: cleanup and size selection."
+  },
+  {
+   "t": 40.04,
+   "text": "Stage five: sequencing."
+  },
+  {
+   "t": 42.31,
+   "text": "Five stages."
+  },
+  {
+   "t": 43.64,
+   "text": "The whole thing fits in a single afternoon."
+  },
+  {
+   "t": 46.39,
+   "text": "Stage one: cell harvest and nuclei isolation."
+  },
+  {
+   "t": 50.23,
+   "text": "You start with your cells."
+  },
+  {
+   "t": 51.75,
+   "text": "They might come from a cell culture, a sorted population from a flow cytometer, a fresh tissue dissociation, a tumor biopsy — anywhere you can get a clean suspension of intact cells."
+  },
+  {
+   "t": 62.95,
+   "text": "The standard input range is 10,000 to 50,000 cells, though modern protocols and the single-cell variants can push this down further."
+  },
+  {
+   "t": 71.9,
+   "text": "You wash the cells in cold PBS to remove media and debris."
+  },
+  {
+   "t": 76.31,
+   "text": "Then you lyse the cell membrane gently — typically with a hypotonic buffer containing a mild detergent like Igepal or NP-40 — to release the nuclei while keeping the nuclear membrane and the chromatin inside it intact."
+  },
+  {
+   "t": 91.96,
+   "text": "The crucial point here is that you want to permeabilize the cells so Tn5 can get to the chromatin, but you do not want to disrupt the chromatin structure itself."
+  },
+  {
+   "t": 101.65,
+   "text": "The nucleosomes have to stay in place."
+  },
+  {
+   "t": 104.0,
+   "text": "The nucleus has to be morphologically intact."
+  },
+  {
+   "t": 107.2,
+   "text": "If you over-lyse, the chromatin spills out and decondenses, and Tn5 will start cutting everywhere — your accessibility signal collapses into noise."
+  },
+  {
+   "t": 118.04,
+   "text": "The hypotonic lysis is calibrated for each cell type."
+  },
+  {
+   "t": 122.01,
+   "text": "Some cells, like immortalized cancer cell lines, lyse easily."
+  },
+  {
+   "t": 126.45,
+   "text": "Some, like primary tissues with tough membranes, need a bit more help."
+  },
+  {
+   "t": 131.09,
+   "text": "The original Buenrostro protocol uses 0.1 percent Igepal, ten minutes on ice."
+  },
+  {
+   "t": 138.84,
+   "text": "The Omni-ATAC variant, which we'll discuss in Segment 11, adds Tween-20 and digitonin to the lysis buffer to improve nuclei recovery from difficult tissues."
+  },
+  {
+   "t": 149.57,
+   "text": "Stage two: the Tn5 reaction."
+  },
+  {
+   "t": 152.47,
+   "text": "Once you have your clean nuclei, you resuspend them in a buffer containing adapter-loaded Tn5 transposase."
+  },
+  {
+   "t": 159.6,
+   "text": "The commercial source for this is typically Illumina's Tagment DNA Enzyme — the same enzyme used in Nextera library preps — which you can buy as a pre-loaded reagent."
+  },
+  {
+   "t": 170.44,
+   "text": "Some labs make their own Tn5 in-house, which is significantly cheaper and gives you more control over the adapter sequences, but requires that you maintain the enzyme expression and purification yourself."
+  },
+  {
+   "t": 183.1,
+   "text": "You incubate the nuclei with the enzyme at 37 degrees Celsius for about 30 minutes."
+  },
+  {
+   "t": 189.19,
+   "text": "During this incubation, Tn5 enters the permeabilized nuclei, encounters the chromatin, and starts inserting into accessible regions."
+  },
+  {
+   "t": 199.15,
+   "text": "The enzyme is, by design, used at a concentration where it produces a population of cuts spread across the accessible chromatin — not so concentrated that it cuts everywhere even in closed regions, not so dilute that it misses real peaks."
+  },
+  {
+   "t": 214.69,
+   "text": "The optimization of this enzyme-to-nuclei ratio is critical."
+  },
+  {
+   "t": 219.22,
+   "text": "Too much enzyme and you over-tagment, getting tiny fragments and losing the nucleosomal size distribution; too little and you under-tagment, getting only a few fragments per nucleus."
+  },
+  {
+   "t": 230.95,
+   "text": "The standard ratio, for 50,000 cells, is about 2.5 microliters of Illumina Tagment Enzyme in a 50-microliter reaction."
+  },
+  {
+   "t": 240.14,
+   "text": "You can adjust up or down based on input."
+  },
+  {
+   "t": 242.66,
+   "text": "After incubation, the reaction is stopped — typically by adding a buffer containing EDTA and SDS to denature the enzyme and release the DNA from the chromatin."
+  },
+  {
+   "t": 254.1,
+   "text": "At this point, you have a population of DNA fragments, each one flanked by Illumina adapters, ranging in size from short fragments derived from nucleosome-free regions to longer fragments that span one or more nucleosomes."
+  },
+  {
+   "t": 269.27,
+   "text": "Stage three: PCR amplification."
+  },
+  {
+   "t": 272.56,
+   "text": "The fragments at this point are adapter-flanked but present in very low quantities — picograms or low nanograms of DNA."
+  },
+  {
+   "t": 280.97,
+   "text": "To get enough material for sequencing, you PCR-amplify the library."
+  },
+  {
+   "t": 285.83,
+   "text": "The PCR uses primers that anneal to the Illumina adapter sequences and that also add the sample indices — short sequences that let you pool multiple samples on a single sequencing run and demultiplex them later by reading the indices."
+  },
+  {
+   "t": 300.89,
+   "text": "You typically do 10 to 13 cycles of PCR, depending on the input."
+  },
+  {
+   "t": 305.71,
+   "text": "More cycles give you more material but also amplify any biases — over-represented fragments get further over-represented, and PCR duplicates accumulate."
+  },
+  {
+   "t": 315.66,
+   "text": "A useful optimization: do a small qPCR pilot first, on a fraction of your library, to determine the optimal number of cycles."
+  },
+  {
+   "t": 324.27,
+   "text": "The endpoint is when the qPCR curve hits about one-third of its maximum fluorescence — far enough into amplification to get enough material, not so far that you over-amplify and saturate."
+  },
+  {
+   "t": 337.32,
+   "text": "Stage four: cleanup and size selection."
+  },
+  {
+   "t": 340.44,
+   "text": "After PCR, you clean up the library with magnetic beads — typically AMPure XP beads — to remove primer dimers, adapter dimers, and excessively long fragments."
+  },
+  {
+   "t": 352.35,
+   "text": "The size range you typically want for ATAC-seq is fragments from about 100 to 1000 base pairs."
+  },
+  {
+   "t": 359.3,
+   "text": "The very short fragments (under 100 bp) are mostly adapter dimers and not useful."
+  },
+  {
+   "t": 365.31,
+   "text": "The very long fragments (over 1000 bp) tend to be inefficiently sequenced on Illumina platforms and waste reads."
+  },
+  {
+   "t": 373.68,
+   "text": "The cleanup gives you a tight, well-sized library ready for the sequencer."
+  },
+  {
+   "t": 378.18,
+   "text": "You can do a Bioanalyzer or TapeStation trace at this point to assess library quality."
+  },
+  {
+   "t": 383.94,
+   "text": "A high-quality ATAC-seq library shows a characteristic size distribution with a clear nucleosomal periodicity — peaks at roughly 100, 200, 400, and 600 base pairs, corresponding to fragments from nucleosome-free regions, single nucleosomes, di-nucleosomes, and tri-nucleosomes."
+  },
+  {
+   "t": 403.62,
+   "text": "We'll spend Segment 7 on this distribution because it's a beautiful piece of structural information that comes essentially for free from the assay."
+  },
+  {
+   "t": 413.03,
+   "text": "Stage five: sequencing."
+  },
+  {
+   "t": 415.26,
+   "text": "This is identical to any other Illumina paired-end sequencing run."
+  },
+  {
+   "t": 419.88,
+   "text": "You pool your samples by their indices, load them onto a flow cell, and run paired-end 50 to 75 base pairs in each direction, which is plenty for ATAC-seq alignment."
+  },
+  {
+   "t": 432.08,
+   "text": "Typical sequencing depth is 25 to 50 million paired reads per sample, though for some applications you go deeper."
+  },
+  {
+   "t": 439.94,
+   "text": "The reads come off the sequencer as FASTQ files, get aligned to the reference genome with a tool like Bowtie2 or BWA, and end up as BAM files — the same file format you'd get from any other Illumina experiment."
+  },
+  {
+   "t": 453.78,
+   "text": "That's the protocol."
+  },
+  {
+   "t": 455.05,
+   "text": "Five stages."
+  },
+  {
+   "t": 456.33,
+   "text": "Four hours total, give or take."
+  },
+  {
+   "t": 458.66,
+   "text": "From a tube of cells to a sequencing-ready library, with one enzymatic reaction at the heart of it."
+  },
+  {
+   "t": 465.39,
+   "text": "Compare this to the multi-day, multi-step protocols of DNase-seq and FAIRE-seq, and you can see why ATAC-seq took off the way it did."
+  },
+  {
+   "t": 474.02,
+   "text": "The biology is the same — same chromatin, same accessibility, same map at the end — but the engineering is dramatically simpler."
+  },
+  {
+   "t": 483.89,
+   "text": "The remaining segments are about what to do with the data, what makes the technique special, where it shines, and where it has limits."
+  },
+  {
+   "t": 491.77,
+   "text": "Let me start with the fragment size distribution, because it's the most elegant feature of the assay and one that almost falls out of the design for free."
+  }
+ ]
+}

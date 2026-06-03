@@ -1,0 +1,279 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — The workflow — cycloheximide arrest, RNase digestion, footprint isolation, library, sequence",
+ "duration": 496.58,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — The workflow — cycloheximide arrest, RNase digestion, footprint isolation, library, sequence"
+  },
+  {
+   "t": 8.7,
+   "text": "Let's now walk through the Ribo-seq workflow in real detail, step by step, the way we did for bulk RNA-seq."
+  },
+  {
+   "t": 15.96,
+   "text": "Each step has choices that matter for the data quality you get and the biology you can extract."
+  },
+  {
+   "t": 21.43,
+   "text": "I want you, by the end of this segment, to be able to sketch the workflow on a whiteboard from cells to sequencer."
+  },
+  {
+   "t": 28.25,
+   "text": "Step one: arrest the ribosomes."
+  },
+  {
+   "t": 30.94,
+   "text": "You have your cells — yeast in culture, a mammalian cell line, a slice of mouse liver, a bacterial culture, whatever."
+  },
+  {
+   "t": 39.15,
+   "text": "The first thing you do is freeze every ribosome in place, so that when you lyse the cells in the next step, the ribosomes don't move and don't run off their mRNAs."
+  },
+  {
+   "t": 49.19,
+   "text": "The standard drug for eukaryotic Ribo-seq is cycloheximide — usually abbreviated CHX."
+  },
+  {
+   "t": 55.62,
+   "text": "Cycloheximide is added to the medium at a concentration of about 100 micrograms per milliliter, a few minutes before harvest."
+  },
+  {
+   "t": 64.99,
+   "text": "It rapidly diffuses into cells, binds to the ribosomal E site, and arrests elongation."
+  },
+  {
+   "t": 71.99,
+   "text": "Within thirty seconds, essentially every actively translating ribosome is stuck in place wherever it happened to be."
+  },
+  {
+   "t": 79.9,
+   "text": "Some protocols also flash-freeze the cells in liquid nitrogen immediately after CHX treatment, to lock in the snapshot even faster."
+  },
+  {
+   "t": 89.75,
+   "text": "There are alternative arrest strategies — harringtonine for initiation-specific profiling, lactimidomycin for similar purposes — which we'll get to in Segment 10."
+  },
+  {
+   "t": 99.81,
+   "text": "Step two: lyse the cells."
+  },
+  {
+   "t": 102.3,
+   "text": "With every ribosome arrested, you crack the cells open."
+  },
+  {
+   "t": 106.29,
+   "text": "Standard lysis buffers for Ribo-seq contain a detergent to dissolve membranes, magnesium to keep ribosomes intact (ribosomes fall apart without divalent cations), and a buffer to maintain physiological pH."
+  },
+  {
+   "t": 120.75,
+   "text": "You typically also include cycloheximide in the lysis buffer, to keep the ribosomes arrested even after the cells are open."
+  },
+  {
+   "t": 128.31,
+   "text": "The output of this step is a clear lysate containing intact polysomes — mRNAs decorated with multiple ribosomes — floating in solution along with all the other cellular contents."
+  },
+  {
+   "t": 140.28,
+   "text": "Step three: nuclease digestion."
+  },
+  {
+   "t": 143.12,
+   "text": "This is the magic step."
+  },
+  {
+   "t": 144.78,
+   "text": "You add RNase to the lysate."
+  },
+  {
+   "t": 147.09,
+   "text": "The standard choice is RNase I for eukaryotic samples, or micrococcal nuclease for bacterial samples (the choice matters because bacterial ribosomes are sensitive to RNase I in ways that obscure the footprints)."
+  },
+  {
+   "t": 161.59,
+   "text": "The nuclease chews up every piece of RNA it can reach."
+  },
+  {
+   "t": 166.0,
+   "text": "Free mRNA, in between the ribosomes on a polysome — gone, digested to nucleotides."
+  },
+  {
+   "t": 172.91,
+   "text": "The 5' UTR before the first ribosome, the 3' UTR after the last ribosome, the linker regions between successive ribosomes on the same polysome — all gone."
+  },
+  {
+   "t": 183.74,
+   "text": "What survives is only the ~30-nucleotide window of mRNA that was physically wrapped inside a ribosome."
+  },
+  {
+   "t": 191.46,
+   "text": "The ribosome's body acts as a shield."
+  },
+  {
+   "t": 194.07,
+   "text": "The RNase cannot get under the ribosome to chew that fragment."
+  },
+  {
+   "t": 198.06,
+   "text": "This is the central trick of Ribo-seq, and I want you to picture it concretely."
+  },
+  {
+   "t": 202.96,
+   "text": "Imagine a long string with dozens of little beads strung along it, each bead clamping shut around a few inches of string."
+  },
+  {
+   "t": 211.32,
+   "text": "Now you bring in scissors that snip any exposed string."
+  },
+  {
+   "t": 214.74,
+   "text": "After enough snipping, all the string between the beads is cut away — what's left is the beads, each still clamped around its own short piece of string."
+  },
+  {
+   "t": 224.57,
+   "text": "Now release the beads and collect the short pieces of string."
+  },
+  {
+   "t": 228.39,
+   "text": "Each piece is the footprint of where a bead was sitting."
+  },
+  {
+   "t": 231.85,
+   "text": "The string is mRNA."
+  },
+  {
+   "t": 234.01,
+   "text": "The beads are ribosomes."
+  },
+  {
+   "t": 235.85,
+   "text": "The scissors are the RNase."
+  },
+  {
+   "t": 237.71,
+   "text": "The footprints are what you sequence."
+  },
+  {
+   "t": 239.8,
+   "text": "Step four: isolate the footprints."
+  },
+  {
+   "t": 242.53,
+   "text": "After digestion, you have a lysate containing intact 80S monosomes — single ribosomes with their protected fragment still bound — plus a lot of junk."
+  },
+  {
+   "t": 252.74,
+   "text": "You separate the monosomes from everything else by sucrose gradient ultracentrifugation."
+  },
+  {
+   "t": 259.09,
+   "text": "You pour a gradient of sucrose from low to high concentration in a tube, layer your digested lysate on top, and spin at high speed for several hours."
+  },
+  {
+   "t": 268.95,
+   "text": "Particles in the lysate migrate down through the gradient at speeds depending on their size and density."
+  },
+  {
+   "t": 275.59,
+   "text": "The 80S monosome peak is at a characteristic position — well-separated from free protein, from free RNA, from larger polysomes."
+  },
+  {
+   "t": 285.36,
+   "text": "You collect the fraction containing the monosome peak, extract the RNA from it, and what you have is enriched for the 30-nucleotide ribosome footprints."
+  },
+  {
+   "t": 295.24,
+   "text": "Some modern protocols skip the sucrose gradient and instead use size selection on a polyacrylamide gel — running the digested RNA on a gel, cutting out the band at ~30 nucleotides, and eluting."
+  },
+  {
+   "t": 308.53,
+   "text": "This is simpler and works well, though it gives slightly less clean signal than the gradient approach."
+  },
+  {
+   "t": 314.53,
+   "text": "The recent ribosome profiling kits sold by companies like Lexogen and McLab use various combinations of these steps."
+  },
+  {
+   "t": 322.16,
+   "text": "Step five: ribosomal RNA depletion."
+  },
+  {
+   "t": 325.42,
+   "text": "Here's a wrinkle that bites you if you're not careful."
+  },
+  {
+   "t": 328.42,
+   "text": "Even after sucrose gradient enrichment, the RNA you extracted from your monosome fraction is not pure footprints."
+  },
+  {
+   "t": 336.12,
+   "text": "It contains ribosomal RNA fragments — specifically, fragments of the 18S and 28S rRNAs that happen to be about the same size as your footprints (because the ribosome contains tons of rRNA, and the RNase chews it up into similar-sized pieces)."
+  },
+  {
+   "t": 353.63,
+   "text": "If you don't deplete the rRNA, your sequencing run will be dominated by rRNA reads, and you'll waste most of your sequencing dollar."
+  },
+  {
+   "t": 361.54,
+   "text": "So before library prep, you do a targeted rRNA depletion — either with hybridization to biotinylated probes followed by streptavidin pulldown, or with the commercial Ribo-Zero kit, or with newer approaches like DASH (depletion of abundant sequences by hybridization)."
+  },
+  {
+   "t": 378.38,
+   "text": "After depletion, your sample is ~70-90% genuine footprints by reads."
+  },
+  {
+   "t": 384.58,
+   "text": "Step six: small-RNA library prep."
+  },
+  {
+   "t": 387.58,
+   "text": "Your input is now a tube of 30-nucleotide RNA fragments, which is way smaller than what standard RNA-seq library prep expects."
+  },
+  {
+   "t": 396.64,
+   "text": "You need to use a small-RNA library prep protocol."
+  },
+  {
+   "t": 399.77,
+   "text": "The basic workflow is: ligate a synthetic adapter onto the 3' end of each fragment (using T4 RNA ligase), then either circularize and PCR or ligate a second adapter onto the 5' end, then reverse transcribe to cDNA, then PCR amplify with index primers."
+  },
+  {
+   "t": 419.76,
+   "text": "Modern protocols include unique molecular identifiers — UMIs, random short barcodes — in the adapters, so you can count distinct molecules instead of PCR-amplified copies and avoid amplification bias."
+  },
+  {
+   "t": 433.82,
+   "text": "The output is a tube of Illumina-compatible library, ready for the sequencer."
+  },
+  {
+   "t": 439.07,
+   "text": "Step seven: sequence."
+  },
+  {
+   "t": 441.24,
+   "text": "Load the library onto an Illumina flow cell, run a standard short-read run — typically single-end 50 or 75 base pairs is plenty, because your inserts are only 30 nucleotides — and you get back a few tens of millions of reads per sample."
+  },
+  {
+   "t": 458.14,
+   "text": "Each read is one ribosome footprint."
+  },
+  {
+   "t": 460.96,
+   "text": "Each footprint is one ribosome's position at one moment in your cells' lives."
+  },
+  {
+   "t": 466.61,
+   "text": "The whole workflow takes a few days end-to-end, costs a few hundred to a thousand dollars per sample, and yields data that — once you've cleaned out the rRNA contamination and aligned the footprints to the transcriptome — looks like one of the most informative tracks in all of genomics."
+  },
+  {
+   "t": 483.27,
+   "text": "Coverage along every translated gene, peaks where ribosomes accumulate, drop-offs at stop codons."
+  },
+  {
+   "t": 490.89,
+   "text": "Let's now look at the most striking feature of that data: 3-nucleotide periodicity."
+  }
+ ]
+}

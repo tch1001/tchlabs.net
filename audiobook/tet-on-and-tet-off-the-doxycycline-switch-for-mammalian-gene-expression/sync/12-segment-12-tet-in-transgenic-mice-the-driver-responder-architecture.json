@@ -1,0 +1,155 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Tet in transgenic mice: the driver-responder architecture",
+ "duration": 222.32,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Tet in transgenic mice: the driver-responder architecture"
+  },
+  {
+   "t": 5.49,
+   "text": "Let me zoom out and talk about how Tet systems are deployed in transgenic mice, because the architectural pattern that has emerged is worth understanding cleanly."
+  },
+  {
+   "t": 14.71,
+   "text": "It's a two-component system, analogous in spirit to the two-component Cre-Lox setup, and the analogy will help you read the literature fluently."
+  },
+  {
+   "t": 23.49,
+   "text": "For a Tet-controlled mouse experiment, you need two transgenic components."
+  },
+  {
+   "t": 28.48,
+   "text": "Component one: the driver line."
+  },
+  {
+   "t": 30.69,
+   "text": "This is a mouse engineered to express rtTA (for Tet-On) or tTA (for Tet-Off) under a tissue-specific or constitutive promoter."
+  },
+  {
+   "t": 41.5,
+   "text": "The promoter choice defines the cell type."
+  },
+  {
+   "t": 44.55,
+   "text": "An rtTA driven by the insulin promoter expresses rtTA in pancreatic beta cells."
+  },
+  {
+   "t": 50.71,
+   "text": "An rtTA driven by the albumin promoter expresses rtTA in hepatocytes."
+  },
+  {
+   "t": 56.54,
+   "text": "An rtTA driven by the CAG ubiquitous promoter expresses rtTA in essentially all cell types."
+  },
+  {
+   "t": 64.53,
+   "text": "The driver line, on its own, does nothing biologically — it just has rtTA sitting in its cells, with no TRE to act on."
+  },
+  {
+   "t": 72.94,
+   "text": "Component two: the responder line."
+  },
+  {
+   "t": 75.56,
+   "text": "This is a mouse engineered with a TRE-driven cassette of your gene of interest."
+  },
+  {
+   "t": 80.5,
+   "text": "The cassette is silent in any cell where there's no rtTA."
+  },
+  {
+   "t": 84.67,
+   "text": "The responder line, on its own, also does nothing — TRE without rtTA is essentially silent."
+  },
+  {
+   "t": 92.47,
+   "text": "Cross the two lines."
+  },
+  {
+   "t": 94.09,
+   "text": "The offspring inherit both the rtTA driver and the TRE responder."
+  },
+  {
+   "t": 98.78,
+   "text": "In the cells where the driver promoter is active, rtTA is expressed."
+  },
+  {
+   "t": 104.4,
+   "text": "In those same cells, if the mouse is on doxycycline, rtTA binds the TRE and turns on the cargo gene."
+  },
+  {
+   "t": 111.44,
+   "text": "In cells where the driver promoter is off, no rtTA, no induction even with dox."
+  },
+  {
+   "t": 117.53,
+   "text": "In cells with rtTA but no doxycycline, also no induction."
+  },
+  {
+   "t": 122.31,
+   "text": "The cargo gene is only expressed at the intersection of three conditions: cells expressing rtTA, plus presence of doxycycline, plus the integrated TRE responder."
+  },
+  {
+   "t": 134.5,
+   "text": "This driver-responder architecture has several beautiful features."
+  },
+  {
+   "t": 139.06,
+   "text": "You can mix and match."
+  },
+  {
+   "t": 140.5,
+   "text": "A single driver line can be crossed with many different TRE-responder lines to drive any of various cargoes in the same tissue."
+  },
+  {
+   "t": 148.93,
+   "text": "A single responder line can be crossed with many different driver lines to express the same cargo in various tissues."
+  },
+  {
+   "t": 156.81,
+   "text": "The combinatorial space is enormous."
+  },
+  {
+   "t": 159.62,
+   "text": "You can do timed delivery."
+  },
+  {
+   "t": 161.16,
+   "text": "The drug controls when, the promoter controls where."
+  },
+  {
+   "t": 164.82,
+   "text": "Adult-only expression: keep the mouse off dox during development, turn on dox in adulthood."
+  },
+  {
+   "t": 170.46,
+   "text": "Pulsed expression: give dox for a week, take it away, give it again later."
+  },
+  {
+   "t": 175.51,
+   "text": "Continuous expression: keep the mouse on dox indefinitely."
+  },
+  {
+   "t": 179.39,
+   "text": "You can do tissue-specific responder cassettes, too."
+  },
+  {
+   "t": 182.72,
+   "text": "Sometimes the responder cassette is built with a Cre-removable stop cassette upstream of the TRE — adding a layer of Cre-based cell-type restriction on top of the Tet-based temporal control."
+  },
+  {
+   "t": 193.89,
+   "text": "These layered systems can give very precise spatial-temporal control, at the cost of considerable breeding complexity."
+  },
+  {
+   "t": 201.47,
+   "text": "The transgenic Tet system is, in short, the natural mouse analog of the Tet-Off and Tet-On platforms developed in cell culture."
+  },
+  {
+   "t": 209.76,
+   "text": "Same components — rtTA, TRE — same logic — drug controls binding — just deployed in a whole-animal context, with the added flexibility of tissue-specific driver promoters."
+  }
+ ]
+}

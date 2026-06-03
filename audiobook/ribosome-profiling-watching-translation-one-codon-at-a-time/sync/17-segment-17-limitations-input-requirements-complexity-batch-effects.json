@@ -1,0 +1,163 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Limitations — input requirements, complexity, batch effects",
+ "duration": 271.81,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Limitations — input requirements, complexity, batch effects"
+  },
+  {
+   "t": 6.28,
+   "text": "I want to be honest about the limitations of Ribo-seq, because every method has them and the published literature can sometimes paper over them."
+  },
+  {
+   "t": 14.65,
+   "text": "If you're going to plan a Ribo-seq experiment, you should know what you're getting into."
+  },
+  {
+   "t": 18.8,
+   "text": "Limitation one: input material requirements."
+  },
+  {
+   "t": 22.4,
+   "text": "Ribo-seq requires substantially more starting material than standard RNA-seq."
+  },
+  {
+   "t": 27.49,
+   "text": "A typical Ribo-seq experiment needs millions of cells or hundreds of milligrams of tissue — because after rRNA depletion, sucrose gradient enrichment, and library prep losses, you need a lot of input to end up with enough footprints to sequence well."
+  },
+  {
+   "t": 43.38,
+   "text": "This makes Ribo-seq challenging for rare cell populations, for small clinical biopsies, and for any application where input is limited."
+  },
+  {
+   "t": 52.16,
+   "text": "There has been progress on low-input Ribo-seq protocols — some can now work with hundreds of thousands of cells — but it's still far from the single-cell range."
+  },
+  {
+   "t": 61.77,
+   "text": "We'll talk about single-cell Ribo-seq in Segment 18."
+  },
+  {
+   "t": 65.44,
+   "text": "Limitation two: protocol complexity."
+  },
+  {
+   "t": 68.66,
+   "text": "Ribo-seq is much more involved than RNA-seq."
+  },
+  {
+   "t": 71.85,
+   "text": "The sucrose gradient ultracentrifugation, the careful rRNA depletion, the small-RNA library prep — each step has more failure modes than the corresponding steps in standard RNA-seq."
+  },
+  {
+   "t": 83.79,
+   "text": "Getting clean Ribo-seq data takes practice, and the success rate is lower than for routine RNA-seq, especially for new operators or new sample types."
+  },
+  {
+   "t": 94.45,
+   "text": "The community has converged on several commercial kits and well-validated protocols, but it's still a more demanding wet-lab technique."
+  },
+  {
+   "t": 102.8,
+   "text": "Limitation three: batch effects."
+  },
+  {
+   "t": 105.84,
+   "text": "Because the protocol has so many steps, batch effects are pronounced."
+  },
+  {
+   "t": 110.45,
+   "text": "The exact concentration of cycloheximide, the exact RNase I activity, the exact sucrose gradient run, the exact rRNA depletion conditions — all of these can vary subtly between batches and produce systematic differences in the resulting data."
+  },
+  {
+   "t": 125.99,
+   "text": "The best practice is to process all samples in a single batch when possible, and when not possible, to use careful experimental design (randomization, blocking) and computational correction."
+  },
+  {
+   "t": 138.39,
+   "text": "Tools like RUVseq and ComBat can help with batch correction, but they're not magic."
+  },
+  {
+   "t": 143.5,
+   "text": "Limitation four: ribosome heterogeneity."
+  },
+  {
+   "t": 147.07,
+   "text": "Standard Ribo-seq treats all ribosomes as equivalent."
+  },
+  {
+   "t": 151.54,
+   "text": "But ribosomes are actually heterogeneous — there are differences in ribosomal protein composition, rRNA modifications, and post-translational modifications across different cell types and conditions."
+  },
+  {
+   "t": 163.72,
+   "text": "The footprint patterns from these different ribosomes may differ subtly, and standard Ribo-seq averages over them."
+  },
+  {
+   "t": 170.65,
+   "text": "Specialized variants — particularly selective ribosome profiling — can address this, but it's a non-trivial complication."
+  },
+  {
+   "t": 178.8,
+   "text": "Limitation five: drug artifacts."
+  },
+  {
+   "t": 181.97,
+   "text": "We covered cycloheximide artifacts in Segment 10."
+  },
+  {
+   "t": 185.51,
+   "text": "Any drug-based arrest method has artifacts."
+  },
+  {
+   "t": 188.49,
+   "text": "Drug-free flash-freeze protocols partly avoid this but introduce their own challenges (speed of freezing, tissue dissection)."
+  },
+  {
+   "t": 196.78,
+   "text": "Limitation six: the difficulty of interpreting absolute density."
+  },
+  {
+   "t": 201.6,
+   "text": "The number of ribosomes on a given mRNA depends on both initiation rate and elongation rate."
+  },
+  {
+   "t": 207.88,
+   "text": "A high density of ribosomes could mean lots of initiation, or it could mean slow elongation with normal initiation — these are not always distinguishable from standard Ribo-seq alone."
+  },
+  {
+   "t": 219.7,
+   "text": "Initiation-specific drugs (harringtonine) help disambiguate, but the absolute kinetic interpretation is harder than the per-gene comparative interpretation."
+  },
+  {
+   "t": 230.41,
+   "text": "Limitation seven: cost."
+  },
+  {
+   "t": 232.61,
+   "text": "Ribo-seq costs more than RNA-seq per sample — typically $500 to $1500 per sample compared to $100-$300 for standard RNA-seq, and that's before you factor in the paired RNA-seq you almost always also need."
+  },
+  {
+   "t": 249.35,
+   "text": "For large clinical cohorts, this matters."
+  },
+  {
+   "t": 252.4,
+   "text": "The headline: Ribo-seq is more demanding, more expensive, and more artifact-prone than RNA-seq."
+  },
+  {
+   "t": 259.34,
+   "text": "It requires substantial input material, careful protocol execution, and thoughtful experimental design."
+  },
+  {
+   "t": 266.74,
+   "text": "When it works, it gives you data that nothing else can give you."
+  },
+  {
+   "t": 270.34,
+   "text": "But you should plan accordingly."
+  }
+ ]
+}

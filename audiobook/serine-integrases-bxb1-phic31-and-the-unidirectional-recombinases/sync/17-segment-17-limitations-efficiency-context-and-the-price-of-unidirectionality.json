@@ -1,0 +1,143 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Limitations — efficiency, context, and the price of unidirectionality",
+ "duration": 253.16,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Limitations — efficiency, context, and the price of unidirectionality"
+  },
+  {
+   "t": 6.99,
+   "text": "Let me close out the technical content with an honest accounting of the limitations of serine integrases as engineering tools."
+  },
+  {
+   "t": 14.85,
+   "text": "Every tool has tradeoffs; serine integrases have theirs."
+  },
+  {
+   "t": 18.96,
+   "text": "Efficiency is variable and context-dependent."
+  },
+  {
+   "t": 22.51,
+   "text": "Bxb1 in mammalian cells is efficient, but \"efficient\" still typically means 10 to 50 percent of cells receiving a successful integration in a transfection experiment — not 100 percent."
+  },
+  {
+   "t": 35.48,
+   "text": "The efficiency depends on the cell type, the chromatin state of the landing-pad site, the delivery method, the relative ratios of integrase to donor DNA, and other factors."
+  },
+  {
+   "t": 46.59,
+   "text": "For ex vivo work where you can select for integrated clones, the efficiency is rarely a bottleneck."
+  },
+  {
+   "t": 53.79,
+   "text": "For in vivo work where you can't easily select, the efficiency directly determines what fraction of cells in the target tissue are successfully edited, and below some threshold the therapy doesn't work."
+  },
+  {
+   "t": 66.41,
+   "text": "Host context matters."
+  },
+  {
+   "t": 68.08,
+   "text": "Some chromosomal locations are more permissive for serine-integrase action than others."
+  },
+  {
+   "t": 73.85,
+   "text": "A landing pad in a transcriptionally-active region of the genome is generally more recombinogenic than one in a heterochromatic region."
+  },
+  {
+   "t": 82.03,
+   "text": "This is why landing-pad sites are usually chosen in well-characterized \"safe harbors\" with known favorable chromatin contexts."
+  },
+  {
+   "t": 90.15,
+   "text": "Integration is unidirectional but cleanly defined."
+  },
+  {
+   "t": 93.6,
+   "text": "This is mostly a feature, but it can be a limitation."
+  },
+  {
+   "t": 96.69,
+   "text": "If you make a mistake — install the wrong cargo at the landing pad, or want to swap it out for a different version — you can't easily undo it without expressing the RDF and excising."
+  },
+  {
+   "t": 107.35,
+   "text": "RDF availability and the engineering of controlled excision is an area of ongoing work."
+  },
+  {
+   "t": 113.56,
+   "text": "Off-target action exists but is mostly low."
+  },
+  {
+   "t": 116.54,
+   "text": "Bxb1 has essentially no detectable off-targets in human and most mammalian genomes, which is its great advantage."
+  },
+  {
+   "t": 124.7,
+   "text": "phiC31 has the pseudo-attP problem we discussed."
+  },
+  {
+   "t": 129.24,
+   "text": "Newer orthologs vary in their off-target profiles, and the off-target landscape always needs to be characterized for any new integrase being deployed for clinical work."
+  },
+  {
+   "t": 139.41,
+   "text": "Delivery of the integrase itself is its own engineering problem."
+  },
+  {
+   "t": 143.81,
+   "text": "The integrase has to be present in the cell at the same time as the cargo, and at a sufficient level."
+  },
+  {
+   "t": 150.44,
+   "text": "Plasmid delivery, mRNA delivery, ribonucleoprotein delivery, and viral-vector delivery of the integrase have all been tried; each has tradeoffs in efficiency, persistence, and immunogenicity."
+  },
+  {
+   "t": 163.61,
+   "text": "Pre-installation of the landing pad is required."
+  },
+  {
+   "t": 166.5,
+   "text": "This is the central limitation of the landing-pad approach as a clinical tool."
+  },
+  {
+   "t": 171.05,
+   "text": "Unlike Cre-Lox, which requires only that loxP sites be installed somewhere in the genome (which can be done germline in transgenic mice), serine-integrase landing pads typically need to be installed in adult tissues for therapeutic applications."
+  },
+  {
+   "t": 185.66,
+   "text": "PASTE solves this in many cell types, but only for cell types and chromosomal locations where prime editing works efficiently."
+  },
+  {
+   "t": 193.75,
+   "text": "For some tissues and some loci, prime editing is still hard, and the landing-pad approach is correspondingly hard."
+  },
+  {
+   "t": 201.78,
+   "text": "Cargo design constraints."
+  },
+  {
+   "t": 203.8,
+   "text": "The cargo plasmid carries att sites and may need to be in a particular topological form (circular vs linear) to be efficiently recombined."
+  },
+  {
+   "t": 214.07,
+   "text": "Plasmid size, sequence content, and methylation state can all affect efficiency."
+  },
+  {
+   "t": 219.71,
+   "text": "These are tractable engineering issues but they do require attention."
+  },
+  {
+   "t": 223.6,
+   "text": "Despite these limitations, serine integrases remain the cleanest, most predictable, most reliable tool we have for large-cargo site-specific integration."
+  },
+  {
+   "t": 234.45,
+   "text": "The combination of unidirectionality, sequence specificity (in the case of Bxb1), no requirement for ATP or accessory factors, and reasonable mammalian-cell efficiency makes them indispensable for landing-pad cell-line engineering and for the emerging PASTE-based gene therapy approaches."
+  }
+ ]
+}

@@ -1,0 +1,239 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Single-stranded oligo recombineering",
+ "duration": 357.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Single-stranded oligo recombineering"
+  },
+  {
+   "t": 3.52,
+   "text": "We are getting close to the break, but I want to introduce one more concept before we get there, because it is the technical leap that enables everything we are going to talk about in the second half of the lecture."
+  },
+  {
+   "t": 13.78,
+   "text": "It is single-stranded oligonucleotide recombineering."
+  },
+  {
+   "t": 17.56,
+   "text": "Sometimes called oligo recombineering, sometimes ssDNA recombineering."
+  },
+  {
+   "t": 22.77,
+   "text": "The smallest possible recombineering reaction."
+  },
+  {
+   "t": 25.85,
+   "text": "One oligo, one edit."
+  },
+  {
+   "t": 27.34,
+   "text": "Remember from Segment 4 that Beta is a single-strand annealing protein."
+  },
+  {
+   "t": 32.25,
+   "text": "Beta does not strictly need Exo or Gam to work — given a single-stranded DNA substrate, Beta alone can drive that substrate to anneal to its complement on the chromosome."
+  },
+  {
+   "t": 44.08,
+   "text": "This is the foundational observation that makes single-stranded oligo recombineering possible."
+  },
+  {
+   "t": 50.6,
+   "text": "So here is the setup."
+  },
+  {
+   "t": 52.34,
+   "text": "You have a strain of E. coli expressing lambda Red — usually all three Red proteins are present, though Beta is the critical one."
+  },
+  {
+   "t": 61.31,
+   "text": "You order, from a commercial oligonucleotide vendor, a single-stranded DNA oligo about ninety bases long."
+  },
+  {
+   "t": 68.9,
+   "text": "The middle of the oligo contains the edit you want to make — say, a single nucleotide change, or a small insertion, or a small deletion."
+  },
+  {
+   "t": 76.94,
+   "text": "The flanking sequences on either side of the edit match the chromosome exactly."
+  },
+  {
+   "t": 82.55,
+   "text": "So the oligo looks like: forty-five bases of matching sequence, then your edit, then forty-five bases of matching sequence."
+  },
+  {
+   "t": 91.35,
+   "text": "Ninety bases total."
+  },
+  {
+   "t": 92.95,
+   "text": "You electroporate this oligo into your Red-expressing strain."
+  },
+  {
+   "t": 96.97,
+   "text": "Beta coats the oligo."
+  },
+  {
+   "t": 98.6,
+   "text": "The Beta-coated oligo drifts around inside the cell until it finds a replication fork where the matching sequence is exposed as single-stranded DNA on the lagging strand."
+  },
+  {
+   "t": 110.19,
+   "text": "The oligo anneals, the cell extends and ligates, the next round of replication incorporates the edit into the daughter chromosome."
+  },
+  {
+   "t": 118.61,
+   "text": "Done."
+  },
+  {
+   "t": 119.34,
+   "text": "One base of the chromosome has been changed."
+  },
+  {
+   "t": 122.11,
+   "text": "Now think about how radical this is compared to traditional cloning."
+  },
+  {
+   "t": 126.46,
+   "text": "The total mass of DNA you delivered is tiny — a few hundred nanograms of oligo, which is something like ten to the eleven molecules, in a cell suspension of a few times ten to the nine cells."
+  },
+  {
+   "t": 138.82,
+   "text": "The edit it makes is precise to the single nucleotide."
+  },
+  {
+   "t": 142.34,
+   "text": "There is no cassette, no marker, no PCR product, no plasmid."
+  },
+  {
+   "t": 147.6,
+   "text": "Just an oligo."
+  },
+  {
+   "t": 148.76,
+   "text": "And the efficiency, surprisingly, is not bad — in a well-optimized recombineering strain, you can get a few percent of cells with the desired edit, sometimes higher."
+  },
+  {
+   "t": 159.24,
+   "text": "Without any selection at all, you can find your edit by colony PCR and sequencing."
+  },
+  {
+   "t": 164.7,
+   "text": "This is the smallest possible edit."
+  },
+  {
+   "t": 166.96,
+   "text": "One 80-nt oligo, one base change."
+  },
+  {
+   "t": 170.26,
+   "text": "And it scales beautifully."
+  },
+  {
+   "t": 172.16,
+   "text": "If you want to make ten edits at ten different sites in your bacterial chromosome, you can in principle electroporate ten different oligos at once, each carrying a different edit."
+  },
+  {
+   "t": 182.07,
+   "text": "Some fraction of cells will get one edit."
+  },
+  {
+   "t": 184.57,
+   "text": "A smaller fraction will get two."
+  },
+  {
+   "t": 186.56,
+   "text": "A smaller fraction yet will get three, and so on."
+  },
+  {
+   "t": 189.99,
+   "text": "With multiple rounds of electroporation and a willingness to screen, you can drive a cell to homozygosity at many sites — meaning all the copies of the chromosome (since E. coli has more than one during fast growth) carry all the edits."
+  },
+  {
+   "t": 204.72,
+   "text": "And when you turn this into a robotic, automated, high-throughput process — which is what George Church's lab did, and what we are going to talk about right after the break — you get MAGE."
+  },
+  {
+   "t": 215.12,
+   "text": "Multiplex automated genome engineering."
+  },
+  {
+   "t": 218.44,
+   "text": "The recombineering robot."
+  },
+  {
+   "t": 220.14,
+   "text": "There is one more subtlety to oligo recombineering that I want to mention before the break, because it determines a lot of the design strategy."
+  },
+  {
+   "t": 228.43,
+   "text": "The cell's mismatch repair machinery is constantly scanning DNA for mismatches and correcting them."
+  },
+  {
+   "t": 235.21,
+   "text": "When your Beta-coated oligo anneals to the chromosome, the edit you have introduced creates a mismatch — your oligo has one base, the chromosomal strand has a different base."
+  },
+  {
+   "t": 246.28,
+   "text": "Mismatch repair sees this and, more often than not, \"corrects\" the mismatch by removing your edit and restoring the original sequence."
+  },
+  {
+   "t": 255.1,
+   "text": "So you get an annealing event that goes nowhere, because the cell's repair machinery undoes it."
+  },
+  {
+   "t": 260.89,
+   "text": "There are two ways around this."
+  },
+  {
+   "t": 262.66,
+   "text": "The first is to do your recombineering in a mismatch-repair-deficient strain — a strain where the mutS gene or related genes have been knocked out."
+  },
+  {
+   "t": 271.02,
+   "text": "This dramatically increases efficiency, often by factors of ten to a hundred."
+  },
+  {
+   "t": 276.59,
+   "text": "The downside is that mismatch-repair-deficient strains accumulate background mutations everywhere, so you need to clean up after the experiment."
+  },
+  {
+   "t": 285.4,
+   "text": "The second way is to design your oligos to evade mismatch repair — for example, by introducing changes that the repair machinery is less efficient at detecting, like mismatches involving the bases C-C, which are poorly recognized."
+  },
+  {
+   "t": 300.2,
+   "text": "People have made an art out of designing recombineering oligos to maximize the chance the edit survives the cell's natural repair."
+  },
+  {
+   "t": 308.59,
+   "text": "This is the kind of mechanistic detail that turns recombineering from a black-box protocol into something you can really tune."
+  },
+  {
+   "t": 315.7,
+   "text": "When you understand why a particular oligo design works better than another, you can rationally improve your experiments."
+  },
+  {
+   "t": 322.76,
+   "text": "And that mechanistic depth is exactly what the technique needs to support the high-throughput, multi-site applications we are going to dive into next."
+  },
+  {
+   "t": 331.36,
+   "text": "Alright."
+  },
+  {
+   "t": 332.15,
+   "text": "We are nine segments in, we have built up from the basic biology of lambda phage all the way to single-stranded oligo recombineering, and you should now have a solid intuitive picture of what recombineering is and how it works."
+  },
+  {
+   "t": 346.1,
+   "text": "We are about to get into the more exotic applications — MAGE, TRACE, recoded organisms, the synergy with CRISPR — and we will need everything we have built up so far."
+  },
+  {
+   "t": 356.79,
+   "text": "Take five."
+  }
+ ]
+}

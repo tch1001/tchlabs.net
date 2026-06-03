@@ -1,0 +1,255 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Translation efficiency — combining Ribo-seq with RNA-seq",
+ "duration": 404.34,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Translation efficiency — combining Ribo-seq with RNA-seq"
+  },
+  {
+   "t": 5.81,
+   "text": "We come now to one of the most useful quantitative measures in the whole Ribo-seq toolkit, and it's an analysis that only works if you have Ribo-seq and RNA-seq from the same samples."
+  },
+  {
+   "t": 16.55,
+   "text": "It's called translation efficiency, abbreviated TE, and it is, almost trivially, the ratio of Ribo-seq signal to RNA-seq signal for each gene."
+  },
+  {
+   "t": 27.04,
+   "text": "The intuition is straightforward."
+  },
+  {
+   "t": 29.36,
+   "text": "RNA-seq counts how many mRNAs of a given gene are present."
+  },
+  {
+   "t": 33.95,
+   "text": "Ribo-seq counts how many ribosomes are sitting on those mRNAs."
+  },
+  {
+   "t": 38.5,
+   "text": "If you have ten mRNAs of gene X and you measure ten ribosomes on gene X, that's one ribosome per mRNA, which is — kinetically — a measure of how heavily loaded that gene's mRNAs are with translating ribosomes."
+  },
+  {
+   "t": 52.98,
+   "text": "Heavily loaded mRNAs make more protein per unit time per mRNA."
+  },
+  {
+   "t": 58.51,
+   "text": "Lightly loaded mRNAs make less."
+  },
+  {
+   "t": 61.0,
+   "text": "The ratio of Ribo-seq to RNA-seq, computed for every gene, gives you a per-gene measure of how efficiently each gene's mRNAs are being translated."
+  },
+  {
+   "t": 71.83,
+   "text": "Formally, translation efficiency = ribosome footprint reads per gene divided by mRNA reads per gene, after normalizing each for sequencing depth and gene length."
+  },
+  {
+   "t": 83.4,
+   "text": "Some pipelines use TPM (transcripts per million) for both Ribo-seq and RNA-seq and compute the ratio; others use raw counts with appropriate normalization."
+  },
+  {
+   "t": 94.55,
+   "text": "The exact formula matters less than the concept."
+  },
+  {
+   "t": 97.92,
+   "text": "TE is a quantitative measure of how many ribosomes are loaded onto each mRNA molecule of a gene, on average."
+  },
+  {
+   "t": 106.16,
+   "text": "Here is how I want you to think about it, in simple cases."
+  },
+  {
+   "t": 109.47,
+   "text": "High mRNA, high Ribo-seq — typical for a constitutively well-translated gene."
+  },
+  {
+   "t": 115.49,
+   "text": "The mRNA is present, the ribosomes are on it, protein is being made at a steady rate."
+  },
+  {
+   "t": 121.59,
+   "text": "Most housekeeping genes look like this."
+  },
+  {
+   "t": 124.03,
+   "text": "Low mRNA, low Ribo-seq — typical for a gene that's just turned off."
+  },
+  {
+   "t": 129.57,
+   "text": "Few mRNAs, few ribosomes, little protein."
+  },
+  {
+   "t": 133.35,
+   "text": "Standard."
+  },
+  {
+   "t": 134.25,
+   "text": "High mRNA, low Ribo-seq — translationally suppressed."
+  },
+  {
+   "t": 139.12,
+   "text": "The transcript is there but it's not being read."
+  },
+  {
+   "t": 141.86,
+   "text": "Maybe there's a uORF blocking initiation."
+  },
+  {
+   "t": 145.01,
+   "text": "Maybe a repressor protein is bound."
+  },
+  {
+   "t": 147.45,
+   "text": "Maybe the mRNA is sequestered in a stress granule."
+  },
+  {
+   "t": 151.06,
+   "text": "The cell has the recipe but isn't cooking it."
+  },
+  {
+   "t": 153.85,
+   "text": "Low TE."
+  },
+  {
+   "t": 154.89,
+   "text": "Low mRNA, high Ribo-seq — translationally activated."
+  },
+  {
+   "t": 159.68,
+   "text": "Few transcripts but each one is heavily loaded with ribosomes."
+  },
+  {
+   "t": 164.32,
+   "text": "The cell is squeezing maximum protein out of a small mRNA pool."
+  },
+  {
+   "t": 169.25,
+   "text": "Could be a stress response, where translation efficiency goes up to compensate for transcript loss."
+  },
+  {
+   "t": 176.04,
+   "text": "High TE."
+  },
+  {
+   "t": 177.03,
+   "text": "The analogy I want you to hold: high mRNA with low Ribo-seq is a transcript that's present but suppressed at translation."
+  },
+  {
+   "t": 185.18,
+   "text": "Low mRNA with high Ribo-seq is an efficiently translated transcript getting lots of protein from few copies."
+  },
+  {
+   "t": 193.05,
+   "text": "Translation efficiency captures the layer of regulation between mRNA and protein that RNA-seq alone cannot see."
+  },
+  {
+   "t": 201.75,
+   "text": "What kinds of biology become visible when you compute TE across conditions?"
+  },
+  {
+   "t": 207.12,
+   "text": "Almost anything where the cell uses translation as a regulatory layer."
+  },
+  {
+   "t": 211.82,
+   "text": "Take the integrated stress response, which we already mentioned."
+  },
+  {
+   "t": 215.49,
+   "text": "When cells are stressed — by amino acid starvation, by viral infection, by misfolded proteins in the endoplasmic reticulum — the global translation machinery slows down through phosphorylation of eIF2-alpha."
+  },
+  {
+   "t": 229.82,
+   "text": "But not every gene is affected equally."
+  },
+  {
+   "t": 232.61,
+   "text": "Some specific genes — including ATF4, ATF5, GADD34, and the chaperone gene CHOP — are translationally upregulated during stress."
+  },
+  {
+   "t": 244.04,
+   "text": "Their mRNA levels don't change much."
+  },
+  {
+   "t": 246.69,
+   "text": "Their TE goes up."
+  },
+  {
+   "t": 248.06,
+   "text": "Without Ribo-seq plus RNA-seq, you'd never see this — you'd look at RNA-seq, see no change in the mRNA levels of these genes, and conclude they aren't responding to stress, when actually they are responding strongly at the translation layer."
+  },
+  {
+   "t": 262.93,
+   "text": "Take the diurnal cycle."
+  },
+  {
+   "t": 264.54,
+   "text": "There's been beautiful work showing that translation efficiency varies across the day-night cycle for many genes, independently of mRNA level changes."
+  },
+  {
+   "t": 274.9,
+   "text": "The cell uses translational control to time when specific proteins get made, on top of the transcriptional regulation provided by the circadian clock."
+  },
+  {
+   "t": 284.59,
+   "text": "You only see this through TE analysis."
+  },
+  {
+   "t": 287.42,
+   "text": "Take cancer."
+  },
+  {
+   "t": 288.48,
+   "text": "Many oncogenes — MYC is the classic example — have mRNAs that are translated with very high efficiency, partly because their 5' UTRs are structured in ways that the translation machinery navigates well only when initiation factor activity is high."
+  },
+  {
+   "t": 305.32,
+   "text": "In tumors with elevated mTOR signaling, the translation machinery is up, and the TE of MYC and similar oncogenes goes up disproportionately."
+  },
+  {
+   "t": 316.53,
+   "text": "This makes the cancer cell extra-sensitive to translation inhibitors."
+  },
+  {
+   "t": 321.01,
+   "text": "The clinical implication: you can target the translation layer in cancer specifically, with drugs that suppress eIF4E or similar targets, and the cancers most dependent on translational regulation are most vulnerable."
+  },
+  {
+   "t": 334.52,
+   "text": "A practical aside on TE statistics."
+  },
+  {
+   "t": 337.44,
+   "text": "Comparing TE between conditions — for example, drug-treated versus untreated — requires careful statistics, because the ratio of two noisy counts is more variable than either count alone."
+  },
+  {
+   "t": 349.46,
+   "text": "The standard tool is Xtail, which models the differential TE between conditions as a function of both the Ribo-seq and RNA-seq counts and their dispersions."
+  },
+  {
+   "t": 359.27,
+   "text": "Ribodiff is an alternative."
+  },
+  {
+   "t": 361.23,
+   "text": "Both are R packages and both build on the negative binomial models used in DESeq2 and edgeR for standard differential expression."
+  },
+  {
+   "t": 369.62,
+   "text": "Don't just take ratios of TPMs and call them \"differential TE\" — the statistics get tricky, and you want a tool that handles them correctly."
+  },
+  {
+   "t": 378.21,
+   "text": "The headline of this segment: Translation efficiency is the per-gene ratio of Ribo-seq to RNA-seq, and it's the single most useful number you can compute from a paired Ribo-seq plus RNA-seq experiment."
+  },
+  {
+   "t": 391.11,
+   "text": "It reveals the translation layer of regulation — the gap between recipe presence and recipe being cooked — and it captures a huge fraction of the variability in protein abundance that mRNA alone misses."
+  }
+ ]
+}

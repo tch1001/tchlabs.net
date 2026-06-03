@@ -1,0 +1,227 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Ribosome stalling — rare codons, proline-proline, and regulatory pauses",
+ "duration": 377.49,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Ribosome stalling — rare codons, proline-proline, and regulatory pauses"
+  },
+  {
+   "t": 7.09,
+   "text": "So far we've talked about translation as if it's relatively uniform along the length of an ORF — ribosomes elongating at some average rate."
+  },
+  {
+   "t": 16.26,
+   "text": "Real translation is not uniform."
+  },
+  {
+   "t": 18.79,
+   "text": "Ribosomes go fast through some codons, slow through others, and occasionally come to a complete halt — a stall — at specific positions."
+  },
+  {
+   "t": 28.66,
+   "text": "Ribo-seq is the perfect tool for seeing these speed variations, because the density of footprints at a given codon is proportional to how long the ribosome spends there."
+  },
+  {
+   "t": 39.86,
+   "text": "A peak in Ribo-seq at one specific codon means ribosomes are pausing there."
+  },
+  {
+   "t": 45.55,
+   "text": "Slow codons accumulate ribosomes."
+  },
+  {
+   "t": 48.71,
+   "text": "Fast codons don't."
+  },
+  {
+   "t": 50.15,
+   "text": "So the Ribo-seq density profile along an mRNA is, essentially, a map of translation speed — and the peaks are the stalls."
+  },
+  {
+   "t": 59.4,
+   "text": "Why do ribosomes stall?"
+  },
+  {
+   "t": 60.91,
+   "text": "Several reasons, and Ribo-seq has illuminated all of them."
+  },
+  {
+   "t": 65.09,
+   "text": "Reason one: rare codons."
+  },
+  {
+   "t": 67.56,
+   "text": "Codons are not used uniformly."
+  },
+  {
+   "t": 69.99,
+   "text": "In any genome, some codons appear much more frequently than others."
+  },
+  {
+   "t": 74.85,
+   "text": "The tRNAs that read those codons are correspondingly more abundant."
+  },
+  {
+   "t": 79.47,
+   "text": "Common codons get read fast — there's a tRNA waiting to come in."
+  },
+  {
+   "t": 84.21,
+   "text": "Rare codons get read slowly — the ribosome has to wait for the rare tRNA to find it."
+  },
+  {
+   "t": 90.41,
+   "text": "Genome-wide, Ribo-seq shows that ribosome density is higher at rare codons than at common codons, on average — confirming that codon usage affects elongation speed."
+  },
+  {
+   "t": 101.94,
+   "text": "Some genes are deliberately encoded with stretches of rare codons in specific places, slowing translation locally — sometimes to allow co-translational folding of a particular protein domain, sometimes to recruit specific chaperones, sometimes for reasons we still don't fully understand."
+  },
+  {
+   "t": 120.92,
+   "text": "Reason two: proline-proline and other slow peptide bonds."
+  },
+  {
+   "t": 125.5,
+   "text": "Some amino acid combinations are particularly slow for the ribosome to chemically link together."
+  },
+  {
+   "t": 132.1,
+   "text": "The worst offenders are stretches of proline residues."
+  },
+  {
+   "t": 135.4,
+   "text": "Proline is a chemical oddball — its amino group is part of a ring structure, which makes it a poor substrate for the peptidyl transferase reaction."
+  },
+  {
+   "t": 144.25,
+   "text": "When the ribosome tries to add a proline to a growing peptide that already ends in a proline, the reaction is sluggish."
+  },
+  {
+   "t": 151.7,
+   "text": "Polyproline tracts — sequences of three or more prolines in a row — cause major ribosome stalls."
+  },
+  {
+   "t": 158.82,
+   "text": "Cells have a specific elongation factor, eIF5A in eukaryotes (and EF-P in bacteria), whose primary job is to rescue ribosomes stalled at polyproline tracts."
+  },
+  {
+   "t": 170.51,
+   "text": "If you do Ribo-seq in cells lacking eIF5A function, you see massive footprint accumulation at every polyproline site in the genome."
+  },
+  {
+   "t": 179.84,
+   "text": "Reason three: regulatory pauses driven by mRNA structure or specific peptide sequences."
+  },
+  {
+   "t": 186.74,
+   "text": "Some genes have evolved to deliberately stall ribosomes at specific positions for regulatory purposes."
+  },
+  {
+   "t": 193.54,
+   "text": "The classical example is the SecM peptide in bacteria, which contains a sequence that, when translated, gets stuck in the ribosomal exit tunnel and stalls translation."
+  },
+  {
+   "t": 204.69,
+   "text": "This stall is part of a regulatory cassette for the SecA secretion machinery — the stalled SecM ribosome exposes a regulatory element on the mRNA that allows downstream translation of SecA."
+  },
+  {
+   "t": 217.39,
+   "text": "Other examples include arginine-attenuated leader peptides in amino acid biosynthesis operons, where stalling depends on amino acid availability, and translational arrest in selenocysteine incorporation."
+  },
+  {
+   "t": 230.95,
+   "text": "Ribo-seq sees all of these as sharp local peaks of footprint density."
+  },
+  {
+   "t": 235.84,
+   "text": "Reason four: collision and queueing."
+  },
+  {
+   "t": 238.65,
+   "text": "When a ribosome stalls, the ribosome behind it on the same mRNA catches up and bumps into it."
+  },
+  {
+   "t": 245.47,
+   "text": "The stalled ribosome creates a traffic jam, with multiple ribosomes piling up behind it."
+  },
+  {
+   "t": 251.39,
+   "text": "The collided ribosomes — called disomes when two collide, trisomes when three — trigger specific quality control responses in the cell, including the ribosome quality control (RQC) pathway, which we'll come back to in Segment 13."
+  },
+  {
+   "t": 267.2,
+   "text": "Disome-seq, a variant of Ribo-seq we'll discuss, specifically isolates these collided pairs."
+  },
+  {
+   "t": 274.19,
+   "text": "A computational note."
+  },
+  {
+   "t": 275.79,
+   "text": "Identifying stall sites in Ribo-seq data is statistically a bit subtle, because you have to control for the baseline footprint density that varies across genes — highly translated genes will have higher absolute footprint counts at every position, including stall sites."
+  },
+  {
+   "t": 292.3,
+   "text": "The standard approach is to compute a per-gene normalized profile, then look for codons where the local density is significantly higher than expected given the gene's average density."
+  },
+  {
+   "t": 303.55,
+   "text": "Various peak-calling tools exist for this, often borrowed from ChIP-seq analysis but adapted for the codon-resolution structure of Ribo-seq data."
+  },
+  {
+   "t": 313.56,
+   "text": "Biologically, stalls matter."
+  },
+  {
+   "t": 315.8,
+   "text": "They are read out as: which codons are limiting for which proteins, where do specific elongation factors act, where do regulatory peptides cause translational arrest, where do specific peptide sequences interact with the ribosomal exit tunnel."
+  },
+  {
+   "t": 332.46,
+   "text": "Each individual peak in a Ribo-seq track is a story."
+  },
+  {
+   "t": 336.6,
+   "text": "Pile them up across the genome, and you have a quantitative description of the entire kinetic landscape of translation in your cells."
+  },
+  {
+   "t": 344.91,
+   "text": "One last point."
+  },
+  {
+   "t": 346.0,
+   "text": "A peak in Ribo-seq at a single codon means ribosomes are pausing there."
+  },
+  {
+   "t": 350.97,
+   "text": "Memorize that."
+  },
+  {
+   "t": 352.26,
+   "text": "When you look at a Ribo-seq track in IGV or UCSC genome browser and you see a tall spike on a specific codon of a coding sequence, what you're seeing is: ribosomes spend longer at that codon than at neighboring codons."
+  },
+  {
+   "t": 366.17,
+   "text": "The codon might be rare."
+  },
+  {
+   "t": 367.7,
+   "text": "The amino acid might be hard to add."
+  },
+  {
+   "t": 370.0,
+   "text": "There might be a regulatory element."
+  },
+  {
+   "t": 372.05,
+   "text": "Something is slowing them down."
+  },
+  {
+   "t": 373.76,
+   "text": "The peak is a window into local translation kinetics."
+  }
+ ]
+}

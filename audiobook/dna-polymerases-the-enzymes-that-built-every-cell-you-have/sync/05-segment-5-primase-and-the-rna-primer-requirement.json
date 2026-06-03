@@ -1,0 +1,259 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Primase and the RNA primer requirement",
+ "duration": 367.92,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Primase and the RNA primer requirement"
+  },
+  {
+   "t": 4.0,
+   "text": "I keep mentioning primase, so let's stop and look at it properly, because the existence of primase reveals something deep about DNA polymerases — a constraint they have that they cannot work around on their own."
+  },
+  {
+   "t": 15.89,
+   "text": "Here's the constraint, stated plainly: DNA polymerases cannot start synthesizing from nothing."
+  },
+  {
+   "t": 22.19,
+   "text": "They cannot take a single-stranded template, look at it, and lay down a first nucleotide unprompted."
+  },
+  {
+   "t": 29.02,
+   "text": "They can only extend an existing strand."
+  },
+  {
+   "t": 31.79,
+   "text": "They need a starting point — a short stretch of nucleic acid already base-paired to the template, with a 3'-hydroxyl group sticking out — and then they can extend from that."
+  },
+  {
+   "t": 42.36,
+   "text": "The first nucleotide of a polymerization event has to come from somewhere other than the polymerase."
+  },
+  {
+   "t": 48.27,
+   "text": "This is the primer requirement, and it's universal across DNA polymerases."
+  },
+  {
+   "t": 53.27,
+   "text": "Every one of them — Pol I, Pol III, eukaryotic Pol delta and Pol epsilon, Taq, Phusion, Q5, everything — needs a primer."
+  },
+  {
+   "t": 63.7,
+   "text": "They are scribes who can copy, but they cannot start a new page."
+  },
+  {
+   "t": 67.56,
+   "text": "Somebody else has to draw the first line."
+  },
+  {
+   "t": 69.81,
+   "text": "The analogy: a polymerase can't start from nothing."
+  },
+  {
+   "t": 73.5,
+   "text": "It needs a starting line drawn first."
+  },
+  {
+   "t": 75.89,
+   "text": "The runner can't begin the race until someone marks the starting line on the track."
+  },
+  {
+   "t": 80.61,
+   "text": "Why is this?"
+  },
+  {
+   "t": 81.72,
+   "text": "The answer is, in a sense, the price of fidelity."
+  },
+  {
+   "t": 85.78,
+   "text": "The polymerase's high accuracy comes from its ability to check that each new base it adds is correctly paired with the template — and that check requires comparing the new base to a neighbor that is already paired with the template."
+  },
+  {
+   "t": 98.94,
+   "text": "The first base has no such neighbor."
+  },
+  {
+   "t": 101.24,
+   "text": "There's nothing to check against."
+  },
+  {
+   "t": 103.0,
+   "text": "So the polymerase, which has been engineered by evolution to be a careful checker, refuses to commit to a first base without a reference."
+  },
+  {
+   "t": 112.03,
+   "text": "It needs something already there to extend from."
+  },
+  {
+   "t": 114.59,
+   "text": "This is, by the way, one of the practical consequences that makes it so hard to use polymerases for de novo DNA synthesis from scratch — for that, you need entirely different chemistry, which we'll touch on in Segment 15 with TdT."
+  },
+  {
+   "t": 128.49,
+   "text": "The solution to the primer requirement is an enzyme called primase — a specialized RNA polymerase that, unlike DNA polymerases, can start from nothing."
+  },
+  {
+   "t": 138.66,
+   "text": "Primase looks at a single-stranded DNA template and lays down a short stretch of RNA — typically about ten nucleotides — base-paired to the template."
+  },
+  {
+   "t": 148.55,
+   "text": "That short RNA stretch is the primer."
+  },
+  {
+   "t": 151.46,
+   "text": "Once it's there, a DNA polymerase can come in, recognize the primed template, and start extending it."
+  },
+  {
+   "t": 157.11,
+   "text": "The primer requirement is satisfied."
+  },
+  {
+   "t": 159.56,
+   "text": "The race can begin."
+  },
+  {
+   "t": 160.82,
+   "text": "Primase, structurally, is in a completely different protein family from DNA polymerase."
+  },
+  {
+   "t": 166.86,
+   "text": "It's an RNA polymerase."
+  },
+  {
+   "t": 168.79,
+   "text": "It uses ribonucleotides — A, U, G, C with ribose sugars — not deoxynucleotides."
+  },
+  {
+   "t": 176.43,
+   "text": "It's less accurate than DNA polymerase, because it doesn't have proofreading."
+  },
+  {
+   "t": 181.12,
+   "text": "It's slower."
+  },
+  {
+   "t": 182.28,
+   "text": "It only makes very short products before falling off."
+  },
+  {
+   "t": 185.6,
+   "text": "But it can do the one thing the DNA polymerases can't — start a new strand from scratch on a bare template."
+  },
+  {
+   "t": 192.4,
+   "text": "Now, here's where it gets interesting biologically."
+  },
+  {
+   "t": 195.57,
+   "text": "On the leading strand, you only need one primer per replication event — laid down at the origin, where replication starts, and then the polymerase extends from that all the way to the end of the chromosome."
+  },
+  {
+   "t": 208.24,
+   "text": "One primer, one strand, miles of DNA."
+  },
+  {
+   "t": 211.88,
+   "text": "But on the lagging strand, you need many primers — one at the start of each Okazaki fragment."
+  },
+  {
+   "t": 218.31,
+   "text": "Every thousand bases or so, primase has to come in and lay down another RNA primer, the polymerase extends, then another primer, another extension, and so on."
+  },
+  {
+   "t": 229.75,
+   "text": "In a single round of E. coli chromosome replication, primase lays down a few thousand primers on the lagging strand."
+  },
+  {
+   "t": 237.81,
+   "text": "In a single round of human chromosome replication, the number is in the millions, distributed across all the replication origins firing throughout the cell cycle."
+  },
+  {
+   "t": 248.5,
+   "text": "And every one of those RNA primers eventually has to be removed."
+  },
+  {
+   "t": 252.43,
+   "text": "Because the final genome is all DNA — no RNA — and a primer left in place would leave a piece of RNA stuck in the middle of the new strand."
+  },
+  {
+   "t": 262.78,
+   "text": "So the cell has elaborate machinery to clean up the primers."
+  },
+  {
+   "t": 266.59,
+   "text": "In bacteria, as we said, Pol I does it with its 5'-to-3' exonuclease — it eats the RNA primer and replaces it with DNA in a single pass."
+  },
+  {
+   "t": 277.14,
+   "text": "In eukaryotes, the cleanup is done by a different enzyme called Flap Endonuclease 1, or FEN1, working with Pol delta."
+  },
+  {
+   "t": 286.27,
+   "text": "The principle is the same: chew off the RNA, fill in with DNA, ligate the nick."
+  },
+  {
+   "t": 292.39,
+   "text": "Tidy up the seam between fragments."
+  },
+  {
+   "t": 295.02,
+   "text": "The result, after the cleanup, is a continuous lagging strand of pure DNA."
+  },
+  {
+   "t": 300.4,
+   "text": "The primer requirement also matters in the lab."
+  },
+  {
+   "t": 303.32,
+   "text": "Whenever you set up a polymerase chain reaction — a PCR — you have to include short synthetic DNA primers in your reaction mix."
+  },
+  {
+   "t": 311.68,
+   "text": "The whole reaction is designed around the primer requirement."
+  },
+  {
+   "t": 315.29,
+   "text": "The primers tell the polymerase where to start."
+  },
+  {
+   "t": 317.77,
+   "text": "They define the boundaries of the region you're amplifying."
+  },
+  {
+   "t": 321.1,
+   "text": "You can think of PCR as a clever exploitation of the primer requirement: you choose your primers, the polymerase obeys them, and only the region between the two primers gets amplified."
+  },
+  {
+   "t": 332.34,
+   "text": "We rely on the constraint that polymerases cannot start without a primer in order to make them obey our targeting instructions."
+  },
+  {
+   "t": 340.39,
+   "text": "Without the primer requirement, PCR wouldn't be specific."
+  },
+  {
+   "t": 344.0,
+   "text": "With it, you can pull one gene out of an entire genome."
+  },
+  {
+   "t": 347.52,
+   "text": "So that's primase."
+  },
+  {
+   "t": 348.87,
+   "text": "A small, specialized RNA polymerase that solves the fundamental problem of starting a new strand."
+  },
+  {
+   "t": 355.85,
+   "text": "It exists because DNA polymerases can't."
+  },
+  {
+   "t": 358.9,
+   "text": "And every time a DNA polymerase does its job, somewhere upstream, primase has already done its job to make the polymerase's job possible."
+  }
+ ]
+}

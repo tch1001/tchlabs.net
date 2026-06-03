@@ -1,0 +1,275 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Why low input matters — primary samples and clinical biology",
+ "duration": 453.21,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Why low input matters — primary samples and clinical biology"
+  },
+  {
+   "t": 6.15,
+   "text": "I want to spend a segment on why the low input of ATAC-seq is not just a technical convenience but a transformative property — one that changed which biological questions could be asked, not just how easily existing questions could be answered."
+  },
+  {
+   "t": 20.44,
+   "text": "The 50,000-cell input requirement of standard ATAC-seq, compared to the millions required by DNase-seq, opens up an enormous range of samples that were previously inaccessible to chromatin accessibility profiling."
+  },
+  {
+   "t": 35.36,
+   "text": "Let me walk you through what those samples are and why this matters."
+  },
+  {
+   "t": 39.19,
+   "text": "First, primary patient samples."
+  },
+  {
+   "t": 41.7,
+   "text": "A clinician draws a tube of blood from a patient."
+  },
+  {
+   "t": 45.25,
+   "text": "From that tube, you can purify, by flow cytometry, a population of rare immune cells — say, regulatory T cells, or a specific subset of B cells, or circulating tumor cells."
+  },
+  {
+   "t": 58.16,
+   "text": "From a single patient sample, you might get a few hundred thousand cells of the type you care about."
+  },
+  {
+   "t": 63.54,
+   "text": "With DNase-seq, that's not enough."
+  },
+  {
+   "t": 65.99,
+   "text": "You can't run the assay."
+  },
+  {
+   "t": 67.67,
+   "text": "You'd need to pool samples across multiple patients, which loses the per-patient resolution that's often the entire point of clinical research."
+  },
+  {
+   "t": 76.24,
+   "text": "With ATAC-seq, 50,000 cells is plenty, and you can profile each patient individually."
+  },
+  {
+   "t": 83.0,
+   "text": "This is the difference between studying a generic immune cell type and studying that cell type in the context of a specific disease, a specific treatment response, a specific genotype."
+  },
+  {
+   "t": 95.12,
+   "text": "The clinical and translational potential of ATAC-seq is enormous, and it's been a major driver of its adoption."
+  },
+  {
+   "t": 102.3,
+   "text": "Second, sorted cell populations."
+  },
+  {
+   "t": 105.2,
+   "text": "Modern cell biology relies heavily on cell sorting — using a FACS machine to isolate cells based on marker expression and study them as a defined population."
+  },
+  {
+   "t": 116.25,
+   "text": "The bottleneck has always been yield."
+  },
+  {
+   "t": 118.42,
+   "text": "You might pull two million cells out of a sort, but if you want a rare subpopulation — say, 1 percent of the input — you're working with tens of thousands."
+  },
+  {
+   "t": 127.78,
+   "text": "ATAC-seq is the first chromatin accessibility assay where these post-sort populations are large enough for the assay."
+  },
+  {
+   "t": 135.29,
+   "text": "Suddenly the regulatory landscape of every defined immunological subpopulation becomes mappable, and we've gained a much richer picture of immune cell diversity as a result."
+  },
+  {
+   "t": 146.5,
+   "text": "Third, biopsies and microdissected tissue."
+  },
+  {
+   "t": 149.84,
+   "text": "A clinician cuts a small piece of tumor from a patient."
+  },
+  {
+   "t": 153.56,
+   "text": "After dissociation, you might get fifty thousand viable cells."
+  },
+  {
+   "t": 157.95,
+   "text": "Or less."
+  },
+  {
+   "t": 158.91,
+   "text": "Or, if it's a precious sample like a needle biopsy, just a few thousand."
+  },
+  {
+   "t": 163.0,
+   "text": "Pre-ATAC-seq, you couldn't profile accessibility from such samples — the input wasn't there."
+  },
+  {
+   "t": 169.12,
+   "text": "With ATAC-seq, you can."
+  },
+  {
+   "t": 171.38,
+   "text": "The Cancer Genome Atlas project, in fact, used ATAC-seq specifically because it was the only accessibility assay compatible with the size of tumor samples available."
+  },
+  {
+   "t": 182.62,
+   "text": "The 2018 TCGA ATAC-seq paper, which we'll talk about in Segment 13, mapped chromatin accessibility across 23 cancer types and over 400 tumors."
+  },
+  {
+   "t": 194.56,
+   "text": "None of that work would have been possible without the input reduction ATAC-seq provided."
+  },
+  {
+   "t": 199.9,
+   "text": "Fourth, embryonic and developmental samples."
+  },
+  {
+   "t": 203.21,
+   "text": "Developmental biology is full of beautiful but tiny samples."
+  },
+  {
+   "t": 208.24,
+   "text": "A dissected mouse embryonic limb bud at E10.5 might yield 100,000 cells."
+  },
+  {
+   "t": 215.06,
+   "text": "A single Drosophila embryo might give you tens of thousands of cells of any specific tissue."
+  },
+  {
+   "t": 222.05,
+   "text": "A particular structure in a zebrafish embryo might give you fewer than a thousand."
+  },
+  {
+   "t": 227.51,
+   "text": "Watching the chromatin landscape change as cells differentiate, as morphogenesis unfolds, as a developmental program executes — this requires being able to profile chromatin in small, specific structures at specific time points."
+  },
+  {
+   "t": 243.2,
+   "text": "ATAC-seq is the first method that makes this routinely possible."
+  },
+  {
+   "t": 247.53,
+   "text": "The developmental biology community embraced it for exactly this reason, and the segment-by-segment maps of embryonic regulatory programs you see in current papers are mostly ATAC-seq data."
+  },
+  {
+   "t": 260.2,
+   "text": "Fifth, neurons and other hard-to-isolate cell types."
+  },
+  {
+   "t": 264.39,
+   "text": "Neurons are notoriously difficult to work with."
+  },
+  {
+   "t": 267.27,
+   "text": "They're hard to dissociate without damaging them."
+  },
+  {
+   "t": 269.88,
+   "text": "They die rapidly outside their natural environment."
+  },
+  {
+   "t": 273.43,
+   "text": "Different neuronal types in the brain are mixed together in complex circuits, and isolating a pure population requires either FACS sorting from genetically labeled animals or single-nucleus extraction protocols."
+  },
+  {
+   "t": 287.21,
+   "text": "Whatever you do, you end up with a small number of nuclei from any given population."
+  },
+  {
+   "t": 292.72,
+   "text": "ATAC-seq, particularly the single-nucleus variant we'll discuss in Segment 12, has been transformative for neuroscience because it lets you ask which regulatory elements are active in particular types of neurons in particular brain regions — a question that was effectively unanswerable before."
+  },
+  {
+   "t": 310.0,
+   "text": "Sixth, and this is the big one, single cells."
+  },
+  {
+   "t": 313.22,
+   "text": "The lowest input you can possibly have is one cell."
+  },
+  {
+   "t": 316.87,
+   "text": "And, as we'll see in Segment 12, ATAC-seq adapts to single-cell resolution remarkably well."
+  },
+  {
+   "t": 323.83,
+   "text": "Single-cell ATAC-seq, snATAC-seq, has become one of the most powerful tools in the single-cell omics arsenal."
+  },
+  {
+   "t": 332.22,
+   "text": "It is technically possible largely because the bulk method was already designed for low input."
+  },
+  {
+   "t": 337.63,
+   "text": "Going from 50,000 cells to one cell is a relatively small leap, conceptually and technically, when your method is already optimized for tens of thousands of cells."
+  },
+  {
+   "t": 348.55,
+   "text": "DNase-seq and FAIRE-seq, by contrast, have never had viable single-cell extensions, because their inputs are too far from one cell to bridge."
+  },
+  {
+   "t": 357.7,
+   "text": "The framing I want you to hold: ATAC-seq broke the input ceiling on chromatin profiling."
+  },
+  {
+   "t": 363.26,
+   "text": "Before 2013, the question of which regulatory elements were open in any given cell type or tissue was a question you could only ask in well-established cell lines that you could grow indefinitely."
+  },
+  {
+   "t": 376.06,
+   "text": "Primary samples, patient tissues, sorted populations, developmental specimens — all of these were dark to the existing assays."
+  },
+  {
+   "t": 384.78,
+   "text": "ATAC-seq turned the lights on."
+  },
+  {
+   "t": 386.82,
+   "text": "Suddenly the chromatin atlas could include the cells that mattered, not just the cells that were easy to grow."
+  },
+  {
+   "t": 393.52,
+   "text": "The shift in what biological questions became answerable was as important as any improvement in throughput or cost."
+  },
+  {
+   "t": 401.53,
+   "text": "This is the kind of methods advance that doesn't just make things easier — it changes the shape of the field."
+  },
+  {
+   "t": 408.02,
+   "text": "The companion fact you should pair with this is timing."
+  },
+  {
+   "t": 410.96,
+   "text": "Four hours from cells to library means you can run the assay on a fresh tissue sample the same day it arrives."
+  },
+  {
+   "t": 418.4,
+   "text": "You don't have to freeze, store, ship, batch."
+  },
+  {
+   "t": 421.62,
+   "text": "The biology is responsive — same-day data acquisition from a clinical or experimental sample."
+  },
+  {
+   "t": 428.31,
+   "text": "This matters for things like time-course experiments, for time-sensitive perturbations, for clinical decision-support workflows where a chromatin profile might inform a treatment choice."
+  },
+  {
+   "t": 439.67,
+   "text": "The combination of low input and short time is what makes ATAC-seq feel like a different kind of assay than its predecessors."
+  },
+  {
+   "t": 447.95,
+   "text": "It's not just better-engineered."
+  },
+  {
+   "t": 449.9,
+   "text": "It's deployable in contexts the others couldn't reach."
+  }
+ ]
+}

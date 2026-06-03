@@ -1,0 +1,159 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — The pseudo-attP problem — phiC31's cautionary tale",
+ "duration": 339.95,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — The pseudo-attP problem — phiC31's cautionary tale"
+  },
+  {
+   "t": 6.0,
+   "text": "Here's where the phiC31 story turns into a cautionary tale, and where the field had to learn an important lesson about sequence specificity in mammalian genomes."
+  },
+  {
+   "t": 16.71,
+   "text": "phiC31's native attP is a specific 39-base-pair sequence — sharp, defined, easily searched for."
+  },
+  {
+   "t": 26.01,
+   "text": "In the Streptomyces host genome, there is one attB site, also sharp and defined."
+  },
+  {
+   "t": 31.79,
+   "text": "In the engineered mammalian use case, we'd install one attB in a known chromosomal location and dock attP-cargo plasmids there."
+  },
+  {
+   "t": 41.05,
+   "text": "So far so good."
+  },
+  {
+   "t": 42.31,
+   "text": "The model is: one attB, one attP, one integration site, perfect precision."
+  },
+  {
+   "t": 49.9,
+   "text": "But the human genome is three billion base pairs."
+  },
+  {
+   "t": 53.89,
+   "text": "And it turns out that within that vast sequence landscape, there are dozens to hundreds of sequences that look enough like phiC31's native attP to be recognized by the integrase."
+  },
+  {
+   "t": 65.69,
+   "text": "These are called pseudo-attP sites, sometimes just pseudo sites."
+  },
+  {
+   "t": 70.45,
+   "text": "They are not perfect matches to the canonical 39-base attP — they differ at multiple positions — but they share enough of the structural features that phiC31 integrase can engage them and catalyze recombination, at reduced efficiency, into a delivered attB-containing plasmid."
+  },
+  {
+   "t": 89.59,
+   "text": "What this means in practice is: when you transfect a mammalian cell with a phiC31 integrase plasmid and an attB-containing donor plasmid, hoping that the donor will integrate at your designated attB landing pad, you instead see substantial integration at a wide range of off-target chromosomal locations — at all those pseudo-attP sites scattered through the genome."
+  },
+  {
+   "t": 112.39,
+   "text": "The pioneering Chalberg, Portlock, Olivares, Calos, and others paper in 2006 in the Journal of Molecular Biology, plus follow-up work, characterized these pseudo sites systematically."
+  },
+  {
+   "t": 125.67,
+   "text": "They estimated somewhere between 10 and 100 pseudo-attP sites in the human genome at which phiC31 will integrate detectably."
+  },
+  {
+   "t": 134.96,
+   "text": "The exact number depends on how you define \"detectable,\" but the order of magnitude is clear and worrying."
+  },
+  {
+   "t": 141.53,
+   "text": "For some applications, off-target integration at a handful of sites is acceptable — if you're making a research cell line and you're just trying to get the cargo in somewhere and you don't care exactly where, phiC31 plus its pseudo sites is fine."
+  },
+  {
+   "t": 156.44,
+   "text": "For gene therapy, however, off-target integration at a random subset of unknown genomic locations is exactly the kind of thing you don't want."
+  },
+  {
+   "t": 166.24,
+   "text": "The whole reason you're using a site-specific integrase is to get a single, defined, predictable integration event — to avoid the insertional mutagenesis risk that comes with random integration."
+  },
+  {
+   "t": 177.94,
+   "text": "If phiC31 is going to drop your cargo into one of fifty different \"almost-good-enough\" sites in any given cell, you've thrown away the main advantage of using a site-specific tool."
+  },
+  {
+   "t": 189.71,
+   "text": "You might as well use lentivirus, which at least has been characterized for safety in many trials."
+  },
+  {
+   "t": 195.69,
+   "text": "The pseudo-attP problem essentially killed phiC31 as a serious clinical gene therapy candidate."
+  },
+  {
+   "t": 203.09,
+   "text": "There are still groups using it, and there are engineering efforts to reduce its promiscuity by mutating the integrase to require a closer sequence match — directed-evolution work to make phiC31 more specific."
+  },
+  {
+   "t": 216.8,
+   "text": "But the field, by around 2010 to 2012, started looking for an alternative — a serine integrase that did the same one-shot integration trick but without the pseudo-site problem."
+  },
+  {
+   "t": 227.95,
+   "text": "An integrase whose native attP sequence happens not to look like any naturally-occurring stretch of mammalian DNA."
+  },
+  {
+   "t": 235.91,
+   "text": "An integrase you could trust to put cargo exactly where you wanted and nowhere else."
+  },
+  {
+   "t": 241.05,
+   "text": "That alternative was Bxb1."
+  },
+  {
+   "t": 243.26,
+   "text": "Let me pause on the pseudo-attP story for a moment, because it teaches a general lesson about porting molecular tools across kingdoms of life."
+  },
+  {
+   "t": 252.0,
+   "text": "phiC31 evolved in Streptomyces."
+  },
+  {
+   "t": 255.47,
+   "text": "Its native attP was tuned to be specific within a bacterial genome of, let's say, 8 megabases — eight million base pairs of fairly low-complexity sequence."
+  },
+  {
+   "t": 267.01,
+   "text": "Within that genome, the 39-base attP sequence was sharp enough to specify one location."
+  },
+  {
+   "t": 274.51,
+   "text": "When you port the same enzyme into the human genome — three billion base pairs of complex sequence with all sorts of repeated motifs and partial sequence matches — what looked like a sharp recognition specifier in the bacterial context turns out to be loose enough to catch dozens of off-targets."
+  },
+  {
+   "t": 292.84,
+   "text": "This is a general phenomenon: tools designed by evolution to be specific in a small genome are often not specific enough for a large one."
+  },
+  {
+   "t": 301.95,
+   "text": "We saw the same thing in early CRISPR — the spacer-protospacer matching that works fine in a 2-megabase bacterial genome catches enough off-targets in the human genome that you have to engineer high-fidelity variants."
+  },
+  {
+   "t": 315.26,
+   "text": "Same lesson."
+  },
+  {
+   "t": 316.34,
+   "text": "For phiC31, the lesson was: an integrase whose native attP just happens to be uncommon in human DNA would be much better than an integrase whose native attP has many close relatives."
+  },
+  {
+   "t": 330.51,
+   "text": "You couldn't really know which way that would shake out without testing."
+  },
+  {
+   "t": 334.09,
+   "text": "Bxb1, fortunately, turned out to be on the lucky side of that distribution."
+  },
+  {
+   "t": 339.0,
+   "text": "Let's meet it."
+  }
+ ]
+}

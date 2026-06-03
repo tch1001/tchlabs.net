@@ -1,0 +1,215 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — High-fidelity variants — narrowing the window, taming the deaminase",
+ "duration": 356.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — High-fidelity variants — narrowing the window, taming the deaminase"
+  },
+  {
+   "t": 6.45,
+   "text": "This is the appropriate place to dive into the engineered variants more thoroughly, because the original BE3 and ABE7.10 are now museum pieces."
+  },
+  {
+   "t": 17.04,
+   "text": "The base editors used in clinical trials today are several generations down the engineering tree from the original publications, and the differences matter."
+  },
+  {
+   "t": 26.68,
+   "text": "Let me describe the dimensions along which the field has improved the base editors over the past eight years."
+  },
+  {
+   "t": 32.95,
+   "text": "Efficiency."
+  },
+  {
+   "t": 34.1,
+   "text": "ABE7.10, the first adenine base editor, could edit at favorable sites with about 50 percent efficiency in cell culture."
+  },
+  {
+   "t": 42.86,
+   "text": "ABE8e, several generations later, can edit some sites at 80 to 95 percent."
+  },
+  {
+   "t": 50.19,
+   "text": "CBEs have followed a similar trajectory."
+  },
+  {
+   "t": 53.04,
+   "text": "Better deaminases — through additional directed evolution rounds and rational design — have substantially improved the rate at which the intended edit gets installed."
+  },
+  {
+   "t": 63.74,
+   "text": "Window narrowing."
+  },
+  {
+   "t": 65.01,
+   "text": "Original BE3 had an editing window roughly five bases wide."
+  },
+  {
+   "t": 70.17,
+   "text": "Variants like A3A-BE3 and engineered tighter-window deaminases have produced editors whose windows are effectively one or two bases."
+  },
+  {
+   "t": 80.44,
+   "text": "These are useful when bystander concerns dominate, at the cost of some efficiency."
+  },
+  {
+   "t": 85.79,
+   "text": "PAM relaxation."
+  },
+  {
+   "t": 87.29,
+   "text": "Standard SpCas9 requires an NGG PAM."
+  },
+  {
+   "t": 91.99,
+   "text": "The editing window position depends on where the PAM is."
+  },
+  {
+   "t": 95.4,
+   "text": "By engineering Cas9 variants with different PAMs — SpCas9-NG, SpRY, others — and by adopting Cas9 orthologs from other bacteria with different PAMs entirely — SaCas9, Cas12a — the field has expanded the set of genomic positions where the editing window can be placed."
+  },
+  {
+   "t": 113.99,
+   "text": "There are now base editor variants that can land their editing window at almost any genomic position, given enough PAM flexibility."
+  },
+  {
+   "t": 122.3,
+   "text": "Reduced RNA off-targets."
+  },
+  {
+   "t": 124.94,
+   "text": "I mentioned this in Segment 8."
+  },
+  {
+   "t": 126.95,
+   "text": "Engineered deaminases — APOBEC variants with mutations that reduce RNA binding while preserving DNA activity, evolved TadA variants similarly tuned — have brought RNA off-target editing down by orders of magnitude."
+  },
+  {
+   "t": 141.21,
+   "text": "The current clinical-grade base editors are dramatically cleaner than the first published versions."
+  },
+  {
+   "t": 146.72,
+   "text": "Reduced DNA off-targets."
+  },
+  {
+   "t": 149.18,
+   "text": "Combining the base editor architecture with high-fidelity Cas9 variants — eSpCas9, HiFi Cas9, SpCas9-HF1 — reduces guide-RNA-dependent DNA off-target editing."
+  },
+  {
+   "t": 163.09,
+   "text": "Most current clinical base editors use one of these high-fidelity Cas9 backbones."
+  },
+  {
+   "t": 168.99,
+   "text": "The naming convention for base editor variants is, frankly, a mess."
+  },
+  {
+   "t": 174.05,
+   "text": "The literature is full of acronyms — BE4, BE4max, AID-BE3, A3A-BE3, ABE7.10, ABE8e, ABE9, ABE-V106W, NG-ABE8e, SaABEmax, and on and on."
+  },
+  {
+   "t": 193.84,
+   "text": "Each one specifies a particular deaminase, Cas9 backbone, and engineering choices."
+  },
+  {
+   "t": 200.19,
+   "text": "For purposes of this lecture, you do not need to memorize them."
+  },
+  {
+   "t": 203.78,
+   "text": "You need to know that the toolbox is large."
+  },
+  {
+   "t": 206.62,
+   "text": "If you are designing a base editing experiment and your first choice doesn't have the right window position or the right efficiency or the right specificity, there is almost certainly a variant in the literature that does."
+  },
+  {
+   "t": 218.84,
+   "text": "What I do want you to remember is that the variants are not interchangeable for clinical purposes."
+  },
+  {
+   "t": 224.32,
+   "text": "Each variant has its own off-target spectrum that has to be characterized for each new target."
+  },
+  {
+   "t": 230.1,
+   "text": "Each has its own efficiency curve."
+  },
+  {
+   "t": 232.46,
+   "text": "Each has its own delivery constraints — some are bigger than others, which matters when you're trying to fit them into a viral vector or formulate them as mRNA in a lipid nanoparticle."
+  },
+  {
+   "t": 243.81,
+   "text": "Picking the right variant for a clinical application is a careful engineering decision, and once you've picked, you generally don't switch — switching means redoing all the preclinical characterization."
+  },
+  {
+   "t": 255.21,
+   "text": "There is one more dimension of improvement worth flagging: delivery formats."
+  },
+  {
+   "t": 259.9,
+   "text": "Base editors are big."
+  },
+  {
+   "t": 261.35,
+   "text": "The combined APOBEC1-nCas9-UGI fusion is about 1700 amino acids, encoded by roughly 5 kilobases of DNA."
+  },
+  {
+   "t": 273.55,
+   "text": "ABE is similar."
+  },
+  {
+   "t": 275.24,
+   "text": "That's too big to fit comfortably into the most popular gene therapy vector, adeno-associated virus, which has a packaging capacity around 4.7 kilobases."
+  },
+  {
+   "t": 286.39,
+   "text": "The field has gotten around this with several tricks."
+  },
+  {
+   "t": 289.32,
+   "text": "One is split intein delivery: you split the base editor in half, deliver each half on a separate AAV, and the protein halves auto-splice back together inside the cell using a clever protein chemistry tool called an intein."
+  },
+  {
+   "t": 302.95,
+   "text": "Another is mRNA delivery via LNP: instead of encoding the editor in DNA, you deliver mRNA, which doesn't have the packaging constraint."
+  },
+  {
+   "t": 313.68,
+   "text": "Verve's PCSK9 program uses LNP-mRNA delivery."
+  },
+  {
+   "t": 318.5,
+   "text": "So does Beam-302."
+  },
+  {
+   "t": 321.02,
+   "text": "The delivery format ends up being almost as important to clinical success as the base editor itself."
+  },
+  {
+   "t": 327.72,
+   "text": "A perfect base editor that you can't get into the right cells does nothing."
+  },
+  {
+   "t": 332.16,
+   "text": "Delivery is the front line of base editing engineering in 2025."
+  },
+  {
+   "t": 337.75,
+   "text": "That's the engineering picture."
+  },
+  {
+   "t": 339.52,
+   "text": "The base editors in clinical trials today are highly engineered descendants of the original 2016 and 2017 publications, optimized along multiple axes for efficiency, specificity, and deliverability."
+  },
+  {
+   "t": 354.81,
+   "text": "We are not using BE1."
+  }
+ ]
+}

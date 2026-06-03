@@ -1,0 +1,159 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Selective ribosome profiling — pulling specific factors",
+ "duration": 362.88,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Selective ribosome profiling — pulling specific factors"
+  },
+  {
+   "t": 5.4,
+   "text": "We come now to one of the most powerful variants of Ribo-seq, and probably the one I find most beautiful as a technique."
+  },
+  {
+   "t": 14.0,
+   "text": "It's called selective ribosome profiling, abbreviated SeRP, and the basic idea is this: instead of looking at all the translating ribosomes in the cell, you look at only the subset of ribosomes that are interacting with a specific factor — a chaperone, a signal recognition particle, a quality control factor, anything that binds to translating ribosomes."
+  },
+  {
+   "t": 36.46,
+   "text": "SeRP was developed by Günter Kramer and Bernd Bukau and their group at Heidelberg around 2012, and the original application was to look at where the chaperone Trigger Factor sits on translating ribosomes in E. coli."
+  },
+  {
+   "t": 50.6,
+   "text": "The conceptual leap is to combine Ribo-seq with co-immunoprecipitation — to use an antibody (or a tag) to pull down ribosomes that have a specific factor bound, and then do the standard Ribo-seq workflow on just that pulled-down subset."
+  },
+  {
+   "t": 65.26,
+   "text": "The analogy I want you to hold: SeRP is Ribo-seq plus IP — you see only the mRNAs and the ribosome positions where a specific factor of interest was bound."
+  },
+  {
+   "t": 76.53,
+   "text": "Regular Ribo-seq shows you every ribosome; SeRP shows you only the ribosomes engaged with your factor."
+  },
+  {
+   "t": 83.97,
+   "text": "It's the difference between a census of every person in the city and a census of only the people having coffee at a specific café — both useful, but the second one tells you something the first can't."
+  },
+  {
+   "t": 96.89,
+   "text": "The protocol works like this."
+  },
+  {
+   "t": 98.81,
+   "text": "You have cells expressing your factor of interest — let's say it's a chaperone, like Trigger Factor, or a signal recognition particle, or a translation factor."
+  },
+  {
+   "t": 108.61,
+   "text": "The factor is either tagged with an epitope (FLAG, HA, GFP, whatever) or you have a good antibody against it."
+  },
+  {
+   "t": 116.84,
+   "text": "You arrest the ribosomes with cycloheximide (or chloramphenicol for bacteria), you lyse the cells, you digest with nuclease as usual."
+  },
+  {
+   "t": 126.51,
+   "text": "But before you do the sucrose gradient, you do an immunoprecipitation — you add the antibody (or anti-tag beads), pull down everything bound to your factor, wash to remove the unbound material, and then proceed with the standard Ribo-seq workflow on the IP'd material."
+  },
+  {
+   "t": 143.05,
+   "text": "You also do a parallel total Ribo-seq from the same lysate, to use as a reference."
+  },
+  {
+   "t": 148.54,
+   "text": "What you get from the IP fraction is a Ribo-seq dataset that contains only the footprints from ribosomes that had your factor bound at the moment of harvest."
+  },
+  {
+   "t": 157.3,
+   "text": "Compared to the total Ribo-seq dataset, you can see which transcripts the factor preferentially associates with, which positions along each transcript the factor binds, and how the factor's binding correlates with the kinetics of translation."
+  },
+  {
+   "t": 170.88,
+   "text": "What has SeRP shown us?"
+  },
+  {
+   "t": 172.81,
+   "text": "Several beautiful things."
+  },
+  {
+   "t": 174.75,
+   "text": "Co-translational chaperone recruitment."
+  },
+  {
+   "t": 177.54,
+   "text": "Trigger Factor binds the bacterial ribosome at the exit tunnel and helps nascent proteins fold as they emerge."
+  },
+  {
+   "t": 185.3,
+   "text": "Kramer's SeRP showed that Trigger Factor associates preferentially with ribosomes translating certain classes of substrate proteins — particularly larger and slower-folding proteins — and that the engagement happens at specific points during translation, not uniformly."
+  },
+  {
+   "t": 202.47,
+   "text": "The chaperone is selective."
+  },
+  {
+   "t": 204.51,
+   "text": "Signal recognition particle (SRP) targeting."
+  },
+  {
+   "t": 208.38,
+   "text": "SRP recognizes hydrophobic signal sequences emerging from translating ribosomes and targets the entire ribosome-nascent-chain complex to the membrane for co-translational protein insertion."
+  },
+  {
+   "t": 221.66,
+   "text": "SeRP for SRP shows exactly when in translation the SRP engages — typically as soon as the signal sequence emerges from the exit tunnel, around codon 30 to 50 of the ORF — and which substrates are recognized."
+  },
+  {
+   "t": 236.89,
+   "text": "This has been done in both bacteria and yeast and has provided beautiful kinetic data on co-translational targeting."
+  },
+  {
+   "t": 244.31,
+   "text": "Specific quality control factors."
+  },
+  {
+   "t": 246.7,
+   "text": "SeRP has been used to look at where ribosome quality control factors like Hbs1, Pelota, and Dom34 are recruited."
+  },
+  {
+   "t": 255.75,
+   "text": "These factors engage stalled ribosomes — and SeRP shows you exactly which transcripts and positions trigger their recruitment, providing a transcriptome-wide view of where translation goes wrong and gets rescued."
+  },
+  {
+   "t": 269.27,
+   "text": "Chaperone networks during stress."
+  },
+  {
+   "t": 271.72,
+   "text": "SeRP for various heat shock proteins shows how the chaperone network reorganizes during heat stress, with different chaperones engaging different subsets of nascent proteins."
+  },
+  {
+   "t": 283.35,
+   "text": "The variant of SeRP I find most clever is called TCP-seq, for translation complex profiling sequencing, developed by Ribosome Profiling pioneer Sasha Shirokikh and Tom Preiss."
+  },
+  {
+   "t": 296.02,
+   "text": "TCP-seq adds an additional crosslinking step before lysis, locking ribosomes and their associated factors in place even more rigidly, and then separately profiles 40S subunits, 80S ribosomes, and various intermediate complexes."
+  },
+  {
+   "t": 312.95,
+   "text": "It gives an even more detailed picture of initiation versus elongation states."
+  },
+  {
+   "t": 318.56,
+   "text": "Practically, SeRP requires good antibodies or good tags, plus more starting material than standard Ribo-seq (because IP discards most of the input), plus careful controls to make sure your IP is specific."
+  },
+  {
+   "t": 332.9,
+   "text": "But when it works, it gives you a view of which translating ribosomes are doing what, with what partners, that no other technique can provide."
+  },
+  {
+   "t": 341.28,
+   "text": "The headline: Selective ribosome profiling combines Ribo-seq with immunoprecipitation to look at only the ribosomes engaged with a specific factor of interest, giving you a factor-specific view of co-translational events."
+  },
+  {
+   "t": 355.86,
+   "text": "It's the workhorse method for studying co-translational chaperone action, membrane targeting, and quality control."
+  }
+ ]
+}

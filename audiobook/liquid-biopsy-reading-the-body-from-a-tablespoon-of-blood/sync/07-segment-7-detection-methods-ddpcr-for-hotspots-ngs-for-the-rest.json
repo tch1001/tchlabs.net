@@ -1,0 +1,135 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Detection methods: ddPCR for hotspots, NGS for the rest",
+ "duration": 241.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Detection methods: ddPCR for hotspots, NGS for the rest"
+  },
+  {
+   "t": 6.36,
+   "text": "So you've drawn a tube of blood, you've extracted the cfDNA, and you have maybe 30 nanograms of DNA in your hand — perhaps a few percent of which is from the tumor, perhaps much less."
+  },
+  {
+   "t": 17.68,
+   "text": "How do you actually detect the ctDNA?"
+  },
+  {
+   "t": 20.48,
+   "text": "The answer depends on what you know in advance."
+  },
+  {
+   "t": 22.75,
+   "text": "And the field has split, roughly, into two technological camps."
+  },
+  {
+   "t": 27.6,
+   "text": "Camp one: digital PCR."
+  },
+  {
+   "t": 29.91,
+   "text": "If you already know what mutation you're looking for — say, the patient's lung tumor was biopsied and shown to carry an EGFR L858R mutation, and you want to monitor that specific mutation in plasma over time — then digital PCR (ddPCR, droplet digital PCR) is the right tool."
+  },
+  {
+   "t": 47.91,
+   "text": "You design primers and probes that distinguish wild-type EGFR from L858R-mutant EGFR, you partition your cfDNA into 20,000 tiny droplets, you run PCR in each droplet, and you count the number of droplets that light up for mutant versus wild-type."
+  },
+  {
+   "t": 65.96,
+   "text": "ddPCR can detect mutant alleles down to roughly 0.01 to 0.1 percent allele fraction — meaning you can find one mutant DNA molecule among 1,000 wild-type molecules."
+  },
+  {
+   "t": 80.09,
+   "text": "It's fast, cheap, quantitative, and beautiful for tracking known mutations."
+  },
+  {
+   "t": 85.28,
+   "text": "The limitation is in the name: you have to know what you're looking for."
+  },
+  {
+   "t": 89.45,
+   "text": "ddPCR is a targeted assay."
+  },
+  {
+   "t": 92.08,
+   "text": "Each assay tests one or a small handful of mutations."
+  },
+  {
+   "t": 95.83,
+   "text": "If the tumor evolves a new resistance mutation in a place you weren't watching, ddPCR will miss it entirely."
+  },
+  {
+   "t": 102.99,
+   "text": "Camp two: next-generation sequencing."
+  },
+  {
+   "t": 105.86,
+   "text": "If you don't know what to look for — say, you've never biopsied the tumor, or the tumor might have multiple mutations across many genes, or you want to detect novel resistance mechanisms — you need NGS."
+  },
+  {
+   "t": 119.4,
+   "text": "The challenge is depth."
+  },
+  {
+   "t": 121.19,
+   "text": "To reliably detect a mutation at 0.1 percent allele fraction with NGS, you need to sequence each base in the region of interest at least a few thousand times, and ideally tens of thousands of times."
+  },
+  {
+   "t": 134.96,
+   "text": "That's deep sequencing, and it's expensive in raw read counts."
+  },
+  {
+   "t": 139.35,
+   "text": "Modern targeted-NGS cfDNA panels — Guardant360, FoundationOne Liquid CDx, and others — sequence a panel of a few hundred cancer-relevant genes at very deep coverage, often 5,000x to 50,000x raw, with unique molecular identifiers (UMIs) to distinguish real low-frequency mutations from sequencing errors."
+  },
+  {
+   "t": 165.7,
+   "text": "The UMI trick is critical: you tag every original cfDNA molecule with a unique random barcode before amplification."
+  },
+  {
+   "t": 174.3,
+   "text": "If you see a putative mutation that appears in multiple PCR copies of the same original molecule (same UMI), it's real."
+  },
+  {
+   "t": 182.82,
+   "text": "If you see it in only one PCR copy among many copies of that molecule, it's a sequencing or PCR error."
+  },
+  {
+   "t": 190.54,
+   "text": "UMIs effectively let you correct out the noise of amplification and sequencing, which is what makes detection down to 0.1 percent allele fraction possible from a 30-nanogram input."
+  },
+  {
+   "t": 202.55,
+   "text": "For the deepest detection — minimal residual disease, which we'll get to in Segment 9 — even targeted panels aren't enough."
+  },
+  {
+   "t": 210.7,
+   "text": "The state of the art is tumor-informed assays, where you've previously sequenced the tumor itself and designed a personalized panel that watches for the specific mutations that patient's tumor carries."
+  },
+  {
+   "t": 222.19,
+   "text": "We'll discuss those next."
+  },
+  {
+   "t": 223.96,
+   "text": "For now, hold the framework."
+  },
+  {
+   "t": 226.19,
+   "text": "ddPCR for known hotspots, NGS for de novo discovery."
+  },
+  {
+   "t": 231.04,
+   "text": "Both have their place."
+  },
+  {
+   "t": 232.38,
+   "text": "Both are getting cheaper."
+  },
+  {
+   "t": 233.71,
+   "text": "And the boundary between them is blurring as multiplexed digital PCR and shallower-but-broader NGS converge."
+  }
+ ]
+}

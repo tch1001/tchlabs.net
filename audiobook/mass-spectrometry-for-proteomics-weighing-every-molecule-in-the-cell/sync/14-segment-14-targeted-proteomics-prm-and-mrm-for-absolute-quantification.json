@@ -1,0 +1,75 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — Targeted proteomics — PRM and MRM for absolute quantification",
+ "duration": 159.28,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — Targeted proteomics — PRM and MRM for absolute quantification"
+  },
+  {
+   "t": 6.92,
+   "text": "Most of what we've discussed has been discovery proteomics — broad, unbiased measurement of as many proteins as possible."
+  },
+  {
+   "t": 14.39,
+   "text": "But sometimes you don't want broad."
+  },
+  {
+   "t": 16.21,
+   "text": "Sometimes you want extremely precise, extremely reproducible quantification of a specific small set of proteins — for clinical biomarker validation, for pharmacokinetic studies, for absolute concentration measurements."
+  },
+  {
+   "t": 30.86,
+   "text": "That's the domain of targeted proteomics, and the two main flavors are MRM and PRM."
+  },
+  {
+   "t": 36.98,
+   "text": "MRM — multiple reaction monitoring, sometimes called SRM (selected reaction monitoring) — runs on a triple quadrupole instrument."
+  },
+  {
+   "t": 46.35,
+   "text": "You configure the first quadrupole to select one specific precursor m/z (a peptide you care about), the second quadrupole is the collision cell, and the third quadrupole selects one specific fragment m/z (a known fragment of that peptide)."
+  },
+  {
+   "t": 63.31,
+   "text": "The instrument cycles through a list of these precursor-fragment pairs, called transitions, monitoring each one."
+  },
+  {
+   "t": 70.74,
+   "text": "By spiking in a heavy-isotope-labeled standard peptide at a known concentration, you can compute the absolute concentration of the endogenous peptide."
+  },
+  {
+   "t": 79.92,
+   "text": "MRM is incredibly sensitive — femtomolar detection — and incredibly reproducible."
+  },
+  {
+   "t": 86.4,
+   "text": "It's the workhorse of clinical mass spec, FDA-validated diagnostic assays, drug pharmacokinetics."
+  },
+  {
+   "t": 93.88,
+   "text": "PRM — parallel reaction monitoring — is the same idea but uses a high-resolution analyzer like an Orbitrap for the fragment detection."
+  },
+  {
+   "t": 102.96,
+   "text": "Instead of monitoring one fragment at a time, PRM captures the entire MS2 spectrum at high resolution, giving you many fragments per precursor and better specificity in complex matrices."
+  },
+  {
+   "t": 116.41,
+   "text": "PRM is the modern preferred targeted method when you have access to an Orbitrap."
+  },
+  {
+   "t": 122.03,
+   "text": "The analogy: discovery proteomics is a wide-angle photograph of the proteome; targeted proteomics is a telephoto zoom on the few proteins you care about, with absolute quantification down to molecules per cell."
+  },
+  {
+   "t": 135.47,
+   "text": "When a clinical lab measures a panel of cancer biomarkers, when a pharma company measures drug concentration in plasma — that's targeted MS, almost always MRM on a triple quadrupole."
+  },
+  {
+   "t": 147.85,
+   "text": "It's the unsung workhorse of practical mass spec, and it generates enormous economic value despite being conceptually less glamorous than discovery proteomics."
+  }
+ ]
+}

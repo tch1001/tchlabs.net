@@ -1,0 +1,183 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Novel microproteins and small ORFs — a hidden proteome",
+ "duration": 378.29,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Novel microproteins and small ORFs — a hidden proteome"
+  },
+  {
+   "t": 6.15,
+   "text": "Now we come to one of the most genuinely exciting things that Ribo-seq has revealed about biology — something that, if you'd told a molecular biologist in 2005, they probably would not have believed."
+  },
+  {
+   "t": 17.91,
+   "text": "The story is this: the genome contains thousands of small open reading frames, encoding proteins of fewer than a hundred amino acids, that the standard genome annotations of human and mouse and yeast had completely missed."
+  },
+  {
+   "t": 32.54,
+   "text": "And many of those small proteins — called variously micropeptides, microproteins, smORF-encoded peptides, or SEPs — turn out to be biologically real, evolutionarily conserved, and functionally important."
+  },
+  {
+   "t": 47.24,
+   "text": "Let me set up why those proteins were missed."
+  },
+  {
+   "t": 49.96,
+   "text": "The standard tools for annotating protein-coding ORFs in a genome — the algorithms that built the original gene catalogs of every model organism — had a built-in size cutoff."
+  },
+  {
+   "t": 61.52,
+   "text": "They generally required an ORF to be at least 100 codons long, encoding a protein of at least 100 amino acids, before they would call it a real gene."
+  },
+  {
+   "t": 71.39,
+   "text": "The reason for the cutoff was statistical."
+  },
+  {
+   "t": 73.79,
+   "text": "By chance, in a long stretch of random sequence, you'll find lots of short open reading frames just from the random arrangement of stop codons."
+  },
+  {
+   "t": 83.21,
+   "text": "If you set the cutoff too low, you fill your annotation with false-positive ORFs that are not really translated."
+  },
+  {
+   "t": 90.26,
+   "text": "So everyone agreed: only call ORFs of 100 amino acids or more."
+  },
+  {
+   "t": 95.3,
+   "text": "That kept the annotations clean, but it also made every protein smaller than 100 amino acids invisible to the annotation pipeline."
+  },
+  {
+   "t": 104.11,
+   "text": "Ribo-seq broke this barrier, because Ribo-seq doesn't care about ORF length."
+  },
+  {
+   "t": 109.11,
+   "text": "Ribo-seq just sees where ribosomes are."
+  },
+  {
+   "t": 111.91,
+   "text": "If a ribosome is sitting on a stretch of mRNA, the footprint shows up in the data, with the 3-nucleotide periodicity, regardless of whether the ORF being translated is 20 codons or 2,000."
+  },
+  {
+   "t": 125.29,
+   "text": "Once people started looking at Ribo-seq data carefully — particularly in studies by groups like Ingolia's, Saghatelian's, Slavoff's, and Eric Lander's — it became clear that there were thousands of translated small ORFs in mammalian genomes."
+  },
+  {
+   "t": 139.89,
+   "text": "They lived in regions previously annotated as 5' UTRs, in regions annotated as long non-coding RNAs (which were now revealed to encode small proteins), in regions annotated as intergenic, and even within the 3' UTRs of canonical mRNAs."
+  },
+  {
+   "t": 157.88,
+   "text": "How many small ORFs are we talking about?"
+  },
+  {
+   "t": 160.09,
+   "text": "Estimates vary, but a reasonable consensus from the field is that the human genome encodes somewhere between five thousand and twenty thousand additional small ORFs beyond the canonical proteome — depending on how stringent you are about evidence."
+  },
+  {
+   "t": 174.62,
+   "text": "Many of these have been independently verified by mass spectrometry, where you can detect the actual peptide product in cell lysates."
+  },
+  {
+   "t": 182.45,
+   "text": "Many are evolutionarily conserved across species, which is strong evidence that they are functional, because random ORFs do not stay conserved over evolutionary time."
+  },
+  {
+   "t": 193.39,
+   "text": "And a growing number have been individually characterized, with specific biological functions in metabolism, signaling, development, and disease."
+  },
+  {
+   "t": 202.49,
+   "text": "A few examples to give you a feel."
+  },
+  {
+   "t": 204.62,
+   "text": "Myoregulin is a 46-amino-acid micropeptide encoded by what was previously annotated as a long non-coding RNA in muscle."
+  },
+  {
+   "t": 214.47,
+   "text": "Doug Olson and Eric Olson's lab at UT Southwestern, working with Alan Saghatelian, showed in 2015 that myoregulin is translated, that it localizes to the sarcoplasmic reticulum membrane in muscle cells, and that it directly regulates calcium uptake by binding to and inhibiting the SERCA calcium pump."
+  },
+  {
+   "t": 234.6,
+   "text": "Knocking out myoregulin in mice changes muscle performance."
+  },
+  {
+   "t": 239.03,
+   "text": "This is a real protein, doing a real job, that the annotation had called \"non-coding RNA\" for years."
+  },
+  {
+   "t": 246.32,
+   "text": "SPAR, a 90-amino-acid micropeptide encoded within what was annotated as a lncRNA, regulates muscle regeneration."
+  },
+  {
+   "t": 255.6,
+   "text": "NoBody, a 68-amino-acid peptide, localizes to P-bodies and regulates mRNA decapping."
+  },
+  {
+   "t": 263.48,
+   "text": "MOTS-c, a 16-amino-acid peptide encoded within the mitochondrial 12S ribosomal RNA gene, regulates insulin sensitivity and metabolic homeostasis."
+  },
+  {
+   "t": 275.4,
+   "text": "The list keeps growing every year."
+  },
+  {
+   "t": 277.63,
+   "text": "Every one of these was first detected as a Ribo-seq footprint signal on a region of the genome the annotation said was non-coding."
+  },
+  {
+   "t": 286.06,
+   "text": "The biological implications are enormous."
+  },
+  {
+   "t": 289.05,
+   "text": "These tiny proteins are doing real cellular work."
+  },
+  {
+   "t": 292.49,
+   "text": "They tend to act as regulators — interacting with larger proteins, modulating membrane channels, scaffolding complexes — and they tend to be expressed in tissue-specific or condition-specific ways."
+  },
+  {
+   "t": 306.16,
+   "text": "They are a substantial fraction of the actual functional proteome that we missed because our annotation pipeline had a size cutoff."
+  },
+  {
+   "t": 314.19,
+   "text": "We are still in the early days of cataloging them, and even earlier in characterizing what most of them do."
+  },
+  {
+   "t": 320.81,
+   "text": "Computationally, the workhorse tools for calling translated small ORFs from Ribo-seq are RibORF, RiboTaper, ORF-RATER, and RibORF2."
+  },
+  {
+   "t": 330.8,
+   "text": "They all work roughly the same way: scan the transcriptome for stretches that have footprint coverage with the right periodicity and frame consistency between a candidate start codon and an in-frame stop codon."
+  },
+  {
+   "t": 343.6,
+   "text": "The outputs of these tools, run on big mammalian Ribo-seq datasets, are the basis for the modern small-ORF catalogs that the field is curating."
+  },
+  {
+   "t": 352.96,
+   "text": "The headline: Ribo-seq has revealed a hidden proteome of thousands of small ORFs, encoding microproteins of fewer than 100 amino acids, that the standard annotations had missed because of an arbitrary size cutoff."
+  },
+  {
+   "t": 367.34,
+   "text": "Many of these are functional."
+  },
+  {
+   "t": 368.98,
+   "text": "Most are still uncharacterized."
+  },
+  {
+   "t": 371.14,
+   "text": "The next decade of post-genomic biology will be substantially about figuring out what they all do."
+  }
+ ]
+}

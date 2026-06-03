@@ -1,0 +1,155 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Industrial CHO cell line engineering for antibody production",
+ "duration": 327.57,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Industrial CHO cell line engineering for antibody production"
+  },
+  {
+   "t": 6.85,
+   "text": "Let me pivot to the industrial application that has, frankly, been the dominant economic use of serine integrases: monoclonal antibody manufacturing in CHO cells."
+  },
+  {
+   "t": 18.16,
+   "text": "Chinese hamster ovary cells — CHO cells — are the standard host cells for industrial production of recombinant therapeutic proteins."
+  },
+  {
+   "t": 27.48,
+   "text": "The global biopharmaceutical industry makes hundreds of billions of dollars a year of monoclonal antibodies (Humira, Keytruda, Herceptin, Rituxan, dozens of others), and the overwhelming majority of those products are made by engineered CHO cells in bioreactors."
+  },
+  {
+   "t": 44.35,
+   "text": "The economics of antibody manufacturing depend critically on the titer — how many grams of antibody you can produce per liter of cell culture per day."
+  },
+  {
+   "t": 53.56,
+   "text": "Higher titers mean cheaper drugs."
+  },
+  {
+   "t": 55.92,
+   "text": "Higher titers also mean smaller bioreactors for the same output, faster scale-up, lower capital costs."
+  },
+  {
+   "t": 63.09,
+   "text": "For decades, the workflow for making a high-titer CHO cell line went like this: design the antibody-expression plasmid; transfect into CHO cells; rely on random integration of the plasmid into the CHO genome; select for cells that took up the plasmid (using a drug-resistance marker); amplify the integrated copies using methotrexate selection of an integrated dihydrofolate reductase gene (gene amplification by selection); screen hundreds to thousands of resulting clones for the rare ones with"
+  },
+  {
+   "t": 95.42,
+   "text": "high, stable expression."
+  },
+  {
+   "t": 97.31,
+   "text": "The whole process took six to twelve months per antibody, was unpredictable in outcome (you might or might not find a great clone), and had to be repeated from scratch for every new antibody."
+  },
+  {
+   "t": 108.84,
+   "text": "The landing-pad approach has been transformative."
+  },
+  {
+   "t": 111.62,
+   "text": "The current state-of-the-art workflow at most major biopharmaceutical companies looks like this:"
+  },
+  {
+   "t": 117.5,
+   "text": "One-time foundation work: Engineer a CHO master cell line carrying a Bxb1 attP landing pad at a well-characterized, high-expressing chromosomal location."
+  },
+  {
+   "t": 129.34,
+   "text": "(Different companies use different exact sites — some use proprietary CHO safe-harbor sites identified by genome-scale screens, others use orthologs of mammalian sites like AAVS1.)"
+  },
+  {
+   "t": 141.74,
+   "text": "Validate the master cell line for growth, stability, titer potential."
+  },
+  {
+   "t": 146.95,
+   "text": "Bank vials."
+  },
+  {
+   "t": 148.07,
+   "text": "This is your platform."
+  },
+  {
+   "t": 149.36,
+   "text": "Per-product workflow: For each new antibody, design the antibody-expression cassette flanked by Bxb1 attB sites."
+  },
+  {
+   "t": 158.47,
+   "text": "Transfect the master cell line with this cassette plus Bxb1 integrase mRNA."
+  },
+  {
+   "t": 165.07,
+   "text": "Select for integration."
+  },
+  {
+   "t": 166.84,
+   "text": "Within four to six weeks, you have stable, high-expressing CHO cell lines producing the new antibody — at predictable titers similar to other antibodies expressed at the same landing-pad site, with no need to screen thousands of clones, with no variability between projects."
+  },
+  {
+   "t": 184.62,
+   "text": "The savings are roughly: six-to-twelve months becomes one-to-two months."
+  },
+  {
+   "t": 189.16,
+   "text": "Thousands of clones screened becomes dozens."
+  },
+  {
+   "t": 192.34,
+   "text": "Antibody titer becomes predictable rather than a gamble."
+  },
+  {
+   "t": 196.09,
+   "text": "The capital required to set up a new manufacturing process drops substantially."
+  },
+  {
+   "t": 201.93,
+   "text": "This is, in pure economic terms, probably the most valuable use of serine integrases in human civilization right now."
+  },
+  {
+   "t": 209.93,
+   "text": "The fact that monoclonal antibody manufacturing is faster, cheaper, and more predictable today than it was fifteen years ago is in significant part due to the landing-pad workflow built on Bxb1 (and to a lesser extent on other serine integrases)."
+  },
+  {
+   "t": 225.81,
+   "text": "When you take a dose of a recent monoclonal antibody drug — Keytruda for cancer, Skyrizi for psoriasis, Dupixent for atopic dermatitis — there's a reasonable chance that the CHO cells in the bioreactor that made your drug had a Bxb1-integrated cassette at a defined landing pad in their genome."
+  },
+  {
+   "t": 244.62,
+   "text": "A few more practical CHO-engineering details worth knowing:"
+  },
+  {
+   "t": 248.54,
+   "text": "Multiple integration events per cell: Some advanced systems install multiple landing pads at multiple safe-harbor sites and allow multiple copies of the antibody cassette to be integrated, with different orthogonal serine integrases handling each site."
+  },
+  {
+   "t": 264.95,
+   "text": "This boosts titer beyond what a single-copy integration can achieve."
+  },
+  {
+   "t": 269.55,
+   "text": "Bicistronic expression: Monoclonal antibodies have two chains — heavy and light — that need to be expressed in balanced ratios."
+  },
+  {
+   "t": 278.55,
+   "text": "Landing-pad cassettes typically encode both chains, often separated by an IRES or a 2A self-cleaving peptide, so that one integration event produces both chains in correct stoichiometry."
+  },
+  {
+   "t": 292.0,
+   "text": "Stability over fermentation: Because the integration is at a defined, well-characterized site, the expression is stable over the many cell generations of a 14-day fed-batch fermentation."
+  },
+  {
+   "t": 304.28,
+   "text": "Random-integration clones often show \"production rundown\" — declining titer over the course of a run — that landing-pad clones don't."
+  },
+  {
+   "t": 312.86,
+   "text": "This industrial application is, I'll say again, the largest single use of serine integrases by economic value."
+  },
+  {
+   "t": 320.92,
+   "text": "It rarely gets the attention that gene therapy gets, but it touches every patient on a modern biologic drug."
+  }
+ ]
+}

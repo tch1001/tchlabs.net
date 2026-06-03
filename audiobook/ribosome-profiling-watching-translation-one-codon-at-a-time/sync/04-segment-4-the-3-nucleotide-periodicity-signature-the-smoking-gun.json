@@ -1,0 +1,239 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — The 3-nucleotide periodicity signature — the smoking gun",
+ "duration": 398.2,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — The 3-nucleotide periodicity signature — the smoking gun"
+  },
+  {
+   "t": 5.44,
+   "text": "If you take a Ribo-seq dataset and you align all the footprint reads to the transcriptome, then plot how the 5' ends of the reads are distributed along the coding sequences of all the translated genes — pooling across thousands of genes to get good statistics — you see something remarkable."
+  },
+  {
+   "t": 22.76,
+   "text": "The read positions are not uniform."
+  },
+  {
+   "t": 25.02,
+   "text": "They are not random."
+  },
+  {
+   "t": 26.26,
+   "text": "They have a strong, clean, 3-nucleotide periodicity."
+  },
+  {
+   "t": 30.59,
+   "text": "Read counts pile up preferentially at every third position along the mRNA."
+  },
+  {
+   "t": 36.02,
+   "text": "The first nucleotide of each codon gets the most reads."
+  },
+  {
+   "t": 39.77,
+   "text": "The second and third nucleotides of each codon get fewer."
+  },
+  {
+   "t": 43.91,
+   "text": "This pattern is the 3-nucleotide periodicity signature of ribosome profiling, and it is the single most important piece of quality control in the field."
+  },
+  {
+   "t": 53.58,
+   "text": "It is the smoking gun — real Ribo-seq data phases in 3-nucleotide steps, with the periodicity matching codon boundaries on the mRNA."
+  },
+  {
+   "t": 63.6,
+   "text": "If your data shows this pattern, you have genuine ribosome footprints."
+  },
+  {
+   "t": 68.46,
+   "text": "If your data doesn't show it, something has gone wrong — either you've contaminated with non-ribosomal RNA fragments, or your digestion conditions weren't right, or your size selection picked up the wrong band, or your sample isn't really translating in the way you thought."
+  },
+  {
+   "t": 84.17,
+   "text": "Why does this periodicity exist?"
+  },
+  {
+   "t": 86.3,
+   "text": "Because translation itself happens in 3-nucleotide steps."
+  },
+  {
+   "t": 90.83,
+   "text": "The ribosome reads codons."
+  },
+  {
+   "t": 93.26,
+   "text": "Each codon is three nucleotides."
+  },
+  {
+   "t": 96.03,
+   "text": "The ribosome moves down the mRNA one codon at a time — three nucleotides per translocation step."
+  },
+  {
+   "t": 103.5,
+   "text": "So if you freeze ribosomes at random moments in their translation cycles, the distribution of ribosome positions along the mRNA is not uniform — it's enriched at codon boundaries, because the ribosome spends most of its time aligned with codon boundaries (during the elongation cycle, between translocation events)."
+  },
+  {
+   "t": 122.91,
+   "text": "The footprint that a ribosome leaves, when you snip the surrounding mRNA away, is a fragment that starts at a specific offset relative to the codon being read."
+  },
+  {
+   "t": 133.05,
+   "text": "That offset is consistent across most ribosomes — typically the 5' end of the footprint is 12 or 13 nucleotides upstream of the codon at the A site (where the next amino acid is being added)."
+  },
+  {
+   "t": 146.31,
+   "text": "Because of this consistent offset, the 5' ends of footprints pile up at every third position relative to the coding frame."
+  },
+  {
+   "t": 154.2,
+   "text": "Practically, here's what you do with this signal."
+  },
+  {
+   "t": 156.8,
+   "text": "After you align your reads to the transcriptome, you take all the reads that map to the coding sequence of any translated gene, and you compute the position of the 5' end of each read relative to the nearest in-frame codon boundary."
+  },
+  {
+   "t": 171.34,
+   "text": "You bin the positions: how many reads have their 5' end at offset 0 from the codon boundary?"
+  },
+  {
+   "t": 177.82,
+   "text": "How many at offset 1?"
+  },
+  {
+   "t": 179.31,
+   "text": "How many at offset 2?"
+  },
+  {
+   "t": 180.84,
+   "text": "In real Ribo-seq data, the bin counts look like a clean three-peaked pattern — one big peak at offset 0 (which corresponds to the actual codon-aligned 5' end), and much smaller peaks at offsets 1 and 2."
+  },
+  {
+   "t": 194.2,
+   "text": "The ratio of the dominant offset to the other two — sometimes called the periodicity score — is a quality metric for the run."
+  },
+  {
+   "t": 201.64,
+   "text": "Good Ribo-seq has a periodicity score above 0.6 or so."
+  },
+  {
+   "t": 206.94,
+   "text": "Bad data — contaminated, mis-digested, mis-selected — has no periodicity at all, just a flat distribution."
+  },
+  {
+   "t": 215.44,
+   "text": "A practical aside."
+  },
+  {
+   "t": 216.85,
+   "text": "The 3-nucleotide periodicity is read-length-dependent."
+  },
+  {
+   "t": 220.82,
+   "text": "Different footprint lengths come from slightly different ribosome conformations, and the offset between the 5' end of the footprint and the A site codon depends on the footprint length."
+  },
+  {
+   "t": 231.69,
+   "text": "Most modern Ribo-seq pipelines compute the periodicity separately for each footprint length, and use a length-specific offset to assign each read to a specific A-site codon."
+  },
+  {
+   "t": 243.74,
+   "text": "The tool riboWaltz, which we'll meet in Segment 15, does this analysis automatically."
+  },
+  {
+   "t": 250.1,
+   "text": "Some footprint length classes have clean periodicity; others don't, and those are usually filtered out."
+  },
+  {
+   "t": 256.61,
+   "text": "Beyond quality control, the 3-nucleotide periodicity is biologically informative in its own right."
+  },
+  {
+   "t": 264.1,
+   "text": "The fact that the periodicity exists is proof that the reads come from actively translating ribosomes, not from any other RNA-binding protein."
+  },
+  {
+   "t": 272.99,
+   "text": "Lots of proteins bind to mRNA."
+  },
+  {
+   "t": 275.7,
+   "text": "Lots of them protect a similar-sized fragment from nucleases."
+  },
+  {
+   "t": 279.86,
+   "text": "RNA-binding proteins in general, exosome subunits, helicases — all of these can leave fragments of similar size in a nuclease-protection experiment."
+  },
+  {
+   "t": 290.46,
+   "text": "None of those fragments will show 3-nucleotide periodicity, because none of those proteins move along the mRNA in codon steps."
+  },
+  {
+   "t": 299.52,
+   "text": "Only ribosomes do that."
+  },
+  {
+   "t": 301.22,
+   "text": "So the periodicity is a kind of biochemical proof of identity: this fragment came from a ribosome, not from some other protein."
+  },
+  {
+   "t": 309.64,
+   "text": "This becomes important in segments later when we discuss novel translation — finding ribosomes on uORFs and on previously unannotated regions of the transcriptome."
+  },
+  {
+   "t": 320.55,
+   "text": "One more thing."
+  },
+  {
+   "t": 321.6,
+   "text": "The 3-nucleotide periodicity also lets you read the translation frame directly from the data."
+  },
+  {
+   "t": 327.7,
+   "text": "For most mRNAs, the frame is known — the start codon is annotated, and you know which of the three possible reading frames is the one being translated."
+  },
+  {
+   "t": 337.82,
+   "text": "But for novel ORFs in unannotated regions — long non-coding RNAs, uORFs, intergenic transcripts that turn out to be translated — you don't a priori know the frame."
+  },
+  {
+   "t": 348.95,
+   "text": "Looking at the periodicity in the data tells you."
+  },
+  {
+   "t": 351.86,
+   "text": "If the reads pile up at every third position starting from a candidate start codon, you have the right frame."
+  },
+  {
+   "t": 358.49,
+   "text": "If they don't, that start codon is not really being used."
+  },
+  {
+   "t": 362.11,
+   "text": "This is one of the main ways the field discovers novel translated ORFs, which we'll dig into in Segment 7."
+  },
+  {
+   "t": 369.52,
+   "text": "The 3-nucleotide periodicity is, in summary, the signature that distinguishes real Ribo-seq from noise, the proof that the protected fragments came from genuine elongating ribosomes, and the ruler that lets you read out translation frame directly from the data."
+  },
+  {
+   "t": 386.39,
+   "text": "Memorize it."
+  },
+  {
+   "t": 387.44,
+   "text": "When you look at a Ribo-seq dataset, the first thing you should check is the periodicity."
+  },
+  {
+   "t": 392.11,
+   "text": "If it's there, you have good data."
+  },
+  {
+   "t": 394.1,
+   "text": "If it's not, stop and figure out what went wrong before you do anything else."
+  }
+ ]
+}

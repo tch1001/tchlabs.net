@@ -1,0 +1,147 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — minimap2: the long-read alignment standard",
+ "duration": 298.29,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — minimap2: the long-read alignment standard"
+  },
+  {
+   "t": 4.92,
+   "text": "In 2018, Heng Li — the same author as BWA — published minimap2."
+  },
+  {
+   "t": 11.74,
+   "text": "The paper was titled \"Minimap2: pairwise alignment for nucleotide sequences,\" and it introduced a new aligner explicitly designed for the long reads produced by PacBio and Oxford Nanopore."
+  },
+  {
+   "t": 24.7,
+   "text": "Long reads are a different beast from short reads — they're a hundred times longer (10-100 kilobases is typical), they have much higher per-base error rates (5-15% raw error for nanopore, versus 0.1% for Illumina), and they're produced in much smaller numbers per run."
+  },
+  {
+   "t": 43.16,
+   "text": "The alignment problem they pose is genuinely different from short-read alignment, and the tools developed for short reads — BWA, Bowtie — were not well-suited to it."
+  },
+  {
+   "t": 53.88,
+   "text": "Minimap2 became the standard within a year of publication."
+  },
+  {
+   "t": 57.76,
+   "text": "As of 2026, essentially every PacBio and nanopore data analysis pipeline uses minimap2 for alignment, and it's also used for many specialized tasks like genome-to-genome alignment, mRNA-to-genome alignment (splice-aware), and long-read overlap detection in assembly."
+  },
+  {
+   "t": 76.33,
+   "text": "Like BWA, it's a single piece of software that defined a whole category."
+  },
+  {
+   "t": 81.7,
+   "text": "The key algorithmic ideas in minimap2 are different from BWA."
+  },
+  {
+   "t": 86.28,
+   "text": "Where BWA indexes the reference with an FM-index and uses backtracking to find approximate matches, minimap2 uses a minimizer-based indexing scheme."
+  },
+  {
+   "t": 97.1,
+   "text": "A minimizer is a representative k-mer chosen from each window of the sequence — specifically, the lexicographically smallest k-mer in a window of size w."
+  },
+  {
+   "t": 107.95,
+   "text": "By indexing only the minimizers, rather than every k-mer, you get a much smaller index (about one tenth the size), and you can compare two long sequences quickly by finding shared minimizers between them."
+  },
+  {
+   "t": 121.51,
+   "text": "Minimizers were introduced by Roberts and colleagues in 2004, but minimap2 was the first widely-used aligner to deploy them at scale."
+  },
+  {
+   "t": 130.31,
+   "text": "For each long read, minimap2 finds all the shared minimizers between the read and the reference, then performs chaining — finding a consistent set of minimizer hits that lie on the same approximate diagonal of the read-versus-reference grid."
+  },
+  {
+   "t": 145.56,
+   "text": "The chain represents a candidate alignment, and minimap2 then fills in the alignment within the chain using a banded dynamic programming extension."
+  },
+  {
+   "t": 155.09,
+   "text": "The output is a precise base-level alignment in SAM/PAF format."
+  },
+  {
+   "t": 160.56,
+   "text": "The chaining step is the part that distinguishes minimap2 from the older short-read aligners."
+  },
+  {
+   "t": 166.3,
+   "text": "Long reads, because they're so long, may contain many short matches scattered along their length, and the alignment algorithm has to figure out which matches are part of one coherent alignment and which are spurious."
+  },
+  {
+   "t": 179.05,
+   "text": "Chaining solves this by looking for sets of matches that are co-linear — same orientation, same approximate diagonal, with consistent spacing."
+  },
+  {
+   "t": 188.04,
+   "text": "The chaining algorithm in minimap2 is implemented very efficiently and is one of the keys to the tool's speed."
+  },
+  {
+   "t": 194.75,
+   "text": "Minimap2 also handles splice-aware alignment, which is the alignment of mRNA reads to a genome where the alignment can skip introns."
+  },
+  {
+   "t": 203.7,
+   "text": "Splicing is a major complication for RNA-seq alignment, and we'll dig into it in the next segment."
+  },
+  {
+   "t": 209.86,
+   "text": "For long reads, minimap2 has a built-in splice mode that allows long gaps in the alignment corresponding to introns, with appropriate scoring for canonical splice sites."
+  },
+  {
+   "t": 221.62,
+   "text": "This makes minimap2 the standard tool for direct long-read RNA-seq alignment from Iso-Seq or nanopore RNA experiments."
+  },
+  {
+   "t": 230.61,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 231.91,
+   "text": "Minimap2 is the long-read upgrade of BWA."
+  },
+  {
+   "t": 235.56,
+   "text": "Where BWA was built around the FM-index for short, low-error reads, minimap2 is built around minimizer indexing and chaining for long, high-error reads."
+  },
+  {
+   "t": 246.79,
+   "text": "It handles 100-kilobase nanopore reads, it's splice-aware, it's very fast, and it's now the universal standard for PacBio and Oxford Nanopore data analysis."
+  },
+  {
+   "t": 257.56,
+   "text": "If you've ever worked with long-read data, you've used minimap2."
+  },
+  {
+   "t": 261.62,
+   "text": "If you've looked at a PAF or SAM file from a long-read experiment, you've looked at minimap2's output."
+  },
+  {
+   "t": 268.18,
+   "text": "There are some specialized long-read aligners that compete with minimap2 in specific niches."
+  },
+  {
+   "t": 274.23,
+   "text": "NGMLR is sometimes used for structural variant calling, where it handles split alignments slightly differently."
+  },
+  {
+   "t": 281.4,
+   "text": "LRA is optimized for very long reads with specific characteristics."
+  },
+  {
+   "t": 286.34,
+   "text": "Winnowmap is a derivative of minimap2 specialized for highly-repetitive sequences like centromeres."
+  },
+  {
+   "t": 293.35,
+   "text": "But for general-purpose long-read alignment, minimap2 is what you use."
+  }
+ ]
+}

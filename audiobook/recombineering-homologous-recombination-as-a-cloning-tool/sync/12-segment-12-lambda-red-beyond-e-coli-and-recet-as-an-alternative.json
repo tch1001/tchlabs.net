@@ -1,0 +1,147 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — Lambda Red beyond E. coli, and RecET as an alternative",
+ "duration": 298.94,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — Lambda Red beyond E. coli, and RecET as an alternative"
+  },
+  {
+   "t": 6.3,
+   "text": "Recombineering is, fundamentally, an E. coli technology."
+  },
+  {
+   "t": 10.29,
+   "text": "Lambda phage evolved to infect E. coli; the Red proteins are tuned to work in the E. coli cellular environment; the standard strains, plasmids, and protocols are all E. coli-centric."
+  },
+  {
+   "t": 22.85,
+   "text": "That is both the technique's strength and its biggest limitation."
+  },
+  {
+   "t": 26.74,
+   "text": "E. coli is the workhorse of molecular biology, so for many applications that is enough."
+  },
+  {
+   "t": 32.84,
+   "text": "But what if you want to do recombineering in a different bacterium?"
+  },
+  {
+   "t": 36.48,
+   "text": "The answer is: sometimes you can, sometimes you cannot, and there has been a long, partly-successful effort to extend lambda Red recombineering to other species."
+  },
+  {
+   "t": 46.98,
+   "text": "The closest relatives of E. coli — bacteria like Salmonella and Shigella — are pretty cooperative."
+  },
+  {
+   "t": 53.7,
+   "text": "Lambda phage can infect them naturally in some cases, and the Red proteins work reasonably well in their cytoplasm."
+  },
+  {
+   "t": 61.19,
+   "text": "So recombineering protocols originally developed for E. coli have been adapted, with modest modifications, for Salmonella and a few other enterobacteria."
+  },
+  {
+   "t": 71.08,
+   "text": "You can do gene knockouts in Salmonella using Red, you can modify chromosomes in Yersinia pseudotuberculosis using Red."
+  },
+  {
+   "t": 78.59,
+   "text": "The molecular biology carries over."
+  },
+  {
+   "t": 81.25,
+   "text": "But the further you get from E. coli, the harder it gets."
+  },
+  {
+   "t": 84.85,
+   "text": "In bacteria like Pseudomonas or Bacillus or Mycobacterium, the Red proteins do not work as well — either because they fold improperly, or because the host's recombination and repair machinery is too different, or because the host's nucleases destroy the substrate DNA before Beta can do anything with it."
+  },
+  {
+   "t": 104.54,
+   "text": "You can sometimes coax some efficiency out of the system with a lot of optimization, but you do not get the same level of robustness you get in E. coli."
+  },
+  {
+   "t": 113.03,
+   "text": "This led people to look for alternative recombination systems — phage-derived recombineering components from other phages, optimized for other hosts."
+  },
+  {
+   "t": 122.91,
+   "text": "The most successful alternative is RecET, which comes from a cryptic prophage in E. coli called the Rac prophage."
+  },
+  {
+   "t": 130.18,
+   "text": "RecET is the equivalent of the lambda Red Exo and Beta — RecE chews back double-stranded DNA from one end to expose single-stranded tails, like lambda Exo."
+  },
+  {
+   "t": 142.49,
+   "text": "RecT coats single-stranded DNA and drives annealing, like lambda Beta."
+  },
+  {
+   "t": 147.75,
+   "text": "The two systems are functionally analogous but evolutionarily distinct."
+  },
+  {
+   "t": 152.07,
+   "text": "RecET works in E. coli in a way that is qualitatively similar to Red, but with somewhat different efficiency for different kinds of substrates."
+  },
+  {
+   "t": 160.95,
+   "text": "For certain applications — particularly very large insertions and direct cloning of large DNA fragments from genomes — RecET turns out to be better than Red."
+  },
+  {
+   "t": 171.91,
+   "text": "There is a beautiful technique called ExoCET developed by Francis Stewart's lab that uses RecET to directly clone enormous fragments — hundreds of kilobases — from genomic DNA into vectors, using only short homology arms on the vector."
+  },
+  {
+   "t": 188.59,
+   "text": "This kind of direct cloning is hard or impossible with lambda Red, but RecET pulls it off because of the specifics of how it handles double-stranded substrates."
+  },
+  {
+   "t": 198.35,
+   "text": "So when you read modern recombineering papers, you will see both lambda Red and RecET in use, sometimes in the same lab and sometimes in the same paper, picked according to what the experiment needs."
+  },
+  {
+   "t": 210.75,
+   "text": "Red is the default for typical edits and insertions; RecET is the alternative when you need to handle very large fragments or work in slightly different hosts."
+  },
+  {
+   "t": 221.1,
+   "text": "In the broader project of extending recombineering to non-E. coli hosts, there have been some real successes and some persistent limitations."
+  },
+  {
+   "t": 230.04,
+   "text": "Mycobacterium tuberculosis, the bacterium that causes tuberculosis, can now be edited using a recombineering system derived from a mycobacteriophage — a phage that infects mycobacteria — called Che9c."
+  },
+  {
+   "t": 244.66,
+   "text": "The Che9c gp60 and gp61 proteins are functional analogs of Exo and Beta, but tuned to work in the mycobacterial cytoplasm."
+  },
+  {
+   "t": 255.43,
+   "text": "This was developed by Bill Jacobs's lab and has been an enormous boon to TB research."
+  },
+  {
+   "t": 260.82,
+   "text": "Similarly, recombineering systems have been built for Streptomyces, for Lactobacillus, for a handful of other organisms."
+  },
+  {
+   "t": 268.87,
+   "text": "Each requires finding the right phage-derived components and optimizing the strain."
+  },
+  {
+   "t": 274.11,
+   "text": "The host range is still much narrower than CRISPR's host range, which is one of the reasons CRISPR has eaten a lot of recombineering's territory in non-E. coli applications."
+  },
+  {
+   "t": 285.64,
+   "text": "CRISPR works in essentially any organism you can deliver it into."
+  },
+  {
+   "t": 290.41,
+   "text": "Recombineering works really well in E. coli, well in close relatives, and with substantial effort in a handful of other species."
+  }
+ ]
+}

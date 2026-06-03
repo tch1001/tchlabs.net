@@ -1,0 +1,263 @@
+{
+ "n": 18,
+ "title": "SEGMENT 18 — Frontiers — sub-2 ångström, in-cell, time-resolved, ML-driven",
+ "duration": 481.84,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 18 — Frontiers — sub-2 ångström, in-cell, time-resolved, ML-driven"
+  },
+  {
+   "t": 6.53,
+   "text": "Let's talk about where cryo-EM is going."
+  },
+  {
+   "t": 9.32,
+   "text": "The field is still in the middle of a rapid evolution, and the next decade will see significant changes."
+  },
+  {
+   "t": 16.06,
+   "text": "Let me sketch the main frontiers."
+  },
+  {
+   "t": 18.2,
+   "text": "Higher resolution, routinely."
+  },
+  {
+   "t": 20.49,
+   "text": "As I mentioned earlier, the current resolution record for single-particle cryo-EM is around 1.2 ångström, achieved on the test sample apoferritin."
+  },
+  {
+   "t": 30.1,
+   "text": "The frontier is to push routine resolutions below 2 ångström on real biological targets — not just the cooperative test cases."
+  },
+  {
+   "t": 39.19,
+   "text": "At sub-2 ångström, you start to see hydrogen atoms, you can resolve subtle ionization states, you can identify bound water molecules confidently."
+  },
+  {
+   "t": 49.45,
+   "text": "The implications for drug discovery are big, because subtle features of binding sites — water networks, side chain rotamer choices — start to be visible."
+  },
+  {
+   "t": 59.52,
+   "text": "The push to routine sub-2 ångström involves better detectors, better microscope alignment, better sample prep, and better algorithms."
+  },
+  {
+   "t": 68.3,
+   "text": "Progress has been steady, and the floor is dropping."
+  },
+  {
+   "t": 72.12,
+   "text": "In-cell structural biology."
+  },
+  {
+   "t": 74.36,
+   "text": "I mentioned this with cryo-ET."
+  },
+  {
+   "t": 76.39,
+   "text": "The vision is to determine the structures of all the major molecular machines in a cell, in their native locations, ideally at near-atomic resolution."
+  },
+  {
+   "t": 86.49,
+   "text": "That's a multi-decade program, but the tools — focused ion beam milling for thinning, cryo-correlated light and electron microscopy for finding your target, sub-tomogram averaging for resolution — are all maturing."
+  },
+  {
+   "t": 100.31,
+   "text": "Atlases of bacterial cells at near-atomic resolution exist."
+  },
+  {
+   "t": 105.44,
+   "text": "Comparable atlases for human cells, organelle by organelle, are in progress."
+  },
+  {
+   "t": 111.06,
+   "text": "The endpoint is a kind of cellular anatomy at the molecular scale, with structures of every machine cataloged in context."
+  },
+  {
+   "t": 118.89,
+   "text": "Time-resolved cryo-EM."
+  },
+  {
+   "t": 121.12,
+   "text": "Most cryo-EM today gives you static snapshots — you freeze your sample, you image it, you reconstruct one or a few states."
+  },
+  {
+   "t": 130.14,
+   "text": "But many biological processes are dynamic — an enzyme cycles through reaction intermediates, a receptor changes shape on binding a ligand, a motor protein steps along its track."
+  },
+  {
+   "t": 142.31,
+   "text": "The frontier of time-resolved cryo-EM is to capture these dynamics by freezing samples at controlled time points after triggering a reaction."
+  },
+  {
+   "t": 150.47,
+   "text": "You mix the substrate and the enzyme, you freeze at 5 milliseconds, 50 milliseconds, 500 milliseconds, and you reconstruct the structure at each time point."
+  },
+  {
+   "t": 160.49,
+   "text": "Stitch them together and you have a structural movie of the reaction."
+  },
+  {
+   "t": 164.28,
+   "text": "Time-resolved cryo-EM requires specialized hardware — fast mixing devices that can blot and freeze the sample within milliseconds of triggering the reaction."
+  },
+  {
+   "t": 174.8,
+   "text": "Several groups have built such devices, and the technique has produced compelling structural movies of ribosomes mid-translation, viruses mid-entry, and enzymes mid-catalysis."
+  },
+  {
+   "t": 186.39,
+   "text": "The throughput is currently modest — building each movie requires multiple datasets — but the technique is maturing."
+  },
+  {
+   "t": 194.57,
+   "text": "Machine learning everywhere."
+  },
+  {
+   "t": 196.61,
+   "text": "Deep learning is permeating every step of the cryo-EM pipeline."
+  },
+  {
+   "t": 201.75,
+   "text": "Particle picking, denoising, conformational classification, model building."
+  },
+  {
+   "t": 207.1,
+   "text": "The integration is increasing, the algorithms are getting better."
+  },
+  {
+   "t": 211.41,
+   "text": "I expect, over the next decade, that significant parts of the cryo-EM workflow that are currently manual or semi-automated will become fully automated, with neural networks handling the routine analysis and humans intervening only for the hard cases."
+  },
+  {
+   "t": 226.86,
+   "text": "The Sjors Scheres group's ModelAngelo tool, which uses deep learning to build atomic models directly from cryo-EM density, is a good example of where this is going."
+  },
+  {
+   "t": 237.6,
+   "text": "ML-driven sample preparation."
+  },
+  {
+   "t": 240.14,
+   "text": "This is the newer and perhaps more transformative frontier — applying machine learning to the bottleneck of sample prep."
+  },
+  {
+   "t": 247.97,
+   "text": "The idea is that there are thousands of variables in grid preparation — buffer composition, blot time, blot force, humidity, grid type, sample concentration, additive presence — and humans typically optimize them one at a time, slowly."
+  },
+  {
+   "t": 263.21,
+   "text": "Machine learning could, in principle, learn from past grid screenings, predict optimal conditions for a new target, and rapidly converge on good grids without weeks of manual screening."
+  },
+  {
+   "t": 274.58,
+   "text": "Several groups are working on this, with active-learning systems that automatically image grids, classify them as good or bad, and update their predictions of what conditions to try next."
+  },
+  {
+   "t": 285.87,
+   "text": "Cryo-EM at scale."
+  },
+  {
+   "t": 287.47,
+   "text": "Modern cryo-EM is still a relatively boutique activity — a few hundred Krios installations worldwide, each producing a few structures per month."
+  },
+  {
+   "t": 297.17,
+   "text": "The frontier is to scale this dramatically — automated facilities producing hundreds of structures per day, robotic sample preparation, automated data collection, automated analysis."
+  },
+  {
+   "t": 309.44,
+   "text": "The pharmaceutical industry, which solves many structures per drug discovery program, has a particular interest in this scaling."
+  },
+  {
+   "t": 317.27,
+   "text": "Several pharma companies have built large internal cryo-EM operations with multiple Krios microscopes and integrated automation."
+  },
+  {
+   "t": 326.06,
+   "text": "Microscope hardware advances."
+  },
+  {
+   "t": 328.19,
+   "text": "Beyond the existing Krios platform, several new instruments are in development — cold field emission guns for higher beam coherence, energy filters for cleaner images, phase plates that can boost contrast for small particles, monochromators for tighter electron energy spreads."
+  },
+  {
+   "t": 345.81,
+   "text": "Each of these will incrementally improve what's achievable."
+  },
+  {
+   "t": 349.76,
+   "text": "The big questions are about which incremental improvements will combine to give another step-change like the 2013 resolution revolution."
+  },
+  {
+   "t": 358.38,
+   "text": "OK."
+  },
+  {
+   "t": 359.2,
+   "text": "We've covered a lot of ground."
+  },
+  {
+   "t": 360.91,
+   "text": "Let me close."
+  },
+  {
+   "t": 362.17,
+   "text": "Cryo-electron microscopy is one of the great success stories of modern structural biology."
+  },
+  {
+   "t": 368.36,
+   "text": "A technique that was dismissed as blobology in the 1990s is now the dominant method for solving new protein structures, including the giant complexes and membrane proteins that crystallography could never reach."
+  },
+  {
+   "t": 382.94,
+   "text": "The 2017 Nobel Prize recognized Dubochet, Frank, and Henderson — the three pillars of vitrification, single-particle averaging, and atomic-resolution proof — but the modern technique is the work of thousands of methods developers, software writers, microscopists, and sample preparers, layered on top of those foundations."
+  },
+  {
+   "t": 404.25,
+   "text": "The resolution revolution of 2013, driven by direct electron detectors, transformed the field from \"occasionally atomic\" to \"routinely atomic."
+  },
+  {
+   "t": 414.49,
+   "text": "\" The combination with AlphaFold and other computational tools has made structure determination faster and more accurate than ever before."
+  },
+  {
+   "t": 422.65,
+   "text": "If you're going into structural biology, into drug discovery, into protein engineering, into mechanistic biochemistry — cryo-EM is the technique you will use."
+  },
+  {
+   "t": 433.04,
+   "text": "Most of the structures you read about in papers from 2020 onward are cryo-EM structures."
+  },
+  {
+   "t": 438.37,
+   "text": "Most of the structures that will be solved in the next decade will be cryo-EM structures."
+  },
+  {
+   "t": 443.32,
+   "text": "The technique is mature, the infrastructure is established, the community is large and welcoming, and the frontiers are exciting."
+  },
+  {
+   "t": 451.91,
+   "text": "The four things I asked you to walk out of here being able to do: explain what cryo-EM is and why it dominates now; describe the three Nobel-winning breakthroughs; walk through the modern workflow including the role of direct detectors; place cryo-EM in the larger ecosystem with AlphaFold and other techniques."
+  },
+  {
+   "t": 471.62,
+   "text": "If those four are in your head, you've got the structure of modern structural biology in your head."
+  },
+  {
+   "t": 477.05,
+   "text": "Everything else is detail."
+  },
+  {
+   "t": 479.15,
+   "text": "We have a few minutes."
+  },
+  {
+   "t": 480.47,
+   "text": "Let's take questions."
+  }
+ ]
+}

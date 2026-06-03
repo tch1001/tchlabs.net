@@ -1,0 +1,159 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — RELION, cryoSPARC, EMAN — the software ecosystem",
+ "duration": 277.99,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — RELION, cryoSPARC, EMAN — the software ecosystem"
+  },
+  {
+   "t": 6.33,
+   "text": "Welcome back."
+  },
+  {
+   "t": 7.33,
+   "text": "Let's pick up with software."
+  },
+  {
+   "t": 8.82,
+   "text": "Modern cryo-EM, as I've emphasized, is as much a computational discipline as it is an experimental one."
+  },
+  {
+   "t": 16.19,
+   "text": "Without sophisticated image-processing software, the raw micrographs from a Krios are just terabytes of noise."
+  },
+  {
+   "t": 23.34,
+   "text": "The software is where the actual structure determination happens, and the software ecosystem in 2026 is dominated by three main packages, plus an array of smaller specialized tools."
+  },
+  {
+   "t": 35.83,
+   "text": "RELION, which stands for REgularised LIkelihood OptimisatioN, is the venerable open-source workhorse of the field."
+  },
+  {
+   "t": 43.7,
+   "text": "It was developed by Sjors Scheres at the MRC LMB starting around 2010, written in C++ with strong GPU support."
+  },
+  {
+   "t": 52.25,
+   "text": "The intellectual core of RELION is a Bayesian maximum-likelihood framework for image processing — instead of treating the image alignment as a hard decision (this particle goes in this orientation), it treats it as a probability distribution (this particle is probably here, with some uncertainty)."
+  },
+  {
+   "t": 71.03,
+   "text": "That probabilistic treatment was a major advance and turned out to play very well with the noisy data from cryo-EM."
+  },
+  {
+   "t": 78.24,
+   "text": "RELION is free, open source, runs on Linux clusters, and is used by a huge fraction of academic cryo-EM labs."
+  },
+  {
+   "t": 86.81,
+   "text": "cryoSPARC, developed by Ali Punjani and David Fleet at the University of Toronto and now commercialized by Structura Biotechnology, is the other dominant package."
+  },
+  {
+   "t": 98.03,
+   "text": "cryoSPARC is faster than RELION for many workflows, has a friendlier web-based user interface, and incorporates a number of algorithmic innovations — non-uniform refinement, 3D variability analysis, and others."
+  },
+  {
+   "t": 112.75,
+   "text": "It's free for academic use but commercial labs pay for licenses."
+  },
+  {
+   "t": 117.47,
+   "text": "The user experience is much closer to \"click and wait\" than RELION's command-line tradition, which has made it popular in pharma settings."
+  },
+  {
+   "t": 125.53,
+   "text": "EMAN, developed by Steve Ludtke at Baylor, is the oldest of the three, with roots going back to the 1990s."
+  },
+  {
+   "t": 132.78,
+   "text": "EMAN is open source, very flexible, and still widely used for specific tasks, though it has been somewhat eclipsed in pure throughput by the newer packages."
+  },
+  {
+   "t": 143.05,
+   "text": "There are dozens of other tools in the ecosystem."
+  },
+  {
+   "t": 145.85,
+   "text": "CTFFIND and CTFFIND4 for estimating contrast transfer function."
+  },
+  {
+   "t": 150.68,
+   "text": "MotionCor2 for motion correction."
+  },
+  {
+   "t": 153.53,
+   "text": "Topaz and crYOLO for neural-network particle picking."
+  },
+  {
+   "t": 157.86,
+   "text": "Phenix and Coot for atomic model building and refinement."
+  },
+  {
+   "t": 162.07,
+   "text": "ChimeraX for visualization."
+  },
+  {
+   "t": 164.56,
+   "text": "Scipion as an integration framework that lets you mix tools from different packages."
+  },
+  {
+   "t": 169.85,
+   "text": "Warp for streamlined preprocessing."
+  },
+  {
+   "t": 172.19,
+   "text": "The pipeline you assemble in practice is typically a mix — pick particles with Topaz, align with cryoSPARC, refine with RELION, build with Phenix and Coot."
+  },
+  {
+   "t": 183.31,
+   "text": "This whole ecosystem is in a state of rapid evolution."
+  },
+  {
+   "t": 187.35,
+   "text": "Machine-learning methods are being integrated everywhere — for particle picking, for denoising, for separating out conformational heterogeneity, for fitting atomic models."
+  },
+  {
+   "t": 198.44,
+   "text": "The line between traditional algorithmic methods and learned methods is blurring."
+  },
+  {
+   "t": 203.55,
+   "text": "A modern cryo-EM analysis pipeline in 2026 has multiple deep learning components woven through it, often without the user being especially aware of which step is using what method."
+  },
+  {
+   "t": 216.11,
+   "text": "One specific recent development worth flagging is the use of deep learning for 3D heterogeneity analysis."
+  },
+  {
+   "t": 223.34,
+   "text": "A real protein sample is rarely a single rigid conformation — it's a population of slightly different states, breathing and flexing."
+  },
+  {
+   "t": 232.64,
+   "text": "Older methods could classify particles into a handful of discrete classes; modern methods, like cryoSPARC's 3D variability analysis or RELION's Multi-body refinement, can produce continuous distributions over conformations, essentially building a movie of the protein's motion from the static images."
+  },
+  {
+   "t": 252.18,
+   "text": "That's a startling capability — you can take frozen snapshots of millions of identical molecules and reconstruct, computationally, how the molecule moves."
+  },
+  {
+   "t": 262.31,
+   "text": "The static technique is starting to capture dynamics."
+  },
+  {
+   "t": 265.69,
+   "text": "OK."
+  },
+  {
+   "t": 266.49,
+   "text": "So we have hardware, software, and workflow."
+  },
+  {
+   "t": 269.98,
+   "text": "Let me now talk about what kinds of structures cryo-EM actually delivers, in terms of resolution and target classes."
+  }
+ ]
+}

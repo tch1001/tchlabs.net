@@ -1,0 +1,179 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Circular RNAs — the 2013 surprise and the back-splicing twist",
+ "duration": 357.85,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Circular RNAs — the 2013 surprise and the back-splicing twist"
+  },
+  {
+   "t": 7.1,
+   "text": "In 2013, two papers — one from Nikolaus Rajewsky's lab at the Max Delbruck Center in Berlin, the other from Julia Salzman at Stanford — independently reported a class of RNA molecules that had been hiding in plain sight in RNA-seq data."
+  },
+  {
+   "t": 23.21,
+   "text": "The molecules were called circular RNAs, or circRNAs, and they had a topology that violated the textbook picture of how RNA processing works."
+  },
+  {
+   "t": 33.61,
+   "text": "In a circRNA, the 3 prime end of one exon is covalently joined to the 5 prime end of another exon in such a way that the resulting molecule has no free ends — it is a covalently closed loop."
+  },
+  {
+   "t": 48.41,
+   "text": "The mechanism by which this happens is called back-splicing."
+  },
+  {
+   "t": 51.84,
+   "text": "In conventional splicing, the spliceosome joins the 3 prime end of an upstream exon to the 5 prime end of a downstream exon, moving linearly through the pre-mRNA from 5 prime to 3 prime."
+  },
+  {
+   "t": 64.83,
+   "text": "In back-splicing, the spliceosome instead joins the 3 prime end of a downstream exon to the 5 prime end of an upstream exon — reversing the normal direction — producing a circle."
+  },
+  {
+   "t": 78.29,
+   "text": "Back-splicing is favored in certain genomic contexts, particularly where intronic Alu repeats flank the participating exons and can base-pair with each other to bring the donor and acceptor sites into proximity."
+  },
+  {
+   "t": 91.45,
+   "text": "The reason circRNAs went unnoticed for so long was that they did not show up in standard RNA-seq analyses."
+  },
+  {
+   "t": 98.3,
+   "text": "Most RNA-seq pipelines select poly-A-tailed RNAs, and circRNAs have no poly-A tail because they have no free 3 prime end."
+  },
+  {
+   "t": 108.26,
+   "text": "They also do not get cataloged by alignment software that assumes a linear transcript geometry — a back-splice junction looks weird to a standard aligner and often gets discarded as an artifact."
+  },
+  {
+   "t": 120.35,
+   "text": "It took specialized analyses that explicitly looked for back-splice junctions to reveal that circRNAs are everywhere."
+  },
+  {
+   "t": 128.93,
+   "text": "Tens of thousands of circRNAs have now been cataloged in human and other species."
+  },
+  {
+   "t": 134.96,
+   "text": "Some genes produce more circRNA than linear mRNA from their loci."
+  },
+  {
+   "t": 140.34,
+   "text": "CircRNAs are particularly abundant in the brain, where they accumulate to high levels in neurons."
+  },
+  {
+   "t": 147.36,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 149.16,
+   "text": "CircRNAs are the topology surprise."
+  },
+  {
+   "t": 152.04,
+   "text": "The cell had been making RNA molecules with closed loops — no free ends, no poly-A tail — and we missed them for decades because our methods assumed RNA had ends."
+  },
+  {
+   "t": 163.06,
+   "text": "Once people looked specifically for back-splice junctions, circRNAs turned out to be ubiquitous, abundant in some tissues, and present in essentially every cell type examined."
+  },
+  {
+   "t": 174.5,
+   "text": "What do circRNAs do?"
+  },
+  {
+   "t": 176.07,
+   "text": "Several functions have been proposed, with varying levels of evidence."
+  },
+  {
+   "t": 180.54,
+   "text": "Function one: microRNA sponges."
+  },
+  {
+   "t": 183.6,
+   "text": "The most famous example is CDR1as, also called ciRS-7, a brain-enriched circRNA that contains over seventy binding sites for microRNA miR-7."
+  },
+  {
+   "t": 195.6,
+   "text": "Because of its high abundance and the density of miR-7 sites, CDR1as is thought to act as a sponge that titrates miR-7 away from its mRNA targets."
+  },
+  {
+   "t": 207.88,
+   "text": "This is the cleanest example of the microRNA-sponge mechanism in any noncoding RNA, and it provided early evidence that circRNAs could have real regulatory functions through the decoy mechanism."
+  },
+  {
+   "t": 220.54,
+   "text": "Function two: protein scaffolds."
+  },
+  {
+   "t": 223.35,
+   "text": "Some circRNAs have been shown to bind specific proteins and to act as scaffolds that bring those proteins together, similar to the scaffold mode for linear lncRNAs."
+  },
+  {
+   "t": 233.95,
+   "text": "Function three: peptide translation."
+  },
+  {
+   "t": 237.24,
+   "text": "Several circRNAs have been shown to be translated, despite lacking a 5 prime cap, through internal ribosome entry sites or through m6A-dependent cap-independent translation mechanisms."
+  },
+  {
+   "t": 249.81,
+   "text": "The peptides produced are typically short and the biological significance is in many cases unclear, but the phenomenon is real — circRNAs can serve as templates for small peptide production."
+  },
+  {
+   "t": 261.54,
+   "text": "Function four: still mysterious."
+  },
+  {
+   "t": 264.36,
+   "text": "Many circRNAs have no known function."
+  },
+  {
+   "t": 267.18,
+   "text": "They are present at appreciable levels, they are stable — circles resist exonucleases because there are no ends to chew — and they are produced in specific patterns across tissues, but no one has yet figured out what they do."
+  },
+  {
+   "t": 281.4,
+   "text": "The same functional fraction debate that applies to linear lncRNAs applies to circRNAs."
+  },
+  {
+   "t": 288.18,
+   "text": "CircRNAs have one feature that makes them clinically attractive: stability."
+  },
+  {
+   "t": 293.46,
+   "text": "Because they lack free ends, they are resistant to the exonucleases that degrade linear RNAs, and they tend to be more stable than their linear mRNA counterparts."
+  },
+  {
+   "t": 304.19,
+   "text": "This makes circRNAs interesting both as biomarkers — circulating circRNAs in blood are being explored as cancer diagnostics — and as therapeutic platforms."
+  },
+  {
+   "t": 316.01,
+   "text": "Synthetic circular RNA constructs are being engineered for vaccine and protein-replacement applications, taking advantage of their stability."
+  },
+  {
+   "t": 325.11,
+   "text": "The slogan for circRNAs."
+  },
+  {
+   "t": 327.15,
+   "text": "CircRNAs are the surprise topology — RNA molecules where the 3 prime end is ligated back to the 5 prime end through back-splicing, forming a covalent loop with no free ends."
+  },
+  {
+   "t": 339.93,
+   "text": "Some sponge microRNAs, some scaffold proteins, some translate into small peptides, and many remain mysterious."
+  },
+  {
+   "t": 348.53,
+   "text": "They were missed for decades because our standard methods assumed linear RNA geometry."
+  },
+  {
+   "t": 354.23,
+   "text": "Once we looked, they were everywhere — especially in the brain."
+  }
+ ]
+}

@@ -1,0 +1,179 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Tet-controlled Cre: temporal control on top of spatial control",
+ "duration": 334.45,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Tet-controlled Cre: temporal control on top of spatial control"
+  },
+  {
+   "t": 5.97,
+   "text": "If you sat through the Cre-Lox lecture earlier in this course, you know that Cre-Lox is the workhorse of conditional genetics in mice — a way to delete genes in specific cell types based on which promoter drives the Cre expression."
+  },
+  {
+   "t": 19.64,
+   "text": "You also know about CreERT2 — a Cre fused to a mutated estrogen receptor ligand-binding domain that keeps Cre in the cytoplasm until tamoxifen is given, providing temporal control over when the deletion happens."
+  },
+  {
+   "t": 35.77,
+   "text": "CreERT2 is great."
+  },
+  {
+   "t": 38.08,
+   "text": "But it has some drawbacks."
+  },
+  {
+   "t": 39.73,
+   "text": "Tamoxifen has off-target effects — it's an estrogen receptor modulator, after all, with biological consequences beyond just activating CreERT2."
+  },
+  {
+   "t": 50.16,
+   "text": "Tamoxifen pharmacokinetics can be unpredictable, especially in different mouse strains and at different ages."
+  },
+  {
+   "t": 57.2,
+   "text": "The CreERT2 fusion protein itself is sometimes a bit leaky — there can be tamoxifen-independent recombination, especially with strong promoters driving high expression of the fusion."
+  },
+  {
+   "t": 69.21,
+   "text": "So an alternative approach emerged: put Cre under Tet control."
+  },
+  {
+   "t": 73.7,
+   "text": "Specifically, install a TRE-Cre cassette in the mouse genome, install an rtTA driven by your cell-type-specific promoter of choice, and now you have a system where the Cre is expressed only in the cells where the promoter is on and only when doxycycline is provided."
+  },
+  {
+   "t": 91.15,
+   "text": "That gives you both cell-type specificity (from the promoter driving rtTA) and temporal control (from when you give the drug), in a clean, two-component system."
+  },
+  {
+   "t": 101.54,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 102.86,
+   "text": "Cre-only with a cell-type-specific promoter is \"scissors only in dopamine neurons, on whenever the dopamine-neuron program is active."
+  },
+  {
+   "t": 111.99,
+   "text": "\" CreERT2 is \"scissors stuck in the cytoplasm of dopamine neurons until tamoxifen is given."
+  },
+  {
+   "t": 119.05,
+   "text": "\" Tet-controlled Cre is \"scissors made only in dopamine neurons, and only when doxycycline is on board."
+  },
+  {
+   "t": 126.2,
+   "text": "\" Two ways to do temporal Cre — tamoxifen (CreERT2) or doxycycline (Tet-Cre) — each with its own dosing and tissue penetration profile."
+  },
+  {
+   "t": 137.09,
+   "text": "Which to choose?"
+  },
+  {
+   "t": 138.3,
+   "text": "Depends on the application."
+  },
+  {
+   "t": 139.96,
+   "text": "Tamoxifen has the advantage that it's been used for decades, lots of standard protocols exist, the CreERT2 system is well-characterized."
+  },
+  {
+   "t": 149.26,
+   "text": "Disadvantages: estrogen-related off-target effects, slow induction kinetics (recombination peaks days after tamoxifen), and can be tricky in young or pregnant animals."
+  },
+  {
+   "t": 160.91,
+   "text": "Tet-Cre has the advantage that doxycycline is well-tolerated, easy to deliver in drinking water, fast on-and-off kinetics (you can turn the Cre on or off within hours), and the rtTA system can be very tight when off."
+  },
+  {
+   "t": 175.46,
+   "text": "Disadvantages: requires a three-component genetic system (rtTA driver + TRE-Cre cassette + floxed allele), which means more breeding for mouse experiments; and doxycycline does have effects on the gut microbiome that can confound some experiments."
+  },
+  {
+   "t": 191.93,
+   "text": "For most applications, either system works."
+  },
+  {
+   "t": 195.04,
+   "text": "For cleanest temporal control, especially when you want to turn the Cre on and then off (which tamoxifen can't really do), Tet-Cre has an advantage."
+  },
+  {
+   "t": 204.56,
+   "text": "For applications where the existing CreERT2 mouse lines already exist and you don't want to breed in additional components, tamoxifen-based control is convenient."
+  },
+  {
+   "t": 215.19,
+   "text": "One particularly nice combination is Tet-CreERT2 — Cre fused to ERT2 AND placed under TRE control."
+  },
+  {
+   "t": 224.53,
+   "text": "This gives you two layers of conditional control on top of each other."
+  },
+  {
+   "t": 229.09,
+   "text": "The Cre is only expressed when doxycycline is given (Tet level)."
+  },
+  {
+   "t": 234.24,
+   "text": "Even when expressed, the Cre is only nuclear-active when tamoxifen is given (ERT2 level)."
+  },
+  {
+   "t": 241.5,
+   "text": "To get recombination, you need both drugs."
+  },
+  {
+   "t": 244.64,
+   "text": "This gives you extremely tight control — useful for situations where you really cannot afford any leakage."
+  },
+  {
+   "t": 250.96,
+   "text": "The downside is that you've now got two drugs to deliver, two pharmacokinetic profiles to coordinate, and two off-target effect profiles to deal with."
+  },
+  {
+   "t": 260.05,
+   "text": "Usually overkill for most experiments, but for the rare case where ultra-tight control matters, it's the gold standard."
+  },
+  {
+   "t": 267.36,
+   "text": "The bigger picture, the one I want you to take away from this segment: the Tet system and the Cre-Lox system are not competitors; they're complementary tools that often get combined."
+  },
+  {
+   "t": 277.45,
+   "text": "Tet controls transcription."
+  },
+  {
+   "t": 279.51,
+   "text": "Cre controls genomic structure."
+  },
+  {
+   "t": 282.25,
+   "text": "The two work on different layers of biology, and the combinations of them give you orders of magnitude more flexibility than either alone."
+  },
+  {
+   "t": 291.37,
+   "text": "A modern mouse experiment might use a tissue-specific Cre to mark a cell lineage, a Tet-controlled fluorescent reporter to track a specific moment in time, and a tamoxifen-controlled CreERT2 to do a separate genetic perturbation — all in the same animal, all coordinated, all giving independent dimensions of experimental control."
+  },
+  {
+   "t": 312.99,
+   "text": "The Tet system, in this layered context, is a key tool in the conditional genetics toolkit."
+  },
+  {
+   "t": 318.87,
+   "text": "This is a good place to pause."
+  },
+  {
+   "t": 320.5,
+   "text": "Take a few minutes, stretch, get water."
+  },
+  {
+   "t": 323.17,
+   "text": "When we come back, we'll talk about inducible RNA interference, the use of Tet in stem cell reprogramming, and the practical realities of dosing doxycycline in mice."
+  },
+  {
+   "t": 333.31,
+   "text": "Back in five."
+  }
+ ]
+}

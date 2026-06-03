@@ -1,0 +1,295 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The accessibility question and why it matters",
+ "duration": 365.23,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The accessibility question and why it matters"
+  },
+  {
+   "t": 4.25,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 5.94,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 7.4,
+   "text": "Today and for the next two hours, we're going to talk about ATAC-seq — the Assay for Transposase-Accessible Chromatin using sequencing."
+  },
+  {
+   "t": 16.51,
+   "text": "It's a technique that, in the dozen years since it was invented, has rewritten how the field thinks about gene regulation, and has done so with an experimental footprint so small that you can run it on a tube of patient blood cells, on a few thousand sorted neurons, on a slice of tumor biopsy that no other method of its era could have touched."
+  },
+  {
+   "t": 35.56,
+   "text": "We're going to spend two hours unpacking how it works, why it became standard so fast, and what it tells you that no other technique tells you quite the same way."
+  },
+  {
+   "t": 45.49,
+   "text": "But before we get to any of that, I want to start with the question the technique is built to answer."
+  },
+  {
+   "t": 50.74,
+   "text": "Because if you internalize the question, the method falls out of it almost inevitably."
+  },
+  {
+   "t": 56.2,
+   "text": "Here is the question."
+  },
+  {
+   "t": 57.8,
+   "text": "You have a cell — say, a human T cell, or a mouse neuron, or a hepatocyte from someone's liver biopsy."
+  },
+  {
+   "t": 65.33,
+   "text": "Inside that cell there is about two meters of DNA crammed into a nucleus ten microns across."
+  },
+  {
+   "t": 72.29,
+   "text": "Six billion base pairs of sequence, packaged tightly around histone proteins into the structure we call chromatin."
+  },
+  {
+   "t": 80.42,
+   "text": "Now, here is the thing that matters."
+  },
+  {
+   "t": 83.45,
+   "text": "Most of that DNA, at any given moment, is closed."
+  },
+  {
+   "t": 87.45,
+   "text": "It is wrapped on nucleosomes, folded into higher-order fibers, balled up into dense, inaccessible regions."
+  },
+  {
+   "t": 95.08,
+   "text": "The proteins of the cell — transcription factors, polymerases, repair enzymes — cannot get to most of it."
+  },
+  {
+   "t": 102.81,
+   "text": "They can't even reach down and touch most of the genome, at most moments, in most cells."
+  },
+  {
+   "t": 108.74,
+   "text": "But some of it is open."
+  },
+  {
+   "t": 110.12,
+   "text": "Some of it — usually just one to three percent of the genome in any given cell — is accessible."
+  },
+  {
+   "t": 117.01,
+   "text": "The nucleosomes are evicted, or sliding around, or pushed apart."
+  },
+  {
+   "t": 122.2,
+   "text": "The DNA is bare or lightly decorated."
+  },
+  {
+   "t": 125.21,
+   "text": "Proteins can land on it."
+  },
+  {
+   "t": 126.85,
+   "text": "Transcription factors can read its sequence."
+  },
+  {
+   "t": 129.61,
+   "text": "RNA polymerase can start a transcript there."
+  },
+  {
+   "t": 132.49,
+   "text": "This open fraction — the accessible chromatin — is where almost all the regulatory action happens."
+  },
+  {
+   "t": 139.47,
+   "text": "The promoters of active genes are open."
+  },
+  {
+   "t": 142.24,
+   "text": "The enhancers driving cell identity are open."
+  },
+  {
+   "t": 145.44,
+   "text": "The places where transcription factors are sitting, where the cell is making decisions about what gene to turn on next, are open."
+  },
+  {
+   "t": 152.97,
+   "text": "Open chromatin is the regulatory genome in action."
+  },
+  {
+   "t": 156.9,
+   "text": "So the central question is this: where in the genome is the chromatin open?"
+  },
+  {
+   "t": 161.65,
+   "text": "Not in general."
+  },
+  {
+   "t": 162.78,
+   "text": "Specifically."
+  },
+  {
+   "t": 163.93,
+   "text": "Which positions, in which cells, in which conditions, at which moment."
+  },
+  {
+   "t": 168.79,
+   "text": "That's it."
+  },
+  {
+   "t": 169.6,
+   "text": "That's the question."
+  },
+  {
+   "t": 170.74,
+   "text": "ATAC-seq is the technique that answers it."
+  },
+  {
+   "t": 173.61,
+   "text": "Here's the analogy I want you to hold for the next two hours."
+  },
+  {
+   "t": 177.15,
+   "text": "Imagine the genome as a vast, dark city at night — three billion buildings, most of them locked up tight, shutters down, doors bolted."
+  },
+  {
+   "t": 186.61,
+   "text": "A few — maybe a few thousand to a few hundred thousand — have their lights on."
+  },
+  {
+   "t": 191.46,
+   "text": "Those are the open ones."
+  },
+  {
+   "t": 193.0,
+   "text": "Those are the addresses where things are happening."
+  },
+  {
+   "t": 195.55,
+   "text": "You want to know which addresses, exactly, are lit."
+  },
+  {
+   "t": 198.86,
+   "text": "You could try to walk down every street and check each door — that would take you years."
+  },
+  {
+   "t": 203.9,
+   "text": "Or you could send out a fleet of tiny scouts, each of them carrying a small piece of luminescent paint, with the property that they can only physically squeeze in through unlocked doors."
+  },
+  {
+   "t": 215.3,
+   "text": "The scouts that find an open door go inside, splash a bit of paint on the doorframe with a tracking tag on it, and leave."
+  },
+  {
+   "t": 222.66,
+   "text": "At the end of the night, you collect every painted doorframe, read the address off the tag, and you have a complete map of every door in the city that was open that night."
+  },
+  {
+   "t": 232.85,
+   "text": "That's ATAC-seq."
+  },
+  {
+   "t": 234.82,
+   "text": "The scout is Tn5 transposase."
+  },
+  {
+   "t": 238.03,
+   "text": "The paint with a tracking tag is a sequencing adapter."
+  },
+  {
+   "t": 241.34,
+   "text": "The unlocked doors are open chromatin."
+  },
+  {
+   "t": 244.11,
+   "text": "The whole method, in one analogy."
+  },
+  {
+   "t": 246.51,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch the ATAC-seq workflow on a whiteboard and explain what each step does and why; two, explain in plain English what Tn5 transposase is doing chemically and why it is so beautifully suited to mapping accessibility; three, look at any modern paper that mentions ATAC-seq and have a real intuition for what the peaks mean, what the size distribution histogram is showing, and how the technique fits into the broader landscape"
+  },
+  {
+   "t": 276.83,
+   "text": "of regulatory genomics — then we've succeeded."
+  },
+  {
+   "t": 280.06,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 282.36,
+   "text": "One last orienting thought before we dive in."
+  },
+  {
+   "t": 285.43,
+   "text": "ATAC-seq is, in a meaningful sense, the natural sibling of ChIP-seq — the technique we covered in detail in an earlier lecture."
+  },
+  {
+   "t": 294.81,
+   "text": "ChIP-seq asks, \"where in the genome is this specific protein bound?"
+  },
+  {
+   "t": 300.53,
+   "text": "\" You need an antibody."
+  },
+  {
+   "t": 301.99,
+   "text": "You're asking about one protein at a time."
+  },
+  {
+   "t": 304.52,
+   "text": "ATAC-seq asks a different and complementary question: \"where in the genome is the chromatin open, regardless of which proteins are there?"
+  },
+  {
+   "t": 313.43,
+   "text": "\" You don't need an antibody."
+  },
+  {
+   "t": 315.01,
+   "text": "You're protein-agnostic."
+  },
+  {
+   "t": 316.56,
+   "text": "You map accessibility itself, and then you infer which transcription factors are likely binding the open regions based on the DNA sequences underneath."
+  },
+  {
+   "t": 326.27,
+   "text": "Both techniques are reading the same chromatin."
+  },
+  {
+   "t": 329.12,
+   "text": "They're just reading it from different angles."
+  },
+  {
+   "t": 331.17,
+   "text": "ChIP-seq is a directed search — \"I am looking for protein X."
+  },
+  {
+   "t": 336.23,
+   "text": "\" ATAC-seq is a broad sweep — \"show me everywhere that's currently accessible."
+  },
+  {
+   "t": 341.64,
+   "text": "\" Together, they give you a far more complete picture of regulatory genomics than either does alone."
+  },
+  {
+   "t": 348.24,
+   "text": "We'll come back to the comparison many times."
+  },
+  {
+   "t": 351.11,
+   "text": "So that's the contract."
+  },
+  {
+   "t": 352.57,
+   "text": "Two hours, one technique, the central question of regulatory accessibility."
+  },
+  {
+   "t": 358.07,
+   "text": "Let's start by unpacking what chromatin actually looks like and what \"accessible\" really means at the molecular level."
+  }
+ ]
+}

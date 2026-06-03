@@ -1,0 +1,307 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — The bacterial source: TetR, tetracycline, and the antibiotic resistance circuit",
+ "duration": 415.89,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — The bacterial source: TetR, tetracycline, and the antibiotic resistance circuit"
+  },
+  {
+   "t": 6.96,
+   "text": "To understand the Tet system, you have to understand where its parts came from, and they came from bacteria — specifically, from the tetracycline resistance circuit that some bacteria have evolved to survive in the presence of the antibiotic tetracycline."
+  },
+  {
+   "t": 21.25,
+   "text": "Let's back up."
+  },
+  {
+   "t": 22.21,
+   "text": "Tetracycline is an antibiotic."
+  },
+  {
+   "t": 24.79,
+   "text": "It's a small, fused-ring molecule, originally isolated in the 1940s from soil bacteria of the genus Streptomyces, and it kills bacteria by binding to the 30S subunit of the ribosome and blocking protein synthesis."
+  },
+  {
+   "t": 39.74,
+   "text": "No protein synthesis, no living bacterium."
+  },
+  {
+   "t": 42.96,
+   "text": "Tetracycline was a wonder drug in its day and is still used clinically, though resistance has eroded its effectiveness in many bacterial populations."
+  },
+  {
+   "t": 52.69,
+   "text": "Where there's an antibiotic, there's resistance."
+  },
+  {
+   "t": 55.55,
+   "text": "Bacteria, being bacteria, have evolved many strategies to survive tetracycline."
+  },
+  {
+   "t": 62.06,
+   "text": "One of the most common strategies is to make a pump — a membrane protein called TetA — that grabs tetracycline as it enters the cell and pumps it back out."
+  },
+  {
+   "t": 71.76,
+   "text": "Cells expressing TetA can tolerate tetracycline concentrations that would kill a sensitive strain."
+  },
+  {
+   "t": 78.35,
+   "text": "Beautiful."
+  },
+  {
+   "t": 79.26,
+   "text": "Simple."
+  },
+  {
+   "t": 80.09,
+   "text": "Effective."
+  },
+  {
+   "t": 81.01,
+   "text": "But here's where the engineering gets clever, and where the part we're going to steal lives."
+  },
+  {
+   "t": 85.69,
+   "text": "Making TetA all the time would be expensive — pumping is metabolically costly, and producing the pump protein takes resources."
+  },
+  {
+   "t": 94.78,
+   "text": "If there's no tetracycline around, you don't want to be making the pump."
+  },
+  {
+   "t": 98.33,
+   "text": "You want the pump production to be on only when needed — only when tetracycline is actually present and threatening the cell."
+  },
+  {
+   "t": 106.16,
+   "text": "So the bacterium has evolved a sensing-and-response circuit."
+  },
+  {
+   "t": 109.94,
+   "text": "The tetA gene is not constitutively on."
+  },
+  {
+   "t": 113.01,
+   "text": "It's controlled by a repressor protein called TetR — the tetracycline repressor."
+  },
+  {
+   "t": 118.44,
+   "text": "TetR is a small protein, about 207 amino acids, that binds to a specific DNA sequence sitting just upstream of the tetA gene."
+  },
+  {
+   "t": 128.39,
+   "text": "That DNA sequence is called the tet operator, abbreviated tetO."
+  },
+  {
+   "t": 133.04,
+   "text": "There are actually two adjacent tet operator sites in the natural arrangement, and TetR binds as a homodimer to each one, sitting on the DNA and physically blocking RNA polymerase from transcribing tetA."
+  },
+  {
+   "t": 146.45,
+   "text": "As long as TetR is on the operators, tetA is off."
+  },
+  {
+   "t": 150.61,
+   "text": "No pump gets made."
+  },
+  {
+   "t": 151.72,
+   "text": "Energy saved."
+  },
+  {
+   "t": 153.18,
+   "text": "Now what happens when tetracycline shows up?"
+  },
+  {
+   "t": 156.55,
+   "text": "Tetracycline diffuses into the cell."
+  },
+  {
+   "t": 159.55,
+   "text": "It binds TetR."
+  },
+  {
+   "t": 160.97,
+   "text": "And when TetR binds tetracycline, the protein undergoes a conformational change — its shape literally rearranges — and the rearrangement causes TetR to release the operator DNA."
+  },
+  {
+   "t": 173.14,
+   "text": "The repressor falls off."
+  },
+  {
+   "t": 174.82,
+   "text": "RNA polymerase, which had been blocked, now has access to the promoter."
+  },
+  {
+   "t": 180.06,
+   "text": "tetA gets transcribed, the pump protein gets made, and tetracycline starts getting pumped back out of the cell."
+  },
+  {
+   "t": 187.53,
+   "text": "Crisis averted."
+  },
+  {
+   "t": 188.78,
+   "text": "When tetracycline levels drop — because all of it has been pumped out — TetR no longer has a ligand bound."
+  },
+  {
+   "t": 194.53,
+   "text": "The protein reverts to its operator-binding shape."
+  },
+  {
+   "t": 197.56,
+   "text": "It re-binds the tetO sites."
+  },
+  {
+   "t": 199.78,
+   "text": "tetA shuts off."
+  },
+  {
+   "t": 200.94,
+   "text": "Pump production stops."
+  },
+  {
+   "t": 202.5,
+   "text": "The system returns to its low-cost resting state."
+  },
+  {
+   "t": 205.97,
+   "text": "So look at what evolution has built here."
+  },
+  {
+   "t": 208.11,
+   "text": "There is a protein that binds a specific DNA sequence."
+  },
+  {
+   "t": 212.0,
+   "text": "There is a small molecule that binds that protein and changes its DNA-binding behavior."
+  },
+  {
+   "t": 217.19,
+   "text": "The relationship between the small molecule and the DNA binding is direct, fast, and reversible."
+  },
+  {
+   "t": 223.96,
+   "text": "The small molecule diffuses freely across cell membranes, so it can be delivered from outside the cell just by adding it to the water."
+  },
+  {
+   "t": 232.41,
+   "text": "And the DNA sequence the protein recognizes — the tetO operator — is a short, defined piece of DNA, only about 19 base pairs long, that's specific enough to almost never appear by accident in any natural genome other than the one bacterial context where it evolved."
+  },
+  {
+   "t": 250.19,
+   "text": "If you are a synthetic biologist looking for parts to build a chemical-controlled gene switch in a foreign organism, this is exactly the parts list you would draw up."
+  },
+  {
+   "t": 259.48,
+   "text": "A DNA sequence the host genome doesn't have."
+  },
+  {
+   "t": 262.88,
+   "text": "A protein from somewhere else that binds it."
+  },
+  {
+   "t": 265.83,
+   "text": "A drug that controls the binding."
+  },
+  {
+   "t": 268.15,
+   "text": "Reversible."
+  },
+  {
+   "t": 269.15,
+   "text": "Membrane-permeable."
+  },
+  {
+   "t": 270.65,
+   "text": "Specific."
+  },
+  {
+   "t": 271.73,
+   "text": "The only thing missing is the on switch."
+  },
+  {
+   "t": 274.31,
+   "text": "As I described it, the natural TetR is a repressor — it turns gene expression off in the absence of tetracycline, and tetracycline relieves the repression."
+  },
+  {
+   "t": 284.19,
+   "text": "That's fine for what bacteria need, but it's a slightly awkward mode for a synthetic biologist."
+  },
+  {
+   "t": 289.8,
+   "text": "You typically want a positive control system — a transcription factor that you put on the DNA to activate transcription, not just relieve repression."
+  },
+  {
+   "t": 299.21,
+   "text": "The Gossen-Bujard insight was to take TetR and bolt onto it a piece of a different protein — a powerful viral transcriptional activation domain — and turn the natural repressor into a synthetic activator."
+  },
+  {
+   "t": 311.78,
+   "text": "Now the protein doesn't just block transcription; it actively recruits the transcription machinery and turns the gene on."
+  },
+  {
+   "t": 319.53,
+   "text": "The ligand control comes along for the ride."
+  },
+  {
+   "t": 322.21,
+   "text": "Add tetracycline, ligand binds, protein falls off the DNA — and now, in the synthetic version, it falls off the DNA and the gene goes off, because without the activator there, the gene isn't on."
+  },
+  {
+   "t": 334.38,
+   "text": "That's the basic Tet-Off topology, and it's where we go next."
+  },
+  {
+   "t": 338.24,
+   "text": "But the punchline I want you to hold from this segment is: the entire molecular logic of the Tet system already existed in bacteria long before Gossen and Bujard touched it."
+  },
+  {
+   "t": 348.73,
+   "text": "They didn't invent the sensing mechanism."
+  },
+  {
+   "t": 351.18,
+   "text": "They didn't invent the DNA recognition."
+  },
+  {
+   "t": 353.78,
+   "text": "They didn't invent the conformational change in response to the drug."
+  },
+  {
+   "t": 357.69,
+   "text": "All of that was sitting there, in a tetracycline-resistant E. coli, doing its evolved job for a billion years."
+  },
+  {
+   "t": 365.15,
+   "text": "The synthetic biology contribution was the adaptation — taking those evolved parts, repurposing them, splicing them into a transcriptional activator, and dropping them into a mammalian cell along with the matching promoter."
+  },
+  {
+   "t": 378.79,
+   "text": "The bacterial parts work perfectly well in a human cell because their function — protein binds DNA, drug binds protein, drug controls binding — is general molecular biology that doesn't care what organism it happens in."
+  },
+  {
+   "t": 392.85,
+   "text": "That's the universality theme you should be hearing echoes of if you've already studied Cre-Lox."
+  },
+  {
+   "t": 399.06,
+   "text": "The most powerful synthetic biology tools tend to be borrowed bacterial or viral parts, repurposed into eukaryotic systems where they just happen to work because their underlying biochemistry is universal."
+  },
+  {
+   "t": 411.95,
+   "text": "Right."
+  },
+  {
+   "t": 412.66,
+   "text": "So we have the parts list."
+  },
+  {
+   "t": 414.16,
+   "text": "Now let's build the system."
+  }
+ ]
+}

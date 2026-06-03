@@ -1,0 +1,191 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — The bystander problem — DddA's window and the TC dinucleotide preference",
+ "duration": 294.99,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — The bystander problem — DddA's window and the TC dinucleotide preference"
+  },
+  {
+   "t": 6.9,
+   "text": "I mentioned the bystander problem in the last segment, but it deserves its own treatment, because it's the single most important practical limitation of DdCBE in its original form."
+  },
+  {
+   "t": 17.09,
+   "text": "Here's the issue."
+  },
+  {
+   "t": 18.23,
+   "text": "DddA, like all base-editing deaminases, doesn't read DNA letter by letter."
+  },
+  {
+   "t": 23.74,
+   "text": "It can't tell you \"edit the C at position 8993, leave the C at position 8995 alone."
+  },
+  {
+   "t": 32.58,
+   "text": "\" It sees a region of DNA, and it attacks any C in that region that's in a context it likes."
+  },
+  {
+   "t": 39.23,
+   "text": "The TALE arms determine where the deaminase gets positioned — they bring it to a particular spot — but once it's there, within the ~14-18 base-pair spacer between the two TALE arms, every C is a potential substrate."
+  },
+  {
+   "t": 52.75,
+   "text": "Some Cs get edited more than others, depending on a few factors."
+  },
+  {
+   "t": 56.79,
+   "text": "The most important factor is sequence context."
+  },
+  {
+   "t": 60.01,
+   "text": "DddA has a strong preference for cytosines preceded by a thymine — the so-called TC dinucleotide."
+  },
+  {
+   "t": 67.38,
+   "text": "A C with a T immediately upstream gets edited efficiently."
+  },
+  {
+   "t": 72.03,
+   "text": "A C with an A, G, or C upstream gets edited much less efficiently, sometimes not at all."
+  },
+  {
+   "t": 78.72,
+   "text": "This preference comes from the structure of DddA's active site, which makes specific contacts with the nucleotide just 5' of the target C."
+  },
+  {
+   "t": 87.22,
+   "text": "The second factor is position within the spacer."
+  },
+  {
+   "t": 90.53,
+   "text": "Cs near the center of the spacer tend to get edited more efficiently than Cs near the TALE binding sites, because the geometry of the reassembled DddA places its active site in the middle of the gap."
+  },
+  {
+   "t": 103.21,
+   "text": "Here's the practical consequence."
+  },
+  {
+   "t": 105.22,
+   "text": "Suppose you want to install a specific C-to-T edit at a particular position in mtDNA, and your TALE arms place that position in the middle of the spacer."
+  },
+  {
+   "t": 114.39,
+   "text": "Great."
+  },
+  {
+   "t": 115.16,
+   "text": "The target gets edited."
+  },
+  {
+   "t": 116.81,
+   "text": "But suppose, three bases away, there's another C in a TC context."
+  },
+  {
+   "t": 121.89,
+   "text": "It will also get edited, possibly at a similar rate."
+  },
+  {
+   "t": 125.21,
+   "text": "Now you've installed two edits, when you wanted one."
+  },
+  {
+   "t": 128.03,
+   "text": "Some mtDNA copies will have only the intended edit."
+  },
+  {
+   "t": 131.74,
+   "text": "Some will have only the bystander edit."
+  },
+  {
+   "t": 134.14,
+   "text": "Some will have both."
+  },
+  {
+   "t": 135.3,
+   "text": "Some will have neither."
+  },
+  {
+   "t": 136.7,
+   "text": "You've created a heterogeneous mess."
+  },
+  {
+   "t": 139.18,
+   "text": "For some applications, the bystander is fine — for example, if the bystander C-to-T conversion is silent or in a non-coding region, you don't care."
+  },
+  {
+   "t": 149.5,
+   "text": "For other applications, the bystander is disastrous — for example, if the bystander edit changes another codon and produces a different mutation."
+  },
+  {
+   "t": 159.57,
+   "text": "You might fix the disease-causing mutation only to introduce a new one a few bases away."
+  },
+  {
+   "t": 165.5,
+   "text": "This is why, when designing a DdCBE construct for a particular target, you have to look carefully at the sequence around your target."
+  },
+  {
+   "t": 173.32,
+   "text": "You ask: are there other Cs in the spacer?"
+  },
+  {
+   "t": 176.22,
+   "text": "Are they in TC contexts?"
+  },
+  {
+   "t": 178.26,
+   "text": "What happens if they get edited — silent, missense, nonsense?"
+  },
+  {
+   "t": 182.39,
+   "text": "Can I shift my TALE arm positions to put those Cs outside the spacer, or to position them at less-preferred edges of the editing window?"
+  },
+  {
+   "t": 191.45,
+   "text": "For some disease-causing mtDNA mutations, the surrounding sequence cooperates, and you can install a clean edit with minimal bystander."
+  },
+  {
+   "t": 200.32,
+   "text": "For others, the surrounding sequence is unfortunate, and you face a hard design choice: live with the bystander, or wait for a more precise deaminase."
+  },
+  {
+   "t": 211.16,
+   "text": "This is exactly the same problem that first-generation nuclear cytosine base editors had."
+  },
+  {
+   "t": 216.5,
+   "text": "The editing window of CBE3 — the original Liu lab cytosine base editor — is about 5 base pairs wide, and any C in that window can be edited."
+  },
+  {
+   "t": 227.09,
+   "text": "Bystander editing has been a known issue in nuclear base editing since 2016, and the response from the field has been to engineer narrower-window variants — base editors with deaminases that have more stringent sequence preferences, smaller activity windows, or both."
+  },
+  {
+   "t": 243.47,
+   "text": "We've gotten quite good at this in the nuclear context."
+  },
+  {
+   "t": 246.38,
+   "text": "Variants like CBE4max with narrower windows, or YE1 and YEE deaminase variants with restricted sequence preferences, have made nuclear cytosine base editing much more precise than the original BE3."
+  },
+  {
+   "t": 260.38,
+   "text": "The mitochondrial field is now repeating that engineering effort for DddA."
+  },
+  {
+   "t": 265.83,
+   "text": "The original DdCBE used the wild-type DddA active site, with its strong TC preference and broad editing window across the spacer."
+  },
+  {
+   "t": 275.48,
+   "text": "Subsequent papers have produced variants of DddA with narrower sequence preferences — variants that edit only at specific dinucleotide contexts and leave nearby Cs alone — and these are the variants that are starting to enable cleaner, more precise mtDNA editing."
+  },
+  {
+   "t": 292.88,
+   "text": "We'll cover those in Segment 10."
+  }
+ ]
+}

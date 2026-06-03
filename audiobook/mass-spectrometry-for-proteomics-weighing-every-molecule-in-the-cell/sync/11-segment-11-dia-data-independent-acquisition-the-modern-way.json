@@ -1,0 +1,99 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — DIA — data-independent acquisition, the modern way",
+ "duration": 218.41,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — DIA — data-independent acquisition, the modern way"
+  },
+  {
+   "t": 4.76,
+   "text": "For about two decades, DDA — data-dependent acquisition, the survey-scan-then-pick-top-N approach we discussed in Segment 8 — was the only way to do shotgun proteomics."
+  },
+  {
+   "t": 15.32,
+   "text": "It works."
+  },
+  {
+   "t": 16.3,
+   "text": "But it has a fatal weakness for large-scale quantification: every cycle, the instrument picks which peptides to fragment based on which ones look most intense at that moment, and that choice is stochastic across runs."
+  },
+  {
+   "t": 29.77,
+   "text": "A peptide that gets fragmented in sample A might not be fragmented in sample B, just because it happened to be slightly less intense at the moment the instrument made its decision."
+  },
+  {
+   "t": 40.69,
+   "text": "You end up with peptide identification matrices full of holes — missing values that aren't biology, they're sampling artifacts."
+  },
+  {
+   "t": 48.84,
+   "text": "Around 2012, the field started seriously adopting an alternative called DIA — data-independent acquisition, sometimes specifically called SWATH (sequential window acquisition of all theoretical mass spectra) in its original Sciex implementation."
+  },
+  {
+   "t": 65.04,
+   "text": "The idea is beautifully different."
+  },
+  {
+   "t": 67.84,
+   "text": "In DIA, instead of picking the top N precursors each cycle, the instrument scans through the entire m/z range in defined windows — say, twenty-five m/z-unit windows from 400 to 1000 m/z, twenty-four windows total — and fragments everything in each window, all together, all at once."
+  },
+  {
+   "t": 88.56,
+   "text": "Every peptide eluting at that moment gets fragmented in some window or other."
+  },
+  {
+   "t": 93.95,
+   "text": "Nothing gets skipped."
+  },
+  {
+   "t": 95.21,
+   "text": "The MS2 spectra are messy — each one contains fragments from many co-isolated peptides, not just one — but the same windows are scanned every cycle in every sample, so the sampling is deterministic and reproducible."
+  },
+  {
+   "t": 110.9,
+   "text": "The challenge then becomes deconvolving those mixed MS2 spectra into individual peptide identifications and quantifications."
+  },
+  {
+   "t": 120.3,
+   "text": "The tools that do this — Spectronaut (commercial, from Biognosys) and DIA-NN (free, from Vadim Demichev) — use either pre-built spectral libraries (made from DDA runs) or, more recently, deep learning models that predict expected spectra and retention times."
+  },
+  {
+   "t": 137.99,
+   "text": "DIA-NN in particular has been a game-changer; it's fast, free, and gives very clean quantification across hundreds of samples."
+  },
+  {
+   "t": 146.47,
+   "text": "The analogy: DDA picks the top N peaks each second; DIA fragments ALL peptides in defined m/z windows."
+  },
+  {
+   "t": 155.64,
+   "text": "DDA misses things stochastically; DIA misses nothing systematically."
+  },
+  {
+   "t": 160.94,
+   "text": "For large-scale reproducible quantification across hundreds of samples — which is what clinical proteomics and population studies need — DIA gives you a much more complete and consistent matrix."
+  },
+  {
+   "t": 173.93,
+   "text": "The tradeoff: DIA spectra are harder to interpret, the software is more complex, and you need decent spectral libraries or AI predictors."
+  },
+  {
+   "t": 183.47,
+   "text": "But the reproducibility gain is enormous, and DIA is the modern default for any quantitative proteomics study of more than about twenty samples."
+  },
+  {
+   "t": 193.29,
+   "text": "When you read a modern proteomics paper from 2023 or 2024, the methods section will almost certainly say \"DIA acquisition, analyzed with DIA-NN or Spectronaut."
+  },
+  {
+   "t": 204.68,
+   "text": "\" That's the new standard."
+  },
+  {
+   "t": 206.06,
+   "text": "DDA still dominates for discovery work on small studies and for PTM analysis where you really want clean MS2 spectra, but DIA owns the world of large quantitative proteomics."
+  }
+ ]
+}

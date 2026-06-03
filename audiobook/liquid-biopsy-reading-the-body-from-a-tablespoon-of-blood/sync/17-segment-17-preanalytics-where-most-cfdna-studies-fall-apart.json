@@ -1,0 +1,171 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Preanalytics: where most cfDNA studies fall apart",
+ "duration": 266.26,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Preanalytics: where most cfDNA studies fall apart"
+  },
+  {
+   "t": 5.24,
+   "text": "We've spent a lot of time on what cfDNA assays measure."
+  },
+  {
+   "t": 8.85,
+   "text": "Now I want to spend a segment on something less glamorous but, in practice, often the difference between a study that works and one that doesn't: preanalytics."
+  },
+  {
+   "t": 18.51,
+   "text": "How you collect, handle, and process the blood sample before any sequencing happens."
+  },
+  {
+   "t": 23.75,
+   "text": "This matters more for cfDNA than for almost any other clinical assay, because of the central problem we keep coming back to: cfDNA is a minority signal in a sea of host genomic DNA, and the dominant contaminant — host genomic DNA from lysed blood cells — looks exactly like cfDNA except that there's a lot more of it."
+  },
+  {
+   "t": 45.76,
+   "text": "If your white blood cells lyse in the tube while waiting to be processed, they dump their genomic DNA into the plasma."
+  },
+  {
+   "t": 53.46,
+   "text": "That DNA gets co-purified with the actual cfDNA, dilutes your signal, and can make a tumor allele fraction of 1 percent look like 0.1 percent or less."
+  },
+  {
+   "t": 64.49,
+   "text": "Suddenly your MRD-positive patient looks MRD-negative."
+  },
+  {
+   "t": 68.76,
+   "text": "So preanalytics for cfDNA is mostly about preventing blood-cell lysis between draw and plasma separation."
+  },
+  {
+   "t": 76.21,
+   "text": "The standard approach uses special preservative tubes — Streck Cell-Free DNA BCT, Roche cfDNA Collection Tubes, and similar."
+  },
+  {
+   "t": 85.71,
+   "text": "These tubes contain a fixative that stabilizes blood cells and prevents lysis for up to a week at room temperature, giving you time to ship the sample to a central lab."
+  },
+  {
+   "t": 95.99,
+   "text": "Without these tubes — if you use regular EDTA tubes — you have to spin the blood within a few hours, ideally within one hour, or contamination becomes a serious problem."
+  },
+  {
+   "t": 106.79,
+   "text": "Plasma versus serum."
+  },
+  {
+   "t": 108.8,
+   "text": "Always plasma."
+  },
+  {
+   "t": 110.05,
+   "text": "Never serum."
+  },
+  {
+   "t": 111.14,
+   "text": "Why?"
+  },
+  {
+   "t": 111.85,
+   "text": "Because serum is what's left after blood clots, and the clotting process activates and lyses white blood cells, releasing enormous amounts of genomic DNA into the serum."
+  },
+  {
+   "t": 123.11,
+   "text": "Serum has 5 to 10 times more total cfDNA than plasma from the same draw, but most of it is contaminating genomic DNA, not real cfDNA."
+  },
+  {
+   "t": 133.89,
+   "text": "Plasma — collected with an anticoagulant and processed before clotting — has cleaner cfDNA."
+  },
+  {
+   "t": 140.69,
+   "text": "All modern cfDNA assays use plasma."
+  },
+  {
+   "t": 143.74,
+   "text": "If a protocol calls for serum, run away."
+  },
+  {
+   "t": 146.85,
+   "text": "Centrifugation protocol."
+  },
+  {
+   "t": 148.88,
+   "text": "Two-step centrifugation is standard."
+  },
+  {
+   "t": 151.35,
+   "text": "First spin removes red and white cells."
+  },
+  {
+   "t": 154.51,
+   "text": "Second spin (at higher speed) removes platelets and microparticles that can contaminate the plasma."
+  },
+  {
+   "t": 161.22,
+   "text": "Skip the second spin and you get particulate contamination that confuses downstream library prep."
+  },
+  {
+   "t": 167.8,
+   "text": "Freeze-thaw."
+  },
+  {
+   "t": 168.8,
+   "text": "Plasma cfDNA is reasonably stable to freezing at minus-80, but each freeze-thaw cycle nibbles away at recovery and shifts the fragment size distribution slightly."
+  },
+  {
+   "t": 180.64,
+   "text": "Best practice: aliquot the plasma after the first thaw, refreeze in single-use aliquots."
+  },
+  {
+   "t": 187.34,
+   "text": "Don't refreeze the same aliquot multiple times."
+  },
+  {
+   "t": 190.7,
+   "text": "Input volume."
+  },
+  {
+   "t": 191.91,
+   "text": "More plasma is better."
+  },
+  {
+   "t": 193.82,
+   "text": "The amount of cfDNA you can detect scales with the volume of plasma you process."
+  },
+  {
+   "t": 199.14,
+   "text": "A 10 mL blood draw giving 4 mL of plasma is the typical minimum for clinical assays."
+  },
+  {
+   "t": 206.41,
+   "text": "For very low-shedding cancers or for MRD applications, larger volumes (20 mL or more of blood) may be needed."
+  },
+  {
+   "t": 215.43,
+   "text": "I'm going through this because if you ever find yourself running a cfDNA study, or interpreting cfDNA data, the preanalytic conditions are the first thing to check when results don't make sense."
+  },
+  {
+   "t": 226.96,
+   "text": "Most \"failed\" cfDNA experiments fail at the preanalytic stage."
+  },
+  {
+   "t": 232.03,
+   "text": "Beautiful sequencing on bad samples is just expensive nonsense."
+  },
+  {
+   "t": 236.62,
+   "text": "The practical implication: the lab that processes the blood is as important as the assay that reads the DNA."
+  },
+  {
+   "t": 243.85,
+   "text": "Centralized reference labs with rigorous preanalytic protocols outperform local labs that occasionally do cfDNA work."
+  },
+  {
+   "t": 252.11,
+   "text": "This is part of why companies like Natera, Guardant, GRAIL, CareDx all operate centralized labs — sample shipping is more standardizable than asking every hospital to perfect its own cfDNA preanalytics."
+  }
+ ]
+}

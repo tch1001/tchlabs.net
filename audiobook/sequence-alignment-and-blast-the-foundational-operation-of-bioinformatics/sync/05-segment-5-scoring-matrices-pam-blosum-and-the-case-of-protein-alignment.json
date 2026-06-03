@@ -1,0 +1,227 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Scoring matrices: PAM, BLOSUM, and the case of protein alignment",
+ "duration": 445.29,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Scoring matrices: PAM, BLOSUM, and the case of protein alignment"
+  },
+  {
+   "t": 6.36,
+   "text": "I want to spend a segment on scoring matrices, because they're the part of the alignment story that depends most directly on biology — and because, in a sense, the choice of scoring matrix encodes a model of evolution."
+  },
+  {
+   "t": 19.77,
+   "text": "Different matrices encode different assumptions about how sequences change over time."
+  },
+  {
+   "t": 25.23,
+   "text": "Pick the wrong one and your alignments are misleading."
+  },
+  {
+   "t": 28.18,
+   "text": "For DNA, scoring matrices are simple."
+  },
+  {
+   "t": 31.23,
+   "text": "Match scores some positive number, mismatch scores some negative number, that's it."
+  },
+  {
+   "t": 35.86,
+   "text": "The simplest version is +1 for a match, -1 for a mismatch."
+  },
+  {
+   "t": 40.73,
+   "text": "Slightly more sophisticated versions distinguish between transitions — substitutions within the same chemical class, like purine A swapping for purine G, or pyrimidine C swapping for pyrimidine T — and transversions, which cross chemical classes."
+  },
+  {
+   "t": 57.17,
+   "text": "Transitions are much more common in real evolution than transversions, by a factor of two or three, so a more accurate scoring scheme penalizes transversions more heavily than transitions."
+  },
+  {
+   "t": 69.62,
+   "text": "But for many practical purposes, +1/-1 or +2/-3 is good enough for DNA."
+  },
+  {
+   "t": 77.1,
+   "text": "For protein, scoring matrices are a whole world."
+  },
+  {
+   "t": 80.44,
+   "text": "There are twenty amino acids, which means a substitution matrix is a 20-by-20 table — 400 entries, or 210 if you account for symmetry."
+  },
+  {
+   "t": 91.19,
+   "text": "Each entry encodes how favorable or unfavorable it is to align amino acid X in one sequence with amino acid Y in the other."
+  },
+  {
+   "t": 100.42,
+   "text": "The entries on the diagonal — aligning an amino acid with itself, a match — are positive."
+  },
+  {
+   "t": 107.21,
+   "text": "The off-diagonal entries are usually negative, but with very different magnitudes depending on which two amino acids are involved."
+  },
+  {
+   "t": 114.35,
+   "text": "Aligning leucine with isoleucine costs almost nothing; aligning leucine with arginine is a real penalty."
+  },
+  {
+   "t": 121.72,
+   "text": "The first famous scoring matrix for proteins came from Margaret Dayhoff and her colleagues in 1978 — the PAM matrix, where PAM stands for \"Point Accepted Mutation."
+  },
+  {
+   "t": 131.97,
+   "text": "\" Dayhoff's idea was elegant."
+  },
+  {
+   "t": 134.28,
+   "text": "She took the alignments of all the closely-related protein families known at the time, counted up how often each amino acid was observed to substitute for each other amino acid in real evolution, and built a substitution probability matrix from those observations."
+  },
+  {
+   "t": 150.24,
+   "text": "The matrix PAM-1 represents the substitution probabilities you'd expect after one percent of residues have changed — that is, a very short evolutionary distance."
+  },
+  {
+   "t": 161.71,
+   "text": "To get the substitution probabilities at greater evolutionary distances, you just multiply the PAM-1 matrix by itself."
+  },
+  {
+   "t": 170.12,
+   "text": "PAM-2 is PAM-1 squared."
+  },
+  {
+   "t": 173.16,
+   "text": "PAM-10 is PAM-1 to the tenth power."
+  },
+  {
+   "t": 177.05,
+   "text": "PAM-250, the most commonly used PAM matrix, represents the substitution probabilities expected after 250 percent of residues have changed — which sounds nonsensical, but isn't, because the same residue can be replaced multiple times."
+  },
+  {
+   "t": 193.39,
+   "text": "PAM-250 corresponds to comparing fairly distantly-related proteins, where about 80% of positions have changed."
+  },
+  {
+   "t": 202.1,
+   "text": "Dayhoff's PAM was the standard scoring scheme through the 1980s."
+  },
+  {
+   "t": 206.39,
+   "text": "It was an elegant idea and it worked."
+  },
+  {
+   "t": 208.79,
+   "text": "But it had a flaw: the PAM matrices at high distances were extrapolated from observed mutations at low distances by repeated matrix multiplication."
+  },
+  {
+   "t": 218.0,
+   "text": "The extrapolation assumes that the same substitution probabilities apply at all distances, which is not quite true."
+  },
+  {
+   "t": 225.71,
+   "text": "By the early 1990s, biologists had enough protein alignments at all distances to do something better — build the scoring matrix directly from observations at each distance, no extrapolation needed."
+  },
+  {
+   "t": 238.11,
+   "text": "That's what Steven Henikoff and Jorja Henikoff did in 1992, when they introduced the BLOSUM matrices — BLOcks SUbstitution Matrix."
+  },
+  {
+   "t": 247.31,
+   "text": "They took a database of conserved protein blocks called BLOCKS, grouped the blocks by percent identity — BLOCKS where the aligned sequences are at least 62% identical go into one group, BLOCKS where they're at least 80% identical go into another, and so on — and computed the observed substitution frequencies directly from each group."
+  },
+  {
+   "t": 269.19,
+   "text": "The result was a series of matrices: BLOSUM-30, BLOSUM-45, BLOSUM-62, BLOSUM-80, BLOSUM-90, with the number representing the percent identity threshold of the block group used to construct the matrix."
+  },
+  {
+   "t": 286.27,
+   "text": "Lower numbers correspond to more distant evolutionary relationships, higher numbers to closer ones."
+  },
+  {
+   "t": 293.35,
+   "text": "The single most famous matrix in this family is BLOSUM-62."
+  },
+  {
+   "t": 298.21,
+   "text": "It is the default scoring matrix in BLAST."
+  },
+  {
+   "t": 301.12,
+   "text": "It is the matrix used in the great majority of protein sequence searches done worldwide."
+  },
+  {
+   "t": 306.6,
+   "text": "The number 62 was chosen by the Henikoffs based on empirical testing — it gave the best balance between sensitivity and specificity across a range of search tasks."
+  },
+  {
+   "t": 317.79,
+   "text": "If you've ever run a BLASTP search and not specified a matrix, you used BLOSUM-62."
+  },
+  {
+   "t": 324.67,
+   "text": "It is, in a real sense, the default model of protein evolution that most of bioinformatics implicitly assumes."
+  },
+  {
+   "t": 332.59,
+   "text": "The entries of BLOSUM-62 capture biology in numeric form."
+  },
+  {
+   "t": 337.64,
+   "text": "Aligning tryptophan with itself scores +11 — the highest in the matrix, because tryptophan is the largest and most distinctive amino acid, and a tryptophan-tryptophan match is very informative."
+  },
+  {
+   "t": 350.46,
+   "text": "Aligning leucine with isoleucine scores +2 — positive, because they're chemically interchangeable."
+  },
+  {
+   "t": 357.67,
+   "text": "Aligning leucine with tryptophan scores -2 — negative, because they're chemically dissimilar."
+  },
+  {
+   "t": 364.25,
+   "text": "Aligning cysteine with cysteine scores +9 — high, because cysteine is rare and often functionally important (it makes disulfide bonds)."
+  },
+  {
+   "t": 373.99,
+   "text": "Each entry, in some sense, captures sixty years of accumulated protein evolution data in one number."
+  },
+  {
+   "t": 381.95,
+   "text": "For DNA, an analogous family of empirical scoring schemes exists, but they're less commonly used than the simple +1/-1 schemes — partly because DNA evolution is more uniform across positions, and partly because most DNA alignment is done at the level of very recent evolution (reads to reference), where simple schemes work fine."
+  },
+  {
+   "t": 404.54,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 405.81,
+   "text": "A scoring matrix is a model of evolution baked into a lookup table."
+  },
+  {
+   "t": 410.61,
+   "text": "PAM and BLOSUM aren't just numbers — they're empirical observations about how proteins change over time, distilled into a form the alignment algorithm can use."
+  },
+  {
+   "t": 421.42,
+   "text": "Picking the right matrix for your evolutionary distance is like picking the right ruler for the size of the object you're measuring."
+  },
+  {
+   "t": 428.21,
+   "text": "Use BLOSUM-90 for close relatives, BLOSUM-45 for distant ones."
+  },
+  {
+   "t": 434.44,
+   "text": "Use the wrong one and your alignments will be biased."
+  },
+  {
+   "t": 437.56,
+   "text": "That's the picture."
+  },
+  {
+   "t": 438.72,
+   "text": "The matrix is biology; the algorithm is mathematics; together they give you a sequence alignment."
+  }
+ ]
+}

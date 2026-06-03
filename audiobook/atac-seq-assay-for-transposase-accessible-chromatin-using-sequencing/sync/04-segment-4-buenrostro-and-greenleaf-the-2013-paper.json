@@ -1,0 +1,251 @@
+{
+ "n": 4,
+ "title": "SEGMENT 4 — Buenrostro and Greenleaf — the 2013 paper",
+ "duration": 463.0,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 4 — Buenrostro and Greenleaf — the 2013 paper"
+  },
+  {
+   "t": 5.69,
+   "text": "The breakthrough came from a Stanford lab in 2013."
+  },
+  {
+   "t": 9.62,
+   "text": "The paper was titled \"Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, DNA-binding proteins and nucleosome position,\" published in Nature Methods in October 2013, by Jason Buenrostro, Paul Giresi, Lisa Zaba, Howard Chang, and William Greenleaf."
+  },
+  {
+   "t": 30.49,
+   "text": "The corresponding authors were Howard Chang and Will Greenleaf, both at Stanford."
+  },
+  {
+   "t": 35.42,
+   "text": "Jason Buenrostro, then a graduate student in Greenleaf's lab, was the first author and the driving force behind the development."
+  },
+  {
+   "t": 44.01,
+   "text": "The paper had a simple, audacious thesis."
+  },
+  {
+   "t": 47.15,
+   "text": "Take the existing accessibility problem — millions of cells, days of protocol, DNase or FAIRE — and replace it with a one-step reaction using a hyperactive transposase loaded with sequencing adapters."
+  },
+  {
+   "t": 60.81,
+   "text": "The transposase, when added to permeabilized nuclei, would preferentially insert into accessible chromatin, simultaneously cutting the DNA and ligating in the adapters needed for sequencing."
+  },
+  {
+   "t": 73.46,
+   "text": "The whole sample-prep step, from nuclei to sequencing-ready library, would collapse into a single tube, taking about thirty minutes of enzyme work and a few hours of PCR."
+  },
+  {
+   "t": 85.0,
+   "text": "The input would drop from millions of cells to tens of thousands."
+  },
+  {
+   "t": 89.09,
+   "text": "Same biology."
+  },
+  {
+   "t": 90.34,
+   "text": "Vastly less material."
+  },
+  {
+   "t": 92.03,
+   "text": "Vastly less time."
+  },
+  {
+   "t": 93.35,
+   "text": "It worked."
+  },
+  {
+   "t": 94.2,
+   "text": "The original paper showed accessibility maps from 50,000 cells, with comparable or better quality than DNase-seq libraries from millions of cells."
+  },
+  {
+   "t": 104.58,
+   "text": "The signal-to-noise was clean."
+  },
+  {
+   "t": 106.75,
+   "text": "The peaks corresponded to known regulatory regions."
+  },
+  {
+   "t": 110.31,
+   "text": "And the whole thing took about four hours, from cells to library, on a benchtop."
+  },
+  {
+   "t": 115.15,
+   "text": "The conceptual insight here is worth pausing on, because it's a beautiful example of how a single piece of clever biochemistry, repurposed from another context, can collapse a hard problem into an easy one."
+  },
+  {
+   "t": 128.55,
+   "text": "The enzyme at the heart of ATAC-seq — Tn5 transposase — was not invented for ATAC-seq."
+  },
+  {
+   "t": 136.5,
+   "text": "It came from a totally different lineage."
+  },
+  {
+   "t": 138.79,
+   "text": "Tn5 is a bacterial transposase, isolated from the bacterial transposon Tn5, originally discovered in the 1970s as a mobile genetic element that bacteria use to spread antibiotic resistance genes."
+  },
+  {
+   "t": 153.5,
+   "text": "The wild-type enzyme has, as its natural function, the ability to recognize specific DNA sequences at the ends of its own transposon, excise the transposon, and insert it into a new genomic location — a cut-and-paste mechanism."
+  },
+  {
+   "t": 169.25,
+   "text": "It's a transposition machine, evolved over hundreds of millions of years to move DNA around."
+  },
+  {
+   "t": 175.6,
+   "text": "In the 1990s and 2000s, biochemists — particularly William Reznikoff at the University of Wisconsin — worked extensively on Tn5 and produced a hyperactive variant, called E54K/M56A/L372P, that transposes about a thousand times more efficiently than the wild-type."
+  },
+  {
+   "t": 197.85,
+   "text": "This hyperactive Tn5 became a workhorse for in vitro transposition reactions, used for things like generating random insertion libraries in bacterial genomes."
+  },
+  {
+   "t": 209.19,
+   "text": "Then, in the late 2000s, Illumina engineers had the further idea to use Tn5 for sequencing library prep."
+  },
+  {
+   "t": 217.06,
+   "text": "The trick was to load the transposase, in vitro, with synthetic DNA adapter molecules — short pieces of DNA carrying the sequences Illumina needs at the ends of any sequencing library — instead of with its natural transposon ends."
+  },
+  {
+   "t": 232.89,
+   "text": "When this adapter-loaded Tn5 attacks a piece of genomic DNA, it cuts the DNA in half and simultaneously ligates an adapter to the cut end."
+  },
+  {
+   "t": 243.4,
+   "text": "One reaction."
+  },
+  {
+   "t": 244.51,
+   "text": "One step."
+  },
+  {
+   "t": 245.5,
+   "text": "From genomic DNA to adapter-flanked fragments, ready for sequencing."
+  },
+  {
+   "t": 250.51,
+   "text": "This is the Nextera library prep, launched by Illumina in 2010, and it was a quiet revolution in how sequencing libraries get made."
+  },
+  {
+   "t": 260.01,
+   "text": "So when Buenrostro and Greenleaf were thinking about how to map chromatin accessibility, they had a piece of biochemistry sitting on the shelf — adapter-loaded Tn5, originally developed for ordinary library prep — that, by its very nature, prefers to insert into accessible DNA."
+  },
+  {
+   "t": 277.74,
+   "text": "The bulky transposase, with its adapter cargo, is physically too large to invade nucleosome-wrapped DNA."
+  },
+  {
+   "t": 285.39,
+   "text": "It can only get into the gaps."
+  },
+  {
+   "t": 287.15,
+   "text": "It can only attack the open regions."
+  },
+  {
+   "t": 289.56,
+   "text": "If you take that enzyme and dump it onto a nucleus, it will preferentially cut and adapter-tag the accessible chromatin, ignoring the closed regions entirely."
+  },
+  {
+   "t": 299.7,
+   "text": "The leap, then, was this: don't use Tn5 to fragment purified genomic DNA."
+  },
+  {
+   "t": 305.95,
+   "text": "Use it on intact nuclei, where the chromatin structure is preserved."
+  },
+  {
+   "t": 310.62,
+   "text": "Let the enzyme decide for itself which parts of the genome to cut, based on what it can physically access."
+  },
+  {
+   "t": 316.94,
+   "text": "The cut sites become the map of accessibility."
+  },
+  {
+   "t": 319.86,
+   "text": "The adapter ligation happens in the same step."
+  },
+  {
+   "t": 322.82,
+   "text": "Amplify by PCR, sequence, map the reads, and you have your accessibility profile."
+  },
+  {
+   "t": 329.3,
+   "text": "This is one of those ideas that, in retrospect, feels obvious — but the moment of recognition required someone to see Tn5 not as a library prep tool but as a sensor of chromatin structure."
+  },
+  {
+   "t": 341.55,
+   "text": "That recognition, made cleanly in the Greenleaf lab in 2012 and demonstrated in the 2013 paper, is the founding insight of the technique."
+  },
+  {
+   "t": 351.79,
+   "text": "I want to single out a few things about the 2013 paper."
+  },
+  {
+   "t": 355.45,
+   "text": "First, the input requirement: they showed clean data from 500 to 50,000 cells, with the headline number around 50,000."
+  },
+  {
+   "t": 363.99,
+   "text": "That's two orders of magnitude lower than DNase-seq."
+  },
+  {
+   "t": 367.41,
+   "text": "Second, the time: under four hours from cells to library, against multiple days for DNase."
+  },
+  {
+   "t": 374.29,
+   "text": "Third, the multi-modal output: the technique gives you, simultaneously, a map of accessibility, a map of nucleosome positions (from the fragment size distribution, which we'll discuss in detail in Segment 7), and the possibility of inferring transcription factor binding from the footprints in the data."
+  },
+  {
+   "t": 393.79,
+   "text": "Three readouts from one experiment."
+  },
+  {
+   "t": 395.97,
+   "text": "This was a striking efficiency gain."
+  },
+  {
+   "t": 398.47,
+   "text": "The paper was widely read, widely adopted, and within about three years ATAC-seq had become the default accessibility assay in the field."
+  },
+  {
+   "t": 407.32,
+   "text": "DNase-seq is still used, particularly for legacy compatibility with the enormous ENCODE catalog, but ATAC-seq is the technique most new labs reach for when they want to map open chromatin in a new sample."
+  },
+  {
+   "t": 420.66,
+   "text": "The shift was clean."
+  },
+  {
+   "t": 421.94,
+   "text": "By 2017, the majority of accessibility papers in major journals were using ATAC-seq."
+  },
+  {
+   "t": 428.8,
+   "text": "By 2020, single-cell ATAC-seq had become a routine extension of the method, which we'll get to in Segment 12."
+  },
+  {
+   "t": 435.66,
+   "text": "So the lineage is: Tn5 transposase from a 1970s bacterial transposon, engineered into a hyperactive variant in the 1990s, loaded with sequencing adapters by Illumina in 2010 for library prep, and then in 2013 redirected by Buenrostro and Greenleaf onto intact nuclei to read out chromatin accessibility."
+  },
+  {
+   "t": 459.09,
+   "text": "Each step builds on the last."
+  },
+  {
+   "t": 460.85,
+   "text": "The history is the technique."
+  }
+ ]
+}

@@ -1,0 +1,235 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The landing-pad workflow — install once, dock forever",
+ "duration": 454.54,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The landing-pad workflow — install once, dock forever"
+  },
+  {
+   "t": 5.53,
+   "text": "This is the heart of the practical application of serine integrases."
+  },
+  {
+   "t": 10.2,
+   "text": "Let me walk through the landing-pad concept slowly, because it is the dominant industrial use of these enzymes today and once you see it, you'll see it everywhere."
+  },
+  {
+   "t": 20.36,
+   "text": "The basic problem the landing pad solves is reproducibility of cell-line engineering."
+  },
+  {
+   "t": 26.09,
+   "text": "Imagine you're working in a biotech company, and your job is to engineer Chinese hamster ovary (CHO) cells to express a monoclonal antibody."
+  },
+  {
+   "t": 35.92,
+   "text": "The conventional approach, for decades, has been: deliver the antibody-expression cassette by random integration — transfect a linearized plasmid and let it integrate wherever it lands in the genome — then screen tens of thousands of clones to find a few that happen to have landed in a favorable genomic location with high, stable, sustained expression."
+  },
+  {
+   "t": 57.12,
+   "text": "The good clones are gold."
+  },
+  {
+   "t": 58.5,
+   "text": "The bad clones are noise."
+  },
+  {
+   "t": 60.29,
+   "text": "The screening takes months."
+  },
+  {
+   "t": 62.02,
+   "text": "The successful clones are unique to that one engineering campaign — if you want to make a different antibody next year, you have to repeat the whole random-integration-plus-screening process from scratch, because the location of the new antibody's integration is unrelated to the location of the old one."
+  },
+  {
+   "t": 79.08,
+   "text": "This is wasteful."
+  },
+  {
+   "t": 80.44,
+   "text": "The good integration sites are the same good integration sites every time — the favorable, transcriptionally-active, stably-expressing chromosomal locations that exist in the CHO genome."
+  },
+  {
+   "t": 92.49,
+   "text": "What if, instead of rediscovering them every time by random integration plus screening, you found a good site once, installed a \"landing pad\" at that site — a defined docking sequence — and then for every future engineering project, just delivered new cargo to that same defined site?"
+  },
+  {
+   "t": 110.12,
+   "text": "That is the landing-pad workflow."
+  },
+  {
+   "t": 112.03,
+   "text": "Here's how it works."
+  },
+  {
+   "t": 113.24,
+   "text": "Step one: Find a good chromosomal site."
+  },
+  {
+   "t": 116.34,
+   "text": "This is a one-time investment."
+  },
+  {
+   "t": 118.16,
+   "text": "You characterize the CHO genome (or whatever cell line you're using), identify chromosomal locations that give strong, stable expression and don't disrupt anything important — sometimes called \"safe harbor\" sites, with names like AAVS1 in human cells, ROSA26 in mouse cells, or proprietary equivalents in CHO."
+  },
+  {
+   "t": 139.43,
+   "text": "This characterization takes time but only needs to be done once for a given cell line."
+  },
+  {
+   "t": 144.54,
+   "text": "Step two: Install the landing pad."
+  },
+  {
+   "t": 147.14,
+   "text": "Using CRISPR plus HDR — Cas9 to cut at the chosen safe-harbor site, plus a donor template with homology arms flanking an attB sequence (or attP, depending on the design) — install the att site into the chromosome at the chosen location."
+  },
+  {
+   "t": 164.46,
+   "text": "This is the hard step, because HDR is inefficient and you have to screen for clones that incorporated the landing pad correctly, but again, it's a one-time investment."
+  },
+  {
+   "t": 173.76,
+   "text": "You make a clone — let's call it the master cell line — that carries the attB landing pad at the safe-harbor site, and you bank it."
+  },
+  {
+   "t": 181.68,
+   "text": "Frozen vials."
+  },
+  {
+   "t": 182.99,
+   "text": "Validated."
+  },
+  {
+   "t": 183.96,
+   "text": "Sequenced."
+  },
+  {
+   "t": 185.04,
+   "text": "Documented."
+  },
+  {
+   "t": 186.06,
+   "text": "This is your foundation cell line, and every future engineering project starts from these vials."
+  },
+  {
+   "t": 192.75,
+   "text": "Step three: Dock cargo via Bxb1."
+  },
+  {
+   "t": 195.96,
+   "text": "Now, for any future engineering project — any new antibody, any new protein product, any new cassette you want to express — you simply transfect the master cell line with two things: the Bxb1 integrase (as a plasmid or mRNA) and a donor plasmid carrying your cargo flanked by attP sites that match the attB landing pad."
+  },
+  {
+   "t": 218.1,
+   "text": "The Bxb1 integrase recombines the attP-cargo into the attB landing pad, depositing your cargo at the exact same chromosomal location every time."
+  },
+  {
+   "t": 228.76,
+   "text": "Select for clones that took up the integration (using a selection marker on the cargo), and within a few weeks you have a stable, high-expressing, characterized cell line — without any random integration, without any clone screening, without any campaign-specific search for the good integration site."
+  },
+  {
+   "t": 245.45,
+   "text": "The savings are enormous."
+  },
+  {
+   "t": 247.25,
+   "text": "What used to be a six-month screen of tens of thousands of clones becomes a two-week transfection-and-selection of dozens of clones, all of which have the cargo in the same predictable, characterized location."
+  },
+  {
+   "t": 259.27,
+   "text": "The CHO cell line engineering industry — billions of dollars a year of monoclonal antibody production — has largely transitioned to landing-pad-based workflows, with Bxb1 or related serine integrases as the docking enzyme."
+  },
+  {
+   "t": 274.35,
+   "text": "Companies like Lonza, Wuxi Biologics, Catalent, and others offer \"platform\" CHO cell lines built around proprietary landing-pad systems."
+  },
+  {
+   "t": 284.45,
+   "text": "This is the analogy I want you to hold for the workflow."
+  },
+  {
+   "t": 287.6,
+   "text": "A random-integration cell line is like throwing darts at a board to find the bullseye, and then having to throw all over again for every new dart."
+  },
+  {
+   "t": 295.99,
+   "text": "A landing-pad cell line is like nailing a piece of Velcro to the bullseye once, and then every future dart just snaps onto the Velcro automatically."
+  },
+  {
+   "t": 305.31,
+   "text": "Or, in slightly different language: the landing pad is a one-time investment that pays an industrial dividend on every subsequent engineering project."
+  },
+  {
+   "t": 314.84,
+   "text": "You're amortizing the cost of finding-and-validating a good chromosomal site across every product you'll ever make at that site."
+  },
+  {
+   "t": 323.23,
+   "text": "A few more details about landing-pad design that you'll see in papers:"
+  },
+  {
+   "t": 327.69,
+   "text": "Single-site landing pads have one attB at the chromosomal site, and the cargo plasmid has one attP."
+  },
+  {
+   "t": 335.38,
+   "text": "After integration, the entire cargo plasmid backbone — including the bacterial origin of replication and the selection marker — ends up in the genome, flanked by attL and attR."
+  },
+  {
+   "t": 347.86,
+   "text": "This is simple but somewhat wasteful: you've installed a bunch of irrelevant bacterial DNA into your mammalian chromosome."
+  },
+  {
+   "t": 355.48,
+   "text": "Cassette-exchange landing pads (RMCE — recombinase-mediated cassette exchange) are smarter."
+  },
+  {
+   "t": 362.66,
+   "text": "The chromosomal landing pad has two different att sites — say attB and attP — flanking a placeholder cassette (often a fluorescent reporter or a counter-selectable marker)."
+  },
+  {
+   "t": 374.86,
+   "text": "The cargo plasmid has the complementary sites — attP and attB — flanking the payload."
+  },
+  {
+   "t": 381.96,
+   "text": "When Bxb1 acts, it exchanges the placeholder cassette for the payload cassette, leaving the backbone of the cargo plasmid behind."
+  },
+  {
+   "t": 390.77,
+   "text": "The result: clean integration of just the payload, with the bacterial backbone never entering the genome."
+  },
+  {
+   "t": 397.62,
+   "text": "We'll have a whole segment on RMCE later."
+  },
+  {
+   "t": 400.19,
+   "text": "Inducible landing pads add a regulatory element — a tetracycline-responsive promoter, for example — so that the cargo's expression can be turned on and off after integration."
+  },
+  {
+   "t": 411.05,
+   "text": "This is useful for studying toxic gene products or for tightly regulating therapeutic expression."
+  },
+  {
+   "t": 417.24,
+   "text": "Multiplexed landing pads install several different att sites (recognized by different orthogonal serine integrases — say Bxb1's site at one location and phiC31's at another) so that multiple cargo cassettes can be docked independently at multiple locations in the same cell."
+  },
+  {
+   "t": 435.81,
+   "text": "This is powerful for building complex synthetic-biology circuits where different parts need to live at different chromosomal addresses."
+  },
+  {
+   "t": 443.95,
+   "text": "That's the landing-pad workflow."
+  },
+  {
+   "t": 445.94,
+   "text": "It is the dominant practical use of serine integrases today, and it's the foundation on which PASTE is built — which is the next segment."
+  }
+ ]
+}

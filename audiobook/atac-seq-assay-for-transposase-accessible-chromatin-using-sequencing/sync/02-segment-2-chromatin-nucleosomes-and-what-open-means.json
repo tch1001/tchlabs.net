@@ -1,0 +1,199 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — Chromatin, nucleosomes, and what \"open\" means",
+ "duration": 335.52,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — Chromatin, nucleosomes, and what \"open\" means"
+  },
+  {
+   "t": 4.44,
+   "text": "Before we can talk about mapping open chromatin, we have to be precise about what chromatin is and what we mean by open versus closed."
+  },
+  {
+   "t": 12.1,
+   "text": "A lot of the intuition for ATAC-seq depends on getting this picture right, so let me build it carefully."
+  },
+  {
+   "t": 18.5,
+   "text": "DNA, inside a living human cell, is not naked."
+  },
+  {
+   "t": 22.52,
+   "text": "It does not float around as a long floppy string."
+  },
+  {
+   "t": 25.82,
+   "text": "It is wrapped, systematically and tightly, around protein spools called nucleosomes."
+  },
+  {
+   "t": 31.56,
+   "text": "Each nucleosome is a small disk-shaped assembly built from eight histone proteins — two copies each of H2A, H2B, H3, and H4."
+  },
+  {
+   "t": 42.54,
+   "text": "Around that octamer the DNA wraps for about one and three-quarter turns, which corresponds to roughly 147 base pairs of DNA per nucleosome."
+  },
+  {
+   "t": 53.3,
+   "text": "Between nucleosomes, there's typically a short stretch of linker DNA — anywhere from 20 to 80 base pairs depending on the cell type and the region of the genome."
+  },
+  {
+   "t": 63.06,
+   "text": "So if you took a chromosome and stretched it out and zoomed in, the first thing you'd see is the beads-on-a-string structure: nucleosomes every couple hundred base pairs along the DNA, separated by short open linkers."
+  },
+  {
+   "t": 75.99,
+   "text": "Now, most of the genome is not just sitting in this beads-on-a-string conformation."
+  },
+  {
+   "t": 81.53,
+   "text": "Most of it is folded into higher-order structures — fibers, loops, and ultimately the dense, inaccessible domains we call heterochromatin."
+  },
+  {
+   "t": 90.66,
+   "text": "Heterochromatin is the genome's dark side: closed, packed, transcriptionally silent."
+  },
+  {
+   "t": 96.92,
+   "text": "The other side of the spectrum, euchromatin, is the open, accessible, transcriptionally engaged compartment."
+  },
+  {
+   "t": 104.08,
+   "text": "Most of the action of gene regulation happens in or at the edges of euchromatin."
+  },
+  {
+   "t": 109.59,
+   "text": "But here's the crucial point."
+  },
+  {
+   "t": 111.24,
+   "text": "Even within euchromatin, not every base pair is equally accessible."
+  },
+  {
+   "t": 116.29,
+   "text": "Most of the DNA is still wrapped on nucleosomes, even in active regions."
+  },
+  {
+   "t": 121.44,
+   "text": "The accessible fraction — the part where proteins can actually reach down and bind — is the linker DNA between nucleosomes, plus a special class of regions where the nucleosomes have been actively evicted or pushed aside."
+  },
+  {
+   "t": 135.05,
+   "text": "These nucleosome-depleted or nucleosome-free regions, often called NDRs or NFRs, are where the most important regulatory events happen."
+  },
+  {
+   "t": 144.78,
+   "text": "They're the gaps in the chromatin packaging."
+  },
+  {
+   "t": 147.15,
+   "text": "They're the windows through which the regulatory machinery can see the genome."
+  },
+  {
+   "t": 151.7,
+   "text": "Where do you find nucleosome-free regions?"
+  },
+  {
+   "t": 154.47,
+   "text": "You find them at three main classes of location."
+  },
+  {
+   "t": 157.46,
+   "text": "First, at the promoters of active genes."
+  },
+  {
+   "t": 160.43,
+   "text": "Just upstream of where transcription begins on an active gene, the nucleosomes have been cleared out, leaving a stretch of bare DNA — usually about 100 to 200 base pairs — that transcription factors and RNA polymerase can bind to."
+  },
+  {
+   "t": 175.7,
+   "text": "The clearance is dynamic and regulated, and the size and position of the nucleosome-free region at a promoter is a reasonable indicator of how active the gene is."
+  },
+  {
+   "t": 185.49,
+   "text": "Second, at enhancers."
+  },
+  {
+   "t": 187.24,
+   "text": "Enhancers are the distal regulatory elements — sometimes thousands or tens of thousands of base pairs away from the genes they control — where cell-type-specific transcription factors bind to drive cell-type-specific gene expression."
+  },
+  {
+   "t": 202.15,
+   "text": "Like promoters, active enhancers have nucleosome-free regions over them, with characteristic flanking nucleosomes that often carry distinctive histone modifications."
+  },
+  {
+   "t": 213.24,
+   "text": "Third, at transcription factor binding sites generally."
+  },
+  {
+   "t": 217.1,
+   "text": "When a transcription factor is sitting at its sequence motif, it displaces or disturbs the local nucleosome, opening up a small footprint of accessible DNA."
+  },
+  {
+   "t": 228.03,
+   "text": "Many of the accessible regions in a genome are essentially the footprints of transcription factors in action."
+  },
+  {
+   "t": 235.59,
+   "text": "So the accessible chromatin landscape — the set of open windows in the genome — is largely a map of the active regulatory machinery."
+  },
+  {
+   "t": 244.7,
+   "text": "Promoters, enhancers, transcription factor binding sites."
+  },
+  {
+   "t": 249.38,
+   "text": "Map those, and you have a map of what the cell is doing regulatorily."
+  },
+  {
+   "t": 253.46,
+   "text": "Map them in different cell types, and you have a map of what makes one cell type different from another."
+  },
+  {
+   "t": 259.34,
+   "text": "Now, here's where it gets interesting and why ATAC-seq matters."
+  },
+  {
+   "t": 263.79,
+   "text": "The number of accessible regions in a typical human cell is on the order of fifty thousand to a few hundred thousand peaks."
+  },
+  {
+   "t": 271.15,
+   "text": "That's a tiny fraction of the genome — maybe one to three percent of the total sequence."
+  },
+  {
+   "t": 276.84,
+   "text": "But these peaks are the parts of the genome where the regulatory action is concentrated."
+  },
+  {
+   "t": 281.8,
+   "text": "If you want to understand how a cell is regulated — which genes are on, which enhancers are driving them, which transcription factors are at work — these accessible regions are where to look."
+  },
+  {
+   "t": 292.61,
+   "text": "They're the addresses of activity."
+  },
+  {
+   "t": 294.6,
+   "text": "The closed, heterochromatic 97 percent is mostly quiet, structurally important, but regulatorily inert at any given moment."
+  },
+  {
+   "t": 304.39,
+   "text": "So a method that gives you a genome-wide map of accessibility is, in effect, a map of regulatory hotspots."
+  },
+  {
+   "t": 313.07,
+   "text": "That's the prize."
+  },
+  {
+   "t": 314.34,
+   "text": "And the question that ATAC-seq solves — better, faster, and cheaper than every prior method — is how to draw that map without needing huge amounts of starting material, complicated multi-step protocols, or specialized antibodies for every protein you might care about."
+  },
+  {
+   "t": 330.74,
+   "text": "Let me show you what came before, so the leap of ATAC-seq becomes clear."
+  }
+ ]
+}

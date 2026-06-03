@@ -1,0 +1,315 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The typical experiment, step by step",
+ "duration": 392.3,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The typical experiment, step by step"
+  },
+  {
+   "t": 4.11,
+   "text": "Now let me walk you through what a typical recombineering experiment actually looks like, so you have a concrete picture of how the pieces fit together."
+  },
+  {
+   "t": 11.86,
+   "text": "Pretend you are the graduate student."
+  },
+  {
+   "t": 13.75,
+   "text": "Your goal: replace the gene lacZ in the E. coli chromosome with a kanamycin resistance cassette."
+  },
+  {
+   "t": 20.62,
+   "text": "Why?"
+  },
+  {
+   "t": 21.35,
+   "text": "Because it is the canonical first experiment — lacZ is famous, kanamycin selection is easy, and you want to learn the technique on something where success is unambiguous."
+  },
+  {
+   "t": 32.5,
+   "text": "Step one: design your homology arms."
+  },
+  {
+   "t": 35.46,
+   "text": "You look up the sequence of the lacZ gene in the E. coli chromosome."
+  },
+  {
+   "t": 39.9,
+   "text": "You pick fifty base pairs immediately upstream of the gene — call that arm A."
+  },
+  {
+   "t": 45.08,
+   "text": "You pick fifty base pairs immediately downstream — call that arm B."
+  },
+  {
+   "t": 49.5,
+   "text": "These are your sticky notes."
+  },
+  {
+   "t": 51.05,
+   "text": "They say: \"paste me HERE."
+  },
+  {
+   "t": 53.14,
+   "text": "\""
+  },
+  {
+   "t": 53.34,
+   "text": "Step two: design your primers."
+  },
+  {
+   "t": 55.8,
+   "text": "You order two PCR primers."
+  },
+  {
+   "t": 58.17,
+   "text": "The forward primer consists of arm A — those fifty bases — followed by twenty bases matching the beginning of the kanamycin resistance cassette you plan to amplify."
+  },
+  {
+   "t": 69.15,
+   "text": "The reverse primer consists of arm B — fifty bases — followed by twenty bases matching the end of the kanamycin cassette."
+  },
+  {
+   "t": 77.71,
+   "text": "So each primer is about seventy bases long."
+  },
+  {
+   "t": 80.76,
+   "text": "The fifty-base homology section is what is going to drive integration."
+  },
+  {
+   "t": 84.85,
+   "text": "The twenty-base section is what allows the primer to anneal to your template and amplify."
+  },
+  {
+   "t": 89.84,
+   "text": "Step three: do the PCR."
+  },
+  {
+   "t": 92.33,
+   "text": "Your template is a plasmid that contains a clean kanamycin resistance cassette flanked by appropriate features."
+  },
+  {
+   "t": 99.28,
+   "text": "You set up a PCR reaction with your two long primers and the plasmid template."
+  },
+  {
+   "t": 104.2,
+   "text": "The PCR product comes out as a linear, double-stranded DNA fragment about twelve hundred base pairs long, with arm A on one end, the kanamycin cassette in the middle, and arm B on the other end."
+  },
+  {
+   "t": 117.01,
+   "text": "You purify it."
+  },
+  {
+   "t": 118.17,
+   "text": "Clean it up."
+  },
+  {
+   "t": 119.03,
+   "text": "Run a small amount on a gel to confirm it is the right size."
+  },
+  {
+   "t": 122.7,
+   "text": "Step four: prepare your recombineering-competent cells."
+  },
+  {
+   "t": 126.66,
+   "text": "This is where the Red proteins come in."
+  },
+  {
+   "t": 128.99,
+   "text": "You have a strain of E. coli that carries the lambda Red genes — gam, bet, exo — on a plasmid or integrated into the chromosome, under control of an inducible promoter."
+  },
+  {
+   "t": 140.61,
+   "text": "The classic systems use a temperature-sensitive promoter, so the Red genes are silent at thirty degrees Celsius and turn on when you shift to forty-two degrees for fifteen minutes."
+  },
+  {
+   "t": 151.3,
+   "text": "Other systems use a chemical inducer like arabinose."
+  },
+  {
+   "t": 154.93,
+   "text": "The important point is: the Red genes are off most of the time, and you turn them on briefly, right before doing the recombineering, so the cell makes a burst of Red proteins."
+  },
+  {
+   "t": 165.05,
+   "text": "So you grow your cells overnight at thirty degrees."
+  },
+  {
+   "t": 168.38,
+   "text": "Next morning, you dilute them into fresh medium, grow them until they hit mid-log phase."
+  },
+  {
+   "t": 174.44,
+   "text": "Then you shift them to forty-two degrees for fifteen minutes, inducing Red expression."
+  },
+  {
+   "t": 179.84,
+   "text": "Then you chill them on ice — quickly — and wash them several times in cold water, to make them electroporation-competent."
+  },
+  {
+   "t": 187.47,
+   "text": "By the end of step four, you have a pellet of cells that are full of Red proteins and ready to take up DNA."
+  },
+  {
+   "t": 193.89,
+   "text": "Step five: electroporate."
+  },
+  {
+   "t": 196.28,
+   "text": "You mix your PCR product — a few hundred nanograms of it — with the cell pellet."
+  },
+  {
+   "t": 201.15,
+   "text": "You pipette the mixture into a cold electroporation cuvette."
+  },
+  {
+   "t": 205.18,
+   "text": "You apply a high-voltage pulse — usually about eighteen hundred volts for one millisecond."
+  },
+  {
+   "t": 210.69,
+   "text": "The pulse temporarily opens up the bacterial membrane, and your DNA fragment enters the cell."
+  },
+  {
+   "t": 217.15,
+   "text": "Inside the cell, Gam blocks RecBCD, Exo chews back the ends to expose single strands, Beta coats the single strands and drives them to anneal to the matching sequences in the chromosome."
+  },
+  {
+   "t": 230.51,
+   "text": "The kanamycin cassette gets pasted in, replacing the lacZ gene."
+  },
+  {
+   "t": 235.29,
+   "text": "Step six: recover and select."
+  },
+  {
+   "t": 237.94,
+   "text": "You add fresh medium and let the cells recover for one to two hours at thirty-seven degrees."
+  },
+  {
+   "t": 243.9,
+   "text": "During this recovery period, the cells that successfully integrated the cassette start expressing the kanamycin resistance gene."
+  },
+  {
+   "t": 251.94,
+   "text": "Then you plate the cells on agar containing kanamycin."
+  },
+  {
+   "t": 255.66,
+   "text": "Only cells that integrated the cassette can grow."
+  },
+  {
+   "t": 258.99,
+   "text": "Anything that did not integrate is killed by the kanamycin."
+  },
+  {
+   "t": 262.96,
+   "text": "The next morning, you come back to colonies on a plate."
+  },
+  {
+   "t": 266.32,
+   "text": "Step seven: verify."
+  },
+  {
+   "t": 268.32,
+   "text": "You pick a few colonies."
+  },
+  {
+   "t": 270.1,
+   "text": "You do a colony PCR with primers that flank the integration site — primers that sit outside arm A and outside arm B."
+  },
+  {
+   "t": 277.92,
+   "text": "If the integration worked, the PCR product will be the size of arm-plus-cassette-plus-arm."
+  },
+  {
+   "t": 283.34,
+   "text": "If it did not work, you would get either no product or a wild-type-sized product."
+  },
+  {
+   "t": 287.97,
+   "text": "You confirm by sequencing."
+  },
+  {
+   "t": 289.69,
+   "text": "That is it."
+  },
+  {
+   "t": 290.52,
+   "text": "That is the whole protocol."
+  },
+  {
+   "t": 292.05,
+   "text": "From design to verified clone, it takes about a week, and most of that week is just waiting for cells to grow."
+  },
+  {
+   "t": 299.22,
+   "text": "The actual hands-on time is maybe a day spread across the week."
+  },
+  {
+   "t": 303.7,
+   "text": "Compare that to the multi-week or multi-month traditional cloning protocol we discussed earlier."
+  },
+  {
+   "t": 309.75,
+   "text": "This is what recombineering bought you."
+  },
+  {
+   "t": 311.9,
+   "text": "It collapsed weeks of work into days."
+  },
+  {
+   "t": 314.32,
+   "text": "A few practical notes to make this real."
+  },
+  {
+   "t": 317.02,
+   "text": "First, the homology arms need to be long enough to drive efficient recombination — forty to fifty base pairs is the standard, though some applications use longer arms for difficult targets."
+  },
+  {
+   "t": 328.71,
+   "text": "Second, the selectable marker is essential in most cases, because the recombineering event is rare enough — maybe one cell in ten thousand to one in a million — that you need a way to enrich for the ones that worked."
+  },
+  {
+   "t": 341.27,
+   "text": "Third, the homology arms need to be perfect matches to the chromosome."
+  },
+  {
+   "t": 346.25,
+   "text": "A single mismatch reduces efficiency dramatically."
+  },
+  {
+   "t": 349.91,
+   "text": "So before designing, you sequence your strain to make sure you know exactly what the local sequence is."
+  },
+  {
+   "t": 356.04,
+   "text": "Strain differences matter."
+  },
+  {
+   "t": 357.75,
+   "text": "Fourth — and this is something every recombineering experimentalist learns the hard way — your PCR product needs to be free of template."
+  },
+  {
+   "t": 367.57,
+   "text": "If any of the parental plasmid you used as PCR template gets carried over into your electroporation, that plasmid will transform into the cell and give you false positive colonies that contain the plasmid instead of an integration event."
+  },
+  {
+   "t": 381.65,
+   "text": "You guard against this with careful gel purification or with template-degrading treatments before electroporation."
+  },
+  {
+   "t": 388.86,
+   "text": "So that is the typical experiment."
+  },
+  {
+   "t": 391.26,
+   "text": "Let us scale up."
+  }
+ ]
+}

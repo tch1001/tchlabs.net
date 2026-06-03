@@ -1,0 +1,255 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The fundamental bioinformatics operation",
+ "duration": 389.3,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The fundamental bioinformatics operation"
+  },
+  {
+   "t": 3.74,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 5.12,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 6.7,
+   "text": "Today and for the next two hours, we're going to talk about sequence alignment — and I'm going to tell you up front that this is, hands down, the most important single operation in all of bioinformatics."
+  },
+  {
+   "t": 18.89,
+   "text": "If there is one piece of computational machinery on which the entire edifice of modern molecular biology rests, it is the algorithm we are about to spend two hours on."
+  },
+  {
+   "t": 28.62,
+   "text": "Every Illumina pipeline you've ever heard of, every nanopore long-read run, every protein homology search, every phylogenetic tree, every variant call, every metagenomics assignment, every RNA-seq experiment, every single-cell analysis — every one of them, somewhere in the middle, calls a function that aligns one biological sequence to another."
+  },
+  {
+   "t": 50.25,
+   "text": "The function might be called BLAST."
+  },
+  {
+   "t": 52.55,
+   "text": "It might be called BWA."
+  },
+  {
+   "t": 54.66,
+   "text": "It might be called minimap2 or Bowtie2 or STAR or HMMER."
+  },
+  {
+   "t": 59.62,
+   "text": "They all do the same thing."
+  },
+  {
+   "t": 61.19,
+   "text": "They all answer the same question."
+  },
+  {
+   "t": 63.09,
+   "text": "They are all variations on the same theme."
+  },
+  {
+   "t": 65.49,
+   "text": "And the theme is what we are going to take apart today."
+  },
+  {
+   "t": 68.21,
+   "text": "Let me tell you what the theme is, in one sentence."
+  },
+  {
+   "t": 71.61,
+   "text": "Given two strings of letters — call them DNA, call them protein, call them whatever you like — find the best way to line them up, allowing for substitutions where letters differ, and gaps where one string has an insertion or a deletion relative to the other."
+  },
+  {
+   "t": 87.12,
+   "text": "That sentence is the entire problem statement of sequence alignment."
+  },
+  {
+   "t": 91.65,
+   "text": "It sounds almost trivially simple."
+  },
+  {
+   "t": 93.71,
+   "text": "And it is, when the strings are short, and when there's a clear answer."
+  },
+  {
+   "t": 97.78,
+   "text": "The trick — and the reason we need a two-hour lecture — is that the strings are not always short."
+  },
+  {
+   "t": 103.31,
+   "text": "The strings can be three billion letters long."
+  },
+  {
+   "t": 106.21,
+   "text": "There can be a hundred million of them."
+  },
+  {
+   "t": 107.86,
+   "text": "The space of possible alignments grows exponentially with length."
+  },
+  {
+   "t": 112.33,
+   "text": "The naive way of computing the answer would take longer than the age of the universe to run."
+  },
+  {
+   "t": 117.99,
+   "text": "So a lot of clever people have spent fifty years inventing better and better algorithms — first exact, then approximate, then approximate-but-fast, then approximate-but-fast-and-clever — to give you back an answer in seconds, where the naive method would never finish."
+  },
+  {
+   "t": 134.54,
+   "text": "Here's the analogy I want you to hold for the next two hours."
+  },
+  {
+   "t": 137.97,
+   "text": "Imagine two old manuscripts of the same ancient text — say, two copies of a Shakespeare play that scribes have hand-copied across centuries."
+  },
+  {
+   "t": 147.04,
+   "text": "They started from the same original."
+  },
+  {
+   "t": 149.01,
+   "text": "But scribes are sloppy."
+  },
+  {
+   "t": 150.49,
+   "text": "One scribe accidentally wrote \"the\" instead of \"thee."
+  },
+  {
+   "t": 154.1,
+   "text": "\" Another scribe skipped an entire word."
+  },
+  {
+   "t": 156.82,
+   "text": "A third scribe wrote a whole paragraph that the original didn't have."
+  },
+  {
+   "t": 161.62,
+   "text": "Two centuries later, you have two manuscripts that are almost the same, but not quite."
+  },
+  {
+   "t": 167.28,
+   "text": "Your job, as a scholar, is to line them up — character by character, word by word — and figure out where the substitutions happened, where the deletions happened, where the insertions happened, and ultimately what the original text most likely said."
+  },
+  {
+   "t": 181.95,
+   "text": "That is literally what sequence alignment is."
+  },
+  {
+   "t": 185.19,
+   "text": "Two DNA sequences are two scribe-copied manuscripts."
+  },
+  {
+   "t": 189.16,
+   "text": "They started from a common ancestor."
+  },
+  {
+   "t": 191.44,
+   "text": "Evolution has introduced changes — point mutations, which are substitutions; insertions, which are gaps in the older copy; deletions, which are gaps in the newer copy."
+  },
+  {
+   "t": 202.94,
+   "text": "Your job, as a bioinformatician, is to line them up and figure out what changed."
+  },
+  {
+   "t": 207.72,
+   "text": "Same problem."
+  },
+  {
+   "t": 208.81,
+   "text": "Same algorithmic structure."
+  },
+  {
+   "t": 210.84,
+   "text": "The chemistry is different, but the abstract problem — find the best alignment between two related strings — is exactly the same."
+  },
+  {
+   "t": 218.96,
+   "text": "And it turns out that the same dynamic programming algorithm that solves the Shakespeare problem is the one that solves the DNA problem, and the protein problem, and the spelling-correction problem in your word processor, and the diff utility in git, and — if you squint — the speech recognition problem."
+  },
+  {
+   "t": 236.06,
+   "text": "Sequence alignment is one of those rare algorithmic patterns that shows up everywhere."
+  },
+  {
+   "t": 241.87,
+   "text": "If you walk out of here in two hours and you can do three things — one, sketch on a whiteboard how dynamic programming fills in a matrix to find the optimal alignment of two short sequences, and explain why the answer is in the corner and the alignment is recovered by backtracking; two, explain in plain English why exact dynamic programming is too slow for billion-base genomes, and how the seed-and-extend heuristic — the idea behind BLAST and every modern aligner — gets around it; three, look"
+  },
+  {
+   "t": 272.42,
+   "text": "at a BLAST report or a SAM file from a real pipeline and tell me what the bit score means, what the E-value means, what a CIGAR string is, and whether the alignment is trustworthy — then we've succeeded."
+  },
+  {
+   "t": 283.96,
+   "text": "Everything else hangs off those three."
+  },
+  {
+   "t": 286.21,
+   "text": "One more orienting thought before we go deeper."
+  },
+  {
+   "t": 289.3,
+   "text": "Sequence alignment, as a field, has a peculiar history."
+  },
+  {
+   "t": 293.62,
+   "text": "The foundational algorithm — Needleman-Wunsch, which we'll meet in Segment 2 — was published in 1970, before there was even a single complete protein sequence longer than a few hundred residues to align."
+  },
+  {
+   "t": 306.39,
+   "text": "The mathematicians figured out the right answer before the biologists had any data to feed into it."
+  },
+  {
+   "t": 312.31,
+   "text": "Then, twenty years later, when Sanger sequencing started producing real volumes of DNA, the algorithm was sitting there waiting."
+  },
+  {
+   "t": 320.69,
+   "text": "By the late 1980s, when GenBank started growing exponentially, the exact algorithm was too slow to search the whole database, and a faster heuristic was needed — and that's where BLAST came in, in 1990, and changed everything."
+  },
+  {
+   "t": 336.49,
+   "text": "Then twenty more years later, when Illumina started producing billions of short reads per run, BLAST itself was too slow, and a new generation of ultrafast aligners — BWA, Bowtie, Bowtie2 — appeared."
+  },
+  {
+   "t": 350.65,
+   "text": "Then long reads came along, and minimap2 was invented."
+  },
+  {
+   "t": 354.84,
+   "text": "The history of sequence alignment is, in a real sense, the history of bioinformatics responding to one wave after another of new sequencing data."
+  },
+  {
+   "t": 364.76,
+   "text": "Each wave demanded a faster algorithm."
+  },
+  {
+   "t": 367.34,
+   "text": "The algorithms got faster."
+  },
+  {
+   "t": 369.46,
+   "text": "Biology kept up."
+  },
+  {
+   "t": 371.32,
+   "text": "So that's the contract."
+  },
+  {
+   "t": 372.81,
+   "text": "Two hours, one operation, the most important one in the field."
+  },
+  {
+   "t": 376.82,
+   "text": "We're going to start with the abstract problem, build up the exact algorithm, then break it on purpose by going to genomic scale, then introduce the heuristics that got us out of the corner."
+  },
+  {
+   "t": 386.26,
+   "text": "Let's begin with what \"similar\" even means."
+  }
+ ]
+}

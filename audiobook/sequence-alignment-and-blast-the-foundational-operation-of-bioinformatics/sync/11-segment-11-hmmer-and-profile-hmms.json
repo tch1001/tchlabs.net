@@ -1,0 +1,167 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — HMMER and profile HMMs",
+ "duration": 366.01,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — HMMER and profile HMMs"
+  },
+  {
+   "t": 4.28,
+   "text": "There is a class of sequence search tools that goes beyond pairwise alignment — tools that align a sequence not against another single sequence, but against a statistical model of a family of sequences."
+  },
+  {
+   "t": 15.93,
+   "text": "The most famous of these is HMMER, written primarily by Sean Eddy starting in the mid-1990s."
+  },
+  {
+   "t": 23.39,
+   "text": "HMMER is built around a class of probabilistic models called profile hidden Markov models — profile HMMs — and it is the standard tool for detecting distant homology to known protein families."
+  },
+  {
+   "t": 35.56,
+   "text": "Let me explain the basic idea."
+  },
+  {
+   "t": 37.66,
+   "text": "Suppose you have a family of related proteins — say, the globin family, which includes hemoglobin, myoglobin, and dozens of other oxygen-binding proteins from across the tree of life."
+  },
+  {
+   "t": 49.14,
+   "text": "You have, in hand, a multiple sequence alignment of fifty or a hundred members of this family, with the columns of the alignment representing positions in the family's conserved core structure."
+  },
+  {
+   "t": 60.79,
+   "text": "From this alignment, you can compute, for each column, the empirical distribution of amino acids at that position — which residues are common, which are rare, which are forbidden."
+  },
+  {
+   "t": 72.03,
+   "text": "You can also compute, for each column, the empirical probability that a position contains a gap (an insertion or deletion)."
+  },
+  {
+   "t": 80.15,
+   "text": "A profile HMM is a probabilistic model that captures all of this, in a structured way."
+  },
+  {
+   "t": 86.19,
+   "text": "Each column of the alignment becomes a match state in the HMM, with an emission distribution over amino acids — the empirical distribution at that column."
+  },
+  {
+   "t": 95.65,
+   "text": "Each column also has associated insertion states (for positions where some family members have inserted residues) and deletion states (for positions where some members have deleted residues), with transition probabilities between them."
+  },
+  {
+   "t": 109.35,
+   "text": "The HMM, as a whole, is a generative model: starting from the begin state, you walk through the states according to the transition probabilities, emitting amino acids from the match and insertion states, and the path you take generates a sequence that \"looks like\" a member of the family."
+  },
+  {
+   "t": 126.15,
+   "text": "To search a database with a profile HMM, you compute, for each target sequence, the probability that the HMM would generate that sequence — that is, you compute the maximum likelihood alignment of the target to the HMM."
+  },
+  {
+   "t": 140.51,
+   "text": "This is done by another dynamic programming algorithm, the Viterbi algorithm for HMMs, which is structurally analogous to Smith-Waterman but with probabilities instead of scores."
+  },
+  {
+   "t": 151.54,
+   "text": "The output is a score for each target sequence, and an E-value telling you how significant that score is given the database size."
+  },
+  {
+   "t": 159.41,
+   "text": "Profile HMMs are much more sensitive than pairwise BLAST for distant homology, for one reason: they have more information."
+  },
+  {
+   "t": 167.55,
+   "text": "A pairwise alignment uses a single query sequence."
+  },
+  {
+   "t": 171.03,
+   "text": "A profile HMM uses an entire family's worth of information, encoded as a position-specific distribution."
+  },
+  {
+   "t": 179.05,
+   "text": "Conserved positions get heavy weights in the HMM; variable positions get light weights."
+  },
+  {
+   "t": 185.46,
+   "text": "The model knows that the histidine at the heme-binding site of globins is essentially required, while the residue at some surface loop is freely variable."
+  },
+  {
+   "t": 195.11,
+   "text": "When you search a new sequence against the globin HMM, the model can detect a candidate globin even if the candidate is only 15% identical to any single known globin — because the candidate has histidines at the right positions, hydrophobic residues at the right positions, conserved patterns of charge in the right places."
+  },
+  {
+   "t": 215.96,
+   "text": "The profile sees the whole pattern; a pairwise comparison only sees one example."
+  },
+  {
+   "t": 221.61,
+   "text": "HMMER comes with the Pfam database, which is a collection of about twenty thousand curated profile HMMs covering most known protein families."
+  },
+  {
+   "t": 231.1,
+   "text": "You can take any new protein sequence, run it through HMMER against Pfam, and get back a list of the protein families it belongs to."
+  },
+  {
+   "t": 239.35,
+   "text": "This is the dominant way that protein domain annotation is done in modern bioinformatics."
+  },
+  {
+   "t": 244.84,
+   "text": "Every annotated genome on Ensembl, every UniProt entry, every InterPro record — the domain annotations come from HMMER-against-Pfam searches."
+  },
+  {
+   "t": 255.34,
+   "text": "There is also the related tool HHsearch / HHblits, by Johannes Söding's group, which goes one step further: it aligns profile HMMs against other profile HMMs, rather than sequences against HMMs."
+  },
+  {
+   "t": 270.1,
+   "text": "Profile-profile comparison is even more sensitive than sequence-against-profile, and is the standard for detecting very distant evolutionary relationships, including relationships at the level of protein structural folds."
+  },
+  {
+   "t": 284.45,
+   "text": "HHsearch is what people use when they want to find homologs at the edge of detectability."
+  },
+  {
+   "t": 289.71,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 290.98,
+   "text": "HMMER is the family-aware sequence searcher."
+  },
+  {
+   "t": 293.76,
+   "text": "Instead of asking \"does my sequence look like this one specific protein,\" it asks \"does my sequence look like this family of proteins, given everything we know about the family's conservation patterns?"
+  },
+  {
+   "t": 306.14,
+   "text": "\" Profile HMMs encode the conservation profile of a family — which positions are conserved, which are variable, which kinds of substitutions are allowed at each position — and the search uses that profile as a target."
+  },
+  {
+   "t": 320.09,
+   "text": "The result is much more sensitive than pairwise BLAST for distant homology, and it's the standard for protein family detection."
+  },
+  {
+   "t": 327.86,
+   "text": "That's HMMER."
+  },
+  {
+   "t": 329.56,
+   "text": "There is a deeper relationship between HMMER and modern deep learning models like AlphaFold and ESM, which we'll touch on in Segment 18."
+  },
+  {
+   "t": 338.46,
+   "text": "Profile HMMs are, in a real sense, simple precursors to the attention-based language models that now dominate protein sequence analysis."
+  },
+  {
+   "t": 348.25,
+   "text": "The principle is the same: learn a model of what sequences in a family look like, then use the model to evaluate new sequences."
+  },
+  {
+   "t": 356.73,
+   "text": "The model class is different — small HMMs for HMMER, large neural networks for ESM — but the conceptual move is the same."
+  }
+ ]
+}

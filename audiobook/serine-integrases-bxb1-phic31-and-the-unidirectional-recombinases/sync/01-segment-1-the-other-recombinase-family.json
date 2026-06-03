@@ -1,0 +1,247 @@
+{
+ "n": 1,
+ "title": "SEGMENT 1 — The other recombinase family",
+ "duration": 382.51,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 1 — The other recombinase family"
+  },
+  {
+   "t": 3.31,
+   "text": "Alright, let's get started."
+  },
+  {
+   "t": 4.76,
+   "text": "Good morning, everyone."
+  },
+  {
+   "t": 6.09,
+   "text": "Today, for the next two hours, we're going to talk about a family of enzymes called serine integrases — phage-derived recombinases with names like Bxb1, phiC31, R4, TP901-1, and a growing parade of orthologs."
+  },
+  {
+   "t": 21.71,
+   "text": "If you've been with us for the Cre-Lox lecture, you already know one site-specific recombinase."
+  },
+  {
+   "t": 27.95,
+   "text": "Cre, with its loxP sites, is the famous one — the workhorse of conditional mouse genetics, the tool every neuroscientist and cancer biologist knows by name."
+  },
+  {
+   "t": 38.92,
+   "text": "Cre is a tyrosine recombinase."
+  },
+  {
+   "t": 41.8,
+   "text": "It cuts and re-ligates DNA between two identical, 34-base-pair sites called loxP, and — this is the key fact — the reaction Cre does is fundamentally reversible."
+  },
+  {
+   "t": 54.67,
+   "text": "If you have loxP sites and Cre in the same place, you get a dynamic equilibrium."
+  },
+  {
+   "t": 60.34,
+   "text": "Things get cut out; things get put back in."
+  },
+  {
+   "t": 63.08,
+   "text": "The system oscillates."
+  },
+  {
+   "t": 64.65,
+   "text": "Most of the time, in practice, we make it look one-directional by ensuring that one product diffuses away or gets diluted, but the chemistry itself is symmetric."
+  },
+  {
+   "t": 75.56,
+   "text": "Serine integrases are the other family — the unidirectional cousins."
+  },
+  {
+   "t": 80.31,
+   "text": "They are also site-specific recombinases."
+  },
+  {
+   "t": 83.41,
+   "text": "They also cut DNA at defined sequences and re-ligate it at defined sequences."
+  },
+  {
+   "t": 89.31,
+   "text": "But they do it differently, and the difference matters enormously for genome engineering."
+  },
+  {
+   "t": 94.49,
+   "text": "Let me give you the headline before we go anywhere else."
+  },
+  {
+   "t": 97.49,
+   "text": "Serine integrases work between two different sites — called attB and attP — and they make products called attL and attR that are not substrates for the same enzyme."
+  },
+  {
+   "t": 108.8,
+   "text": "The reaction runs forward only."
+  },
+  {
+   "t": 111.01,
+   "text": "To reverse it, you need a completely separate protein called an RDF, a recombination directionality factor, which is usually not provided."
+  },
+  {
+   "t": 119.92,
+   "text": "That's it."
+  },
+  {
+   "t": 120.72,
+   "text": "That's the whole reason these enzymes exist in our toolkit and the whole reason this lecture is its own thing rather than a footnote to the Cre-Lox lecture."
+  },
+  {
+   "t": 130.46,
+   "text": "Unidirectional."
+  },
+  {
+   "t": 131.7,
+   "text": "Once recombination happens, it stays happened."
+  },
+  {
+   "t": 134.84,
+   "text": "The DNA you put into a chromosome with a serine integrase stays in the chromosome."
+  },
+  {
+   "t": 140.0,
+   "text": "There is no back-reaction worth worrying about."
+  },
+  {
+   "t": 142.66,
+   "text": "If you walk out of here in two hours, I want you to be able to do three things."
+  },
+  {
+   "t": 147.49,
+   "text": "One: explain the conceptual difference between tyrosine recombinases like Cre and serine integrases like Bxb1, including why the asymmetric attB-versus-attP architecture gives you irreversibility while Cre's symmetric loxP-times-two architecture gives you reversibility."
+  },
+  {
+   "t": 167.09,
+   "text": "Two: sketch the landing-pad workflow — install an attB sequence into a chromosomal site once, with CRISPR or with PASTE, and then dock attP-cargo plasmids in over and over again — and explain why this is the gold-standard approach for industrial cell-line engineering."
+  },
+  {
+   "t": 184.5,
+   "text": "Three: read a 2022-or-later paper that uses Bxb1 for kilobase-scale gene insertion — whether that's PASTE for therapeutic applications, CHO landing-pad engineering for antibody production, or synthetic-biology genetic circuits — and tell me what's been built and why it works."
+  },
+  {
+   "t": 202.6,
+   "text": "Those three things."
+  },
+  {
+   "t": 204.2,
+   "text": "Everything else is decoration."
+  },
+  {
+   "t": 206.38,
+   "text": "Now, why does any of this matter?"
+  },
+  {
+   "t": 208.18,
+   "text": "Let me frame the field problem."
+  },
+  {
+   "t": 209.97,
+   "text": "If you've been with us through the gene therapy lectures, you know the central tension of large-payload delivery."
+  },
+  {
+   "t": 216.24,
+   "text": "AAV — adeno-associated virus, the dominant gene therapy vector — has a packaging limit of about 4.7 kilobases."
+  },
+  {
+   "t": 225.01,
+   "text": "That is small."
+  },
+  {
+   "t": 226.09,
+   "text": "There are diseases where the gene you want to deliver is bigger than that."
+  },
+  {
+   "t": 229.95,
+   "text": "Duchenne muscular dystrophy: dystrophin is 11 kilobases of coding sequence."
+  },
+  {
+   "t": 236.35,
+   "text": "Hemophilia A: factor VIII is over 7 kilobases."
+  },
+  {
+   "t": 240.84,
+   "text": "Cystic fibrosis: CFTR is 4.4 kilobases of coding sequence, which fits in AAV only barely, with no room for a real promoter or regulatory elements."
+  },
+  {
+   "t": 252.25,
+   "text": "The list goes on."
+  },
+  {
+   "t": 253.44,
+   "text": "For these diseases, AAV by itself is too small to do the job."
+  },
+  {
+   "t": 258.85,
+   "text": "Lentivirus stretches you to about 8 to 10 kilobases, which is bigger, but lentivirus has its own problems — semi-random integration, insertional mutagenesis risk, manufacturing complexity."
+  },
+  {
+   "t": 272.11,
+   "text": "What you'd really like is a tool that says: \"I'll insert exactly the cargo you specify into exactly the chromosomal location you specify, with kilobase-scale capacity, no off-targets, and a single defined integration event per cell."
+  },
+  {
+   "t": 286.74,
+   "text": "\" That is what serine integrases give you."
+  },
+  {
+   "t": 289.01,
+   "text": "Not by themselves — by themselves they need to know what site to integrate into."
+  },
+  {
+   "t": 293.93,
+   "text": "But coupled to a way of pre-installing the docking site, they give you almost ideal large-cargo delivery."
+  },
+  {
+   "t": 300.08,
+   "text": "The coupling tool used to be CRISPR plus homology-directed repair, or HDR — cut the genome with Cas9, then provide a donor with homology arms and an attB site, and let HDR install the attB into the chromosome."
+  },
+  {
+   "t": 314.79,
+   "text": "That works, but HDR is inefficient in many cell types."
+  },
+  {
+   "t": 319.34,
+   "text": "Then in 2022, the David Liu lab combined prime editing with Bxb1 to make a system called PASTE — Prime-editing Assisted Site-specific Integration — which lets you install the attB landing site using prime editing instead of HDR, and then dock kilobase cargo on top of it with Bxb1."
+  },
+  {
+   "t": 337.99,
+   "text": "That combination unlocked a whole new design space for gene therapy."
+  },
+  {
+   "t": 342.89,
+   "text": "We're going to walk through all of this."
+  },
+  {
+   "t": 344.85,
+   "text": "The biology of serine integrases — where they come from, how they work, the attB-attP-attL-attR cycle."
+  },
+  {
+   "t": 353.09,
+   "text": "The two famous ones, phiC31 and Bxb1, and why Bxb1 won."
+  },
+  {
+   "t": 358.95,
+   "text": "The landing-pad workflow that has become the industrial standard for CHO antibody production."
+  },
+  {
+   "t": 365.0,
+   "text": "PASTE."
+  },
+  {
+   "t": 365.84,
+   "text": "The synthetic-biology angle — using serine integrases as molecular logic gates and biological memory."
+  },
+  {
+   "t": 373.36,
+   "text": "The frontier — newer integrases, AI-discovered orthologs, controlled reversal with engineered RDFs."
+  },
+  {
+   "t": 381.56,
+   "text": "Let's begin."
+  }
+ ]
+}

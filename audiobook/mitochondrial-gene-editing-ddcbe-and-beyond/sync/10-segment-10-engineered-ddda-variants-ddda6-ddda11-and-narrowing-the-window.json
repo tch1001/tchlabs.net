@@ -1,0 +1,151 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Engineered DddA variants — DddA6, DddA11, and narrowing the window",
+ "duration": 288.53,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Engineered DddA variants — DddA6, DddA11, and narrowing the window"
+  },
+  {
+   "t": 7.89,
+   "text": "Welcome back."
+  },
+  {
+   "t": 8.95,
+   "text": "Let's pick up exactly where we left off: the bystander problem."
+  },
+  {
+   "t": 12.74,
+   "text": "The Liu lab and others recognized very quickly after the 2020 paper that wild-type DddA's TC preference, while real, was too permissive — it left enough Cs in the spacer accessible to editing that designing a clean single-letter edit was often impossible."
+  },
+  {
+   "t": 30.19,
+   "text": "The fix had to come from engineering DddA itself."
+  },
+  {
+   "t": 33.73,
+   "text": "In 2022, the Liu lab published a series of evolved DddA variants in Nature Biotechnology."
+  },
+  {
+   "t": 41.2,
+   "text": "The first author, again Beverly Mok, ran the constructs through directed evolution — the same lab-scale natural selection technique we discussed in the base-editing lecture, the one Frances Arnold won the Nobel for."
+  },
+  {
+   "t": 54.49,
+   "text": "The Liu lab built bacterial selections that linked survival to specific deaminase activities, mutagenized DddA, picked survivors, and iterated."
+  },
+  {
+   "t": 64.84,
+   "text": "Two important variants came out of this work."
+  },
+  {
+   "t": 67.83,
+   "text": "DddA6 is a variant with substantially higher activity than wild-type DddA — about three times more efficient at editing in the original TC context."
+  },
+  {
+   "t": 78.39,
+   "text": "This matters because higher activity means you can get useful editing in cells that are hard to deliver to, or with constructs that have lower expression."
+  },
+  {
+   "t": 87.05,
+   "text": "DddA6 is the workhorse for applications where you want more editing without worrying about sequence preference."
+  },
+  {
+   "t": 94.2,
+   "text": "DddA11 is the more interesting variant for the bystander problem."
+  },
+  {
+   "t": 98.65,
+   "text": "DddA11 was selected to edit cytosines in contexts other than TC — specifically, it edits AC, CC, and GC cytosines in addition to TC."
+  },
+  {
+   "t": 110.05,
+   "text": "That sounds like it would make bystander editing worse, not better."
+  },
+  {
+   "t": 113.65,
+   "text": "And in some sense it does — DddA11 is broader."
+  },
+  {
+   "t": 117.09,
+   "text": "But the practical advantage is that DddA11 can target cytosines that DddA could never edit, opening up new disease mutations to therapy."
+  },
+  {
+   "t": 126.94,
+   "text": "For a pathogenic mutation in an AC or CC context, DddA11 is the only option, and the editing achieved in AC and CC contexts is high enough to matter clinically."
+  },
+  {
+   "t": 139.32,
+   "text": "The broader research effort has produced variants going in the opposite direction too — variants with narrower sequence preferences than wild-type DddA, designed specifically to reduce bystander editing."
+  },
+  {
+   "t": 151.16,
+   "text": "These typically work by introducing mutations in the DddA active site that make the enzyme more sensitive to the bases flanking the target C."
+  },
+  {
+   "t": 160.65,
+   "text": "The result is an editor that's more picky, edits fewer Cs in the spacer, and produces cleaner outcomes at the cost of lower overall editing efficiency."
+  },
+  {
+   "t": 170.28,
+   "text": "There's a fundamental tradeoff here that you should internalize, because it shows up over and over in base editing."
+  },
+  {
+   "t": 177.44,
+   "text": "You can trade specificity for efficiency, but you can't get both perfectly."
+  },
+  {
+   "t": 182.26,
+   "text": "A deaminase that only edits Cs in a very specific context will, by definition, edit fewer Cs total — including, sometimes, the target C if its context is suboptimal."
+  },
+  {
+   "t": 195.14,
+   "text": "A deaminase that edits many contexts will edit your target well but will edit bystanders too."
+  },
+  {
+   "t": 201.2,
+   "text": "There is no free lunch."
+  },
+  {
+   "t": 202.74,
+   "text": "You design your editor based on the priorities of the application — do I need very clean single-letter editing, or do I need high efficiency on a hard-to-edit site?"
+  },
+  {
+   "t": 212.3,
+   "text": "A second line of engineering has focused not on the deaminase itself but on the linker between the TALE arm and the DddA half."
+  },
+  {
+   "t": 220.93,
+   "text": "The geometry of where the DddA halves meet is partly controlled by how long and how flexible the linker is."
+  },
+  {
+   "t": 228.44,
+   "text": "A short, rigid linker constrains the halves to meet at a specific position in the spacer; a long, flexible linker lets them meet over a broader window."
+  },
+  {
+   "t": 238.69,
+   "text": "By tuning the linker, you can adjust the editing window — make it narrower if you want a tight target, wider if you want flexibility."
+  },
+  {
+   "t": 246.49,
+   "text": "Optimal linker design is now a routine part of designing a new DdCBE construct."
+  },
+  {
+   "t": 252.45,
+   "text": "And a third line of engineering has focused on the TALE arms themselves, with researchers exploring whether you can use other DNA-binding scaffolds — like zinc finger arrays — in place of TALEs."
+  },
+  {
+   "t": 264.49,
+   "text": "We'll come back to this in Segment 17 when we discuss zinc-finger-deaminase fusions."
+  },
+  {
+   "t": 270.17,
+   "text": "But for now, the variant most commonly used in mitochondrial editing experiments is a DdCBE with optimized TALE arms, DddA6 or a narrow-window evolved variant, an engineered linker, and UGI."
+  },
+  {
+   "t": 283.52,
+   "text": "That's the second-generation mitochondrial editor, circa 2024."
+  }
+ ]
+}

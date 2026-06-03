@@ -1,0 +1,179 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — ENCODE, GENCODE, and the seventeen-thousand-lncRNA catalog",
+ "duration": 354.47,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — ENCODE, GENCODE, and the seventeen-thousand-lncRNA catalog"
+  },
+  {
+   "t": 6.36,
+   "text": "In 2003, with the human genome sequence essentially finished, the National Human Genome Research Institute launched a follow-on project to figure out what was actually functional in those three billion base pairs."
+  },
+  {
+   "t": 20.3,
+   "text": "The project was called ENCODE — the Encyclopedia of DNA Elements — and its job was to map every region of the genome that does something: every promoter, every enhancer, every transcribed region, every protein binding site, every chromatin state, in many human cell types."
+  },
+  {
+   "t": 38.3,
+   "text": "ENCODE was a huge international consortium that ran in phases through the 2000s and 2010s."
+  },
+  {
+   "t": 45.6,
+   "text": "The first major results came out in 2007."
+  },
+  {
+   "t": 49.05,
+   "text": "The headline 2012 release filled an entire issue of the journal Nature with thirty papers."
+  },
+  {
+   "t": 55.26,
+   "text": "The project is still ongoing."
+  },
+  {
+   "t": 57.1,
+   "text": "ENCODE is the source of the famous and controversial claim that eighty percent of the human genome is biochemically active — by which the consortium meant that eighty percent of bases lie within at least one element that shows transcription factor binding, chromatin modification, DNase hypersensitivity, or transcription in at least one of the cell types they assayed."
+  },
+  {
+   "t": 78.39,
+   "text": "That number, eighty percent, was widely picked up in the press and widely contested by evolutionary biologists, who pointed out that \"biochemical activity\" is a low bar for \"functional."
+  },
+  {
+   "t": 90.39,
+   "text": "\" We will come back to that debate in Segment 9."
+  },
+  {
+   "t": 93.33,
+   "text": "For our purposes today, the most important ENCODE deliverable is the transcript catalog — the list of every gene and every transcript variant produced by the human genome."
+  },
+  {
+   "t": 104.41,
+   "text": "The catalog is maintained by a sister project called GENCODE, which is the official human and mouse transcript annotation project, run jointly by the Sanger Institute, UCSC, and other centers."
+  },
+  {
+   "t": 117.2,
+   "text": "GENCODE releases a new version every few months."
+  },
+  {
+   "t": 120.71,
+   "text": "The version current at the time this lecture is being prepared annotates somewhere around twenty thousand protein-coding genes and a similar order of magnitude of noncoding RNA genes — specifically, around seventeen to twenty thousand long noncoding RNA genes."
+  },
+  {
+   "t": 137.26,
+   "text": "Let that number sink in."
+  },
+  {
+   "t": 138.85,
+   "text": "There are about as many long noncoding RNA genes in the human genome as there are protein-coding genes."
+  },
+  {
+   "t": 146.09,
+   "text": "The ratio depends on which catalog you use — RefSeq is more conservative, GENCODE more inclusive, NONCODE more inclusive still — and the count keeps drifting upward as new transcripts get added and old ones get reclassified."
+  },
+  {
+   "t": 160.84,
+   "text": "The current order of magnitude, though, is firmly in the tens of thousands."
+  },
+  {
+   "t": 165.81,
+   "text": "If you trust the most permissive catalog, the human genome encodes more lncRNAs than protein-coding genes."
+  },
+  {
+   "t": 173.36,
+   "text": "How did these catalogs get assembled?"
+  },
+  {
+   "t": 175.51,
+   "text": "The basic recipe is to take very deep RNA-seq data from many human tissues and cell types, assemble the reads into transcripts, filter out the ones that overlap known protein-coding genes or known small noncoding RNAs, filter for transcripts longer than two hundred nucleotides, apply coding potential predictors to exclude likely small-ORF coding genes, and call whatever survives a lncRNA."
+  },
+  {
+   "t": 201.4,
+   "text": "Different catalogs use different stringency in each of these steps."
+  },
+  {
+   "t": 205.47,
+   "text": "NONCODE, the most permissive, has annotated over a hundred thousand human lncRNA transcripts when you count all isoforms across all cataloged species."
+  },
+  {
+   "t": 215.64,
+   "text": "GENCODE, the consensus mid-stringency catalog, sits in the seventeen-thousand range."
+  },
+  {
+   "t": 221.9,
+   "text": "RefSeq, the most stringent, annotates closer to ten thousand."
+  },
+  {
+   "t": 226.81,
+   "text": "The differences reflect honest disagreements about how much evidence a putative lncRNA needs before it gets into the catalog."
+  },
+  {
+   "t": 235.19,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 237.0,
+   "text": "The lncRNA catalogs are like field guides to a recently discovered family of organisms."
+  },
+  {
+   "t": 244.14,
+   "text": "Some field guides include every reported sighting; some only include species with confirmed breeding populations."
+  },
+  {
+   "t": 251.71,
+   "text": "The number depends on the stringency, and the right number is the subject of active debate."
+  },
+  {
+   "t": 257.26,
+   "text": "When you read a paper that says \"there are twenty thousand human lncRNAs,\" what it really means is \"twenty thousand entries in a particular curated catalog, assembled with a particular set of inclusion criteria."
+  },
+  {
+   "t": 270.15,
+   "text": "\" That number is not a count of functional regulatory molecules."
+  },
+  {
+   "t": 274.28,
+   "text": "It is a count of cataloged transcripts."
+  },
+  {
+   "t": 276.93,
+   "text": "There are some structural facts about the lncRNA catalog that are worth knowing."
+  },
+  {
+   "t": 281.32,
+   "text": "lncRNAs, on average, are shorter than mRNAs — typical length around one to two kilobases, versus three to four for mRNAs."
+  },
+  {
+   "t": 291.75,
+   "text": "They have fewer exons — typically two or three, versus eight or ten for mRNAs."
+  },
+  {
+   "t": 299.31,
+   "text": "They are less abundant than mRNAs in any given cell — most lncRNAs are expressed at one to a few molecules per cell, where most mRNAs are tens to thousands."
+  },
+  {
+   "t": 310.4,
+   "text": "They are more cell-type-specific than mRNAs — a typical lncRNA is expressed in only a few cell types, where a typical mRNA is expressed across many."
+  },
+  {
+   "t": 322.05,
+   "text": "And they are less conserved across species than mRNAs, which is the big issue we will get to."
+  },
+  {
+   "t": 327.98,
+   "text": "So the lncRNA universe, as cataloged, is a vast collection of mostly low-abundance, cell-type-specific, short-ish, lightly-spliced transcripts that look superficially like mRNAs but do not produce proteins."
+  },
+  {
+   "t": 342.33,
+   "text": "The catalog is large."
+  },
+  {
+   "t": 344.26,
+   "text": "The functional fraction is unknown."
+  },
+  {
+   "t": 347.02,
+   "text": "And that brings us directly to the central debate of the field: how many of these things actually do anything?"
+  }
+ ]
+}

@@ -1,0 +1,163 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — C-to-G and A-to-C — expanding the chemistry",
+ "duration": 313.53,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — C-to-G and A-to-C — expanding the chemistry"
+  },
+  {
+   "t": 5.69,
+   "text": "Now back to the four-of-twelve problem from Segment 6, because in the past several years, the field has begun to expand the chemistry beyond the original deamination repertoire."
+  },
+  {
+   "t": 16.36,
+   "text": "Recall: CBE does C-to-T (and G-to-A on the opposite strand)."
+  },
+  {
+   "t": 21.73,
+   "text": "ABE does A-to-G (and T-to-C)."
+  },
+  {
+   "t": 24.98,
+   "text": "That's four transitions."
+  },
+  {
+   "t": 26.73,
+   "text": "The other eight changes — the transversions — are not within reach of standard deamination chemistry."
+  },
+  {
+   "t": 32.85,
+   "text": "But here is a clever observation that the Liu lab and others made starting around 2020."
+  },
+  {
+   "t": 38.44,
+   "text": "When CBE deaminates C to U in the DNA, there are actually two ways the cell can repair the resulting U:G mismatch."
+  },
+  {
+   "t": 47.41,
+   "text": "The one we discussed earlier — replicate or repair to install T:A — is the one CBE is engineered to favor, with UGI blocking the alternative pathway."
+  },
+  {
+   "t": 58.94,
+   "text": "But there is another pathway: if you let UDG remove the uracil but then the cell's repair machinery installs a different base at the abasic site, you can sometimes get a C-to-G or even a C-to-A outcome instead of the standard C-to-T."
+  },
+  {
+   "t": 72.86,
+   "text": "The intermediate — an abasic site, a position in DNA where the base has been removed but the backbone is still intact — is a branch point from which the cell can go multiple ways depending on which repair pathway gets there first."
+  },
+  {
+   "t": 86.71,
+   "text": "Liu's lab and several others have exploited this to engineer C-to-G base editors — CGBEs — that produce C-to-G outcomes instead of C-to-T."
+  },
+  {
+   "t": 96.67,
+   "text": "The trick is to deliberately allow UDG to remove the uracil, creating the abasic site, while suppressing certain repair pathways and recruiting others, so that the abasic site gets resolved as G:C instead of as T:A."
+  },
+  {
+   "t": 112.06,
+   "text": "The architecture typically includes the cytidine deaminase, nCas9, and modulators of base excision repair — sometimes a UNG enzyme included on purpose, sometimes specific DNA repair proteins fused in."
+  },
+  {
+   "t": 126.74,
+   "text": "The outcome distributions are messier than CBE — you get C-to-T, C-to-G, and C-to-A in some mixture, with engineered variants biased toward C-to-G as the predominant outcome."
+  },
+  {
+   "t": 139.07,
+   "text": "The 2020-2021 papers from Liu's lab and from the Erwei Zuo and Liang Xu groups demonstrated CGBE chemistry, and subsequent engineering has produced variants with C-to-G as the dominant outcome at substantial efficiency."
+  },
+  {
+   "t": 153.91,
+   "text": "The practical consequence: C-to-G is now within reach of base editing."
+  },
+  {
+   "t": 158.9,
+   "text": "That gives us one more of the twelve possible single-letter changes."
+  },
+  {
+   "t": 162.79,
+   "text": "Combined with the four transitions, we are now at five-of-twelve."
+  },
+  {
+   "t": 167.09,
+   "text": "With ongoing work on the equivalent A-to-T and A-to-C chemistries — using adenine glycosylase variants and engineered repair recruitment — the toolkit will likely continue to expand over the next few years."
+  },
+  {
+   "t": 180.61,
+   "text": "But here is the honest assessment."
+  },
+  {
+   "t": 183.01,
+   "text": "The transversion base editors — C-to-G, and the under-development A-to-Y editors — are less clean than the original transition editors."
+  },
+  {
+   "t": 191.51,
+   "text": "The outcome distributions are messier."
+  },
+  {
+   "t": 193.99,
+   "text": "The efficiency is lower."
+  },
+  {
+   "t": 196.19,
+   "text": "The bystander spectrum is broader."
+  },
+  {
+   "t": 198.49,
+   "text": "For specific clinical applications they may not be ready yet, even when the chemistry is available."
+  },
+  {
+   "t": 204.85,
+   "text": "For applications that genuinely require a transversion edit — and there are many disease-causing mutations that fall into this category — there is another technology that has emerged from Liu's lab, called prime editing, which I will discuss briefly in the final segment."
+  },
+  {
+   "t": 220.25,
+   "text": "Prime editing can install any of the twelve possible single-letter changes, plus small insertions and deletions, by an entirely different mechanism."
+  },
+  {
+   "t": 229.07,
+   "text": "It is harder to deliver, harder to engineer, and slower to reach the clinic than base editing — but it has wider reach."
+  },
+  {
+   "t": 236.53,
+   "text": "So if you ask \"what is the full toolkit for installing a specific single-letter genomic change without making a double-strand break,\" the answer in 2025 is: base editing for the easy transitions and C-to-G, prime editing for everything else."
+  },
+  {
+   "t": 251.89,
+   "text": "The two technologies are complementary."
+  },
+  {
+   "t": 254.44,
+   "text": "They cover different parts of the design space."
+  },
+  {
+   "t": 256.99,
+   "text": "The Liu lab built both."
+  },
+  {
+   "t": 258.94,
+   "text": "One more observation about chemistry."
+  },
+  {
+   "t": 261.34,
+   "text": "The development of CGBE and the in-progress development of other transversion editors illustrates something important about how genome editing has matured as a field."
+  },
+  {
+   "t": 271.91,
+   "text": "The early work — Cas9, base editing — was about finding and adapting natural enzymes for genome editing purposes."
+  },
+  {
+   "t": 279.54,
+   "text": "The later work — TadA-8e via directed evolution, the engineered transversion editors — is about creating chemistries that don't exist in nature, by mining the natural enzyme world, evolving variants under selection, and combining domains to produce activities we want."
+  },
+  {
+   "t": 298.15,
+   "text": "We have moved from genome editing as molecular discovery to genome editing as molecular engineering."
+  },
+  {
+   "t": 305.01,
+   "text": "The pace of new chemistry coming out is now limited by engineering creativity, not by what evolution happens to have made available."
+  }
+ ]
+}

@@ -1,0 +1,207 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Editing efficiency, heteroplasmy as readout, and what \"5 to 50 percent\" actually means",
+ "duration": 423.99,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Editing efficiency, heteroplasmy as readout, and what \"5 to 50 percent\" actually means"
+  },
+  {
+   "t": 7.88,
+   "text": "When the Mok 2020 paper reported editing efficiencies of 5% to 50%, you need to understand what that percentage means in the mitochondrial context, because it's different from nuclear editing."
+  },
+  {
+   "t": 20.43,
+   "text": "In the nuclear genome, when we report a base-editing efficiency, we typically mean: of the cells in the population, what fraction have the edit installed at the target locus?"
+  },
+  {
+   "t": 31.5,
+   "text": "Or, since each cell has two alleles, sometimes: what fraction of alleles in the whole population carry the edit?"
+  },
+  {
+   "t": 39.24,
+   "text": "Either way, you're sampling distinct chromosomes — typically two per cell — and asking how many got changed."
+  },
+  {
+   "t": 46.8,
+   "text": "In the mitochondrial genome, each cell has not two but hundreds to thousands of mtDNA copies."
+  },
+  {
+   "t": 53.17,
+   "text": "When you report a mitochondrial editing efficiency, you're asking: across all those copies, in all the cells you assayed, what fraction now carry the edit?"
+  },
+  {
+   "t": 63.55,
+   "text": "You're sampling a much larger pool."
+  },
+  {
+   "t": 65.9,
+   "text": "The readout for mtDNA editing is heteroplasmy."
+  },
+  {
+   "t": 69.99,
+   "text": "You sequence the mtDNA from the treated cells, you count how often you see the edited base versus the original base at the target position, and the ratio is your editing efficiency."
+  },
+  {
+   "t": 81.55,
+   "text": "So when the 2020 paper says they got 50% editing at a target site, what they're saying is: of the many thousands of mtDNA copies they sequenced from the treated cells, half of them now carry the edit."
+  },
+  {
+   "t": 95.05,
+   "text": "The other half are still wild-type."
+  },
+  {
+   "t": 97.11,
+   "text": "The cells, on average, have shifted from being homoplasmic for the original sequence to being 50:50 heteroplasmic for original and edited."
+  },
+  {
+   "t": 106.66,
+   "text": "This is, as we discussed in Segment 3, exactly the kind of partial outcome that's clinically meaningful in the mitochondrial context."
+  },
+  {
+   "t": 114.75,
+   "text": "If you start with a patient whose tissue is 90% mutant and 10% wild-type, and you apply an editor that converts 30% of the mtDNA copies from mutant to wild-type — that doesn't sound like much in the nuclear context, but in the mitochondrial context, it shifts the heteroplasmy from 90:10 mutant:wild-type to roughly 60:40."
+  },
+  {
+   "t": 137.35,
+   "text": "That's potentially a huge clinical change, because you've moved across the disease threshold for many mutations."
+  },
+  {
+   "t": 144.79,
+   "text": "Cells that were failing because they only had 10% functional copies are now succeeding because they have 40%."
+  },
+  {
+   "t": 152.06,
+   "text": "But efficiency isn't the only thing you measure."
+  },
+  {
+   "t": 155.21,
+   "text": "You also have to measure specificity — both at the intended site and elsewhere."
+  },
+  {
+   "t": 160.68,
+   "text": "The question is: how often does DdCBE edit cytosines that you didn't intend to edit?"
+  },
+  {
+   "t": 166.43,
+   "text": "There are two flavors of off-target editing to worry about."
+  },
+  {
+   "t": 169.82,
+   "text": "The first is bystander editing within the spacer."
+  },
+  {
+   "t": 173.2,
+   "text": "The TALE arms bring the DddA halves to the spacer region — that 14-to-18 base-pair window between the two TALE binding sites."
+  },
+  {
+   "t": 181.96,
+   "text": "Any cytosine in that window is potentially a substrate for the reassembled DddA."
+  },
+  {
+   "t": 187.88,
+   "text": "If your target cytosine is the only C in the window, great — only it gets edited."
+  },
+  {
+   "t": 193.7,
+   "text": "If there are multiple Cs in the window, all of them might get edited, with various efficiencies."
+  },
+  {
+   "t": 199.9,
+   "text": "The unintended ones are bystanders."
+  },
+  {
+   "t": 202.57,
+   "text": "We'll come back to this in Segment 9, because the bystander problem is one of the biggest practical issues with DdCBE."
+  },
+  {
+   "t": 209.29,
+   "text": "The second flavor is off-target editing elsewhere in the mitochondrial genome, or in the nuclear genome."
+  },
+  {
+   "t": 215.53,
+   "text": "This is the more worrying one for safety."
+  },
+  {
+   "t": 218.29,
+   "text": "DddA is a deaminase that can act on any double-stranded DNA — so even if you've split it into halves, if both halves happen to come close to each other at a non-target site (because the TALEs bind weakly to a mismatched site, or because the halves dimerize on their own at high concentrations), you can get off-target deamination."
+  },
+  {
+   "t": 237.34,
+   "text": "And mitochondrial-localized constructs can also leak into the nucleus, where they encounter the nuclear genome — and again, off-target editing can occur."
+  },
+  {
+   "t": 246.82,
+   "text": "The 2020 paper assessed off-targets at a modest scale and found them to be relatively low — a few sites in the mitochondrial genome with measurable bystander editing outside the spacer, and very low levels of off-target editing in the nuclear genome."
+  },
+  {
+   "t": 262.42,
+   "text": "But subsequent work has shown that the off-target landscape is more complex than initially appreciated."
+  },
+  {
+   "t": 268.88,
+   "text": "A 2022 paper from Daniel Bauer's lab and others, using more sensitive whole-genome bisulfite sequencing, found that DdCBE produces substantial off-target editing in the nuclear genome at sites that resemble the intended target sequence."
+  },
+  {
+   "t": 284.52,
+   "text": "The off-target signature reflects DddA's intrinsic preference for TC dinucleotides — that is, a C preceded by a T — which is the sequence context DddA evolved to attack."
+  },
+  {
+   "t": 297.14,
+   "text": "Reducing these off-targets has become an active area of engineering, with newer variants of DddA that have either narrower sequence preferences or weaker intrinsic activity that requires more stringent TALE binding to trigger."
+  },
+  {
+   "t": 310.87,
+   "text": "We'll cover those in Segment 10."
+  },
+  {
+   "t": 313.19,
+   "text": "The take-home point for now is: DdCBE works, but it's a first-generation tool, and like first-generation nuclear base editors, the specificity is good but not perfect, and the engineering effort to improve it is ongoing."
+  },
+  {
+   "t": 326.49,
+   "text": "One more thing about heteroplasmy as a readout, because it has practical implications for experimental design."
+  },
+  {
+   "t": 332.76,
+   "text": "When you treat a population of cells with DdCBE, you're shifting the heteroplasmy distribution."
+  },
+  {
+   "t": 338.86,
+   "text": "But within that distribution, individual cells can have wildly different outcomes."
+  },
+  {
+   "t": 344.42,
+   "text": "One cell might end up 80% edited, the next cell 10% edited, the next cell 50% edited."
+  },
+  {
+   "t": 352.38,
+   "text": "The population average is the reported number, but the variance is real and matters."
+  },
+  {
+   "t": 357.89,
+   "text": "This single-cell variation in editing outcome reflects two things: how many DdCBE proteins got into a given mitochondrion in that cell, and how that mitochondrion's mtDNA replicated and segregated during the time you were observing it."
+  },
+  {
+   "t": 373.16,
+   "text": "mtDNA is replicated by a dedicated mitochondrial polymerase, gamma-pol, and copies divide and segregate semi-randomly during mitochondrial fission."
+  },
+  {
+   "t": 383.71,
+   "text": "So even within a single cell, some mitochondria might end up enriched for edited mtDNA, others depleted."
+  },
+  {
+   "t": 391.23,
+   "text": "Over time, with selection and drift, the distribution can shift further — sometimes in the direction of the edit, sometimes against, depending on whether the edit confers any fitness advantage to the mitochondrion that carries it."
+  },
+  {
+   "t": 404.94,
+   "text": "For a therapeutic application, you'd want to be sure that the edit is stable — that over many cell divisions in the patient's tissue, the heteroplasmy stays where you put it and doesn't drift back to the disease state."
+  },
+  {
+   "t": 417.53,
+   "text": "This is one of the open questions in the field, and we'll return to it in Segment 14 on limitations."
+  }
+ ]
+}

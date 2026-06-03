@@ -1,0 +1,219 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Phages, integration, and the natural life of attB and attP",
+ "duration": 421.11,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Phages, integration, and the natural life of attB and attP"
+  },
+  {
+   "t": 6.97,
+   "text": "So where do serine integrases come from in the wild, and why does nature need them?"
+  },
+  {
+   "t": 11.59,
+   "text": "Let me give you the phage biology, because once you see the natural function, the engineering use cases will be obvious."
+  },
+  {
+   "t": 18.77,
+   "text": "Temperate bacteriophages — phages that can either kill their host immediately or insert into the host chromosome and lie dormant — face an interesting molecular problem."
+  },
+  {
+   "t": 29.7,
+   "text": "When a temperate phage infects a bacterium, it has a choice."
+  },
+  {
+   "t": 33.67,
+   "text": "It can go into lytic mode, replicating its genome and bursting out as fresh virions; or it can go into lysogenic mode, where it inserts its DNA into the host chromosome and rides along as a passive passenger, called a prophage, for many generations of host cell division."
+  },
+  {
+   "t": 51.96,
+   "text": "The lysogenic decision is reversible — under stress, a prophage can excise out of the chromosome and switch back to lytic mode — but it requires precise, defined insertion and excision events."
+  },
+  {
+   "t": 64.91,
+   "text": "You can't just randomly stuff phage DNA into the host genome; that would interrupt host genes, kill the host, and lose the cargo."
+  },
+  {
+   "t": 73.46,
+   "text": "You need to insert at a specific, defined spot — a \"safe harbor\" location in the host genome — and you need to be able to excise cleanly when the time comes."
+  },
+  {
+   "t": 83.3,
+   "text": "This is what serine integrases do, natively, for their phage hosts."
+  },
+  {
+   "t": 88.31,
+   "text": "The phage genome carries a sequence called attP — short for \"attachment site, phage."
+  },
+  {
+   "t": 94.95,
+   "text": "\" The bacterial chromosome has a sequence called attB — \"attachment site, bacterial."
+  },
+  {
+   "t": 100.59,
+   "text": "\" When the phage decides to go lysogenic, it expresses its integrase."
+  },
+  {
+   "t": 106.05,
+   "text": "The integrase finds attP on the circular phage genome, finds attB at the safe-harbor location in the bacterial chromosome, brings them together, and catalyzes recombination."
+  },
+  {
+   "t": 118.62,
+   "text": "The result: the entire circular phage genome is now linearly inserted into the host chromosome, flanked by two new sites called attL and attR — attachment sites Left and Right of the inserted prophage."
+  },
+  {
+   "t": 132.99,
+   "text": "The phage is now a stable passenger."
+  },
+  {
+   "t": 135.89,
+   "text": "Notice the topology."
+  },
+  {
+   "t": 137.44,
+   "text": "You took a circular piece of DNA (the phage) and a linear piece of DNA (the host chromosome), brought together two distinct sites (attP on the phage, attB on the host), and you ended up with the two pieces fused into one continuous piece, with attL on the upstream side of the insertion and attR on the downstream side."
+  },
+  {
+   "t": 158.71,
+   "text": "The two original sites — attB and attP — are gone."
+  },
+  {
+   "t": 163.74,
+   "text": "They've been recombined into two new sites — attL and attR — and the enzyme that made attL and attR cannot, by itself, take those products and recombine them back into attB plus attP."
+  },
+  {
+   "t": 177.43,
+   "text": "That's the unidirectionality."
+  },
+  {
+   "t": 179.35,
+   "text": "The integrase alone goes attB-plus-attP-to-attL-plus-attR."
+  },
+  {
+   "t": 184.31,
+   "text": "To go the other way — attL-plus-attR-to-attB-plus-attP — the phage has to express a second protein, a small accessory factor called the recombination directionality factor, or RDF, sometimes also called an excisionase."
+  },
+  {
+   "t": 198.66,
+   "text": "The RDF binds to the integrase and changes its specificity — now the integrase-plus-RDF complex grabs attL and attR instead of attB and attP, and the excision reaction proceeds."
+  },
+  {
+   "t": 213.96,
+   "text": "Without the RDF, the integrase is stuck in the integration direction."
+  },
+  {
+   "t": 218.54,
+   "text": "This is beautiful biology."
+  },
+  {
+   "t": 220.55,
+   "text": "The phage gets a one-way insertion under normal conditions — committed, stable, lysogenic — and a controlled excision when the RDF is expressed in response to stress."
+  },
+  {
+   "t": 231.82,
+   "text": "The directionality of the entire lysogeny-to-lysis switch is encoded in whether or not one extra small protein is around."
+  },
+  {
+   "t": 240.12,
+   "text": "The integrase by itself does integration; the integrase plus RDF does excision; nothing happens spontaneously."
+  },
+  {
+   "t": 248.21,
+   "text": "For us, as engineers, the punchline is this: if we use the integrase alone, without the RDF, we get one-shot integration that cannot reverse."
+  },
+  {
+   "t": 258.4,
+   "text": "That is exactly the property we want for landing-pad cloning."
+  },
+  {
+   "t": 261.94,
+   "text": "We provide attB and attP, we provide the integrase, the cargo is inserted at the chromosomal site, and because we never provide the RDF, the insertion is locked in."
+  },
+  {
+   "t": 274.19,
+   "text": "Permanent."
+  },
+  {
+   "t": 275.19,
+   "text": "Stable across cell divisions, across selection cycles, across whatever downstream manipulation we want to do."
+  },
+  {
+   "t": 282.56,
+   "text": "The serine integrase is, by design, a one-shot precision welding tool."
+  },
+  {
+   "t": 287.7,
+   "text": "Let me say a little more about what attB and attP actually look like, because the asymmetry is real and the lengths are different."
+  },
+  {
+   "t": 296.0,
+   "text": "Different serine integrases have different att site lengths and sequences, but the pattern is conserved across the family."
+  },
+  {
+   "t": 304.16,
+   "text": "attB is short — typically 30 to 50 base pairs."
+  },
+  {
+   "t": 308.89,
+   "text": "It's a simple bipartite sequence with two half-sites flanking a small central crossover region."
+  },
+  {
+   "t": 315.55,
+   "text": "The integrase binds to the two half-sites as a dimer; the crossover region is where the DNA is cut and re-joined."
+  },
+  {
+   "t": 323.56,
+   "text": "attB is short because in the host chromosome, the integrase doesn't need to do anything fancy — it just needs to identify a docking position."
+  },
+  {
+   "t": 332.39,
+   "text": "attP is longer and more complex — typically 40 to 60 base pairs, sometimes longer, with additional binding motifs that don't exist in attB."
+  },
+  {
+   "t": 343.22,
+   "text": "The integrase binds attP with higher affinity than attB, and the structural arrangement of integrase on attP is what determines the directionality."
+  },
+  {
+   "t": 353.85,
+   "text": "The recombination synaptic complex — the four-integrase tetramer that brings attB and attP together for the cutting and re-joining — is geometrically built to be a productive engagement for the attB-attP combination and an unproductive engagement for the attL-attR combination."
+  },
+  {
+   "t": 371.74,
+   "text": "After recombination, attL consists of the left half of attB fused to the right half of attP, and attR consists of the left half of attP fused to the right half of attB."
+  },
+  {
+   "t": 384.21,
+   "text": "The two products are chimeric — each is half of one parent and half of the other."
+  },
+  {
+   "t": 389.6,
+   "text": "Neither attL nor attR looks like attB; neither attL nor attR looks like attP."
+  },
+  {
+   "t": 397.62,
+   "text": "The integrase, sitting on attL or attR, can't form the productive synaptic complex it would need to run the reaction in reverse."
+  },
+  {
+   "t": 406.44,
+   "text": "The geometry is wrong."
+  },
+  {
+   "t": 408.3,
+   "text": "Hence the irreversibility."
+  },
+  {
+   "t": 410.24,
+   "text": "You don't need to memorize the exact base sequences."
+  },
+  {
+   "t": 413.34,
+   "text": "What you need to carry is: two different sites in, two different sites out, and the products are not substrates."
+  },
+  {
+   "t": 419.64,
+   "text": "That's the architecture."
+  }
+ ]
+}

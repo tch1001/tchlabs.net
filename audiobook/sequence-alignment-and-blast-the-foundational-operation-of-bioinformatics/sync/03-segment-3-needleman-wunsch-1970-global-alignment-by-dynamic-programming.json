@@ -1,0 +1,383 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Needleman-Wunsch (1970): global alignment by dynamic programming",
+ "duration": 561.92,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Needleman-Wunsch (1970): global alignment by dynamic programming"
+  },
+  {
+   "t": 6.55,
+   "text": "In 1970, Saul Needleman and Christian Wunsch published a paper titled \"A general method applicable to the search for similarities in the amino acid sequence of two proteins\" in the Journal of Molecular Biology."
+  },
+  {
+   "t": 20.23,
+   "text": "It was four and a half pages long."
+  },
+  {
+   "t": 22.31,
+   "text": "It introduced the first general algorithm for optimal sequence alignment, and it has been cited tens of thousands of times since."
+  },
+  {
+   "t": 30.43,
+   "text": "The algorithm, which we now call Needleman-Wunsch, is the foundational piece of bioinformatics."
+  },
+  {
+   "t": 36.27,
+   "text": "Every modern aligner traces its lineage to this paper."
+  },
+  {
+   "t": 39.99,
+   "text": "Needleman and Wunsch's key insight is the move that underlies all of dynamic programming, which is a general technique in algorithms for problems that have a recursive structure with overlapping subproblems."
+  },
+  {
+   "t": 51.83,
+   "text": "The insight, in plain English, is this."
+  },
+  {
+   "t": 54.76,
+   "text": "If you know the best alignment of every prefix of sequence one with every prefix of sequence two, then you can compute the best alignment of the full sequences by extending those prefix alignments by one step."
+  },
+  {
+   "t": 67.15,
+   "text": "Break the big problem into small overlapping sub-problems, solve the sub-problems once and store their answers in a table, then use those stored answers to solve bigger sub-problems."
+  },
+  {
+   "t": 78.6,
+   "text": "Eventually you reach the full problem."
+  },
+  {
+   "t": 80.9,
+   "text": "Let me make this concrete."
+  },
+  {
+   "t": 82.54,
+   "text": "Imagine a grid — a two-dimensional table — where the columns are labeled by the letters of sequence one, plus an initial empty column, and the rows are labeled by the letters of sequence two, plus an initial empty row."
+  },
+  {
+   "t": 96.41,
+   "text": "So if sequence one is m letters long, the grid has m+1 columns."
+  },
+  {
+   "t": 102.06,
+   "text": "If sequence two is n letters long, the grid has n+1 rows."
+  },
+  {
+   "t": 107.45,
+   "text": "The cell at row i, column j of the grid will hold a number — the best score of aligning the first j letters of sequence one with the first i letters of sequence two."
+  },
+  {
+   "t": 117.61,
+   "text": "That's the meaning of every cell."
+  },
+  {
+   "t": 120.06,
+   "text": "Once we've filled in every cell, the answer to the original problem — the best alignment of all of sequence one with all of sequence two — is the number in the bottom-right corner of the grid."
+  },
+  {
+   "t": 130.72,
+   "text": "Now, how do you fill in the cells?"
+  },
+  {
+   "t": 132.55,
+   "text": "Here is the magic."
+  },
+  {
+   "t": 134.14,
+   "text": "To compute the value of any cell — call it cell (i, j) — you only need to know the values of the three cells immediately to its top-left, top, and left."
+  },
+  {
+   "t": 144.05,
+   "text": "The reason is this."
+  },
+  {
+   "t": 145.46,
+   "text": "There are exactly three ways the alignment ending at cell (i, j) could have arrived there."
+  },
+  {
+   "t": 151.75,
+   "text": "One: the alignment ending at (i, j) consists of the alignment ending at (i-1, j-1), plus one more aligned pair of letters — the j-th letter of sequence one matched with the i-th letter of sequence two."
+  },
+  {
+   "t": 165.36,
+   "text": "If those two letters are the same, you score +1 for a match."
+  },
+  {
+   "t": 169.54,
+   "text": "If they're different, you score -1 for a mismatch."
+  },
+  {
+   "t": 173.4,
+   "text": "So the value at (i, j) along this path is the value at (i-1, j-1) plus the match-or-mismatch score."
+  },
+  {
+   "t": 182.24,
+   "text": "Two: the alignment ending at (i, j) consists of the alignment ending at (i, j-1), plus a gap in sequence two — meaning, you slid sequence one forward by one letter without using a letter of sequence two."
+  },
+  {
+   "t": 197.51,
+   "text": "That's a gap, scoring -2."
+  },
+  {
+   "t": 199.8,
+   "text": "So the value at (i, j) along this path is the value at (i, j-1) plus the gap penalty."
+  },
+  {
+   "t": 208.24,
+   "text": "Three: the alignment ending at (i, j) consists of the alignment ending at (i-1, j), plus a gap in sequence one — slid sequence two forward by one letter without using a letter of sequence one."
+  },
+  {
+   "t": 222.0,
+   "text": "That's also a gap, scoring -2."
+  },
+  {
+   "t": 224.51,
+   "text": "The value along this path is the value at (i-1, j) plus the gap penalty."
+  },
+  {
+   "t": 231.43,
+   "text": "The optimal score at (i, j) is just the maximum of these three."
+  },
+  {
+   "t": 236.44,
+   "text": "The best of (diagonal plus match-or-mismatch), (left plus gap), and (top plus gap)."
+  },
+  {
+   "t": 242.2,
+   "text": "That's the recurrence."
+  },
+  {
+   "t": 243.6,
+   "text": "That's the whole algorithm, in one formula."
+  },
+  {
+   "t": 246.46,
+   "text": "You start at the top-left corner — cell (0, 0) — which represents aligning the empty prefix of both sequences."
+  },
+  {
+   "t": 254.36,
+   "text": "Score zero."
+  },
+  {
+   "t": 255.55,
+   "text": "Then you fill in the top row, which represents aligning a growing prefix of sequence one to the empty prefix of sequence two — that's all gaps, so cell (0, j) gets score j times the gap penalty."
+  },
+  {
+   "t": 269.44,
+   "text": "Similarly the left column gets cell (i, 0) equal to i times the gap penalty."
+  },
+  {
+   "t": 275.21,
+   "text": "Now you have the boundary."
+  },
+  {
+   "t": 276.99,
+   "text": "You fill in cell (1, 1) using the recurrence — looking at cells (0, 0), (0, 1), and (1, 0)."
+  },
+  {
+   "t": 286.51,
+   "text": "Then (1, 2), then (1, 3), going row by row, left to right, top to bottom, until you've filled the whole grid."
+  },
+  {
+   "t": 294.1,
+   "text": "Each cell takes constant time to compute."
+  },
+  {
+   "t": 296.85,
+   "text": "There are roughly m times n cells."
+  },
+  {
+   "t": 300.16,
+   "text": "So the total time is O(mn) — proportional to the product of the two sequence lengths."
+  },
+  {
+   "t": 306.66,
+   "text": "The space is also O(mn) for the grid."
+  },
+  {
+   "t": 309.89,
+   "text": "Now you've filled in the grid."
+  },
+  {
+   "t": 311.4,
+   "text": "The bottom-right corner — cell (m, n) — holds the best score for aligning the full sequences."
+  },
+  {
+   "t": 318.37,
+   "text": "But the score itself isn't the alignment."
+  },
+  {
+   "t": 320.86,
+   "text": "To recover the actual letter-by-letter alignment, you do something called traceback."
+  },
+  {
+   "t": 325.66,
+   "text": "Starting from the bottom-right corner, at each cell you ask: \"which of the three predecessors did I come from?"
+  },
+  {
+   "t": 332.14,
+   "text": "The diagonal, the left, or the top?"
+  },
+  {
+   "t": 334.45,
+   "text": "\" If I came from the diagonal, then this cell represents a letter pair — match or mismatch — and I emit the j-th letter of sequence one paired with the i-th letter of sequence two, and step diagonally back."
+  },
+  {
+   "t": 347.96,
+   "text": "If I came from the left, then this cell represents a gap in sequence two, and I emit the j-th letter of sequence one paired with a dash, and step left."
+  },
+  {
+   "t": 358.2,
+   "text": "If I came from the top, it's a gap in sequence one — dash paired with the i-th letter of sequence two — and I step up."
+  },
+  {
+   "t": 365.39,
+   "text": "Keep doing this until you reach the top-left corner."
+  },
+  {
+   "t": 368.32,
+   "text": "The sequence of emissions, reversed, is the optimal alignment."
+  },
+  {
+   "t": 372.66,
+   "text": "There's a small bookkeeping question — what if two predecessors are tied for best?"
+  },
+  {
+   "t": 377.29,
+   "text": "Standard practice is to pick one, usually with a fixed priority (diagonal first, then left, then top), which gives you a deterministic alignment."
+  },
+  {
+   "t": 387.04,
+   "text": "Sometimes you want to enumerate all the equally-best alignments, which means recording all the ties during fill-in and traversing all the back-pointer chains during traceback."
+  },
+  {
+   "t": 397.0,
+   "text": "That's a small extension."
+  },
+  {
+   "t": 398.55,
+   "text": "Here's the analogy I want you to hold for this whole segment."
+  },
+  {
+   "t": 402.21,
+   "text": "Dynamic programming is the table approach."
+  },
+  {
+   "t": 405.14,
+   "text": "You fill in a grid where each cell stores the best score for aligning the prefixes of both sequences ending at that cell."
+  },
+  {
+   "t": 412.41,
+   "text": "The answer is in the corner."
+  },
+  {
+   "t": 414.17,
+   "text": "The alignment itself is recovered by backtracking through the grid, reading off which predecessor each cell came from."
+  },
+  {
+   "t": 421.37,
+   "text": "That's the picture."
+  },
+  {
+   "t": 422.55,
+   "text": "Memorize it."
+  },
+  {
+   "t": 423.6,
+   "text": "Sketch a four-by-four grid on a napkin."
+  },
+  {
+   "t": 426.37,
+   "text": "Trace through the recurrence by hand once."
+  },
+  {
+   "t": 429.47,
+   "text": "It will stick."
+  },
+  {
+   "t": 430.46,
+   "text": "Needleman-Wunsch, as published, is what we now call a global alignment algorithm."
+  },
+  {
+   "t": 435.55,
+   "text": "The word \"global\" is doing real work — it means the algorithm forces both sequences to be aligned end to end."
+  },
+  {
+   "t": 443.42,
+   "text": "The bottom-right corner of the grid represents aligning all of sequence one with all of sequence two."
+  },
+  {
+   "t": 450.0,
+   "text": "Every letter of both sequences participates."
+  },
+  {
+   "t": 453.74,
+   "text": "If the two sequences are similar across their whole length — for example, two orthologous genes from closely related species, both roughly the same length — global alignment is the right tool."
+  },
+  {
+   "t": 466.46,
+   "text": "You want to know how the entire sequence one corresponds to the entire sequence two."
+  },
+  {
+   "t": 472.02,
+   "text": "But what if the two sequences are not similar across their whole lengths?"
+  },
+  {
+   "t": 476.26,
+   "text": "What if you have a short query — say, a small protein domain — and you want to find where that domain shows up inside a much larger protein?"
+  },
+  {
+   "t": 484.31,
+   "text": "Forcing the short query to align across the whole big protein is silly — you'd be paying gap penalties for all the parts that don't match."
+  },
+  {
+   "t": 492.69,
+   "text": "You don't want a global alignment; you want a local alignment — find the best matching region between the two sequences, ignoring everything outside it."
+  },
+  {
+   "t": 501.57,
+   "text": "That problem motivated the next big algorithm, which we'll cover in the next segment."
+  },
+  {
+   "t": 507.11,
+   "text": "But before we move on, one cultural note."
+  },
+  {
+   "t": 509.95,
+   "text": "Needleman-Wunsch was published in 1970."
+  },
+  {
+   "t": 513.46,
+   "text": "At the time, the first complete protein sequences had only just become available — Sanger's insulin, a few other small proteins."
+  },
+  {
+   "t": 522.02,
+   "text": "There were no whole-genome sequences."
+  },
+  {
+   "t": 524.4,
+   "text": "There was no GenBank."
+  },
+  {
+   "t": 526.0,
+   "text": "The authors couldn't run their algorithm on much."
+  },
+  {
+   "t": 529.09,
+   "text": "They published it as a general method, with worked examples on small proteins, and it sat for years before it had real data to chew on."
+  },
+  {
+   "t": 536.88,
+   "text": "It was, in a real sense, a theoretical contribution waiting for the experimental field to catch up."
+  },
+  {
+   "t": 543.94,
+   "text": "By the late 1980s, when DNA sequence databases started exploding, the algorithm was there, waiting, ready to be applied."
+  },
+  {
+   "t": 552.26,
+   "text": "That's a recurring pattern in this field — algorithms developed for one purpose, sitting on the shelf, until data finally arrives to make them useful."
+  }
+ ]
+}

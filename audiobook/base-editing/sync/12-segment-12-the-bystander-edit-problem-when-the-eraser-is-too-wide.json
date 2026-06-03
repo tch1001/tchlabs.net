@@ -1,0 +1,255 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — The bystander edit problem — when the eraser is too wide",
+ "duration": 339.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — The bystander edit problem — when the eraser is too wide"
+  },
+  {
+   "t": 5.36,
+   "text": "Now back to the chemistry, because I told you in Segment 7 that we were going to come back to the bystander problem, and this is where we do."
+  },
+  {
+   "t": 13.05,
+   "text": "Recall the editing window."
+  },
+  {
+   "t": 14.76,
+   "text": "The deaminase tethered to nCas9 can reach bases within roughly positions 4 to 8 of the target."
+  },
+  {
+   "t": 21.77,
+   "text": "Within that window, any base of the right type — any cytosine for CBE, any adenine for ABE — is a substrate."
+  },
+  {
+   "t": 30.43,
+   "text": "The deaminase doesn't pick."
+  },
+  {
+   "t": 32.54,
+   "text": "It edits everything it can reach."
+  },
+  {
+   "t": 34.61,
+   "text": "This is fine if there's only one editable base in the window."
+  },
+  {
+   "t": 38.59,
+   "text": "But often there isn't."
+  },
+  {
+   "t": 39.88,
+   "text": "Often there are two cytosines, or two adenines, sitting within the editing window, and you want to change only one of them."
+  },
+  {
+   "t": 47.66,
+   "text": "The base editor doesn't know which one you wanted."
+  },
+  {
+   "t": 50.17,
+   "text": "It edits whatever is in reach."
+  },
+  {
+   "t": 52.0,
+   "text": "So you get the intended edit at one position, and an unintended bystander edit at another position nearby."
+  },
+  {
+   "t": 58.45,
+   "text": "Here is the analogy."
+  },
+  {
+   "t": 59.76,
+   "text": "The eraser is wide."
+  },
+  {
+   "t": 61.4,
+   "text": "If there are two Cs in the editing window, both get changed."
+  },
+  {
+   "t": 65.31,
+   "text": "Imagine you have a soft, broad pencil eraser, and the word you want to fix is \"carve\" but you wanted to change it to \"narve\" — change just the c at the start."
+  },
+  {
+   "t": 73.99,
+   "text": "You bring your eraser down, and the eraser is wider than one letter."
+  },
+  {
+   "t": 78.61,
+   "text": "It erases the c, but it also smudges the a next to it."
+  },
+  {
+   "t": 83.04,
+   "text": "Maybe you can write your new letter cleanly over the c."
+  },
+  {
+   "t": 86.41,
+   "text": "But the a is now a smudge."
+  },
+  {
+   "t": 88.22,
+   "text": "You didn't want to change the a."
+  },
+  {
+   "t": 89.86,
+   "text": "The eraser didn't care."
+  },
+  {
+   "t": 91.51,
+   "text": "In a real base editing experiment, bystander edits look like this."
+  },
+  {
+   "t": 96.06,
+   "text": "You target an A at position 5 of the spacer for an A-to-G edit."
+  },
+  {
+   "t": 100.7,
+   "text": "There happens to also be an A at position 7, also within the editing window."
+  },
+  {
+   "t": 106.06,
+   "text": "The deaminase reaches over and edits both."
+  },
+  {
+   "t": 109.28,
+   "text": "You wanted A-to-G at position 5; you got A-to-G at positions 5 and 7."
+  },
+  {
+   "t": 114.99,
+   "text": "The position 7 edit is the bystander."
+  },
+  {
+   "t": 117.97,
+   "text": "Sometimes it's silent — it doesn't change a coded amino acid, or it falls in an intron, or it changes an amino acid that doesn't affect function."
+  },
+  {
+   "t": 126.95,
+   "text": "Sometimes it's not silent, and you have inadvertently introduced a second mutation alongside your intended one."
+  },
+  {
+   "t": 134.01,
+   "text": "For therapeutic applications, bystander edits matter."
+  },
+  {
+   "t": 137.65,
+   "text": "If you are trying to correct a disease-causing mutation and your base editor also installs an unwanted amino acid change next door, you might have just exchanged one mutation for two."
+  },
+  {
+   "t": 148.19,
+   "text": "The new mutation might be benign."
+  },
+  {
+   "t": 150.68,
+   "text": "It might be subtly harmful."
+  },
+  {
+   "t": 152.45,
+   "text": "It might be unpredictable."
+  },
+  {
+   "t": 154.21,
+   "text": "Regulators want to know what every off-target and bystander edit does, at what frequency, in patient cells."
+  },
+  {
+   "t": 161.26,
+   "text": "How does the field deal with bystander editing?"
+  },
+  {
+   "t": 163.71,
+   "text": "Three strategies."
+  },
+  {
+   "t": 165.24,
+   "text": "The first is target selection."
+  },
+  {
+   "t": 167.3,
+   "text": "Before you commit to using a base editor at a specific spot, you look at the sequence and check whether there are bystander candidates within the editing window."
+  },
+  {
+   "t": 176.12,
+   "text": "If there are, and they would be tolerable — say, they're synonymous changes that don't alter the protein, or they're in noncoding sequence — fine, proceed."
+  },
+  {
+   "t": 186.04,
+   "text": "If they're not tolerable, you pick a different target spot, perhaps using a different PAM variant of Cas9 to place the editing window differently, or you switch to a different editing strategy altogether."
+  },
+  {
+   "t": 197.45,
+   "text": "The second is narrower-window base editor variants."
+  },
+  {
+   "t": 201.18,
+   "text": "Liu's lab and others have engineered base editor variants with much narrower windows — sometimes only one or two bases wide."
+  },
+  {
+   "t": 209.7,
+   "text": "By engineering mutations in the deaminase that restrict its substrate scope, or by changing the linker, you can produce editors where only the very specific intended position is touched."
+  },
+  {
+   "t": 220.62,
+   "text": "The trade-off is usually some loss of efficiency: a narrow-window editor edits less efficiently overall, but the editing is more precise."
+  },
+  {
+   "t": 230.41,
+   "text": "The third is deaminase context preferences."
+  },
+  {
+   "t": 233.97,
+   "text": "APOBEC1 and the various TadA variants have sequence-context preferences — they prefer to edit cytosines or adenines in certain local contexts."
+  },
+  {
+   "t": 244.1,
+   "text": "APOBEC1, for instance, prefers TCW contexts, where W is A or T."
+  },
+  {
+   "t": 251.05,
+   "text": "TadA variants have their own preferences."
+  },
+  {
+   "t": 253.71,
+   "text": "By choosing a deaminase whose preferences match your target and disfavor your bystanders, you can sometimes get clean editing even in a multi-substrate window."
+  },
+  {
+   "t": 263.07,
+   "text": "In practice, all three strategies get used together."
+  },
+  {
+   "t": 266.98,
+   "text": "A clinical base editing program will spend a lot of design effort picking the right deaminase, the right Cas9 variant, the right guide, and the right precise target spot to minimize bystander editing."
+  },
+  {
+   "t": 279.01,
+   "text": "By the time a program is in human trials, the bystander spectrum has usually been characterized in cell culture and animal models, and the team can tell you exactly what fraction of editing events install just the intended edit, what fraction also install bystanders at specific neighboring positions, and what the expected protein-level consequences are."
+  },
+  {
+   "t": 299.87,
+   "text": "It is worth saying: bystander editing is not unique to base editors."
+  },
+  {
+   "t": 304.97,
+   "text": "Cas9 itself has off-target editing."
+  },
+  {
+   "t": 307.84,
+   "text": "Prime editors have their own error modes."
+  },
+  {
+   "t": 310.54,
+   "text": "ZFN and TALEN editors had theirs."
+  },
+  {
+   "t": 313.26,
+   "text": "Every editing technology installs the intended change with some characteristic distribution of unintended changes."
+  },
+  {
+   "t": 320.81,
+   "text": "The base editor's distribution is unusual mostly in that bystander edits sit right next to the intended edit, within a few bases, rather than off elsewhere in the genome."
+  },
+  {
+   "t": 331.47,
+   "text": "That's a different shape of problem than Cas9's distant off-targets, but it is still a manageable problem, and the engineering has come a long way."
+  }
+ ]
+}

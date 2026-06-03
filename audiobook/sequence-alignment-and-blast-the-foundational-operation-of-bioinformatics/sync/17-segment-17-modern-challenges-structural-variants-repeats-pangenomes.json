@@ -1,0 +1,175 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Modern challenges: structural variants, repeats, pangenomes",
+ "duration": 390.19,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Modern challenges: structural variants, repeats, pangenomes"
+  },
+  {
+   "t": 6.35,
+   "text": "Let me step back from the parade of specific tools and talk about the modern challenges in sequence alignment — the problems that are still active research, the places where the current generation of tools falls short, the places where the field is moving."
+  },
+  {
+   "t": 21.21,
+   "text": "There are three I want to highlight: structural variants, repetitive regions, and pangenome alignment."
+  },
+  {
+   "t": 27.62,
+   "text": "Structural variants."
+  },
+  {
+   "t": 29.2,
+   "text": "Most variant calling, with Illumina reads aligned by BWA, focuses on small variants — single nucleotide changes and short insertions or deletions of a few bases."
+  },
+  {
+   "t": 40.75,
+   "text": "These are the \"easy\" variants, in the sense that a single short read can span them and the alignment is straightforward."
+  },
+  {
+   "t": 47.51,
+   "text": "But the human genome also contains large structural variants — insertions, deletions, inversions, duplications, and translocations that span hundreds to millions of bases."
+  },
+  {
+   "t": 59.62,
+   "text": "These structural variants are responsible for a substantial fraction of human genetic disease, including most large copy-number changes, many cancer rearrangements, and major contributors to neurological disorders."
+  },
+  {
+   "t": 73.35,
+   "text": "Detecting structural variants from short reads is hard because no single short read spans the variant."
+  },
+  {
+   "t": 80.39,
+   "text": "Instead, you have to infer the variant indirectly from coverage changes, from discordant paired-end mappings (where the two reads of a pair end up much further apart than expected, or in the wrong orientation), or from soft-clipped alignments at breakpoints."
+  },
+  {
+   "t": 95.79,
+   "text": "Tools like DELLY, Manta, LUMPY, and GRIDSS are specialized structural variant callers built on top of BWA-aligned BAM files."
+  },
+  {
+   "t": 105.06,
+   "text": "They each use slightly different signals — coverage, discordant pairs, split reads — but all infer SVs indirectly from short-read alignments."
+  },
+  {
+   "t": 114.46,
+   "text": "Long reads make structural variant detection dramatically easier."
+  },
+  {
+   "t": 118.91,
+   "text": "A 50-kilobase nanopore read can span most structural variants directly — you can see the inversion, the duplication, the deletion in a single read, with the boundaries directly visible."
+  },
+  {
+   "t": 131.31,
+   "text": "Minimap2-based pipelines with tools like Sniffles, PBSV, and SVIM can call structural variants with much higher sensitivity than any short-read approach."
+  },
+  {
+   "t": 142.86,
+   "text": "This is one of the main reasons people are moving to long reads for clinical sequencing — short reads systematically miss the structural variants that cause real disease."
+  },
+  {
+   "t": 153.22,
+   "text": "Repetitive regions."
+  },
+  {
+   "t": 154.69,
+   "text": "Roughly half of the human genome consists of repetitive sequences — transposable elements, satellite DNA, centromeres, telomeres, segmental duplications."
+  },
+  {
+   "t": 165.75,
+   "text": "These regions are very hard to align reads to with confidence, because a short read from a repetitive region matches many places in the genome equally well, and the aligner has no way to know which place is correct."
+  },
+  {
+   "t": 178.51,
+   "text": "The standard solution is to assign such reads a low mapping quality (MAPQ) score — a number reported in the SAM file that estimates the probability the alignment is correct."
+  },
+  {
+   "t": 190.78,
+   "text": "Reads with MAPQ less than, say, 20 are typically filtered out before variant calling, on the grounds that you can't trust their placement."
+  },
+  {
+   "t": 199.47,
+   "text": "But this throws away a lot of data — and worse, it systematically excludes the parts of the genome that may be biologically important."
+  },
+  {
+   "t": 208.28,
+   "text": "Many genes are embedded in or near repetitive regions, and centromeres and telomeres play essential cell-biological roles."
+  },
+  {
+   "t": 217.0,
+   "text": "Long reads help here too: a long read that anchors in a unique region next to a repeat can disambiguate the repeat, by reading through to the unique anchor."
+  },
+  {
+   "t": 227.66,
+   "text": "The current frontier of human genome assembly — the T2T-CHM13 reference genome, which assembled the complete human genome including all centromeres and telomeres — was made possible by combining ultra-long nanopore reads with PacBio HiFi reads, both aligned with minimap2."
+  },
+  {
+   "t": 244.99,
+   "text": "Pangenomes."
+  },
+  {
+   "t": 246.34,
+   "text": "Here's the deepest current challenge."
+  },
+  {
+   "t": 248.69,
+   "text": "Up to now, all alignment has assumed a single linear reference genome — the human genome is GRCh38, every read aligns to GRCh38, every variant is described relative to GRCh38."
+  },
+  {
+   "t": 263.69,
+   "text": "But humans differ from each other by tens of millions of variants, and any single reference systematically biases analysis against people who differ from it."
+  },
+  {
+   "t": 273.46,
+   "text": "A variant that's common in West African populations but missing from GRCh38 will be hard to align reads to and hard to call accurately."
+  },
+  {
+   "t": 282.76,
+   "text": "This is a real source of bias in clinical genomics."
+  },
+  {
+   "t": 286.65,
+   "text": "The pangenome approach is to replace the linear reference with a graph — a data structure where the nodes are sequence segments and the edges represent how those segments connect, with the graph containing not one path through the genome but many alternative paths corresponding to common population variants."
+  },
+  {
+   "t": 304.84,
+   "text": "Aligning a read to a pangenome means finding the best path through the graph that matches the read — not the best position in a linear string."
+  },
+  {
+   "t": 313.6,
+   "text": "This is a fundamentally harder algorithmic problem, but it's also a fundamentally better representation of human genetic diversity."
+  },
+  {
+   "t": 321.46,
+   "text": "The Human Pangenome Reference Consortium published the first draft human pangenome in 2023, containing 47 phased diploid assemblies from genetically diverse individuals."
+  },
+  {
+   "t": 334.15,
+   "text": "Tools like vg (variation graph), GraphAligner, GraphChainer, and PGGB (PanGenome Graph Builder) are the early implementations of pangenome alignment."
+  },
+  {
+   "t": 345.96,
+   "text": "The algorithms are immature compared to BWA and minimap2, but they're improving fast, and within five years pangenome alignment will likely become standard for at least clinical-grade analyses."
+  },
+  {
+   "t": 358.89,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 360.2,
+   "text": "The future of sequence alignment is pangenome alignment."
+  },
+  {
+   "t": 364.09,
+   "text": "Instead of one reference genome, a graph that contains common variants as alternative paths; instead of forcing your reads to align to a single linear sequence, finding the most-similar path through the graph."
+  },
+  {
+   "t": 377.14,
+   "text": "This is a more honest representation of human diversity, and it eliminates the reference bias that has plagued the field for two decades."
+  },
+  {
+   "t": 385.12,
+   "text": "The algorithms are new, the tools are immature, but the direction is clear."
+  }
+ ]
+}

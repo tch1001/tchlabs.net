@@ -1,0 +1,175 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — Label-free vs labeled quantification — LFQ, TMT, iTRAQ, SILAC",
+ "duration": 291.59,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — Label-free vs labeled quantification — LFQ, TMT, iTRAQ, SILAC"
+  },
+  {
+   "t": 7.85,
+   "text": "Welcome back."
+  },
+  {
+   "t": 8.86,
+   "text": "Before the break we covered how mass spec identifies peptides."
+  },
+  {
+   "t": 13.04,
+   "text": "Now let's talk about how it quantifies them — because identification is only half the story."
+  },
+  {
+   "t": 19.23,
+   "text": "You usually want to know not just which proteins are in your sample, but how much of each, and how those amounts compare across conditions."
+  },
+  {
+   "t": 26.77,
+   "text": "There are two big families of approaches: label-free and labeled."
+  },
+  {
+   "t": 31.35,
+   "text": "Each has a place."
+  },
+  {
+   "t": 32.58,
+   "text": "Each has tradeoffs."
+  },
+  {
+   "t": 33.94,
+   "text": "Knowing the difference is essential to reading any proteomics paper."
+  },
+  {
+   "t": 38.61,
+   "text": "Label-free quantification, abbreviated LFQ, is conceptually the simplest."
+  },
+  {
+   "t": 44.76,
+   "text": "You run each sample separately on the LC-MS/MS instrument."
+  },
+  {
+   "t": 49.9,
+   "text": "For each identified peptide, you measure either its precursor ion intensity in the MS1 scan — the area under the peak — or its spectral count, meaning how many MS2 spectra were taken of it."
+  },
+  {
+   "t": 63.61,
+   "text": "You sum across peptides to get a protein intensity."
+  },
+  {
+   "t": 67.04,
+   "text": "Then you compare intensities across samples."
+  },
+  {
+   "t": 70.01,
+   "text": "The MaxQuant LFQ algorithm, and later FragPipe's IonQuant, normalize cleverly to account for differences in sample loading and ionization efficiency."
+  },
+  {
+   "t": 81.0,
+   "text": "LFQ is cheap — no labeling chemistry, just run samples."
+  },
+  {
+   "t": 85.83,
+   "text": "It scales to hundreds of samples."
+  },
+  {
+   "t": 88.19,
+   "text": "But because every sample is run separately, you get batch effects and missing values — a peptide identified in one sample may not be identified in the next, just because the instrument didn't happen to fragment it."
+  },
+  {
+   "t": 101.58,
+   "text": "LFQ reproducibility across hundreds of samples is the chronic pain point."
+  },
+  {
+   "t": 107.2,
+   "text": "Labeled quantification solves the batch effect problem by multiplexing — combining multiple samples into a single LC-MS run, but tagging each sample with a different chemical label so you can disentangle them afterwards."
+  },
+  {
+   "t": 121.33,
+   "text": "SILAC — stable isotope labeling by amino acids in cell culture — is the original."
+  },
+  {
+   "t": 127.61,
+   "text": "Invented by Matthias Mann's lab in 2002."
+  },
+  {
+   "t": 131.16,
+   "text": "You grow your cells in media containing heavy isotopic versions of arginine and lysine — typically carbon-13 and nitrogen-15."
+  },
+  {
+   "t": 141.09,
+   "text": "The heavy amino acids get incorporated into every newly-synthesized protein."
+  },
+  {
+   "t": 146.62,
+   "text": "Then you mix heavy-labeled cells with light-labeled cells and run them together."
+  },
+  {
+   "t": 151.28,
+   "text": "In the MS1 spectrum, every peptide appears as a pair of peaks — light and heavy, separated by a known mass difference — and the ratio of the two peaks is the ratio of protein abundance in the two cell populations."
+  },
+  {
+   "t": 166.22,
+   "text": "SILAC is exquisitely accurate but limited to cells you can grow in dialyzed media for many generations."
+  },
+  {
+   "t": 174.19,
+   "text": "Tissues, patient samples, plants — out of luck."
+  },
+  {
+   "t": 177.71,
+   "text": "iTRAQ and TMT — isobaric tags for relative and absolute quantification, and tandem mass tags — solved the SILAC limitation."
+  },
+  {
+   "t": 187.55,
+   "text": "These are chemical labels you attach to peptides after digestion, via amine chemistry on lysine side chains and N-termini."
+  },
+  {
+   "t": 196.32,
+   "text": "Each TMT label has the same total mass — they're isobaric — so labeled peptides from different samples co-elute and appear as a single MS1 peak."
+  },
+  {
+   "t": 206.79,
+   "text": "But when you fragment the peptide in MS2, the tags break off and release reporter ions at low m/z — each sample's tag releases a reporter at a unique m/z."
+  },
+  {
+   "t": 218.61,
+   "text": "The relative intensities of the reporter ions in the MS2 spectrum tell you the relative abundance of that peptide in each of the multiplexed samples."
+  },
+  {
+   "t": 227.85,
+   "text": "Modern TMT kits go up to TMT 18-plex or higher — eighteen samples in a single LC-MS run."
+  },
+  {
+   "t": 235.71,
+   "text": "TMT is the workhorse for large-scale tissue and clinical proteomics."
+  },
+  {
+   "t": 241.16,
+   "text": "It does have ratio compression issues — co-isolated peptides contaminate reporter ions, flattening true differences — and there are fixes for that, but it's still very widely used."
+  },
+  {
+   "t": 252.75,
+   "text": "Hold the contrast."
+  },
+  {
+   "t": 254.29,
+   "text": "Label-free is cheap, scales infinitely, suffers from missing values and batch effects."
+  },
+  {
+   "t": 260.5,
+   "text": "Labeled — TMT especially — eliminates batch effects by multiplexing, gives clean ratios, costs more per sample, and caps at the number of channels in the kit."
+  },
+  {
+   "t": 271.29,
+   "text": "For a study of ten samples, LFQ is fine."
+  },
+  {
+   "t": 274.86,
+   "text": "For a study of two thousand patient samples, you'd run TMT in batches of sixteen with a common reference channel for normalization."
+  },
+  {
+   "t": 283.61,
+   "text": "The modern alternative, DIA, addresses many of LFQ's problems without needing labels — and that's what we'll cover next."
+  }
+ ]
+}

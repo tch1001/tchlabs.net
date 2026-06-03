@@ -1,0 +1,195 @@
+{
+ "n": 17,
+ "title": "SEGMENT 17 — Limitations and where recombineering struggles",
+ "duration": 339.53,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 17 — Limitations and where recombineering struggles"
+  },
+  {
+   "t": 5.25,
+   "text": "Now for an honest accounting."
+  },
+  {
+   "t": 7.01,
+   "text": "Recombineering is an extraordinary technique, but it is not magic, and it has real limitations that have shaped where it gets used and where other tools take over."
+  },
+  {
+   "t": 17.07,
+   "text": "Let me walk through the main ones, because understanding the limitations is part of understanding when to use the tool."
+  },
+  {
+   "t": 23.81,
+   "text": "First, efficiency drops sharply with insertion size."
+  },
+  {
+   "t": 28.02,
+   "text": "For small insertions — point mutations via oligo, or insertions of a kilobase or two via cassette — recombineering works beautifully, with efficiencies in the range of a few percent and sometimes much higher."
+  },
+  {
+   "t": 42.23,
+   "text": "For larger insertions — say, ten or twenty kilobases — efficiency drops by orders of magnitude."
+  },
+  {
+   "t": 49.27,
+   "text": "For very large insertions — fifty kilobases or more — recombineering becomes impractical for routine use."
+  },
+  {
+   "t": 57.39,
+   "text": "The practical sweet spot is in the range of a few hundred bases to a few kilobases."
+  },
+  {
+   "t": 62.67,
+   "text": "Larger constructs require other approaches, like in-yeast assembly or integration mediated by site-specific recombinases."
+  },
+  {
+   "t": 71.67,
+   "text": "Second, you cannot always avoid leaving a marker behind."
+  },
+  {
+   "t": 75.71,
+   "text": "Counter-selection is great, but it requires a two-step protocol and adds time."
+  },
+  {
+   "t": 81.24,
+   "text": "In high-throughput applications, where you want to do many edits across the genome quickly, the counter-selection step can become a bottleneck."
+  },
+  {
+   "t": 89.81,
+   "text": "MAGE-style oligo editing without markers works, but the efficiency is lower than marker-selected editing, and you often need to screen many colonies to find your edit."
+  },
+  {
+   "t": 99.81,
+   "text": "So there is a tradeoff: cleaner editing is slower, and faster editing leaves scars."
+  },
+  {
+   "t": 105.71,
+   "text": "Third, the host range is narrow."
+  },
+  {
+   "t": 108.24,
+   "text": "Lambda Red works beautifully in E. coli and pretty well in close relatives like Salmonella, but really poorly in distant bacteria like Pseudomonas, Bacillus, or most environmental microbes."
+  },
+  {
+   "t": 120.89,
+   "text": "Building recombineering systems for new hosts requires identifying analogous phage proteins, optimizing them for the new host, and validating performance."
+  },
+  {
+   "t": 131.24,
+   "text": "This is an active research area, and progress has been steady, but it is not as easy as just dropping in lambda Red."
+  },
+  {
+   "t": 138.99,
+   "text": "CRISPR, by contrast, works in essentially any organism with reasonable effort, which has shifted some of recombineering's territory to CRISPR for non-E. coli applications."
+  },
+  {
+   "t": 150.39,
+   "text": "Fourth, mismatch repair limits oligo efficiency."
+  },
+  {
+   "t": 154.16,
+   "text": "We talked about this in Segment 9."
+  },
+  {
+   "t": 156.3,
+   "text": "The cell's mismatch repair machinery can undo many recombineering events by detecting the mismatch between the introduced oligo and the chromosomal strand, and correcting it back to the original."
+  },
+  {
+   "t": 168.01,
+   "text": "You can work around this by using a mismatch-repair-deficient strain, but those strains accumulate background mutations, which can cause its own headaches."
+  },
+  {
+   "t": 176.94,
+   "text": "Picking the right strain background is part of the art of recombineering."
+  },
+  {
+   "t": 181.18,
+   "text": "Fifth, homology arms must be perfect matches."
+  },
+  {
+   "t": 184.8,
+   "text": "A single mismatched base in your homology arm reduces efficiency dramatically."
+  },
+  {
+   "t": 191.03,
+   "text": "This means you need to know the exact sequence of your starting strain — strain-to-strain variation in the chromosome can break recombineering experiments if your arms were designed based on a reference sequence rather than your actual strain."
+  },
+  {
+   "t": 203.81,
+   "text": "Most experienced recombineering labs sequence their starting strains to make sure the arms are accurate."
+  },
+  {
+   "t": 210.78,
+   "text": "Sixth, recombineering is not zero-error."
+  },
+  {
+   "t": 214.16,
+   "text": "Sometimes the recombination event introduces small errors at the junctions — small deletions or insertions where the homology arm meets the chromosome."
+  },
+  {
+   "t": 224.07,
+   "text": "These are rare but real, and you need to sequence-verify your final clones to be sure the edit is clean."
+  },
+  {
+   "t": 230.51,
+   "text": "With long sequencing reads now cheap and routine, this is less of a burden than it once was, but it is something to be aware of."
+  },
+  {
+   "t": 238.88,
+   "text": "Seventh, scale-up costs add up."
+  },
+  {
+   "t": 241.2,
+   "text": "A single recombineering experiment is cheap — primers, oligo, a strain, a few plates."
+  },
+  {
+   "t": 248.18,
+   "text": "But scaling up to MAGE-level libraries requires a robot, custom oligo pools, sequencing for screening, computational infrastructure."
+  },
+  {
+   "t": 257.0,
+   "text": "The cost per experiment is low; the cost per platform is substantial."
+  },
+  {
+   "t": 261.91,
+   "text": "This is the same tradeoff you see in any high-throughput biology, but it is worth flagging because the headlines about MAGE making thousands of edits in a day can hide the fact that the supporting infrastructure took years and millions of dollars to build."
+  },
+  {
+   "t": 276.4,
+   "text": "So when does recombineering shine, and when do you reach for something else?"
+  },
+  {
+   "t": 281.04,
+   "text": "Recombineering shines when you need precise, defined sequence changes in E. coli or close relatives, especially when those changes are not knockouts but more subtle edits — point mutations, small insertions, tagging endogenous genes, modifying regulatory elements."
+  },
+  {
+   "t": 299.3,
+   "text": "It shines when you need many edits and can leverage MAGE-style automation."
+  },
+  {
+   "t": 304.2,
+   "text": "It shines as the editing partner of CRISPR for clean markerless edits."
+  },
+  {
+   "t": 308.91,
+   "text": "CRISPR alone is better for simple knockouts, for non-E. coli hosts, for mammalian cells, for any application where you need a quick gene disruption rather than a precise sequence change."
+  },
+  {
+   "t": 321.1,
+   "text": "Yeast-based assembly methods are better for very large constructs."
+  },
+  {
+   "t": 325.63,
+   "text": "Site-specific recombinases like Cre-lox are better for managing complex conditional alleles in higher organisms."
+  },
+  {
+   "t": 334.13,
+   "text": "The choice depends on what you are trying to do."
+  },
+  {
+   "t": 336.21,
+   "text": "Knowing the tool's limits is part of knowing the tool."
+  }
+ ]
+}

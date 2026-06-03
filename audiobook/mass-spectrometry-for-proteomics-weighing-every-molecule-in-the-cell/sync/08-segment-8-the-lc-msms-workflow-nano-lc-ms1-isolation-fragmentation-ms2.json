@@ -1,0 +1,211 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — The LC-MS/MS workflow — nano-LC, MS1, isolation, fragmentation, MS2",
+ "duration": 371.05,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — The LC-MS/MS workflow — nano-LC, MS1, isolation, fragmentation, MS2"
+  },
+  {
+   "t": 9.97,
+   "text": "Here is the workflow that runs on essentially every shotgun proteomics experiment in the world."
+  },
+  {
+   "t": 16.56,
+   "text": "I want you to be able to draw this on a whiteboard by the end of the segment."
+  },
+  {
+   "t": 20.52,
+   "text": "It has roughly six stages, and each stage solves a specific problem."
+  },
+  {
+   "t": 25.46,
+   "text": "Stage one: nano-LC."
+  },
+  {
+   "t": 27.79,
+   "text": "Your peptide mixture, after tryptic digestion, gets loaded onto a tiny reverse-phase liquid chromatography column — typically a fused silica capillary about fifty to seventy-five micrometers in inner diameter, packed with C18 silica beads, about fifteen to fifty centimeters long."
+  },
+  {
+   "t": 46.62,
+   "text": "You run a gradient — starting with mostly water and a little acetonitrile, ramping up to mostly acetonitrile over an hour or two."
+  },
+  {
+   "t": 54.94,
+   "text": "As the gradient runs, peptides elute off the column in order of hydrophobicity: most polar first, most hydrophobic last."
+  },
+  {
+   "t": 64.34,
+   "text": "The flow rate is in the hundreds of nanoliters per minute — hence \"nano-LC."
+  },
+  {
+   "t": 70.2,
+   "text": "\" The narrow column and the slow flow rate are crucial for sensitivity: you want every peptide molecule to enter the mass spec, not get diluted into a big solvent volume."
+  },
+  {
+   "t": 80.51,
+   "text": "The analogy: LC-MS is a two-step separation."
+  },
+  {
+   "t": 84.46,
+   "text": "First the peptides spread out in time as they elute from the column, then the mass spec spreads them out in m/z."
+  },
+  {
+   "t": 92.38,
+   "text": "Together you get millions of resolved features per run — every peptide localized to a specific retention time and a specific mass."
+  },
+  {
+   "t": 100.92,
+   "text": "Stage two: electrospray."
+  },
+  {
+   "t": 103.29,
+   "text": "The eluent from the column flows directly into an electrospray emitter — usually a tapered tip on the end of the column, with a few kilovolts of voltage."
+  },
+  {
+   "t": 112.7,
+   "text": "The peptides ionize as they spray, as we discussed in Segment 3, and enter the mass spec."
+  },
+  {
+   "t": 119.62,
+   "text": "Stage three: MS1 scan."
+  },
+  {
+   "t": 122.29,
+   "text": "The first thing the mass spec does, every fraction of a second, is take a survey scan — called an MS1 scan — of everything currently entering the instrument."
+  },
+  {
+   "t": 132.59,
+   "text": "The MS1 is a snapshot of all the peptide ions present at that moment, with their m/z values and intensities."
+  },
+  {
+   "t": 140.74,
+   "text": "A typical MS1 from a complex sample shows hundreds of peptide peaks, with charge-state isotope envelopes that let you compute monoisotopic masses."
+  },
+  {
+   "t": 150.88,
+   "text": "The MS1 is your inventory of what's eluting right now."
+  },
+  {
+   "t": 154.66,
+   "text": "Stage four: precursor selection."
+  },
+  {
+   "t": 157.24,
+   "text": "The instrument software looks at the MS1 spectrum and picks the most intense peaks — typically the top ten or twenty — for further analysis."
+  },
+  {
+   "t": 166.5,
+   "text": "Each selected peak is a precursor ion candidate."
+  },
+  {
+   "t": 169.88,
+   "text": "The instrument then isolates one precursor at a time, using a quadrupole as a narrow mass filter, letting through only ions in a window of, say, half an m/z unit around the chosen peak."
+  },
+  {
+   "t": 183.6,
+   "text": "Everything else gets discarded."
+  },
+  {
+   "t": 185.34,
+   "text": "Stage five: fragmentation."
+  },
+  {
+   "t": 187.76,
+   "text": "The isolated precursor ions are sent into a collision cell, where they collide with neutral gas molecules — typically nitrogen or argon."
+  },
+  {
+   "t": 196.93,
+   "text": "The collisions transfer energy to the peptide, exciting it vibrationally, and the peptide breaks apart at its weakest bonds — which, for peptides, are the amide bonds of the peptide backbone."
+  },
+  {
+   "t": 209.65,
+   "text": "This kind of fragmentation, when done with relatively high collision energy in a beam-type cell, is called HCD — higher-energy collisional dissociation."
+  },
+  {
+   "t": 220.24,
+   "text": "The result is a population of fragment ions, each one corresponding to a piece of the peptide."
+  },
+  {
+   "t": 226.45,
+   "text": "Specifically, for each amide bond that breaks, you get a pair of fragments: a b-ion, containing the N-terminal piece, and a y-ion, containing the C-terminal piece."
+  },
+  {
+   "t": 238.54,
+   "text": "A peptide of length n produces a ladder of n minus one possible b-ions and n minus one possible y-ions, and from the mass differences between adjacent ions in the ladder, you can read off the sequence — because the mass difference between a b-ion of length k and a b-ion of length k plus one is exactly the mass of the amino acid in position k plus one."
+  },
+  {
+   "t": 261.86,
+   "text": "Stage six: MS2 scan."
+  },
+  {
+   "t": 264.59,
+   "text": "The mass spec then takes a high-resolution scan of all the fragment ions produced in the collision cell."
+  },
+  {
+   "t": 271.41,
+   "text": "This is called the MS2 scan, or the tandem MS spectrum, or just \"the fragment spectrum."
+  },
+  {
+   "t": 278.3,
+   "text": "\" It contains the b- and y-ion ladders."
+  },
+  {
+   "t": 281.55,
+   "text": "From the spacing of the ions in the ladder, you can — in principle — read the sequence directly."
+  },
+  {
+   "t": 287.82,
+   "text": "In practice, you don't do that manually; you hand the spectrum to a database search algorithm, which we'll discuss in the next segment."
+  },
+  {
+   "t": 295.56,
+   "text": "The whole cycle — MS1 survey, pick top N precursors, isolate each one in turn, fragment, MS2 scan — takes about one to two seconds on a modern instrument."
+  },
+  {
+   "t": 307.88,
+   "text": "The instrument then moves to the next MS1 scan and repeats."
+  },
+  {
+   "t": 312.56,
+   "text": "Over a one-to-two-hour LC gradient, the instrument acquires tens of thousands of MS2 spectra, each one a candidate peptide identification."
+  },
+  {
+   "t": 322.4,
+   "text": "From that pile of MS2 spectra, with good software, you'll typically identify thirty to fifty thousand peptides, which map to eight thousand to twelve thousand distinct proteins."
+  },
+  {
+   "t": 334.55,
+   "text": "That is the modern proteomics dataset."
+  },
+  {
+   "t": 337.11,
+   "text": "This style of acquisition — pick the top N peaks from each MS1 and fragment them — is called DDA, data-dependent acquisition."
+  },
+  {
+   "t": 346.2,
+   "text": "It's been the standard for two decades."
+  },
+  {
+   "t": 348.62,
+   "text": "We'll see in Segment 11 that there's a different and better-for-quantification approach called DIA."
+  },
+  {
+   "t": 354.77,
+   "text": "But DDA is the conceptual baseline."
+  },
+  {
+   "t": 357.93,
+   "text": "Get it in your head: survey scan, pick top peaks, isolate, fragment, fragment spectrum."
+  },
+  {
+   "t": 364.11,
+   "text": "Repeat for two hours."
+  },
+  {
+   "t": 366.07,
+   "text": "The instrument is making thousands of decisions per minute about what to look at next."
+  }
+ ]
+}

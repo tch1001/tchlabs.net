@@ -1,0 +1,187 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — Bottom-up proteomics — why we chop the proteins first",
+ "duration": 329.5,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — Bottom-up proteomics — why we chop the proteins first"
+  },
+  {
+   "t": 4.8,
+   "text": "Now we get to the actual strategy of modern proteomics, and it requires a conceptual move that feels backwards at first."
+  },
+  {
+   "t": 12.64,
+   "text": "If you wanted to identify the proteins in a sample, you might think the natural thing to do would be: ionize each intact protein, measure its mass on the mass spec, look up the mass against the proteome, done."
+  },
+  {
+   "t": 25.11,
+   "text": "That approach exists and is called top-down proteomics, and we'll talk about it in Segment 15."
+  },
+  {
+   "t": 31.12,
+   "text": "But for almost all real-world proteomics — by some estimates ninety-five percent of all the proteomics done in the world today — we do not do that."
+  },
+  {
+   "t": 40.33,
+   "text": "We do something called bottom-up proteomics, also known as shotgun proteomics, in which we chop every protein in our sample into small peptides before measuring anything."
+  },
+  {
+   "t": 50.66,
+   "text": "Why on earth would you do that?"
+  },
+  {
+   "t": 52.11,
+   "text": "You started with intact proteins."
+  },
+  {
+   "t": 54.61,
+   "text": "Now you're throwing away the most important piece of information — which amino acids were connected to which — and trying to reassemble it later."
+  },
+  {
+   "t": 62.9,
+   "text": "It feels insane until you understand why."
+  },
+  {
+   "t": 65.61,
+   "text": "Here's why."
+  },
+  {
+   "t": 66.54,
+   "text": "Intact proteins are awful mass spec analytes."
+  },
+  {
+   "t": 70.2,
+   "text": "They're huge — fifty to a hundred kilodaltons is typical, sometimes much more."
+  },
+  {
+   "t": 75.74,
+   "text": "They carry many charges in ESI, spreading the signal across many m/z peaks."
+  },
+  {
+   "t": 82.69,
+   "text": "They're physically heterogeneous — every individual protein molecule in your sample has its own set of post-translational modifications, oxidations, deamidations, and so on, so a single \"protein\" in your sample is actually a forest of slightly different molecular species."
+  },
+  {
+   "t": 100.59,
+   "text": "They're hard to separate by chromatography — they stick to columns, they fall out of solution, they don't behave."
+  },
+  {
+   "t": 107.7,
+   "text": "And they're hard to fragment cleanly in the mass spec, because there are so many bonds and so many possible fragments that the spectra get impossibly complex."
+  },
+  {
+   "t": 117.38,
+   "text": "Peptides are wonderful mass spec analytes."
+  },
+  {
+   "t": 120.91,
+   "text": "They're small — typically eight to twenty amino acids, masses around eight hundred to twenty-five hundred daltons."
+  },
+  {
+   "t": 128.07,
+   "text": "They have a small number of charges in ESI, usually two or three."
+  },
+  {
+   "t": 132.65,
+   "text": "They separate beautifully by reverse-phase liquid chromatography."
+  },
+  {
+   "t": 137.07,
+   "text": "They fragment cleanly in collision-induced dissociation, giving interpretable spectra."
+  },
+  {
+   "t": 143.54,
+   "text": "And — this is the killer feature — the sequence of a peptide can be read directly off its fragmentation pattern."
+  },
+  {
+   "t": 151.26,
+   "text": "So the trick of bottom-up proteomics is: chop every protein in your sample into peptides, analyze the peptides instead of the proteins, identify each peptide by its mass and fragmentation, then computationally assemble the peptides back into protein identifications by matching them to a protein database."
+  },
+  {
+   "t": 171.04,
+   "text": "You lose some information — you don't know which peptides came from the same original molecule, so you lose proteoform-level resolution — but you gain enormous tractability."
+  },
+  {
+   "t": 181.32,
+   "text": "The proteins become a problem of identifying peptides, which is a problem the instrumentation is brilliantly suited to solve."
+  },
+  {
+   "t": 189.54,
+   "text": "The enzyme that does the chopping, in essentially all bottom-up proteomics, is trypsin."
+  },
+  {
+   "t": 195.04,
+   "text": "Trypsin is a digestive enzyme that lives in your gut and chops dietary proteins after lysine and arginine residues — specifically, after K and R, except when the next amino acid is proline."
+  },
+  {
+   "t": 208.32,
+   "text": "Why trypsin?"
+  },
+  {
+   "t": 209.32,
+   "text": "Several reasons."
+  },
+  {
+   "t": 210.68,
+   "text": "It's specific — it cleaves at predictable sites, so you can compute in advance what peptides any protein should yield."
+  },
+  {
+   "t": 218.41,
+   "text": "It cleaves often enough that most peptides come out in the eight-to-twenty residue size range that's ideal for mass spec."
+  },
+  {
+   "t": 225.41,
+   "text": "Lysine and arginine are both basic amino acids, so every tryptic peptide ends with a basic residue, which is great because it readily picks up a positive charge in ESI."
+  },
+  {
+   "t": 237.04,
+   "text": "And trypsin is cheap and robust — you buy it as a powder, dissolve it, mix with your sample, incubate overnight at 37 degrees, and you're done."
+  },
+  {
+   "t": 246.53,
+   "text": "The analogy: trypsin digestion is the trick that makes proteomics possible."
+  },
+  {
+   "t": 251.98,
+   "text": "It takes a sample of intact proteins — which would be a nightmare to analyze — and turns it into a sample of well-behaved peptides — which are exactly what the mass spec wants."
+  },
+  {
+   "t": 262.83,
+   "text": "Without trypsin, modern proteomics doesn't exist."
+  },
+  {
+   "t": 266.48,
+   "text": "There are other proteases that get used occasionally — Lys-C, chymotrypsin, Glu-C, Asp-N — for specific situations where trypsin doesn't give good coverage of a particular protein."
+  },
+  {
+   "t": 279.49,
+   "text": "But trypsin is the default, the workhorse, the protease that runs the field."
+  },
+  {
+   "t": 284.37,
+   "text": "After tryptic digestion, your sample — which started as maybe a few thousand intact proteins — has become a mixture of maybe a hundred thousand peptides."
+  },
+  {
+   "t": 294.42,
+   "text": "Each protein contributes, on average, a few dozen tryptic peptides."
+  },
+  {
+   "t": 299.3,
+   "text": "The mixture is enormously complex, but in a controlled way: every peptide is, in principle, predictable from the protein sequence."
+  },
+  {
+   "t": 308.77,
+   "text": "The job of the LC-MS/MS workflow is to detect and identify as many of those peptides as possible, and from the identified peptides, infer which proteins were present in the original sample."
+  },
+  {
+   "t": 322.24,
+   "text": "That's bottom-up proteomics in one paragraph."
+  },
+  {
+   "t": 325.33,
+   "text": "Now let's walk through the actual LC-MS/MS run."
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — Bacterial Ribo-seq — different biochemistry, different biology",
+ "duration": 346.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — Bacterial Ribo-seq — different biochemistry, different biology"
+  },
+  {
+   "t": 5.83,
+   "text": "So far we've talked mostly about eukaryotic Ribo-seq — yeast, mammalian cells, plants."
+  },
+  {
+   "t": 11.81,
+   "text": "But Ribo-seq has been adapted to bacteria as well, and bacterial Ribo-seq has its own particularities."
+  },
+  {
+   "t": 18.88,
+   "text": "The biology is different, the biochemistry is different, and the data has different features."
+  },
+  {
+   "t": 25.45,
+   "text": "Let me walk through the main points."
+  },
+  {
+   "t": 27.3,
+   "text": "The technique was first adapted to bacteria around 2011 and 2012, in studies by Gene-Wei Li (then in Carol Gross's lab and now at MIT), and independently by groups working in E. coli and Bacillus subtilis."
+  },
+  {
+   "t": 42.04,
+   "text": "The basic workflow is similar to eukaryotic Ribo-seq: stall ribosomes, lyse cells, digest with nuclease, isolate monosomes by sucrose gradient, deplete rRNA, build small-RNA library, sequence."
+  },
+  {
+   "t": 57.23,
+   "text": "But several specifics differ."
+  },
+  {
+   "t": 59.26,
+   "text": "Difference one: no cycloheximide."
+  },
+  {
+   "t": 61.88,
+   "text": "Cycloheximide doesn't work on bacterial ribosomes — their structure is different enough that CHX doesn't bind."
+  },
+  {
+   "t": 69.51,
+   "text": "The standard bacterial arrest agent is chloramphenicol, which binds the 70S ribosome and inhibits peptide bond formation."
+  },
+  {
+   "t": 77.85,
+   "text": "Chloramphenicol works on bacterial ribosomes but not eukaryotic ones."
+  },
+  {
+   "t": 83.01,
+   "text": "Some bacterial Ribo-seq studies don't use any drug at all and rely on extremely fast flash-freezing — which works for bacteria because they're small and freeze quickly, more so than thick eukaryotic tissues."
+  },
+  {
+   "t": 96.14,
+   "text": "Drug-free bacterial Ribo-seq is increasingly the standard."
+  },
+  {
+   "t": 100.09,
+   "text": "Difference two: micrococcal nuclease instead of RNase I."
+  },
+  {
+   "t": 104.79,
+   "text": "Bacterial ribosomes are sensitive to RNase I in a way that disrupts the protected footprint — the enzyme can get into and around the 70S ribosome and degrade more than just the exposed RNA."
+  },
+  {
+   "t": 117.75,
+   "text": "So bacterial Ribo-seq uses micrococcal nuclease (MNase) instead."
+  },
+  {
+   "t": 123.58,
+   "text": "MNase is a less aggressive nuclease and stops cleanly at the ribosome boundary."
+  },
+  {
+   "t": 129.14,
+   "text": "The footprints come out the right size — around 24 to 30 nucleotides in bacteria, slightly shorter than the typical eukaryotic 28-30."
+  },
+  {
+   "t": 138.79,
+   "text": "Difference three: no 5' cap, no poly-A tail."
+  },
+  {
+   "t": 143.1,
+   "text": "Bacterial mRNAs do not have a 5' cap or a poly-A tail."
+  },
+  {
+   "t": 148.15,
+   "text": "The translation initiation machinery is completely different — bacterial ribosomes find start codons via Shine-Dalgarno sequences in the mRNA, which base-pair to the 16S rRNA of the small subunit."
+  },
+  {
+   "t": 161.79,
+   "text": "The implication for Ribo-seq is that initiation profiles look different, with sharp peaks at Shine-Dalgarno-positioned AUGs rather than at the cap-proximal scanned start codons of eukaryotes."
+  },
+  {
+   "t": 174.88,
+   "text": "The downstream analyses — annotating ORFs, finding stalls, computing TE — work essentially the same way, but the spatial arrangement of features is bacterial-specific."
+  },
+  {
+   "t": 185.96,
+   "text": "Difference four: no introns, no splicing."
+  },
+  {
+   "t": 189.65,
+   "text": "Bacterial mRNAs are unspliced — what you transcribe is what you translate."
+  },
+  {
+   "t": 195.51,
+   "text": "This actually makes bacterial Ribo-seq computationally simpler, because you don't have to worry about splice junctions in your alignment."
+  },
+  {
+   "t": 203.51,
+   "text": "Footprints align directly to the genome."
+  },
+  {
+   "t": 206.39,
+   "text": "Difference five: operons."
+  },
+  {
+   "t": 208.6,
+   "text": "Bacterial mRNAs are often polycistronic — a single mRNA encodes multiple proteins, one after another, each with its own Shine-Dalgarno and start codon."
+  },
+  {
+   "t": 220.14,
+   "text": "Ribo-seq shows you the translation of each ORF on the operon independently, and you can see things like differential translation of the genes within a single operon, which can vary based on internal initiation efficiency."
+  },
+  {
+   "t": 233.5,
+   "text": "The biology that bacterial Ribo-seq has revealed is rich."
+  },
+  {
+   "t": 237.88,
+   "text": "Gene-Wei Li and colleagues, in a series of beautiful papers, used bacterial Ribo-seq to demonstrate proportional translation — the observation that within a multi-protein complex like the ribosome itself, the ratios of protein synthesis from each gene are tightly matched to the stoichiometry needed for the assembled complex."
+  },
+  {
+   "t": 258.75,
+   "text": "This works through a combination of mRNA half-life, initiation efficiency, and feedback regulation, and bacterial Ribo-seq makes it directly quantifiable."
+  },
+  {
+   "t": 269.25,
+   "text": "Bacterial Ribo-seq has also revealed the importance of EF-P, the bacterial homolog of eIF5A, in rescuing ribosomes stalled at polyproline sequences."
+  },
+  {
+   "t": 280.63,
+   "text": "The clean signal you get from bacterial Ribo-seq, plus the ability to do clean genetic knockouts, has made bacteria a wonderful system for studying ribosome rescue and quality control."
+  },
+  {
+   "t": 292.21,
+   "text": "Bacterial Ribo-seq is now standard in microbiology research."
+  },
+  {
+   "t": 296.98,
+   "text": "It's used for everything from understanding antibiotic mechanisms (many antibiotics work by perturbing translation, and Ribo-seq shows you exactly what they do) to characterizing virulence factor expression in pathogens to studying the translation landscape of the gut microbiome via metaribosomal profiling."
+  },
+  {
+   "t": 316.32,
+   "text": "The headline: Bacterial Ribo-seq uses different drugs and different nucleases than eukaryotic Ribo-seq, but the basic idea is the same: stall the ribosomes, digest the mRNA except where ribosomes protect it, sequence the footprints, read out translation at codon resolution."
+  },
+  {
+   "t": 335.11,
+   "text": "The biology you see is bacterial — Shine-Dalgarno-based initiation, polycistronic operons, EF-P-dependent rescue at polyproline — but the experimental logic is identical."
+  }
+ ]
+}

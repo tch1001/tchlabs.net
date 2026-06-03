@@ -1,0 +1,227 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Recombineering plus CRISPR: the synergy",
+ "duration": 316.93,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Recombineering plus CRISPR: the synergy"
+  },
+  {
+   "t": 4.85,
+   "text": "Now I want to spend a segment on something that you might find surprising, given that I started this lecture by framing recombineering as the thing that came before CRISPR."
+  },
+  {
+   "t": 14.44,
+   "text": "The reality is that recombineering and CRISPR are not really competitors."
+  },
+  {
+   "t": 19.32,
+   "text": "They solve different problems."
+  },
+  {
+   "t": 21.15,
+   "text": "And when you combine them, you get a tool that is more powerful than either one alone."
+  },
+  {
+   "t": 25.99,
+   "text": "The two technologies have become, in many bacterial genome editing workflows, partners."
+  },
+  {
+   "t": 32.26,
+   "text": "Here is the conceptual frame."
+  },
+  {
+   "t": 34.59,
+   "text": "CRISPR cuts."
+  },
+  {
+   "t": 35.76,
+   "text": "Recombineering pastes."
+  },
+  {
+   "t": 37.58,
+   "text": "Together they are a precision editor."
+  },
+  {
+   "t": 39.83,
+   "text": "Let me unpack that."
+  },
+  {
+   "t": 41.35,
+   "text": "CRISPR, in its basic form, is a programmable cutter."
+  },
+  {
+   "t": 45.24,
+   "text": "You give Cas9 a guide RNA that matches a particular sequence in the genome, and Cas9 finds that sequence and makes a double-strand break."
+  },
+  {
+   "t": 54.58,
+   "text": "The cell then has to repair the break."
+  },
+  {
+   "t": 56.92,
+   "text": "If you do nothing else, the cell repairs it by some error-prone process that often introduces small insertions or deletions — that is fine for knocking out a gene, but it does not give you a precise edit."
+  },
+  {
+   "t": 68.54,
+   "text": "You cannot, with CRISPR alone, get a clean swap of one sequence for another."
+  },
+  {
+   "t": 73.24,
+   "text": "To get a clean swap, you need to provide the cell with a template — a piece of DNA carrying the desired final sequence, flanked by homology arms that match the regions around the cut."
+  },
+  {
+   "t": 84.59,
+   "text": "When the cell repairs the cut, it can use your template as a guide and copy the new sequence into the chromosome by homologous recombination."
+  },
+  {
+   "t": 93.16,
+   "text": "The double-strand break dramatically stimulates the rate of homologous recombination at that location — instead of one in a million, you get something like one in ten or one in a hundred cells incorporating the template."
+  },
+  {
+   "t": 106.21,
+   "text": "Sound familiar?"
+  },
+  {
+   "t": 107.35,
+   "text": "This is recombineering."
+  },
+  {
+   "t": 108.91,
+   "text": "The template with homology arms is exactly the kind of substrate that lambda Red is designed to handle."
+  },
+  {
+   "t": 115.16,
+   "text": "So the natural workflow is: use CRISPR to make a cut at the target site, use lambda Red to drive incorporation of a template at the cut site."
+  },
+  {
+   "t": 123.76,
+   "text": "CRISPR provides the targeting; recombineering provides the precise editing."
+  },
+  {
+   "t": 128.84,
+   "text": "In practice, in bacteria, the combined CRISPR-plus-recombineering workflow looks like this."
+  },
+  {
+   "t": 134.94,
+   "text": "You build a strain expressing lambda Red and also carrying a CRISPR-Cas9 cassette with a programmable guide RNA."
+  },
+  {
+   "t": 142.53,
+   "text": "You design your guide to target the site where you want to edit."
+  },
+  {
+   "t": 145.8,
+   "text": "You design your template — a PCR product with homology arms flanking the new sequence, designed so that the new sequence destroys the guide RNA target site, preventing re-cutting."
+  },
+  {
+   "t": 157.49,
+   "text": "You electroporate the template into your strain, induce both Red and Cas9, and let the cell sort it out."
+  },
+  {
+   "t": 164.46,
+   "text": "Cas9 cuts."
+  },
+  {
+   "t": 165.82,
+   "text": "The break stimulates recombination."
+  },
+  {
+   "t": 168.38,
+   "text": "Red drives incorporation of the template."
+  },
+  {
+   "t": 171.41,
+   "text": "Cells that successfully integrate are the only ones that survive, because any cell that did not edit gets repeatedly cut by Cas9 until it either dies or edits."
+  },
+  {
+   "t": 181.46,
+   "text": "The selection is built into the system — you do not need a separate antibiotic marker, because Cas9 itself is the selection."
+  },
+  {
+   "t": 189.53,
+   "text": "This is sometimes called no-SCAR editing or CRISPR-mediated lambda Red recombineering, and it has been the workhorse for clean, markerless bacterial editing in the last several years."
+  },
+  {
+   "t": 200.79,
+   "text": "It is faster than traditional counter-selection recombineering — you do not need a two-round protocol, just one round with CRISPR doing the heavy selection."
+  },
+  {
+   "t": 209.61,
+   "text": "It is cleaner than CRISPR alone — you get the precise edit you designed, not an arbitrary indel."
+  },
+  {
+   "t": 215.96,
+   "text": "And it does not require a selectable marker in your final strain — Cas9 kills the unedited cells without needing antibiotic resistance to be installed."
+  },
+  {
+   "t": 225.19,
+   "text": "I want to emphasize the philosophical point here."
+  },
+  {
+   "t": 228.06,
+   "text": "When CRISPR arrived in 2012 and started being applied to bacteria around 2013 and 2014, a natural assumption was that it would replace recombineering for bacterial genome editing."
+  },
+  {
+   "t": 240.97,
+   "text": "And in some applications it did."
+  },
+  {
+   "t": 242.85,
+   "text": "For knockouts, where you just need a gene disabled, CRISPR alone is usually faster and easier than recombineering."
+  },
+  {
+   "t": 250.2,
+   "text": "For organisms outside the recombineering host range, CRISPR is the only viable approach."
+  },
+  {
+   "t": 256.98,
+   "text": "But for the cases that recombineering was best at — precise, defined sequence changes at chosen locations — CRISPR alone was not actually the right tool."
+  },
+  {
+   "t": 266.9,
+   "text": "CRISPR cuts, but cutting is not the same as editing."
+  },
+  {
+   "t": 270.29,
+   "text": "The editing comes from homologous recombination, which is exactly what recombineering catalyzes."
+  },
+  {
+   "t": 277.3,
+   "text": "So the field, instead of replacing recombineering with CRISPR, ended up combining them."
+  },
+  {
+   "t": 283.13,
+   "text": "And the combination is better than either component alone."
+  },
+  {
+   "t": 286.79,
+   "text": "There is a general lesson here that I would like you to take seriously."
+  },
+  {
+   "t": 290.23,
+   "text": "New technologies in biology do not always replace old ones."
+  },
+  {
+   "t": 294.5,
+   "text": "Sometimes they layer on top, with the old technique providing one part of the workflow and the new technique providing another."
+  },
+  {
+   "t": 301.68,
+   "text": "CRISPR is the targeting layer."
+  },
+  {
+   "t": 304.1,
+   "text": "Recombineering is the precision-editing layer."
+  },
+  {
+   "t": 307.36,
+   "text": "Together they are a stack."
+  },
+  {
+   "t": 309.0,
+   "text": "Recognizing when to combine techniques rather than substitute them is one of the marks of an experienced experimentalist."
+  }
+ ]
+}

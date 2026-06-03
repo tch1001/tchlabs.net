@@ -1,0 +1,267 @@
+{
+ "n": 3,
+ "title": "SEGMENT 3 — Before ATAC-seq — DNase-seq, FAIRE-seq, MNase-seq",
+ "duration": 449.04,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 3 — Before ATAC-seq — DNase-seq, FAIRE-seq, MNase-seq"
+  },
+  {
+   "t": 6.25,
+   "text": "The accessibility question is old."
+  },
+  {
+   "t": 8.66,
+   "text": "People have been trying to map open chromatin since the 1970s, when researchers first noticed that the DNA in active regions of the genome was more sensitive to digestion by nucleases than the DNA in inactive regions."
+  },
+  {
+   "t": 23.14,
+   "text": "The reasoning was simple: if a nuclease can chew up a piece of DNA, that DNA must be exposed."
+  },
+  {
+   "t": 30.12,
+   "text": "Nucleosome-wrapped DNA is shielded; nucleosome-free DNA is vulnerable."
+  },
+  {
+   "t": 36.24,
+   "text": "So if you treat a nucleus with a nuclease and ask which regions get cut, you're effectively mapping which regions are open."
+  },
+  {
+   "t": 43.94,
+   "text": "That insight is the conceptual seed of every chromatin accessibility assay ever invented, including ATAC-seq."
+  },
+  {
+   "t": 52.33,
+   "text": "The differences are all in the engineering."
+  },
+  {
+   "t": 54.51,
+   "text": "The classical method, and for decades the gold standard, was DNase-seq — short for DNase hypersensitive site sequencing."
+  },
+  {
+   "t": 62.67,
+   "text": "The idea, going back to work by Carl Wu, Mark Groudine, and others in the late 1970s and 1980s, is this."
+  },
+  {
+   "t": 70.4,
+   "text": "You take a nucleus, treat it with the enzyme DNase I — a non-specific endonuclease that cuts double-stranded DNA — at a carefully calibrated low concentration, so that only the most accessible DNA gets cut, while the rest of the chromatin stays intact."
+  },
+  {
+   "t": 86.74,
+   "text": "The cut sites — called DNase hypersensitive sites, or DHSs — mark the locations of accessible chromatin."
+  },
+  {
+   "t": 95.06,
+   "text": "In the original implementations, DHSs were mapped one locus at a time using Southern blots, and they became one of the first widely used proxies for active regulatory elements."
+  },
+  {
+   "t": 106.92,
+   "text": "By the mid-2000s, with the rise of sequencing, the method evolved into DNase-seq: digest with DNase I, isolate the small fragments left over, sequence them, and map them genome-wide."
+  },
+  {
+   "t": 120.1,
+   "text": "The DNase footprint analysis — looking at the sub-peak structure of cuts within accessible regions, which can hint at where individual transcription factors are sitting — was a beautiful refinement that gave the technique additional resolution."
+  },
+  {
+   "t": 134.25,
+   "text": "DNase-seq works."
+  },
+  {
+   "t": 135.81,
+   "text": "It produced foundational data."
+  },
+  {
+   "t": 137.94,
+   "text": "The ENCODE consortium used it extensively in the 2010s to map accessible chromatin across hundreds of human cell types and tissues."
+  },
+  {
+   "t": 148.12,
+   "text": "But it had some serious practical limitations."
+  },
+  {
+   "t": 150.93,
+   "text": "First, the input requirement was enormous — you needed millions of cells, often tens of millions, to get a high-quality library."
+  },
+  {
+   "t": 159.72,
+   "text": "Second, the protocol was long and finicky — multiple enzymatic steps, multiple purifications, careful calibration of DNase concentration, often spanning days from cells to sequencing-ready library."
+  },
+  {
+   "t": 173.55,
+   "text": "Third, the enzyme had some sequence biases of its own, which had to be corrected computationally."
+  },
+  {
+   "t": 179.8,
+   "text": "And fourth, the dynamic range of DNase-seq peaks was sometimes compressed in ways that made it hard to compare between samples without careful normalization."
+  },
+  {
+   "t": 189.5,
+   "text": "Then there was FAIRE-seq — Formaldehyde-Assisted Isolation of Regulatory Elements followed by sequencing."
+  },
+  {
+   "t": 196.0,
+   "text": "FAIRE, developed by Jason Lieb and colleagues in the late 2000s, took a clever indirect approach."
+  },
+  {
+   "t": 202.76,
+   "text": "The idea is that if you crosslink cells with formaldehyde, the nucleosome-bound DNA gets glued to the histones, while the nucleosome-free DNA — the open regions — stays relatively free."
+  },
+  {
+   "t": 214.86,
+   "text": "If you then fragment the chromatin, do a phenol-chloroform extraction, and ask which DNA partitions into the aqueous phase — well, the free DNA, the open chromatin DNA, ends up in the aqueous phase, while the protein-bound DNA stays trapped in the organic phase."
+  },
+  {
+   "t": 232.21,
+   "text": "You sequence the aqueous-phase DNA and you have, in principle, a map of accessibility."
+  },
+  {
+   "t": 238.57,
+   "text": "No enzyme needed."
+  },
+  {
+   "t": 239.95,
+   "text": "Just chemistry."
+  },
+  {
+   "t": 241.14,
+   "text": "FAIRE-seq is elegant in concept but has its own issues."
+  },
+  {
+   "t": 245.0,
+   "text": "It tends to be noisier than DNase-seq, the peaks are broader, and the signal-to-noise is generally lower."
+  },
+  {
+   "t": 251.84,
+   "text": "It also still requires substantial input — millions of cells — and the formaldehyde fixation introduces its own complications."
+  },
+  {
+   "t": 260.96,
+   "text": "FAIRE-seq found a niche, but it never became dominant."
+  },
+  {
+   "t": 264.36,
+   "text": "Then there's MNase-seq — micrococcal nuclease sequencing — which is, in a way, the opposite of DNase-seq."
+  },
+  {
+   "t": 273.41,
+   "text": "Where DNase-seq maps open DNA by cutting in the open regions, MNase-seq maps nucleosomes by cutting away the linker DNA between them."
+  },
+  {
+   "t": 282.51,
+   "text": "MNase preferentially digests exposed DNA — the linker between nucleosomes — leaving the nucleosomes themselves protected."
+  },
+  {
+   "t": 291.36,
+   "text": "After heavy digestion, what's left is a population of DNA fragments that are exactly 147 base pairs long — the size of a nucleosome."
+  },
+  {
+   "t": 301.85,
+   "text": "Sequence these, and you get a map of where the nucleosomes are sitting."
+  },
+  {
+   "t": 305.88,
+   "text": "This is the inverse problem: rather than mapping the gaps, you map the beads."
+  },
+  {
+   "t": 310.92,
+   "text": "From that, you can infer the gaps."
+  },
+  {
+   "t": 313.33,
+   "text": "MNase-seq is a very different tool, more for studying nucleosome positioning than accessibility per se, but it sits in the same family of nuclease-based methods."
+  },
+  {
+   "t": 324.32,
+   "text": "So the chromatin accessibility toolbox in 2012 looked like this."
+  },
+  {
+   "t": 329.77,
+   "text": "DNase-seq: the gold standard, very thoroughly characterized, but needing millions of cells and days of protocol."
+  },
+  {
+   "t": 337.38,
+   "text": "FAIRE-seq: chemically clever but noisy, also needing lots of cells."
+  },
+  {
+   "t": 342.6,
+   "text": "MNase-seq: powerful for positioning nucleosomes but conceptually inverted from what you want for accessibility."
+  },
+  {
+   "t": 349.76,
+   "text": "And all of these methods had been built around the same constraint: you needed bulk biological material, lots of it, and you needed days of careful enzymatic or chemical work to extract a usable library."
+  },
+  {
+   "t": 362.77,
+   "text": "This was fine if you were studying a cell line."
+  },
+  {
+   "t": 365.44,
+   "text": "HeLa cells, K562 cells, mouse embryonic stem cells — these you could grow in unlimited quantities and harvest by the tens of millions."
+  },
+  {
+   "t": 375.1,
+   "text": "The early accessibility maps of the human genome were dominated by these immortalized cell types because they were the only ones from which you could routinely get enough material."
+  },
+  {
+   "t": 385.45,
+   "text": "But here is the problem."
+  },
+  {
+   "t": 386.75,
+   "text": "The biology that biologists most wanted to study — the biology of disease, of development, of cell-type-specific regulation — was almost never about cell lines."
+  },
+  {
+   "t": 397.96,
+   "text": "It was about primary cells: patient samples, sorted populations of rare immune cells, embryonic tissues, biopsy slices, cells dissociated from a single fly embryo, neurons from a particular brain region."
+  },
+  {
+   "t": 411.57,
+   "text": "These you couldn't grow in unlimited quantities."
+  },
+  {
+   "t": 414.44,
+   "text": "You had what you had."
+  },
+  {
+   "t": 415.6,
+   "text": "A few thousand cells."
+  },
+  {
+   "t": 417.35,
+   "text": "A few tens of thousands."
+  },
+  {
+   "t": 419.1,
+   "text": "Maybe a hundred thousand if you were lucky."
+  },
+  {
+   "t": 421.22,
+   "text": "DNase-seq couldn't touch most of these samples."
+  },
+  {
+   "t": 424.25,
+   "text": "The input was too low."
+  },
+  {
+   "t": 426.05,
+   "text": "The protocol was too lossy."
+  },
+  {
+   "t": 428.08,
+   "text": "The mapping of primary, biologically interesting tissues was effectively gated behind the input requirement of the available methods."
+  },
+  {
+   "t": 436.74,
+   "text": "The field had a map of accessibility in well-characterized cell lines, and almost nothing for the cells that mattered most."
+  },
+  {
+   "t": 444.21,
+   "text": "That was the problem ATAC-seq was about to solve."
+  },
+  {
+   "t": 447.5,
+   "text": "In one fell swoop."
+  }
+ ]
+}

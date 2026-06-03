@@ -1,0 +1,135 @@
+{
+ "n": 13,
+ "title": "SEGMENT 13 — Disome-seq — when ribosomes crash into each other",
+ "duration": 249.29,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 13 — Disome-seq — when ribosomes crash into each other"
+  },
+  {
+   "t": 5.11,
+   "text": "The next variant I want to walk through is disome profiling, sometimes called disome-seq, which is essentially Ribo-seq for ribosomes that have collided with each other."
+  },
+  {
+   "t": 14.69,
+   "text": "Where standard Ribo-seq isolates the 80S monosome — single ribosomes with their protected footprint — disome-seq isolates the 160S disome, which is a pair of ribosomes stuck together on the same mRNA, one having run into the back of the other."
+  },
+  {
+   "t": 31.23,
+   "text": "The biology behind this is the traffic-jam picture I mentioned in Segment 9."
+  },
+  {
+   "t": 35.86,
+   "text": "When a ribosome stalls in the middle of an mRNA — for whatever reason, rare codon, polyproline, regulatory pause, damaged template — the next ribosome behind it on the same mRNA catches up and bumps into it."
+  },
+  {
+   "t": 50.29,
+   "text": "The two ribosomes are now in close contact, and they together protect a longer footprint — about 60 nucleotides instead of 30 — corresponding to the combined width of two ribosomes."
+  },
+  {
+   "t": 63.0,
+   "text": "The analogy I want you to hold: disome-seq looks at ribosomes crashing into each other on the same mRNA — a leading stalled ribosome and a trailing one piled up behind it."
+  },
+  {
+   "t": 73.72,
+   "text": "Two ribosomes touching means the leading one had a serious stall, slow enough for the next one to catch up."
+  },
+  {
+   "t": 80.33,
+   "text": "Disomes are an indication that something went wrong, or at least that something got slow."
+  },
+  {
+   "t": 85.31,
+   "text": "Where monosome Ribo-seq sees every ribosome, disome-seq specifically sees the stalls."
+  },
+  {
+   "t": 92.16,
+   "text": "The protocol modifications are small."
+  },
+  {
+   "t": 94.42,
+   "text": "You do the standard Ribo-seq workflow — arrest, lyse, digest with nuclease — but on the sucrose gradient, you collect the 160S peak instead of (or in addition to) the 80S peak."
+  },
+  {
+   "t": 107.24,
+   "text": "The 160S peak contains the disomes."
+  },
+  {
+   "t": 110.45,
+   "text": "You extract the RNA, which now contains 60-nucleotide protected fragments."
+  },
+  {
+   "t": 116.3,
+   "text": "You build a small-RNA library specifically tuned for the longer insert size (your size selection band is at ~60 nt instead of ~30)."
+  },
+  {
+   "t": 125.7,
+   "text": "You sequence."
+  },
+  {
+   "t": 126.88,
+   "text": "In the analysis, you align the 60-nucleotide footprints to the transcriptome and ask: where are the collisions happening?"
+  },
+  {
+   "t": 134.55,
+   "text": "The answer comes out as peaks at specific codons across the transcriptome."
+  },
+  {
+   "t": 139.8,
+   "text": "The leading ribosome of each disome — the stalled one — sits at the collision site."
+  },
+  {
+   "t": 145.64,
+   "text": "The trailing ribosome sits just behind it."
+  },
+  {
+   "t": 148.51,
+   "text": "So the 60-nucleotide footprints map to pairs of adjacent codons, and the data tells you which codons cause the most collisions."
+  },
+  {
+   "t": 157.28,
+   "text": "What does disome-seq show?"
+  },
+  {
+   "t": 158.89,
+   "text": "Two things, and both have been illuminating."
+  },
+  {
+   "t": 161.91,
+   "text": "First, disome-seq independently confirms ribosome stall sites."
+  },
+  {
+   "t": 166.8,
+   "text": "The stalls we discussed in Segment 9 — rare codons, polyproline tracts, regulatory pauses — all show up as peaks in disome-seq, because stalled ribosomes get bumped into."
+  },
+  {
+   "t": 178.54,
+   "text": "So disome-seq gives you a second view of where translation is slow, with the additional information that the stall was severe enough to cause queueing."
+  },
+  {
+   "t": 187.62,
+   "text": "Second, disome-seq has revealed the connection between ribosome collisions and quality control."
+  },
+  {
+   "t": 193.78,
+   "text": "When ribosomes collide, the disome is recognized by a specific quality control pathway — the ribosome-associated quality control (RQC) pathway — which involves factors like Hbs1-Pelota in yeast, ZNF598 in mammals, and a downstream cascade that ubiquitinates and degrades the stalled ribosome's nascent peptide."
+  },
+  {
+   "t": 216.39,
+   "text": "The collided disome is the activating signal for this entire pathway."
+  },
+  {
+   "t": 220.85,
+   "text": "Disome-seq has helped map exactly where in the transcriptome this quality control gets activated, and which mRNAs and codons cause the most collisions and the most QC activity."
+  },
+  {
+   "t": 232.11,
+   "text": "The technique is relatively young — most disome-seq papers are from 2019 onward — but it's already an important addition to the Ribo-seq toolkit."
+  },
+  {
+   "t": 241.24,
+   "text": "Anyone studying ribosome stalling, mRNA quality control, or co-translational regulation should be aware of it."
+  }
+ ]
+}

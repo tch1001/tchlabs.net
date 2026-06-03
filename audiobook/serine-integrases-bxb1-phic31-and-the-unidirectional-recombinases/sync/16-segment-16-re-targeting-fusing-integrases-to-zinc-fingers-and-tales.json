@@ -1,0 +1,79 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Re-targeting — fusing integrases to zinc fingers and TALEs",
+ "duration": 204.39,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Re-targeting — fusing integrases to zinc fingers and TALEs"
+  },
+  {
+   "t": 6.12,
+   "text": "Let me briefly mention an interesting line of work that tried to make serine integrases more flexible by re-targeting them to arbitrary chromosomal sequences."
+  },
+  {
+   "t": 16.2,
+   "text": "The native integrase only acts at its native att site sequence."
+  },
+  {
+   "t": 20.98,
+   "text": "If you want the integrase to act at some other chromosomal location of your choosing, the conventional approach is to install an att site there (with CRISPR + HDR or with PASTE)."
+  },
+  {
+   "t": 32.31,
+   "text": "But what if you could make the integrase itself programmable — re-target it to a sequence of your choice without needing to pre-install a landing pad?"
+  },
+  {
+   "t": 41.17,
+   "text": "This is the question Andrew Anzalone, Russell Brewer-Jensen, Michele Calos, and others — independent groups in the late 2000s and 2010s — explored by fusing integrases to programmable DNA-binding domains."
+  },
+  {
+   "t": 55.92,
+   "text": "The two main programmable DNA-binding architectures of that era were zinc fingers (engineered three- and four-finger proteins that bind 9- to 12-base-pair sequences) and TALEs — transcription-activator-like effectors (modular proteins from plant pathogens that recognize DNA one base at a time and can be designed to bind any sequence)."
+  },
+  {
+   "t": 77.3,
+   "text": "By fusing one of these programmable DNA-binding domains to an integrase, you could in principle direct the integrase to a chromosomal location of your choice, where it would then catalyze recombination of an incoming attB-flanked donor."
+  },
+  {
+   "t": 92.34,
+   "text": "The chimeric proteins worked, in proof-of-principle experiments."
+  },
+  {
+   "t": 96.58,
+   "text": "Zinc-finger-phiC31 fusions and TALE-phiC31 fusions both showed re-targeted integration at chosen genomic loci."
+  },
+  {
+   "t": 106.79,
+   "text": "The problem was that the integration efficiency was much lower than at the native att site — typically one or two orders of magnitude lower."
+  },
+  {
+   "t": 115.85,
+   "text": "The reason is that the integrase's catalytic activity is intimately tied to the structure of the synaptic complex it forms on its native att sites; tethering the integrase to a different sequence via a DNA-binding fusion partner gets it to the right location but doesn't necessarily set up the productive synaptic geometry needed for efficient catalysis."
+  },
+  {
+   "t": 138.16,
+   "text": "This re-targeting approach was largely superseded by the rise of CRISPR — once you could cut at any sequence with Cas9, the question \"how do I direct integration to any sequence\" was answered more cleanly by Cas9 + HDR for landing-pad installation, and then standard integrase chemistry for the docking step."
+  },
+  {
+   "t": 157.51,
+   "text": "PASTE is the modern manifestation of this design: use prime editing (CRISPR-derived) for the targeting, use Bxb1 (native chemistry, full efficiency) for the integration."
+  },
+  {
+   "t": 169.78,
+   "text": "The targeting and the integration are cleanly separated rather than fused into a single chimeric protein."
+  },
+  {
+   "t": 177.15,
+   "text": "That said, some recent work — notably from the Liu lab and from the Gersbach lab at Duke — has revisited integrase-fusion approaches with CRISPR-Cas9 nickases as the DNA-binding domain."
+  },
+  {
+   "t": 189.32,
+   "text": "These chimeric \"Cas9-integrase\" systems are an area of active investigation, and may yet provide a different route to programmable site-specific large-cargo insertion."
+  },
+  {
+   "t": 199.86,
+   "text": "For now, the dominant approach is the pre-install-a-landing-pad model."
+  }
+ ]
+}

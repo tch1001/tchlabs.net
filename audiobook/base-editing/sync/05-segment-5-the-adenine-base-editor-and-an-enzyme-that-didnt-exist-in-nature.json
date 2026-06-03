@@ -1,0 +1,239 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — The adenine base editor — and an enzyme that didn't exist in nature",
+ "duration": 370.86,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — The adenine base editor — and an enzyme that didn't exist in nature"
+  },
+  {
+   "t": 6.41,
+   "text": "When Liu's group asked whether they could build an adenine base editor analogous to CBE, they ran into a problem that almost killed the project."
+  },
+  {
+   "t": 15.2,
+   "text": "The problem is that no enzyme that deaminates adenine in DNA exists in nature."
+  },
+  {
+   "t": 20.57,
+   "text": "That's worth pausing on."
+  },
+  {
+   "t": 21.95,
+   "text": "Read it again."
+  },
+  {
+   "t": 22.89,
+   "text": "No naturally occurring enzyme that you can find in any organism, anywhere on Earth, does to adenine on DNA what APOBEC1 does to cytosine."
+  },
+  {
+   "t": 31.99,
+   "text": "Lots of enzymes deaminate adenine in other contexts — there are adenine deaminases that act on RNA, there are adenine deaminases that act on free adenosine molecules, there are enzymes that deaminate adenine in tRNA."
+  },
+  {
+   "t": 45.92,
+   "text": "The chemistry exists in biology."
+  },
+  {
+   "t": 48.58,
+   "text": "But no enzyme, that anyone had identified by 2015, performed adenosine deamination on DNA."
+  },
+  {
+   "t": 56.29,
+   "text": "The substrate didn't exist for evolution to bother with."
+  },
+  {
+   "t": 60.29,
+   "text": "So if you wanted to build an adenine base editor by following the CBE recipe — find a natural deaminase, fuse it to Cas9, optimize the construct — you couldn't."
+  },
+  {
+   "t": 70.72,
+   "text": "There was no natural enzyme to recruit."
+  },
+  {
+   "t": 73.46,
+   "text": "The whole architecture had no first ingredient."
+  },
+  {
+   "t": 76.41,
+   "text": "What Liu's team did instead is the part of this story that I find most thrilling, and that I want you to remember in your bones because it is going to happen again and again in modern biotech."
+  },
+  {
+   "t": 86.53,
+   "text": "They evolved an enzyme that does not exist in nature."
+  },
+  {
+   "t": 90.14,
+   "text": "They took an enzyme that does the closest related chemistry — deaminating adenine in tRNA — and they pushed it through round after round of laboratory directed evolution until it gained the new activity they wanted: deaminating adenine in DNA."
+  },
+  {
+   "t": 105.31,
+   "text": "That enzyme is called TadA."
+  },
+  {
+   "t": 107.3,
+   "text": "Let me tell you what directed evolution is, because the term gets thrown around and it's worth knowing exactly."
+  },
+  {
+   "t": 113.22,
+   "text": "Directed evolution is the laboratory version of natural selection."
+  },
+  {
+   "t": 117.79,
+   "text": "You take a starting enzyme, you generate millions of variants of it by randomly mutating its DNA, you put the variants into bacteria or yeast under a selective pressure that only the variants with your desired new activity can survive, the survivors multiply, you take their enzymes, you mutate again, you select again, and you do this for round after round."
+  },
+  {
+   "t": 140.65,
+   "text": "You are pretending to be evolution."
+  },
+  {
+   "t": 142.7,
+   "text": "You are choosing what gets to survive — in this case, the variants that show even a tiny amount of DNA adenine deamination activity — and you let beneficial mutations accumulate over generations."
+  },
+  {
+   "t": 154.76,
+   "text": "Frances Arnold won the Nobel Prize in Chemistry in 2018 for pioneering exactly this technique."
+  },
+  {
+   "t": 162.4,
+   "text": "It is one of the most powerful tools in modern biology."
+  },
+  {
+   "t": 165.61,
+   "text": "Liu's team started with TadA from E. coli, the bacterial enzyme that normally deaminates adenosine at position 34 of tRNA."
+  },
+  {
+   "t": 175.29,
+   "text": "They engineered a clever bacterial selection in which the survival of the bacterium depended on TadA being able to deaminate an adenine in a piece of DNA."
+  },
+  {
+   "t": 185.49,
+   "text": "Wild-type TadA could not."
+  },
+  {
+   "t": 187.04,
+   "text": "They mutagenized the TadA gene, plated billions of bacteria, and looked for the rare survivors."
+  },
+  {
+   "t": 193.49,
+   "text": "They sequenced the TadA gene in the survivors."
+  },
+  {
+   "t": 196.46,
+   "text": "They took those slightly improved versions, mutagenized again, and selected again."
+  },
+  {
+   "t": 201.57,
+   "text": "They did this for round after round."
+  },
+  {
+   "t": 203.82,
+   "text": "After seven rounds, they had a variant they called **TadA\\*7.10."
+  },
+  {
+   "t": 209.47,
+   "text": "Several mutations away from the parent."
+  },
+  {
+   "t": 212.24,
+   "text": "Now able to deaminate adenine in DNA, in a sequence-defined way, with reasonable efficiency."
+  },
+  {
+   "t": 218.91,
+   "text": "They fused this evolved TadA to nCas9, added a wild-type TadA as a partner — TadA likes to dimerize, and the heterodimer of wild-type-plus-evolved turned out to work better than evolved alone — and they had the first adenine base editor**, ABE7.10."
+  },
+  {
+   "t": 236.35,
+   "text": "It was published in Nature in October of 2017."
+  },
+  {
+   "t": 240.11,
+   "text": "ABE7.10 converts A to inosine."
+  },
+  {
+   "t": 243.61,
+   "text": "Inosine, when the cell reads it during DNA replication or repair, is interpreted as guanine."
+  },
+  {
+   "t": 250.22,
+   "text": "So the net effect is A-to-G conversion."
+  },
+  {
+   "t": 253.31,
+   "text": "The thymine across the helix from the original A becomes a cytosine, because the cell pairs C with the new inosine/G."
+  },
+  {
+   "t": 261.44,
+   "text": "So the genomic outcome is A:T becomes G:C."
+  },
+  {
+   "t": 266.07,
+   "text": "Just like CBE, but on the other transition."
+  },
+  {
+   "t": 269.05,
+   "text": "ABE7.10 was a real reagent."
+  },
+  {
+   "t": 272.02,
+   "text": "It worked in human cells, with editing efficiencies in the same ballpark as CBE — sometimes 50 percent or more at favorable target sites."
+  },
+  {
+   "t": 281.27,
+   "text": "And every subsequent round of evolution improved it."
+  },
+  {
+   "t": 284.94,
+   "text": "Several years later, Liu's lab produced TadA-8e, with additional mutations that made it faster and more processive."
+  },
+  {
+   "t": 293.61,
+   "text": "ABE8e, the editor based on TadA-8e, can edit some targets with 80 to 90 percent efficiency in cell culture."
+  },
+  {
+   "t": 303.59,
+   "text": "It is the workhorse adenine base editor in current research and in essentially every adenine-base-editing clinical trial running today."
+  },
+  {
+   "t": 311.69,
+   "text": "I want to land the point one more time."
+  },
+  {
+   "t": 313.46,
+   "text": "The TadA in ABE is not a natural enzyme."
+  },
+  {
+   "t": 316.71,
+   "text": "There is no organism on Earth whose ancestors evolved TadA-7.10 or TadA-8e."
+  },
+  {
+   "t": 323.79,
+   "text": "Those enzymes exist because human beings, in a Boston lab, used directed evolution to drag a tRNA-editing enzyme out of its evolutionary niche and force it to acquire an activity that no organism, in three and a half billion years of life on this planet, had ever evolved."
+  },
+  {
+   "t": 341.99,
+   "text": "That is, in a sentence, the analogy."
+  },
+  {
+   "t": 344.46,
+   "text": "ABE is an evolved enzyme that doesn't exist in nature — Liu's team made it because no natural enzyme would do A-to-I on DNA."
+  },
+  {
+   "t": 353.09,
+   "text": "When you read about ABE in a clinical trial — and you will, because ABE-based therapies are now in human trials — remember that the active ingredient in that drug is an enzyme that natural selection never produced."
+  },
+  {
+   "t": 366.12,
+   "text": "Directed evolution produced it."
+  },
+  {
+   "t": 368.51,
+   "text": "Liu's team produced it."
+  },
+  {
+   "t": 369.97,
+   "text": "In a lab."
+  }
+ ]
+}

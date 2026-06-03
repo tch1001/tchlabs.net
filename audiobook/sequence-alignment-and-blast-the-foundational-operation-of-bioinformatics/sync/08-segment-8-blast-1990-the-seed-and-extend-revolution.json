@@ -1,0 +1,299 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — BLAST (1990): the seed-and-extend revolution",
+ "duration": 531.93,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — BLAST (1990): the seed-and-extend revolution"
+  },
+  {
+   "t": 5.2,
+   "text": "In October 1990, a paper titled \"Basic Local Alignment Search Tool\" appeared in the Journal of Molecular Biology."
+  },
+  {
+   "t": 13.1,
+   "text": "The authors were Stephen Altschul, Warren Gish, Webb Miller, Eugene Myers, and David Lipman — all at the National Center for Biotechnology Information, the NCBI, the part of the US National Institutes of Health that maintains GenBank."
+  },
+  {
+   "t": 27.32,
+   "text": "The tool they described was named after the initial letters of the title: BLAST."
+  },
+  {
+   "t": 32.5,
+   "text": "It was, and remains, the single most-used algorithm in molecular biology."
+  },
+  {
+   "t": 37.41,
+   "text": "The 1990 paper has been cited more than a hundred thousand times, making it one of the most-cited papers in all of science."
+  },
+  {
+   "t": 44.76,
+   "text": "BLAST took the seed-and-extend idea and engineered it into a robust, fast, statistically-grounded database search tool."
+  },
+  {
+   "t": 52.73,
+   "text": "The architecture was three-phase, not two — phase one was seeding, phase two was ungapped extension, phase three was gapped extension."
+  },
+  {
+   "t": 62.56,
+   "text": "Let me walk through each."
+  },
+  {
+   "t": 64.17,
+   "text": "Phase one: word search."
+  },
+  {
+   "t": 66.4,
+   "text": "BLAST builds a hash table of all k-mers from the query (called \"words\" in BLAST terminology — typically eleven for DNA, three for protein), and then scans through the database one position at a time, asking at each position: does the next k characters in the database match any word in the query's hash table?"
+  },
+  {
+   "t": 85.04,
+   "text": "Note that this is the reverse of what I described in the previous segment — BLAST indexes the query, not the database, and scans through the database linearly."
+  },
+  {
+   "t": 93.92,
+   "text": "For database search, that's the right choice, because the database might be too big to fully index in memory, while the query is small."
+  },
+  {
+   "t": 102.4,
+   "text": "For protein, BLAST does something clever in this phase."
+  },
+  {
+   "t": 105.96,
+   "text": "Instead of looking for exact 3-mer matches between query and database, it looks for high-scoring 3-mer matches — meaning, for each 3-mer in the query, it generates a list of all 3-mers in the database whose BLOSUM-62 alignment score with the query 3-mer exceeds a threshold (typically 11)."
+  },
+  {
+   "t": 126.51,
+   "text": "So if the query 3-mer is \"LIV\" (leucine-isoleucine-valine), the neighborhood of 3-mers that BLAST will look for includes not just \"LIV\" but also \"LIM,\" \"IIV,\" \"VIV,\" \"MIV\" — variations that score nearly as well against \"LIV\" as \"LIV\" does against itself."
+  },
+  {
+   "t": 144.41,
+   "text": "This neighborhood expansion makes BLAST much more sensitive for protein searches at moderate evolutionary distances, where exact 3-mer matches are rare but near-matches are common."
+  },
+  {
+   "t": 155.95,
+   "text": "The price is that the seed list is larger and the scanning is slower, but for protein it's worth it."
+  },
+  {
+   "t": 161.91,
+   "text": "Phase two: ungapped extension."
+  },
+  {
+   "t": 164.56,
+   "text": "Each word hit triggers an extension."
+  },
+  {
+   "t": 166.79,
+   "text": "Starting from the seed, BLAST extends the alignment in both directions, base by base, without allowing any gaps."
+  },
+  {
+   "t": 175.11,
+   "text": "It accumulates a score along the way — match scores add, mismatches subtract — and keeps track of the running maximum."
+  },
+  {
+   "t": 182.69,
+   "text": "When the score drops by more than X below the running maximum (the X-drop threshold), extension stops, and the extension is trimmed back to the position of the maximum."
+  },
+  {
+   "t": 192.76,
+   "text": "The result is an ungapped local alignment anchored on the seed."
+  },
+  {
+   "t": 197.09,
+   "text": "The original 1990 BLAST stopped here — gapped extension wasn't added until the second version, in 1997."
+  },
+  {
+   "t": 204.76,
+   "text": "The ungapped alignment was called the HSP — High-scoring Segment Pair — and the BLAST report was a list of HSPs above some threshold."
+  },
+  {
+   "t": 213.86,
+   "text": "The reason ungapped extension is the default starting point is that most real homologs contain at least one ungapped segment of substantial length."
+  },
+  {
+   "t": 223.03,
+   "text": "If two proteins are 50% identical across some domain, that domain is likely to contain a stretch of, say, twenty consecutive positions without any gaps."
+  },
+  {
+   "t": 234.29,
+   "text": "Finding that stretch is enough to identify the homology."
+  },
+  {
+   "t": 238.62,
+   "text": "Worrying about gaps comes later."
+  },
+  {
+   "t": 240.69,
+   "text": "Phase three: gapped extension."
+  },
+  {
+   "t": 243.06,
+   "text": "In 1997, Altschul and colleagues published \"Gapped BLAST and PSI-BLAST,\" which added a gapped extension step."
+  },
+  {
+   "t": 251.41,
+   "text": "After finding the best ungapped HSP, BLAST now runs a small Smith-Waterman-style dynamic programming extension over a limited region around the HSP, allowing gaps."
+  },
+  {
+   "t": 263.38,
+   "text": "The gapped alignment is the final output."
+  },
+  {
+   "t": 266.11,
+   "text": "This makes BLAST much more sensitive at greater evolutionary distances, where real homologs do contain gaps."
+  },
+  {
+   "t": 273.99,
+   "text": "Gapped BLAST is what almost everyone uses today."
+  },
+  {
+   "t": 277.66,
+   "text": "Now let me say something about the statistics of BLAST, because this is the part of the tool that made it scientifically rigorous, and it's something most users don't fully appreciate."
+  },
+  {
+   "t": 287.36,
+   "text": "Karlin and Altschul, in 1990 and 1993, worked out the theory of expected alignment scores under random sequence models."
+  },
+  {
+   "t": 296.54,
+   "text": "They proved that, for sequences drawn from random distributions of letters, the maximum local alignment score follows a particular probability distribution called the Gumbel extreme value distribution."
+  },
+  {
+   "t": 308.95,
+   "text": "From this distribution, you can compute, for any observed score, the expected number of alignments of that score or better that you'd see by chance in a database of a given size."
+  },
+  {
+   "t": 319.51,
+   "text": "That expected count is the E-value."
+  },
+  {
+   "t": 321.99,
+   "text": "The E-value is the most important number on a BLAST report."
+  },
+  {
+   "t": 325.33,
+   "text": "It tells you: if I had searched a random database of this size, how many alignments scoring this well would I expect to see purely by chance?"
+  },
+  {
+   "t": 334.26,
+   "text": "An E-value of 10 means \"I'd expect ten hits this good by chance, so this hit is meaningless."
+  },
+  {
+   "t": 340.69,
+   "text": "\" An E-value of 0.1 means \"I'd expect 0.1 hits this good by chance, so this hit is plausible but I shouldn't bet on it."
+  },
+  {
+   "t": 349.48,
+   "text": "\" An E-value of 10^-10 means \"I'd expect 10^-10 hits this good by chance, which is essentially zero, so this hit is real."
+  },
+  {
+   "t": 360.33,
+   "text": "\" The conventional threshold for \"this is real\" is E < 10^-5, though that's loose — for whole-proteome searches you might want E < 10^-20."
+  },
+  {
+   "t": 373.06,
+   "text": "Here's the analogy."
+  },
+  {
+   "t": 374.34,
+   "text": "The E-value is the statistical adjustment that makes BLAST scientifically useful."
+  },
+  {
+   "t": 379.49,
+   "text": "Without it, you'd just have a score, and you wouldn't know whether a score of 50 was good or bad."
+  },
+  {
+   "t": 384.86,
+   "text": "The E-value tells you: how many hits this good would you expect by chance, given the size of the database you searched?"
+  },
+  {
+   "t": 391.79,
+   "text": "Small E-value, real hit."
+  },
+  {
+   "t": 393.91,
+   "text": "Large E-value, noise."
+  },
+  {
+   "t": 395.78,
+   "text": "E < 10^-5 is the typical threshold for \"yes, this is a real homolog."
+  },
+  {
+   "t": 403.19,
+   "text": "\" The Karlin-Altschul theory of extreme values is what turned BLAST from a search tool into a real piece of statistical science."
+  },
+  {
+   "t": 411.29,
+   "text": "The 1990 paper also introduced the bit score, which is a length-and-database-independent normalization of the raw alignment score."
+  },
+  {
+   "t": 419.05,
+   "text": "The bit score is computed from the raw score by a formula involving the scoring matrix's parameters, and it tells you, intuitively, how many bits of information the alignment carries."
+  },
+  {
+   "t": 430.34,
+   "text": "A bit score of 50 means the alignment is 2^50 times more likely under the homology model than under the random model."
+  },
+  {
+   "t": 438.81,
+   "text": "Bit scores let you compare BLAST results across databases of different sizes, where raw scores would be misleading."
+  },
+  {
+   "t": 445.66,
+   "text": "Let me give you a sense of why BLAST was so transformative."
+  },
+  {
+   "t": 449.38,
+   "text": "Before BLAST, doing a database search meant running Smith-Waterman against every sequence in GenBank — one pair at a time."
+  },
+  {
+   "t": 457.29,
+   "text": "For the GenBank of 1989, a single protein query took several minutes per match, and a full database scan took hours."
+  },
+  {
+   "t": 465.71,
+   "text": "BLAST, on the same hardware, did the same scan in seconds — about a thousand times faster."
+  },
+  {
+   "t": 471.91,
+   "text": "Suddenly, every biologist who cloned a gene could, in minutes, find out what its closest known relatives were."
+  },
+  {
+   "t": 479.33,
+   "text": "The bottleneck of homology search disappeared."
+  },
+  {
+   "t": 482.79,
+   "text": "The whole field of molecular biology shifted into a \"BLAST it\" reflex — the very first thing you do with any new sequence is BLAST it, every time, by reflex."
+  },
+  {
+   "t": 494.04,
+   "text": "That reflex was made possible by Altschul's algorithm."
+  },
+  {
+   "t": 497.31,
+   "text": "BLAST is still in use today, thirty-five years later."
+  },
+  {
+   "t": 500.9,
+   "text": "It's available on the web at NCBI; you can paste in a sequence and search GenBank from a browser, and you get results in seconds."
+  },
+  {
+   "t": 508.78,
+   "text": "The web interface processes something like a hundred thousand searches a day."
+  },
+  {
+   "t": 513.06,
+   "text": "There are command-line versions for running locally."
+  },
+  {
+   "t": 515.58,
+   "text": "The algorithm has been refined dozens of times, but the architecture is unchanged."
+  },
+  {
+   "t": 521.65,
+   "text": "BLAST is one of those rare pieces of software that became infrastructure — like Linux or grep, it's just there, in the background, and everyone uses it without thinking."
+  }
+ ]
+}

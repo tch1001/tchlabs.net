@@ -1,0 +1,139 @@
+{
+ "n": 16,
+ "title": "SEGMENT 16 — Integration with CLIP-seq, RNA-seq, and mass spec",
+ "duration": 261.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 16 — Integration with CLIP-seq, RNA-seq, and mass spec"
+  },
+  {
+   "t": 5.71,
+   "text": "Ribo-seq is most powerful when it's not used alone."
+  },
+  {
+   "t": 9.64,
+   "text": "The translation layer of biology connects to many other layers — RNA binding, RNA modifications, protein abundance, protein-protein interactions — and the most informative studies typically integrate Ribo-seq with one or more complementary techniques."
+  },
+  {
+   "t": 26.59,
+   "text": "Let me walk through the main integrations."
+  },
+  {
+   "t": 29.14,
+   "text": "Ribo-seq plus RNA-seq."
+  },
+  {
+   "t": 31.62,
+   "text": "We've already covered this in Segment 8."
+  },
+  {
+   "t": 33.91,
+   "text": "Paired Ribo-seq and RNA-seq from the same samples lets you compute translation efficiency, which is the most fundamental derived measurement of ribosome profiling."
+  },
+  {
+   "t": 44.26,
+   "text": "Essentially every modern Ribo-seq study includes paired RNA-seq."
+  },
+  {
+   "t": 49.25,
+   "text": "Ribo-seq plus CLIP-seq."
+  },
+  {
+   "t": 51.17,
+   "text": "CLIP-seq — crosslinking and immunoprecipitation followed by sequencing — maps where specific RNA-binding proteins (RBPs) sit on the transcriptome."
+  },
+  {
+   "t": 62.35,
+   "text": "Many RBPs regulate translation."
+  },
+  {
+   "t": 65.45,
+   "text": "By combining CLIP-seq for an RBP with Ribo-seq of the same cells (with and without the RBP), you can connect RBP binding sites directly to changes in ribosome footprint distribution."
+  },
+  {
+   "t": 77.69,
+   "text": "If an RBP binds at a uORF and silencing the RBP increases ribosome density on the downstream main ORF, you've directly linked the RBP to translational suppression of that main ORF."
+  },
+  {
+   "t": 91.44,
+   "text": "This kind of analysis has been important for understanding microRNA-mediated translation repression, RNA-binding protein regulation of specific transcripts, and the role of RNA modifications (which often involve modification-binding proteins detectable by CLIP)."
+  },
+  {
+   "t": 106.91,
+   "text": "Ribo-seq plus mass spectrometry."
+  },
+  {
+   "t": 109.78,
+   "text": "Mass spec measures protein abundance directly."
+  },
+  {
+   "t": 112.97,
+   "text": "Combining Ribo-seq with quantitative proteomics from the same samples lets you triangulate: which transcripts are made (RNA-seq), which are translated (Ribo-seq), and what protein actually accumulates (mass spec)."
+  },
+  {
+   "t": 127.17,
+   "text": "Discrepancies are informative."
+  },
+  {
+   "t": 129.03,
+   "text": "A gene with high Ribo-seq but low protein implies post-translational regulation — protein degradation, secretion, instability."
+  },
+  {
+   "t": 137.95,
+   "text": "A gene with low Ribo-seq but high protein implies a stable, long-lived protein that doesn't need continuous synthesis."
+  },
+  {
+   "t": 146.46,
+   "text": "Integration with mass spec is also the gold standard for confirming that novel small ORFs identified from Ribo-seq actually produce detectable peptide products — Ribo-seq says \"ribosomes are translating here,\" mass spec says \"the resulting peptide is present in the cell."
+  },
+  {
+   "t": 163.29,
+   "text": "\""
+  },
+  {
+   "t": 163.49,
+   "text": "Ribo-seq plus epitranscriptomics."
+  },
+  {
+   "t": 166.05,
+   "text": "Modifications on mRNA — N6-methyladenosine (m6A) being the most studied — can affect translation."
+  },
+  {
+   "t": 175.12,
+   "text": "Methods like meRIP-seq and miCLIP map m6A sites across the transcriptome."
+  },
+  {
+   "t": 181.6,
+   "text": "Combining these with Ribo-seq lets you ask whether m6A sites in specific positions (5' UTR, near start codon, in the coding sequence, in the 3' UTR) affect ribosome density in predictable ways."
+  },
+  {
+   "t": 197.1,
+   "text": "The answer turns out to be yes — m6A in the 5' UTR can promote cap-independent translation, m6A in the coding sequence can affect elongation rate, m6A in the 3' UTR can affect mRNA stability and indirectly TE."
+  },
+  {
+   "t": 214.35,
+   "text": "Ribo-seq plus genetic perturbation."
+  },
+  {
+   "t": 217.16,
+   "text": "Combining Ribo-seq with CRISPR knockouts of translation factors, chaperones, or RNA-binding proteins of interest lets you see the direct functional consequences."
+  },
+  {
+   "t": 227.78,
+   "text": "Knock out an initiation factor, do Ribo-seq, see which mRNAs depend on that factor most."
+  },
+  {
+   "t": 234.12,
+   "text": "Knock out a quality control factor, do Ribo-seq, see where stalled ribosomes accumulate."
+  },
+  {
+   "t": 240.12,
+   "text": "The headline: Ribo-seq is most informative in combination with other genomics layers — RNA-seq for translation efficiency, CLIP-seq for RBP integration, mass spec for protein-level confirmation, epitranscriptomics for modification effects."
+  },
+  {
+   "t": 256.16,
+   "text": "No single assay reveals biology; the integrations are where the insight comes from."
+  }
+ ]
+}

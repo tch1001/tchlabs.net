@@ -1,0 +1,183 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — PASTE — the Liu lab marriage of prime editing and Bxb1",
+ "duration": 391.43,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — PASTE — the Liu lab marriage of prime editing and Bxb1"
+  },
+  {
+   "t": 5.74,
+   "text": "Now we get to one of the most elegant pieces of integrative thinking in the recent CRISPR-era engineering literature."
+  },
+  {
+   "t": 12.49,
+   "text": "The system is called PASTE — Prime-editing Assisted Site-specific Integration with Exchange — published by Eric Anzalone, Andrew Anzalone, David Liu and collaborators in late 2022 in Nature Biotechnology."
+  },
+  {
+   "t": 26.51,
+   "text": "(David Liu is the same lab that gave you base editing and prime editing, both of which we have covered in their own lectures.)"
+  },
+  {
+   "t": 33.75,
+   "text": "PASTE answers a problem that the landing-pad workflow only partially solved."
+  },
+  {
+   "t": 38.51,
+   "text": "The landing-pad workflow gives you fantastic reproducibility after you've installed the landing pad, but installing the landing pad in the first place requires either embryonic stem cell gene targeting (slow, laborious, mostly only used in mice) or CRISPR + HDR (inefficient in most cell types, especially primary and post-mitotic cells like neurons, hepatocytes, muscle fibers)."
+  },
+  {
+   "t": 63.48,
+   "text": "HDR works passably in dividing cell lines but really doesn't work well in differentiated cells in vivo."
+  },
+  {
+   "t": 70.33,
+   "text": "So the landing-pad approach has historically been a cell-culture and cell-line tool, not a tool for in vivo gene therapy in adult tissues."
+  },
+  {
+   "t": 78.86,
+   "text": "PASTE's insight is: use prime editing, not HDR, to install the attB landing pad."
+  },
+  {
+   "t": 85.58,
+   "text": "Prime editing — which we covered in detail in its own lecture — is a CRISPR-derived tool that can install short defined sequences (up to about 50 base pairs) into a chromosomal location with high precision, without requiring HDR, and crucially with reasonable efficiency in non-dividing cells."
+  },
+  {
+   "t": 104.8,
+   "text": "The Bxb1 attB site is only 38 base pairs."
+  },
+  {
+   "t": 109.58,
+   "text": "Prime editing can install it."
+  },
+  {
+   "t": 111.31,
+   "text": "So the PASTE strategy is:"
+  },
+  {
+   "t": 113.3,
+   "text": "Step one: Use prime editing to install a 38-base Bxb1 attB sequence at the desired chromosomal location."
+  },
+  {
+   "t": 122.36,
+   "text": "Prime editing works in many cell types where HDR doesn't, including primary hepatocytes, primary neurons, and many other clinically-relevant differentiated cells."
+  },
+  {
+   "t": 133.66,
+   "text": "Step two: Deliver Bxb1 integrase and an attP-flanked cargo plasmid (or AAV, or whatever delivery vehicle) to the same cells."
+  },
+  {
+   "t": 144.88,
+   "text": "Bxb1 docks the cargo at the newly-installed attB."
+  },
+  {
+   "t": 148.91,
+   "text": "Net result: A kilobase-scale cargo (the Bxb1 reaction has no realistic upper size limit — payloads of 10, 20, 30 kilobases have been demonstrated) is now stably and precisely integrated at the chromosomal location specified by the prime editor's guide RNA."
+  },
+  {
+   "t": 167.7,
+   "text": "No HDR."
+  },
+  {
+   "t": 168.88,
+   "text": "No random integration."
+  },
+  {
+   "t": 170.56,
+   "text": "No double-strand break of the chromosome."
+  },
+  {
+   "t": 173.19,
+   "text": "The entire process is achievable in differentiated, non-dividing cells in vivo."
+  },
+  {
+   "t": 179.19,
+   "text": "Let me put this in perspective."
+  },
+  {
+   "t": 180.99,
+   "text": "AAV — the dominant gene therapy vector — has a payload limit of about 4.7 kilobases."
+  },
+  {
+   "t": 188.09,
+   "text": "That limit excludes therapeutic genes like dystrophin (11 kb), full-length factor VIII (7 kb), full-length ABCA4 (6.8 kb), and many others."
+  },
+  {
+   "t": 199.95,
+   "text": "The conventional workarounds — dual-AAV split-intein systems, minigene cassettes, oversized AAV — are all unsatisfying compromises."
+  },
+  {
+   "t": 209.93,
+   "text": "PASTE offers, for the first time, a route to integrating cargo of essentially arbitrary size at a precise chromosomal location in differentiated tissues."
+  },
+  {
+   "t": 220.15,
+   "text": "The delivery mechanism (AAV, lipid nanoparticles, electroporation) still has to physically transport the components into the cell, but the integrated cargo size is not capped by the packaging limits of any one vector — it's capped by what you can deliver as a separate piece of DNA, which can be quite large."
+  },
+  {
+   "t": 239.03,
+   "text": "The PASTE paper demonstrated insertion of payloads up to 36 kilobases into multiple genomic loci in multiple cell types, including primary human hepatocytes."
+  },
+  {
+   "t": 250.78,
+   "text": "They showed therapeutic-relevant insertions for diseases like phenylketonuria, where a full-length copy of the PAH gene (plus regulatory elements) was installed at a safe-harbor location."
+  },
+  {
+   "t": 263.09,
+   "text": "The efficiencies are not perfect — typical PASTE rates run in the range of a few percent to ~30% of cells receiving a complete integration, depending on cell type and locus — but they are competitive with other in vivo gene therapy delivery strategies and miles ahead of HDR-based integration."
+  },
+  {
+   "t": 281.55,
+   "text": "Here is the analogy I want you to carry for PASTE."
+  },
+  {
+   "t": 284.81,
+   "text": "Prime editing installs the landing site with single-nucleotide precision — like screwing a metal anchor into exactly the right spot in a wall."
+  },
+  {
+   "t": 293.93,
+   "text": "Bxb1 then docks the cargo at the anchor — like clipping a heavy load onto the anchor."
+  },
+  {
+   "t": 299.68,
+   "text": "Together, they let you hang a kilobase-scale payload at any specified address in the genome, in differentiated cells, in vivo."
+  },
+  {
+   "t": 308.83,
+   "text": "PASTE is being pursued commercially by a company called Prime Medicine, the David Liu lab spinout, and there are pre-clinical and early-clinical programs for various inherited diseases."
+  },
+  {
+   "t": 319.92,
+   "text": "There are also academic competitors and adaptations — variants called PASTE-on-AAV, PASTE-LNP, twin-PE-PASTE — that further refine the delivery and the editing efficiency."
+  },
+  {
+   "t": 331.8,
+   "text": "The general principle is now established and is one of the most exciting design patterns in the entire genome-engineering field."
+  },
+  {
+   "t": 339.47,
+   "text": "A subtle but important point: PASTE separates the targeting problem from the integration problem."
+  },
+  {
+   "t": 345.55,
+   "text": "The targeting problem — getting to the right chromosomal location — is solved by prime editing's guide RNA, which can be programmed to virtually any sequence in the genome."
+  },
+  {
+   "t": 356.61,
+   "text": "The integration problem — actually depositing the cargo — is solved by Bxb1's well-characterized, unidirectional, high-specificity recombination."
+  },
+  {
+   "t": 366.62,
+   "text": "By cleanly separating these two functions and using the best tool for each, the Liu lab built something better than either prime editing alone (which can't install kilobase cargo) or Bxb1 alone (which needs an attB to already be present somewhere) could do."
+  },
+  {
+   "t": 383.43,
+   "text": "This is, in my opinion, one of the cleanest examples of integrative engineering in modern molecular biology."
+  },
+  {
+   "t": 390.33,
+   "text": "Hold onto it."
+  }
+ ]
+}

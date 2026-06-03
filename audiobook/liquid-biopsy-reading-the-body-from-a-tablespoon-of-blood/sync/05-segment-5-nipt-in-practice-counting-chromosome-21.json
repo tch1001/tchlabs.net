@@ -1,0 +1,191 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — NIPT in practice: counting chromosome 21",
+ "duration": 297.05,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — NIPT in practice: counting chromosome 21"
+  },
+  {
+   "t": 5.62,
+   "text": "Let's make NIPT concrete."
+  },
+  {
+   "t": 7.89,
+   "text": "How does the test actually work?"
+  },
+  {
+   "t": 9.84,
+   "text": "What does the lab do when your blood arrives?"
+  },
+  {
+   "t": 12.51,
+   "text": "The standard NIPT workflow is, at a high level, almost embarrassingly simple to describe."
+  },
+  {
+   "t": 18.82,
+   "text": "The complexity is all in the analysis."
+  },
+  {
+   "t": 21.88,
+   "text": "Step one: blood draw."
+  },
+  {
+   "t": 23.71,
+   "text": "Usually around 10 weeks of pregnancy, sometimes earlier."
+  },
+  {
+   "t": 27.54,
+   "text": "Two tubes of blood, drawn into special preservative tubes — usually Streck tubes — that stabilize the cfDNA and prevent white blood cells from lysing and contaminating the sample with maternal genomic DNA."
+  },
+  {
+   "t": 40.99,
+   "text": "Preanalytics matter; we'll come back to this in Segment 17."
+  },
+  {
+   "t": 45.15,
+   "text": "Step two: spin."
+  },
+  {
+   "t": 46.77,
+   "text": "Centrifuge the blood to separate plasma from cells."
+  },
+  {
+   "t": 50.61,
+   "text": "Plasma goes forward."
+  },
+  {
+   "t": 52.15,
+   "text": "Cells are discarded."
+  },
+  {
+   "t": 53.45,
+   "text": "Step three: extract cfDNA."
+  },
+  {
+   "t": 56.65,
+   "text": "Use a kit — silica column, magnetic beads, whatever — to pull cfDNA out of the plasma."
+  },
+  {
+   "t": 62.94,
+   "text": "You get maybe 5 to 30 nanograms total, including the 10 percent or so that's fetal."
+  },
+  {
+   "t": 69.1,
+   "text": "Step four: library prep and sequencing."
+  },
+  {
+   "t": 72.34,
+   "text": "Build a sequencing library from the cfDNA — add adapters, amplify gently — and run it on an Illumina sequencer."
+  },
+  {
+   "t": 80.24,
+   "text": "The clever bit: you don't need deep coverage."
+  },
+  {
+   "t": 83.22,
+   "text": "You don't even need to identify specific mutations."
+  },
+  {
+   "t": 86.74,
+   "text": "You just need to count fragments and figure out which chromosome each fragment came from."
+  },
+  {
+   "t": 91.95,
+   "text": "A few million reads, mapped to the human genome, is enough."
+  },
+  {
+   "t": 96.45,
+   "text": "Total cost per sample: well under $100 in 2026."
+  },
+  {
+   "t": 101.28,
+   "text": "Step five: count."
+  },
+  {
+   "t": 102.83,
+   "text": "For each chromosome, count what fraction of your reads mapped there."
+  },
+  {
+   "t": 106.9,
+   "text": "In a normal sample, the fraction of reads mapping to chromosome 21 should be a particular number — let's call it p₂₁ — that you've calibrated from reference samples."
+  },
+  {
+   "t": 117.47,
+   "text": "In a pregnancy where the fetus has trisomy 21 — three copies of chromosome 21 instead of two — and where 10 percent of the cfDNA is fetal, the fraction of reads from chromosome 21 will be slightly elevated."
+  },
+  {
+   "t": 131.71,
+   "text": "Specifically, you'll see roughly p₂₁ × (1 + 0.05) — about a 5 percent relative increase, because the fetal contribution to chromosome 21 reads is 50 percent higher than normal (three copies instead of two) and the fetus contributes 10 percent of total reads."
+  },
+  {
+   "t": 151.76,
+   "text": "A 5 percent shift in the read fraction of one chromosome sounds small."
+  },
+  {
+   "t": 156.86,
+   "text": "It is small."
+  },
+  {
+   "t": 157.96,
+   "text": "But if you have a few million reads and you've calibrated the assay well, that shift is enormously statistically significant."
+  },
+  {
+   "t": 166.11,
+   "text": "The standard deviation of the read fraction is tiny when you have that many reads, and a 5 percent shift is many standard deviations away from normal."
+  },
+  {
+   "t": 175.91,
+   "text": "You can call trisomy 21 with sensitivity above 99 percent and a false positive rate below 0.1 percent."
+  },
+  {
+   "t": 184.43,
+   "text": "NIPT has become the original mass-market liquid biopsy — trisomy 21 screening from a blood draw, replaced amniocentesis for most patients."
+  },
+  {
+   "t": 194.78,
+   "text": "Before NIPT, the standard prenatal screening was a combination of maternal serum markers and ultrasound, which would identify high-risk pregnancies that were then offered amniocentesis — a needle through the abdomen, into the amniotic sac, to collect fetal cells for karyotyping."
+  },
+  {
+   "t": 212.5,
+   "text": "Amniocentesis is invasive, carries a small but real risk of miscarriage, and is uncomfortable."
+  },
+  {
+   "t": 219.84,
+   "text": "NIPT replaced it for the vast majority of patients."
+  },
+  {
+   "t": 223.6,
+   "text": "Today, most pregnant women in the developed world get an NIPT instead of, or before, an amnio."
+  },
+  {
+   "t": 230.39,
+   "text": "Amnio is now reserved for confirmation of a positive NIPT, or for cases where you need to test things NIPT can't easily address."
+  },
+  {
+   "t": 239.68,
+   "text": "By 2026, NIPT accounts for roughly 10 percent of all clinical liquid biopsy testing by volume — it's the largest single application of cfDNA technology."
+  },
+  {
+   "t": 251.57,
+   "text": "Hundreds of millions of tests have been run worldwide."
+  },
+  {
+   "t": 254.86,
+   "text": "It also paid for, in a real sense, the development of the sequencing infrastructure and laboratory protocols that the rest of the field — cancer cfDNA, transplant cfDNA — now uses."
+  },
+  {
+   "t": 267.06,
+   "text": "Without NIPT, the economic case for industrial-scale cfDNA processing would have been much weaker."
+  },
+  {
+   "t": 274.51,
+   "text": "NIPT also tests for trisomy 18 and trisomy 13 (less common, more severe), sex chromosome aneuploidies, and — depending on the panel — some larger structural variants."
+  },
+  {
+   "t": 287.13,
+   "text": "We'll see in Segment 14 that the panel keeps expanding, toward single-gene disorders and eventually whole-genome fetal sequencing from the same blood draw."
+  }
+ ]
+}

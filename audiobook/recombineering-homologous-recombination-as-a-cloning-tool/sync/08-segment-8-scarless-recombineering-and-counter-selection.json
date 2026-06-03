@@ -1,0 +1,259 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — Scarless recombineering and counter-selection",
+ "duration": 364.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — Scarless recombineering and counter-selection"
+  },
+  {
+   "t": 4.19,
+   "text": "Now I want to deal with one of the inelegant aspects of the basic recombineering workflow, and how it got fixed."
+  },
+  {
+   "t": 10.55,
+   "text": "The problem is this."
+  },
+  {
+   "t": 12.05,
+   "text": "When you do a typical recombineering experiment, you insert a selectable marker — a kanamycin resistance gene, say — at your target site."
+  },
+  {
+   "t": 21.29,
+   "text": "The marker is essential, because you need to select for the rare cells that did integration."
+  },
+  {
+   "t": 26.88,
+   "text": "But once the integration is done, you do not necessarily want the marker to be there."
+  },
+  {
+   "t": 31.8,
+   "text": "It is, in a sense, a scar."
+  },
+  {
+   "t": 33.89,
+   "text": "It is extra DNA you left behind that you did not really want — useful for selection, but not part of the actual edit you cared about."
+  },
+  {
+   "t": 42.06,
+   "text": "And if you want to do a second round of recombineering at a different site, you cannot use the same marker again, because every cell already has it."
+  },
+  {
+   "t": 50.17,
+   "text": "So the question becomes: how do you select for an integration event, get a clean clone, and then remove the marker afterward, leaving only your intended edit behind?"
+  },
+  {
+   "t": 60.26,
+   "text": "This is called scarless recombineering or markerless recombineering, and the trick that solves it is called counter-selection."
+  },
+  {
+   "t": 67.72,
+   "text": "The basic idea of counter-selection is beautifully symmetric."
+  },
+  {
+   "t": 72.06,
+   "text": "First, you select FOR the marker — you put cells on a plate where only cells with the marker can grow."
+  },
+  {
+   "t": 77.97,
+   "text": "Then, in a second step, you select AGAINST the marker — you put cells on a plate where only cells without the marker can grow."
+  },
+  {
+   "t": 85.4,
+   "text": "The first step finds the rare integration events."
+  },
+  {
+   "t": 88.61,
+   "text": "The second step finds the rare loss-of-marker events."
+  },
+  {
+   "t": 91.94,
+   "text": "By doing both in sequence, you get a clean clone where the marker is gone."
+  },
+  {
+   "t": 96.59,
+   "text": "For this to work, you need a marker that supports both kinds of selection — positive selection for its presence, negative selection against its presence."
+  },
+  {
+   "t": 105.8,
+   "text": "And there are a few such markers in common use, each with a different mechanism."
+  },
+  {
+   "t": 110.28,
+   "text": "The first counter-selection marker most people learn about is SacB."
+  },
+  {
+   "t": 114.59,
+   "text": "SacB is a gene from Bacillus subtilis that encodes an enzyme called levansucrase."
+  },
+  {
+   "t": 120.24,
+   "text": "Levansucrase polymerizes sucrose into long chains called levans."
+  },
+  {
+   "t": 125.51,
+   "text": "If you grow E. coli expressing SacB on a medium containing sucrose, the cell makes levans, the levans accumulate, and the cell dies."
+  },
+  {
+   "t": 135.97,
+   "text": "So SacB is lethal in the presence of sucrose."
+  },
+  {
+   "t": 139.66,
+   "text": "That is your counter-selection."
+  },
+  {
+   "t": 141.3,
+   "text": "Cells with SacB die on sucrose; cells without SacB live."
+  },
+  {
+   "t": 145.85,
+   "text": "To use SacB for scarless recombineering, you pair it with a normal positive marker like kanamycin resistance."
+  },
+  {
+   "t": 153.35,
+   "text": "You make a cassette that contains both: kan-plus-SacB, flanked by your homology arms."
+  },
+  {
+   "t": 159.22,
+   "text": "First round: electroporate the kan-SacB cassette into your strain, select on kanamycin, get colonies that have integrated the cassette."
+  },
+  {
+   "t": 168.26,
+   "text": "Now you have your edit in place, but with the marker as a scar."
+  },
+  {
+   "t": 172.12,
+   "text": "Second round: design a second, scarless replacement cassette."
+  },
+  {
+   "t": 176.31,
+   "text": "This time it is just your desired final sequence — say, the wild-type sequence with a specific point mutation — flanked by the same homology arms."
+  },
+  {
+   "t": 185.44,
+   "text": "No kan, no SacB."
+  },
+  {
+   "t": 187.49,
+   "text": "You electroporate this second cassette into your colonies."
+  },
+  {
+   "t": 191.25,
+   "text": "The lambda Red machinery replaces the kan-SacB cassette with your scarless replacement."
+  },
+  {
+   "t": 196.75,
+   "text": "Now you select on sucrose."
+  },
+  {
+   "t": 198.74,
+   "text": "Only cells that successfully replaced the kan-SacB are now alive, because cells with SacB still in their chromosome die on sucrose."
+  },
+  {
+   "t": 207.31,
+   "text": "The survivors are your clean, scarless clones."
+  },
+  {
+   "t": 210.36,
+   "text": "That is counter-selection."
+  },
+  {
+   "t": 212.0,
+   "text": "First you select for the marker."
+  },
+  {
+   "t": 213.75,
+   "text": "Then you select against it."
+  },
+  {
+   "t": 215.35,
+   "text": "The marker is gone in the final clone, replaced by exactly the edit you wanted, no extra baggage."
+  },
+  {
+   "t": 221.66,
+   "text": "There are several other counter-selection systems in common use."
+  },
+  {
+   "t": 225.53,
+   "text": "CcdB is a toxin from a plasmid called F that poisons DNA gyrase, an essential cellular enzyme."
+  },
+  {
+   "t": 233.21,
+   "text": "CcdB-expressing cells die unless they have a counter-toxin."
+  },
+  {
+   "t": 237.47,
+   "text": "So expressing CcdB is lethal in normal cells, which means you can use it as a counter-selection marker: cells without CcdB live, cells with CcdB die."
+  },
+  {
+   "t": 248.25,
+   "text": "GalK is a particularly elegant counter-selection used in BAC recombineering."
+  },
+  {
+   "t": 253.91,
+   "text": "GalK encodes galactokinase, an enzyme in the galactose metabolism pathway."
+  },
+  {
+   "t": 260.45,
+   "text": "In a galK-deletion strain, expressing GalK from a plasmid or chromosome allows the cell to grow on galactose as a carbon source — that is positive selection."
+  },
+  {
+   "t": 271.02,
+   "text": "But GalK also makes the cell sensitive to a sugar analog called 2-deoxy-galactose, because the enzyme converts the analog into a toxic compound."
+  },
+  {
+   "t": 281.43,
+   "text": "So in the same strain, cells with GalK die on 2-deoxy-galactose."
+  },
+  {
+   "t": 286.44,
+   "text": "Same gene, two selections — first you select for it on galactose, then you select against it on the analog."
+  },
+  {
+   "t": 292.95,
+   "text": "The Copeland lab used this brilliantly for BAC modification."
+  },
+  {
+   "t": 297.43,
+   "text": "Counter-selection is the scar removal step."
+  },
+  {
+   "t": 300.34,
+   "text": "First you select FOR the marker, then you select AGAINST it, leaving only the desired edit."
+  },
+  {
+   "t": 306.15,
+   "text": "Once you internalize that two-step structure, a lot of advanced recombineering protocols suddenly make sense."
+  },
+  {
+   "t": 313.19,
+   "text": "The basic insight is that recombineering events are rare, so you need selection to find them — but if you want a clean final product, you need a way to get rid of the selection apparatus afterward."
+  },
+  {
+   "t": 323.71,
+   "text": "Counter-selection provides exactly that bidirectional capability."
+  },
+  {
+   "t": 328.24,
+   "text": "The combined toolkit — recombineering plus counter-selection — turned out to be powerful enough that whole genomes have been modified, gene by gene, using it."
+  },
+  {
+   "t": 338.64,
+   "text": "Recoded organisms, which we will get to in a few segments, are built by applying scarless recombineering at hundreds of sites across the genome."
+  },
+  {
+   "t": 347.91,
+   "text": "Without counter-selection, that would be impossible."
+  },
+  {
+   "t": 350.94,
+   "text": "Each round of editing would leave another marker behind, until the chromosome was unrecognizable."
+  },
+  {
+   "t": 357.9,
+   "text": "With counter-selection, each round leaves only the intended edit, and the next round can proceed cleanly."
+  }
+ ]
+}

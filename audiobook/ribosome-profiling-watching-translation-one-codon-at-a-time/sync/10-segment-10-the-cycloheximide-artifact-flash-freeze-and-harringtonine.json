@@ -1,0 +1,251 @@
+{
+ "n": 10,
+ "title": "SEGMENT 10 — The cycloheximide artifact, flash-freeze, and harringtonine",
+ "duration": 455.54,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 10 — The cycloheximide artifact, flash-freeze, and harringtonine"
+  },
+  {
+   "t": 5.64,
+   "text": "Welcome back."
+  },
+  {
+   "t": 6.66,
+   "text": "We've now spent an hour and we've covered the founding paper, the workflow, the periodicity signature, the meta-profiles, uORFs, microproteins, translation efficiency, and ribosome stalling."
+  },
+  {
+   "t": 19.2,
+   "text": "We're now going to spend the second hour going deeper — first into some artifacts that you have to be aware of, then into specialized variants of Ribo-seq, then into applications, and finally into the future of the field."
+  },
+  {
+   "t": 31.85,
+   "text": "The most important artifact in Ribo-seq, and one that has caused real controversy in the field, is the cycloheximide artifact."
+  },
+  {
+   "t": 40.29,
+   "text": "I want to spend a segment on it because it shapes how you should interpret most published Ribo-seq data, and especially Ribo-seq data from the early years of the technique."
+  },
+  {
+   "t": 50.2,
+   "text": "Here is the problem."
+  },
+  {
+   "t": 51.79,
+   "text": "Cycloheximide is added to cells to arrest ribosomes before lysis, so that ribosomes don't move during sample preparation."
+  },
+  {
+   "t": 60.23,
+   "text": "The premise is that CHX freezes every ribosome instantaneously, in place, exactly where it was at the moment of treatment."
+  },
+  {
+   "t": 69.29,
+   "text": "The premise is not exactly true."
+  },
+  {
+   "t": 71.71,
+   "text": "Cycloheximide takes a few seconds to bind and stall ribosomes."
+  },
+  {
+   "t": 76.83,
+   "text": "During those few seconds, ribosomes that have just initiated translation continue to elongate — but slowly, because CHX is starting to inhibit them."
+  },
+  {
+   "t": 86.79,
+   "text": "The net effect is that ribosomes accumulate slightly downstream of where they were when CHX was added."
+  },
+  {
+   "t": 93.4,
+   "text": "Specifically, CHX causes an artifactual enrichment of ribosome footprints in the first 30 to 50 codons of every ORF."
+  },
+  {
+   "t": 103.16,
+   "text": "If you do CHX-treated Ribo-seq and you look at the meta-profile of footprint density along the coding sequence, you see a striking signature: a high peak in the first ~30 codons, then a gradual decline to a lower steady-state plateau across the rest of the ORF."
+  },
+  {
+   "t": 119.41,
+   "text": "That early peak is not real biology — it's the consequence of ribosomes continuing to slowly accumulate at the start of each ORF during the seconds it takes for CHX to fully act."
+  },
+  {
+   "t": 131.12,
+   "text": "Cycloheximide is essentially distorting the first 30 seconds of translation."
+  },
+  {
+   "t": 136.8,
+   "text": "The analogy I want you to hold: CHX arrest is like freezing every ribosome in place, but also slightly distorting the first 30 seconds of translation, because the freeze takes a few seconds to fully take hold."
+  },
+  {
+   "t": 150.61,
+   "text": "The image is of taking a flash photograph at the racetrack — most of the runners are caught mid-stride, but the runners who just left the starting gate are slightly blurred because they're still moving while the flash fires."
+  },
+  {
+   "t": 162.34,
+   "text": "How big a deal is this?"
+  },
+  {
+   "t": 163.9,
+   "text": "For some analyses, modest."
+  },
+  {
+   "t": 166.14,
+   "text": "If you're computing per-gene total ribosome counts to estimate translation efficiency, the first-30-codon distortion averages out."
+  },
+  {
+   "t": 175.46,
+   "text": "If you're looking at stall sites in the middle of a long ORF, the artifact is far away from your peaks of interest."
+  },
+  {
+   "t": 182.35,
+   "text": "But if you're trying to interpret initiation kinetics, or if you're looking at short ORFs (like uORFs) where the first 30 codons are most of the ORF, the artifact can completely dominate your data."
+  },
+  {
+   "t": 194.21,
+   "text": "Many published claims about translation kinetics from early Ribo-seq studies have had to be re-examined in light of this artifact."
+  },
+  {
+   "t": 202.34,
+   "text": "What do you do about it?"
+  },
+  {
+   "t": 203.46,
+   "text": "Several strategies have been developed."
+  },
+  {
+   "t": 205.78,
+   "text": "Strategy one: flash-freezing without CHX."
+  },
+  {
+   "t": 209.71,
+   "text": "You skip CHX entirely."
+  },
+  {
+   "t": 211.78,
+   "text": "Instead, you flash-freeze your cells in liquid nitrogen as fast as possible, then process the frozen cells through the rest of the workflow with CHX added only to the lysis buffer (which still helps prevent post-lysis ribosome movement, but doesn't distort in-cell translation)."
+  },
+  {
+   "t": 229.21,
+   "text": "This is sometimes called drug-free profiling."
+  },
+  {
+   "t": 232.34,
+   "text": "It produces meta-profiles without the start-codon artifact and is now considered the gold standard, especially for studies focused on translation kinetics or initiation."
+  },
+  {
+   "t": 243.16,
+   "text": "The catch is that you have to be fast — flash-freezing has to happen within seconds of harvest, before ribosomes redistribute."
+  },
+  {
+   "t": 250.82,
+   "text": "Practical for cultured cells, harder for whole tissues."
+  },
+  {
+   "t": 254.75,
+   "text": "Strategy two: use a different elongation inhibitor."
+  },
+  {
+   "t": 258.84,
+   "text": "Anisomycin is one alternative — it binds the ribosomal A site and is faster-acting than CHX in some experimental setups."
+  },
+  {
+   "t": 267.64,
+   "text": "Emetine is another, and is sometimes preferred for very short timescale experiments."
+  },
+  {
+   "t": 273.14,
+   "text": "None of these are perfect, but they have different artifact profiles, and using multiple drugs in parallel lets you triangulate the real signal."
+  },
+  {
+   "t": 281.92,
+   "text": "Strategy three: combine CHX-treated and drug-free runs."
+  },
+  {
+   "t": 286.55,
+   "text": "Some groups now run both, and use the agreement between them to identify which features of the data are real and which are CHX artifacts."
+  },
+  {
+   "t": 295.84,
+   "text": "Now let me talk about harringtonine, which is essentially the inverse of cycloheximide and is used for a completely different purpose."
+  },
+  {
+   "t": 303.13,
+   "text": "Harringtonine — and its more potent relative homoharringtonine, which is a clinically used cancer drug — binds the ribosome at the very first elongation step."
+  },
+  {
+   "t": 312.82,
+   "text": "Specifically, harringtonine allows ribosomes to initiate at the start codon, but blocks the first peptide bond formation."
+  },
+  {
+   "t": 321.22,
+   "text": "The ribosome can find a start codon, recruit the first tRNA, but cannot elongate."
+  },
+  {
+   "t": 327.39,
+   "text": "As a result, in harringtonine-treated cells, ribosomes accumulate at start codons and nowhere else."
+  },
+  {
+   "t": 334.69,
+   "text": "Why is this useful?"
+  },
+  {
+   "t": 336.02,
+   "text": "Because the entire Ribo-seq signal collapses to start codons."
+  },
+  {
+   "t": 340.8,
+   "text": "The whole transcriptome's worth of translation initiation events shows up as massive peaks at the start codon of every translated ORF."
+  },
+  {
+   "t": 350.18,
+   "text": "You can use this to map translation initiation sites genome-wide, with single-codon precision."
+  },
+  {
+   "t": 356.79,
+   "text": "This is how you find non-canonical start codons — start codons at CUG or GUG instead of AUG, alternative start sites within annotated ORFs, start codons in uORFs that you couldn't see clearly because they were buried in the elongation signal."
+  },
+  {
+   "t": 373.88,
+   "text": "The standard workflow is to do CHX Ribo-seq and harringtonine Ribo-seq in parallel."
+  },
+  {
+   "t": 380.24,
+   "text": "CHX gives you elongation density along the whole transcriptome."
+  },
+  {
+   "t": 385.2,
+   "text": "Harringtonine gives you a sharp map of every initiation site."
+  },
+  {
+   "t": 389.04,
+   "text": "Comparing the two lets you precisely identify where translation starts and where it elongates."
+  },
+  {
+   "t": 395.47,
+   "text": "Combined with riboseq-only data of various kinds, this is how the field now finds novel ORFs and characterizes alternative initiation events."
+  },
+  {
+   "t": 405.62,
+   "text": "A close cousin to harringtonine is lactimidomycin, or LTM, which also enriches for initiating ribosomes."
+  },
+  {
+   "t": 413.34,
+   "text": "Lactimidomycin has somewhat cleaner kinetics than harringtonine for some applications."
+  },
+  {
+   "t": 418.75,
+   "text": "The methods toolkit for initiation profiling has expanded significantly in the years since 2009."
+  },
+  {
+   "t": 426.04,
+   "text": "The headline of this segment: Cycloheximide arrest causes a real artifact at the start of every ORF, because CHX takes seconds to act and ribosomes drift in that window."
+  },
+  {
+   "t": 438.09,
+   "text": "Flash-freezing without CHX, or initiation-specific drugs like harringtonine, give you cleaner views of the underlying biology."
+  },
+  {
+   "t": 447.33,
+   "text": "When you read a Ribo-seq paper, look at the methods — find out what arrest strategy they used, and calibrate your interpretation accordingly."
+  }
+ ]
+}

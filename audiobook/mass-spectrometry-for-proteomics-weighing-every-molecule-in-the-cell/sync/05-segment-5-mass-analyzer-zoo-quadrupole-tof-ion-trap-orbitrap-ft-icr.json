@@ -1,0 +1,263 @@
+{
+ "n": 5,
+ "title": "SEGMENT 5 — Mass analyzer zoo — Quadrupole, TOF, Ion trap, Orbitrap, FT-ICR",
+ "duration": 453.66,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 5 — Mass analyzer zoo — Quadrupole, TOF, Ion trap, Orbitrap, FT-ICR"
+  },
+  {
+   "t": 8.39,
+   "text": "There are five major types of mass analyzer in widespread use, and each one has a distinct geometry, a distinct trick for separating ions by m/z, and distinct tradeoffs in resolution, mass accuracy, speed, sensitivity, and cost."
+  },
+  {
+   "t": 24.95,
+   "text": "You don't need to be a mass spec engineer to use proteomics data, but you absolutely need to know which analyzer is which, because every paper you read will tell you what instrument it used, and the choice of analyzer is the single biggest determinant of what the data can do."
+  },
+  {
+   "t": 39.95,
+   "text": "Let me walk you through them in roughly historical order, because each one was invented to fix limitations of the previous ones."
+  },
+  {
+   "t": 47.45,
+   "text": "The quadrupole, invented by Wolfgang Paul in the 1950s — Nobel Prize 1989."
+  },
+  {
+   "t": 54.56,
+   "text": "Four parallel metal rods arranged in a square."
+  },
+  {
+   "t": 57.88,
+   "text": "You put a combination of DC voltage and radiofrequency AC voltage on the rods, and the resulting oscillating electric field acts as a kind of mass filter."
+  },
+  {
+   "t": 68.03,
+   "text": "Ions with one specific m/z fly in stable trajectories down the middle of the rods and reach the detector."
+  },
+  {
+   "t": 76.0,
+   "text": "Ions with any other m/z get yanked sideways and crash into the rods."
+  },
+  {
+   "t": 81.89,
+   "text": "By sweeping the voltages, you scan through m/z values one at a time."
+  },
+  {
+   "t": 87.15,
+   "text": "Quadrupoles are cheap, robust, fast, simple — but their resolution is modest (you can distinguish ions about one m/z unit apart, no better) and they're sensitive but not exquisitely so."
+  },
+  {
+   "t": 100.95,
+   "text": "They're the workhorse for routine quantitative work — triple quadrupole instruments, which we'll discuss later, are the standard for clinical mass spec and targeted proteomics."
+  },
+  {
+   "t": 111.7,
+   "text": "But they're not the right tool for unbiased proteome-wide discovery."
+  },
+  {
+   "t": 115.92,
+   "text": "Time-of-flight, abbreviated TOF."
+  },
+  {
+   "t": 118.92,
+   "text": "The trick is delightful in its simplicity."
+  },
+  {
+   "t": 121.67,
+   "text": "You give all your ions the same amount of kinetic energy by accelerating them through a fixed voltage."
+  },
+  {
+   "t": 127.76,
+   "text": "Now you let them fly down a long, evacuated tube."
+  },
+  {
+   "t": 131.46,
+   "text": "Light ions go fast; heavy ions go slow."
+  },
+  {
+   "t": 135.09,
+   "text": "Measure the time of arrival at the detector at the end of the tube."
+  },
+  {
+   "t": 138.35,
+   "text": "From the flight time and the known length of the tube, you compute the velocity, and from velocity plus known kinetic energy, you compute the mass."
+  },
+  {
+   "t": 147.8,
+   "text": "A TOF analyzer is a literal race track for ions, where the lighter ions finish first and the heavier ones bring up the rear, and the order of arrival is the spectrum."
+  },
+  {
+   "t": 158.39,
+   "text": "TOFs can be very fast — you get a complete mass spectrum every microsecond — and modern reflectron TOFs (which fold the flight path with electrostatic mirrors to extend it) reach quite high resolution."
+  },
+  {
+   "t": 172.2,
+   "text": "MALDI is almost always coupled to TOF."
+  },
+  {
+   "t": 175.25,
+   "text": "The modern proteomics workhorse called timsTOF, which we'll discuss in detail in Segment 16, is a TOF with an extra trick."
+  },
+  {
+   "t": 183.72,
+   "text": "Ion traps, both 3D (Paul trap) and 2D (linear trap quadrupole, LTQ)."
+  },
+  {
+   "t": 190.97,
+   "text": "Imagine a quadrupole, but with end caps that close the trap into a box."
+  },
+  {
+   "t": 195.84,
+   "text": "Ions get injected, then oscillate inside the trap as a cloud, kept in place by the RF fields."
+  },
+  {
+   "t": 202.84,
+   "text": "You can then selectively eject ions of different m/z by sweeping the field, and they fly out to the detector in m/z order."
+  },
+  {
+   "t": 212.89,
+   "text": "Ion traps are compact, sensitive, fast at MS/MS — they can isolate a peak, fragment it, and read the fragments very efficiently."
+  },
+  {
+   "t": 223.44,
+   "text": "The Thermo LTQ Orbitrap (which we'll get to) used an ion trap as its front end for years."
+  },
+  {
+   "t": 229.32,
+   "text": "But ion trap resolution is also modest, and they have a quirk called the \"one-third rule\" where you can't measure fragments below about one third of the precursor m/z."
+  },
+  {
+   "t": 240.14,
+   "text": "For a long time the LTQ was the standard for shotgun proteomics MS/MS."
+  },
+  {
+   "t": 246.43,
+   "text": "Orbitrap."
+  },
+  {
+   "t": 247.38,
+   "text": "This deserves its own segment, which it gets next, but the short version is: invented by Alexander Makarov in the late 1990s, commercialized by Thermo in 2005, it uses an electrostatic field to trap ions in orbits around a spindle-shaped central electrode, measures their orbital frequencies, and Fourier-transforms the frequency signal into a mass spectrum."
+  },
+  {
+   "t": 270.25,
+   "text": "It has stunning resolution and mass accuracy."
+  },
+  {
+   "t": 273.36,
+   "text": "It's the dominant high-resolution analyzer in modern proteomics."
+  },
+  {
+   "t": 277.73,
+   "text": "FT-ICR — Fourier-transform ion cyclotron resonance."
+  },
+  {
+   "t": 282.94,
+   "text": "Highest resolution and mass accuracy of any mass analyzer ever built."
+  },
+  {
+   "t": 288.36,
+   "text": "Ions are trapped in a strong magnetic field (typically 7 to 15 tesla, requiring a superconducting magnet — these instruments are physically huge and need liquid helium) and made to orbit at a frequency that depends on m/z."
+  },
+  {
+   "t": 304.41,
+   "text": "The orbital signal is detected and Fourier-transformed, exactly like in the Orbitrap."
+  },
+  {
+   "t": 310.54,
+   "text": "FT-ICR predated the Orbitrap by decades — the technique was developed in the 1970s by Marshall and Comisarow — and remains the gold standard for the most demanding work, like top-down proteomics of intact proteins."
+  },
+  {
+   "t": 325.0,
+   "text": "But it's expensive, large, and slow, so it's mostly used in specialized facilities."
+  },
+  {
+   "t": 331.16,
+   "text": "The Orbitrap is, in effect, the FT-ICR's smaller, cheaper, more practical cousin — same Fourier-transform principle, electrostatic instead of magnetic trapping, way more practical to run."
+  },
+  {
+   "t": 344.36,
+   "text": "Let me give you a rough comparison table, in words."
+  },
+  {
+   "t": 347.55,
+   "text": "Quadrupole: low resolution, fast, cheap, robust."
+  },
+  {
+   "t": 352.13,
+   "text": "Used for targeted quantification."
+  },
+  {
+   "t": 354.46,
+   "text": "TOF: high resolution, very fast, scales to high mass."
+  },
+  {
+   "t": 359.38,
+   "text": "Used for MALDI and modern timsTOF instruments."
+  },
+  {
+   "t": 363.19,
+   "text": "Ion trap: modest resolution, very fast MS/MS, compact, sensitive."
+  },
+  {
+   "t": 370.51,
+   "text": "Used historically and still in some hybrid instruments."
+  },
+  {
+   "t": 374.14,
+   "text": "Orbitrap: very high resolution, excellent mass accuracy, moderate speed, the modern workhorse for discovery proteomics."
+  },
+  {
+   "t": 383.08,
+   "text": "FT-ICR: ultimate resolution and accuracy, slow, expensive, gold standard for top-down and small molecule work."
+  },
+  {
+   "t": 392.51,
+   "text": "The other important pattern: many modern instruments are hybrid, combining two or three analyzer types in a single box to get the best of each."
+  },
+  {
+   "t": 401.43,
+   "text": "A triple quadrupole has three quadrupoles in series."
+  },
+  {
+   "t": 405.26,
+   "text": "A Q-Exactive combines a quadrupole for ion selection with an Orbitrap for high-resolution detection."
+  },
+  {
+   "t": 412.09,
+   "text": "A Q-TOF combines a quadrupole with a TOF."
+  },
+  {
+   "t": 415.91,
+   "text": "The Orbitrap Eclipse and Astral are even more elaborate hybrids."
+  },
+  {
+   "t": 420.93,
+   "text": "The reason hybrids dominate is that you typically want one analyzer to isolate the ion you care about — pick out one peak from a thousand — and a second analyzer to fragment it and measure the fragments with high resolution."
+  },
+  {
+   "t": 433.93,
+   "text": "Different analyzers are good at different parts of that workflow."
+  },
+  {
+   "t": 437.89,
+   "text": "Hold the zoo."
+  },
+  {
+   "t": 438.99,
+   "text": "Quadrupole, TOF, ion trap, Orbitrap, FT-ICR."
+  },
+  {
+   "t": 444.38,
+   "text": "Five geometries."
+  },
+  {
+   "t": 446.03,
+   "text": "Five tradeoffs."
+  },
+  {
+   "t": 447.39,
+   "text": "The Orbitrap, in particular, deserves its own segment, because it's the one that changed the field."
+  }
+ ]
+}

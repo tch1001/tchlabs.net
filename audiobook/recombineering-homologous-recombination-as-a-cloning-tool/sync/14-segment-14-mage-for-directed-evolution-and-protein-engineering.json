@@ -1,0 +1,119 @@
+{
+ "n": 14,
+ "title": "SEGMENT 14 — MAGE for directed evolution and protein engineering",
+ "duration": 201.68,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 14 — MAGE for directed evolution and protein engineering"
+  },
+  {
+   "t": 4.78,
+   "text": "Let me come back to MAGE for a moment, because I want to highlight an application that I find particularly elegant: using MAGE not to build a specific designed strain, but to generate a library of variants for directed evolution."
+  },
+  {
+   "t": 17.59,
+   "text": "Directed evolution is the strategy of evolving proteins or pathways toward a desired function by iterating cycles of mutation and selection."
+  },
+  {
+   "t": 27.43,
+   "text": "You make a library of variants, you select the best, you make a new library by mutagenizing the best, and you repeat."
+  },
+  {
+   "t": 35.05,
+   "text": "Done well, directed evolution can dramatically improve enzymes, optimize metabolic pathways, and discover new biological functions."
+  },
+  {
+   "t": 45.17,
+   "text": "Frances Arnold won the 2018 Nobel Prize in Chemistry for pioneering directed evolution of enzymes."
+  },
+  {
+   "t": 53.38,
+   "text": "The classical directed evolution workflow uses error-prone PCR or random mutagenesis to generate libraries."
+  },
+  {
+   "t": 61.61,
+   "text": "The problem is that random mutagenesis is, well, random."
+  },
+  {
+   "t": 65.7,
+   "text": "It puts mutations everywhere, including in places where mutations are unlikely to help."
+  },
+  {
+   "t": 71.84,
+   "text": "Most of the library is dead or unimproved."
+  },
+  {
+   "t": 74.8,
+   "text": "Only a tiny fraction of variants are actually useful, and you have to screen through a lot of garbage to find them."
+  },
+  {
+   "t": 81.3,
+   "text": "MAGE offers a different approach."
+  },
+  {
+   "t": 83.22,
+   "text": "Instead of random mutagenesis, you design a pool of oligos that target only the residues you think are important — say, the active site residues of an enzyme, or the codons that interact with substrate, or the residues at a protein-protein interface."
+  },
+  {
+   "t": 98.72,
+   "text": "Each oligo introduces a specific mutation, often saturating mutagenesis at one position."
+  },
+  {
+   "t": 105.8,
+   "text": "The pool together covers all the positions and all the mutations you want to explore."
+  },
+  {
+   "t": 111.09,
+   "text": "You run MAGE for many rounds with this pool, and you get a library of cells, each carrying some subset of mutations at the chosen positions."
+  },
+  {
+   "t": 120.22,
+   "text": "The library is now enriched for variants that have changes only at sites you considered important — not random changes everywhere."
+  },
+  {
+   "t": 128.12,
+   "text": "The library is far smaller, but every member of it is biologically meaningful in the sense that it varies a site you thought might matter."
+  },
+  {
+   "t": 136.29,
+   "text": "You can screen or select this focused library and find improved variants much faster than with random mutagenesis."
+  },
+  {
+   "t": 144.41,
+   "text": "This approach has been used to engineer enzymes with novel substrate specificities, to evolve metabolic pathways for higher product yield, and to optimize ribosome binding sites and other regulatory elements."
+  },
+  {
+   "t": 158.15,
+   "text": "The general framework — design the search space, build the library with MAGE, select the best — is essentially the modern version of directed evolution as practiced by synthetic biologists."
+  },
+  {
+   "t": 170.15,
+   "text": "There is a deeper conceptual point here."
+  },
+  {
+   "t": 172.61,
+   "text": "MAGE turns recombineering from a tool for building a single designed strain into a tool for exploring a designed search space."
+  },
+  {
+   "t": 181.22,
+   "text": "The output is not one strain."
+  },
+  {
+   "t": 183.28,
+   "text": "It is a library."
+  },
+  {
+   "t": 184.49,
+   "text": "The library is the experiment."
+  },
+  {
+   "t": 186.56,
+   "text": "The selection over the library is the answer."
+  },
+  {
+   "t": 189.5,
+   "text": "This shift from \"build one thing\" to \"build a population and let selection pick\" is one of the recurring patterns of modern biology, and recombineering is one of the best tools for executing it precisely."
+  }
+ ]
+}

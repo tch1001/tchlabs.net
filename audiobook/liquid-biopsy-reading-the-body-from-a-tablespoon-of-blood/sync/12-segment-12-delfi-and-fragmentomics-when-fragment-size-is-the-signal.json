@@ -1,0 +1,123 @@
+{
+ "n": 12,
+ "title": "SEGMENT 12 — DELFI and fragmentomics: when fragment size IS the signal",
+ "duration": 255.26,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 12 — DELFI and fragmentomics: when fragment size IS the signal"
+  },
+  {
+   "t": 6.41,
+   "text": "Let me come back to something I flagged way back in Segment 2 — the idea that the size distribution of cfDNA fragments is itself informative, independent of any specific mutations or methylation marks."
+  },
+  {
+   "t": 20.05,
+   "text": "This idea has grown, in the last several years, into an entire subfield called fragmentomics, and the landmark paper was Cristiano et al. 2019, which introduced an approach they called DELFI — DNA Evaluation of Fragments for early Interception."
+  },
+  {
+   "t": 36.5,
+   "text": "The DELFI insight is this."
+  },
+  {
+   "t": 39.01,
+   "text": "Healthy plasma cfDNA, as we said, peaks at 166 base pairs and has a very specific, reproducible distribution of fragment sizes across the genome."
+  },
+  {
+   "t": 50.46,
+   "text": "The distribution reflects nucleosome positioning, which in turn reflects which genomic regions are open (less protected) and which are condensed (more protected) in the source cells."
+  },
+  {
+   "t": 62.83,
+   "text": "In cancer, two things change."
+  },
+  {
+   "t": 65.21,
+   "text": "First, the size distribution shifts — cancer-derived cfDNA fragments are subtly shorter on average than healthy-derived fragments, probably because tumor cells have somewhat disrupted nucleosome structure and somewhat different nuclease processing."
+  },
+  {
+   "t": 79.79,
+   "text": "Second, the size distribution varies across the genome differently — different regions show different shifts, in patterns that depend on which tissue the cancer is from and how aggressive it is."
+  },
+  {
+   "t": 92.16,
+   "text": "DELFI captures these patterns by dividing the genome into 5-megabase windows and, for each window, computing the ratio of short to long cfDNA fragments."
+  },
+  {
+   "t": 103.55,
+   "text": "You get a \"fragmentation profile\" — basically a fingerprint of how fragmented the cfDNA is in each region."
+  },
+  {
+   "t": 110.81,
+   "text": "In healthy people, this profile is remarkably consistent across individuals."
+  },
+  {
+   "t": 116.51,
+   "text": "In cancer patients, the profile is shifted in characteristic ways."
+  },
+  {
+   "t": 120.88,
+   "text": "The original DELFI paper showed that this fragmentation profile alone — without any mutation calls, without methylation, without anything else — could distinguish cancer patients from healthy controls with high specificity and roughly 70 percent sensitivity in stage I to III disease across seven cancer types."
+  },
+  {
+   "t": 140.93,
+   "text": "That is a stunning result, because it says: even when ctDNA is too low to detect by mutation, the cfDNA fragmentation pattern still carries cancer signal."
+  },
+  {
+   "t": 151.79,
+   "text": "DELFI as the fragment-pattern trick — even if you can't see a mutation, the SIZE distribution of cfDNA fragments differs in cancer vs healthy; a free signal."
+  },
+  {
+   "t": 162.47,
+   "text": "The beauty of fragmentomics is that it's orthogonal to the mutation-based and methylation-based approaches."
+  },
+  {
+   "t": 168.95,
+   "text": "You can do shallow whole-genome sequencing — just 1x to 2x coverage of the genome — at low cost, and extract fragmentation features that are predictive of cancer."
+  },
+  {
+   "t": 179.82,
+   "text": "You don't need deep targeted sequencing."
+  },
+  {
+   "t": 182.53,
+   "text": "You don't need bisulfite conversion."
+  },
+  {
+   "t": 184.78,
+   "text": "You just need to know where each fragment maps and how long it is."
+  },
+  {
+   "t": 188.74,
+   "text": "Even better, you can combine fragmentomics with methylation features and with low-frequency mutation calls into a single multi-feature classifier."
+  },
+  {
+   "t": 197.85,
+   "text": "The next generation of MCED tests — Galleri's next version, and competitors like Exact Sciences' CancerSEEK and others — are explicitly multi-modal, using fragmentation, methylation, mutation, and protein biomarkers all together."
+  },
+  {
+   "t": 213.7,
+   "text": "Each modality provides some signal; the combination provides more than any one alone."
+  },
+  {
+   "t": 219.64,
+   "text": "Fragmentomics has also opened up applications beyond cancer."
+  },
+  {
+   "t": 223.86,
+   "text": "The fragmentation profile of cfDNA from a transplant recipient differs from baseline when the transplanted organ is being rejected."
+  },
+  {
+   "t": 232.31,
+   "text": "The profile from a pregnant woman shifts in characteristic ways with placental dysfunction."
+  },
+  {
+   "t": 238.14,
+   "text": "The profile during sepsis reflects the inflammatory state."
+  },
+  {
+   "t": 241.94,
+   "text": "We're at the beginning of an era where the cfDNA fragment-size distribution is treated as a rich multi-dimensional biosensor, not just as DNA that happens to be carrying some specific mutation we're trying to read."
+  }
+ ]
+}

@@ -1,0 +1,227 @@
+{
+ "n": 8,
+ "title": "SEGMENT 8 — The modern workflow — from cells to atomic model",
+ "duration": 378.11,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 8 — The modern workflow — from cells to atomic model"
+  },
+  {
+   "t": 4.69,
+   "text": "Let me walk you through the modern cryo-EM workflow, step by step."
+  },
+  {
+   "t": 9.01,
+   "text": "This is the recipe a structural biology lab follows in 2026 to determine the atomic structure of a protein."
+  },
+  {
+   "t": 16.55,
+   "text": "I'll go in order, and we'll spend the rest of this segment on the early stages, then continue into specific instruments and software in later segments."
+  },
+  {
+   "t": 25.74,
+   "text": "Step one: produce and purify the protein."
+  },
+  {
+   "t": 29.41,
+   "text": "This part is not unique to cryo-EM — every structural biology method needs purified protein — but it matters because cryo-EM has its own quirks."
+  },
+  {
+   "t": 40.12,
+   "text": "You typically express the protein in a host organism, often a mammalian cell line for membrane proteins or a bacterium for simpler targets."
+  },
+  {
+   "t": 49.51,
+   "text": "You include various purification tags."
+  },
+  {
+   "t": 52.41,
+   "text": "You extract the protein, often in detergent if it's a membrane protein, run it through chromatography columns — affinity, size exclusion — until you have a sample that is biochemically clean and conformationally homogeneous."
+  },
+  {
+   "t": 67.04,
+   "text": "You need micrograms to milligrams of pure protein, far less than crystallography typically requires."
+  },
+  {
+   "t": 74.99,
+   "text": "How much you need matters."
+  },
+  {
+   "t": 76.49,
+   "text": "Crystallography historically needed tens of milligrams of pure protein."
+  },
+  {
+   "t": 82.28,
+   "text": "Cryo-EM, because each grid only uses about three microliters of solution at concentrations around one milligram per milliliter, needs maybe a hundred micrograms — sometimes less."
+  },
+  {
+   "t": 94.49,
+   "text": "This is a huge advantage for targets where the protein is hard to produce in quantity."
+  },
+  {
+   "t": 99.72,
+   "text": "Step two: prepare the grid."
+  },
+  {
+   "t": 101.94,
+   "text": "This is the famous sample-prep step, and it's still considered the hardest part of cryo-EM."
+  },
+  {
+   "t": 107.67,
+   "text": "The grid itself is a tiny metal mesh, typically 3 millimeters across, made of copper or gold, coated with a thin film of carbon perforated with tiny holes."
+  },
+  {
+   "t": 118.67,
+   "text": "The holes are where you want your protein to end up — suspended in a thin film of water, the carbon around the holes serves only as a support."
+  },
+  {
+   "t": 126.59,
+   "text": "You pipette three microliters of your protein solution onto the grid."
+  },
+  {
+   "t": 130.6,
+   "text": "You blot the grid with filter paper for a few seconds to wick away most of the liquid, leaving only a very thin film — ideally one or two protein-molecule diameters thick — spanning the holes."
+  },
+  {
+   "t": 143.5,
+   "text": "Then immediately, within milliseconds, you plunge the grid into liquid ethane."
+  },
+  {
+   "t": 149.5,
+   "text": "This is Dubochet's trick, mechanized — modern plunge freezers like the Vitrobot or the Chameleon do this automatically, with controlled humidity and blot times."
+  },
+  {
+   "t": 160.29,
+   "text": "If everything goes right, you have a grid where, in the holes, there's a thin layer of vitreous ice with your protein particles suspended in it, in random orientations, separated from each other, not denatured, not clumped at the surface."
+  },
+  {
+   "t": 175.16,
+   "text": "If something goes wrong — and it usually does, the first many times — the ice is too thick, or too thin, or has crystallized rather than vitrified, or the proteins are stuck at the air-water interface in non-native orientations, or they've aggregated, or they've broken apart."
+  },
+  {
+   "t": 191.86,
+   "text": "You screen many grids, in many conditions, until you find ones that look right."
+  },
+  {
+   "t": 197.46,
+   "text": "Step three: screen and image."
+  },
+  {
+   "t": 200.39,
+   "text": "You take your grid to an electron microscope."
+  },
+  {
+   "t": 203.03,
+   "text": "Often the first step is a screening microscope — typically a smaller 100 or 200 kV instrument — to assess grid quality before committing to the high-end machine."
+  },
+  {
+   "t": 213.19,
+   "text": "You look for grids where the ice thickness is right, the particles are well distributed, and the orientations look diverse."
+  },
+  {
+   "t": 220.84,
+   "text": "Then, on a good grid, you collect data on a high-end microscope — the 300 kV instruments we'll discuss in the next segment."
+  },
+  {
+   "t": 229.28,
+   "text": "You're going to collect tens of thousands of micrograph movies, each one capturing maybe a hundred to a few hundred particles in random orientations."
+  },
+  {
+   "t": 238.0,
+   "text": "A modern data collection might take a day or two, generate terabytes of data, and yield millions of individual particle images by the time you're done."
+  },
+  {
+   "t": 247.35,
+   "text": "Step four: process the data."
+  },
+  {
+   "t": 249.75,
+   "text": "This is where Frank's algorithms — modernized, accelerated, and embedded in software packages like RELION, cryoSPARC, and EMAN — do their thing."
+  },
+  {
+   "t": 260.5,
+   "text": "You motion-correct the movies."
+  },
+  {
+   "t": 262.56,
+   "text": "You estimate the contrast transfer function for each image, which corrects for distortions introduced by the microscope optics."
+  },
+  {
+   "t": 270.17,
+   "text": "You pick particles from each micrograph, typically using neural networks trained to recognize protein particles."
+  },
+  {
+   "t": 277.37,
+   "text": "You classify the particles, separating out junk and identifying particles that might be in different conformations."
+  },
+  {
+   "t": 284.61,
+   "text": "You do an initial 3D reconstruction, often starting from a low-resolution model."
+  },
+  {
+   "t": 289.96,
+   "text": "You iteratively refine the orientations and the 3D map until the resolution stops improving."
+  },
+  {
+   "t": 296.45,
+   "text": "This processing pipeline used to take months."
+  },
+  {
+   "t": 299.21,
+   "text": "With modern software and GPU acceleration, it can take days or even hours for many targets."
+  },
+  {
+   "t": 306.12,
+   "text": "Step five: build the atomic model."
+  },
+  {
+   "t": 308.72,
+   "text": "Once you have a 3D density map at high enough resolution, you build an atomic model into the density."
+  },
+  {
+   "t": 314.77,
+   "text": "Historically this was done by hand in software like Coot."
+  },
+  {
+   "t": 318.41,
+   "text": "Increasingly, it's done with the aid of AlphaFold — you predict the protein structure computationally, then fit and refine that predicted model into your experimental density."
+  },
+  {
+   "t": 329.01,
+   "text": "The combination is faster and more accurate than either alone, and we'll come back to that in the AlphaFold synergy segment."
+  },
+  {
+   "t": 336.07,
+   "text": "Step six: validate and deposit."
+  },
+  {
+   "t": 338.76,
+   "text": "You run various validation tools to check that your model is consistent with the data and physically reasonable."
+  },
+  {
+   "t": 345.41,
+   "text": "You deposit the structure in the Protein Data Bank, and the underlying density map in the Electron Microscopy Data Bank, and ideally the raw images in EMPIAR."
+  },
+  {
+   "t": 355.06,
+   "text": "The structure becomes part of the public scientific record."
+  },
+  {
+   "t": 358.45,
+   "text": "That's the workflow, end to end."
+  },
+  {
+   "t": 360.57,
+   "text": "Purify, vitrify, image, average, reconstruct, model, deposit."
+  },
+  {
+   "t": 365.85,
+   "text": "Each step has its art, each step has people who specialize in it, and modern cryo-EM facilities have separate teams for each."
+  },
+  {
+   "t": 374.01,
+   "text": "Now let's zoom in on the instrument that does most of the heavy lifting."
+  }
+ ]
+}

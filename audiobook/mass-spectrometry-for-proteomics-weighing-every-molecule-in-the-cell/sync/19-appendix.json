@@ -1,0 +1,179 @@
+{
+ "n": 19,
+ "title": "APPENDIX",
+ "duration": 292.86,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "APPENDIX"
+  },
+  {
+   "t": 1.04,
+   "text": "Key instruments referenced"
+  },
+  {
+   "t": 3.33,
+   "text": "LTQ-Orbitrap (2005, Thermo) — first commercial Orbitrap; established the modern era of high-resolution shotgun proteomics."
+  },
+  {
+   "t": 13.46,
+   "text": "Q-Exactive family (Thermo) — quadrupole front-end + Orbitrap; the workhorse of mid-2010s discovery proteomics."
+  },
+  {
+   "t": 22.55,
+   "text": "Orbitrap Fusion / Lumos / Eclipse / Exploris / Astral (Thermo) — successive flagships, each pushing speed and sensitivity further."
+  },
+  {
+   "t": 34.95,
+   "text": "timsTOF Pro / SCP / Ultra (Bruker) — TIMS + TOF; ion mobility front-end, faster gradients, strong for single-cell proteomics."
+  },
+  {
+   "t": 47.24,
+   "text": "Sciex TripleTOF and ZenoTOF — Q-TOF instruments, used historically for SWATH-DIA and still in pharma quantification."
+  },
+  {
+   "t": 56.55,
+   "text": "Triple quadrupole instruments (Thermo TSQ, Sciex QTRAP, Agilent 6500 series) — workhorses of MRM targeted proteomics and clinical mass spec."
+  },
+  {
+   "t": 68.71,
+   "text": "Key software"
+  },
+  {
+   "t": 69.94,
+   "text": "Sequest (1994) — original database search; conceptual ancestor of all modern search engines."
+  },
+  {
+   "t": 77.49,
+   "text": "Mascot — long-dominant commercial search engine."
+  },
+  {
+   "t": 80.75,
+   "text": "MaxQuant — Cox/Mann lab; integrated LFQ; transformed Orbitrap proteomics in the 2010s."
+  },
+  {
+   "t": 89.24,
+   "text": "FragPipe / MSFragger — Nesvizhskii lab; modern fast search, default in many labs today."
+  },
+  {
+   "t": 96.83,
+   "text": "Proteome Discoverer (Thermo) — commercial platform integrating multiple search engines."
+  },
+  {
+   "t": 102.84,
+   "text": "Spectronaut (Biognosys) — leading commercial DIA analysis platform."
+  },
+  {
+   "t": 108.08,
+   "text": "DIA-NN (Demichev) — free, fast, deep-learning-enhanced DIA analyzer; modern standard."
+  },
+  {
+   "t": 114.85,
+   "text": "Skyline (MacCoss lab) — open-source platform for targeted proteomics, PRM and MRM analysis."
+  },
+  {
+   "t": 122.6,
+   "text": "Sequence-to-spectrum prediction (deep learning)"
+  },
+  {
+   "t": 125.44,
+   "text": "Prosit, MS2PIP, DeepMass — predict expected fragment spectra from sequence."
+  },
+  {
+   "t": 132.19,
+   "text": "DeepNovo, Casanovo, PointNovo — de novo sequencing directly from MS2 spectra."
+  },
+  {
+   "t": 139.18,
+   "text": "Quantification approaches at a glance"
+  },
+  {
+   "t": 141.85,
+   "text": "LFQ (label-free) — cheap, scales, missing values, batch effects."
+  },
+  {
+   "t": 147.25,
+   "text": "SILAC — metabolic labeling, accurate, limited to cultured cells."
+  },
+  {
+   "t": 152.18,
+   "text": "TMT / iTRAQ — chemical isobaric labels, multiplexed up to 18 samples, eliminates batch effects within a plex."
+  },
+  {
+   "t": 162.56,
+   "text": "DIA — modern reproducible large-scale label-free; replacing DDA for most quantitative studies."
+  },
+  {
+   "t": 170.19,
+   "text": "PRM / MRM — targeted, absolute quantification, gold standard for biomarker validation."
+  },
+  {
+   "t": 177.6,
+   "text": "PTM enrichment methods"
+  },
+  {
+   "t": 179.9,
+   "text": "Phosphopeptides — TiO2, IMAC (Fe-NTA), polymer-based MOAC."
+  },
+  {
+   "t": 186.12,
+   "text": "Ubiquitin (diGly remnant) — anti-K-epsilon-GG antibody (Cell Signaling PTMScan)."
+  },
+  {
+   "t": 193.05,
+   "text": "Acetyl-lysine — anti-acetyl-lysine antibodies."
+  },
+  {
+   "t": 197.06,
+   "text": "Methyl, succinyl, malonyl, crotonyl — various specific antibodies; growing menu."
+  },
+  {
+   "t": 203.81,
+   "text": "Glycopeptides — lectin enrichment, HILIC chromatography, specialized search software (Byonic, pGlyco)."
+  },
+  {
+   "t": 211.59,
+   "text": "RNA-seq vs. mass-spec proteomics — when to use which"
+  },
+  {
+   "t": 216.12,
+   "text": "mRNA-to-protein correlation is roughly 0.4 — neither is a complete proxy for the other."
+  },
+  {
+   "t": 222.71,
+   "text": "RNA-seq: cheap, high throughput, every gene, dynamic transcriptional response, splicing, non-coding RNAs."
+  },
+  {
+   "t": 231.4,
+   "text": "Proteomics: actual functional molecules, includes PTMs, captures translation/stability/degradation, much harder for low-abundance proteins."
+  },
+  {
+   "t": 242.85,
+   "text": "Best practice for systems biology: multi-omic integration of RNA-seq and proteomics on the same samples."
+  },
+  {
+   "t": 250.36,
+   "text": "Further reading"
+  },
+  {
+   "t": 251.46,
+   "text": "Aebersold & Mann, \"Mass-spectrometric exploration of proteome structure and function,\" Nature (2016) — definitive review."
+  },
+  {
+   "t": 261.2,
+   "text": "Cox & Mann, \"Quantitative, high-resolution proteomics for data-driven systems biology,\" Annual Review of Biochemistry (2011) — MaxQuant-era framing."
+  },
+  {
+   "t": 272.95,
+   "text": "Demichev et al., \"DIA-NN: neural networks and interference correction enable deep proteome coverage in high throughput,\" Nature Methods (2020)."
+  },
+  {
+   "t": 283.26,
+   "text": "Kelleher lab publications on top-down proteoform analysis."
+  },
+  {
+   "t": 287.66,
+   "text": "Slavov lab publications on SCoPE-MS single-cell proteomics."
+  }
+ ]
+}

@@ -1,0 +1,159 @@
+{
+ "n": 15,
+ "title": "SEGMENT 15 — Genome recoding and the Genome Project-write",
+ "duration": 293.46,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 15 — Genome recoding and the Genome Project-write"
+  },
+  {
+   "t": 4.3,
+   "text": "Now I want to talk about what is, in some ways, the most ambitious application of recombineering ever attempted: genome recoding."
+  },
+  {
+   "t": 12.6,
+   "text": "The project of taking a bacterial genome and systematically changing how it encodes proteins — not changing the proteins themselves, but changing the codons used to encode them — so that the genome reads, at the DNA level, as a fundamentally different document while still producing the same proteins."
+  },
+  {
+   "t": 30.54,
+   "text": "Why would you do this?"
+  },
+  {
+   "t": 31.86,
+   "text": "Two reasons."
+  },
+  {
+   "t": 33.0,
+   "text": "First, scientific curiosity: how much can the genetic code be rewritten before things break?"
+  },
+  {
+   "t": 39.58,
+   "text": "Second, practical: a recoded organism can be made resistant to viruses, can incorporate non-standard amino acids in its proteins, can be made auxotrophic for engineered nutrients in a way that prevents environmental escape."
+  },
+  {
+   "t": 54.58,
+   "text": "Recoded organisms are platforms for genetics, for biotechnology, for biosecurity."
+  },
+  {
+   "t": 60.64,
+   "text": "The most famous recoding project came out of George Church's lab at Harvard — yes, the same lab that built MAGE — and was led by Farren Isaacs and a series of other extraordinary postdocs and graduate students."
+  },
+  {
+   "t": 73.47,
+   "text": "The goal was to take E. coli and replace every occurrence of one specific stop codon — the TAG stop codon, sometimes called the amber stop — with a different stop codon, TAA."
+  },
+  {
+   "t": 84.49,
+   "text": "There are about three hundred and twenty TAG codons scattered across the E. coli chromosome."
+  },
+  {
+   "t": 90.09,
+   "text": "The plan was to change every single one of them."
+  },
+  {
+   "t": 92.85,
+   "text": "How would you do that?"
+  },
+  {
+   "t": 93.95,
+   "text": "You cannot use CRISPR to do three hundred separate edits — there is no easy way to deliver three hundred guides plus three hundred templates all at once, and even if there were, the cumulative cuts would be lethal."
+  },
+  {
+   "t": 106.8,
+   "text": "You cannot use traditional cloning, because the edits are scattered across the genome at sites with no convenient restriction targets."
+  },
+  {
+   "t": 115.31,
+   "text": "The only viable approach, in 2009 when this project was started, was recombineering — specifically, MAGE."
+  },
+  {
+   "t": 122.88,
+   "text": "The Isaacs and Church team designed about a thousand MAGE oligos, each targeting one TAG-to-TAA edit."
+  },
+  {
+   "t": 130.61,
+   "text": "They ran MAGE on E. coli for hundreds of rounds, screening at every step, recombining edits across cells, gradually building a strain that contained all the edits."
+  },
+  {
+   "t": 141.75,
+   "text": "The work took years."
+  },
+  {
+   "t": 143.31,
+   "text": "The result, published in 2013, was an E. coli strain — christened C321."
+  },
+  {
+   "t": 150.8,
+   "text": "DeltaA — in which all three hundred and twenty-one TAG codons had been replaced with TAA, and the entire amber-stop translation factor had been removed."
+  },
+  {
+   "t": 160.24,
+   "text": "The strain was viable, healthy, and now had a free codon — TAG — that could be reassigned to encode any non-canonical amino acid the experimenter wanted."
+  },
+  {
+   "t": 170.85,
+   "text": "Think about what that opened up."
+  },
+  {
+   "t": 172.71,
+   "text": "The TAG codon in C321."
+  },
+  {
+   "t": 175.46,
+   "text": "DeltaA was a blank slot in the genetic code."
+  },
+  {
+   "t": 178.66,
+   "text": "By engineering a tRNA that recognized TAG and an aminoacyl-tRNA synthetase that loaded that tRNA with a specific unnatural amino acid, you could install that unnatural amino acid into any protein you wanted, at any site you specified, just by putting a TAG in your favorite gene."
+  },
+  {
+   "t": 196.84,
+   "text": "Proteins with click chemistry handles, with phosphorylated residues installed at exactly chosen sites, with photoreactive crosslinkers, with fluorescent amino acids — all of this became possible, in vivo, in a living cell, thanks to genome recoding."
+  },
+  {
+   "t": 213.69,
+   "text": "And the field has not stopped there."
+  },
+  {
+   "t": 215.71,
+   "text": "The follow-up was the construction of Syn61 — a Salmonella and E. coli strain in which not one but three codons had been reassigned, also using recombineering plus chemical genome synthesis."
+  },
+  {
+   "t": 229.39,
+   "text": "Syn61 was a tour de force of synthetic biology, and recombineering was a critical component of building it."
+  },
+  {
+   "t": 237.05,
+   "text": "There are now plans, under the umbrella of Genome Project-write, to scale this kind of approach to bigger genomes — yeast, eventually mammalian cells."
+  },
+  {
+   "t": 245.72,
+   "text": "The principles are the same: design the changes, deliver them, drive them to homozygosity, verify, iterate."
+  },
+  {
+   "t": 253.6,
+   "text": "The tools are CRISPR, recombineering, chemical synthesis, and increasingly AI-driven design of what to change."
+  },
+  {
+   "t": 261.19,
+   "text": "Recombineering's role in this lineage is foundational."
+  },
+  {
+   "t": 265.25,
+   "text": "Without it, genome-scale recoding of E. coli would not have happened."
+  },
+  {
+   "t": 269.75,
+   "text": "The technique provided the molecular operation — multiplex single-nucleotide editing at chosen sites — that made the project feasible."
+  },
+  {
+   "t": 278.65,
+   "text": "It is the original example of recombineering operating not on a single gene but on a whole genome's worth of changes."
+  },
+  {
+   "t": 286.11,
+   "text": "And it is a window into what is possible when you have a really precise, really scalable editing tool."
+  }
+ ]
+}

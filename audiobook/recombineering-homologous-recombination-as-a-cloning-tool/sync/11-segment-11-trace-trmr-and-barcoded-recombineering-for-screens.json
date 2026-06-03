@@ -1,0 +1,187 @@
+{
+ "n": 11,
+ "title": "SEGMENT 11 — TRACE, TRMR, and barcoded recombineering for screens",
+ "duration": 272.13,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 11 — TRACE, TRMR, and barcoded recombineering for screens"
+  },
+  {
+   "t": 5.99,
+   "text": "If MAGE is automated recombineering for making strains, then TRACE and TRMR are barcoded recombineering for screening many constructs in parallel."
+  },
+  {
+   "t": 15.95,
+   "text": "These are technologies that I find a little less famous than MAGE but conceptually really important, because they show how recombineering can be combined with modern DNA sequencing to do massively parallel genetic screens."
+  },
+  {
+   "t": 28.81,
+   "text": "The acronyms are not friendly, so let me spell them out."
+  },
+  {
+   "t": 31.99,
+   "text": "TRMR is Trackable Multiplex Recombineering."
+  },
+  {
+   "t": 35.77,
+   "text": "TRACE is **Trackable Recombineering Allele Cataloging in Escherichia coli**."
+  },
+  {
+   "t": 41.12,
+   "text": "Both names are stretching for memorability."
+  },
+  {
+   "t": 43.98,
+   "text": "The underlying idea is the same in both: you do recombineering with a large library of oligos, each oligo carrying both an edit and a unique DNA barcode that identifies which edit it is, and then you use deep sequencing to read out, in one experiment, the fitness or behavior of every variant in the library at once."
+  },
+  {
+   "t": 64.6,
+   "text": "Let me make this concrete."
+  },
+  {
+   "t": 66.11,
+   "text": "Suppose you want to ask: of all the genes in E. coli, which ones, when their expression is increased, make the cell grow better on a particular medium?"
+  },
+  {
+   "t": 75.8,
+   "text": "Conventionally, you would have to overexpress each gene one by one, in separate strains, and measure growth one by one."
+  },
+  {
+   "t": 83.21,
+   "text": "That is, what, four thousand genes?"
+  },
+  {
+   "t": 85.44,
+   "text": "Four thousand experiments?"
+  },
+  {
+   "t": 87.3,
+   "text": "Impossible."
+  },
+  {
+   "t": 88.41,
+   "text": "With TRMR, you design a library of oligos."
+  },
+  {
+   "t": 91.78,
+   "text": "Each oligo, when integrated by recombineering, modifies the promoter of one specific gene to increase its expression."
+  },
+  {
+   "t": 100.25,
+   "text": "And each oligo also installs a unique short DNA barcode somewhere nearby, so you can later identify which gene was modified."
+  },
+  {
+   "t": 109.04,
+   "text": "You pool all these oligos into one mix."
+  },
+  {
+   "t": 111.81,
+   "text": "You do recombineering on a big batch of cells, all at once."
+  },
+  {
+   "t": 115.83,
+   "text": "Now you have a library of cells, each cell carrying a modification at a different gene, each tagged with the barcode that says which gene was modified."
+  },
+  {
+   "t": 124.89,
+   "text": "Then you grow this library under whatever selective condition you care about — high salt, low nutrient, antibiotic, whatever."
+  },
+  {
+   "t": 132.56,
+   "text": "Some cells grow well, some grow poorly."
+  },
+  {
+   "t": 135.49,
+   "text": "You harvest the surviving population."
+  },
+  {
+   "t": 138.15,
+   "text": "You sequence the barcode region from all the surviving cells."
+  },
+  {
+   "t": 142.3,
+   "text": "The barcodes tell you which cells did well."
+  },
+  {
+   "t": 144.74,
+   "text": "The frequency of each barcode in the surviving population tells you the relative fitness of the corresponding modification."
+  },
+  {
+   "t": 152.11,
+   "text": "In one experiment, in one tube, you have measured the fitness effect of overexpressing every gene in the genome."
+  },
+  {
+   "t": 159.9,
+   "text": "That is what barcoded recombineering buys you."
+  },
+  {
+   "t": 162.86,
+   "text": "The screening is parallel at the scale of the entire library, and the readout is a single sequencing run."
+  },
+  {
+   "t": 169.47,
+   "text": "This kind of trick — pool a library, apply selection, sequence the barcodes — has become standard in modern functional genomics."
+  },
+  {
+   "t": 178.03,
+   "text": "CRISPR libraries do something similar with guide RNA barcodes, and we are now used to thinking of pooled screens as the way to do high-throughput biology."
+  },
+  {
+   "t": 187.51,
+   "text": "But the recombineering versions were among the first to demonstrate the approach."
+  },
+  {
+   "t": 192.03,
+   "text": "They pioneered the idea that you could do thousands of genetic modifications in a single test tube, track each one with a barcode, and read out the answers by sequencing."
+  },
+  {
+   "t": 202.15,
+   "text": "There is a beautiful efficiency here."
+  },
+  {
+   "t": 204.54,
+   "text": "You do one round of recombineering with a complex pool of oligos."
+  },
+  {
+   "t": 209.14,
+   "text": "You get a population of cells, where each cell carries one edit from the pool plus a barcode that identifies that edit."
+  },
+  {
+   "t": 216.43,
+   "text": "You can then apply this single library to many different conditions in parallel — same library, different selections — and read out fitness across all conditions with sequencing."
+  },
+  {
+   "t": 226.82,
+   "text": "The library is the asset; the experiments are cheap."
+  },
+  {
+   "t": 230.39,
+   "text": "Recombineering's role in this is that it is the molecular technique that creates the library."
+  },
+  {
+   "t": 236.1,
+   "text": "CRISPR can also create such libraries, in a different way, by knocking out genes."
+  },
+  {
+   "t": 241.6,
+   "text": "Recombineering creates libraries by precisely modifying sequences — promoters, ribosome binding sites, coding regions — with single-nucleotide accuracy."
+  },
+  {
+   "t": 252.76,
+   "text": "Both have a place."
+  },
+  {
+   "t": 254.11,
+   "text": "For modifications that are not knockouts — point mutations, expression tuning, fine-grained edits — recombineering is often the cleaner choice."
+  },
+  {
+   "t": 263.98,
+   "text": "For knockouts of entire genes, CRISPR is usually easier."
+  },
+  {
+   "t": 268.84,
+   "text": "The barcoded screening framework works either way."
+  }
+ ]
+}

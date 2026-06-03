@@ -1,0 +1,247 @@
+{
+ "n": 9,
+ "title": "SEGMENT 9 — Database search — Sequest, Mascot, MaxQuant, FragPipe",
+ "duration": 413.06,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 9 — Database search — Sequest, Mascot, MaxQuant, FragPipe"
+  },
+  {
+   "t": 5.94,
+   "text": "Now you have a pile of forty thousand MS2 spectra from a single LC-MS/MS run."
+  },
+  {
+   "t": 12.51,
+   "text": "Each one is a list of fragment-ion masses, with some intensities, corresponding to some peptide that the instrument decided to fragment."
+  },
+  {
+   "t": 20.98,
+   "text": "None of them are labeled with what peptide they came from."
+  },
+  {
+   "t": 24.01,
+   "text": "The instrument just knows the precursor m/z and the fragment masses."
+  },
+  {
+   "t": 29.74,
+   "text": "How do you turn that into identifications?"
+  },
+  {
+   "t": 32.51,
+   "text": "The answer is a beautifully simple algorithm called database search, first implemented in a program called Sequest by John Yates and Jimmy Eng in 1994, while Yates was at the University of Washington."
+  },
+  {
+   "t": 45.84,
+   "text": "The Sequest algorithm is the conceptual ancestor of every database search tool used in proteomics today, and the logic is worth understanding deeply."
+  },
+  {
+   "t": 55.69,
+   "text": "Here's the idea."
+  },
+  {
+   "t": 56.91,
+   "text": "You start with a database of all the known protein sequences from the organism you're studying — for human, the UniProt human proteome, about twenty thousand reviewed proteins."
+  },
+  {
+   "t": 67.29,
+   "text": "For each protein, you simulate a tryptic digest in silico: chop the sequence at every K and R (skipping the followed-by-proline ones), and write down every theoretical tryptic peptide."
+  },
+  {
+   "t": 80.15,
+   "text": "For each peptide, compute the theoretical monoisotopic mass and the theoretical fragment ion masses — the b-ions and y-ions you'd expect if you fragmented this peptide in the mass spec."
+  },
+  {
+   "t": 92.47,
+   "text": "Now you have a giant lookup table: every theoretical peptide from every protein, with its expected mass and its expected fragment spectrum."
+  },
+  {
+   "t": 101.66,
+   "text": "The database, for a human proteome with one missed cleavage allowed, contains a few million theoretical peptides."
+  },
+  {
+   "t": 109.3,
+   "text": "To identify an observed MS2 spectrum, you do this."
+  },
+  {
+   "t": 113.67,
+   "text": "First, filter the database by precursor mass: only consider peptides whose theoretical mass is within, say, ten parts per million of the observed precursor mass."
+  },
+  {
+   "t": 124.78,
+   "text": "That filter reduces the candidates from millions down to a few dozen — maybe a few hundred."
+  },
+  {
+   "t": 130.7,
+   "text": "Then, for each candidate peptide, compute its theoretical fragment spectrum and compare it to the observed fragment spectrum."
+  },
+  {
+   "t": 138.61,
+   "text": "Score each comparison — how many observed peaks are explained by theoretical fragments, how well do the intensities match."
+  },
+  {
+   "t": 146.32,
+   "text": "Pick the best-scoring candidate."
+  },
+  {
+   "t": 148.35,
+   "text": "That candidate is your peptide identification."
+  },
+  {
+   "t": 151.55,
+   "text": "The analogy: database search is the central trick of proteomics."
+  },
+  {
+   "t": 156.06,
+   "text": "You observed a spectrum."
+  },
+  {
+   "t": 157.62,
+   "text": "The software predicts what every theoretically-possible peptide in the proteome would give."
+  },
+  {
+   "t": 162.81,
+   "text": "Whichever theoretical prediction best matches what you actually saw, wins."
+  },
+  {
+   "t": 167.96,
+   "text": "It's not de novo sequencing — you're not reading the spectrum from scratch and figuring out the sequence."
+  },
+  {
+   "t": 174.01,
+   "text": "You're matching against a predicted catalog."
+  },
+  {
+   "t": 176.81,
+   "text": "That's why proteomics requires a reference proteome; the technique fundamentally cannot identify a peptide whose sequence isn't in the database."
+  },
+  {
+   "t": 186.07,
+   "text": "Of course, with millions of candidates and noisy spectra, you'll get false matches by chance."
+  },
+  {
+   "t": 192.35,
+   "text": "Some spectra will match a wrong peptide by random alignment of peaks."
+  },
+  {
+   "t": 196.91,
+   "text": "To deal with this, the field uses a target-decoy strategy."
+  },
+  {
+   "t": 200.94,
+   "text": "You search not just against the real proteome (the target) but also against a reversed or shuffled version of every protein sequence (the decoy)."
+  },
+  {
+   "t": 210.3,
+   "text": "Real peptides should match the target database; random matches should hit target and decoy at equal rates."
+  },
+  {
+   "t": 217.99,
+   "text": "By measuring the rate of decoy matches, you estimate the false discovery rate, FDR, and threshold your identifications to keep the FDR below, say, one percent."
+  },
+  {
+   "t": 229.86,
+   "text": "This is the standard for publishing proteomics data: peptide identifications at one percent FDR, protein identifications also at one percent FDR after combining peptides."
+  },
+  {
+   "t": 241.68,
+   "text": "The software stack has evolved a lot."
+  },
+  {
+   "t": 243.96,
+   "text": "Sequest, the original, is still around in modified form inside Thermo's Proteome Discoverer."
+  },
+  {
+   "t": 250.95,
+   "text": "Mascot, developed by Matrix Science in the late 1990s, was the dominant commercial search engine for a long time."
+  },
+  {
+   "t": 258.29,
+   "text": "MaxQuant, developed by Jürgen Cox and Matthias Mann's lab in Munich starting in 2008, transformed the field by being free, by being integrated with label-free quantification, and by being extremely well-engineered for handling Orbitrap data."
+  },
+  {
+   "t": 273.59,
+   "text": "FragPipe, more recently, built around the MSFragger search engine from Alexey Nesvizhskii's lab at Michigan, is much faster than older tools — orders of magnitude faster — and has become the modern default in many labs."
+  },
+  {
+   "t": 287.9,
+   "text": "There are others: Comet, X!"
+  },
+  {
+   "t": 290.55,
+   "text": "Tandem, Andromeda, OpenMS, PEAKS, Spectronaut, DIA-NN."
+  },
+  {
+   "t": 295.31,
+   "text": "Each has tradeoffs."
+  },
+  {
+   "t": 296.7,
+   "text": "The conceptual algorithm — match observed spectrum against theoretical proteome database — is the same in all of them."
+  },
+  {
+   "t": 303.99,
+   "text": "One important wrinkle."
+  },
+  {
+   "t": 305.3,
+   "text": "Once you've identified peptides, you have to assemble them into protein identifications, and that's surprisingly subtle."
+  },
+  {
+   "t": 313.1,
+   "text": "Some peptides are shared between multiple proteins — for example, many human proteins have paralogs that differ at only a few residues, and some tryptic peptides will be identical between paralogs."
+  },
+  {
+   "t": 326.24,
+   "text": "If you observe such a peptide, you can't tell which paralog it came from."
+  },
+  {
+   "t": 330.5,
+   "text": "The field handles this with protein inference algorithms that group ambiguous peptides into protein groups and report at the protein-group level rather than at the individual-protein level."
+  },
+  {
+   "t": 341.74,
+   "text": "When a paper says \"we identified ten thousand protein groups,\" that's the right number — it's an honest accounting of distinguishable proteins, not over-claiming individual paralogs."
+  },
+  {
+   "t": 354.17,
+   "text": "So the data flow is: raw spectra in, database search algorithm, target-decoy FDR estimation, peptide identifications at one percent FDR, protein inference, protein groups at one percent FDR, peptide-level and protein-level quantification numbers per sample."
+  },
+  {
+   "t": 372.12,
+   "text": "That's the standard proteomics output table."
+  },
+  {
+   "t": 375.12,
+   "text": "Twenty rows of metadata at the top, ten thousand rows of proteins below, intensity values per sample in the columns."
+  },
+  {
+   "t": 383.33,
+   "text": "It looks just like an RNA-seq count table, except the entities are proteins instead of genes, and they were measured by mass instead of by sequencing."
+  },
+  {
+   "t": 392.56,
+   "text": "That brings us to the halfway point."
+  },
+  {
+   "t": 394.63,
+   "text": "After the break, we'll get into the quantification methods — label-free versus labeled — the DIA revolution, post-translational modifications, and everything from cross-linking to single-cell proteomics."
+  },
+  {
+   "t": 406.92,
+   "text": "Take ten minutes."
+  },
+  {
+   "t": 408.21,
+   "text": "Stretch."
+  },
+  {
+   "t": 409.12,
+   "text": "Get water."
+  },
+  {
+   "t": 410.19,
+   "text": "We'll resume with TMT and SILAC."
+  }
+ ]
+}

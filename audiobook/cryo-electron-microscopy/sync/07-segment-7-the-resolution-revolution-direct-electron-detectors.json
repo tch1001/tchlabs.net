@@ -1,0 +1,207 @@
+{
+ "n": 7,
+ "title": "SEGMENT 7 — The resolution revolution — direct electron detectors",
+ "duration": 355.59,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 7 — The resolution revolution — direct electron detectors"
+  },
+  {
+   "t": 5.38,
+   "text": "For decades, the limiting factor in cryo-EM was, surprisingly, the detector."
+  },
+  {
+   "t": 11.54,
+   "text": "The electron microscope itself was capable of producing exquisitely detailed images — the electron optics were diffraction-limited at sub-ångström resolution."
+  },
+  {
+   "t": 21.85,
+   "text": "The vitrified sample was preserving the protein in its native state."
+  },
+  {
+   "t": 26.45,
+   "text": "The image-processing algorithms were getting smarter every year."
+  },
+  {
+   "t": 30.29,
+   "text": "But what was holding back resolution was the device that actually recorded the image."
+  },
+  {
+   "t": 34.9,
+   "text": "For most of the history of cryo-EM, the detector was photographic film."
+  },
+  {
+   "t": 39.26,
+   "text": "You took an exposure, the film recorded it, you developed the film, you digitized it on a scanner."
+  },
+  {
+   "t": 45.5,
+   "text": "Film has high dynamic range and reasonable signal-to-noise, but it's slow — you can't easily take many exposures in series, you can't correct for the fact that your sample is drifting around in the beam, you can only record one snapshot."
+  },
+  {
+   "t": 60.15,
+   "text": "Then, in the late 1990s and 2000s, charge-coupled devices — CCDs — replaced film."
+  },
+  {
+   "t": 67.08,
+   "text": "CCDs were digital, faster, but they were not direct detectors."
+  },
+  {
+   "t": 72.3,
+   "text": "The electrons hit a phosphor screen that produced photons, the photons traveled through fiber optics to the CCD chip, and the CCD detected the photons."
+  },
+  {
+   "t": 82.97,
+   "text": "Each step in that chain added noise."
+  },
+  {
+   "t": 85.17,
+   "text": "The end result was a detector that was, in many ways, worse than film for cryo-EM purposes."
+  },
+  {
+   "t": 91.36,
+   "text": "The breakthrough was the direct electron detector."
+  },
+  {
+   "t": 94.16,
+   "text": "Starting around 2012 and 2013, a new generation of detectors became commercially available — the Falcon series from FEI (now Thermo Fisher), the K2 and later K3 from Gatan, the DE series from Direct Electron."
+  },
+  {
+   "t": 109.86,
+   "text": "These detectors used CMOS chips that could detect individual incoming electrons directly, without the phosphor-photon intermediate step."
+  },
+  {
+   "t": 118.88,
+   "text": "They had vastly better signal-to-noise."
+  },
+  {
+   "t": 121.76,
+   "text": "And, critically, they were fast — fast enough to record movies, not just single snapshots."
+  },
+  {
+   "t": 128.12,
+   "text": "Here's why the movies mattered."
+  },
+  {
+   "t": 129.6,
+   "text": "When you put a vitrified sample into an electron microscope and turn on the beam, the sample moves."
+  },
+  {
+   "t": 135.36,
+   "text": "Even at cryogenic temperatures, even with the most careful sample preparation, the beam-induced motion of the specimen — sometimes also called beam-induced doming or warping — blurs the image."
+  },
+  {
+   "t": 147.82,
+   "text": "For decades this was a fundamental limitation."
+  },
+  {
+   "t": 151.29,
+   "text": "You could take a long exposure to gather more signal, but the longer the exposure, the more the sample moved, and the more your image blurred."
+  },
+  {
+   "t": 159.39,
+   "text": "So you had to balance signal versus blur, and the resolution suffered."
+  },
+  {
+   "t": 163.86,
+   "text": "With a direct detector that could record movies — say, forty frames over a few seconds of exposure — you could record each frame separately, see how the sample was moving from frame to frame, computationally align all the frames to correct for the motion, and then sum them into a single sharp image."
+  },
+  {
+   "t": 182.78,
+   "text": "This is called motion correction, and it transformed the technique."
+  },
+  {
+   "t": 186.86,
+   "text": "You could collect total dose that was previously blurred away, you could correct for drift in real time, and the resulting images were sharper than anything that had been possible before."
+  },
+  {
+   "t": 197.3,
+   "text": "The combination of direct detection, motion correction, and the rapidly improving software for single-particle analysis caused a step-change in achievable resolutions."
+  },
+  {
+   "t": 207.82,
+   "text": "Almost overnight, structures that had been stuck at 8 to 10 ångström started coming in at 3 to 4 ångström."
+  },
+  {
+   "t": 214.53,
+   "text": "Targets that had been resistant for years suddenly yielded atomic-resolution structures."
+  },
+  {
+   "t": 220.29,
+   "text": "The community had a name for this: the resolution revolution."
+  },
+  {
+   "t": 224.57,
+   "text": "I want you to feel the suddenness of this."
+  },
+  {
+   "t": 227.04,
+   "text": "In 2012, single-particle cryo-EM was a respected but niche technique, mostly stuck above 4 ångström, and most labs were still doing crystallography."
+  },
+  {
+   "t": 237.39,
+   "text": "In 2014, a wave of papers appeared with structures of complicated targets — the TRPV1 ion channel, the mitochondrial ribosome, the gamma-secretase complex — at 3 to 4 ångström, in some cases on samples that had defeated crystallographers for a decade."
+  },
+  {
+   "t": 255.07,
+   "text": "The cover of the journal Nature in 2015 ran a special feature on the resolution revolution."
+  },
+  {
+   "t": 261.67,
+   "text": "By 2016, cryo-EM was producing more new atomic-resolution structures than X-ray crystallography for large complexes."
+  },
+  {
+   "t": 271.01,
+   "text": "By the end of the decade, it was producing more structures, period."
+  },
+  {
+   "t": 275.19,
+   "text": "The resolution revolution is, in a sentence, direct electron detectors in 2013 changed everything — suddenly you could record movies of electron exposures, correct for sample drift, get atomic resolution."
+  },
+  {
+   "t": 289.59,
+   "text": "And the field, which had been promising atomic resolution for thirty years, finally delivered."
+  },
+  {
+   "t": 295.62,
+   "text": "I also want to acknowledge the people."
+  },
+  {
+   "t": 297.57,
+   "text": "Sjors Scheres at the MRC LMB, who developed the RELION software that implemented Bayesian image processing in a form that made the new detectors fully exploitable."
+  },
+  {
+   "t": 308.72,
+   "text": "Yifan Cheng at UCSF, who pushed the TRPV1 structure through and showed what was possible on a real target."
+  },
+  {
+   "t": 316.35,
+   "text": "Maofu Liao, Cheng's collaborator."
+  },
+  {
+   "t": 319.12,
+   "text": "The Gatan and FEI engineers who built the detectors."
+  },
+  {
+   "t": 322.87,
+   "text": "The whole community of methods developers, sample preparers, microscopists, and software writers who took the technology from \"promising\" to \"transformative\" in about three years."
+  },
+  {
+   "t": 333.96,
+   "text": "The Nobel went to Dubochet, Frank, and Henderson — but the resolution revolution was a much larger collective achievement, layered on top of the foundational work."
+  },
+  {
+   "t": 344.27,
+   "text": "OK."
+  },
+  {
+   "t": 345.06,
+   "text": "We now have all the historical pieces."
+  },
+  {
+   "t": 347.56,
+   "text": "Let me put together the modern cryo-EM workflow, end to end, so you can see exactly how a structure gets made in 2026."
+  }
+ ]
+}

@@ -1,0 +1,231 @@
+{
+ "n": 6,
+ "title": "SEGMENT 6 — The Orbitrap revolution — Makarov, Thermo, and the rise of the workhorse",
+ "duration": 388.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 6 — The Orbitrap revolution — Makarov, Thermo, and the rise of the workhorse"
+  },
+  {
+   "t": 7.1,
+   "text": "Around 2005, the Thermo Scientific company released a new mass spectrometer based on a brand-new analyzer design, called the Orbitrap."
+  },
+  {
+   "t": 16.16,
+   "text": "The principle had been worked out by a young Russian physicist named Alexander Makarov, who had been developing it through the 1990s — first at his lab in Moscow, then at HD Technologies in the UK, which Thermo acquired."
+  },
+  {
+   "t": 29.94,
+   "text": "The first commercial instrument was the LTQ-Orbitrap, released in 2005."
+  },
+  {
+   "t": 35.16,
+   "text": "Within five years, the Orbitrap had become the dominant high-resolution analyzer in proteomics."
+  },
+  {
+   "t": 41.52,
+   "text": "Within ten years, essentially every major academic proteomics core in the world had at least one."
+  },
+  {
+   "t": 47.86,
+   "text": "It is, by some margin, the most influential mass spec instrument of the modern era."
+  },
+  {
+   "t": 53.25,
+   "text": "So how does it work?"
+  },
+  {
+   "t": 54.45,
+   "text": "The principle is gorgeous, and I want to walk through it carefully."
+  },
+  {
+   "t": 58.35,
+   "text": "Imagine a small barrel-shaped chamber, maybe the size of a soda can, evacuated to high vacuum."
+  },
+  {
+   "t": 64.69,
+   "text": "In the middle of the chamber sits a spindle-shaped central electrode — like a tapered metal axle, fat in the middle and tapering toward both ends."
+  },
+  {
+   "t": 74.25,
+   "text": "Around it, the outer wall of the chamber is also an electrode, with a precisely shaped curvature."
+  },
+  {
+   "t": 80.91,
+   "text": "You put a few kilovolts of voltage between the central spindle and the outer wall — but the geometry is shaped such that the resulting electric field has a very specific mathematical form."
+  },
+  {
+   "t": 91.76,
+   "text": "In particular, the field has a quadratic-logarithmic shape that creates a stable trapping potential for ions in three dimensions."
+  },
+  {
+   "t": 100.24,
+   "text": "When you inject ions into this chamber, they don't just sit there."
+  },
+  {
+   "t": 104.15,
+   "text": "They start orbiting around the central spindle, like planets around a sun, while simultaneously oscillating back and forth along the axis of the spindle."
+  },
+  {
+   "t": 113.86,
+   "text": "The combination of orbital motion and axial oscillation traces out a complex three-dimensional pattern — kind of like a figure-eight wrapped around a barrel."
+  },
+  {
+   "t": 123.51,
+   "text": "The crucial fact, mathematically, is this: the frequency of the axial oscillation depends only on the m/z of the ion."
+  },
+  {
+   "t": 132.31,
+   "text": "It does not depend on the orbital motion, the injection energy, or anything else."
+  },
+  {
+   "t": 137.39,
+   "text": "Just m/z."
+  },
+  {
+   "t": 139.53,
+   "text": "So if you can measure the axial oscillation frequency of the trapped ions, you can compute their m/z directly."
+  },
+  {
+   "t": 147.03,
+   "text": "How do you measure the frequency?"
+  },
+  {
+   "t": 148.69,
+   "text": "You don't try to detect the ions directly."
+  },
+  {
+   "t": 151.15,
+   "text": "Instead, you put pickup electrodes on the outer walls of the chamber and measure the tiny image current that the oscillating ion charge induces in those electrodes as the ions move back and forth."
+  },
+  {
+   "t": 163.72,
+   "text": "The image current is a periodic signal, with a frequency equal to the axial oscillation frequency."
+  },
+  {
+   "t": 169.93,
+   "text": "If you have many different ion species in the trap at once, each oscillating at its own frequency, the image current is a sum of many sinusoids — a complex waveform."
+  },
+  {
+   "t": 181.21,
+   "text": "You record that waveform for a few hundred milliseconds."
+  },
+  {
+   "t": 184.64,
+   "text": "Then you Fourier-transform it, decomposing the complex waveform into its constituent frequencies, and each frequency peak corresponds to an ion species at a particular m/z."
+  },
+  {
+   "t": 196.99,
+   "text": "The Fourier transform is the magic that turns the time-domain image current signal into a frequency-domain spectrum, which is the mass spectrum."
+  },
+  {
+   "t": 205.64,
+   "text": "Hold the analogy."
+  },
+  {
+   "t": 206.86,
+   "text": "The Orbitrap is like a tuning fork chorus."
+  },
+  {
+   "t": 209.78,
+   "text": "Different ions ring at different frequencies."
+  },
+  {
+   "t": 212.68,
+   "text": "You record the combined sound."
+  },
+  {
+   "t": 214.49,
+   "text": "You decompose the sound into pure tones with a Fourier transform."
+  },
+  {
+   "t": 218.95,
+   "text": "Each tone is a peak in the mass spectrum."
+  },
+  {
+   "t": 221.74,
+   "text": "The longer you record, the more precisely you can pin down each frequency, and the higher your resolution."
+  },
+  {
+   "t": 228.46,
+   "text": "Modern Orbitraps can achieve resolutions of half a million or more — meaning they can distinguish two peaks that differ in m/z by one part in five hundred thousand."
+  },
+  {
+   "t": 240.53,
+   "text": "Mass accuracy of a few parts per million is routine; sub-ppm with internal calibration."
+  },
+  {
+   "t": 246.8,
+   "text": "For a peptide of mass around two thousand daltons, that's identifying the mass to within plus or minus 0.002 daltons."
+  },
+  {
+   "t": 255.7,
+   "text": "That is essentially molecular-formula-level accuracy."
+  },
+  {
+   "t": 258.95,
+   "text": "Why did this matter so much for proteomics?"
+  },
+  {
+   "t": 262.25,
+   "text": "Because the precision is what makes peptide identification reliable."
+  },
+  {
+   "t": 266.44,
+   "text": "If you measure a peptide at m/z 850.456789 with mass accuracy of one part per million, you can check that mass against a database of every theoretical peptide from every protein in the human proteome, and find a unique match — or at most a small handful of candidates that you can distinguish by their fragmentation pattern."
+  },
+  {
+   "t": 288.69,
+   "text": "With low-resolution analyzers, dozens of peptides have similar enough masses that you can't tell them apart, and you generate a lot of ambiguous identifications."
+  },
+  {
+   "t": 298.62,
+   "text": "With high-resolution Orbitrap data, the matches are almost unique on mass alone."
+  },
+  {
+   "t": 304.05,
+   "text": "The Orbitrap also has good dynamic range — you can see peaks across a few orders of magnitude in a single scan."
+  },
+  {
+   "t": 311.34,
+   "text": "It's compatible with high-speed acquisition — you can collect tens of MS/MS spectra per second on modern instruments."
+  },
+  {
+   "t": 320.07,
+   "text": "It's relatively compact — not as big as an FT-ICR's superconducting magnet."
+  },
+  {
+   "t": 325.68,
+   "text": "And, critically, the Thermo product family built around the Orbitrap has been iterated relentlessly for two decades: LTQ-Orbitrap, Orbitrap Velos, Q-Exactive, Orbitrap Fusion, Orbitrap Lumos, Orbitrap Eclipse, Orbitrap Exploris, and most recently the Orbitrap Astral, which pairs an Orbitrap with an Astral analyzer — a clever folded-flight-path TOF derivative — to push acquisition speeds even higher."
+  },
+  {
+   "t": 353.14,
+   "text": "Every major proteomics paper you read from 2008 onwards almost certainly uses an Orbitrap somewhere in its workflow."
+  },
+  {
+   "t": 360.94,
+   "text": "When people say \"modern proteomics,\" what they often mean, implicitly, is \"Orbitrap proteomics."
+  },
+  {
+   "t": 367.56,
+   "text": "\" Makarov, by the way, is still alive, still at Thermo, still working on the next generation of instruments."
+  },
+  {
+   "t": 374.12,
+   "text": "He is, fairly, considered one of the most consequential analytical chemists of the modern era."
+  },
+  {
+   "t": 380.05,
+   "text": "The Orbitrap is his monument."
+  },
+  {
+   "t": 382.29,
+   "text": "Now we have the ionization, the architecture, and the analyzer."
+  },
+  {
+   "t": 386.48,
+   "text": "Let's actually do proteomics with them."
+  }
+ ]
+}

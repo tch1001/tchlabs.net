@@ -1,0 +1,311 @@
+{
+ "n": 2,
+ "title": "SEGMENT 2 — What does \"similar\" mean for two sequences?",
+ "duration": 461.0,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "SEGMENT 2 — What does \"similar\" mean for two sequences?"
+  },
+  {
+   "t": 4.22,
+   "text": "Before we can talk about algorithms for aligning sequences, we have to talk about what we even mean by a \"good\" alignment."
+  },
+  {
+   "t": 10.89,
+   "text": "Because alignment is an optimization problem — we're picking the best alignment from some space of possibilities — and to optimize, you need a scoring function."
+  },
+  {
+   "t": 20.39,
+   "text": "Different scoring functions give you different best alignments."
+  },
+  {
+   "t": 24.31,
+   "text": "The choice of scoring function is the part of the problem that depends on biology; the algorithm that finds the best alignment given a scoring function is the part that depends on computer science."
+  },
+  {
+   "t": 35.31,
+   "text": "We need to spend a few minutes on the biology piece first, because it sets up everything that follows."
+  },
+  {
+   "t": 40.67,
+   "text": "Consider two short DNA sequences."
+  },
+  {
+   "t": 43.77,
+   "text": "Let's say the first one is ACGTAGC and the second one is ACGCAGC."
+  },
+  {
+   "t": 48.0,
+   "text": "Stare at them for a second."
+  },
+  {
+   "t": 49.88,
+   "text": "They are seven letters long, and they match at positions one, two, three, five, six, and seven."
+  },
+  {
+   "t": 57.42,
+   "text": "At position four, the first one has a T and the second one has a C."
+  },
+  {
+   "t": 62.12,
+   "text": "That's a substitution — one base has been swapped for another, presumably by a point mutation somewhere in the evolutionary history connecting these two sequences."
+  },
+  {
+   "t": 72.12,
+   "text": "The alignment is pretty obvious: line them up letter by letter, mark the mismatch at position four, done."
+  },
+  {
+   "t": 78.62,
+   "text": "Six matches, one mismatch."
+  },
+  {
+   "t": 80.72,
+   "text": "Now consider a slightly trickier pair."
+  },
+  {
+   "t": 83.35,
+   "text": "First sequence: ACGTAGC."
+  },
+  {
+   "t": 85.67,
+   "text": "Second sequence: ACGAGC."
+  },
+  {
+   "t": 88.05,
+   "text": "The second one is six letters long, not seven."
+  },
+  {
+   "t": 91.6,
+   "text": "If you try to line them up letter by letter from the left, you get matches at positions one, two, three, then a mismatch at four (T versus A), then mismatches at five and six and seven as well."
+  },
+  {
+   "t": 103.09,
+   "text": "That looks like a disaster — four mismatches in a row."
+  },
+  {
+   "t": 106.56,
+   "text": "But there's a better alignment: assume the T at position four of the first sequence was deleted in the second sequence — so the second sequence is missing one letter — and align position five of the first to position four of the second, position six of the first to position five of the second, and position seven of the first to position six of the second."
+  },
+  {
+   "t": 126.91,
+   "text": "Now you have six matches and one gap."
+  },
+  {
+   "t": 129.21,
+   "text": "That's much better."
+  },
+  {
+   "t": 130.39,
+   "text": "This is the essential complication."
+  },
+  {
+   "t": 132.57,
+   "text": "Alignments can have gaps."
+  },
+  {
+   "t": 134.36,
+   "text": "Gaps represent insertions or deletions — collectively called indels — that happened in the evolutionary history of the two sequences."
+  },
+  {
+   "t": 143.19,
+   "text": "When you align two sequences, you're not just deciding which letters match which letters; you're also deciding where to insert dashes — gaps — in one or both sequences so that the matching parts line up."
+  },
+  {
+   "t": 156.24,
+   "text": "The space of possible alignments includes all the ways to introduce gaps in either sequence, which is a huge space."
+  },
+  {
+   "t": 164.55,
+   "text": "For two sequences of length n and m, the number of distinct alignments is roughly the central binomial coefficient — it grows exponentially with sequence length."
+  },
+  {
+   "t": 176.54,
+   "text": "You cannot enumerate them all for any non-trivial sequence."
+  },
+  {
+   "t": 180.4,
+   "text": "You need to be smart."
+  },
+  {
+   "t": 181.65,
+   "text": "So we need a scoring function that, given any specific alignment, tells us how good that alignment is."
+  },
+  {
+   "t": 188.22,
+   "text": "Then we want the algorithm that finds the alignment with the highest score."
+  },
+  {
+   "t": 192.28,
+   "text": "Let me show you the simplest possible scoring function for DNA, just to get the idea."
+  },
+  {
+   "t": 197.34,
+   "text": "Each matching position scores +1."
+  },
+  {
+   "t": 200.06,
+   "text": "Each mismatching position scores -1."
+  },
+  {
+   "t": 203.19,
+   "text": "Each gap position scores -2."
+  },
+  {
+   "t": 205.54,
+   "text": "Add up the scores along the alignment, and that's the alignment's score."
+  },
+  {
+   "t": 209.4,
+   "text": "Higher is better."
+  },
+  {
+   "t": 210.76,
+   "text": "So in our first example — ACGTAGC versus ACGCAGC — the obvious alignment has six matches and one mismatch."
+  },
+  {
+   "t": 218.45,
+   "text": "Score: 6 times 1, plus 1 times -1, equals +5."
+  },
+  {
+   "t": 223.95,
+   "text": "The other obvious thing to try would be to introduce a gap, but any alignment with a gap will pick up at least one -2 penalty, plus you'd still have a few mismatches, so it would be worse."
+  },
+  {
+   "t": 234.03,
+   "text": "The no-gap alignment wins."
+  },
+  {
+   "t": 236.0,
+   "text": "In the second example — ACGTAGC versus ACGAGC — the no-gap left-aligned attempt has three matches, then a string of mismatches."
+  },
+  {
+   "t": 244.74,
+   "text": "Score: 3 times 1, plus 4 times -1, equals -1."
+  },
+  {
+   "t": 250.28,
+   "text": "The alignment with a gap in the shorter sequence has six matches and one gap."
+  },
+  {
+   "t": 255.09,
+   "text": "Score: 6 times 1, plus 1 times -2, equals +4."
+  },
+  {
+   "t": 260.38,
+   "text": "The gapped alignment wins."
+  },
+  {
+   "t": 262.47,
+   "text": "The scoring function correctly tells us that the gap is the right interpretation."
+  },
+  {
+   "t": 267.59,
+   "text": "This is the basic structure of the problem."
+  },
+  {
+   "t": 269.79,
+   "text": "Match score, mismatch penalty, gap penalty."
+  },
+  {
+   "t": 273.47,
+   "text": "Find the alignment that maximizes the total score."
+  },
+  {
+   "t": 277.02,
+   "text": "Different scoring schemes encode different biological assumptions."
+  },
+  {
+   "t": 281.57,
+   "text": "For DNA, a simple +1/-1/-2 scheme is fine for many purposes, because the four DNA bases are all chemically similar and any substitution is roughly equally likely."
+  },
+  {
+   "t": 295.77,
+   "text": "For protein, things get more interesting, because the twenty amino acids have very different chemistries — replacing leucine with isoleucine is almost free, biologically, because they're nearly identical hydrophobic residues, whereas replacing leucine with arginine is dramatic, because you've turned a hydrophobic side chain into a positively charged one."
+  },
+  {
+   "t": 317.34,
+   "text": "The scoring function for proteins needs to reflect that — substitutions between similar amino acids should cost less than substitutions between dissimilar ones."
+  },
+  {
+   "t": 327.57,
+   "text": "That's where the famous PAM and BLOSUM matrices come in, and we'll spend Segment 5 on them."
+  },
+  {
+   "t": 333.25,
+   "text": "For gaps, there's another subtlety."
+  },
+  {
+   "t": 335.52,
+   "text": "Biology tells us that opening a new gap is rare, but once a gap is open, extending it by another base or two is much more common — because real indels often span multiple bases at once."
+  },
+  {
+   "t": 347.65,
+   "text": "A single deletion of ten bases is far more likely, evolutionarily, than ten independent deletions of one base each in the same region."
+  },
+  {
+   "t": 357.04,
+   "text": "So most real scoring schemes use what's called an affine gap penalty: opening a gap costs a lot — say, -10 — but each additional base of gap extension only costs a little — say, -1."
+  },
+  {
+   "t": 369.94,
+   "text": "The math gets slightly more complicated, but the principle is the same: a scoring function that reflects what evolution actually does."
+  },
+  {
+   "t": 378.48,
+   "text": "There's also a concept you should know called edit distance."
+  },
+  {
+   "t": 382.19,
+   "text": "Edit distance is the simplest possible measure of similarity between two strings — it's the minimum number of single-character edits (insertions, deletions, or substitutions) needed to turn one string into the other."
+  },
+  {
+   "t": 395.43,
+   "text": "ACGTAGC and ACGCAGC have edit distance one — a single substitution."
+  },
+  {
+   "t": 400.38,
+   "text": "ACGTAGC and ACGAGC have edit distance one too — a single deletion."
+  },
+  {
+   "t": 405.34,
+   "text": "ACGTAGC and TTTTTT have edit distance seven — change every letter."
+  },
+  {
+   "t": 410.55,
+   "text": "Edit distance is a special case of sequence alignment scoring, with match score 0, mismatch penalty 1, gap penalty 1, and minimization instead of maximization."
+  },
+  {
+   "t": 422.0,
+   "text": "The classical name for computing edit distance is the Levenshtein distance algorithm, published in 1965 by Vladimir Levenshtein."
+  },
+  {
+   "t": 431.15,
+   "text": "It's the grandparent of sequence alignment, and structurally it's the same dynamic program we're about to meet."
+  },
+  {
+   "t": 438.15,
+   "text": "The biologists picked up the algorithm a few years later and dressed it up with biology-aware scoring matrices, but the bones are Levenshtein's."
+  },
+  {
+   "t": 446.94,
+   "text": "So that's the setup."
+  },
+  {
+   "t": 448.24,
+   "text": "Two sequences."
+  },
+  {
+   "t": 449.67,
+   "text": "A scoring function with match, mismatch, and gap terms."
+  },
+  {
+   "t": 454.0,
+   "text": "Find the best alignment."
+  },
+  {
+   "t": 455.63,
+   "text": "Now let's see how Needleman and Wunsch, in 1970, taught us how to find it."
+  }
+ ]
+}
