@@ -1,0 +1,1041 @@
+{
+ "title": "Play Optimal Poker — Companion",
+ "voice": "en-US-AndrewMultilingualNeural",
+ "chapters": [
+  {
+   "n": 0,
+   "title": "Introduction",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Why You Need Game Theory",
+     "lines": [
+      "Introduction, part one. Why you need game theory.",
+      "Here's the thing that makes poker so maddening, and so beautiful. You can play a hand perfectly and lose, or play it terribly and win.",
+      "Unlike blackjack or craps, your payoff doesn't just depend on your own choices. It depends on what your opponents choose to do.",
+      "And you can't see their cards, and you can't read their minds. So when you fire a big bluff on the river, you genuinely don't know if they'll fold.",
+      "That means results are a liar. A bluff that gets called isn't necessarily a bad bluff. It might be a great bluff that ran into the one hand that could never fold.",
+      "So if results don't tell you whether you played well, what does? For a long time, the honest answer was: nothing reliable. Players just flailed around and trusted their gut.",
+      "Game theory is the way through. It doesn't make the uncertainty disappear, but it gives you a principled way to make decisions when you can't know what's coming.",
+      "And here's the reframe that changes everything. Your goal at the table isn't really to win this pot, or to play tight, or to be tricky.",
+      "Your goal is to give your opponents difficult decisions. To put them in spots where they have no idea what's right. You can't force them to make mistakes, but you can create the conditions where mistakes happen.",
+      "And the best part: game theory isn't just for elite players in tough games. It's for anyone who has ever sat at a table and felt unsure what to do. Which is everyone."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "The Game Theory Approach",
+     "lines": [
+      "Introduction, part two. The game theory approach.",
+      "At the center of all this is one idea: equilibrium. People also call it G T O, for game theory optimal.",
+      "An equilibrium strategy has a remarkable property. It's a way of playing that can't be beaten, even by an opponent who knows exactly what you're doing.",
+      "How is that possible? The secret is that you think in ranges, not single hands. You build betting ranges that mix strong hands and bluffs in the right proportions.",
+      "Get those proportions right, and your opponent is stuck. If they fold too much, your bluffs print money. If they call too much, your value bets clean them out. Every choice they make is break-even at best.",
+      "That balance point, where the opponent literally cannot find a profitable response, is the equilibrium. It's your safety net. It guarantees you can't be exploited.",
+      "Now, equilibrium is not the same as maximally profitable. Against a weak opponent, you can often win more by deviating, by exploiting their specific leaks.",
+      "But here's why you start with the baseline. You can't recognize a leak, or exploit it safely, until you know what solid, balanced play looks like in the first place.",
+      "So the plan is simple to state, even if it takes a book to master. Learn the unexploitable baseline. Then learn how, and when, to step away from it to punish the mistakes in front of you."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "How to Use This Book",
+     "lines": [
+      "Introduction, part three. How to use this companion.",
+      "Game theory in real No-Limit Hold'em is fiendishly complicated. There are too many hands, too many board textures, too many bet sizes to hold in your head.",
+      "So the approach here is to start with toy games. Tiny, stripped-down versions of poker, simple enough that we can actually solve them by hand and see exactly why the optimal play is optimal.",
+      "These toy games aren't a distraction from real poker. They're where the core intuitions live: polarization, balance, indifference, blockers. The same forces drive the real game.",
+      "A word on how to listen. When we pose a scenario, pause and try to reason it out yourself before I walk through the answer. The struggle is where the learning happens.",
+      "And the goal is never to memorize a chart. It's to understand the why, so that when you face a spot this companion never mentioned, you can still reason your way to a good play.",
+      "We'll build up slowly, from the simplest possible game to scenarios that look like hands you'll actually play. Take your time. Let it sink in.",
+      "One more note. This is an original explainer of the ideas in Andrew Brokos's book, Play Optimal Poker. If these concepts grab you, go buy the real thing. It's worth it."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 1,
+   "title": "Chapter 1: Understanding Equilibrium",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter 1, section 1. Overview and Objectives.",
+      "Welcome to the foundation of everything we are going to build together in this series.",
+      "The big idea in modern poker theory is something called equilibrium, and it changes how you think about every decision at the table.",
+      "Before we can talk about equilibrium, we need to know what a strategy actually is.",
+      "Then we are going to explore Nash equilibrium and what it means for a strategy to be truly unexploitable.",
+      "We will dig into equity and expected value, the two measurements that tell you whether a decision is good or bad.",
+      "And we will unlock the concept of indifference, which is the secret engine running underneath every balanced, optimal play.",
+      "We are going to learn all of this by solving tiny toy games you can hold entirely in your head.",
+      "These small games strip away the complexity of real poker and let you see the logic clearly.",
+      "By the end of this chapter, you will have the core vocabulary and intuition to start thinking about poker the way a solver does."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "What is a Strategy?",
+     "lines": [
+      "Chapter 1, section 2. What is a Strategy?",
+      "In everyday life, a strategy might mean a rough plan, but in game theory the word has a very precise meaning.",
+      "A strategy is a complete plan that tells you exactly what to do in every situation you could possibly face.",
+      "Not just the situations you expect to see often, but every single one, including the rare and uncomfortable spots.",
+      "Now, sometimes your plan is to always take one specific action in a given situation, and that is called a pure strategy.",
+      "Other times the best plan involves doing different things at different frequencies, and that is called a mixed strategy.",
+      "A mixed strategy might say: in this spot, bet seventy percent of the time and check thirty percent of the time.",
+      "In poker, a strategy assigns an action, or a mix of actions with frequencies, to every hand you could hold in every position.",
+      "That sounds overwhelming, but the principle is simple: you have a rule for every spot before the hand even starts.",
+      "Think of it like a giant decision tree where every branch already has an answer written on it.",
+      "When you play without a complete plan, opponents can find gaps and exploit them, and we will see exactly how that works very soon."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Nash Equilibrium",
+     "lines": [
+      "Chapter 1, section 3. Nash Equilibrium.",
+      "A Nash equilibrium is a pair of strategies, one for each player, where neither player can improve their results by changing only their own strategy.",
+      "Think about what that really means: your opponent could know your exact strategy down to every frequency, and they still cannot beat you.",
+      "That is an extraordinary property, and it is what people mean when they say a strategy is unexploitable.",
+      "At equilibrium, any adjustment your opponent tries to make will not help them, because your strategy already accounts for it.",
+      "Equilibrium does not mean you will win every hand, or even most hands, it means no one can gain an edge over you through strategy alone.",
+      "John Nash proved that every finite game has at least one equilibrium, which means one always exists in poker, even if finding it is hard.",
+      "In two-player poker, the equilibrium strategies are often called GTO strategies, short for game-theory optimal.",
+      "Playing GTO guarantees you a certain minimum result: you will never be losing money to a player who is also playing GTO.",
+      "And against anyone who deviates from equilibrium, you have the opportunity to exploit them and do even better.",
+      "Equilibrium is your floor, not your ceiling, but it is a very solid floor to stand on."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Proving an Equilibrium",
+     "lines": [
+      "Chapter 1, section 4. Proving an Equilibrium.",
+      "How do you actually prove that two strategies form a Nash equilibrium?",
+      "The method is straightforward: you check that neither player has any profitable deviation available.",
+      "A deviation just means switching to some other action or some different mixing frequency.",
+      "You go through every possible alternative for player one and confirm that none of them produce a higher expected value than the proposed strategy.",
+      "Then you do the same check for player two.",
+      "If you cannot find a profitable deviation for either player, you have proven the equilibrium.",
+      "This might sound like a lot of checking, but in small toy games the number of alternatives is manageable.",
+      "In a game with only two choices per player, you might only need to test four or five scenarios total.",
+      "The key insight is that proving an equilibrium does not require you to find it first; you can be handed a candidate and then verify it.",
+      "Later in this chapter we will do exactly that: we will be handed a solution and walk through the verification step by step.",
+      "That process of verification will teach you more about equilibrium than just memorizing the answer ever could."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Scenario: Going to the Movies",
+     "lines": [
+      "Chapter 1, section 5. Scenario: Going to the Movies.",
+      "Let us build some intuition with a tiny game before we touch poker at all.",
+      "Imagine two friends, Alex and Blair, who both want to meet up at a movie tonight.",
+      "Alex wants to see a thriller, Blair wants to see a comedy, but they both would rather be together than go alone.",
+      "Each of them has to decide independently which theater to go to, without being able to call the other person first.",
+      "If they both pick the thriller, Alex is happy and they are together, so that is a decent outcome for both.",
+      "If they both pick the comedy, Blair is happy and they are together, so that is also a decent outcome for both.",
+      "If they split up and go to different movies, they both end up alone, and that is the worst result for everyone.",
+      "Notice that this game has two equilibria: both go to the thriller, or both go to the comedy.",
+      "Neither friend wants to deviate from whichever meeting point they happen to coordinate on, because switching solo means being alone.",
+      "This shows you that a game can have more than one equilibrium, and that the challenge is sometimes coordination as much as conflict.",
+      "In poker, the game is pure conflict, but the lesson holds: always check whether multiple equilibria might exist."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Equity and Expected Value",
+     "lines": [
+      "Chapter 1, section 6. Equity and Expected Value.",
+      "Before we solve our first poker toy game, you need two measuring tools: equity and expected value.",
+      "Equity is your share of the pot on average if every remaining card simply runs out with no more betting.",
+      "If you hold a hand that wins half the time at showdown, your equity is fifty percent of the pot.",
+      "Equity does not care about bet sizes or future decisions; it is purely about how often you win at showdown.",
+      "Expected value, on the other hand, captures everything: your equity, how much money goes in, and the consequences of every possible action.",
+      "Expected value is the probability-weighted average of all possible outcomes of a decision.",
+      "Say you bet ten dollars into a pot where you will win that bet sixty percent of the time and lose it forty percent of the time.",
+      "Your expected value is sixty percent times ten dollars, minus forty percent times ten dollars, which equals two dollars.",
+      "That positive two dollars tells you the bet is profitable on average, even though you will sometimes lose it.",
+      "Every decision in poker ultimately reduces to a question of expected value: which choice gives me the highest average payoff?",
+      "Equity gives you a starting point, and expected value tells you whether to act on it and how."
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Scenario: Dodging a Debt",
+     "lines": [
+      "Chapter 1, section 7. Scenario: Dodging a Debt.",
+      "Here is a game that gets at the heart of why mixing your strategy is so important.",
+      "Imagine you owe someone money and you are desperately trying to avoid them today.",
+      "There are only two places you can be: the coffee shop or the park.",
+      "The person you owe money to is also choosing between those same two locations, trying to find you.",
+      "If they find you, they collect their money and you lose a dollar; if they miss you, you keep the dollar.",
+      "You want to not be found; they want to find you.",
+      "Now ask yourself: what is the best strategy here?",
+      "If you always go to the coffee shop, the debt collector figures that out and waits for you there every time.",
+      "If you always go to the park, same problem, they just go to the park.",
+      "Any fixed, predictable choice gets you caught, because your opponent can simply best-respond to a pattern they have identified.",
+      "The only way to stay safe is to become unpredictable, and that means randomizing your choice, but the question is: how much of each?"
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Answers & Explanation",
+     "lines": [
+      "Chapter 1, section 8. Answers and Explanation.",
+      "Let us solve the Dodging a Debt game and find the equilibrium.",
+      "You need to choose a mixing frequency between the coffee shop and the park that makes the debt collector indifferent between the two locations.",
+      "If you go to the coffee shop fifty percent of the time and the park fifty percent of the time, let us check what happens.",
+      "When the collector goes to the coffee shop, they find you half the time and miss half the time, for an expected payoff of zero.",
+      "When the collector goes to the park, they also find you half the time and miss half the time, for an expected payoff of zero.",
+      "Both options give the collector the same result, so they have no reason to favor one location over the other.",
+      "And by the same logic, you should also go fifty-fifty, because the collector will be mixing and each location is equally dangerous for you.",
+      "The equilibrium is both players choosing each location fifty percent of the time, and the expected value of the game is zero for both sides.",
+      "Notice how the proof works: neither player can improve by deviating, because the other player's mixing makes both options equally good or bad.",
+      "This simple hide-and-seek game is the skeleton of bluffing and calling in poker, and we will build on it throughout the series."
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Indifference",
+     "lines": [
+      "Chapter 1, section 9. Indifference.",
+      "The result from that game reveals a principle that sits at the core of all optimal poker strategy.",
+      "When a player uses a mixed strategy at equilibrium, they must be exactly indifferent between the actions they are mixing.",
+      "Indifferent means both actions produce the same expected value; you genuinely do not care which one you take.",
+      "That sounds strange at first: why would you mix if it does not matter?",
+      "The answer is that your mixing is not for your own benefit in that moment; it is to prevent your opponent from exploiting you.",
+      "If one action had higher expected value than the other, you would never take the worse one, and your play would become predictable.",
+      "Your opponent, knowing you would never do the lower-value action, could then adjust and exploit that gap.",
+      "By mixing in exactly the right proportions, you remove any edge your opponent could gain from knowing your strategy.",
+      "Indifference is the stability condition that keeps a mixed equilibrium from collapsing into something exploitable.",
+      "In poker, when a solver mixes between a bet and a check in some spot, it is because both actions have the same expected value at equilibrium.",
+      "Learning to recognize and create indifference in your opponent is one of the deepest skills in the game."
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Your Brain Is Not Capable of Randomization",
+     "lines": [
+      "Chapter 1, section 10. Your Brain Is Not Capable of Randomization.",
+      "Here is an uncomfortable truth: humans are genuinely terrible at randomizing.",
+      "When we try to mix randomly, we actually fall into rhythms and patterns that a sharp opponent can detect over time.",
+      "You might think you are going fifty-fifty, but you are really going sixty-forty in a way that leaks information.",
+      "This is not a character flaw; it is just how brains work, and the best players in the world struggle with it too.",
+      "The good news is that you do not need to generate randomness from scratch; you can borrow it from the cards themselves.",
+      "One popular method is to use the suit of your hole cards as a built-in randomizer.",
+      "For example, you might decide to bluff when your low card is a heart or a diamond, and give up when it is a club or a spade.",
+      "The suits appear at the right frequencies and are essentially random, so your opponent cannot read your pattern.",
+      "Another simple approach is to glance at the second hand of a clock or watch: bet if it points to the top half, check if it points to the bottom.",
+      "The goal is to outsource the randomness to something truly unpredictable rather than trusting your gut feeling in the moment.",
+      "Building these habits makes your game genuinely harder to read, which is exactly what equilibrium theory demands."
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Computer Assistance",
+     "lines": [
+      "Chapter 1, section 11. Computer Assistance.",
+      "Over the last decade, poker-solving software has transformed how serious players study the game.",
+      "These programs, called solvers, use algorithms to compute approximate Nash equilibrium strategies for real poker situations.",
+      "A solver can tell you exactly how often to bet, call, raise, or fold with every hand in a given spot.",
+      "But here is the trap that a lot of players fall into: they memorize the solver output without understanding why it looks the way it does.",
+      "Memorizing frequencies without understanding them is like memorizing a phone number without knowing who you are calling.",
+      "The right way to use a solver is to ask it questions and then dig into the logic behind the answers.",
+      "Why is this hand checking when the rest of the range is betting?",
+      "Why does the equilibrium use three different bet sizes in this spot?",
+      "Those whys are where the real learning lives, and they connect directly back to concepts like indifference and expected value.",
+      "The theory in this chapter is the foundation you need to ask solvers good questions and actually understand what they are telling you.",
+      "Think of equilibrium theory as the language, and the solver as a native speaker you are finally able to have a real conversation with."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Chapter 2: Polarized Versus Condensed Ranges",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter 2, section 1. Overview and objectives.",
+      "Today we are going to talk about two very different kinds of hands ranges, and why the difference matters more than almost anything else at the table.",
+      "The first type is called a polarized range.",
+      "The second type is called a condensed range.",
+      "Understanding which one you hold — and which one your opponent holds — tells you almost everything about how to size your bets.",
+      "To make this concrete, we are going to use a simple teaching scenario called the clairvoyance game.",
+      "This toy game is a bit extreme, but it strips away all the noise so the core logic becomes impossible to miss.",
+      "By the end of this chapter you will know exactly why polarized hands want to bet big, while condensed hands are often better off checking.",
+      "You will also understand what equilibrium actually means in practice, and how indifference connects your bet sizing to your bluffing frequency.",
+      "Let's get into it."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Recognizing Polarized And Condensed Ranges",
+     "lines": [
+      "Chapter 2, section 2. Recognizing polarized and condensed ranges.",
+      "A polarized range is one that contains the very best hands and the very worst hands, with almost nothing in the middle.",
+      "Think of a river bet from a player who could have the stone cold nuts or a total bluff — that's polarized.",
+      "A condensed range, on the other hand, is a cluster of medium-strength hands packed closely together.",
+      "Maybe you called a preflop raise, then called a flop bet, and the board ran out without hitting any of your big draws — your hand is probably somewhere in the middle of the deck.",
+      "The betting incentives here are completely different from the polarized case.",
+      "When your range is polarized, you want to bet big, because your strong hands want big calls and your bluffs need big folds.",
+      "When your range is condensed, betting big actually puts you in danger, because you almost never have the very best hand to justify it.",
+      "The opponent with the polarized range has leverage — they can apply maximum pressure.",
+      "The player with the condensed range is mostly defending, hoping to get to showdown cheaply.",
+      "Spotting which side of that divide you are on is one of the most important reads you can develop."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Scenario: The Clairvoyance Game (Opal's Strategy)",
+     "lines": [
+      "Chapter 2, section 3. The clairvoyance game, Opal's strategy.",
+      "Imagine a simplified poker hand where one player, let's call her Opal, gets to look at her cards before deciding to bet.",
+      "But here's the twist: Opal always holds either an unbeatable hand or completely worthless cards — nothing in between.",
+      "That's the clairvoyance part — she has perfect information about where she stands.",
+      "Her opponent, Ivan, holds a hand that can only beat a bluff.",
+      "When Opal has the best hand, she obviously wants to bet and get called.",
+      "When she has nothing, she wants to bluff and make Ivan fold.",
+      "The question is how many of her worthless hands should she bluff with?",
+      "If she bluffs too often, Ivan figures it out and calls her down every time, which kills the profit on her bluffs.",
+      "So Opal's job is to bluff just frequently enough that Ivan is exactly indifferent between calling and folding.",
+      "That exact balance is what we call an optimal bluffing frequency, and the math behind it flows directly from the size of her bet."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Scenario: The Clairvoyance Game (Ivan's Strategy)",
+     "lines": [
+      "Chapter 2, section 4. The clairvoyance game, Ivan's strategy.",
+      "Now flip to Ivan's seat.",
+      "Ivan holds a bluff-catcher — a hand that beats a bluff but loses to a value bet.",
+      "He can't tell from Opal's betting alone whether she has the nuts or nothing.",
+      "His decision is purely about how often he should call.",
+      "If Ivan folds every time, Opal profits by bluffing with every worthless hand she holds.",
+      "If Ivan calls every time, Opal adjusts by simply not bluffing anymore, and Ivan keeps paying off her value hands.",
+      "The right answer is that Ivan must call often enough to make Opal's bluffs break even.",
+      "That means Ivan's calling frequency is tied directly to the pot odds Opal is offering him.",
+      "Here is the key insight: at equilibrium, Ivan's call does not have to show a direct profit.",
+      "It just has to prevent Opal from printing money with her bluffs.",
+      "Neither player can unilaterally improve their results — that's what makes it an equilibrium."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Mixed Strategies Arise Only When a Player is Indifferent",
+     "lines": [
+      "Chapter 2, section 5. Mixed strategies arise only when a player is indifferent.",
+      "You might have heard that good players randomize their actions — sometimes calling, sometimes folding with the same hand.",
+      "That sounds mysterious, but the logic is actually pretty clean.",
+      "You only need to randomize when two options return exactly the same expected value.",
+      "If calling is clearly better than folding, just call every time — no mixing needed.",
+      "If folding is clearly better, just fold.",
+      "Randomizing when one option dominates the other is just leaving money on the table.",
+      "The only time mixing makes mathematical sense is at the exact point of indifference, where both choices earn the same amount on average.",
+      "In the clairvoyance game, Ivan reaches that point when Opal is bluffing at precisely the right frequency.",
+      "If Opal over-bluffs, calling becomes strictly better for Ivan and he should always call.",
+      "If Opal under-bluffs, folding becomes strictly better and Ivan should always fold.",
+      "Randomizing is not a trick — it's a signal that your opponent has done their job perfectly."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Indifference is the Goal of a Balanced Betting Range",
+     "lines": [
+      "Chapter 2, section 6. Indifference is the goal of a balanced betting range.",
+      "So what does Opal actually control when she picks her bet size?",
+      "She controls the pot odds she offers Ivan, which in turn determines how often Ivan needs to call to defend correctly.",
+      "And the number of bluffs she should include in her betting range follows directly from that.",
+      "If Opal bets half the pot, she needs a different bluff-to-value ratio than if she bets pot.",
+      "The goal in both cases is the same: make Ivan's bluff-catchers earn the same amount whether he calls or folds.",
+      "When she achieves that, Ivan has no single response that beats her.",
+      "He can call, he can fold, or he can flip a coin — and his expectation stays the same.",
+      "That's what a balanced range means in practice — not that you have equal numbers of bluffs and value hands, but that you have the right ratio for the size you chose.",
+      "Build your range around that target ratio, and your opponent loses the ability to exploit you."
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Optimal Calling Frequency",
+     "lines": [
+      "Chapter 2, section 7. Optimal calling frequency.",
+      "Let's talk about the defender's side of this in a more practical way.",
+      "When Opal bets, she is offering Ivan pot odds — a ratio of potential reward to required investment.",
+      "The concept of minimum defense frequency says that Ivan must call or raise often enough so that Opal's bluffs can't be automatically profitable.",
+      "Here's a quick example: if Opal bets the size of the pot, Ivan needs to call at least half the time to keep her bluffs from being free money.",
+      "With a half-pot bet, Ivan needs to call roughly two thirds of the time.",
+      "The exact numbers shift with every bet size, but the principle stays the same.",
+      "Defend too little and every bluff Opal throws at you shows an immediate profit.",
+      "Defend too much and you are paying off her value hands more than your hand strength warrants.",
+      "The sweet spot is the minimum defense frequency — where Opal's marginal bluff, the last one she adds to her range, earns exactly zero.",
+      "Get comfortable doing this math quickly, and you will never be a pushover when someone fires a big bet at you."
+     ]
+    },
+    {
+     "n": 8,
+     "title": "What's This Game Worth?",
+     "lines": [
+      "Chapter 2, section 8. What's this game worth?",
+      "Now let's ask a different question: how much does the player with the polarized range actually win in this setup?",
+      "The answer depends heavily on bet size.",
+      "Bigger bets extract more money when the value hand is called, and they also require bigger folds when the bluff lands.",
+      "The polarized player — Opal — wins more on average with larger bets, assuming she sizes her bluffs correctly each time.",
+      "The condensed player — Ivan in this case — actually does better when Opal bets smaller, because smaller bets are cheaper to defend against.",
+      "This reveals something important about the value of having the betting initiative.",
+      "When you are the one who gets to choose whether and how much to bet, you hold enormous power in a polarized spot.",
+      "You can choose the size that maximizes your value, and your opponent has to react.",
+      "Ivan can defend correctly no matter what size Opal picks, but he can never fully neutralize the advantage she holds by having the better information.",
+      "That information edge, the fact that she knows her range while he doesn't, is the real engine of her profit."
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Real World Applications",
+     "lines": [
+      "Chapter 2, section 9. Real world applications.",
+      "The river is where polarization tends to show up most clearly in real hands.",
+      "All the draws have either gotten there or missed, so ranges sort themselves into made hands and missed draws.",
+      "When you have a range like that — strong value hands plus busted draws — that's your green light to bet big and balance your value with bluffs.",
+      "A common mistake is betting too small in those spots out of habit, when the correct play is to go large and make your opponent's bluff-catchers genuinely uncomfortable.",
+      "On the other side, imagine you called down on the flop and turn without a draw, and the river changes nothing.",
+      "Your range is probably condensed — a handful of medium-strength showdown hands — and betting into that texture often gets you into trouble.",
+      "When you spot that your own range is condensed, think about the cost of building a pot you can't defend.",
+      "And when you suspect your opponent's range is condensed, look for opportunities to apply pressure with a polarized range of your own.",
+      "Position helps enormously here, because the last player to act gets to see what their opponent does before deciding whether the spot is favorable."
+     ]
+    },
+    {
+     "n": 10,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter 2, section 10. Test yourself.",
+      "Here's a question to think about before we move on.",
+      "The river card completes a possible flush, and your opponent fires a large bet — about the size of the pot.",
+      "You hold top pair, no flush.",
+      "Your opponent's range looks polarized: they either have the flush or a busted straight draw.",
+      "How often do you need to call to defend correctly?",
+      "Think about it for a moment.",
+      "With a pot-sized bet, your pot odds are two to one on your call — you are risking one unit to win two.",
+      "That means you need to win at least one time in three for a call to break even.",
+      "To stop the bet from being automatically profitable, you need to call roughly half the time.",
+      "Whether you specifically call or fold in this spot depends on reads and hand strength, but the minimum defense frequency tells you the zone you should be operating in.",
+      "If you are folding much more than half the time in spots like this, you are handing free profits to anyone willing to barrel the river."
+     ]
+    },
+    {
+     "n": 11,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter 2, section 11. Conclusion.",
+      "Let's bring it all together.",
+      "Polarized ranges contain the extremes — strong made hands and pure bluffs, with nothing in between.",
+      "Condensed ranges cluster in the middle — a bunch of decent hands that can't comfortably get a lot of money in.",
+      "The polarized player has leverage: they can choose large bet sizes and force their opponent into difficult decisions.",
+      "The condensed player is mostly reacting, trying to get to showdown without paying too much.",
+      "The clairvoyance game showed us that the right number of bluffs is not arbitrary — it flows from the bet size and the pot odds that bet creates.",
+      "Indifference is the north star: build your range so your opponent gains nothing by shifting entirely to calling or entirely to folding.",
+      "And on defense, use the minimum defense frequency to make sure your opponents can't bluff you without cost.",
+      "These ideas are the scaffolding for everything else in game theory applied poker.",
+      "Once they feel natural, the rest of the theory clicks into place surprisingly fast.",
+      "In the next chapter we will take these principles and apply them to multi-street play, where ranges evolve with every card."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Chapter 3: Reciprocal Ranges",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter 3, section 1. Overview and objectives.",
+      "In the last two chapters, one player held a range and the other held a fixed, known hand.",
+      "That was a useful starting point, but it left out something crucial.",
+      "In real poker, both players are drawing from a range of hands on every single street.",
+      "We call this a reciprocal range situation, because both of you have uncertainty about the other.",
+      "That small change — both players holding real ranges — makes the game dramatically more interesting.",
+      "Now bluffing, catching, and protection all become two-way streets.",
+      "In this chapter we will walk through two teaching models that capture this idea.",
+      "The first is the half-street game, where only one player can bet.",
+      "The second is the full-street game, where either player can bet or check.",
+      "By the end, you will understand why real poker strategy is always about your range versus their range."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Scenario: Reciprocal Ranges, Half-Street Game",
+     "lines": [
+      "Chapter 3, section 2. The reciprocal ranges half-street game.",
+      "In this model, both players are dealt from a mixed range of strong and weak hands.",
+      "The twist is that only one player — call them the bettor — is allowed to act first.",
+      "The other player can only call or fold in response.",
+      "Because the bettor holds a range, they cannot just bet their strong hands and check the rest.",
+      "If they did, a smart opponent would fold every time they bet and call every time they check.",
+      "So the bettor must mix value bets and bluffs in a proportion that keeps their opponent indifferent.",
+      "On the other side, the caller is also holding a range — some decent hands, some trash.",
+      "They need to figure out how often to call based on the pot odds and the bettor's likely bluff frequency.",
+      "Critically, the caller cannot just fold all weak hands, because that would let the bettor bluff freely.",
+      "Both sides are managing ranges, not just hand strength, and that is the core lesson here.",
+      "The half-street game isolates this dynamic without adding the complexity of who acts first."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Scenario: Reciprocal Ranges, Full Street Game",
+     "lines": [
+      "Chapter 3, section 3. The reciprocal ranges full-street game.",
+      "Now we remove the restriction — either player can bet or check on this street.",
+      "That sounds like a small change, but it adds a whole new layer of strategy.",
+      "When you can bet or check, your checking range becomes a real thing that your opponent can attack.",
+      "If you only check weak hands, your opponent can bet every time you check and make easy money.",
+      "So you must include some strong hands in your checking range to protect it.",
+      "This is what coaches mean when they talk about protecting your checks.",
+      "Meanwhile, your betting range still needs the right balance of value and bluffs.",
+      "And your opponent still needs to call at a frequency that keeps you from bluffing too freely.",
+      "All four actions — bet for value, bet as a bluff, check strong, check weak — have to interlock.",
+      "Pull on any one of them too hard and the whole structure breaks down.",
+      "The full-street game is the closest toy model we have to what actually happens in a real poker hand."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Real World Applications",
+     "lines": [
+      "Chapter 3, section 4. Real world applications.",
+      "Here is the honest truth about almost every hand you play: both of you have a range.",
+      "Your opponent does not know your exact cards, and you do not know theirs.",
+      "That means every decision you make is a range decision, whether you think about it that way or not.",
+      "Good players bluff because their range demands it — not just because they have a weak hand.",
+      "Good players also bluff-catch because their range demands it — not just because they feel suspicious.",
+      "When you fixate on your own two cards, you are thinking about only half of the equation.",
+      "The player who thinks in ranges is always asking what their betting line looks like across all their hands.",
+      "They ask what story their range is telling, and whether that story is consistent.",
+      "This is why a strong player can bet nothing with the nuts and still be doing the right thing.",
+      "The right play comes from what your whole range needs, not from what your specific hand needs.",
+      "Reciprocal thinking is what separates hand-readers from range-managers."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter 3, section 5. Test yourself.",
+      "Here is a question to sit with for a moment.",
+      "You are in the full-street game and you decide to check your entire range on the river.",
+      "Your opponent bets every single time you check — and they are making money doing it.",
+      "What went wrong, and what is the fix?",
+      "The answer is that your checking range had no strong hands in it, so your opponent exploited it freely.",
+      "The fix is to check some of your strong hands so that your opponent cannot bet without risk.",
+      "Once you protect your checking range with strong hands, your opponent has to slow down.",
+      "Now your bluff-catchers in that checking range actually have backup, and the pressure flows back both ways.",
+      "That is protection in action — not a passive idea, but an active structural choice."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter 3, section 6. Conclusion.",
+      "Reciprocal ranges are what makes poker poker.",
+      "The moment both players hold real, uncertain ranges, the game becomes fully two-sided.",
+      "You have to balance your bets, protect your checks, and think about what your whole range is doing.",
+      "The half-street game showed you how a bettor manages a range when only one side can act.",
+      "The full-street game showed you what happens when both sides can bet or check freely.",
+      "And the real-world section connected those ideas to what you face in every actual hand you play.",
+      "From here, the concepts only build — bet sizing, multi-street thinking, and position all layer on top.",
+      "But the foundation is this: stop thinking about your hand, and start thinking about your range.",
+      "That shift in perspective is what it means to play game-theory optimal poker."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Chapter 4: Get Real!",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter 4, section 1. Overview and objectives.",
+      "Up to now we've been working with toy games, stripped-down scenarios just complex enough to see the underlying forces clearly.",
+      "Those forces have names you know by now: polarization, indifference, balance, and reciprocal ranges.",
+      "Real No-Limit Hold'em looks nothing like a toy game on the surface, but underneath, the same forces are pulling the strings.",
+      "The big differences are volume and complexity: you have many streets, enormous starting ranges, and hundreds of possible board textures.",
+      "That scale means you cannot hold the full solution in your head, but you don't need to.",
+      "What you need is to recognize which force is dominant in any given spot, and let that guide your instincts.",
+      "So in this chapter we take everything you've built and plug it into a real hand, one street at a time.",
+      "By the end you'll have a framework for reading any spot and asking the right questions, even ones this series never covered."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Scenario: UTG vs BB",
+     "lines": [
+      "Chapter 4, section 2. A real spot, under the gun versus the big blind.",
+      "Picture a nine-handed table: the player under the gun opens to three big blinds, everyone folds, and only the big blind calls.",
+      "That preflop action already tells you a lot about both players' ranges before a single card hits the board.",
+      "Under the gun has to act first preflop with seven players left to speak, so a rational player opens only strong, condensed hands: big pairs, big aces, strong broadways, and some suited connectors.",
+      "The big blind is getting a discount and closes the action, so the calling range is wider and includes more speculative hands: suited connectors, small pairs, weaker aces, and hands that wouldn't be worth playing otherwise.",
+      "Now the flop comes ace of spades, seven of hearts, two of clubs — a dry, disconnected board with one high card.",
+      "Under the gun has a big range advantage here, because a lot of the strong aces — ace-king, ace-queen, ace-jack — sit comfortably in that tight early-position range.",
+      "The big blind called with some aces too, but fewer of the premium ones, and many big blind hands simply missed this board entirely.",
+      "That range advantage gives under the gun what's called the nut advantage: the strongest hands in the deck are more likely to be on the UTG side of the table.",
+      "Because of that, under the gun can bet this flop at a high frequency, with a sizing around one-third to one-half the pot, representing a range that is ahead more often than not.",
+      "But betting a strong range isn't enough on its own — the bet also needs bluffs, because a purely value-heavy betting range is trivially easy for the big blind to read and play against.",
+      "So under the gun balances value hands like top pair top kicker and overpairs with bluffs that have some equity: gutshots, backdoor flush draws, and hands like king-queen that have two overcards and some runner-runner potential.",
+      "The big blind, facing that bet, has to set a calling frequency that keeps the bettor from printing money by bluffing every time.",
+      "Think back to indifference: the big blind needs to call just often enough that the UTG bluffs are break-even, not profitable on their own.",
+      "Blockers come in here too — if the big blind holds an ace, that card reduces the number of top-pair combinations UTG can have, which nudges the BB toward calling a bit more freely.",
+      "And as the hand moves to the turn and river, the aggressor's range narrows, bet sizes get bigger, and the same logic repeats: balance value against bluffs, call at the frequency that creates indifference, and let the structure do the work."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Chapter 5: Crafting Exploitative Strategies",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter five, section one. Overview and objectives.",
+      "Equilibrium strategy is your shield — it keeps opponents from taking chunks out of you.",
+      "But a shield alone doesn't win the fight. The real profit in poker comes from punishing the mistakes other people make.",
+      "Here's the key insight: you can't exploit someone correctly if you don't know what a correct baseline looks like first.",
+      "Without equilibrium as your reference point, you're just guessing at counters, and you're likely to overcorrect in ways that hurt you.",
+      "So think of the baseline as your home position. You start there, you understand it, and then you choose to leave it deliberately.",
+      "Exploitation means deviating from equilibrium on purpose, in a specific direction, because you've seen a specific mistake.",
+      "When an opponent plays worse than equilibrium, they are handing you free equity. Your job is to collect it.",
+      "This chapter walks you through exactly how to identify those leaks and how to turn them into money."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "The Four-Step Exploitative Process",
+     "lines": [
+      "Chapter five, section two. The four-step exploitative process.",
+      "Step one: begin by assuming your opponent is playing the equilibrium. That's the null hypothesis, your starting point.",
+      "Step two: gather evidence and identify the specific way they're actually deviating from that baseline.",
+      "Maybe they bluff too often, or they never bluff, or they call down with hands that should be folds.",
+      "Be specific here — a vague read like 'they play loose' isn't enough to build an exploit on.",
+      "Step three: find the counter that maximally punishes that exact mistake. If they over-bluff, call more. If they never bluff, fold more. If they over-call, bet thinner for value.",
+      "The maximally exploitative response is often extreme — sometimes it's 'always do X' or 'never do Y.'",
+      "Step four: move toward that counter strategy only as far as the evidence supports, and no further.",
+      "Over-adjusting is its own trap. The more you deviate, the more you expose a new weakness on the other side.",
+      "A smart opponent who spots your over-adjustment will pivot and exploit you right back.",
+      "The goal is calibrated deviation, not wild swings. Small, confident adjustments based on solid reads."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Scenario: Exploitation in the Reciprocal Ranges Game",
+     "lines": [
+      "Chapter five, section three. Scenario: exploitation in the reciprocal ranges game.",
+      "Remember the reciprocal ranges game from earlier — one player has a strong range and one has a capped range, with bluff-catchers in the middle.",
+      "Let's say your opponent is bluffing way too often on the river. They fire too many rivers with nothing.",
+      "The counter is simple: call with all your bluff-catchers. Do not fold anything that beats a bluff.",
+      "At equilibrium you'd mix some calls and some folds, but when they over-bluff, mixing is giving up free money.",
+      "Now flip it. Your opponent never bluffs. They only bet when they have it.",
+      "Now the counter is also simple: fold everything except your very best hands. There's no reason to call off chips with a medium hand against a range that's never bluffing.",
+      "Third scenario: your opponent calls too much. They can't find the fold button, even on bad runouts.",
+      "Against a chronic over-caller, you bet thinner for value — hands you'd normally check become bets — and you cut bluffs from your range almost entirely.",
+      "Bluffing an over-caller is burning money. Stop doing it, and extract value instead.",
+      "Each of these adjustments flows directly from identifying one specific deviation and applying the right counter to that exact leak."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Real World Applications",
+     "lines": [
+      "Chapter five, section four. Real world applications.",
+      "Live poker gives you a ton of information that solvers don't have: timing tells, betting patterns, table talk, and history.",
+      "A player who checks their chips before calling, or who sighs before betting big, is leaking information every hand.",
+      "But here's the danger: one data point isn't a read. It's a hypothesis.",
+      "You need to see a pattern repeat across multiple hands before you start adjusting your strategy around it.",
+      "Leveling yourself is a real risk. You think: 'They know I know they over-bluff, so maybe they're bluffing less now, so I should fold more.'",
+      "That kind of spiral — where you keep guessing what they think you think — is where smart players go broke.",
+      "The antidote is to stay close to the baseline and make adjustments that are supported by clear, repeated evidence.",
+      "The best live players blend a rock-solid equilibrium foundation with small, confident deviations when the reads are obvious.",
+      "They don't chase every hunch. They wait for the clear spots and then they hit them hard."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter five, section five. Test yourself.",
+      "Here's your question. You're facing a river bet from a player who you've noticed almost never bluffs — they only bet when they have a strong hand. What should you do with your bluff-catchers?",
+      "Pause and think about it for a moment before reading on.",
+      "The answer is: fold your bluff-catchers. Against a player who essentially never bluffs, your bluff-catchers have almost no equity against their betting range.",
+      "At equilibrium you'd call some percentage of the time to keep them honest, but when they've taken bluffing out of their range entirely, calling is just a donation.",
+      "The lesson: exploit the specific leak you see, even when that means doing something that looks passive or weak on the surface."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter five, section six. Conclusion.",
+      "Here's the core takeaway from this chapter: the equilibrium baseline isn't the destination, it's the launching pad.",
+      "You learn it so you have something solid to deviate from — a home base you understand deeply.",
+      "Exploitation is the active part, the part where you actually print money from your opponents' mistakes.",
+      "But smart exploitation is measured. You identify one specific leak, you find the counter, and you move toward it carefully.",
+      "You don't abandon your whole game every time you get a read. You make a targeted adjustment and watch what happens.",
+      "Baseline first. Then exploit the leak that's right in front of you. That's the whole game."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Chapter 6: Complex Ranges",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter 6, section 1. Overview and objectives.",
+      "In earlier chapters, ranges were simple: you had the nuts or you had air, nothing in between.",
+      "That binary setup was useful for learning the basics, but it left out most of real poker.",
+      "Most of the time your range is a spectrum — some very strong hands, some medium ones, and some weak ones.",
+      "When your range has that kind of spread, the strategy becomes richer and more nuanced.",
+      "You cannot just ask which hands bet and which hands check — you have to ask where the lines are drawn.",
+      "Those lines are called thresholds, and finding them is the central skill of this chapter.",
+      "We will use a simple toy game to make those thresholds visible and concrete.",
+      "Once you see how value bets, bluffs, and calls each form a zone rather than a single hand type, everything clicks.",
+      "By the end, you will think about your range less like a list and more like a ranked continuum."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Scenario: The Ace-to-Five Game",
+     "lines": [
+      "Chapter 6, section 2. The ace-to-five game.",
+      "Imagine each player is dealt a single card ranked from ace down to five, where ace is best.",
+      "There is no binary nuts-or-air divide here — every rank from ace to five represents a different level of strength.",
+      "At the end of the hand, the player with the higher card wins a showdown.",
+      "One player gets to bet or check; the other can call or fold.",
+      "Because hands are spread across a full spectrum, the bettor needs to figure out where value ends and bluffing begins.",
+      "The strongest hands near the top of the range bet for value because they win at showdown often enough.",
+      "The very weakest hands near the bottom bluff because they cannot win at showdown anyway.",
+      "The medium hands in between are the interesting ones — they are often better off checking than doing either.",
+      "The caller faces an equally interesting problem: call with hands that beat enough of the bettor's value range.",
+      "A calling threshold emerges naturally from the pot odds — hands above that line call, hands below fold.",
+      "The beauty of this game is that all three zones — value, check-back, and bluff — form from the same ranked range.",
+      "You can see that where a hand sits in the continuum determines its role, not just whether it is strong or weak."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Scenario: Exploitation in the Ace-to-Five Game",
+     "lines": [
+      "Chapter 6, section 3. Exploitation in the ace-to-five game.",
+      "Now that you know where the thresholds sit at equilibrium, you can see exactly how to move them.",
+      "Suppose your opponent calls too wide — they are calling hands that are below the correct threshold.",
+      "That tells you their calling range is too weak on average, meaning your bets get called by weaker hands.",
+      "When that happens, you should push your value threshold down — bet thinner than equilibrium suggests.",
+      "Hands you would normally check back now have enough equity against a wide calling range to bet for value.",
+      "The flip side is that you do not need as many bluffs, because you are already printing money with thin value.",
+      "Now suppose your opponent folds too much — they are folding hands that should be calling.",
+      "Their range is too strong when they do call, which means bluffs work at a higher rate.",
+      "You respond by moving your bluffing threshold up, turning more of your medium-weak hands into bluffs.",
+      "The key insight is that exploitation is never about guessing — it is about sliding thresholds in the correct direction.",
+      "The equilibrium gives you a home base, and the opponent's leak tells you which way to move."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Real World Applications",
+     "lines": [
+      "Chapter 6, section 4. Real world applications.",
+      "In hold'em your range is never just nuts or air — it is always a layered spectrum of hand strengths.",
+      "Think about reaching the river with a range that includes top pair, second pair, a busted draw, and bottom pair.",
+      "Each of those hand types sits at a different point on the value continuum, just like the cards in the ace-to-five game.",
+      "Your best made hands form the value betting zone, and your worst hands — the ones with no showdown value — form the bluffing zone.",
+      "The hands in between are your bluff-catchers and check-backs, the medium-strength zone that checks most of the time.",
+      "Thinking in thresholds means asking: where does my value end, and where do my bluffs begin?",
+      "Once you find those two lines, the rest of your range slots into place automatically.",
+      "Bet sizing matters here too — a larger bet size shrinks the value zone and requires fewer but stronger hands to bet.",
+      "A smaller bet lets you bet thinner for value because you need less equity to profit.",
+      "The threshold mindset also helps you read opponents — their bet sizing tells you where they think their value line is.",
+      "Real ranges are messy, but the underlying logic is the same tidy spectrum from the toy game."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter 6, section 5. Test yourself.",
+      "Here is your self-check question for this chapter.",
+      "You are in the ace-to-five game, and you notice your opponent is folding roughly seventy percent of the time to bets.",
+      "The pot is large enough that a bluff only needs to succeed about forty percent of the time to break even.",
+      "Should you move your bluffing threshold up, down, or leave it at equilibrium, and why?",
+      "The answer is that you should move your bluffing threshold up — bluff more hands than equilibrium says.",
+      "Your opponent is folding far more often than required to make bluffing neutral, which means bluffs are profitable.",
+      "By turning weaker medium hands into bluffs, you capture extra value every time they fold too much.",
+      "You stop moving the threshold when your bluff frequency has pushed their folding rate back down toward equilibrium.",
+      "That is exploit-and-adjust thinking in action."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter 6, section 6. Conclusion.",
+      "This chapter was about one big upgrade: moving from binary ranges to continuous, layered ones.",
+      "The ace-to-five game gave you a model where you could see value, bluff, and call zones emerge from a single spectrum.",
+      "Those three zones are not arbitrary — they form because of pot odds, showdown equity, and the structure of the game.",
+      "The exploitation section showed you that thresholds are not fixed — they move when opponents make mistakes.",
+      "And the real-world section connected all of it to the multi-strength ranges you actually face in hold'em.",
+      "The threshold mindset is the key takeaway: always ask where your value ends and where your bluffs begin.",
+      "Everything else in your range fills in around those two anchor points.",
+      "From here the ideas get even richer — multi-street play, range advantage, and board texture all build on this foundation.",
+      "But the habit of thinking in spectrums and thresholds is something you can apply to your game starting today."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Chapter 7: Raising",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter 7, section 1. Overview and objectives.",
+      "Up to now, when someone bet at you, your only choices were to call or to fold.",
+      "That kept things tidy, but it left out one of the most powerful moves in poker: the raise.",
+      "Adding a raise as an option changes the entire game, for both the raiser and the original bettor.",
+      "A raise is not just a bigger call — it puts the other player in a completely new situation.",
+      "Now they have to decide whether to continue, and the price of doing so has just jumped.",
+      "Your raising range, just like your betting range, must be polarized to work correctly.",
+      "That means it should contain your strongest hands and your best bluffs, with the middle folded away.",
+      "The threat of a raise reshapes how the original bettor has to construct their betting range in the first place.",
+      "In this chapter we add raising to the toy games you already know and watch everything shift.",
+      "You will also learn how to exploit players who raise too often, too rarely, or in the wrong way.",
+      "By the end, raising will feel less like aggression and more like a precision instrument."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Scenario: Raising in the Reciprocal Ranges Game",
+     "lines": [
+      "Chapter 7, section 2. Raising in the reciprocal ranges game.",
+      "Take the full-street game from chapter three and hand the caller a new option: the raise.",
+      "Suddenly, the bettor cannot just bet and expect to be met with a call or a fold.",
+      "They have to account for the possibility that their bet might be met with a re-raise.",
+      "That new pressure forces the bettor to think about how often they can actually continue after a raise.",
+      "Meanwhile, the raiser needs to build a range that makes sense: strong hands and carefully chosen bluffs.",
+      "Your strongest hands — the ones that beat almost everything the bettor can hold — usually prefer to raise.",
+      "Slow-playing by calling with your best hands lets the bettor off easy and gives you no extra money.",
+      "Raising with them charges the bettor to continue and builds a pot when you are likely to win it.",
+      "But if you raise only value hands, a thinking opponent folds to every raise and you collect only small pots.",
+      "So you add bluffs to the raising range — hands that have little chance of winning at showdown but plenty of fold equity.",
+      "The exact ratio of value raises to bluff raises mirrors the same math we saw with betting: it has to make the bettor indifferent to calling.",
+      "And because raises now exist, the bettor has to widen what they are willing to bet in the first place — the whole game gets richer."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Scenario: Raising in the Ace-to-Five Game",
+     "lines": [
+      "Chapter 7, section 3. Raising in the ace-to-five game.",
+      "The ace-to-five game ranks hands from a simple low to a simple high across a small deck.",
+      "It already had defined thresholds: bet with hands above a value threshold, fold below a bluff threshold, call in between.",
+      "When we allow raising, new thresholds form on top of that existing structure.",
+      "Some hands that were previously just calls are now strong enough to raise for value.",
+      "These are the hands near the very top of your range — the ones that beat nearly everything the bettor can hold.",
+      "At the bottom, some hands that were previous folds now become raise-bluffs if they have enough equity or fold equity.",
+      "The bluff-raising candidates are often your worst hands, because your mediocre hands have too much to lose by folding out the bettor.",
+      "A raise-bluff works best when your hand has almost no showdown value — there is nothing to give up by folding out a worse hand.",
+      "So in the ace-to-five game, you end up with three layers: fold, call, or raise — and raising is the polarized outside layer.",
+      "The bettor, knowing raises are possible, has to revise their own calling threshold for when they face one.",
+      "They also have to think about whether some of their value hands are better off raising back — a three-bet — instead of calling.",
+      "Each added option creates a ripple through every other threshold, which is exactly what makes multi-street poker so deep."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Scenario: Exploitation with Raising",
+     "lines": [
+      "Chapter 7, section 4. Exploitation with raising.",
+      "Once you understand how a balanced raising range is supposed to work, you can spot when your opponent breaks from it.",
+      "The first mistake to look for is the player who never raises as a bluff — they only raise when they have a monster.",
+      "Against that player, you can fold to raises much more often than the math normally requires, because you are almost never ahead.",
+      "Their raise range has told you its secret, and the correct adjustment is simple: give them credit and get out of the way.",
+      "The second mistake is the player who folds too often to raises — they just do not like the pressure and they give up.",
+      "That player is handing you free money every time you raise, so you should raise more often as a bluff.",
+      "Pick hands with some board coverage or outs, and fire raises at a higher frequency than balance would suggest.",
+      "The third mistake is over-raising: someone who raises aggressively too often across the board, value and bluffs alike.",
+      "Do not panic and start re-raising back — that is playing into their pressure on their terms.",
+      "Instead, slow down with your strongest hands and let them inflate the pot for you.",
+      "Trap them by calling with hands you would normally re-raise, then let them keep betting on later streets.",
+      "Every raising leak has an exploit, and the exploit is always the logical mirror image of the mistake."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter 7, section 5. Test yourself.",
+      "Here is your question: your opponent bets the river and you raise, but you only ever raise with your very best hands.",
+      "Your opponent is a thinking player who pays attention — how will they adjust, and why does it hurt you?",
+      "The answer is that they will start folding almost every time you raise, because your range has told them you always have it.",
+      "They lose nothing by folding, because calling your raise when you never bluff is a guaranteed way to lose money.",
+      "You get no action on your strong hands, and your raising range stops making any money above what a call would earn.",
+      "The fix is to add bluffs to your raising range so that your opponent can never simply fold to every raise without cost.",
+      "Once they have to worry about bluffs, they call more often, and your value raises get paid.",
+      "Balance in your raising range is not an abstract principle — it is what forces your opponent to make hard, expensive decisions."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter 7, section 6. Conclusion.",
+      "Raising is not just a bigger bet — it is a structurally different move that changes every player's incentives.",
+      "A well-built raising range is polarized: your best made hands and your cheapest, highest-equity bluffs.",
+      "Your middle-strength hands belong in the calling range, not the raising range, because they have too much to lose.",
+      "The threat of a raise alone forces the original bettor to be more careful about how wide they bet.",
+      "And once your opponent knows you raise a balanced mix of value and bluffs, they can never play perfectly against you.",
+      "Exploitation through raising follows the same logic as every other exploitation we have discussed: mirror the mistake.",
+      "If they never bluff-raise, fold more to their raises.",
+      "If they fold too much, bluff-raise more.",
+      "If they over-raise, trap them and let them build the pot for you.",
+      "Raising widens the strategic picture in every direction, and mastering it is one of the biggest edges you can develop.",
+      "In the next chapter, we move beyond a single street and start looking at how these ideas carry across multiple betting rounds."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Chapter 8: Putting It All Together",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter 8, section 1. Overview and Objectives.",
+      "You've built up a serious toolkit over the last seven chapters.",
+      "You understand polarization — betting with hands that are either strong or worthless.",
+      "You understand indifference — pricing bluffs so opponents can't profitably always fold or always call.",
+      "You understand balance — mixing your value bets and bluffs in the right ratio.",
+      "You understand reciprocal ranges — how the pot odds you offer mirror the bluff frequency you use.",
+      "You understand exploitation — spotting opponents who deviate and punishing them for it.",
+      "You understand raising — when aggression forces the worst outcome for your opponent's range.",
+      "Now we add one final concept that ties everything together: blockers, also called card removal.",
+      "A blocker is simply a card in your hand that cannot also be in your opponent's hand.",
+      "That might sound trivial, but at the highest levels it shapes every bluff selection and every call.",
+      "By the end of this chapter you'll be thinking about all of these ideas as one unified system."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Blockers Tell You What Your Opponents Don't Have",
+     "lines": [
+      "Chapter 8, section 2. Blockers Tell You What Your Opponents Don't Have.",
+      "A standard deck has four of each card, and the two in your hand can't be in anyone else's.",
+      "Hold the ace of spades on a spade-heavy board and your opponent has one fewer flush combination.",
+      "That means when you bluff you're doing it at a moment when they're statistically less likely to call.",
+      "The reason bluffing with blockers matters is purely mathematical — you remove combinations from their calling range.",
+      "Choosing your bluffing hands by blocker value is one of the clearest ways to gain an edge.",
+      "Conversely, when you're thinking about whether to call a river bet, your own hand blocks certain hands.",
+      "If you hold a card that blocks your opponent's most natural bluffs, you can fold more comfortably.",
+      "If you hold a card that blocks their value combos, you have better reason to call.",
+      "Good players run this calculation quickly and almost unconsciously, but it starts as a deliberate habit.",
+      "You don't need every blocker interaction memorized — just ask which nutted hands does my card cancel out.",
+      "That one question steers you toward better bluff selections and sharper calls on the river."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Scenario: After the Turn Checks Through",
+     "lines": [
+      "Chapter 8, section 3. Scenario: After the Turn Checks Through.",
+      "Picture this: you're on the river after both players checked the turn.",
+      "That check-through tells you something important — neither player represented a strong hand on the turn.",
+      "Both ranges are now capped, meaning neither of you is likely to hold a true monster.",
+      "When both ranges are capped, the board dynamics on the river become the deciding factor.",
+      "The player whose range connects better with the river card earns the right to bet for value.",
+      "Bluffing still works here, but only if your hand has no showdown value on its own.",
+      "Choose bluffs that unblock your opponent's folding range and block the hands they'd call with.",
+      "If you're the defender facing a river bet after a turn check, your opponent's range is also capped.",
+      "That means you can call down a bit wider than usual because their strongest hands have been filtered out.",
+      "The right play is to match their bet sizing to the pot odds and then find enough bluff-catchers.",
+      "Every tool you've learned — polarization, balance, blockers, indifference — is operating simultaneously in this spot."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Real World Applications",
+     "lines": [
+      "Chapter 8, section 4. Real World Applications.",
+      "Putting this all together at the table sounds daunting, but it gets faster the more you study.",
+      "The strongest players don't think through each concept in isolation — the ideas merge into instinct.",
+      "Before you bet, ask yourself whether your hand is better as a value bet, a bluff, or a check.",
+      "Then ask which sizing puts your opponent in the hardest possible spot to respond correctly.",
+      "Then ask whether the blockers in your hand point toward this bet or away from it.",
+      "The goal at every decision point is the same: make your opponent's decision as uncomfortable as possible.",
+      "A well-constructed range forces them to be wrong no matter what they do — call or fold.",
+      "Against weak opposition you'll lean on exploitation, but against thinkers you need the full balanced approach.",
+      "Start reviewing your own hands through this lens — what was the opponent's range, and what did my bet accomplish?",
+      "Over time you'll catch yourself choosing bluffs with better blockers without consciously running the math.",
+      "That's the moment when game theory stops being a subject you study and starts being how you play."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Wrap-Up",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Summary of Exploits",
+     "lines": [
+      "Chapter 9, section 1. Summary of Exploits.",
+      "Before we close, let's walk back through the exploitative adjustments you can make against real opponents.",
+      "When someone folds too often, you bluff more — they're literally giving you money every time you fire.",
+      "When someone calls too often, you stop bluffing and value bet much thinner than you normally would.",
+      "Against a player who bluffs too much, you call wider and you never fold a decent bluff-catcher.",
+      "Against a player who almost never bluffs, you can over-fold their bets because their range is brutally strong.",
+      "When an opponent almost never raises, you can bet for thin value and fold less, knowing aggression means something when it comes.",
+      "When an opponent raises too much, the right counter is to trap — slow-play your strongest hands and let them hang themselves.",
+      "Every one of these adjustments flows from the same underlying logic: find the deviation and apply the opposite pressure.",
+      "The baseline you compare against is always the equilibrium — the balanced strategy that can't be exploited itself.",
+      "If you don't know what an opponent is doing, play closer to equilibrium until the reads clarify.",
+      "When the read is clear, lean into the exploit hard — that's where the biggest profits come from."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter 9, section 2. Conclusion.",
+      "Here's the single most important idea from this entire series: equilibrium is your unshakable home base.",
+      "You deviate from it to exploit, but you always know the way back when the reads go cold.",
+      "The real aim of every hand isn't to win that pot — it's to give your opponent an impossible decision.",
+      "When your ranges are built so that calling and folding are both costly for them, you're winning the long game.",
+      "Results will lie to you, sometimes for weeks at a time — a bad run doesn't mean you played badly.",
+      "Trust the process, trust the math, and keep studying spots where you felt uncertain about the right play.",
+      "The players who improve fastest are the ones who review hands with genuine curiosity, not just looking to confirm they were right.",
+      "We've covered a lot of ground together — polarization, indifference, balance, reciprocal ranges, exploitation, raising, and blockers.",
+      "This podcast was designed as a plain-spoken companion to help these ideas click before you dig deeper.",
+      "For the full rigorous treatment, go buy Andrew Brokos's book Play Optimal Poker — it's the real thing.",
+      "Thank you for listening, keep thinking clearly at the table, and good luck out there."
+     ]
+    }
+   ]
+  }
+ ]
+}
