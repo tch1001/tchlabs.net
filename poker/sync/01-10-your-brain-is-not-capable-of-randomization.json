@@ -1,55 +1,215 @@
 {
  "n": 10,
  "title": "Your Brain Is Not Capable of Randomization",
- "duration": 78.77,
+ "duration": 336.19,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 1, section 10. Your Brain Is Not Capable of Randomization."
+   "text": "Chapter one, section ten. Your Brain Is Not Capable of Randomization."
   },
   {
-   "t": 5.05,
-   "text": "Here is an uncomfortable truth: humans are genuinely terrible at randomizing."
+   "t": 5.26,
+   "text": "We've established that mixed strategies — randomizing your choices with specific probabilities — are sometimes essential for reaching an equilibrium, particularly in zero-sum situations like most poker scenarios."
   },
   {
-   "t": 10.62,
-   "text": "When we try to mix randomly, we actually fall into rhythms and patterns that a sharp opponent can detect over time."
+   "t": 19.02,
+   "text": "But there's a serious practical challenge: human brains are genuinely terrible at generating true randomness."
   },
   {
-   "t": 17.34,
-   "text": "You might think you are going fifty-fifty, but you are really going sixty-forty in a way that leaks information."
+   "t": 26.49,
+   "text": "This section of the book addresses that challenge directly, and the advice it gives is more important than it might initially seem."
   },
   {
-   "t": 24.24,
-   "text": "This is not a character flaw; it is just how brains work, and the best players in the world struggle with it too."
+   "t": 33.75,
+   "text": "Let's say you've determined that when facing a bet on the river with a certain bluff-catcher, you should call fifty percent of the time."
   },
   {
-   "t": 30.91,
-   "text": "The good news is that you do not need to generate randomness from scratch; you can borrow it from the cards themselves."
+   "t": 40.31,
+   "text": "Maybe the math tells you that your opponent's bluffing frequency makes calling and folding exactly equal in EV — you're indifferent — and so you've decided to call half the time and fold the other half."
   },
   {
-   "t": 37.83,
-   "text": "One popular method is to use the suit of your hole cards as a built-in randomizer."
+   "t": 52.86,
+   "text": "How do you actually implement that?"
   },
   {
-   "t": 42.89,
-   "text": "For example, you might decide to bluff when your low card is a heart or a diamond, and give up when it is a club or a spade."
+   "t": 54.69,
+   "text": "One approach that seems intuitive but is completely wrong: you tell yourself that you folded the last time you were in this spot, so you'll call this time."
   },
   {
-   "t": 49.67,
-   "text": "The suits appear at the right frequencies and are essentially random, so your opponent cannot read your pattern."
+   "t": 62.89,
+   "text": "That way, over two situations, you've called once and folded once, achieving a fifty-fifty split."
   },
   {
-   "t": 55.89,
-   "text": "Another simple approach is to glance at the second hand of a clock or watch: bet if it points to the top half, check if it points to the bottom."
+   "t": 69.84,
+   "text": "The book explains why this is flawed in multiple ways."
   },
   {
-   "t": 64.04,
-   "text": "The goal is to outsource the randomness to something truly unpredictable rather than trusting your gut feeling in the moment."
+   "t": 73.22,
+   "text": "First, the previous situation was almost certainly not the same situation."
   },
   {
-   "t": 71.67,
-   "text": "Building these habits makes your game genuinely harder to read, which is exactly what equilibrium theory demands."
+   "t": 78.17,
+   "text": "The board was different, the action leading up to it was different, the opponent might have been different, your hand was different."
+  },
+  {
+   "t": 84.96,
+   "text": "Even if it looked similar on the surface, the underlying variables were different, which means the correct strategy might have been different too."
+  },
+  {
+   "t": 92.66,
+   "text": "You can't treat two distinct hands as instances of the same situation just because they superficially resembled each other."
+  },
+  {
+   "t": 100.2,
+   "text": "Second, and more fundamentally, this approach makes your behavior predictable in exactly the way you're trying to avoid."
+  },
+  {
+   "t": 107.12,
+   "text": "Your opponent knows that you folded the last time they made this kind of bet."
+  },
+  {
+   "t": 111.62,
+   "text": "If you have a policy of alternating — fold one time, call the next — then your opponent can predict that you'll call this time."
+  },
+  {
+   "t": 118.67,
+   "text": "And if they can predict your action, they can exploit it."
+  },
+  {
+   "t": 121.72,
+   "text": "A person who knew you alternated could time their bluffs to coincide with your 'fold' turns and their value bets to coincide with your 'call' turns."
+  },
+  {
+   "t": 129.74,
+   "text": "You would have completely undermined the point of randomizing."
+  },
+  {
+   "t": 133.0,
+   "text": "Third, the book points out that even in the hypothetical where you found yourself in precisely identical situations back to back — same board, same action, same opponent, same hand — the correct approach is still to treat each instance as fully independent."
+  },
+  {
+   "t": 149.28,
+   "text": "Each time you're in the situation, there must be a fifty percent chance you call, regardless of what happened last time."
+  },
+  {
+   "t": 155.38,
+   "text": "The past is not relevant."
+  },
+  {
+   "t": 157.7,
+   "text": "If what you did last time influences what you do this time, that's a pattern, and patterns are predictable."
+  },
+  {
+   "t": 163.68,
+   "text": "The book uses a beautiful analogy to make this point: think about flipping a fair coin."
+  },
+  {
+   "t": 169.56,
+   "text": "The probability of heads on any given flip is exactly fifty percent."
+  },
+  {
+   "t": 174.6,
+   "text": "That never changes based on previous flips."
+  },
+  {
+   "t": 177.35,
+   "text": "If you flipped heads three times in a row, the probability of heads on the fourth flip is still exactly fifty percent."
+  },
+  {
+   "t": 184.89,
+   "text": "Each flip is an independent event."
+  },
+  {
+   "t": 187.05,
+   "text": "You cannot and should not try to predict the next flip based on the history of previous flips."
+  },
+  {
+   "t": 192.29,
+   "text": "Your poker decisions need to work the same way."
+  },
+  {
+   "t": 195.26,
+   "text": "When you're in a spot where you should call fifty percent of the time, each occurrence of that spot needs its own independent randomization, completely unaffected by what you did last time."
+  },
+  {
+   "t": 205.51,
+   "text": "So if alternating and remembering previous hands are wrong approaches, what's the right one?"
+  },
+  {
+   "t": 210.88,
+   "text": "Use an external random number generator."
+  },
+  {
+   "t": 213.16,
+   "text": "The book offers several practical options."
+  },
+  {
+   "t": 215.93,
+   "text": "If you're playing live and have a digital watch or clock with a seconds display, you can glance at the last digit before acting."
+  },
+  {
+   "t": 223.1,
+   "text": "If it's zero, one, two, three, or four — that is, less than five — you call."
+  },
+  {
+   "t": 228.96,
+   "text": "If it's five, six, seven, eight, or nine — five or above — you fold."
+  },
+  {
+   "t": 234.94,
+   "text": "That gives you exactly a fifty percent chance of calling, determined by a number that neither you nor your opponent can predict or control."
+  },
+  {
+   "t": 243.08,
+   "text": "If you're playing online, a coin flip is perfectly workable."
+  },
+  {
+   "t": 247.01,
+   "text": "For different probability splits — say you need to call thirty percent of the time — you could roll a ten-sided die and call on a result of one, two, or three."
+  },
+  {
+   "t": 256.66,
+   "text": "There are also websites and apps that generate true random numbers on demand, like Random.org."
+  },
+  {
+   "t": 262.36,
+   "text": "The key principle is that the randomization device needs to be genuinely unpredictable and outside your control."
+  },
+  {
+   "t": 269.55,
+   "text": "Your own thought process does not qualify."
+  },
+  {
+   "t": 272.38,
+   "text": "Human intuitions about randomness are notoriously unreliable — we systematically overestimate how often patterns should 'break,' we're influenced by recency, and we have unconscious biases toward certain numbers or choices."
+  },
+  {
+   "t": 286.99,
+   "text": "Multiple experiments in psychology have demonstrated that when people try to generate random sequences, the sequences they produce have statistical patterns that a simple algorithm could detect."
+  },
+  {
+   "t": 298.3,
+   "text": "We're not wired for true randomness."
+  },
+  {
+   "t": 300.7,
+   "text": "The implication for poker is direct and practical: if your game-theoretically correct strategy requires you to call with a hand some fraction of the time and fold the rest of the time, find a mechanical randomization method before you sit down."
+  },
+  {
+   "t": 314.93,
+   "text": "Decide in advance what your randomization device will be and how you'll interpret its output."
+  },
+  {
+   "t": 320.18,
+   "text": "Do not rely on your own sense of what 'feels random' in the moment, and do not rely on what you did in previous hands."
+  },
+  {
+   "t": 327.0,
+   "text": "The goal of randomization is to become unpredictable to your opponent."
+  },
+  {
+   "t": 331.34,
+   "text": "Anything that introduces a pattern — however subtle — defeats that goal."
   }
  ]
 }

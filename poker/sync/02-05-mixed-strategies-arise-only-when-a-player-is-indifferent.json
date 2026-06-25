@@ -1,55 +1,147 @@
 {
  "n": 5,
  "title": "Mixed Strategies Arise Only When a Player is Indifferent",
- "duration": 66.5,
+ "duration": 269.26,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 2, section 5. Mixed strategies arise only when a player is indifferent."
+   "text": "Chapter two, section five. Mixed strategies arise only when a player is indifferent."
   },
   {
-   "t": 6.04,
-   "text": "You might have heard that good players randomize their actions — sometimes calling, sometimes folding with the same hand."
+   "t": 6.06,
+   "text": "The Clairvoyance Game has led us to a point where both Ivan and Opal need to mix between two options: Ivan sometimes bluffs and sometimes checks with the Queen, and Opal sometimes calls and sometimes folds when Ivan bets."
   },
   {
-   "t": 12.97,
-   "text": "That sounds mysterious, but the logic is actually pretty clean."
+   "t": 19.86,
+   "text": "But there is a critical principle behind mixed strategies that is often misunderstood, and it is worth stating clearly before we move on."
   },
   {
-   "t": 16.71,
-   "text": "You only need to randomize when two options return exactly the same expected value."
+   "t": 27.94,
+   "text": "Mixed strategies in game theory arise only when a player is genuinely indifferent between two options — when both options yield the same expected value."
   },
   {
-   "t": 21.77,
-   "text": "If calling is clearly better than folding, just call every time — no mixing needed."
+   "t": 37.79,
+   "text": "If one option is strictly better than the other, a rational player should take that option one hundred percent of the time, and that is what we see at equilibrium."
   },
   {
-   "t": 27.07,
-   "text": "If folding is clearly better, just fold."
+   "t": 46.66,
+   "text": "There is a widespread misconception in poker that mixed strategies are about deliberate deception: that you sometimes need to make a suboptimal play in order to keep your opponent guessing."
   },
   {
-   "t": 29.59,
-   "text": "Randomizing when one option dominates the other is just leaving money on the table."
+   "t": 57.54,
+   "text": "People often frame this as making bluffs an investment in future value, along the lines of letting yourself get caught bluffing now so that your real value bets get paid off later."
   },
   {
-   "t": 34.73,
-   "text": "The only time mixing makes mathematical sense is at the exact point of indifference, where both choices earn the same amount on average."
+   "t": 68.55,
+   "text": "This logic may feel intuitively compelling but it is not sound from a game-theoretic perspective."
   },
   {
-   "t": 42.59,
-   "text": "In the clairvoyance game, Ivan reaches that point when Opal is bluffing at precisely the right frequency."
+   "t": 74.29,
+   "text": "It puts the cart before the horse."
   },
   {
-   "t": 49.65,
-   "text": "If Opal over-bluffs, calling becomes strictly better for Ivan and he should always call."
+   "t": 76.29,
+   "text": "Yes, the ultimate purpose of mixing strategies is to be unpredictable to your opponent, but you should not deliberately take a worse option just to create that unpredictability."
   },
   {
-   "t": 55.16,
-   "text": "If Opal under-bluffs, folding becomes strictly better and Ivan should always fold."
+   "t": 86.62,
+   "text": "If you genuinely believe one option is superior — if calling has higher expected value than folding, for example — then you should take that option every single time, not mix in the inferior choice for the sake of variety."
   },
   {
-   "t": 60.98,
-   "text": "Randomizing is not a trick — it's a signal that your opponent has done their job perfectly."
+   "t": 99.44,
+   "text": "In the Clairvoyance Game, Ivan does not mix when he holds the Ace."
+  },
+  {
+   "t": 103.59,
+   "text": "Betting is strictly better than checking with the Ace, so he bets one hundred percent of the time, even though that makes him completely predictable."
+  },
+  {
+   "t": 112.42,
+   "text": "He mixes only when he holds the Queen, and the reason he mixes there is that at the right bluffing frequency, betting and checking have identical expected values."
+  },
+  {
+   "t": 122.24,
+   "text": "Neither is strictly better."
+  },
+  {
+   "t": 124.04,
+   "text": "He is genuinely indifferent, so mixing has no cost."
+  },
+  {
+   "t": 127.88,
+   "text": "And because he has found the exact frequency that renders Opal indifferent between calling and folding, his mixing also prevents Opal from exploiting him."
+  },
+  {
+   "t": 136.96,
+   "text": "Here is another way to think about the common misconception."
+  },
+  {
+   "t": 140.74,
+   "text": "The argument that you should bluff occasionally as an investment in getting value bets paid off implicitly assumes something contradictory."
+  },
+  {
+   "t": 149.74,
+   "text": "It assumes your opponent calls too much when you bluff, but also that your opponent might not call enough when you have strong hands."
+  },
+  {
+   "t": 157.07,
+   "text": "You cannot logically hold both beliefs simultaneously."
+  },
+  {
+   "t": 161.1,
+   "text": "If your opponent calls too much, you should simply stop bluffing, because your bluffs are losing money."
+  },
+  {
+   "t": 166.91,
+   "text": "If your opponent calls too little, you should bluff more aggressively."
+  },
+  {
+   "t": 171.11,
+   "text": "You have to pick a consistent belief about your opponent's tendencies and act on it."
+  },
+  {
+   "t": 175.64,
+   "text": "If you are genuinely uncertain about how your opponent will respond to a bet — you do not know whether they call too much or too little — then betting and checking have the same expected value for you because you cannot form a confident prediction either way."
+  },
+  {
+   "t": 189.54,
+   "text": "In that case, a mixed strategy is appropriate, not because mixing is inherently good, but because you are in a state of genuine indifference."
+  },
+  {
+   "t": 198.89,
+   "text": "There is also a dynamic argument sometimes made: that not bluffing in the current situation will cause your opponent to fold more in the future, allowing you to bluff more profitably later."
+  },
+  {
+   "t": 210.26,
+   "text": "But this is not an argument for mixing."
+  },
+  {
+   "t": 212.18,
+   "text": "If you believe your opponent will adjust their future calling frequency based on what you do now, then you have a clear prediction about the future, and you should act on it directly."
+  },
+  {
+   "t": 221.82,
+   "text": "In the current hand, never bluff."
+  },
+  {
+   "t": 224.11,
+   "text": "In the next hand where your opponent plans to fold more, always bluff."
+  },
+  {
+   "t": 228.62,
+   "text": "That is not a mixed strategy — those are two different pure strategies applied in sequence to two different situations."
+  },
+  {
+   "t": 236.21,
+   "text": "The upshot of all this is that mixed strategies at equilibrium are a consequence of indifference, not a separate tool you deploy for strategic variety."
+  },
+  {
+   "t": 245.6,
+   "text": "When both options have equal expected value, you can mix freely without cost, and the right mixing frequency is the one that makes your opponent equally indifferent between their available options."
+  },
+  {
+   "t": 257.31,
+   "text": "That mutual indifference is what defines a Nash equilibrium: neither player has any incentive to unilaterally deviate from their strategy, because deviating cannot improve their outcome."
   }
  ]
 }

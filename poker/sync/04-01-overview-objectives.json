@@ -1,43 +1,107 @@
 {
  "n": 1,
  "title": "Overview & Objectives",
- "duration": 61.25,
+ "duration": 219.05,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 4, section 1. Overview and objectives."
+   "text": "Chapter four, section one. Overview and objectives."
   },
   {
-   "t": 4.16,
-   "text": "Up to now we've been working with toy games, stripped-down scenarios just complex enough to see the underlying forces clearly."
+   "t": 4.14,
+   "text": "So far in this book, we have spent a lot of time inside carefully constructed toy games — simplified environments where every variable is controlled, every range is clean, and the math is tractable."
   },
   {
-   "t": 12.05,
-   "text": "Those forces have names you know by now: polarization, indifference, balance, and reciprocal ranges."
+   "t": 17.12,
+   "text": "Those toy games were not just exercises for their own sake; they were laboratories where we could isolate the core principles of game theory and see exactly how they work without the noise of a full poker hand getting in the way."
   },
   {
-   "t": 19.06,
-   "text": "Real No-Limit Hold'em looks nothing like a toy game on the surface, but underneath, the same forces are pulling the strings."
+   "t": 29.49,
+   "text": "But at some point, you have to leave the laboratory and step onto the actual felt, and that is exactly what this chapter is about."
   },
   {
-   "t": 26.49,
-   "text": "The big differences are volume and complexity: you have many streets, enormous starting ranges, and hundreds of possible board textures."
+   "t": 37.62,
+   "text": "We are going to take everything we have learned about polarized ranges, condensed ranges, the incentives to bet and to check, and the dynamics between an aggressor and a caller, and we are going to apply all of it to a genuine hold 'em situation."
   },
   {
-   "t": 35.67,
-   "text": "That scale means you cannot hold the full solution in your head, but you don't need to."
+   "t": 51.23,
+   "text": "Now, right away, it is important to set realistic expectations about what that application is going to look like."
   },
   {
-   "t": 40.71,
-   "text": "What you need is to recognize which force is dominant in any given spot, and let that guide your instincts."
+   "t": 58.44,
+   "text": "In the toy games, we could solve for precise frequencies — we knew that a player should bluff exactly this percentage of the time, or call with exactly these hands."
   },
   {
-   "t": 47.34,
-   "text": "So in this chapter we take everything you've built and plug it into a real hand, one street at a time."
+   "t": 68.58,
+   "text": "Real poker hands are far too complex to solve that precisely at the table, and that is not what we are trying to do here."
   },
   {
-   "t": 53.35,
-   "text": "By the end you'll have a framework for reading any spot and asking the right questions, even ones this series never covered."
+   "t": 75.64,
+   "text": "Instead, the goal is to develop a practical framework: a way of thinking through a real poker situation quickly, using the theoretical tools we have built, so that you arrive at roughly the right strategy even without a solver in front of you."
+  },
+  {
+   "t": 90.11,
+   "text": "The standard we are aiming for is not perfection — it is avoiding the biggest mistakes."
+  },
+  {
+   "t": 95.8,
+   "text": "If you check a hand when betting would have been slightly better, that is a small leak, and small leaks are tolerable."
+  },
+  {
+   "t": 102.78,
+   "text": "But if you bet a hand when checking would have been dramatically more profitable — or vice versa — that is a serious error, and those are the kinds of errors theory helps you avoid."
+  },
+  {
+   "t": 112.67,
+   "text": "Think of it this way: the goal is to identify the highest-value opportunities and capture them, while steering clear of the most costly blunders."
+  },
+  {
+   "t": 121.55,
+   "text": "Getting the big decisions roughly right is far more important than optimizing the fine-grained frequencies."
+  },
+  {
+   "t": 128.53,
+   "text": "By the time you finish this chapter, you should come away with four concrete abilities."
+  },
+  {
+   "t": 133.5,
+   "text": "First, you should be able to see the polarized-versus-condensed range dynamic playing out in a real hold 'em hand — not just in an abstract toy game, but on an actual board with actual card combinations."
+  },
+  {
+   "t": 145.69,
+   "text": "Second, you should be able to look at any heads-up hold 'em situation and quickly identify which of the two players is better positioned to bet a polarized range."
+  },
+  {
+   "t": 155.16,
+   "text": "Third, you should be able to take a real hand range and split it — mentally sorting the hands into those that belong in a polarized betting range and those that belong in a more condensed checking range."
+  },
+  {
+   "t": 167.45,
+   "text": "Fourth, you should be able to recognize the specific turn cards or situations that should cause a player who has been mostly passive to shift gears and take an aggressive action."
+  },
+  {
+   "t": 177.31,
+   "text": "All four of those skills come directly out of the principles we developed in the toy games."
+  },
+  {
+   "t": 182.43,
+   "text": "What this chapter does is show you how those principles translate, imperfectly but usefully, to the much messier world of real poker."
+  },
+  {
+   "t": 191.65,
+   "text": "The scenario we will work through is a heads-up flop situation between the under-the-gun player and the big blind after a single raise and call before the flop."
+  },
+  {
+   "t": 200.55,
+   "text": "We will look at both players' ranges, examine the board texture, and then work through a series of questions about what each player should do — and more importantly, why."
+  },
+  {
+   "t": 210.3,
+   "text": "The answers will not always be precise numbers, but they will be grounded in the same logic that made the toy game solutions work."
+  },
+  {
+   "t": 217.84,
+   "text": "Let us get into it."
   }
  ]
 }

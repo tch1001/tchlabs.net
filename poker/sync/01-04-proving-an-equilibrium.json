@@ -1,55 +1,163 @@
 {
  "n": 4,
  "title": "Proving an Equilibrium",
- "duration": 72.22,
+ "duration": 226.3,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 1, section 4. Proving an Equilibrium."
+   "text": "Chapter one, section four. Proving an Equilibrium."
   },
   {
-   "t": 4.12,
-   "text": "How do you actually prove that two strategies form a Nash equilibrium?"
+   "t": 4.01,
+   "text": "The driving example was intuitive enough that the equilibria were pretty obvious — of course both going right or both going left are stable solutions."
   },
   {
-   "t": 9.09,
-   "text": "The method is straightforward: you check that neither player has any profitable deviation available."
+   "t": 13.19,
+   "text": "But Brokos points out that in more complicated scenarios, it won't always be so clear, and we need a systematic method for proving or disproving whether a given pair of strategies is an equilibrium."
   },
   {
-   "t": 15.11,
-   "text": "A deviation just means switching to some other action or some different mixing frequency."
+   "t": 25.3,
+   "text": "That method follows directly from the definition."
   },
   {
-   "t": 20.84,
-   "text": "You go through every possible alternative for player one and confirm that none of them produce a higher expected value than the proposed strategy."
+   "t": 28.21,
+   "text": "Recall that a set of strategies is an equilibrium if and only if no single player can unilaterally change their strategy and get a better payoff."
   },
   {
-   "t": 28.95,
-   "text": "Then you do the same check for player two."
+   "t": 37.66,
+   "text": "So to prove that a particular set of strategies is an equilibrium, you take each player one at a time, hold everyone else's strategies fixed, and ask: is there any change that this one player could make to improve their own payoff?"
   },
   {
-   "t": 31.49,
-   "text": "If you cannot find a profitable deviation for either player, you have proven the equilibrium."
+   "t": 51.89,
+   "text": "If the answer is no for every player, you've proven it's an equilibrium."
   },
   {
-   "t": 37.15,
-   "text": "This might sound like a lot of checking, but in small toy games the number of alternatives is manageable."
+   "t": 56.51,
+   "text": "If the answer is yes for even one player, you've proven it's not."
   },
   {
-   "t": 43.23,
-   "text": "In a game with only two choices per player, you might only need to test four or five scenarios total."
+   "t": 60.42,
+   "text": "Let's walk through this with the driving game."
   },
   {
-   "t": 49.77,
-   "text": "The key insight is that proving an equilibrium does not require you to find it first; you can be handed a candidate and then verify it."
+   "t": 62.52,
+   "text": "Start with the proposed equilibrium where both drivers go to the right."
   },
   {
-   "t": 58.31,
-   "text": "Later in this chapter we will do exactly that: we will be handed a solution and walk through the verification step by step."
+   "t": 66.95,
+   "text": "Hold Driver Two's strategy fixed — they're going right."
   },
   {
-   "t": 65.5,
-   "text": "That process of verification will teach you more about equilibrium than just memorizing the answer ever could."
+   "t": 70.65,
+   "text": "Now look at Driver One's options."
+  },
+  {
+   "t": 72.59,
+   "text": "Driver One can go right, getting a payoff of one."
+  },
+  {
+   "t": 75.51,
+   "text": "Driver One can go left, getting a payoff of negative ten."
+  },
+  {
+   "t": 79.36,
+   "text": "Driver One can go down the middle, getting a payoff of negative ten."
+  },
+  {
+   "t": 83.5,
+   "text": "The payoff of one from going right is the highest available."
+  },
+  {
+   "t": 87.51,
+   "text": "There is no deviation that improves Driver One's outcome."
+  },
+  {
+   "t": 91.08,
+   "text": "Now hold Driver One's strategy fixed — they're going right — and examine Driver Two's options."
+  },
+  {
+   "t": 97.16,
+   "text": "By the same reasoning, Driver Two gets one for going right, negative ten for any other choice."
+  },
+  {
+   "t": 103.83,
+   "text": "No deviation helps Driver Two either."
+  },
+  {
+   "t": 106.39,
+   "text": "Therefore, both-go-right is proven to be an equilibrium."
+  },
+  {
+   "t": 110.25,
+   "text": "The book also illustrates how to use this method to prove that something is not an equilibrium."
+  },
+  {
+   "t": 116.15,
+   "text": "Consider what happens if Driver One goes right while Driver Two goes left."
+  },
+  {
+   "t": 121.11,
+   "text": "Both players get negative ten — they've collided."
+  },
+  {
+   "t": 124.12,
+   "text": "Now, is this an equilibrium?"
+  },
+  {
+   "t": 126.25,
+   "text": "To find out, hold Driver Two's strategy fixed — they're going left — and ask whether Driver One can do better by changing."
+  },
+  {
+   "t": 133.99,
+   "text": "If Driver One switches from right to left, they go from negative ten to positive one."
+  },
+  {
+   "t": 139.25,
+   "text": "That is a strictly better outcome achieved by a unilateral change."
+  },
+  {
+   "t": 143.86,
+   "text": "That single finding is enough — we don't need to check Driver Two."
+  },
+  {
+   "t": 147.66,
+   "text": "The pair 'Driver One right, Driver Two left' is not an equilibrium."
+  },
+  {
+   "t": 152.06,
+   "text": "And of course the same logic applies from Driver Two's side: if Driver Two switches from left to right while Driver One stays right, Driver Two also improves from negative ten to positive one."
+  },
+  {
+   "t": 162.86,
+   "text": "Both players have incentive to deviate, confirming this is not an equilibrium."
+  },
+  {
+   "t": 168.94,
+   "text": "One crucial point the book emphasizes: the test is always about unilateral deviation."
+  },
+  {
+   "t": 175.75,
+   "text": "It doesn't matter whether both players changing their strategies simultaneously could lead to a better outcome — that's a different question entirely."
+  },
+  {
+   "t": 184.81,
+   "text": "The equilibrium test asks what a single player can do on their own, holding everything else constant."
+  },
+  {
+   "t": 191.1,
+   "text": "This might seem like a fine distinction right now, but it becomes very important when we move to more complex scenarios."
+  },
+  {
+   "t": 198.25,
+   "text": "Sometimes a pair of strategies is not ideal in some global sense — both players might do better if they both changed — but it's still an equilibrium because neither player can improve their own situation acting alone."
+  },
+  {
+   "t": 210.62,
+   "text": "In the Going to the Movies scenario coming up next, we'll see exactly that situation play out."
+  },
+  {
+   "t": 215.8,
+   "text": "The discipline of checking each player's options one at a time, always keeping the other players' strategies fixed, is the core technique for equilibrium analysis throughout this book."
   }
  ]
 }

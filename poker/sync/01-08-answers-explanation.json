@@ -1,51 +1,543 @@
 {
  "n": 8,
  "title": "Answers & Explanation",
- "duration": 79.06,
+ "duration": 842.83,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 1, section 8. Answers and Explanation."
+   "text": "Chapter one, section eight. Answers and Explanation."
   },
   {
-   "t": 4.34,
-   "text": "Let us solve the Dodging a Debt game and find the equilibrium."
+   "t": 4.12,
+   "text": "Let's now work through both the Going to the Movies answers and the Dodging a Debt answers in full detail."
   },
   {
-   "t": 8.19,
-   "text": "You need to choose a mixing frequency between the coffee shop and the park that makes the debt collector indifferent between the two locations."
+   "t": 9.84,
+   "text": "Starting with Going to the Movies."
   },
   {
-   "t": 15.6,
-   "text": "If you go to the coffee shop fifty percent of the time and the park fifty percent of the time, let us check what happens."
+   "t": 11.69,
+   "text": "Question one: suppose both Andrew and Blanca play a pure strategy of always going to the comedy."
   },
   {
-   "t": 22.36,
-   "text": "When the collector goes to the coffee shop, they find you half the time and miss half the time, for an expected payoff of zero."
+   "t": 17.96,
+   "text": "Is this an equilibrium?"
   },
   {
-   "t": 29.6,
-   "text": "When the collector goes to the park, they also find you half the time and miss half the time, for an expected payoff of zero."
+   "t": 19.46,
+   "text": "The answer is yes — this is an equilibrium."
   },
   {
-   "t": 37.24,
-   "text": "Both options give the collector the same result, so they have no reason to favor one location over the other."
+   "t": 22.5,
+   "text": "Here's how to prove it."
   },
   {
-   "t": 44.2,
-   "text": "And by the same logic, you should also go fifty-fifty, because the collector will be mixing and each location is equally dangerous for you."
+   "t": 23.65,
+   "text": "We check each player separately, holding the other's strategy fixed."
   },
   {
-   "t": 53.23,
-   "text": "The equilibrium is both players choosing each location fifty percent of the time, and the expected value of the game is zero for both sides."
+   "t": 27.84,
+   "text": "Start with Blanca: she goes to the comedy, and so does Andrew, putting them in the upper-left cell with payoffs of four for Andrew and five for Blanca."
   },
   {
-   "t": 62.38,
-   "text": "Notice how the proof works: neither player can improve by deviating, because the other player's mixing makes both options equally good or bad."
+   "t": 37.12,
+   "text": "Blanca's payoff of five is the highest possible payoff she can get in this entire game."
   },
   {
-   "t": 71.25,
-   "text": "This simple hide-and-seek game is the skeleton of bluffing and calling in poker, and we will build on it throughout the series."
+   "t": 42.48,
+   "text": "There is simply no cell where she gets more than five."
+  },
+  {
+   "t": 45.29,
+   "text": "She has no incentive to change whatsoever."
+  },
+  {
+   "t": 48.46,
+   "text": "Now check Andrew: he goes to the comedy while Blanca also goes to the comedy, giving him four points."
+  },
+  {
+   "t": 55.3,
+   "text": "Andrew would prefer the drama in terms of the movie itself, so let's ask what happens if he unilaterally switches to going to the drama while Blanca stays at the comedy."
+  },
+  {
+   "t": 64.59,
+   "text": "Now we're in the lower-left cell: Andrew goes to drama, Blanca goes to comedy, they're apart."
+  },
+  {
+   "t": 70.58,
+   "text": "Andrew's payoff drops to one — lower than the four he was getting by going to the comedy together."
+  },
+  {
+   "t": 76.08,
+   "text": "So Andrew's unilateral switch from comedy to drama makes him worse off."
+  },
+  {
+   "t": 80.42,
+   "text": "Even though Andrew has a preference for dramas, what he cares about most is being with Blanca, and he loses that by defecting."
+  },
+  {
+   "t": 88.2,
+   "text": "Neither player can unilaterally improve their situation."
+  },
+  {
+   "t": 91.55,
+   "text": "Therefore, both-go-comedy is an equilibrium."
+  },
+  {
+   "t": 94.96,
+   "text": "Now here is the crucial point the book emphasizes about this answer: this equilibrium does not give Andrew his highest possible payoff."
+  },
+  {
+   "t": 104.12,
+   "text": "Andrew's personal best outcome is both-go-drama, which gives him five points."
+  },
+  {
+   "t": 109.17,
+   "text": "He could get five instead of four — but only if Blanca also changed to the drama."
+  },
+  {
+   "t": 114.25,
+   "text": "Since that requires both players to change simultaneously, it doesn't violate the equilibrium condition."
+  },
+  {
+   "t": 121.12,
+   "text": "Andrew cannot get five points by acting alone; he can only get five points if Blanca cooperates."
+  },
+  {
+   "t": 127.21,
+   "text": "The 'unilaterally' qualifier in the definition is doing real work here."
+  },
+  {
+   "t": 131.41,
+   "text": "An equilibrium doesn't have to be the best possible world for everyone — it just has to be a stable point where no individual player is motivated to act differently on their own."
+  },
+  {
+   "t": 141.53,
+   "text": "By the same logic, both-go-drama is also an equilibrium, by symmetric reasoning: Blanca can't do better by switching to comedy while Andrew stays at drama, and Andrew is already at his personal maximum."
+  },
+  {
+   "t": 154.03,
+   "text": "So this game actually has two pure-strategy equilibria, just like the driving game had two."
+  },
+  {
+   "t": 159.35,
+   "text": "Question two: what if Andrew's strategy is always to go to the drama and Blanca's strategy is always to go to the comedy?"
+  },
+  {
+   "t": 167.76,
+   "text": "Is this an equilibrium?"
+  },
+  {
+   "t": 169.31,
+   "text": "The answer is no — this is not an equilibrium."
+  },
+  {
+   "t": 172.59,
+   "text": "In this scenario, we're in the lower-left cell: Andrew at drama, Blanca at comedy, both alone."
+  },
+  {
+   "t": 178.82,
+   "text": "Andrew gets one point; Blanca gets one point."
+  },
+  {
+   "t": 181.76,
+   "text": "Now test Andrew: if he switches from drama to comedy while Blanca stays at comedy, Andrew's payoff jumps from one to four."
+  },
+  {
+   "t": 189.55,
+   "text": "That is a strictly better outcome achieved by a unilateral change."
+  },
+  {
+   "t": 193.96,
+   "text": "Andrew has every incentive to deviate."
+  },
+  {
+   "t": 196.99,
+   "text": "That alone is enough to prove this is not an equilibrium."
+  },
+  {
+   "t": 200.97,
+   "text": "But let's also check Blanca: if she switches from comedy to drama while Andrew stays at drama, Blanca's payoff goes from one to four as well."
+  },
+  {
+   "t": 209.7,
+   "text": "Both players would benefit from unilaterally changing their strategy, so this is definitively not an equilibrium."
+  },
+  {
+   "t": 216.91,
+   "text": "The core issue is that in this cell, both players are alone at their movie — both are getting their worst company outcome — and both can fix that by simply switching to what the other person chose."
+  },
+  {
+   "t": 228.14,
+   "text": "Now let's move to the Dodging a Debt answers, which involve the more sophisticated reasoning about mixed strategies."
+  },
+  {
+   "t": 235.11,
+   "text": "Question one: why does no cell in the Dodging a Debt grid represent an equilibrium?"
+  },
+  {
+   "t": 240.86,
+   "text": "Let's go through all four cells systematically."
+  },
+  {
+   "t": 243.71,
+   "text": "Cell one: both go to Room A."
+  },
+  {
+   "t": 245.94,
+   "text": "David gets one hundred dollars; Christina pays one hundred dollars."
+  },
+  {
+   "t": 250.27,
+   "text": "David is happy, but Christina can unilaterally improve her situation by switching to Room B — she'd go from negative one hundred to zero."
+  },
+  {
+   "t": 258.8,
+   "text": "That's strictly better, so this is not an equilibrium."
+  },
+  {
+   "t": 262.15,
+   "text": "Cell two: Christina goes to Room A, David goes to Room B."
+  },
+  {
+   "t": 266.79,
+   "text": "Both get zero."
+  },
+  {
+   "t": 267.99,
+   "text": "Now David can unilaterally improve by switching to Room A — he'd collect one hundred dollars instead of zero."
+  },
+  {
+   "t": 275.09,
+   "text": "Not an equilibrium."
+  },
+  {
+   "t": 276.44,
+   "text": "Cell three: Christina goes to Room B, David goes to Room A."
+  },
+  {
+   "t": 281.19,
+   "text": "Both get zero again."
+  },
+  {
+   "t": 282.72,
+   "text": "This time it's David who can unilaterally improve by switching to Room B — one hundred dollars instead of zero."
+  },
+  {
+   "t": 289.69,
+   "text": "Not an equilibrium."
+  },
+  {
+   "t": 291.0,
+   "text": "Cell four: both go to Room B."
+  },
+  {
+   "t": 293.16,
+   "text": "David collects; Christina pays."
+  },
+  {
+   "t": 295.69,
+   "text": "Christina can unilaterally improve by switching to Room A — zero instead of negative one hundred."
+  },
+  {
+   "t": 303.01,
+   "text": "Not an equilibrium."
+  },
+  {
+   "t": 304.39,
+   "text": "The pattern is clear: whenever they meet, Christina wants to leave."
+  },
+  {
+   "t": 308.77,
+   "text": "Whenever they miss each other, David wants to follow her."
+  },
+  {
+   "t": 311.97,
+   "text": "There is always exactly one player who would prefer to be doing something else."
+  },
+  {
+   "t": 316.45,
+   "text": "Pure strategies are inherently predictable, and in a zero-sum game like this one — where what's good for David is bad for Christina — predictability is exploitable."
+  },
+  {
+   "t": 327.65,
+   "text": "The only escape from this cycle is randomization: mixed strategies."
+  },
+  {
+   "t": 332.37,
+   "text": "Question two: what is the equilibrium?"
+  },
+  {
+   "t": 335.1,
+   "text": "The equilibrium is for each player to randomize their choice of poker room, going to Room A with probability one-half and Room B with probability one-half."
+  },
+  {
+   "t": 345.61,
+   "text": "The book explains why this specific fifty-fifty split is the equilibrium, not some other random mix."
+  },
+  {
+   "t": 352.54,
+   "text": "Christina's situation is symmetric: she doesn't inherently prefer one room over the other, and she has no information advantage that would tell her which room David is more likely to be in."
+  },
+  {
+   "t": 363.82,
+   "text": "Her only goal is to be unpredictable so that David has no way to reliably find her."
+  },
+  {
+   "t": 369.6,
+   "text": "If Christina were to go to Room A even slightly more than fifty percent of the time — say fifty-one percent — then there would be a clear best response for David: always go to Room A."
+  },
+  {
+   "t": 380.72,
+   "text": "By doing so, David would find Christina more than half the time and collect his money more than half the time on average."
+  },
+  {
+   "t": 388.12,
+   "text": "Christina's strategy would be slightly exploitable."
+  },
+  {
+   "t": 392.15,
+   "text": "At exactly fifty percent, however, it doesn't matter which room David goes to — or even what mix he uses — because he has a fifty percent chance of finding Christina no matter what."
+  },
+  {
+   "t": 402.69,
+   "text": "By being perfectly unpredictable, Christina eliminates any advantage David could gain from choosing one room over another."
+  },
+  {
+   "t": 410.47,
+   "text": "David's reasoning is perfectly symmetric: if he went to Room A more than fifty percent of the time, Christina could exploit that by going to Room B more than fifty percent of the time, and she'd dodge him more often than not."
+  },
+  {
+   "t": 422.61,
+   "text": "At exactly fifty percent, David makes Christina completely indifferent between the two rooms — we'll come back to that word 'indifferent' in the next section."
+  },
+  {
+   "t": 431.52,
+   "text": "Also important to note: the earlier scenarios we looked at were cooperative in nature — both drivers want to avoid a collision, Andrew and Blanca both want to be together."
+  },
+  {
+   "t": 441.75,
+   "text": "In those games, predictability was an asset, because there are win-win outcomes both players are trying to coordinate toward."
+  },
+  {
+   "t": 448.69,
+   "text": "But the Dodging a Debt game is a zero-sum game: every dollar David gains is a dollar Christina loses, and every dollar Christina saves is a dollar David fails to collect."
+  },
+  {
+   "t": 459.86,
+   "text": "There are no win-win outcomes here."
+  },
+  {
+   "t": 461.89,
+   "text": "In zero-sum games, predictability is a liability, not an asset, because your opponent can always exploit a predictable pattern."
+  },
+  {
+   "t": 470.79,
+   "text": "Most two-player poker situations share this zero-sum structure, which is exactly why mixed strategies — and the unpredictability they generate — are so central to poker game theory."
+  },
+  {
+   "t": 482.39,
+   "text": "Question three: what is each player's expected value at the equilibrium?"
+  },
+  {
+   "t": 487.52,
+   "text": "With both players randomizing at fifty-fifty, we can calculate EV by listing all four possible outcomes, computing the probability of each, and weighting the payoff accordingly."
+  },
+  {
+   "t": 498.79,
+   "text": "Outcome one: both go to Room A."
+  },
+  {
+   "t": 501.27,
+   "text": "Probability: Christina's fifty percent chance of Room A, times David's fifty percent chance of Room A, equals twenty-five percent."
+  },
+  {
+   "t": 509.79,
+   "text": "David's payoff in this outcome: one hundred dollars."
+  },
+  {
+   "t": 513.15,
+   "text": "Outcome two: Christina goes to Room A, David goes to Room B."
+  },
+  {
+   "t": 518.1,
+   "text": "Probability: fifty percent times fifty percent equals twenty-five percent."
+  },
+  {
+   "t": 523.53,
+   "text": "David's payoff: zero."
+  },
+  {
+   "t": 525.79,
+   "text": "Outcome three: Christina goes to Room B, David goes to Room A."
+  },
+  {
+   "t": 530.57,
+   "text": "Probability: twenty-five percent."
+  },
+  {
+   "t": 533.02,
+   "text": "David's payoff: zero."
+  },
+  {
+   "t": 535.24,
+   "text": "Outcome four: both go to Room B."
+  },
+  {
+   "t": 537.65,
+   "text": "Probability: twenty-five percent."
+  },
+  {
+   "t": 540.12,
+   "text": "David's payoff: one hundred dollars."
+  },
+  {
+   "t": 542.73,
+   "text": "David's expected value equals zero-point-two-five times one hundred, plus zero-point-two-five times zero, plus zero-point-two-five times zero, plus zero-point-two-five times one hundred."
+  },
+  {
+   "t": 554.48,
+   "text": "That equals twenty-five plus zero plus zero plus twenty-five, which equals fifty dollars."
+  },
+  {
+   "t": 560.97,
+   "text": "So David's expected value is fifty dollars."
+  },
+  {
+   "t": 564.28,
+   "text": "Intuitively, this makes sense: David has a fifty percent chance of ending up in the same room as Christina — whichever room that turns out to be — and when he does, he collects one hundred dollars."
+  },
+  {
+   "t": 576.12,
+   "text": "Half of one hundred is fifty."
+  },
+  {
+   "t": 577.92,
+   "text": "Because this is a zero-sum game, Christina's expected value must be the mirror image of David's: negative fifty dollars."
+  },
+  {
+   "t": 586.3,
+   "text": "There is a fifty percent chance she ends up in the same room as David and pays her debt, and a fifty percent chance she avoids him and pays nothing."
+  },
+  {
+   "t": 594.97,
+   "text": "Her average outcome is losing fifty dollars."
+  },
+  {
+   "t": 598.2,
+   "text": "Question four: prove that neither player has incentive to deviate from the equilibrium."
+  },
+  {
+   "t": 603.93,
+   "text": "The method here is the same one we've used throughout: hold one player's strategy fixed and experiment with changes to the other player's strategy."
+  },
+  {
+   "t": 612.83,
+   "text": "Let's hold Christina's strategy fixed — she's still flipping a coin and going to each room with fifty percent probability."
+  },
+  {
+   "t": 620.24,
+   "text": "Now let's try different strategies for David and compute his EV each time."
+  },
+  {
+   "t": 624.97,
+   "text": "First, suppose David plays a pure strategy of always going to Room A."
+  },
+  {
+   "t": 629.94,
+   "text": "He goes to Room A with one hundred percent probability and Room B with zero percent probability."
+  },
+  {
+   "t": 636.45,
+   "text": "Outcome one: both at Room A, probability fifty percent times one hundred percent equals fifty percent, payoff one hundred dollars."
+  },
+  {
+   "t": 645.38,
+   "text": "Outcome two: Christina at Room A, David at Room B, probability fifty percent times zero percent equals zero percent."
+  },
+  {
+   "t": 654.23,
+   "text": "Outcome three: Christina at Room B, David at Room A, probability fifty percent times one hundred percent equals fifty percent, payoff zero dollars."
+  },
+  {
+   "t": 665.17,
+   "text": "Outcome four: both at Room B, probability zero percent."
+  },
+  {
+   "t": 669.59,
+   "text": "David's EV: zero-point-five times one hundred plus zero-point-five times zero equals fifty dollars."
+  },
+  {
+   "t": 677.67,
+   "text": "His EV is still fifty dollars — identical to what he got at the equilibrium."
+  },
+  {
+   "t": 682.83,
+   "text": "Now try David going to Room A eighty percent of the time and Room B twenty percent of the time."
+  },
+  {
+   "t": 688.89,
+   "text": "Outcome one: both at Room A, probability fifty percent times eighty percent equals forty percent, payoff one hundred dollars."
+  },
+  {
+   "t": 698.07,
+   "text": "Outcome two: Christina at Room A, David at Room B, probability fifty percent times twenty percent equals ten percent, payoff zero."
+  },
+  {
+   "t": 708.32,
+   "text": "Outcome three: Christina at Room B, David at Room A, probability fifty percent times eighty percent equals forty percent, payoff zero."
+  },
+  {
+   "t": 718.53,
+   "text": "Outcome four: both at Room B, probability fifty percent times twenty percent equals ten percent, payoff one hundred dollars."
+  },
+  {
+   "t": 727.52,
+   "text": "David's EV: zero-point-four times one hundred, plus zero-point-one times zero, plus zero-point-four times zero, plus zero-point-one times one hundred, equals forty plus zero plus zero plus ten, equals fifty dollars."
+  },
+  {
+   "t": 742.57,
+   "text": "Still fifty."
+  },
+  {
+   "t": 743.8,
+   "text": "The pattern will hold for any strategy David might try, because Christina's fifty-fifty randomization means she's equally likely to be at either room regardless of what David does."
+  },
+  {
+   "t": 754.74,
+   "text": "He always has a fifty percent chance of finding her, no matter how he distributes his own probability."
+  },
+  {
+   "t": 760.55,
+   "text": "The same analysis works in reverse for Christina: if David plays his fifty-fifty equilibrium strategy, Christina's EV is always negative fifty dollars, regardless of what she does."
+  },
+  {
+   "t": 772.29,
+   "text": "She cannot improve beyond negative fifty by changing her strategy."
+  },
+  {
+   "t": 777.27,
+   "text": "This is an important nuance the book highlights: the fact that David's EV stays the same when he deviates from the equilibrium doesn't mean he should deviate."
+  },
+  {
+   "t": 787.78,
+   "text": "If David plays a pure strategy of always going to Room A while Christina keeps flipping her coin, David's expected value remains fifty dollars, but the strategy pair is no longer an equilibrium — because now Christina could do better by changing her strategy."
+  },
+  {
+   "t": 804.38,
+   "text": "She could start always going to Room B, and then she'd dodge David every single time for an EV of zero, which beats her equilibrium EV of negative fifty."
+  },
+  {
+   "t": 814.63,
+   "text": "So if David breaks from the equilibrium, he creates an opportunity for Christina to exploit him."
+  },
+  {
+   "t": 820.85,
+   "text": "There are infinitely many strategy pairs that produce EVs of fifty for David and negative fifty for Christina in this game, but only the fifty-fifty, fifty-fifty pair is an equilibrium."
+  },
+  {
+   "t": 832.43,
+   "text": "The distinguishing feature of the equilibrium is mutual stability: neither player can do better by acting alone, even though a unilateral deviation might not do worse either."
   }
  ]
 }

@@ -1,59 +1,387 @@
 {
  "n": 3,
  "title": "Scenario: Raising in the Ace-to-Five Game",
- "duration": 89.3,
+ "duration": 811.22,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 7, section 3. Raising in the ace-to-five game."
+   "text": "Chapter seven, section three. Scenario: Raising in the Ace-to-Five Game."
   },
   {
-   "t": 4.69,
-   "text": "The ace-to-five game ranks hands from a simple low to a simple high across a small deck."
+   "t": 5.44,
+   "text": "The Ace-to-Five Game is a richer environment: each player antes one dollar and receives one card from a ten-card deck running from the Ace down to the Five."
   },
   {
-   "t": 10.8,
-   "text": "It already had defined thresholds: bet with hands above a value threshold, fold below a bluff threshold, call in between."
+   "t": 14.86,
+   "text": "Higher cards beat lower cards, so the Ace is the best hand and the Five is the worst."
   },
   {
-   "t": 18.94,
-   "text": "When we allow raising, new thresholds form on top of that existing structure."
+   "t": 20.68,
+   "text": "In the original version without raising, each player could bet one dollar or check, and when facing a bet, could call or fold."
   },
   {
-   "t": 23.79,
-   "text": "Some hands that were previously just calls are now strong enough to raise for value."
+   "t": 28.51,
+   "text": "Now we are adding the same option we added in the Reciprocal Ranges Game: after a one-dollar bet, the opponent may raise to three dollars total, and the original bettor may only call or fold that raise — no re-raising."
   },
   {
-   "t": 29.21,
-   "text": "These are the hands near the very top of your range — the ones that beat nearly everything the bettor can hold."
+   "t": 42.33,
+   "text": "Unlike the Reciprocal Ranges Game, this game has genuine middle-strength hands in equilibrium betting ranges, which means raising is going to matter a great deal here."
   },
   {
-   "t": 34.95,
-   "text": "At the bottom, some hands that were previous folds now become raise-bluffs if they have enough equity or fold equity."
+   "t": 53.06,
+   "text": "Let's work through the six questions the book poses, one by one, with full explanation of the numbers and the reasoning behind each answer."
   },
   {
-   "t": 42.92,
-   "text": "The bluff-raising candidates are often your worst hands, because your mediocre hands have too much to lose by folding out the bettor."
+   "t": 61.2,
+   "text": "The first question is whether Opal's betting frequency increases, decreases, or stays the same when raising is allowed."
   },
   {
-   "t": 50.54,
-   "text": "A raise-bluff works best when your hand has almost no showdown value — there is nothing to give up by folding out a worse hand."
+   "t": 68.84,
+   "text": "The answer is that it decreases — significantly."
   },
   {
-   "t": 58.34,
-   "text": "So in the ace-to-five game, you end up with three layers: fold, call, or raise — and raising is the polarized outside layer."
+   "t": 72.35,
+   "text": "Without the option to raise, Opal bet nearly thirty-seven percent of her range at equilibrium."
   },
   {
-   "t": 67.26,
-   "text": "The bettor, knowing raises are possible, has to revise their own calling threshold for when they face one."
+   "t": 78.96,
+   "text": "With raising allowed, she bets only about twenty-seven percent of her range."
   },
   {
-   "t": 74.12,
-   "text": "They also have to think about whether some of their value hands are better off raising back — a three-bet — instead of calling."
+   "t": 83.55,
+   "text": "That is a reduction of roughly ten percentage points, and to understand why, you need to look at what happens to each hand in her range individually."
   },
   {
-   "t": 81.76,
-   "text": "Each added option creates a ripple through every other threshold, which is exactly what makes multi-street poker so deep."
+   "t": 92.59,
+   "text": "The book provides a detailed table, and the changes are striking when you walk through them hand by hand."
+  },
+  {
+   "t": 98.74,
+   "text": "With an Ace, Opal went from betting eighty-one percent of the time without raising to betting only twenty percent of the time with raising."
+  },
+  {
+   "t": 106.62,
+   "text": "That sounds like the Ace gets checked more often, and it does — but this is actually good news for the Ace, because when raising is allowed, the Ace is strong enough to check and then raise if Ivan bets."
+  },
+  {
+   "t": 117.56,
+   "text": "The expected value of betting an Ace actually goes up slightly, from two dollars and fifty-six cents to two dollars and sixty-six cents, because when she does bet it and gets raised, she can call the raise profitably."
+  },
+  {
+   "t": 130.81,
+   "text": "The Ace is indifferent between betting and checking precisely because both lines are now profitable — betting opens up the possibility of winning a larger pot, and checking opens up the possibility of executing a check-raise."
+  },
+  {
+   "t": 143.79,
+   "text": "With a King, Opal goes from betting seventy-three percent of the time to betting one hundred percent of the time."
+  },
+  {
+   "t": 149.79,
+   "text": "This is a complete reversal in the direction of change, and the reasoning is elegant."
+  },
+  {
+   "t": 155.36,
+   "text": "The King is strong enough to call a raise — it does well against Ivan's calling range — but it is not strong enough to check-raise for value."
+  },
+  {
+   "t": 163.32,
+   "text": "Because the King cannot profitably check-raise, it does not benefit from being in the checking range the way the Ace does."
+  },
+  {
+   "t": 170.32,
+   "text": "Betting the King with full commitment is therefore strictly preferred over checking it."
+  },
+  {
+   "t": 175.69,
+   "text": "With a Queen, betting frequency rises from sixty-three percent to eighty-six percent, and the expected value of betting a Queen drops from one dollar and sixty-seven cents to one dollar and fifty cents."
+  },
+  {
+   "t": 188.01,
+   "text": "The Queen is the hand in the middle of Opal's value range — it is the weakest genuine value bet — and it becomes indifferent between calling and folding when raised."
+  },
+  {
+   "t": 198.84,
+   "text": "The Queen suffers when raised, but not catastrophically; it's still profitable enough to bet because most of the time it won't face a raise, and when it does get called, that is still a good outcome."
+  },
+  {
+   "t": 210.22,
+   "text": "With a Jack, the situation is completely different from the game without raising."
+  },
+  {
+   "t": 215.26,
+   "text": "Without raising, Opal bet the Jack fifty-seven percent of the time, and the expected value of betting was one dollar and twenty-two cents."
+  },
+  {
+   "t": 223.59,
+   "text": "With raising allowed, she bets the Jack zero percent of the time."
+  },
+  {
+   "t": 227.34,
+   "text": "Why the complete abandonment of the Jack as a value bet?"
+  },
+  {
+   "t": 231.07,
+   "text": "The Jack's fundamental problem is that it wants to reach showdown more than anything else — it is a bluff-catcher, a hand that wins reasonably often against weak hands but loses to anything in Ivan's strong range."
+  },
+  {
+   "t": 243.51,
+   "text": "Without raising, Opal could value bet the Jack because even though she frequently ran into stronger hands, the alternative of checking and calling those same hands would not have been much better — she was going to pay off Ivan's strong hands either way."
+  },
+  {
+   "t": 257.66,
+   "text": "With raising allowed, betting a Jack creates a new nightmare scenario: she puts in one dollar, Ivan raises to three dollars, and now she has to either call another two dollars with a marginal hand or fold and lose the bet she already put in without even getting to showdown."
+  },
+  {
+   "t": 273.92,
+   "text": "Checking the Jack is strictly better because it always gets to showdown at no additional cost."
+  },
+  {
+   "t": 279.94,
+   "text": "The Ten and all lower hands in Opal's value range were already checking without raising being allowed, so they stay at zero percent betting frequency."
+  },
+  {
+   "t": 288.98,
+   "text": "For her bluffs — the Six and the Five — Opal goes from betting thirty-six percent with a Six and fifty-six percent with a Five to betting thirty-four percent of the time with both."
+  },
+  {
+   "t": 299.87,
+   "text": "The bluffing frequencies decrease slightly because less value betting overall means fewer bluffs are needed to balance the range."
+  },
+  {
+   "t": 308.56,
+   "text": "The second question is about Ivan's betting frequency when facing a check."
+  },
+  {
+   "t": 313.41,
+   "text": "Here too the answer is a decrease, though less dramatic than Opal's."
+  },
+  {
+   "t": 318.04,
+   "text": "Ivan goes from betting sixty percent of his range in the original game to about forty-five percent with raising allowed."
+  },
+  {
+   "t": 324.79,
+   "text": "Looking at the individual hands in his range: Ivan still bets the Ace, King, and Queen one hundred percent of the time — these hands are strong enough to call a raise or even raise themselves."
+  },
+  {
+   "t": 336.84,
+   "text": "With a Jack, Ivan drops from betting one hundred percent to betting thirty-seven percent of the time, since the Jack faces the same middle-hand dilemma we described for Opal — it doesn't love getting raised."
+  },
+  {
+   "t": 349.04,
+   "text": "The Ten was bet fifty percent of the time in the original game but drops to zero percent with raising, for the same reasons the Jack dropped to zero in Opal's range."
+  },
+  {
+   "t": 358.77,
+   "text": "For bluffs, Ivan still bets all his Fives at one hundred percent, because the Five has zero chance of winning at showdown so bluffing is always better than checking for the Five."
+  },
+  {
+   "t": 369.74,
+   "text": "He bets eleven percent of his Sixes, and is essentially indifferent there, because the Six has some small chance of winning at showdown through checking, making it close between bluffing and pot-controlling."
+  },
+  {
+   "t": 381.52,
+   "text": "The third question is about Ivan's strategy when Opal bets: what is the worst hand he raises for value, and what does he use as bluffs?"
+  },
+  {
+   "t": 390.07,
+   "text": "This is where the chapter produces its most surprising result."
+  },
+  {
+   "t": 393.87,
+   "text": "Ivan raises the Ace for value always — that is not surprising."
+  },
+  {
+   "t": 398.28,
+   "text": "He mixes raising and calling with the King: at equilibrium he raises the King ten percent of the time and calls ninety percent of the time, with equal expected value of two dollars and fifty-five cents either way."
+  },
+  {
+   "t": 411.38,
+   "text": "Now, what does he use as bluff raises?"
+  },
+  {
+   "t": 413.71,
+   "text": "You might expect him to use his weakest hands — the Five and Six — because those are the ones that lose at showdown and therefore have the least to lose by raising and the most to gain from stealing the pot."
+  },
+  {
+   "t": 424.71,
+   "text": "But that is wrong."
+  },
+  {
+   "t": 425.82,
+   "text": "Ivan bluffs by raising with some combination of the Jack, Ten, Nine, Eight, and Seven — all of which are hands that can also call or fold — but he never raises with Fives or Sixes."
+  },
+  {
+   "t": 437.79,
+   "text": "This reversal of the usual weakest-hands-are-best-bluffs logic requires careful explanation."
+  },
+  {
+   "t": 444.23,
+   "text": "In every equilibrium strategy we have seen before, the weakest hands in a player's range were the preferred bluffs, because they had no showdown value to give up."
+  },
+  {
+   "t": 453.71,
+   "text": "But here there is a crucial asymmetry: the Fives and Sixes in Opal's range are the hands that fold to a raise."
+  },
+  {
+   "t": 461.37,
+   "text": "When Ivan holds a Five, that reduces the probability that Opal holds a Five — and a Five is exactly the kind of hand that would fold to Ivan's raise."
+  },
+  {
+   "t": 470.48,
+   "text": "In other words, having a Five in your hand when you raise makes your raise less likely to work, because you have removed one of the cards from the deck that Opal might be bluffing with."
+  },
+  {
+   "t": 480.48,
+   "text": "The same logic applies to the Six, though less extremely."
+  },
+  {
+   "t": 484.8,
+   "text": "Meanwhile, hands like the Jack, Ten, Nine, Eight, and Seven are genuinely indifferent at equilibrium between calling, folding, and raising, because Opal's calling frequency is calibrated to make all three options yield zero expected value when bluffing."
+  },
+  {
+   "t": 502.08,
+   "text": "So raising with a Jack doesn't cost Ivan more than folding the Jack would cost him — both actions yield zero — but it gives Ivan an extra way to win the pot that he can incorporate into his range without any penalty."
+  },
+  {
+   "t": 514.33,
+   "text": "It is also worth noting that Ivan's folding frequency remains exactly the same as in the game without raising: he folds forty percent of the time when facing a bet."
+  },
+  {
+   "t": 525.01,
+   "text": "This is not a coincidence."
+  },
+  {
+   "t": 526.74,
+   "text": "The reason Opal's bluffs are indifferent between betting and not betting is determined entirely by Ivan's folding frequency, not by whether he responds to her bet by calling or raising."
+  },
+  {
+   "t": 538.25,
+   "text": "So Ivan can shuffle his responses between calling and raising without affecting Opal's indifference on bluffs — as long as his total folding frequency stays at forty percent."
+  },
+  {
+   "t": 548.88,
+   "text": "The fourth question is about how often Opal must call a raise to make Ivan indifferent between bluff-raising and not raising at all."
+  },
+  {
+   "t": 556.68,
+   "text": "The answer is one half of the time — fifty percent."
+  },
+  {
+   "t": 560.1,
+   "text": "This is different from the two-thirds calling frequency we saw in earlier chapters, and it is worth understanding why."
+  },
+  {
+   "t": 567.61,
+   "text": "The general formula for making a bluff indifferent is: one minus the result of the bet divided by the sum of the bet and the pot."
+  },
+  {
+   "t": 575.33,
+   "text": "In the original game, Ivan bet one dollar into a two-dollar pot, so the formula gave one minus one-third, which equals two-thirds."
+  },
+  {
+   "t": 584.55,
+   "text": "In this scenario, Opal has already put one dollar into a pot that had two dollars before her bet, so after her bet there are three dollars in the pot."
+  },
+  {
+   "t": 593.05,
+   "text": "Ivan is raising to three dollars total, but he already put in one dollar calling the bet doesn't apply here since we are computing the raise itself — the raise costs him three dollars to go into a three-dollar pot."
+  },
+  {
+   "t": 605.76,
+   "text": "So the formula gives one minus three-sixths, which equals one-half."
+  },
+  {
+   "t": 610.73,
+   "text": "Opal must call fifty percent of the time after being raised to deny Ivan a profitable bluff-raising opportunity."
+  },
+  {
+   "t": 618.5,
+   "text": "The fifth question asks what Opal's check-raising range should look like."
+  },
+  {
+   "t": 622.53,
+   "text": "The book provides a detailed table of her strategy after checking and facing a bet."
+  },
+  {
+   "t": 627.91,
+   "text": "The first thing to notice is that not all hands sum to one hundred percent, because some hands sometimes end up in Opal's betting range instead of her checking range."
+  },
+  {
+   "t": 637.45,
+   "text": "For instance, Opal checks an Ace eighty percent of the time and bets it twenty percent of the time, and when she checks an Ace and faces a bet, she always raises."
+  },
+  {
+   "t": 647.15,
+   "text": "So eighty percent of the Aces she is dealt end up in her check-raising range, while the other twenty percent go into her betting range."
+  },
+  {
+   "t": 655.21,
+   "text": "After checking and facing a bet: Opal raises with eighty percent of her range's Aces and zero percent of her Kings — the King is never checked at equilibrium, so it never appears in her check-raising range."
+  },
+  {
+   "t": 667.74,
+   "text": "She calls with fourteen percent of her Queens, one hundred percent of her Jacks, and roughly forty-four percent of each hand from the Ten down to the Seven."
+  },
+  {
+   "t": 676.55,
+   "text": "She folds roughly forty-nine percent of the Tens through Sevens, and one hundred percent of the Sixes and Fives."
+  },
+  {
+   "t": 683.24,
+   "text": "She raises with about six point six seven percent of the Tens, Nines, Eights, and Sevens as bluffs."
+  },
+  {
+   "t": 690.0,
+   "text": "Looking at the overall totals after checking: she calls forty percent of her checking range, folds forty-five percent, and raises fifteen percent."
+  },
+  {
+   "t": 699.5,
+   "text": "The ratio of value raises to bluff raises in her check-raising range is three to one — she raises three Aces for value for every one bluff raise — and this is exactly the correct ratio given that she must call half the time when raised."
+  },
+  {
+   "t": 714.55,
+   "text": "The book notes that the decimal bluff-raising frequencies for the Seven through Ten are left precise specifically so you can verify this three-to-one ratio yourself."
+  },
+  {
+   "t": 724.79,
+   "text": "The sixth and final question is whether the option to raise increases or decreases the overall value of the game for Ivan."
+  },
+  {
+   "t": 732.53,
+   "text": "The answer is that it technically increases his expected value, but only by an almost negligible amount."
+  },
+  {
+   "t": 739.02,
+   "text": "Without raising, Ivan's expected value over the course of the game is one dollar and six point one cents."
+  },
+  {
+   "t": 745.39,
+   "text": "With raising, it rises to one dollar and six point three cents."
+  },
+  {
+   "t": 749.68,
+   "text": "That is a gain of two-tenths of one penny per hand — barely measurable."
+  },
+  {
+   "t": 754.36,
+   "text": "However, the book makes an important observation here: these numbers assume both players play perfectly."
+  },
+  {
+   "t": 760.99,
+   "text": "In practice, adding the raising option makes the game more complex, which means more opportunities for mistakes."
+  },
+  {
+   "t": 768.11,
+   "text": "All other things being equal, the more skilled player benefits most from added complexity, because they are better positioned both to keep their own ranges balanced and to identify imbalances in the opponent's play."
+  },
+  {
+   "t": 779.97,
+   "text": "Ivan, as the in-position player, also has a slight structural advantage: he does not need to worry about balancing a checking range because he always acts last, which means his equilibrium betting strategy is somewhat simpler and therefore less error-prone."
+  },
+  {
+   "t": 795.4,
+   "text": "So while raising adds only a hair of theoretical value at equilibrium, the real value of understanding how to raise correctly comes from the exploitation opportunities that open up when opponents make mistakes with or around raising — which is exactly what the next section covers."
   }
  ]
 }

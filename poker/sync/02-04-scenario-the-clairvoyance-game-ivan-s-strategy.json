@@ -1,55 +1,175 @@
 {
  "n": 4,
  "title": "Scenario: The Clairvoyance Game (Ivan's Strategy)",
- "duration": 61.46,
+ "duration": 286.94,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 2, section 4. The clairvoyance game, Ivan's strategy."
+   "text": "Chapter two, section four. Scenario — the Clairvoyance Game, Ivan's strategy."
   },
   {
-   "t": 5.1,
-   "text": "Now flip to Ivan's seat."
+   "t": 6.06,
+   "text": "Now let us switch perspectives and think about the game from Ivan's point of view."
   },
   {
-   "t": 7.01,
-   "text": "Ivan holds a bluff-catcher — a hand that beats a bluff but loses to a value bet."
+   "t": 10.25,
+   "text": "We have already established that if Opal were to bet, Ivan's responses would be completely straightforward: call with the Ace since it is the best hand in the deck, and fold the Queen since it is the worst."
   },
   {
-   "t": 12.39,
-   "text": "He can't tell from Opal's betting alone whether she has the nuts or nothing."
+   "t": 21.16,
+   "text": "There is no strategic complexity for Ivan in responding to a bet from Opal."
   },
   {
-   "t": 16.88,
-   "text": "His decision is purely about how often he should call."
+   "t": 26.38,
+   "text": "The interesting question is what Ivan does when Opal checks, as she always will at equilibrium."
   },
   {
-   "t": 20.15,
-   "text": "If Ivan folds every time, Opal profits by bluffing with every worthless hand she holds."
+   "t": 32.5,
+   "text": "First question: when Opal checks, will Ivan bet the Ace always, sometimes, or never?"
   },
   {
-   "t": 26.5,
-   "text": "If Ivan calls every time, Opal adjusts by simply not bluffing anymore, and Ivan keeps paying off her value hands."
+   "t": 38.92,
+   "text": "Always."
   },
   {
-   "t": 34.14,
-   "text": "The right answer is that Ivan must call often enough to make Opal's bluffs break even."
+   "t": 39.9,
+   "text": "Ivan holds the best card in the deck, and the river is his only opportunity to extract additional money from Opal."
   },
   {
-   "t": 39.17,
-   "text": "That means Ivan's calling frequency is tied directly to the pot odds Opal is offering him."
+   "t": 47.09,
+   "text": "If he checks behind, the hand goes to showdown and he wins the two-dollar pot, full stop."
   },
   {
-   "t": 45.89,
-   "text": "Here is the key insight: at equilibrium, Ivan's call does not have to show a direct profit."
+   "t": 53.09,
+   "text": "But if he bets, there is a chance Opal calls and he wins three dollars instead."
   },
   {
-   "t": 52.41,
-   "text": "It just has to prevent Opal from printing money with her bluffs."
+   "t": 58.2,
+   "text": "There is also a chance she folds, in which case he still wins the pot."
   },
   {
-   "t": 55.92,
-   "text": "Neither player can unilaterally improve their results — that's what makes it an equilibrium."
+   "t": 62.45,
+   "text": "Regardless of whether Opal calls or folds, checking behind with the Ace can never outperform betting with the Ace."
+  },
+  {
+   "t": 70.17,
+   "text": "The Ace is the nuts — there is literally no downside to betting it."
+  },
+  {
+   "t": 75.04,
+   "text": "Ivan bets the Ace one hundred percent of the time."
+  },
+  {
+   "t": 77.97,
+   "text": "Second question: when Opal checks, will Ivan bet the Queen always, sometimes, or never?"
+  },
+  {
+   "t": 84.53,
+   "text": "Sometimes."
+  },
+  {
+   "t": 85.69,
+   "text": "With the Queen, Ivan holds the worst card in the deck and will lose at showdown one hundred percent of the time."
+  },
+  {
+   "t": 91.47,
+   "text": "If he checks, he loses the pot and his one-dollar ante — a total of zero dollars in terms of any additional money he puts in, but he does lose the pot value."
+  },
+  {
+   "t": 101.45,
+   "text": "His only alternative is to bluff, betting one dollar and hoping Opal folds."
+  },
+  {
+   "t": 106.62,
+   "text": "If she folds, he collects the two-dollar pot — money he would otherwise lose."
+  },
+  {
+   "t": 111.91,
+   "text": "If she calls, he loses the one-dollar bet on top of the pot he was already going to lose."
+  },
+  {
+   "t": 117.4,
+   "text": "Now, just as with Opal's calling strategy, we can test extreme versions of Ivan's bluffing strategy to see if either is sustainable at equilibrium."
+  },
+  {
+   "t": 126.75,
+   "text": "If Ivan never bluffs with the Queen, Opal could exploit him by always folding whenever he bets."
+  },
+  {
+   "t": 132.61,
+   "text": "Since he only bets Aces, folding is costless for her — she never gives up a winning call."
+  },
+  {
+   "t": 138.3,
+   "text": "And because she always folds, Ivan never gets paid on his value bets."
+  },
+  {
+   "t": 142.97,
+   "text": "That makes never-bluffing an exploitable strategy."
+  },
+  {
+   "t": 146.62,
+   "text": "If Ivan always bluffs with the Queen — meaning he bets one hundred percent of the time regardless of which card he holds — then Opal can exploit him by always calling."
+  },
+  {
+   "t": 156.1,
+   "text": "Consider what happens in that case: when Opal calls, she wins three dollars half the time when Ivan has the Queen, and loses one dollar the other half when he has the Ace."
+  },
+  {
+   "t": 166.64,
+   "text": "Her expected value from calling is three dollars times one-half minus one dollar times one-half, which equals one dollar."
+  },
+  {
+   "t": 174.8,
+   "text": "That is strictly better than folding, which gives her zero dollars."
+  },
+  {
+   "t": 178.79,
+   "text": "So always-calling becomes the right response to always-bluffing, and Ivan's strategy is once again exploitable."
+  },
+  {
+   "t": 187.05,
+   "text": "Both pure strategies — never bluff and always bluff — are exploitable, which means neither can be part of an equilibrium."
+  },
+  {
+   "t": 195.57,
+   "text": "The equilibrium requires Ivan to bluff with some specific frequency between zero and one hundred percent, and the way we find that frequency is through the concept of indifference."
+  },
+  {
+   "t": 207.36,
+   "text": "We want Ivan to choose a bluffing frequency that makes Opal genuinely indifferent between calling and folding."
+  },
+  {
+   "t": 214.56,
+   "text": "If Opal is indifferent, she cannot exploit Ivan by shifting toward always-call or always-fold."
+  },
+  {
+   "t": 221.59,
+   "text": "If she cannot exploit him by shifting, then his strategy is unexploitable."
+  },
+  {
+   "t": 226.91,
+   "text": "Before we work out the exact math, it is worth appreciating the conceptual foundation."
+  },
+  {
+   "t": 232.54,
+   "text": "Ivan's optimal strategy is a mixed strategy — he bets his Aces every time, and he bets his Queens some of the time — and the mixing with the Queens exists not because he is trying to deceive Opal in some clever sequential way, but because there is genuinely no single best option when Opal is playing correctly."
+  },
+  {
+   "t": 251.7,
+   "text": "At the right bluffing frequency, betting a Queen and checking a Queen will have exactly the same expected value for Ivan."
+  },
+  {
+   "t": 259.44,
+   "text": "He will be indifferent between them, and because he is indifferent, there is no cost to randomizing."
+  },
+  {
+   "t": 265.07,
+   "text": "The game theoretically optimal bluffing frequency is the one that creates this indifference in Opal, and from Ivan's perspective, once he has found that frequency, he can rest easy knowing that no adjustment Opal makes can hurt him."
+  },
+  {
+   "t": 279.1,
+   "text": "That is a powerful guarantee, and it is worth understanding deeply before we move on to calculating the exact numbers."
   }
  ]
 }

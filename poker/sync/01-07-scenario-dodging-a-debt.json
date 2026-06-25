@@ -1,55 +1,175 @@
 {
  "n": 7,
  "title": "Scenario: Dodging a Debt",
- "duration": 61.34,
+ "duration": 268.7,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 1, section 7. Scenario: Dodging a Debt."
+   "text": "Chapter one, section seven. Scenario: Dodging a Debt."
   },
   {
-   "t": 4.39,
-   "text": "Here is a game that gets at the heart of why mixing your strategy is so important."
+   "t": 4.34,
+   "text": "Now we come to what is arguably the most important scenario in the chapter — a game that, unlike the previous examples, has no equilibrium involving pure strategies at all."
   },
   {
-   "t": 9.56,
-   "text": "Imagine you owe someone money and you are desperately trying to avoid them today."
+   "t": 14.78,
+   "text": "The scenario: Christina owes David one hundred dollars."
   },
   {
-   "t": 13.89,
-   "text": "There are only two places you can be: the coffee shop or the park."
+   "t": 18.84,
+   "text": "It's Saturday night, and both of them independently plan to go to one of two poker rooms — call them Room A and Room B."
   },
   {
-   "t": 18.07,
-   "text": "The person you owe money to is also choosing between those same two locations, trying to find you."
+   "t": 25.99,
+   "text": "If they end up at the same room, Christina will have to pay David the hundred dollars she owes him."
   },
   {
-   "t": 24.25,
-   "text": "If they find you, they collect their money and you lose a dollar; if they miss you, you keep the dollar."
+   "t": 31.61,
+   "text": "David's goal is to find Christina and collect."
   },
   {
-   "t": 30.38,
-   "text": "You want to not be found; they want to find you."
+   "t": 34.98,
+   "text": "Christina's goal is to avoid David and not pay."
   },
   {
-   "t": 33.05,
-   "text": "Now ask yourself: what is the best strategy here?"
+   "t": 38.25,
+   "text": "These interests are completely opposed — whatever is good for David is bad for Christina, and vice versa."
   },
   {
-   "t": 36.55,
-   "text": "If you always go to the coffee shop, the debt collector figures that out and waits for you there every time."
+   "t": 45.04,
+   "text": "The payoff grid for this game is clean and symmetric."
   },
   {
-   "t": 41.65,
-   "text": "If you always go to the park, same problem, they just go to the park."
+   "t": 48.65,
+   "text": "If both go to Room A, David collects his hundred dollars: Christina's payoff is negative one hundred, David's is positive one hundred."
   },
   {
-   "t": 45.24,
-   "text": "Any fixed, predictable choice gets you caught, because your opponent can simply best-respond to a pattern they have identified."
+   "t": 57.24,
+   "text": "If Christina goes to Room A but David goes to Room B, they miss each other: Christina's payoff is zero, David's is zero."
   },
   {
-   "t": 52.61,
-   "text": "The only way to stay safe is to become unpredictable, and that means randomizing your choice, but the question is: how much of each?"
+   "t": 66.51,
+   "text": "If Christina goes to Room B and David goes to Room A, they again miss each other: Christina zero, David zero."
+  },
+  {
+   "t": 74.66,
+   "text": "If both go to Room B, David again collects: Christina is negative one hundred, David is positive one hundred."
+  },
+  {
+   "t": 82.06,
+   "text": "The grid has four cells and only two distinct outcomes: they meet, in which case Christina pays and David receives, or they don't meet, in which case both get zero."
+  },
+  {
+   "t": 93.97,
+   "text": "Now for the four questions this scenario poses."
+  },
+  {
+   "t": 96.99,
+   "text": "The first question asks you to explain or demonstrate why no single cell in this grid represents an equilibrium."
+  },
+  {
+   "t": 103.96,
+   "text": "In other words, why is there no pure-strategy equilibrium for this game?"
+  },
+  {
+   "t": 108.81,
+   "text": "The second question asks: given that no pure-strategy equilibrium exists, what is the equilibrium for this game?"
+  },
+  {
+   "t": 116.26,
+   "text": "This is a more challenging question that requires you to think beyond always-do-one-thing strategies."
+  },
+  {
+   "t": 122.47,
+   "text": "The third question asks: at that equilibrium, what is each player's expected value?"
+  },
+  {
+   "t": 128.03,
+   "text": "And the fourth asks you to prove that neither player has any incentive to deviate from the equilibrium strategy."
+  },
+  {
+   "t": 134.46,
+   "text": "Let's set up the intuition before you try to work through the answers."
+  },
+  {
+   "t": 137.89,
+   "text": "Think about what would happen if Christina simply decided to always go to Room A."
+  },
+  {
+   "t": 143.43,
+   "text": "If David knows that's her strategy, he should always go to Room A too — then he always collects."
+  },
+  {
+   "t": 149.31,
+   "text": "But if David always goes to Room A, Christina should switch to Room B — then she never pays."
+  },
+  {
+   "t": 155.7,
+   "text": "But if Christina always goes to Room B, David should follow her there."
+  },
+  {
+   "t": 159.89,
+   "text": "And if David always goes to Room B, Christina should go to Room A."
+  },
+  {
+   "t": 164.45,
+   "text": "No matter which room either player commits to, their opponent has a response that beats them."
+  },
+  {
+   "t": 170.0,
+   "text": "This is a fundamentally different structure from the driving game or the movie scenario, where we could find stable resting points."
+  },
+  {
+   "t": 177.44,
+   "text": "Here, every pure-strategy combination creates a situation where one player is unhappy and wants to change."
+  },
+  {
+   "t": 184.94,
+   "text": "The only way out of this cycle is to make your choice unpredictable — to randomize."
+  },
+  {
+   "t": 190.22,
+   "text": "If Christina can't be predicted, David can't reliably follow her."
+  },
+  {
+   "t": 194.86,
+   "text": "If David can't be predicted, Christina can't reliably avoid him."
+  },
+  {
+   "t": 199.55,
+   "text": "The question then becomes: what specific kind of randomization produces an equilibrium?"
+  },
+  {
+   "t": 205.4,
+   "text": "This is where the concept of mixed strategies becomes essential."
+  },
+  {
+   "t": 209.31,
+   "text": "A mixed strategy is one in which a player doesn't always do the same thing, but instead assigns probabilities to their available actions and randomly selects among them according to those probabilities."
+  },
+  {
+   "t": 220.85,
+   "text": "The question is what probabilities create a stable equilibrium — where neither player has any reason to change their randomization."
+  },
+  {
+   "t": 228.78,
+   "text": "Think about whether it matters which probabilities they use, or whether there's a specific fifty-fifty split that is special."
+  },
+  {
+   "t": 236.22,
+   "text": "Also think about question three from a symmetry standpoint: if the game is perfectly symmetric and both players randomize equally, what does that imply about the long-run payoffs?"
+  },
+  {
+   "t": 247.04,
+   "text": "And for question four, try to construct the mathematical argument showing that no change in strategy by either player can improve their expected value above what the equilibrium gives them."
+  },
+  {
+   "t": 257.93,
+   "text": "These are challenging questions, and the next section will walk through all of them in full detail."
+  },
+  {
+   "t": 263.22,
+   "text": "The tools you'll use are exactly the expected-value framework we just covered in the previous section."
   }
  ]
 }

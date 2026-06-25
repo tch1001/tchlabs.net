@@ -1,55 +1,191 @@
 {
  "n": 5,
  "title": "Scenario: Going to the Movies",
- "duration": 75.38,
+ "duration": 249.43,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 1, section 5. Scenario: Going to the Movies."
+   "text": "Chapter one, section five. Scenario: Going to the Movies."
   },
   {
-   "t": 4.5,
-   "text": "Let us build some intuition with a tiny game before we touch poker at all."
+   "t": 4.51,
+   "text": "Now we move into the first of the book's interactive scenarios — a situation drawn from everyday social life that turns out to have a surprisingly rich game-theoretic structure."
   },
   {
-   "t": 8.79,
-   "text": "Imagine two friends, Alex and Blair, who both want to meet up at a movie tonight."
+   "t": 14.86,
+   "text": "The setup: two friends, Andrew and Blanca, have decided to go to a movie together."
   },
   {
-   "t": 13.95,
-   "text": "Alex wants to see a thriller, Blair wants to see a comedy, but they both would rather be together than go alone."
+   "t": 20.27,
+   "text": "Andrew would prefer to see a drama; Blanca would prefer to see a comedy."
   },
   {
-   "t": 20.19,
-   "text": "Each of them has to decide independently which theater to go to, without being able to call the other person first."
+   "t": 24.45,
+   "text": "But here's the key: for both of them, the most important thing is being together."
   },
   {
-   "t": 26.82,
-   "text": "If they both pick the thriller, Alex is happy and they are together, so that is a decent outcome for both."
+   "t": 29.99,
+   "text": "Andrew would rather see a comedy with Blanca than watch a drama by himself."
   },
   {
-   "t": 33.26,
-   "text": "If they both pick the comedy, Blair is happy and they are together, so that is also a decent outcome for both."
+   "t": 34.84,
+   "text": "Blanca would rather see a drama with Andrew than watch a comedy by herself."
   },
   {
-   "t": 40.14,
-   "text": "If they split up and go to different movies, they both end up alone, and that is the worst result for everyone."
+   "t": 39.44,
+   "text": "Company trumps genre for both of them."
   },
   {
-   "t": 46.12,
-   "text": "Notice that this game has two equilibria: both go to the thriller, or both go to the comedy."
+   "t": 41.92,
+   "text": "This has all the ingredients of a game in the game-theory sense: multiple players, each choosing from multiple options, and payoffs for each player that depend on what both of them decide."
   },
   {
-   "t": 51.95,
-   "text": "Neither friend wants to deviate from whichever meeting point they happen to coordinate on, because switching solo means being alone."
+   "t": 52.33,
+   "text": "Andrew can choose comedy or drama."
   },
   {
-   "t": 59.5,
-   "text": "This shows you that a game can have more than one equilibrium, and that the challenge is sometimes coordination as much as conflict."
+   "t": 54.59,
+   "text": "Blanca can choose comedy or drama."
   },
   {
-   "t": 67.54,
-   "text": "In poker, the game is pure conflict, but the lesson holds: always check whether multiple equilibria might exist."
+   "t": 56.77,
+   "text": "What each person gets out of the evening depends on both of their choices, not just their own."
+  },
+  {
+   "t": 61.55,
+   "text": "One important detail the book asks you to accept: assume both players make their choices independently, without being able to consult each other first."
+  },
+  {
+   "t": 71.56,
+   "text": "You can imagine Andrew lost his phone after they made plans, so they can't coordinate."
+  },
+  {
+   "t": 76.55,
+   "text": "Andrew might know Blanca's strategy — he might know she tends to flip a coin, for example — but he won't know the actual result of that coin flip."
+  },
+  {
+   "t": 85.65,
+   "text": "The choices happen in isolation."
+  },
+  {
+   "t": 87.9,
+   "text": "Now, to do any math, we need to put numbers on the preferences."
+  },
+  {
+   "t": 92.49,
+   "text": "For Andrew: his best outcome is seeing a drama with Blanca, which is worth five points."
+  },
+  {
+   "t": 98.7,
+   "text": "His second-best outcome is seeing a comedy with Blanca — still together, just not his preferred genre — worth four points."
+  },
+  {
+   "t": 106.49,
+   "text": "Going to a drama alone is worth one point."
+  },
+  {
+   "t": 109.6,
+   "text": "The worst outcome for Andrew is going to a comedy alone — he misses out on both his preferred genre and his preferred company — worth zero points."
+  },
+  {
+   "t": 118.31,
+   "text": "For Blanca, the preference ordering is mirrored."
+  },
+  {
+   "t": 121.66,
+   "text": "Her best outcome is seeing a comedy with Andrew, worth five points."
+  },
+  {
+   "t": 126.15,
+   "text": "Going to a drama with Andrew is second-best, worth four points."
+  },
+  {
+   "t": 130.29,
+   "text": "Going to a comedy alone is worth one point."
+  },
+  {
+   "t": 133.2,
+   "text": "Going to a drama alone is the worst for her — worth zero points."
+  },
+  {
+   "t": 137.82,
+   "text": "We can organize all four possible outcomes into a two-by-two grid."
+  },
+  {
+   "t": 142.25,
+   "text": "The rows represent Andrew's choices and the columns represent Blanca's choices."
+  },
+  {
+   "t": 147.07,
+   "text": "In each cell, the first number is Andrew's payoff and the second is Blanca's."
+  },
+  {
+   "t": 152.32,
+   "text": "If both go to the comedy: Andrew gets four, Blanca gets five — they're together at Blanca's preferred film."
+  },
+  {
+   "t": 159.24,
+   "text": "If Andrew goes to comedy but Blanca goes to drama: Andrew gets zero, Blanca gets zero — they're both alone at a film they chose."
+  },
+  {
+   "t": 168.35,
+   "text": "If Andrew goes to drama but Blanca goes to comedy: Andrew gets one, Blanca gets one — again, both alone."
+  },
+  {
+   "t": 175.66,
+   "text": "If both go to the drama: Andrew gets five, Blanca gets four — they're together at Andrew's preferred film."
+  },
+  {
+   "t": 182.21,
+   "text": "The grid makes the whole structure of the game visible at a glance."
+  },
+  {
+   "t": 186.18,
+   "text": "Now for the questions this scenario asks you to work through."
+  },
+  {
+   "t": 189.5,
+   "text": "First question: suppose both players always go to the comedy — Andrew goes to comedy, Blanca goes to comedy, every time, as a pure strategy."
+  },
+  {
+   "t": 199.01,
+   "text": "Is this an equilibrium?"
+  },
+  {
+   "t": 200.56,
+   "text": "How can you tell?"
+  },
+  {
+   "t": 201.61,
+   "text": "Think about it using the definition: can either player unilaterally deviate and get a better payoff?"
+  },
+  {
+   "t": 207.18,
+   "text": "Second question: what if Andrew's strategy is always to go to the drama and Blanca's strategy is always to go to the comedy?"
+  },
+  {
+   "t": 215.26,
+   "text": "Is that an equilibrium?"
+  },
+  {
+   "t": 216.85,
+   "text": "Again, apply the definition — can either player do better on their own?"
+  },
+  {
+   "t": 221.25,
+   "text": "Try to work through both questions before moving to the answers section."
+  },
+  {
+   "t": 225.5,
+   "text": "The reasoning process is at least as important as the conclusions, so think carefully about the structure of the argument, not just the final answer."
+  },
+  {
+   "t": 234.57,
+   "text": "Keep in mind that the equilibrium test requires checking whether a unilateral change helps — not whether some combination of changes by both players might produce a better overall outcome."
+  },
+  {
+   "t": 245.24,
+   "text": "That distinction is going to matter for at least one of these questions."
   }
  ]
 }

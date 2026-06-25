@@ -1,6 +1,6 @@
 // Poker podcast player — scroll transcript, current line centered & highlighted.
 // URL: player.html?ch=<section-slug>. Manifest is nested (chapters → sections);
-// we flatten the sections for prev/next navigation.
+// we flatten the sections for prev/next navigation, autoplay, and sleep timer.
 
 (async function () {
   const $ = (id) => document.getElementById(id);
@@ -20,6 +20,17 @@
 
   let manifest, sync, flat = [], idx = -1, lineEls = [], activeIdx = -1;
   let userScrolledAt = 0, userIsScrolling = false, scrollResetTimer = null;
+
+  // ---- Autoplay + sleep-timer state (persist across section navigation) ----
+  const AUTO_KEY = "poker_autoplay", SLEEP_KEY = "poker_sleep_deadline", RESUME_KEY = "poker_resume";
+  let autoplayOn = sessionStorage.getItem(AUTO_KEY);
+  autoplayOn = autoplayOn === null ? true : autoplayOn === "1";   // default ON
+  const wantResume = sessionStorage.getItem(RESUME_KEY) === "1";  // arrived via autoplay/next
+  sessionStorage.removeItem(RESUME_KEY);
+  const rawDeadline = parseInt(sessionStorage.getItem(SLEEP_KEY) || "0", 10);
+  const sleepExpired = rawDeadline > 0 && rawDeadline <= Date.now();
+  const sleepActive = () => { const v = parseInt(sessionStorage.getItem(SLEEP_KEY)||"0",10); return v > Date.now() ? v : 0; };
+  let sleepTimer = null;
 
   try {
     manifest = await (await fetch("manifest.json", { cache: "no-store" })).json();
@@ -82,7 +93,12 @@
     while (lo <= hi) { const mid = (lo + hi) >> 1; if (sync.lines[mid].t <= t) { ans = mid; lo = mid + 1; } else hi = mid - 1; }
     return ans;
   }
-  const go = (j) => { if (j >= 0 && j < flat.length) location.href = `player.html?ch=${encodeURIComponent(flat[j].slug)}`; };
+  // Navigate to section j. If autoplay is on, flag the next page to resume playing.
+  const go = (j, viaAutoplay) => {
+    if (j < 0 || j >= flat.length) return;
+    if (viaAutoplay || autoplayOn) sessionStorage.setItem(RESUME_KEY, "1");
+    location.href = `player.html?ch=${encodeURIComponent(flat[j].slug)}`;
+  };
 
   audio.addEventListener("timeupdate", () => {
     const t = audio.currentTime;
@@ -93,7 +109,11 @@
   audio.addEventListener("loadedmetadata", () => { durTime.textContent = fmtTime(audio.duration || sync.duration || 0); });
   audio.addEventListener("play",  () => { playBtn.textContent = "❚❚"; playBtn.setAttribute("aria-label","pause"); });
   audio.addEventListener("pause", () => { playBtn.textContent = "▶"; playBtn.setAttribute("aria-label","play"); });
-  audio.addEventListener("ended", () => { playBtn.textContent = "▶"; go(idx + 1); });
+  audio.addEventListener("ended", () => {
+    playBtn.textContent = "▶";
+    // Continue to the next section; the sleep timer (if set) still enforces stop independently.
+    if (autoplayOn) go(idx + 1, true);
+  });
 
   playBtn.addEventListener("click", () => { if (audio.paused) audio.play().catch(()=>{}); else audio.pause(); });
   $("back15").addEventListener("click", () => { audio.currentTime = Math.max(0, audio.currentTime - 15); });
@@ -109,6 +129,61 @@
       audio.playbackRate = parseFloat(btn.dataset.rate);
     });
   });
+
+  // ---- Autoplay toggle ----
+  const autoplayToggle = $("autoplayToggle");
+  if (autoplayToggle) {
+    autoplayToggle.checked = autoplayOn;
+    autoplayToggle.addEventListener("change", () => {
+      autoplayOn = autoplayToggle.checked;
+      sessionStorage.setItem(AUTO_KEY, autoplayOn ? "1" : "0");
+    });
+  }
+
+  // ---- Sleep timer ----
+  const sleepRemainEl = $("sleepRemain");
+  const sleepBtns = Array.from(document.querySelectorAll("#sleepBtns button"));
+  function markSleepBtn(min) {
+    sleepBtns.forEach(b => b.classList.toggle("active", parseInt(b.dataset.min,10) === min));
+  }
+  function clearSleep() {
+    sessionStorage.removeItem(SLEEP_KEY);
+    if (sleepTimer) { clearTimeout(sleepTimer); sleepTimer = null; }
+    markSleepBtn(0);
+    if (sleepRemainEl) sleepRemainEl.textContent = "";
+  }
+  function scheduleSleep() {
+    if (sleepTimer) { clearTimeout(sleepTimer); sleepTimer = null; }
+    const dl = sleepActive();
+    if (!dl) return;
+    sleepTimer = setTimeout(() => { audio.pause(); clearSleep(); }, Math.max(0, dl - Date.now()));
+  }
+  function setSleep(min) {
+    if (!min) { clearSleep(); return; }
+    sessionStorage.setItem(SLEEP_KEY, String(Date.now() + min * 60000));
+    markSleepBtn(min);
+    scheduleSleep();
+  }
+  sleepBtns.forEach(btn => btn.addEventListener("click", () => setSleep(parseInt(btn.dataset.min, 10))));
+  // live countdown
+  setInterval(() => {
+    if (!sleepRemainEl) return;
+    const dl = sleepActive();
+    sleepRemainEl.textContent = dl ? fmtTime((dl - Date.now()) / 1000) : "";
+  }, 1000);
+
+  if (sleepExpired) { clearSleep(); }                 // timer elapsed on a prior section → stay stopped
+  else if (sleepActive()) {                           // resume an in-progress timer from a prior section
+    sleepBtns.forEach(b => b.classList.remove("active"));   // no preset highlighted; countdown shows remaining
+    scheduleSleep();
+  }
+
+  // ---- Resume playback after autoplay/next navigation ----
+  if (wantResume && !sleepExpired) {
+    const tryPlay = () => audio.play().catch(() => {});
+    if (audio.readyState >= 2) tryPlay();
+    else audio.addEventListener("canplay", tryPlay, { once: true });
+  }
 
   if ("mediaSession" in navigator) {
     navigator.mediaSession.metadata = new MediaMetadata({ title: sync.title, artist: here.chapter || "", album: manifest.title });

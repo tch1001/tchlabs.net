@@ -1,51 +1,107 @@
 {
  "n": 2,
  "title": "What is a Strategy?",
- "duration": 78.0,
+ "duration": 232.92,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 1, section 2. What is a Strategy?"
+   "text": "Chapter one, section two. What is a Strategy?"
   },
   {
-   "t": 3.49,
-   "text": "In everyday life, a strategy might mean a rough plan, but in game theory the word has a very precise meaning."
+   "t": 3.38,
+   "text": "In everyday conversation, the word 'strategy' gets used loosely — someone might say their strategy is to play aggressively, or to be patient, or to trap their opponents."
   },
   {
-   "t": 10.54,
-   "text": "A strategy is a complete plan that tells you exactly what to do in every situation you could possibly face."
+   "t": 14.47,
+   "text": "In game theory, though, the word has a much more precise and demanding definition."
   },
   {
-   "t": 17.84,
-   "text": "Not just the situations you expect to see often, but every single one, including the rare and uncomfortable spots."
+   "t": 19.85,
+   "text": "Wikipedia captures it well: a strategy is a complete algorithm for playing the game, meaning it specifies exactly what a player will do in every possible situation that could arise during the game."
   },
   {
-   "t": 25.68,
-   "text": "Now, sometimes your plan is to always take one specific action in a given situation, and that is called a pure strategy."
+   "t": 32.06,
+   "text": "Not a general approach, not a rough style of play, but a specific, exhaustive prescription covering every possible situation without exception."
   },
   {
-   "t": 33.88,
-   "text": "Other times the best plan involves doing different things at different frequencies, and that is called a mixed strategy."
+   "t": 41.42,
+   "text": "To appreciate how demanding this definition is, think about what a complete poker strategy would actually require."
   },
   {
-   "t": 41.7,
-   "text": "A mixed strategy might say: in this spot, bet seventy percent of the time and check thirty percent of the time."
+   "t": 48.83,
+   "text": "It's not enough to say you play tight and aggressive before the flop."
   },
   {
-   "t": 48.48,
-   "text": "In poker, a strategy assigns an action, or a mix of actions with frequencies, to every hand you could hold in every position."
+   "t": 52.5,
+   "text": "A complete strategy needs to say exactly which hands you raise with, which you call with, and which you fold — and in what proportions — from every position, at every table size, against every possible betting action you might face."
   },
   {
-   "t": 56.55,
-   "text": "That sounds overwhelming, but the principle is simple: you have a rule for every spot before the hand even starts."
+   "t": 67.46,
+   "text": "And then it needs to describe all of that for every possible flop, every possible turn card, every possible river card, every possible action your opponents might have taken on every street."
   },
   {
-   "t": 64.34,
-   "text": "Think of it like a giant decision tree where every branch already has an answer written on it."
+   "t": 78.42,
+   "text": "Brokos gives a concrete illustration: imagine his pre-flop strategy when sitting first to act at a nine-handed table."
   },
   {
-   "t": 70.03,
-   "text": "When you play without a complete plan, opponents can find gaps and exploit them, and we will see exactly how that works very soon."
+   "t": 86.64,
+   "text": "He might raise three times the big blind with any pair of sevens or better, with ace-queen offsuit or better, and with any suited broadway hand."
+  },
+  {
+   "t": 96.14,
+   "text": "For suited connectors ranging from ten-nine suited down to seven-six suited, he might raise only twenty percent of the time — meaning four times out of five he folds that hand in that spot, and one time out of five he raises."
+  },
+  {
+   "t": 109.01,
+   "text": "He would fold everything else."
+  },
+  {
+   "t": 110.85,
+   "text": "But even that level of detail is only the beginning, because a complete strategy would also need to describe how he responds to a three-bet of various sizes from each of his opponents — a different answer potentially for every opponent, every three-bet size, and every hand in his range."
+  },
+  {
+   "t": 127.7,
+   "text": "The sheer volume of information required for a genuinely complete strategy is staggering, far beyond what any human being can hold in their head at once."
+  },
+  {
+   "t": 136.94,
+   "text": "This is one of the central reasons why computers are so valuable for studying game theory in a rigorous way: the machines can store and process the kind of exhaustive strategic detail that would completely overwhelm a human mind."
+  },
+  {
+   "t": 150.54,
+   "text": "Now, when we're actually sitting at a poker table, we're not going to be operating from anything close to a complete strategy in this formal sense."
+  },
+  {
+   "t": 159.04,
+   "text": "We make decisions situation by situation, drawing on pattern recognition, intuition, and whatever principles we've internalized from study."
+  },
+  {
+   "t": 167.65,
+   "text": "But here's the key insight from the book: even if we can't hold a complete strategy in our heads, we still need to think beyond the current moment."
+  },
+  {
+   "t": 176.26,
+   "text": "To make a good decision right now, we often need to consider what situations we might face later in the hand, and how we intend to respond to those situations."
+  },
+  {
+   "t": 185.74,
+   "text": "For example, if you're deciding whether to call a bet on the turn, part of that decision involves thinking about what you'll do on the river — what kinds of bets you'll be able to make, what kinds of bets you'll be able to call, what hands in your range can serve what purpose."
+  },
+  {
+   "t": 198.86,
+   "text": "Similarly, having some model of your opponent's likely strategy — what range of hands they might have, what they tend to do with strong hands versus weak ones — is essential for making good decisions yourself."
+  },
+  {
+   "t": 211.0,
+   "text": "Knowing that a particular river card would leave you vulnerable to bluffs, for instance, might influence which hands you call with on the turn."
+  },
+  {
+   "t": 218.82,
+   "text": "So even without a fully explicit strategy, you're always implicitly working with strategic frameworks, both for yourself and for your opponents."
+  },
+  {
+   "t": 228.06,
+   "text": "The game-theoretic definition just makes all of that explicit and rigorous."
   }
  ]
 }

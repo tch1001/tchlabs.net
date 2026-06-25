@@ -1,51 +1,199 @@
 {
  "n": 7,
  "title": "Optimal Calling Frequency",
- "duration": 68.54,
+ "duration": 339.65,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 2, section 7. Optimal calling frequency."
+   "text": "Chapter two, section seven. Optimal calling frequency."
   },
   {
-   "t": 4.25,
-   "text": "Let's talk about the defender's side of this in a more practical way."
+   "t": 4.17,
+   "text": "We have now worked out how often Ivan should bluff with his Queens in the Clairvoyance Game."
   },
   {
-   "t": 7.86,
-   "text": "When Opal bets, she is offering Ivan pot odds — a ratio of potential reward to required investment."
+   "t": 9.22,
+   "text": "The next question is the mirror image of that problem: after checking and facing a bet from Ivan, how often should Opal call?"
   },
   {
-   "t": 15.18,
-   "text": "The concept of minimum defense frequency says that Ivan must call or raise often enough so that Opal's bluffs can't be automatically profitable."
+   "t": 16.82,
+   "text": "The process for answering this question exactly parallels the process for finding Ivan's bluffing frequency."
   },
   {
-   "t": 24.35,
-   "text": "Here's a quick example: if Opal bets the size of the pot, Ivan needs to call at least half the time to keep her bluffs from being free money."
+   "t": 23.94,
+   "text": "We start by asking what Opal's calling strategy is designed to accomplish."
   },
   {
-   "t": 32.42,
-   "text": "With a half-pot bet, Ivan needs to call roughly two thirds of the time."
+   "t": 28.62,
+   "text": "Recall that Ivan's betting strategy was designed to make Opal indifferent between calling and folding."
   },
   {
-   "t": 36.96,
-   "text": "The exact numbers shift with every bet size, but the principle stays the same."
+   "t": 34.51,
+   "text": "By symmetry, Opal's calling strategy is designed to make Ivan indifferent between two options as well."
   },
   {
-   "t": 42.19,
-   "text": "Defend too little and every bluff Opal throws at you shows an immediate profit."
+   "t": 41.24,
+   "text": "But which two options?"
   },
   {
-   "t": 47.69,
-   "text": "Defend too much and you are paying off her value hands more than your hand strength warrants."
+   "t": 42.86,
+   "text": "For Ivan holding an Ace, there is no dilemma: betting is strictly better than checking, because he is guaranteed to win at showdown anyway and betting gives him a chance to win more."
   },
   {
-   "t": 52.83,
-   "text": "The sweet spot is the minimum defense frequency — where Opal's marginal bluff, the last one she adds to her range, earns exactly zero."
+   "t": 54.06,
+   "text": "There is nothing Opal can do to make Ivan hesitate when he holds the nuts."
   },
   {
-   "t": 62.36,
-   "text": "Get comfortable doing this math quickly, and you will never be a pushover when someone fires a big bet at you."
+   "t": 58.8,
+   "text": "The action Opal's calling strategy must target is Ivan's decision about whether to bet or check when he holds the Queen."
+  },
+  {
+   "t": 66.51,
+   "text": "Checking a Queen has an expected value of zero for Ivan: he always loses the pot at showdown, so he walks away with nothing, but he also risks no additional money."
+  },
+  {
+   "t": 76.17,
+   "text": "For Opal's calling strategy to be optimal, she needs to call at a frequency that makes betting a Queen also have an expected value of zero for Ivan."
+  },
+  {
+   "t": 84.9,
+   "text": "If betting a Queen has positive expected value, Ivan will bluff too aggressively and Opal will wish she had called more."
+  },
+  {
+   "t": 92.26,
+   "text": "If betting a Queen has negative expected value, Ivan will never bluff and Opal can fold every time he bets without cost."
+  },
+  {
+   "t": 100.34,
+   "text": "Only when betting a Queen has exactly zero expected value for Ivan — the same as checking — is the strategy balanced."
+  },
+  {
+   "t": 108.25,
+   "text": "Now let us write the expected value equation for Ivan when he bets a Queen."
+  },
+  {
+   "t": 112.46,
+   "text": "If Opal folds, Ivan wins the two dollars already in the pot."
+  },
+  {
+   "t": 116.62,
+   "text": "Note carefully: that two dollars is the net gain from the bet, because Ivan was going to lose the pot anyway."
+  },
+  {
+   "t": 123.11,
+   "text": "If Opal calls, Ivan loses the one dollar he bet."
+  },
+  {
+   "t": 126.69,
+   "text": "So the expected value equation is: EV equals fold-frequency times two dollars, minus call-frequency times one dollar."
+  },
+  {
+   "t": 135.34,
+   "text": "Since folding and calling are Opal's only two options, fold-frequency equals one minus call-frequency."
+  },
+  {
+   "t": 142.4,
+   "text": "Substituting: EV equals the quantity one minus call-frequency, times two, minus call-frequency times one."
+  },
+  {
+   "t": 150.56,
+   "text": "Setting EV equal to zero and solving: zero equals two minus two times call-frequency minus call-frequency, so zero equals two minus three times call-frequency, giving call-frequency equals two-thirds."
+  },
+  {
+   "t": 164.78,
+   "text": "Opal should call two-thirds of the time when Ivan bets."
+  },
+  {
+   "t": 168.16,
+   "text": "This calling frequency makes Ivan exactly indifferent between bluffing with his Queen and checking it."
+  },
+  {
+   "t": 174.94,
+   "text": "There is a general formula for this as well: the optimal calling frequency equals one minus the quantity Bet divided by Bet plus Pot."
+  },
+  {
+   "t": 183.45,
+   "text": "In the Clairvoyance Game with a one-dollar bet into a two-dollar pot, that is one minus one-third, which is two-thirds — consistent with our algebraic result."
+  },
+  {
+   "t": 193.04,
+   "text": "This formula is worth understanding in words: the larger Ivan's bet relative to the pot, the smaller the fraction of her range Opal needs to call in order to make bluffing unprofitable for him."
+  },
+  {
+   "t": 204.61,
+   "text": "When Ivan bets half the pot, Opal needs to call two-thirds of the time."
+  },
+  {
+   "t": 208.91,
+   "text": "When Ivan bets the full pot, she only needs to call half the time."
+  },
+  {
+   "t": 212.76,
+   "text": "When Ivan bets twice the pot, she only needs to call one-third of the time."
+  },
+  {
+   "t": 217.0,
+   "text": "The intuition is straightforward: larger bets cost more when they fail, so Ivan's bluffs become more expensive and Opal can afford to let more of them through."
+  },
+  {
+   "t": 227.35,
+   "text": "The book provides a table showing optimal calling frequencies for various bet sizes relative to the pot."
+  },
+  {
+   "t": 233.89,
+   "text": "At a quarter-pot bet, the optimal call frequency is four-fifths, or eighty percent."
+  },
+  {
+   "t": 239.68,
+   "text": "At a half-pot bet, it is two-thirds, or about sixty-seven percent."
+  },
+  {
+   "t": 244.5,
+   "text": "At a pot-sized bet, it is one-half, or fifty percent."
+  },
+  {
+   "t": 248.31,
+   "text": "At a bet of twice the pot, it is one-third, or about thirty-three percent."
+  },
+  {
+   "t": 253.11,
+   "text": "At a bet of ten times the pot, it drops all the way to one in eleven, or about nine percent."
+  },
+  {
+   "t": 259.03,
+   "text": "Calling frequency decreases monotonically as bet size increases."
+  },
+  {
+   "t": 264.45,
+   "text": "This has a critical practical implication."
+  },
+  {
+   "t": 266.85,
+   "text": "When you face a very large bet, you do not need to call very often to neutralize your opponent's bluffs."
+  },
+  {
+   "t": 272.81,
+   "text": "Many players feel that they should call large bets more often because the stakes are higher, but game theory says the opposite: large bets justify folding more of your range, as long as you retain some calling frequency at all."
+  },
+  {
+   "t": 286.2,
+   "text": "The reason you must retain some calling frequency no matter how large the bet is that if you fold one hundred percent of the time, bluffing becomes infinitely profitable for Ivan — he can win the whole pot with any two cards."
+  },
+  {
+   "t": 299.03,
+   "text": "The goal of your calling strategy is not to win money on every call but to ensure that bluffing does not become a free money machine for your opponent."
+  },
+  {
+   "t": 307.71,
+   "text": "As long as you call often enough that bluffing is zero EV for Ivan, you have done your job."
+  },
+  {
+   "t": 313.31,
+   "text": "Everything beyond that — the question of which specific hands to call with — is a separate discussion, but the frequency itself is determined by this indifference calculation."
+  },
+  {
+   "t": 323.73,
+   "text": "The same formula applies in real poker with different bet sizes and pot sizes, and while you will not solve equations at the table, having an intuitive sense of these frequencies will help you avoid the twin mistakes of calling too much or folding too much when facing polarized bets."
   }
  ]
 }

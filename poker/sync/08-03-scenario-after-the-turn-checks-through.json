@@ -1,55 +1,483 @@
 {
  "n": 3,
  "title": "Scenario: After the Turn Checks Through",
- "duration": 67.75,
+ "duration": 998.98,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 8, section 3. Scenario: After the Turn Checks Through."
+   "text": "Chapter eight, section three. Scenario: After the Turn Checks Through."
   },
   {
-   "t": 4.9,
-   "text": "Picture this: you're on the river after both players checked the turn."
+   "t": 5.08,
+   "text": "Let us now work through the central scenario of this chapter, step by step, examining the full equilibrium strategy for both players."
   },
   {
-   "t": 9.04,
-   "text": "That check-through tells you something important — neither player represented a strong hand on the turn."
+   "t": 13.97,
+   "text": "The setup is a nine-handed two-dollar, five-dollar no-limit hold 'em game with five hundred dollars effective stacks and no rake."
   },
   {
-   "t": 14.95,
-   "text": "Both ranges are now capped, meaning neither of you is likely to hold a true monster."
+   "t": 21.48,
+   "text": "The first player to act before the flop — Under the Gun, or UTG — raises to fifteen dollars."
   },
   {
-   "t": 20.2,
-   "text": "When both ranges are capped, the board dynamics on the river become the deciding factor."
+   "t": 28.44,
+   "text": "Only the big blind calls, so we go to the flop heads up."
   },
   {
-   "t": 25.66,
-   "text": "The player whose range connects better with the river card earns the right to bet for value."
+   "t": 31.55,
+   "text": "The flop comes ace of spades, nine of hearts, six of spades."
   },
   {
-   "t": 30.65,
-   "text": "Bluffing still works here, but only if your hand has no showdown value on its own."
+   "t": 35.8,
+   "text": "Big Blind checks, UTG bets half the pot, and Big Blind calls."
   },
   {
-   "t": 35.89,
-   "text": "Choose bluffs that unblock your opponent's folding range and block the hands they'd call with."
+   "t": 40.6,
+   "text": "The turn card is the four of diamonds, and both players check."
   },
   {
-   "t": 41.75,
-   "text": "If you're the defender facing a river bet after a turn check, your opponent's range is also capped."
+   "t": 44.46,
+   "text": "The river is the jack of diamonds."
   },
   {
-   "t": 47.84,
-   "text": "That means you can call down a bit wider than usual because their strongest hands have been filtered out."
+   "t": 46.71,
+   "text": "This is the starting point for our analysis: we have reached the river after the pot was built on the flop and then both players checked the turn."
   },
   {
-   "t": 53.75,
-   "text": "The right play is to match their bet sizing to the pot odds and then find enough bluff-catchers."
+   "t": 54.64,
+   "text": "Big Blind can check, or bet thirty-three percent of the pot, seventy-five percent of the pot, or two hundred percent of the pot — a massive overbet."
   },
   {
-   "t": 59.69,
-   "text": "Every tool you've learned — polarization, balance, blockers, indifference — is operating simultaneously in this spot."
+   "t": 63.67,
+   "text": "If Big Blind checks, UTG can bet seventy-five percent or two hundred percent of the pot."
+  },
+  {
+   "t": 69.88,
+   "text": "Either player is also permitted to raise to fifty percent of the pot when facing a bet."
+  },
+  {
+   "t": 75.5,
+   "text": "Now let us work through all eight key questions about the equilibrium strategy in this situation."
+  },
+  {
+   "t": 81.22,
+   "text": "Question one: which player has more equity when they reach the river in this way, and why?"
+  },
+  {
+   "t": 87.03,
+   "text": "The answer may be surprising at first glance — Big Blind has significantly more equity, about sixty-one percent, compared to UTG's thirty-nine percent."
+  },
+  {
+   "t": 97.44,
+   "text": "This is a solver result, and while the exact numbers depend on the assumptions built into the simulation, the directional conclusion is robust: Big Blind is the favorite on the river."
+  },
+  {
+   "t": 108.89,
+   "text": "Why would Big Blind, who called from out of position and then checked the turn without betting, be winning the equity battle on the river?"
+  },
+  {
+   "t": 116.34,
+   "text": "The answer lies in understanding how actions shape ranges."
+  },
+  {
+   "t": 120.5,
+   "text": "On the flop, UTG had the range advantage — UTG raised preflop from early position, which means a strong, tight starting range full of high-card combinations, strong aces, and medium to large pocket pairs, all of which connect well with an ace-nine-six board."
+  },
+  {
+   "t": 137.34,
+   "text": "So UTG bet the flop with a polarized range, meaning strong hands and bluffs, while Big Blind called with a condensed range of medium-strength holdings and some slowplayed monsters."
+  },
+  {
+   "t": 148.7,
+   "text": "Big Blind was forced to fold many of their weakest hands on the flop, which cut away the low end of their range and moved their average equity upward."
+  },
+  {
+   "t": 157.6,
+   "text": "On the turn, the same dynamic was expected to repeat: UTG would bet strong hands and some bluffs, while Big Blind would call with solid medium-strength hands."
+  },
+  {
+   "t": 168.11,
+   "text": "But both players checked the turn."
+  },
+  {
+   "t": 170.15,
+   "text": "When UTG checks the turn, that is highly informative."
+  },
+  {
+   "t": 174.2,
+   "text": "UTG has been playing a polarized betting strategy, meaning their strong hands mostly go into the betting range."
+  },
+  {
+   "t": 181.22,
+   "text": "A turn check suggests, strongly, that UTG does not have a very strong hand right now."
+  },
+  {
+   "t": 187.35,
+   "text": "UTG's turn-checking range contains some showdown-value hands and many weak hands that simply declined to bluff again."
+  },
+  {
+   "t": 195.09,
+   "text": "Essentially, UTG traded away most of their strong hands into the turn betting range from earlier streets — those hands are simply not available to them anymore on the river."
+  },
+  {
+   "t": 205.97,
+   "text": "Big Blind, by contrast, has been calling with a condensed range and slowplaying some strong hands throughout."
+  },
+  {
+   "t": 212.79,
+   "text": "Those slowplayed monsters — sets, top two pair, and strong top pairs — are still present in Big Blind's range on the river."
+  },
+  {
+   "t": 220.71,
+   "text": "So by the time the jack of diamonds hits on the river, Big Blind is holding a range that contains real strong hands, while UTG is holding a range that is relatively weak."
+  },
+  {
+   "t": 231.4,
+   "text": "That is not a mistake by UTG — it is a deliberate tradeoff, the cost of having executed a polarized betting strategy on earlier streets."
+  },
+  {
+   "t": 240.54,
+   "text": "Question two: which player is better positioned to bet a polarized range on the river?"
+  },
+  {
+   "t": 246.07,
+   "text": "Both players will bet polarized ranges when they get the opportunity, but Big Blind's polarized betting range will be meaningfully wider."
+  },
+  {
+   "t": 253.71,
+   "text": "The logic here flows directly from what we just established."
+  },
+  {
+   "t": 258.15,
+   "text": "The player with the condensed range keeps checking to the player with the polarized range — that is the equilibrium dynamic on earlier streets."
+  },
+  {
+   "t": 266.53,
+   "text": "But once the player with the polarized range stops betting — as UTG did when checking the turn — an opportunity opens up for the previously passive player to take the betting lead."
+  },
+  {
+   "t": 277.33,
+   "text": "On the river, Big Blind is in exactly that position: UTG has checked the turn and weakened their range, and now Big Blind gets to bet a polarized range of their own."
+  },
+  {
+   "t": 287.78,
+   "text": "For Big Blind to bet a polarized range, they need both strong hands and weak hands — a value region and a bluffing region."
+  },
+  {
+   "t": 296.07,
+   "text": "The strong hands in Big Blind's polarized range come from three sources."
+  },
+  {
+   "t": 300.8,
+   "text": "First, there are slowplayed premium hands: combinations like ace-nine, pocket nines, and pocket sixes that were strong enough to check-raise the flop but that Big Blind just called as a deliberate trap."
+  },
+  {
+   "t": 313.91,
+   "text": "By slowplaying these on the flop and checking the turn, Big Blind has hidden their strength and now gets to bet them as apparent out-of-nowhere aggression on the river, which is very hard for UTG to play against."
+  },
+  {
+   "t": 326.01,
+   "text": "Second, there are hands that were not strong enough to raise the flop but that improved on the turn or river, including hands like jack-nine suited and ace-four."
+  },
+  {
+   "t": 335.4,
+   "text": "The jack-nine combination is particularly interesting here because the river jack gave it two pair, and the four of diamonds made ace-four two pair as well."
+  },
+  {
+   "t": 344.47,
+   "text": "Not many hands improved in this way on this particular runout, but on other boards — say, if a spade had fallen completing the flush draw, or a ten had come in completing a straight — there would have been many more such improved hands available."
+  },
+  {
+   "t": 358.15,
+   "text": "Third, there are hands that were not strong enough to play a huge pot but that are strong enough to bet for thin value on the river: ace-ten is the key example here."
+  },
+  {
+   "t": 367.9,
+   "text": "Ace-ten is not a hand you want to check-raise the flop with, because check-raising commits you to a trajectory where you put four bets into the pot, and ace-ten with a bad kicker is not a hand you want to build a four-bet pot with against UTG's strong preflop range."
+  },
+  {
+   "t": 383.3,
+   "text": "But calling the flop and then betting the river for two bets total — that is a perfectly fine plan for ace-ten."
+  },
+  {
+   "t": 390.17,
+   "text": "On the bluffing side, Big Blind has some candidates, though they are fewer than you might expect, because Big Blind had to have something to call the flop with."
+  },
+  {
+   "t": 398.36,
+   "text": "Big Blind's truly unpaired hands are limited: king-queen of spades, and hands like ten-eight and eight-seven that missed straight draws."
+  },
+  {
+   "t": 407.36,
+   "text": "Those hands always bluff when Big Blind bets, because they have no showdown value."
+  },
+  {
+   "t": 412.86,
+   "text": "But they do not fill enough of a bluffing range on their own, so Big Blind also uses their weakest pairs — six-five suited and seven-six suited — as bluffs for certain bet sizes."
+  },
+  {
+   "t": 423.91,
+   "text": "Question three: what are the weakest hands Big Blind bets for value, and what bluffs balance those bets?"
+  },
+  {
+   "t": 430.46,
+   "text": "This is where bet sizing becomes crucial, because the answer changes dramatically depending on how large Big Blind bets."
+  },
+  {
+   "t": 438.23,
+   "text": "At the smallest bet size — thirty-three percent of the pot, which is sometimes called a blocking bet — Big Blind can bet as thin as ace-ten for value."
+  },
+  {
+   "t": 447.35,
+   "text": "The reason is that a small bet forces UTG to call with a very wide range in order to prevent Big Blind from bluffing profitably, and when UTG must call with many weak hands, Big Blind can profit by betting weaker value hands."
+  },
+  {
+   "t": 461.56,
+   "text": "At seventy-five percent of the pot, the thinnest value bet is ace-king."
+  },
+  {
+   "t": 466.27,
+   "text": "At twice the pot — the massive overbet — Big Blind cannot even bet jack-nine for value; the threshold rises to ace-jack or better."
+  },
+  {
+   "t": 475.23,
+   "text": "The bluffs used to balance these value ranges are always drawn from the weakest hands in Big Blind's range: the missed straight draws, the spade combos, and the weakest pairs, as described above."
+  },
+  {
+   "t": 486.67,
+   "text": "Question four: what are the worst hands Big Blind calls with after checking, when UTG bets?"
+  },
+  {
+   "t": 492.93,
+   "text": "Against a seventy-five percent pot bet, Big Blind never folds when they hold an ace or a jack — those hands always call."
+  },
+  {
+   "t": 501.15,
+   "text": "Big Blind folds most combinations of pocket nines, though they are roughly indifferent with those hands."
+  },
+  {
+   "t": 507.57,
+   "text": "Against a two hundred percent pot overbet, Big Blind's calling range narrows sharply, because now UTG is demanding that Big Blind risk a very large amount to stay in."
+  },
+  {
+   "t": 518.66,
+   "text": "Jack-nine and pocket nines always call the overbet."
+  },
+  {
+   "t": 522.36,
+   "text": "Ace-jack and pocket jacks are split between calling and raising — they are strong enough to play for stacks, and raising is sometimes the right move."
+  },
+  {
+   "t": 531.52,
+   "text": "Hands that contain just a pair of aces become indifferent between calling and folding, regardless of what kicker they hold alongside the ace."
+  },
+  {
+   "t": 540.5,
+   "text": "That last point is particularly revealing about UTG's strategy: the fact that Big Blind's kicker does not matter tells us that UTG should not include just a single pair in their overbet value range, because if UTG's overbet value range contained one-pair hands, then the kicker would matter a great deal — an ace with a king would beat an ace with a five."
+  },
+  {
+   "t": 562.83,
+   "text": "Since the kicker does not matter, we can infer that UTG's two-hundred-percent value range must contain two pair or better, not mere one-pair hands."
+  },
+  {
+   "t": 572.73,
+   "text": "Now here is one of the most instructive blocker effects in the entire scenario: Big Blind never folds when they have a jack in their hand, regardless of what UTG bets."
+  },
+  {
+   "t": 582.97,
+   "text": "Think carefully about why."
+  },
+  {
+   "t": 584.63,
+   "text": "The jack is a blocker to the hands UTG is most likely to be betting for value here: ace-jack and pocket jacks."
+  },
+  {
+   "t": 592.02,
+   "text": "If Big Blind holds a jack, they have removed one of those combinations from UTG's possible holdings."
+  },
+  {
+   "t": 598.65,
+   "text": "The risk of being up against a strong hand is meaningfully lower when Big Blind holds a jack."
+  },
+  {
+   "t": 604.33,
+   "text": "So instead of folding, Big Blind always does something with a jack — sometimes they call, and sometimes they raise as a bluff, but they never simply give up."
+  },
+  {
+   "t": 613.9,
+   "text": "Question five: what hands should Big Blind check-raise for value, and what bluffs balance those check-raises?"
+  },
+  {
+   "t": 620.52,
+   "text": "Big Blind check-raises ace-jack and pocket jacks for value almost exclusively, regardless of UTG's bet size."
+  },
+  {
+   "t": 629.07,
+   "text": "Pocket nines are included as a check-raise at the smaller bet size but not the overbet."
+  },
+  {
+   "t": 634.51,
+   "text": "This creates a fascinating strategic wrinkle: against the overbet, Big Blind raises the weaker hand — ace-jack — but calls with the stronger hand — pocket nines."
+  },
+  {
+   "t": 645.28,
+   "text": "In our toy games, we never encountered a situation where a player raised with a weaker holding and called with a stronger one."
+  },
+  {
+   "t": 652.25,
+   "text": "The explanation is all about blockers."
+  },
+  {
+   "t": 654.87,
+   "text": "When Big Blind check-raises ace-jack, they have a jack in hand."
+  },
+  {
+   "t": 658.3,
+   "text": "That jack blocks UTG from holding pocket jacks or ace-jack themselves, which are the main hands that would crush Big Blind's check-raise."
+  },
+  {
+   "t": 666.77,
+   "text": "The risk of running into a monster is reduced."
+  },
+  {
+   "t": 669.73,
+   "text": "When Big Blind has pocket nines, they hold no jack, so the risk of UTG having pocket jacks or ace-jack is higher, making a check-raise riskier than it might initially appear."
+  },
+  {
+   "t": 681.13,
+   "text": "Against the overbet in particular, where Big Blind must commit a very large amount to raise, the danger of running into a jack-high hand is severe enough that Big Blind prefers to call with pocket nines rather than risk a check-raise."
+  },
+  {
+   "t": 694.06,
+   "text": "The blocker is genuinely the deciding factor."
+  },
+  {
+   "t": 697.23,
+   "text": "For bluffing check-raises, Big Blind always uses hands that contain a jack."
+  },
+  {
+   "t": 702.6,
+   "text": "There are two complementary reasons for this."
+  },
+  {
+   "t": 705.13,
+   "text": "First and most obviously, having a jack in hand blocks the strong jack-containing hands UTG might hold, reducing the probability of getting called by a monster."
+  },
+  {
+   "t": 715.12,
+   "text": "Second, and more subtly, a hand with a jack has some showdown value — there is a real chance it wins at showdown if checked down."
+  },
+  {
+   "t": 723.56,
+   "text": "That parallels the lesson from the Ace-to-Five game, where Opal check-raised tens, nines, eights, and sevens as bluffs but not sixes and fives."
+  },
+  {
+   "t": 733.65,
+   "text": "The hands that are so weak they have no showdown value prefer to just bet outright rather than check — they need to generate fold equity immediately."
+  },
+  {
+   "t": 743.35,
+   "text": "The hands that have a little bit of showdown value can afford to check first, and if UTG bets, that is new information suggesting that perhaps Big Blind's marginal jack is not good enough after all, which gives Big Blind the incentive to sometimes turn it into a bluff by raising."
+  },
+  {
+   "t": 760.1,
+   "text": "Question six: what does UTG's raising range look like when facing Big Blind's bet?"
+  },
+  {
+   "t": 765.99,
+   "text": "UTG raises more liberally against smaller bets, because a small bet implies a wider range, and wider ranges contain more weak hands worth isolating."
+  },
+  {
+   "t": 776.42,
+   "text": "Against a thirty-three percent pot bet, UTG is indifferent between calling and raising with ace-king."
+  },
+  {
+   "t": 783.7,
+   "text": "Against a seventy-five percent pot bet, UTG needs ace-jack to raise for value."
+  },
+  {
+   "t": 789.62,
+   "text": "Against the two hundred percent overbet, UTG also raises ace-jack — but here, raising ace-jack functions as a bluff, not value."
+  },
+  {
+   "t": 799.4,
+   "text": "The logic is that Big Blind sometimes folds pocket sixes, pocket nines, and even ace-jack to this raise, making it profitable even though UTG's hand is not that strong."
+  },
+  {
+   "t": 810.3,
+   "text": "UTG's bluff raises also shift based on bet size, and blockers are the deciding factor."
+  },
+  {
+   "t": 816.53,
+   "text": "Against the small bet, it is most valuable to block ace-king and ace-queen, because those are the thin-value hands Big Blind is betting, so UTG's bluffing hands include king-queen, king-jack, and even pocket kings — pocket kings has no showdown value here because if it does not raise, it will fold, so it might as well try to fold out Big Blind's better holdings."
+  },
+  {
+   "t": 838.07,
+   "text": "Against larger bets, UTG wants to block jacks, because jacks dominate the strong hands Big Blind would continue with, so UTG's bluffs shift to queen-jack, jack-ten, and even ace-jack when facing the overbet."
+  },
+  {
+   "t": 851.23,
+   "text": "Question seven: what are the weakest hands UTG calls with when facing Big Blind's bet?"
+  },
+  {
+   "t": 857.18,
+   "text": "Against the thirty-three percent pot bet, UTG is indifferent to calling with pocket tens and pocket sevens."
+  },
+  {
+   "t": 864.67,
+   "text": "Against seventy-five percent, UTG is indifferent with jack-ten, ace-five, and ace-ten."
+  },
+  {
+   "t": 871.82,
+   "text": "Against the two hundred percent overbet, UTG is indifferent with ace-king, ace-queen, queen-jack, and jack-ten."
+  },
+  {
+   "t": 879.63,
+   "text": "Notice the direct relationship here: as the bet grows larger, UTG must call with stronger hands and can let go of weaker ones."
+  },
+  {
+   "t": 888.17,
+   "text": "And as UTG calls with stronger hands, Big Blind can bet for value with stronger hands only — which is exactly the pattern we observed in Question three."
+  },
+  {
+   "t": 897.9,
+   "text": "The two constraints are linked: the calling threshold and the value-betting threshold move in lockstep, because they must — that is what equilibrium demands."
+  },
+  {
+   "t": 907.9,
+   "text": "Question eight: what are the weakest hands UTG bets for value when Big Blind checks, and what bluffs balance those bets?"
+  },
+  {
+   "t": 915.47,
+   "text": "At seventy-five percent of the pot, UTG can bet for value down to ace-queen."
+  },
+  {
+   "t": 920.72,
+   "text": "Notice that this is a weaker hand than Big Blind can bet for the same size from out of position."
+  },
+  {
+   "t": 926.02,
+   "text": "This is exactly the positional advantage we saw in the Ace-to-Five game: the player in position can make thinner value bets than the player out of position, because being in position is safer — you get to see your opponent's action before committing, and if they show aggression, you can get away from a marginal hand."
+  },
+  {
+   "t": 943.64,
+   "text": "At two hundred percent of the pot, UTG needs ace-jack or better for a value bet."
+  },
+  {
+   "t": 948.87,
+   "text": "For bluffs, UTG is in an interesting spot: against Big Blind's checking range, UTG has a lot of showdown value with medium-strength hands, which means those medium hands are better served by checking and trying to win at showdown rather than betting."
+  },
+  {
+   "t": 964.57,
+   "text": "UTG draws their bluffs from their very weakest hands: unpaired holdings like queen-ten, king-ten, and king-queen, as well as their lowest pocket pairs."
+  },
+  {
+   "t": 975.14,
+   "text": "These are hands with little to no chance of winning a showdown, so turning them into bluffs is the natural play."
+  },
+  {
+   "t": 981.69,
+   "text": "The entire eight-question analysis reveals a beautifully interlocked system where every decision by one player constrains and is constrained by the decisions of the other, and where blockers serve as the final, precise tiebreaker that determines which specific hand goes into which specific role."
   }
  ]
 }

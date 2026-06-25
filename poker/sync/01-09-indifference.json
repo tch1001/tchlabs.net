@@ -1,55 +1,199 @@
 {
  "n": 9,
  "title": "Indifference",
- "duration": 78.17,
+ "duration": 358.8,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 1, section 9. Indifference."
+   "text": "Chapter one, section nine. Indifference."
   },
   {
-   "t": 3.15,
-   "text": "The result from that game reveals a principle that sits at the core of all optimal poker strategy."
+   "t": 3.23,
+   "text": "The Dodging a Debt analysis leads us directly to one of the most important and counterintuitive concepts in poker game theory: indifference."
   },
   {
-   "t": 9.54,
-   "text": "When a player uses a mixed strategy at equilibrium, they must be exactly indifferent between the actions they are mixing."
+   "t": 12.51,
+   "text": "Let's start with exactly what happened when we proved the equilibrium in the previous section."
   },
   {
-   "t": 16.66,
-   "text": "Indifferent means both actions produce the same expected value; you genuinely do not care which one you take."
+   "t": 17.85,
+   "text": "When Christina plays her equilibrium strategy of going to each room with fifty percent probability, we showed that no matter what David does — go to Room A always, go to Room B always, flip a coin, go to Room A seventy percent of the time, any percentage at all — his expected value is always fifty dollars."
   },
   {
-   "t": 23.55,
-   "text": "That sounds strange at first: why would you mix if it does not matter?"
+   "t": 37.29,
+   "text": "In game theory vocabulary, we say that Christina's equilibrium strategy makes David indifferent between all of his available strategies."
   },
   {
-   "t": 27.39,
-   "text": "The answer is that your mixing is not for your own benefit in that moment; it is to prevent your opponent from exploiting you."
+   "t": 45.96,
+   "text": "He has no preference among them — they're all equally good, which means they're all equally bad, which means none of them can be called the 'right' play."
   },
   {
-   "t": 34.4,
-   "text": "If one action had higher expected value than the other, you would never take the worse one, and your play would become predictable."
+   "t": 54.55,
+   "text": "Similarly, David's equilibrium strategy of going to each room with fifty percent probability makes Christina indifferent between all of her strategies."
   },
   {
-   "t": 41.73,
-   "text": "Your opponent, knowing you would never do the lower-value action, could then adjust and exploit that gap."
+   "t": 64.53,
+   "text": "No matter what she does, her EV is negative fifty dollars."
   },
   {
-   "t": 48.49,
-   "text": "By mixing in exactly the right proportions, you remove any edge your opponent could gain from knowing your strategy."
+   "t": 68.99,
+   "text": "Now why does this matter for poker?"
   },
   {
-   "t": 55.49,
-   "text": "Indifference is the stability condition that keeps a mixed equilibrium from collapsing into something exploitable."
+   "t": 70.84,
+   "text": "Because indifference is actually what you're trying to create when you play correctly."
   },
   {
-   "t": 63.36,
-   "text": "In poker, when a solver mixes between a bet and a check in some spot, it is because both actions have the same expected value at equilibrium."
+   "t": 75.24,
+   "text": "Think about a river situation where you might bet or check with a particular hand."
   },
   {
-   "t": 72.2,
-   "text": "Learning to recognize and create indifference in your opponent is one of the deepest skills in the game."
+   "t": 79.76,
+   "text": "If you always bet for value and never bluff, your opponent can simply fold every time you bet and call every time you check."
+  },
+  {
+   "t": 87.21,
+   "text": "Your play is transparent — they always know what to do."
+  },
+  {
+   "t": 90.72,
+   "text": "But if you always bluff in certain spots, your opponent can call you every time."
+  },
+  {
+   "t": 95.29,
+   "text": "Again, they always know what to do."
+  },
+  {
+   "t": 97.78,
+   "text": "The ideal scenario — the game-theoretically sound scenario — is to play in such a way that your opponent has no clearly correct response."
+  },
+  {
+   "t": 106.62,
+   "text": "If your betting range is constructed so that calling and folding have exactly the same EV for your opponent, then your opponent is indifferent — there is no right play."
+  },
+  {
+   "t": 116.76,
+   "text": "You can't force your opponent to make a mistake in the sense of taking an action that is objectively clearly wrong."
+  },
+  {
+   "t": 123.16,
+   "text": "What you can do is make the decision so close that it's hard to get right, and human beings under pressure will inevitably err."
+  },
+  {
+   "t": 130.41,
+   "text": "Here's a telling example from the book about how sensitive this is."
+  },
+  {
+   "t": 134.68,
+   "text": "If Christina were to go to Room A fifty-one percent of the time instead of exactly fifty percent, then David would have a clear best response: always go to Room A."
+  },
+  {
+   "t": 145.38,
+   "text": "He'd find Christina fifty-one percent of the time instead of fifty percent, which over the long run translates to more money collected."
+  },
+  {
+   "t": 154.15,
+   "text": "That one-percent shift away from fifty is enough to make one room strictly better than the other for David."
+  },
+  {
+   "t": 160.47,
+   "text": "Only at exactly fifty percent does Christina make David completely indifferent, giving him absolutely no advantage from choosing one room over the other."
+  },
+  {
+   "t": 170.43,
+   "text": "This illustrates something important about equilibrium strategies: they are precisely calibrated."
+  },
+  {
+   "t": 176.32,
+   "text": "Getting the frequencies even slightly wrong creates exploitability."
+  },
+  {
+   "t": 181.1,
+   "text": "The book also addresses an important point about real-world poker players and their preferences."
+  },
+  {
+   "t": 186.7,
+   "text": "In practice, people play poker with all sorts of motivations that aren't purely about maximizing expected value."
+  },
+  {
+   "t": 193.96,
+   "text": "Some players are risk-averse — they hate losing big pots even if the expected value math says taking the risk is correct."
+  },
+  {
+   "t": 202.0,
+   "text": "Some are risk-seeking — they love gambling, they enjoy the thrill of big swings, and they'll accept worse expected value in exchange for more variance."
+  },
+  {
+   "t": 212.07,
+   "text": "Some care about how they're perceived at the table and won't make unconventional plays even when those plays are profitable."
+  },
+  {
+   "t": 219.29,
+   "text": "Brokos acknowledges all of that and explicitly sets it aside."
+  },
+  {
+   "t": 223.47,
+   "text": "The framework in this book assumes that all players are trying to maximize their expected value and nothing else."
+  },
+  {
+   "t": 229.8,
+   "text": "That is a simplifying assumption, not a statement about how real humans actually behave."
+  },
+  {
+   "t": 235.89,
+   "text": "But here's the practical implication: even if you have other motivations yourself, understanding your opponents' preferences can be a major edge."
+  },
+  {
+   "t": 244.22,
+   "text": "A risk-averse player can be bluffed more easily because they hate losing big pots."
+  },
+  {
+   "t": 249.43,
+   "text": "A risk-loving player can be value-bet more aggressively because they'll call with weaker hands for the thrill of having a shot at the pot."
+  },
+  {
+   "t": 256.96,
+   "text": "A player obsessed with protecting their hand will fold the turn to a raise even when calling is clearly the better EV play."
+  },
+  {
+   "t": 264.16,
+   "text": "Understanding those deviations from pure EV-maximization is how you craft exploitative strategies."
+  },
+  {
+   "t": 271.3,
+   "text": "In game-theoretic analysis, indifference has a precise definition: two options are indifferent when they produce the same expected value."
+  },
+  {
+   "t": 279.47,
+   "text": "A player who is indifferent between two options has no preference between them — neither is better or worse by the only criterion we're using, which is EV."
+  },
+  {
+   "t": 288.56,
+   "text": "In poker terms, the goal is to construct your ranges and frequencies so that your opponents face exactly these kinds of indifference situations — spots where calling and folding produce the same result for them, or where betting and checking produce the same result for them."
+  },
+  {
+   "t": 304.67,
+   "text": "That's the standard that equilibrium strategies are designed to achieve."
+  },
+  {
+   "t": 308.65,
+   "text": "And finally, the book offers a reframe that might change how you think about the goal of poker."
+  },
+  {
+   "t": 314.4,
+   "text": "Most players think about poker in terms of inducing mistakes: they want their opponent to call when they should fold, or fold when they should call."
+  },
+  {
+   "t": 322.53,
+   "text": "The game-theoretic reframe is to think about creating indifference: make the decisions so close and so difficult that there is no obviously correct answer."
+  },
+  {
+   "t": 332.52,
+   "text": "If you can put your opponent in a spot where calling and folding are genuinely equal, then whatever they do is neither right nor wrong — but in practice, humans faced with genuinely difficult decisions will make errors, and those errors are where your edge comes from."
+  },
+  {
+   "t": 347.43,
+   "text": "That shift in perspective — from inducing specific mistakes to creating difficult situations — is one of the most fundamental things this book tries to accomplish."
   }
  ]
 }

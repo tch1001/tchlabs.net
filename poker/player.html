@@ -41,6 +41,18 @@
     <button data-rate="1.75">1.75×</button>
     <button data-rate="2">2×</button>
   </div>
+  <div class="extras">
+    <label class="toggle"><input type="checkbox" id="autoplayToggle" checked> Autoplay next</label>
+    <div class="sleep" id="sleepBtns">
+      <span class="sleep-label">Sleep</span>
+      <button data-min="0" class="active">Off</button>
+      <button data-min="15">15m</button>
+      <button data-min="30">30m</button>
+      <button data-min="45">45m</button>
+      <button data-min="60">60m</button>
+      <span class="sleep-remain" id="sleepRemain"></span>
+    </div>
+  </div>
 </footer>
 
 <audio id="audio" preload="metadata"></audio>

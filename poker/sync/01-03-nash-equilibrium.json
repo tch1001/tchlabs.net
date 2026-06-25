@@ -1,51 +1,175 @@
 {
  "n": 3,
  "title": "Nash Equilibrium",
- "duration": 81.98,
+ "duration": 270.38,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 1, section 3. Nash Equilibrium."
+   "text": "Chapter one, section three. Nash Equilibrium."
   },
   {
-   "t": 3.88,
-   "text": "A Nash equilibrium is a pair of strategies, one for each player, where neither player can improve their results by changing only their own strategy."
+   "t": 3.81,
+   "text": "With the definition of strategy in hand, we can now define what game theorists mean by an equilibrium — specifically, what's called a Nash Equilibrium, named after the mathematician John Nash."
   },
   {
-   "t": 13.26,
-   "text": "Think about what that really means: your opponent could know your exact strategy down to every frequency, and they still cannot beat you."
+   "t": 15.74,
+   "text": "Here is the formal definition: an equilibrium is a set of strategies for all players in a game such that no player has any incentive to deviate unilaterally from their strategy."
   },
   {
-   "t": 22.04,
-   "text": "That is an extraordinary property, and it is what people mean when they say a strategy is unexploitable."
+   "t": 26.48,
+   "text": "Let's unpack what that means, because every word in that definition matters."
   },
   {
-   "t": 28.66,
-   "text": "At equilibrium, any adjustment your opponent tries to make will not help them, because your strategy already accounts for it."
+   "t": 31.1,
+   "text": "First, an equilibrium is not a single player's strategy — it's a set of strategies, one for each player in the game."
   },
   {
-   "t": 35.85,
-   "text": "Equilibrium does not mean you will win every hand, or even most hands, it means no one can gain an edge over you through strategy alone."
+   "t": 38.9,
+   "text": "An equilibrium describes what every player is doing, all at the same time."
   },
   {
-   "t": 44.01,
-   "text": "John Nash proved that every finite game has at least one equilibrium, which means one always exists in poker, even if finding it is hard."
+   "t": 43.76,
+   "text": "Second, the defining condition is that no player has any incentive to deviate unilaterally."
   },
   {
-   "t": 53.51,
-   "text": "In two-player poker, the equilibrium strategies are often called GTO strategies, short for game-theory optimal."
+   "t": 50.4,
+   "text": "Unilaterally means one player acting on their own, without any change in what the other players are doing."
   },
   {
-   "t": 60.56,
-   "text": "Playing GTO guarantees you a certain minimum result: you will never be losing money to a player who is also playing GTO."
+   "t": 56.48,
+   "text": "So the test is: if I told you exactly how I was going to play, and you told me exactly how you were going to play, would either of us want to change anything?"
   },
   {
-   "t": 68.79,
-   "text": "And against anyone who deviates from equilibrium, you have the opportunity to exploit them and do even better."
+   "t": 65.3,
+   "text": "If neither of us wants to change even after we have complete information about the other's plan, then we're at an equilibrium."
   },
   {
-   "t": 75.88,
-   "text": "Equilibrium is your floor, not your ceiling, but it is a very solid floor to stand on."
+   "t": 72.35,
+   "text": "That might sound abstract, so let's look at the example the book uses to make it concrete."
+  },
+  {
+   "t": 77.01,
+   "text": "Imagine two cars driving toward each other on a road, moving in opposite directions."
+  },
+  {
+   "t": 82.54,
+   "text": "Each driver has three choices: stay to the right side of the road from their own perspective, stay to the left side, or drive straight down the middle."
+  },
+  {
+   "t": 91.03,
+   "text": "Neither driver has any inherent preference about which side of the road they use — they just want to avoid a collision."
+  },
+  {
+   "t": 97.45,
+   "text": "Successfully passing each other safely is worth one point to each driver."
+  },
+  {
+   "t": 102.05,
+   "text": "A collision is worth negative ten points to each — a very bad outcome for everyone involved."
+  },
+  {
+   "t": 108.34,
+   "text": "We can lay out the entire game in a simple grid where the rows represent what Driver One does and the columns represent what Driver Two does, and each cell shows the payoffs for both players."
+  },
+  {
+   "t": 119.9,
+   "text": "If Driver One stays right and Driver Two stays right, both get one point — safe passage."
+  },
+  {
+   "t": 126.22,
+   "text": "If Driver One stays right and Driver Two stays left, they collide — both get negative ten."
+  },
+  {
+   "t": 132.21,
+   "text": "If Driver One stays right and Driver Two goes down the middle, again, collision — negative ten for both."
+  },
+  {
+   "t": 138.78,
+   "text": "If both drivers go down the middle, they collide — negative ten each."
+  },
+  {
+   "t": 143.03,
+   "text": "The only cells where both players get the payoff of one are the one where both go right and the one where both go left."
+  },
+  {
+   "t": 149.76,
+   "text": "Now let's apply the equilibrium definition to the case where both drivers stay to their right."
+  },
+  {
+   "t": 155.09,
+   "text": "Driver One is getting one point — the maximum possible payoff in this game."
+  },
+  {
+   "t": 159.99,
+   "text": "If Driver One unilaterally switches to driving left or down the middle while Driver Two keeps going right, Driver One gets negative ten instead of one."
+  },
+  {
+   "t": 169.85,
+   "text": "That's clearly worse."
+  },
+  {
+   "t": 171.39,
+   "text": "The same logic applies to Driver Two: any unilateral change from 'stay right' makes things worse, not better."
+  },
+  {
+   "t": 178.6,
+   "text": "So 'both drive right' is an equilibrium."
+  },
+  {
+   "t": 181.93,
+   "text": "By exactly the same logic, 'both drive left' is also an equilibrium."
+  },
+  {
+   "t": 186.4,
+   "text": "Neither player can do better by changing alone."
+  },
+  {
+   "t": 189.53,
+   "text": "Notice that there are two equilibria here, and neither is inherently better than the other — they produce identical payoffs."
+  },
+  {
+   "t": 197.44,
+   "text": "The real world reflects this: in the United States, the convention is to drive on the right, while in the United Kingdom and some former British colonies, the convention is to drive on the left."
+  },
+  {
+   "t": 208.57,
+   "text": "Both are stable equilibria; what matters is simply that everyone within a given system agrees on which one to use."
+  },
+  {
+   "t": 216.15,
+   "text": "It's also worth noting what never happens in this game: no rational driver would drive straight down the middle."
+  },
+  {
+   "t": 223.14,
+   "text": "No matter what the other driver does, going down the middle produces either a collision — negative ten — or another collision."
+  },
+  {
+   "t": 230.29,
+   "text": "There is literally no scenario in which it helps."
+  },
+  {
+   "t": 233.22,
+   "text": "In game theory vocabulary, this is called a dominated strategy — one that is always worse than at least one of the available alternatives, regardless of what the other players do."
+  },
+  {
+   "t": 244.39,
+   "text": "A rational player never plays a dominated strategy."
+  },
+  {
+   "t": 248.35,
+   "text": "This example also makes clear something important about what equilibrium does and doesn't mean."
+  },
+  {
+   "t": 254.0,
+   "text": "It doesn't mean the strategies produce the best possible outcome in some absolute sense."
+  },
+  {
+   "t": 259.97,
+   "text": "It means that given what the other players are doing, no single player can improve their own situation by changing their own approach."
+  },
+  {
+   "t": 267.15,
+   "text": "That self-stability is the defining feature."
   }
  ]
 }

@@ -1,59 +1,375 @@
 {
  "n": 2,
  "title": "Scenario: The Ace-to-Five Game",
- "duration": 78.94,
+ "duration": 758.52,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 6, section 2. The ace-to-five game."
+   "text": "Chapter six, section two. Scenario: The Ace-to-Five Game."
   },
   {
-   "t": 3.83,
-   "text": "Imagine each player is dealt a single card ranked from ace down to five, where ace is best."
+   "t": 4.74,
+   "text": "Here is the setup."
   },
   {
-   "t": 10.06,
-   "text": "There is no binary nuts-or-air divide here — every rank from ace to five represents a different level of strength."
+   "t": 6.36,
+   "text": "Two players, Opal and Ivan, each receive one card from a ten-card deck containing exactly one card of each rank from Five up through Ace."
   },
   {
-   "t": 17.34,
-   "text": "At the end of the hand, the player with the higher card wins a showdown."
+   "t": 15.35,
+   "text": "Both players post a one-dollar ante, creating a two-dollar pot before any betting begins."
   },
   {
-   "t": 21.43,
-   "text": "One player gets to bet or check; the other can call or fold."
+   "t": 21.18,
+   "text": "The game allows only a single round of betting, and the only permitted bet size is one dollar."
   },
   {
-   "t": 25.82,
-   "text": "Because hands are spread across a full spectrum, the bettor needs to figure out where value ends and bluffing begins."
+   "t": 26.94,
+   "text": "Opal acts first: she can either bet one dollar or check."
   },
   {
-   "t": 33.12,
-   "text": "The strongest hands near the top of the range bet for value because they win at showdown often enough."
+   "t": 30.93,
+   "text": "If she checks, Ivan may then bet one dollar or check behind."
   },
   {
-   "t": 39.38,
-   "text": "The very weakest hands near the bottom bluff because they cannot win at showdown anyway."
+   "t": 35.24,
+   "text": "There is no raising — whichever player faces a bet can only call or fold."
   },
   {
-   "t": 44.77,
-   "text": "The medium hands in between are the interesting ones — they are often better off checking than doing either."
+   "t": 39.76,
+   "text": "If neither player folds, the hand goes to showdown and the highest card wins."
   },
   {
-   "t": 50.77,
-   "text": "The caller faces an equally interesting problem: call with hands that beat enough of the bettor's value range."
+   "t": 44.76,
+   "text": "That's the whole game, but don't be fooled by its simplicity — the equilibrium strategies that emerge are quite intricate, and unpacking them reveals a tremendous amount about how real poker works."
   },
   {
-   "t": 57.39,
-   "text": "A calling threshold emerges naturally from the pot odds — hands above that line call, hands below fold."
+   "t": 56.86,
+   "text": "Let's walk through the equilibrium starting with the most fundamental question Ivan faces: when Opal bets, which hands should he call?"
   },
   {
-   "t": 64.42,
-   "text": "The beauty of this game is that all three zones — value, check-back, and bluff — form from the same ranked range."
+   "t": 64.53,
+   "text": "At equilibrium, Ivan calls one hundred percent of the time with Ace, King, Queen, and Jack."
   },
   {
-   "t": 72.36,
-   "text": "You can see that where a hand sits in the continuum determines its role, not just whether it is strong or weak."
+   "t": 70.46,
+   "text": "Below that, his strategy becomes mixed: he calls with a Ten eighty-three percent of the time, with a Nine fifty-nine percent, with an Eight forty-two percent, and with a Seven sixteen percent."
+  },
+  {
+   "t": 82.29,
+   "text": "He always folds a Six and always folds a Five."
+  },
+  {
+   "t": 85.75,
+   "text": "The first question to address is which of these calls are genuinely profitable, which are money-losing, and which are neutral."
+  },
+  {
+   "t": 92.96,
+   "text": "The Ace, King, Queen, and Jack are all automatic calls — one hundred percent, no mixing — and that alone signals that these are positive expected value calls."
+  },
+  {
+   "t": 104.15,
+   "text": "The interesting case is the Jack, because Opal can value bet a Jack herself, meaning the Jack does not beat the entire value portion of Opal's betting range."
+  },
+  {
+   "t": 113.92,
+   "text": "However, when Ivan holds a Jack, he knows with certainty that Opal cannot also hold a Jack, so Opal's betting range is slightly imbalanced in ways that are favorable to Ivan — it is tilted a bit more toward bluffs relative to what Ivan's range-wide calling frequency would otherwise assume."
+  },
+  {
+   "t": 131.5,
+   "text": "That blocking effect is enough to make calling with a Jack a positive expected value play."
+  },
+  {
+   "t": 137.28,
+   "text": "The Six is the mirror image of the Jack: a Six can beat some of Opal's bluffs, but it also blocks one of Opal's potential bluffing hands, meaning that when Ivan holds a Six, Opal is actually less likely to be bluffing than her overall bluffing frequency would suggest."
+  },
+  {
+   "t": 153.09,
+   "text": "That makes calling with a Six a money-losing proposition for Ivan, even though it looks like it could beat some of Opal's range."
+  },
+  {
+   "t": 160.54,
+   "text": "The Tens, Nines, Eights, and Sevens are all equivalent to each other in strategic terms — these are the pure bluff-catchers, the hands that lose to every value bet but beat every bluff."
+  },
+  {
+   "t": 172.41,
+   "text": "At equilibrium, Opal's betting range is polarized, meaning she bets strong hands for value and weak hands as bluffs, with nothing in the middle."
+  },
+  {
+   "t": 181.78,
+   "text": "That structural fact is what allows Ivan's Seven to function just as well as his Ten as a bluff-catcher, because a Seven beats all the same bluffs that a Ten does."
+  },
+  {
+   "t": 192.75,
+   "text": "Ivan can mix his calls any way he likes across the Seven-through-Ten group, as long as the total calling frequency across those four hands reaches the right level."
+  },
+  {
+   "t": 202.59,
+   "text": "What is that level?"
+  },
+  {
+   "t": 203.71,
+   "text": "Ivan needs to call with two thirds of his possible holdings when facing a bet."
+  },
+  {
+   "t": 208.25,
+   "text": "This is the same math we saw in earlier games: Opal is risking one dollar to win a two-dollar pot, so Ivan must call at a frequency that denies her a positive expected value bluff."
+  },
+  {
+   "t": 219.03,
+   "text": "Ivan starts with ten cards in the deck, but since Opal holds one of them, Ivan effectively has nine possible holdings."
+  },
+  {
+   "t": 226.39,
+   "text": "Two thirds of nine is six, so Ivan must call with the equivalent of six out of nine hands."
+  },
+  {
+   "t": 232.51,
+   "text": "Four of those — Ace, King, Queen, and Jack — are unambiguous calls, giving him four out of nine right away."
+  },
+  {
+   "t": 240.3,
+   "text": "He needs the equivalent of two more calls from the Seven-through-Ten group."
+  },
+  {
+   "t": 244.44,
+   "text": "Notice something elegant here: in the table given for Ivan's equilibrium strategy, if you add up all four of the mixed calling frequencies for Ten, Nine, Eight, and Seven — eighty-three percent plus fifty-nine percent plus forty-two percent plus sixteen percent — those sum to two hundred percent, which is exactly the same as calling two of those hands one hundred percent of the time and folding the other two entirely."
+  },
+  {
+   "t": 269.27,
+   "text": "That confirms the math: Ivan is calling with exactly two equivalent hands worth of bluff-catching from that group."
+  },
+  {
+   "t": 276.55,
+   "text": "Now let's look at Opal's betting strategy, because this is where things get really interesting."
+  },
+  {
+   "t": 281.57,
+   "text": "At equilibrium Opal's betting range is indeed polarized: she bets the Ace, King, Queen, and Jack for value, and she bets the Six and Five as bluffs."
+  },
+  {
+   "t": 291.82,
+   "text": "She never bets a Ten, Nine, Eight, or Seven."
+  },
+  {
+   "t": 295.49,
+   "text": "Her exact betting frequencies are: Ace at eighty-one percent, King at seventy-three percent, Queen at sixty-three percent, and Jack at fifty-seven percent."
+  },
+  {
+   "t": 305.59,
+   "text": "For bluffs: Six at thirty-six percent, Five at fifty-six percent."
+  },
+  {
+   "t": 310.44,
+   "text": "The fact that she is mixing — not betting any of these at one hundred percent — means she is indifferent between betting and checking with each of them."
+  },
+  {
+   "t": 318.84,
+   "text": "So why is a Jack in the value betting portion of this range?"
+  },
+  {
+   "t": 322.09,
+   "text": "After all, a Jack will lose to an Ace, King, or Queen if called, and it only beats the Tens, Nines, Eights, and Sevens that might call it."
+  },
+  {
+   "t": 331.72,
+   "text": "The key insight is this: when Opal holds a Jack, and Ivan holds something better, she is already going to lose a bet one way or another."
+  },
+  {
+   "t": 340.59,
+   "text": "She cannot simply check and avoid that loss, because Ivan will bet his stronger hand into her, and Opal should call."
+  },
+  {
+   "t": 347.44,
+   "text": "Either way, a bet goes into the pot and Opal loses it."
+  },
+  {
+   "t": 351.47,
+   "text": "Given that reality, the right question is not whether to put in a bet — that's effectively already decided — but rather how to make that unavoidable bet go in under the most favorable conditions possible."
+  },
+  {
+   "t": 363.09,
+   "text": "When Opal bets her Jack, she may get called by a Ten, Nine, Eight, or Seven, and she beats all of those."
+  },
+  {
+   "t": 370.87,
+   "text": "When she checks her Jack and faces a bet, she gets value from the Tens, Sixes, and Fives in Ivan's range."
+  },
+  {
+   "t": 377.69,
+   "text": "At equilibrium, both of these options produce the same expected value, which is why Opal mixes between them."
+  },
+  {
+   "t": 384.13,
+   "text": "This is one of the clearest illustrations in the book of why checking to control the pot — what players sometimes call pot control — is not actually a free option for the player out of position."
+  },
+  {
+   "t": 395.14,
+   "text": "Now let's move to Ivan's betting strategy when Opal checks."
+  },
+  {
+   "t": 399.03,
+   "text": "At equilibrium, Ivan bets one hundred percent of the time with Ace, King, Queen, and Jack."
+  },
+  {
+   "t": 405.24,
+   "text": "He bets fifty percent of the time with a Ten, and he also bets fifty percent of the time with a Six."
+  },
+  {
+   "t": 411.43,
+   "text": "He always bets a Five — one hundred percent — and never bets a Nine, Eight, or Seven."
+  },
+  {
+   "t": 417.3,
+   "text": "One of the most striking features here is that Ivan can value bet a Ten, while Opal never bets a Ten."
+  },
+  {
+   "t": 423.65,
+   "text": "Why does Ivan get this privilege?"
+  },
+  {
+   "t": 425.55,
+   "text": "It comes down to the informational advantage of acting second."
+  },
+  {
+   "t": 429.3,
+   "text": "When Opal checks, she reveals something about her range."
+  },
+  {
+   "t": 432.8,
+   "text": "She doesn't reveal everything, because she does check some strong hands as traps, but she has strong incentive to bet a polarized range, meaning her checking range is genuinely weaker on average than Ivan's overall range, which has not yet revealed anything."
+  },
+  {
+   "t": 448.23,
+   "text": "Because Opal's checking range contains more medium and weak hands than Ivan's full starting range, Ivan is less likely to run into a better hand when he bets a Ten, which shifts the expected value of that bet enough to make it competitive with checking."
+  },
+  {
+   "t": 463.24,
+   "text": "Opal keeps Ivan indifferent to value betting a Ten precisely by checking a certain number of strong hands — her Jacks, Queens, Kings, and Aces at their mixed frequencies."
+  },
+  {
+   "t": 474.98,
+   "text": "If she never checked a strong hand, Ivan would strictly prefer to bet a Ten every time."
+  },
+  {
+   "t": 480.44,
+   "text": "Her checking frequency with strong hands is calibrated to just barely make Ivan indifferent."
+  },
+  {
+   "t": 486.69,
+   "text": "Now for the bluffing asymmetry, which is one of the most subtle and important results in this chapter."
+  },
+  {
+   "t": 493.15,
+   "text": "Ivan always bluffs with a Five, but only bluffs with a Six fifty percent of the time."
+  },
+  {
+   "t": 498.07,
+   "text": "This is unusual: at equilibrium, Ivan's Five is not a break-even bluff — it is actually a positive expected value bluff."
+  },
+  {
+   "t": 507.14,
+   "text": "How can a bluff be strictly profitable at equilibrium?"
+  },
+  {
+   "t": 511.22,
+   "text": "The answer lies in the fact that Ivan has two possible bluffing candidates — Five and Six — and checking with a Six is slightly better than checking with a Five, because a Six can occasionally win at showdown against a Five, while a Five can never win."
+  },
+  {
+   "t": 525.59,
+   "text": "Opal cannot simultaneously make Ivan indifferent to bluffing with both his Five and his Six, because those two hands have different values when checked."
+  },
+  {
+   "t": 535.5,
+   "text": "Opal could call at a higher frequency that would make the Five a break-even bluff, but doing so would require either checking more strong hands — costing her value — or calling with more weak hands — making Ivan's value bets more profitable."
+  },
+  {
+   "t": 549.39,
+   "text": "The cost of that adjustment is too high, so Opal instead calibrates her check-calling frequency to make the Six indifferent to bluffing, which leaves the Five as a perpetually profitable bluff."
+  },
+  {
+   "t": 561.75,
+   "text": "This is one of the position advantages Ivan enjoys: his worst hands generate small but guaranteed profits, something Opal cannot achieve from out of position."
+  },
+  {
+   "t": 571.57,
+   "text": "Now let's look at Opal's check-calling strategy when Ivan bets after she checks."
+  },
+  {
+   "t": 576.4,
+   "text": "Opal always calls with a Ten or better — including her trapped Aces, Kings, Queens, and Jacks at their residual checking frequencies."
+  },
+  {
+   "t": 585.54,
+   "text": "She also calls with a Nine forty-nine percent of the time, an Eight forty-two percent, and a Seven forty percent."
+  },
+  {
+   "t": 592.93,
+   "text": "She never calls with a Six or Five."
+  },
+  {
+   "t": 594.97,
+   "text": "The Ten is worth focusing on: Ivan value bets his own Tens, which means that when Opal holds a Ten, she blocks a portion of Ivan's value range, making his overall betting range slightly more bluff-heavy relative to what it would look like without that blocking effect."
+  },
+  {
+   "t": 611.05,
+   "text": "That makes calling with a Ten a positive expected value decision for Opal, not a break-even one, which is why she calls with it one hundred percent rather than mixing."
+  },
+  {
+   "t": 620.79,
+   "text": "Opal's objective when constructing this check-calling range is to make Ivan indifferent to bluffing with a Six."
+  },
+  {
+   "t": 627.97,
+   "text": "Notice she is not trying to make him indifferent to bluffing with a Five — that bluff is already profitable and there is nothing she can cost-effectively do about it."
+  },
+  {
+   "t": 637.64,
+   "text": "Her target is the Six: call at a frequency that makes a Six a zero expected value bluff."
+  },
+  {
+   "t": 644.28,
+   "text": "She also does not need to count the hands she folds that are worse than a Six — like Fives — as part of Ivan's free pass, because Ivan doesn't gain anything from betting a Six and having Opal fold a Five."
+  },
+  {
+   "t": 656.57,
+   "text": "Those extra folds are irrelevant to the indifference calculation."
+  },
+  {
+   "t": 660.6,
+   "text": "Let's summarize the equilibrium to crystallize all of this."
+  },
+  {
+   "t": 664.63,
+   "text": "Opal bets a polarized range — Jacks through Aces for value, Fives and Sixes as bluffs — at mixed frequencies that leave her indifferent between betting and checking each of those hands."
+  },
+  {
+   "t": 677.03,
+   "text": "The overall ratio of value bets to bluffs in her range is three to one, which is exactly right for a half-pot bet that offers the caller two-to-one odds."
+  },
+  {
+   "t": 686.69,
+   "text": "Ivan, when facing that bet, calls with two thirds of his range — all his Jacks and better automatically, plus just enough of the Seven-through-Ten group to reach two thirds overall."
+  },
+  {
+   "t": 697.94,
+   "text": "When Opal checks, Ivan bets a wider polarized range than Opal could achieve: Jacks through Aces always, Tens half the time, Fives always, and Sixes half the time, again in a three-to-one ratio of value to bluffs."
+  },
+  {
+   "t": 712.14,
+   "text": "Opal, facing Ivan's bet, calls with her Tens and better automatically and calls with enough of her Sevens, Eights, and Nines to make Ivan's Six a break-even bluff."
+  },
+  {
+   "t": 723.17,
+   "text": "Position is worth exactly twelve cents in this game: Opal's expected value is ninety-four cents, while Ivan's is one dollar and six cents."
+  },
+  {
+   "t": 732.87,
+   "text": "The amounts at stake are small in this toy game, but the six-cent positional edge is real and persistent regardless of how well Opal plays — it is built into the structure of the game itself."
+  },
+  {
+   "t": 744.41,
+   "text": "What makes the Ace-to-Five Game so valuable as a teaching tool is that the equilibrium is complex enough that real, non-trivial mistakes are easy to imagine, and as we'll see in the next section, those mistakes are expensive."
   }
  ]
 }

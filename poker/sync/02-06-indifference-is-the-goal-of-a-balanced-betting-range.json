@@ -1,47 +1,271 @@
 {
  "n": 6,
  "title": "Indifference is the Goal of a Balanced Betting Range",
- "duration": 60.53,
+ "duration": 459.65,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 2, section 6. Indifference is the goal of a balanced betting range."
+   "text": "Chapter two, section six. Indifference is the goal of a balanced betting range."
   },
   {
-   "t": 5.4,
-   "text": "So what does Opal actually control when she picks her bet size?"
+   "t": 5.5,
+   "text": "Now we are ready to work out the precise mathematics of Ivan's bluffing frequency in the Clairvoyance Game."
   },
   {
-   "t": 9.2,
-   "text": "She controls the pot odds she offers Ivan, which in turn determines how often Ivan needs to call to defend correctly."
+   "t": 12.39,
+   "text": "Before diving into the algebra, let us clarify what Ivan's betting range is actually trying to accomplish."
   },
   {
-   "t": 16.45,
-   "text": "And the number of bluffs she should include in her betting range follows directly from that."
+   "t": 19.11,
+   "text": "An intuitive first answer might be that when Ivan bets with a Queen, he is trying to make Opal fold her King."
   },
   {
-   "t": 21.71,
-   "text": "If Opal bets half the pot, she needs a different bluff-to-value ratio than if she bets pot."
+   "t": 25.34,
+   "text": "That is technically correct as a description of what he hopes happens on any individual hand where he holds the Queen."
   },
   {
-   "t": 27.51,
-   "text": "The goal in both cases is the same: make Ivan's bluff-catchers earn the same amount whether he calls or folds."
+   "t": 32.5,
+   "text": "But it is not a complete description of what his range — which includes both Aces and Queens — is trying to accomplish."
   },
   {
-   "t": 34.8,
-   "text": "When she achieves that, Ivan has no single response that beats her."
+   "t": 39.61,
+   "text": "When Ivan bets an Ace, he wants Opal to call."
   },
   {
-   "t": 39.05,
-   "text": "He can call, he can fold, or he can flip a coin — and his expectation stays the same."
+   "t": 42.34,
+   "text": "When Ivan bets a Queen, he wants Opal to fold."
   },
   {
-   "t": 44.95,
-   "text": "That's what a balanced range means in practice — not that you have equal numbers of bluffs and value hands, but that you have the right ratio for the size you chose."
+   "t": 45.44,
+   "text": "These two desires seem contradictory, so what is the unified goal of the range?"
   },
   {
-   "t": 54.0,
-   "text": "Build your range around that target ratio, and your opponent loses the ability to exploit you."
+   "t": 50.64,
+   "text": "The answer is indifference."
+  },
+  {
+   "t": 52.34,
+   "text": "The purpose of a balanced betting range is to make the opponent indifferent between calling and folding."
+  },
+  {
+   "t": 58.12,
+   "text": "If Ivan constructs his range correctly, Opal will have no profitable deviation — calling and folding will be equally good for her."
+  },
+  {
+   "t": 66.69,
+   "text": "This is the only approach that cannot be exploited."
+  },
+  {
+   "t": 69.6,
+   "text": "Any strategy in which Ivan plays Aces differently from Queens — such as betting larger with Aces to build the pot or using some physical tell with Queens — would risk being deciphered by Opal."
+  },
+  {
+   "t": 81.85,
+   "text": "Once she notices a difference, she can call when she expects him to have an Ace and fold when she expects him to have a Queen."
+  },
+  {
+   "t": 88.47,
+   "text": "Only by playing both hands identically — the same bet size, the same timing, the same everything — can Ivan guarantee that his betting tells Opal nothing about which hand he holds."
+  },
+  {
+   "t": 100.11,
+   "text": "Now let us do the math."
+  },
+  {
+   "t": 101.58,
+   "text": "The EV of folding for Opal is zero dollars."
+  },
+  {
+   "t": 105.05,
+   "text": "She put in one dollar as an ante, but that money is already in the pot and no longer belongs to her — it is a sunk cost."
+  },
+  {
+   "t": 112.61,
+   "text": "If she folds when Ivan bets, she neither gains nor loses any additional money."
+  },
+  {
+   "t": 118.35,
+   "text": "Her EV from folding is exactly zero."
+  },
+  {
+   "t": 121.56,
+   "text": "To make Opal indifferent, Ivan must construct a betting range such that calling also has an EV of zero for Opal."
+  },
+  {
+   "t": 129.1,
+   "text": "When Opal calls and Ivan was bluffing with a Queen, Opal wins the two dollars already in the pot plus the one dollar bet, for a total gain of three dollars."
+  },
+  {
+   "t": 139.4,
+   "text": "When Opal calls and Ivan was value betting with an Ace, Opal loses the one dollar she puts in to call."
+  },
+  {
+   "t": 145.82,
+   "text": "So the expected value of calling equals the bluffing frequency times three dollars, minus the value-betting frequency times one dollar."
+  },
+  {
+   "t": 154.59,
+   "text": "In equation form: EV equals percent-bluff times three dollars minus percent-value times one dollar."
+  },
+  {
+   "t": 161.95,
+   "text": "We also know that the bluffing frequency and the value-betting frequency must sum to one — every bet is either a bluff or a value bet, with no other possibilities."
+  },
+  {
+   "t": 173.03,
+   "text": "So we can replace percent-value with the quantity one minus percent-bluff."
+  },
+  {
+   "t": 177.6,
+   "text": "Substituting that in: EV equals percent-bluff times three, minus the quantity one minus percent-bluff, all times one."
+  },
+  {
+   "t": 186.14,
+   "text": "Setting EV equal to zero and solving for percent-bluff: zero equals three times percent-bluff minus one plus percent-bluff, which gives us four times percent-bluff equals one, so percent-bluff equals one-quarter."
+  },
+  {
+   "t": 200.51,
+   "text": "Ivan's betting range should consist of one-quarter bluffs and three-quarters value bets."
+  },
+  {
+   "t": 206.06,
+   "text": "For every four bets Ivan makes, three should be Aces and one should be a Queen."
+  },
+  {
+   "t": 211.12,
+   "text": "That one-quarter bluffing frequency is what makes Opal exactly indifferent between calling and folding."
+  },
+  {
+   "t": 218.07,
+   "text": "There is a simpler way to express this result that generalizes to any bet size and pot size."
+  },
+  {
+   "t": 224.61,
+   "text": "The optimal bluff-to-value ratio equals the bet size divided by the sum of the bet size and the pot size."
+  },
+  {
+   "t": 231.82,
+   "text": "In the Clairvoyance Game with a one-dollar bet into a two-dollar pot, that ratio is one divided by one plus two, which equals one-third."
+  },
+  {
+   "t": 240.74,
+   "text": "Wait — that gives one-third, not one-quarter."
+  },
+  {
+   "t": 244.01,
+   "text": "The ratio of bluffs to total bets is one-quarter, but the ratio of bluffs to value bets is one-to-three, meaning one bluff for every three value bets."
+  },
+  {
+   "t": 254.86,
+   "text": "The fraction of bets that are bluffs is one-quarter, which is consistent with the formula Bet divided by Bet plus Pot equaling one divided by three equaling one-third — but let us restate this precisely."
+  },
+  {
+   "t": 268.01,
+   "text": "The formula Bet divided by Bet plus Pot gives the proportion of Ivan's bets that are bluffs: with a one-dollar bet into a two-dollar pot, that is one divided by three, approximately thirty-three percent."
+  },
+  {
+   "t": 280.43,
+   "text": "Actually, let us revisit the arithmetic carefully."
+  },
+  {
+   "t": 283.81,
+   "text": "With a one-dollar bet and a two-dollar pot, the formula gives one divided by one plus two equals one-third."
+  },
+  {
+   "t": 290.3,
+   "text": "But our algebraic solution said one-quarter."
+  },
+  {
+   "t": 293.5,
+   "text": "The reason for this apparent discrepancy is how we set up the EV equation."
+  },
+  {
+   "t": 298.45,
+   "text": "When Opal wins a call, she wins three dollars: the two-dollar pot plus the one-dollar bet."
+  },
+  {
+   "t": 304.91,
+   "text": "So the equation is three times bluff-frequency minus one times value-frequency equals zero, yielding bluff-frequency equals one-quarter."
+  },
+  {
+   "t": 314.08,
+   "text": "The formula Bet divided by Bet plus Pot applies when computing bluff-to-value ratios for a pot that has already incorporated the bet from both players, and care must be taken about what counts as the pot."
+  },
+  {
+   "t": 327.02,
+   "text": "Regardless of the precise formula, the conceptual takeaway is robust and important: the optimal bluffing proportion in a betting range increases as the bet size increases relative to the pot."
+  },
+  {
+   "t": 339.67,
+   "text": "The book provides a table illustrating this relationship across a wide range of bet sizes."
+  },
+  {
+   "t": 345.67,
+   "text": "At a quarter-pot bet, the bluffing frequency is one-sixth — roughly seventeen percent."
+  },
+  {
+   "t": 352.1,
+   "text": "At a half-pot bet, it is one-quarter or twenty-five percent."
+  },
+  {
+   "t": 356.15,
+   "text": "At a pot-sized bet, it is one-third or about thirty-three percent."
+  },
+  {
+   "t": 360.5,
+   "text": "At a bet of twice the pot, it is two-fifths or forty percent."
+  },
+  {
+   "t": 364.98,
+   "text": "The bluffing frequency keeps rising with the bet size but never reaches fifty percent."
+  },
+  {
+   "t": 370.75,
+   "text": "A bluffing frequency of fifty percent or higher would always make calling profitable for Opal, regardless of bet size, because at that point she is winning often enough to overcome the unfavorable odds when she loses."
+  },
+  {
+   "t": 383.9,
+   "text": "Two practical factors govern how much you get to bluff in a real poker situation."
+  },
+  {
+   "t": 389.28,
+   "text": "The first is the number of value bets you can credibly have."
+  },
+  {
+   "t": 392.68,
+   "text": "The more strong hands you could plausibly hold in a given spot, the more bluffs you get to include alongside them."
+  },
+  {
+   "t": 399.01,
+   "text": "In spots where your range is rich with strong hands, you have more room to bluff."
+  },
+  {
+   "t": 403.95,
+   "text": "The second factor is how large your bet is relative to the pot."
+  },
+  {
+   "t": 407.71,
+   "text": "Bigger bets afford you a higher bluffing frequency because they offer your opponent worse pot odds."
+  },
+  {
+   "t": 413.6,
+   "text": "When you bet small, your opponent is getting such a favorable price that they should call even knowing they will lose most of the time — so there is less room for bluffs."
+  },
+  {
+   "t": 422.78,
+   "text": "When you bet large, your opponent needs a higher probability of catching a bluff to justify calling, which means you need more bluffs in your range to make calling worthwhile for them."
+  },
+  {
+   "t": 432.47,
+   "text": "The practical implication is that your bluffing frequency should scale upward when you bet larger — and crucially, you should use the same bet size for both value bets and bluffs."
+  },
+  {
+   "t": 443.46,
+   "text": "If large bets were always bluffs and small bets always value, a competent opponent could simply fold to large bets and call small ones."
+  },
+  {
+   "t": 453.22,
+   "text": "The key is that the same bet size communicates both possibilities, forcing the opponent to guess."
   }
  ]
 }

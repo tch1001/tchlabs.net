@@ -1,55 +1,71 @@
 {
  "n": 1,
  "title": "Overview & Objectives",
- "duration": 67.63,
+ "duration": 180.0,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 7, section 1. Overview and objectives."
+   "text": "Chapter seven, section one. Overview and objectives."
   },
   {
-   "t": 4.21,
-   "text": "Up to now, when someone bet at you, your only choices were to call or to fold."
+   "t": 4.34,
+   "text": "Up to this point in our study of toy games, we have deliberately left one option off the table — the raise."
   },
   {
-   "t": 9.47,
-   "text": "That kept things tidy, but it left out one of the most powerful moves in poker: the raise."
+   "t": 10.9,
+   "text": "Every game we have analyzed so far allowed players to bet or check, and when facing a bet, to call or fold, but nobody could come back over the top with a raise."
   },
   {
-   "t": 15.25,
-   "text": "Adding a raise as an option changes the entire game, for both the raiser and the original bettor."
+   "t": 20.95,
+   "text": "That restriction kept the math manageable while we built intuition about betting frequencies, bluff-to-value ratios, and how polarized ranges interact with condensed ranges."
   },
   {
-   "t": 21.74,
-   "text": "A raise is not just a bigger call — it puts the other player in a completely new situation."
+   "t": 32.21,
+   "text": "Now it's time to remove that restriction and ask: what actually changes when a player is allowed to raise?"
   },
   {
-   "t": 27.46,
-   "text": "Now they have to decide whether to continue, and the price of doing so has just jumped."
+   "t": 38.73,
+   "text": "The answer turns out to be more nuanced than you might expect, and it reveals some deep principles about how range construction works under pressure."
   },
   {
-   "t": 32.51,
-   "text": "Your raising range, just like your betting range, must be polarized to work correctly."
+   "t": 46.86,
+   "text": "The central insight of this chapter is that raising is a form of pressure — specifically, it is pressure applied against the bettor's range rather than against the checker's range."
   },
   {
-   "t": 37.86,
-   "text": "That means it should contain your strongest hands and your best bluffs, with the middle folded away."
+   "t": 57.38,
+   "text": "When you are deciding whether to bet, you are choosing to expose your hand to potential counter-pressure in the form of a raise, and that possibility changes which hands benefit most from betting and which hands would rather avoid the whole confrontation."
   },
   {
-   "t": 43.64,
-   "text": "The threat of a raise reshapes how the original bettor has to construct their betting range in the first place."
+   "t": 71.2,
+   "text": "The chapter works through this idea systematically by taking two games we already understand — the Reciprocal Ranges Game and the Ace-to-Five Game — and rerunning them with raising added as an option."
   },
   {
-   "t": 50.29,
-   "text": "In this chapter we add raising to the toy games you already know and watch everything shift."
+   "t": 83.55,
+   "text": "We will see that in one of those games, adding raising barely changes anything, while in the other it reshapes the entire equilibrium strategy in ways that are surprising and instructive."
   },
   {
-   "t": 55.8,
-   "text": "You will also learn how to exploit players who raise too often, too rarely, or in the wrong way."
+   "t": 95.35,
+   "text": "After working through the equilibrium analysis, the chapter shifts to exploitation — four specific scenarios in which one player deviates from equilibrium, and we must figure out exactly how the other player should respond."
   },
   {
-   "t": 61.83,
-   "text": "By the end, raising will feel less like aggression and more like a precision instrument."
+   "t": 108.38,
+   "text": "These exploitation scenarios cover a wide range of real-world mistakes: never bluff-raising, value betting too thinly, value betting too thickly, and refusing to call raises without the absolute nuts."
+  },
+  {
+   "t": 122.45,
+   "text": "Finally, the chapter grounds everything in practical poker with a set of test problems featuring an actual hand played from first position with ace-eight of spades, walking through three streets of decision-making on a real board."
+  },
+  {
+   "t": 136.14,
+   "text": "By the time you finish this chapter, you should have a clear sense of how raising changes the calculus of betting, why polarized ranges are so difficult to raise against, how medium-strength hands suffer most when facing pressure from either bets or raises, and how to build exploitative raising strategies when your opponent makes a specific mistake."
+  },
+  {
+   "t": 155.72,
+   "text": "Those are the three stated learning objectives: appreciate the strategic role of raising, explain how the possibility of a raise affects betting strategy, and adapt both betting and raising strategies to exploit specific opponent errors."
+  },
+  {
+   "t": 170.25,
+   "text": "Let's begin with the simplest possible environment in which to study raising — a game where the equilibrium is already very clean and the deck has only three cards."
   }
  ]
 }

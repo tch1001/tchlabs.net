@@ -1,51 +1,259 @@
 {
  "n": 8,
  "title": "What's This Game Worth?",
- "duration": 67.39,
+ "duration": 404.64,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 2, section 8. What's this game worth?"
+   "text": "Chapter two, section eight. What's this game worth?"
   },
   {
-   "t": 3.27,
-   "text": "Now let's ask a different question: how much does the player with the polarized range actually win in this setup?"
+   "t": 3.46,
+   "text": "We have now solved the equilibrium strategies for both players in the Clairvoyance Game."
   },
   {
-   "t": 9.35,
-   "text": "The answer depends heavily on bet size."
+   "t": 8.51,
+   "text": "Opal always checks and calls Ivan's bets two-thirds of the time."
   },
   {
-   "t": 12.03,
-   "text": "Bigger bets extract more money when the value hand is called, and they also require bigger folds when the bluff lands."
+   "t": 12.93,
+   "text": "Ivan always bets his Aces and bluffs with his Queens one-third of the time."
   },
   {
-   "t": 19.43,
-   "text": "The polarized player — Opal — wins more on average with larger bets, assuming she sizes her bluffs correctly each time."
+   "t": 17.3,
+   "text": "The natural follow-up question is: what does this all add up to?"
   },
   {
-   "t": 27.4,
-   "text": "The condensed player — Ivan in this case — actually does better when Opal bets smaller, because smaller bets are cheaper to defend against."
+   "t": 20.99,
+   "text": "What is the game actually worth to each player when both are playing optimally?"
   },
   {
-   "t": 36.01,
-   "text": "This reveals something important about the value of having the betting initiative."
+   "t": 25.05,
+   "text": "Before calculating, the book poses a variation on the game that sharpens the intuition."
   },
   {
-   "t": 40.69,
-   "text": "When you are the one who gets to choose whether and how much to bet, you hold enormous power in a polarized spot."
+   "t": 30.94,
+   "text": "Suppose Ivan can bet any amount from one dollar up to one thousand dollars — he has complete freedom to choose his bet size and construct his range however he wishes."
   },
   {
-   "t": 47.29,
-   "text": "You can choose the size that maximizes your value, and your opponent has to react."
+   "t": 41.27,
+   "text": "How much should he bet, and why?"
   },
   {
-   "t": 52.34,
-   "text": "Ivan can defend correctly no matter what size Opal picks, but he can never fully neutralize the advantage she holds by having the better information."
+   "t": 43.11,
+   "text": "Hold that question in mind as we work through the value calculation for the original game."
   },
   {
-   "t": 61.0,
-   "text": "That information edge, the fact that she knows her range while he doesn't, is the real engine of her profit."
+   "t": 47.88,
+   "text": "The cleanest way to calculate Ivan's EV is to exploit a key property of balanced betting ranges."
+  },
+  {
+   "t": 54.49,
+   "text": "We have established that Ivan's balanced range makes Opal indifferent between calling and folding."
+  },
+  {
+   "t": 60.33,
+   "text": "Indifference means that both actions yield exactly the same EV for Opal."
+  },
+  {
+   "t": 65.1,
+   "text": "It does not matter whether Opal always calls, always folds, or uses any mixture in between — her EV is the same."
+  },
+  {
+   "t": 73.83,
+   "text": "Since her calling decision does not affect the outcome, let us make the calculation as simple as possible by imagining that Opal always folds when Ivan bets."
+  },
+  {
+   "t": 83.5,
+   "text": "If Opal always folds, Ivan wins the two-dollar pot every single time he bets, regardless of whether he is holding an Ace or a Queen."
+  },
+  {
+   "t": 92.1,
+   "text": "When Ivan checks — which only happens when he holds a Queen and decides not to bluff — he goes to showdown and loses the two-dollar pot."
+  },
+  {
+   "t": 100.39,
+   "text": "Now let us compute Ivan's overall betting frequency."
+  },
+  {
+   "t": 104.08,
+   "text": "Half the time Ivan is dealt an Ace, and he always bets the Ace."
+  },
+  {
+   "t": 108.12,
+   "text": "The other half of the time Ivan is dealt a Queen, and he bets one-third of those."
+  },
+  {
+   "t": 113.33,
+   "text": "So Ivan bets the Ace with probability one-half, and bets the Queen with probability one-half times one-third, which is one-sixth."
+  },
+  {
+   "t": 121.99,
+   "text": "His total betting frequency is one-half plus one-sixth, which equals three-sixths plus one-sixth, equaling four-sixths, which reduces to two-thirds."
+  },
+  {
+   "t": 132.38,
+   "text": "Two-thirds of the time, Ivan bets and wins two dollars."
+  },
+  {
+   "t": 136.53,
+   "text": "His expected value from the game is two-thirds times two dollars, which is four-thirds dollars, or approximately one dollar and thirty-three cents."
+  },
+  {
+   "t": 145.54,
+   "text": "But remember that Ivan had to ante one dollar to play, so his net profit — his overall EV from the game — is one dollar and thirty-three cents minus one dollar, which equals thirty-three cents."
+  },
+  {
+   "t": 157.24,
+   "text": "Ivan averages a profit of thirty-three cents each time the Clairvoyance Game is played."
+  },
+  {
+   "t": 162.85,
+   "text": "Since the game is zero-sum and both players ante one dollar, Opal must average a loss of thirty-three cents, leaving her with sixty-seven cents of her original one-dollar ante."
+  },
+  {
+   "t": 174.11,
+   "text": "Now recall that with no betting at all, neither player would have an advantage — both would have an EV of zero, and both would simply win their ante back exactly half the time."
+  },
+  {
+   "t": 184.53,
+   "text": "What betting does is allow Ivan to win the pot not only when he has the Ace — he was going to win those pots even without betting — but also some fraction of the time when he has the Queen."
+  },
+  {
+   "t": 195.29,
+   "text": "By bluffing at the right frequency, Ivan extracts value that would simply evaporate in a no-betting game."
+  },
+  {
+   "t": 201.6,
+   "text": "Opal cannot stop this."
+  },
+  {
+   "t": 203.34,
+   "text": "Ivan could literally announce his strategy to her — tell her he will bet every Ace and one-third of his Queens — and she still cannot prevent him from winning that thirty-three cents per game."
+  },
+  {
+   "t": 214.36,
+   "text": "If she calls more often, she catches more bluffs but pays off more value bets."
+  },
+  {
+   "t": 219.45,
+   "text": "If she folds more often, she saves on value bets but surrenders more pots to bluffs."
+  },
+  {
+   "t": 225.45,
+   "text": "The math works out the same either way, because Ivan's range renders her indifferent."
+  },
+  {
+   "t": 230.68,
+   "text": "That said, Ivan only captures this guaranteed profit if he sticks to his balanced betting range."
+  },
+  {
+   "t": 236.81,
+   "text": "If he gets greedy and starts bluffing more than one-third of his Queens, Opal's calls become profitable and she should always call."
+  },
+  {
+   "t": 244.8,
+   "text": "If both players always call and Ivan always bluffs, the game reverts to zero EV for both — Ivan's edge disappears entirely."
+  },
+  {
+   "t": 254.16,
+   "text": "The guaranteed thirty-three cents per game is the reward for perfect balance, not for aggression alone."
+  },
+  {
+   "t": 260.35,
+   "text": "Now let us return to the question of the optimal bet size."
+  },
+  {
+   "t": 263.86,
+   "text": "We have seen that betting allows Ivan to win the pot some fraction of the time when he holds a Queen."
+  },
+  {
+   "t": 269.37,
+   "text": "We have also seen that larger bets allow a higher bluffing frequency."
+  },
+  {
+   "t": 273.76,
+   "text": "Putting these two facts together, larger bets let Ivan include more bluffs in his range, which means he wins the pot more often when holding a Queen."
+  },
+  {
+   "t": 282.81,
+   "text": "It follows logically that bigger bets are better for Ivan."
+  },
+  {
+   "t": 285.97,
+   "text": "The optimal strategy for a player with a perfectly polarized range is to bet as large as possible and include as many bluffs as necessary to maintain balance."
+  },
+  {
+   "t": 296.05,
+   "text": "The book provides a table illustrating this with striking clarity."
+  },
+  {
+   "t": 300.15,
+   "text": "At a bet of twenty-five percent of the pot, Ivan's EV is twenty cents per game."
+  },
+  {
+   "t": 305.24,
+   "text": "At a half-pot bet, it is thirty-three cents."
+  },
+  {
+   "t": 308.37,
+   "text": "At a pot-sized bet, it is fifty cents."
+  },
+  {
+   "t": 311.24,
+   "text": "At a bet of twice the pot, it is sixty-seven cents."
+  },
+  {
+   "t": 315.02,
+   "text": "At a bet of three times the pot, it is seventy-five cents."
+  },
+  {
+   "t": 318.99,
+   "text": "At a bet of ten times the pot, it is ninety-one cents."
+  },
+  {
+   "t": 322.74,
+   "text": "At a bet of ten thousand percent of the pot, it approaches ninety-nine cents."
+  },
+  {
+   "t": 327.49,
+   "text": "The EV of the game for Ivan approaches but never quite reaches one dollar — which would mean Ivan wins the entire pot every single time — as the bet size grows toward infinity."
+  },
+  {
+   "t": 338.46,
+   "text": "What is happening at extreme bet sizes?"
+  },
+  {
+   "t": 340.96,
+   "text": "As the bet grows very large, Ivan's bluffing frequency approaches but never quite reaches fifty percent."
+  },
+  {
+   "t": 348.2,
+   "text": "He is bluffing nearly half the time, but Opal still cannot profitably call because a call requires putting up such a large amount that even catching all those bluffs barely compensates for the losses on value bets."
+  },
+  {
+   "t": 360.8,
+   "text": "So Opal folds almost all of the time, and Ivan effectively takes the pot most of the time regardless of his card."
+  },
+  {
+   "t": 368.49,
+   "text": "Why, then, do we not see massive overbets in every real poker game?"
+  },
+  {
+   "t": 373.27,
+   "text": "Part of the answer is that most players, even experienced ones, do not understand the theory and are not comfortable making very unconventional plays."
+  },
+  {
+   "t": 382.85,
+   "text": "But there is also a structural answer: massive overbets are only optimal when your range is as perfectly polarized as in this toy game."
+  },
+  {
+   "t": 391.25,
+   "text": "In the real world, ranges are rarely so clean."
+  },
+  {
+   "t": 394.55,
+   "text": "The next chapter will explore what happens when the perfectly polarized range assumption is relaxed, and we will see that the optimal bet size changes significantly."
   }
  ]
 }

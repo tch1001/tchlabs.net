@@ -1,55 +1,275 @@
 {
  "n": 2,
  "title": "Scenario: Reciprocal Ranges, Half-Street Game",
- "duration": 66.17,
+ "duration": 569.33,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 3, section 2. The reciprocal ranges half-street game."
+   "text": "Chapter three, section two. Scenario: Reciprocal Ranges, Half-Street Game."
   },
   {
-   "t": 4.83,
-   "text": "In this model, both players are dealt from a mixed range of strong and weak hands."
+   "t": 6.1,
+   "text": "Let us set up the game carefully so that every number we encounter later makes sense."
   },
   {
-   "t": 9.88,
-   "text": "The twist is that only one player — call them the bettor — is allowed to act first."
+   "t": 10.96,
+   "text": "Both players ante one dollar each, creating a starting pot of two dollars."
   },
   {
-   "t": 15.44,
-   "text": "The other player can only call or fold in response."
+   "t": 16.06,
+   "text": "They are each dealt one card from a three-card deck containing exactly one ace, one king, and one queen."
   },
   {
-   "t": 19.19,
-   "text": "Because the bettor holds a range, they cannot just bet their strong hands and check the rest."
+   "t": 23.2,
+   "text": "Here is the critical difference from the Clairvoyance Game: either player could receive any of those three cards."
   },
   {
-   "t": 24.91,
-   "text": "If they did, a smart opponent would fold every time they bet and call every time they check."
+   "t": 30.18,
+   "text": "If Opal is dealt the ace, she knows Ivan's range is king or queen, but she does not know which one he holds."
   },
   {
-   "t": 30.1,
-   "text": "So the bettor must mix value bets and bluffs in a proportion that keeps their opponent indifferent."
+   "t": 38.15,
+   "text": "If Ivan is holding a queen, he knows Opal has either an ace or a king, but again, not which."
   },
   {
-   "t": 35.85,
-   "text": "On the other side, the caller is also holding a range — some decent hands, some trash."
+   "t": 45.06,
+   "text": "The highest card wins at showdown, ace beats king beats queen, and there are no draws or community cards."
   },
   {
-   "t": 42.16,
-   "text": "They need to figure out how often to call based on the pot odds and the bettor's likely bluff frequency."
+   "t": 51.86,
+   "text": "In the half-street version, Opal must check, and Ivan may either bet one dollar or check behind."
   },
   {
-   "t": 48.09,
-   "text": "Critically, the caller cannot just fold all weak hands, because that would let the bettor bluff freely."
+   "t": 58.19,
+   "text": "If Ivan bets, Opal can call or fold, but she cannot raise."
   },
   {
-   "t": 54.59,
-   "text": "Both sides are managing ranges, not just hand strength, and that is the core lesson here."
+   "t": 62.76,
+   "text": "The first question the book poses is deceptively simple: what is Opal's equity in this game?"
   },
   {
-   "t": 60.16,
-   "text": "The half-street game isolates this dynamic without adding the complexity of who acts first."
+   "t": 68.46,
+   "text": "The answer is fifty percent, because the ranges are identical — each player has an equal probability of receiving any of the three cards, so the raw chance of having the better hand is a coin flip."
+  },
+  {
+   "t": 79.95,
+   "text": "But equity and expected value are not the same thing, and that distinction matters enormously here."
+  },
+  {
+   "t": 86.55,
+   "text": "The second question asks which player has higher EV, and the answer is Ivan, even though his equity is identical to Opal's."
+  },
+  {
+   "t": 94.94,
+   "text": "The reason is asymmetric betting access."
+  },
+  {
+   "t": 97.72,
+   "text": "Ivan will never have to face a bet when he holds a king, which means his king never has to make a difficult decision about calling against a polarized range."
+  },
+  {
+   "t": 106.31,
+   "text": "But Ivan can value bet his ace and, if he chooses, bluff with his queen — both of those are profitable opportunities that Opal simply does not have."
+  },
+  {
+   "t": 116.3,
+   "text": "Now here is where the analysis gets genuinely interesting: the third question asks whether Ivan's bluffing frequency with a queen should be higher, lower, or identical to what it was in the Clairvoyance Game."
+  },
+  {
+   "t": 128.28,
+   "text": "The answer, perhaps surprisingly, is the same — and working through why teaches you something deep about bluffing."
+  },
+  {
+   "t": 135.55,
+   "text": "In the Clairvoyance Game, Ivan knew Opal had a king, so he knew bluffing with a queen would put her in a difficult spot."
+  },
+  {
+   "t": 142.69,
+   "text": "In the Reciprocal Ranges Game, Opal might have an ace and snap-call trivially, which seems like it should discourage bluffing."
+  },
+  {
+   "t": 150.66,
+   "text": "But the book asks a sharper question: not whether Opal could have the nuts, but how often she will have the nuts."
+  },
+  {
+   "t": 157.45,
+   "text": "When Ivan holds a queen, Opal's range is split evenly between aces and kings — exactly one of each."
+  },
+  {
+   "t": 165.36,
+   "text": "Now remember the calling frequency math: with a one-dollar bet into a two-dollar pot, the pot is growing to three dollars, so Opal needs to call enough to make bluffing break-even."
+  },
+  {
+   "t": 175.81,
+   "text": "The formula for the minimum calling frequency to neutralize a bluff is one minus the fraction bet over pot — specifically, one minus one divided by three, which gives two-thirds."
+  },
+  {
+   "t": 187.38,
+   "text": "Opal needs to call two-thirds of her range to make Ivan indifferent to bluffing."
+  },
+  {
+   "t": 192.22,
+   "text": "If Opal's strategy were to call only with aces and fold all kings, she would call half the time — only three hands out of six if we think in sixths — which is less than two-thirds."
+  },
+  {
+   "t": 203.84,
+   "text": "That means bluffing would be profitable for Ivan if Opal took that approach, because she is not calling often enough to make his bluffs break-even."
+  },
+  {
+   "t": 212.09,
+   "text": "There is a guaranteed profitable strategy buried in here: either Opal folds all her kings, in which case Ivan's bluffs are immediately profitable, or she calls with some kings, in which case Ivan's ace gets paid off more often."
+  },
+  {
+   "t": 226.54,
+   "text": "The purpose of bluffing is specifically to make the bluff-catchers — the medium-strength hands, meaning the kings in Opal's range — face an unprofitable decision, and that logic does not change just because some of Opal's range consists of aces."
+  },
+  {
+   "t": 242.59,
+   "text": "When Ivan bets with a queen and gets called, it genuinely does not matter to him whether the call came from an ace or a king — he loses the same amount either way."
+  },
+  {
+   "t": 252.0,
+   "text": "So the bluffing frequency stays the same because the thing being targeted — the decision difficulty for the king — is governed by the same bet size and pot size as before."
+  },
+  {
+   "t": 262.18,
+   "text": "The fourth question asks about Opal's calling frequency with a king, and here the answer does change: she calls less often with a king than she did in the Clairvoyance Game."
+  },
+  {
+   "t": 272.14,
+   "text": "Let us walk through the arithmetic."
+  },
+  {
+   "t": 274.11,
+   "text": "Opal still needs to call two-thirds of her range — four sixths if we keep the fractions unsimplified — to make Ivan indifferent to bluffing."
+  },
+  {
+   "t": 283.79,
+   "text": "But now her range, when Ivan has a queen, includes both aces and kings in equal proportion."
+  },
+  {
+   "t": 290.65,
+   "text": "The aces are trivial calls; Opal will always call with an ace, and aces represent half her range, which is three sixths."
+  },
+  {
+   "t": 299.55,
+   "text": "That means aces alone get her most of the way to her required calling frequency of four sixths."
+  },
+  {
+   "t": 305.89,
+   "text": "To reach four sixths total, she needs only one additional sixth of her range to call, and since kings are half her range — three sixths — she needs to call with one third of her kings to supply that final sixth."
+  },
+  {
+   "t": 318.4,
+   "text": "So Opal calls with one hundred percent of her aces and one third of her kings, compared to the Clairvoyance Game where she had to call with two thirds of her kings."
+  },
+  {
+   "t": 327.39,
+   "text": "The presence of strong hands in Opal's range — the aces — absorbs much of the calling burden, letting the kings off the hook somewhat."
+  },
+  {
+   "t": 336.03,
+   "text": "The fifth question is a trap that even experienced players fall into: if the bet size increases from one dollar to two dollars, which player benefits?"
+  },
+  {
+   "t": 345.21,
+   "text": "The answer is Opal, and the book admits this was deeply counter-intuitive even to the author at first."
+  },
+  {
+   "t": 352.45,
+   "text": "To see why, start with the one-dollar game and compute Ivan's overall expected value."
+  },
+  {
+   "t": 358.15,
+   "text": "When Ivan holds a queen, his equilibrium EV is zero dollars — either he checks and loses to Opal's better card, or he bluffs and Opal calls at a frequency that makes his bluff exactly break-even."
+  },
+  {
+   "t": 371.7,
+   "text": "When Ivan holds a king, his EV is one dollar: he never bets, and at showdown he wins the two-dollar pot half the time when Opal has a queen and loses it the other half when Opal has an ace, averaging one dollar back against his one-dollar ante."
+  },
+  {
+   "t": 386.99,
+   "text": "When Ivan holds an ace, the calculation requires a bit more work."
+  },
+  {
+   "t": 391.23,
+   "text": "With an ace in hand, Opal's range consists of a king and a queen."
+  },
+  {
+   "t": 395.74,
+   "text": "The queen will never call a bet."
+  },
+  {
+   "t": 397.5,
+   "text": "The king, as we just established, calls one third of the time."
+  },
+  {
+   "t": 401.46,
+   "text": "So when Ivan bets his ace, he wins the two-dollar pot five sixths of the time — when Opal has a queen and always folds, which is half the time, plus when she has a king and folds two thirds of that, which is one third of the time, totaling five sixths — and he wins a three-dollar pot one sixth of the time when she calls with a king."
+  },
+  {
+   "t": 420.51,
+   "text": "That works out to two dollars times five sixths plus three dollars times one sixth, which equals ten sixths plus three sixths, which is thirteen sixths, or approximately two dollars and seventeen cents."
+  },
+  {
+   "t": 434.06,
+   "text": "Averaging Ivan's three hand EVs together — zero for the queen, one dollar for the king, and two dollars seventeen cents for the ace — gives a total of three dollars and seventeen cents divided by three, which is about one dollar and six cents."
+  },
+  {
+   "t": 449.29,
+   "text": "Since Ivan put in one dollar as his ante, his profit is roughly six cents, or about a six percent return on investment."
+  },
+  {
+   "t": 457.0,
+   "text": "Now let us see what happens at a two-dollar bet size."
+  },
+  {
+   "t": 459.96,
+   "text": "The calling frequency formula changes: one minus two divided by four equals one half."
+  },
+  {
+   "t": 466.83,
+   "text": "Opal needs to call only half her range to neutralize a bluff."
+  },
+  {
+   "t": 471.13,
+   "text": "But here is the problem for Ivan: when he holds a queen, Opal's range is exactly half aces and half kings, meaning aces alone — which are trivial calls — already constitute half her range."
+  },
+  {
+   "t": 484.44,
+   "text": "Opal can neutralize Ivan's bluffing entirely just by calling with her aces and folding every king."
+  },
+  {
+   "t": 491.38,
+   "text": "She never has to put kings in a difficult spot at all."
+  },
+  {
+   "t": 494.5,
+   "text": "The reason to bluff is to generate tough decisions for the medium-strength hands, but a larger bet means those medium-strength hands never have to feel any heat because the strong hands absorb all the required calling."
+  },
+  {
+   "t": 507.22,
+   "text": "Since Ivan cannot profitably bluff with a two-dollar bet, he has no incentive to risk two dollars unless he has the nuts."
+  },
+  {
+   "t": 514.78,
+   "text": "And Opal, knowing this, can simply fold everything except an ace against any bet."
+  },
+  {
+   "t": 520.69,
+   "text": "The expected value of the game collapses to zero for both players — no one benefits from betting without the nuts, and the pot-control equilibrium dissolves into pure showdown equity."
+  },
+  {
+   "t": 532.11,
+   "text": "That symmetry — fifty-fifty equity, zero profit for either — is actually better for Opal than the asymmetric situation where Ivan earns a six-percent edge by bluffing optimally at the smaller size."
+  },
+  {
+   "t": 545.08,
+   "text": "The key insight is that the risk of running into the nuts is not inherently a bluffing deterrent; it only becomes a deterrent when the bet size is large enough that the nuts appear at or above the required calling threshold."
+  },
+  {
+   "t": 558.09,
+   "text": "A smaller bet forces the medium-strength hands into the action; a larger bet lets the strong hands absorb all the calling and neutralizes the bluffer's advantage entirely."
   }
  ]
 }

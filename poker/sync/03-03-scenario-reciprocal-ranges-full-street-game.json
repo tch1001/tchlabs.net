@@ -1,55 +1,223 @@
 {
  "n": 3,
  "title": "Scenario: Reciprocal Ranges, Full Street Game",
- "duration": 61.2,
+ "duration": 465.94,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 3, section 3. The reciprocal ranges full-street game."
+   "text": "Chapter three, section three. Scenario: Reciprocal Ranges, Full Street Game."
   },
   {
-   "t": 5.19,
-   "text": "Now we remove the restriction — either player can bet or check on this street."
+   "t": 6.22,
+   "text": "Now we open up the game so that Opal is no longer forced to check — she can bet or check just like Ivan can."
   },
   {
-   "t": 9.96,
-   "text": "That sounds like a small change, but it adds a whole new layer of strategy."
+   "t": 12.75,
+   "text": "Every other rule stays the same: one ace, one king, one queen in the deck, one dollar antes producing a two-dollar pot, one-dollar bet size, no raising."
   },
   {
-   "t": 14.4,
-   "text": "When you can bet or check, your checking range becomes a real thing that your opponent can attack."
+   "t": 23.75,
+   "text": "The question is what this new freedom does to Opal's situation, and specifically whether she can use it to erase Ivan's advantage."
   },
   {
-   "t": 20.07,
-   "text": "If you only check weak hands, your opponent can bet every time you check and make easy money."
+   "t": 31.55,
+   "text": "The first question the book poses is which player will have a higher EV, and the answer is still Ivan."
   },
   {
-   "t": 25.75,
-   "text": "So you must include some strong hands in your checking range to protect it."
+   "t": 37.84,
+   "text": "His edge shrinks compared to the half-street game, but position still enables him to claim more than his fair share of the pot even when both players have reciprocal ranges and reciprocal betting access."
   },
   {
-   "t": 29.76,
-   "text": "This is what coaches mean when they talk about protecting your checks."
+   "t": 49.4,
+   "text": "The second question is whether Ivan's betting strategy — when Opal checks to him — changes from what it was in the half-street game, and the answer is no."
   },
   {
-   "t": 33.41,
-   "text": "Meanwhile, your betting range still needs the right balance of value and bluffs."
+   "t": 57.91,
+   "text": "This is worth pausing on, because it might seem like giving Opal the ability to bet would change the composition of her checking range and therefore change Ivan's calculations."
   },
   {
-   "t": 38.61,
-   "text": "And your opponent still needs to call at a frequency that keeps you from bluffing too freely."
+   "t": 67.85,
+   "text": "But think about what Ivan is actually targeting when he bets: he is targeting the kings in Opal's range, because those are the hands that face a genuine dilemma about calling or folding."
   },
   {
-   "t": 44.54,
-   "text": "All four actions — bet for value, bet as a bluff, check strong, check weak — have to interlock."
+   "t": 77.91,
+   "text": "Now, will Opal have any incentive to bet her kings from out of position?"
   },
   {
-   "t": 51.42,
-   "text": "Pull on any one of them too hard and the whole structure breaks down."
+   "t": 82.88,
+   "text": "No — kings are precisely the medium-strength hands that do not want to build pots, and they have nothing to gain from leading out into a polarized range."
   },
   {
-   "t": 55.23,
-   "text": "The full-street game is the closest toy model we have to what actually happens in a real poker hand."
+   "t": 91.9,
+   "text": "If anything, Opal might shift some aces and queens into her betting range, but those shifts do not affect the mathematical core of Ivan's betting calculus."
+  },
+  {
+   "t": 101.75,
+   "text": "When Ivan bets, his bet is designed to create indifference for king-holding Opal, and the number of kings in her checking range does not change just because she might sometimes bet an ace or a queen."
+  },
+  {
+   "t": 113.36,
+   "text": "His bluffing frequency with a queen and his value-betting approach with an ace remain exactly the same as in the half-street game."
+  },
+  {
+   "t": 121.05,
+   "text": "The third question is the most interesting one, and the book labels it a trick question."
+  },
+  {
+   "t": 126.09,
+   "text": "It asks whether Opal's betting strategy — when she decides to lead out — will differ from Ivan's equilibrium strategy in the half-street game."
+  },
+  {
+   "t": 134.61,
+   "text": "The answer is: maybe, and the explanation reveals something subtle and important about strong hands played out of position."
+  },
+  {
+   "t": 142.76,
+   "text": "In all previous games, betting an ace was trivially correct because checking meant going straight to showdown with no further action."
+  },
+  {
+   "t": 150.5,
+   "text": "In the full-street game, however, Opal now has a third option when she holds an ace: she can check and then call if Ivan bets."
+  },
+  {
+   "t": 158.68,
+   "text": "That check-call line extracts value from Ivan when he bluffs a queen."
+  },
+  {
+   "t": 162.85,
+   "text": "The betting line extracts value from Ivan when he calls with a king."
+  },
+  {
+   "t": 166.95,
+   "text": "So the real question is: which source of value is greater?"
+  },
+  {
+   "t": 170.91,
+   "text": "To answer that, we need to know Ivan's calling frequency with a king and his bluffing frequency with a queen."
+  },
+  {
+   "t": 177.43,
+   "text": "We already established in the half-street analysis that Ivan calls with a king one third of the time and bluffs with a queen one third of the time."
+  },
+  {
+   "t": 185.51,
+   "text": "Let us verify what betting an ace is worth for Opal in this scenario."
+  },
+  {
+   "t": 190.25,
+   "text": "When Opal bets her ace, Ivan's range consists of king and queen."
+  },
+  {
+   "t": 194.79,
+   "text": "The queen never calls — it folds every time — and the king calls one third of the time."
+  },
+  {
+   "t": 200.36,
+   "text": "So Opal wins the two-dollar pot five sixths of the time — queen always folds, constituting half of Ivan's range, plus king folds two thirds of the time, which is another one third of the time, summing to five sixths — and she wins a three-dollar pot one sixth of the time when Ivan calls with a king."
+  },
+  {
+   "t": 218.94,
+   "text": "That gives an EV of two dollars times five sixths plus three dollars times one sixth, which is ten sixths plus three sixths, equaling thirteen sixths, approximately two dollars and seventeen cents."
+  },
+  {
+   "t": 232.2,
+   "text": "Now let us compute the EV of checking an ace and calling any bet."
+  },
+  {
+   "t": 236.41,
+   "text": "When Opal checks her ace, Ivan checks all his kings — he has no incentive to bet a king for value — and he bluffs one third of his queens."
+  },
+  {
+   "t": 246.29,
+   "text": "Working through the probabilities: Ivan's range is king and queen."
+  },
+  {
+   "t": 250.99,
+   "text": "If Opal checks, Ivan bets with probability one third of the time he holds a queen, which is one sixth of the time overall."
+  },
+  {
+   "t": 258.58,
+   "text": "Opal wins the two-dollar pot five sixths of the time — when Ivan checks — and wins the three-dollar pot one sixth of the time when Ivan bluffs and she calls."
+  },
+  {
+   "t": 267.78,
+   "text": "That is again two dollars times five sixths plus three dollars times one sixth, the same arithmetic, the same result: two dollars and seventeen cents."
+  },
+  {
+   "t": 278.09,
+   "text": "The two lines produce identical expected values, which is not a coincidence."
+  },
+  {
+   "t": 282.78,
+   "text": "It is the direct consequence of equilibrium: Ivan calls with kings exactly as often as he bluffs with queens — both at one third — which perfectly equates the value of betting for a call versus checking to induce a bluff."
+  },
+  {
+   "t": 296.44,
+   "text": "If those frequencies were not equal, Opal would have a strictly dominant strategy with her aces, and Ivan would be making an exploitable error."
+  },
+  {
+   "t": 305.54,
+   "text": "For instance, if Ivan were more likely to bluff a queen than to call with a king, Opal would always prefer to check-call her aces, capturing more bluffs."
+  },
+  {
+   "t": 314.6,
+   "text": "If the reverse were true — king calling more often than queen bluffing — Opal would always bet her aces to capture those calls."
+  },
+  {
+   "t": 322.45,
+   "text": "At equilibrium, Ivan's frequencies are precisely calibrated to make Opal indifferent, and that indifference means that any mixture of betting and checking aces is a valid equilibrium strategy for Opal."
+  },
+  {
+   "t": 335.19,
+   "text": "She could always bet her aces, never bet them, or mix in any proportion she likes, and her EV with aces remains the same as long as the rest of her strategy is correctly balanced."
+  },
+  {
+   "t": 347.62,
+   "text": "There is an important consequence that flows from this indifference: if Opal bets more of her aces, she must also adjust the rest of her range to maintain balance."
+  },
+  {
+   "t": 357.24,
+   "text": "Specifically, she needs to include more queen bluffs in her betting range to keep Ivan indifferent between calling and folding his kings, and she needs to check-call more of her kings to keep Ivan indifferent between bluffing and checking his queens."
+  },
+  {
+   "t": 371.44,
+   "text": "More aces in the betting range means a more polarized betting range, which requires more bluffs to maintain the right ratio, which in turn means her checking range contains fewer total hands and the ones that remain — mostly kings — need to call more often."
+  },
+  {
+   "t": 386.75,
+   "text": "Conversely, if Opal checks more of her aces, she can bet fewer queens as bluffs and call less often with kings."
+  },
+  {
+   "t": 394.4,
+   "text": "The system is internally consistent regardless of where Opal lands on the spectrum."
+  },
+  {
+   "t": 399.37,
+   "text": "The book offers a clean way to think about this: no matter how often Opal checks an ace, Ivan will still bluff with a queen at the same frequency, and no matter how often Opal bets her aces, Ivan will still call with a king just often enough to make bluffing break-even for her."
+  },
+  {
+   "t": 415.5,
+   "text": "What Opal loses by betting more aces — the ability to trap Ivan when he bluffs — she exactly compensates for by gaining more calls from kings."
+  },
+  {
+   "t": 424.79,
+   "text": "What she loses by checking more aces — fewer calls from kings — she compensates for by trapping more queen bluffs."
+  },
+  {
+   "t": 431.78,
+   "text": "The net outcome is invariant."
+  },
+  {
+   "t": 433.89,
+   "text": "One specific equilibrium strategy for Opal that the book highlights is betting all her aces and one third of her queens, mirroring Ivan's strategy exactly."
+  },
+  {
+   "t": 444.42,
+   "text": "This is a natural and clean solution, but it is only one valid point in a continuous family of equilibria."
+  },
+  {
+   "t": 451.89,
+   "text": "The key takeaway from this full-street analysis is that Ivan still profits and that his profit comes purely from position, not from any range advantage — a conclusion we will examine in much more depth in the Real World Applications section."
   }
  ]
 }

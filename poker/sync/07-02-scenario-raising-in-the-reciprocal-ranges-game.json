@@ -1,59 +1,175 @@
 {
  "n": 2,
  "title": "Scenario: Raising in the Reciprocal Ranges Game",
- "duration": 83.14,
+ "duration": 316.61,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 7, section 2. Raising in the reciprocal ranges game."
+   "text": "Chapter seven, section two. Scenario: Raising in the Reciprocal Ranges Game."
   },
   {
-   "t": 4.7,
-   "text": "Take the full-street game from chapter three and hand the caller a new option: the raise."
+   "t": 5.83,
+   "text": "Let's revisit the Reciprocal Ranges Game with fresh eyes and then add the option to raise."
   },
   {
-   "t": 10.01,
-   "text": "Suddenly, the bettor cannot just bet and expect to be met with a call or a fold."
+   "t": 11.75,
+   "text": "The setup is simple: each player antes one dollar and receives one card from a deck containing only an Ace, a King, and a Queen."
   },
   {
-   "t": 15.31,
-   "text": "They have to account for the possibility that their bet might be met with a re-raise."
+   "t": 20.85,
+   "text": "Both players know this, so if you have the Ace, you know your opponent has either the King or the Queen."
   },
   {
-   "t": 20.23,
-   "text": "That new pressure forces the bettor to think about how often they can actually continue after a raise."
+   "t": 27.29,
+   "text": "In the original version of this game, each player could either bet one dollar or check, and if a bet was made, the opponent could call or fold."
   },
   {
-   "t": 26.54,
-   "text": "Meanwhile, the raiser needs to build a range that makes sense: strong hands and carefully chosen bluffs."
+   "t": 35.74,
+   "text": "Now we are adding a third option for the player who faces a bet: instead of calling or folding, that player can raise to three dollars total."
   },
   {
-   "t": 33.59,
-   "text": "Your strongest hands — the ones that beat almost everything the bettor can hold — usually prefer to raise."
+   "t": 44.05,
+   "text": "If a raise is made, the original bettor can only call or fold — there is no re-raising in this version of the game."
   },
   {
-   "t": 40.4,
-   "text": "Slow-playing by calling with your best hands lets the bettor off easy and gives you no extra money."
+   "t": 51.36,
+   "text": "Before diving into the equilibrium analysis, the book asks you to predict what will happen."
   },
   {
-   "t": 46.2,
-   "text": "Raising with them charges the bettor to continue and builds a pot when you are likely to win it."
+   "t": 56.96,
+   "text": "The first question is whether Opal's checking frequency will increase, decrease, or stay the same once raising is allowed."
   },
   {
-   "t": 51.49,
-   "text": "But if you raise only value hands, a thinking opponent folds to every raise and you collect only small pots."
+   "t": 64.49,
+   "text": "The answer is that it stays the same — and this is the first surprising result of the chapter."
   },
   {
-   "t": 58.92,
-   "text": "So you add bluffs to the raising range — hands that have little chance of winning at showdown but plenty of fold equity."
+   "t": 70.05,
+   "text": "Adding the option to raise does not meaningfully change the equilibrium in the Reciprocal Ranges Game."
   },
   {
-   "t": 66.15,
-   "text": "The exact ratio of value raises to bluff raises mirrors the same math we saw with betting: it has to make the bettor indifferent to calling."
+   "t": 76.53,
+   "text": "To understand why, you need to remember what the equilibrium looked like in the original game."
   },
   {
-   "t": 75.33,
-   "text": "And because raises now exist, the bettor has to widen what they are willing to bet in the first place — the whole game gets richer."
+   "t": 82.42,
+   "text": "Each player bet a polarized range — strong hands to extract value and weak hands as bluffs — and each player called with a frequency designed to make the bettor indifferent to bluffing."
+  },
+  {
+   "t": 94.01,
+   "text": "Middle-strength hands, specifically the King, faced difficult decisions between calling and folding."
+  },
+  {
+   "t": 100.55,
+   "text": "Now the second question: if Opal does bet, what should Ivan's raising range look like?"
+  },
+  {
+   "t": 106.09,
+   "text": "Ivan should only raise when he holds the Ace."
+  },
+  {
+   "t": 109.01,
+   "text": "And symmetrically, if Opal checks and then faces a bet from Ivan, Opal should only raise when she holds the Ace."
+  },
+  {
+   "t": 116.44,
+   "text": "Furthermore, neither player ever calls a raise after having been the one who bet — they simply fold."
+  },
+  {
+   "t": 122.44,
+   "text": "At first glance this looks dangerously exploitable: if your opponent always folds to a raise, shouldn't you just bluff-raise with everything?"
+  },
+  {
+   "t": 131.09,
+   "text": "The answer is no, and understanding why requires thinking carefully about what hands can actually be in the bettor's range."
+  },
+  {
+   "t": 138.46,
+   "text": "Remember that the equilibrium betting strategy in this game is polarized — bets come from strong hands and bluffs, not from middle-strength hands."
+  },
+  {
+   "t": 147.28,
+   "text": "The King, which is the middle-strength hand in this deck, never bets at equilibrium — and we confirmed that equilibrium doesn't change when raising is added."
+  },
+  {
+   "t": 157.19,
+   "text": "So when Ivan holds a Queen and Opal bets, what does Ivan know?"
+  },
+  {
+   "t": 160.96,
+   "text": "He knows that since he has the Queen, Opal must hold either the Ace or the King."
+  },
+  {
+   "t": 166.09,
+   "text": "Since Opal bets a polarized range, and since in this game a King doesn't show up in that range as a value bet, Opal almost certainly has the Ace."
+  },
+  {
+   "t": 175.76,
+   "text": "Bluff-raising against someone who almost certainly holds the Ace is a disaster — the Ace calls every raise happily."
+  },
+  {
+   "t": 182.99,
+   "text": "What if Ivan holds the Ace and Opal bets?"
+  },
+  {
+   "t": 185.75,
+   "text": "Then Opal must have the Queen, which means she is bluffing."
+  },
+  {
+   "t": 189.28,
+   "text": "Ivan could raise, but Opal holds a hand that will strictly fold to any raise — she was bluffing with the weakest card in the deck."
+  },
+  {
+   "t": 197.29,
+   "text": "So raising with the Ace does no extra damage; Ivan wins the pot either way once Opal folds, but he doesn't win any more money by raising."
+  },
+  {
+   "t": 205.91,
+   "text": "The raise is harmless but pointless against a pure bluff."
+  },
+  {
+   "t": 209.61,
+   "text": "This leads to the most important lesson from the Reciprocal Ranges Game with raising: the more polarized your opponent's betting range, the less useful raising becomes."
+  },
+  {
+   "t": 218.94,
+   "text": "A polarized range contains hands at the extremes — very strong hands that call any raise happily, and very weak hands that fold to any pressure — but it contains no middle-strength hands."
+  },
+  {
+   "t": 231.16,
+   "text": "Raising works by putting pressure on middle-strength hands, hands that are strong enough to be uncomfortable folding but not strong enough to confidently call."
+  },
+  {
+   "t": 240.09,
+   "text": "When there are no such hands in the bettor's range, raising either runs straight into a call from the nuts or knocks out a hand that was going to fold anyway."
+  },
+  {
+   "t": 248.95,
+   "text": "Neither outcome makes raising profitable as a bluff, and neither outcome generates extra value from a value raise beyond what a simple bet and call would achieve."
+  },
+  {
+   "t": 258.68,
+   "text": "This is a profound insight that carries directly into real poker: when you are up against a very tight, polarized better who essentially only bets the nuts or total air, your raising range is restricted almost exclusively to your strongest holdings."
+  },
+  {
+   "t": 274.08,
+   "text": "The middle of your range — hands that might raise for thin value or semi-bluff against a wider bettor — simply don't have good targets when the bettor has nothing in the middle either."
+  },
+  {
+   "t": 284.75,
+   "text": "The Reciprocal Ranges Game gives us this lesson in its purest, cleanest form precisely because the game only has three cards."
+  },
+  {
+   "t": 293.4,
+   "text": "With only three ranks in the deck, the structure forces polarization — there is almost no room for a genuine middle-strength betting hand."
+  },
+  {
+   "t": 301.92,
+   "text": "In a richer game like the Ace-to-Five Game, where the deck has ten distinct ranks and equilibrium betting ranges are considerably wider and more nuanced, raising starts doing a lot more interesting work."
+  },
+  {
+   "t": 314.48,
+   "text": "That's exactly where we turn next."
   }
  ]
 }

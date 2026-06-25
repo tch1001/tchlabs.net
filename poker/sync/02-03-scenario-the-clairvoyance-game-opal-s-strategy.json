@@ -1,51 +1,287 @@
 {
  "n": 3,
  "title": "Scenario: The Clairvoyance Game (Opal's Strategy)",
- "duration": 63.74,
+ "duration": 445.46,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 2, section 3. The clairvoyance game, Opal's strategy."
+   "text": "Chapter two, section three. Scenario — the Clairvoyance Game, Opal's strategy."
   },
   {
-   "t": 4.86,
-   "text": "Imagine a simplified poker hand where one player, let's call her Opal, gets to look at her cards before deciding to bet."
+   "t": 6.33,
+   "text": "To understand the interplay between polarized and condensed ranges at a deep level, we are going to work through a carefully designed toy game called the Clairvoyance Game, first introduced in Bill Chen and Jerrod Ankenman's book The Mathematics of Poker."
   },
   {
-   "t": 12.62,
-   "text": "But here's the twist: Opal always holds either an unbeatable hand or completely worthless cards — nothing in between."
+   "t": 20.65,
+   "text": "The setup is stripped down to its essence, with all the noise of real poker removed so we can focus on exactly one dynamic: a perfectly polarized range competing against a perfectly condensed range."
   },
   {
-   "t": 20.77,
-   "text": "That's the clairvoyance part — she has perfect information about where she stands."
+   "t": 34.0,
+   "text": "Here is how the game works."
   },
   {
-   "t": 25.55,
-   "text": "Her opponent, Ivan, holds a hand that can only beat a bluff."
+   "t": 35.6,
+   "text": "There is a three-card deck containing exactly one Ace, one King, and one Queen."
   },
   {
-   "t": 29.91,
-   "text": "When Opal has the best hand, she obviously wants to bet and get called."
+   "t": 41.54,
+   "text": "One card is dealt to each player, and the goal is simply to hold the higher card at showdown."
   },
   {
-   "t": 34.01,
-   "text": "When she has nothing, she wants to bluff and make Ivan fold."
+   "t": 46.99,
+   "text": "The Ace is best, the Queen is worst, and there are no community cards, no draws, and no additional betting streets — just one round of betting followed by a showdown."
   },
   {
-   "t": 38.04,
-   "text": "The question is how many of her worthless hands should she bluff with?"
+   "t": 57.84,
+   "text": "The out-of-position player is named Opal, and she is always dealt the King."
   },
   {
-   "t": 42.14,
-   "text": "If she bluffs too often, Ivan figures it out and calls her down every time, which kills the profit on her bluffs."
+   "t": 62.54,
+   "text": "The in-position player is named Ivan, and he is dealt either the Ace or the Queen, each with fifty percent probability."
   },
   {
-   "t": 48.88,
-   "text": "So Opal's job is to bluff just frequently enough that Ivan is exactly indifferent between calling and folding."
+   "t": 70.4,
+   "text": "Both players know each other's ranges perfectly: Opal knows Ivan holds either the Ace or the Queen, and Ivan knows Opal always holds the King."
   },
   {
-   "t": 55.66,
-   "text": "That exact balance is what we call an optimal bluffing frequency, and the math behind it flows directly from the size of her bet."
+   "t": 79.8,
+   "text": "Each player antes one dollar to begin the hand."
+  },
+  {
+   "t": 83.06,
+   "text": "Opal acts first and may bet one dollar or check."
+  },
+  {
+   "t": 86.69,
+   "text": "If Opal checks, Ivan may then bet one dollar or check."
+  },
+  {
+   "t": 90.71,
+   "text": "Whenever a player faces a bet, they may only call or fold — no raising is permitted."
+  },
+  {
+   "t": 96.75,
+   "text": "If no bet is made, or if a bet is called, there is a showdown and the high card wins the pot."
+  },
+  {
+   "t": 102.72,
+   "text": "Now, before we solve this game, let us put ourselves in Opal's position and reason through what her optimal strategy should look like."
+  },
+  {
+   "t": 110.6,
+   "text": "First question: does Opal have a polarized range or a condensed range?"
+  },
+  {
+   "t": 115.2,
+   "text": "Opal has a condensed range."
+  },
+  {
+   "t": 117.04,
+   "text": "Her King sits squarely in the middle of the three-card deck — she beats Ivan's Queen but loses to Ivan's Ace."
+  },
+  {
+   "t": 124.58,
+   "text": "Every time they go to showdown, she either wins or loses, and her outcome is perfectly determined by which card Ivan holds."
+  },
+  {
+   "t": 133.09,
+   "text": "Ivan, on the other hand, has a polarized range: his Ace is the nuts, guaranteed to win at showdown, and his Queen is the stone bottom of the deck, guaranteed to lose."
+  },
+  {
+   "t": 144.09,
+   "text": "Second question: what is Opal's equity in this game?"
+  },
+  {
+   "t": 147.31,
+   "text": "Equity, remember, is what a player would win on average if there were no betting — if the cards were simply turned over and the pot awarded."
+  },
+  {
+   "t": 154.84,
+   "text": "Since Ivan has an equal chance of holding either the Ace or the Queen, Opal wins the two-dollar pot half the time and loses it half the time, giving her an expected value before betting of exactly one dollar."
+  },
+  {
+   "t": 167.6,
+   "text": "Her equity is fifty percent of the pot, or one dollar."
+  },
+  {
+   "t": 171.35,
+   "text": "Third question: will Opal's actual expected value in this game, once betting is introduced, be higher than, lower than, or equal to her equity?"
+  },
+  {
+   "t": 180.89,
+   "text": "Her expected value at equilibrium will be lower than her equity."
+  },
+  {
+   "t": 185.18,
+   "text": "Equity and expected value are not the same thing."
+  },
+  {
+   "t": 188.43,
+   "text": "Equity tells you what you would win in a no-betting scenario."
+  },
+  {
+   "t": 191.78,
+   "text": "Expected value tells you what you actually win once both players are playing optimally."
+  },
+  {
+   "t": 196.49,
+   "text": "The reason Opal's EV falls below her equity is that the option to bet is structurally better for Ivan than it is for her."
+  },
+  {
+   "t": 204.28,
+   "text": "If Ivan holds an Ace, he can bet for value and profit when Opal calls."
+  },
+  {
+   "t": 208.8,
+   "text": "If Ivan holds a Queen, he can bluff and profit when Opal folds."
+  },
+  {
+   "t": 213.74,
+   "text": "In either case, Ivan has a productive use for his betting option."
+  },
+  {
+   "t": 217.49,
+   "text": "Opal, holding the King, has no such productive use."
+  },
+  {
+   "t": 221.61,
+   "text": "If Opal were to bet, Ivan could respond perfectly: call with the Ace since he is guaranteed to win, and fold the Queen since he is guaranteed to lose."
+  },
+  {
+   "t": 230.79,
+   "text": "When Ivan has the Queen and would fold, Opal wins the pot — but she almost certainly would have won it at showdown anyway."
+  },
+  {
+   "t": 237.8,
+   "text": "When Ivan has the Ace and calls, Opal loses an extra dollar she did not need to risk."
+  },
+  {
+   "t": 243.19,
+   "text": "Betting gains her essentially nothing and costs her something, so it is a losing proposition."
+  },
+  {
+   "t": 249.3,
+   "text": "When Ivan is the one betting, though, Opal's position is genuinely uncomfortable."
+  },
+  {
+   "t": 254.8,
+   "text": "She cannot be sure whether Ivan holds the Ace or the Queen."
+  },
+  {
+   "t": 258.58,
+   "text": "If she folds, she surrenders a pot she might have won."
+  },
+  {
+   "t": 262.5,
+   "text": "If she calls, she risks losing an extra dollar every time Ivan holds the Ace."
+  },
+  {
+   "t": 268.07,
+   "text": "That uncertainty is the price she pays for holding the condensed range."
+  },
+  {
+   "t": 272.7,
+   "text": "Fourth question: will Opal ever bet her King?"
+  },
+  {
+   "t": 275.6,
+   "text": "Never."
+  },
+  {
+   "t": 276.38,
+   "text": "For the reasons just explained, betting the King provides no upside and introduces downside."
+  },
+  {
+   "t": 282.52,
+   "text": "An equilibrium strategy assumes your opponent will play perfectly, and a perfectly playing Ivan will simply call when he wins and fold when he loses."
+  },
+  {
+   "t": 292.08,
+   "text": "Against a perfect opponent, Opal's best action is always to check."
+  },
+  {
+   "t": 296.92,
+   "text": "Fifth question: if Opal checks and Ivan bets, will she call always, sometimes, or never?"
+  },
+  {
+   "t": 303.2,
+   "text": "Sometimes — and the reasoning here gets to the very heart of what equilibrium means."
+  },
+  {
+   "t": 309.15,
+   "text": "At a Nash equilibrium, neither player can unilaterally improve their expected value by changing their strategy."
+  },
+  {
+   "t": 316.23,
+   "text": "Even if Ivan told Opal his exact betting plan in advance, she would have no way to exploit that information."
+  },
+  {
+   "t": 322.9,
+   "text": "Let us test two extreme strategies for Opal and see if either is part of an equilibrium."
+  },
+  {
+   "t": 328.42,
+   "text": "If Opal always folds when Ivan bets, Ivan can exploit her by bluffing every single time he holds a Queen, winning an extra two dollars each time she folds."
+  },
+  {
+   "t": 338.75,
+   "text": "That means always-fold cannot be an equilibrium strategy for Opal."
+  },
+  {
+   "t": 343.93,
+   "text": "If Opal always calls when Ivan bets, Ivan can exploit her by never bluffing — he simply bets only his Aces and collects an extra dollar every time she calls."
+  },
+  {
+   "t": 354.2,
+   "text": "That means always-call cannot be an equilibrium strategy either."
+  },
+  {
+   "t": 358.79,
+   "text": "To be unexploitable, Opal must be genuinely unpredictable."
+  },
+  {
+   "t": 363.15,
+   "text": "She must mix between calling and folding at exactly the right frequencies, so that Ivan cannot profit by shifting exclusively toward bluffing or exclusively toward value betting."
+  },
+  {
+   "t": 374.54,
+   "text": "This mixed strategy is the only equilibrium option available to her."
+  },
+  {
+   "t": 379.38,
+   "text": "Sixth question: if Ivan and Opal swapped positions, so that Opal now acted last while still holding the condensed range, would her expected value increase, decrease, or stay the same?"
+  },
+  {
+   "t": 391.27,
+   "text": "Remarkably, it would stay exactly the same."
+  },
+  {
+   "t": 394.33,
+   "text": "You might assume that position is the source of Ivan's advantage — after all, acting last is usually better in poker."
+  },
+  {
+   "t": 402.19,
+   "text": "But in this game, position provides no benefit to Ivan because he already has perfect information about Opal's range."
+  },
+  {
+   "t": 409.55,
+   "text": "He knows she has a King before the hand begins, so seeing her check the action first tells him absolutely nothing new."
+  },
+  {
+   "t": 416.3,
+   "text": "If the positions were reversed, Opal would gain some information when Ivan checks — she would know he holds the Queen — but she could not profitably act on that knowledge."
+  },
+  {
+   "t": 426.23,
+   "text": "She could bet, but Ivan would fold and she would win the same two-dollar pot she would have won at showdown anyway."
+  },
+  {
+   "t": 432.49,
+   "text": "The positions change, but the equilibrium strategies and the expected values remain identical."
+  },
+  {
+   "t": 438.5,
+   "text": "Ivan's advantage in this game comes entirely from holding the polarized range, not from his position at the table."
   }
  ]
 }

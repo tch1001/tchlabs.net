@@ -1,47 +1,79 @@
 {
  "n": 1,
  "title": "Overview & Objectives",
- "duration": 59.18,
+ "duration": 163.22,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 6, section 1. Overview and objectives."
+   "text": "Chapter six, section one. Overview and objectives."
   },
   {
-   "t": 4.31,
-   "text": "In earlier chapters, ranges were simple: you had the nuts or you had air, nothing in between."
+   "t": 4.25,
+   "text": "Welcome back to our deep dive into game-theory-optimal poker strategy."
   },
   {
-   "t": 10.69,
-   "text": "That binary setup was useful for learning the basics, but it left out most of real poker."
+   "t": 8.91,
+   "text": "In the previous chapter we worked through the Reciprocal Ranges Game, and while that toy game taught us the fundamentals of polarized betting and bluff-catching, it had a significant limitation: the decisions were almost too obvious."
   },
   {
-   "t": 16.31,
-   "text": "Most of the time your range is a spectrum — some very strong hands, some medium ones, and some weak ones."
+   "t": 22.07,
+   "text": "Think about it — folding an Ace or calling with a Queen are the kinds of catastrophic errors that even beginners would rarely make."
   },
   {
-   "t": 23.68,
-   "text": "When your range has that kind of spread, the strategy becomes richer and more nuanced."
+   "t": 30.02,
+   "text": "That means the game, while instructive, left something important on the table: it didn't really help us understand what happens when opponents make realistic, believable mistakes, and how we ought to profit from those mistakes."
   },
   {
-   "t": 29.2,
-   "text": "You cannot just ask which hands bet and which hands check — you have to ask where the lines are drawn."
+   "t": 43.3,
+   "text": "There's also a widespread misconception in poker circles that game-theory-optimal play is somehow a defensive posture that caps your upside — that equilibrium strategies only ever break even and can't exploit errors."
   },
   {
-   "t": 34.9,
-   "text": "Those lines are called thresholds, and finding them is the central skill of this chapter."
+   "t": 57.12,
+   "text": "This chapter is going to dismantle that misconception directly and decisively."
   },
   {
-   "t": 41.02,
-   "text": "We will use a simple toy game to make those thresholds visible and concrete."
+   "t": 62.83,
+   "text": "To do that, we're going to work through a meaningfully more complex toy game called the Ace-to-Five Game."
   },
   {
-   "t": 46.08,
-   "text": "Once you see how value bets, bluffs, and calls each form a zone rather than a single hand type, everything clicks."
+   "t": 68.71,
+   "text": "In this game, the deck is larger, the hand rankings cover a wider spectrum, and the boundary between a value bet and a bluff becomes genuinely unclear — which is exactly what makes it a better model of real poker."
   },
   {
-   "t": 53.36,
-   "text": "By the end, you will think about your range less like a list and more like a ranked continuum."
+   "t": 81.71,
+   "text": "With more cards in play, there will be more close decisions, more plausible errors, and more opportunities to profit from an opponent who doesn't find the right lines."
+  },
+  {
+   "t": 91.36,
+   "text": "We'll start by solving for the equilibrium strategies across every decision point — what each player should bet, check, call, and fold — and then we'll pivot to the question of exploitation: how do you adjust when your opponent is straying from equilibrium?"
+  },
+  {
+   "t": 105.31,
+   "text": "By the time you finish this chapter, you should have developed four concrete skills."
+  },
+  {
+   "t": 109.9,
+   "text": "First, you'll understand the strategic role that different parts of a range play, from the very strongest hands down to the pure air at the bottom."
+  },
+  {
+   "t": 118.12,
+   "text": "Second, you'll know how to construct ranges that confront your opponents with genuinely difficult decisions, the kind where a reasonable player could easily go wrong."
+  },
+  {
+   "t": 127.51,
+   "text": "Third, you'll be able to incorporate information about a specific opponent's tendencies into decisions about when to bluff, when to bluff-catch, and when to go thin with a value bet."
+  },
+  {
+   "t": 138.66,
+   "text": "Fourth, you'll have a framework for identifying the right targets for your bets, your checks, and your calls — thinking not just about what you hold, but about which specific hands in your opponent's range your action is designed to affect."
+  },
+  {
+   "t": 152.21,
+   "text": "These are not abstract concepts — they translate directly to decisions at the table, and we'll see exactly how in the real-world applications section."
+  },
+  {
+   "t": 162.12,
+   "text": "Let's get into it."
   }
  ]
 }

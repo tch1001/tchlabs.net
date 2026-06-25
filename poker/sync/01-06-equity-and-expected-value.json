@@ -1,55 +1,307 @@
 {
  "n": 6,
  "title": "Equity and Expected Value",
- "duration": 81.86,
+ "duration": 506.88,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 1, section 6. Equity and Expected Value."
+   "text": "Chapter one, section six. Equity and Expected Value."
   },
   {
-   "t": 4.61,
-   "text": "Before we solve our first poker toy game, you need two measuring tools: equity and expected value."
+   "t": 4.5,
+   "text": "Before we get to the answers for the Going to the Movies questions, the book introduces two foundational concepts you will use constantly throughout your study of poker: equity and expected value."
   },
   {
-   "t": 11.31,
-   "text": "Equity is your share of the pot on average if every remaining card simply runs out with no more betting."
+   "t": 16.0,
+   "text": "These two tools are how we put a number on situations where we're operating under uncertainty — where we don't know exactly what cards will come or exactly what our opponents will do."
   },
   {
-   "t": 18.12,
-   "text": "If you hold a hand that wins half the time at showdown, your equity is fifty percent of the pot."
+   "t": 25.81,
+   "text": "Let's start with the broader point about why these tools are necessary."
   },
   {
-   "t": 24.27,
-   "text": "Equity does not care about bet sizes or future decisions; it is purely about how often you win at showdown."
+   "t": 29.6,
+   "text": "Poker is inherently uncertain, and many players resist that fact."
   },
   {
-   "t": 31.31,
-   "text": "Expected value, on the other hand, captures everything: your equity, how much money goes in, and the consequences of every possible action."
+   "t": 34.38,
+   "text": "You see it all the time: a player won't bluff unless they're confident their opponent will fold."
   },
   {
-   "t": 40.66,
-   "text": "Expected value is the probability-weighted average of all possible outcomes of a decision."
+   "t": 39.65,
+   "text": "They won't value bet the river unless they're virtually certain their hand is best."
   },
   {
-   "t": 46.24,
-   "text": "Say you bet ten dollars into a pot where you will win that bet sixty percent of the time and lose it forty percent of the time."
+   "t": 44.17,
+   "text": "Some players even feel uncomfortable getting all-in before the flop with king-king because they can't be sure an ace won't appear."
   },
   {
-   "t": 53.2,
-   "text": "Your expected value is sixty percent times ten dollars, minus forty percent times ten dollars, which equals two dollars."
+   "t": 51.38,
+   "text": "But this resistance to uncertainty is a strategic mistake."
   },
   {
-   "t": 61.31,
-   "text": "That positive two dollars tells you the bet is profitable on average, even though you will sometimes lose it."
+   "t": 56.16,
+   "text": "Poker is not a game of certainty."
   },
   {
-   "t": 67.41,
-   "text": "Every decision in poker ultimately reduces to a question of expected value: which choice gives me the highest average payoff?"
+   "t": 58.39,
+   "text": "It is a game of making good decisions under uncertainty, and the best players don't just tolerate that uncertainty — they embrace it."
   },
   {
-   "t": 75.75,
-   "text": "Equity gives you a starting point, and expected value tells you whether to act on it and how."
+   "t": 66.7,
+   "text": "They accept that the outcome of any individual decision is unknowable in advance, and they focus instead on whether the decision has positive expectation over time."
+  },
+  {
+   "t": 77.09,
+   "text": "Uncertainty in poker comes in several layers."
+  },
+  {
+   "t": 81.14,
+   "text": "Before the river, you don't know which cards will fall."
+  },
+  {
+   "t": 84.06,
+   "text": "You don't know which specific cards your opponents hold."
+  },
+  {
+   "t": 86.83,
+   "text": "Even if you could perfectly narrow down an opponent to a range of hands — the set of all hands consistent with their actions so far — you still wouldn't know which particular hand in that range they actually have."
+  },
+  {
+   "t": 98.76,
+   "text": "And even if you somehow knew their exact hand, you still might not know how they'd react to your actions — whether they'd call a big bet, whether they'd bluff if you checked."
+  },
+  {
+   "t": 108.01,
+   "text": "Equity and expected value are the two main tools for converting that uncertainty into a number you can reason with and act on."
+  },
+  {
+   "t": 115.6,
+   "text": "Let's take equity first."
+  },
+  {
+   "t": 117.31,
+   "text": "Equity, as the term is commonly used in the poker world, is a measure of how much of the pot a particular hand or range of hands would win on average if there were no further betting and the hand ran out to the river."
+  },
+  {
+   "t": 129.18,
+   "text": "It removes uncertainty about future board cards by computing an average across all possible runouts."
+  },
+  {
+   "t": 135.78,
+   "text": "The way this works in practice is through equity calculator software."
+  },
+  {
+   "t": 140.09,
+   "text": "You enter two or more hands or ranges, and the calculator simulates a hundred thousand or more possible boards, tracking how often each hand wins, loses, or ties."
+  },
+  {
+   "t": 151.8,
+   "text": "It then gives you the average fraction of the pot that each hand would win across all those simulations."
+  },
+  {
+   "t": 158.26,
+   "text": "Here are some concrete examples from the book."
+  },
+  {
+   "t": 160.69,
+   "text": "Before the flop, ace-king offsuit has approximately thirty percent equity against pocket kings."
+  },
+  {
+   "t": 166.72,
+   "text": "That means if you got all the money in before the flop with ace-king against king-king, you would win about thirty percent of the total pot on average."
+  },
+  {
+   "t": 174.49,
+   "text": "Against a range that includes ace-king, king-king, and ace-ace, ace-king offsuit has about thirty-seven percent equity."
+  },
+  {
+   "t": 182.65,
+   "text": "Equity is useful because it collapses all the uncertainty about board cards into a single number."
+  },
+  {
+   "t": 189.51,
+   "text": "You might not win this particular hand with your ace-king — in fact, against pocket kings, you'll lose about seventy percent of the time — but you can still say precisely what your holding is worth over the long run."
+  },
+  {
+   "t": 201.06,
+   "text": "One important limitation: equity is only a clean number when you're all-in, because at that point there's no further betting to complicate things."
+  },
+  {
+   "t": 209.25,
+   "text": "If you're not all-in, knowing your equity is still useful as a rough baseline, but the actual value of your hand will be shaped by many other factors: whether you'll get bluffed off your hand, whether you'll be able to successfully bluff, whether you'll pay off an opponent's value bet, or whether you'll get paid when you have the best hand."
+  },
+  {
+   "t": 227.31,
+   "text": "All of those future actions create a gap between your raw equity and what your hand is actually worth in a given spot."
+  },
+  {
+   "t": 234.72,
+   "text": "Now let's talk about expected value, which the book abbreviates as EV."
+  },
+  {
+   "t": 239.69,
+   "text": "Expected value is a broader tool that tries to account for all possible outcomes of a decision — including the effects of future actions by both you and your opponents — weighted by how likely each outcome is."
+  },
+  {
+   "t": 252.33,
+   "text": "The book gives a clear example."
+  },
+  {
+   "t": 254.31,
+   "text": "Suppose you're on the river and you make a bluff of fifty dollars into a pot of one hundred dollars."
+  },
+  {
+   "t": 260.0,
+   "text": "You don't know whether your opponent will call or fold."
+  },
+  {
+   "t": 263.03,
+   "text": "But you can express the value of that bluff as a formula."
+  },
+  {
+   "t": 266.5,
+   "text": "When your opponent folds, you win the one-hundred-dollar pot."
+  },
+  {
+   "t": 269.78,
+   "text": "When your opponent calls or raises, you lose your fifty-dollar bet."
+  },
+  {
+   "t": 274.4,
+   "text": "So your expected value equals the probability they fold times one hundred dollars, minus the probability they call times fifty dollars, minus the probability they raise times fifty dollars."
+  },
+  {
+   "t": 286.95,
+   "text": "We can simplify that last part: calling and raising both result in you losing fifty dollars, so we can combine them into a single non-fold frequency."
+  },
+  {
+   "t": 296.83,
+   "text": "The formula becomes: EV equals one hundred dollars times the fold frequency, minus fifty dollars times the non-fold frequency."
+  },
+  {
+   "t": 305.2,
+   "text": "Now plug in some numbers."
+  },
+  {
+   "t": 306.78,
+   "text": "If your opponent folds forty percent of the time, your EV is: one hundred times zero-point-four minus fifty times zero-point-six."
+  },
+  {
+   "t": 315.83,
+   "text": "That's forty dollars minus thirty dollars, which equals ten dollars."
+  },
+  {
+   "t": 320.38,
+   "text": "So that fifty-dollar bluff into a hundred-dollar pot, against an opponent who folds forty percent of the time, makes you an average of ten dollars every time you make it."
+  },
+  {
+   "t": 330.17,
+   "text": "This formula is also useful for a different question: how often does your opponent need to fold for your bluff to break even?"
+  },
+  {
+   "t": 337.18,
+   "text": "That would be the fold frequency that makes your EV equal to exactly zero."
+  },
+  {
+   "t": 342.25,
+   "text": "We'll work through that kind of algebra in detail in the next chapter."
+  },
+  {
+   "t": 345.92,
+   "text": "For now, the key point is that expected value is the tool that lets you put a price on a decision under uncertainty, by averaging all the possible outcomes weighted by their probabilities."
+  },
+  {
+   "t": 357.15,
+   "text": "The book also includes four practice problems to test your understanding of equity and expected value, and let's work through all of them."
+  },
+  {
+   "t": 364.73,
+   "text": "Problem one: how much equity does ten-nine of hearts have against ace-king — ace of spades, king of clubs — before the flop?"
+  },
+  {
+   "t": 373.75,
+   "text": "The answer is approximately forty-one percent."
+  },
+  {
+   "t": 376.75,
+   "text": "This might surprise you — ten-nine suited is not that far behind ace-king offsuit before the flop."
+  },
+  {
+   "t": 382.87,
+   "text": "It has two big card outs plus its flush and straight potential."
+  },
+  {
+   "t": 387.04,
+   "text": "Problem two: how much equity does ten-nine of hearts have against a range of all pocket pairs fifty-fives or better, ace-jack or better, and king-queen?"
+  },
+  {
+   "t": 397.42,
+   "text": "Against that wider, stronger range, ten-nine suited has about thirty-seven percent equity."
+  },
+  {
+   "t": 403.56,
+   "text": "The suited connector loses a little ground against the full range compared to just ace-king."
+  },
+  {
+   "t": 408.81,
+   "text": "Problem three: how much equity does ten-nine of hearts have against ace-ace — ace of spades, ace of clubs — on a flop of eight of hearts, seven of hearts, three of spades?"
+  },
+  {
+   "t": 421.17,
+   "text": "On this flop, ten-nine of hearts has flopped an open-ended straight draw and a flush draw simultaneously — a massive draw."
+  },
+  {
+   "t": 429.1,
+   "text": "Against the pocket aces, ten-nine of hearts has approximately fifty-six percent equity, meaning it is actually a slight favorite on this particular board."
+  },
+  {
+   "t": 438.26,
+   "text": "Problem four: suppose you make a bluff of one hundred dollars into a one-hundred-dollar pot on the river."
+  },
+  {
+   "t": 444.74,
+   "text": "Your opponent folds forty percent of the time."
+  },
+  {
+   "t": 447.62,
+   "text": "Whenever they don't fold, you lose your bet."
+  },
+  {
+   "t": 450.29,
+   "text": "What is the expected value of this bluff?"
+  },
+  {
+   "t": 452.67,
+   "text": "This time you're risking one hundred dollars to win one hundred dollars."
+  },
+  {
+   "t": 456.65,
+   "text": "The formula: EV equals one hundred dollars times forty percent, minus one hundred dollars times sixty percent."
+  },
+  {
+   "t": 464.08,
+   "text": "That's forty dollars minus sixty dollars, which equals negative twenty dollars."
+  },
+  {
+   "t": 469.45,
+   "text": "So this bluff loses you an average of twenty dollars each time you attempt it, even though forty percent of the time you win the pot."
+  },
+  {
+   "t": 476.92,
+   "text": "The risk-to-reward ratio doesn't justify the bet at that fold frequency."
+  },
+  {
+   "t": 481.99,
+   "text": "Notice the contrast with the earlier example: when you were bluffing fifty dollars into a hundred-dollar pot, you only needed your opponent to fold one-third of the time to break even — a relatively low bar."
+  },
+  {
+   "t": 494.97,
+   "text": "When you bluff a full pot-sized bet, you need your opponent to fold fifty percent of the time just to break even."
+  },
+  {
+   "t": 502.61,
+   "text": "At forty percent folds, a pot-sized bluff is a money-loser."
   }
  ]
 }

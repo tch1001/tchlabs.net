@@ -1,55 +1,191 @@
 {
  "n": 11,
  "title": "Computer Assistance",
- "duration": 78.67,
+ "duration": 396.19,
  "lines": [
   {
    "t": 0.05,
-   "text": "Chapter 1, section 11. Computer Assistance."
+   "text": "Chapter one, section eleven. Computer Assistance."
   },
   {
-   "t": 3.79,
-   "text": "Over the last decade, poker-solving software has transformed how serious players study the game."
+   "t": 3.74,
+   "text": "Human brains struggle to generate true randomness, as we've just seen, but that's actually a relatively minor limitation compared to the deeper challenge that game theory presents: finding equilibrium strategies for real poker games in the first place."
   },
   {
-   "t": 9.47,
-   "text": "These programs, called solvers, use algorithms to compute approximate Nash equilibrium strategies for real poker situations."
+   "t": 19.16,
+   "text": "Solving the kinds of toy games we've examined in this chapter — the driving game, the movie scenario, the debt-dodging game — is something human beings can do with nothing more than a grid and some arithmetic."
   },
   {
-   "t": 18.38,
-   "text": "A solver can tell you exactly how often to bet, call, raise, or fold with every hand in a given spot."
+   "t": 31.23,
+   "text": "But no-limit Texas hold 'em is not a two-by-two grid."
   },
   {
-   "t": 25.27,
-   "text": "But here is the trap that a lot of players fall into: they memorize the solver output without understanding why it looks the way it does."
+   "t": 35.49,
+   "text": "It is an almost incomprehensibly large game."
   },
   {
-   "t": 33.39,
-   "text": "Memorizing frequencies without understanding them is like memorizing a phone number without knowing who you are calling."
+   "t": 38.55,
+   "text": "The number of possible situations — the number of distinct combinations of hole cards, community cards, position, stack sizes, and action histories — runs into the billions."
   },
   {
-   "t": 40.2,
-   "text": "The right way to use a solver is to ask it questions and then dig into the logic behind the answers."
+   "t": 49.85,
+   "text": "Finding true equilibrium strategies across that entire game space is completely beyond human unaided reasoning."
   },
   {
-   "t": 46.05,
-   "text": "Why is this hand checking when the rest of the range is betting?"
+   "t": 57.74,
+   "text": "This is why specialized software called game theory solvers, or equilibrium solvers, or just 'solvers,' have become essential tools for serious poker study."
   },
   {
-   "t": 49.59,
-   "text": "Why does the equilibrium use three different bet sizes in this spot?"
+   "t": 68.49,
+   "text": "These programs use computational methods to approximate equilibrium solutions for poker situations — not toy games, but real poker spots with specific ranges, specific bet sizes, and specific stack depths."
   },
   {
-   "t": 53.92,
-   "text": "Those whys are where the real learning lives, and they connect directly back to concepts like indifference and expected value."
+   "t": 82.04,
+   "text": "The word 'approximate' matters here, and the book is careful about it."
   },
   {
-   "t": 61.7,
-   "text": "The theory in this chapter is the foundation you need to ask solvers good questions and actually understand what they are telling you."
+   "t": 87.01,
+   "text": "Even with modern computing power, solvers don't solve no-limit hold 'em in its full generality."
   },
   {
-   "t": 68.8,
-   "text": "Think of equilibrium theory as the language, and the solver as a native speaker you are finally able to have a real conversation with."
+   "t": 93.31,
+   "text": "The fundamental problem is the size of the game's strategy space."
+  },
+  {
+   "t": 97.34,
+   "text": "Consider a simple example: you're in a one-dollar two-dollar cash game with two hundred dollars effective stacks."
+  },
+  {
+   "t": 104.0,
+   "text": "When it's your turn to bet, you can bet any whole-dollar amount from two dollars up to two hundred dollars."
+  },
+  {
+   "t": 109.66,
+   "text": "That's nearly two hundred distinct betting options just for your first action."
+  },
+  {
+   "t": 114.0,
+   "text": "After you bet some amount, your opponent can raise to any of potentially hundreds of different sizes."
+  },
+  {
+   "t": 120.14,
+   "text": "You could then re-raise."
+  },
+  {
+   "t": 121.58,
+   "text": "The number of possible game paths explodes combinatorially with each additional action."
+  },
+  {
+   "t": 127.15,
+   "text": "No computer can handle that full complexity in a reasonable amount of time."
+  },
+  {
+   "t": 132.09,
+   "text": "Instead, when working with a solver, you restrict the set of available bet sizes to a manageable number."
+  },
+  {
+   "t": 139.11,
+   "text": "For example, you might allow flop bets of fifty percent of the pot, turn bets of fifty percent or one hundred percent of the pot, and river bets of fifty percent, one hundred percent, or all-in."
+  },
+  {
+   "t": 149.71,
+   "text": "With those constraints in place — just a handful of betting options at each decision point — the solver can compute an equilibrium within a much smaller game."
+  },
+  {
+   "t": 159.29,
+   "text": "The book acknowledges that restricting players to three bet sizes produces a result that's probably not too far from the true no-limit equilibrium, but strictly speaking, what the solver finds is an equilibrium for a related but different game — a game where certain bet sizes simply don't exist."
+  },
+  {
+   "t": 176.21,
+   "text": "It's an approximation, and the quality of the approximation depends on how well the allowed bet sizes capture the important choices in a given situation."
+  },
+  {
+   "t": 185.1,
+   "text": "Solvers also have a second important limitation: they need starting inputs."
+  },
+  {
+   "t": 189.88,
+   "text": "If you want to solve a flop situation, you have to tell the solver which range of hands each player is bringing to the flop."
+  },
+  {
+   "t": 196.65,
+   "text": "Those ranges are typically not precisely known — they depend on what happened before the flop, how each player tends to play, and many other factors."
+  },
+  {
+   "t": 205.66,
+   "text": "Getting the input ranges right is itself a skill, separate from the technical operation of running the solver."
+  },
+  {
+   "t": 212.71,
+   "text": "Brokos uses a vivid analogy: think of a scientist designing a laboratory experiment."
+  },
+  {
+   "t": 218.95,
+   "text": "If she designs the experiment poorly — uses the wrong controls, asks the wrong question, introduces confounding variables — then the results might be technically valid within the experiment but completely fail to illuminate what she actually wanted to know."
+  },
+  {
+   "t": 234.85,
+   "text": "The same is true of solvers: garbage in, garbage out."
+  },
+  {
+   "t": 238.95,
+   "text": "A solver will faithfully find the equilibrium for the game you defined, but if you defined the wrong game — if your input ranges are wrong or your bet size choices are inappropriate for the situation — then the output won't tell you what you think it tells you."
+  },
+  {
+   "t": 252.6,
+   "text": "There is now a category of solver capable of tackling pre-flop situations, computing equilibrium strategies for the entire pre-flop game including opening ranges, calling ranges, three-betting ranges, and responses."
+  },
+  {
+   "t": 267.26,
+   "text": "These are extremely computationally intensive, often requiring hundreds or even thousands of dollars worth of processing time to complete a single analysis."
+  },
+  {
+   "t": 277.61,
+   "text": "They are not practical tools for most players studying poker at home."
+  },
+  {
+   "t": 281.36,
+   "text": "Despite all these limitations, solvers have been transformative for poker study."
+  },
+  {
+   "t": 286.57,
+   "text": "They've allowed researchers and dedicated players to explore equilibrium strategies for real poker spots in ways that were completely impossible before, and they've generated enormous amounts of insight about how to construct balanced ranges, when to use certain bet sizes, and how various strategic choices play out in equilibrium."
+  },
+  {
+   "t": 306.88,
+   "text": "The book makes clear that you do not need access to a solver to work through the material here."
+  },
+  {
+   "t": 311.92,
+   "text": "Brokos has already done the solver work; when solver outputs appear in the book, they've been set up and interpreted for you."
+  },
+  {
+   "t": 319.36,
+   "text": "Your job as a reader is to analyze and learn from those outputs, not to generate them yourself."
+  },
+  {
+   "t": 325.52,
+   "text": "But the book also promises that by the time you've finished studying its material, you will have developed the conceptual vocabulary and analytical framework to use a solver independently and productively if you choose to do so."
+  },
+  {
+   "t": 339.0,
+   "text": "That's the longer-term payoff: not just understanding what equilibrium means in abstract terms, but building the intuition and skill to work with the tools that reveal equilibrium strategies in the games you actually play."
+  },
+  {
+   "t": 351.98,
+   "text": "And that's where we land at the end of chapter one."
+  },
+  {
+   "t": 354.57,
+   "text": "We've covered the definition of strategy, the definition of Nash Equilibrium, how to prove or disprove an equilibrium by testing unilateral deviations, the distinction between pure and mixed strategies, why mixed strategies are necessary in zero-sum games, how to calculate expected value under uncertainty, the concept of indifference and why it's the real goal of balanced play, the limitations of human randomization and how to work around them, and the role that computers and solvers play in extending these ideas to real poker."
+  },
+  {
+   "t": 387.45,
+   "text": "Every one of these concepts will come up again throughout the rest of the book."
+  },
+  {
+   "t": 391.4,
+   "text": "The work we've done in this chapter is the foundation everything else rests on."
   }
  ]
 }
