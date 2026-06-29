@@ -1,0 +1,119 @@
+{
+ "n": 7,
+ "title": "From Model to Wet Lab — DNA Compilers and Robotic Assembly",
+ "duration": 224.83,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section seven. From model to wet lab — automating the last mile."
+  },
+  {
+   "t": 4.84,
+   "text": "We have walked through the in silico portion of the design cycle."
+  },
+  {
+   "t": 8.62,
+   "text": "But at some point, you have to actually build the DNA, transform it into cells, and characterise the result in vivo."
+  },
+  {
+   "t": 16.66,
+   "text": "Computational tools are increasingly automating this transition from model to wet lab, and this section walks through where the field stands."
+  },
+  {
+   "t": 25.36,
+   "text": "If your design uses standard, well-characterised parts whose DNA sequences are known, the implementation is relatively straightforward."
+  },
+  {
+   "t": 34.04,
+   "text": "Each part has a corresponding DNA sequence; the design's interconnection structure dictates how those sequences are assembled together; standard DNA assembly methods like Gibson assembly or Golden Gate produce the final construct; and the construct is transformed into the chassis cell of choice."
+  },
+  {
+   "t": 51.88,
+   "text": "The textbook notes that this assembly phase can range in scale from assembling a single optimised gene to assembling a full bacterial genome."
+  },
+  {
+   "t": 61.01,
+   "text": "Computational algorithms exist for each scale, designed to eliminate human error and to minimise both time and cost."
+  },
+  {
+   "t": 69.89,
+   "text": "The end state, the authors note, is high-throughput, fully-automated assembly performed by liquid-handling robots."
+  },
+  {
+   "t": 77.55,
+   "text": "Modern synthetic biology labs increasingly look like miniature factories."
+  },
+  {
+   "t": 82.54,
+   "text": "Now, the harder case: when you do not know in advance which parts to use to achieve a desired behaviour."
+  },
+  {
+   "t": 88.89,
+   "text": "Maybe no existing characterised part produces the response curve you need."
+  },
+  {
+   "t": 93.84,
+   "text": "Maybe you need a part that does not yet exist."
+  },
+  {
+   "t": 96.59,
+   "text": "Two classes of tools address this."
+  },
+  {
+   "t": 99.0,
+   "text": "Class one: parts-selection tools."
+  },
+  {
+   "t": 101.56,
+   "text": "Given a high-level behavioural specification and a database of characterised parts, these tools search the part space and propose designs — combinations of parts that, when assembled, should produce the specified behaviour."
+  },
+  {
+   "t": 115.03,
+   "text": "The GEC programming language, developed by Phillips and Cardelli, is an example."
+  },
+  {
+   "t": 120.8,
+   "text": "You write a high-level program describing what you want; GEC consults its part database and returns candidate designs; you can then simulate and evaluate each candidate before committing to one."
+  },
+  {
+   "t": 132.64,
+   "text": "Class two: DNA sequence compilers."
+  },
+  {
+   "t": 135.69,
+   "text": "These are the more ambitious tools."
+  },
+  {
+   "t": 137.89,
+   "text": "Rather than selecting from a fixed catalogue of pre-existing parts, sequence compilers generate the exact DNA sequence that would implement a desired specification, even if that sequence is not in any registry."
+  },
+  {
+   "t": 150.96,
+   "text": "The RBS Calculator is the cleanest example we have discussed — it generates an RBS sequence for a desired translation initiation rate."
+  },
+  {
+   "t": 159.89,
+   "text": "Similar predictive tools exist or are being developed for promoters and terminators."
+  },
+  {
+   "t": 165.43,
+   "text": "If predictive tools mature for every fundamental part type, the entire parts registry could in principle be replaced by computational synthesis: you specify what you want, the tool designs the sequence, the synthesis company makes it, the chassis runs it."
+  },
+  {
+   "t": 181.06,
+   "text": "ClothoCAD is the textbook's example of an ambitious integrated platform — modular software that combines graphical sequence editing, data management, algorithm management, plug-in extensibility, and the ability to interface with liquid-handling robots for automated assembly."
+  },
+  {
+   "t": 198.34,
+   "text": "Platforms like this are aiming for the eventual goal of an end-to-end pipeline: behavioural specification at the input, working transformed cells at the output, with the human designer involved only in the high-level decisions."
+  },
+  {
+   "t": 211.99,
+   "text": "We are not there yet."
+  },
+  {
+   "t": 213.31,
+   "text": "But each year, larger fractions of the synthetic biology workflow move from \"manual at the bench\" to \"automatic via software\", and that trend is one of the field's most important long-term arcs."
+  }
+ ]
+}

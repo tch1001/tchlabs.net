@@ -1,0 +1,99 @@
+{
+ "n": 7,
+ "title": "Light Control Devices",
+ "duration": 220.92,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section seven. Light control — gene expression triggered by photons."
+  },
+  {
+   "t": 5.35,
+   "text": "Inducible promoters give you chemical control over when a gene turns on — add IPTG, add tetracycline, the gene activates."
+  },
+  {
+   "t": 14.68,
+   "text": "Quorum sensing gives you density-based control — the gene activates when enough cells are present."
+  },
+  {
+   "t": 20.75,
+   "text": "But both of these have limitations for fine-grained, real-time, spatially-resolved control."
+  },
+  {
+   "t": 26.54,
+   "text": "Chemicals diffuse slowly and distribute themselves around a culture; they cannot be turned off quickly; and they cannot be patterned in space without elaborate microfluidic setups."
+  },
+  {
+   "t": 38.21,
+   "text": "Light, in contrast, is a remarkable control modality."
+  },
+  {
+   "t": 42.46,
+   "text": "Light can be applied or removed instantly."
+  },
+  {
+   "t": 45.52,
+   "text": "Light can be patterned in space at micrometre resolution with a projector or a microscope objective."
+  },
+  {
+   "t": 51.46,
+   "text": "Light can target specific locations within a culture without disturbing others."
+  },
+  {
+   "t": 56.4,
+   "text": "These properties make light a natural choice for high-resolution control of engineered cells, and the synthetic biology community has invested heavily in building light-controlled gene expression devices."
+  },
+  {
+   "t": 69.39,
+   "text": "A light-control device, in basic terms, has two components."
+  },
+  {
+   "t": 73.95,
+   "text": "First, a light-gathering element — a protein that absorbs light and undergoes a conformational change in response."
+  },
+  {
+   "t": 82.0,
+   "text": "Most synthetic-biology light-gathering elements come from organisms that naturally use light for signalling: plants (which use phytochromes and cryptochromes for circadian and developmental control), cyanobacteria (which sense light for photosynthesis regulation), and microbial systems like the bacterial light-oxygen-voltage domains."
+  },
+  {
+   "t": 102.44,
+   "text": "When the light-gathering protein absorbs a photon — usually via a small chemical chromophore embedded in the protein — its three-dimensional structure changes, exposing or burying particular binding surfaces."
+  },
+  {
+   "t": 116.36,
+   "text": "Second, an effector element — a protein that takes the conformational change in the light-gathering element and translates it into a change in gene expression."
+  },
+  {
+   "t": 126.45,
+   "text": "The effector is usually a native transcription factor from the chassis (so that it can interface with native promoters), fused or coupled to the light-gathering protein."
+  },
+  {
+   "t": 136.5,
+   "text": "Two strategies have been most widely used."
+  },
+  {
+   "t": 139.35,
+   "text": "One: light-induced phosphorylation of a transcription factor — the light-gathering element catalyses or inhibits the phosphorylation of a downstream transcription factor that controls gene expression."
+  },
+  {
+   "t": 151.46,
+   "text": "Two: light-induced dimerisation — the light-gathering element, when illuminated, either pulls two protein partners together or pushes them apart, and the change in dimerisation state alters transcription factor activity."
+  },
+  {
+   "t": 165.74,
+   "text": "Both strategies have been demonstrated in bacteria, yeast, and mammalian cells."
+  },
+  {
+   "t": 171.04,
+   "text": "With light control in your toolkit, you can do things that are otherwise hard: induce gene expression in specific sub-regions of a growing colony, drive gene expression in time-varying patterns to study cellular dynamics, build optogenetic circuits where the colony's behaviour is shaped in real time by patterns of light projected onto it."
+  },
+  {
+   "t": 190.72,
+   "text": "The bacterial camera — an early demonstration of synthetic biology, in which engineered E. coli were patterned by ambient light into image-forming layers — is one famous example, and we will see its descendants when we discuss edge detectors a few sections from now."
+  },
+  {
+   "t": 207.51,
+   "text": "Light control is also useful for studying the dynamics of natural systems by perturbing them rapidly and reversibly, and it has become a workhorse tool in fundamental cell biology beyond synthetic biology proper."
+  }
+ ]
+}

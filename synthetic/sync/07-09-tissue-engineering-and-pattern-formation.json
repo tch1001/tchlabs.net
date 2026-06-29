@@ -1,0 +1,119 @@
+{
+ "n": 9,
+ "title": "Tissue Engineering and Pattern Formation",
+ "duration": 242.9,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section nine. Tissue engineering and pattern formation — programming multicellular structure."
+  },
+  {
+   "t": 6.06,
+   "text": "Many of the most striking biological behaviours emerge from collective coordination of many cells."
+  },
+  {
+   "t": 12.69,
+   "text": "A multicellular organism arises from a single fertilised egg through patterns of cell division, differentiation, and positional choice that produce reliable structures across thousands of generations."
+  },
+  {
+   "t": 25.26,
+   "text": "Reproducing this kind of patterned multicellular behaviour with engineered cells is one of the most ambitious goals in synthetic biology."
+  },
+  {
+   "t": 33.62,
+   "text": "Traditional tissue engineering relies on extracellular scaffolds — three-dimensional matrices made of polymers or natural materials — that physically constrain where cells go and how they differentiate."
+  },
+  {
+   "t": 46.52,
+   "text": "The scaffolds direct cellular organisation through top-down structural cues."
+  },
+  {
+   "t": 51.91,
+   "text": "A synthetic biology approach adds bottom-up programming: cells themselves are engineered to communicate, sense their position relative to neighbours, and choose their behaviour based on what they sense."
+  },
+  {
+   "t": 63.75,
+   "text": "Pattern formation through cell-to-cell signalling has been demonstrated in elegant proof-of-principle experiments."
+  },
+  {
+   "t": 70.54,
+   "text": "One particularly clean example uses the quorum-sensing system from Vibrio cholerae to engineer pattern-forming cellular communities in E. coli."
+  },
+  {
+   "t": 80.33,
+   "text": "The setup involves sender cells that produce a signalling molecule and receiver cells whose response depends on the local concentration of that signal."
+  },
+  {
+   "t": 88.9,
+   "text": "Receiver cells were designed to act as band-pass filters — they only respond to a specific range of signalling concentrations, ignoring concentrations that are too low or too high."
+  },
+  {
+   "t": 100.75,
+   "text": "Place a sender cell in the middle of a lawn of receiver cells, and the signal diffuses outward, creating a concentration gradient."
+  },
+  {
+   "t": 109.39,
+   "text": "Receiver cells at the right distance from the sender — where the concentration falls in their bandpass range — fluoresce."
+  },
+  {
+   "t": 116.15,
+   "text": "Receiver cells too close (saturated) or too far (sub-threshold) do not fluoresce."
+  },
+  {
+   "t": 122.95,
+   "text": "The visible result is a ring of fluorescence around the sender cell — a bullseye pattern, emerged spontaneously from the engineered cellular logic."
+  },
+  {
+   "t": 132.81,
+   "text": "By tuning the bandpass parameters and arranging multiple senders, you can engineer more complex patterns — ellipses, concentric circles, clovers."
+  },
+  {
+   "t": 143.04,
+   "text": "Each pattern is the visible signature of the underlying cellular logic and signalling kinetics."
+  },
+  {
+   "t": 149.44,
+   "text": "Another set of approaches uses light-driven patterning."
+  },
+  {
+   "t": 152.97,
+   "text": "The bacterial camera we mentioned briefly in chapter five works by engineering E. coli that respond to red light using a chimeric photoreceptor system, where the light input controls expression of a chemical output."
+  },
+  {
+   "t": 166.11,
+   "text": "When a high-contrast image is projected onto a lawn of these cells, the cells in lit regions and dark regions express different colours, capturing the image in living cells at resolutions exceeding 100 megapixels per square inch."
+  },
+  {
+   "t": 181.12,
+   "text": "The image is recorded by the bacteria."
+  },
+  {
+   "t": 183.4,
+   "text": "Extending this further, researchers built the edge-detector circuit we discussed in chapter five, which lets bacterial populations detect the boundaries between lit and dark regions of a projected image and produce visible pigment exactly at those boundaries."
+  },
+  {
+   "t": 198.5,
+   "text": "This is genuinely multicellular image processing implemented in engineered cells."
+  },
+  {
+   "t": 204.53,
+   "text": "The applications of programmable pattern formation are broad."
+  },
+  {
+   "t": 208.24,
+   "text": "Patterned biomaterials — engineered tissues that lay themselves down in specified architectures."
+  },
+  {
+   "t": 214.94,
+   "text": "Self-organising organoids — three-dimensional cellular structures that mimic specific organs and are useful for drug screening and disease modelling."
+  },
+  {
+   "t": 223.95,
+   "text": "Parallel biological computation — using lawns of cells as computational substrates, each cell a tiny processor, the whole lawn a large parallel computer."
+  },
+  {
+   "t": 234.79,
+   "text": "All of these are research-stage rather than commercial, but the principle has been demonstrated and the field is investing in scaling it up."
+  }
+ ]
+}

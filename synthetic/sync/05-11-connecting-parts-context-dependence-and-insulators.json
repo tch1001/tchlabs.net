@@ -1,0 +1,179 @@
+{
+ "n": 11,
+ "title": "Connecting Parts — Context Dependence and Insulators",
+ "duration": 352.03,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section eleven. Connecting parts in practice — context dependence, RBS matching, and the problem of insulators."
+  },
+  {
+   "t": 7.95,
+   "text": "We have been treating biological parts as if they are clean modules."
+  },
+  {
+   "t": 11.99,
+   "text": "Drop one in, swap another out, expect predictable behaviour."
+  },
+  {
+   "t": 16.48,
+   "text": "The reality, the textbook emphasises here, is more complicated."
+  },
+  {
+   "t": 21.14,
+   "text": "Biological parts are context-dependent in a way that electronic components are not."
+  },
+  {
+   "t": 26.05,
+   "text": "Their behaviour depends on what sits next to them in the DNA, what neighbouring sequences fold into in the mRNA, what is already in the cellular environment."
+  },
+  {
+   "t": 35.54,
+   "text": "Engineering robust, predictable, composable parts in this context is one of the major open problems of synthetic biology, and the last sections of this chapter cover the techniques the community uses to mitigate the worst of the context-dependence problem."
+  },
+  {
+   "t": 51.17,
+   "text": "Start with the basic observation."
+  },
+  {
+   "t": 53.36,
+   "text": "A promoter's strength depends primarily on its own sequence, but it is secondarily affected by the bases upstream and downstream of it."
+  },
+  {
+   "t": 61.59,
+   "text": "Those neighbouring bases change the local melting temperature of the DNA — how easy it is to pry the strands apart for transcription — and they change the secondary structure that the freshly synthesised RNA might adopt."
+  },
+  {
+   "t": 75.21,
+   "text": "An RBS's strength depends primarily on its own sequence, but the context around it — the immediate downstream coding sequence, in particular — can determine whether the RBS folds into a hairpin and becomes inaccessible to the ribosome."
+  },
+  {
+   "t": 90.5,
+   "text": "Connect two devices in series, and the intergenic region between them can affect both devices' behaviour by determining how the mRNA folds across the boundary."
+  },
+  {
+   "t": 100.71,
+   "text": "This is the layer of complexity the design cycle has to confront."
+  },
+  {
+   "t": 105.46,
+   "text": "Three engineering responses are described in this section."
+  },
+  {
+   "t": 108.8,
+   "text": "First: tuning secondary structure deliberately."
+  },
+  {
+   "t": 112.01,
+   "text": "When building a metabolic pathway with several enzymes in sequence, you often need to balance the expression of each enzyme — too little of one and the pathway stalls; too much of one and intermediates pile up and become toxic."
+  },
+  {
+   "t": 126.99,
+   "text": "One way to balance is to design the mRNA secondary structure around each part so that translation efficiency comes out at the desired ratios."
+  },
+  {
+   "t": 136.53,
+   "text": "Algorithms exist for this, with varying degrees of accuracy."
+  },
+  {
+   "t": 140.81,
+   "text": "An alternative when algorithms are imperfect is to build combinatorial libraries — randomise the bases in critical intergenic regions, screen many variants, and find ones with the desired performance."
+  },
+  {
+   "t": 153.29,
+   "text": "Labour intensive but effective when first-principles design falls short."
+  },
+  {
+   "t": 158.51,
+   "text": "Second: RBS matching using computational tools like the RBS Calculator."
+  },
+  {
+   "t": 164.51,
+   "text": "We discussed the RBS Calculator at length in chapter one, but it appears again here in the context-dependence context."
+  },
+  {
+   "t": 171.79,
+   "text": "Given a particular surrounding sequence, the calculator predicts the RBS strength within a factor of two or three of measured behaviour."
+  },
+  {
+   "t": 180.4,
+   "text": "That accuracy lets you design metabolic pathways with proportionally tuned RBSes — say, ratio of one to three to ten across three enzymes in a pathway — without doing exhaustive combinatorial screening."
+  },
+  {
+   "t": 194.29,
+   "text": "The calculator is one of the cleanest examples of model-driven design in synthetic biology, and it is among the most successful tools the field has produced."
+  },
+  {
+   "t": 204.19,
+   "text": "Third: insulators."
+  },
+  {
+   "t": 206.11,
+   "text": "The ambitious solution to context dependence is to build insulator parts — neutral buffering sequences placed between adjacent parts to absorb the context effects and keep parts behaviourally independent."
+  },
+  {
+   "t": 219.01,
+   "text": "An ideal insulator would receive a signal from an upstream device, generate a clean output independent of any downstream device, and never interact with either side beyond that defined input-output relationship."
+  },
+  {
+   "t": 231.7,
+   "text": "If you had ideal insulators, you could connect any two parts and expect them to behave the same as they did in isolation — the holy grail of compositional engineering."
+  },
+  {
+   "t": 242.54,
+   "text": "Unfortunately, real biological insulators are hard to build."
+  },
+  {
+   "t": 246.8,
+   "text": "The textbook discusses two open problems."
+  },
+  {
+   "t": 250.04,
+   "text": "Buffering sequences in DNA have to be chosen for context-neutrality, but their context-neutrality itself depends on the surrounding sequence — a recursive problem."
+  },
+  {
+   "t": 260.67,
+   "text": "And some parts must be very tightly spaced — an RBS and the start codon of its coding sequence, for example, cannot have arbitrary intervening sequences — so you cannot just always insert buffers between parts."
+  },
+  {
+   "t": 274.4,
+   "text": "A theoretical alternative is to use small circuits as insulators."
+  },
+  {
+   "t": 278.95,
+   "text": "Take a signal from an upstream device, feed it into a small circuit, and have that circuit produce a stable output signal that is independent of whatever downstream device it feeds."
+  },
+  {
+   "t": 289.7,
+   "text": "Such circuits have been proposed, and partial implementations exist."
+  },
+  {
+   "t": 294.73,
+   "text": "But the catch is the metabolic cost: maintaining a stable output regardless of downstream load requires the insulator circuit to synthesise and degrade biomolecules at high rates — which imposes a significant burden on the cell."
+  },
+  {
+   "t": 309.28,
+   "text": "Insulators of this kind are a research frontier rather than a deployed solution."
+  },
+  {
+   "t": 314.22,
+   "text": "The general lesson from this section is sobering but important."
+  },
+  {
+   "t": 318.42,
+   "text": "The clean modularity that parts-devices-systems frameworks promise is, in biology, an aspiration rather than a guarantee."
+  },
+  {
+   "t": 327.3,
+   "text": "Real engineering with biological parts means understanding context dependence, having tools to predict and mitigate it, and accepting that significant experimental iteration may still be required."
+  },
+  {
+   "t": 339.47,
+   "text": "Synthetic biology is closing the gap, but the gap is real, and being clear-eyed about it is what distinguishes the working engineer from the optimist who is about to be surprised."
+  },
+  {
+   "t": 350.48,
+   "text": "End of chapter five."
+  }
+ ]
+}

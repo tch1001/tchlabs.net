@@ -1,0 +1,175 @@
+{
+ "n": 3,
+ "title": "Types of Models — ODEs, PDEs, SDEs, and Master Equations",
+ "duration": 312.05,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section three. Types of mathematical models you will encounter."
+  },
+  {
+   "t": 4.25,
+   "text": "Not all biological models are the same."
+  },
+  {
+   "t": 6.97,
+   "text": "The mathematical machinery varies enormously depending on what you are trying to capture, and the textbook walks through the main classes."
+  },
+  {
+   "t": 14.19,
+   "text": "At the very finest scale, there is molecular dynamics — atom-by-atom simulation of protein motions, ligand binding, conformational changes."
+  },
+  {
+   "t": 23.43,
+   "text": "This is the highest-resolution modelling available."
+  },
+  {
+   "t": 26.57,
+   "text": "Most of the time, it is impractical for synthetic biology design."
+  },
+  {
+   "t": 30.73,
+   "text": "Molecular dynamics is computationally expensive and requires parameter values that may not be known accurately."
+  },
+  {
+   "t": 37.73,
+   "text": "And the questions a synthetic biologist usually asks — what is the steady-state protein level, how does the output oscillate, what is the response time to an input — are not best answered at the atomic level."
+  },
+  {
+   "t": 49.51,
+   "text": "So coarse-grained models are the workhorses."
+  },
+  {
+   "t": 52.29,
+   "text": "Four main types appear repeatedly."
+  },
+  {
+   "t": 54.44,
+   "text": "First: ordinary differential equations, abbreviated ODEs."
+  },
+  {
+   "t": 59.4,
+   "text": "An ODE expresses the rate of change of a variable as a function of time, with the variable depending only on time and not on space."
+  },
+  {
+   "t": 68.62,
+   "text": "Each species — mRNA concentration, protein concentration, signalling molecule concentration — gets one variable, and the system is described by a set of coupled ODEs."
+  },
+  {
+   "t": 80.21,
+   "text": "ODEs implicitly assume spatial homogeneity: every molecule of a given species behaves the same, regardless of where in the cell it is."
+  },
+  {
+   "t": 89.65,
+   "text": "For many synthetic biology systems this is a fine approximation, and ODEs are the most commonly used framework."
+  },
+  {
+   "t": 97.1,
+   "text": "The original toggle switch by Gardner, Cantor, and Collins, and the original repressilator by Elowitz and Leibler, were both modelled with ODEs."
+  },
+  {
+   "t": 106.36,
+   "text": "Second: partial differential equations, PDEs."
+  },
+  {
+   "t": 110.28,
+   "text": "A PDE allows variables to depend not just on time but also on space."
+  },
+  {
+   "t": 115.56,
+   "text": "When spatial variation matters — when concentrations differ across regions of a cell or across regions of a colony — PDEs are the appropriate tool."
+  },
+  {
+   "t": 125.46,
+   "text": "Reaction-diffusion equations are the canonical example: a concentration at each point in space changes over time according to both reactions happening at that point and diffusion of the species from neighbouring points."
+  },
+  {
+   "t": 138.38,
+   "text": "PDEs were used to capture the spatial dynamics of synchronised bacterial oscillators distributed across a culture."
+  },
+  {
+   "t": 146.26,
+   "text": "PDEs are mathematically harder than ODEs and computationally more expensive, but for spatially-resolved synthetic biology designs they are essential."
+  },
+  {
+   "t": 156.12,
+   "text": "Third: stochastic differential equations, SDEs."
+  },
+  {
+   "t": 160.3,
+   "text": "ODEs and PDEs are deterministic — given the same initial conditions, you always get the same trajectory."
+  },
+  {
+   "t": 167.65,
+   "text": "But biology is noisy."
+  },
+  {
+   "t": 169.59,
+   "text": "When the number of molecules of a species is small — say, a few tens of transcription factor molecules — the discrete random events of biochemistry start to matter, and the smooth continuous deterministic description fails to capture the actual behaviour."
+  },
+  {
+   "t": 184.64,
+   "text": "SDEs add a stochastic noise term to differential equations to capture this random variation, using the Langevin approximation or similar techniques."
+  },
+  {
+   "t": 194.56,
+   "text": "Variables still take continuous values, but their trajectories now include random fluctuations."
+  },
+  {
+   "t": 201.57,
+   "text": "SDE simulations from the same initial conditions give different trajectories each run, and you average over many runs to get statistical properties."
+  },
+  {
+   "t": 210.57,
+   "text": "Fourth: chemical master equations, CMEs."
+  },
+  {
+   "t": 214.31,
+   "text": "These are the most rigorous treatment of stochastic biochemistry."
+  },
+  {
+   "t": 218.39,
+   "text": "Rather than treating concentrations as continuous variables with random fluctuations, CMEs treat molecule counts as discrete integer values that change in discrete jumps when reactions fire."
+  },
+  {
+   "t": 230.8,
+   "text": "The CME describes the time evolution of the joint probability distribution over all possible molecule-count states."
+  },
+  {
+   "t": 238.45,
+   "text": "Mathematically beautiful; computationally expensive for systems with many species or many molecules."
+  },
+  {
+   "t": 245.6,
+   "text": "Simulating CMEs is typically done with the Gillespie algorithm, which generates individual sample paths through the discrete state space."
+  },
+  {
+   "t": 254.34,
+   "text": "Comparison: deterministic frameworks like ODEs are fast and capture average behaviour; stochastic frameworks like SDEs and CMEs capture noise but cost more compute."
+  },
+  {
+   "t": 265.99,
+   "text": "Hybrid frameworks that combine deterministic and stochastic descriptions within the same model are an active research area, used when some species have high copy numbers and others have low."
+  },
+  {
+   "t": 277.12,
+   "text": "And the textbook offers a practical workflow tip."
+  },
+  {
+   "t": 280.13,
+   "text": "Start with deterministic models — ODEs are simpler and faster to develop."
+  },
+  {
+   "t": 285.53,
+   "text": "If the deterministic design behaves as desired, test whether stochastic effects would compromise it by building the corresponding stochastic model."
+  },
+  {
+   "t": 293.69,
+   "text": "If they would, refine the design until stochastic effects no longer dominate."
+  },
+  {
+   "t": 299.11,
+   "text": "Only design specifically for stochastic phenomena when stochasticity is the feature, not the bug — for example, when you want population-level diversification or noise-driven decision making."
+  }
+ ]
+}

@@ -1,0 +1,139 @@
+{
+ "n": 10,
+ "title": "Edge Detectors and Counters",
+ "duration": 280.63,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section ten. Edge detectors and counters — composing devices into smarter systems."
+  },
+  {
+   "t": 6.67,
+   "text": "Once you have logic gates, signalling devices, and light-control elements, you can compose them into much more interesting systems."
+  },
+  {
+   "t": 13.97,
+   "text": "The textbook highlights two beautiful examples: the edge detector and the genetic counter."
+  },
+  {
+   "t": 20.23,
+   "text": "Start with the edge detector."
+  },
+  {
+   "t": 22.19,
+   "text": "In image processing, edge detection is the technique that finds the boundaries between regions of different brightness — the edges in a photograph."
+  },
+  {
+   "t": 31.06,
+   "text": "It is a classic algorithm in computer vision, and one of the showcase results of early synthetic biology was the construction of a biological version of it."
+  },
+  {
+   "t": 40.56,
+   "text": "The edge detector system, published by Tabor and colleagues in 2009 in Cell, was built into E. coli cells and used a combination of light-control elements, quorum-sensing devices, and logic gates."
+  },
+  {
+   "t": 53.35,
+   "text": "Here is how it works."
+  },
+  {
+   "t": 54.7,
+   "text": "Cells contain a light-sensing element that distinguishes light from dark."
+  },
+  {
+   "t": 59.89,
+   "text": "Cells that find themselves in the dark behave like a NOT-light gate — they detect darkness and respond by activating a sender device that produces an AHL signal."
+  },
+  {
+   "t": 70.19,
+   "text": "Cells that find themselves in the light do not produce AHL — but they do carry a receiver device that responds to AHL produced by neighbouring dark-region cells."
+  },
+  {
+   "t": 80.88,
+   "text": "Now consider three regions of a cellular lawn."
+  },
+  {
+   "t": 84.04,
+   "text": "Cells deep in the dark region produce AHL but are surrounded by other dark-region cells also producing AHL — the local AHL concentration is high but uniform."
+  },
+  {
+   "t": 96.06,
+   "text": "Cells deep in the light region do not produce AHL and are surrounded by other light-region cells also not producing AHL — local AHL concentration is low."
+  },
+  {
+   "t": 106.7,
+   "text": "Cells at the boundary, sitting in the light but adjacent to dark-region cells, are in a unique situation: they are NOT in the dark themselves, so they do not produce AHL, but they DO receive AHL diffusing in from their dark-region neighbours."
+  },
+  {
+   "t": 121.85,
+   "text": "These boundary cells satisfy the logic: I receive AHL AND I am NOT in the light's dark — they activate a downstream gene that produces a pigment."
+  },
+  {
+   "t": 132.11,
+   "text": "The result: a cellular lawn that, when patterned with light, produces a visible pigment line precisely at the edges between light and dark regions."
+  },
+  {
+   "t": 141.57,
+   "text": "This is genuinely beautiful as an engineered system, and it illustrates how compositionally simple parts give rise to complex behaviour — image-processing-style edge detection, implemented in living bacteria."
+  },
+  {
+   "t": 155.6,
+   "text": "Now the genetic counter."
+  },
+  {
+   "t": 157.2,
+   "text": "A counter is a system that records the occurrence of events — each event increments an internal state."
+  },
+  {
+   "t": 163.53,
+   "text": "Building such a system in cells has been pursued for several reasons: as a memory device, as a way for cells to record their developmental history, as a step toward more general cellular computation."
+  },
+  {
+   "t": 175.85,
+   "text": "One scheme couples protein generators that depend on each other for activation."
+  },
+  {
+   "t": 180.53,
+   "text": "The first input event causes the production of a protein that the second event's protein generator requires for activation."
+  },
+  {
+   "t": 187.86,
+   "text": "Until that prerequisite protein is present, the second protein generator does not respond to its own input."
+  },
+  {
+   "t": 194.74,
+   "text": "Once it is present, the second event becomes detectable — and analogously, the second protein's product becomes a prerequisite for the third protein generator."
+  },
+  {
+   "t": 205.57,
+   "text": "By chaining these dependencies, you get a counter: a cellular population whose state reflects how many events of the relevant kind have occurred."
+  },
+  {
+   "t": 214.0,
+   "text": "The obvious limitation is that this approach scales linearly in genetic real estate — you need a new protein generator for each event to be counted."
+  },
+  {
+   "t": 222.74,
+   "text": "An elegant alternative uses DNA-editing enzymes called integrases to rearrange DNA in response to each input event."
+  },
+  {
+   "t": 231.29,
+   "text": "Integrases can flip, excise, or insert DNA segments, and they leave a permanent rearrangement behind."
+  },
+  {
+   "t": 238.72,
+   "text": "By engineering integrase-mediated rearrangements that toggle on each input, you can record events directly in DNA, which is both stable and high-capacity — far more bits than a fixed set of protein generators could provide."
+  },
+  {
+   "t": 252.54,
+   "text": "Counters built this way can act as cellular event recorders, useful for tracking what an engineered population has experienced over its history."
+  },
+  {
+   "t": 261.39,
+   "text": "Both the edge detector and the counter illustrate a recurring theme in chapter five: simple parts and devices, composed thoughtfully, give rise to behaviours far more sophisticated than any individual part could."
+  },
+  {
+   "t": 274.69,
+   "text": "This is exactly the parts-devices-systems hierarchy doing what it is supposed to do."
+  }
+ ]
+}

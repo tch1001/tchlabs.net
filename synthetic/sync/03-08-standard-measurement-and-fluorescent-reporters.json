@@ -1,0 +1,155 @@
+{
+ "n": 8,
+ "title": "Standard Measurement and Fluorescent Reporters",
+ "duration": 340.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section eight. Standard measurement and the role of fluorescent reporters."
+  },
+  {
+   "t": 4.62,
+   "text": "Standardising how parts are assembled is one half of the engineering foundation."
+  },
+  {
+   "t": 9.65,
+   "text": "Standardising how parts are measured is the other."
+  },
+  {
+   "t": 13.04,
+   "text": "For synthetic biology to be a real engineering discipline, the characterisation data of a part — its strength, its dynamic range, its response curve — has to be measured in a way that allows different laboratories to compare their numbers."
+  },
+  {
+   "t": 27.23,
+   "text": "Otherwise the registry of parts becomes a registry of incomparable measurements."
+  },
+  {
+   "t": 32.42,
+   "text": "The closest historical analogy the authors offer is the Texas Instruments TTL Data Book of the 1970s and 1980s, which standardised the characteristic curves of every common transistor and digital logic chip."
+  },
+  {
+   "t": 46.4,
+   "text": "Engineers could pull a part off the shelf and trust the datasheet, because the manufacturer had measured under standardised conditions and reported in standardised units."
+  },
+  {
+   "t": 56.56,
+   "text": "Synthetic biology aspires to the same regime, and has built infrastructure around a small set of standard measurement technologies."
+  },
+  {
+   "t": 64.67,
+   "text": "Microscopy, flow cytometry, colorimetry, luminometry, fluorimetry."
+  },
+  {
+   "t": 70.78,
+   "text": "Almost all standard measurements in synthetic biology depend on reporter systems — devices that produce a visually or spectrally detectable signal in proportion to the quantity you actually want to measure."
+  },
+  {
+   "t": 83.86,
+   "text": "The dominant reporter in the field, by a long way, is Green Fluorescent Protein, abbreviated GFP."
+  },
+  {
+   "t": 90.91,
+   "text": "GFP was originally isolated from the jellyfish Aequorea victoria."
+  },
+  {
+   "t": 95.8,
+   "text": "It is a small, well-folded protein that fluoresces green when illuminated with blue light, and crucially, this property is intrinsic to the protein — no co-factor is required, just the protein itself and the right wavelength."
+  },
+  {
+   "t": 110.33,
+   "text": "The DNA sequence encoding GFP can be inserted into essentially any organism, and that organism will then produce GFP and glow green when illuminated."
+  },
+  {
+   "t": 121.05,
+   "text": "This makes GFP a remarkably versatile reporter."
+  },
+  {
+   "t": 124.64,
+   "text": "Researchers use GFP in three main ways."
+  },
+  {
+   "t": 128.56,
+   "text": "First, as a transcriptional reporter: place the GFP coding sequence downstream of a promoter, and the fluorescence intensity tells you how active that promoter is."
+  },
+  {
+   "t": 139.35,
+   "text": "Second, as a translational fusion: fuse GFP to another protein of interest, and you can follow the protein's localisation and abundance live in the cell."
+  },
+  {
+   "t": 149.66,
+   "text": "Third, as a population indicator: measure the green fluorescence of an entire culture to see how an engineered behaviour scales across a population."
+  },
+  {
+   "t": 159.04,
+   "text": "GFP quantification can happen at three different scales."
+  },
+  {
+   "t": 163.28,
+   "text": "At the population scale, a fluorimeter measures total green output of a bulk cell culture."
+  },
+  {
+   "t": 169.36,
+   "text": "At the single-cell scale, flow cytometry passes cells one at a time through a microfluidic chamber, hitting them with a blue laser and recording the green fluorescence of each."
+  },
+  {
+   "t": 180.72,
+   "text": "At the sub-cellular scale, fluorescence microscopy reveals where in the cell the GFP is located, allowing protein localisation to be studied."
+  },
+  {
+   "t": 190.18,
+   "text": "Beyond GFP, there is now a broad palette of fluorescent proteins — blue, cyan, yellow, multiple shades of red, and various optimisations for specific cellular environments — that all came either from natural diversity or from extensive in-laboratory mutagenesis and selection campaigns."
+  },
+  {
+   "t": 209.94,
+   "text": "Having multiple colours available is essential because it lets you measure several engineered parts simultaneously: place GFP after one promoter and RFP after another in the same cell, and a flow cytometer with the appropriate filters can quantify both at once."
+  },
+  {
+   "t": 227.01,
+   "text": "Beyond fluorescence, two other reporter systems are common."
+  },
+  {
+   "t": 230.93,
+   "text": "Enzymatic reporters like beta-galactosidase and catechol 2,3-dioxygenase catalyse colour-change reactions when their substrates are added — the colour change is then quantified spectrophotometrically."
+  },
+  {
+   "t": 244.39,
+   "text": "Luminescent reporters like firefly and jellyfish luciferases emit light when their substrates are added — quantified by luminometry."
+  },
+  {
+   "t": 253.46,
+   "text": "Each has its niche, depending on the dynamic range and time resolution required."
+  },
+  {
+   "t": 258.79,
+   "text": "Even with these standard measurement tools, the authors are explicit that biological measurements show significant variation between research groups, and they explain why."
+  },
+  {
+   "t": 269.04,
+   "text": "Biology is inherently noisy at the molecular level — transcription is stochastic, ribosome occupancy varies, cells in a population are in different growth phases."
+  },
+  {
+   "t": 280.28,
+   "text": "Cell strains differ between laboratories even when nominally the same — the same E. coli K12 in two labs may have accumulated different mutations."
+  },
+  {
+   "t": 291.28,
+   "text": "Experimental protocols differ — different shaking speeds, different inoculation densities, different time points, different equipment manufacturers."
+  },
+  {
+   "t": 300.1,
+   "text": "All of this conspires to make absolute measurements hard to compare."
+  },
+  {
+   "t": 304.38,
+   "text": "The solution the field has converged on is reference elements — relative measurements against a known standard, analogous to how the metre is defined."
+  },
+  {
+   "t": 313.52,
+   "text": "If one specific E. coli promoter is set as the community-wide reference for promoter strength, every lab can measure their new promoter's GFP output relative to that reference, and the relative numbers can be compared across labs even when the absolute numbers cannot."
+  },
+  {
+   "t": 329.53,
+   "text": "Reference-based measurement is exactly how engineering disciplines outside biology cope with the same problem, and it is the discipline that synthetic biology is gradually adopting."
+  }
+ ]
+}

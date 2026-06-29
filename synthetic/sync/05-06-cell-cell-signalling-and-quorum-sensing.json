@@ -1,0 +1,119 @@
+{
+ "n": 6,
+ "title": "Cell-Cell Signalling and Quorum Sensing",
+ "duration": 252.74,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section six. Cell-cell signalling — coordinating populations through quorum sensing."
+  },
+  {
+   "t": 6.1,
+   "text": "Single cells doing single computations is interesting, but populations of cells coordinating with each other is much more interesting — and much more powerful."
+  },
+  {
+   "t": 15.89,
+   "text": "The natural mechanism for cell-cell communication in bacteria is called quorum sensing, and synthetic biology has adapted it into a flexible toolkit for coordinating engineered behaviours across populations."
+  },
+  {
+   "t": 28.95,
+   "text": "Quorum sensing is how bacteria sense how many of themselves are around."
+  },
+  {
+   "t": 34.15,
+   "text": "The mechanism is built around small organic molecules called acyl-homoserine lactones — AHLs."
+  },
+  {
+   "t": 41.05,
+   "text": "Different bacterial species synthesise different AHLs that vary in the length of their acyl chain and in the chemical groups attached."
+  },
+  {
+   "t": 49.59,
+   "text": "AHL molecules are made inside a cell, secreted into the environment, and accumulate in proportion to local cell density."
+  },
+  {
+   "t": 58.3,
+   "text": "When AHL concentration in the environment reaches a threshold — meaning there are enough cells around for the concentration to build up — bacteria sense this and switch on density-dependent behaviours."
+  },
+  {
+   "t": 70.42,
+   "text": "Famously, in Vibrio fischeri this triggers bioluminescence — the light is only worth producing when there are enough cells to produce a visible glow."
+  },
+  {
+   "t": 80.79,
+   "text": "In other species, quorum sensing triggers biofilm formation, virulence factor production, or sporulation."
+  },
+  {
+   "t": 88.19,
+   "text": "Synthetic biology has decomposed quorum sensing into two kinds of engineered devices: senders and receivers."
+  },
+  {
+   "t": 96.22,
+   "text": "A sender device is a piece of DNA that, when expressed in a cell, makes the AHL synthesis enzyme."
+  },
+  {
+   "t": 103.84,
+   "text": "That enzyme then produces the AHL molecule, which the cell secretes."
+  },
+  {
+   "t": 109.11,
+   "text": "By placing the sender device under the control of a regulated promoter, you can decide when and under what conditions the cell starts emitting its AHL signal."
+  },
+  {
+   "t": 119.29,
+   "text": "And by using AHL synthesis enzymes from different bacterial species, you can produce different AHL variants — each one a distinguishable chemical signal."
+  },
+  {
+   "t": 129.38,
+   "text": "Because the AHL species native to your chassis is typically not produced by your engineered AHL synthesis enzyme, you get orthogonality — the engineered system can speak its own chemical language that the native cellular regulators do not interfere with."
+  },
+  {
+   "t": 144.62,
+   "text": "A receiver device is the complementary piece."
+  },
+  {
+   "t": 147.6,
+   "text": "It contains a transcription factor that specifically binds a particular AHL, and a promoter regulated by that transcription factor."
+  },
+  {
+   "t": 156.19,
+   "text": "In the natural system, the transcription factor is continually produced but is unstable on its own."
+  },
+  {
+   "t": 162.5,
+   "text": "When the AHL ligand binds, it stabilises the transcription factor, which then binds its operator on the downstream promoter and activates transcription of whatever output gene you placed under that promoter."
+  },
+  {
+   "t": 174.99,
+   "text": "So a cell carrying a receiver device sits quietly, producing the unstable transcription factor; when sufficient AHL accumulates in its environment, the transcription factor stabilises and turns on the response."
+  },
+  {
+   "t": 188.75,
+   "text": "Pair senders and receivers and you can build a remarkable variety of population-level behaviours."
+  },
+  {
+   "t": 195.07,
+   "text": "Cells that turn on a behaviour only when their population density exceeds a threshold."
+  },
+  {
+   "t": 200.9,
+   "text": "Cells that broadcast information to other cells."
+  },
+  {
+   "t": 204.18,
+   "text": "Cells that respond to chemical gradients of AHL across a spatial field."
+  },
+  {
+   "t": 209.93,
+   "text": "Coupled with logic gates and other devices, quorum sensing turns out to be one of the most flexible substrates synthetic biology has for building multicellular behaviours, and it underlies many of the more sophisticated synthetic systems we will discuss later in the chapter."
+  },
+  {
+   "t": 225.82,
+   "text": "By choosing different AHL signals — different acyl chain lengths, different functional groups — researchers can build multi-channel cell-cell communication, where different signals carry different messages, and orthogonality is preserved."
+  },
+  {
+   "t": 241.38,
+   "text": "Quorum sensing is, in a sense, biology's native protocol for distributed computing in microbial communities, and synthetic biology has co-opted it deliberately."
+  }
+ ]
+}

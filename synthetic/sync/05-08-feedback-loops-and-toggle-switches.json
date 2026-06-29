@@ -1,0 +1,143 @@
+{
+ "n": 8,
+ "title": "Feedback Loops and Toggle Switches",
+ "duration": 241.75,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section eight. Feedback loops and toggle switches — adding memory and stability."
+  },
+  {
+   "t": 5.86,
+   "text": "Feedback is one of the most important concepts in engineering, and biology is full of feedback loops."
+  },
+  {
+   "t": 12.55,
+   "text": "A feedback loop, in general, is an arrangement where a system's output influences its own future behaviour."
+  },
+  {
+   "t": 19.56,
+   "text": "If the output increases the future output, you have positive feedback."
+  },
+  {
+   "t": 23.95,
+   "text": "If the output decreases the future output, you have negative feedback."
+  },
+  {
+   "t": 28.39,
+   "text": "Both are everywhere in biology, and both are crucial for building robust synthetic systems."
+  },
+  {
+   "t": 34.84,
+   "text": "Negative feedback is especially powerful for stability."
+  },
+  {
+   "t": 38.38,
+   "text": "Theoretical work going back decades shows that negative feedback loops reduce noise — the variability in a system's output due to random fluctuations."
+  },
+  {
+   "t": 48.66,
+   "text": "Cells, being inherently noisy biochemical machines, benefit enormously from feedback control, which is why natural regulatory networks are riddled with negative feedback."
+  },
+  {
+   "t": 60.25,
+   "text": "In synthetic biology, negative feedback is easy to engineer."
+  },
+  {
+   "t": 65.2,
+   "text": "Place a repressor protein in an operon with the gene you want to regulate."
+  },
+  {
+   "t": 69.4,
+   "text": "When that operon is transcribed, both the output gene and the repressor get produced."
+  },
+  {
+   "t": 74.64,
+   "text": "The repressor then binds its own promoter and represses further transcription, throttling future output."
+  },
+  {
+   "t": 81.83,
+   "text": "The result is a gene circuit that self-regulates, settling at a steady-state level set by the balance between transcription, translation, and repression."
+  },
+  {
+   "t": 91.22,
+   "text": "Positive feedback is harder to make stable but creates interesting behaviours."
+  },
+  {
+   "t": 96.3,
+   "text": "Place an activator protein under the control of a promoter that the activator itself activates."
+  },
+  {
+   "t": 102.8,
+   "text": "Once expression starts, the activator drives more expression, which produces more activator, and so on."
+  },
+  {
+   "t": 109.81,
+   "text": "Positive feedback amplifies signals, creates bistable systems, and can drive cellular commitments — a fundamental mechanism behind many cell-fate decisions."
+  },
+  {
+   "t": 120.49,
+   "text": "An alternative positive-feedback design uses a custom RNA polymerase that recognises its own promoter — the polymerase produces more of itself, exponentially amplifying transcription until some other mechanism limits the runaway."
+  },
+  {
+   "t": 136.21,
+   "text": "Now to toggle switches."
+  },
+  {
+   "t": 138.14,
+   "text": "A toggle switch is a bistable device — it has two stable states and can be flipped between them by an external signal."
+  },
+  {
+   "t": 145.49,
+   "text": "Once flipped, it stays in its new state, even after the signal is removed."
+  },
+  {
+   "t": 150.51,
+   "text": "In other words, the switch remembers."
+  },
+  {
+   "t": 153.15,
+   "text": "The canonical genetic toggle switch was built by Gardner, Cantor, and Collins in 2000."
+  },
+  {
+   "t": 158.82,
+   "text": "Two repressors, each controlling the promoter that drives production of the other."
+  },
+  {
+   "t": 164.35,
+   "text": "Repressor A represses the promoter that produces repressor B."
+  },
+  {
+   "t": 168.53,
+   "text": "Repressor B represses the promoter that produces repressor A."
+  },
+  {
+   "t": 172.59,
+   "text": "Under most conditions, this mutually-antagonistic structure has two stable states: one in which A is high and B is low, and one in which B is high and A is low."
+  },
+  {
+   "t": 183.44,
+   "text": "A signal — typically a small inducer that disables one of the repressors — can knock the system from one stable state to the other, where it then remains."
+  },
+  {
+   "t": 192.53,
+   "text": "Adding a reporter gene downstream of one of the repressors gives you a visual indicator of which state the switch is in."
+  },
+  {
+   "t": 200.01,
+   "text": "Theoretical work has shown that any network with an even number of repressors in a feedback loop will display switch-like behaviour, so more elaborate switches with more repressors are possible."
+  },
+  {
+   "t": 210.78,
+   "text": "And switches with built-in delays — timer switches — can be designed to flip after a defined period of time has elapsed."
+  },
+  {
+   "t": 218.0,
+   "text": "By tuning the relative strengths of the two competing promoters and operators, you can set the rate at which one repressor accumulates relative to the other, and the switch flips when that accumulation crosses a threshold."
+  },
+  {
+   "t": 230.39,
+   "text": "Toggle switches are the genetic equivalent of memory bits — they let cells remember whether something happened in the past, which is a foundation for any kind of cellular decision-making logic."
+  }
+ ]
+}

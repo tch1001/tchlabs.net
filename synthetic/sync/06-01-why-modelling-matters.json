@@ -1,0 +1,167 @@
+{
+ "n": 1,
+ "title": "Why Modelling Matters",
+ "duration": 263.28,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Chapter six, section one. Why modelling matters."
+  },
+  {
+   "t": 3.79,
+   "text": "We have referenced mathematical modelling repeatedly across the previous chapters — in chapter two when introducing the engineering design cycle, in chapter three when discussing foundational technologies, in chapter five when designing devices."
+  },
+  {
+   "t": 19.0,
+   "text": "Chapter six is where the textbook puts modelling under the microscope."
+  },
+  {
+   "t": 23.7,
+   "text": "It is not optional engineering reading; it is one of the load-bearing pillars of the entire discipline."
+  },
+  {
+   "t": 29.43,
+   "text": "The opening claim is direct."
+  },
+  {
+   "t": 31.65,
+   "text": "Synthetic biology aims to rationally construct complex biological systems from well-characterised components, in the way an electronic circuit is designed."
+  },
+  {
+   "t": 41.55,
+   "text": "Other engineering disciplines — chemical, mechanical, electrical — long ago worked out that designing complex systems efficiently requires three things together: mathematical models of the components, mathematical analysis of how the components interconnect, and computer-aided design tools that operationalise both."
+  },
+  {
+   "t": 61.44,
+   "text": "Synthetic biology is now retrofitting itself with the same intellectual apparatus."
+  },
+  {
+   "t": 67.22,
+   "text": "So: what is a mathematical model?"
+  },
+  {
+   "t": 69.8,
+   "text": "The textbook defines it carefully."
+  },
+  {
+   "t": 72.35,
+   "text": "A model is a representation of the essential aspects of an existing or future system, expressed in a form that supports analysis or design."
+  },
+  {
+   "t": 81.5,
+   "text": "Crucially, models are not replicas of reality."
+  },
+  {
+   "t": 85.0,
+   "text": "They are simplified descriptions of it."
+  },
+  {
+   "t": 87.16,
+   "text": "And there is no such thing as \"the\" model of a system — only a model that answers a particular question."
+  },
+  {
+   "t": 93.46,
+   "text": "If your question is \"how do I design a gene network that produces sustained protein oscillations?\", you build one kind of model."
+  },
+  {
+   "t": 101.24,
+   "text": "If your question is \"how do I maximise ethanol production from glucose in this E. coli strain?\", you build a different kind of model."
+  },
+  {
+   "t": 109.55,
+   "text": "The question dictates the abstraction level, the equations, the parameters."
+  },
+  {
+   "t": 115.1,
+   "text": "Two parts go into building any model."
+  },
+  {
+   "t": 117.65,
+   "text": "First, the model structure — the set of equations, the variables, the way they couple to each other."
+  },
+  {
+   "t": 124.16,
+   "text": "Second, the parameter values — the rates, constants, and coefficients that appear in those equations."
+  },
+  {
+   "t": 130.99,
+   "text": "Beyond just identifying parameter values, you also need to estimate biologically feasible ranges within which the system behaves as desired."
+  },
+  {
+   "t": 139.99,
+   "text": "A model that requires impossibly precise parameter tuning is, in practice, a useless model."
+  },
+  {
+   "t": 146.85,
+   "text": "Modelling is always a trade-off between accuracy and simplicity."
+  },
+  {
+   "t": 151.25,
+   "text": "Large complex models can be more accurate, but they require more parameters, and parameter estimation is hard."
+  },
+  {
+   "t": 157.96,
+   "text": "They are also harder to analyse and slower to simulate."
+  },
+  {
+   "t": 161.9,
+   "text": "Small simple models are easier to work with but may oversimplify the biology to the point where their predictions are wrong."
+  },
+  {
+   "t": 168.51,
+   "text": "Good modelling sits in the productive middle: complex enough to capture what matters, simple enough to be tractable."
+  },
+  {
+   "t": 176.35,
+   "text": "The textbook lists four criteria for a successful model."
+  },
+  {
+   "t": 180.03,
+   "text": "Accuracy: describes current observations sufficiently well."
+  },
+  {
+   "t": 184.41,
+   "text": "Predictability: makes useful predictions about situations not yet observed."
+  },
+  {
+   "t": 189.28,
+   "text": "Reusability: applies to similar situations beyond the original case."
+  },
+  {
+   "t": 194.22,
+   "text": "Parsimony: as simple as possible — given two equally good models, prefer the simpler one."
+  },
+  {
+   "t": 200.56,
+   "text": "This is sometimes called Occam's Razor, and it shows up across science."
+  },
+  {
+   "t": 205.0,
+   "text": "And the uses of modelling in synthetic biology, the chapter emphasises, are extensive."
+  },
+  {
+   "t": 210.7,
+   "text": "Modelling separates the in silico design phase from the in vivo or in vitro implementation phase, so designs can be tested and refined computationally before any DNA is synthesised."
+  },
+  {
+   "t": 222.64,
+   "text": "It supports decisions about how to interconnect subsystems, what parameter values to target, and how to design regulatory elements to meet a behavioural specification."
+  },
+  {
+   "t": 232.14,
+   "text": "It guides robustness analysis — how much variation in parameters or environmental conditions can the system tolerate while still working?"
+  },
+  {
+   "t": 240.36,
+   "text": "And it identifies fundamental limits — behaviours that no design in a given class can achieve, no matter how cleverly engineered."
+  },
+  {
+   "t": 249.0,
+   "text": "All of which is to say: modelling is not just about predicting what your circuit will do."
+  },
+  {
+   "t": 254.43,
+   "text": "It is about understanding the design space, identifying the boundaries of that space, and choosing the best location within it before you commit to building."
+  }
+ ]
+}

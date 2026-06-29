@@ -1,0 +1,103 @@
+{
+ "n": 8,
+ "title": "Closing the Loop — Model Refinement",
+ "duration": 190.94,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section eight. Closing the loop — comparing predictions to data and refining the model."
+  },
+  {
+   "t": 5.65,
+   "text": "Building a model, generating DNA, running the wet lab — these are all upstream of the moment of truth: comparing the model's predictions with what the engineered cells actually do."
+  },
+  {
+   "t": 16.57,
+   "text": "Almost never do they match perfectly on the first iteration."
+  },
+  {
+   "t": 20.18,
+   "text": "How that mismatch is handled determines whether the model becomes a useful design tool or remains an academic exercise."
+  },
+  {
+   "t": 28.06,
+   "text": "The first thing to ask when predictions and experiments disagree is: which is wrong?"
+  },
+  {
+   "t": 33.51,
+   "text": "Maybe the model is wrong — its structure misses some important biology, or its parameter values are off."
+  },
+  {
+   "t": 40.16,
+   "text": "Maybe the experiment is unreliable — measurement noise, calibration error, drift between replicates."
+  },
+  {
+   "t": 47.29,
+   "text": "Maybe the experimental conditions did not match what the model assumed — temperature, growth phase, media composition."
+  },
+  {
+   "t": 54.86,
+   "text": "Sorting out which of these is the source of the discrepancy is a diagnostic skill that comes with experience."
+  },
+  {
+   "t": 62.08,
+   "text": "Typically, the answer is some combination: experimental error in some measurements, parts of the model that need refinement, and assumptions that need to be revisited."
+  },
+  {
+   "t": 72.05,
+   "text": "Model refinement proceeds in several modes."
+  },
+  {
+   "t": 75.66,
+   "text": "Sometimes the model structure is fine but parameter values need updating — the new experimental data become additional inputs to the parameter inference process, narrowing the estimates."
+  },
+  {
+   "t": 87.38,
+   "text": "Sometimes the model structure is incomplete — a relevant interaction was left out, a feedback loop was overlooked, a regulatory mechanism was simplified too aggressively."
+  },
+  {
+   "t": 99.45,
+   "text": "In that case the model needs to be expanded, often becoming more complex but also more accurate."
+  },
+  {
+   "t": 105.44,
+   "text": "Sometimes the experimental data themselves need refinement — new measurements at different conditions, time-series at finer resolution, replicates to reduce noise."
+  },
+  {
+   "t": 115.89,
+   "text": "And sometimes — most informatively — the discrepancy reveals that the chassis is doing something the model did not anticipate."
+  },
+  {
+   "t": 124.41,
+   "text": "A growing bacterium responds to engineered burdens by slowing down its own metabolism; a stressed cell turns on stress-response pathways that interfere with the engineered circuit; the chassis itself becomes a variable in the design rather than a constant background."
+  },
+  {
+   "t": 140.38,
+   "text": "Iterating between model and experiment is how synthetic biology systems actually get debugged."
+  },
+  {
+   "t": 146.64,
+   "text": "And the modelling effort earns its keep when the second or third iteration of the design works, where it might have taken five or ten iterations of pure trial-and-error wet-lab work."
+  },
+  {
+   "t": 157.94,
+   "text": "The textbook closes the chapter on a note of realism."
+  },
+  {
+   "t": 161.34,
+   "text": "Modelling does not replace experimentation; it accelerates it."
+  },
+  {
+   "t": 165.7,
+   "text": "Good models guide you to the right experiments to run; good experimental data feeds back into making better models; and the loop converges, iteration by iteration, on engineered systems that work."
+  },
+  {
+   "t": 178.12,
+   "text": "That iterative dialogue between in silico design and in vivo build is the heart of how synthetic biology now operates, and chapter six has been about how to do it rigorously."
+  },
+  {
+   "t": 189.31,
+   "text": "End of chapter six."
+  }
+ ]
+}

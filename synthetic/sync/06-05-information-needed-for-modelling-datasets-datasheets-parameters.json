@@ -1,0 +1,139 @@
+{
+ "n": 5,
+ "title": "Information Needed for Modelling — Datasets, Datasheets, Parameters",
+ "duration": 266.09,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section five. Where the numbers come from — datasets, datasheets, and parameter identification."
+  },
+  {
+   "t": 6.25,
+   "text": "A mathematical model has two ingredients: its equations, and the numerical values of the parameters in those equations."
+  },
+  {
+   "t": 13.74,
+   "text": "Equations come from biophysical reasoning or from systems-biology knowledge of the relevant biology."
+  },
+  {
+   "t": 20.27,
+   "text": "But the parameter values — the rate constants, the binding affinities, the Hill coefficients — those have to come from somewhere measurable."
+  },
+  {
+   "t": 28.71,
+   "text": "Three sources are described in this chapter."
+  },
+  {
+   "t": 31.25,
+   "text": "Source one: the biological literature."
+  },
+  {
+   "t": 34.16,
+   "text": "Decades of biochemical and molecular-biology research have measured rate constants for thousands of enzymes, binding constants for thousands of transcription-factor-DNA interactions, half-lives for many proteins and mRNAs."
+  },
+  {
+   "t": 48.84,
+   "text": "This information is scattered across thousands of papers, which makes it tedious to assemble."
+  },
+  {
+   "t": 55.05,
+   "text": "Hence: dedicated repositories that curate biophysical and biological parameter values from the literature."
+  },
+  {
+   "t": 62.12,
+   "text": "BioNumbers, developed jointly by the Harvard Systems Biology Department and the Weizmann Institute, is the canonical example."
+  },
+  {
+   "t": 70.01,
+   "text": "It is a searchable database of biological numbers — concentrations, rates, sizes, copy numbers — extracted from published papers with citation provenance."
+  },
+  {
+   "t": 80.75,
+   "text": "If you need to know, say, the typical mRNA half-life in E. coli, BioNumbers will give you a range of measured values with the papers they came from."
+  },
+  {
+   "t": 89.86,
+   "text": "Source two: characterisation datasheets from synthetic biology parts."
+  },
+  {
+   "t": 94.79,
+   "text": "We discussed datasheets in chapter three as part of the standard-measurement foundation."
+  },
+  {
+   "t": 100.0,
+   "text": "Here they come back as the input to modelling."
+  },
+  {
+   "t": 102.84,
+   "text": "A well-characterised part comes with quantitative data on its behaviour — its input-output relationship at various conditions, its dynamic range, its time response, its interaction with the chassis."
+  },
+  {
+   "t": 115.1,
+   "text": "Those measurements are exactly the parameters you need to feed into your model of a circuit built from that part."
+  },
+  {
+   "t": 121.31,
+   "text": "The BBa_F2620 part — a quorum-sensing receiver device — is the textbook's pointed example of a gold-standard datasheet, providing time evolution of output at various inducer concentrations, expected time to failure, compatibility with other inducers, and resource consumption estimates."
+  },
+  {
+   "t": 141.61,
+   "text": "If every part in the registry came with that level of characterisation, model-driven design would be vastly easier."
+  },
+  {
+   "t": 148.96,
+   "text": "Most parts do not yet — but the ambition is clear."
+  },
+  {
+   "t": 152.28,
+   "text": "BIOFAB, mentioned in chapter three, is the open-source registry committed to producing professional-grade datasheets of this kind."
+  },
+  {
+   "t": 161.06,
+   "text": "Source three: parameter inference from your own experiments."
+  },
+  {
+   "t": 164.9,
+   "text": "When neither the literature nor existing datasheets give you the parameters you need, you measure them yourself."
+  },
+  {
+   "t": 171.43,
+   "text": "Typically this means time-course experiments — measuring how a concentration changes over time after some perturbation — and then fitting model parameters to the data."
+  },
+  {
+   "t": 181.91,
+   "text": "Parameter inference is a parameter optimisation problem: you have an objective function (how well does the model with parameter values theta match the experimental data?), and you find the theta that maximises that function."
+  },
+  {
+   "t": 194.45,
+   "text": "Optimisation can be local or global, gradient-based or stochastic, depending on the model's complexity and the data's quality."
+  },
+  {
+   "t": 202.74,
+   "text": "Beyond inferring parameters within a fixed model structure, there is also model selection — choosing between competing model structures."
+  },
+  {
+   "t": 211.03,
+   "text": "Generally, a model with more parameters can fit any given dataset better than a simpler model."
+  },
+  {
+   "t": 217.14,
+   "text": "But that does not mean the more complex model is genuinely better — it might just be over-fitting."
+  },
+  {
+   "t": 222.76,
+   "text": "Model selection criteria like the Likelihood Ratio Test, the Akaike Information Criterion, or the Bayesian Information Criterion balance fit quality against model complexity to identify the most parsimonious model that adequately explains the data."
+  },
+  {
+   "t": 238.35,
+   "text": "These statistical methods come from the broader statistics literature and are not biology-specific, but they are routinely used in synthetic biology modelling."
+  },
+  {
+   "t": 247.68,
+   "text": "All three sources together — biological literature, characterisation datasheets, and your own experiments — produce the parameter values that turn model equations into quantitative predictive tools."
+  },
+  {
+   "t": 259.91,
+   "text": "And the quality of any synthetic biology model is bounded by the quality of the parameters you feed it."
+  }
+ ]
+}

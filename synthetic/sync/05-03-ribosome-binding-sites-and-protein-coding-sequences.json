@@ -1,0 +1,119 @@
+{
+ "n": 3,
+ "title": "Ribosome Binding Sites and Protein Coding Sequences",
+ "duration": 269.95,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section three. Ribosome binding sites and protein-coding sequences — the translation layer."
+  },
+  {
+   "t": 6.9,
+   "text": "Once a promoter has driven transcription and you have an mRNA, the next step is translation, and the part that controls translation is the ribosome binding site, or RBS."
+  },
+  {
+   "t": 18.29,
+   "text": "In prokaryotes, the RBS is also called the Shine-Dalgarno sequence, named for Drs John Shine and Linda Dalgarno who described it in 1975."
+  },
+  {
+   "t": 28.8,
+   "text": "In eukaryotes, the analogous sequence is called the Kozak consensus sequence, named for Dr Marilyn Kozak who described it."
+  },
+  {
+   "t": 37.12,
+   "text": "Both serve the same fundamental purpose: they are short sequences on the mRNA, positioned upstream of the start codon, that recruit ribosomes for the initiation of translation."
+  },
+  {
+   "t": 48.51,
+   "text": "And as with promoters, the sequence of the RBS strongly affects how efficiently it works."
+  },
+  {
+   "t": 55.38,
+   "text": "A strong RBS binds the ribosome tightly, initiates translation efficiently, and produces a lot of protein per mRNA."
+  },
+  {
+   "t": 64.5,
+   "text": "A weak RBS binds loosely, initiates translation less often, and produces less protein."
+  },
+  {
+   "t": 71.92,
+   "text": "We walked through this in chapter one when discussing translational control, including the RBS Calculator that lets you predict RBS strength from sequence within a factor of two or three."
+  },
+  {
+   "t": 83.36,
+   "text": "For our parts-level purposes here, the takeaway is the same: the RBS is one of the most powerful tuning knobs in the synthetic biologist's toolkit, and synthetic biology registries contain libraries of RBSes with varying strengths so you can pick one that matches your design target."
+  },
+  {
+   "t": 100.28,
+   "text": "Next, the protein-coding sequence — the part that, once transcribed and translated, actually produces the functional protein."
+  },
+  {
+   "t": 108.72,
+   "text": "Structurally, a protein-coding sequence begins with a start codon, which is almost always ATG (encoding methionine), and ends with one of three stop codons: TAA, TAG, or TGA."
+  },
+  {
+   "t": 122.42,
+   "text": "Between start and stop is a sequence of codons, each three nucleotides long, encoding the amino acid sequence of the protein."
+  },
+  {
+   "t": 131.46,
+   "text": "In synthetic biology, the protein-coding sequences you assemble fall into three rough categories — reporters, repressors, and enzymes."
+  },
+  {
+   "t": 141.56,
+   "text": "Reporters are coding sequences whose protein product produces a measurable signal."
+  },
+  {
+   "t": 147.64,
+   "text": "GFP and its colour variants — RFP, YFP, CFP, mCherry — are the canonical fluorescent reporters, and they are popular because they fluoresce intrinsically once folded; no exogenous substrate is required."
+  },
+  {
+   "t": 163.74,
+   "text": "Beyond fluorescence, enzymatic reporters like beta-galactosidase, also known as LacZ, catalyse colour-change reactions when their substrates are added — useful for blue-white screening of cloning experiments, among other things."
+  },
+  {
+   "t": 178.55,
+   "text": "Luciferase, the enzyme behind firefly bioluminescence, also gets used heavily — its action on its substrate produces light, which can be quantified."
+  },
+  {
+   "t": 188.39,
+   "text": "Each reporter has its niche based on signal type, sensitivity, and convenience."
+  },
+  {
+   "t": 193.57,
+   "text": "Repressors are the second category of coding sequences."
+  },
+  {
+   "t": 197.26,
+   "text": "A repressor's natural function is to bind to operator sites on DNA and prevent transcription."
+  },
+  {
+   "t": 203.16,
+   "text": "Synthetic biology recruits repressors as the building blocks of logic gates, toggle switches, and oscillators — almost any device that needs to invert or gate a signal."
+  },
+  {
+   "t": 214.46,
+   "text": "Importantly, repressors usually have two binding sites: one for their target DNA operator, and one for a small inducer molecule that controls whether the repressor is in an active or inactive conformation."
+  },
+  {
+   "t": 227.39,
+   "text": "By adding or removing inducers, you can control the repressor, and through it, the downstream promoter."
+  },
+  {
+   "t": 234.45,
+   "text": "Enzymes are the third category."
+  },
+  {
+   "t": 236.59,
+   "text": "These are the workhorses of metabolic engineering — coding sequences that, when expressed, produce enzymes that catalyse specific reactions on specific substrates."
+  },
+  {
+   "t": 247.84,
+   "text": "Strings of enzymes acting sequentially constitute metabolic pathways, and these pathways can be engineered to convert simple feedstocks into complex valuable products — biofuels, pharmaceuticals, fine chemicals."
+  },
+  {
+   "t": 261.9,
+   "text": "We will return to applications in chapter seven, but the engineering substrate for that work is the protein-coding sequence as a part."
+  }
+ ]
+}

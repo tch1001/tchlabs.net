@@ -1,0 +1,119 @@
+{
+ "n": 11,
+ "title": "Parts Registries — From iGEM to BIOFAB",
+ "duration": 235.73,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section eleven. Parts registries — from iGEM to professional infrastructure."
+  },
+  {
+   "t": 5.76,
+   "text": "We have already touched on the Registry of Standard Biological Parts when discussing BioBricks, and on the iGEM connection in chapter two."
+  },
+  {
+   "t": 13.57,
+   "text": "But the foundational-technologies framing deserves a closer look at where parts registries are going."
+  },
+  {
+   "t": 19.56,
+   "text": "The original iGEM parts registry, at parts.igem.org, was the first large-scale attempt to give synthetic biology a shared, community-maintained catalogue of standard parts."
+  },
+  {
+   "t": 31.61,
+   "text": "It is hosted in the United States by a dedicated team, and it operates roughly as a wiki — iGEM teams submit DNA sequence information and characterisation data for the parts they create or reuse."
+  },
+  {
+   "t": 44.12,
+   "text": "Over years of accumulated submissions, the registry now catalogues several thousand parts."
+  },
+  {
+   "t": 50.61,
+   "text": "This is an enormous resource — without iGEM and its registry, synthetic biology as a teaching subject would simply not exist."
+  },
+  {
+   "t": 59.55,
+   "text": "But the registry's limitations are real, and the authors do not soft-pedal them."
+  },
+  {
+   "t": 64.81,
+   "text": "Because iGEM is primarily an undergraduate competition, the focus of submitting teams has historically been quantity rather than depth of characterisation."
+  },
+  {
+   "t": 74.45,
+   "text": "Parts are deposited with sequence information and a description of intended function, but often without rigorous quantitative measurements."
+  },
+  {
+   "t": 82.58,
+   "text": "Parts may not always work as described."
+  },
+  {
+   "t": 84.99,
+   "text": "Submission validation is minimal."
+  },
+  {
+   "t": 87.51,
+   "text": "Data formats are inconsistent across submissions."
+  },
+  {
+   "t": 91.64,
+   "text": "Metadata about how parts were measured is often absent."
+  },
+  {
+   "t": 95.53,
+   "text": "For a competition, this is fine."
+  },
+  {
+   "t": 97.8,
+   "text": "For a professional engineering discipline that wants to design with confidence, it is not enough."
+  },
+  {
+   "t": 103.53,
+   "text": "The community's response has been to build professional-grade registries alongside the iGEM one — registries committed to rigorous characterisation, standardised data formats, and reliable function."
+  },
+  {
+   "t": 115.91,
+   "text": "Two prominent examples."
+  },
+  {
+   "t": 117.61,
+   "text": "Many commercial synthetic biology companies maintain closed-source internal registries with deep characterisation of their own proprietary parts."
+  },
+  {
+   "t": 126.61,
+   "text": "And open-source equivalents are emerging."
+  },
+  {
+   "t": 129.2,
+   "text": "The most prominent open professional registry is the BIOFAB — the International Open Facility Advancing Biotechnology — founded in 2009 in the United States with public funding."
+  },
+  {
+   "t": 140.94,
+   "text": "BIOFAB's mission was to design and rigorously characterise hundreds of high-quality biological parts and make them publicly available in a registry that is, by design, professional-grade."
+  },
+  {
+   "t": 152.53,
+   "text": "Since 2013 their parts have been available in a public-facing registry."
+  },
+  {
+   "t": 157.53,
+   "text": "Critically, BIOFAB committed to defining the measurement standards for the parts themselves — what data must be collected, in what units, with what precision — so that downstream design tools and modelling software can ingest BIOFAB parts data programmatically."
+  },
+  {
+   "t": 172.71,
+   "text": "BIOFAB stores its parts data in a format compatible with SBOL, the Synthetic Biology Open Language, which is the field's emerging standard for the machine-readable representation of biological designs."
+  },
+  {
+   "t": 185.62,
+   "text": "Both the BioBricks Registry and BIOFAB are committed to being open source, and the broader politics of open-source biology gets a fuller treatment in chapter nine."
+  },
+  {
+   "t": 196.04,
+   "text": "For our foundational-technologies purposes, here is the takeaway: parts registries are essential infrastructure, the community is in the middle of an evolution from the somewhat-loose iGEM registry to professional-grade registries with stronger characterisation standards, and the trend is clearly toward machine-readable formats that let parts data flow seamlessly between registry, model, and design tool."
+  },
+  {
+   "t": 221.09,
+   "text": "If you want to know which specific parts to use for a synthetic biology project today, you will probably end up consulting both iGEM and BIOFAB-style registries, and the tooling to do so cleanly is itself an active area of development."
+  }
+ ]
+}

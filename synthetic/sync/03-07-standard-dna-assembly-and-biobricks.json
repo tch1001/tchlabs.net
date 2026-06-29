@@ -1,0 +1,119 @@
+{
+ "n": 7,
+ "title": "Standard DNA Assembly and BioBricks",
+ "duration": 226.27,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section seven. Standard DNA assembly and the BioBricks story."
+  },
+  {
+   "t": 4.55,
+   "text": "If parts-devices-systems is the conceptual framework, standard DNA assembly is the physical machinery that implements it."
+  },
+  {
+   "t": 12.68,
+   "text": "Engineering disciplines outside biology run on standards — USB plugs, screw threads, voltage levels, transistor pinouts."
+  },
+  {
+   "t": 21.79,
+   "text": "These standards exist because they let parts from different sources be combined without bespoke adaptation."
+  },
+  {
+   "t": 28.14,
+   "text": "Synthetic biology's analogous problem is: how do you connect two pieces of DNA reliably, repeatably, and in a way that the entire community agrees on?"
+  },
+  {
+   "t": 38.73,
+   "text": "The first attempts at this used unique restriction enzyme recognition sites — short DNA sequences cut by specific restriction enzymes."
+  },
+  {
+   "t": 47.79,
+   "text": "If you put a unique site at each boundary of each part, you can cut and paste parts together using standard cloning techniques."
+  },
+  {
+   "t": 55.16,
+   "text": "This works, but it is fragile."
+  },
+  {
+   "t": 57.17,
+   "text": "Each new part needs a different combination of flanking sites."
+  },
+  {
+   "t": 61.0,
+   "text": "Adding the sites requires PCR or other DNA modification, which is laborious."
+  },
+  {
+   "t": 66.58,
+   "text": "And the available unique sites are a finite pool — your assembly will eventually run out."
+  },
+  {
+   "t": 72.56,
+   "text": "In 2003, Tom Knight at MIT proposed a fundamentally different convention, which became known as the BioBricks assembly standard."
+  },
+  {
+   "t": 81.59,
+   "text": "The key insight is to use a single, standard set of restriction enzymes at every part boundary — specifically, three particular enzymes — and to design the cutting chemistry so that joining two BioBricks parts produces a new BioBricks part that can be joined to the next one in turn."
+  },
+  {
+   "t": 98.89,
+   "text": "Mechanically, the cleverness involves what biochemists call isocaudomers — different restriction enzymes whose digested overhangs can ligate together, even though the enzymes themselves recognise different sites."
+  },
+  {
+   "t": 112.45,
+   "text": "Using these isocaudomers, you can cut two BioBricks parts with different enzymes, ligate them together, and end up with a product where the original recognition sites are gone but a new set of sites is present at the boundaries."
+  },
+  {
+   "t": 125.79,
+   "text": "The product is itself a BioBricks part, ready for further assembly."
+  },
+  {
+   "t": 130.12,
+   "text": "This is exactly the recursive, hierarchical, scar-controlled assembly that the parts-devices-systems framework requires."
+  },
+  {
+   "t": 138.15,
+   "text": "The BioBricks standard is detailed in Appendix 1 of the textbook for those who want the exact mechanics, but the principle is what matters for now."
+  },
+  {
+   "t": 146.16,
+   "text": "BioBricks made it possible for any researcher, anywhere in the world, with a single set of common restriction enzymes, to reliably combine any two BioBricks parts."
+  },
+  {
+   "t": 157.04,
+   "text": "This is the foundation that the iGEM competition is built on — undergraduates in summer programs assembling complex devices from BioBricks parts in just three months."
+  },
+  {
+   "t": 168.29,
+   "text": "And it underlies the iGEM parts registry, which we will return to shortly."
+  },
+  {
+   "t": 172.94,
+   "text": "BioBricks has limitations the authors are honest about."
+  },
+  {
+   "t": 176.51,
+   "text": "Each assembly step leaves behind a small \"scar\" — a few extra base pairs between adjacent parts — that can affect the function of neighbouring parts."
+  },
+  {
+   "t": 185.41,
+   "text": "Parts that contain the restriction-enzyme recognition sites used by the BioBricks standard internally cannot be used without modification."
+  },
+  {
+   "t": 194.05,
+   "text": "And the methodology is slow compared with newer techniques like Gibson assembly or Golden Gate."
+  },
+  {
+   "t": 200.03,
+   "text": "For these reasons, professional synthetic biology projects today often use bespoke or scarless assembly methods rather than strict BioBricks."
+  },
+  {
+   "t": 209.3,
+   "text": "But the conceptual contribution of BioBricks remains: it was the first widely-adopted standard for biological-parts assembly, and it normalised the idea that the field could agree on a common interface."
+  },
+  {
+   "t": 221.79,
+   "text": "Whatever the assembly method, the cultural shift it enabled is permanent."
+  }
+ ]
+}

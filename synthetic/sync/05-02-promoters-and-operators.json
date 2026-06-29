@@ -1,0 +1,111 @@
+{
+ "n": 2,
+ "title": "Promoters and Operators",
+ "duration": 208.85,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section two. Promoters and operators — the input layer for transcription."
+  },
+  {
+   "t": 5.56,
+   "text": "A promoter is a stretch of DNA where RNA polymerase, together with its accessory factors, binds and begins transcription."
+  },
+  {
+   "t": 14.31,
+   "text": "It is the genetic switch we discussed back in chapter one, made concrete as a sequence-encoded part."
+  },
+  {
+   "t": 20.31,
+   "text": "Promoters in synthetic biology come in two main flavours: constitutive and regulated."
+  },
+  {
+   "t": 26.3,
+   "text": "A constitutive promoter is one that is always on — not controlled by any DNA-binding regulators, just steadily firing."
+  },
+  {
+   "t": 34.4,
+   "text": "Constitutive promoters are useful when you want a stable, continuous level of some protein in your system."
+  },
+  {
+   "t": 41.12,
+   "text": "And critically, you can vary the strength of a constitutive promoter by changing its sequence around the polymerase binding region."
+  },
+  {
+   "t": 48.8,
+   "text": "Stronger sequence variants recruit polymerase more efficiently and produce more mRNA per second."
+  },
+  {
+   "t": 55.66,
+   "text": "Weaker variants do the opposite."
+  },
+  {
+   "t": 57.92,
+   "text": "Through downstream translation and degradation, this maps to a different steady-state protein concentration — and that is your tuning knob for setting expression level."
+  },
+  {
+   "t": 68.56,
+   "text": "A regulated promoter has additional DNA sequences inside or around it that recruit other transcription factors — proteins that bind specifically and modulate the polymerase's activity."
+  },
+  {
+   "t": 80.65,
+   "text": "Those additional sequences are called operators."
+  },
+  {
+   "t": 83.94,
+   "text": "A regulated promoter can be positively regulated — an activator binding to the operator increases transcription — or negatively regulated — a repressor binding decreases transcription."
+  },
+  {
+   "t": 96.49,
+   "text": "And both situations are common."
+  },
+  {
+   "t": 98.41,
+   "text": "When the promoter is negatively regulated by a repressor that is always present in the cell, its default state is off — it only transcribes when the repressor is removed or inactivated."
+  },
+  {
+   "t": 110.11,
+   "text": "When something — typically a small inducer molecule — disables the repressor, the promoter switches on."
+  },
+  {
+   "t": 116.86,
+   "text": "This pattern is called inducible expression, and the small molecule that triggers it is called the inducer."
+  },
+  {
+   "t": 123.62,
+   "text": "Inducer triggers include molecules like IPTG (which inactivates the LacI repressor), tetracycline or its analogue anhydrotetracycline (which inactivates the TetR repressor), arabinose, rhamnose — each canonical pair has its uses."
+  },
+  {
+   "t": 140.31,
+   "text": "Now, the operator itself."
+  },
+  {
+   "t": 142.56,
+   "text": "Technically, the term \"operator\" originally referred to DNA sequences that recruit repressors — negative regulators."
+  },
+  {
+   "t": 150.93,
+   "text": "DNA sequences that recruit activators — positive regulators — sometimes get called operators too, depending on the author."
+  },
+  {
+   "t": 158.97,
+   "text": "In modern synthetic biology, operators and promoters are often treated together as a single composite part."
+  },
+  {
+   "t": 166.19,
+   "text": "If your characterised \"promoter\" is in fact a promoter-plus-operator unit, the strength of regulation depends on the operator sequence as well as on the promoter sequence, and engineers tune both."
+  },
+  {
+   "t": 178.49,
+   "text": "Sequences immediately near the operator can also affect repressor or activator binding, which gives a third layer of tunability — sometimes engineers will randomise these neighbouring bases and screen for variants with the desired regulation strength."
+  },
+  {
+   "t": 192.8,
+   "text": "All of which is to say: promoter and operator together are the input layer of transcription, and they are richly tunable through sequence design."
+  },
+  {
+   "t": 202.2,
+   "text": "If you want to control when a gene comes on and how strongly, this is where most of the engineering happens."
+  }
+ ]
+}

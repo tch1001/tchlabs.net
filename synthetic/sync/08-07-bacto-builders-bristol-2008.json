@@ -1,0 +1,99 @@
+{
+ "n": 7,
+ "title": "Bacto-builders — Bristol 2008",
+ "duration": 208.2,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section seven. Bacto-builders — Bristol Centre for Complexity Sciences, 2008."
+  },
+  {
+   "t": 6.16,
+   "text": "Bristol's iGEM team in 2008 won the Best Modelling Prize for an ambitious project: programming a fleet of E. coli cells to collaboratively move physical particles through coordinated swarming behaviour."
+  },
+  {
+   "t": 20.75,
+   "text": "The goal was emergent collective behaviour — cells following simple individual rules that, summed across the population, produce useful macroscopic outcomes."
+  },
+  {
+   "t": 31.25,
+   "text": "Cells doing as a swarm what no individual cell could do alone."
+  },
+  {
+   "t": 36.15,
+   "text": "The behavioural rules each engineered bacterium would follow."
+  },
+  {
+   "t": 39.94,
+   "text": "Rule one: randomly explore the environment looking for a suitable particle."
+  },
+  {
+   "t": 44.89,
+   "text": "Rule two: upon physical contact with a particle, attach to the particle and attempt to push it toward a goal — a chemoattractant gradient in the environment."
+  },
+  {
+   "t": 55.39,
+   "text": "Rule three: while pushing, emit a short-range quorum-sensing signal advertising that a particle is being processed nearby."
+  },
+  {
+   "t": 63.88,
+   "text": "Rule four: when a nearby bacterium senses the quorum signal from a neighbour, switch its own behaviour to chemotaxis toward the same goal, joining the effort."
+  },
+  {
+   "t": 73.94,
+   "text": "By altering the chemoattractant gradient, the experimenter can guide where particles get assembled, producing different macroscopic patterns from the same underlying cellular rules."
+  },
+  {
+   "t": 84.76,
+   "text": "Implementation drew on real E. coli mechanisms — chemotaxis, quorum sensing, environmental sensing — engineered together in novel combinations."
+  },
+  {
+   "t": 96.2,
+   "text": "What made the project win the modelling prize was the rigorous computational design."
+  },
+  {
+   "t": 100.45,
+   "text": "Because of the system's complexity — many bacteria, physical forces between cells and particles, diffusion of signalling molecules, fluid dynamics, individual cell state variation — the team adopted the formal engineering design cycle."
+  },
+  {
+   "t": 116.06,
+   "text": "They built two layers of model."
+  },
+  {
+   "t": 117.95,
+   "text": "An internal model: differential equations describing the synthetic gene-regulation circuits embedded in each individual bacterium."
+  },
+  {
+   "t": 126.34,
+   "text": "An external model: stochastic agent-based simulation of the whole population — each bacterium as an agent, with the agents interacting through chemical diffusion and physical forces in a shared spatial environment."
+  },
+  {
+   "t": 139.97,
+   "text": "Both models were extensively simulated."
+  },
+  {
+   "t": 142.74,
+   "text": "MATLAB handled the numerical integration and statistical analysis of the differential equations."
+  },
+  {
+   "t": 148.66,
+   "text": "Java was used to build the agent-based framework — simulating bacterial chemotaxis, physical interactions, and chemical gradients across the whole population."
+  },
+  {
+   "t": 159.05,
+   "text": "Running thousands of bacteria's worth of agent-based simulation required serious compute, which they accessed via the Blue Crystal high-performance computing cluster at the University of Bristol."
+  },
+  {
+   "t": 170.34,
+   "text": "The combination — rigorous internal differential-equation models, stochastic agent-based population simulations, and high-performance compute — let Bristol explore design alternatives in silico before any laboratory work."
+  },
+  {
+   "t": 185.14,
+   "text": "By the time they committed to wet-lab implementation, they had a strong basis for choosing among design options."
+  },
+  {
+   "t": 191.62,
+   "text": "The Bacto-builders project did not produce a finished commercial product, but it demonstrated that rigorous model-based design is not just an aspiration in synthetic biology — it is something that even an iGEM team can do, given good computational tools and the discipline to use them."
+  }
+ ]
+}

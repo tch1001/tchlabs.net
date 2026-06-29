@@ -1,0 +1,131 @@
+{
+ "n": 5,
+ "title": "DNA Synthesis and Codon Optimisation",
+ "duration": 282.07,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section five. DNA synthesis, gene synthesis, and codon optimisation."
+  },
+  {
+   "t": 5.8,
+   "text": "If sequencing is the technology for reading DNA, synthesis is the technology for writing it."
+  },
+  {
+   "t": 12.55,
+   "text": "DNA synthesis falls into two broad categories that you should keep separated in your head: oligonucleotide synthesis, and gene synthesis."
+  },
+  {
+   "t": 21.98,
+   "text": "Oligonucleotide synthesis is the production of short, single-stranded DNA molecules, typically 20 to 60 nucleotides long but sometimes up to 150 or so."
+  },
+  {
+   "t": 34.0,
+   "text": "These are the primers that drive PCR, the probes that hybridise to specific targets, the linker sequences used in cloning."
+  },
+  {
+   "t": 41.74,
+   "text": "They are also the building blocks for gene synthesis itself."
+  },
+  {
+   "t": 45.88,
+   "text": "Oligonucleotide synthesis is a chemical process: solid-phase synthesis using phosphoramidite chemistry, in which the DNA chain is built one nucleotide at a time on a solid support, cycle by cycle."
+  },
+  {
+   "t": 59.58,
+   "text": "It is done industrially, at automated 24-hour facilities, and like sequencing, the cost has been falling steadily for decades."
+  },
+  {
+   "t": 68.21,
+   "text": "Gene synthesis is the more dramatic technology."
+  },
+  {
+   "t": 71.72,
+   "text": "Gene synthesis is the custom commercial production of long, double-stranded DNA — from 200 base pairs up to many thousands."
+  },
+  {
+   "t": 80.6,
+   "text": "You design a sequence, you place an order with a synthesis company, you wait a week or two, and you receive a tube of DNA that contains exactly the sequence you specified, sequence-verified to a high standard."
+  },
+  {
+   "t": 93.28,
+   "text": "This is genuinely transformative for synthetic biology."
+  },
+  {
+   "t": 97.16,
+   "text": "Twenty years ago, if you wanted a particular gene, you had to clone it from a natural source — find an organism that has it, isolate genomic DNA, PCR-amplify the gene, deal with whatever mutations and side products you got along the way."
+  },
+  {
+   "t": 111.86,
+   "text": "Today, if you can write the sequence down, you can have it synthesised."
+  },
+  {
+   "t": 115.91,
+   "text": "The price of gene synthesis, per base pair, has dropped on an even steeper exponential than sequencing."
+  },
+  {
+   "t": 122.72,
+   "text": "How does gene synthesis work mechanically?"
+  },
+  {
+   "t": 125.36,
+   "text": "The desired gene is broken into many overlapping oligonucleotides — typically 40 to 60 nucleotides each — that together cover both strands of the final double-stranded product, with substantial overlap between adjacent oligonucleotides."
+  },
+  {
+   "t": 141.76,
+   "text": "Those oligonucleotides are synthesised individually by phosphoramidite chemistry, then pooled together in a reaction where the overlaps allow them to anneal."
+  },
+  {
+   "t": 152.22,
+   "text": "Ligase enzymes seal the gaps, or alternatively PCR amplification methods like progressive overlap extension PCR or thermodynamically balanced inside-out PCR fill in and amplify the assembly."
+  },
+  {
+   "t": 166.66,
+   "text": "The result is the full-length double-stranded gene."
+  },
+  {
+   "t": 169.9,
+   "text": "Because the assembly is imperfect, the product is then sequence-verified, and if there are errors, DNA repair enzymes are used to correct them."
+  },
+  {
+   "t": 178.76,
+   "text": "Now to the most synthetic-biology-relevant benefit of gene synthesis: codon optimisation."
+  },
+  {
+   "t": 184.74,
+   "text": "We mentioned codon usage bias in chapter one — the observation that different organisms prefer different codons for the same amino acid, and that a gene from one organism may translate poorly in another because the tRNAs for its preferred codons are scarce in the new host."
+  },
+  {
+   "t": 201.81,
+   "text": "Before gene synthesis, codon optimisation was painful — you would have to PCR-mutate individual codons one at a time, which scales badly."
+  },
+  {
+   "t": 211.45,
+   "text": "With gene synthesis, codon optimisation is trivial: you write down the protein sequence, you run a codon-optimisation algorithm that produces a DNA sequence using the new host's preferred codons, and you order that sequence."
+  },
+  {
+   "t": 225.44,
+   "text": "A gene from a tobacco plant, when synthesised with E. coli codon optimisation, expresses dramatically better in E. coli than the native plant sequence would."
+  },
+  {
+   "t": 235.41,
+   "text": "Gene synthesis also allows you to recode for other purposes: removing internal restriction sites that would interfere with cloning, removing internal secondary-structure-forming sequences, designing entirely artificial sequences that have never existed in nature."
+  },
+  {
+   "t": 252.28,
+   "text": "Every one of these is a synthesis convenience that, twenty years ago, would have taken months of laboratory work."
+  },
+  {
+   "t": 259.34,
+   "text": "Today, it is a checkbox on a synthesis-company order form."
+  },
+  {
+   "t": 263.21,
+   "text": "If you think about what synthetic biology is doing — designing new biological systems from defined parts — gene synthesis is the technology that closes the loop between the dry lab and the wet lab."
+  },
+  {
+   "t": 275.61,
+   "text": "Without it, every part of every design would have to be cloned by hand, and the field would still be a craft."
+  }
+ ]
+}

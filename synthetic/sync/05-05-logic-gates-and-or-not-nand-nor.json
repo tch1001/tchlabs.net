@@ -1,0 +1,163 @@
+{
+ "n": 5,
+ "title": "Logic Gates — AND, OR, NOT, NAND, NOR",
+ "duration": 239.71,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section five. Logic gates — biology imitating Boolean algebra."
+  },
+  {
+   "t": 5.19,
+   "text": "Logic gates are the fundamental building blocks of digital electronics."
+  },
+  {
+   "t": 9.81,
+   "text": "Modern computers contain hundreds of millions of them."
+  },
+  {
+   "t": 13.45,
+   "text": "They take two or more binary inputs, apply a defined rule, and produce a single binary output — implementing Boolean operations like AND, OR, NOT."
+  },
+  {
+   "t": 24.12,
+   "text": "Synthetic biology has built genetic equivalents of every standard logic gate, and the design patterns are worth walking through because they illustrate how transcription factors, promoters, and operators compose to produce more complex behaviour."
+  },
+  {
+   "t": 38.56,
+   "text": "Start with the AND gate."
+  },
+  {
+   "t": 39.98,
+   "text": "An AND gate's rule: if both input A AND input B are present, the output is on; otherwise off."
+  },
+  {
+   "t": 46.8,
+   "text": "The most common synthetic biology implementation uses a hybrid promoter with two different operator sites — one for each of two repressors."
+  },
+  {
+   "t": 55.75,
+   "text": "In the default state, both repressors are present and bound to their operators, blocking transcription."
+  },
+  {
+   "t": 61.91,
+   "text": "To turn the gate on, you need both inducers — one to remove repressor A, one to remove repressor B."
+  },
+  {
+   "t": 69.03,
+   "text": "Only when both inducers are added does the promoter become free of both repressors, allowing transcription to occur."
+  },
+  {
+   "t": 76.72,
+   "text": "Hence: output on if and only if both inducers are present — A AND B."
+  },
+  {
+   "t": 82.55,
+   "text": "Now the OR gate."
+  },
+  {
+   "t": 83.64,
+   "text": "OR's rule: if A OR B (or both) is present, the output is on."
+  },
+  {
+   "t": 89.4,
+   "text": "The simplest OR gate design uses two separate inducible promoters in parallel, each driving the same output protein."
+  },
+  {
+   "t": 98.03,
+   "text": "Activating either promoter produces output."
+  },
+  {
+   "t": 101.2,
+   "text": "More elaborate OR gates can be built, but the parallel-promoter design is the canonical pedagogical example."
+  },
+  {
+   "t": 108.11,
+   "text": "Now the NOT gate — also called an inverter."
+  },
+  {
+   "t": 110.89,
+   "text": "NOT takes a single input and produces the opposite output: input on, output off; input off, output on."
+  },
+  {
+   "t": 118.79,
+   "text": "A NOT gate is built from a compatible promoter-repressor pair."
+  },
+  {
+   "t": 122.9,
+   "text": "An inducible promoter, controlled by the input signal, drives the production of a repressor."
+  },
+  {
+   "t": 128.62,
+   "text": "The repressor blocks a second, output-driving promoter."
+  },
+  {
+   "t": 132.25,
+   "text": "So: when the input signal is present, the repressor is made, the output promoter is repressed, output is off."
+  },
+  {
+   "t": 140.3,
+   "text": "When the input signal is absent, no repressor is made, the output promoter is free to transcribe, output is on."
+  },
+  {
+   "t": 148.32,
+   "text": "The signal has been inverted."
+  },
+  {
+   "t": 149.82,
+   "text": "And the cool thing about gates is that you can compose them."
+  },
+  {
+   "t": 152.81,
+   "text": "Hook a NOT gate to the output of an AND gate and you get a NAND gate — output on except when both inputs are present."
+  },
+  {
+   "t": 159.76,
+   "text": "Hook a NOT gate to the output of an OR gate and you get a NOR gate — output on only when both inputs are absent."
+  },
+  {
+   "t": 166.68,
+   "text": "NAND and NOR are particularly important in digital logic because either one of them is functionally complete: any Boolean function can be constructed using only NAND gates, or using only NOR gates."
+  },
+  {
+   "t": 179.01,
+   "text": "So in principle, with a robust genetic NAND or NOR, you could build any computational function in a cell."
+  },
+  {
+   "t": 186.36,
+   "text": "Two practical caveats to flag."
+  },
+  {
+   "t": 188.75,
+   "text": "First, biological logic gates are slow."
+  },
+  {
+   "t": 191.49,
+   "text": "Each transcription-translation cycle takes minutes to tens of minutes."
+  },
+  {
+   "t": 195.88,
+   "text": "So a multi-stage logic circuit assembled from genetic gates evaluates slowly — hours, not nanoseconds."
+  },
+  {
+   "t": 204.26,
+   "text": "Second, biological logic gates are noisy."
+  },
+  {
+   "t": 207.47,
+   "text": "Transcription is stochastic; mRNA levels fluctuate; even a deterministic-on-paper circuit produces noisy behaviour in practice."
+  },
+  {
+   "t": 216.66,
+   "text": "Real synthetic biology circuits rarely behave as cleanly as their schematic diagrams suggest, and a great deal of engineering effort goes into making them more reliable."
+  },
+  {
+   "t": 227.16,
+   "text": "Nonetheless, the proof of principle is firm."
+  },
+  {
+   "t": 230.34,
+   "text": "Genetic logic gates work, they can be composed, and they have been used to build progressively more sophisticated decision-making circuits in cells."
+  }
+ ]
+}

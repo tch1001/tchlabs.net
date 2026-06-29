@@ -1,0 +1,151 @@
+{
+ "n": 4,
+ "title": "Genome Reduction — Finding the Minimum by Subtraction",
+ "duration": 298.73,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section four. Genome reduction — finding the minimum by subtraction."
+  },
+  {
+   "t": 4.84,
+   "text": "Natural minimal cells set a lower bound on what life can be in the wild."
+  },
+  {
+   "t": 9.74,
+   "text": "But the more aggressive question is: of the genes in even the smallest known cell, are some of them still unnecessary? Can we reduce further?"
+  },
+  {
+   "t": 19.06,
+   "text": "This is the minimal genome project, and it has been pursued since the 1990s under the leadership of Nobel Laureate Hamilton Smith, working largely at the J. Craig Venter Institute."
+  },
+  {
+   "t": 31.15,
+   "text": "The project focuses on Mycoplasma genitalium and its 482 genes."
+  },
+  {
+   "t": 36.81,
+   "text": "Even within those 482 genes, M. genitalium has already shed a great deal compared to a typical bacterium."
+  },
+  {
+   "t": 45.6,
+   "text": "It has the essential central-dogma machinery — DNA replication, transcription, and translation."
+  },
+  {
+   "t": 52.51,
+   "text": "It has core metabolism — phospholipid biosynthesis, vitamin utilisation, glycolysis."
+  },
+  {
+   "t": 59.59,
+   "text": "But it has done away with a great deal as well."
+  },
+  {
+   "t": 62.23,
+   "text": "It cannot make most of its own amino acids — it parasitises hosts for those."
+  },
+  {
+   "t": 67.66,
+   "text": "It cannot make most of its own nucleic acid precursors."
+  },
+  {
+   "t": 71.69,
+   "text": "It lacks the enzymes of oxidative metabolism."
+  },
+  {
+   "t": 74.74,
+   "text": "It has remarkably few regulatory genes — almost no transcription factors, almost no two-component signalling systems."
+  },
+  {
+   "t": 83.75,
+   "text": "M. genitalium is, in evolutionary terms, a cell that has already pruned itself heavily."
+  },
+  {
+   "t": 91.55,
+   "text": "Of those 482 genes, which are absolutely required for the cell to survive in the lab?"
+  },
+  {
+   "t": 97.94,
+   "text": "Researchers approach this question in two complementary ways."
+  },
+  {
+   "t": 101.81,
+   "text": "First, the comparative approach."
+  },
+  {
+   "t": 104.19,
+   "text": "Compare the genomes of many organisms — close relatives and distant — and look for genes that are conserved across the largest possible variety of life."
+  },
+  {
+   "t": 114.83,
+   "text": "Genes that show up in every cell, with very similar sequences, are likely essential — they are essential because evolution would have removed them by now if they were not, and the lack of sequence change indicates strong selective pressure to keep them."
+  },
+  {
+   "t": 131.19,
+   "text": "Comparing all sequenced genomes, the surprising answer is only about 60 to 70 genes are shared across all of life — much lower than the actual minimal-cell gene count, simply because different organisms have evolved different gene families to perform the same essential functions."
+  },
+  {
+   "t": 149.32,
+   "text": "DNA polymerase in a human cell is not closely related to DNA polymerase in a bacterium, even though both perform the same function."
+  },
+  {
+   "t": 158.12,
+   "text": "Narrowing the comparison to close relatives — say, the Mycoplasma genus alone — gives a more realistic estimate of around 200 to 300 essential genes."
+  },
+  {
+   "t": 169.3,
+   "text": "Second, the reductionist approach."
+  },
+  {
+   "t": 171.76,
+   "text": "Instead of comparing sequences, you experimentally remove genes one at a time and see what happens."
+  },
+  {
+   "t": 178.7,
+   "text": "In M. genitalium, this was done by transposon insertion — a transposon is a mobile DNA element that disrupts whatever gene it lands in."
+  },
+  {
+   "t": 188.69,
+   "text": "Researchers inserted transposons into thousands of cells and then asked: which cells survived? Genes that always show transposon insertions in survivors are non-essential; genes that never tolerate insertions are essential."
+  },
+  {
+   "t": 204.69,
+   "text": "In M. genitalium, this approach identified about 100 genes as non-essential, leaving an estimated 370 or so essential genes."
+  },
+  {
+   "t": 216.3,
+   "text": "Strikingly, about 100 of those 370 essential genes have no known function — we know they are required for survival, but we do not know what they do."
+  },
+  {
+   "t": 226.96,
+   "text": "That gap in understanding is one of the open puzzles of the minimal-cell project."
+  },
+  {
+   "t": 232.07,
+   "text": "Similar experiments in Bacillus subtilis — a much larger bacterium with around 4,800 genes — identified 271 essential genes individually."
+  },
+  {
+   "t": 243.95,
+   "text": "But the authors are careful to note: removing each gene one at a time and observing survival is not the same as removing all non-essential genes simultaneously."
+  },
+  {
+   "t": 254.43,
+   "text": "A cell that tolerates losing gene A or gene B alone may not survive losing A and B together."
+  },
+  {
+   "t": 261.56,
+   "text": "Synthetic-lethal interactions abound in biology, and the simple per-gene knockout data underestimate the dependencies."
+  },
+  {
+   "t": 269.55,
+   "text": "The endgame of the minimal-genome project is a strain called M. laboratorium — a synthetic Mycoplasma with as few genes as possible, custom-built to serve as a clean chassis for synthetic biology."
+  },
+  {
+   "t": 282.67,
+   "text": "And the route the researchers chose for building M. laboratorium is not sequential deletion from a natural genome."
+  },
+  {
+   "t": 290.3,
+   "text": "It is bottom-up genome synthesis — chemically writing the entire minimal genome from scratch, which is the topic of the next section."
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "n": 4,
+ "title": "Model Repositories and SBML",
+ "duration": 169.94,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section four. Model repositories and standard exchange formats."
+  },
+  {
+   "t": 4.8,
+   "text": "Building good models is hard."
+  },
+  {
+   "t": 6.6,
+   "text": "Building good models from scratch every time, when other researchers have already built good models of overlapping systems, is wasteful."
+  },
+  {
+   "t": 15.04,
+   "text": "The community has responded by creating model repositories — online databases that store, share, and version published mathematical models of biological systems."
+  },
+  {
+   "t": 25.19,
+   "text": "The most widely used such repository is BioModels, maintained at the European Bioinformatics Institute."
+  },
+  {
+   "t": 32.45,
+   "text": "BioModels stores models from published, peer-reviewed papers."
+  },
+  {
+   "t": 36.55,
+   "text": "The models are stored as biochemical reaction networks — chemical species, reactions, kinetic laws — which can be automatically converted into either deterministic ODE models or stochastic SDE or CME models depending on what the user wants."
+  },
+  {
+   "t": 52.42,
+   "text": "BioModels is curated, which is critical."
+  },
+  {
+   "t": 55.75,
+   "text": "Curators verify that each submitted model corresponds to the cited publication, produces the right numerical results, and is annotated with controlled-vocabulary terms linking the model components to other reference resources."
+  },
+  {
+   "t": 69.72,
+   "text": "This curation is what distinguishes BioModels from a simple model dump."
+  },
+  {
+   "t": 74.01,
+   "text": "And BioModels supports machine-readable formats."
+  },
+  {
+   "t": 77.35,
+   "text": "Models can be exported in SBML — the Systems Biology Markup Language — or in CellML."
+  },
+  {
+   "t": 84.05,
+   "text": "Both are XML-based standards for representing biological models in a tool-independent way."
+  },
+  {
+   "t": 90.04,
+   "text": "If you write your model in SBML, you can import it into any SBML-compatible simulator, analyser, or visualiser."
+  },
+  {
+   "t": 98.34,
+   "text": "If a model on BioModels is in SBML, you can pull it into your local analysis environment with a few clicks."
+  },
+  {
+   "t": 105.12,
+   "text": "This is exactly the kind of standardisation infrastructure that other engineering disciplines have long had — common interchange formats let tools and data flow across the entire ecosystem without re-translation losses."
+  },
+  {
+   "t": 118.49,
+   "text": "Other repositories exist for specialised purposes — there is a centralised listing of biological model repositories at systems-biology.org's resources page — and the broader landscape is one in which a synthetic biologist building a new design can plausibly find a starting model close to what they need, rather than starting from a blank page."
+  },
+  {
+   "t": 139.96,
+   "text": "If you are working on a system that involves transcription factor regulation in E. coli, chances are someone has already built and validated an ODE model of a related system, and you can start from theirs."
+  },
+  {
+   "t": 151.93,
+   "text": "If you are working on something novel, your model contribution can be deposited in BioModels for the next researcher."
+  },
+  {
+   "t": 158.76,
+   "text": "Model repositories are not glamorous infrastructure, but they are exactly the kind of slow accumulation of community resources that turns a craft into an engineering discipline."
+  }
+ ]
+}

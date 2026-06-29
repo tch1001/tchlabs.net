@@ -1,0 +1,91 @@
+{
+ "n": 4,
+ "title": "Terminators and Protein Generators",
+ "duration": 209.69,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section four. Terminators, and the simplest possible device — the protein generator."
+  },
+  {
+   "t": 6.03,
+   "text": "After RNA polymerase has transcribed a gene, it has to stop somewhere."
+  },
+  {
+   "t": 10.82,
+   "text": "The signal that tells it to stop is the terminator — a DNA sequence positioned downstream of the protein-coding sequence that causes RNA polymerase to cease transcribing and disengage from the DNA."
+  },
+  {
+   "t": 23.62,
+   "text": "Terminators matter for two reasons."
+  },
+  {
+   "t": 26.29,
+   "text": "Practically: if there is no terminator, RNA polymerase keeps reading past your gene, into whatever DNA is downstream — potentially producing huge wasteful transcripts, or worse, accidentally transcribing other genes you did not intend."
+  },
+  {
+   "t": 42.59,
+   "text": "Engineered constructs typically place a strong terminator at the 3-prime end of each transcription unit precisely to prevent this read-through."
+  },
+  {
+   "t": 52.23,
+   "text": "Mechanistically: in prokaryotes, the most common terminators are rho-independent terminators, which work by forming a particular secondary structure in the mRNA — a stem-loop or hairpin — that weakens the interaction between the polymerase and the DNA strand it is reading."
+  },
+  {
+   "t": 69.28,
+   "text": "Because hairpins form when palindromic sequences fold back on themselves, terminator sequences are often palindromic."
+  },
+  {
+   "t": 76.84,
+   "text": "And because robust termination is important, devices often incorporate two tandem terminators in series, reducing the probability of read-through to near zero."
+  },
+  {
+   "t": 87.3,
+   "text": "Now, with promoter, RBS, coding sequence, and terminator in hand, you can assemble the simplest possible synthetic biology device: the protein generator."
+  },
+  {
+   "t": 98.16,
+   "text": "A protein generator is just those four parts arranged in order: promoter, then RBS, then protein-coding sequence, then terminator."
+  },
+  {
+   "t": 108.19,
+   "text": "When this construct sits on DNA in a host cell, RNA polymerase binds the promoter, transcribes through the RBS, the coding sequence, and the terminator; then the ribosome binds the RBS on the resulting mRNA, translates the coding sequence into protein, and you have produced a particular protein at a particular level set by the strengths of the promoter and the RBS."
+  },
+  {
+   "t": 132.35,
+   "text": "That four-part composite is the molecular biology equivalent of a wire that produces a specific output voltage."
+  },
+  {
+   "t": 139.19,
+   "text": "It is, in some sense, the entry point to every synthetic biology design."
+  },
+  {
+   "t": 144.54,
+   "text": "More sophisticated devices add more parts — operators in the promoter for regulation, multiple coding sequences in an operon, additional RBSes — but the protein generator is the elementary unit you compose from."
+  },
+  {
+   "t": 158.62,
+   "text": "Note that two devices can have nearly identical part-layouts but completely different functions, depending on what each protein in the chain does."
+  },
+  {
+   "t": 167.18,
+   "text": "An inverter and a receiver, for instance, both look like a protein generator that produces a transcription factor, followed by a second promoter responsive to that factor, followed by a downstream output."
+  },
+  {
+   "t": 179.11,
+   "text": "But in the inverter case, the transcription factor is a repressor — input on means downstream off; input off means downstream on."
+  },
+  {
+   "t": 187.41,
+   "text": "In the receiver case, the transcription factor is an activator — input present means downstream on; input absent means downstream off."
+  },
+  {
+   "t": 196.79,
+   "text": "Same architecture, opposite behaviour, depending on what the parts inside actually are."
+  },
+  {
+   "t": 201.94,
+   "text": "That is one of the foundational lessons of working with biological parts: the function lives in the parts, not just in the wiring diagram."
+  }
+ ]
+}

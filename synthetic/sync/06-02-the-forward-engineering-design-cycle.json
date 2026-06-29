@@ -1,0 +1,163 @@
+{
+ "n": 2,
+ "title": "The Forward-Engineering Design Cycle",
+ "duration": 256.75,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section two. The forward-engineering design cycle."
+  },
+  {
+   "t": 3.3,
+   "text": "We have discussed the design cycle in chapter two as a general engineering framework."
+  },
+  {
+   "t": 8.11,
+   "text": "Chapter six brings it back with a tighter focus on the role of modelling and CAD tooling at each step."
+  },
+  {
+   "t": 14.82,
+   "text": "The forward-engineering workflow goes as follows."
+  },
+  {
+   "t": 17.84,
+   "text": "Step one: define the design objectives."
+  },
+  {
+   "t": 20.84,
+   "text": "What dynamical behaviour are you after?"
+  },
+  {
+   "t": 23.09,
+   "text": "What properties does it need — robustness, yield, response time?"
+  },
+  {
+   "t": 27.39,
+   "text": "What constraints apply — bounds on output variability, choice of chassis, environmental conditions?"
+  },
+  {
+   "t": 34.06,
+   "text": "Spell these out precisely, because everything downstream depends on them."
+  },
+  {
+   "t": 38.39,
+   "text": "Step two: enumerate candidate designs."
+  },
+  {
+   "t": 41.73,
+   "text": "Different designs differ in three ways: which parts they use, what values their parameters take, and how the parts are interconnected."
+  },
+  {
+   "t": 49.95,
+   "text": "You typically want several candidates, not one, because in silico evaluation will let you choose among them later."
+  },
+  {
+   "t": 56.62,
+   "text": "Step three: build mathematical models of each candidate."
+  },
+  {
+   "t": 60.5,
+   "text": "Ideally, this is automated using a standardised database of composable part models, where each part comes with a calibrated mathematical description and well-defined input-output interfaces."
+  },
+  {
+   "t": 72.54,
+   "text": "Then you assemble the part models according to the design's interconnection structure and you have an end-to-end model of the candidate."
+  },
+  {
+   "t": 79.3,
+   "text": "Step four: analyse and simulate."
+  },
+  {
+   "t": 82.15,
+   "text": "Run mathematical analysis on the models — stability, dynamics, response to perturbations."
+  },
+  {
+   "t": 88.24,
+   "text": "Run numerical simulations of each design under representative conditions."
+  },
+  {
+   "t": 93.15,
+   "text": "Compare against the design specifications."
+  },
+  {
+   "t": 95.99,
+   "text": "Tune parameters in silico to find combinations that meet the specifications, and use robustness analysis to see which candidates are most resilient to perturbations."
+  },
+  {
+   "t": 107.15,
+   "text": "This step usually involves multiple in silico iterations — refining models, retuning parameters, comparing alternatives — until a small subset of designs emerges as strong candidates for actually building."
+  },
+  {
+   "t": 120.44,
+   "text": "Step five: compile to DNA and build."
+  },
+  {
+   "t": 123.6,
+   "text": "The chosen designs are translated into DNA sequences, often using assembly-strategy software that figures out how to physically build the construct from available DNA fragments."
+  },
+  {
+   "t": 135.06,
+   "text": "Step six: implement and characterise in the wet lab."
+  },
+  {
+   "t": 139.06,
+   "text": "Build the DNA, transform it into the chassis, measure the actual behaviour."
+  },
+  {
+   "t": 144.3,
+   "text": "Compare against the design objectives and against the model's predictions."
+  },
+  {
+   "t": 148.46,
+   "text": "Step seven: iterate."
+  },
+  {
+   "t": 150.44,
+   "text": "If the implementation falls short of the design objectives — and it usually does, at least on the first round — the discrepancy informs the next iteration."
+  },
+  {
+   "t": 160.22,
+   "text": "Maybe the model was wrong somewhere; maybe a part behaved differently in context than expected; maybe a parameter needs retuning."
+  },
+  {
+   "t": 168.24,
+   "text": "Whatever the source, the iteration loop is part of the methodology, not a failure of it."
+  },
+  {
+   "t": 173.95,
+   "text": "The textbook stresses something important here: CAD tools and graphical user interfaces dramatically accelerate this loop."
+  },
+  {
+   "t": 182.44,
+   "text": "When a designer can drag part icons onto a canvas, have the underlying mathematical models auto-generated, run simulations with a click, and get suggestions for DNA assembly strategies as output — the design cycle becomes much faster than when each step requires bespoke wet-lab work."
+  },
+  {
+   "t": 200.57,
+   "text": "And the goal is to push this further: eventually, computational tools will predict the exact DNA sequence required to implement a high-level design, and liquid-handling robots will physically assemble that DNA, fully automating the build phase."
+  },
+  {
+   "t": 216.22,
+   "text": "Synthetic biology is not yet at that fully-automated level, but the trajectory is clearly toward it."
+  },
+  {
+   "t": 223.31,
+   "text": "The bigger conceptual point is that the design cycle, properly executed, enables abstraction."
+  },
+  {
+   "t": 229.54,
+   "text": "Different experts can work at different layers — parts, devices, systems — without each needing to understand the full implementation details of the others."
+  },
+  {
+   "t": 239.47,
+   "text": "The model-driven design phase happens in silico, where iteration is cheap."
+  },
+  {
+   "t": 244.62,
+   "text": "The fabrication phase happens in the wet lab, where iteration is expensive."
+  },
+  {
+   "t": 250.29,
+   "text": "Separating them by means of validated models is what makes the whole approach scale to complex systems."
+  }
+ ]
+}

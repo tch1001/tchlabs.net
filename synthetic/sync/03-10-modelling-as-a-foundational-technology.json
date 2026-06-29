@@ -1,0 +1,111 @@
+{
+ "n": 10,
+ "title": "Modelling as a Foundational Technology",
+ "duration": 214.03,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section ten. Modelling as a foundational technology."
+  },
+  {
+   "t": 3.95,
+   "text": "We have already discussed modelling at some length in chapter two — ODEs, transfer functions, the Laplace domain, control theory."
+  },
+  {
+   "t": 12.36,
+   "text": "Why does the foundational-technologies chapter return to it?"
+  },
+  {
+   "t": 15.91,
+   "text": "Because the authors want to make explicit that modelling is not just a side-interest; it is one of the foundations of synthetic biology, comparable in importance to genome sequencing and DNA synthesis."
+  },
+  {
+   "t": 28.36,
+   "text": "Modelling appears at two distinct points in the synthetic biology design cycle, and each one is important."
+  },
+  {
+   "t": 35.2,
+   "text": "Before building anything, modelling is predictive."
+  },
+  {
+   "t": 39.08,
+   "text": "It lets a designer evaluate whether a proposed circuit is likely to work; suggests alternative designs; simulates expected performance under different conditions; derives optimal parameter values; identifies which parts of the design space are worth exploring experimentally."
+  },
+  {
+   "t": 55.94,
+   "text": "A particularly important predictive role is parameter estimation — figuring out what relative expression levels, binding affinities, and turnover rates are required for a device to behave the way you want."
+  },
+  {
+   "t": 67.95,
+   "text": "If you know from the model that your logic gate needs the input transcription factor to be expressed at five times the level of the output protein, you can search the registry for promoter-RBS combinations that hit that ratio."
+  },
+  {
+   "t": 80.36,
+   "text": "Predictive modelling effectively replaces a great deal of wet-lab trial and error."
+  },
+  {
+   "t": 86.11,
+   "text": "After building, modelling serves several other roles."
+  },
+  {
+   "t": 89.67,
+   "text": "It can be used as a description: fitting a model to characterisation data of a synthetic device gives a mathematical understanding of how that device works, and sometimes generalises to give insight about natural processes that the engineered system was inspired by."
+  },
+  {
+   "t": 105.22,
+   "text": "It can be used to explore design space cheaply — once your model is calibrated to one set of experiments, simulating the same model under many other conditions is essentially free, far cheaper than the equivalent wet-lab experiments."
+  },
+  {
+   "t": 119.3,
+   "text": "And it provides the bridge between iterations of the engineering cycle — the model derived from a first round of experiments tells you what to change in the second round."
+  },
+  {
+   "t": 128.74,
+   "text": "Modelling techniques used in synthetic biology span a range."
+  },
+  {
+   "t": 133.43,
+   "text": "Ordinary differential equations are the workhorse for deterministic, average-behaviour descriptions."
+  },
+  {
+   "t": 139.5,
+   "text": "Stochastic differential equations capture the inherent randomness of low-copy-number processes like single-gene transcription."
+  },
+  {
+   "t": 147.44,
+   "text": "Master equations describe the probability distributions of cellular states over time."
+  },
+  {
+   "t": 153.75,
+   "text": "Boolean networks abstract continuous concentrations into binary on-off states, useful for reasoning about logical behaviour at the cost of quantitative accuracy."
+  },
+  {
+   "t": 164.11,
+   "text": "Each technique has its niche; we will go into detail in chapter six."
+  },
+  {
+   "t": 169.05,
+   "text": "The textbook makes one more crucial observation about modelling: it lets you shift work from the wet lab to the dry lab, and this is a productivity multiplier."
+  },
+  {
+   "t": 178.64,
+   "text": "Wet-lab work is slow, expensive, and unpredictable."
+  },
+  {
+   "t": 183.14,
+   "text": "Computational simulation is fast, cheap, and reproducible."
+  },
+  {
+   "t": 187.54,
+   "text": "Every hour of analysis you can do in silico before committing to a build is potentially saving days of wet-lab time."
+  },
+  {
+   "t": 195.54,
+   "text": "For an engineering discipline trying to operate at the speed and scale of, say, electronic design, that ratio matters enormously."
+  },
+  {
+   "t": 204.66,
+   "text": "The whole BioCAD vision — sketched in chapter two and returning here — depends fundamentally on accurate, accessible, composable models."
+  }
+ ]
+}

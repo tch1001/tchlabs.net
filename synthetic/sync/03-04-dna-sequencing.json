@@ -1,0 +1,103 @@
+{
+ "n": 4,
+ "title": "DNA Sequencing",
+ "duration": 210.94,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section four. DNA sequencing."
+  },
+  {
+   "t": 2.83,
+   "text": "If genome sequences are the data, DNA sequencing is the machinery that produces them."
+  },
+  {
+   "t": 9.25,
+   "text": "And the history of DNA sequencing is essentially the history of an exponential curve in cost and throughput."
+  },
+  {
+   "t": 17.36,
+   "text": "The original sequencing technology was Sanger sequencing, named for Frederick Sanger, who developed the method in the 1970s."
+  },
+  {
+   "t": 26.26,
+   "text": "Sanger sequencing reads up to about a thousand base pairs of DNA at a time, using gel electrophoresis and fluorescent dye chemistry to determine the base at each position."
+  },
+  {
+   "t": 37.94,
+   "text": "Early genome projects relied entirely on Sanger sequencing, which limited them severely — a thousand bases per read is not very much when you are trying to sequence a multi-million-base genome."
+  },
+  {
+   "t": 49.79,
+   "text": "The strategy that opened up large-scale genomes was called shotgun sequencing, championed in the 1990s by J. Craig Venter and others."
+  },
+  {
+   "t": 59.46,
+   "text": "The idea is conceptually simple."
+  },
+  {
+   "t": 62.0,
+   "text": "Take a large piece of DNA — say, an entire chromosome — and chop it into many smaller fragments, randomly."
+  },
+  {
+   "t": 70.21,
+   "text": "Sequence each fragment with Sanger sequencing in parallel."
+  },
+  {
+   "t": 74.34,
+   "text": "Then use computer algorithms to find overlaps between the fragments and assemble them back into the full sequence, in silico."
+  },
+  {
+   "t": 82.49,
+   "text": "This works because, if you fragment the original DNA into enough pieces and sequence each piece multiple times, the overlaps unambiguously tell you the full sequence — provided your assembly algorithm can handle the combinatorics."
+  },
+  {
+   "t": 97.85,
+   "text": "Shotgun sequencing enabled bacterial genomes to be sequenced quickly and affordably, and it remains the dominant strategy for sequencing chromosome-sized DNA today."
+  },
+  {
+   "t": 109.9,
+   "text": "The hardware kept improving."
+  },
+  {
+   "t": 112.05,
+   "text": "Gel electrophoresis gave way to capillary electrophoresis for sequencing of individual cloned DNA pieces — common in synthetic biology when you need to verify a new construct."
+  },
+  {
+   "t": 124.5,
+   "text": "And for genome-scale work, the chemistry has moved on entirely."
+  },
+  {
+   "t": 128.81,
+   "text": "Second-generation sequencing — Illumina being the dominant example — and third-generation sequencing — PacBio, Oxford Nanopore — sequence short DNA fragments in massive parallel, producing data sets in the terabyte range and relying heavily on computational pipelines to assemble the reads."
+  },
+  {
+   "t": 148.88,
+   "text": "For synthetic biology, fast and cheap DNA sequencing is a prerequisite for almost everything."
+  },
+  {
+   "t": 155.96,
+   "text": "Every new construct needs to be sequence-verified before you trust it."
+  },
+  {
+   "t": 160.14,
+   "text": "Every cloned plasmid, every PCR product, every engineered chassis needs to be sequenced to confirm that the DNA you have is the DNA you designed."
+  },
+  {
+   "t": 170.06,
+   "text": "And in projects where the engineered strains will grow and evolve over time — which is most projects — periodic sequencing catches mutations that would otherwise silently break your design."
+  },
+  {
+   "t": 181.16,
+   "text": "The Carlson Curve, which appears in this chapter as Figure 3.2, shows DNA sequencing and synthesis costs over the last two decades on a log scale."
+  },
+  {
+   "t": 191.2,
+   "text": "A straight line on a log plot is an exponential, and the curve has been roughly exponential for years — sequencing costs have fallen far faster than Moore's Law for transistors."
+  },
+  {
+   "t": 202.51,
+   "text": "That cost curve is what made synthetic biology, with its dependence on constant sequencing verification, economically practical."
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "n": 9,
+ "title": "Oscillators and the Repressilator",
+ "duration": 299.14,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section nine. Oscillators and the famous repressilator."
+  },
+  {
+   "t": 3.98,
+   "text": "An oscillator is a system whose output varies in a regular, periodic pattern over time."
+  },
+  {
+   "t": 9.7,
+   "text": "Biology is full of natural oscillators — circadian clocks coordinate daily rhythms, segmentation clocks pattern embryos, neural oscillations underlie brain function."
+  },
+  {
+   "t": 21.43,
+   "text": "Building synthetic oscillators in cells has been a major goal of the field, both because oscillators are essential for any kind of timing in cellular logic, and because their stable, sustained oscillation is a demanding test of how well we can engineer dynamics."
+  },
+  {
+   "t": 37.41,
+   "text": "Two key parameters describe an oscillator: period and amplitude."
+  },
+  {
+   "t": 41.73,
+   "text": "The period is the length of time from one peak of the output to the next — equivalently, the inverse of the frequency."
+  },
+  {
+   "t": 49.49,
+   "text": "The amplitude is the distance between the average value of the output and its peak."
+  },
+  {
+   "t": 54.11,
+   "text": "When synthetic biologists design oscillators, they want to specify and tune both — period for timing, amplitude for output magnitude."
+  },
+  {
+   "t": 63.3,
+   "text": "The general design principle for an oscillator is to combine negative feedback with a delay."
+  },
+  {
+   "t": 68.55,
+   "text": "Negative feedback alone tends to settle to a stable equilibrium."
+  },
+  {
+   "t": 73.01,
+   "text": "Negative feedback with a long enough delay tends to overshoot, undershoot, and oscillate."
+  },
+  {
+   "t": 79.0,
+   "text": "The exact form of the delay is what distinguishes one oscillator design from another."
+  },
+  {
+   "t": 84.36,
+   "text": "The simplest scheme: a single gene that represses itself, coupled to a mechanism for delay."
+  },
+  {
+   "t": 90.54,
+   "text": "Theoretical studies have shown that with sufficient delay, this two-component system oscillates."
+  },
+  {
+   "t": 96.96,
+   "text": "But practical implementations have proved difficult — the delay must be tuned carefully, and noise can easily dampen or destabilise the oscillation."
+  },
+  {
+   "t": 107.09,
+   "text": "A more elaborate design uses two cell populations exchanging chemical signals in a Lotka-Volterra arrangement — the same predator-prey equations that govern fox-and-rabbit ecology."
+  },
+  {
+   "t": 119.28,
+   "text": "One population produces a signal at an exponential rate (the prey)."
+  },
+  {
+   "t": 123.95,
+   "text": "Another population, in response to that signal, consumes or destroys it (the predator)."
+  },
+  {
+   "t": 130.34,
+   "text": "The delays in signal diffusion and processing between populations naturally produce oscillation — the prey signal builds up, triggers the predator, the predator consumes the signal, the prey then rebounds, and the cycle repeats."
+  },
+  {
+   "t": 144.59,
+   "text": "But the most famous synthetic oscillator is the repressilator, built by Michael Elowitz and Stanislas Leibler in 2000."
+  },
+  {
+   "t": 152.66,
+   "text": "It is one of the foundational achievements of synthetic biology and worth understanding in detail."
+  },
+  {
+   "t": 158.55,
+   "text": "Take three inverters — three NOT gates — and chain them in a cyclic loop."
+  },
+  {
+   "t": 163.26,
+   "text": "Repressor A represses the gene for repressor B."
+  },
+  {
+   "t": 166.97,
+   "text": "Repressor B represses the gene for repressor C."
+  },
+  {
+   "t": 170.29,
+   "text": "Repressor C represses the gene for repressor A."
+  },
+  {
+   "t": 173.64,
+   "text": "Notice that the loop has an odd number of inverters."
+  },
+  {
+   "t": 176.51,
+   "text": "Each inverter introduces a delay equal to a transcription-and-translation cycle."
+  },
+  {
+   "t": 182.0,
+   "text": "The odd number of inversions means that the signal coming back to A is the opposite of where it started."
+  },
+  {
+   "t": 188.01,
+   "text": "If A starts high, then B is repressed (low), so C is not repressed (high), so A is repressed (low) — but A was high; contradiction; A must fall."
+  },
+  {
+   "t": 199.57,
+   "text": "Once A falls, the inverse chain runs in the opposite direction, raising A again."
+  },
+  {
+   "t": 205.04,
+   "text": "The system therefore cannot settle to a fixed point — it oscillates."
+  },
+  {
+   "t": 209.94,
+   "text": "The original Elowitz-Leibler repressilator used three well-characterised repressors: LacI, TetR, and lambda cI."
+  },
+  {
+   "t": 218.41,
+   "text": "It produced sustained oscillations in living E. coli cells with a period of roughly 150 minutes."
+  },
+  {
+   "t": 225.34,
+   "text": "It was the first time anyone had built a genetic oscillator that worked in vivo, and it became a model system for understanding the engineering of cellular dynamics."
+  },
+  {
+   "t": 235.31,
+   "text": "Theoretical investigations have since shown that any odd number of inverters in a cyclic chain will produce sustained oscillations, given the right parameters."
+  },
+  {
+   "t": 244.76,
+   "text": "And more sophisticated repressilator variants exist — coupled to quorum sensing so that oscillations synchronise across populations of cells, tuned for shorter or longer periods, integrated with light-sensing modules for entrainment."
+  },
+  {
+   "t": 259.42,
+   "text": "Whenever you see synthetic biology demonstrations of oscillators in colony-level fluorescence movies, the underlying design is almost certainly a repressilator variant of some kind."
+  },
+  {
+   "t": 270.77,
+   "text": "Beyond the repressilator, more recent oscillators by Stricker, Cookson, Bennett, and colleagues — published in Nature in 2008 — used coupled positive and negative feedback to achieve fast, robust, tunable oscillations."
+  },
+  {
+   "t": 285.37,
+   "text": "These represent the current state of the art in genetic oscillator design."
+  },
+  {
+   "t": 289.78,
+   "text": "The general lesson is that an oscillator is one of the harder systems to engineer reliably in biology, and the field has spent considerable effort getting it right."
+  }
+ ]
+}

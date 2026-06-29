@@ -1,0 +1,155 @@
+{
+ "n": 6,
+ "title": "What Models Tell You — Metrics, Simulations, Fundamental Limits",
+ "duration": 276.86,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section six. What you actually get from a calibrated model."
+  },
+  {
+   "t": 3.64,
+   "text": "Suppose you have built a model, fit its parameters, and verified that it reproduces the relevant experimental data."
+  },
+  {
+   "t": 10.5,
+   "text": "What can you now do with it?"
+  },
+  {
+   "t": 11.82,
+   "text": "The textbook organises the answers into three categories."
+  },
+  {
+   "t": 15.82,
+   "text": "First: metrics of interest."
+  },
+  {
+   "t": 18.12,
+   "text": "Once you have a model, you can compute quantitative metrics for the designed system before you build it."
+  },
+  {
+   "t": 23.6,
+   "text": "Typical metrics include: rise time (how long the output takes to reach a new steady state after an input change), steady-state amplitude (what the output level is at equilibrium), tunability (how the output changes as you vary specific parameters), and robustness (how much the output drifts under perturbations)."
+  },
+  {
+   "t": 43.67,
+   "text": "All of these are essential to making informed design decisions."
+  },
+  {
+   "t": 47.56,
+   "text": "You no longer have to build five candidate designs to see which has the best rise time; you simulate the five models and pick the winner before any DNA is synthesised."
+  },
+  {
+   "t": 58.12,
+   "text": "Second: model-based numerical simulations."
+  },
+  {
+   "t": 61.64,
+   "text": "Beyond extracting specific metrics, simulations let you visualise the system's behaviour over time, under various conditions, in any scenario you can describe mathematically."
+  },
+  {
+   "t": 73.06,
+   "text": "Run the model under stress conditions; run it with input perturbations; run it across the full operating range and check for unexpected behaviours."
+  },
+  {
+   "t": 82.83,
+   "text": "Each simulation is a free experiment in silico, and they let you discover problems with your design before you commit to it."
+  },
+  {
+   "t": 90.14,
+   "text": "Third — and this is the most powerful application — fundamental limits."
+  },
+  {
+   "t": 94.86,
+   "text": "Some of the most important results in engineering theory are not about how to improve a specific design, but about the absolute limits of what any design in a given class can achieve."
+  },
+  {
+   "t": 105.88,
+   "text": "Mathematical analysis of a synthetic biology model can identify these limits."
+  },
+  {
+   "t": 111.28,
+   "text": "Three specific analyses appear in this chapter."
+  },
+  {
+   "t": 114.6,
+   "text": "Parameter sensitivity analysis: which parameters most strongly influence the system's behaviour?"
+  },
+  {
+   "t": 120.94,
+   "text": "Local sensitivity analysis perturbs one parameter at a time around a nominal value and measures the resulting change in output."
+  },
+  {
+   "t": 129.19,
+   "text": "Global sensitivity analysis perturbs all parameters simultaneously across their full biological ranges, capturing parameter interactions."
+  },
+  {
+   "t": 138.76,
+   "text": "Tools like BioSens, SensSB, and SBML-SAT implement these algorithms for biological models."
+  },
+  {
+   "t": 146.3,
+   "text": "Sensitive parameters are the ones a designer must pin down most precisely."
+  },
+  {
+   "t": 151.34,
+   "text": "Bifurcation analysis: how does the qualitative behaviour of the system change as parameters vary?"
+  },
+  {
+   "t": 157.72,
+   "text": "A system might have a single stable steady state in one region of parameter space, become bistable as a parameter is increased, then transition to sustained oscillations beyond a further threshold."
+  },
+  {
+   "t": 170.29,
+   "text": "The boundaries between these qualitatively different regimes are bifurcations, and characterising them tells you the parameter ranges within which a desired behaviour is achievable."
+  },
+  {
+   "t": 181.5,
+   "text": "Tools like XPPAUT and MATCONT perform bifurcation analyses on biological models."
+  },
+  {
+   "t": 187.81,
+   "text": "Robustness analysis: how much can the system tolerate before its behaviour breaks?"
+  },
+  {
+   "t": 193.09,
+   "text": "Different designs that achieve the same nominal behaviour can have very different robustness profiles."
+  },
+  {
+   "t": 199.07,
+   "text": "Multivariable robust control techniques from control theory can be applied to assess and compare these profiles."
+  },
+  {
+   "t": 206.57,
+   "text": "Tools like the MATLAB Robust Control Toolbox, SBML-SAT, and BIOCHAM implement these analyses."
+  },
+  {
+   "t": 214.03,
+   "text": "And then there is a particularly beautiful kind of result: mathematical proof of a fundamental limit that no design in a class can exceed."
+  },
+  {
+   "t": 222.94,
+   "text": "The textbook cites a 2010 paper by Lestas, Vinnicombe, and colleagues that derives a fundamental limit on how much molecular fluctuation feedback control can suppress."
+  },
+  {
+   "t": 234.01,
+   "text": "The result is striking: the suppression is bounded by the quartic root of the number of signalling events used."
+  },
+  {
+   "t": 240.49,
+   "text": "If you want to reduce molecular fluctuations by one order of magnitude using feedback, you need to use four orders of magnitude more signalling events."
+  },
+  {
+   "t": 249.53,
+   "text": "This is not a statement about a particular design being wasteful; it is a statement about the laws of biology that no design in this class can escape."
+  },
+  {
+   "t": 258.41,
+   "text": "Results of this kind tell synthetic biologists what is possible and what is impossible — what design goals are worth pursuing, and what goals would require fundamentally different mechanisms."
+  },
+  {
+   "t": 269.41,
+   "text": "This is exactly what mature engineering disciplines have, and what synthetic biology is increasingly accessing."
+  }
+ ]
+}
