@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0f14">
+<title>Synthetic Biology — A Primer Podcast</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-chapters">
+<header class="topic-header book-header">
+  <h1 id="bookTitle">Synthetic Biology</h1>
+</header>
+<p class="book-sub" id="bookSub">An original explainer companion — synthetic biology primer, chapter by chapter.</p>
+<main id="chapters">
+  <p class="muted" style="padding:0 1rem">Loading…</p>
+</main>
+<p class="disclaimer">
+  Original explainer commentary on the concepts in Baldwin, Bayer, Dickinson, Ellis, Freemont,
+  Kitney, Polizzi and Stan's <em>Synthetic Biology — A Primer (Revised Edition)</em> (Imperial
+  College Press / World Scientific, 2016), organised by the book's structure. Not the book's
+  text; for the real thing, buy the book from
+  <a href="https://www.worldscientific.com/worldscibooks/10.1142/p1060">World Scientific</a>.
+</p>
+<script>
+(async function () {
+  const main = document.getElementById("chapters");
+  const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const fmt = s => { s = Math.max(0, Math.round(s)); const m = (s/60)|0, ss = s%60; return `${m}:${String(ss).padStart(2,"0")}`; };
+  try {
+    const m = await (await fetch("manifest.json", { cache: "no-store" })).json();
+    document.getElementById("bookTitle").textContent = m.title;
+    document.title = m.title;
+    main.innerHTML = m.chapters.map(c => `
+      <section class="chap-group">
+        <div class="chap-group-title">${esc(c.title)}</div>
+        <div class="chapter-list">
+          ${c.sections.map(s => `
+            <a class="card chapter-card" href="player.html?ch=${encodeURIComponent(s.slug)}">
+              <div class="chapter-num">${String(s.n).padStart(2,"0")}</div>
+              <div class="chapter-body">
+                <div class="chapter-title-row">${esc(s.title)}</div>
+                <div class="chapter-meta">${fmt(s.duration)}</div>
+              </div>
+              <div class="chevron">›</div>
+            </a>`).join("")}
+        </div>
+      </section>`).join("");
+  } catch (e) {
+    main.innerHTML = `<p class="muted" style="padding:0 1rem">Nothing here yet.</p>`;
+  }
+})();
+</script>
+</body>
+</html>

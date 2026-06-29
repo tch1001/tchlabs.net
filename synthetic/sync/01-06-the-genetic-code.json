@@ -1,0 +1,203 @@
+{
+ "n": 6,
+ "title": "The Genetic Code",
+ "duration": 357.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section six. The genetic code."
+  },
+  {
+   "t": 2.56,
+   "text": "We just said that nucleic acids use four letters and proteins use twenty."
+  },
+  {
+   "t": 7.85,
+   "text": "There is no way to get a one-to-one mapping out of that — four cannot encode twenty."
+  },
+  {
+   "t": 13.81,
+   "text": "So the cell uses groups of letters."
+  },
+  {
+   "t": 16.44,
+   "text": "Specifically, three nucleotides at a time."
+  },
+  {
+   "t": 19.76,
+   "text": "A group of three nucleotides is called a codon."
+  },
+  {
+   "t": 23.04,
+   "text": "Each codon specifies one amino acid."
+  },
+  {
+   "t": 25.76,
+   "text": "With four possible bases at each of three positions, you have 4 cubed — that is, 64 possible codons."
+  },
+  {
+   "t": 33.2,
+   "text": "Sixty-four possible codons, but only twenty amino acids — which means there is enormous redundancy in the genetic code."
+  },
+  {
+   "t": 41.31,
+   "text": "Most amino acids are specified by more than one codon, sometimes by as many as six."
+  },
+  {
+   "t": 47.59,
+   "text": "There are two interesting exceptions."
+  },
+  {
+   "t": 49.54,
+   "text": "Tryptophan and methionine each have only one codon dedicated to them — UGG for tryptophan, AUG for methionine."
+  },
+  {
+   "t": 58.2,
+   "text": "And those two amino acids are also among the less common ones in proteins, which is not a coincidence: a less frequently used amino acid does not benefit as much from having a redundant set of codons."
+  },
+  {
+   "t": 71.03,
+   "text": "Methionine has a second, very special job beyond just being one of the twenty: in bacteria, every single protein starts with methionine."
+  },
+  {
+   "t": 79.95,
+   "text": "The first amino acid added to every newly synthesised bacterial protein is methionine, encoded by an AUG codon."
+  },
+  {
+   "t": 88.25,
+   "text": "Eukaryotes follow nearly the same convention."
+  },
+  {
+   "t": 91.26,
+   "text": "This start convention matters because it tells the ribosome where to begin."
+  },
+  {
+   "t": 95.6,
+   "text": "Recall that any stretch of DNA can be read in three different reading frames on each of its two strands — that is six possible frames total — depending on where you decide to start counting your three-nucleotide groups."
+  },
+  {
+   "t": 108.5,
+   "text": "Without a defined start, the ribosome has no idea which frame is the real one."
+  },
+  {
+   "t": 114.28,
+   "text": "The bacterial answer is twofold."
+  },
+  {
+   "t": 116.51,
+   "text": "First, the mRNA carries a short sequence called the ribosome binding site, or RBS — sometimes also called the Shine-Dalgarno sequence after its discoverers — which lets the ribosome dock at the right place."
+  },
+  {
+   "t": 129.89,
+   "text": "Second, just downstream of the RBS sits the first AUG codon."
+  },
+  {
+   "t": 134.44,
+   "text": "When the ribosome lands at the RBS and finds that AUG, it sets the reading frame to start at that codon and translates from there."
+  },
+  {
+   "t": 142.94,
+   "text": "Because methionine has only one codon, the start signal is unambiguous: there is no question about whether a given AUG \"could\" mean something else, because nothing else uses AUG."
+  },
+  {
+   "t": 154.51,
+   "text": "That removes one source of ambiguity in an inherently noisy process."
+  },
+  {
+   "t": 159.8,
+   "text": "The redundancy of the code is interesting in itself."
+  },
+  {
+   "t": 163.47,
+   "text": "Because most amino acids have multiple codons, an organism can have a preference about which codons it uses most often, and different organisms tend to settle on different preferences."
+  },
+  {
+   "t": 175.07,
+   "text": "This phenomenon is called codon usage bias, and it varies systematically between species."
+  },
+  {
+   "t": 181.35,
+   "text": "E. coli, baker's yeast, humans, and a chloroplast all have somewhat different codon preferences."
+  },
+  {
+   "t": 188.74,
+   "text": "This matters in synthetic biology in a very practical way."
+  },
+  {
+   "t": 192.81,
+   "text": "If you take a gene from one organism and try to express it in another, the codons that were perfectly common in the original host may be very rare in the new host."
+  },
+  {
+   "t": 203.25,
+   "text": "The new host has fewer of the tRNAs that read those rare codons, and the ribosome stalls when it hits one, and protein output drops."
+  },
+  {
+   "t": 212.0,
+   "text": "The standard fix is called codon optimisation — you rewrite the DNA sequence of the gene, swapping rare codons in the new host for common ones, while preserving the amino acid sequence of the protein."
+  },
+  {
+   "t": 224.68,
+   "text": "You will see codon optimisation come up repeatedly when we discuss expressing foreign genes in microbial chassis."
+  },
+  {
+   "t": 232.35,
+   "text": "Now, the actual translation of codons to amino acids on the ribosome does not happen directly."
+  },
+  {
+   "t": 239.19,
+   "text": "It happens through an intermediary class of small RNA molecules called transfer RNA — tRNA."
+  },
+  {
+   "t": 246.26,
+   "text": "A tRNA molecule is short — about 76 nucleotides — and folds into a characteristic cloverleaf-like secondary structure with three loops."
+  },
+  {
+   "t": 256.5,
+   "text": "One end of the tRNA, at its three-prime tail, gets chemically loaded with a specific amino acid."
+  },
+  {
+   "t": 263.52,
+   "text": "Another part of the tRNA, at the bottom of one of the loops, exposes a sequence of three nucleotides called the anticodon."
+  },
+  {
+   "t": 271.04,
+   "text": "The anticodon is — surprise — complementary to a codon in mRNA."
+  },
+  {
+   "t": 277.11,
+   "text": "There are different tRNA species in the cell for each amino acid, and the matching between which tRNA gets loaded with which amino acid is enforced by another family of enzymes called aminoacyl-tRNA synthetases."
+  },
+  {
+   "t": 290.56,
+   "text": "These synthetases are remarkably specific — they have to be, because if a tRNA was loaded with the wrong amino acid, the protein produced from that mRNA would have a mistake at every codon read by that tRNA, and the cell would gradually accumulate errors throughout its proteome."
+  },
+  {
+   "t": 307.51,
+   "text": "So the genetic code, in practice, is not implemented in a lookup table."
+  },
+  {
+   "t": 312.47,
+   "text": "It is implemented by the population of tRNAs and the synthetases that load them."
+  },
+  {
+   "t": 317.69,
+   "text": "Whoever loads the tRNAs is, in a literal sense, defining what the code means."
+  },
+  {
+   "t": 323.21,
+   "text": "There is one more subtlety to mention: wobble pairing."
+  },
+  {
+   "t": 326.44,
+   "text": "At the third position of the codon — that is, the third nucleotide — the base pairing between codon and anticodon is sometimes a little loose, allowing one tRNA to recognise multiple synonymous codons."
+  },
+  {
+   "t": 340.88,
+   "text": "That is part of why redundant codons can be efficiently translated by fewer than 61 different tRNAs."
+  },
+  {
+   "t": 348.02,
+   "text": "We do not need to dwell on wobble here, but if you ever look up a codon table and wonder why some codons clearly behave as equivalents, wobble is the reason."
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0b0f14">
+<title>Poker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-player">
+<header class="player-header">
+  <a class="back" id="backLink" href="index.html" aria-label="back">←</a>
+  <div class="player-titles">
+    <div class="topic-title" id="topicTitle">…</div>
+    <div class="chapter-title" id="chapterTitle">…</div>
+  </div>
+</header>
+
+<main class="transcript" id="transcript">
+  <p class="muted" style="padding:1rem">Loading…</p>
+</main>
+
+<footer class="controls">
+  <div class="seek">
+    <span class="time" id="curTime">0:00</span>
+    <input type="range" id="seekBar" min="0" max="1000" value="0" step="1" aria-label="seek">
+    <span class="time" id="durTime">0:00</span>
+  </div>
+  <div class="buttons">
+    <button id="prevCh" aria-label="previous section" class="icon">⏮</button>
+    <button id="back15" aria-label="back 15 seconds" class="icon">−15</button>
+    <button id="playPause" aria-label="play" class="play">▶</button>
+    <button id="fwd15" aria-label="forward 15 seconds" class="icon">+15</button>
+    <button id="nextCh" aria-label="next section" class="icon">⏭</button>
+  </div>
+  <div class="speed" id="speedBtns">
+    <button data-rate="0.85">0.85×</button>
+    <button data-rate="1" class="active">1×</button>
+    <button data-rate="1.25">1.25×</button>
+    <button data-rate="1.5">1.5×</button>
+    <button data-rate="1.75">1.75×</button>
+    <button data-rate="2">2×</button>
+  </div>
+  <div class="extras">
+    <label class="toggle"><input type="checkbox" id="autoplayToggle" checked> Autoplay next</label>
+    <div class="sleep" id="sleepBtns">
+      <span class="sleep-label">Sleep</span>
+      <button data-min="0" class="active">Off</button>
+      <button data-min="15">15m</button>
+      <button data-min="30">30m</button>
+      <button data-min="45">45m</button>
+      <button data-min="60">60m</button>
+      <span class="sleep-remain" id="sleepRemain"></span>
+    </div>
+  </div>
+</footer>
+
+<audio id="audio" preload="metadata"></audio>
+<script src="player.js"></script>
+</body>
+</html>

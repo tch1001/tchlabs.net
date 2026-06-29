@@ -1,0 +1,203 @@
+{
+ "n": 10,
+ "title": "RNA Regulation and Riboswitches",
+ "duration": 398.74,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section ten. RNA as a regulator, and the riboswitches that synthetic biology has begun to put to work."
+  },
+  {
+   "t": 8.11,
+   "text": "It is tempting to think of RNA as just the passive messenger — a tape that carries the message from DNA to ribosome and then gets destroyed."
+  },
+  {
+   "t": 17.3,
+   "text": "For decades that is roughly how molecular biology thought about it."
+  },
+  {
+   "t": 21.75,
+   "text": "We now know that view was incomplete, and in some ways quite wrong."
+  },
+  {
+   "t": 26.24,
+   "text": "RNA does many things in the cell."
+  },
+  {
+   "t": 29.14,
+   "text": "It does carry messages, yes."
+  },
+  {
+   "t": 31.29,
+   "text": "But it also performs catalysis, and it actively regulates gene expression."
+  },
+  {
+   "t": 36.33,
+   "text": "Its versatility is now believed to reflect a very ancient role."
+  },
+  {
+   "t": 40.83,
+   "text": "There is a widely supported hypothesis, called the RNA world hypothesis, which proposes that very early in the history of life — perhaps before DNA existed at all — RNA served both as the storage molecule for genetic information and as the catalytic molecule that carried out cellular reactions."
+  },
+  {
+   "t": 59.04,
+   "text": "In the RNA world, RNA was both database and machine."
+  },
+  {
+   "t": 63.69,
+   "text": "DNA arose later as a more chemically stable carrier — better suited to long-term storage and to building genomes large enough for complex organisms."
+  },
+  {
+   "t": 74.0,
+   "text": "Proteins arose to take over catalysis at scale, far more efficient and diverse than RNA at building specialised enzymes."
+  },
+  {
+   "t": 82.45,
+   "text": "But RNA never quite handed everything over."
+  },
+  {
+   "t": 85.69,
+   "text": "Some of the oldest and most central processes in modern cells are still done with RNA, or with RNA-protein hybrids."
+  },
+  {
+   "t": 93.24,
+   "text": "The ribosome itself, which we have been talking about, is a perfect example: it is a massive ribonucleoprotein complex, but the catalytic centre that actually forms the peptide bond is made of RNA, not protein."
+  },
+  {
+   "t": 106.47,
+   "text": "The ribosome is, at its heart, a ribozyme — an RNA enzyme."
+  },
+  {
+   "t": 111.79,
+   "text": "Transfer RNA, similarly, is RNA doing a sophisticated structural and recognition job that proteins do not."
+  },
+  {
+   "t": 120.06,
+   "text": "Even outside the ribosome, RNA does catalysis: some RNAs splice themselves; some cut other RNAs; we call these catalytic RNAs ribozymes generally."
+  },
+  {
+   "t": 131.97,
+   "text": "But the discovery that has shaped molecular biology most over the last twenty-five years is RNA's role in regulating gene expression through small RNAs."
+  },
+  {
+   "t": 142.09,
+   "text": "In eukaryotes, the discovery of small interfering RNA — siRNA — and the related microRNA system has opened up an entirely new layer of gene control."
+  },
+  {
+   "t": 152.82,
+   "text": "These short RNAs bind to specific mRNAs by base pairing, recruit protein machinery, and either degrade the mRNA or block its translation."
+  },
+  {
+   "t": 162.94,
+   "text": "Beyond the basic biology, siRNA has become a workhorse tool: in the lab, you can design a short RNA to silence essentially any gene you want, with high specificity."
+  },
+  {
+   "t": 174.5,
+   "text": "Prokaryotes do not have the same elaborate machinery as eukaryotes do, but they also use small RNAs to regulate gene expression, and synthetic biologists have built versions of small-RNA control in bacteria."
+  },
+  {
+   "t": 188.4,
+   "text": "An influential paper by Travis Bayer and Christina Smolke in 2005 showed that you can rationally engineer small RNAs that bind to specific mRNAs and modulate translation in predictable ways."
+  },
+  {
+   "t": 202.1,
+   "text": "An attractive feature of RNA-based regulation is its speed."
+  },
+  {
+   "t": 205.81,
+   "text": "RNA molecules are made quickly and degraded quickly — their typical half-lives are short."
+  },
+  {
+   "t": 212.07,
+   "text": "That means RNA-based regulation can turn on and off much faster than protein-based regulation, where you have to first transcribe the regulator, then translate it, then have the regulator find its target."
+  },
+  {
+   "t": 224.6,
+   "text": "Proteins are also costly: they take more energy to build, last longer than you might want, and clutter up the cell with leftover regulator after the moment of decision has passed."
+  },
+  {
+   "t": 235.64,
+   "text": "RNA regulators sidestep some of that cost."
+  },
+  {
+   "t": 238.85,
+   "text": "And then there is a particular class of RNA regulators that is especially elegant: riboswitches."
+  },
+  {
+   "t": 245.06,
+   "text": "A riboswitch is a stretch of RNA, usually sitting in the 5-prime untranslated region of an mRNA, that can fold into two different shapes — and that physically changes shape when a small metabolite molecule binds to it."
+  },
+  {
+   "t": 260.04,
+   "text": "Imagine a length of RNA sitting just upstream of an RBS."
+  },
+  {
+   "t": 265.19,
+   "text": "When no small molecule is present, the RNA adopts one structure that leaves the RBS exposed, ribosome happy, translation proceeds."
+  },
+  {
+   "t": 275.52,
+   "text": "When the relevant small molecule is around — say, an amino acid that the cell happens to be metabolising — the RNA binds the small molecule and refolds into a different structure that buries the RBS in a hairpin, ribosome cannot dock, translation stops."
+  },
+  {
+   "t": 292.77,
+   "text": "The riboswitch has, in effect, sensed the concentration of a metabolite directly, without needing a protein sensor at all."
+  },
+  {
+   "t": 300.63,
+   "text": "In nature, riboswitches are often used as feedback regulators on metabolic pathways: when the metabolic product accumulates, the riboswitch shuts off translation of the enzymes that produce it."
+  },
+  {
+   "t": 312.71,
+   "text": "It is a beautiful, low-cost feedback control built entirely out of RNA and a small molecule."
+  },
+  {
+   "t": 319.5,
+   "text": "Tucker and Breaker described many natural riboswitches in a 2005 review that the textbook recommends."
+  },
+  {
+   "t": 326.68,
+   "text": "And synthetic biologists have engineered riboswitches into circuits — Callura and colleagues in 2010 showed riboswitches incorporated into programmable bacterial control modules."
+  },
+  {
+   "t": 339.15,
+   "text": "If you treat them as engineered parts, riboswitches give you a way to make protein expression directly conditional on chemical signals, with no extra protein machinery required."
+  },
+  {
+   "t": 350.17,
+   "text": "When you put all of this together — the central dogma, the levels of control, the role of RNA — what you should see is a layered architecture."
+  },
+  {
+   "t": 359.45,
+   "text": "Information flows from DNA to RNA to protein."
+  },
+  {
+   "t": 363.5,
+   "text": "But at every level, the cell has knobs."
+  },
+  {
+   "t": 366.16,
+   "text": "It can tune transcription via promoters, sigma factors, activators, and repressors."
+  },
+  {
+   "t": 372.38,
+   "text": "It can tune translation via the RBS and via secondary structure in mRNA."
+  },
+  {
+   "t": 378.22,
+   "text": "It can tune everything again with regulatory RNAs and riboswitches."
+  },
+  {
+   "t": 383.27,
+   "text": "Every one of those knobs is, in principle, available to a synthetic biologist as a design surface."
+  },
+  {
+   "t": 390.51,
+   "text": "The rest of this book is, in a real sense, a tour of how to design at those surfaces."
+  },
+  {
+   "t": 397.05,
+   "text": "That is the end of chapter one."
+  }
+ ]
+}

@@ -1,0 +1,283 @@
+{
+ "n": 8,
+ "title": "Transcriptional Control",
+ "duration": 544.03,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section eight. Controlling the flow of information, starting with transcription."
+  },
+  {
+   "t": 4.74,
+   "text": "An interesting observation from genome sequencing: complexity does not seem to live in raw gene count."
+  },
+  {
+   "t": 11.38,
+   "text": "Humans have around 25,000 protein-coding genes."
+  },
+  {
+   "t": 15.32,
+   "text": "E. coli, the well-studied bacterium, has about 4,800."
+  },
+  {
+   "t": 20.68,
+   "text": "Five-fold difference for organisms that are obviously not five-fold different in sophistication."
+  },
+  {
+   "t": 27.06,
+   "text": "So if complexity is not about how many genes you have, where does it live?"
+  },
+  {
+   "t": 32.01,
+   "text": "A large part of the answer is regulation."
+  },
+  {
+   "t": 34.71,
+   "text": "Higher organisms devote a much larger fraction of their genomes to genes that control other genes — transcription factors, regulatory RNAs, chromatin modifiers, and so on."
+  },
+  {
+   "t": 46.49,
+   "text": "The biological work of being a complex organism is largely the work of controlling when, where, and how strongly each gene is expressed."
+  },
+  {
+   "t": 57.54,
+   "text": "For an engineer, this is encouraging: it suggests that to build interesting biological behaviour, you do not have to invent new gene products; you can often just build new control logic around existing ones."
+  },
+  {
+   "t": 70.24,
+   "text": "Why do cells need that control?"
+  },
+  {
+   "t": 72.26,
+   "text": "In a eukaryote, gene regulation is how a skin cell ends up different from a brain cell despite having identical DNA — different sets of genes are being expressed in each."
+  },
+  {
+   "t": 83.08,
+   "text": "In a bacterium, gene regulation is how the cell responds to its environment — different food sources, different stresses, different temperatures all drive different expression patterns."
+  },
+  {
+   "t": 94.29,
+   "text": "And in synthetic biology, gene regulation is the thing you are designing."
+  },
+  {
+   "t": 98.99,
+   "text": "Whether you want a strain that produces a chemical only when a sensor detects a signal, or a circuit that toggles between two states, or a programmable response to a stimulus — you are designing transcriptional and translational control."
+  },
+  {
+   "t": 112.79,
+   "text": "Several research papers — Pfleger and colleagues in 2006, Pitera and colleagues in 2007 — established early that the fine balance of expression levels in a designed pathway is critical: too much enzyme can be as bad as too little, and tuning the levels is often the difference between a working strain and a failed one."
+  },
+  {
+   "t": 134.22,
+   "text": "So we need to look at the actual mechanisms."
+  },
+  {
+   "t": 136.71,
+   "text": "We will focus on prokaryotes — bacteria."
+  },
+  {
+   "t": 139.49,
+   "text": "Eukaryotic transcription is far more elaborate, with nucleosomes, chromatin remodelling, splicing, and many other layers; the principles are similar but the machinery is heavier."
+  },
+  {
+   "t": 151.38,
+   "text": "Most synthetic biology to date has been done in microbial chassis, so the prokaryotic story is the right place to start."
+  },
+  {
+   "t": 159.15,
+   "text": "Transcription begins with the enzyme RNA polymerase, which I will sometimes shorten to RNAP."
+  },
+  {
+   "t": 165.47,
+   "text": "It is the enzyme that reads a DNA template and produces a complementary mRNA strand."
+  },
+  {
+   "t": 171.8,
+   "text": "Just like DNA polymerase, RNAP works in a 5-prime to 3-prime direction on the new RNA strand, which means it reads the template DNA strand 3-prime to 5-prime."
+  },
+  {
+   "t": 183.86,
+   "text": "By convention, when biologists draw or sequence a gene, they show the \"coding strand\", which has the same sequence as the mRNA — with T's standing in for the U's that the actual mRNA would carry."
+  },
+  {
+   "t": 196.53,
+   "text": "But it is the other strand, the \"template strand\", that the polymerase physically reads."
+  },
+  {
+   "t": 202.31,
+   "text": "Now, a gene, as we said, is not just the coding sequence — it includes regulatory elements."
+  },
+  {
+   "t": 208.84,
+   "text": "Of those, the most important is the promoter."
+  },
+  {
+   "t": 212.24,
+   "text": "The promoter is the stretch of DNA, upstream of the coding sequence, where RNA polymerase docks and decides whether to start transcribing."
+  },
+  {
+   "t": 220.75,
+   "text": "If you want to think of a gene as having an \"on/off switch\", the promoter is the switch."
+  },
+  {
+   "t": 226.3,
+   "text": "In bacteria, a single promoter can drive a single gene, or it can drive an entire operon — a group of related genes clustered together and co-transcribed from the same promoter."
+  },
+  {
+   "t": 237.57,
+   "text": "The classic example is the lac operon in E. coli, where the genes for lactose metabolism are organised in one operon, so the cell can turn on lactose digestion as a single coordinated decision."
+  },
+  {
+   "t": 249.89,
+   "text": "Operons are essentially the bacterial idiom for grouping a set of functionally related genes under one regulatory decision."
+  },
+  {
+   "t": 258.16,
+   "text": "Now, bacterial RNA polymerase has a quirk: by itself, it cannot find or bind a promoter."
+  },
+  {
+   "t": 265.2,
+   "text": "It needs a helper protein called a sigma factor, written with the Greek letter sigma."
+  },
+  {
+   "t": 269.96,
+   "text": "The sigma factor is what recognises the specific DNA sequences in the promoter region and guides RNA polymerase to bind there."
+  },
+  {
+   "t": 278.3,
+   "text": "When RNA polymerase and a sigma factor are combined, the resulting active complex is called the holoenzyme."
+  },
+  {
+   "t": 285.55,
+   "text": "E. coli has seven different sigma factors, each recognising a different family of promoters, and the cell uses them to coordinate large-scale gene regulation in response to different conditions."
+  },
+  {
+   "t": 298.48,
+   "text": "Let me name them."
+  },
+  {
+   "t": 299.53,
+   "text": "Sigma-70, also called RpoD, is the housekeeping sigma factor — it directs the polymerase to most genes that are needed under normal growth conditions."
+  },
+  {
+   "t": 310.46,
+   "text": "Sigma-54, RpoN, handles nitrogen limitation."
+  },
+  {
+   "t": 316.04,
+   "text": "Sigma-38, RpoS, handles stationary phase and starvation."
+  },
+  {
+   "t": 322.24,
+   "text": "Sigma-32, RpoH, handles heat shock — it is the one whose level rises when the cell gets too hot."
+  },
+  {
+   "t": 329.98,
+   "text": "Sigma-28, RpoF, handles flagellar gene expression."
+  },
+  {
+   "t": 334.99,
+   "text": "Sigma-24, RpoE, handles extreme stress, particularly trouble at the cell envelope."
+  },
+  {
+   "t": 342.06,
+   "text": "And sigma-19, FecI, handles ferric citrate transport — the iron uptake machinery."
+  },
+  {
+   "t": 349.48,
+   "text": "By regulating the abundance and activity of each sigma factor, the cell can swap which whole programme of genes is being transcribed."
+  },
+  {
+   "t": 357.66,
+   "text": "It is a tidy mechanism — turning on dozens of related genes via the abundance of one sigma factor — and you will see synthetic biologists co-opt it."
+  },
+  {
+   "t": 367.53,
+   "text": "Where on the DNA does the sigma factor actually look?"
+  },
+  {
+   "t": 371.0,
+   "text": "The transcription start site — the first base that gets copied into mRNA — is designated the plus-one position."
+  },
+  {
+   "t": 378.5,
+   "text": "Two key promoter elements sit upstream of plus-one."
+  },
+  {
+   "t": 382.56,
+   "text": "There is a conserved sequence around the minus-ten position, and another around the minus-thirty-five position."
+  },
+  {
+   "t": 388.93,
+   "text": "These are the recognition sites that sigma factors read."
+  },
+  {
+   "t": 392.61,
+   "text": "The specific consensus sequence at minus-ten and minus-thirty-five differs slightly between sigma factors, which is what makes one sigma activate a different set of promoters than another."
+  },
+  {
+   "t": 404.3,
+   "text": "And to make this even more layered, there are anti-sigma factors that bind to sigma factors and inhibit them, and anti-anti-sigma factors that bind to anti-sigma factors and restore activity."
+  },
+  {
+   "t": 416.31,
+   "text": "It is regulatory turtles, several deep."
+  },
+  {
+   "t": 419.18,
+   "text": "Sigma factors are not the only way to control transcription."
+  },
+  {
+   "t": 423.08,
+   "text": "Two other classes of proteins are critical: activators and repressors."
+  },
+  {
+   "t": 428.29,
+   "text": "An activator binds at or near a specific promoter and increases the rate of transcription from it."
+  },
+  {
+   "t": 434.8,
+   "text": "A repressor binds at or near a specific promoter and decreases the rate of transcription from it."
+  },
+  {
+   "t": 440.94,
+   "text": "Both activators and repressors are called transcription factors, and unlike the global, genome-wide effect of sigma factors, transcription factors typically act on a single gene or a small set of related genes."
+  },
+  {
+   "t": 454.15,
+   "text": "Now one final point about how transcription factors give you a sharp on-off switch."
+  },
+  {
+   "t": 458.84,
+   "text": "If a single repressor molecule binds a single site on DNA, the relationship between repressor concentration and gene expression is a hyperbolic curve — gradual, gentle, hard to fully shut off."
+  },
+  {
+   "t": 471.93,
+   "text": "But many transcription factors bind cooperatively, often as dimers or tetramers, and to multiple binding sites in the operator region."
+  },
+  {
+   "t": 481.6,
+   "text": "When the first repressor binds, it makes it easier for the second to bind too — protein-protein contacts plus protein-DNA contacts — and you end up with a sigmoidal, S-shaped response curve."
+  },
+  {
+   "t": 494.03,
+   "text": "Sigmoidal means sharp."
+  },
+  {
+   "t": 495.66,
+   "text": "A sigmoidal response curve gives you something close to a digital switch: below a threshold the gene is essentially on, above it the gene is essentially off, and the transition is fast."
+  },
+  {
+   "t": 507.58,
+   "text": "This is why so many synthetic biology circuits depend on cooperatively binding repressors — the sharper the switch, the cleaner the circuit behaves."
+  },
+  {
+   "t": 517.0,
+   "text": "Mark Ptashne's classic book on the bacteriophage lambda repressor, published in 1992, is the canonical reference if you want to dig deeper into how cooperativity gives biology digital-feeling switches; the textbook explicitly recommends it."
+  },
+  {
+   "t": 533.28,
+   "text": "Modelling these interactions, even with simple Hill-type equations, will teach you a lot about how much engineering leverage you can get by tweaking binding affinities and cooperativity."
+  }
+ ]
+}

@@ -1,0 +1,183 @@
+{
+ "n": 9,
+ "title": "Translational Control",
+ "duration": 348.6,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section nine. Translational control."
+  },
+  {
+   "t": 2.83,
+   "text": "Transcription gets you an mRNA molecule."
+  },
+  {
+   "t": 6.26,
+   "text": "An mRNA molecule, sitting in the cytoplasm, is still just information — it has not yet become a functional protein."
+  },
+  {
+   "t": 15.15,
+   "text": "That final step happens at the ribosome, and the process is called translation."
+  },
+  {
+   "t": 19.95,
+   "text": "Translation is also a control point, and a very important one for synthetic biology."
+  },
+  {
+   "t": 25.69,
+   "text": "In bacteria, the key element that controls translation is the ribosome binding site, or RBS, sometimes called the Shine-Dalgarno sequence — we mentioned it in passing earlier when discussing start codons."
+  },
+  {
+   "t": 38.85,
+   "text": "The RBS is a short stretch of mRNA, sitting in the 5-prime untranslated region — the part of the mRNA that comes before the first AUG codon."
+  },
+  {
+   "t": 49.14,
+   "text": "Its job is to be recognised by the ribosome, which uses it to dock onto the mRNA in the correct orientation and at roughly the right place for the first AUG to land in the ribosomal active site."
+  },
+  {
+   "t": 61.05,
+   "text": "Once the ribosome is locked onto the RBS and positioned at the start codon, translation begins — codon by codon, the ribosome reads the mRNA, recruits the matching tRNA, and adds the corresponding amino acid to the growing polypeptide chain."
+  },
+  {
+   "t": 77.86,
+   "text": "Here is the engineering-relevant point: how much protein you actually get out of a single mRNA depends critically on how strong the RBS is."
+  },
+  {
+   "t": 86.85,
+   "text": "mRNAs are not long-lived molecules."
+  },
+  {
+   "t": 90.25,
+   "text": "A typical bacterial mRNA has a half-life of just two to three minutes — much shorter than the protein that mRNA will produce."
+  },
+  {
+   "t": 99.21,
+   "text": "So the number of protein molecules made from one mRNA molecule is finite — and the strength of the RBS, by setting how efficiently the ribosome engages, determines that number."
+  },
+  {
+   "t": 110.94,
+   "text": "A strong RBS has a high affinity for the ribosome."
+  },
+  {
+   "t": 114.75,
+   "text": "The ribosome binds it tightly, engages it quickly, and initiates many rounds of translation before the mRNA is degraded."
+  },
+  {
+   "t": 123.5,
+   "text": "A weak RBS has a low affinity."
+  },
+  {
+   "t": 126.01,
+   "text": "The ribosome binds it loosely, often dissociates without translating, and initiates fewer rounds before the mRNA is gone."
+  },
+  {
+   "t": 134.8,
+   "text": "So a stronger RBS gives you more protein per mRNA, and a weaker RBS gives you less."
+  },
+  {
+   "t": 141.34,
+   "text": "This makes the RBS one of the most powerful tuning knobs in synthetic biology."
+  },
+  {
+   "t": 146.9,
+   "text": "If you want to dial down a gene's expression by, say, ten-fold, without changing the promoter or the protein, you can swap the RBS for a weaker variant."
+  },
+  {
+   "t": 156.9,
+   "text": "Pfleger and colleagues, in a 2006 paper that became a touchstone in the field, showed that you can construct entire pathways with different RBS strengths controlling each enzyme, and by tuning them you can balance flux through a metabolic pathway, drastically improving the yield of the final product."
+  },
+  {
+   "t": 174.39,
+   "text": "The RBS is one of the cleanest examples of a part you can swap to tune behaviour."
+  },
+  {
+   "t": 179.57,
+   "text": "There is a consensus RBS sequence — the canonical Shine-Dalgarno sequence — and many natural and synthetic variants exist around it."
+  },
+  {
+   "t": 189.21,
+   "text": "Small changes in sequence give you graded changes in strength."
+  },
+  {
+   "t": 193.07,
+   "text": "If only RBS behaviour were perfectly predictable, life would be easy."
+  },
+  {
+   "t": 198.07,
+   "text": "It is not, and the reason is one of the trickiest aspects of designing in biology: context dependence."
+  },
+  {
+   "t": 204.62,
+   "text": "mRNA is single-stranded."
+  },
+  {
+   "t": 206.76,
+   "text": "Single-stranded nucleic acid is free to fold back on itself — wherever two stretches of the same molecule are complementary, they can pair up and form a hairpin or other secondary structure."
+  },
+  {
+   "t": 219.39,
+   "text": "If the sequence surrounding the RBS happens to be complementary to the RBS, the mRNA can fold up in a way that hides the RBS inside a secondary structure."
+  },
+  {
+   "t": 231.31,
+   "text": "When that happens, the ribosome cannot bind, because it can only bind to the RBS when it is single-stranded and accessible."
+  },
+  {
+   "t": 239.41,
+   "text": "So the same RBS, dropped in front of two different coding sequences, can give wildly different protein output — not because the RBS changed, but because the downstream sequence changed what secondary structure the mRNA folds into."
+  },
+  {
+   "t": 254.38,
+   "text": "This is exactly the kind of problem that frustrates engineers: a part that behaves differently depending on what you connect it to."
+  },
+  {
+   "t": 261.59,
+   "text": "The most influential attempt to put this on a quantitative footing is the RBS Calculator, published by Howard Salis, Ethan Mirsky, and Christopher Voigt in 2009."
+  },
+  {
+   "t": 272.35,
+   "text": "Their idea was to model the thermodynamics of the process explicitly."
+  },
+  {
+   "t": 277.32,
+   "text": "Compute the free energy of the mRNA in its folded state."
+  },
+  {
+   "t": 281.44,
+   "text": "Compute the free energy of the mRNA bound to the ribosome."
+  },
+  {
+   "t": 286.44,
+   "text": "Take the difference between those two free energies."
+  },
+  {
+   "t": 290.1,
+   "text": "That difference is what controls the equilibrium between folded mRNA and ribosome-engaged mRNA, and it correlates — pretty well — with the actual translation initiation rate observed in cells."
+  },
+  {
+   "t": 303.25,
+   "text": "The RBS Calculator can predict the relative strength of a synthetic RBS in a specific sequence context, and it gets predictions correct within roughly a factor of two or three of observed values."
+  },
+  {
+   "t": 315.54,
+   "text": "A factor of two or three is enough to design with, and enough to do informed screening — but it is not enough for fully rational, hands-off design."
+  },
+  {
+   "t": 324.72,
+   "text": "You will still build a small library of variants, test them, and pick the one that works."
+  },
+  {
+   "t": 329.93,
+   "text": "But it is a real, useful advance over picking by trial and error."
+  },
+  {
+   "t": 334.15,
+   "text": "The bigger lesson is this: in biology, parts are not always context-independent."
+  },
+  {
+   "t": 339.83,
+   "text": "Designing reliably with biological parts often means measuring their behaviour in their actual deployment context, not just in isolation."
+  }
+ ]
+}

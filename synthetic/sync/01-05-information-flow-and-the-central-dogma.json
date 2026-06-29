@@ -1,0 +1,179 @@
+{
+ "n": 5,
+ "title": "Information Flow and the Central Dogma",
+ "duration": 294.5,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section five. Information flow in biology, and what biologists call the central dogma."
+  },
+  {
+   "t": 6.0,
+   "text": "We have established that DNA is the molecule that stores information."
+  },
+  {
+   "t": 10.71,
+   "text": "But cells are not just sequences of bases sitting in a library."
+  },
+  {
+   "t": 14.85,
+   "text": "Cells move, divide, sense, respond, produce things — they have function."
+  },
+  {
+   "t": 19.82,
+   "text": "Most of that function is carried out by proteins."
+  },
+  {
+   "t": 23.05,
+   "text": "So we need to ask a very basic question: how does information stored in DNA become functional protein?"
+  },
+  {
+   "t": 29.95,
+   "text": "The conceptual answer is what is known as the central dogma of molecular biology."
+  },
+  {
+   "t": 35.19,
+   "text": "The central dogma states that information flows from DNA, to RNA, to protein."
+  },
+  {
+   "t": 41.29,
+   "text": "DNA is transcribed into messenger RNA, abbreviated mRNA."
+  },
+  {
+   "t": 46.44,
+   "text": "And messenger RNA is then translated into protein."
+  },
+  {
+   "t": 50.16,
+   "text": "Those two steps — transcription and translation — are the two great machines of gene expression, and you will spend a lot of your synthetic-biology life trying to control one or both of them."
+  },
+  {
+   "t": 61.41,
+   "text": "Before we look at the machinery, let us pin down a vocabulary item: the gene."
+  },
+  {
+   "t": 66.42,
+   "text": "A gene is the fundamental unit of hereditary information."
+  },
+  {
+   "t": 70.28,
+   "text": "In most cases, a gene is a stretch of DNA whose sequence encodes a protein."
+  },
+  {
+   "t": 76.25,
+   "text": "But not always — some genes do not code for proteins at all, and instead the RNA molecule that gets made from them is itself the functional product."
+  },
+  {
+   "t": 85.74,
+   "text": "Ribosomal RNA, transfer RNA, microRNA — these are functional RNAs and they will come up later."
+  },
+  {
+   "t": 93.04,
+   "text": "Importantly, when biologists talk about a gene, they do not just mean the coding sequence in isolation."
+  },
+  {
+   "t": 99.95,
+   "text": "They mean the coding sequence plus the regulatory elements that control when, where, and how strongly that gene is expressed."
+  },
+  {
+   "t": 108.33,
+   "text": "We will come to those regulatory elements very shortly."
+  },
+  {
+   "t": 111.54,
+   "text": "When the gene is \"on\", the protein it codes for is being actively produced."
+  },
+  {
+   "t": 116.54,
+   "text": "When the gene is \"off\", the protein is not being made."
+  },
+  {
+   "t": 120.35,
+   "text": "Much of biology is about flipping that switch and adjusting how hard it is held down."
+  },
+  {
+   "t": 125.67,
+   "text": "Now, why does the cell bother with this RNA intermediate at all?"
+  },
+  {
+   "t": 129.12,
+   "text": "Why not translate directly from DNA?"
+  },
+  {
+   "t": 131.79,
+   "text": "There are several reasons, but two are most important."
+  },
+  {
+   "t": 134.65,
+   "text": "First, in eukaryotic cells, DNA sits in the nucleus, while protein synthesis happens out in the cytoplasm — RNA acts as a portable messenger that can carry the instructions across that boundary."
+  },
+  {
+   "t": 148.03,
+   "text": "Second, having an intermediate gives the cell another whole layer of control: it can modulate how much mRNA gets made, how long it lasts, where it goes, how efficiently it gets translated, and so on."
+  },
+  {
+   "t": 160.38,
+   "text": "What is messenger RNA chemically?"
+  },
+  {
+   "t": 162.96,
+   "text": "It is almost the same molecule as DNA, with two small differences that matter enormously."
+  },
+  {
+   "t": 169.46,
+   "text": "First, the sugar in RNA is ribose, not deoxyribose."
+  },
+  {
+   "t": 174.56,
+   "text": "Ribose has a hydroxyl group at the 2-prime position of the sugar that DNA is missing — that extra hydroxyl is exactly what the \"deoxy\" prefix in DNA refers to."
+  },
+  {
+   "t": 185.22,
+   "text": "That extra hydroxyl makes RNA more chemically reactive and less stable than DNA — RNA is much more prone to spontaneous hydrolysis — but it also lets RNA fold into more complex three-dimensional shapes than DNA usually does."
+  },
+  {
+   "t": 201.12,
+   "text": "Second, RNA uses uracil — U — in place of thymine — T."
+  },
+  {
+   "t": 206.74,
+   "text": "Uracil and thymine are almost identical; thymine just has an extra methyl group that uracil lacks."
+  },
+  {
+   "t": 214.03,
+   "text": "Because U pairs with A in just the same way T does, the RNA alphabet works for base pairing without any modification to the rules: A pairs with U, G pairs with C."
+  },
+  {
+   "t": 224.9,
+   "text": "Transcription, then, is the process of synthesising an RNA molecule whose sequence is dictated by complementary pairing against a DNA template strand."
+  },
+  {
+   "t": 235.25,
+   "text": "The enzyme that does this is RNA polymerase."
+  },
+  {
+   "t": 238.7,
+   "text": "We will come back to it in detail when we discuss transcriptional control."
+  },
+  {
+   "t": 242.8,
+   "text": "Once an mRNA molecule has been made, it travels — in eukaryotes, out of the nucleus; in bacteria, just within the cell — to a ribosome."
+  },
+  {
+   "t": 253.25,
+   "text": "The ribosome is one of the largest and most ancient macromolecular machines in biology — a complex composed of many proteins and several RNA molecules, joined into one functional unit."
+  },
+  {
+   "t": 266.25,
+   "text": "It is here that translation happens — the conversion of the nucleotide sequence in the mRNA into an amino acid sequence that becomes a protein."
+  },
+  {
+   "t": 275.45,
+   "text": "Notice the shift in alphabet: DNA and RNA use a four-letter nucleotide alphabet; proteins use a twenty-letter amino acid alphabet."
+  },
+  {
+   "t": 284.99,
+   "text": "Most of the next two sections will be about how the cell translates between these two alphabets, and what the consequences are for designing biological systems."
+  }
+ ]
+}
