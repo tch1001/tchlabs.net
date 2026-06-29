@@ -1,0 +1,131 @@
+{
+ "n": 4,
+ "title": "Registries and Part Characterisation",
+ "duration": 275.02,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section four. Registries of parts, and the art of characterisation."
+  },
+  {
+   "t": 4.58,
+   "text": "The whole parts-devices-systems vision falls apart if there is no shared repository of well-characterised parts."
+  },
+  {
+   "t": 11.51,
+   "text": "A modern electronics designer can reach for a Texas Instruments datasheet for any standard transistor and know — with extremely high confidence — exactly how that transistor will behave: its current gain, its switching speed, its noise figure, its temperature dependence, its absolute maximum ratings."
+  },
+  {
+   "t": 29.15,
+   "text": "Synthetic biology needs the equivalent."
+  },
+  {
+   "t": 32.15,
+   "text": "Two things are required: a registry, which is the database of parts; and a discipline of characterisation, which means rigorously measuring how each part actually behaves under realistic conditions."
+  },
+  {
+   "t": 45.01,
+   "text": "Let me start with characterisation, because it sets the bar for what the registry contains."
+  },
+  {
+   "t": 50.01,
+   "text": "A part is rigorously characterised when its function has been measured across all the conditions under which it will normally operate."
+  },
+  {
+   "t": 57.73,
+   "text": "For a promoter, that means: what transcription rate does it produce, in what chassis, at what growth phase, under what inducer concentrations, with what other context surrounding it? Those measurements get summarised in datasheets — graphical, tabular, or written descriptions of the part's behaviour."
+  },
+  {
+   "t": 75.45,
+   "text": "Alongside the data is metadata — data about the data — recording the experimental conditions, the equipment used, the strain, the medium, the time of day if it matters."
+  },
+  {
+   "t": 87.51,
+   "text": "Metadata is what makes data comparable."
+  },
+  {
+   "t": 90.47,
+   "text": "Without metadata, a measured value is almost useless: two scientists each saying \"this promoter produces 10,000 units of fluorescence\" can be saying completely different things if they used different fluorescent reporters, different photomultiplier settings, different growth conditions."
+  },
+  {
+   "t": 108.92,
+   "text": "Metadata is what makes their numbers translatable."
+  },
+  {
+   "t": 112.21,
+   "text": "Now to registries."
+  },
+  {
+   "t": 113.65,
+   "text": "The most famous synthetic biology registry, by far, is the one maintained by MIT for the International Genetically Engineered Machine competition, known as iGEM."
+  },
+  {
+   "t": 124.31,
+   "text": "We will return to iGEM in chapter eight; for now, it is enough to know that iGEM is an annual student competition that runs every summer, in which teams design and build genetic circuits and then deposit their parts into the central registry."
+  },
+  {
+   "t": 140.55,
+   "text": "Over the years, that registry has grown into a very large library of bioparts — easily the largest in the world."
+  },
+  {
+   "t": 148.34,
+   "text": "It has been a foundational resource for the field."
+  },
+  {
+   "t": 151.07,
+   "text": "But the authors are also honest about its limitations."
+  },
+  {
+   "t": 154.19,
+   "text": "First: parts in the iGEM registry are submitted by participating teams, and the focus of those teams has historically been competition outcomes rather than rigorous characterisation."
+  },
+  {
+   "t": 165.06,
+   "text": "Second: data tends to be qualitative — does this part express, yes or no — rather than quantitative — under what conditions, what is the transfer function."
+  },
+  {
+   "t": 175.68,
+   "text": "Third: parts are not automatically verified upon submission; many entries are missing fields, lack sequence validation, or have not been confirmed to work as described."
+  },
+  {
+   "t": 186.19,
+   "text": "Fourth: the registry does not enforce a universal data structure or schema, so the same kind of information can be recorded in inconsistent ways across different submissions."
+  },
+  {
+   "t": 196.72,
+   "text": "The upshot, the authors argue, is that while the iGEM registry has been enormously valuable as a teaching tool and a source of starter material, it is not yet adequate to support truly professional or commercial synthetic biology design, where you need to be able to pull a part off the shelf and know with high confidence exactly how it will behave."
+  },
+  {
+   "t": 217.32,
+   "text": "What would a more rigorous registry look like?"
+  },
+  {
+   "t": 219.71,
+   "text": "It would enforce a standard data template for each part type — promoters share one schema, RBSes share another, terminators a third — so that comparable measurements can actually be compared."
+  },
+  {
+   "t": 231.06,
+   "text": "It would automatically validate submissions for sequence integrity and completeness."
+  },
+  {
+   "t": 236.2,
+   "text": "It would store both data and metadata, with the metadata explicit and machine-readable."
+  },
+  {
+   "t": 241.88,
+   "text": "It would link to the assays, equipment, and protocols used to generate the measurements."
+  },
+  {
+   "t": 247.56,
+   "text": "And it would be designed as a web-based information system, accessible through standard interfaces, so that design tools and modelling software can pull from it programmatically."
+  },
+  {
+   "t": 257.65,
+   "text": "Building such a registry is, in essence, an information-systems engineering problem."
+  },
+  {
+   "t": 263.46,
+   "text": "The next section walks through one specific attempt at exactly that — SynBIS, the Synthetic Biology Information System developed at Imperial College London — as a concrete example."
+  }
+ ]
+}

@@ -1,0 +1,163 @@
+{
+ "n": 6,
+ "title": "BioCAD — Computer-Aided Design for Biology",
+ "duration": 310.87,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section six. BioCAD — bringing computer-aided design to biology."
+  },
+  {
+   "t": 5.4,
+   "text": "Once you have a registry of characterised parts and a working information system, the natural next step is to give designers a tool that helps them combine those parts intelligently."
+  },
+  {
+   "t": 15.69,
+   "text": "In electronics, this kind of tool is called a CAD package — computer-aided design."
+  },
+  {
+   "t": 21.11,
+   "text": "In biology, the analogous concept is called BioCAD."
+  },
+  {
+   "t": 25.31,
+   "text": "The authors are explicit that the BioCAD concept is, as of this revised edition, still very much under development."
+  },
+  {
+   "t": 33.05,
+   "text": "But the principle is clear and worth understanding, because it will tell you a great deal about where synthetic biology is heading."
+  },
+  {
+   "t": 40.52,
+   "text": "BioCAD is a set of computer tools that integrate with a registry like SynBIS to support the entire dry-lab design workflow before any DNA is synthesised."
+  },
+  {
+   "t": 51.45,
+   "text": "Why bother?"
+  },
+  {
+   "t": 52.41,
+   "text": "Because, as the authors explicitly say, wet-lab work takes far longer than dry-lab work — sometimes by orders of magnitude."
+  },
+  {
+   "t": 60.56,
+   "text": "A simulation that takes a minute on a laptop might correspond to a wet-lab experiment that takes a week."
+  },
+  {
+   "t": 67.04,
+   "text": "If you can do a meaningful amount of design work in simulation — testing alternatives, exploring parameter sensitivities, ruling out obviously broken designs — before you commit to a build, you radically compress the design-build-test loop."
+  },
+  {
+   "t": 81.96,
+   "text": "The conceptual parallel the authors draw is between BioCAD and software development tools."
+  },
+  {
+   "t": 88.03,
+   "text": "When you write software, you start with a block diagram of what the system should do, you derive a mathematical or logical description of each block, you express the design in a high-level language like C or C plus plus, and then the compiler automatically translates your high-level code down to assembly, and then assembly to machine code."
+  },
+  {
+   "t": 108.78,
+   "text": "You — the human — work at the high level; the tools handle the translation to the low level."
+  },
+  {
+   "t": 114.99,
+   "text": "BioCAD aims for an analogous workflow on the biological side."
+  },
+  {
+   "t": 119.42,
+   "text": "You start with a block diagram of the synthetic biology design."
+  },
+  {
+   "t": 123.08,
+   "text": "You annotate each block with the bioparts that will implement it — moving from a conceptual block diagram to a biopart-level block diagram."
+  },
+  {
+   "t": 131.56,
+   "text": "You run computer simulations on the biopart diagram, evaluate the predicted behaviour, and iterate the block diagram and the parts until the simulated behaviour matches your specification."
+  },
+  {
+   "t": 143.14,
+   "text": "Once you are happy with the biopart-level design, you pass it to assembly-strategy software, which figures out the physical DNA assembly steps required to actually build the construct — what fragments to PCR, what overlaps to design, what restriction enzymes to use, and so on."
+  },
+  {
+   "t": 159.59,
+   "text": "The output of the assembly strategy is then handed to a DNA-assembly workflow — Gibson assembly, Golden Gate, whatever your chassis prefers — and finally the assembled DNA is transformed into a host and tested for viability in the wet lab."
+  },
+  {
+   "t": 175.81,
+   "text": "Each stage of the BioCAD chain corresponds to a stage in the software-development analogy."
+  },
+  {
+   "t": 181.57,
+   "text": "Block diagram is like the architecture diagram."
+  },
+  {
+   "t": 184.7,
+   "text": "Biopart block diagram is like the high-level code."
+  },
+  {
+   "t": 188.01,
+   "text": "Assembly strategy is like the compiler producing assembly code."
+  },
+  {
+   "t": 192.34,
+   "text": "DNA assembly is like the linker producing the executable."
+  },
+  {
+   "t": 196.43,
+   "text": "Wet-lab viability testing is like running the program."
+  },
+  {
+   "t": 199.88,
+   "text": "BioCAD lives in the dry lab, integrates with the registry, and feeds into the wet lab."
+  },
+  {
+   "t": 206.32,
+   "text": "A few practical points worth noting."
+  },
+  {
+   "t": 208.41,
+   "text": "Currently there is no single dominant BioCAD package — instead, there are several open-source packages that handle different parts of the workflow."
+  },
+  {
+   "t": 217.28,
+   "text": "Clotho is one example; GenoCAD is another; TinkerCell is another."
+  },
+  {
+   "t": 222.97,
+   "text": "Each focuses on a different layer of the design problem."
+  },
+  {
+   "t": 226.04,
+   "text": "There is, as of the writing of this textbook, no unified industry-standard BioCAD environment comparable to, say, Cadence or Synopsys in electronics."
+  },
+  {
+   "t": 237.32,
+   "text": "Building one is one of the big open infrastructure problems of synthetic biology, and the work being done on SynBIS and equivalent systems is, in part, an investment toward eventually having that unified environment."
+  },
+  {
+   "t": 250.61,
+   "text": "A second practical point: even with BioCAD tools, the human is in the loop."
+  },
+  {
+   "t": 256.25,
+   "text": "You are not specifying a behaviour and having the tool magically synthesise the genetic circuit."
+  },
+  {
+   "t": 262.66,
+   "text": "You are using the tool to do the bookkeeping, the simulation, the assembly planning — the labour-intensive parts that scale badly with circuit complexity — while keeping the high-level design decisions in your hands."
+  },
+  {
+   "t": 275.46,
+   "text": "Which, again, is exactly how electronic design works: you specify the architecture, the CAD tool synthesises the layout."
+  },
+  {
+   "t": 284.61,
+   "text": "The relationship between designer and tool is collaborative, not adversarial."
+  },
+  {
+   "t": 290.0,
+   "text": "So when you read \"BioCAD\" in synthetic biology papers and presentations, picture this: a registry of parts on one side, a chassis on the other, and in between, a software environment that helps you draw block diagrams, simulate them, plan assembly, and orchestrate the whole design cycle without losing track of any of it."
+  }
+ ]
+}

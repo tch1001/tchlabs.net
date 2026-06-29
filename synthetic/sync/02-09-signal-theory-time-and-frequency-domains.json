@@ -1,0 +1,163 @@
+{
+ "n": 9,
+ "title": "Signal Theory — Time and Frequency Domains",
+ "duration": 307.94,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section nine. Signal theory — the time and frequency domains."
+  },
+  {
+   "t": 4.8,
+   "text": "Many biological measurements come in the form of waveforms — quantities that vary over time."
+  },
+  {
+   "t": 10.79,
+   "text": "The fluorescence intensity of a reporter protein."
+  },
+  {
+   "t": 14.1,
+   "text": "The concentration of a metabolite during a fermentation."
+  },
+  {
+   "t": 17.71,
+   "text": "The membrane potential of a neuron."
+  },
+  {
+   "t": 19.81,
+   "text": "The rhythmic oscillations of a circadian clock."
+  },
+  {
+   "t": 22.75,
+   "text": "Whenever you look at a biological signal versus time, you are looking at a waveform."
+  },
+  {
+   "t": 27.59,
+   "text": "The first concept to internalise is the distinction between continuous signals and sampled signals."
+  },
+  {
+   "t": 33.58,
+   "text": "In nature, most biological signals are continuous — at every instant of time, the signal has a value, with no gaps."
+  },
+  {
+   "t": 42.0,
+   "text": "But the digital computers we use to record and analyse signals can only handle finite amounts of data — they record the signal at discrete instants, separated by a sampling interval T."
+  },
+  {
+   "t": 53.76,
+   "text": "So the continuous biological waveform, in a computer, becomes a sequence of sampled values."
+  },
+  {
+   "t": 60.38,
+   "text": "Can you recover the original continuous signal from its samples? This question was answered, beautifully, by Claude Shannon in his sampling theorem."
+  },
+  {
+   "t": 69.7,
+   "text": "Shannon proved that you can recover a continuous signal exactly from its samples, with no loss of information, provided that the sampling frequency Fs — equal to one over the sampling interval T — is at least twice the highest frequency present in the original signal."
+  },
+  {
+   "t": 86.53,
+   "text": "This is the famous Nyquist–Shannon criterion."
+  },
+  {
+   "t": 89.8,
+   "text": "If your signal contains frequency components up to, say, twenty hertz, you must sample at least forty times per second to capture it faithfully."
+  },
+  {
+   "t": 99.36,
+   "text": "Sample slower than that, and high-frequency components get aliased — they appear in the sampled data as fake low-frequency components, contaminating your analysis."
+  },
+  {
+   "t": 109.94,
+   "text": "This single result underwrites essentially all of digital audio, video, and instrumentation."
+  },
+  {
+   "t": 116.84,
+   "text": "Now, the question that arises is: what does it mean to talk about the \"highest frequency present\" in a signal?"
+  },
+  {
+   "t": 124.28,
+   "text": "A messy biological waveform does not obviously have a frequency at all — it just wiggles in some complicated way."
+  },
+  {
+   "t": 131.96,
+   "text": "The answer comes from another great mathematical result: Fourier decomposition."
+  },
+  {
+   "t": 137.44,
+   "text": "Joseph Fourier showed, around two hundred years ago, that essentially any waveform can be expressed as a sum of pure sine waves of different frequencies and amplitudes."
+  },
+  {
+   "t": 148.72,
+   "text": "If you take three sine waves with different frequencies and amplitudes and add them point by point in time, you get a more complicated-looking waveform."
+  },
+  {
+   "t": 157.75,
+   "text": "Fourier's insight was that any biological waveform you observe in practice can — in principle — be decomposed back into its constituent sine waves."
+  },
+  {
+   "t": 168.05,
+   "text": "The biological problem is usually the inverse one: you have the messy waveform, and you want to figure out what frequency components are inside it."
+  },
+  {
+   "t": 176.49,
+   "text": "Solving this inverse problem is what the Fourier transform does."
+  },
+  {
+   "t": 180.68,
+   "text": "Run a Fourier transform on a signal, and instead of a plot of amplitude versus time — the time domain — you get a plot of amplitude versus frequency — the frequency domain."
+  },
+  {
+   "t": 191.78,
+   "text": "Each peak in the frequency plot tells you the amplitude of one particular sine-wave component."
+  },
+  {
+   "t": 197.54,
+   "text": "In modern practice, the Fourier transform on a sampled signal is computed by an algorithm called the Fast Fourier Transform, the FFT, which is one of the most important numerical algorithms ever invented and which runs in essentially every signal-processing software package today."
+  },
+  {
+   "t": 214.44,
+   "text": "Why does the frequency-domain view matter? Because some patterns that are invisible in the time domain are obvious in the frequency domain."
+  },
+  {
+   "t": 222.31,
+   "text": "The textbook gives a worked example: a noisy biological waveform that, in the time domain, looks like random wiggles, with no obvious periodic structure."
+  },
+  {
+   "t": 232.54,
+   "text": "Run the FFT, and a single sharp peak emerges at, say, 0.05 hertz — a twenty-second period."
+  },
+  {
+   "t": 240.54,
+   "text": "The signal was actually periodic all along, but the periodic component was buried in noise in the time domain."
+  },
+  {
+   "t": 246.84,
+   "text": "In the frequency domain, the periodic component is unambiguous."
+  },
+  {
+   "t": 251.79,
+   "text": "This is what is meant by saying that signal analysis is a tool in the synthetic biology design toolbox: when you build a circuit that is supposed to oscillate, or that is supposed to respond at a particular frequency, or that is supposed to filter out noise of a particular frequency, you analyse its output in the frequency domain to see whether it is doing what you designed it to do."
+  },
+  {
+   "t": 274.37,
+   "text": "Time and frequency are dual descriptions of the same signal."
+  },
+  {
+   "t": 278.14,
+   "text": "Any biological signal can be expressed in either domain, and you can move between them at will using the Fourier transform."
+  },
+  {
+   "t": 285.65,
+   "text": "Different questions are more naturally answered in one domain or the other, and a designer trained in signal processing learns to flip between them as needed."
+  },
+  {
+   "t": 294.26,
+   "text": "If you take only one thing away from this section, take this: when you see a biological waveform, get into the habit of asking \"what does its frequency spectrum look like?\"."
+  },
+  {
+   "t": 304.45,
+   "text": "The answer is often where the engineering insight lives."
+  }
+ ]
+}

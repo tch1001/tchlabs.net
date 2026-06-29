@@ -1,0 +1,167 @@
+{
+ "n": 7,
+ "title": "Modelling — From Biology to Equations",
+ "duration": 346.13,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section seven. Modelling — turning biology into equations."
+  },
+  {
+   "t": 4.86,
+   "text": "Up to this point, the chapter has been about the discipline of engineering biology — frameworks, hierarchies, registries, design tools."
+  },
+  {
+   "t": 13.18,
+   "text": "Now we get to the part where engineering bites: the equations."
+  },
+  {
+   "t": 17.38,
+   "text": "Synthetic biology, if it is to live up to its predictive-design ambitions, needs mathematical models of biological devices that are accurate enough to guide design decisions."
+  },
+  {
+   "t": 28.4,
+   "text": "The authors illustrate this with a simple but fundamental example: a transcriptional regulatory device."
+  },
+  {
+   "t": 35.15,
+   "text": "Imagine a small piece of DNA that contains an inducible promoter, a ribosome binding site, a protein-coding region, and a terminator."
+  },
+  {
+   "t": 44.64,
+   "text": "In the presence of a transcription factor, the promoter activates, the gene is transcribed into messenger RNA, and the messenger RNA is then translated into protein."
+  },
+  {
+   "t": 55.24,
+   "text": "How can we describe this dynamically — in equations — so a computer can simulate it?"
+  },
+  {
+   "t": 60.71,
+   "text": "The standard approach is to use ordinary differential equations, abbreviated ODEs, that track the concentrations of mRNA and protein over time."
+  },
+  {
+   "t": 70.51,
+   "text": "Two equations capture the system."
+  },
+  {
+   "t": 72.69,
+   "text": "The first equation describes the rate of change of mRNA concentration over time."
+  },
+  {
+   "t": 78.42,
+   "text": "The mRNA is produced at a rate that depends on the concentration of the transcription factor, and it is degraded at a rate proportional to how much mRNA is currently present."
+  },
+  {
+   "t": 89.49,
+   "text": "Mathematically, the production term takes a particular nonlinear form called a Hill function, parameterised by the transcription factor concentration W, a binding constant K, and a Hill coefficient n which captures cooperativity — exactly the cooperativity we talked about in chapter one's discussion of transcription factors."
+  },
+  {
+   "t": 109.79,
+   "text": "If the transcription factor is an activator, a parameter mu equals plus one and the mRNA production scales up with W."
+  },
+  {
+   "t": 117.62,
+   "text": "If the transcription factor is a repressor, mu equals zero and the relationship inverts."
+  },
+  {
+   "t": 123.74,
+   "text": "Multiplying this Hill term by a kinetic rate constant of transcription, ktr, gives you the production rate."
+  },
+  {
+   "t": 130.78,
+   "text": "Subtracting a degradation term — a degradation rate constant dm multiplied by the current mRNA concentration — gives you the net rate of change."
+  },
+  {
+   "t": 140.46,
+   "text": "So equation one is, in words: rate of change of mRNA equals Hill-shaped production rate driven by the transcription factor minus first-order degradation."
+  },
+  {
+   "t": 151.07,
+   "text": "The second equation handles the next step in the central dogma: translation."
+  },
+  {
+   "t": 156.07,
+   "text": "The protein P is produced at a rate proportional to mRNA concentration, with the proportionality being a kinetic rate constant of translation, ktl."
+  },
+  {
+   "t": 166.18,
+   "text": "And the protein is itself degraded at a rate proportional to its concentration, with a degradation rate constant dp."
+  },
+  {
+   "t": 173.31,
+   "text": "So equation two is, in words: rate of change of protein equals translation rate from mRNA minus first-order protein degradation."
+  },
+  {
+   "t": 182.69,
+   "text": "This pair of equations is genuinely usable."
+  },
+  {
+   "t": 185.89,
+   "text": "Plug in numerical values for ktr, K, n, dm, ktl, and dp, simulate the system over time on a laptop, and you have a quantitative prediction of how your device will behave."
+  },
+  {
+   "t": 198.76,
+   "text": "And these same two equations, with small modifications to the Hill function, can describe a whole family of related devices — inverters, switches, simple genetic circuits — by varying the parameters and the sign of the regulation."
+  },
+  {
+   "t": 213.89,
+   "text": "Here is the fundamental challenge, though, and the authors are honest about it."
+  },
+  {
+   "t": 218.82,
+   "text": "As you scale up — combining many devices into a larger system — the ODE description gets large fast."
+  },
+  {
+   "t": 226.0,
+   "text": "You have an mRNA and a protein for every gene; you have feedback loops connecting them; you have shared resources like ribosomes and polymerases that compete across genes."
+  },
+  {
+   "t": 236.85,
+   "text": "At some point the differential-equations description, while still in principle correct, stops being something a human can reason about by inspection."
+  },
+  {
+   "t": 246.06,
+   "text": "You can simulate it, you can run parameter sweeps, but you lose the intuitive feel that lets a designer say \"if I increase ktl on this gene, the steady-state protein level rises about this much.\""
+  },
+  {
+   "t": 257.99,
+   "text": "Engineering has faced this kind of problem many times before."
+  },
+  {
+   "t": 261.77,
+   "text": "The mathematical machinery that engineers reach for in this situation is called systems and control theory."
+  },
+  {
+   "t": 268.47,
+   "text": "Systems and control theory was developed in the early nineteenth century by, primarily, two French mathematicians: Pierre-Simon Laplace and Joseph Fourier."
+  },
+  {
+   "t": 278.5,
+   "text": "Laplace's contribution is the Laplace transform, a mathematical operation that converts an ordinary differential equation into an algebraic equation in a new variable called s."
+  },
+  {
+   "t": 289.88,
+   "text": "In the Laplace domain, the differential equation becomes much easier to manipulate — composition, feedback, and parallel structures all become straightforward algebra."
+  },
+  {
+   "t": 300.3,
+   "text": "Once you have solved the problem in the Laplace domain, you transform back to the time domain — the real world — and recover the behaviour as a function of time."
+  },
+  {
+   "t": 309.14,
+   "text": "Fourier's contribution, complementary to Laplace's, is the Fourier transform, which decomposes any signal into its frequency components, opening up the entire frequency-domain perspective on dynamical systems."
+  },
+  {
+   "t": 322.68,
+   "text": "Both of these are foundational tools that we will get to in the next two sections."
+  },
+  {
+   "t": 327.51,
+   "text": "The reason they matter for synthetic biology is exactly the reason they matter for any other engineering discipline: they let you reason about complex systems without drowning in the underlying differential equations."
+  },
+  {
+   "t": 340.56,
+   "text": "And synthetic biology's complex systems are going to be the rule, not the exception."
+  }
+ ]
+}

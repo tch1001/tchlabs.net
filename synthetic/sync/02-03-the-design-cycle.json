@@ -1,0 +1,155 @@
+{
+ "n": 3,
+ "title": "The Design Cycle",
+ "duration": 275.81,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section three. The design cycle."
+  },
+  {
+   "t": 2.7,
+   "text": "If you have ever taken an introductory course in any engineering discipline, you have seen some version of the design cycle."
+  },
+  {
+   "t": 10.03,
+   "text": "Specify the requirements."
+  },
+  {
+   "t": 12.04,
+   "text": "Design something that meets the requirements."
+  },
+  {
+   "t": 14.51,
+   "text": "Build it."
+  },
+  {
+   "t": 15.29,
+   "text": "Test whether it actually meets the requirements."
+  },
+  {
+   "t": 18.05,
+   "text": "Learn from the test, iterate."
+  },
+  {
+   "t": 20.09,
+   "text": "This four-stage loop — design, build, test, learn — is so universal in engineering that we sometimes forget how powerful it is."
+  },
+  {
+   "t": 28.34,
+   "text": "It is the basis of modern manufacturing, software engineering, semiconductor design, and aerospace."
+  },
+  {
+   "t": 35.46,
+   "text": "And it is the basis of how synthetic biology is now done."
+  },
+  {
+   "t": 39.46,
+   "text": "The authors lay out the synthetic biology design cycle in five stages."
+  },
+  {
+   "t": 44.58,
+   "text": "Specification: define what you want the part, device, or system to do."
+  },
+  {
+   "t": 49.33,
+   "text": "Design: choose the architecture and the components that will achieve the specification, often with the help of detailed computer modelling."
+  },
+  {
+   "t": 57.26,
+   "text": "Implementation: translate the design into actual DNA — synthesise it, assemble it, and put it into a host cell, which biologists call the chassis."
+  },
+  {
+   "t": 67.26,
+   "text": "Testing and validation: characterise the response of the host cell to the new DNA and check whether the behaviour matches the specification."
+  },
+  {
+   "t": 76.22,
+   "text": "Iteration: take what you learned, refine the design, and run through the cycle again."
+  },
+  {
+   "t": 81.64,
+   "text": "And critically: at every stage of the cycle, the authors highlight the responsible research and innovation paradigm — the idea that synthetic biology is not just an engineering project but a societally consequential one, and that ethical, safety, and societal considerations must enter the design loop, not get tacked on at the end."
+  },
+  {
+   "t": 102.62,
+   "text": "We will return to that theme in chapter nine."
+  },
+  {
+   "t": 105.41,
+   "text": "There is one phrase the authors use that is worth dwelling on: \"one of the key differences between design today and that of the past is the ability to undertake detailed computer modelling.\""
+  },
+  {
+   "t": 116.92,
+   "text": "Modern synthetic biology relies on computational modelling for the same reason that modern transistor design does."
+  },
+  {
+   "t": 124.58,
+   "text": "Sixty years ago, electronic engineering was a craft; you built circuits, you measured them, you iterated."
+  },
+  {
+   "t": 131.68,
+   "text": "Today, you can simulate a transistor at the device level on a laptop, before any silicon is touched, and have high confidence that the simulation predicts the real device's behaviour."
+  },
+  {
+   "t": 142.12,
+   "text": "Synthetic biology aspires to that same regime: design your gene circuit in simulation, evaluate its dynamics, optimise the parameters, and only then commit to the much slower wet-lab build step."
+  },
+  {
+   "t": 155.21,
+   "text": "The authors note this comparison explicitly: the design challenges of synthetic biology today are conceptually similar to those of electronic device design sixty years ago, with the crucial difference being the enormous amount of computing power now available to do the modelling."
+  },
+  {
+   "t": 172.62,
+   "text": "Two more pieces fit into the design-cycle picture."
+  },
+  {
+   "t": 175.88,
+   "text": "First, the registry."
+  },
+  {
+   "t": 177.68,
+   "text": "The design step of any cycle is enormously accelerated if you can pull standard, pre-characterised parts from a shared library rather than designing each one from scratch."
+  },
+  {
+   "t": 188.68,
+   "text": "So the cycle in practice looks like this: when you reach the design stage, you query the registry to see which existing parts can fulfil each block in your design."
+  },
+  {
+   "t": 198.66,
+   "text": "If suitable parts exist, you reuse them."
+  },
+  {
+   "t": 201.44,
+   "text": "If they do not, you spawn a sub-cycle: design and build the missing part, characterise it in vitro and in vivo, deposit its characterisation data and metadata in the registry, and only then incorporate it into the larger device build."
+  },
+  {
+   "t": 215.86,
+   "text": "The bottom of the design-cycle diagram, which the authors illustrate as a feedback loop from the wet-lab back to the registry, is exactly this: every new part that gets characterised increases the catalogue available for future designs."
+  },
+  {
+   "t": 229.71,
+   "text": "Second, iteration."
+  },
+  {
+   "t": 231.53,
+   "text": "Biology is messy and the first design rarely works."
+  },
+  {
+   "t": 235.7,
+   "text": "Each turn of the design cycle should reduce the gap between the intended behaviour and the observed behaviour."
+  },
+  {
+   "t": 242.05,
+   "text": "Some iterations modify the parts themselves; others modify the network architecture; others modify the chassis or the growth conditions."
+  },
+  {
+   "t": 251.62,
+   "text": "Either way, the explicit recognition that engineering biological systems is iterative — and that this is normal and not a sign of failure — is one of the most important habits of mind the chapter is trying to instil."
+  },
+  {
+   "t": 264.98,
+   "text": "If you think you can design a complex genetic circuit in one shot, you are almost certainly wrong; if you embrace the design cycle, your circuits will get better with each pass."
+  }
+ ]
+}

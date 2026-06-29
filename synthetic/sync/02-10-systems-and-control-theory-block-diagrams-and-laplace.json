@@ -1,0 +1,171 @@
+{
+ "n": 10,
+ "title": "Systems and Control Theory — Block Diagrams and Laplace",
+ "duration": 406.25,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section ten. Systems and control theory — block diagrams and the Laplace domain."
+  },
+  {
+   "t": 6.14,
+   "text": "We are now ready to bring together everything in this chapter: parts and devices, the design cycle, modelling with ODEs, signal theory, and the Wiener-style view of biology as a system."
+  },
+  {
+   "t": 18.29,
+   "text": "The synthesis is called systems and control theory, and it is the framework engineers use to design dynamical systems whose behaviour they can both predict and shape."
+  },
+  {
+   "t": 27.76,
+   "text": "Let me start with the central representational device: the block diagram."
+  },
+  {
+   "t": 32.06,
+   "text": "A block diagram is a visual abstraction of a dynamical system."
+  },
+  {
+   "t": 36.33,
+   "text": "Each block represents a transformation: an operation that takes inputs and produces outputs."
+  },
+  {
+   "t": 42.7,
+   "text": "The lines between blocks are not physical wires — they represent the flow of information or signals."
+  },
+  {
+   "t": 49.64,
+   "text": "A simple block diagram has one input X of s, one block labelled G of s, and one output Y of s, with the relationship Y equals G times X."
+  },
+  {
+   "t": 60.16,
+   "text": "Here G is called the transfer function of that block — it is the mathematical relationship between input and output, expressed in the Laplace domain."
+  },
+  {
+   "t": 69.41,
+   "text": "Why the Laplace domain?"
+  },
+  {
+   "t": 70.91,
+   "text": "Because in the Laplace domain, what was previously a differential equation — for example, the rate of change of protein concentration is some function of mRNA concentration minus a degradation term — becomes an algebraic equation."
+  },
+  {
+   "t": 85.96,
+   "text": "And algebraic equations compose beautifully."
+  },
+  {
+   "t": 89.6,
+   "text": "If your system is two blocks in series, the overall transfer function is just the product of the two: G one of s times G two of s."
+  },
+  {
+   "t": 99.54,
+   "text": "If they are in parallel, the overall transfer function is the sum."
+  },
+  {
+   "t": 103.94,
+   "text": "If there is a feedback loop, there is a clean algebraic expression that converts the open-loop transfer function into the closed-loop transfer function."
+  },
+  {
+   "t": 112.99,
+   "text": "These are the kinds of operations you cannot easily do in the original differential-equations representation but that become straightforward in the Laplace domain."
+  },
+  {
+   "t": 122.72,
+   "text": "Concretely, the authors show how to apply this to the transcriptional regulatory device we discussed in section seven."
+  },
+  {
+   "t": 130.3,
+   "text": "Block one represents transcription — its transfer function captures equation one of that section, the Hill-function dependence of mRNA production on transcription factor concentration."
+  },
+  {
+   "t": 142.28,
+   "text": "Block two represents translation — its transfer function captures equation two, the linear dependence of protein production on mRNA concentration, minus first-order degradation."
+  },
+  {
+   "t": 154.05,
+   "text": "Equation two, being linear, can be Laplace-transformed directly, and the result is a beautifully simple expression: the transfer function G two of s equals k subscript tl divided by s plus d subscript p."
+  },
+  {
+   "t": 168.84,
+   "text": "This is what engineers call a simple pole — a standard form that appears throughout control theory, with a constant numerator and a denominator of the form s plus a."
+  },
+  {
+   "t": 178.56,
+   "text": "Once your blocks are in standard forms like simple poles, you can apply a great deal of pre-existing engineering theory: you can analyse stability by looking at the locations of the poles in the complex s-plane; you can compute the steady-state response by setting s to zero or to a particular frequency j-omega; you can predict the transient behaviour by inverse-Laplace-transforming back to the time domain."
+  },
+  {
+   "t": 201.79,
+   "text": "The Laplace variable s has both a real part and an imaginary part — written s equals sigma plus j-omega — and these have specific interpretations: sigma controls the transient response, j-omega controls the steady-state response, also called the frequency response."
+  },
+  {
+   "t": 220.46,
+   "text": "By setting sigma to zero and varying omega, you can build up a frequency response of any block — a description of how the block responds to inputs at every frequency."
+  },
+  {
+   "t": 231.51,
+   "text": "This frequency response is itself often the most useful thing to know about a part or a device, especially when you are designing for some particular dynamic behaviour, such as filtering out noise at a particular frequency."
+  },
+  {
+   "t": 244.34,
+   "text": "An important tool here is Bode analysis — a graphical method that plots the gain and phase of a transfer function across frequencies — which lets a designer reason about stability and bandwidth at a glance."
+  },
+  {
+   "t": 257.07,
+   "text": "Block diagrams also support feedback, which is the heart of control engineering."
+  },
+  {
+   "t": 262.0,
+   "text": "A closed-loop system feeds its output back through some block and into a comparator that subtracts it from the input, producing an error signal that drives the forward path."
+  },
+  {
+   "t": 272.05,
+   "text": "Feedback can stabilise a system that would otherwise be unstable; it can reduce sensitivity to parameter uncertainty; it can shape the dynamics in ways that open-loop systems simply cannot."
+  },
+  {
+   "t": 284.3,
+   "text": "Biology, the authors remind us, is full of feedback loops — both negative and positive — at every scale from gene regulation to whole-organism physiology."
+  },
+  {
+   "t": 294.73,
+   "text": "Modelling those feedback loops with block diagrams and analysing them with closed-loop transfer functions gives the synthetic biologist the same tools that an aerospace control engineer would use."
+  },
+  {
+   "t": 306.13,
+   "text": "Two more topics close this section."
+  },
+  {
+   "t": 308.39,
+   "text": "First, there is the question of how you derive transfer functions from real biological systems."
+  },
+  {
+   "t": 315.25,
+   "text": "One approach is mechanistic modelling, where you write down differential equations from first principles and Laplace-transform them."
+  },
+  {
+   "t": 323.13,
+   "text": "Another approach is the black-box method: you ignore the internal mechanism and fit a transfer function purely from input-output measurements."
+  },
+  {
+   "t": 332.33,
+   "text": "Black-box methods are common in physiology — heart rate variability is a classic example — and they will become important in synthetic biology too, particularly when parts are too poorly characterised at the mechanistic level for a from-first-principles model."
+  },
+  {
+   "t": 348.03,
+   "text": "Second, real biological systems are often nonlinear, especially through Hill functions and cooperative binding, and the strict linear Laplace machinery only applies near operating points."
+  },
+  {
+   "t": 360.04,
+   "text": "Engineers handle this by linearising around the operating point, applying linear analysis there, and then either verifying numerically across larger operating ranges or extending to nonlinear control techniques where required."
+  },
+  {
+   "t": 374.29,
+   "text": "The textbook does not develop full nonlinear control here, but it does point out that block-diagram representations themselves can be extended to incorporate nonlinearities — and we will see explicit nonlinear elements again in chapter six on modelling."
+  },
+  {
+   "t": 389.2,
+   "text": "If you finish this section feeling that you have just been given a small but powerful piece of mathematical machinery — block diagrams, transfer functions, the Laplace transform, feedback loops — that is exactly the intent."
+  },
+  {
+   "t": 403.03,
+   "text": "The rest of the book uses these tools repeatedly."
+  }
+ ]
+}

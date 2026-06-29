@@ -1,0 +1,211 @@
+{
+ "n": 11,
+ "title": "Biological Analogues of Electronic Devices",
+ "duration": 386.11,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section eleven. Models and languages — biological analogues of electronic devices."
+  },
+  {
+   "t": 6.36,
+   "text": "The closing section of chapter two takes the engineering analogy that has been running through the chapter and pushes it explicitly into electronics."
+  },
+  {
+   "t": 15.56,
+   "text": "Many of the most interesting synthetic biology designs are inspired by — and intended to mimic — electronic devices."
+  },
+  {
+   "t": 23.55,
+   "text": "Logic gates."
+  },
+  {
+   "t": 24.8,
+   "text": "Oscillators."
+  },
+  {
+   "t": 26.01,
+   "text": "Timers."
+  },
+  {
+   "t": 26.94,
+   "text": "Memory elements."
+  },
+  {
+   "t": 28.51,
+   "text": "Sensors."
+  },
+  {
+   "t": 29.55,
+   "text": "If you can build a biological analogue of each of these elementary electronic devices, you can in principle compose them into much larger circuits with much richer behaviour, just as electronic engineers compose AND, OR, and NOT gates into computers."
+  },
+  {
+   "t": 45.34,
+   "text": "There are, however, some important differences between electronic devices and biological devices that any designer must keep firmly in mind."
+  },
+  {
+   "t": 54.05,
+   "text": "First, speed."
+  },
+  {
+   "t": 55.27,
+   "text": "Biological devices are typically much slower than electronic ones."
+  },
+  {
+   "t": 60.09,
+   "text": "An electronic logic gate switches in nanoseconds."
+  },
+  {
+   "t": 63.92,
+   "text": "A biological logic gate, implemented through transcription and translation, switches in minutes to hours."
+  },
+  {
+   "t": 70.71,
+   "text": "That difference of nine to twelve orders of magnitude is real, and it shapes what biological circuits are realistically useful for."
+  },
+  {
+   "t": 78.85,
+   "text": "However, slowness is not always a disadvantage — many biological processes that the circuits will sense or control are themselves slow, and matching time-scales between sensor and substrate is often desirable."
+  },
+  {
+   "t": 92.51,
+   "text": "If you are monitoring a fermentation process that evolves over hours, you do not need a nanosecond logic gate; a minutes-scale gate is perfectly matched to the dynamics you care about."
+  },
+  {
+   "t": 103.79,
+   "text": "Second, power."
+  },
+  {
+   "t": 105.19,
+   "text": "Electronic devices are powered by external batteries or mains supplies."
+  },
+  {
+   "t": 109.6,
+   "text": "Biological devices are powered, in a deep sense, by the cell's own metabolism — energy harvested from the cell's growth medium, ultimately deriving from sunlight or chemical fuels in the environment."
+  },
+  {
+   "t": 123.61,
+   "text": "This makes biological devices remarkably energy-autonomous; they can operate in environments — wet, warm, biological — that would be hostile to electronic components."
+  },
+  {
+   "t": 134.79,
+   "text": "Third, the wiring problem."
+  },
+  {
+   "t": 136.8,
+   "text": "In an electronic digital circuit, components are physically connected by metal wires, and the wires are physically isolated from each other so that signal on one wire does not bleed onto another."
+  },
+  {
+   "t": 148.4,
+   "text": "Crosstalk between properly-laid-out electronic circuits is essentially nil."
+  },
+  {
+   "t": 153.1,
+   "text": "In a biological cell, there are no wires."
+  },
+  {
+   "t": 156.3,
+   "text": "Components — proteins, RNAs, metabolites — diffuse through the shared cytoplasmic soup, and any two components that happen to chemically interact will do so regardless of which circuit a designer thought they belonged to."
+  },
+  {
+   "t": 169.75,
+   "text": "This is the problem of crosstalk in biology, and it is much harder than in electronics."
+  },
+  {
+   "t": 175.85,
+   "text": "The solution that synthetic biology reaches for is orthogonality."
+  },
+  {
+   "t": 180.81,
+   "text": "Two biological components are orthogonal if they do not interact with each other — neither directly through binding, nor indirectly through shared resources."
+  },
+  {
+   "t": 190.57,
+   "text": "When you design a biological system with multiple modules, you want the modules to be orthogonal to each other and orthogonal to the host cell's existing regulatory network."
+  },
+  {
+   "t": 201.35,
+   "text": "If they are not orthogonal, unintended interactions can sabotage the design."
+  },
+  {
+   "t": 206.36,
+   "text": "The current synthetic biology toolkit, the authors note, has only a small repertoire of truly orthogonal regulatory parts."
+  },
+  {
+   "t": 214.65,
+   "text": "Building larger circuits requires expanding this toolkit substantially, and a great deal of part-engineering work has been going into producing orthogonal promoters, orthogonal transcription factors, orthogonal ribosomes, and orthogonal RNA regulators."
+  },
+  {
+   "t": 230.47,
+   "text": "Now the catalogue of biological analogues to electronic devices."
+  },
+  {
+   "t": 235.06,
+   "text": "Logical devices and gates."
+  },
+  {
+   "t": 237.16,
+   "text": "Any logical function can be built from a base set of Boolean operations — AND, OR, NOT — and combinations of those."
+  },
+  {
+   "t": 244.96,
+   "text": "Texas Instruments' famous 7400 series logic-chip catalogue in the 1970s transformed electronic design by making logic gates a commodity that any designer could compose."
+  },
+  {
+   "t": 257.62,
+   "text": "The synthetic biology aspiration is to build the analogous biological catalogue — robust biological AND, OR, and NOT gates, often called BioLogic — that can be reliably combined into larger circuits."
+  },
+  {
+   "t": 271.09,
+   "text": "This is the basis of essentially every programmable cellular behaviour."
+  },
+  {
+   "t": 276.22,
+   "text": "Timing functions and clocks."
+  },
+  {
+   "t": 278.32,
+   "text": "Many useful circuits require delays — a defined time interval between an input event and an output event — or oscillators, which produce regular clock signals."
+  },
+  {
+   "t": 288.54,
+   "text": "A time delay coupled with a series of inverters (NAND gates, in electronic terms) is the basis of a simple ring oscillator, and we will see this exact structure return in chapter five when we discuss the repressilator, one of the most famous synthetic biology circuits ever built."
+  },
+  {
+   "t": 306.12,
+   "text": "Sensors and modulators."
+  },
+  {
+   "t": 308.37,
+   "text": "Electronic systems have a vast catalogue of input transducers — temperature sensors, light sensors, pressure sensors — and output transducers — speakers, LEDs, motors."
+  },
+  {
+   "t": 320.77,
+   "text": "Biology has its own catalogue: light-sensitive proteins, ligand-binding receptors, quorum sensing molecules for cell-cell signalling."
+  },
+  {
+   "t": 330.02,
+   "text": "Combining these gives synthetic biology its ability to interface engineered cells with the chemical and physical world."
+  },
+  {
+   "t": 338.01,
+   "text": "The chapter closes by emphasising again that this chapter has been a conceptual setup."
+  },
+  {
+   "t": 343.88,
+   "text": "The actual catalogue of parts and devices, and the ways they are combined into simple synthetic biology systems, is the subject of chapter five — and we will then return to modelling in chapter six and applications in chapter seven."
+  },
+  {
+   "t": 357.58,
+   "text": "What chapter two has given you is the mental architecture — the design cycle, the parts-devices-systems hierarchy, the registry, the BioCAD vision, the ODE-Laplace-block-diagram toolkit, and the framing of biology as a system to be engineered with the same mathematical machinery that engineers apply elsewhere."
+  },
+  {
+   "t": 376.56,
+   "text": "If you carry that architecture into the chapters that follow, the technical content there will fit cleanly into the framework you now have."
+  },
+  {
+   "t": 384.72,
+   "text": "End of chapter two."
+  }
+ ]
+}

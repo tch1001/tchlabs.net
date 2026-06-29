@@ -1,0 +1,155 @@
+{
+ "n": 2,
+ "title": "The Parts, Devices, and Systems Hierarchy",
+ "duration": 300.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section two. The parts, devices, and systems hierarchy."
+  },
+  {
+   "t": 4.22,
+   "text": "Engineers, when they design anything non-trivial, almost always reach for a hierarchical decomposition."
+  },
+  {
+   "t": 11.94,
+   "text": "They break the thing they want to build into modules, and those modules into smaller modules, and the smallest modules are built from standard, well-characterised components that can be ordered from a catalogue."
+  },
+  {
+   "t": 23.82,
+   "text": "An aircraft is built from devices; the devices are built from parts; the parts come from suppliers' catalogues with detailed specification sheets."
+  },
+  {
+   "t": 32.79,
+   "text": "A radio is built from a radio-frequency stage, an intermediate-frequency stage, and an audio amplifier; each stage is itself built from resistors, capacitors, and transistors; each component comes with a datasheet you can trust."
+  },
+  {
+   "t": 47.56,
+   "text": "The discipline of choosing standard parts from a catalogue, combining them into devices, and combining devices into systems is what makes any kind of engineering tractable at scale."
+  },
+  {
+   "t": 59.19,
+   "text": "Synthetic biology is the project of bringing this same discipline to biology."
+  },
+  {
+   "t": 65.03,
+   "text": "The textbook calls this the Parts, Devices, and Systems approach, sometimes abbreviated as the P D S approach, and it underpins everything that follows."
+  },
+  {
+   "t": 75.2,
+   "text": "Let me define the three layers cleanly."
+  },
+  {
+   "t": 77.88,
+   "text": "First layer: parts, sometimes called bioparts."
+  },
+  {
+   "t": 81.69,
+   "text": "A part is a stretch of DNA that encodes a single biological function."
+  },
+  {
+   "t": 86.66,
+   "text": "A promoter is a part."
+  },
+  {
+   "t": 88.31,
+   "text": "A ribosome binding site is a part."
+  },
+  {
+   "t": 90.78,
+   "text": "A protein-coding sequence is a part."
+  },
+  {
+   "t": 93.34,
+   "text": "A terminator is a part."
+  },
+  {
+   "t": 94.97,
+   "text": "Each part is, currently, a specific sequence of DNA, and the field's job is to characterise that part — to know precisely how it behaves under different conditions and inside different host cells."
+  },
+  {
+   "t": 107.76,
+   "text": "Second layer: devices."
+  },
+  {
+   "t": 109.85,
+   "text": "A device is built by combining several parts in a defined way to produce a higher-level, human-meaningful function."
+  },
+  {
+   "t": 117.65,
+   "text": "A simple example is a transcriptional unit: a promoter, plus a ribosome binding site, plus a protein-coding sequence, plus a terminator, assembled together produces a piece of DNA that expresses a specific protein when placed in a cell."
+  },
+  {
+   "t": 133.74,
+   "text": "A more sophisticated device example is a logic gate, where the combination of several parts and proteins produces an input-output relationship that mimics a Boolean function — AND, OR, NOT, and so on — that you can chain into a circuit."
+  },
+  {
+   "t": 149.65,
+   "text": "Third layer: systems."
+  },
+  {
+   "t": 151.75,
+   "text": "A system is built from one or more devices and performs some task at the level of the whole cell — counting, oscillating, sensing and responding, controlling some downstream process."
+  },
+  {
+   "t": 164.07,
+   "text": "You can see immediately that the hierarchy is recursive in the same way that electronic engineering's hierarchy is."
+  },
+  {
+   "t": 171.43,
+   "text": "Three or four standard parts plus a defined arrangement give you a device."
+  },
+  {
+   "t": 176.32,
+   "text": "Three or four devices plus a defined arrangement give you a system."
+  },
+  {
+   "t": 180.72,
+   "text": "And — if synthetic biology continues to develop the way the authors hope — entire engineered cells will eventually be built up from standard systems with carefully managed interfaces."
+  },
+  {
+   "t": 192.43,
+   "text": "What this approach gives you, conceptually, is the freedom to not build everything from scratch."
+  },
+  {
+   "t": 198.66,
+   "text": "Concretely: to make a simple gene circuit that expresses a protein when an inducer is present, you do not need to design the promoter, the RBS, the coding sequence, and the terminator each from first principles."
+  },
+  {
+   "t": 212.04,
+   "text": "You walk to the registry, find well-characterised parts that have already been measured under conditions similar to yours, combine them, and you have a working construct on the first try — at least in principle."
+  },
+  {
+   "t": 223.22,
+   "text": "Three engineering principles undergird this whole approach, and they appear over and over."
+  },
+  {
+   "t": 228.99,
+   "text": "Modularity: the ability to cleanly decompose a larger system into smaller, independent parts."
+  },
+  {
+   "t": 236.04,
+   "text": "Characterisation: knowing rigorously how each part behaves — its inputs, its outputs, its dynamic range, its noise, its dependence on cellular context."
+  },
+  {
+   "t": 247.14,
+   "text": "Standardisation: agreeing on shared interfaces so that parts from different sources can be combined."
+  },
+  {
+   "t": 253.39,
+   "text": "Each of these is essentially aspirational in synthetic biology today."
+  },
+  {
+   "t": 258.46,
+   "text": "Real bioparts are messier than electronic components — biology, as we said in chapter one, does not have the clean physical isolation of a printed circuit board, and parts interact with each other in ways that depend on their context inside the cell."
+  },
+  {
+   "t": 272.91,
+   "text": "But the discipline of trying to enforce modularity, characterisation, and standardisation is, the authors argue, what will make synthetic biology mature into a real engineering discipline rather than remain a craft."
+  },
+  {
+   "t": 286.71,
+   "text": "Once you accept the parts-devices-systems framing, the rest of the chapter becomes natural: how do we organise these parts, characterise them, store the data, model them, and design with them? Those are the next questions we tackle."
+  }
+ ]
+}

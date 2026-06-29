@@ -1,0 +1,127 @@
+{
+ "n": 5,
+ "title": "SynBIS — Building a Real Information System for Biology",
+ "duration": 301.66,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Section five. SynBIS — a worked example of an information system for synthetic biology."
+  },
+  {
+   "t": 6.69,
+   "text": "If you are going to make the parts-devices-systems vision actually operational, you need somewhere to put all of those parts and their characterisation data."
+  },
+  {
+   "t": 15.05,
+   "text": "Imperial College London's answer is called SynBIS — the Synthetic Biology Information System."
+  },
+  {
+   "t": 21.51,
+   "text": "SynBIS is a four-layer web-based information system, and the four layers will be very familiar to anyone with software engineering background: an interface layer, a communication layer, an application layer, and a database layer."
+  },
+  {
+   "t": 35.6,
+   "text": "Let me walk through each."
+  },
+  {
+   "t": 37.2,
+   "text": "The interface layer is a web browser."
+  },
+  {
+   "t": 39.98,
+   "text": "From the user's side, SynBIS looks like a website — you point a browser at it and interact through HTML pages."
+  },
+  {
+   "t": 47.12,
+   "text": "This means scientists can use the system from any laptop, without installing custom software, and the system can be accessed both for entering new data and for querying existing data."
+  },
+  {
+   "t": 58.51,
+   "text": "The communication layer sits behind the interface and shuttles requests and responses between the browser and the application layer."
+  },
+  {
+   "t": 66.11,
+   "text": "It is, in modern terms, basically the HTTP plumbing — translating user actions on web forms into structured queries that the application layer can act on."
+  },
+  {
+   "t": 76.29,
+   "text": "The application layer is where the interesting logic lives."
+  },
+  {
+   "t": 80.15,
+   "text": "It contains two distinct families of software."
+  },
+  {
+   "t": 83.28,
+   "text": "The first family handles incoming data: when a user submits experimental measurements for a new part, the application layer first runs a standards-converter — translating whatever format the data arrived in into the SynBIS data standard — and then runs a conformance checker, which verifies that the submitted information actually conforms to the SynBIS template for that part type."
+  },
+  {
+   "t": 105.72,
+   "text": "If the submission is non-conformant — missing fields, wrong units, sequence inconsistency — the system returns a compliance report explaining what is wrong, rather than silently storing bad data."
+  },
+  {
+   "t": 118.44,
+   "text": "The second family of application-layer software handles outgoing data: retrieving parts, displaying their datasheets, exporting them to other systems, populating models with the database's parameters, running simulations, and comparing simulation output to stored experimental data so that discrepancies can be identified and fed back to whoever is iterating the design."
+  },
+  {
+   "t": 141.57,
+   "text": "The database layer is a structured query language — SQL — commercial relational database."
+  },
+  {
+   "t": 147.61,
+   "text": "Its schema is the SynBIS template, which means every part stored in SynBIS conforms to the same controlled structure."
+  },
+  {
+   "t": 155.15,
+   "text": "The schema records, for each part: the part type — promoter, RBS, coding sequence, terminator, and so on — the part number, the characteristic data, and the metadata about how that data was obtained."
+  },
+  {
+   "t": 168.36,
+   "text": "Part type and chassis type are two of the most important schema fields, because they slice the catalogue in the ways scientists actually search it."
+  },
+  {
+   "t": 176.69,
+   "text": "If you want every characterised promoter that has been tested in E. coli at stationary phase, the schema lets you ask that question and get a clean answer."
+  },
+  {
+   "t": 185.66,
+   "text": "To make this concrete, the authors describe an example datasheet for the promoter LacUV5 — one of the most famous engineered promoters in E. coli — illustrating that a real SynBIS datasheet contains graphical information, sequence information, diagrams, characteristic data, and a substantial body of metadata covering experimental conditions and provenance."
+  },
+  {
+   "t": 208.03,
+   "text": "Several lessons emerge from this design."
+  },
+  {
+   "t": 210.88,
+   "text": "First: the schema is what enforces consistency."
+  },
+  {
+   "t": 214.93,
+   "text": "If you do not encode the data structure of each part type as a controlled template, you end up with a registry like the iGEM one — full of data but inconsistent in structure, hard to compare across submissions."
+  },
+  {
+   "t": 227.9,
+   "text": "Second: separating data ingestion from data retrieval into distinct application-layer pipelines lets you enforce quality at the point of entry without slowing down the read path."
+  },
+  {
+   "t": 239.14,
+   "text": "Third: building the information system as a four-layer web architecture means the design tools downstream — which we will get to in the BioCAD section — can connect to SynBIS programmatically, pulling parameters out of the database to populate their models, and pushing simulation results back in so that the database becomes the integration point for both wet-lab and dry-lab work."
+  },
+  {
+   "t": 261.6,
+   "text": "Fourth: this is hard engineering work, and the authors are forthright that it is still a work in progress."
+  },
+  {
+   "t": 268.08,
+   "text": "Building a good biological-parts registry is not the kind of project that is ever quite done; the field keeps adding new part types, new characterisation methods, and new modelling approaches, and the schema needs to keep up."
+  },
+  {
+   "t": 280.98,
+   "text": "But the principle — that any mature synthetic biology workflow needs a structured, accessible, well-curated information system at its centre — is exactly what SynBIS exemplifies."
+  },
+  {
+   "t": 293.06,
+   "text": "Whether you end up using SynBIS specifically or some other registry, the architecture you need to imagine in your head is something like this."
+  }
+ ]
+}
