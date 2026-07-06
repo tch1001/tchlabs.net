@@ -1,0 +1,51 @@
+{
+ "n": 6,
+ "title": "Use Heuristics to Construct Balanced Ranges",
+ "duration": 103.34,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Chapter three, section six. Use heuristics to construct reasonably balanced ranges."
+  },
+  {
+   "t": 6.8,
+   "text": "You will never sit down at a table with a solver in your head; you sit down with heuristics that approximate what a solver would do."
+  },
+  {
+   "t": 13.55,
+   "text": "Fortunately, most solver outputs, once you strip out the tiny mixed-strategy noise, reduce to a small number of clean rules that you can actually apply."
+  },
+  {
+   "t": 22.86,
+   "text": "Heuristic one: never fold a flush draw on the flop when facing a normal-sized bet, because the equity is too rich to give up."
+  },
+  {
+   "t": 31.1,
+   "text": "Heuristic two: rarely fold a pair on the flop when the pot is small, unless the board is dry and you are dominated by the aggressor's likely value hands."
+  },
+  {
+   "t": 40.5,
+   "text": "Heuristic three: your weakest calling hands should carry backdoor equity, meaning an overcard, a backdoor flush draw, or both."
+  },
+  {
+   "t": 48.94,
+   "text": "Heuristic four: when you slowplay strong hands, mix them with a set of balancing bluffs that include some pure air and some backdoor draws, so that no runout leaves your range obviously imbalanced."
+  },
+  {
+   "t": 60.66,
+   "text": "Heuristic five: when you interpret a solver's output, look for pure calls, pure raises, and pure folds first, because those are the load-bearing decisions."
+  },
+  {
+   "t": 70.76,
+   "text": "The small mixing between two nearby actions is usually indifference at work, and turning those into a pure strategy costs you a fraction of a cent in expected value while saving you the mental burden."
+  },
+  {
+   "t": 82.92,
+   "text": "The player who applies five clear heuristics with discipline will beat the player who tries to remember every solver frequency and gets three of them wrong."
+  },
+  {
+   "t": 92.17,
+   "text": "In the end, range construction is not about hitting the solver's exact numbers; it is about arriving at every decision with a shape of range that a solver would recognize as reasonable."
+  }
+ ]
+}

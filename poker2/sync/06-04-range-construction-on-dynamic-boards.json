@@ -1,0 +1,47 @@
+{
+ "n": 4,
+ "title": "Range Construction on Dynamic Boards",
+ "duration": 94.82,
+ "lines": [
+  {
+   "t": 0.05,
+   "text": "Chapter six, section four. Range construction on dynamic boards."
+  },
+  {
+   "t": 4.92,
+   "text": "Dynamic boards are the ones where turn and river cards can change the ranking of hands dramatically."
+  },
+  {
+   "t": 10.88,
+   "text": "On these boards, range construction becomes about board coverage: making sure every likely runout finds you with a plausible value hand and a plausible bluff candidate."
+  },
+  {
+   "t": 21.49,
+   "text": "If two hearts fall on the flop and you never have any flush draws in your betting range, then on the third heart river, your bets will scream that you do not have a flush."
+  },
+  {
+   "t": 30.91,
+   "text": "The remedy is to include some flush-draw combinations in every action bucket: bet a few, call a few, and even raise a few when the board supports it."
+  },
+  {
+   "t": 40.41,
+   "text": "The same reasoning applies to straight coverage: if the board is nine-eight-seven, both players' ranges should have some sixty-fives and some ten-jacks scattered across their action buckets, so that no straight-completing river becomes a dead giveaway."
+  },
+  {
+   "t": 55.41,
+   "text": "Constructing ranges with good board coverage is expensive in terms of solver frequencies, because it forces you to include some marginal or hard-to-classify combinations in every bucket."
+  },
+  {
+   "t": 67.25,
+   "text": "But for a real human strategy, the discipline of board coverage is worth more than getting the exact frequencies right, because a range with obvious holes is far more exploitable than a range with slightly wrong percentages."
+  },
+  {
+   "t": 80.04,
+   "text": "As you plan a hand on a dynamic board, ask yourself: on every likely runout, do I have a plausible way to bet for value, and a plausible way to bluff?"
+  },
+  {
+   "t": 89.84,
+   "text": "If the answer is no, tighten your betting range and let the runouts filter for you."
+  }
+ ]
+}

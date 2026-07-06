@@ -1,0 +1,1319 @@
+{
+ "title": "Play Optimal Poker 2 — Range Construction — Companion",
+ "voice": "en-US-AndrewMultilingualNeural",
+ "chapters": [
+  {
+   "n": 0,
+   "title": "Introduction",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Why a Second Volume",
+     "lines": [
+      "Introduction, section one. Why a second volume.",
+      "The first volume of Play Optimal Poker built its foundation on river play, where ranges are either polarized or condensed and the story usually ends with a single decision.",
+      "This second volume moves us backward through the hand, into the turn and the flop, where hands are still evolving and every choice you make is really a choice about several streets at once.",
+      "That difference matters more than it sounds, because on early streets a hand can be a bluff on one runout, a value bet on another, and a bluff-catcher on a third.",
+      "You cannot simply label a hand and move on; you have to think about how its role will change as new cards arrive.",
+      "That flexibility is the source of most of the complexity we will wade into together in the chapters ahead.",
+      "This book will still use scenarios to isolate ideas, but the scenarios will look and feel much more like real poker than the tiny toy games we solved in volume one.",
+      "You will learn to think in ranges rather than in single hands, and you will learn to build those ranges deliberately, one street at a time.",
+      "The metaphor we will keep returning to is construction: picking hands for a range is like picking players for a team, choosing pieces that complement each other and set up strong plays on future streets.",
+      "By the end of the book you should be able to reason about turn barreling, protection, leverage, and range construction with the same confidence that volume one gave you for river play."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "A Recurring Hypothetical",
+     "lines": [
+      "Introduction, section two. A recurring hypothetical.",
+      "Imagine you are on the turn in a no-limit hold em pot, and the turn card has just delivered a third club.",
+      "You look down at your hand and you have no pair, no flush, and no straight, only the Ace of clubs sitting there as your one and only chance.",
+      "That Ace-high flush draw is about a one-in-five shot to hit the nut flush on the river.",
+      "Your opponent is stone-faced, giving you no reads, and the clock is ticking on your decision.",
+      "The question is simple to ask and famously hard to answer: do you bet, or do you take a free card?",
+      "This is the setup we will keep returning to throughout the introduction, because it captures almost every tension we care about.",
+      "Betting is appealing because you know your opponent cannot hold the current nuts, and because the Ace of clubs sets up a devastating value bet on any club river.",
+      "Checking is appealing because a fourth club can come whether or not you bet, and giving up the option to bluff-catch on the river costs you money too.",
+      "The real answer is that at equilibrium you should be indifferent between betting and checking with this exact hand, and that indifference is what forces both players into balanced strategies on later streets.",
+      "That single word, indifference, is going to do a lot of work in this book, so keep this hypothetical hand in the back of your mind as we go."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Key Concepts From Volume One",
+     "lines": [
+      "Introduction, section three. Key concepts from volume one.",
+      "Before we dive into anything new, let us do a quick tour of the ideas from the first book that we are going to rely on heavily here.",
+      "The first idea is equilibrium: a pair of strategies where neither player can improve their expected value by unilaterally deviating.",
+      "The second is exploitability: a measure of how much expected value you are leaving on the table when you play something other than an equilibrium strategy against a perfect opponent.",
+      "Equilibrium strategies are unexploitable, which is what makes them a safe default when you do not have reliable reads on your opponent.",
+      "The third idea is the polarized versus condensed dynamic, where the polarized range holds either the nuts or bluffs, and the condensed range holds a lot of medium-strength hands that beat bluffs but lose to value bets.",
+      "Polarized ranges bet big and get to charge condensed ranges to see showdown; that asymmetry is where a huge amount of poker profit comes from.",
+      "The fourth idea is indifference, which we already met in the recurring hypothetical: at a mixed equilibrium, all the actions you mix between must have the same expected value.",
+      "Indifference is not a strange coincidence; it is the very thing that makes a mixed strategy stable.",
+      "If any one option were better, you would take it always, and your opponent would adjust.",
+      "The final idea to keep front of mind is the value of position: acting last gives you information, and information turns into expected value in almost every spot we will study.",
+      "If any of these still feel wobbly, the first book covers them in detail, and this book will assume you can pick them up on the fly."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "How to Use This Book",
+     "lines": [
+      "Introduction, section four. How to use this book.",
+      "Each chapter opens with a short overview and objectives section that tells you what you are about to learn and what you should be able to do afterward.",
+      "The core of every chapter is one or more scenarios, small, self-contained poker situations that we solve together to reveal a single strategic idea.",
+      "Then comes a test yourself section, where you get a chance to apply the idea to a fresh spot without me holding your hand.",
+      "Finally, each chapter closes with a conclusion that pulls the lesson out of the scenario and connects it back to the wider strategic map.",
+      "You do not have to read the chapters in order, but the early ones lay foundations that the later ones assume, so linear reading is the low-risk path.",
+      "Do not try to memorize every solved frequency you see, because the specific numbers will differ every time the board or stack size or position changes.",
+      "Focus instead on the underlying reasons: why does the aggressor want to bet small here, why does the defender want to check-raise there.",
+      "Those reasons are portable, and they are what will still be with you when you are staring at a real hand in a live game a year from now.",
+      "The goal is not to become a walking solver; the goal is to become a player who asks the right questions and instantly knows which side of a decision they want to be on.",
+      "With that framing in place, let us get into the first chapter and start putting these tools to work on real hands."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 1,
+   "title": "Chapter 1: Leverage",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter one, section one. Overview and objectives.",
+      "The word leverage in this book means one very specific thing: the ability to threaten another bet on a future street.",
+      "On the river there is no leverage, because there are no more streets, so a call always finishes the hand.",
+      "On the turn and on the flop, a call does not finish the hand at all, and that changes the entire economics of both betting and calling.",
+      "A polarized range that expects to bet again on a future street benefits from leverage, because every current bet is backed up by the threat of a future bet.",
+      "A condensed range that has to defend against those bets is hurt by leverage, because calling now does not buy peace, it just buys another difficult decision later.",
+      "That single asymmetry is the reason so much of poker profit lives on the early streets, and it is the reason so many small mistakes on those streets compound into big losses by showdown.",
+      "By the end of this chapter you should be able to feel, in your gut, how future betting changes both your betting and your calling decisions right now.",
+      "You should be able to use leverage to squeeze extra fold equity out of early-street bets even when your immediate hand is weak.",
+      "You should be able to approximate correct bluffing frequencies when you know you will get to fire again on the river.",
+      "And you should be able to plan a sequence of bet sizes that maximizes the value of your polarized range across multiple streets."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Scenario: The Two-Street Clairvoyance Game",
+     "lines": [
+      "Chapter one, section two. Scenario, the two-street clairvoyance game.",
+      "To isolate the effects of leverage from everything else, we revisit the clairvoyance game from volume one and simply add a second street of betting.",
+      "The setup is the same as before: each player antes a dollar and starts with three dollars behind, Opal is always dealt a King, and Ivan is dealt an Ace or a Queen at random.",
+      "Both players know each other's ranges perfectly, so the only uncertainty in the game is which card Ivan happened to receive on this particular hand.",
+      "The new twist is that there are now two betting streets, which we will call the turn and the river, but hands do not change value between them.",
+      "On the turn, Opal always checks, and Ivan can check or bet anywhere from one dollar up to his full three-dollar stack.",
+      "If Ivan bets and Opal calls a bet smaller than all-in, the river arrives, and Ivan gets another chance to check or bet whatever he has left.",
+      "In the one-street version of this game, the equilibrium was crisp: Ivan bets as large as possible with all his Aces, adds a proportional dose of Queens as bluffs, and Opal calls at a frequency that makes bluffing exactly break-even.",
+      "The natural question is what changes when we let Ivan fire twice, and the answer is that almost everything changes, in Ivan's favor.",
+      "As we work through the six questions in this scenario, keep asking yourself the same underlying question: how does the possibility of a future bet change what happens right now?",
+      "That is the pattern of thinking this whole chapter is designed to build in you."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Ivan's EV Goes Up and So Does His Bluffing",
+     "lines": [
+      "Chapter one, section three. Ivan's expected value goes up, and so does his bluffing.",
+      "The first thing to notice is that Ivan makes more money in the two-street game than in the one-street game with the same starting stacks.",
+      "In the one-street version of this setup, his profit above the ante is sixty cents; in the two-street version, it jumps to seventy-eight cents, which is a thirty percent bump.",
+      "That extra profit is not free; it comes directly from leverage, because now the turn bet is backed up by the threat of a river bet.",
+      "Ivan's Aces do not just win the pot when Opal folds now; they also open the door to a big river bet if Opal calls.",
+      "That downstream value makes calling the turn less attractive for Opal, and less attractive calling means Ivan gets away with more bluffs.",
+      "Concretely, Ivan bluffs Queens at a higher frequency on the turn than he does on the river, because on the turn he only needs to make Opal indifferent between three options: fold now, call and fold later, or call twice.",
+      "Making Opal indifferent between all three options requires Ivan to bluff enough that calling the turn is only just barely not worse than folding, and that magic frequency turns out to be higher than the river frequency.",
+      "Meanwhile Ivan's Aces never check the turn, because there is no way to disguise them that beats the geometric growth of the pot we will meet in the next section.",
+      "So the two-street game rewards Ivan on both sides: he bluffs more often with Queens on the turn, and he value bets every single Ace on the turn.",
+      "The core lesson is that leverage transfers expected value from the calling range to the betting range, in every game where hands are truly polarized."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Geometric Growth and Bet Sizing",
+     "lines": [
+      "Chapter one, section four. Geometric growth and bet sizing.",
+      "When Ivan has a truly polarized range, the way to squeeze the most money out of his Aces is not to guess a bet size, it is to grow the pot geometrically.",
+      "Geometric growth means picking a bet size on the current street such that if the pot doubles or triples according to that ratio on every street, the last bet is exactly all-in.",
+      "In our two-street game with three dollars behind and a two-dollar pot, that works out to a one-dollar turn bet followed by a two-dollar all-in on the river.",
+      "In a deep-stacked version of the same game with eight dollars behind, geometric growth means a two-dollar full-pot turn bet followed by a six-dollar all-in on the river.",
+      "The general rule is: same fraction of the pot on every street, ending with the entire stack in the pot.",
+      "You can prove that this maximizes the expected value of a perfectly polarized range using calculus, but the intuition is that the bet-to-pot ratio is what determines how many bluffs your opponent must call, and keeping that ratio constant balances value and pressure across streets.",
+      "This is why an off-the-cuff turn bet like check-min-bet then jam plays badly against a solid opponent; the min-bet does not build the pot enough to make the river shove threatening.",
+      "In real poker, hands are almost never perfectly polarized, so geometric growth is a starting heuristic, not a strict rule.",
+      "But when you have a hand at the top of your range on the turn and you plan to bet the river, ask yourself: does this bet size let me shove the river naturally, or am I stranding myself with an awkward jam?",
+      "Getting the ratio roughly right on the turn is one of those small decisions that quietly makes you more money on every polarized runout for the rest of your career."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Equity Realization",
+     "lines": [
+      "Chapter one, section five. Equity realization.",
+      "So far we have talked as though a hand's equity is a fixed thing you can look up, but at the table your equity is not what actually goes into your pocket.",
+      "The share of the pot you actually win is your realized equity, and it can be higher or lower than the raw all-in equity depending on how the betting goes.",
+      "Polarized hands, meaning the nutty ones and the pure air, tend to over-realize their equity because they can bet effectively, extracting extra chips with the nuts and picking up dead money with the bluffs.",
+      "Medium-strength hands tend to under-realize their equity because they get squeezed by lose-lose decisions, folding away too much equity to bets and paying off too many strong hands when they call.",
+      "That means the same fifty percent all-in equity is worth very different amounts depending on whether it lives in a bet-friendly hand or a call-friendly hand.",
+      "The takeaway for you is that when you compare two hands with similar equity, you should always give an edge to the one that expects to realize its equity better.",
+      "A hand that can barrel two more streets is worth more than a hand that has to check every time, even if the raw equity numbers are identical.",
+      "Position amplifies this effect, because acting last means you get to see your opponent's action before you decide, which lets you protect your realization by folding when you are beat and betting when you are ahead.",
+      "One reason button opens are so profitable is not just that you get to see how the blinds react before you close the pre-flop action, but that your equity realizes better on every post-flop street you get to.",
+      "Keep this concept in your back pocket the whole book, because equity realization is the currency in which almost every strategic tradeoff we discuss will be paid out."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Scenario: Exploitation in the Clairvoyance Game",
+     "lines": [
+      "Chapter one, section six. Scenario, exploitation in the two-street clairvoyance game.",
+      "So far we have played the two-street clairvoyance game against a perfect opponent, but the whole point of learning equilibrium is so you can spot and punish deviations from it.",
+      "Suppose Opal calls the turn too rarely, meaning she folds a bit more often than the equilibrium demands.",
+      "Ivan can exploit this by bluffing more Queens on the turn, because every extra fold picks up the entire pot for the cost of a small bluff.",
+      "Conversely, if Opal calls the turn too often, Ivan should stop bluffing Queens entirely and just wait for Aces, because his bluffs no longer show a profit.",
+      "Now suppose Opal is at the right turn frequency but folds too much on the river.",
+      "Then Ivan can bluff even more Queens on the turn, because he now anticipates picking up the pot on the river as well, which raises the expected value of a turn bluff beyond its baseline.",
+      "This is leverage cashing out in real time: mistakes on the river make bluffs on the turn more profitable, because the threat behind the turn bet has become more effective.",
+      "The mirror-image case is important too: if Opal is going to call rivers too much, Ivan should not only stop bluffing Queens on the turn, he should also value bet Aces even more emphatically, because now his value bets get paid off more.",
+      "The general lesson from exploitation in the clairvoyance game is that a small leak in one spot echoes forward and backward across streets.",
+      "You do not just exploit a single street; you exploit an opponent's whole plan by adjusting the street where the deviation is loudest."
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Static and Dynamic Boards",
+     "lines": [
+      "Chapter one, section seven. Static and dynamic boards.",
+      "The clairvoyance game is a purely static setup, because the hands you are dealt do not change value between the turn and the river.",
+      "Real poker boards are dynamic to varying degrees, meaning the value of your hand and your opponent's hand can shift on the river depending on what falls.",
+      "A dry, uncoordinated board like king-seven-two rainbow is close to static: the flush and straight possibilities are limited, so most hands hold their relative strength from turn to river.",
+      "A wet, coordinated board like nine-eight-seven with two of a suit is dynamic: many rivers change the ranking of hands drastically.",
+      "Leverage still exists on dynamic boards, but the geometric growth heuristic gets softer, because a sequence of bet sizes that is perfect for a static distribution can be awful when many rivers turn value hands into bluff-catchers.",
+      "On more dynamic boards, you generally want to bet smaller and more often, because your polarized advantage is fragile and you want to keep the pot manageable while still applying pressure.",
+      "On more static boards, larger sizings become viable, because your value hands hold up well on almost every river and your opponent cannot escape the leverage by hoping for a bailout card.",
+      "This is also why choosing which draws to semi-bluff is a board-texture question: on dynamic boards you have more equity to protect, and on static boards you have less potential to improve, so semi-bluffing pays off differently in the two worlds.",
+      "As you look at any turn spot, ask yourself quickly whether the board is static or dynamic, and use the answer to pick your sizing and frequency.",
+      "This one habit will save you from misapplying the polarized-range playbook in situations where the board is going to keep rearranging your hand's role."
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter one, section eight. Test yourself.",
+      "Here are three quick questions to see whether the leverage lens has clicked for you.",
+      "Question one. You are in position on the turn holding a hand that will be a value bet on roughly one third of rivers and a bluff on the rest. Should you bet the turn?",
+      "Think it through: your hand is currently polarized in a way that mirrors a bluff, but future value gives you leverage. Betting is right, because the threat of a value bet on future rivers gives your turn bluffs additional expected value.",
+      "Question two. You are out of position facing a turn bet. The board is very dynamic, and many rivers will change the value of both players' hands. Should you call more or fewer of your medium-strength hands than you would on a static board?",
+      "Fewer. On a dynamic board, the leverage from the incoming river bet is heavier, because your hand's value can crumble on rivers that give your opponent's polarized range more equity.",
+      "Question three. You are the aggressor with an eight-dollar stack and a two-dollar pot, planning to bet the turn and the river with a polarized range. What is roughly the correct turn bet size to plan for a geometric river shove?",
+      "Two dollars, or full pot, because that turns the river pot into six dollars and lets you shove your remaining six-dollar stack cleanly.",
+      "If you got most of those right, you are already thinking about the turn the way this book wants you to.",
+      "If not, do not worry: the ideas will get many more concrete reps in the chapters to come."
+     ]
+    },
+    {
+     "n": 9,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter one, section nine. Conclusion.",
+      "Leverage is the single most important concept for translating river-style equilibrium thinking into turn-style equilibrium thinking.",
+      "On the river, betting is only about the current pot; on the turn, betting is about the current pot plus the leverage of the river bet you plan to make.",
+      "Because polarized ranges benefit from leverage and condensed ranges are punished by it, every early-street decision is really a decision about which side of that asymmetry you want to be on.",
+      "The two-street clairvoyance game showed us three concrete consequences: Ivan's expected value goes up, his bluffing frequency on the turn goes up, and Opal's calling frequency on the turn goes up too.",
+      "It also introduced geometric growth of the pot, which is the closed-form answer to the question of how big to bet when your range is polarized and you plan to fire multiple times.",
+      "Equity realization gave us the language to explain why polarized ranges get more than their fair share and condensed ranges get less.",
+      "The exploitation section reminded us that every deviation from equilibrium has echoes forward and backward across streets, so you should exploit where the deviation is loudest.",
+      "And the static-versus-dynamic board distinction warned us that geometric growth is a first-approximation heuristic that softens on boards where hand values keep changing.",
+      "Carry these five ideas into every hand you play on the turn: leverage, geometric growth, equity realization, forward-and-backward exploitation, and board texture.",
+      "The rest of the book will keep sharpening them, but you now have the whole shape of the argument in your head, and that is the hardest step done."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Chapter 2: Protection and Semi-Bluffing",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter two, section one. Overview and objectives.",
+      "In the first chapter we used a purely polarized toy game to isolate leverage, but real hands rarely split cleanly into pure value and pure air.",
+      "Most bets you actually make on the flop and turn get value from two very different places at the same time.",
+      "One source is fold equity, which is money you win when your opponent gives up and folds.",
+      "The other is pot equity, which is your share of the pot if the hand goes to showdown right now, before any more chips move.",
+      "A bluff is a hand that gets most of its value from fold equity, and a value bet is a hand that gets most of its value from pot equity, but the line between them is fuzzy well before the river.",
+      "This chapter is about the hands that live in the middle: hands that would rather not go to showdown against a strong range, but still have enough equity to be worth playing aggressively.",
+      "By the end of the chapter you should be able to explain when a medium-strength hand should bet for protection instead of check-calling.",
+      "You should be able to recognize when a range should be linear, meaning it excludes the weakest hands, rather than fully polarized.",
+      "You should be able to spot the situations where a modest equity advantage makes small-bet strategies extremely profitable.",
+      "And you should be able to resist the human urge to over-complicate a strategy that only barely improves on a much simpler one."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Betting for Protection",
+     "lines": [
+      "Chapter two, section two. Betting for protection.",
+      "Betting for protection is another name for denying equity, and it comes into play whenever your hand is best now but vulnerable to being drawn out on.",
+      "The classic case is a one-pair hand on a board where many overcards or draws can come and turn your good hand into a loser.",
+      "Think of top pair with a mediocre kicker on a board that has plenty of gutshots and backdoor flush draws.",
+      "If you check, you let a hand like queen-jack, or nine-eight suited, or ace-high with backdoor equity, see a free card that will occasionally beat you and, worse, occasionally let them bluff you off the pot.",
+      "If you bet small, most of those hands fold, and the ones that call do not usually improve to beat you.",
+      "That is what betting for protection buys you: fold equity from a wide, weak part of your opponent's range, plus a smaller pot on the runouts where you get outdrawn.",
+      "It is important to notice that a protection bet is not really trying to fold out draws like open-ended straights or nine-out flush draws.",
+      "Those hands almost always call, and they should, because their equity is worth the price.",
+      "Instead, protection bets aim at overcards and weak backdoor hands, the ones that quietly grind down your equity if given free cards.",
+      "The right size for a protection bet is usually small, because you want to preserve fold equity against the weakest overcards without paying off stronger hands that will happily raise you when you overbet."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Scenario: C-Betting Against the Big Blind",
+     "lines": [
+      "Chapter two, section three. Scenario, c-betting against the big blind.",
+      "Picture yourself opening on the button and being called by the big blind, who is defending wide because the price is right.",
+      "The flop comes king of diamonds, eight of diamonds, eight of clubs, a static board where your range is stacked with strong hands and the big blind's range is much wider and softer.",
+      "You have a big equity advantage on this board, and the solver's answer to what you should do reflects that: bet a lot, bet small, and bet often.",
+      "Small bets, roughly a quarter or a third of the pot, are the workhorse of this spot, because they push the pot in your favor while your opponent is behind and gaining almost nothing per hand.",
+      "Some of your very best hands mix in a bigger bet, because they welcome the polarized-versus-condensed dynamic when you know your opponent's range is capped.",
+      "But most hands, including many medium holdings that would check on more dynamic boards, prefer a small stab to see what happens.",
+      "This is not exactly a bluff and not exactly a value bet.",
+      "It is a hand-in-hand marriage of fold equity from the big blind's overcards and pot equity from your own showdown potential.",
+      "The scenario also shows why the aggressor's incentive to bet is often about the SHAPE of the ranges rather than any single hand's equity.",
+      "When your range dominates the board, small bets protect your medium hands, extract value from your strong hands, and pressure the opponent's whole range, all at the same time."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Linear Ranges",
+     "lines": [
+      "Chapter two, section four. Linear ranges.",
+      "In volume one we talked mostly about polarized ranges and condensed ranges, because those are the crisp cases on the river.",
+      "On early streets a third shape shows up all the time, and it is called a linear range.",
+      "A linear range contains the strongest and the medium-strength hands and simply drops the weakest ones.",
+      "Instead of the barbell shape of polarized play, a linear range is a taper: strong at the top, thinning out through medium hands, no pure bluffs at the bottom.",
+      "You see linear ranges most naturally in three situations.",
+      "First, in raise-or-fold spots like button opens, because if you cannot flat call, you might as well raise your best hands and fold the rest, no room for arbitrary bluffs.",
+      "Second, in all-in situations before the river, because with no leverage on future streets, the best bluff candidates are the ones with the most raw equity when called, which are high-equity semi-bluffs, not zero-equity air.",
+      "Third, with small bets on the flop, because a small bet does not need much fold equity to break even, and it is cheap for medium hands to include themselves to protect equity and build the pot.",
+      "The rule to internalize is: the smaller the bet and the earlier the street, the more linear the range that should sit behind it.",
+      "The bigger the bet and the later the street, the more polarized that range should be."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Simplifying Strategies",
+     "lines": [
+      "Chapter two, section five. Simplifying strategies.",
+      "Solvers love to answer with elaborate mixed strategies: bet twenty-five percent of pot with sixty-seven percent of this hand, mix in an overbet three percent of the time, check the rest.",
+      "You are a human being at a poker table, and you cannot execute that with any real accuracy.",
+      "The good news is that in most spots, a clean, simple strategy is worth almost as much as the exact solver output.",
+      "In the king-eight-eight scenario, betting a single small size with your entire range makes a certain number of dollars per pot.",
+      "Adding a big-bet size and a small checking range on top increases that expected value by a penny.",
+      "For an expert practitioner with unlimited attention, that penny is worth taking; for the rest of us, the penny is worth less than the mistakes we would introduce by trying to execute a two-size strategy in real time.",
+      "The best strategies for humans are the ones that hit ninety-five percent of the solver's expected value while being resilient to slight execution errors.",
+      "As you build your own game plans, notice when the solver is asking you to mix two sizes in a spot where the value gap is tiny.",
+      "In those spots, pick the one size that dominates and stick to it, and use the mental bandwidth you save for the harder decisions later in the hand.",
+      "Simplicity that survives contact with a real game beats complexity that only works in the calm of a training tool."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Pushing Equity",
+     "lines": [
+      "Chapter two, section six. Pushing equity.",
+      "When your range is much stronger than your opponent's on a given board, you have what we will call an equity advantage, and a big equity advantage is one of the most exploitable resources in poker.",
+      "Pushing equity means using that advantage to move chips into a pot that your range is favored to win.",
+      "You do this by betting small with a wide range, so that your opponent is forced to defend most of her hands.",
+      "When she calls, the pot grows and your equity edge does its work.",
+      "When she folds, you pocket the pot and the fold equity is pure profit.",
+      "The scary alternative is that she raises, and raises can turn your medium hands into painful bluff-catchers.",
+      "The saving grace is that your opponent needs strong hands to raise for value, and if your range is truly stronger than hers, she has very few of them.",
+      "That means a well-defended small betting range faces raises rarely, and when it does, the raise is often out of proportion to the opponent's actual value combinations.",
+      "So the whole small-bet plan is self-reinforcing: your equity edge makes betting profitable, and it also makes raising unattractive for her.",
+      "The biggest mistake human players make in these spots is checking too much out of fear of the raise, and thereby giving up the free pot equity they should be pressing.",
+      "When you have the equity advantage, be the aggressor with a wide, small betting range, and let your opponent solve the puzzle of how to fight back."
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter two, section seven. Test yourself.",
+      "Question one. You raise from the button with ace-queen offsuit and get called by the big blind. Flop comes ten of hearts, four of spades, three of hearts. Should this hand bet or check?",
+      "The board is quite dynamic, so this is a good moment for protection and equity pressure. A small bet works well: it denies equity to overcards you dominate, applies pressure to unpaired hands, and keeps the pot manageable if you get called or raised.",
+      "Question two. You are the big blind facing a small stab on king-eight-eight. Your hand is queen-jack with no backdoors. Should you call, raise, or fold?",
+      "Fold. Against a strong range on a static, dominant board, queen-jack with no backdoor equity is just paying rent, and any equity you have is deeply owned by the opener's linear range.",
+      "Question three. You have pocket sevens on ace-jack-two rainbow, in position. Would this hand rather bet small for protection or check to keep the pot small?",
+      "Bet small. There are many broadway overcards you would rather see fold, and while you can occasionally get raised by a set or two pair, the protection value of denying equity to hands like king-queen and queen-jack is worth the risk.",
+      "Question four. You are betting a small size with a wide range on the flop, and you notice your opponent almost never raises. How do you adjust?",
+      "Widen your betting range even further. When your opponent underrepresents raises, small stabs get almost pure profit, and you should push equity aggressively with hands you would otherwise consider marginal.",
+      "If most of that felt natural, the linear-versus-polarized distinction has clicked; if it did not, the rest of the book will keep sharpening it."
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter two, section eight. Conclusion.",
+      "This chapter shifted us from the crisp world of pure polarization into the messier reality of flop and turn play, where most bets are hybrids of fold equity and pot equity.",
+      "We saw that protection is not about beating strong draws; it is about denying free cards to hands with a few live outs and little other way to win.",
+      "We introduced linear ranges as the natural shape for raise-or-fold spots, all-in bluffs, and small-bet strategies.",
+      "We saw how solvers construct elaborate multi-size strategies that only marginally beat simpler human-executable ones, and how you should default to the simpler play in almost every real spot.",
+      "And we saw how a big equity advantage lets you push equity with small bets, extracting value from your whole range while making raises unattractive for your opponent.",
+      "The one habit to keep from this chapter is asking, before every flop decision: which shape does my range want to be here, polarized, condensed, or linear?",
+      "That question alone gets you three-quarters of the way to the right strategy in most spots.",
+      "In the next chapter, we will make range construction itself the object of study, walking through the mechanics of building a betting range and a defending range one hand at a time."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Chapter 3: Range Construction",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter three, section one. Overview and objectives.",
+      "The book gets its subtitle from this chapter, because range construction is the beating heart of everything else we will study.",
+      "Range construction just means the deliberate choice of which hands you put into each action bucket, betting, calling, raising, or folding, in a given spot.",
+      "Once you have a range for one action, everything else, sizing, frequencies, board coverage, cascades from those choices.",
+      "You do not need to memorize solver output to construct good ranges; you need a small toolbox of habits and a clear sense of which hands anchor each bucket.",
+      "By the end of this chapter you should be able to walk through a step-by-step process for building a range in any spot, starting from your pure strategies and filling in the mixed candidates around them.",
+      "You should be able to look at a condensed calling range and know how it should defend against a polarized bet on future streets.",
+      "You should be able to identify the pre-flop decisions that make or break your post-flop range construction, particularly the value of suited, connected, and big-card holdings when defending out of position.",
+      "And you should be able to distill a solver's complicated mixed answer into a set of simple heuristics that a human can execute at the table.",
+      "Range construction is a skill you keep sharpening for the rest of your poker career; this chapter gives you the scaffolding you will build on for years."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Range Construction Step-By-Step",
+     "lines": [
+      "Chapter three, section two. Range construction step by step.",
+      "The first idea to internalize is that ranges are made of pure strategies and mixed strategies, and they play very different roles.",
+      "Pure strategies are the hands you put into a range at one hundred percent frequency because there is no other action that makes sense for them.",
+      "The nuts on the river against a shove is a pure call; garbage against the same shove is a pure fold; a small set on a dry, dominant flop wants to raise every time.",
+      "Pure strategies are the load-bearing beams of a range; they define what the range is about.",
+      "Mixed strategies are the hands where several actions are close in expected value, so you can distribute them between actions to balance the pure strategies.",
+      "The right process is to place your pure strategies first, then use mixed hands to fill the range in the shape it needs to have.",
+      "On a king-seven-four flop where you check-raise, your pure hands might be sets like four-fours and seven-sevens; those anchor the raise as a real value range.",
+      "You add mixed hands like six-five suited and eight-six suited as balancing bluffs, because they are strong enough that check-calling is defensible but weak enough that you can afford to raise some of the combinations.",
+      "This layered process, pure strategies first, mixed strategies to balance them, is the same everywhere in the book, and once you feel it in your bones, most range-construction problems become almost mechanical."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Defending A Condensed Range",
+     "lines": [
+      "Chapter three, section three. Defending a condensed range.",
+      "When you called a raise pre-flop, especially out of position, you often arrive on the flop with a range that is more condensed than your opponent's.",
+      "Condensed means you have relatively few nut hands and relatively few pure bluffs, so most of your combinations are medium-strength or drawing hands.",
+      "Defending that condensed range against small continuation bets is one of the most common and one of the most important skills in modern poker.",
+      "The first job is to defend enough hands that the aggressor cannot profitably bluff any two cards.",
+      "The second job is to build a check-raising range with real value hands, so that the aggressor cannot bet with impunity against you.",
+      "The third job is to preserve strong-enough calling hands that you can bluff-catch on future streets when the aggressor barrels again.",
+      "The temptation is to fold too much, because condensed ranges rarely feel like they have a great hand to defend with, and pot control feels like the safe path.",
+      "But over-folding a condensed range is exactly the mistake that lets aggressive players print money by continuation betting relentlessly.",
+      "The healthier reflex is to make small bets pay for themselves by calling with pairs, high-card equity, and backdoor draws, and to check-raise a small mix of strong hands and gutshot-plus-backdoor combinations to keep the aggressor honest.",
+      "As you defend, keep in mind that the very shape of a condensed range means you will lose small pots often, but you will occasionally scoop big ones when your opponent barrels into your traps."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Scenario: Exploiting From the Big Blind",
+     "lines": [
+      "Chapter three, section four. Scenario, exploiting from the big blind.",
+      "Now let us flip the perspective and look at what happens when the big blind steps out of pure defense and starts hunting for exploits.",
+      "Suppose an aggressor is c-betting almost every flop with a small size, and the big blind notices that the c-betting range includes way too many hands.",
+      "The correct exploit is not to raise every time; it is to start check-raising a wider polarized range that punishes the weak parts of the c-bet range while continuing to call with medium-strength hands that beat bluffs but hate large pots.",
+      "You want to raise value hands that keep dominating the aggressor's calls, and you want to raise bluffs with high equity when called, so that even when the exploit fails, you have a real chance to win the pot.",
+      "The other exploit direction is to widen your calling range with any hand that has decent turn playability, because a wide c-bet range is more brittle on turns that change the board texture.",
+      "By calling more, you give yourself the chance to bluff-raise or check-raise later on turns that are especially bad for the aggressor.",
+      "The overall lesson is that exploiting a bet-happy opponent from the big blind is less about immediate raises and more about defending a well-chosen wide range that keeps future streets interesting.",
+      "Every exploit lives inside the same range-construction discipline: pure hands first, then mixed hands to balance them, then a sensible tilt toward whichever kind of leak you are targeting.",
+      "The equilibrium is the reference point, and exploits are structured deviations from it, never wild swings that leave you vulnerable to counter-adjustments.",
+      "As you get more comfortable, you will find that most profitable exploits are surprisingly small tweaks, not dramatic overhauls."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Plan Ahead",
+     "lines": [
+      "Chapter three, section five. Plan ahead to give yourself the tools you need on future streets.",
+      "Range construction does not start on the flop; it starts pre-flop, with the decision to enter the pot in the first place.",
+      "When you are defending the big blind against a raise, the hands you choose to call with will determine what kinds of ranges you can construct on every future street.",
+      "The habit to build is: prefer hands that are suited and connected, because they flop the widest variety of draws and pairs.",
+      "A hand like eight-seven suited will flop pairs, gutshots, open-enders, backdoor flush draws, and combinations of them, all of which give you good tools for calling and raising flop bets profitably.",
+      "A hand like king-ten offsuit flops top pair sometimes, but most flops leave it with only a hopeful overcard and no path forward.",
+      "The one exception is hands with both cards big enough to make top pair top kicker or better; those hands survive their own lack of draws because when they connect, they connect hard.",
+      "Out of position, the value of good post-flop tools is even higher, because you cannot recover from a bad flop by using position to keep the pot small.",
+      "Pre-flop laziness, calling with hands that flop poorly, is one of the biggest leaks in intermediate players' games.",
+      "Plan ahead by picturing the flops you want to have real hands on, and the flops on which you want to bluff-raise, and pick pre-flop hands that give you both.",
+      "The pre-flop button matters far more than most players realize, because every downstream range you construct depends on it."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Use Heuristics to Construct Balanced Ranges",
+     "lines": [
+      "Chapter three, section six. Use heuristics to construct reasonably balanced ranges.",
+      "You will never sit down at a table with a solver in your head; you sit down with heuristics that approximate what a solver would do.",
+      "Fortunately, most solver outputs, once you strip out the tiny mixed-strategy noise, reduce to a small number of clean rules that you can actually apply.",
+      "Heuristic one: never fold a flush draw on the flop when facing a normal-sized bet, because the equity is too rich to give up.",
+      "Heuristic two: rarely fold a pair on the flop when the pot is small, unless the board is dry and you are dominated by the aggressor's likely value hands.",
+      "Heuristic three: your weakest calling hands should carry backdoor equity, meaning an overcard, a backdoor flush draw, or both.",
+      "Heuristic four: when you slowplay strong hands, mix them with a set of balancing bluffs that include some pure air and some backdoor draws, so that no runout leaves your range obviously imbalanced.",
+      "Heuristic five: when you interpret a solver's output, look for pure calls, pure raises, and pure folds first, because those are the load-bearing decisions.",
+      "The small mixing between two nearby actions is usually indifference at work, and turning those into a pure strategy costs you a fraction of a cent in expected value while saving you the mental burden.",
+      "The player who applies five clear heuristics with discipline will beat the player who tries to remember every solver frequency and gets three of them wrong.",
+      "In the end, range construction is not about hitting the solver's exact numbers; it is about arriving at every decision with a shape of range that a solver would recognize as reasonable."
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter three, section seven. Test yourself.",
+      "Question one. You are the big blind, and you have called a small button open with a wide range. Flop comes queen of clubs, seven of diamonds, three of spades. The button bets one third of the pot. Which of your hands should be pure calls?",
+      "Any pair, ace-x with backdoor equity, king-jack suited for its overcards plus backdoor flush, and combinations like queen-nine suited for top pair. Pure folds are hands like seven-two offsuit with no backdoor equity.",
+      "Question two. Same spot, but the flop is ace of diamonds, king of diamonds, four of spades. Which mixed hands make sense as check-raise bluffs?",
+      "Hands with a diamond blocker and some equity if called, like queen of diamonds jack of diamonds, or six of diamonds five of diamonds. You want the extra equity, and the diamond in your hand blocks the nut flush.",
+      "Question three. You are the pre-flop aggressor, and the big blind check-raises your c-bet on a low, dry board. Should you continue with a hand like ace-king unimproved?",
+      "Yes, because ace-king still has heavy overcard equity plus backdoor draws, and your opponent's check-raise range on such a board should be so narrow that continuing pressures her thin bluffs.",
+      "Question four. When a solver mixes fifty-fifty between calling and raising with a specific hand, and you have to pick a pure action for practical purposes, how do you choose?",
+      "Pick the action that is easier to defend on future streets. Usually calling keeps more options open with medium hands, and raising is cleaner with hands that have equity when called.",
+      "The whole point of the test is to feel the mechanical process: pure strategies first, mixed strategies to balance, heuristics as your everyday guide."
+     ]
+    },
+    {
+     "n": 8,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter three, section eight. Conclusion.",
+      "Range construction is the bridge between abstract equilibrium theory and the practical business of choosing which hands you play which way.",
+      "The disciplined process of placing pure strategies first and using mixed strategies to balance them is the single most useful habit in this book.",
+      "Condensed ranges are defended by calling wide with pairs, backdoor draws, and pot-controlling holdings, and by check-raising a small mix of strong hands and high-equity bluffs.",
+      "Exploits against a bet-happy aggressor are structured deviations from equilibrium defense, not wild swings; they lean on the same range-construction discipline as balanced play.",
+      "Pre-flop choices, especially the value of suited and connected hands out of position, dictate the tools you will have for every downstream street.",
+      "Heuristics, not solver frequencies, are what you will actually use at a real table, and a small set of clean heuristics beats a large set of noisy ones.",
+      "Carry these five ideas into every hand: pure-first construction, condensed-range discipline, exploit-through-structure, pre-flop planning, and heuristic simplification.",
+      "In the next chapter, we return to leverage, this time with dynamic boards and hand ranges instead of the sterile toy version, and we start applying the range-construction process at speed."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Chapter 4: Using Leverage",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter four, section one. Overview and objectives.",
+      "The toy clairvoyance game taught us the mechanics of leverage, but it left hands frozen in place and boards abstract.",
+      "This chapter takes leverage into real poker: dynamic boards, live ranges, and the messy question of which specific hands should barrel which specific turn cards.",
+      "When the pre-flop raiser continuation bets the flop and then bets the turn, we call it firing a second barrel.",
+      "When he fires the turn and follows up on the river, he is triple barreling.",
+      "Every barrel is a leverage decision, because a bet on the turn is worth much more when the story continues to a river bet, and the story continues to a river bet only when the turn barrel makes sense in the first place.",
+      "By the end of this chapter you should be able to evaluate a new turn card and quickly judge whether it helps you or your opponent.",
+      "You should be able to pick semi-bluff candidates that match the effective stack size, so your turn bets have the runway to become good river bets.",
+      "You should be able to factor river play back into your turn betting decisions, rather than treating each street as an isolated problem.",
+      "And you should be able to recognize the situations where declining to barrel is the actual equilibrium move, even when the aggressor's default reflex is to keep firing."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Hand Reading on the Flop",
+     "lines": [
+      "Chapter four, section two. Hand reading on the flop to guide range construction on the turn.",
+      "Before you can barrel a turn effectively, you need a sensible picture of what your opponent's flop range actually looks like.",
+      "Return to the king of diamonds, eight of diamonds, eight of clubs scenario, where the button opens and the big blind defends.",
+      "The big blind called a small c-bet on the flop, so we can infer that her range is condensed: mostly pairs, some flush draws, and probably some ace-high with backdoor equity.",
+      "She almost certainly folded her worst hands, and she probably did not check-raise, which discounts, but does not eliminate, monster hands like trips.",
+      "You should be aware that a real player may not defend exactly like the solver: some love to slowplay trips, some are terrified of getting counterfeited and just call, and some will not defend queen-jack of clubs at all.",
+      "Without a read, though, you cannot assume any of these deviations without opening yourself to exploitation.",
+      "Equilibrium hand reading gives you a reasonable prior for the opponent's range, and your turn strategy should perform sensibly against any distribution that is close to it.",
+      "The key habit is that equilibrium play is robust: even if your opponent slowplayed her trips and shows up with a stronger-than-expected range, your best-response strategy still does no worse than break even against her, and it prevents her from doing any better than she would have by playing correctly.",
+      "Hand reading is not about guessing the exact hand; it is about narrowing the range to a shape you can attack the turn against."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Small Bets Cap Your Opponent's Range",
+     "lines": [
+      "Chapter four, section three. Small bets cap your opponent's range.",
+      "One of the sneakier effects of using a small c-bet size is that it caps your opponent's continuing range for you.",
+      "Because a small bet is easy to call, your opponent will call with almost every reasonable hand, but she will only rarely raise, and when she raises it will be with a narrow, polarized range.",
+      "The result on the turn is that her calling range is capped: she probably does not have the very best hands, because those would have raised, and she probably does not have air, because that would have folded.",
+      "This is a gift for the barreler, because a capped range is much easier to attack.",
+      "You can barrel medium turn cards and small equity bumps and expect a lot of folds, because her range is packed with medium-strength hands that were happy to see a cheap flop card but hate paying a second bet.",
+      "You can also overbet turns that are especially bad for her range, because you know her strongest hands are not there to raise you back.",
+      "The mirror of this observation is what she should be doing: even against a small c-bet, she should include some slowplayed trips and top pair-plus in her calling range, precisely so that you cannot exploit her cap so mercilessly.",
+      "As you construct your own defending ranges against small bets, remember that keeping some strong hands out of your raising bucket is not a mistake; it is protection against being over-barreled.",
+      "The interaction between bet size and range shape is one of the deepest patterns in the game."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Scenario: Barreling the Turn",
+     "lines": [
+      "Chapter four, section four. Scenario, barreling the turn.",
+      "Now let us think about how the turn card itself should change your barreling plan on the king-eight-eight flop after the big blind called your small c-bet.",
+      "Break turn cards into three categories: cards that help you, cards that help your opponent, and cards that are largely neutral.",
+      "Cards that help you are usually overcards, like an ace, that fit your range far better than they fit hers, and diamonds that complete the front-door flush draw where your range has all the nut flush draws.",
+      "Cards that help her are usually low or middling cards that pair her holdings, like an eight or a seven, or that improve backdoor draws she is more likely to hold than you.",
+      "Neutral cards are things like the queen or the jack that touch neither range strongly.",
+      "On the good turns, barrel aggressively with a wide range, including thin value and semi-bluffs, because your equity edge has widened.",
+      "On the bad turns, slow down: barrel only your strongest value and your best semi-bluffs, and consider checking a much wider range than you normally would.",
+      "On neutral turns, apply the standard leverage playbook: barrel a polarized range at a size that maintains geometric growth toward a river bet.",
+      "The specific hand choices matter, but the framework matters more: sort the turn into good, bad, or neutral, then choose your frequency and size accordingly."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Scenario: Bet-Check-Bet",
+     "lines": [
+      "Chapter four, section five. Scenario, bet-check-bet.",
+      "So far we have talked about betting the turn after betting the flop, but what happens when you bet the flop, check the turn, and then get to face a river decision?",
+      "This is the bet-check line, and it is much more common than novices expect, especially on turns that are bad for the c-bettor's range.",
+      "By checking the turn, you preserve the option to fold cheaply, and you also let some of your medium-strength hands realize their equity for free.",
+      "Importantly, you keep leverage alive for the river: after your check, your opponent's range still has to worry about your polarized river betting range, particularly on turns where you would clearly value bet with the top of your range.",
+      "When the river card arrives, ask two questions.",
+      "First, does this river card change the balance of the ranges enough to justify a big polarized bet from you?",
+      "Second, if your opponent bets into you, is her betting range a real polarized range, or is it a thin value plus rare bluff shape that you should mostly call against?",
+      "The bet-check-bet line combines pot control on the turn with a targeted river attack, and it is one of the most valuable sequences to master, because it lets a hand like top pair mediocre kicker still profit even on tough turns.",
+      "The rule of thumb is: check the turn when the card damages your range's balance, and choose your river bet size based on how much of your range remains truly polarized after the runout."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter four, section six. Test yourself.",
+      "Question one. You c-bet small on king-eight-eight, and the turn is the ace of diamonds. How does this turn card change your barreling frequency?",
+      "It increases it. The ace hits your range hard and misses hers, giving you a bigger equity advantage. You should barrel more hands and can size up meaningfully with your best value hands and semi-bluffs.",
+      "Question two. Same start, but the turn is the seven of hearts. Adjust your barreling plan.",
+      "Slow down. The seven pairs middling hands more often for the big blind, and it does not help your range much. Check a much wider range, and barrel only your best value and semi-bluffs.",
+      "Question three. You are barreling a turn with a hand that has a strong value plan on some rivers and a strong bluff plan on others. What size do you want to pick?",
+      "Choose a size that grows the pot geometrically toward a river bet you can actually execute. If your remaining stack after the turn is close to pot size, you have set up a natural river shove, which is the sweet spot.",
+      "Question four. You bet the flop small, checked the turn, and now the river gives you top two pair on a static board. Should you bet, and how big?",
+      "Yes, bet, and lean toward a larger size, because your range after check-back is condensed enough that a polarized river bet stands out clearly, and your value hands need to get paid.",
+      "The pattern to feel is that leverage rewards planning, and every turn decision should already have a river decision waiting in the wings."
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter four, section seven. Conclusion.",
+      "This chapter took the clean lessons of the toy clairvoyance game and put them to work on real boards, real ranges, and real hand-reading.",
+      "The single biggest habit to leave with is the good-turn, bad-turn, neutral-turn triage: before you bet, check whether the turn card helps your range or your opponent's, and let the answer set your frequency.",
+      "Small c-bet sizes cap the opponent's continuing range, and a capped range is easier to exploit on turns that are especially bad for her, so the small size and the aggressive turn barreling are two sides of the same coin.",
+      "The bet-check line is not a concession; it is a tool for preserving optionality on bad turns while keeping leverage alive for the river.",
+      "Every turn barrel should have a river plan attached, because leverage only works if the barrel is credible as a story that reaches the river.",
+      "In the next chapter we swap the barreling perspective for the short-stack world, where all these ideas get compressed by the reality of a small stack-to-pot ratio."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Chapter 5: Shallow Stacks",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter five, section one. Overview and objectives.",
+      "So far we have implicitly assumed reasonably deep stacks, which is what makes leverage so valuable in the first place.",
+      "When stacks are short relative to the pot, leverage shrinks toward zero, because there is not enough money left to threaten a meaningful future bet.",
+      "This chapter is about how equilibrium strategy shifts when the stack-to-pot ratio, or SPR, is small.",
+      "You will find that hands change value, that some betting lines disappear, and that others, like flop check-raising all-in, become surprisingly attractive.",
+      "By the end of this chapter you should be able to compute how much equity you need to stack off at various SPRs, and see intuitively why the required equity climbs as stacks deepen.",
+      "You should be able to sort your flop range into hands that welcome low-SPR stack-offs and hands that would rather see a bigger pot.",
+      "You should be able to build balanced checking, continuation betting, and check-raising strategies at low SPRs, where every bet is a partial commitment.",
+      "And you should be able to plan pre-flop with an eye on SPR, so that the low-stack situations you get into are the ones that suit your range."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Stack-to-Pot Ratio (SPR)",
+     "lines": [
+      "Chapter five, section two. Stack-to-pot ratio, or SPR.",
+      "SPR is simply the effective stack divided by the current pot, measured at the moment you arrive on the street you are analyzing.",
+      "An SPR of one means you have exactly the size of the pot behind, so a single pot-sized bet gets you all in.",
+      "An SPR of four gives room for a check-raise or a small bet followed by a river shove, but not much more.",
+      "An SPR of ten or more is enough runway for full three-street barrels with reasonable sizing, which is where the leverage from prior chapters lives.",
+      "The reason SPR matters is that it directly determines how much equity a hand needs to break even in a stack-off.",
+      "At SPR one, calling an all-in requires only thirty-three percent equity, because you risk the pot to win three times the pot.",
+      "At SPR three, you need about forty-three percent, and at SPR ten you need almost fifty percent.",
+      "That climbing equity requirement means each player also stacks off with stronger hands as SPR grows, which cascades into every earlier decision.",
+      "Reading SPR before you plan your line is like checking the weather before you plan a road trip; ignore it and you will be miserable."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Scenario: Shallow-Stacked Flop Strategy",
+     "lines": [
+      "Chapter five, section three. Scenario, shallow-stacked flop strategy.",
+      "Imagine Ivan opens for three big blinds and gets called by the big blind, and the effective stack is only twenty-six big blinds behind after the flop.",
+      "The flop comes king of diamonds, eight of diamonds, eight of clubs, familiar from earlier chapters.",
+      "SPR here is roughly four, which is a completely different game than the deep-stacked version.",
+      "Ivan can no longer plan a three-street barrel, because the stack is not big enough to grow the pot geometrically to a river shove of any meaningful size.",
+      "Instead, betting the flop and shoving the turn becomes the natural polarized line, and check-raising all-in on the flop becomes a real weapon for Opal.",
+      "Opal's check-raise no longer needs to threaten a future street; it puts the entire stack in play immediately, and that shortcut suits her polarized hands.",
+      "Meanwhile, hands that thrive on leverage, like ace-high semi-bluffs that expect to barrel two more streets, lose most of their value.",
+      "Hands with strong immediate equity, like straight draws and flush draws, keep more of their worth, because they can stack off with reasonable equity when the money goes in fast.",
+      "The overall theme is that low SPR compresses the game, and the best hands are the ones that are ready to commit right now."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Pre-Flop Ranges With An Eye Toward SPR",
+     "lines": [
+      "Chapter five, section four. Pre-flop ranges with an eye toward SPR.",
+      "The SPR you end up with post-flop is not a random accident; it is set up by your pre-flop choices.",
+      "When you open large, you push the SPR down, which means you will be committing shorter stacks on the flop.",
+      "When you flat call a raise, you keep the SPR fatter, which means you will have room to play post-flop poker on multiple streets.",
+      "The habit to build is asking, before you make a pre-flop bet, what SPR you want to have on the flop given the specific hand.",
+      "With premium pairs, you often want a moderate SPR, big enough to build a real pot but not so big that top pair loses its shape.",
+      "With small pocket pairs and suited connectors, you want a big SPR, because implied odds and multi-street playability are what turn a small hand into a big win.",
+      "With medium-strength offsuit broadways, small pocket pairs, and A-x hands, you often want a smaller SPR, because your equity is fine when the money goes in fast but degrades as barreling begins.",
+      "Three-betting for value at a size that leaves an SPR of four or five is often the sweet spot for premium hands, because it commits the pot enough to punish loose calls without leaving you awkwardly deep.",
+      "The pre-flop button is not a black box; it is the first move in a multi-street plan, and SPR is one of the key numbers that plan hinges on."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter five, section five. Test yourself.",
+      "Question one. The pot is one hundred dollars and the effective stack is one hundred dollars. How much equity do you need to call an all-in?",
+      "Thirty-three percent. You risk one hundred to win three hundred, so the break-even equity is one over three.",
+      "Question two. Same pot, but the effective stack is three hundred dollars. How much equity to call an all-in?",
+      "About forty-three percent. You risk three hundred to win seven hundred, so break-even equity is three over seven.",
+      "Question three. You are on the button with pocket eights and the SPR after the flop will be about two. Should you three-bet pre-flop to build the pot?",
+      "It depends on the flop you expect. With low SPR, pocket eights want to stack off on lots of boards, so three-betting to compress the SPR is often a fine plan, especially against players who defend three-bets loosely.",
+      "Question four. You flop a naked flush draw with SPR three. Should you shove over an aggressive c-bet?",
+      "Often yes. Your equity against the c-bet range is likely at or above break-even, and you also generate fold equity, so combining the two makes a shove attractive at this SPR.",
+      "Question five. You flop top pair on king-eight-eight with SPR ten. Should you plan to commit your stack on any turn?",
+      "No. With SPR ten, top pair with a mediocre kicker is a bluff-catcher at best on many turns, and forcing action risks stacking off against a range you cannot beat.",
+      "SPR is the number that ties every stack decision together."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter five, section six. Conclusion.",
+      "Shallow-stacked poker is a compressed, high-tempo version of the same game we have been building throughout the book.",
+      "SPR is the single number that captures the tension between hand strength, pot odds, and stack-off ranges, so make it the first thing you check on any new flop.",
+      "At low SPR, leverage does not have room to breathe, so polarized barrels dissolve into simple polarized shoves, and check-raise all-in becomes a natural line for the defender.",
+      "Draws, particularly nut draws, hold their value beautifully at low SPR, because their equity is robust against the stronger ranges that stack off in these spots.",
+      "Marginal hands like middle pair and top pair mediocre kicker lose value as SPR falls, because they get committed too easily against ranges that dominate them.",
+      "Pre-flop planning shapes the SPR you end up with, so treat every open, three-bet, and cold call as a step in the multi-street plan you are already writing.",
+      "In the next chapter we drop the equity advantage entirely and study how to c-bet when your range does not dominate the board, which is where much of the modern game happens."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Chapter 6: C-Betting Without Range Advantage",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter six, section one. Overview and objectives.",
+      "In the earlier chapters, our c-bettor always had a comfortable equity advantage, and that shaped every decision we made.",
+      "In real poker, the pre-flop aggressor often does not have an equity advantage on the flop.",
+      "This chapter is about c-betting when your range is not obviously ahead, and about defending when you are the caller who actually has the better hand.",
+      "You will find that the answer is not to c-bet less; it is to c-bet with a different shape of range and a different size.",
+      "Small bets that pushed equity in earlier chapters become risky here, because the caller can profitably raise them.",
+      "By the end of this chapter you should be able to identify boards where you have no range advantage and adjust your c-bet size and frequency accordingly.",
+      "You should be able to use pot control to preserve the equity of your medium hands rather than committing them to a big pot you cannot win.",
+      "You should be able to construct betting ranges on dynamic boards where hand values shift quickly.",
+      "And you should understand why sometimes the correct plan is to give up the initiative altogether and let the pre-flop caller do the work."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Scenario: C-Betting Without Range Advantage",
+     "lines": [
+      "Chapter six, section two. Scenario, c-betting without range advantage.",
+      "Suppose the button opens and gets called by a tight big blind whose range is heavy on pairs and suited connectors.",
+      "The flop comes eight of hearts, seven of hearts, four of spades, a wet, connected, medium-height board.",
+      "The big blind's range hits this flop hard: eight-x, seven-x, sixty-fives, straight draws, and flush draws are all well-represented.",
+      "The button's range has a lot of overcards and some high pairs, but many of its combinations are drawing thin.",
+      "The result is that on this flop, the pre-flop caller actually has an equity edge, at least across the whole range.",
+      "Betting a wide small size, the reflex from earlier chapters, is a disaster here: your medium hands get raised, your bluffs miss their equity when called, and the big blind's polarized check-raise is a nightmare.",
+      "The equilibrium answer is to bet less often but bigger with a polarized range: pure value with sets and overpairs, semi-bluffs with hands like ace of hearts plus a wheel card, and a lot of checking with the middle of your range.",
+      "By splitting your c-bet range into polarized and checked buckets, you avoid feeding the big blind's check-raise range while still applying pressure with the hands that welcome a big pot.",
+      "The general lesson is that range advantage, not initiative, is what earns you the right to c-bet a lot."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Use Pot Control to Preserve Equity",
+     "lines": [
+      "Chapter six, section three. Use pot control to preserve the equity of medium hands.",
+      "When you do not have a range advantage, your medium-strength hands are the most vulnerable part of your range.",
+      "They cannot bet for value, because you are not confident of being ahead of the caller.",
+      "They cannot bet for protection with much success, because the caller can profitably raise wide.",
+      "And they cannot barrel two more streets, because they will not stand up on many turns.",
+      "The correct plan is pot control: check to keep the pot small, protect equity that would otherwise be lost to raises, and reserve your medium hand for a river showdown or a cheap bluff-catch.",
+      "This is deeply counter to the reflex that says the aggressor should keep betting; that reflex was built for spots where you had a range edge, and now you do not.",
+      "You should also expect to see your opponent take some initiative in these spots: donk bets, delayed check-raises, and turn probes are all more common when the caller has the range edge.",
+      "Adjust to those by tightening up your calling range and by including a small amount of bluff-catch check-raises when the board suits it.",
+      "Pot control is not passive play; it is disciplined play that refuses to donate equity to a range you cannot dominate."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Range Construction on Dynamic Boards",
+     "lines": [
+      "Chapter six, section four. Range construction on dynamic boards.",
+      "Dynamic boards are the ones where turn and river cards can change the ranking of hands dramatically.",
+      "On these boards, range construction becomes about board coverage: making sure every likely runout finds you with a plausible value hand and a plausible bluff candidate.",
+      "If two hearts fall on the flop and you never have any flush draws in your betting range, then on the third heart river, your bets will scream that you do not have a flush.",
+      "The remedy is to include some flush-draw combinations in every action bucket: bet a few, call a few, and even raise a few when the board supports it.",
+      "The same reasoning applies to straight coverage: if the board is nine-eight-seven, both players' ranges should have some sixty-fives and some ten-jacks scattered across their action buckets, so that no straight-completing river becomes a dead giveaway.",
+      "Constructing ranges with good board coverage is expensive in terms of solver frequencies, because it forces you to include some marginal or hard-to-classify combinations in every bucket.",
+      "But for a real human strategy, the discipline of board coverage is worth more than getting the exact frequencies right, because a range with obvious holes is far more exploitable than a range with slightly wrong percentages.",
+      "As you plan a hand on a dynamic board, ask yourself: on every likely runout, do I have a plausible way to bet for value, and a plausible way to bluff?",
+      "If the answer is no, tighten your betting range and let the runouts filter for you."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter six, section five. Test yourself.",
+      "Question one. You open under the gun and the big blind calls. Flop is nine-eight-seven with two hearts. Should you c-bet small with a wide range?",
+      "No. You have no range advantage; the big blind's range hits this flop harder. Bet less often, choose a bigger size when you do, and use a polarized shape.",
+      "Question two. Same flop. You have king-queen offsuit with the queen of hearts. Should this hand bet, check, or fold?",
+      "Check. King-queen with backdoor flush equity is a fine hand for pot control: it can call turn barrels on many cards, and it retains value on ace and king runouts.",
+      "Question three. You have pocket aces on the same flop. What size do you want to bet?",
+      "Large. Pocket aces welcome a polarized dynamic here, and you want to charge draws and set up a river shove that captures value from called ranges.",
+      "Question four. You are the big blind and check-raise the c-bet on this board with a hand like eight-nine suited. What is your plan on the turn?",
+      "Barrel on cards that continue to help your range, like a low or middling card that keeps your equity intact, and slow down on cards that clearly favor the button's range, like an ace.",
+      "The general skill is knowing when the range edge has slipped away from you and responding by shrinking your betting range."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter six, section six. Conclusion.",
+      "Range advantage, not initiative, is what earns you the right to c-bet often, and there are many boards where the pre-flop raiser simply does not have it.",
+      "On those boards, the c-bet range should shrink to a polarized shape, with strong value hands and high-equity semi-bluffs, and everything else should check for pot control or preservation.",
+      "Pot control is not passive; it is a targeted defense of the medium-strength part of your range against the caller's raises and barrels.",
+      "Board coverage is the discipline that keeps your ranges from being obvious on future streets, and it is worth more than exact solver frequencies in most human games.",
+      "Sometimes the correct plan is simply to give up the initiative, check the flop, and let the caller take the lead if they want; discipline of doing nothing is often worth more than the reflex of always betting.",
+      "In the next chapter we flip the perspective again and study how the defender, when she does have a range advantage, can use it to punish over-frequent c-betting."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Chapter 7: Defending with Range Advantage",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter seven, section one. Overview and objectives.",
+      "The last chapter looked at c-betting when you did not have a range advantage; this chapter looks at the mirror image, defending when you actually do.",
+      "The defender who has a stronger range than the pre-flop aggressor can take a big share of expected value, but only if she plays actively.",
+      "Passive defense, just calling and hoping to bluff-catch, leaves money on the table when the range dynamics favor you.",
+      "By the end of this chapter you should be able to identify the flops where the pre-flop caller has an equity or nut advantage.",
+      "You should be able to convert that advantage into a real check-raising range, with clear value hands and well-chosen bluffs.",
+      "You should be able to plan turn and river follow-ups so that your check-raise is not a one-street bluff but a multi-street threat.",
+      "And you should be able to attack thin c-bets from the aggressor, punishing the over-frequency mistake that many players make in these spots."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Scenario: Defending with Range Advantage",
+     "lines": [
+      "Chapter seven, section two. Scenario, defending with range advantage.",
+      "Picture the big blind defending against an under-the-gun open, and the flop coming eight-six-four with two clubs.",
+      "The under-the-gun raiser's range is heavy on high cards and premium pairs; it does not connect well with a low, connected board.",
+      "The big blind's defending range, meanwhile, is packed with hands that flop pairs, gutshots, straight draws, and combo draws.",
+      "That gives the big blind both a small equity advantage and a huge nut advantage: sets, straights, and two pair combos are all disproportionately in her range.",
+      "The equilibrium answer is not to check-call passively; it is to check-raise a real polarized range that punishes the aggressor's under-defended c-bet.",
+      "Pure value hands like sets and straight draws that flopped straights lead the raising range, with balancing semi-bluffs like combo draws and hands like nine-seven suited with a backdoor flush.",
+      "Meanwhile, the big blind should defend a wide calling range with pairs and mid-strength holdings that can continue on many turns.",
+      "The aggressor, seeing all this pressure, should respond by c-betting less often on such boards, but many real opponents still fire the standard c-bet, and that mistake is what the big blind is exploiting.",
+      "This scenario is a template: whenever your range dominates the board, become the aggressor even though you were the caller pre-flop."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter seven, section three. Test yourself.",
+      "Question one. You defend the big blind against a middle-position open. Flop is seven of clubs, six of clubs, three of hearts. Whose range has the advantage?",
+      "Yours. The big blind's calling range is much more connected on this board, and it contains more sets, straights, and combo draws than the opener's range.",
+      "Question two. On that flop, which hands should be pure check-raise value?",
+      "Sets, straights like five-four, and top pair with a strong kicker mixed with backdoor flush draws.",
+      "Question three. Which hands make the best check-raise bluffs on that flop?",
+      "Combo draws like nine-eight of clubs, straight-draw plus overcard combinations like nine of clubs eight of hearts, and some ace-high hands with a club blocker.",
+      "Question four. The aggressor calls your check-raise. What does the turn plan look like?",
+      "On a card that continues to favor your range, keep barreling with your semi-bluffs; on a card that shifts equity toward the opener, slow down and evaluate whether pot control on the turn preserves better river options.",
+      "The big takeaway is that check-raising with range advantage is not gambling; it is disciplined pressure that punishes an over-frequent c-bet without leaving you exposed."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter seven, section four. Conclusion.",
+      "Range advantage is a defender's weapon when the flop connects better with her calling range than with the opener's raising range.",
+      "The right response to a range advantage is aggressive: build a check-raising range with pure value and well-chosen bluffs, and continue barreling on turns that keep the range dynamic in your favor.",
+      "Passive defense against an opener who over-c-bets leaves money on the table; the equilibrium answer includes clear punishment for that mistake.",
+      "The check-raise is not a one-shot play; it is a multi-street plan, and every semi-bluff should have a story that can survive to the river.",
+      "In the next chapter we return to the aggressor's side and study barreling the turn in depth, especially the choice of hands and sizes that make the turn barrel truly threatening."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "Chapter 8: Barreling the Turn",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter eight, section one. Overview and objectives.",
+      "Every turn card is a small referendum on the balance of the game.",
+      "Some cards tilt the ranges further in favor of the aggressor, some tilt them toward the caller, and some are close to neutral.",
+      "This chapter is about learning to read that referendum quickly, choosing barreling hands that match the card, and picking a size that fits the story.",
+      "By the end of the chapter you should be able to sort turns into good, bad, and neutral for your range without needing a solver.",
+      "You should be able to construct barreling ranges that combine high-equity value hands with semi-bluffs that have real river plans.",
+      "You should be able to size up or down according to how the range dynamics have shifted after the flop call.",
+      "And you should recognize the spots where the correct plan is to check the turn and keep the initiative for the river."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Scenario: Evaluating the Turn",
+     "lines": [
+      "Chapter eight, section two. Scenario, evaluating the turn.",
+      "Return to the king-eight-eight flop where you c-bet small and the big blind called.",
+      "Now the turn arrives, and the natural first question is: whose range does this card fit better?",
+      "Ask yourself three simple questions in order.",
+      "First, does this card give the caller a big equity boost, like completing a specific draw she is likely to have?",
+      "Second, does this card give her range a new nut hand that she probably would have called flop with, like a straight or a flush?",
+      "Third, does this card mostly miss her range, either by pairing an unlikely combination or by being far from where her defends live?",
+      "The answers to these three questions tell you whether to slow down, keep firing, or ramp up the pressure.",
+      "This is the same triage from Chapter Four, but here we sharpen it into a concrete evaluation process you can run in under five seconds at the table."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Scenario: Barreling the Seven of Hearts",
+     "lines": [
+      "Chapter eight, section three. Scenario, barreling the seven of hearts.",
+      "Suppose the turn is the seven of hearts, a card that seems neutral but actually shifts the balance toward the caller.",
+      "Her range on the flop was heavy with medium pairs and low overcards, and the seven pairs some of those medium pairs into two pair or gives new hands like nine-seven and eight-seven picked-up equity.",
+      "Your range does not gain much, because you were not calling with hands that connect with the seven.",
+      "The correct adjustment is to barrel less often but more polarized: your best value hands, the ones that welcome a big pot, keep firing, and your weakest bluff candidates are best turned into semi-bluffs that have real river plans, like backdoor flush draws that would love to hit a heart.",
+      "Meanwhile, your medium-strength hands, second pair with a decent kicker for example, should mostly check for pot control.",
+      "As always, the key discipline is asking whether each hand you are considering barreling has a plausible river plan, and if not, whether checking gets you a better result on the turn."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Scenario: Barreling the Two of Diamonds",
+     "lines": [
+      "Chapter eight, section four. Scenario, barreling the two of diamonds.",
+      "Now imagine the turn is the two of diamonds, a low card that misses her range almost entirely.",
+      "It also completes some backdoor flush draws in your favor, since your range has more high-diamond combinations than hers.",
+      "Two of diamonds is a bad card for her and a small equity bump for you, so the correct adjustment is to barrel more often and slightly bigger.",
+      "Your best value hands can size up, because the caller's range is capped and cannot punish you for polarizing.",
+      "Your weakest bluffs, hands you gave up on the flop, can even come out of the check-back range and turn into speculative turn bluffs, since her folding frequency should be high.",
+      "This is a scenario where leverage really shines: a well-executed turn barrel here sets up a threatening river shove that many caller ranges simply cannot handle.",
+      "The rule of thumb is: when the turn card misses the caller's range and modestly helps yours, the correct move is more barreling, at a size that lets the river run naturally."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter eight, section five. Test yourself.",
+      "Question one. Flop is queen-jack-two rainbow, you c-bet small, the big blind calls. Turn is the ace of spades. Good, bad, or neutral for you?",
+      "Good. The ace fits your range far better than hers. Barrel more often, and size up with your strongest value.",
+      "Question two. Same start, but the turn is the ten of hearts. Good, bad, or neutral?",
+      "Bad. The ten completes many straight draws and gives new equity to hands like nine-eight and king-nine. Slow down, keep firing only with your strongest value and best semi-bluffs.",
+      "Question three. You barrel the turn with king-queen offsuit on a board where the river will let you value bet many hearts. What size do you want?",
+      "One that grows the pot geometrically toward a comfortable river bet. Aim for around two-thirds of the pot in most cases; too small strands leverage, too big over-commits.",
+      "Question four. Your c-bet was called on a very dynamic board and the turn is a card that helps neither range much. What is the correct plan?",
+      "Check most hands. On a neutral card after a wet flop, both ranges are still murky, and checking preserves optionality without conceding the pot.",
+      "The habit is: read the turn card first, choose the size second, and pick the exact hands last."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter eight, section six. Conclusion.",
+      "Barreling the turn is a range-construction problem, not a hand-strength problem.",
+      "Your first question should always be about how the turn card changed the balance of ranges, not about how it changed your specific hand.",
+      "The good-turn, bad-turn, neutral-turn triage lets you set frequency and size in seconds, freeing your attention for the harder hand-by-hand choices.",
+      "Every semi-bluff should have a river plan; if it does not, checking is almost always better than betting.",
+      "Turn barrels are only as good as the river bets they set up, so plan the river before you fire the turn.",
+      "In the next chapter we look at what happens when the aggressor gives up and checks the flop, and how to exploit that missed continuation bet from the caller's seat."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "Chapter 9: Attacking a Missed Continuation Bet",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter nine, section one. Overview and objectives.",
+      "Most of the chapters so far have looked at the world from the aggressor's seat.",
+      "This chapter changes seats: when the pre-flop raiser checks the flop, the caller has a big opportunity, and this chapter is about how to take it.",
+      "A missed continuation bet is a message: the aggressor probably does not have a strong hand, or he would have bet.",
+      "The caller can use that message to attack the turn with a wider, more polarized range, because the aggressor's checking range is capped.",
+      "By the end of this chapter you should be able to build a probing range on the turn after the aggressor checks the flop.",
+      "You should be able to combine value hands and bluffs in the right proportions, exploiting the aggressor's capped range without over-bluffing into his slowplays.",
+      "You should be able to plan turn probes on different board textures, adjusting for how easily the aggressor's range can defend.",
+      "And you should recognize the specific spots where a big turn bet after a missed c-bet becomes almost a free money maker."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Scenario: Evaluating the Turn After a Check",
+     "lines": [
+      "Chapter nine, section two. Scenario, evaluating the turn after a check.",
+      "Picture the button opens, the big blind calls, and the flop is king of clubs, seven of hearts, four of spades.",
+      "The button checks behind, a slightly unusual line but one that shows up when the button decides the range dynamics are not favorable enough to c-bet.",
+      "The turn arrives, and the big blind gets to lead.",
+      "The first question is what the button's checked flop range looks like: mostly low pairs, ace-high with backdoor equity, and a small slowplay contingent.",
+      "The big blind's leading range should be wider than her normal betting range against a c-bet, because the aggressor's checked range is capped and unable to fight back with a real polarized range of its own.",
+      "The rule of thumb is: on turns that further tighten the caller's expected value from checking, the big blind should probe often and small, extracting the aggressor's give-up range while charging his medium hands.",
+      "On turns that shift equity back toward the aggressor, the big blind should probe less and consider checking to induce a delayed c-bet."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Scenario: Attacking the Seven of Hearts",
+     "lines": [
+      "Chapter nine, section three. Scenario, attacking the seven of hearts.",
+      "Suppose the turn is a card that clearly favors the big blind, like the seven of hearts on a king-high flop.",
+      "Now she has a bunch of new two-pair combinations, more straight draws, and no reason to fear that the aggressor has caught up.",
+      "She should lead most of her value hands, mix in a wide range of semi-bluffs like flush draws and combo draws, and even include some pure bluffs with backdoor equity.",
+      "The aggressor, holding a capped range, cannot raise credibly, and the big blind's turn bet is extracting maximum value from his medium hands while denying equity to his weak overcards.",
+      "The right size is often a small-to-medium bet, one-third to one-half of the pot, because a big polarized bet risks folding out too many of the aggressor's calling hands and does not extract the full value from the weak-called range.",
+      "This is a spot where the range advantage compounds: the aggressor already showed weakness, and the turn card magnifies that weakness into a directly exploitable frequency mistake if he does not adjust."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Scenario: Attacking the Two of Diamonds",
+     "lines": [
+      "Chapter nine, section four. Scenario, attacking the two of diamonds.",
+      "Now consider a neutral turn like the two of diamonds after the checked flop.",
+      "The two does not change the balance much, so the big blind still has a range edge, but not as sharp as on the seven of hearts.",
+      "Her probing range should include her top value hands, some semi-bluffs, and a healthy dose of hands that are only barely worth betting, because the aggressor's give-up frequency is still high.",
+      "Size should be small, because the aggressor will fold his weakest hands to almost anything, and calling with the medium hands is still profitable at a small price.",
+      "On truly bad turns for the big blind, like an ace that fits the aggressor's range but does not fit hers, she should probe less and consider checking to induce a bluff on the river.",
+      "The core skill is calibrating the probing frequency to how much the turn card has tilted the range dynamics."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Exploiting a Capped Checking Range",
+     "lines": [
+      "Chapter nine, section five. Exploiting a capped checking range.",
+      "The capped checking range is the caller's dream setup, and it applies to more than just missed c-bets.",
+      "Any time the aggressor checks a street he would normally bet, his range is capped: no monsters, mostly medium hands and give-ups.",
+      "You can exploit a capped checking range in three ways.",
+      "First, bet a wider polarized range on the next street, extracting value from the medium hands while giving up on hands you cannot value bet or bluff.",
+      "Second, overbet with your strongest value hands, because your opponent's range cannot punish you and folding out his medium hands is often break-even at worst.",
+      "Third, use board texture to your advantage: on runouts that make the caller's medium hands even worse, size up further and keep the pressure on.",
+      "The one caveat is that some players slowplay strong hands more than the solver would, so if you have a read that a specific opponent slowplays, dial back the bluffing frequency accordingly.",
+      "Absent such reads, treat a check as an implicit admission of weakness and press it accordingly.",
+      "Some of the highest-EV turn spots in modern poker come precisely from attacking these capped checking ranges."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter nine, section six. Test yourself.",
+      "Question one. Button opens, you defend the big blind, flop is king-seven-four rainbow, button checks. Should you bet the turn most of the time?",
+      "Yes. The button's checked range is capped; probing the turn extracts value from his medium hands and denies equity to his overcards.",
+      "Question two. Same start, turn is the ace of spades. Should you probe?",
+      "Less often. The ace helps the button's checked range more than it helps yours; consider checking to induce a delayed c-bet or a bluff on the river.",
+      "Question three. You are the button, and after checking the flop, the big blind fires the turn. How should you defend?",
+      "Tighter than usual on the calling side, but include some pot-controlling calls with your medium hands. Do not float too widely, because the big blind's range is polarized against your capped range.",
+      "Question four. You probed a turn and the big blind called. What is your river plan with a hand that has become a bluff-catcher?",
+      "Check-call small bets, fold big bets. Your range on the river is already condensed by the probing action, so you cannot afford to spew off value hands by turning them into desperate bluffs.",
+      "The skill is knowing that a check does not just miss value; it hands the caller a lever to move the pot toward her."
+     ]
+    },
+    {
+     "n": 7,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter nine, section seven. Conclusion.",
+      "A missed continuation bet is a gift to the caller, and this chapter has been about learning to unwrap it.",
+      "The aggressor's checking range is capped, and capped ranges are attackable in every direction: wider probing, larger sizing, and polarized turn barrels are all on the menu.",
+      "The right choice depends on the turn card, but the general framework is that the more the turn favors the caller's original range, the more aggressively she should probe.",
+      "Neutral turns still support small, wide probes, because the aggressor's give-up frequency is inherently high.",
+      "Bad turns for the caller should slow her down, and often the correct move is to check and induce, converting the aggressor's capped range into a bluff.",
+      "In the next chapter we take the aggressor's seat again in the out-of-position role, and we study how to c-bet when you are the one giving away positional advantage on every street."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Chapter 10: C-Betting From Out of Position",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter ten, section one. Overview and objectives.",
+      "So far we have mostly assumed the c-bettor is the in-position player, which is the friendlier side of the game.",
+      "This chapter is about the harder version: c-betting when you are out of position, meaning you act first on every post-flop street.",
+      "Being out of position costs you information: you have to bet or check before you see what your opponent will do.",
+      "You cannot use position to protect your medium hands, and you cannot bluff-catch as cheaply, because your opponent controls the size of the pot.",
+      "The good news is that when your range is strong enough, being out of position does not stop you from c-betting effectively.",
+      "By the end of this chapter you should be able to identify the range dynamics that support out-of-position c-betting.",
+      "You should be able to choose sizes that account for the fact that you cannot see the caller's reaction before you commit.",
+      "You should be able to design turn plans that survive being checked to or being raised.",
+      "And you should understand when the correct out-of-position plan is to skip the c-bet entirely and defend a checked range instead."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Scenario: Out of Position on a Dynamic Board",
+     "lines": [
+      "Chapter ten, section two. Scenario, out of position on a dynamic board.",
+      "Picture a small blind versus big blind confrontation where the small blind three-bet pre-flop.",
+      "Flop is queen-jack-ten with two hearts, a highly dynamic board where hand values will keep changing.",
+      "The small blind is out of position with a range that is strong but not overwhelmingly ahead.",
+      "The big blind's calling range is packed with connected and suited hands that hit this board hard.",
+      "In this spot, the small blind's best plan is not to c-bet at high frequency; it is to bet a polarized range with clear value and clear semi-bluff candidates, and check the middle of her range.",
+      "Sizing matters: a bigger bet suits the polarized dynamic, and it also compensates for the fact that being out of position makes small stabs vulnerable to floats.",
+      "The big blind, meanwhile, should defend a wide calling range against the small stabs but be ready to raise polarized against the big bets, because the small blind's out-of-position range is not big enough to defend against a well-timed raise on a dynamic board.",
+      "The general theme is that out-of-position c-betting rewards a polarized shape more than an in-position c-bet does, because the caller's positional advantage can otherwise chew you up on subsequent streets."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Scenario: Exploiting Loose Callers",
+     "lines": [
+      "Chapter ten, section three. Scenario, exploiting loose callers.",
+      "In the previous scenario we assumed the caller defended at equilibrium; now consider a real opponent who defends too widely.",
+      "A loose caller keeps too many hands in her range, especially the ones with weak equity or awkward playability.",
+      "Out of position, you can exploit this by c-betting more often, but with a shift toward smaller sizes that let her call with the marginal hands you dominate.",
+      "The value bet has a wider net: hands like queen-jack that would be too thin against a tight caller are now clearly ahead, and you can bet them for two streets confidently.",
+      "The bluff has a wider net too: hands like ace-high with backdoor equity that would have been vulnerable against a good defender now show good expected value against a loose caller's overcalling range.",
+      "The main danger is that against a loose caller, you will get to the turn and river more often, and being out of position means you need a real plan for both.",
+      "Turn barrels should be picked with river follow-through in mind, and semi-bluffs should have equity to fall back on when the caller does not fold.",
+      "The exploit is not to overbet every flop; it is to widen your c-bet range at the correct sizes so that the loose caller's mistakes on every street compound in your favor.",
+      "Out-of-position exploitation demands discipline, because you will pay for spew more often here than in position."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter ten, section four. Test yourself.",
+      "Question one. You three-bet from the small blind and the big blind calls. Flop is king-eight-two rainbow. Should you c-bet often or slow down?",
+      "C-bet often. This flop hits your range hard: ace-king, king-queen, and premium pairs are all disproportionately in your range compared to the big blind's.",
+      "Question two. Same start, flop is nine-eight-seven with two hearts. Adjust.",
+      "C-bet less often and more polarized. The board hits the big blind's calling range better; your c-bet range should shrink to top value plus best semi-bluffs, with lots of checking.",
+      "Question three. You c-bet out of position and get raised on a dynamic board. What is your default response with a medium hand?",
+      "Fold most medium hands. Out of position, defending against raises is expensive, and only your best value and highest-equity draws are worth continuing.",
+      "Question four. You are out of position with a strong range but a loose caller behind you. Should you c-bet larger or smaller than equilibrium?",
+      "Smaller. Loose callers reward wide c-bet ranges at small sizes, because the marginal hands you dominate keep calling and the marginal bluffs you fire keep getting through.",
+      "Practicing out-of-position c-betting is about knowing when your range advantage is enough to force through the disadvantage of being first to act."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter ten, section five. Conclusion.",
+      "Out-of-position c-betting is the harder half of the aggressor's world, because you lose information on every street.",
+      "The framework is still the same as in-position play, but the shapes shift: c-bet less often, more polarized, and bigger, and defend a wider checked range instead of stabbing marginal spots.",
+      "Against equilibrium callers, out-of-position c-betting is best used sparingly and precisely, with a plan for both being raised and being called.",
+      "Against loose callers, the c-bet range widens and the sizes shrink, because their mistakes multiply against a well-tuned attack.",
+      "The one habit to internalize is that being out of position is a real cost, and every c-bet should either earn back that cost through a genuine range advantage or leverage a specific opponent tendency.",
+      "In the final chapter we shift to tournament play, where antes, ICM, and shrinking stacks add a whole new layer to every decision we have studied so far."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "title": "Chapter 11: Adapting to Tournament Play",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Overview & Objectives",
+     "lines": [
+      "Chapter eleven, section one. Overview and objectives.",
+      "Everything we have studied so far was implicitly assuming cash-game economics, where a dollar is a dollar no matter how many chips you have.",
+      "In tournaments, the value of a chip depends on your stack, on the payout structure, and on how many players are left, and that changes the math of almost every decision.",
+      "This chapter is about the two biggest tournament adjustments: playing with antes and adjusting for the independent chip model, or ICM.",
+      "By the end of this chapter you should be able to explain why antes make every pot bigger relative to the stacks, and why that pushes optimal strategies toward wider ranges and shorter fights.",
+      "You should be able to apply ICM adjustments to shove and call decisions on the money bubble and at the final table, where chip preservation is worth more than raw chip accumulation.",
+      "You should be able to reason about final-table clairvoyance games, where survival value makes even nut-versus-nothing situations trickier than a cash game would suggest.",
+      "And you should understand the general principle that tournament play amplifies the value of pot control and dampens the value of thin-edge aggression when you have a large stack and the ICM incentives point toward survival."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "Scenario: Playing With Antes",
+     "lines": [
+      "Chapter eleven, section two. Scenario, playing with antes.",
+      "Antes are small mandatory contributions from every player before the hand starts.",
+      "The effect is that the pre-flop pot is much bigger relative to the blinds, and the pot odds on every pre-flop call improve for everyone.",
+      "The first consequence is that opening ranges widen, especially from late position, because the increased dead money in the pot makes marginal opens directly profitable.",
+      "The second consequence is that defenders in the blinds should defend wider than they would without antes, because they are getting a much better price.",
+      "The third consequence is that steal attempts, three-bet bluffs, and squeezes all become more profitable, because the increased dead money changes the fold-equity math.",
+      "The fourth consequence is that stack-to-pot ratios shrink faster, so a hand that would be a fine multi-street plan in a no-ante game becomes a stack-off spot with antes in play.",
+      "The overall effect is that ante games are more aggressive and more compressed, and stack management matters more than it does in the ante-free version of the same game.",
+      "As you sit down to a tournament with antes, expect to open wider from late position, defend wider from the blinds, and re-open wider when facing pre-flop action; those are the baseline adjustments the ante economics demand."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "The Independent Chip Model (ICM)",
+     "lines": [
+      "Chapter eleven, section three. The independent chip model, or ICM.",
+      "ICM is a way of translating your chip stack into an expected share of the prize pool, based on the payout structure and the stacks of everyone still in the tournament.",
+      "The key insight is that chips you win are worth less than chips you lose, in ICM terms, because the payout structure is heavily weighted toward the top places.",
+      "That asymmetry means every decision you make near the money bubble or the final table should be biased toward chip preservation, and it changes the profitability of aggressive plays that would be clear winners in a chip-EV world.",
+      "For example, calling an all-in with slight positive chip equity may be a losing decision in ICM terms if your call risks a huge stack drop that would demolish your tournament equity.",
+      "The mirror is that shoving on other players who are ICM-pressured is doubly profitable: your fold equity is higher because they cannot afford to call marginally, and every fold gives you dead antes and blinds.",
+      "ICM is a heavy calculation to do at the table, but a few rules of thumb carry most of the value.",
+      "Rule one: the closer you are to a pay jump, the tighter you should call all-ins and the wider you should shove into short stacks.",
+      "Rule two: the bigger your stack advantage over the medium stacks, the more aggressively you should pressure them, because their ICM incentive is to fold.",
+      "Rule three: when you are the medium stack, avoid marginal spots with the big stacks and prey on the short stacks who cannot risk a call."
+     ]
+    },
+    {
+     "n": 4,
+     "title": "Scenario: Clairvoyance at the Final Table",
+     "lines": [
+      "Chapter eleven, section four. Scenario, clairvoyance at the final table.",
+      "Return one more time to the clairvoyance game, but now imagine the two players are at a tournament final table with three players remaining and a big ICM cliff between second and third place.",
+      "Ivan has an ace or a queen, Opal has a king, and Ivan can bet or check as in the original game.",
+      "In the cash-game version, we solved this game with a specific bluffing frequency for the queen and a specific calling frequency for the king.",
+      "At the final table, the ICM cost of losing the pot is much larger than the ICM gain of winning it, especially for the shorter stack.",
+      "The correct adjustment is that Opal's calling frequency should shrink, because the ICM cost of a wrong call is amplified, and Ivan's bluffing frequency with the queen should shrink in response, because he now needs less bluffing to make Opal indifferent.",
+      "Notice the direction of the adjustment: less action from both sides, more folding, and less thin value pursuit.",
+      "That is the general final-table ICM lesson: the game gets more conservative for both players when the payoff of a loss is much worse than the payoff of a win.",
+      "The polarized attacker keeps most of the leverage, but he has to spend it more carefully, and the bluff-catcher has to accept a lower expected value from her showdown holdings.",
+      "When you feel a hand tightening up on you at the final table, that instinct is often ICM speaking, and following it is usually the right call."
+     ]
+    },
+    {
+     "n": 5,
+     "title": "Test Yourself",
+     "lines": [
+      "Chapter eleven, section six. Test yourself.",
+      "Question one. You are the button in a tournament with antes and everyone folds to you. Should you open wider than you would without antes?",
+      "Yes. The dead money from antes gives you better pre-flop odds, and more marginal opens become directly profitable.",
+      "Question two. You are the medium stack at a final table with a huge pay jump between fourth and third. A short stack shoves under the gun. What is your calling range?",
+      "Tight. You should call only with hands that dominate his shoving range, because a call that busts you costs a huge ICM chunk.",
+      "Question three. You are the big stack at the same final table. The medium stack opens for a modest raise. What is your default response?",
+      "Aggressive. Three-bet often, because the medium stack cannot afford to call or four-bet you marginally, and every fold gives you dead money without ICM risk.",
+      "Question four. On the money bubble, you have an unimportant stack size. Should you open wider or tighter than you would deeper in the tournament?",
+      "Wider than deeper, but the correct answer depends on the immediate opponents; against ICM-pressured stacks, widen further, and against equally desperate stacks, tighten up because the fold equity vanishes.",
+      "Understanding ICM is the difference between a good cash player and a good tournament player."
+     ]
+    },
+    {
+     "n": 6,
+     "title": "Conclusion",
+     "lines": [
+      "Chapter eleven, section seven. Conclusion.",
+      "Tournament play is a version of the same game we have studied, but with a currency that fluctuates: chips are worth more or less depending on your stack, the payouts, and the number of players left.",
+      "Antes make every pre-flop pot bigger relative to the stacks and push optimal strategy toward wider ranges and shorter fights.",
+      "ICM changes the profitability of aggression: it pressures short and medium stacks to fold and lets big stacks bully them for dead chips.",
+      "The final-table clairvoyance scenario showed that even a purely polarized game gets tighter under ICM, because the loss cost outweighs the win gain.",
+      "The habit to keep from this chapter is asking, before every all-in decision, whose ICM pressure is heaviest right now and how that changes the incentives at the table.",
+      "The book closes with a short conclusion that ties the eleven chapters together and sends you off with the shape of the argument in one clean piece."
+     ]
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "title": "Conclusion",
+   "sections": [
+    {
+     "n": 1,
+     "title": "Putting It All Together",
+     "lines": [
+      "Conclusion, section one. Putting it all together.",
+      "The eleven chapters you just walked through are really one long argument about how to think about poker before the river.",
+      "The argument starts with leverage: on early streets, betting is not just about the current pot, it is about the leverage those bets carry into future streets.",
+      "Polarized ranges benefit from leverage, condensed ranges are punished by it, and every early-street decision is really a decision about which side of that asymmetry you want to be on.",
+      "The middle chapters gave you the mechanics: protection and semi-bluffing for hands that live between value and air, range construction as the discipline of choosing which hands do which job, and using leverage on real boards with real hand distributions.",
+      "The later chapters challenged the assumptions: what happens when the stacks are short, when the pre-flop caller has the range advantage, when the aggressor is out of position, or when tournament economics reshape the value of every chip.",
+      "In every case, the answer was some structured adjustment to the same core toolkit, not a wholesale reinvention.",
+      "Carry that structured way of thinking into every hand you play, and you will find that even unfamiliar spots start to feel navigable."
+     ]
+    },
+    {
+     "n": 2,
+     "title": "The Habits That Matter Most",
+     "lines": [
+      "Conclusion, section two. The habits that matter most.",
+      "If you leave this book with only five habits, make it these.",
+      "One: before every early-street decision, ask which shape your range wants to be, polarized, condensed, or linear.",
+      "Two: before every barrel, sort the incoming turn or river card into good, bad, or neutral for your range.",
+      "Three: pick your bet size to grow the pot geometrically toward the future bet you actually want to make.",
+      "Four: build your ranges from pure strategies first and use mixed strategies to balance them, so that the load-bearing hands drive the plan.",
+      "Five: check SPR and ICM context before you commit chips, because the value of every future action depends on them.",
+      "None of these habits is glamorous, and none of them wins a specific hand.",
+      "But apply them together, over thousands of hands, and you will find yourself in the right shape at the right time much more often than the players you are competing with.",
+      "Range construction is a lifetime skill, not a chapter to be finished, and the toolkit you built here is meant to keep sharpening as you use it."
+     ]
+    },
+    {
+     "n": 3,
+     "title": "Where to Go From Here",
+     "lines": [
+      "Conclusion, section three. Where to go from here.",
+      "The natural next step is to bring these ideas to the tools you already use: a solver, a training site, or a heads-up display in your online play.",
+      "When you run scenarios in a solver, look for the pure-strategy hands first, then the shape of the mixed strategies, and finally the exact frequencies.",
+      "When you review a session, focus on the range shapes you constructed rather than the individual results; a bad river outcome does not mean the range plan was wrong.",
+      "When you play, keep the good-turn, bad-turn, neutral-turn triage in the front of your mind, and let it govern your barreling frequency.",
+      "And when you find yourself in an unfamiliar spot, remember that the whole book is about the shape of ranges and the shape of leverage; almost any surprise decision can be interrogated by asking what those shapes want to look like here.",
+      "Poker is a game where the deepest players never quite finish learning, and that is the good news: every session is an opportunity to sharpen the same set of habits a little further.",
+      "Thank you for listening, and may your ranges be well constructed."
+     ]
+    }
+   ]
+  }
+ ]
+}
