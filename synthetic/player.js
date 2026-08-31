@@ -23,9 +23,11 @@
   let userScrolledAt = 0, userIsScrolling = false, scrollResetTimer = null;
 
   // ---- Autoplay + sleep-timer state ----
-  const AUTO_KEY = "synthetic_autoplay", SLEEP_KEY = "synthetic_sleep_deadline";
+  const AUTO_KEY = "synthetic_autoplay", SLEEP_KEY = "synthetic_sleep_deadline", RATE_KEY = "synthetic_playback_rate";
   let autoplayOn = sessionStorage.getItem(AUTO_KEY);
   autoplayOn = autoplayOn === null ? true : autoplayOn === "1";   // default ON
+  let playbackRate = parseFloat(sessionStorage.getItem(RATE_KEY) || "1");
+  if (!isFinite(playbackRate) || playbackRate <= 0) playbackRate = 1;
   const sleepActive = () => { const v = parseInt(sessionStorage.getItem(SLEEP_KEY)||"0",10); return v > Date.now() ? v : 0; };
   let sleepTimer = null;
 
@@ -61,6 +63,8 @@
     transcriptEl.scrollTop = 0;
 
     audio.src = `audio/${slug}.mp3`;
+    audio.defaultPlaybackRate = playbackRate;
+    audio.playbackRate = playbackRate;
     audio.load();
     curTime.textContent = "0:00";
     seek.value = "0";
@@ -129,7 +133,11 @@
     curTime.textContent = fmtTime(t);
     if (isFinite(audio.duration) && audio.duration > 0) seek.value = String(Math.round((t / audio.duration) * 1000));
   });
-  audio.addEventListener("loadedmetadata", () => { durTime.textContent = fmtTime(audio.duration || (sync && sync.duration) || 0); });
+  audio.addEventListener("loadedmetadata", () => {
+    audio.defaultPlaybackRate = playbackRate;
+    audio.playbackRate = playbackRate;
+    durTime.textContent = fmtTime(audio.duration || (sync && sync.duration) || 0);
+  });
   audio.addEventListener("play",  () => { playBtn.textContent = "❚❚"; playBtn.setAttribute("aria-label","pause"); });
   audio.addEventListener("pause", () => { playBtn.textContent = "▶"; playBtn.setAttribute("aria-label","play"); });
   audio.addEventListener("ended", () => {
@@ -147,10 +155,14 @@
   seek.addEventListener("input", () => { if (isFinite(audio.duration)) audio.currentTime = (parseInt(seek.value, 10) / 1000) * audio.duration; });
 
   document.querySelectorAll("#speedBtns button").forEach(btn => {
+    btn.classList.toggle("active", parseFloat(btn.dataset.rate) === playbackRate);
     btn.addEventListener("click", () => {
       document.querySelectorAll("#speedBtns button").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
-      audio.playbackRate = parseFloat(btn.dataset.rate);   // persists across in-place section loads
+      playbackRate = parseFloat(btn.dataset.rate);
+      sessionStorage.setItem(RATE_KEY, String(playbackRate));
+      audio.defaultPlaybackRate = playbackRate;
+      audio.playbackRate = playbackRate;
     });
   });
 
